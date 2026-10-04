@@ -455,6 +455,8 @@ nav.dm-tabs a,nav.dm-scenes a{flex:0 0 auto}
 .dm-mat-text b{font-size:18px;line-height:1.3}
 .dm-mat-text>span{color:var(--dm-muted);font-size:15px}
 .dm-mat-text small{color:var(--dm-muted);font-size:14px}
+.dm-mat-topics{margin:4px 0 2px;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:6px}
+.dm-mat-topics li{font-size:13px;line-height:1.3;padding:3px 9px;border-radius:999px;background:var(--dm-tinte-soft,#E8ECFA);color:var(--dm-tinte,#2341B5)}
 .dm-mat-dl{font-weight:700;color:var(--dm-tinte);font-size:15px;white-space:nowrap}
 @media (max-width:560px){.dm-mat{grid-template-columns:auto minmax(0,1fr)}.dm-mat-dl{display:none}}
 .dm-mat-lid{display:flex;flex-wrap:wrap;gap:14px 24px;align-items:center;justify-content:space-between}

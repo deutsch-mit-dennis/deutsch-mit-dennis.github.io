@@ -577,7 +577,7 @@
     if (!LEVELS.includes(lvl)) lvl = 'alle';
     const size = kb => kb >= 1024 ? (kb / 1024).toLocaleString('de-DE', { maximumFractionDigits: 1 }) + ' MB' : kb + ' KB';
     page(`${crumbs([['Materialien']])}
-      <div class="dm-head"><h1>Materialien</h1><p class="dm-lead">Arbeitsblätter, Wortlisten und ganze Unterrichtsstunden von Dennis als PDF. Zum Ausdrucken und Üben – kostenlos.</p></div>
+      <div class="dm-head"><h1>Materialien</h1><p class="dm-lead">Arbeitsblätter, Wortlisten und ganze Unterrichtsstunden von Dennis als PDF – jede Stunde mit Regeln, Beispielen, Übungen und Lösungen. Zum Ausdrucken und Üben – kostenlos.</p></div>
       <div class="dm-filter dm-mat-filter">
         <nav class="dm-tabs dm-tabs-small" aria-label="Thema">${[['alle', 'Alle']].concat(Object.entries(C)).map(([k, t]) => `<a href="#material/${k}/${lvl}" ${k === cat ? 'aria-current="page"' : ''}><b>${t}</b><small>${k === 'alle' ? all.length : all.filter(m => m.cat === k).length}</small></a>`).join('')}</nav>
       </div>
@@ -592,12 +592,12 @@
     const norm = t => t.toLocaleLowerCase('de').normalize('NFD').replace(/\p{M}/gu, '').replace(/ß/g, 'ss');
     const draw = () => {
       const q = norm($('#dm-mq').value.trim());
-      const list = all.filter(m => (cat === 'alle' || m.cat === cat) && (lvl === 'alle' || m.level === lvl) && (!q || norm(`${m.title} ${m.desc} ${C[m.cat]}`).includes(q)));
+      const list = all.filter(m => (cat === 'alle' || m.cat === cat) && (lvl === 'alle' || m.level.includes(lvl)) && (!q || norm(`${m.title} ${m.desc} ${(m.topics || []).join(' ')} ${C[m.cat]}`).includes(q)));
       $('#dm-mcount').textContent = `${list.length} ${list.length === 1 ? 'Material' : 'Materialien'}`;
       const groups = cat === 'alle' ? Object.keys(C) : [cat];
       $('#dm-mlist').innerHTML = groups.map(g => {
         const items = list.filter(m => m.cat === g); if (!items.length) return '';
-        return `<section class="dm-mat-group">${cat === 'alle' ? `<h2>${C[g]}</h2>` : ''}<ul class="dm-mat-list">${items.map(m => `<li><a class="dm-mat" href="${m.file}" download target="_blank" rel="noopener"><span class="dm-mat-icon" aria-hidden="true">PDF</span><span class="dm-mat-text"><b>${x(m.title)}</b><span>${x(m.desc)}</span><small>${m.level} · ${m.pages} ${m.pages === 1 ? 'Seite' : 'Seiten'} · ${size(m.kb)}</small></span><span class="dm-mat-dl">Herunterladen</span></a></li>`).join('')}</ul></section>`;
+        return `<section class="dm-mat-group">${cat === 'alle' ? `<h2>${C[g]}</h2>` : ''}<ul class="dm-mat-list">${items.map(m => `<li><a class="dm-mat" href="${m.file}" download target="_blank" rel="noopener"><span class="dm-mat-icon" aria-hidden="true">PDF</span><span class="dm-mat-text"><b>${x(m.title)}</b><span>${x(m.desc)}</span>${m.topics ? `<ul class="dm-mat-topics">${m.topics.map(t => `<li>${x(t)}</li>`).join('')}</ul>` : ''}<small>${m.level} · ${m.pages} ${m.pages === 1 ? 'Seite' : 'Seiten'} · ${size(m.kb)}</small></span><span class="dm-mat-dl">Herunterladen</span></a></li>`).join('')}</ul></section>`;
       }).join('') || '<p class="dm-empty">Nichts gefunden. Versuche ein anderes Wort oder wähle „Alle“.</p>';
     };
     $('#dm-mq').oninput = draw; draw();
