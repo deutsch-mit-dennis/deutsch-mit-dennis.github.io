@@ -1,41 +1,45 @@
 {
   "user": "28070f1f-b266-41cd-a90f-0e8f04c31f07",
-  "updated": "2026-10-04T19:31:01.858423Z",
+  "updated": "2026-10-04T19:48:09.714Z",
   "kahoots": [
     {
       "uuid": "3f6d5758-6289-43c5-9741-c336e92fca0c",
       "title": "Gemeinsam etwas planen_DTZ",
-      "description": "",
+      "description": "Quiz zu typischen Redemitteln und Grammatik im DTZ-Planungsgespräch: höflich vorschlagen, ablehnen, Bedenken äußern sowie korrekte Satzstellung mit „dass“, „weil“ und Konjunktiv II auf B1-Niveau.",
       "questions": 9,
-      "created": "2026-10-03T09:25:11.829000Z",
+      "created": "2026-10-03T09:25:11.829Z",
       "url": "https://create.kahoot.it/details/3f6d5758-6289-43c5-9741-c336e92fca0c",
+      "cover": "assets/kahoot/3f6d5758-6289-43c5-9741-c336e92fca0c.jpg",
       "qr": "assets/kahoot/3f6d5758-6289-43c5-9741-c336e92fca0c-qr.svg"
     },
     {
       "uuid": "61588fd5-a47d-4fa9-93c1-fcf7b08e72da",
       "title": "Bildbeschreibung & Floskeln (DTZ)",
-      "description": "",
+      "description": "Trainiere Präpositionen, Fälle und Adjektive mit bildbezogenen Sätzen: vom Vorder- und Hintergrund über Kleidung bis zur Beschreibung von Personen und Atmosphäre. Ideal zur Wiederholung von Grammatik und Wortschatz im Alltag.",
       "questions": 9,
-      "created": "2026-10-01T18:05:02.974000Z",
+      "created": "2026-10-01T18:05:02.974Z",
       "url": "https://create.kahoot.it/details/61588fd5-a47d-4fa9-93c1-fcf7b08e72da",
+      "cover": "assets/kahoot/61588fd5-a47d-4fa9-93c1-fcf7b08e72da.jpg",
       "qr": "assets/kahoot/61588fd5-a47d-4fa9-93c1-fcf7b08e72da-qr.svg"
     },
     {
       "uuid": "be39c6be-67b1-4e9b-8428-e6cd0875d206",
       "title": "DTZ Bild beschreiben_Redemittel",
-      "description": "",
+      "description": "Trainiere Redemittel für Bildbeschreibungen: passende Einleitungen finden, Personen und ihre Position im Bild benennen, Orte vorsichtig vermuten und Handlungen präzise formulieren. Ideal zur Vorbereitung auf mündliche Prüfungen oder Präsentationen.",
       "questions": 11,
-      "created": "2026-10-01T17:37:58.584000Z",
+      "created": "2026-10-01T17:37:58.584Z",
       "url": "https://create.kahoot.it/details/be39c6be-67b1-4e9b-8428-e6cd0875d206",
+      "cover": "assets/kahoot/be39c6be-67b1-4e9b-8428-e6cd0875d206.jpg",
       "qr": "assets/kahoot/be39c6be-67b1-4e9b-8428-e6cd0875d206-qr.svg"
     },
     {
       "uuid": "956392a2-f868-4c47-81f8-dca282c74be5",
       "title": "Bild beschreiben DTZ _ Floskeln",
-      "description": "",
+      "description": "Trainiere deutsche Grammatik mit typischen Formulierungen zur Bildbeschreibung: Satzanfänge, richtige Fälle, passende Adjektive und höfliche Schlussformeln für mündliche und schriftliche Prüfungen.",
       "questions": 9,
-      "created": "2026-10-01T16:58:19.775000Z",
+      "created": "2026-10-01T16:58:19.775Z",
       "url": "https://create.kahoot.it/details/956392a2-f868-4c47-81f8-dca282c74be5",
+      "cover": "assets/kahoot/956392a2-f868-4c47-81f8-dca282c74be5.jpg",
       "qr": "assets/kahoot/956392a2-f868-4c47-81f8-dca282c74be5-qr.svg"
     }
   ]
