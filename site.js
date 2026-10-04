@@ -18,6 +18,8 @@
   mem.visited ||= {}; mem.done ||= {}; mem.drafts ||= {};
   const save = () => { try { localStorage.setItem(KEY, JSON.stringify(mem)); } catch { /* privater Modus: nur für diese Sitzung */ } };
   DM.store = mem;
+  DM.save = save;
+  DM.routes ||= {};
 
   /* ---------- Sprachausgabe (Vorlesen) ---------- */
   const synth = window.speechSynthesis;
@@ -431,6 +433,7 @@
     const card = (url, part, title, desc) => `<a class="dm-exam" href="${url}"><span class="dm-tag">${part}</span><b>${title}</b><span>${desc}</span></a>`;
     page(`${crumbs([['Prüfungstraining']])}
       <div class="dm-head"><h1>Prüfungstraining</h1><p class="dm-lead">Eigene Übungsaufgaben im Stil der Prüfungen – mit Mustertexten und Checklisten. Keine offiziellen Prüfungsaufgaben.</p></div>
+      <aside class="dm-card dm-exam-new"><b>⏱ Neu: Prüfungsmodus.</b> In jeder Aufgabe läuft auf Wunsch die Uhr wie in der Prüfung. Beim Schreiben zählt ein Wortzähler mit, beim Sprechen kannst du dich aufnehmen und anhören.</aside>
       <section class="dm-exam-block dm-g-sun" aria-labelledby="dtz-h">
         <div class="dm-exam-head"><h2 id="dtz-h">DTZ – Deutsch-Test für Zuwanderer</h2><p>A2–B1 · am Ende des Integrationskurses</p><a href="#lernweg/dtz">Lernweg DTZ öffnen</a></div>
         <div class="dm-examgrid">
@@ -456,6 +459,7 @@
       <section class="dm-exam-block dm-g-mint" aria-labelledby="lid-h">
         <div class="dm-exam-head"><h2 id="lid-h">Leben in Deutschland</h2><p>Orientierungskurs · Test „Leben in Deutschland“</p></div>
         <div class="dm-examgrid">
+          ${card('#lid', 'Neu', 'LiD-Trainer: alle 310 Fragen', 'Lernen, Fehler wiederholen, Test mit 33 Fragen und 60 Minuten')}
           ${card('#orientierungskurs', 'Lernspiele', 'Deutschland verstehen', 'Demokratie, Geschichte, Zusammenleben')}
           ${card('#videos/orientierung', 'Videos', 'LiD einfach erklärt', 'Wahlen, Grundrechte, Bundestag')}
         </div>
@@ -618,6 +622,28 @@
     });
   }
 
+
+  /* ---------- Lernpakete (Kauf später über Digistore24) ---------- */
+  function packages() {
+    const P = DM.packages || [];
+    const card = k => `<article class="dm-card dm-pkg" id="paket-${k.id}">
+      <div class="dm-pkg-top"><span class="dm-pkg-icon" aria-hidden="true">${k.icon}</span><span class="dm-pkg-lock" title="Gesperrt">🔒 Gesperrt</span></div>
+      <h2>${x(k.title)}</h2><p class="dm-pkg-meta">${x(k.level)} · ${x(k.target)}</p>
+      <p>${x(k.desc)}</p>
+      <ul class="dm-pkg-list">${k.contents.map(c => `<li>${x(c)}</li>`).join('')}</ul>
+      <div class="dm-pkg-buy">
+        ${k.buy ? `<a class="dm-btn" href="${x(k.buy)}" target="_blank" rel="noopener">Kaufen${k.price ? ` · ${x(k.price)}` : ''}</a>` : `<span class="dm-btn dm-btn-disabled" aria-disabled="true">Bald erhältlich</span>`}
+        <a class="dm-btn dm-btn-quiet" href="material/leseproben/${k.id}.pdf" target="_blank" rel="noopener">Leseprobe (PDF)</a>
+        ${k.buy ? '' : `<a class="dm-pkg-notify" href="mailto:${T.email}?subject=${encodeURIComponent('Lernpaket: ' + k.title)}&body=${encodeURIComponent('Hallo Dennis,\nbitte gib mir Bescheid, wenn dieses Lernpaket erhältlich ist.\n')}">Benachrichtigen, wenn verfügbar</a>`}
+      </div></article>`;
+    page(`${crumbs([['Lernpakete']])}
+      <div class="dm-head"><h1>Lernpakete</h1><p class="dm-lead">Ausführliche PDF-Pakete zum Selbstlernen – mit Musterlösungen und Lösungsschlüssel. Die meisten Materialien auf dieser Seite bleiben kostenlos. Die Pakete sind für alle, die gezielt mehr üben möchten.</p></div>
+      <div class="dm-pkg-grid">${P.map(card).join('')}</div>
+      <section class="dm-card dm-pkg-info"><h2>So funktioniert der Kauf</h2>
+        <ol><li>Du wählst ein Paket und klickst auf „Kaufen“.</li><li>Die Bezahlung läuft sicher über <b>Digistore24</b>.</li><li>Direkt nach dem Kauf bekommst du den Download-Link per E-Mail.</li></ol>
+        <p class="dm-small">Selbstlernmaterial ohne individuelle Betreuung oder Korrektur. Unabhängiges Lernangebot – kein Angebot von g.a.s.t., telc oder BAMF, keine offiziellen Prüfungsaufgaben. Fragen? <a href="mailto:${T.email}">${T.email}</a></p></section>`);
+  }
+
   /* ---------- Feedback & Wünsche (ersetzt die Pinnwand) ---------- */
   function feedback() {
     page(`${crumbs([['Feedback und Wünsche']])}
@@ -630,8 +656,89 @@
       ${note('Danke für jede Rückmeldung! So wird die Seite für alle besser.')}`);
   }
 
+
+  /* ---------- Prüfungsmodus: Zeit wie in der Prüfung, Wortzähler, Selbstaufnahme ---------- */
+  const EXAM_TIMES = {
+    'dtz-vorstellen': { min: 3, kind: 'sprechen', label: 'DTZ Sprechen Teil 1: ca. 3 Minuten pro Person' },
+    'dtz-bild': { min: 3, kind: 'sprechen', label: 'DTZ Sprechen Teil 2: ca. 3 Minuten pro Person' },
+    'dtz-sprechen': { min: 5, kind: 'sprechen', label: 'DTZ Sprechen Teil 3: ca. 5 Minuten zu zweit' },
+    'dtz-schreiben': { min: 30, kind: 'schreiben', label: 'DTZ Schreiben: 30 Minuten für einen Brief' },
+    'dtz-lesen': { min: 10, kind: 'lesen', label: 'Übungszeit für einen Lesetext: 10 Minuten' },
+    'dtb-thema': { min: 4, kind: 'sprechen', label: 'DTB B2 Sprechen Teil 1: ca. 3–4 Minuten' },
+    'dtb-kollegen': { min: 4, kind: 'sprechen', label: 'DTB B2 Sprechen Teil 2: ca. 4 Minuten' },
+    'dtb-sprechen': { min: 4, kind: 'sprechen', label: 'DTB B2 Sprechen Teil 3: ca. 4 Minuten' },
+    'dtb-schreiben': { min: 30, kind: 'schreiben', label: 'DTB B2 Schreiben: Übungszeit 30 Minuten' },
+    'dtb-lesen': { min: 10, kind: 'lesen', label: 'Übungszeit für einen Lesetext: 10 Minuten' }
+  };
+  const CHECK_WRITE = ['Habe ich alle Leitpunkte bearbeitet?', 'Passen Anrede und Gruß (Sie oder du)?', 'Habe ich Sätze verbunden (weil, deshalb, aber, dass)?', 'Steht das Verb an Position 2 bzw. am Ende im Nebensatz?', 'Nomen groß, Satzende mit Punkt, Text noch einmal gelesen?'];
+  const CHECK_SPEAK = ['Habe ich die ganze Zeit gesprochen, ohne lange Pausen?', 'Habe ich Beispiele und Gründe genannt?', 'Habe ich auf meinen Partner reagiert und nachgefragt?', 'Habe ich laut und deutlich gesprochen?'];
+  let examT = { id: null, left: 0, total: 0, run: null, rec: null, chunks: [], url: null };
+  const examBox = document.createElement('section');
+  examBox.className = 'dm-examtimer'; examBox.setAttribute('aria-label', 'Prüfungsmodus');
+  const fmtT = s => `${String(Math.floor(s / 60)).padStart(2, '0')}:${String(s % 60).padStart(2, '0')}`;
+  function words() { const t = $('main textarea'); return t ? (t.value.trim().match(/\S+/g) || []).length : 0; }
+  function drawExamBox() {
+    const c = EXAM_TIMES[examT.id]; if (!c) return;
+    const running = !!examT.run, done = examT.total && examT.left <= 0;
+    const pct = examT.total ? Math.round((1 - examT.left / examT.total) * 100) : 0;
+    const checks = (c.kind === 'schreiben' ? CHECK_WRITE : c.kind === 'sprechen' ? CHECK_SPEAK : []);
+    examBox.innerHTML = `<div class="dm-et-row"><span class="dm-et-badge">⏱ Prüfungsmodus</span><span class="dm-et-label">${x(c.label)}</span>
+      <span class="dm-et-time ${examT.total && examT.left < 60 && !done ? 'is-low' : ''}" role="timer">${fmtT(examT.total ? examT.left : c.min * 60)}</span></div>
+      <span class="dm-et-bar"><i style="width:${pct}%"></i></span>
+      <div class="dm-et-row">
+        <button type="button" class="dm-btn" data-et="go">${running ? 'Pause' : examT.total && !done ? 'Weiter' : 'Zeit starten'}</button>
+        ${examT.total ? '<button type="button" class="dm-btn dm-btn-quiet" data-et="reset">Neu starten</button>' : ''}
+        ${c.kind === 'schreiben' ? `<span class="dm-et-words">Wörter: <b id="dm-et-w">${words()}</b></span>` : ''}
+        ${c.kind === 'sprechen' && navigator.mediaDevices?.getUserMedia && window.MediaRecorder ? `<button type="button" class="dm-btn dm-btn-quiet" data-et="rec">${examT.rec ? '■ Aufnahme stoppen' : '🎙 Mich aufnehmen'}</button>${examT.url ? `<audio controls src="${examT.url}"></audio>` : ''}` : ''}
+      </div>
+      ${done ? `<div class="dm-et-done" role="status"><b>Die Zeit ist um.</b> ${c.kind === 'schreiben' ? `Du hast ${words()} Wörter geschrieben.` : ''} Prüfe dich selbst:<ul>${checks.map(t => `<li><label><input type="checkbox"> ${x(t)}</label></li>`).join('')}</ul></div>` : ''}
+      ${c.kind === 'sprechen' && !done ? '<p class="dm-et-hint">Tipp: Nimm dich auf und hör dir die Aufnahme an. Sie bleibt nur in deinem Browser.</p>' : ''}`;
+    $$('[data-et]', examBox).forEach(b => b.onclick = () => examAction(b.dataset.et));
+  }
+  function examTick() {
+    examT.left--; 
+    const t = $('.dm-et-time', examBox), w = $('#dm-et-w', examBox), bar = $('.dm-et-bar i', examBox);
+    if (examT.left <= 0) { clearInterval(examT.run); examT.run = null; examT.left = 0; drawExamBox(); try { navigator.vibrate?.(300); } catch {} return; }
+    if (t) { t.textContent = fmtT(examT.left); t.classList.toggle('is-low', examT.left < 60); }
+    if (w) w.textContent = words();
+    if (bar) bar.style.width = Math.round((1 - examT.left / examT.total) * 100) + '%';
+  }
+  async function examAction(a) {
+    const c = EXAM_TIMES[examT.id];
+    if (a === 'go') {
+      if (examT.run) { clearInterval(examT.run); examT.run = null; }
+      else { if (!examT.total || examT.left <= 0) { examT.total = examT.left = c.min * 60; } examT.run = setInterval(examTick, 1000); }
+    }
+    if (a === 'reset') { clearInterval(examT.run); examT.run = null; examT.total = examT.left = c.min * 60; examT.run = setInterval(examTick, 1000); }
+    if (a === 'rec') {
+      if (examT.rec) { examT.rec.stop(); return; }
+      try {
+        const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+        examT.chunks = []; const r = new MediaRecorder(stream); examT.rec = r;
+        r.ondataavailable = e => examT.chunks.push(e.data);
+        r.onstop = () => { stream.getTracks().forEach(t => t.stop()); if (examT.url) URL.revokeObjectURL(examT.url); examT.url = URL.createObjectURL(new Blob(examT.chunks, { type: r.mimeType })); examT.rec = null; drawExamBox(); };
+        r.start(); if (!examT.run) examAction('go');
+      } catch { examBox.insertAdjacentHTML('beforeend', '<p class="dm-et-hint">Das Mikrofon ist nicht erlaubt. Du kannst trotzdem mit der Uhr üben.</p>'); return; }
+    }
+    drawExamBox();
+  }
+  function placeExamBox() {
+    if (!examT.id || !mainEl.firstElementChild || mainEl.contains(examBox)) return;
+    const anchor = $('main .lesson-head, main .oral-heading, main .oral-tabs');
+    const after = $('main .oral-tabs') || anchor;
+    if (after) after.after(examBox); else mainEl.prepend(examBox);
+  }
+  new MutationObserver(placeExamBox).observe(mainEl, { childList: true });
+  function setupExamBox(p) {
+    const id = p[0] === 'training' ? p[1] : null;
+    if (id !== examT.id) { clearInterval(examT.run); try { examT.rec?.stop(); } catch {} examT = { id, left: 0, total: 0, run: null, rec: null, chunks: [], url: null }; }
+    if (!EXAM_TIMES[id]) { examBox.remove(); examT.id = null; return; }
+    drawExamBox(); placeExamBox();
+  }
+
   /* ---------- Nach dem Laden einer bisherigen Seite ---------- */
   function afterLegacy(p) {
+    setupExamBox(p);
     if (p[0] === 'quellen') {
       const sec = $$('main section').find(s => /Deine Eingaben/.test(s.querySelector('h2')?.textContent || ''));
       if (sec) sec.innerHTML = '<h2>Deine Eingaben</h2><p>In „Üben“ (Sprechen, Schreiben, Hören) und in „Mein Lernweg“ bleiben deine Texte und dein Fortschritt im Speicher deines Browsers – nur auf diesem Gerät. Texte in den Lektionen und im Prüfungstraining bleiben nur, solange die Seite geöffnet ist. Lade wichtige Texte vorher herunter. Freie Texte und die Aussprache werden nicht automatisch bewertet.</p><p>Mehr dazu in der <a href="#datenschutz">Datenschutzerklärung</a>.</p>';
@@ -644,8 +751,8 @@
 
   /* ---------- Router ---------- */
   const legacyRoute = window.route;
-  const NAV = { '': 'start', lernweg: 'wege', wegweiser: 'wege', lernen: 'lernen', lektion: 'lernen', wortschatz: 'lernen', wort: 'lernen', ueben: 'ueben', schreiben: 'ueben', hoeren: 'ueben', kahoot: 'ueben', pruefung: 'pruefung', training: 'pruefung', orientierungskurs: 'pruefung', quellen: 'pruefung', videos: 'videos', 'ueber-mich': 'ueber', material: 'material' };
-  const TITLES = { '': 'Deutsch lernen mit Dennis', lernweg: 'Mein Lernweg', wegweiser: 'Welcher Weg passt?', lernen: 'Lektionen', lektion: 'Lektion', wortschatz: 'Wortschatz', wort: 'Wortkarte', ueben: 'Üben', schreiben: 'Schreib-Bausteine', hoeren: 'Hören', kahoot: 'Kahoot-Quiz', pruefung: 'Prüfungstraining', training: 'Prüfungstraining', orientierungskurs: 'Leben in Deutschland', quellen: 'Prüfungsinfos & Quellen', videos: 'Videos', 'ueber-mich': 'Über mich', impressum: 'Impressum', datenschutz: 'Datenschutz', pinnwand: 'Feedback und Wünsche', material: 'Materialien' };
+  const NAV = { '': 'start', lernweg: 'wege', wegweiser: 'wege', lernen: 'lernen', lektion: 'lernen', wortschatz: 'lernen', wort: 'lernen', ueben: 'ueben', schreiben: 'ueben', hoeren: 'ueben', kahoot: 'ueben', pruefung: 'pruefung', training: 'pruefung', orientierungskurs: 'pruefung', lid: 'pruefung', quellen: 'pruefung', videos: 'videos', 'ueber-mich': 'ueber', material: 'material', lernpakete: 'pakete' };
+  const TITLES = { '': 'Deutsch lernen mit Dennis', lernweg: 'Mein Lernweg', wegweiser: 'Welcher Weg passt?', lernen: 'Lektionen', lektion: 'Lektion', wortschatz: 'Wortschatz', wort: 'Wortkarte', ueben: 'Üben', schreiben: 'Schreib-Bausteine', hoeren: 'Hören', kahoot: 'Kahoot-Quiz', pruefung: 'Prüfungstraining', training: 'Prüfungstraining', orientierungskurs: 'Leben in Deutschland', lid: 'LiD-Trainer', quellen: 'Prüfungsinfos & Quellen', videos: 'Videos', 'ueber-mich': 'Über mich', impressum: 'Impressum', datenschutz: 'Datenschutz', pinnwand: 'Feedback und Wünsche', material: 'Materialien', lernpakete: 'Lernpakete' };
   const OWN = {
     '': () => home(),
     lernweg: p => p[1] ? pathPage(p[1]) : paths(),
@@ -660,7 +767,8 @@
     impressum: () => impressum(),
     datenschutz: () => datenschutz(),
     pinnwand: () => feedback(),
-    material: p => materials(p[1], p[2])
+    material: p => materials(p[1], p[2]),
+    lernpakete: () => packages()
   };
   const ALIAS = { buch: 'lernen', themen: 'lernen', cover: '', praxis: 'ueben', pruefungen: 'pruefung', start: '' };
 
@@ -673,8 +781,8 @@
     stopSpeaking();
     $$('audio').forEach(a => a.pause());
     document.body.dataset.learningLevel = '';
-    const own = OWN[p[0]];
-    if (own) own(p);
+    const own = OWN[p[0]] || DM.routes[p[0]];
+    if (own) { own(p); setupExamBox(p); }
     else { try { legacyRoute(); } catch (e) { console.error(e); home(); } afterLegacy(p); }
     hideMissingDownloads();
     const nav = NAV[p[0]] ?? '';
@@ -684,9 +792,10 @@
     $('header')?.classList.remove('menu-open');
     $('#pl-menu')?.setAttribute('aria-expanded', 'false');
     window.scrollTo({ top: 0, behavior: 'instant' });
+    revealCards();
     // Weitermachen merken: nur Lernseiten
     const routeStr = p.filter(Boolean).join('/');
-    if (['lektion', 'wortschatz', 'ueben', 'hoeren', 'training', 'lernweg', 'orientierungskurs'].includes(p[0]) && routeStr) {
+    if (['lektion', 'wortschatz', 'ueben', 'hoeren', 'training', 'lernweg', 'orientierungskurs', 'lid'].includes(p[0]) && routeStr) {
       mem.visited[routeStr] = Date.now();
       mem.last = { route: routeStr, title: (h1 || TITLES[p[0]] || '').replace(/\.$/, '').slice(0, 48), ts: Date.now() };
       save();
@@ -699,9 +808,22 @@
   /* Menü: Schließen beim Klick außerhalb */
   document.addEventListener('click', e => { const hd = $('header'); if (hd?.classList.contains('menu-open') && !hd.contains(e.target)) { hd.classList.remove('menu-open'); $('#pl-menu')?.setAttribute('aria-expanded', 'false'); } });
 
+  /* Sanftes Einblenden von Karten beim Scrollen (nur ohne „weniger Bewegung“) */
+  const motionOK = window.matchMedia?.('(prefers-reduced-motion: no-preference)').matches && 'IntersectionObserver' in window;
+  const io = motionOK ? new IntersectionObserver(es => es.forEach(en => { if (en.isIntersecting) { en.target.classList.add('dm-in'); io.unobserve(en.target); } }), { rootMargin: '0px 0px -40px 0px' }) : null;
+  function revealCards() {
+    if (!io) return;
+    $$('main .dm-card, main .dm-exam, main .lid-block, main .dm-mat, main .dm-pkg, main .card, main .oral-card').forEach((el, i) => {
+      if (el.dataset.rv) return; el.dataset.rv = 1;
+      if (el.getBoundingClientRect().top < innerHeight) return; // sichtbare Karten nicht verstecken
+      el.classList.add('dm-rv'); el.style.transitionDelay = (i % 4) * 60 + 'ms'; io.observe(el);
+    });
+  }
+
   /* Footer-Jahr */
   const y = $('#dm-year'); if (y) y.textContent = new Date().getFullYear();
 
+  DM.page = page; DM.crumbs = crumbs; DM.note = note; DM.esc = x;
   route();
   DM.speak = speak; DM.loadVideos = loadVideos;
 })();
