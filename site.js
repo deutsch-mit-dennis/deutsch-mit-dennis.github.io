@@ -693,6 +693,9 @@
     }
   };
 
+  /* Bilder, die nicht geladen werden können, ausblenden statt ein kaputtes Symbol zu zeigen */
+  document.addEventListener('error', e => { const t = e.target; if (t && t.tagName === 'IMG' && t.closest('main')) { const f = t.closest('figure'); (f || t).hidden = true; } }, true);
+
   /* Menü: Schließen beim Klick außerhalb */
   document.addEventListener('click', e => { const hd = $('header'); if (hd?.classList.contains('menu-open') && !hd.contains(e.target)) { hd.classList.remove('menu-open'); $('#pl-menu')?.setAttribute('aria-expanded', 'false'); } });
 
