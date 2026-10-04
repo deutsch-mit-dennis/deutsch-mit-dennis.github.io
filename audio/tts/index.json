@@ -1,0 +1,656 @@
+{
+"updated": "2026-10-04T19:47:25Z",
+"engines": [
+"piper"
+],
+"files": {
+"b2-1-01": {
+"v": "8bef36612d",
+"engine": "piper",
+"sig": "8bef36612d",
+"text": "92efc1e291"
+},
+"b2-1-02": {
+"v": "1dbcc4c5a3",
+"engine": "piper",
+"sig": "1dbcc4c5a3",
+"text": "a98dc5883c"
+},
+"b2-1-03": {
+"v": "790e37fe10",
+"engine": "piper",
+"sig": "790e37fe10",
+"text": "f3476ecb0c"
+},
+"b2-1-04": {
+"v": "b341086638",
+"engine": "piper",
+"sig": "b341086638",
+"text": "f277b76b7d"
+},
+"b2-1-05": {
+"v": "5b3d6da719",
+"engine": "piper",
+"sig": "5b3d6da719",
+"text": "7bfb7b423f"
+},
+"b2-1-06": {
+"v": "3a58f9a07e",
+"engine": "piper",
+"sig": "3a58f9a07e",
+"text": "de3119b5be"
+},
+"b2-2-01": {
+"v": "b679430b33",
+"engine": "piper",
+"sig": "b679430b33",
+"text": "03b3ea848c"
+},
+"b2-2-02": {
+"v": "dea55a5737",
+"engine": "piper",
+"sig": "dea55a5737",
+"text": "d847ab1ca3"
+},
+"b2-2-03": {
+"v": "692b56239c",
+"engine": "piper",
+"sig": "692b56239c",
+"text": "9f4d20bdb5"
+},
+"b2-2-04": {
+"v": "af412806d3",
+"engine": "piper",
+"sig": "af412806d3",
+"text": "8a484c6c1e"
+},
+"b2-2-05": {
+"v": "d8325f8473",
+"engine": "piper",
+"sig": "d8325f8473",
+"text": "61966a08ec"
+},
+"b2-2-06": {
+"v": "a64ec6bace",
+"engine": "piper",
+"sig": "a64ec6bace",
+"text": "fdfbc90fdb"
+},
+"b2-3-01": {
+"v": "26e01bb920",
+"engine": "piper",
+"sig": "26e01bb920",
+"text": "6b97716dfd"
+},
+"b2-3-02": {
+"v": "a28d2db70a",
+"engine": "piper",
+"sig": "a28d2db70a",
+"text": "67928efab5"
+},
+"b2-3-03": {
+"v": "6d0336fa86",
+"engine": "piper",
+"sig": "6d0336fa86",
+"text": "bd242af845"
+},
+"b2-3-04": {
+"v": "e3f5f6184c",
+"engine": "piper",
+"sig": "e3f5f6184c",
+"text": "7fe87534ab"
+},
+"b2-3-05": {
+"v": "5c5e1b4766",
+"engine": "piper",
+"sig": "5c5e1b4766",
+"text": "51fafb45ec"
+},
+"b2-3-06": {
+"v": "382ba855f5",
+"engine": "piper",
+"sig": "382ba855f5",
+"text": "1db6ae5b8b"
+},
+"dtz-1-01": {
+"v": "7d848aea14",
+"engine": "piper",
+"sig": "7d848aea14",
+"text": "925e1cf8ca"
+},
+"dtz-1-02": {
+"v": "4a21af50b8",
+"engine": "piper",
+"sig": "4a21af50b8",
+"text": "cff86560d3"
+},
+"dtz-1-03": {
+"v": "d815a0d183",
+"engine": "piper",
+"sig": "d815a0d183",
+"text": "7bc346fb72"
+},
+"dtz-1-04": {
+"v": "fe85c59001",
+"engine": "piper",
+"sig": "fe85c59001",
+"text": "8966520001"
+},
+"dtz-1-05": {
+"v": "290c4c0822",
+"engine": "piper",
+"sig": "290c4c0822",
+"text": "b5ff7f760b"
+},
+"dtz-1-06": {
+"v": "ab23220cbf",
+"engine": "piper",
+"sig": "ab23220cbf",
+"text": "068f00df02"
+},
+"dtz-1-07": {
+"v": "c8b33ed730",
+"engine": "piper",
+"sig": "c8b33ed730",
+"text": "b4e5de60fa"
+},
+"dtz-2-01": {
+"v": "ac5d2cb818",
+"engine": "piper",
+"sig": "ac5d2cb818",
+"text": "3d929bc868"
+},
+"dtz-2-02": {
+"v": "3c77fe2694",
+"engine": "piper",
+"sig": "3c77fe2694",
+"text": "0cced762ec"
+},
+"dtz-2-03": {
+"v": "a4ba3fc097",
+"engine": "piper",
+"sig": "a4ba3fc097",
+"text": "7b48f3ba5c"
+},
+"dtz-2-04": {
+"v": "e39503d68c",
+"engine": "piper",
+"sig": "e39503d68c",
+"text": "bbb3c56976"
+},
+"dtz-2-05": {
+"v": "a3ce934720",
+"engine": "piper",
+"sig": "a3ce934720",
+"text": "d9723a866e"
+},
+"dtz-2-06": {
+"v": "7c4240979a",
+"engine": "piper",
+"sig": "7c4240979a",
+"text": "50eeedb4fb"
+},
+"dtz-2-07": {
+"v": "b63d3dc60a",
+"engine": "piper",
+"sig": "b63d3dc60a",
+"text": "c92ae3bd09"
+},
+"dtz-3-01": {
+"v": "51d5bbccb2",
+"engine": "piper",
+"sig": "51d5bbccb2",
+"text": "e10f22f0af"
+},
+"dtz-3-02": {
+"v": "953a7be35b",
+"engine": "piper",
+"sig": "953a7be35b",
+"text": "5c08494f24"
+},
+"dtz-3-03": {
+"v": "c201fa8899",
+"engine": "piper",
+"sig": "c201fa8899",
+"text": "e6c63b8830"
+},
+"dtz-3-04": {
+"v": "a2739311fa",
+"engine": "piper",
+"sig": "a2739311fa",
+"text": "d95ab2c738"
+},
+"dtz-3-05": {
+"v": "35377af5ad",
+"engine": "piper",
+"sig": "35377af5ad",
+"text": "dae2034b1f"
+},
+"dtz-3-06": {
+"v": "9a36b4c09c",
+"engine": "piper",
+"sig": "9a36b4c09c",
+"text": "bd17494acf"
+},
+"dtz-3-07": {
+"v": "6ed496d52c",
+"engine": "piper",
+"sig": "6ed496d52c",
+"text": "08f355b3b2"
+},
+"dtz-4-01": {
+"v": "0d47cd8739",
+"engine": "piper",
+"sig": "0d47cd8739",
+"text": "64a88ba1a9"
+},
+"dtz-4-02": {
+"v": "7ad04e339f",
+"engine": "piper",
+"sig": "7ad04e339f",
+"text": "c7ba7b4c6f"
+},
+"dtz-4-03": {
+"v": "9efb40c46c",
+"engine": "piper",
+"sig": "9efb40c46c",
+"text": "ce46cb0d79"
+},
+"dtz-4-04": {
+"v": "2e562ab199",
+"engine": "piper",
+"sig": "2e562ab199",
+"text": "9a8092137b"
+},
+"dtz-4-05": {
+"v": "073c136cb0",
+"engine": "piper",
+"sig": "073c136cb0",
+"text": "6aec10b51e"
+},
+"dtz-4-06": {
+"v": "a70930f1f4",
+"engine": "piper",
+"sig": "a70930f1f4",
+"text": "9cd2a9cf68"
+},
+"dtz-4-07": {
+"v": "c8b2eae524",
+"engine": "piper",
+"sig": "c8b2eae524",
+"text": "72b0525444"
+},
+"ex-alltag": {
+"v": "f69dfd6995",
+"engine": "piper",
+"sig": "f69dfd6995",
+"text": "7bb4c972a1"
+},
+"ex-ankommen": {
+"v": "232da53ab2",
+"engine": "piper",
+"sig": "232da53ab2",
+"text": "484c8305cf"
+},
+"ex-arbeit": {
+"v": "d62f7d5c52",
+"engine": "piper",
+"sig": "d62f7d5c52",
+"text": "fbbfd5248e"
+},
+"ex-beschwerde-b2": {
+"v": "23752e88b9",
+"engine": "piper",
+"sig": "23752e88b9",
+"text": "7469eda22c"
+},
+"ex-bewerbung-b2": {
+"v": "f267fff32c",
+"engine": "piper",
+"sig": "f267fff32c",
+"text": "8b9be93892"
+},
+"ex-einkaufen": {
+"v": "0f1c230ba2",
+"engine": "piper",
+"sig": "0f1c230ba2",
+"text": "2847d76e7a"
+},
+"ex-forum-b2": {
+"v": "2e9780fed4",
+"engine": "piper",
+"sig": "2e9780fed4",
+"text": "e43efcbbed"
+},
+"ex-gesundheit": {
+"v": "cde6848cbe",
+"engine": "piper",
+"sig": "cde6848cbe",
+"text": "c0c7c1cb92"
+},
+"ex-kleidung": {
+"v": "6e666a79b5",
+"engine": "piper",
+"sig": "6e666a79b5",
+"text": "3b48e03def"
+},
+"ex-loesungen-b2": {
+"v": "388976e528",
+"engine": "piper",
+"sig": "388976e528",
+"text": "60394b8a54"
+},
+"ex-meinung": {
+"v": "6c219c11b0",
+"engine": "piper",
+"sig": "6c219c11b0",
+"text": "a8e5a77bea"
+},
+"ex-planen": {
+"v": "698362df68",
+"engine": "piper",
+"sig": "698362df68",
+"text": "7d6217c752"
+},
+"ex-reklamation": {
+"v": "ee9662819d",
+"engine": "piper",
+"sig": "ee9662819d",
+"text": "aa797b9853"
+},
+"ex-schule": {
+"v": "d5e6009db1",
+"engine": "piper",
+"sig": "d5e6009db1",
+"text": "50143fb0e3"
+},
+"ex-termine": {
+"v": "743ebe71ef",
+"engine": "piper",
+"sig": "743ebe71ef",
+"text": "0330632df3"
+},
+"ex-unterwegs": {
+"v": "70bce283d6",
+"engine": "piper",
+"sig": "70bce283d6",
+"text": "d345a5012c"
+},
+"ex-wohnen": {
+"v": "fa9bc25fa4",
+"engine": "piper",
+"sig": "fa9bc25fa4",
+"text": "02c379e480"
+},
+"t0210d2db": {
+"v": "3894a5c9ff",
+"engine": "piper",
+"sig": "3894a5c9ff",
+"text": "e5f01263cc"
+},
+"t079682b1": {
+"v": "4f1aee2925",
+"engine": "piper",
+"sig": "4f1aee2925",
+"text": "571ab07cd0"
+},
+"t13c1af60": {
+"v": "d62aacbef4",
+"engine": "piper",
+"sig": "d62aacbef4",
+"text": "5535c07ee4"
+},
+"t16470000": {
+"v": "c991f96962",
+"engine": "piper",
+"sig": "c991f96962",
+"text": "ccc30a4dc4"
+},
+"t176cfab9": {
+"v": "bacccefc3e",
+"engine": "piper",
+"sig": "bacccefc3e",
+"text": "e83ccf47f0"
+},
+"t19a7e00f": {
+"v": "1dc6d046ac",
+"engine": "piper",
+"sig": "1dc6d046ac",
+"text": "af486cefb6"
+},
+"t19b94e8a": {
+"v": "0e0f358225",
+"engine": "piper",
+"sig": "0e0f358225",
+"text": "8fa16851b9"
+},
+"t1ba9709e": {
+"v": "3e89fee1ee",
+"engine": "piper",
+"sig": "3e89fee1ee",
+"text": "2382363007"
+},
+"t2698e6e3": {
+"v": "d872d0f7bb",
+"engine": "piper",
+"sig": "d872d0f7bb",
+"text": "9c6dfcf0ab"
+},
+"t28edb0d9": {
+"v": "fb4439a238",
+"engine": "piper",
+"sig": "fb4439a238",
+"text": "c01dd974dd"
+},
+"t36fc6731": {
+"v": "b2df368310",
+"engine": "piper",
+"sig": "b2df368310",
+"text": "a5333f6723"
+},
+"t382b5639": {
+"v": "6bc8a4a82d",
+"engine": "piper",
+"sig": "6bc8a4a82d",
+"text": "6fa677a401"
+},
+"t39ae4ac3": {
+"v": "d1e9cb253b",
+"engine": "piper",
+"sig": "d1e9cb253b",
+"text": "4b5399f664"
+},
+"t3a06b579": {
+"v": "ef10b784ed",
+"engine": "piper",
+"sig": "ef10b784ed",
+"text": "aa21c594a0"
+},
+"t3de06393": {
+"v": "f9dd266c30",
+"engine": "piper",
+"sig": "f9dd266c30",
+"text": "947318a8f0"
+},
+"t406e4ca9": {
+"v": "944e4f0591",
+"engine": "piper",
+"sig": "944e4f0591",
+"text": "55c302ec1b"
+},
+"t48af6461": {
+"v": "39ca4c4b6a",
+"engine": "piper",
+"sig": "39ca4c4b6a",
+"text": "8ad52b786b"
+},
+"t4d33d75f": {
+"v": "0bfd0d1ddd",
+"engine": "piper",
+"sig": "0bfd0d1ddd",
+"text": "3bb04a3106"
+},
+"t4f6d80b3": {
+"v": "aecf5e67ee",
+"engine": "piper",
+"sig": "aecf5e67ee",
+"text": "02baba00d6"
+},
+"t52c6c36e": {
+"v": "689e72393f",
+"engine": "piper",
+"sig": "689e72393f",
+"text": "5952c5594e"
+},
+"t61b6aa7b": {
+"v": "5ded9d0a1c",
+"engine": "piper",
+"sig": "5ded9d0a1c",
+"text": "c9aeea63eb"
+},
+"t6c19edf7": {
+"v": "a9fb3b6765",
+"engine": "piper",
+"sig": "a9fb3b6765",
+"text": "28dec26ed9"
+},
+"t6c55327d": {
+"v": "a9a295e9c2",
+"engine": "piper",
+"sig": "a9a295e9c2",
+"text": "a27b0ce9fd"
+},
+"t77d93b44": {
+"v": "a4edf57c4b",
+"engine": "piper",
+"sig": "a4edf57c4b",
+"text": "2af7b2cf88"
+},
+"t7e2e7181": {
+"v": "b410fb07a4",
+"engine": "piper",
+"sig": "b410fb07a4",
+"text": "7d27cd53dd"
+},
+"t7e695bb3": {
+"v": "692ab5e6a7",
+"engine": "piper",
+"sig": "692ab5e6a7",
+"text": "74c858adc5"
+},
+"t89308c7b": {
+"v": "3d3b7944c5",
+"engine": "piper",
+"sig": "3d3b7944c5",
+"text": "5357ee8561"
+},
+"t8abf068a": {
+"v": "f6265636ed",
+"engine": "piper",
+"sig": "f6265636ed",
+"text": "bb3ac76b9c"
+},
+"t8d3a5113": {
+"v": "00567c207a",
+"engine": "piper",
+"sig": "00567c207a",
+"text": "4c3d3d35d7"
+},
+"t957aad76": {
+"v": "7dc31a535a",
+"engine": "piper",
+"sig": "7dc31a535a",
+"text": "66f40debbe"
+},
+"t9a555269": {
+"v": "4310524079",
+"engine": "piper",
+"sig": "4310524079",
+"text": "30906d7984"
+},
+"t9ff5730d": {
+"v": "ce9ceaab10",
+"engine": "piper",
+"sig": "ce9ceaab10",
+"text": "4f41c217dc"
+},
+"ta7f9a3c5": {
+"v": "2328a723a5",
+"engine": "piper",
+"sig": "2328a723a5",
+"text": "fe0d4e8c27"
+},
+"tad15ffbd": {
+"v": "4303e4c0af",
+"engine": "piper",
+"sig": "4303e4c0af",
+"text": "db150bdfa6"
+},
+"tbb0d6187": {
+"v": "89daa4dfc3",
+"engine": "piper",
+"sig": "89daa4dfc3",
+"text": "f00384df9e"
+},
+"tc146793c": {
+"v": "a271a192f1",
+"engine": "piper",
+"sig": "a271a192f1",
+"text": "fd5c03b0c8"
+},
+"tc37ac09e": {
+"v": "4b79374326",
+"engine": "piper",
+"sig": "4b79374326",
+"text": "211504f595"
+},
+"tc3b7c5ea": {
+"v": "0d391be711",
+"engine": "piper",
+"sig": "0d391be711",
+"text": "4778226dbd"
+},
+"td0c258a0": {
+"v": "85804ed127",
+"engine": "piper",
+"sig": "85804ed127",
+"text": "e8c255bdbf"
+},
+"td2afc93a": {
+"v": "d4b75424aa",
+"engine": "piper",
+"sig": "d4b75424aa",
+"text": "fd56eb0f46"
+},
+"td6bb11bc": {
+"v": "2e6290974c",
+"engine": "piper",
+"sig": "2e6290974c",
+"text": "0d66fa0a55"
+},
+"td93e425b": {
+"v": "075ec8f6e7",
+"engine": "piper",
+"sig": "075ec8f6e7",
+"text": "49081c3808"
+},
+"te59bec66": {
+"v": "b2c68b17c0",
+"engine": "piper",
+"sig": "b2c68b17c0",
+"text": "5d509797c8"
+},
+"te6eff347": {
+"v": "fdfde2407e",
+"engine": "piper",
+"sig": "fdfde2407e",
+"text": "5b7f12e3ba"
+},
+"tf2242147": {
+"v": "ca0ca00884",
+"engine": "piper",
+"sig": "ca0ca00884",
+"text": "42f8add0cf"
+}
+}
+}
