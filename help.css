@@ -5,3 +5,14 @@
 @media(max-width:720px){.book-controls{padding-right:0;display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:80px}.book-controls p{grid-column:1/-1;grid-row:1}.book-controls>a,.book-controls>span{grid-row:2}.book-controls>a:last-child{margin-right:0}}
 
 .help-suggestions{max-height:none!important;overflow:visible;border:0;padding:12px 0 0}.help-suggestions button{text-align:start}
+
+/* Antwort sofort sichtbar: mehr Platz für den Verlauf, Themen nach der ersten Frage eingeklappt */
+#help-panel{height:min(760px,calc(100dvh - 96px))}
+.help-log{min-height:220px;scroll-behavior:smooth}
+.help-topics-wrap{border-top:1px solid #dce2d5;padding:6px 16px}
+.help-topics-wrap>summary{cursor:pointer;font-size:14px;font-weight:600;color:#2d523e;padding:4px 0;list-style:none}
+.help-topics-wrap>summary::-webkit-details-marker{display:none}
+.help-topics-wrap .help-topics{border-top:0;padding:6px 0 4px;max-height:120px}
+.help-new{animation:helpIn .35s ease-out;border-color:var(--dm-tinte,#2341B5)!important}
+@keyframes helpIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+@media(max-width:520px){#help-panel{height:calc(100dvh - 84px)}.help-log{min-height:180px}}

@@ -1,11 +1,20 @@
-# Nur nötig, wenn die Website über GitHub Pages läuft: holt jeden Morgen neue YouTube-Videos.
-name: YouTube-Videos aktualisieren
+# Holt jeden Morgen neue YouTube-Videos (mit Vorschaubildern) und neue öffentliche Kahoots.
+name: Videos und Kahoots synchronisieren
 on:
   schedule:
     - cron: '17 5 * * *'
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'tools/update-youtube-feed.mjs'
+      - 'tools/update-kahoot-feed.mjs'
+      - '.github/workflows/youtube-feed.yml'
 permissions:
   contents: write
+concurrency:
+  group: repo-bot
+  cancel-in-progress: false
 jobs:
   update:
     runs-on: ubuntu-latest
@@ -14,10 +23,16 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-      - run: node tools/update-youtube-feed.mjs
-      - run: |
-          git config user.name "youtube-feed-bot"
+      - run: npm install --no-save qrcode@1
+      - name: YouTube
+        run: node tools/update-youtube-feed.mjs
+      - name: Kahoot
+        run: node tools/update-kahoot-feed.mjs || echo "Kahoot-Sync übersprungen"
+      - name: Speichern
+        run: |
+          git config user.name "sync-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add youtube-feed.json
-          git diff --cached --quiet || git commit -m "Neue YouTube-Videos"
-          git push
+          git add youtube-feed.json kahoot-feed.json assets/yt assets/kahoot
+          git diff --cached --quiet && exit 0
+          git commit -m "Neue Videos und Kahoots synchronisiert"
+          for i in 1 2 3; do git pull --rebase -q && git push && break; sleep 5; done

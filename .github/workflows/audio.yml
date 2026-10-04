@@ -1,0 +1,52 @@
+# Erzeugt alle Hörtexte als MP3 mit natürlichen Neural-Stimmen (siehe tools/tts/generate.py).
+# Natürlichste Stimmen: In GitHub unter Settings → Secrets and variables → Actions ein Secret
+# ELEVENLABS_API_KEY oder GEMINI_API_KEY (Google AI Studio) anlegen. Danach den Workflow einmal starten
+# (Actions → Hörtexte vertonen → Run workflow). Ohne Schlüssel werden freie Piper-Stimmen benutzt.
+name: Hörtexte vertonen
+on:
+  workflow_dispatch:
+    inputs:
+      force:
+        description: 'Alle Dateien neu erzeugen (true/false)'
+        required: false
+        default: 'false'
+  push:
+    branches: [main]
+    paths:
+      - 'tools/tts/manifest.json'
+      - 'tools/tts/generate.py'
+      - '.github/workflows/audio.yml'
+  schedule:
+    - cron: '41 3 * * *'
+permissions:
+  contents: write
+concurrency:
+  group: repo-bot
+  cancel-in-progress: false
+jobs:
+  tts:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Werkzeuge
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+          pip install -q piper-tts onnxruntime
+      - name: Vertonen
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          TTS_FORCE: ${{ github.event.inputs.force }}
+        run: python tools/tts/generate.py
+      - name: Speichern
+        run: |
+          git config user.name "audio-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add audio/tts
+          git diff --cached --quiet && exit 0
+          git commit -m "Hörtexte vertont"
+          for i in 1 2 3; do git pull --rebase -q && git push && break; sleep 5; done

@@ -1,0 +1,1512 @@
+{
+ "note": "Automatisch erzeugt. Jeder Eintrag wird zu audio/tts/<key>.mp3. Schlüssel t… = FNV-1a-Hash des Textes (siehe site.js).",
+ "entries": [
+  {
+   "key": "td0c258a0",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Hallo, Mila! Ich heiße Ali. Lernst du hier Deutsch?"
+    }
+   ]
+  },
+  {
+   "key": "t382b5639",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Hallo! Ich heiße Mila. Ich wohne in Essen. Ich spreche Ukrainisch und ein bisschen Deutsch."
+    }
+   ]
+  },
+  {
+   "key": "t406e4ca9",
+   "segments": [
+    {
+     "voice": "f3",
+     "text": "Guten Tag! Das Brot kostet drei Euro. Möchten Sie noch etwas?"
+    }
+   ]
+  },
+  {
+   "key": "t13c1af60",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Guten Tag! Ich möchte ein Brot, bitte. Was kostet das Brot? Danke. Auf Wiedersehen!"
+    }
+   ]
+  },
+  {
+   "key": "t89308c7b",
+   "segments": [
+    {
+     "voice": "m3",
+     "text": "Gute Besserung, Ali! Bis Montag."
+    }
+   ]
+  },
+  {
+   "key": "t3a06b579",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Hallo Frau Weber, ich bin krank. Ich kann heute nicht kommen. Ich komme am Montag wieder. Viele Grüße Ali"
+    }
+   ]
+  },
+  {
+   "key": "t52c6c36e",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Wie alt sind deine Kinder?"
+    }
+   ]
+  },
+  {
+   "key": "tf2242147",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Ich habe zwei Kinder. Meine Tochter heißt Lea. Mein Sohn heißt Tim. Meine Eltern wohnen in der Ukraine."
+    }
+   ]
+  },
+  {
+   "key": "t19a7e00f",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Am Donnerstag ist leider nichts mehr frei. Passt Ihnen Freitag um 11 Uhr?"
+    }
+   ]
+  },
+  {
+   "key": "t4f6d80b3",
+   "segments": [
+    {
+     "voice": "f3",
+     "text": "Guten Tag, ich habe morgen um 10 Uhr einen Termin bei Ihnen. Leider kann ich nicht kommen, weil mein Kind krank ist. Kann ich am Donnerstag kommen? Am Vormittag habe ich Zeit. Vielen Dank und freundliche Grüße Mila Petrova"
+    }
+   ]
+  },
+  {
+   "key": "t8d3a5113",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Am Samstag kann ich erst um 16 Uhr. Ist das für dich in Ordnung?"
+    }
+   ]
+  },
+  {
+   "key": "t3de06393",
+   "segments": [
+    {
+     "voice": "m3",
+     "text": "Hallo Omar, hast du am Samstag Zeit? Wir können uns um 15 Uhr am Eingang des Stadtparks treffen. Ich bringe Getränke mit. Kannst du etwas Obst mitbringen? Schreib mir bitte, ob du kommen kannst. Viele Grüße Mila"
+    }
+   ]
+  },
+  {
+   "key": "td6bb11bc",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Der Handwerker kann erst am Montag um 9 Uhr kommen. Passt das?"
+    }
+   ]
+  },
+  {
+   "key": "t36fc6731",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Sehr geehrter Herr Schmitz, seit Montag funktioniert die Heizung in meiner Wohnung nicht. Es ist sehr kalt, besonders im Kinderzimmer. Bitte schicken Sie schnell einen Handwerker. Ich bin am Donnerstag und Freitag ab 14 Uhr zu Hause. Mit freundlichen Grüßen Mila Petrova"
+    }
+   ]
+  },
+  {
+   "key": "t6c55327d",
+   "segments": [
+    {
+     "voice": "f3",
+     "text": "Schade! Ja, Kaffee nächste Woche ist eine gute Idee. Hast du am Dienstag Zeit?"
+    }
+   ]
+  },
+  {
+   "key": "tc146793c",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Liebe Sara, vielen Dank für die Einladung! Leider kann ich am Samstag nicht kommen, weil meine Schwester uns besucht. Wollen wir nächste Woche zusammen einen Kaffee trinken? Ich wünsche dir eine schöne Feier! Viele Grüße Omar"
+    }
+   ]
+  },
+  {
+   "key": "t079682b1",
+   "segments": [
+    {
+     "voice": "m3",
+     "text": "Die Idee gefällt mir. Einige haben aber am Freitag keine Zeit. Können wir einen anderen Tag wählen?"
+    }
+   ]
+  },
+  {
+   "key": "t176cfab9",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Hallo zusammen, ich schlage vor, dass wir am Freitag nach dem Unterricht gemeinsam essen. Wir könnten den Kursraum nutzen, weil es dort genug Tische gibt. Ich bringe einen Salat mit. Könnt ihr bitte bis Mittwoch schreiben, was ihr mitbringen möchtet? Falls der Raum nicht frei ist, könnten wir uns im Park treffen. Was haltet ihr davon? Viele Grüße Mila"
+    }
+   ]
+  },
+  {
+   "key": "t9a555269",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Vielen Dank für Ihre Nachricht. Die Jacke ist derzeit nicht lieferbar. Möchten Sie Ihr Geld zurück?"
+    }
+   ]
+  },
+  {
+   "key": "t4d33d75f",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Sehr geehrte Damen und Herren, am 2. Mai habe ich bei Ihnen eine blaue Jacke bestellt. Die Bestellung hat die Nummer 1234. Leider ist der Reißverschluss kaputt. Deshalb kann ich die Jacke nicht benutzen. Ich möchte Sie bitten, mir eine neue Jacke zu schicken. Wie kann ich die beschädigte Jacke zurücksenden? Vielen Dank für Ihre Antwort. Mit freundlichen Grüßen Mila Petrova"
+    }
+   ]
+  },
+  {
+   "key": "t7e695bb3",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Vielen Dank für Ihre Nachricht. Können Sie uns genau mitteilen, an welchen Tagen es laut war?"
+    }
+   ]
+  },
+  {
+   "key": "t2698e6e3",
+   "segments": [
+    {
+     "voice": "f3",
+     "text": "Sehr geehrte Damen und Herren, ich wende mich an Sie, weil es in unserem Haus seit etwa drei Wochen nachts sehr laut ist. Die Mieter in der Wohnung über mir hören bis 2 Uhr laute Musik. Ich habe bereits mit ihnen gesprochen, aber leider hat sich nichts geändert. Da ich früh aufstehen muss, schlafe ich zu wenig. Deshalb bitte ich Sie, die Mieter an die Hausordnung zu erinnern. Ich würde mich über eine schnelle Antwort freuen. Mit freundlichen Grüßen Mila Petrova"
+    }
+   ]
+  },
+  {
+   "key": "t8abf068a",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Der Kurs findet dienstags von 18 bis 20 Uhr statt. Leider ist er schon voll. Möchten Sie auf die Warteliste?"
+    }
+   ]
+  },
+  {
+   "key": "td2afc93a",
+   "segments": [
+    {
+     "voice": "m3",
+     "text": "Sehr geehrte Damen und Herren, ich habe auf Ihrer Internetseite gelesen, dass Sie im Herbst einen Computerkurs für Anfänger anbieten. Ich hätte gern mehr Informationen dazu. Könnten Sie mir bitte mitteilen, an welchen Tagen der Kurs stattfindet und wie viel er kostet? Außerdem möchte ich wissen, ob ich einen eigenen Laptop brauche. Sie erreichen mich am besten per E-Mail. Vielen Dank im Voraus. Mit freundlichen Grüßen Yusuf Demir"
+    }
+   ]
+  },
+  {
+   "key": "tad15ffbd",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Eine Checkliste finde ich sinnvoll. In unserer Abteilung gibt es aber schon sehr viele Listen. Wie vermeiden wir zusätzliche Arbeit?"
+    }
+   ]
+  },
+  {
+   "key": "tc3b7c5ea",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Liebe Kolleginnen und Kollegen, mir ist aufgefallen, dass bei unseren Schichtwechseln wichtige Informationen manchmal verloren gehen. Dadurch müssen Aufgaben doppelt erledigt werden. Ich würde deshalb vorschlagen, eine kurze gemeinsame Checkliste zu nutzen. Darauf könnten offene Aufgaben und besondere Vorkommnisse stehen. Zwar brauchen wir zunächst etwas Zeit, um die Liste zu erstellen, allerdings könnten wir später viele Rückfragen vermeiden. Damit die Übergabe nicht zu lange dauert, sollten wir uns auf drei Punkte beschränken. Wie wäre es, wenn wir die Checkliste zwei Wochen lang testen und anschließend unsere Erfahrungen besprechen? Ich freue mich auf eure Vorschläge. Viele Grüße Mila"
+    }
+   ]
+  },
+  {
+   "key": "tbb0d6187",
+   "segments": [
+    {
+     "voice": "f3",
+     "text": "Ich brauche zumindest einen Teil der Ware bis Freitag. Können Sie mir den Liefertermin garantieren?"
+    }
+   ]
+  },
+  {
+   "key": "t77d93b44",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Sehr geehrter Herr Weber, vielen Dank für Ihre Nachricht. Bitte entschuldigen Sie, dass Ihre Bestellung noch nicht vollständig geliefert wurde und Sie bisher keine Information dazu erhalten haben. Nach Rücksprache mit unserem Lager ist ein Artikel erst ab Montag verfügbar. Wir können Ihnen anbieten, die bereits vorhandenen Artikel morgen zu versenden. Den fehlenden Artikel würden wir am Montag ohne zusätzliche Versandkosten nachschicken. Alternativ können wir die gesamte Bestellung am Montag versenden. Bitte teilen Sie uns mit, welche Lösung Ihnen lieber ist. Für Rückfragen stehe ich Ihnen gerne zur Verfügung. Mit freundlichen Grüßen Mila Petrova"
+    }
+   ]
+  },
+  {
+   "key": "t6c19edf7",
+   "segments": [
+    {
+     "voice": "m3",
+     "text": "Die Weiterbildung klingt sinnvoll. Das Budget für dieses Jahr ist aber fast aufgebraucht. Gibt es eine günstigere Alternative?"
+    }
+   ]
+  },
+  {
+   "key": "t48af6461",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Sehr geehrte Frau Krüger, ich möchte Sie bitten, mir die Teilnahme an der Weiterbildung „Professionell telefonieren mit Kunden“ am 14. und 15. November zu genehmigen. Die Schulung findet bei der IHK in Hagen statt und kostet 280 Euro. Die Weiterbildung wäre für unser Team hilfreich, da wir zunehmend Anfragen per Telefon bekommen und ich die Inhalte anschließend an die Kolleginnen und Kollegen weitergeben könnte. Meine Aufgaben würde in dieser Zeit Herr Aydın übernehmen; ich habe das bereits mit ihm abgesprochen. Für Rückfragen stehe ich Ihnen gern zur Verfügung. Mit freundlichen Grüßen Mila Petrova"
+    }
+   ]
+  },
+  {
+   "key": "td93e425b",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Ich finde, dann entsteht eine Ungerechtigkeit zwischen den Abteilungen. Wie sollen wir damit umgehen?"
+    }
+   ]
+  },
+  {
+   "key": "te59bec66",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Liebe Kolleginnen und Kollegen, meiner Ansicht nach ist Homeoffice eine gute Möglichkeit – allerdings nicht für alle Abteilungen in gleichem Umfang. Ein wichtiges Argument dafür ist, dass viele von uns lange Fahrtwege haben. Wer zu Hause arbeitet, spart Zeit und kann sich oft besser konzentrieren. In unserer Buchhaltung hat das in der Testphase gut funktioniert. Man könnte zwar einwenden, dass die Zusammenarbeit leidet, allerdings lässt sich das mit festen Teamtagen lösen. In der Produktion oder im Lager ist Homeoffice dagegen kaum möglich. Abschließend möchte ich vorschlagen, dass jede Abteilung selbst eine passende Regelung entwickelt. Viele Grüße Mila"
+    }
+   ]
+  },
+  {
+   "key": "ta7f9a3c5",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Achtung an Gleis 4. Der Regionalexpress nach Dortmund, planmäßige Abfahrt 14 Uhr 12, fährt heute von Gleis 7. Wir bitten um Beachtung."
+    }
+   ]
+  },
+  {
+   "key": "t1ba9709e",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Guten Tag, hier ist die Praxis Doktor Kaya. Frau Novak, Ihr Termin am Mittwoch um zehn Uhr muss leider ausfallen. Wir können Ihnen Donnerstag um halb neun anbieten. Bitte rufen Sie uns bis morgen Mittag zurück."
+    }
+   ]
+  },
+  {
+   "key": "t28edb0d9",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Liebe Kundinnen und Kunden, nur heute bis 20 Uhr: Alle Obst- und Gemüsesorten sind zwanzig Prozent günstiger. Außerdem ist Kasse 3 ab sofort für Sie geöffnet."
+    }
+   ]
+  },
+  {
+   "key": "t61b6aa7b",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Und nun der Verkehr: Auf der A 1 zwischen Hagen und Wuppertal gibt es nach einem Unfall fünf Kilometer Stau. Bitte fahren Sie über die A 43 aus."
+    }
+   ]
+  },
+  {
+   "key": "t16470000",
+   "segments": [
+    {
+     "voice": "f3",
+     "text": "Hallo Mila, hier ist Omar. Wir treffen uns heute nicht um drei, sondern um vier, weil mein Bus Verspätung hat. Und wir treffen uns direkt am Kino, nicht am Bahnhof. Bis dann!"
+    }
+   ]
+  },
+  {
+   "key": "t7e2e7181",
+   "segments": [
+    {
+     "voice": "m3",
+     "text": "Willkommen beim Bürgerbüro. Für Termine zum Personalausweis drücken Sie die Eins. Für Fragen zur Anmeldung einer Wohnung drücken Sie die Zwei. Unsere Öffnungszeiten: Montag bis Freitag von 8 bis 13 Uhr, donnerstags zusätzlich bis 18 Uhr."
+    }
+   ]
+  },
+  {
+   "key": "t0210d2db",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Liebe Eltern, am Freitag endet der Unterricht schon um 11 Uhr 30, weil die Lehrkräfte eine Konferenz haben. Die Nachmittagsbetreuung findet wie immer statt."
+    }
+   ]
+  },
+  {
+   "key": "te6eff347",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Das Wetter für morgen: Im Ruhrgebiet wird es regnerisch und kühl, die Temperaturen erreichen höchstens zwölf Grad. Am Wochenende scheint dann wieder die Sonne."
+    }
+   ]
+  },
+  {
+   "key": "t19b94e8a",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Hallo Frau Jovanović, hier ist Markus Lenz. Das Meeting mit dem Kunden wird auf Donnerstag um neun Uhr verschoben. Könnten Sie bitte bis Mittwochabend die aktuellen Verkaufszahlen vorbereiten und an alle Teilnehmenden schicken? Die Präsentation übernehme ich selbst."
+    }
+   ]
+  },
+  {
+   "key": "t39ae4ac3",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Wegen Wartungsarbeiten ist das Zeiterfassungssystem am Samstag zwischen 6 und 14 Uhr nicht verfügbar. Bitte tragen Sie Ihre Arbeitszeiten in dieser Zeit in die ausliegenden Listen ein. Die Personalabteilung überträgt die Daten am Montag."
+    }
+   ]
+  },
+  {
+   "key": "t9ff5730d",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Hast du schon gehört, dass die Spätschicht ab nächsten Monat eine Stunde früher beginnt?"
+    },
+    {
+     "voice": "m3",
+     "text": "Ja, aber nur in der Logistik. In der Produktion bleibt alles beim Alten."
+    },
+    {
+     "voice": "f1",
+     "text": "Dann muss ich meine Kinderbetreuung neu organisieren."
+    }
+   ]
+  },
+  {
+   "key": "tc37ac09e",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Guten Tag, Schulz von der Firma Brandt. Wir haben gestern 200 Kartons bestellt, brauchen aber dringend 300. Falls die zusätzliche Menge nicht bis Freitag lieferbar ist, nehmen wir vorerst nur die 200 und bestellen den Rest später."
+    }
+   ]
+  },
+  {
+   "key": "t957aad76",
+   "segments": [
+    {
+     "voice": "f3",
+     "text": "Liebe Kolleginnen und Kollegen, Urlaubsanträge für die Zeit zwischen Weihnachten und Neujahr müssen bis zum 15. November über das Mitarbeiterportal gestellt werden. Später eingereichte Anträge können wir leider nur berücksichtigen, wenn die Abteilung zustimmt."
+    }
+   ]
+  },
+  {
+   "key": "dtz-1-01",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Guten Tag, Frau Kowalski, hier ist die Praxis Dr. Yilmaz in Bochum. Leider ist Frau Dr. Yilmaz am Donnerstag krank. Ihr Termin am Donnerstag um 9:30 Uhr fällt deshalb aus. Wir können Ihnen Freitag um 11 Uhr anbieten oder Montag um 8:15 Uhr. Bitte rufen Sie uns kurz zurück. Danke und auf Wiederhören.",
+     "say": "Guten Tag, Frau Kowalski, hier ist die Praxis Doktor Yilmaz in Bochum. Leider ist Frau Doktor Yilmaz am Donnerstag krank. Ihr Termin am Donnerstag um neun Uhr dreißig fällt deshalb aus. Wir können Ihnen Freitag um elf Uhr anbieten oder Montag um acht Uhr fünfzehn. Bitte rufen Sie uns kurz zurück. Danke und auf Wiederhören."
+    }
+   ],
+   "pause": 0.6
+  },
+  {
+   "key": "dtz-1-02",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Hallo Herr Demir, Peters hier von der Hausverwaltung Ruhrblick. Sie hatten wegen der Heizung angerufen. Der Monteur kommt morgen, also am Mittwoch, zwischen 13 und 15 Uhr. Wenn Sie da nicht zu Hause sind, geben Sie den Schlüssel bitte bei Frau Lange im Erdgeschoss ab. Ach so, der Monteur muss auch ins Badezimmer. Danke!",
+     "say": "Hallo Herr Demir, Peters hier von der Hausverwaltung Ruhrblick. Sie hatten wegen der Heizung angerufen. Der Monteur kommt morgen, also am Mittwoch, zwischen dreizehn und fünfzehn Uhr. Wenn Sie da nicht zu Hause sind, geben Sie den Schlüssel bitte bei Frau Lange im Erdgeschoss ab. Ach so, der Monteur muss auch ins Badezimmer. Danke!"
+    }
+   ],
+   "pause": 0.6
+  },
+  {
+   "key": "dtz-1-03",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Information zum RE 2 nach Münster, planmäßige Abfahrt 14:12 Uhr: Dieser Zug fährt heute ausnahmsweise von Gleis 5, nicht von Gleis 3. Die Abfahrt verzögert sich um etwa zehn Minuten. Reisende nach Haltern am See steigen bitte in die vorderen Wagen ein. Wir bitten um Entschuldigung.",
+     "say": "Information zum R E zwei nach Münster, planmäßige Abfahrt vierzehn Uhr zwölf: Dieser Zug fährt heute ausnahmsweise von Gleis fünf, nicht von Gleis drei. Die Abfahrt verzögert sich um etwa zehn Minuten. Reisende nach Haltern am See steigen bitte in die vorderen Wagen ein. Wir bitten um Entschuldigung."
+    }
+   ],
+   "pause": 0.6
+  },
+  {
+   "key": "dtz-1-04",
+   "segments": [
+    {
+     "voice": "f3",
+     "text": "Kita Sonnenblume, Brinkmann, guten Morgen."
+    },
+    {
+     "voice": "f2",
+     "text": "Ja, guten Morgen, mein Name ist Petrova. Ich möchte meine Tochter für die Kita anmelden. Sie ist jetzt zwei Jahre alt."
+    },
+    {
+     "voice": "f3",
+     "text": "Ah, schön. Haben Sie Ihre Tochter schon im Kita-Navigator der Stadt angemeldet?"
+    },
+    {
+     "voice": "f2",
+     "text": "Äh, nein. Was ist das?"
+    },
+    {
+     "voice": "f3",
+     "text": "Das ist eine Internetseite. Da melden Sie Ihr Kind an und wählen drei Kitas aus. Sie können aber auch am Dienstag zu unserem Infonachmittag kommen, von 15 bis 17 Uhr. Dann helfe ich Ihnen dabei.",
+     "say": "Das ist eine Internetseite. Da melden Sie Ihr Kind an und wählen drei Kitas aus. Sie können aber auch am Dienstag zu unserem Infonachmittag kommen, von fünfzehn bis siebzehn Uhr. Dann helfe ich Ihnen dabei."
+    },
+    {
+     "voice": "f2",
+     "text": "Dienstag passt gut. Muss ich etwas mitbringen?"
+    },
+    {
+     "voice": "f3",
+     "text": "Ja, bitte die Geburtsurkunde und den Impfpass von Ihrer Tochter."
+    },
+    {
+     "voice": "f2",
+     "text": "Gut, mache ich. Vielen Dank!"
+    }
+   ],
+   "pause": 0.6
+  },
+  {
+   "key": "dtz-1-05",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Also, ich finde, der Sonntag soll ein freier Tag bleiben. Ich arbeite selbst im Supermarkt, an der Kasse. Unter der Woche habe ich oft lange Schichten. Der Sonntag ist der einzige Tag, an dem meine ganze Familie zusammen frühstücken kann. Das möchte ich nicht verlieren."
+    }
+   ],
+   "pause": 0.6
+  },
+  {
+   "key": "dtz-1-06",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Ich bin dafür. Ich arbeite im Schichtdienst bei einer Spedition in Duisburg, manchmal auch samstags. Wann soll ich denn einkaufen? Unter der Woche schaffe ich es oft nicht vor acht Uhr abends. Ein paar Stunden am Sonntag wären für Leute wie mich wirklich praktisch."
+    }
+   ],
+   "pause": 0.6
+  },
+  {
+   "key": "dtz-1-07",
+   "segments": [
+    {
+     "voice": "f3",
+     "text": "Hm, schwierige Frage. Ich glaube, es muss nicht jeder Laden am Sonntag offen sein. Bäckereien und kleine Kioske, die gibt es ja schon, und das reicht eigentlich. Wer am Sonntag Milch braucht, findet immer etwas. Große Supermärkte müssen nicht öffnen."
+    }
+   ],
+   "pause": 0.6
+  },
+  {
+   "key": "dtz-2-01",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Guten Tag, hier ist die Volkshochschule Essen, Anmeldung. Das ist eine Nachricht für die Teilnehmenden im Kurs „Deutsch am Computer“. Der Kurs am Montag, dem 12. Oktober, fällt leider aus, weil die Kursleiterin krank ist. Wir holen die Stunde am Montag, dem 19. Oktober, nach. Gleiche Uhrzeit, aber in Raum 204 statt in Raum 110. Vielen Dank.",
+     "say": "Guten Tag, hier ist die Volkshochschule Essen, Anmeldung. Das ist eine Nachricht für die Teilnehmenden im Kurs „Deutsch am Computer“. Der Kurs am Montag, dem zwölften Oktober, fällt leider aus, weil die Kursleiterin krank ist. Wir holen die Stunde am Montag, dem neunzehnten Oktober, nach. Gleiche Uhrzeit, aber in Raum zweihundertvier statt in Raum hundertzehn. Vielen Dank."
+    }
+   ],
+   "pause": 0.6
+  },
+  {
+   "key": "dtz-2-02",
+   "segments": [
+    {
+     "voice": "m3",
+     "text": "Und jetzt die Verkehrslage für das Ruhrgebiet: Auf der A 40 in Richtung Dortmund gibt es zwischen Essen-Frillendorf und Gelsenkirchen fünf Kilometer Stau nach einem Unfall. Planen Sie 30 Minuten mehr ein oder fahren Sie besser über die A 42. Auf der A 43 bei Bochum ist die Baustelle seit heute Morgen beendet. Dort läuft der Verkehr wieder normal.",
+     "say": "Und jetzt die Verkehrslage für das Ruhrgebiet: Auf der A vierzig in Richtung Dortmund gibt es zwischen Essen-Frillendorf und Gelsenkirchen fünf Kilometer Stau nach einem Unfall. Planen Sie dreißig Minuten mehr ein oder fahren Sie besser über die A zweiundvierzig. Auf der A dreiundvierzig bei Bochum ist die Baustelle seit heute Morgen beendet. Dort läuft der Verkehr wieder normal."
+    }
+   ],
+   "pause": 0.6
+  },
+  {
+   "key": "dtz-2-03",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Liebe Kundinnen und Kunden, nur noch heute bis 18 Uhr: Alle Obst- und Gemüsesorten aus unserer Region sind 20 Prozent günstiger. Und bitte beachten Sie: Kasse 3 ist heute nur für Kartenzahlung geöffnet. Wenn Sie bar bezahlen möchten, gehen Sie bitte zu Kasse 1 oder 2. Vielen Dank für Ihren Einkauf.",
+     "say": "Liebe Kundinnen und Kunden, nur noch heute bis achtzehn Uhr: Alle Obst- und Gemüsesorten aus unserer Region sind zwanzig Prozent günstiger. Und bitte beachten Sie: Kasse drei ist heute nur für Kartenzahlung geöffnet. Wenn Sie bar bezahlen möchten, gehen Sie bitte zu Kasse eins oder zwei. Vielen Dank für Ihren Einkauf."
+    }
+   ],
+   "pause": 0.6
+  },
+  {
+   "key": "dtz-2-04",
+   "segments": [
+    {
+     "voice": "f3",
+     "text": "Guten Tag, was kann ich für Sie tun?"
+    },
+    {
+     "voice": "m3",
+     "text": "Guten Tag. Ich bin letzte Woche umgezogen, von Bochum nach Dortmund, und ich möchte mich ummelden."
+    },
+    {
+     "voice": "f3",
+     "text": "Gut. Haben Sie einen Termin?"
+    },
+    {
+     "voice": "m3",
+     "text": "Ja, um 10:20 Uhr. Ich bin ein bisschen zu früh, oder?",
+     "say": "Ja, um zehn Uhr zwanzig. Ich bin ein bisschen zu früh, oder?"
+    },
+    {
+     "voice": "f3",
+     "text": "Kein Problem. Ich brauche Ihren Ausweis und die Wohnungsgeberbestätigung von Ihrem Vermieter."
+    },
+    {
+     "voice": "m3",
+     "text": "Die Bestätigung … Moment … ja, hier. Und den Ausweis habe ich auch."
+    },
+    {
+     "voice": "f3",
+     "text": "Danke. Wohnen Sie allein in der Wohnung?"
+    },
+    {
+     "voice": "m3",
+     "text": "Nein, mit meiner Frau. Sie kommt aber nächste Woche selbst, sie arbeitet heute."
+    },
+    {
+     "voice": "f3",
+     "text": "Das geht. Sie braucht dann aber einen eigenen Termin. Den kann sie online buchen."
+    },
+    {
+     "voice": "m3",
+     "text": "Okay, ich sage es ihr. Danke schön."
+    }
+   ],
+   "pause": 0.6
+  },
+  {
+   "key": "dtz-2-05",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Mein Sohn hat mit neun Jahren sein erstes Handy bekommen. Er fährt allein mit dem Bus zur Schule, und ich wollte ihn erreichen können. Aber wir haben klare Regeln: Beim Essen und nach acht Uhr abends bleibt das Handy in der Küche. Das klappt eigentlich ganz gut."
+    }
+   ],
+   "pause": 0.6
+  },
+  {
+   "key": "dtz-2-06",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Ich arbeite als Lehrerin an einer Grundschule in Oberhausen und sehe jeden Tag, wie müde manche Kinder sind, weil sie nachts spielen. Ich finde, ein Smartphone braucht man frühestens mit zwölf. Vorher reicht ein einfaches Telefon ohne Internet völlig aus."
+    }
+   ],
+   "pause": 0.6
+  },
+  {
+   "key": "dtz-2-07",
+   "segments": [
+    {
+     "voice": "m3",
+     "text": "Ehrlich gesagt kann man das nicht verbieten. Alle Freunde haben eins, und dann ist das eigene Kind allein. Viel wichtiger finde ich, dass die Eltern selbst ein gutes Beispiel sind. Wenn ich die ganze Zeit aufs Handy schaue, warum soll mein Kind das nicht tun?"
+    }
+   ],
+   "pause": 0.6
+  },
+  {
+   "key": "dtz-3-01",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Ja, guten Tag, Frau Schneider, hier ist die Autowerkstatt Krüger aus Herne. Ihr Wagen ist fertig. Wir mussten nur die Bremsen vorne wechseln, nicht hinten. Deshalb wird es billiger: 280 Euro statt 450. Sie können das Auto heute bis 18 Uhr abholen. Morgen ist Samstag, da haben wir geschlossen. Tschüss!",
+     "say": "Ja, guten Tag, Frau Schneider, hier ist die Autowerkstatt Krüger aus Herne. Ihr Wagen ist fertig. Wir mussten nur die Bremsen vorne wechseln, nicht hinten. Deshalb wird es billiger: zweihundertachtzig Euro statt vierhundertfünfzig. Sie können das Auto heute bis achtzehn Uhr abholen. Morgen ist Samstag, da haben wir geschlossen. Tschüss!"
+    }
+   ],
+   "pause": 0.6
+  },
+  {
+   "key": "dtz-3-02",
+   "segments": [
+    {
+     "voice": "f3",
+     "text": "Hi Nadia, ich bin's, Julia. Du, das mit morgen Nachmittag klappt bei mir leider nicht, ich muss länger arbeiten. Können wir uns stattdessen am Sonntag treffen? Nicht im Café am Markt, das hat sonntags zu, sondern lieber im Westpark, am Eingang bei der Jahrhunderthalle. So um drei? Schreib mir einfach kurz. Bis dann!"
+    }
+   ],
+   "pause": 0.6
+  },
+  {
+   "key": "dtz-3-03",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Und hier noch ein Tipp für das Wochenende: Am Samstag und Sonntag feiert Herne das Stadtfest in der Innenstadt, mit Musik, Essen aus vielen Ländern und einem Flohmarkt. Wichtig für alle, die mit dem Auto kommen: Die Bahnhofstraße ist das ganze Wochenende gesperrt. Nehmen Sie lieber die U-Bahn. Die U 35 fährt bis Mitternacht alle zehn Minuten.",
+     "say": "Und hier noch ein Tipp für das Wochenende: Am Samstag und Sonntag feiert Herne das Stadtfest in der Innenstadt, mit Musik, Essen aus vielen Ländern und einem Flohmarkt. Wichtig für alle, die mit dem Auto kommen: Die Bahnhofstraße ist das ganze Wochenende gesperrt. Nehmen Sie lieber die U-Bahn. Die U fünfunddreißig fährt bis Mitternacht alle zehn Minuten."
+    }
+   ],
+   "pause": 0.6
+  },
+  {
+   "key": "dtz-3-04",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "So, Frau Rahimi, Sie suchen also eine Stelle im Einzelhandel?"
+    },
+    {
+     "voice": "f2",
+     "text": "Ja, genau. Ich habe in meinem Land sechs Jahre in einem Bekleidungsgeschäft gearbeitet."
+    },
+    {
+     "voice": "m2",
+     "text": "Sehr gut. Haben Sie Ihren Lebenslauf schon auf Deutsch?"
+    },
+    {
+     "voice": "f2",
+     "text": "Ja, aber ich bin nicht sicher, ob er gut ist. Und ein Anschreiben habe ich noch nicht."
+    },
+    {
+     "voice": "m2",
+     "text": "Kein Problem. Wir haben einen Bewerbungskurs, jeden Mittwoch von neun bis zwölf, hier im Haus. Da schreiben Sie das Anschreiben zusammen mit einer Trainerin."
+    },
+    {
+     "voice": "f2",
+     "text": "Mittwochs? Hm, mittwochs vormittags habe ich selbst Deutschkurs."
+    },
+    {
+     "voice": "m2",
+     "text": "Dann gibt es noch den Kurs am Donnerstag, aber erst ab dem 5. November.",
+     "say": "Dann gibt es noch den Kurs am Donnerstag, aber erst ab dem fünften November."
+    },
+    {
+     "voice": "f2",
+     "text": "Das ist besser. Bitte melden Sie mich dafür an."
+    }
+   ],
+   "pause": 0.6
+  },
+  {
+   "key": "dtz-3-05",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Ich fahre seit zwei Jahren jeden Tag mit dem Rad zur Arbeit, ungefähr sechs Kilometer. Am Anfang war das anstrengend, aber jetzt fühle ich mich viel fitter. Und ich spare viel Geld für Benzin und Parkplatz. Nur im Winter, wenn es glatt ist, nehme ich den Bus."
+    }
+   ],
+   "pause": 0.6
+  },
+  {
+   "key": "dtz-3-06",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Na ja, ich bin 67 und habe Probleme mit dem Knie. Für mich ist das Fahrrad keine Lösung. Außerdem sind die Radwege hier in Duisburg oft schlecht, manchmal hört der Weg einfach auf. Solange die Stadt das nicht verbessert, fahre ich weiter mit dem Auto.",
+     "say": "Na ja, ich bin siebenundsechzig und habe Probleme mit dem Knie. Für mich ist das Fahrrad keine Lösung. Außerdem sind die Radwege hier in Duisburg oft schlecht, manchmal hört der Weg einfach auf. Solange die Stadt das nicht verbessert, fahre ich weiter mit dem Auto."
+    }
+   ],
+   "pause": 0.6
+  },
+  {
+   "key": "dtz-3-07",
+   "segments": [
+    {
+     "voice": "f3",
+     "text": "Ich finde die Idee gut, aber mit drei Kindern ist das nicht so einfach. Wir haben uns jetzt ein Lastenrad gekauft, zusammen mit zwei anderen Familien aus unserem Haus. Für den Einkauf und den Weg zur Kita ist das super. Für längere Fahrten haben wir noch das Auto."
+    }
+   ],
+   "pause": 0.6
+  },
+  {
+   "key": "dtz-4-01",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Guten Tag, hier spricht Frau Wagner von den Stadtwerken Bochum. Wir möchten am Dienstag, dem 3. November, Ihren Stromzähler ablesen. Unser Mitarbeiter kommt zwischen 8 und 12 Uhr. Wenn Sie nicht da sind, können Sie den Zählerstand auch selbst auf unserer Internetseite eingeben, bis spätestens zum 10. November. Vielen Dank.",
+     "say": "Guten Tag, hier spricht Frau Wagner von den Stadtwerken Bochum. Wir möchten am Dienstag, dem dritten November, Ihren Stromzähler ablesen. Unser Mitarbeiter kommt zwischen acht und zwölf Uhr. Wenn Sie nicht da sind, können Sie den Zählerstand auch selbst auf unserer Internetseite eingeben, bis spätestens zum zehnten November. Vielen Dank."
+    }
+   ],
+   "pause": 0.6
+  },
+  {
+   "key": "dtz-4-02",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Achtung, eine wichtige Information für unsere Badegäste: Wegen einer Veranstaltung schließt das Hallenbad heute schon um 17 Uhr. Bitte verlassen Sie das Schwimmbecken spätestens um 16:30 Uhr. Die Sauna bleibt wie gewohnt bis 21 Uhr geöffnet. Morgen gelten wieder die normalen Öffnungszeiten. Vielen Dank für Ihr Verständnis.",
+     "say": "Achtung, eine wichtige Information für unsere Badegäste: Wegen einer Veranstaltung schließt das Hallenbad heute schon um siebzehn Uhr. Bitte verlassen Sie das Schwimmbecken spätestens um sechzehn Uhr dreißig. Die Sauna bleibt wie gewohnt bis einundzwanzig Uhr geöffnet. Morgen gelten wieder die normalen Öffnungszeiten. Vielen Dank für Ihr Verständnis."
+    }
+   ],
+   "pause": 0.6
+  },
+  {
+   "key": "dtz-4-03",
+   "segments": [
+    {
+     "voice": "m3",
+     "text": "Und nun zu den Nachrichten aus der Region: Morgen streiken die Beschäftigten der städtischen Verkehrsbetriebe. In Bochum und Gelsenkirchen fahren deshalb ab drei Uhr morgens keine Busse und Straßenbahnen. Die S-Bahnen und Regionalzüge sind nicht betroffen, sie fahren normal. Am Donnerstag soll der Verkehr wieder nach Plan laufen."
+    }
+   ],
+   "pause": 0.6
+  },
+  {
+   "key": "dtz-4-04",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "So, das ist das Wohnzimmer. Schön hell, oder?"
+    },
+    {
+     "voice": "f2",
+     "text": "Ja, sehr schön. Und der Balkon geht nach Süden?"
+    },
+    {
+     "voice": "m1",
+     "text": "Genau, den ganzen Nachmittag Sonne."
+    },
+    {
+     "voice": "f2",
+     "text": "Wie hoch ist denn die Miete genau? In der Anzeige stand 620 Euro.",
+     "say": "Wie hoch ist denn die Miete genau? In der Anzeige stand sechshundertzwanzig Euro."
+    },
+    {
+     "voice": "m1",
+     "text": "Das ist die Kaltmiete. Dazu kommen noch 180 Euro Nebenkosten, also insgesamt 800.",
+     "say": "Das ist die Kaltmiete. Dazu kommen noch hundertachtzig Euro Nebenkosten, also insgesamt achthundert."
+    },
+    {
+     "voice": "f2",
+     "text": "Hm, okay. Und die Heizung, ist die da schon drin?"
+    },
+    {
+     "voice": "m1",
+     "text": "Ja, die Heizkosten sind in den Nebenkosten. Nur den Strom zahlen Sie extra."
+    },
+    {
+     "voice": "f2",
+     "text": "Gut. Ab wann ist die Wohnung frei?"
+    },
+    {
+     "voice": "m1",
+     "text": "Ab dem ersten Dezember. Wenn Sie Interesse haben, schicken Sie mir bitte bis Freitag eine Kopie von Ihren letzten drei Gehaltsabrechnungen."
+    },
+    {
+     "voice": "f2",
+     "text": "Mache ich, gerne."
+    }
+   ],
+   "pause": 0.6
+  },
+  {
+   "key": "dtz-4-05",
+   "segments": [
+    {
+     "voice": "f3",
+     "text": "Ich habe zuerst nur mit Apps gelernt, aber nach einem halben Jahr konnte ich immer noch nicht richtig sprechen. Jetzt besuche ich einen Integrationskurs in Hagen. Die Gruppe ist super, wir sprechen jeden Tag, und die Lehrerin korrigiert uns. Ohne Kurs geht es für mich nicht."
+    }
+   ],
+   "pause": 0.6
+  },
+  {
+   "key": "dtz-4-06",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Ich arbeite als Elektriker auf Baustellen, und da lerne ich am meisten. Meine Kollegen sprechen nur Deutsch, manchmal auch Ruhrdeutsch. Am Anfang habe ich wenig verstanden, aber man gewöhnt sich daran. Und wenn ich etwas nicht weiß, frage ich einfach nach. Für mich ist der Alltag die beste Schule."
+    }
+   ],
+   "pause": 0.6
+  },
+  {
+   "key": "dtz-4-07",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Ich habe zwei kleine Kinder und kann nicht jeden Tag in einen Kurs gehen. Deshalb lerne ich abends online, mit Videos und einer Lerngruppe im Internet. Einmal pro Woche treffe ich außerdem eine Tandempartnerin im Café. Das hilft mir beim Sprechen sehr."
+    }
+   ],
+   "pause": 0.6
+  },
+  {
+   "key": "b2-1-01",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Guten Tag, Frau Becker, hier ist Stefan Brandt von Brandt Verpackungen in Hamm. Es geht um Ihre Bestellung 4711, also die Kartons und das Füllmaterial. Leider hat unser Zulieferer Probleme mit dem Papier. Deshalb können wir nicht wie vereinbart am Montag liefern, sondern frühestens am Donnerstag. Wenn das für Sie zu spät ist, könnten wir eine Teillieferung schicken, etwa die Hälfte der Kartons schon am Dienstag. Rufen Sie mich bitte bis morgen Mittag zurück, unter 02381 88420. Vielen Dank.",
+     "say": "Guten Tag, Frau Becker, hier ist Stefan Brandt von Brandt Verpackungen in Hamm. Es geht um Ihre Bestellung siebenundvierzig elf, also die Kartons und das Füllmaterial. Leider hat unser Zulieferer Probleme mit dem Papier. Deshalb können wir nicht wie vereinbart am Montag liefern, sondern frühestens am Donnerstag. Wenn das für Sie zu spät ist, könnten wir eine Teillieferung schicken, etwa die Hälfte der Kartons schon am Dienstag. Rufen Sie mich bitte bis morgen Mittag zurück, unter null zwei drei acht eins, acht acht vier zwei null. Vielen Dank."
+    }
+   ],
+   "pause": 0.6
+  },
+  {
+   "key": "b2-1-02",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Hallo Herr Nowicki, hier ist Claudia Lehmann aus der Personalabteilung. Ich rufe wegen Ihrer Fortbildung zum Thema Arbeitssicherheit an. Die Kostenübernahme ist genehmigt, aber mir fehlt noch Ihre unterschriebene Anmeldung. Könnten Sie die bitte bis Freitag einscannen und mir per Mail schicken? Das Original brauche ich nicht. Und noch etwas: Die Fortbildung findet nicht in Essen statt, wie ursprünglich geplant, sondern in Mülheim an der Ruhr. Die genaue Adresse schicke ich Ihnen noch. Danke und bis bald."
+    }
+   ],
+   "pause": 0.6
+  },
+  {
+   "key": "b2-1-03",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Gut, dann fangen wir an. Wichtigster Punkt heute: die Wochen vor Weihnachten. Wie jedes Jahr haben wir im Dezember fast doppelt so viele Sendungen wie sonst, und gleichzeitig liegen schon sieben Urlaubsanträge für diese Zeit vor."
+    },
+    {
+     "voice": "m2",
+     "text": "Sieben? Das schaffen wir nie. Wir sind ja jetzt schon knapp besetzt, seit Jonas in Elternzeit ist."
+    },
+    {
+     "voice": "f2",
+     "text": "Eben. Deshalb mein Vorschlag: Zwischen dem ersten und dem zwanzigsten Dezember genehmigen wir pro Schicht höchstens einen Urlaub. Wer zuerst beantragt hat, bekommt ihn."
+    },
+    {
+     "voice": "m3",
+     "text": "Hm, „wer zuerst kommt“ finde ich nicht ganz fair. Kollegen mit Schulkindern können ja nur in den Ferien weg. Und die Weihnachtsferien beginnen erst am dreiundzwanzigsten."
+    },
+    {
+     "voice": "f2",
+     "text": "Das stimmt, aber die Zeit ab dem dreiundzwanzigsten betrifft meine Regel gar nicht. Da wird es ja wieder ruhiger."
+    },
+    {
+     "voice": "m2",
+     "text": "Und was ist mit Aushilfen? Letztes Jahr hatten wir doch drei Studenten von der Zeitarbeitsfirma."
+    },
+    {
+     "voice": "f2",
+     "text": "Ja, das hat gut geklappt. Ich habe schon nachgefragt: Wir können wieder bis zu vier Leute bekommen, aber nur, wenn wir bis Ende Oktober bestellen. Herr Kuhn, könnten Sie bis Freitag ausrechnen, wie viele wir wirklich brauchen?"
+    },
+    {
+     "voice": "m3",
+     "text": "Mach ich. Ich schaue mir die Zahlen vom letzten Jahr an."
+    },
+    {
+     "voice": "m2",
+     "text": "Und Überstunden? Die Leute haben vom Sommer noch einige auf dem Konto."
+    },
+    {
+     "voice": "f2",
+     "text": "Neue Überstunden möchte ich möglichst vermeiden. Die Kollegen sollen ihre alten Stunden im Januar abbauen können. Gut, dann schreibe ich die Urlaubsregel ins Protokoll und schicke sie morgen an alle."
+    }
+   ],
+   "pause": 0.6
+  },
+  {
+   "key": "b2-1-04",
+   "segments": [
+    {
+     "voice": "f3",
+     "text": "Küchenstudio Reinhardt, Sie sprechen mit Melanie Vogt, guten Tag."
+    },
+    {
+     "voice": "m1",
+     "text": "Ja, Lindner hier, guten Tag. Sie haben uns vor zwei Wochen eine Küche geliefert und eingebaut. Grundsätzlich sind wir zufrieden, aber eine Schranktür hängt schief, und an der Spülmaschine ist die Blende beschädigt. Da ist ein deutlicher Kratzer."
+    },
+    {
+     "voice": "f3",
+     "text": "Oh, das tut mir leid. Haben Sie den Kratzer schon bei der Montage bemerkt?"
+    },
+    {
+     "voice": "m1",
+     "text": "Nein, leider erst am Abend, als die Monteure weg waren. Ich habe aber gleich Fotos gemacht."
+    },
+    {
+     "voice": "f3",
+     "text": "Sehr gut. Schicken Sie mir die Fotos bitte per Mail, dann bestelle ich eine neue Blende beim Hersteller. Das dauert erfahrungsgemäß etwa drei Wochen. Die Schranktür kann unser Monteur aber auch früher einstellen, das sind nur ein paar Minuten."
+    },
+    {
+     "voice": "m1",
+     "text": "Muss ich dafür etwas bezahlen?"
+    },
+    {
+     "voice": "f3",
+     "text": "Nein, beides läuft über die Gewährleistung. Am besten kommt der Monteur einmal und erledigt alles zusammen, wenn die Blende da ist. Oder möchten Sie lieber zwei Termine?"
+    },
+    {
+     "voice": "m1",
+     "text": "Ein Termin reicht. Die Tür stört uns nicht so sehr."
+    },
+    {
+     "voice": "f3",
+     "text": "Gut, dann melde ich mich, sobald das Teil da ist."
+    }
+   ],
+   "pause": 0.6
+  },
+  {
+   "key": "b2-1-05",
+   "segments": [
+    {
+     "voice": "m3",
+     "text": "Jana, hast du kurz Zeit? Ich komme mit dem neuen Ticketsystem noch nicht so richtig klar."
+    },
+    {
+     "voice": "f2",
+     "text": "Klar. Wo hakt's denn?"
+    },
+    {
+     "voice": "m3",
+     "text": "Wenn ein Mieter einen Schaden meldet, lege ich ein Ticket an, okay. Aber ich weiß nie, welche Priorität ich auswählen soll."
+    },
+    {
+     "voice": "f2",
+     "text": "Ah, das ist eigentlich einfach. „Hoch“ nur, wenn Gefahr besteht oder die Wohnung nicht nutzbar ist, also Wasserschaden, Heizungsausfall im Winter, so was. Ein tropfender Wasserhahn ist „normal“."
+    },
+    {
+     "voice": "m3",
+     "text": "Und wer bekommt das Ticket dann?"
+    },
+    {
+     "voice": "f2",
+     "text": "Bei „hoch“ geht automatisch eine SMS an den Hausmeister. Bei „normal“ landet es in einer Liste, und Herr Sommer verteilt die Aufträge jeden Morgen um neun."
+    },
+    {
+     "voice": "m3",
+     "text": "Ah, deshalb hat sich der Hausmeister gestern beschwert. Ich habe eine kaputte Briefkastenklappe auf „hoch“ gesetzt."
+    },
+    {
+     "voice": "f2",
+     "text": "Ja, das passiert am Anfang jedem. Es gibt übrigens eine Kurzanleitung im Intranet, unter „Schulungen“. Schau da mal rein."
+    }
+   ],
+   "pause": 0.6
+  },
+  {
+   "key": "b2-1-06",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Vier Tage arbeiten, drei Tage frei, und das bei vollem Gehalt? Was nach einem Traum klingt, testet ein Dortmunder IT-Dienstleister mit rund 60 Beschäftigten seit einem Jahr. Die Arbeitszeit wurde von 40 auf 36 Stunden pro Woche reduziert. Geschäftsführer Thomas Rüdiger zieht eine erste Bilanz.",
+     "say": "Vier Tage arbeiten, drei Tage frei, und das bei vollem Gehalt? Was nach einem Traum klingt, testet ein Dortmunder IT-Dienstleister mit rund sechzig Beschäftigten seit einem Jahr. Die Arbeitszeit wurde von vierzig auf sechsunddreißig Stunden pro Woche reduziert. Geschäftsführer Thomas Rüdiger zieht eine erste Bilanz."
+    },
+    {
+     "voice": "m2",
+     "text": "Ehrlich gesagt war ich am Anfang skeptisch. Aber die Zahl der Krankheitstage ist deutlich gesunken, und wir bekommen viel mehr Bewerbungen. Gerade im Wettbewerb um Fachkräfte ist das ein echter Vorteil. Die Produktivität ist ungefähr gleich geblieben. Wir arbeiten einfach konzentrierter, zum Beispiel mit kürzeren Meetings."
+    },
+    {
+     "voice": "f1",
+     "text": "Doch nicht alles läuft reibungslos. Weil die Kunden auch freitags Ansprechpartner brauchen, arbeitet ein Teil des Teams montags bis donnerstags, der andere Teil dienstags bis freitags. Das macht die Planung aufwendiger. Projektleiterin Sandra Kaya sieht das Modell gemischt."
+    },
+    {
+     "voice": "f3",
+     "text": "Privat ist es super, ich habe endlich Zeit für meine Familie und für Sport. Aber an den vier Tagen ist der Druck schon höher. Man muss die gleiche Arbeit in weniger Zeit schaffen, und Pausen kommen manchmal zu kurz."
+    },
+    {
+     "voice": "f1",
+     "text": "Arbeitsforscher betonen, dass sich das Modell nicht für jede Branche eignet. In der Pflege oder im Einzelhandel etwa ist es schwer umzusetzen. Das Dortmunder Unternehmen will die Vier-Tage-Woche trotzdem ein weiteres Jahr fortsetzen und im Frühjahr alle Beschäftigten befragen."
+    }
+   ],
+   "pause": 0.6
+  },
+  {
+   "key": "b2-2-01",
+   "segments": [
+    {
+     "voice": "m3",
+     "text": "Hallo Frau Szymańska, hier ist Kevin Hartmann vom IT-Support. Sie hatten heute Morgen ein Ticket geschrieben, weil Sie sich nicht im Kundenportal anmelden können. Das liegt an der Umstellung auf die Zwei-Faktor-Anmeldung vom letzten Wochenende. Sie müssen auf Ihrem Diensthandy einmalig die Authenticator-App einrichten. Ich kann Ihnen das gern am Telefon erklären, das dauert etwa zehn Minuten. Ich bin heute noch bis 16 Uhr erreichbar, Durchwahl 235. Ansonsten melde ich mich morgen früh noch mal bei Ihnen.",
+     "say": "Hallo Frau Szymańska, hier ist Kevin Hartmann vom IT-Support. Sie hatten heute Morgen ein Ticket geschrieben, weil Sie sich nicht im Kundenportal anmelden können. Das liegt an der Umstellung auf die Zwei-Faktor-Anmeldung vom letzten Wochenende. Sie müssen auf Ihrem Diensthandy einmalig die Authenticator-App einrichten. Ich kann Ihnen das gern am Telefon erklären, das dauert etwa zehn Minuten. Ich bin heute noch bis sechzehn Uhr erreichbar, Durchwahl zwei drei fünf. Ansonsten melde ich mich morgen früh noch mal bei Ihnen."
+    }
+   ],
+   "pause": 0.6
+  },
+  {
+   "key": "b2-2-02",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Guten Tag, hier ist Birgit Laufenberg aus Witten. Sie wollten am Mittwoch um acht Uhr bei uns die neue Markise montieren. Leider hat sich bei uns etwas geändert: Mein Mann hat am Mittwoch einen Termin im Krankenhaus, nichts Schlimmes, aber wir sind den ganzen Tag nicht zu Hause. Ginge es vielleicht am Donnerstag oder Freitag? Am liebsten nachmittags, vormittags arbeite ich. Und die Einfahrt wird gerade neu gepflastert, parken Sie dann bitte lieber auf der Straße. Meine Nummer haben Sie ja. Danke!"
+    }
+   ],
+   "pause": 0.6
+  },
+  {
+   "key": "b2-2-03",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Also, in drei Wochen ist die große Fachmesse, und wir sind von Montag bis Donnerstag komplett ausgebucht. Ich möchte heute klären, wie wir das mit Frühstück und Rezeption organisieren. Herr Petrović, fangen Sie an?"
+    },
+    {
+     "voice": "m2",
+     "text": "Ja. Das Problem ist ganz klar das Frühstück. Die Messegäste wollen alle zwischen halb sieben und halb acht essen, und unser Frühstücksraum hat nur 80 Plätze. Bei 140 Gästen gibt das Chaos.",
+     "say": "Ja. Das Problem ist ganz klar das Frühstück. Die Messegäste wollen alle zwischen halb sieben und halb acht essen, und unser Frühstücksraum hat nur achtzig Plätze. Bei hundertvierzig Gästen gibt das Chaos."
+    },
+    {
+     "voice": "f3",
+     "text": "Könnten wir nicht schon um sechs öffnen statt um halb sieben?"
+    },
+    {
+     "voice": "m2",
+     "text": "Ginge schon, dann brauche ich aber eine zusätzliche Kraft in der Küche, ab fünf Uhr."
+    },
+    {
+     "voice": "f1",
+     "text": "Das ist in Ordnung. Außerdem würde ich den Konferenzraum im Erdgeschoss an diesen Tagen als zweiten Frühstücksraum nutzen. Der ist ja morgens nicht gebucht, oder, Frau Klein?"
+    },
+    {
+     "voice": "f3",
+     "text": "Am Montag und Dienstag ist er frei. Am Mittwoch hat eine Firma ihn ab acht Uhr reserviert."
+    },
+    {
+     "voice": "f1",
+     "text": "Bis acht reicht uns völlig. Dann zur Rezeption: Was brauchen Sie?"
+    },
+    {
+     "voice": "f3",
+     "text": "Vor allem beim Check-out am Donnerstag wird es eng. Ich würde vorschlagen, dass die Gäste die Rechnung schon am Vorabend per Mail bekommen und den Schlüssel morgens nur noch in eine Box werfen."
+    },
+    {
+     "voice": "f1",
+     "text": "Gute Idee. Können Sie das bis nächsten Montag mit der IT klären?"
+    },
+    {
+     "voice": "f3",
+     "text": "Mache ich."
+    },
+    {
+     "voice": "f1",
+     "text": "Prima. Dann fasse ich zusammen: Frühstück ab sechs, ein zweiter Raum im Erdgeschoss und Express-Check-out per Mail."
+    }
+   ],
+   "pause": 0.6
+  },
+  {
+   "key": "b2-2-04",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Hagedorn, Firma Holzwerk Sauerland, guten Tag. Ich hatte Ihnen letzte Woche eine Anfrage geschickt, für den Transport von zwölf Paletten nach Rotterdam."
+    },
+    {
+     "voice": "m1",
+     "text": "Ja, Frau Hagedorn, guten Tag. Ich habe das Angebot gerade fertig gemacht. Für die zwölf Paletten komme ich auf 1.350 Euro netto, inklusive Maut.",
+     "say": "Ja, Frau Hagedorn, guten Tag. Ich habe das Angebot gerade fertig gemacht. Für die zwölf Paletten komme ich auf tausenddreihundertfünfzig Euro netto, inklusive Maut."
+    },
+    {
+     "voice": "f2",
+     "text": "Hm, das ist mehr als erwartet. Unser bisheriger Spediteur lag bei etwa 1.200.",
+     "say": "Hm, das ist mehr als erwartet. Unser bisheriger Spediteur lag bei etwa tausendzweihundert."
+    },
+    {
+     "voice": "m1",
+     "text": "Verstehe. Der Preis gilt allerdings für eine Expresslieferung innerhalb von 24 Stunden. Wenn Sie zwei Tage Zeit haben, kann ich die Ware mit einer anderen Ladung kombinieren. Dann wären wir bei 1.180.",
+     "say": "Verstehe. Der Preis gilt allerdings für eine Expresslieferung innerhalb von vierundzwanzig Stunden. Wenn Sie zwei Tage Zeit haben, kann ich die Ware mit einer anderen Ladung kombinieren. Dann wären wir bei tausendeinhundertachtzig."
+    },
+    {
+     "voice": "f2",
+     "text": "Zwei Tage sind kein Problem. Ist die Ware dann auch versichert?"
+    },
+    {
+     "voice": "m1",
+     "text": "Die Grundversicherung ist dabei. Bei Möbeln empfehle ich aber eine Zusatzversicherung, die kostet 45 Euro.",
+     "say": "Die Grundversicherung ist dabei. Bei Möbeln empfehle ich aber eine Zusatzversicherung, die kostet fünfundvierzig Euro."
+    },
+    {
+     "voice": "f2",
+     "text": "Gut, dann nehmen wir die Variante mit zwei Tagen, mit Zusatzversicherung. Schicken Sie mir das Angebot bitte schriftlich?"
+    },
+    {
+     "voice": "m1",
+     "text": "Mache ich sofort."
+    }
+   ],
+   "pause": 0.6
+  },
+  {
+   "key": "b2-2-05",
+   "segments": [
+    {
+     "voice": "f3",
+     "text": "So, kurze Übergabe, dann bin ich weg. Zimmer 12, Herr Brosowski: Er hat heute fast nichts gegessen, nur ein bisschen Suppe. Bitte achte darauf, dass er genug trinkt, und schreib es in die Dokumentation.",
+     "say": "So, kurze Übergabe, dann bin ich weg. Zimmer zwölf, Herr Brosowski: Er hat heute fast nichts gegessen, nur ein bisschen Suppe. Bitte achte darauf, dass er genug trinkt, und schreib es in die Dokumentation."
+    },
+    {
+     "voice": "m3",
+     "text": "Okay. Hat er Fieber?"
+    },
+    {
+     "voice": "f3",
+     "text": "Nein, die Temperatur ist normal, ich habe um elf gemessen. Die Ärztin kommt aber morgen früh sowieso zur Visite, dann soll sie ihn sich anschauen."
+    },
+    {
+     "voice": "m3",
+     "text": "Gut. Sonst noch was?"
+    },
+    {
+     "voice": "f3",
+     "text": "Ja, Frau Engel aus Zimmer 7 bekommt heute um 16 Uhr Besuch von ihrer Tochter. Die wollen zusammen in den Garten. Hilf ihr bitte mit dem Rollstuhl, falls die Tochter allein nicht klarkommt.",
+     "say": "Ja, Frau Engel aus Zimmer sieben bekommt heute um sechzehn Uhr Besuch von ihrer Tochter. Die wollen zusammen in den Garten. Hilf ihr bitte mit dem Rollstuhl, falls die Tochter allein nicht klarkommt."
+    },
+    {
+     "voice": "m3",
+     "text": "Mach ich. Und der neue Bewohner, kommt der heute?"
+    },
+    {
+     "voice": "f3",
+     "text": "Nein, der Einzug ist auf Montag verschoben worden. Das Zimmer ist aber schon fertig."
+    },
+    {
+     "voice": "m3",
+     "text": "Alles klar, danke dir. Schönen Feierabend!"
+    }
+   ],
+   "pause": 0.6
+  },
+  {
+   "key": "b2-2-06",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Im Handwerk fehlen Fachkräfte, allein im Ruhrgebiet sind es nach Schätzungen mehrere tausend. Viele Betriebe müssen Aufträge ablehnen oder Kunden monatelang warten lassen. Einige gehen deshalb neue Wege. Zum Beispiel ein Malerbetrieb in Recklinghausen: Dort sind inzwischen drei von zwölf Mitarbeitenden Quereinsteiger. Inhaberin Kerstin Wolff:"
+    },
+    {
+     "voice": "f2",
+     "text": "Wir schauen nicht mehr nur auf Zeugnisse. Wenn jemand motiviert ist und handwerklich geschickt, dann bilden wir ihn aus, auch mit Mitte vierzig. Das Wichtigste ist, dass die Person ins Team passt. Das Fachliche kann man lernen."
+    },
+    {
+     "voice": "m1",
+     "text": "Damit das klappt, arbeitet der Betrieb mit einem Bildungsträger zusammen. Einmal pro Woche gibt es direkt im Betrieb Deutschunterricht mit Fachwortschatz. Einen Teil der Kosten übernimmt die Agentur für Arbeit. Einer der Teilnehmer ist Rami Saleh. Er war früher Lehrer und arbeitet seit zwei Jahren als Maler."
+    },
+    {
+     "voice": "m3",
+     "text": "Am Anfang war es schwer, vor allem die Sprache auf der Baustelle. Die Kollegen reden schnell, und die Fachwörter kennt man aus keinem Kurs. Aber durch den Unterricht im Betrieb lerne ich genau die Wörter, die ich brauche. Nächstes Jahr mache ich meine Gesellenprüfung."
+    },
+    {
+     "voice": "m1",
+     "text": "Einfach ist dieser Weg nicht: Die Ausbildung dauert, und erfahrene Kollegen müssen viel Zeit in die Einarbeitung investieren. Trotzdem raten Experten anderen Betrieben, offen für Quereinsteiger zu sein. Denn, so Kerstin Wolff: Wer heute ausbildet, sichert sich die Fachkräfte von morgen."
+    }
+   ],
+   "pause": 0.6
+  },
+  {
+   "key": "b2-3-01",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Guten Morgen, Frau Jankowski, hier ist Markus Feldmann, Fachkraft für Arbeitssicherheit. Ich wollte Sie daran erinnern, dass Ihre jährliche Sicherheitsunterweisung noch fehlt. Der nächste Termin ist am Dienstag, dem 17. November, um 14 Uhr in Halle 3, im Besprechungsraum oben. Die Unterweisung dauert ungefähr eine Stunde und gilt natürlich als Arbeitszeit. Falls Sie da Schicht haben, gibt es noch einen Online-Termin am 24. Bitte geben Sie mir kurz Bescheid, welchen Termin Sie nehmen. Danke!",
+     "say": "Guten Morgen, Frau Jankowski, hier ist Markus Feldmann, Fachkraft für Arbeitssicherheit. Ich wollte Sie daran erinnern, dass Ihre jährliche Sicherheitsunterweisung noch fehlt. Der nächste Termin ist am Dienstag, dem siebzehnten November, um vierzehn Uhr in Halle drei, im Besprechungsraum oben. Die Unterweisung dauert ungefähr eine Stunde und gilt natürlich als Arbeitszeit. Falls Sie da Schicht haben, gibt es noch einen Online-Termin am vierundzwanzigsten. Bitte geben Sie mir kurz Bescheid, welchen Termin Sie nehmen. Danke!"
+    }
+   ],
+   "pause": 0.6
+  },
+  {
+   "key": "b2-3-02",
+   "segments": [
+    {
+     "voice": "f3",
+     "text": "Hi Daniel, hier ist Melanie. Ich liege leider mit Grippe im Bett und bin wahrscheinlich die ganze Woche krankgeschrieben. Kannst du bitte morgen die Präsentation beim Kunden in Bielefeld übernehmen? Die Folien liegen im Projektordner, Version vom Freitag. Nicht die alte vom Mittwoch, da sind die Preise noch falsch. Der Termin ist um zehn, Ansprechpartner ist Herr Gerdes. Ich habe ihm schon geschrieben, dass du kommst. Wenn du Fragen hast, schreib mir lieber eine Nachricht, ich kann gerade kaum sprechen."
+    }
+   ],
+   "pause": 0.6
+  },
+  {
+   "key": "b2-3-03",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Kommen wir zum Umzug. Wie ihr wisst, ziehen wir im Februar in das neue Gebäude am Phoenix-See. Dort wird es keine festen Arbeitsplätze mehr geben, sondern Desk-Sharing. Auf 30 Mitarbeitende kommen 22 Schreibtische.",
+     "say": "Kommen wir zum Umzug. Wie ihr wisst, ziehen wir im Februar in das neue Gebäude am Phoenix-See. Dort wird es keine festen Arbeitsplätze mehr geben, sondern Desk-Sharing. Auf dreißig Mitarbeitende kommen zweiundzwanzig Schreibtische."
+    },
+    {
+     "voice": "m2",
+     "text": "Und das reicht? Wenn alle am selben Tag kommen, stehen wir im Flur."
+    },
+    {
+     "voice": "f1",
+     "text": "Deshalb machen wir einen Plan. Jedes Team bekommt feste Präsenztage. Unser Team wäre dienstags und donnerstags vor Ort, an den anderen Tagen im Homeoffice."
+    },
+    {
+     "voice": "f2",
+     "text": "Dienstag ist schlecht. Da haben wir doch jede Woche den Jour fixe mit dem Vertrieb, und die Kollegen vom Vertrieb sind nur montags im Haus."
+    },
+    {
+     "voice": "f1",
+     "text": "Guter Punkt. Dann tauschen wir: Montag und Donnerstag. Ich kläre das mit den anderen Teamleitungen."
+    },
+    {
+     "voice": "m2",
+     "text": "Was passiert eigentlich mit unseren Unterlagen? Ich habe noch drei Schränke voller Akten."
+    },
+    {
+     "voice": "f1",
+     "text": "Alles, was älter als zehn Jahre ist, wird vernichtet, natürlich datenschutzgerecht. Der Rest wird möglichst digitalisiert. Im neuen Gebäude bekommt jeder nur noch ein Schließfach."
+    },
+    {
+     "voice": "m2",
+     "text": "Na, dann habe ich ja im Januar einiges zu tun."
+    },
+    {
+     "voice": "f2",
+     "text": "Und wie buchen wir die Schreibtische?"
+    },
+    {
+     "voice": "f1",
+     "text": "Über eine App. Man kann bis zu zwei Wochen im Voraus buchen. Eine Schulung dazu gibt es Mitte Januar. Frau Öztürk, könnten Sie für unser Team die Ansprechpartnerin sein, falls es mit der App Probleme gibt?"
+    },
+    {
+     "voice": "f2",
+     "text": "Ja, gerne."
+    },
+    {
+     "voice": "f1",
+     "text": "Danke. Dann nehmen wir das so ins Protokoll."
+    }
+   ],
+   "pause": 0.6
+  },
+  {
+   "key": "b2-3-04",
+   "segments": [
+    {
+     "voice": "f3",
+     "text": "Herr Kaminski, schön, dass Sie Zeit haben. Ich muss leider gleich mit einer weniger guten Nachricht anfangen: Ab Januar müssen wir unsere Mehlpreise um acht Prozent erhöhen."
+    },
+    {
+     "voice": "m2",
+     "text": "Acht Prozent? Frau Roth, das ist deutlich zu viel. Wir haben doch erst im Frühjahr eine Erhöhung akzeptiert."
+    },
+    {
+     "voice": "f3",
+     "text": "Ich weiß. Aber die Energiekosten und vor allem die Transportkosten sind weiter gestiegen. Wir geben wirklich nur einen Teil davon weiter."
+    },
+    {
+     "voice": "m2",
+     "text": "Das verstehe ich. Trotzdem, bei zwölf Filialen ist das ein großer Betrag. Gibt es da gar keinen Spielraum?"
+    },
+    {
+     "voice": "f3",
+     "text": "Eine Möglichkeit gäbe es: Wenn Sie einen Vertrag über zwölf Monate abschließen statt wie bisher über sechs, kann ich Ihnen eine Erhöhung von nur fünf Prozent anbieten. Dafür bräuchten wir aber feste Mindestmengen."
+    },
+    {
+     "voice": "m2",
+     "text": "Hm. Das müsste ich mit unserer Geschäftsführung besprechen. Bis wann brauchen Sie eine Antwort?"
+    },
+    {
+     "voice": "f3",
+     "text": "Bis Ende November, dann kann ich den Preis noch garantieren."
+    },
+    {
+     "voice": "m2",
+     "text": "In Ordnung. Schicken Sie mir die Konditionen bitte schriftlich, dann melde ich mich nächste Woche."
+    }
+   ],
+   "pause": 0.6
+  },
+  {
+   "key": "b2-3-05",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Frau Popescu, Ihre Probezeit endet ja Ende des Monats. Deshalb wollte ich kurz mit Ihnen zurückblicken. Wie geht es Ihnen im Team?"
+    },
+    {
+     "voice": "f2",
+     "text": "Eigentlich sehr gut. Die Kolleginnen haben mir viel geholfen. Am Anfang war das Abrechnungsprogramm schwierig, aber inzwischen komme ich gut zurecht."
+    },
+    {
+     "voice": "m1",
+     "text": "Das sehe ich auch so. Ihre Abrechnungen sind sehr sorgfältig, und die Kunden loben Ihre freundliche Art am Telefon. Ein Punkt, an dem wir noch arbeiten sollten: Manchmal übernehmen Sie zu viele Aufgaben gleichzeitig und sagen nicht Bescheid, wenn es zu viel wird."
+    },
+    {
+     "voice": "f2",
+     "text": "Ja, das stimmt. Ich wollte am Anfang niemanden enttäuschen."
+    },
+    {
+     "voice": "m1",
+     "text": "Das verstehe ich. Aber es ist völlig in Ordnung, Nein zu sagen oder Prioritäten mit mir abzusprechen. Was wünschen Sie sich für die nächsten Monate?"
+    },
+    {
+     "voice": "f2",
+     "text": "Ich würde gern eine Fortbildung zum Thema Mahnwesen machen. Da fühle ich mich noch unsicher."
+    },
+    {
+     "voice": "m1",
+     "text": "Gute Idee. Schauen Sie doch mal ins Programm der IHK, und schicken Sie mir einen Vorschlag. Und um es offiziell zu sagen: Wir übernehmen Sie sehr gerne."
+    }
+   ],
+   "pause": 0.6
+  },
+  {
+   "key": "b2-3-06",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Herzlich willkommen zu unserer Reihe „Arbeit im Wandel“. Heute spricht Dr. Jens Albrecht über künstliche Intelligenz im Büroalltag.",
+     "say": "Herzlich willkommen zu unserer Reihe „Arbeit im Wandel“. Heute spricht Doktor Jens Albrecht über künstliche Intelligenz im Büroalltag."
+    },
+    {
+     "voice": "m2",
+     "text": "Vielen Dank. Ich möchte mit einer kleinen Umfrage beginnen, die wir hier in der Region bei Betrieben gemacht haben. Ungefähr jede dritte Firma nutzt schon KI-Werkzeuge, meistens, um Texte zu schreiben, E-Mails zusammenzufassen oder Besprechungen zu protokollieren. Die Vorteile liegen auf der Hand: Routinearbeiten gehen schneller, und es bleibt mehr Zeit für Kundengespräche. Ein Handwerksbetrieb aus Moers hat mir erzählt, dass er für Angebote heute nur noch halb so lange braucht wie früher. Aber ich sehe drei Risiken. Erstens: KI-Programme machen Fehler, und zwar oft sehr überzeugend. Jedes Ergebnis muss also von einem Menschen geprüft werden. Zweitens der Datenschutz: Kundendaten oder Personalakten haben in öffentlichen KI-Programmen nichts zu suchen. Und drittens haben viele Beschäftigte Angst um ihren Arbeitsplatz. Diese Angst muss man ernst nehmen. Meine Erfahrung ist allerdings, dass sich Aufgaben eher verändern, als dass sie verschwinden. Was bedeutet das nun für Sie als Unternehmen? Mein wichtigster Rat: Beginnen Sie mit klaren Regeln. Legen Sie schriftlich fest, welche Programme erlaubt sind und welche Daten man eingeben darf. Und bieten Sie Schulungen an, nicht nur für junge Leute, sondern für alle. Gerade erfahrene Mitarbeitende können sehr gut beurteilen, ob ein Ergebnis fachlich stimmt."
+    }
+   ],
+   "pause": 0.6
+  },
+  {
+   "key": "ex-alltag",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Ich habe gekocht. Danach bin ich nach Hause gefahren."
+    }
+   ]
+  },
+  {
+   "key": "ex-ankommen",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Ich komme aus Syrien. Wo wohnen Sie?"
+    }
+   ]
+  },
+  {
+   "key": "ex-arbeit",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Ich besuche einen Kurs, um mein Deutsch zu verbessern."
+    }
+   ]
+  },
+  {
+   "key": "ex-beschwerde-b2",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Wir bedauern die Verzögerung. Die fehlenden Teile werden morgen versendet."
+    }
+   ]
+  },
+  {
+   "key": "ex-bewerbung-b2",
+   "segments": [
+    {
+     "voice": "f3",
+     "text": "Ich habe die Einarbeitung neuer Mitarbeitender übernommen."
+    }
+   ]
+  },
+  {
+   "key": "ex-einkaufen",
+   "segments": [
+    {
+     "voice": "m3",
+     "text": "Ich kaufe einen Apfel, eine Banane und ein Brot."
+    }
+   ]
+  },
+  {
+   "key": "ex-forum-b2",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Einerseits spart das Zeit, andererseits fehlt der persönliche Austausch."
+    }
+   ]
+  },
+  {
+   "key": "ex-gesundheit",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Sie sollen viel trinken. Ich muss den Termin absagen."
+    }
+   ]
+  },
+  {
+   "key": "ex-kleidung",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Der rote Pullover. Ich trage einen roten Pullover. Der Mann mit dem roten Pullover."
+    }
+   ]
+  },
+  {
+   "key": "ex-loesungen-b2",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Falls die Lieferung ausfällt, könnten wir einen anderen Anbieter anfragen."
+    }
+   ]
+  },
+  {
+   "key": "ex-meinung",
+   "segments": [
+    {
+     "voice": "f3",
+     "text": "Obwohl ich wenig Zeit habe, lerne ich Deutsch. Ich habe wenig Zeit. Trotzdem lerne ich Deutsch."
+    }
+   ]
+  },
+  {
+   "key": "ex-planen",
+   "segments": [
+    {
+     "voice": "m3",
+     "text": "Das ist eine gute Idee. Samstag passt mir leider nicht. Wie wäre es mit Sonntag?"
+    }
+   ]
+  },
+  {
+   "key": "ex-reklamation",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Der Drucker, den ich gekauft habe, funktioniert nicht."
+    }
+   ]
+  },
+  {
+   "key": "ex-schule",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Mein Kind fehlt, weil es krank ist. Könnten Sie mir die Aufgaben schicken?"
+    }
+   ]
+  },
+  {
+   "key": "ex-termine",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Haben Sie am Dienstag um zehn Uhr Zeit?"
+    }
+   ]
+  },
+  {
+   "key": "ex-unterwegs",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Ich warte an der Haltestelle. Ich gehe an die Haltestelle."
+    }
+   ]
+  },
+  {
+   "key": "ex-wohnen",
+   "segments": [
+    {
+     "voice": "f3",
+     "text": "Die Wohnung hat keinen Balkon. Die Küche ist nicht klein."
+    }
+   ]
+  }
+ ]
+}

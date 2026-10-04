@@ -280,5 +280,22 @@ DM.packages = [
     contents: ['310 Fragen mit markierter Lösung', 'Lernplan: 10 Tage, 31 Fragen pro Tag', 'Abhak-Kästchen für jede Frage', 'Wichtige Begriffe einfach erklärt'] },
   { id: 'lehrerpaket-16-stunden', group: 'lehrende', icon: '🧑‍🏫', title: 'Lehrerpaket: 16 fertige Unterrichtsstunden A1–A2', level: 'A1–B1', target: 'für Lehrkräfte', price: null, buy: null,
     desc: '16 erprobte Unterrichtsstunden aus dem Integrationskurs – mit Lehrerblatt, Ablauf mit Zeiten, eigenem Kahoot-Quiz pro Stunde, Übungen und Lösungen. Sofort einsetzbar im Präsenz- oder Online-Unterricht.',
-    contents: ['16 Lehrerblätter: Lernziele, Ablauf, Sozialformen', '16 Kahoot-Quiz mit je 9 Fragen und Bildern (Link + QR-Code)', 'Arbeitsblätter mit Regeln, Übungen und Lösungen', 'Kopierrecht für den eigenen Unterricht'] }
+    contents: ['16 Lehrerblätter: Lernziele, Ablauf, Sozialformen', '16 Kahoot-Quiz mit je 9 Fragen und Bildern (Link + QR-Code)', 'Arbeitsblätter mit Regeln, Übungen und Lösungen', 'Kopierrecht für den eigenen Unterricht'] },
+  { id: 'lehrer-briefe-dtz', group: 'lehrende', icon: '✉️', title: 'Lehrerpaket: Briefe schreiben DTZ', level: 'A2–B1', target: 'für Lehrkräfte', price: null, buy: null,
+    desc: 'Alles für den Schreibunterricht zur DTZ-Vorbereitung: 5 fertige Unterrichtseinheiten à 90 Minuten, Kopiervorlagen, 20 Schreibaufgaben mit Musterlösung und ein Korrekturraster – geschrieben von einem lizenzierten DTZ-Prüfer.',
+    contents: ['5 Unterrichtseinheiten mit Ablaufplan', '18 Kopiervorlagen: Redemittel-Karten, Lückentexte, Fehlertexte', '20 Schreibaufgaben mit Musterlösung', 'Korrekturraster, Korrekturzeichen, Peer-Feedback-Bogen'] },
+  { id: 'lehrer-briefe-dtb-b2', group: 'lehrende', icon: '💼', title: 'Lehrerpaket: E-Mails im Beruf – DTB B2', level: 'B1–B2', target: 'für Lehrkräfte', price: null, buy: null,
+    desc: 'Schreiben im Berufssprachkurs: Beschwerden beantworten, interne E-Mails, Stellungnahmen. 5 Unterrichtseinheiten, Kopiervorlagen und 16 Aufgaben mit Musterlösung – von einem DTB-Prüfenden entwickelt.',
+    contents: ['5 Unterrichtseinheiten à 90 Minuten', 'Register-Training und Auftrag-Analyse', '16 Aufgaben (E-Mail und Forumsbeitrag) mit Musterlösung', 'Korrekturraster und Peer-Feedback'] }
+];
+
+/* Zulassungen und Nachweise (Bilder in assets/nachweise, persönliche Daten geschwärzt) */
+DM.teacher.music = 'https://www.youtube.com/@PrudnikauMusic';
+DM.credentials = [
+  { id: 'dtz-pruefer', icon: '🎙', kind: 'Prüferlizenz', title: 'DTZ-Prüfer', org: 'g.a.s.t. · Deutsch-Test für Zuwanderer', desc: 'Lizenz zur Abnahme und Bewertung der mündlichen DTZ-Prüfung (A2/B1).' },
+  { id: 'telc-pruefer', icon: '📝', kind: 'Prüferlizenzen', title: 'telc Deutsch B1–B2 und DTB B2–C1', org: 'telc gGmbH', desc: 'Prüferlizenz Deutsch B1–B2 und Prüfendenlizenz Deutsch-Test für den Beruf B2–C1.' },
+  { id: 'bamf-integrationskurs', icon: '🏛', kind: 'Zulassung BAMF', title: 'Lehrkraft in Integrationskursen', org: 'Bundesamt für Migration und Flüchtlinge', desc: 'Zulassung zur Lehrtätigkeit in Integrationskursen nach § 15 IntV.' },
+  { id: 'bamf-berufssprachkurs', icon: '💼', kind: 'Zulassung BAMF', title: 'Berufssprachkurse bis C2', org: 'Bundesamt für Migration und Flüchtlinge', desc: 'Erweiterung der Zulassung auf Berufssprachkurse (DeuFöV) bis Sprachniveau C2.' },
+  { id: 'master-germanistik', icon: '🎓', kind: 'Studium', title: 'Master of Arts Germanistik', org: 'Ruhr-Universität Bochum', desc: 'Masterarbeit über linguistische Aspekte des deutsch-russischen Sprachkontakts.' },
+  { id: 'nlp-practitioner', icon: '🧠', kind: 'Weiterbildung', title: 'NLP-Practitioner (DVNLP)', org: 'Mea Voß Seminare', desc: 'Kommunikation und Lernbegleitung: 145 Stunden Ausbildung nach DVNLP-Richtlinien.' }
 ];

@@ -26,7 +26,29 @@
   let voicesDE = [];
   const loadVoices = () => { if (!synth) return; voicesDE = synth.getVoices().filter(v => /^de(-|_|$)/i.test(v.lang)); };
   if (synth) { loadVoices(); synth.onvoiceschanged = loadVoices; }
-  function speak(text, { rate = 0.92, onend, dialogue = false } = {}) {
+  /* Aufgenommene Hörtexte (Neural-Stimmen, erzeugt per GitHub Action, siehe tools/tts).
+     Gibt es zu einem Text eine Datei, wird sie abgespielt – sonst liest die Stimme des Geräts. */
+  const normT = s => String(s ?? '').replace(/\s+/g, ' ').trim();
+  const fnv = s => { let h = 0x811c9dc5; for (const b of new TextEncoder().encode(normT(s))) { h ^= b; h = Math.imul(h, 0x01000193) >>> 0; } return 't' + h.toString(16).padStart(8, '0'); };
+  let ttsFiles = {};
+  const ttsReady = fetch('audio/tts/index.json', { cache: 'no-cache' }).then(r => r.ok ? r.json() : {}).then(j => { ttsFiles = j.files || {}; }).catch(() => {});
+  const ttsSrc = key => ttsFiles[key] ? `audio/tts/${key}.mp3?v=${ttsFiles[key].v || ''}` : null;
+  const hasRecording = (text, key) => !!ttsSrc(key || fnv(text));
+  DM.ttsSrc = ttsSrc; DM.ttsReady = ttsReady;
+  let player = null;
+  function playRecording(src, rate, onend) {
+    try { player?.pause(); } catch {}
+    player = new Audio(src);
+    player.preservesPitch = true;
+    player.playbackRate = rate >= 0.9 ? 1 : 0.85;
+    player.onended = () => onend?.(true);
+    player.onerror = () => onend?.(false);
+    player.play().catch(() => onend?.(false));
+    return true;
+  }
+  function speak(text, { rate = 0.92, onend, dialogue = false, key } = {}) {
+    const src = ttsSrc(key || fnv(text));
+    if (src) { try { synth?.cancel(); } catch {} return playRecording(src, rate, onend); }
     if (!synth) { onend?.(false); return false; }
     synth.cancel();
     const parts = dialogue ? String(text).split(/\s+–\s+/) : [String(text)];
@@ -41,7 +63,7 @@
     });
     return true;
   }
-  const stopSpeaking = () => { try { synth?.cancel(); } catch {} };
+  const stopSpeaking = () => { try { synth?.cancel(); } catch {} try { player?.pause(); } catch {} };
   function bindSpeakButtons(root = mainEl) {
     $$('[data-speak]', root).forEach(b => {
       b.onclick = () => {
@@ -54,7 +76,7 @@
       };
     });
   }
-  const speakBtn = (text, label = 'Vorlesen', extra = '') => synth ? `<button type="button" class="dm-btn dm-btn-quiet dm-speak" data-speak="${x(text)}" ${extra}><span aria-hidden="true">🔊</span> ${label}</button>` : '';
+  const speakBtn = (text, label = 'Vorlesen', extra = '') => (synth || hasRecording(text)) ? `<button type="button" class="dm-btn dm-btn-quiet dm-speak" data-speak="${x(text)}" ${extra}><span aria-hidden="true">🔊</span> ${label}</button>` : '';
 
   /* ---------- Videos von YouTube ---------- */
   const ID_RE = /^[A-Za-z0-9_-]{11}$/;
@@ -85,9 +107,11 @@
   const isRussian = t => /[А-Яа-яЁё]/.test(t);
   const fmtDate = s => { const d = new Date(s); return isNaN(d) ? '' : d.toLocaleDateString('de-DE', { day: 'numeric', month: 'long', year: 'numeric' }); };
   const ytConsent = () => !!mem.ytConsent;
+  /* Vorschaubilder liegen auf dieser Website (assets/yt, täglich synchronisiert) – kein Abruf bei YouTube nötig */
+  const vthumb = v => `<img src="assets/yt/${v.id}.jpg" alt="" loading="lazy" width="640" height="360" onerror="this.parentNode.classList.add('is-empty');this.remove()"><span class="dm-vthumb-ph" aria-hidden="true"><b>${x(v.title.split(/[|:–]/)[0].trim().slice(0, 60))}</b></span><span class="dm-vplay" aria-hidden="true">▶</span>`;
   function giveYtConsent() { mem.ytConsent = true; save(); }
   function videoCard(v, { big = false } = {}) {
-    const thumb = ytConsent() ? `<img src="https://i.ytimg.com/vi/${v.id}/${big ? 'hqdefault' : 'mqdefault'}.jpg" alt="" loading="lazy" width="320" height="180">` : `<span class="dm-vthumb-ph" aria-hidden="true">▶</span>`;
+    const thumb = vthumb(v);
     return `<button type="button" class="dm-vcard dm-cat-${v.category}" data-play="${v.id}" data-title="${x(v.title)}">
       <span class="dm-vthumb">${thumb}</span>
       <span class="dm-vmeta"><span class="dm-tag">${DM.videoCategories[v.category]}${isRussian(v.title) ? ' · Erklärung auf Russisch' : ''}</span>
@@ -117,7 +141,7 @@
     box.innerHTML = `<div class="dm-section-head"><h2>${heading}</h2><a href="#videos/${cat}">Alle ansehen</a></div><div class="dm-vgrid" aria-busy="true"></div>`;
     const list = (await loadVideos()).filter(v => v.category === cat).slice(0, 3);
     if (!list.length) { box.remove(); return null; }
-    $('.dm-vgrid', box).innerHTML = list.map(v => `<a class="dm-vcard dm-cat-${v.category}" href="#videos/${cat}/${v.id}"><span class="dm-vthumb">${ytConsent() ? `<img src="https://i.ytimg.com/vi/${v.id}/mqdefault.jpg" alt="" loading="lazy" width="320" height="180">` : '<span class="dm-vthumb-ph" aria-hidden="true">▶</span>'}</span><span class="dm-vmeta"><span class="dm-tag">${DM.videoCategories[v.category]}${isRussian(v.title) ? ' · auf Russisch' : ''}</span><strong>${x(v.title)}</strong></span></a>`).join('');
+    $('.dm-vgrid', box).innerHTML = list.map(v => `<a class="dm-vcard dm-cat-${v.category}" href="#videos/${cat}/${v.id}"><span class="dm-vthumb">${vthumb(v)}</span><span class="dm-vmeta"><span class="dm-tag">${DM.videoCategories[v.category]}${isRussian(v.title) ? ' · auf Russisch' : ''}</span><strong>${x(v.title)}</strong></span></a>`).join('');
     $('.dm-vgrid', box).removeAttribute('aria-busy');
     return box;
   }
@@ -142,7 +166,8 @@
       <div class="dm-hero-copy">
         <h1>Deutsch lernen mit Dennis</h1>
         <p class="dm-lead">Kostenlose Übungen von A1 bis B2 Beruf – für deinen Alltag, deine Prüfung und deinen Job. Ohne Anmeldung.</p>
-        <p class="dm-hand">Hallo! Ich bin Dennis, dein Deutschlehrer. Wähle unten deinen Weg – ich zeige dir die nächsten Schritte.</p>
+        <p class="dm-hand">Hallo! Ich bin Dennis, dein Deutschlehrer und zugelassener Prüfer. Wähle unten deinen Weg – ich zeige dir die nächsten Schritte.</p>
+        <ul class="dm-trust"><li>✓ DTZ-Prüfer</li><li>✓ telc-Prüfer B1–C1</li><li>✓ BAMF-zugelassen bis C2</li></ul>
         <div class="dm-row">
           ${last ? `<a class="dm-btn" href="#${x(last.route)}">Weitermachen: ${x(last.title)}</a><a class="dm-btn dm-btn-quiet" href="#wegweiser">Welcher Weg passt zu mir?</a>` : `<a class="dm-btn" href="#wegweiser">Welcher Weg passt zu mir?</a><a class="dm-btn dm-btn-quiet" href="#lernen/A1">Mit A1 beginnen</a>`}
         </div>
@@ -157,12 +182,13 @@
     <section class="dm-section dm-tools" aria-labelledby="tools-h">
       <div class="dm-section-head"><h2 id="tools-h">Direkt üben</h2></div>
       <div class="dm-toolgrid">
-        <a href="#ueben/sprechen/A1"><b>Sprechen</b><span>Gespräche aus dem Alltag, mit Satzanfängen und Beispiel zum Anhören.</span></a>
-        <a href="#ueben/schreiben/A2"><b>Schreiben</b><span>Nachrichten, Briefe und E-Mails – mit Checkliste und Mustertext.</span></a>
-        <a href="#hoeren"><b>Hören</b><span>Ansagen, Mailbox und Gespräche verstehen.</span></a>
-        <a href="#lernen"><b>Lektionen</b><span>17 Themen von A1 bis B2 mit Wortschatz, Grammatik und Übungen.</span></a>
-        <a href="#orientierungskurs"><b>Leben in Deutschland</b><span>Lernspiele und Wissen für den Orientierungskurs.</span></a>
-        <a href="#material"><b>Materialien</b><span>66 Arbeitsblätter und Wortlisten als PDF zum Ausdrucken.</span></a>
+        <a href="#ueben/sprechen/A1" data-ico="💬"><b>Sprechen</b><span>Gespräche aus dem Alltag, mit Satzanfängen und Beispiel zum Anhören.</span></a>
+        <a href="#ueben/schreiben/A2" data-ico="✍️"><b>Schreiben</b><span>Nachrichten, Briefe und E-Mails – mit Sofort-Korrektur, Checkliste und Mustertext.</span></a>
+        <a href="#hoeren" data-ico="🎧"><b>Hören</b><span>DTZ- und B2-Hörtraining mit natürlichen Stimmen: Ansagen, Mailbox, Gespräche.</span></a>
+        <a href="#lernen" data-ico="📚"><b>Lektionen</b><span>17 Themen von A1 bis B2 mit Wortschatz, Grammatik und Übungen.</span></a>
+        <a href="#lid" data-ico="🇩🇪"><b>Leben in Deutschland</b><span>Lernspiele und Wissen für den Orientierungskurs.</span></a>
+        <a href="#kahoot" data-ico="🎲"><b>Kahoot-Quiz</b><span>Spielerisch wiederholen – allein oder mit dem ganzen Kurs.</span></a>
+
       </div>
     </section>
 
@@ -173,8 +199,10 @@
 
     <section class="dm-section dm-about-teaser">
       <img src="assets/dennis.webp" alt="" width="120" height="192" loading="lazy">
-      <div><h2>Wer ist Dennis?</h2><p>Ich habe einen Master in Germanistik und habe mich selbst auf Sprachprüfungen und den Test „Leben in Deutschland“ vorbereitet. Deshalb weiß ich, wo es schwierig wird.</p><a class="dm-btn dm-btn-quiet" href="#ueber-mich">Mehr über mich</a></div>
+      <div><h2>Wer ist Dennis?</h2><p>Master in Germanistik, lizenzierter DTZ- und telc-Prüfer, vom BAMF zugelassen für Integrations- und Berufssprachkurse bis C2. Ich kenne die Prüfungen als Lehrer und als Prüfer.</p><div class="dm-row"><a class="dm-btn dm-btn-quiet" href="#ueber-mich">Mehr über mich</a><a class="dm-btn dm-btn-quiet" href="#ueber-mich/nachweise">Meine Zulassungen ansehen</a></div></div>
     </section>
+
+    ${musicCard()}
 
     <section class="dm-section dm-thanks">
       <div><h2>Hat dir das Lernen geholfen?</h2><p>Alle Übungen, Videos und Merkblätter sind kostenlos. Wenn du Danke sagen möchtest, kannst du meine Arbeit mit einem freiwilligen Beitrag unterstützen.</p></div>
@@ -183,7 +211,7 @@
     loadVideos().then(list => {
       const box = $('#dm-home-video .dm-vgrid'); if (!box) return;
       box.removeAttribute('aria-busy');
-      box.innerHTML = list.slice(0, 3).map((v, i) => `<a class="dm-vcard dm-cat-${v.category}${i === 0 ? ' dm-vcard-big' : ''}" href="#videos/alle/${v.id}"><span class="dm-vthumb">${ytConsent() ? `<img src="https://i.ytimg.com/vi/${v.id}/${i ? 'mqdefault' : 'hqdefault'}.jpg" alt="" loading="lazy">` : '<span class="dm-vthumb-ph" aria-hidden="true">▶</span>'}</span><span class="dm-vmeta"><span class="dm-tag">${i === 0 ? 'Neuestes Video · ' : ''}${DM.videoCategories[v.category]}</span><strong>${x(v.title)}</strong>${v.published ? `<small>${fmtDate(v.published)}</small>` : ''}</span></a>`).join('');
+      box.innerHTML = list.slice(0, 3).map((v, i) => `<a class="dm-vcard dm-cat-${v.category}${i === 0 ? ' dm-vcard-big' : ''}" href="#videos/alle/${v.id}"><span class="dm-vthumb">${vthumb(v)}</span><span class="dm-vmeta"><span class="dm-tag">${i === 0 ? 'Neuestes Video · ' : ''}${DM.videoCategories[v.category]}</span><strong>${x(v.title)}</strong>${v.published ? `<small>${fmtDate(v.published)}</small>` : ''}</span></a>`).join('');
     });
   }
   function pathCard(id) {
@@ -306,7 +334,7 @@
       <div class="dm-hub">
         <section class="dm-card dm-hub-card"><h2>💬 Sprechen</h2><p>Kurze Situationen aus dem Alltag und Beruf. Mit Satzanfängen, Rückfrage und Beispiel zum Anhören.</p>${levelLinks('ueben/sprechen')}</section>
         <section class="dm-card dm-hub-card"><h2>✍️ Schreiben</h2><p>Plane deinen Text, schreib ihn und vergleiche mit einem Muster. Dein Entwurf bleibt auf deinem Gerät gespeichert.</p>${levelLinks('ueben/schreiben')}<a class="dm-inline-link" href="#schreiben/bausteine">Schreib-Bausteine: Anrede, Gruß, Verbindungswörter</a></section>
-        <section class="dm-card dm-hub-card"><h2>🎧 Hören</h2><p>Ansagen, Nachrichten und Gespräche. Die Stimme deines Geräts liest die Texte vor.</p><div class="dm-pills"><a href="#hoeren/alltag"><b>Alltag</b><small>A2–B1 · DTZ</small></a><a href="#hoeren/beruf"><b>Beruf</b><small>B1–B2</small></a></div></section>
+        <section class="dm-card dm-hub-card"><h2>🎧 Hören</h2><p>Hörtraining für DTZ und DTB B2 mit natürlichen Stimmen – plus kurze Texte zum Einstieg.</p><div class="dm-pills"><a href="#hoeren/dtz-1"><b>DTZ</b><small>4 Übungssätze</small></a><a href="#hoeren/b2-1"><b>DTB B2</b><small>3 Übungssätze</small></a><a href="#hoeren"><b>Alle</b><small>Übersicht</small></a></div></section>
         <section class="dm-card dm-hub-card"><h2>🎲 Gemeinsam spielen</h2><p>Kahoot-Quiz für den Kurs oder zu Hause. Wörter und Redemittel festigen.</p><a class="dm-btn dm-btn-quiet" href="#kahoot">Zu den Kahoot-Quiz</a></section>
       </div>`);
   }
@@ -349,7 +377,7 @@
           <details><summary>Eine mögliche Lösung</summary><p class="dm-model">${x(s.model)}</p>${speakBtn(s.model.replace(/\n/g, ' '), 'Beispiel anhören')}<p class="dm-small">Andere passende Sätze sind auch richtig.</p></details>
           <fieldset class="dm-checks"><legend>${writing ? 'Prüfe deinen Text' : 'Prüfe deine Antwort'}</legend>${checks.map(t => `<label class="dm-check"><input type="checkbox"> <span>${x(t)}</span></label>`).join('')}</fieldset>
           <p>${writing ? 'Verbessere mindestens eine Stelle. Lies den Text danach laut.' : 'Zweite Runde: Schließ das Beispiel. Sprich noch einmal und ändere eine Information.'}</p>
-          <p class="dm-small">Dein Text bleibt nur auf diesem Gerät gespeichert. Er wird nicht automatisch bewertet.</p>
+          <p class="dm-small">Dein Text bleibt auf diesem Gerät gespeichert. Mit „Text prüfen“ bekommst du sofort Hinweise zu Rechtschreibung und Grammatik.</p>
         </section>
       </div>
       <div class="dm-row dm-next">
@@ -375,29 +403,44 @@
   }
 
   /* ---------- Hören ---------- */
+  const listenSet = id => (DM.listening || {})[id] || (DM.listeningExam || {})[id];
+  const setCard = (id, set, color) => { const done = set.items.filter((_, i) => mem.done[`hoeren:${id}:${i}`] !== undefined).length;
+    return `<a class="dm-path dm-g-${color}" href="#hoeren/${id}"><span class="dm-path-icon" aria-hidden="true">🎧</span><span class="dm-path-text"><span class="dm-path-meta">${set.level} · ${set.exam}</span><b>${x(set.title)}</b><span>${set.items.length} Hörtexte: ${x([...new Set(set.items.map(i => i.type))].slice(0, 3).join(', '))} …</span>${done ? `<span class="dm-mini-progress"><i style="width:${Math.round(done / set.items.length * 100)}%"></i></span><small>${done} von ${set.items.length} bearbeitet</small>` : ''}</span></a>`; };
   function listeningHub() {
+    const ex = DM.listeningExam || {};
+    const group = g => Object.entries(ex).filter(([, s]) => s.group === g);
     page(`${crumbs([['Üben', '#ueben'], ['Hören']])}
-      <div class="dm-head"><h1>Hören</h1><p class="dm-lead">Kurze Hörtexte mit Fragen. Die Texte liest die Stimme deines Geräts vor – sie klingt etwas künstlich, aber du übst genau hinzuhören.</p></div>
-      <div class="dm-paths">${Object.entries(DM.listening).map(([id, set]) => `<a class="dm-path dm-g-${id === 'beruf' ? 'ink' : 'sun'}" href="#hoeren/${id}"><span class="dm-path-icon" aria-hidden="true">🎧</span><span class="dm-path-text"><span class="dm-path-meta">${set.level} · ${set.exam}</span><b>${set.title}</b><span>${set.items.length} Hörtexte: ${[...new Set(set.items.map(i => i.type))].slice(0, 3).join(', ')} …</span></span></a>`).join('')}</div>
-      ${synth ? '' : '<p class="dm-warn">Dein Browser kann keine Texte vorlesen. Öffne die Seite bitte in einem aktuellen Chrome, Edge, Safari oder Firefox.</p>'}`);
+      <div class="dm-head dm-head-art"><div><h1>Hören</h1><p class="dm-lead">Ansagen, Mailbox-Nachrichten, Gespräche und Radiobeiträge – mit Fragen und Lösungen. Die Texte sind mit natürlichen Stimmen aufgenommen, verschiedene Personen sprechen.</p></div><span class="dm-wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span></div>
+      <section class="dm-section"><div class="dm-section-head"><h2>DTZ Hören – Übungssätze</h2><p>A2–B1 · alle vier Teile wie in der Prüfung</p></div>
+        <div class="dm-paths">${group('dtz').map(([id, s]) => setCard(id, s, 'sun')).join('')}</div></section>
+      <section class="dm-section"><div class="dm-section-head"><h2>DTB B2 Hören – Beruf</h2><p>B2 · Mailbox, Besprechung, Kundengespräch, Radio</p></div>
+        <div class="dm-paths">${group('b2').map(([id, s]) => setCard(id, s, 'ink')).join('')}</div></section>
+      <section class="dm-section"><div class="dm-section-head"><h2>Kurze Hörtexte zum Einstieg</h2></div>
+        <div class="dm-paths">${Object.entries(DM.listening).map(([id, set]) => setCard(id, set, id === 'beruf' ? 'sky' : 'mint')).join('')}</div></section>
+      <p class="dm-small">Alle Hörtexte sind eigene Übungstexte im Stil der Prüfungen, keine offiziellen Prüfungsaufgaben. Die Stimmen sind künstlich erzeugt (KI).</p>`);
   }
   function listening(setId, raw) {
-    const set = DM.listening[setId]; if (!set) return listeningHub();
+    const set = listenSet(setId); if (!set) return listeningHub();
     const n = Math.max(0, Math.min(set.items.length - 1, Number(raw) || 0)), item = set.items[n];
     const plays = { count: 0 };
+    const rec = hasRecording(item.text, item.id);
+    const canPlay = rec || !!synth;
+    const transcript = item.segments ? item.segments.map(g => `<p class="dm-line dm-v-${g.voice[0]}"><b>${g.voice[0] === 'f' ? '♀' : '♂'}</b> ${x(g.text)}</p>`).join('') : `<p class="dm-model">${x(item.text)}</p>`;
     page(`${crumbs([['Üben', '#ueben'], ['Hören', '#hoeren'], [set.title]])}
-      <div class="dm-head"><h1>${set.title}</h1><p class="dm-lead">${x(set.intro)}</p></div>
-      <nav class="dm-scenes" aria-label="Hörtext wählen">${set.items.map((it, i) => `<a href="#hoeren/${setId}/${i}" ${i === n ? 'aria-current="page"' : ''}>${i + 1}. ${x(it.type)}</a>`).join('')}</nav>
+      <div class="dm-head"><h1>${x(set.title)}</h1><p class="dm-lead">${x(set.intro)}</p></div>
+      <nav class="dm-scenes" aria-label="Hörtext wählen">${set.items.map((it, i) => `<a href="#hoeren/${setId}/${i}" ${i === n ? 'aria-current="page"' : ''} class="${mem.done[`hoeren:${setId}:${i}`] !== undefined ? 'is-done' : ''}">${i + 1}. ${x(it.type)}</a>`).join('')}</nav>
       <div class="dm-practice">
         <section class="dm-card dm-listen">
-          <p class="dm-path-meta">Hörtext ${n + 1} von ${set.items.length}</p>
+          <p class="dm-path-meta">${item.teil ? x(item.teil) + ' · ' : ''}Hörtext ${n + 1} von ${set.items.length}</p>
           <h2>${x(item.type)}</h2>
-          ${synth ? `<div class="dm-player-audio">
+          ${item.situation ? `<p class="dm-task">${x(item.situation)}</p>` : ''}
+          ${canPlay ? `<div class="dm-player-audio">
             <button type="button" class="dm-play" id="dm-play" aria-describedby="dm-plays"><span aria-hidden="true">▶</span> Abspielen</button>
             <label class="dm-rate">Tempo <select id="dm-rate"><option value="0.92">normal</option><option value="0.75">langsamer</option></select></label>
-          </div><p class="dm-small" id="dm-plays">Du kannst den Text zweimal hören.</p>` : '<p class="dm-warn">Dein Browser kann keine Texte vorlesen. Du kannst den Text unten lesen.</p>'}
-          <details id="dm-transcript" ${synth ? '' : 'open'}><summary>Text zum Mitlesen</summary><p class="dm-model">${x(item.text)}</p></details>
-          <p class="dm-small">Computerstimme deines Geräts. Je nach Gerät klingt sie unterschiedlich.</p>
+            <span class="dm-eq" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
+          </div><p class="dm-small" id="dm-plays">Lies zuerst die Fragen. Dann hör den Text – du kannst ihn zweimal hören.</p>` : '<p class="dm-warn">Dein Browser kann keine Texte vorlesen. Du kannst den Text unten lesen.</p>'}
+          <details id="dm-transcript" ${canPlay ? '' : 'open'}><summary>Text zum Mitlesen</summary><div class="dm-transcript">${transcript}</div></details>
+          <p class="dm-small">${rec ? '🎙 Aufnahme mit natürlichen KI-Stimmen.' : 'Computerstimme deines Geräts. Eine natürliche Aufnahme folgt in Kürze.'}</p>
         </section>
         <section class="dm-card">
           <h2>Fragen</h2>
@@ -409,12 +452,13 @@
       <div class="dm-row dm-next">${n < set.items.length - 1 ? `<a class="dm-btn" href="#hoeren/${setId}/${n + 1}">Nächster Hörtext</a>` : `<a class="dm-btn" href="#hoeren">Fertig – zur Übersicht</a>`}${n ? `<a class="dm-btn dm-btn-quiet" href="#hoeren/${setId}/${n - 1}">Vorheriger Hörtext</a>` : ''}</div>`);
     const btn = $('#dm-play');
     if (btn) btn.onclick = () => {
-      if (btn.classList.contains('is-playing')) { stopSpeaking(); btn.classList.remove('is-playing'); btn.innerHTML = '<span aria-hidden="true">▶</span> Abspielen'; return; }
+      const card = btn.closest('.dm-listen');
+      if (btn.classList.contains('is-playing')) { stopSpeaking(); btn.classList.remove('is-playing'); card.classList.remove('is-playing'); btn.innerHTML = '<span aria-hidden="true">▶</span> Abspielen'; return; }
       plays.count++;
-      btn.classList.add('is-playing'); btn.innerHTML = '<span aria-hidden="true">■</span> Stopp';
+      btn.classList.add('is-playing'); card.classList.add('is-playing'); btn.innerHTML = '<span aria-hidden="true">■</span> Stopp';
       const isDialogue = /\s–\s/.test(item.text);
-      speak(item.text, { rate: Number($('#dm-rate').value), dialogue: isDialogue, onend: () => {
-        btn.classList.remove('is-playing');
+      speak(item.text, { key: item.id, rate: Number($('#dm-rate').value), dialogue: isDialogue, onend: () => {
+        btn.classList.remove('is-playing'); card.classList.remove('is-playing');
         btn.innerHTML = plays.count >= 2 ? '<span aria-hidden="true">↺</span> Noch einmal hören' : '<span aria-hidden="true">▶</span> Zum zweiten Mal hören';
         $('#dm-plays').textContent = plays.count >= 2 ? 'Du hast den Text zweimal gehört. Beantworte jetzt die Fragen.' : 'Lies die Fragen noch einmal. Dann hör den Text ein zweites Mal.';
       } });
@@ -422,10 +466,40 @@
     $('#dm-lq').onsubmit = e => {
       e.preventDefault(); const f = new FormData(e.target); let ok = 0, filled = 0;
       item.questions.forEach((q, i) => { const v = f.get('q' + i), el = $('#dm-f' + i), good = v !== null && Number(v) === q.answer; if (v !== null) filled++; if (good) ok++; el.className = 'dm-feedback ' + (v === null ? '' : good ? 'good' : 'bad'); el.textContent = v === null ? 'Wähle bitte eine Antwort.' : `${good ? 'Richtig.' : 'Noch nicht richtig.'} ${q.why}`; });
-      $('#dm-lq-score').textContent = filled === item.questions.length ? `${ok} von ${item.questions.length} richtig.${ok < item.questions.length ? ' Lies den Text mit und hör noch einmal.' : ''}` : 'Bitte beantworte alle Fragen.';
-      if (filled === item.questions.length) { mem.done[`hoeren:${setId}:${n}`] = ok; save(); }
+      $('#dm-lq-score').textContent = filled === item.questions.length ? `${ok} von ${item.questions.length} richtig.${ok < item.questions.length ? ' Lies den Text mit und hör noch einmal.' : ' 🎉'}` : 'Bitte beantworte alle Fragen.';
+      if (filled === item.questions.length) { mem.done[`hoeren:${setId}:${n}`] = ok; save(); if (ok === item.questions.length) celebrate(e.target); }
     };
     $('#dm-lq-reset').onclick = () => { $('#dm-lq').reset(); $$('.dm-feedback').forEach(el => { el.textContent = ''; el.className = 'dm-feedback'; }); $('#dm-lq-score').textContent = ''; };
+  }
+  /* Kleine Konfetti-Animation bei allen richtigen Antworten */
+  function celebrate(el) {
+    if (!window.matchMedia?.('(prefers-reduced-motion: no-preference)').matches) return;
+    const box = document.createElement('div'); box.className = 'dm-confetti'; box.setAttribute('aria-hidden', 'true');
+    box.innerHTML = Array.from({ length: 28 }, (_, i) => `<i style="--x:${(Math.random() * 2 - 1) * 180}px;--y:${-80 - Math.random() * 160}px;--r:${Math.random() * 720}deg;--d:${i * 12}ms;--c:${['#2341B5', '#F4B740', '#2E9E6B', '#E4572E', '#7B61FF'][i % 5]}"></i>`).join('');
+    el.style.position ||= 'relative'; el.append(box); setTimeout(() => box.remove(), 1600);
+  }
+
+  /* ---------- Kahoot (wird täglich mit dem Kahoot-Profil synchronisiert) ---------- */
+  let kahootPromise;
+  const loadKahoots = () => kahootPromise ||= fetch('kahoot-feed.json', { cache: 'no-cache' }).then(r => r.ok ? r.json() : Promise.reject()).then(d => d.kahoots || []).catch(() => [])
+    .then(feed => feed.length ? feed : (typeof kahootQuizzes !== 'undefined' ? kahootQuizzes.map(q => ({ title: q.title, url: q.url, qr: `material/kahoot/kahoot-${q.n}.png` })) : []));
+  async function kahootPage() {
+    page(`${crumbs([['Üben', '#ueben'], ['Kahoot-Quiz']])}
+      <div class="dm-head dm-head-art"><div><h1>Kahoot-Quiz</h1><p class="dm-lead">Spiel allein oder im Kurs: Öffne ein Quiz oder scanne den QR-Code mit dem Handy. Neue Quiz von meinem Kahoot-Profil erscheinen hier automatisch.</p></div><span class="dm-head-emoji" aria-hidden="true">🎲</span></div>
+      <div class="dm-kgrid" id="dm-kgrid" aria-busy="true"><p class="dm-hint">Quiz werden geladen …</p></div>
+      <div class="dm-row"><a class="dm-btn dm-btn-quiet" href="https://create.kahoot.it/profiles/28070f1f-b266-41cd-a90f-0e8f04c31f07" target="_blank" rel="noopener noreferrer">Mein Kahoot-Profil ↗</a><a class="dm-btn dm-btn-quiet" href="material/kahoot/alle-kahoot-qr-codes.pdf" download>QR-Codes als PDF</a></div>
+      <p class="dm-small">Für eine gemeinsame Runde startet die Lehrkraft das Spiel bei Kahoot und teilt die Spiel-PIN. Kahoot ist ein Angebot der Kahoot! ASA; beim Öffnen gelten deren Datenschutzbestimmungen.</p>`);
+    const list = await loadKahoots(), box = $('#dm-kgrid'); if (!box) return;
+    box.removeAttribute('aria-busy');
+    const week = Date.now() - 14 * 864e5;
+    box.innerHTML = list.map((k, i) => `<article class="dm-kcard dm-c${i % 5}">
+      <a class="dm-kcover" href="${x(k.url)}" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">${k.cover ? `<img src="${x(k.cover)}" alt="" loading="lazy" onerror="this.remove()">` : ''}<span>${x(k.title.slice(0, 1))}</span></a>
+      <div class="dm-kbody">${i === 0 && k.created && Date.parse(k.created) > week ? '<span class="dm-new">Neu</span>' : ''}<h2>${x(k.title.replace(/_/g, ' '))}</h2>
+      ${k.description ? `<p>${x(k.description)}</p>` : ''}${k.questions ? `<p class="dm-small">${k.questions} Fragen</p>` : ''}
+      <div class="dm-row"><a class="dm-btn" href="${x(k.url)}" target="_blank" rel="noopener noreferrer">Quiz öffnen ↗</a></div></div>
+      ${k.qr ? `<img class="dm-kqr" src="${x(k.qr)}" alt="QR-Code: ${x(k.title)}" width="120" height="120" loading="lazy">` : ''}
+    </article>`).join('') || '<p class="dm-empty">Gerade sind keine Quiz verfügbar.</p>';
+    revealCards();
   }
 
   /* ---------- Prüfung ---------- */
@@ -493,14 +567,22 @@
 
   /* ---------- Über mich, Impressum, Datenschutz ---------- */
   function about() {
+    const C = DM.credentials || [];
     page(`${crumbs([['Über mich']])}
       <section class="dm-about">
-        <figure class="dm-about-photo"><img src="assets/dennis.webp" alt="Dennis, Deutschlehrer" width="626" height="1004"></figure>
+        <figure class="dm-about-photo"><img src="assets/dennis.webp" alt="Dennis, Deutschlehrer" width="626" height="1004"><figcaption class="dm-badge-stack"><span>✓ DTZ-Prüfer</span><span>✓ telc-Prüfer</span><span>✓ BAMF-zugelassen</span></figcaption></figure>
         <div class="dm-about-text">
           <h1>Hallo, ich bin Dennis.</h1>
-          <p class="dm-lead">Ich unterrichte Deutsch – vom ersten Satz bis zum Berufssprachkurs B2.</p>
-          <p>Ich habe einen Master in Germanistik. Auf Sprachprüfungen und den Test „Leben in Deutschland“ habe ich mich selbst vorbereitet. Deshalb weiß ich genau, wo die größten Stolpersteine liegen – und wie man sie überwindet.</p>
+          <p class="dm-lead">Ich unterrichte Deutsch – vom ersten Satz bis zum Berufssprachkurs. Und ich bin zugelassener Prüfer.</p>
+          <p>Ich habe einen Master in Germanistik. Ich bin <b>lizenzierter Prüfer für den DTZ</b> (Deutsch-Test für Zuwanderer), <b>telc-Prüfer für Deutsch B1–B2</b> und <b>Prüfender für den Deutsch-Test für den Beruf B2–C1</b>. Das Bundesamt für Migration und Flüchtlinge (BAMF) hat mich als <b>Lehrkraft für Integrationskurse</b> und für <b>Berufssprachkurse bis zum Niveau C2</b> zugelassen.</p>
+          <p>Ich kenne die Prüfungen also von beiden Seiten: als Lehrer und als Prüfer. Deshalb weiß ich genau, worauf es ankommt – und wo die größten Stolpersteine liegen.</p>
           <p>Auf dieser Seite findest du alles, was ich für meine Kurse entwickle: Lektionen, Übungen zum Sprechen und Schreiben, Prüfungstraining und meine Erklärvideos. Alles kostenlos und ohne Anmeldung.</p>
+          <ul class="dm-facts">
+            <li><b>DTZ</b><span>Prüferlizenz g.a.s.t.</span></li>
+            <li><b>B1–B2</b><span>telc-Prüferlizenz</span></li>
+            <li><b>B2–C1</b><span>DTB-Prüfendenlizenz</span></li>
+            <li><b>bis C2</b><span>BAMF-Zulassung</span></li>
+          </ul>
           <h2>So arbeite ich</h2>
           <ul class="dm-list">
             <li>Grammatik erkläre ich auf Deutsch – einfach und mit vielen Beispielen.</li>
@@ -512,8 +594,29 @@
           <p class="dm-small">Oder nutze die Seite <a href="#pinnwand">Feedback und Wünsche</a>.</p>
         </div>
       </section>
+      <section class="dm-section dm-wall" id="nachweise" aria-labelledby="wall-h">
+        <div class="dm-section-head"><h2 id="wall-h">Meine Zulassungen und Nachweise</h2><p>Klicke auf ein Dokument, um es groß zu sehen. Persönliche Daten sind geschwärzt.</p></div>
+        <div class="dm-wall-grid">${C.map((c, i) => `<button type="button" class="dm-cert dm-c${i % 5}" data-cert="${i}">
+          <span class="dm-cert-pin" aria-hidden="true"></span>
+          <span class="dm-cert-frame"><img src="assets/nachweise/${c.id}-klein.webp" alt="${x(c.kind)}: ${x(c.title)}" loading="lazy" width="420" height="560"></span>
+          <span class="dm-cert-label"><span class="dm-tag">${c.icon} ${x(c.kind)}</span><b>${x(c.title)}</b><small>${x(c.org)}</small></span></button>`).join('')}</div>
+        <dialog class="dm-lightbox" id="dm-lightbox"><form method="dialog"><button class="dm-lb-close" aria-label="Schließen">×</button></form><figure><img alt="" id="dm-lb-img"><figcaption id="dm-lb-cap"></figcaption></figure><div class="dm-row"><button type="button" class="dm-btn dm-btn-quiet" id="dm-lb-prev">← Zurück</button><button type="button" class="dm-btn dm-btn-quiet" id="dm-lb-next">Weiter →</button></div></dialog>
+      </section>
+      ${musicCard()}
       <section class="dm-section dm-thanks"><div><h2>Danke sagen</h2><p>Die Lernangebote bleiben kostenlos. Wenn du meine Arbeit unterstützen möchtest, freue ich mich über einen freiwilligen Beitrag.</p></div><a class="dm-btn dm-btn-sun" href="${T.donate}" target="_blank" rel="noopener noreferrer">♡ Danke sagen</a></section>`);
+    const lb = $('#dm-lightbox'); let cur = 0;
+    const show = i => { cur = (i + C.length) % C.length; const c = C[cur]; $('#dm-lb-img').src = `assets/nachweise/${c.id}.webp`; $('#dm-lb-img').alt = `${c.kind}: ${c.title}`; $('#dm-lb-cap').innerHTML = `<b>${x(c.title)}</b> · ${x(c.org)}<br><span>${x(c.desc)}</span>`; };
+    $$('[data-cert]').forEach(b => b.onclick = () => { show(Number(b.dataset.cert)); lb.showModal ? lb.showModal() : lb.setAttribute('open', ''); });
+    $('#dm-lb-prev').onclick = () => show(cur - 1); $('#dm-lb-next').onclick = () => show(cur + 1);
+    lb.addEventListener('click', e => { if (e.target === lb) lb.close(); });
+    lb.addEventListener('keydown', e => { if (e.key === 'ArrowLeft') show(cur - 1); if (e.key === 'ArrowRight') show(cur + 1); });
   }
+  /* Empfehlung: Musikkanal zum konzentrierten Lernen */
+  const musicCard = () => `<section class="dm-section dm-music" aria-labelledby="music-h">
+      <div class="dm-music-art" aria-hidden="true"><span>♪</span><span>♫</span><span>♪</span><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      <div><p class="dm-path-meta">Tipp von Dennis</p><h2 id="music-h">Mit Musik fokussiert Deutsch lernen</h2>
+      <p>Ruhige Hintergrundmusik hilft vielen beim Konzentrieren – beim Vokabellernen, Schreiben oder Wiederholen. Auf meinem zweiten YouTube-Kanal findest du Musik, die ich zum Lernen und Arbeiten mache.</p>
+      <a class="dm-btn" href="${T.music}" target="_blank" rel="noopener noreferrer">🎧 Zum Musikkanal PrudnikauMusic ↗</a></div></section>`;
   function impressum() {
     page(`${crumbs([['Impressum']])}
       <article class="dm-legal"><h1>Impressum</h1>
@@ -545,14 +648,17 @@
       <p><button type="button" class="dm-btn dm-btn-quiet" id="dm-wipe">Meinen gespeicherten Lernstand löschen</button> <span id="dm-wipe-status" role="status"></span></p>
       <h2>4. YouTube-Videos</h2>
       <p>Videos werden erst geladen, wenn du auf „Videos hier anzeigen“ klickst. Erst dann werden Daten (zum Beispiel deine IP-Adresse) an YouTube (Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland) übertragen. Ich nutze den erweiterten Datenschutzmodus (youtube-nocookie.com). Deine Zustimmung wird auf deinem Gerät gespeichert; du kannst sie oben mit „Lernstand löschen“ zurücknehmen. Rechtsgrundlage ist deine Einwilligung (Art. 6 Abs. 1 lit. a DSGVO). Mehr: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Datenschutzerklärung von Google</a>.</p>
+      <p>Die Vorschaubilder der Videos liegen auf dieser Website selbst. Beim Anzeigen der Bilder werden keine Daten an YouTube übertragen.</p>
+      <h2>4a. Schreib-Check (LanguageTool)</h2>
+      <p>Wenn du bei einem Schreibfeld auf „Text prüfen“ klickst, wird der Text aus diesem Feld zur Rechtschreib- und Grammatikprüfung an LanguageTool übertragen (LanguageTooler GmbH, Boschstraße 23a, 22761 Hamburg, Deutschland). Dabei wird auch deine IP-Adresse übermittelt. Ohne Klick wird nichts übertragen. Für die Verarbeitung beim Anbieter gelten dessen Datenschutzbestimmungen. Rechtsgrundlage ist deine Einwilligung durch den Klick (Art. 6 Abs. 1 lit. a DSGVO). Schreib bitte keine sensiblen persönlichen Daten in die Übungsfelder. Mehr: <a href="https://languagetool.org/legal/privacy" target="_blank" rel="noopener noreferrer">Datenschutzerklärung von LanguageTool</a>.</p>
       <h2>5. Kontakt per E-Mail oder WhatsApp</h2>
       <p>Wenn du mir schreibst, verarbeite ich deine Nachricht und deine Kontaktdaten nur, um dir zu antworten. Für WhatsApp gelten zusätzlich die Datenschutzbestimmungen von WhatsApp (Meta).</p>
       <h2>6. Vorlesefunktion</h2>
-      <p>Die Vorlesefunktion nutzt die Sprachausgabe deines Browsers. Je nach Browser und gewählter Stimme kann der Text dafür an den Anbieter des Browsers (zum Beispiel Google, Microsoft oder Apple) übertragen werden.</p>
+      <p>Die meisten Hörtexte sind als Audiodateien auf dieser Website gespeichert (künstlich erzeugte Stimmen). Wo es noch keine Datei gibt, nutzt die Vorlesefunktion die Sprachausgabe deines Browsers. Je nach Browser und gewählter Stimme kann der Text dafür an den Anbieter des Browsers (zum Beispiel Google, Microsoft oder Apple) übertragen werden.</p>
       <h2>7. Schriften</h2>
       <p>Die Schriften dieser Website liegen auf dem eigenen Server. Es werden keine Schriften von Google oder anderen Anbietern geladen.</p>
       <h2>8. Externe Links</h2>
-      <p>Links zu Kahoot, DonationAlerts, WhatsApp, YouTube oder Prüfungsanbietern führen zu anderen Websites. Dort gelten deren Datenschutzbestimmungen.</p>
+      <p>Die Titelbilder und QR-Codes der Kahoot-Quiz liegen auf dieser Website. Links zu Kahoot, DonationAlerts, WhatsApp, YouTube oder Prüfungsanbietern führen zu anderen Websites. Dort gelten deren Datenschutzbestimmungen.</p>
       <h2>9. Deine Rechte</h2>
       <p>Du hast das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerspruch. Eine Einwilligung kannst du jederzeit widerrufen. Du kannst dich außerdem bei einer Datenschutz-Aufsichtsbehörde beschweren, zum Beispiel bei der Landesbeauftragten für Datenschutz und Informationsfreiheit Nordrhein-Westfalen.</p>
       <p class="dm-small">Stand: Oktober 2026</p>
@@ -766,14 +872,37 @@
     hoeren: p => p[1] ? listening(p[1], p[2]) : listeningHub(),
     pruefung: () => exam(),
     videos: p => videos(p[1], p[2]),
-    'ueber-mich': () => about(),
+    'ueber-mich': p => { about(); if (p[1] === 'nachweise') setTimeout(() => $('#nachweise')?.scrollIntoView({ behavior: 'smooth' }), 60); },
     impressum: () => impressum(),
     datenschutz: () => datenschutz(),
     pinnwand: () => feedback(),
     material: p => materials(p[1], p[2]),
-    lernpakete: () => packages()
+    lernpakete: () => packages(),
+    kahoot: () => kahootPage()
   };
   const ALIAS = { buch: 'lernen', themen: 'lernen', cover: '', praxis: 'ueben', pruefungen: 'pruefung', start: '' };
+
+  /* Zurück-Pfeil und Startseite auf jeder Unterseite */
+  let navDepth = 0;
+  window.addEventListener('hashchange', () => { navDepth++; });
+  function parentOf(p) {
+    const legacy = $('main a.back')?.getAttribute('href');
+    if (legacy) return legacy;
+    const links = $$('main .dm-crumbs a[href]').map(a => a.getAttribute('href'));
+    if (links.length > 1) return links[links.length - 1];
+    if (p.length > 2) return '#' + p.slice(0, -1).join('/');
+    if (p.length === 2) return '#' + p[0];
+    return '#';
+  }
+  const backBar = document.createElement('nav');
+  backBar.className = 'dm-backbar'; backBar.setAttribute('aria-label', 'Zurück'); backBar.hidden = true;
+  mainEl.before(backBar);
+  function addBackBar(p) {
+    backBar.hidden = p[0] === '';
+    if (backBar.hidden) return;
+    backBar.innerHTML = `<div class="dm-backbar-in"><a class="dm-back" href="${x(parentOf(p))}"><span aria-hidden="true">←</span> Zurück</a><a class="dm-home" href="#"><span aria-hidden="true">⌂</span> Startseite</a></div>`;
+    backBar.querySelector('.dm-back').onclick = e => { if (navDepth > 0) { e.preventDefault(); navDepth -= 2; history.back(); } };
+  }
 
   window.route = function () {
     let raw = decodeURIComponent(location.hash.slice(1)).replace(/^\/+/, '');
@@ -788,6 +917,7 @@
     if (own) { own(p); setupExamBox(p); }
     else { try { legacyRoute(); } catch (e) { console.error(e); home(); } afterLegacy(p); }
     hideMissingDownloads();
+    addBackBar(p);
     const nav = NAV[p[0]] ?? '';
     $$('#main-navigation a[data-nav]').forEach(a => { const on = a.dataset.nav === nav; a.classList.toggle('active', on); if (on) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current'); });
     const h1 = $('main h1')?.textContent.trim();
@@ -828,5 +958,6 @@
 
   DM.page = page; DM.crumbs = crumbs; DM.note = note; DM.esc = x;
   route();
+  ttsReady.then(() => { if (/^#(hoeren|ueben)/.test(location.hash)) route(); });
   DM.speak = speak; DM.loadVideos = loadVideos;
 })();
