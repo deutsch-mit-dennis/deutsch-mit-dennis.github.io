@@ -503,7 +503,7 @@
           </ul>
           ${note('Du hast eine Frage oder einen Wunsch für ein neues Thema? Schreib mir!', true)}
           <div class="dm-row"><a class="dm-btn" href="mailto:${T.email}">E-Mail schreiben</a><a class="dm-btn dm-btn-quiet" href="${T.whatsapp}" target="_blank" rel="noopener noreferrer">WhatsApp</a><a class="dm-btn dm-btn-quiet" href="${T.youtube}" target="_blank" rel="noopener noreferrer">YouTube-Kanal ↗</a></div>
-          <p class="dm-small">Oder hinterlasse eine Nachricht auf der <a href="#pinnwand">Pinnwand</a>.</p>
+          <p class="dm-small">Oder nutze die Seite <a href="#pinnwand">Feedback und Wünsche</a>.</p>
         </div>
       </section>
       <section class="dm-section dm-thanks"><div><h2>Danke sagen</h2><p>Die Lernangebote bleiben kostenlos. Wenn du meine Arbeit unterstützen möchtest, freue ich mich über einen freiwilligen Beitrag.</p></div><a class="dm-btn dm-btn-sun" href="${T.donate}" target="_blank" rel="noopener noreferrer">♡ Danke sagen</a></section>`);
@@ -533,14 +533,14 @@
       <p>${T.address.map(x).join('<br>')}<br>E-Mail: <a href="mailto:${T.email}">${T.email}</a></p>
       <h2>2. Hosting und Server-Protokolle</h2>
       <p>Beim Aufruf der Website verarbeitet der Hosting-Anbieter technisch notwendige Daten (zum Beispiel IP-Adresse, Datum und Uhrzeit, aufgerufene Seite, Browsertyp), um die Seite auszuliefern und die Sicherheit zu gewährleisten. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO.</p>
-      <p class="dm-todo">Hosting-Anbieter: [bitte Namen und Anschrift des Hosting-Anbieters eintragen]</p>
+      <p>Diese Website wird bei GitHub Pages gehostet, einem Dienst der GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA. Dabei können Daten auch in den USA verarbeitet werden. Mehr: <a href="https://docs.github.com/de/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener noreferrer">Datenschutzerklärung von GitHub</a>.</p>
       <h2>3. Lernstand auf deinem Gerät</h2>
       <p>Dein Lernfortschritt, abgehakte Schritte und deine Übungstexte werden im Speicher deines Browsers (localStorage) gespeichert. Diese Daten werden nicht an mich oder Dritte übertragen. Du kannst sie jederzeit löschen.</p>
       <p><button type="button" class="dm-btn dm-btn-quiet" id="dm-wipe">Meinen gespeicherten Lernstand löschen</button> <span id="dm-wipe-status" role="status"></span></p>
       <h2>4. YouTube-Videos</h2>
       <p>Videos werden erst geladen, wenn du auf „Videos hier anzeigen“ klickst. Erst dann werden Daten (zum Beispiel deine IP-Adresse) an YouTube (Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland) übertragen. Ich nutze den erweiterten Datenschutzmodus (youtube-nocookie.com). Deine Zustimmung wird auf deinem Gerät gespeichert; du kannst sie oben mit „Lernstand löschen“ zurücknehmen. Rechtsgrundlage ist deine Einwilligung (Art. 6 Abs. 1 lit. a DSGVO). Mehr: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Datenschutzerklärung von Google</a>.</p>
-      <h2>5. Pinnwand</h2>
-      <p>Wenn du auf der Pinnwand einen Zettel absendest, werden dein Text und ein freiwillig angegebener Name gespeichert und öffentlich angezeigt. Bitte schreib keine privaten Kontaktdaten. Du kannst deinen Zettel in demselben Browser wieder löschen oder mich um Löschung bitten.</p>
+      <h2>5. Kontakt per E-Mail oder WhatsApp</h2>
+      <p>Wenn du mir schreibst, verarbeite ich deine Nachricht und deine Kontaktdaten nur, um dir zu antworten. Für WhatsApp gelten zusätzlich die Datenschutzbestimmungen von WhatsApp (Meta).</p>
       <h2>6. Vorlesefunktion</h2>
       <p>Die Vorlesefunktion nutzt die Sprachausgabe deines Browsers. Je nach Browser und gewählter Stimme kann der Text dafür an den Anbieter des Browsers (zum Beispiel Google, Microsoft oder Apple) übertragen werden.</p>
       <h2>7. Schriften</h2>
@@ -568,11 +568,23 @@
     en[8] = 'All of Dennis’ videos are under “Videos”. New videos appear automatically. If the player does not work, open the video directly on YouTube.';
   } catch { /* Hilfe nicht geladen */ }
 
+  /* ---------- Feedback & Wünsche (ersetzt die Pinnwand) ---------- */
+  function feedback() {
+    page(`${crumbs([['Feedback und Wünsche']])}
+      <div class="dm-head"><h1>Feedback und Wünsche</h1><p class="dm-lead">Was gefällt dir? Was fehlt dir? Welches Thema soll Dennis als Nächstes erklären?</p></div>
+      <div class="dm-hub">
+        <section class="dm-card dm-hub-card"><h2>✉️ E-Mail</h2><p>Schreib Dennis eine kurze Nachricht. Gern auch mit einem Thema für ein neues Video.</p><p><b>${T.email}</b></p><a class="dm-btn" href="mailto:${T.email}?subject=${encodeURIComponent('Feedback zur Website')}">E-Mail schreiben</a></section>
+        <section class="dm-card dm-hub-card"><h2>💬 WhatsApp</h2><p>Lieber per Handy? Dann schreib über WhatsApp.</p><a class="dm-btn dm-btn-quiet" href="${T.whatsapp}" target="_blank" rel="noopener noreferrer">WhatsApp öffnen</a></section>
+        <section class="dm-card dm-hub-card"><h2>▶ YouTube</h2><p>Unter jedem Video kannst du einen Kommentar schreiben und dir ein Thema wünschen.</p><a class="dm-btn dm-btn-quiet" href="${T.youtube}" target="_blank" rel="noopener noreferrer">Zum Kanal ↗</a></section>
+      </div>
+      ${note('Danke für jede Rückmeldung! So wird die Seite für alle besser.')}`);
+  }
+
   /* ---------- Nach dem Laden einer bisherigen Seite ---------- */
   function afterLegacy(p) {
     if (p[0] === 'quellen') {
       const sec = $$('main section').find(s => /Deine Eingaben/.test(s.querySelector('h2')?.textContent || ''));
-      if (sec) sec.innerHTML = '<h2>Deine Eingaben</h2><p>In „Üben“ (Sprechen, Schreiben, Hören) und in „Mein Lernweg“ bleiben deine Texte und dein Fortschritt im Speicher deines Browsers – nur auf diesem Gerät. Texte in den Lektionen und im Prüfungstraining bleiben nur, solange die Seite geöffnet ist. Lade wichtige Texte vorher herunter. Freie Texte und die Aussprache werden nicht automatisch bewertet.</p><h3>Die öffentliche Pinnwand</h3><p>Wenn du einen Zettel absendest, werden dein Text und der freiwillige Name gespeichert und öffentlich angezeigt. Verwende keine privaten Kontaktdaten.</p><p>Mehr dazu in der <a href="#datenschutz">Datenschutzerklärung</a>.</p>';
+      if (sec) sec.innerHTML = '<h2>Deine Eingaben</h2><p>In „Üben“ (Sprechen, Schreiben, Hören) und in „Mein Lernweg“ bleiben deine Texte und dein Fortschritt im Speicher deines Browsers – nur auf diesem Gerät. Texte in den Lektionen und im Prüfungstraining bleiben nur, solange die Seite geöffnet ist. Lade wichtige Texte vorher herunter. Freie Texte und die Aussprache werden nicht automatisch bewertet.</p><p>Mehr dazu in der <a href="#datenschutz">Datenschutzerklärung</a>.</p>';
     }
     if (p[0] === 'orientierungskurs' && !p[1]) videoSection('orientierung', 'Videos: Leben in Deutschland').then(sec => sec && mainEl.append(sec));
     if (p[0] === 'lektion' && p[1] && lessons.some(l => l.id === p[1])) {
@@ -583,7 +595,7 @@
   /* ---------- Router ---------- */
   const legacyRoute = window.route;
   const NAV = { '': 'start', lernweg: 'wege', wegweiser: 'wege', lernen: 'lernen', lektion: 'lernen', wortschatz: 'lernen', wort: 'lernen', ueben: 'ueben', schreiben: 'ueben', hoeren: 'ueben', kahoot: 'ueben', pruefung: 'pruefung', training: 'pruefung', orientierungskurs: 'pruefung', quellen: 'pruefung', videos: 'videos', 'ueber-mich': 'ueber' };
-  const TITLES = { '': 'Deutsch lernen mit Dennis', lernweg: 'Mein Lernweg', wegweiser: 'Welcher Weg passt?', lernen: 'Lektionen', lektion: 'Lektion', wortschatz: 'Wortschatz', wort: 'Wortkarte', ueben: 'Üben', schreiben: 'Schreib-Bausteine', hoeren: 'Hören', kahoot: 'Kahoot-Quiz', pruefung: 'Prüfungstraining', training: 'Prüfungstraining', orientierungskurs: 'Leben in Deutschland', quellen: 'Prüfungsinfos & Quellen', videos: 'Videos', 'ueber-mich': 'Über mich', impressum: 'Impressum', datenschutz: 'Datenschutz', pinnwand: 'Pinnwand' };
+  const TITLES = { '': 'Deutsch lernen mit Dennis', lernweg: 'Mein Lernweg', wegweiser: 'Welcher Weg passt?', lernen: 'Lektionen', lektion: 'Lektion', wortschatz: 'Wortschatz', wort: 'Wortkarte', ueben: 'Üben', schreiben: 'Schreib-Bausteine', hoeren: 'Hören', kahoot: 'Kahoot-Quiz', pruefung: 'Prüfungstraining', training: 'Prüfungstraining', orientierungskurs: 'Leben in Deutschland', quellen: 'Prüfungsinfos & Quellen', videos: 'Videos', 'ueber-mich': 'Über mich', impressum: 'Impressum', datenschutz: 'Datenschutz', pinnwand: 'Feedback und Wünsche' };
   const OWN = {
     '': () => home(),
     lernweg: p => p[1] ? pathPage(p[1]) : paths(),
@@ -596,7 +608,8 @@
     videos: p => videos(p[1], p[2]),
     'ueber-mich': () => about(),
     impressum: () => impressum(),
-    datenschutz: () => datenschutz()
+    datenschutz: () => datenschutz(),
+    pinnwand: () => feedback()
   };
   const ALIAS = { buch: 'lernen', themen: 'lernen', cover: '', praxis: 'ueben', pruefungen: 'pruefung', start: '' };
 
