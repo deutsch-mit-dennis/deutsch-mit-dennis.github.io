@@ -557,3 +557,4 @@ nav.dm-tabs a,nav.dm-scenes a{flex:0 0 auto}
 .dm-btn-disabled{background:#E3E6EE!important;color:#5d6578!important;border-color:#E3E6EE!important;cursor:not-allowed;box-shadow:none!important}
 .dm-pkg-notify{font-size:14px;width:100%}
 .dm-pkg-info{margin-top:26px}.dm-pkg-info ol{padding-left:22px}
+.dm-pkg-sec{margin:26px 0}.dm-pkg-sec>h2{margin:0 0 4px}.dm-pkg-jump{margin-bottom:6px}

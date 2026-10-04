@@ -633,15 +633,18 @@
       <ul class="dm-pkg-list">${k.contents.map(c => `<li>${x(c)}</li>`).join('')}</ul>
       <div class="dm-pkg-buy">
         ${k.buy ? `<a class="dm-btn" href="${x(k.buy)}" target="_blank" rel="noopener">Kaufen${k.price ? ` · ${x(k.price)}` : ''}</a>` : `<span class="dm-btn dm-btn-disabled" aria-disabled="true">Bald erhältlich</span>`}
-        <a class="dm-btn dm-btn-quiet" href="material/leseproben/${k.id}.pdf" target="_blank" rel="noopener">Leseprobe (PDF)</a>
+        ${k.preview ? `<a class="dm-btn dm-btn-quiet" href="${x(k.preview)}" target="_blank" rel="noopener">Leseprobe (PDF)</a>` : ''}
         ${k.buy ? '' : `<a class="dm-pkg-notify" href="mailto:${T.email}?subject=${encodeURIComponent('Lernpaket: ' + k.title)}&body=${encodeURIComponent('Hallo Dennis,\nbitte gib mir Bescheid, wenn dieses Lernpaket erhältlich ist.\n')}">Benachrichtigen, wenn verfügbar</a>`}
       </div></article>`;
     page(`${crumbs([['Lernpakete']])}
       <div class="dm-head"><h1>Lernpakete</h1><p class="dm-lead">Ausführliche PDF-Pakete zum Selbstlernen – mit Musterlösungen und Lösungsschlüssel. Die meisten Materialien auf dieser Seite bleiben kostenlos. Die Pakete sind für alle, die gezielt mehr üben möchten.</p></div>
-      <div class="dm-pkg-grid">${P.map(card).join('')}</div>
+      <nav class="dm-tabs dm-tabs-small dm-pkg-jump" aria-label="Zielgruppe"><a href="#lernpakete" data-jump="pk-lernende"><b>Für Lernende</b><small>${P.filter(k => k.group !== 'lehrende').length} Pakete</small></a><a href="#lernpakete" data-jump="pk-lehrende"><b>Für Lehrkräfte</b><small>${P.filter(k => k.group === 'lehrende').length} Paket</small></a></nav>
+      <section class="dm-pkg-sec" id="pk-lernende"><h2>Für Lernende</h2><p class="dm-small">Selbstlernmaterial für DTZ, B2 Beruf und den Test „Leben in Deutschland“ – mit Musterlösungen.</p><div class="dm-pkg-grid">${P.filter(k => k.group !== 'lehrende').map(card).join('')}</div></section>
+      <section class="dm-pkg-sec" id="pk-lehrende"><h2>Für Lehrkräfte</h2><p class="dm-small">Fertige Unterrichtsstunden für Integrationskurs und DaZ – mit Lehrerblatt, Kahoot-Quiz und Kopiervorlagen.</p><div class="dm-pkg-grid">${P.filter(k => k.group === 'lehrende').map(card).join('')}</div></section>
       <section class="dm-card dm-pkg-info"><h2>So funktioniert der Kauf</h2>
         <ol><li>Du wählst ein Paket und klickst auf „Kaufen“.</li><li>Die Bezahlung läuft sicher über <b>Digistore24</b>.</li><li>Direkt nach dem Kauf bekommst du den Download-Link per E-Mail.</li></ol>
-        <p class="dm-small">Selbstlernmaterial ohne individuelle Betreuung oder Korrektur. Unabhängiges Lernangebot – kein Angebot von g.a.s.t., telc oder BAMF, keine offiziellen Prüfungsaufgaben. Fragen? <a href="mailto:${T.email}">${T.email}</a></p></section>`);
+        <p class="dm-small">Selbstlernmaterial und Unterrichtsmaterial ohne individuelle Betreuung oder Korrektur. Unabhängiges Lernangebot – kein Angebot von g.a.s.t., telc oder BAMF, keine offiziellen Prüfungsaufgaben. Fragen? <a href="mailto:${T.email}">${T.email}</a></p></section>`);
+    $$('[data-jump]').forEach(a => a.onclick = e => { e.preventDefault(); document.getElementById(a.dataset.jump)?.scrollIntoView({ behavior: 'smooth', block: 'start' }); });
   }
 
   /* ---------- Feedback & Wünsche (ersetzt die Pinnwand) ---------- */

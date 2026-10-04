@@ -263,22 +263,22 @@ DM.materials = [{"file":"material/arbeitsblaetter/dativ-nomen-durch-pronomen-ers
    Die vollständigen PDFs liegen NICHT auf dieser Website – nur die Leseproben.
    Sobald ein Produkt bei Digistore24 angelegt ist: buy = Kauflink eintragen, price = Preis. */
 DM.packages = [
-  { id: 'dtz-schreiben-20-briefe', icon: '✉️', title: 'DTZ Schreiben: 20 Briefe mit Musterlösung', level: 'A2–B1', target: 'DTZ', price: null, buy: null,
+  { id: 'dtz-schreiben-20-briefe', group: 'lernende', icon: '✉️', title: 'DTZ Schreiben: 20 Briefe mit Musterlösung', level: 'A2–B1', target: 'DTZ', price: null, buy: null,
     desc: '20 Aufgaben wie im Deutsch-Test für Zuwanderer – vom Brief an den Vermieter bis zur Entschuldigung beim Kurs. Zu jeder Aufgabe eine Musterlösung, die wichtigsten Redemittel und eine Checkliste zum Selbstkontrollieren.',
     contents: ['20 Schreibaufgaben mit vier Leitpunkten', '20 Musterbriefe (formell und informell)', 'Baukasten: Anrede, Einleitung, Bitte, Entschuldigung, Gruß', 'Checkliste und typische Fehler'] },
-  { id: 'bild-beschreiben-20-bilder', icon: '🖼️', title: 'Bild beschreiben: 20 Bilder mit Redemitteln', level: 'A2–B1', target: 'DTZ', price: null, buy: null,
+  { id: 'bild-beschreiben-20-bilder', group: 'lernende', icon: '🖼️', title: 'Bild beschreiben: 20 Bilder mit Redemitteln', level: 'A2–B1', target: 'DTZ', price: null, buy: null,
     desc: '20 Alltagsbilder in Farbe – Arbeit, Familie, Gesundheit, Wohnen, Ämter, Freizeit. Zu jedem Bild Wortschatz, Leitfragen, eine Musterbeschreibung und Fragen zu eigenen Erfahrungen.',
     contents: ['20 farbige Bilder zu den Prüfungsthemen', 'Wortschatz und Leitfragen zu jedem Bild', '20 Musterbeschreibungen zum Vorlesen', 'Redemittel: Ort, Personen, Kleidung, Vermutungen'] },
-  { id: 'b2-beruf-redemittel', icon: '💼', title: 'B2 Beruf: Redemittel für Telefonat, Besprechung und E-Mail', level: 'B2', target: 'DTB B2 / Berufssprachkurs', price: null, buy: null,
+  { id: 'b2-beruf-redemittel', group: 'lernende', icon: '💼', title: 'B2 Beruf: Redemittel für Telefonat, Besprechung und E-Mail', level: 'B2', target: 'DTB B2 / Berufssprachkurs', price: null, buy: null,
     desc: 'Die wichtigsten Formulierungen für den Arbeitsalltag und die Prüfung: Meinung äußern, widersprechen, Vorschläge machen, Probleme lösen, Kunden antworten – übersichtlich nach Situationen sortiert, mit Beispieldialogen.',
     contents: ['Redemittel nach 12 Situationen geordnet', 'Beispieldialoge Telefonat und Besprechung', 'E-Mail-Bausteine: Anfrage, Beschwerde, Antwort', 'Übungen mit Lösungen'] },
-  { id: 'b2-wiederholer', icon: '🔁', title: 'B2-Wiederholer-Paket: gezielt zum zweiten Versuch', level: 'B2', target: 'DTB B2', price: null, buy: null,
+  { id: 'b2-wiederholer', group: 'lernende', icon: '🔁', title: 'B2-Wiederholer-Paket: gezielt zum zweiten Versuch', level: 'B2', target: 'DTB B2', price: null, buy: null,
     desc: 'Für alle, die die B2-Prüfung wiederholen. Typische Gründe fürs Nichtbestehen, ein 4-Wochen-Plan, Grammatik-Schwerpunkte für B2 und Training für die schriftlichen und mündlichen Teile – mit Lösungen.',
     contents: ['Selbsttest: Wo liegen meine Lücken?', '4-Wochen-Lernplan zum Abhaken', 'Grammatik B2: Passiv, Konnektoren, Nomen-Verb-Verbindungen', 'Schreib- und Sprechtraining mit Mustern'] },
-  { id: 'lid-lernheft', icon: '🇩🇪', title: 'Leben in Deutschland: Lernheft mit allen 310 Fragen', level: 'A2–B1', target: 'Orientierungskurs / Einbürgerung', price: null, buy: null,
+  { id: 'lid-lernheft', group: 'lernende', icon: '🇩🇪', title: 'Leben in Deutschland: Lernheft mit allen 310 Fragen', level: 'A2–B1', target: 'Orientierungskurs / Einbürgerung', price: null, buy: null,
     desc: 'Alle 300 allgemeinen Fragen und die 10 Fragen für NRW zum Ausdrucken – mit markierter Lösung, Lernplan für 10 Tage und Checkboxen für deinen Fortschritt. Ideal zum Lernen ohne Handy.',
     contents: ['310 Fragen mit markierter Lösung', 'Lernplan: 10 Tage, 31 Fragen pro Tag', 'Abhak-Kästchen für jede Frage', 'Wichtige Begriffe einfach erklärt'] },
-  { id: 'lehrerpaket-16-stunden', icon: '🧑‍🏫', title: 'Lehrerpaket: 16 fertige Unterrichtsstunden A1–A2', level: 'A1–B1', target: 'für Lehrkräfte', price: null, buy: null,
-    desc: '16 erprobte Unterrichtsstunden aus dem Integrationskurs – mit Ablauf, Tafelbildern, Übungen und Lösungen. Sofort einsetzbar im Präsenz- oder Online-Unterricht.',
-    contents: ['16 Stunden mit Ablaufplan und Zeitangaben', 'Regeln, Tafelbilder und Übungen', 'Lösungen zu allen Übungen', 'Kopiervorlagen für Teilnehmende'] }
+  { id: 'lehrerpaket-16-stunden', group: 'lehrende', icon: '🧑‍🏫', title: 'Lehrerpaket: 16 fertige Unterrichtsstunden A1–A2', level: 'A1–B1', target: 'für Lehrkräfte', price: null, buy: null,
+    desc: '16 erprobte Unterrichtsstunden aus dem Integrationskurs – mit Lehrerblatt, Ablauf mit Zeiten, eigenem Kahoot-Quiz pro Stunde, Übungen und Lösungen. Sofort einsetzbar im Präsenz- oder Online-Unterricht.',
+    contents: ['16 Lehrerblätter: Lernziele, Ablauf, Sozialformen', '16 Kahoot-Quiz mit je 9 Fragen und Bildern (Link + QR-Code)', 'Arbeitsblätter mit Regeln, Übungen und Lösungen', 'Kopierrecht für den eigenen Unterricht'] }
 ];
