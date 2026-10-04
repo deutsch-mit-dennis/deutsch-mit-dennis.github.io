@@ -160,7 +160,7 @@
         <a href="#hoeren"><b>Hören</b><span>Ansagen, Mailbox und Gespräche verstehen.</span></a>
         <a href="#lernen"><b>Lektionen</b><span>17 Themen von A1 bis B2 mit Wortschatz, Grammatik und Übungen.</span></a>
         <a href="#orientierungskurs"><b>Leben in Deutschland</b><span>Lernspiele und Wissen für den Orientierungskurs.</span></a>
-        <a href="#kahoot"><b>Kahoot-Quiz</b><span>Gemeinsam spielen und Redemittel festigen.</span></a>
+        <a href="#material"><b>Materialien</b><span>66 Arbeitsblätter und Wortlisten als PDF zum Ausdrucken.</span></a>
       </div>
     </section>
 
@@ -280,6 +280,7 @@
       </div>
       <p id="dm-count" class="dm-small" role="status"></p>
       <div class="dm-lessons" id="dm-lessons"></div>
+      ${materialLinks('grammatik', 'Arbeitsblätter zur Grammatik')}
       <p class="dm-small">Die Lektionen vertiefen ausgewählte Themen. Sie ersetzen keinen vollständigen Sprachkurs.</p>`);
     const draw = () => {
       const q = $('#dm-q').value.trim().toLocaleLowerCase('de').normalize('NFD').replace(/\p{M}/gu, '').replace(/ß/g, 'ss');
@@ -460,6 +461,7 @@
         </div>
       </section>
       <section class="dm-card dm-official"><h2>Offizielle Informationen und Modelltests</h2><p>Prüfungsaufbau, Bewertung und offizielle Übungssätze findest du bei den Prüfungsanbietern. Die Links haben wir für dich gesammelt.</p><a class="dm-btn dm-btn-quiet" href="#quellen">Prüfungsinfos und Quellen</a></section>
+      ${materialLinks('pruefung', 'Arbeitsblätter zur Prüfung')}
       <div id="dm-exam-videos"></div>`);
     videoSection('pruefung', 'Videos zur Prüfung').then(sec => sec && $('#dm-exam-videos')?.replaceWith(sec));
   }
@@ -568,6 +570,54 @@
     en[8] = 'All of Dennis’ videos are under “Videos”. New videos appear automatically. If the player does not work, open the video directly on YouTube.';
   } catch { /* Hilfe nicht geladen */ }
 
+  /* ---------- Materialien zum Herunterladen ---------- */
+  function materials(cat, lvl) {
+    const C = DM.materialCats, all = DM.materials || [];
+    if (!C[cat]) cat = 'alle';
+    if (!LEVELS.includes(lvl)) lvl = 'alle';
+    const size = kb => kb >= 1024 ? (kb / 1024).toLocaleString('de-DE', { maximumFractionDigits: 1 }) + ' MB' : kb + ' KB';
+    page(`${crumbs([['Materialien']])}
+      <div class="dm-head"><h1>Materialien</h1><p class="dm-lead">Arbeitsblätter, Wortlisten und ganze Unterrichtsstunden von Dennis als PDF. Zum Ausdrucken und Üben – kostenlos.</p></div>
+      <div class="dm-filter dm-mat-filter">
+        <nav class="dm-tabs dm-tabs-small" aria-label="Thema">${[['alle', 'Alle']].concat(Object.entries(C)).map(([k, t]) => `<a href="#material/${k}/${lvl}" ${k === cat ? 'aria-current="page"' : ''}><b>${t}</b><small>${k === 'alle' ? all.length : all.filter(m => m.cat === k).length}</small></a>`).join('')}</nav>
+      </div>
+      <div class="dm-filter">
+        <nav class="dm-tabs dm-tabs-small" aria-label="Niveau">${['alle', 'A1', 'A2', 'B1'].map(k => `<a href="#material/${cat}/${k}" ${k === lvl ? 'aria-current="page"' : ''}><b>${k === 'alle' ? 'Alle Niveaus' : k}</b></a>`).join('')}</nav>
+        <label class="dm-search"><span class="dm-sr">Material suchen</span><input type="search" id="dm-mq" placeholder="Suchen, z. B. Dativ, Uhrzeit, Brief …"></label>
+      </div>
+      <p id="dm-mcount" class="dm-small" role="status"></p>
+      <div id="dm-mlist"></div>
+      <section class="dm-section dm-card dm-mat-lid"><div><h2>Leben in Deutschland</h2><p>Neun illustrierte Merkblätter zum Orientierungskurs findest du im Bereich „Deutschland verstehen“.</p></div><a class="dm-btn dm-btn-quiet" href="#orientierungskurs">Zu den Merkblättern</a></section>
+      <p class="dm-small">Alle Materialien sind von Dennis für seinen Unterricht erstellt. Du darfst sie zum Lernen und im Unterricht nutzen. Bitte veröffentliche sie nicht unter deinem Namen.</p>`);
+    const norm = t => t.toLocaleLowerCase('de').normalize('NFD').replace(/\p{M}/gu, '').replace(/ß/g, 'ss');
+    const draw = () => {
+      const q = norm($('#dm-mq').value.trim());
+      const list = all.filter(m => (cat === 'alle' || m.cat === cat) && (lvl === 'alle' || m.level === lvl) && (!q || norm(`${m.title} ${m.desc} ${C[m.cat]}`).includes(q)));
+      $('#dm-mcount').textContent = `${list.length} ${list.length === 1 ? 'Material' : 'Materialien'}`;
+      const groups = cat === 'alle' ? Object.keys(C) : [cat];
+      $('#dm-mlist').innerHTML = groups.map(g => {
+        const items = list.filter(m => m.cat === g); if (!items.length) return '';
+        return `<section class="dm-mat-group">${cat === 'alle' ? `<h2>${C[g]}</h2>` : ''}<ul class="dm-mat-list">${items.map(m => `<li><a class="dm-mat" href="${m.file}" download target="_blank" rel="noopener"><span class="dm-mat-icon" aria-hidden="true">PDF</span><span class="dm-mat-text"><b>${x(m.title)}</b><span>${x(m.desc)}</span><small>${m.level} · ${m.pages} ${m.pages === 1 ? 'Seite' : 'Seiten'} · ${size(m.kb)}</small></span><span class="dm-mat-dl">Herunterladen</span></a></li>`).join('')}</ul></section>`;
+      }).join('') || '<p class="dm-empty">Nichts gefunden. Versuche ein anderes Wort oder wähle „Alle“.</p>';
+    };
+    $('#dm-mq').oninput = draw; draw();
+  }
+  function materialLinks(cat, heading) {
+    const items = (DM.materials || []).filter(m => m.cat === cat).slice(0, 6);
+    if (!items.length) return '';
+    return `<section class="dm-section"><div class="dm-section-head"><h2>${heading}</h2><a href="#material/${cat}">Alle ansehen</a></div><ul class="dm-mat-list dm-mat-compact">${items.map(m => `<li><a class="dm-mat" href="${m.file}" download target="_blank" rel="noopener"><span class="dm-mat-icon" aria-hidden="true">PDF</span><span class="dm-mat-text"><b>${x(m.title)}</b><small>${m.level} · ${m.pages} ${m.pages === 1 ? 'Seite' : 'Seiten'}</small></span></a></li>`).join('')}</ul></section>`;
+  }
+
+  /* Download-Links zu Dateien, die (noch) nicht auf dem Server liegen, ausblenden */
+  const fileOk = new Map();
+  function hideMissingDownloads() {
+    $$('main a[href^="material/"], main a[href^="./material/"]').forEach(a => {
+      const href = a.getAttribute('href');
+      if (!fileOk.has(href)) fileOk.set(href, fetch(href, { method: 'HEAD' }).then(r => r.ok).catch(() => true));
+      fileOk.get(href).then(ok => { if (!ok) { a.hidden = true; a.setAttribute('aria-hidden', 'true'); } });
+    });
+  }
+
   /* ---------- Feedback & Wünsche (ersetzt die Pinnwand) ---------- */
   function feedback() {
     page(`${crumbs([['Feedback und Wünsche']])}
@@ -594,8 +644,8 @@
 
   /* ---------- Router ---------- */
   const legacyRoute = window.route;
-  const NAV = { '': 'start', lernweg: 'wege', wegweiser: 'wege', lernen: 'lernen', lektion: 'lernen', wortschatz: 'lernen', wort: 'lernen', ueben: 'ueben', schreiben: 'ueben', hoeren: 'ueben', kahoot: 'ueben', pruefung: 'pruefung', training: 'pruefung', orientierungskurs: 'pruefung', quellen: 'pruefung', videos: 'videos', 'ueber-mich': 'ueber' };
-  const TITLES = { '': 'Deutsch lernen mit Dennis', lernweg: 'Mein Lernweg', wegweiser: 'Welcher Weg passt?', lernen: 'Lektionen', lektion: 'Lektion', wortschatz: 'Wortschatz', wort: 'Wortkarte', ueben: 'Üben', schreiben: 'Schreib-Bausteine', hoeren: 'Hören', kahoot: 'Kahoot-Quiz', pruefung: 'Prüfungstraining', training: 'Prüfungstraining', orientierungskurs: 'Leben in Deutschland', quellen: 'Prüfungsinfos & Quellen', videos: 'Videos', 'ueber-mich': 'Über mich', impressum: 'Impressum', datenschutz: 'Datenschutz', pinnwand: 'Feedback und Wünsche' };
+  const NAV = { '': 'start', lernweg: 'wege', wegweiser: 'wege', lernen: 'lernen', lektion: 'lernen', wortschatz: 'lernen', wort: 'lernen', ueben: 'ueben', schreiben: 'ueben', hoeren: 'ueben', kahoot: 'ueben', pruefung: 'pruefung', training: 'pruefung', orientierungskurs: 'pruefung', quellen: 'pruefung', videos: 'videos', 'ueber-mich': 'ueber', material: 'material' };
+  const TITLES = { '': 'Deutsch lernen mit Dennis', lernweg: 'Mein Lernweg', wegweiser: 'Welcher Weg passt?', lernen: 'Lektionen', lektion: 'Lektion', wortschatz: 'Wortschatz', wort: 'Wortkarte', ueben: 'Üben', schreiben: 'Schreib-Bausteine', hoeren: 'Hören', kahoot: 'Kahoot-Quiz', pruefung: 'Prüfungstraining', training: 'Prüfungstraining', orientierungskurs: 'Leben in Deutschland', quellen: 'Prüfungsinfos & Quellen', videos: 'Videos', 'ueber-mich': 'Über mich', impressum: 'Impressum', datenschutz: 'Datenschutz', pinnwand: 'Feedback und Wünsche', material: 'Materialien' };
   const OWN = {
     '': () => home(),
     lernweg: p => p[1] ? pathPage(p[1]) : paths(),
@@ -609,7 +659,8 @@
     'ueber-mich': () => about(),
     impressum: () => impressum(),
     datenschutz: () => datenschutz(),
-    pinnwand: () => feedback()
+    pinnwand: () => feedback(),
+    material: p => materials(p[1], p[2])
   };
   const ALIAS = { buch: 'lernen', themen: 'lernen', cover: '', praxis: 'ueben', pruefungen: 'pruefung', start: '' };
 
@@ -625,6 +676,7 @@
     const own = OWN[p[0]];
     if (own) own(p);
     else { try { legacyRoute(); } catch (e) { console.error(e); home(); } afterLegacy(p); }
+    hideMissingDownloads();
     const nav = NAV[p[0]] ?? '';
     $$('#main-navigation a[data-nav]').forEach(a => { const on = a.dataset.nav === nav; a.classList.toggle('active', on); if (on) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current'); });
     const h1 = $('main h1')?.textContent.trim();
