@@ -61,7 +61,7 @@ const videos = [...byId.values()].sort((a, b) => String(b.published).localeCompa
 
 // 3. Thumbnails
 await mkdir(THUMBS, { recursive: true });
-let loaded = 0;
+let loaded = 0; const fresh_files = [];
 for (const v of videos) {
   const target = new URL(`${v.id}.jpg`, THUMBS);
   try { await access(target); continue; } catch { /* fehlt noch */ }
@@ -71,14 +71,14 @@ for (const v of videos) {
       if (!r.ok) continue;
       const buf = Buffer.from(await r.arrayBuffer());
       if (buf.length < 4000) continue; // Platzhalterbild von YouTube
-      await writeFile(target, buf); loaded++; break;
+      await writeFile(target, buf); loaded++; fresh_files.push(target.pathname); break;
     } catch { /* nächste Größe */ }
   }
 }
 // Bilder verkleinern (falls ImageMagick vorhanden ist), damit die Seite schnell bleibt
 try {
   const { execSync } = await import('node:child_process');
-  execSync(`mogrify -resize '640x360^' -gravity center -extent 640x360 -strip -quality 78 ${new URL('.', THUMBS).pathname}*.jpg`, { stdio: 'ignore' });
+  if (fresh_files.length) execSync(`mogrify -resize '640x360^' -gravity center -extent 640x360 -strip -quality 78 ${fresh_files.map(f => `'${f}'`).join(' ')}`, { stdio: 'ignore' });
 } catch { /* ohne ImageMagick bleiben die Originale */ }
 
 for (const v of videos) {

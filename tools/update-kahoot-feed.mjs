@@ -43,7 +43,10 @@ for (const k of list) {
     try {
       const sep = src.includes('?') ? '&' : '?';
       const r = await fetch(/unsplash/.test(src) ? `${src}${sep}w=640&h=360&fit=crop&fm=jpg&q=75` : src);
-      if (r.ok) await writeFile(cover, Buffer.from(await r.arrayBuffer()));
+      if (r.ok) {
+        await writeFile(cover, Buffer.from(await r.arrayBuffer()));
+        try { (await import('node:child_process')).execSync(`mogrify -resize '800x450>' -strip -quality 80 '${cover.pathname}'`, { stdio: 'ignore' }); } catch { /* ohne ImageMagick */ }
+      }
     } catch { /* ohne Bild */ }
   }
   if (await exists(cover)) item.cover = `assets/kahoot/${k.uuid}.jpg`;
