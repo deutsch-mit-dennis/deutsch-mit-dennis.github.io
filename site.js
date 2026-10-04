@@ -290,7 +290,7 @@
       $('#dm-lessons').innerHTML = list.map(l => {
         const n = lessonProgress(l.id), i = lessons.filter(o => o.level === l.level).indexOf(l) + 1, done = (typeof platformDone !== 'undefined' && platformDone.has(l.id)) || mem.done['lektion:' + l.id];
         return `<a class="dm-lesson" href="#lektion/${l.id}">
-          <span class="dm-lesson-img"><img src="assets/${imgFor(l)}.png" alt="" loading="lazy" onerror="this.parentNode.classList.add('is-empty');this.remove()"></span>
+          <span class="dm-lesson-img"><img src="assets/${imgFor(l)}-klein.webp" alt="" loading="lazy" onerror="this.parentNode.classList.add('is-empty');this.remove()"></span>
           <span class="dm-lesson-text"><span class="dm-path-meta">${l.level} · Lektion ${i}${done ? ' · ✓ bearbeitet' : n ? ` · ${n} von 7 Schritten` : ''}</span><b>${x(l.title)}</b><span>${x(l.goal)}</span></span></a>`;
       }).join('') || '<p class="dm-empty">Kein Thema gefunden. Versuche ein anderes Wort, zum Beispiel „Termin“ oder „Arbeit“.</p>';
     };
@@ -329,7 +329,7 @@
         <section class="dm-card">
           <p class="dm-path-meta">Situation ${n + 1} von ${scenes.length}</p>
           <h2>${x(s.title)}</h2>
-          <figure class="dm-scene-img"><img src="assets/${x(s.image)}.png" alt="" loading="lazy" onerror="this.parentNode.remove()"></figure>
+          <figure class="dm-scene-img"><img src="assets/${x(s.image)}.webp" alt="" loading="lazy" onerror="this.parentNode.remove()"></figure>
           <p class="dm-task">${x(s.task)}</p>
           <h3>${writing ? '1. Plane deinen Text' : '1. Sprich laut'}</h3>
           <ul class="dm-list">${s.prompts.map(t => `<li>${x(t)}</li>`).join('')}</ul>
