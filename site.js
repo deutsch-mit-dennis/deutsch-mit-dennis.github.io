@@ -818,7 +818,7 @@
       ? `<p class="dm-pkg-bigprice">${x(k.price || '')}<small>Endpreis inkl. MwSt. · einmalige Zahlung</small></p>
          <a class="dm-btn dm-btn-big" href="${x(k.buy)}" target="_blank" rel="noopener">Jetzt kaufen</a>
          <p class="dm-small">Sichere Bezahlung über Digistore24 (PayPal, Kreditkarte, SEPA-Lastschrift u. a.).</p>`
-      : `<p class="dm-pkg-bigprice">Bald erhältlich</p>
+      : `<p class="dm-pkg-bigprice">${k.price ? `${x(k.price)}<small>Endpreis inkl. MwSt. · einmalige Zahlung · Kauf in Kürze möglich</small>` : 'Bald erhältlich'}</p>
          <a class="dm-btn" href="mailto:${T.email}?subject=${encodeURIComponent('Lernpaket: ' + k.title)}&body=${encodeURIComponent('Hallo Dennis,\nbitte gib mir Bescheid, wenn dieses Lernpaket erhältlich ist.\n')}">Benachrichtigen, wenn verfügbar</a>`;
     page(`${crumbs([['Lernpakete', '#lernpakete'], [k.title]])}
       <div class="dm-pkg-detail">
