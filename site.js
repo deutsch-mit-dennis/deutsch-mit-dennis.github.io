@@ -185,8 +185,8 @@
         <a href="#ueben/sprechen/A1" data-ico="💬"><b>Sprechen</b><span>Gespräche aus dem Alltag, mit Satzanfängen und Beispiel zum Anhören.</span></a>
         <a href="#ueben/schreiben/A2" data-ico="✍️"><b>Schreiben</b><span>Nachrichten, Briefe und E-Mails – mit Sofort-Korrektur, Checkliste und Mustertext.</span></a>
         <a href="#hoeren" data-ico="🎧"><b>Hören</b><span>DTZ- und B2-Hörtraining mit natürlichen Stimmen: Ansagen, Mailbox, Gespräche.</span></a>
-        <a href="#lernen" data-ico="📚"><b>Lektionen</b><span>17 Themen von A1 bis B2 mit Wortschatz, Grammatik und Übungen.</span></a>
         <a href="#lid" data-ico="🇩🇪"><b>Leben in Deutschland</b><span>Lernspiele und Wissen für den Orientierungskurs.</span></a>
+        <a href="#lieder" data-ico="🎤"><b>Deutsch mit Liedern</b><span>25 eigene Lieder von A1 bis C1 – mit Text, Aufgaben und Lösungen.</span></a>
         <a href="#kahoot" data-ico="🎲"><b>Kahoot-Quiz</b><span>Spielerisch wiederholen – allein oder mit dem ganzen Kurs.</span></a>
 
       </div>
@@ -479,6 +479,58 @@
     el.style.position ||= 'relative'; el.append(box); setTimeout(() => box.remove(), 1600);
   }
 
+  /* ---------- Deutsch mit Liedern ---------- */
+  const SONG_LEVELS = ['A1', 'A2', 'B1', 'B2', 'C1'];
+  const sunoConsent = () => !!mem.sunoConsent;
+  function songCard(sg) {
+    const done = mem.done['lied:' + sg.id];
+    return `<a class="dm-song dm-lv-${sg.level.toLowerCase()}" href="#lieder/${sg.id}"><span class="dm-song-disc" aria-hidden="true"><i></i></span>
+      <span class="dm-song-text"><span class="dm-path-meta">${sg.level}${done ? ' · ✓ geübt' : ''}</span><b>${x(sg.title)}</b><span>${x(sg.theme)}</span></span></a>`;
+  }
+  function songsHub(sel) {
+    if (!SONG_LEVELS.includes(sel)) sel = mem.songLevel && SONG_LEVELS.includes(mem.songLevel) ? mem.songLevel : 'A1';
+    mem.songLevel = sel; save();
+    const list = (DM.songs || []).filter(sg => sg.level === sel);
+    page(`${crumbs([['Deutsch mit Liedern']])}
+      <div class="dm-head dm-head-art"><div><h1>Deutsch mit Liedern</h1><p class="dm-lead">Eigene Lieder zu Alltag, Beruf und Grammatik – von A1 bis C1. Hör zu, sing mit und lerne die Wörter mit Aufgaben und Lösungen.</p></div><span class="dm-head-emoji" aria-hidden="true">🎤</span></div>
+      <nav class="dm-tabs" aria-label="Niveau">${SONG_LEVELS.map(k => `<a href="#lieder/${k}" ${k === sel ? 'aria-current="page"' : ''}><b>${k}</b><small>${(DM.songs || []).filter(sg => sg.level === k).length} Lieder</small></a>`).join('')}</nav>
+      <div class="dm-songs">${list.map(songCard).join('')}</div>
+      <aside class="dm-card dm-song-how"><h2>So lernst du mit einem Lied</h2><ol class="dm-list"><li>Hör das Lied einmal nur zu. Worum geht es?</li><li>Lies die wichtigen Wörter und mach die Lückenaufgabe.</li><li>Hör noch einmal und lies den Text mit.</li><li>Sing mit – das trainiert Aussprache und Satzmelodie.</li><li>Lade das PDF herunter: Liedtext, Aufgaben und Lösungen.</li></ol></aside>
+      ${musicCard()}`);
+  }
+  function songPage(id) {
+    const all = DM.songs || [], i = all.findIndex(sg => sg.id === id);
+    if (i < 0) return songsHub(SONG_LEVELS.includes(id) ? id : undefined);
+    const sg = all[i], prev = all[i - 1], next = all[i + 1];
+    const lyr = sg.lyrics.split('\n').map(l => { const m = l.match(/^\[(.+)\]$/); return m ? `<p class="dm-lyr-tag">${x(m[1].replace('Verse', 'Strophe').replace('Pre-Chorus', 'Vor-Refrain').replace('Chorus', 'Refrain').replace('Outro', 'Schluss').replace('Intro', 'Anfang'))}</p>` : l.trim() ? `<p>${x(l)}</p>` : ''; }).join('');
+    const player = !sg.suno ? `<div class="dm-song-soon"><span aria-hidden="true">🎵</span><p><b>Die Aufnahme folgt in Kürze.</b> Den Text und die Aufgaben kannst du schon jetzt bearbeiten.</p></div>`
+      : sunoConsent() ? `<div class="dm-suno"><iframe src="https://suno.com/embed/${x(sg.suno)}" title="${x(sg.title)}" loading="lazy" allow="autoplay; encrypted-media"></iframe></div><p class="dm-small"><a href="https://suno.com/song/${x(sg.suno)}" target="_blank" rel="noopener noreferrer">Bei Suno öffnen ↗</a></p>`
+      : `<div class="dm-consent"><p><b>Das Lied wird von Suno geladen.</b> Beim Abspielen überträgt dein Browser Daten (zum Beispiel deine IP-Adresse) an Suno. Mehr in der <a href="#datenschutz">Datenschutzerklärung</a>.</p><div class="dm-row"><button type="button" class="dm-btn" id="dm-suno-ok">▶ Lied hier abspielen</button><a class="dm-btn dm-btn-quiet" href="https://suno.com/song/${x(sg.suno)}" target="_blank" rel="noopener noreferrer">Bei Suno öffnen ↗</a></div></div>`;
+    const gap = sg.gap;
+    page(`${crumbs([['Deutsch mit Liedern', '#lieder/' + sg.level], [sg.title]])}
+      <div class="dm-head"><p class="dm-path-meta">Niveau ${sg.level} · ${x(sg.theme)}</p><h1>${x(sg.title)}</h1><p class="dm-lead">${x(sg.intro)}</p><p class="dm-small"><b>Grammatik:</b> ${x(sg.grammar)}</p></div>
+      <div class="dm-practice">
+        <section class="dm-card dm-song-player">${player}
+          <h2>Liedtext</h2><details><summary>Text zum Mitlesen (erst nach der Lückenaufgabe öffnen)</summary><div class="dm-lyrics">${lyr}</div></details>
+          <div class="dm-row"><a class="dm-btn dm-btn-quiet" href="material/lieder/${sg.id}.pdf" download>PDF: Text, Aufgaben, Lösungen</a></div>
+        </section>
+        <section class="dm-card">
+          <h2>Wichtige Wörter</h2><dl class="dm-vocab">${sg.vocab.map(([w, d]) => `<dt>${x(w)}</dt><dd>${x(d)}</dd>`).join('')}</dl>
+          ${gap ? `<h2>Lückentext</h2><p>${x(gap.instruction)}</p><form id="dm-gap" class="dm-gap">${gap.items.map((it, k) => `<p>${k + 1}. ${x(it).replace('___', `<input type="text" data-k="${k}" aria-label="Lücke ${k + 1}" autocomplete="off" spellcheck="false" data-nocheck>`)}</p>`).join('')}
+            <div class="dm-row"><button class="dm-btn">Prüfen</button><button type="button" class="dm-btn dm-btn-quiet" id="dm-gap-show">Lösungen zeigen</button></div><p id="dm-gap-res" role="status"></p></form>` : ''}
+        </section>
+      </div>
+      <div class="dm-row dm-next">${next ? `<a class="dm-btn" href="#lieder/${next.id}">Nächstes Lied: ${x(next.title)}</a>` : ''}${prev ? `<a class="dm-btn dm-btn-quiet" href="#lieder/${prev.id}">Vorheriges Lied</a>` : ''}<a class="dm-btn dm-btn-quiet" href="#lieder/${sg.level}">Alle Lieder ${sg.level}</a></div>`);
+    $('#dm-suno-ok') && ($('#dm-suno-ok').onclick = () => { mem.sunoConsent = true; save(); songPage(id); });
+    const f = $('#dm-gap');
+    if (f && gap) {
+      const norm = v => v.trim().toLowerCase().replace(/[.,!?]/g, '');
+      f.onsubmit = e => { e.preventDefault(); let ok = 0; $$('input', f).forEach(inp => { const good = norm(inp.value) === norm(gap.solutions[inp.dataset.k] || ''); inp.classList.toggle('is-good', good); inp.classList.toggle('is-bad', !good && !!inp.value.trim()); if (good) ok++; });
+        $('#dm-gap-res').textContent = `${ok} von ${gap.items.length} richtig.${ok === gap.items.length ? ' Super!' : ' Hör noch einmal genau hin.'}`; if (ok === gap.items.length) { mem.done['lied:' + sg.id] = Date.now(); save(); celebrate(f); } };
+      $('#dm-gap-show').onclick = () => $$('input', f).forEach(inp => { inp.value = gap.solutions[inp.dataset.k] || ''; inp.classList.add('is-shown'); });
+    }
+  }
+
   /* ---------- Kahoot (wird täglich mit dem Kahoot-Profil synchronisiert) ---------- */
   let kahootPromise;
   const loadKahoots = () => kahootPromise ||= fetch('kahoot-feed.json', { cache: 'no-cache' }).then(r => r.ok ? r.json() : Promise.reject()).then(d => d.kahoots || []).catch(() => [])
@@ -649,6 +701,8 @@
       <h2>4. YouTube-Videos</h2>
       <p>Videos werden erst geladen, wenn du auf „Videos hier anzeigen“ klickst. Erst dann werden Daten (zum Beispiel deine IP-Adresse) an YouTube (Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland) übertragen. Ich nutze den erweiterten Datenschutzmodus (youtube-nocookie.com). Deine Zustimmung wird auf deinem Gerät gespeichert; du kannst sie oben mit „Lernstand löschen“ zurücknehmen. Rechtsgrundlage ist deine Einwilligung (Art. 6 Abs. 1 lit. a DSGVO). Mehr: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Datenschutzerklärung von Google</a>.</p>
       <p>Die Vorschaubilder der Videos liegen auf dieser Website selbst. Beim Anzeigen der Bilder werden keine Daten an YouTube übertragen.</p>
+      <h2>4b. Lieder (Suno)</h2>
+      <p>Die Lieder im Bereich „Deutsch mit Liedern“ werden erst geladen, wenn du auf „Lied hier abspielen“ klickst. Dann werden Daten (zum Beispiel deine IP-Adresse) an Suno, Inc. (USA) übertragen; dabei können Daten in den USA verarbeitet werden. Rechtsgrundlage ist deine Einwilligung (Art. 6 Abs. 1 lit. a DSGVO). Du kannst sie oben mit „Lernstand löschen“ widerrufen. Mehr: <a href="https://suno.com/privacy" target="_blank" rel="noopener noreferrer">Datenschutzerklärung von Suno</a>.</p>
       <h2>4a. Schreib-Check (LanguageTool)</h2>
       <p>Wenn du bei einem Schreibfeld auf „Text prüfen“ klickst, wird der Text aus diesem Feld zur Rechtschreib- und Grammatikprüfung an LanguageTool übertragen (LanguageTooler GmbH, Boschstraße 23a, 22761 Hamburg, Deutschland). Dabei wird auch deine IP-Adresse übermittelt. Ohne Klick wird nichts übertragen. Für die Verarbeitung beim Anbieter gelten dessen Datenschutzbestimmungen. Rechtsgrundlage ist deine Einwilligung durch den Klick (Art. 6 Abs. 1 lit. a DSGVO). Schreib bitte keine sensiblen persönlichen Daten in die Übungsfelder. Mehr: <a href="https://languagetool.org/legal/privacy" target="_blank" rel="noopener noreferrer">Datenschutzerklärung von LanguageTool</a>.</p>
       <h2>5. Kontakt per E-Mail oder WhatsApp</h2>
@@ -860,8 +914,8 @@
 
   /* ---------- Router ---------- */
   const legacyRoute = window.route;
-  const NAV = { '': 'start', lernweg: 'wege', wegweiser: 'wege', lernen: 'lernen', lektion: 'lernen', wortschatz: 'lernen', wort: 'lernen', ueben: 'ueben', schreiben: 'ueben', hoeren: 'ueben', kahoot: 'ueben', pruefung: 'pruefung', training: 'pruefung', orientierungskurs: 'pruefung', lid: 'pruefung', quellen: 'pruefung', videos: 'videos', 'ueber-mich': 'ueber', material: 'material', lernpakete: 'pakete' };
-  const TITLES = { '': 'Deutsch lernen mit Dennis', lernweg: 'Mein Lernweg', wegweiser: 'Welcher Weg passt?', lernen: 'Lektionen', lektion: 'Lektion', wortschatz: 'Wortschatz', wort: 'Wortkarte', ueben: 'Üben', schreiben: 'Schreib-Bausteine', hoeren: 'Hören', kahoot: 'Kahoot-Quiz', pruefung: 'Prüfungstraining', training: 'Prüfungstraining', orientierungskurs: 'Leben in Deutschland', lid: 'LiD-Trainer', quellen: 'Prüfungsinfos & Quellen', videos: 'Videos', 'ueber-mich': 'Über mich', impressum: 'Impressum', datenschutz: 'Datenschutz', pinnwand: 'Feedback und Wünsche', material: 'Materialien', lernpakete: 'Lernpakete' };
+  const NAV = { '': 'start', lernweg: 'wege', wegweiser: 'wege', lernen: 'lernen', lektion: 'lernen', wortschatz: 'lernen', wort: 'lernen', ueben: 'ueben', schreiben: 'ueben', hoeren: 'ueben', kahoot: 'ueben', pruefung: 'pruefung', training: 'pruefung', orientierungskurs: 'pruefung', lid: 'pruefung', quellen: 'pruefung', videos: 'videos', 'ueber-mich': 'ueber', material: 'material', lernpakete: 'pakete', lieder: 'lieder' };
+  const TITLES = { '': 'Deutsch lernen mit Dennis', lernweg: 'Mein Lernweg', wegweiser: 'Welcher Weg passt?', lernen: 'Lektionen', lektion: 'Lektion', wortschatz: 'Wortschatz', wort: 'Wortkarte', ueben: 'Üben', schreiben: 'Schreib-Bausteine', hoeren: 'Hören', kahoot: 'Kahoot-Quiz', pruefung: 'Prüfungstraining', training: 'Prüfungstraining', orientierungskurs: 'Leben in Deutschland', lid: 'LiD-Trainer', quellen: 'Prüfungsinfos & Quellen', videos: 'Videos', 'ueber-mich': 'Über mich', impressum: 'Impressum', datenschutz: 'Datenschutz', pinnwand: 'Feedback und Wünsche', material: 'Materialien', lernpakete: 'Lernpakete', lieder: 'Deutsch mit Liedern' };
   const OWN = {
     '': () => home(),
     lernweg: p => p[1] ? pathPage(p[1]) : paths(),
@@ -878,7 +932,8 @@
     pinnwand: () => feedback(),
     material: p => materials(p[1], p[2]),
     lernpakete: () => packages(),
-    kahoot: () => kahootPage()
+    kahoot: () => kahootPage(),
+    lieder: p => p[1] && !SONG_LEVELS.includes(p[1]) ? songPage(p[1]) : songsHub(p[1])
   };
   const ALIAS = { buch: 'lernen', themen: 'lernen', cover: '', praxis: 'ueben', pruefungen: 'pruefung', start: '' };
 
@@ -928,7 +983,7 @@
     revealCards();
     // Weitermachen merken: nur Lernseiten
     const routeStr = p.filter(Boolean).join('/');
-    if (['lektion', 'wortschatz', 'ueben', 'hoeren', 'training', 'lernweg', 'orientierungskurs', 'lid'].includes(p[0]) && routeStr) {
+    if (['lektion', 'wortschatz', 'ueben', 'hoeren', 'training', 'lernweg', 'orientierungskurs', 'lid', 'lieder'].includes(p[0]) && routeStr) {
       mem.visited[routeStr] = Date.now();
       mem.last = { route: routeStr, title: (h1 || TITLES[p[0]] || '').replace(/\.$/, '').slice(0, 48), ts: Date.now() };
       save();
