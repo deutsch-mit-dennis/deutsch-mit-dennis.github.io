@@ -219,3 +219,20 @@ li.sc-sp .sc-cat{background:#FDE3DC;color:#A3281E}li.sc-gr .sc-cat{background:#D
 .dm-gap input.is-bad{border-color:var(--dm-rot);background:#FDE3DC}
 .dm-gap input.is-shown{border-color:#9AA3B5}
 @media (prefers-reduced-motion:reduce){.dm-song:hover .dm-song-disc{animation:none}}
+
+/* Lernpakete: Bild, Detailseite, Kaufbox */
+.dm-pkg-img{display:block;margin:-22px -22px 10px;border-radius:inherit;overflow:hidden}
+.dm-pkg-img img{display:block;width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;border-radius:var(--dm-r) var(--dm-r) 0 0}
+.dm-pkg h2 a{color:inherit;text-decoration:none}.dm-pkg h2 a:hover{text-decoration:underline}
+.dm-pkg-price{font-weight:800;color:var(--dm-ink);background:var(--dm-marker);padding:4px 12px;border-radius:99px}
+.dm-pkg-detail{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:34px;align-items:start;margin-top:8px}
+.dm-pkg-media{position:sticky;top:90px;display:flex;flex-direction:column;gap:12px}
+.dm-pkg-media img{width:100%;height:auto;border-radius:16px;box-shadow:0 14px 34px rgba(23,32,54,.16)}
+.dm-pkg-main h1{margin:4px 0 8px;line-height:1.15}
+.dm-pkg-main h2{font-size:20px;margin:22px 0 6px}
+.dm-pkg-buybox{margin:18px 0;padding:20px;border:2px solid var(--dm-tinte-soft)}
+.dm-pkg-bigprice{font-size:30px;font-weight:800;margin:0 0 10px;color:var(--dm-ink)}
+.dm-pkg-bigprice small{display:block;font-size:13px;font-weight:400;color:var(--dm-muted)}
+.dm-btn-big{font-size:18px;padding:14px 26px}
+.dm-pkg-facts{padding-left:20px}.dm-pkg-facts li{margin:6px 0}
+@media (max-width:760px){.dm-pkg-detail{grid-template-columns:1fr;gap:18px}.dm-pkg-media{position:static}}

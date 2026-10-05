@@ -705,6 +705,8 @@
       <p>Die Lieder im Bereich „Deutsch mit Liedern“ werden erst geladen, wenn du auf „Lied hier abspielen“ klickst. Dann werden Daten (zum Beispiel deine IP-Adresse) an Suno, Inc. (USA) übertragen; dabei können Daten in den USA verarbeitet werden. Rechtsgrundlage ist deine Einwilligung (Art. 6 Abs. 1 lit. a DSGVO). Du kannst sie oben mit „Lernstand löschen“ widerrufen. Mehr: <a href="https://suno.com/privacy" target="_blank" rel="noopener noreferrer">Datenschutzerklärung von Suno</a>.</p>
       <h2>4a. Schreib-Check (LanguageTool)</h2>
       <p>Wenn du bei einem Schreibfeld auf „Text prüfen“ klickst, wird der Text aus diesem Feld zur Rechtschreib- und Grammatikprüfung an LanguageTool übertragen (LanguageTooler GmbH, Boschstraße 23a, 22761 Hamburg, Deutschland). Dabei wird auch deine IP-Adresse übermittelt. Ohne Klick wird nichts übertragen. Für die Verarbeitung beim Anbieter gelten dessen Datenschutzbestimmungen. Rechtsgrundlage ist deine Einwilligung durch den Klick (Art. 6 Abs. 1 lit. a DSGVO). Schreib bitte keine sensiblen persönlichen Daten in die Übungsfelder. Mehr: <a href="https://languagetool.org/legal/privacy" target="_blank" rel="noopener noreferrer">Datenschutzerklärung von LanguageTool</a>.</p>
+      <h2>4c. Kauf von Lernpaketen (Digistore24)</h2>
+      <p>Die Lernpakete werden über die Digistore24 GmbH, St.-Godehard-Straße 32, 31139 Hildesheim, verkauft. Digistore24 ist Verkäufer und Vertragspartner. Erst wenn du auf „Jetzt kaufen“ klickst, öffnet sich das Bestellformular von Digistore24; vorher werden keine Daten an Digistore24 übertragen. Bei der Bestellung verarbeitet Digistore24 deine Bestell- und Zahlungsdaten. Ich erhalte von Digistore24 die für die Abwicklung nötigen Angaben (zum Beispiel Name, E-Mail-Adresse und gekauftes Produkt), um dir bei Fragen helfen zu können. Rechtsgrundlage ist die Vertragsabwicklung (Art. 6 Abs. 1 lit. b DSGVO). Mehr: <a href="https://www.digistore24.com/page/privacy/1/de" target="_blank" rel="noopener noreferrer">Datenschutzerklärung von Digistore24</a>.</p>
       <h2>5. Kontakt per E-Mail oder WhatsApp</h2>
       <p>Wenn du mir schreibst, verarbeite ich deine Nachricht und deine Kontaktdaten nur, um dir zu antworten. Für WhatsApp gelten zusätzlich die Datenschutzbestimmungen von WhatsApp (Meta).</p>
       <h2>6. Vorlesefunktion</h2>
@@ -787,24 +789,60 @@
   function packages() {
     const P = DM.packages || [];
     const card = k => `<article class="dm-card dm-pkg" id="paket-${k.id}">
-      <div class="dm-pkg-top"><span class="dm-pkg-icon" aria-hidden="true">${k.icon}</span><span class="dm-pkg-lock" title="Gesperrt">🔒 Gesperrt</span></div>
-      <h2>${x(k.title)}</h2><p class="dm-pkg-meta">${x(k.level)} · ${x(k.target)}</p>
+      ${k.img ? `<a class="dm-pkg-img" href="#lernpakete/${k.id}"><img src="${k.img}" alt="" loading="lazy" width="800" height="800"></a>` : ''}
+      <div class="dm-pkg-top"><span class="dm-pkg-icon" aria-hidden="true">${k.icon}</span>${k.buy ? (k.price ? `<span class="dm-pkg-price">${x(k.price)}</span>` : '') : '<span class="dm-pkg-lock" title="Noch nicht erhältlich">🔒 Bald erhältlich</span>'}</div>
+      <h2><a href="#lernpakete/${k.id}">${x(k.title)}</a></h2><p class="dm-pkg-meta">${x(k.level)} · ${x(k.target)}</p>
       <p>${x(k.desc)}</p>
       <ul class="dm-pkg-list">${k.contents.map(c => `<li>${x(c)}</li>`).join('')}</ul>
       <div class="dm-pkg-buy">
-        ${k.buy ? `<a class="dm-btn" href="${x(k.buy)}" target="_blank" rel="noopener">Kaufen${k.price ? ` · ${x(k.price)}` : ''}</a>` : `<span class="dm-btn dm-btn-disabled" aria-disabled="true">Bald erhältlich</span>`}
+        <a class="dm-btn${k.buy ? '' : ' dm-btn-quiet'}" href="#lernpakete/${k.id}">${k.buy ? 'Details und Kauf' : 'Details ansehen'}</a>
         ${k.preview ? `<a class="dm-btn dm-btn-quiet" href="${x(k.preview)}" target="_blank" rel="noopener">Leseprobe (PDF)</a>` : ''}
         ${k.buy ? '' : `<a class="dm-pkg-notify" href="mailto:${T.email}?subject=${encodeURIComponent('Lernpaket: ' + k.title)}&body=${encodeURIComponent('Hallo Dennis,\nbitte gib mir Bescheid, wenn dieses Lernpaket erhältlich ist.\n')}">Benachrichtigen, wenn verfügbar</a>`}
       </div></article>`;
     page(`${crumbs([['Lernpakete']])}
       <div class="dm-head"><h1>Lernpakete</h1><p class="dm-lead">Ausführliche PDF-Pakete zum Selbstlernen – mit Musterlösungen und Lösungsschlüssel. Die meisten Materialien auf dieser Seite bleiben kostenlos. Die Pakete sind für alle, die gezielt mehr üben möchten.</p></div>
-      <nav class="dm-tabs dm-tabs-small dm-pkg-jump" aria-label="Zielgruppe"><a href="#lernpakete" data-jump="pk-lernende"><b>Für Lernende</b><small>${P.filter(k => k.group !== 'lehrende').length} Pakete</small></a><a href="#lernpakete" data-jump="pk-lehrende"><b>Für Lehrkräfte</b><small>${P.filter(k => k.group === 'lehrende').length} Paket</small></a></nav>
+      <nav class="dm-tabs dm-tabs-small dm-pkg-jump" aria-label="Zielgruppe"><a href="#lernpakete" data-jump="pk-lernende"><b>Für Lernende</b><small>${P.filter(k => k.group !== 'lehrende').length} Pakete</small></a><a href="#lernpakete" data-jump="pk-lehrende"><b>Für Lehrkräfte</b><small>${P.filter(k => k.group === 'lehrende').length} Pakete</small></a></nav>
       <section class="dm-pkg-sec" id="pk-lernende"><h2>Für Lernende</h2><p class="dm-small">Selbstlernmaterial für DTZ, B2 Beruf und den Test „Leben in Deutschland“ – mit Musterlösungen.</p><div class="dm-pkg-grid">${P.filter(k => k.group !== 'lehrende').map(card).join('')}</div></section>
       <section class="dm-pkg-sec" id="pk-lehrende"><h2>Für Lehrkräfte</h2><p class="dm-small">Fertige Unterrichtsstunden für Integrationskurs und DaZ – mit Lehrerblatt, Kahoot-Quiz und Kopiervorlagen.</p><div class="dm-pkg-grid">${P.filter(k => k.group === 'lehrende').map(card).join('')}</div></section>
       <section class="dm-card dm-pkg-info"><h2>So funktioniert der Kauf</h2>
         <ol><li>Du wählst ein Paket und klickst auf „Kaufen“.</li><li>Die Bezahlung läuft sicher über <b>Digistore24</b>.</li><li>Direkt nach dem Kauf bekommst du den Download-Link per E-Mail.</li></ol>
         <p class="dm-small">Selbstlernmaterial und Unterrichtsmaterial ohne individuelle Betreuung oder Korrektur. Unabhängiges Lernangebot – kein Angebot von g.a.s.t., telc oder BAMF, keine offiziellen Prüfungsaufgaben. Fragen? <a href="mailto:${T.email}">${T.email}</a></p></section>`);
     $$('[data-jump]').forEach(a => a.onclick = e => { e.preventDefault(); document.getElementById(a.dataset.jump)?.scrollIntoView({ behavior: 'smooth', block: 'start' }); });
+  }
+
+  function packagePage(id) {
+    const P = DM.packages || [], k = P.find(q => q.id === id);
+    if (!k) return packages();
+    const days = (DM.shop && DM.shop.refundDays) || 14, teach = k.group === 'lehrende';
+    const buyBox = k.buy
+      ? `<p class="dm-pkg-bigprice">${x(k.price || '')}<small>Endpreis inkl. MwSt. · einmalige Zahlung</small></p>
+         <a class="dm-btn dm-btn-big" href="${x(k.buy)}" target="_blank" rel="noopener">Jetzt kaufen</a>
+         <p class="dm-small">Sichere Bezahlung über Digistore24 (PayPal, Kreditkarte, SEPA-Lastschrift u. a.).</p>`
+      : `<p class="dm-pkg-bigprice">Bald erhältlich</p>
+         <a class="dm-btn" href="mailto:${T.email}?subject=${encodeURIComponent('Lernpaket: ' + k.title)}&body=${encodeURIComponent('Hallo Dennis,\nbitte gib mir Bescheid, wenn dieses Lernpaket erhältlich ist.\n')}">Benachrichtigen, wenn verfügbar</a>`;
+    page(`${crumbs([['Lernpakete', '#lernpakete'], [k.title]])}
+      <div class="dm-pkg-detail">
+        <div class="dm-pkg-media">${k.img ? `<img src="${k.img}" alt="Vorschau: ${x(k.title)}" width="800" height="800">` : ''}
+          ${k.preview ? `<a class="dm-btn dm-btn-quiet" href="${x(k.preview)}" target="_blank" rel="noopener">📄 Leseprobe ansehen (PDF)</a>` : ''}</div>
+        <div class="dm-pkg-main">
+          <p class="dm-pkg-meta">${teach ? 'Für Lehrkräfte' : 'Lernpaket'} · ${x(k.level)}${teach ? '' : ' · ' + x(k.target)}</p>
+          <h1>${x(k.title)}</h1>
+          <p class="dm-lead">${x(k.desc)}</p>
+          <h2>Das ist drin</h2>
+          <ul class="dm-pkg-list">${k.contents.map(c => `<li>${x(c)}</li>`).join('')}</ul>
+          <section class="dm-card dm-pkg-buybox">${buyBox}</section>
+          <h2>So bekommst du das Paket</h2>
+          <ul class="dm-pkg-facts">
+            <li><b>Format:</b> PDF${k.pages ? ` mit ${k.pages} Seiten` : ''} (A4), zum Lesen am Bildschirm und zum Ausdrucken.</li>
+            <li><b>Lieferung:</b> Sofort nach dem Kauf erscheint der Download auf der Bestätigungsseite, und du bekommst den Link per E-Mail. Es wird nichts verschickt.</li>
+            <li><b>Geld zurück:</b> Du hast ${days} Tage Geld-zurück-Garantie. Schreib einfach an Digistore24 oder an mich – du bekommst den vollen Preis zurück.</li>
+            <li><b>Nutzung:</b> ${teach ? 'Sie dürfen die Kopiervorlagen für Ihren eigenen Unterricht (eine Lehrkraft) beliebig oft kopieren und digital an Ihre Kursteilnehmenden weitergeben. Weiterverkauf, Veröffentlichung im Internet oder Weitergabe an andere Lehrkräfte sind nicht erlaubt.' : 'Für deinen persönlichen Gebrauch. Bitte nicht weitergeben oder im Internet veröffentlichen.'}</li>
+          </ul>
+          <p class="dm-small">Verkäufer und Vertragspartner ist die Digistore24 GmbH (St.-Godehard-Straße 32, 31139 Hildesheim). Es gelten deren <a href="https://www.digistore24.com/page/terms/1/de" target="_blank" rel="noopener noreferrer">AGB</a> und <a href="https://www.digistore24.com/page/privacy/1/de" target="_blank" rel="noopener noreferrer">Datenschutzerklärung</a>. Inhalt und Support: Dzianis Prudnikau, siehe <a href="#impressum">Impressum</a>. Unabhängiges Lernmaterial: keine Verbindung zu g.a.s.t., telc oder BAMF, keine offiziellen Prüfungsaufgaben.</p>
+          <p><a href="#lernpakete">← Alle Lernpakete</a></p>
+        </div>
+      </div>`);
+    document.title = k.title + ' – Deutsch mit Dennis';
   }
 
   /* ---------- Feedback & Wünsche (ersetzt die Pinnwand) ---------- */
@@ -931,7 +969,7 @@
     datenschutz: () => datenschutz(),
     pinnwand: () => feedback(),
     material: p => materials(p[1], p[2]),
-    lernpakete: () => packages(),
+    lernpakete: p => p[1] ? packagePage(p[1]) : packages(),
     kahoot: () => kahootPage(),
     lieder: p => p[1] && !SONG_LEVELS.includes(p[1]) ? songPage(p[1]) : songsHub(p[1])
   };
