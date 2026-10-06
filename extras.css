@@ -365,3 +365,12 @@ li.sc-sp .sc-cat{background:#FDE3DC;color:#A3281E}li.sc-gr .sc-cat{background:#D
 @media (prefers-reduced-motion:reduce){.dm-coach-ico,.dm-coach-rec.is-on .dm-coach-dot{animation:none}}
 .dm-pin-filter{justify-content:flex-start}.dm-pin-filter a{margin:0!important;flex:0 0 auto}
 .dm-facts span{hyphens:auto;overflow-wrap:anywhere}
+
+/* ---------- Neu auf der Seite ---------- */
+.dm-newslist{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+.dm-newslist a{display:flex;gap:12px;align-items:center;padding:12px 14px;border:1px solid var(--dm-line);border-radius:16px;background:#fff;text-decoration:none;color:var(--dm-ink);height:100%;transition:transform .2s,box-shadow .2s}
+.dm-newslist a:hover{transform:translateY(-3px);box-shadow:0 10px 22px rgba(23,32,54,.1)}
+.dm-newslist img{width:46px;height:46px;flex:none;filter:drop-shadow(0 5px 6px rgba(23,32,54,.18));transition:transform .3s cubic-bezier(.2,1.6,.4,1)}
+.dm-newslist a:hover img{transform:rotate(-10deg) scale(1.12)}
+.dm-newslist small{display:block;color:var(--dm-tinte);font-weight:700;font-size:13px}
+.dm-newslist b{display:block;line-height:1.3}

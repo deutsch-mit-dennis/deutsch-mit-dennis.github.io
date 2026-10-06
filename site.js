@@ -206,6 +206,11 @@
       </div>
     </section>
 
+    <section class="dm-section dm-news" aria-labelledby="news-h">
+      <div class="dm-section-head"><h2 id="news-h">Neu auf der Seite</h2><p>Jede Woche kommt etwas dazu.</p></div>
+      <ol class="dm-newslist" id="dm-newslist" aria-busy="true"></ol>
+    </section>
+
     <section class="dm-section dm-home-video" id="dm-home-video" aria-labelledby="video-h">
       <div class="dm-section-head"><h2 id="video-h">Neu auf YouTube</h2><a href="#videos">Alle Videos</a></div>
       <div class="dm-vgrid dm-vgrid-feature" aria-busy="true"><p class="dm-hint">Videos werden geladen …</p></div>
@@ -222,6 +227,11 @@
       <div><h2>Hat dir das Lernen geholfen?</h2><p>Alle Übungen, Videos und Merkblätter sind kostenlos. Wenn du Danke sagen möchtest, kannst du meine Arbeit mit einem freiwilligen Beitrag unterstützen.</p></div>
       <a class="dm-btn dm-btn-sun" href="${T.donate}" target="_blank" rel="noopener noreferrer">♡ Danke sagen</a>
     </section>`, 'dm-home');
+    fetch('neu.json?v=' + Math.floor(Date.now() / 36e5), { cache: 'no-cache' }).then(r => r.json()).then(j => {
+      const ico = { lied: ['noten', 'Lied'], hoeren: ['kopfhoerer', 'Hören'], sprechen: ['sprechblase', 'Sprechen'], schreiben: ['schreiben', 'Schreiben'], uebung: ['idee', 'Übung'], neu: ['funkeln', 'Neu'] };
+      const ol = $('#dm-newslist'); if (!ol) return; ol.removeAttribute('aria-busy');
+      ol.innerHTML = (j.items || []).slice(0, 4).map(it => { const [img, lab] = ico[it.type] || ico.neu; return `<li><a href="${x(it.link)}"><img src="assets/3d/${img}.webp" alt="" width="192" height="192" loading="lazy"><span><small>${lab} · ${fmtDate(it.date)}</small><b>${x(it.title)}</b></span></a></li>`; }).join('');
+    }).catch(() => $('.dm-news')?.remove());
     loadVideos().then(list => {
       const box = $('#dm-home-video .dm-vgrid'); if (!box) return;
       box.removeAttribute('aria-busy');
