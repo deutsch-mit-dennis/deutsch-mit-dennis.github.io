@@ -3,3 +3,15 @@
 .lid-course-video{max-width:960px;margin:24px auto 36px}.lid-course-video h2{font-family:Hand,Arial,sans-serif;font-size:clamp(28px,4vw,40px)}
 
 .lid-video-item+ .lid-video-item{border-top:1px solid #c9cfc1;margin-top:28px;padding-top:12px}
+/* Erklärung erst auf Wunsch */
+.lid-hint{min-width:0}
+.lid-hint>summary{list-style:none;display:flex;gap:14px;align-items:center;cursor:pointer;padding:18px 20px;background:#fffefb;border:2px dashed #ddc46c;border-radius:4px;color:#253c31}
+.lid-hint>summary::-webkit-details-marker{display:none}
+.lid-hint>summary:hover{background:#fbf6e2}
+.lid-hint>summary b{display:block;font-size:1.15rem}
+.lid-hint>summary small{display:block;font-size:.92rem;line-height:1.45;color:#56604f}
+.lid-hint-ico{font-size:1.8rem;transition:transform .2s}
+.lid-hint>summary:hover .lid-hint-ico{transform:rotate(-12deg) scale(1.1)}
+.lid-hint[open]>summary{border-style:solid;border-bottom:0;margin-bottom:0}
+.lid-hint[open] .lid-notebook{border-top:0}
+.lid-heading{position:relative}.lid-3d{position:absolute;right:0;top:6px;width:clamp(70px,9vw,118px)}@media(max-width:620px){.lid-3d{position:static;display:block;width:60px;margin-bottom:6px}}

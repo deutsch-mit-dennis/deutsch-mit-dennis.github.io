@@ -1,0 +1,11 @@
+{
+  "updated": "2026-10-06",
+  "notes": [
+    { "id": "willkommen", "type": "dennis", "date": "2026-10-06", "name": "Dennis",
+      "text": "Willkommen an unserer Pinnwand! Hier hängen Rückmeldungen, Wünsche, Kritik und Fragen von Lernenden. Schreib einfach einen Zettel – ich lese jeden und hänge ihn nach kurzer Prüfung auf." },
+    { "id": "frage-lied", "type": "dennis", "date": "2026-10-06", "name": "Dennis",
+      "text": "Frage der Woche: Zu welchem Thema soll das nächste Lied sein? Ein Thema aus deinem Alltag, deinem Job oder eine Grammatik, die dir schwerfällt?" },
+    { "id": "neu-oktober", "type": "dennis", "date": "2026-10-06", "name": "Dennis",
+      "text": "Neu auf der Seite: 25 eigene Lieder von A1 bis C1, mehr Hörtraining für DTZ und B2 und die Sofort-Korrektur beim Schreiben. Was sollen wir als Nächstes bauen?" }
+  ]
+}

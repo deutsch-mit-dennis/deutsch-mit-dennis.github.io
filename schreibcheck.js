@@ -169,10 +169,11 @@
       data = await r.json();
     } catch (e) { ltFailed = e.message || 'http'; }
     btn.disabled = false; btn.classList.remove('is-busy');
-    const lt = data.matches || [];
+    const speech = ta.dataset.speech === '1';
+    const lt = (data.matches || []).filter(m => !speech || (!['PUNCTUATION', 'TYPOGRAPHY'].includes(m.rule?.category?.id) && !/UPPERCASE_SENTENCE_START|KOMMA|COMMA|PUNCT|SATZZEICHEN|LEERZEICHEN|WHITESPACE/i.test(m.rule?.id || '')));
     const own = learnerChecks(text, L).filter(o => !lt.some(m => o.offset < m.offset + m.length && m.offset < o.offset + o.length));
     const matches = [...lt, ...own].sort((a, b) => a.offset - b.offset);
-    const { out, words } = extraChecks(text, ta);
+    const ex = extraChecks(text, ta), words = ex.words, out = speech ? [] : ex.out;
     const counts = {};
     matches.forEach(m => { const c = CAT[m.rule?.category?.id] || 'Sonstiges'; counts[c] = (counts[c] || 0) + 1; });
     const score = matches.length === 0 && !out.length ? 'sc-good' : matches.length <= 3 ? 'sc-mid' : 'sc-bad';
@@ -183,6 +184,7 @@
       ${out.length ? `<ul class="sc-extra">${out.map(([t, d]) => `<li><b>${esc(t)}:</b> ${esc(d)}</li>`).join('')}</ul>` : ''}
       ${matches.length === 0 && !out.length ? '<p>Sehr gut! Lies deinen Text trotzdem noch einmal laut: Passt alles zur Aufgabe?</p>' : '<p class="sc-hint">Tipp: Klicke auf einen Vorschlag, um ihn zu übernehmen. Versuche aber zuerst selbst, den Fehler zu finden – so lernst du am meisten.</p>'}
       ${ltFailed ? `<p class="sc-hint">${ltFailed === 'limit' ? 'LanguageTool ist gerade ausgelastet' : 'LanguageTool ist gerade nicht erreichbar'} – angezeigt werden nur die typischen Lernerfehler. Prüfe später noch einmal.</p>` : ''}
+      ${speech ? '<p class="sc-hint">Gesprochener Text: Satzzeichen werden hier nicht bewertet – achte auf Wortformen, Endungen und Satzbau.</p>' : ''}
       <p class="sc-privacy">Automatische Prüfung (LanguageTool und eigene Regeln für typische Lernerfehler). Sie findet nicht alle Fehler und bewertet nicht den Inhalt.</p>`;
     panel.querySelectorAll('.sc-fix button').forEach(b => b.onclick = () => {
       const m = matches[Number(b.dataset.i)];
