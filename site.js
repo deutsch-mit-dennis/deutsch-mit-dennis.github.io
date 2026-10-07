@@ -863,7 +863,7 @@
       <h2>7. Schriften</h2>
       <p>Die Schriften dieser Website liegen auf dem eigenen Server. Es werden keine Schriften von Google oder anderen Anbietern geladen.</p>
       <h2>8. Externe Links</h2>
-      <p>Die Titelbilder und QR-Codes der Kahoot-Quiz liegen auf dieser Website. Links zu Kahoot, DonationAlerts, YouTube oder Prüfungsanbietern führen zu anderen Websites. Dort gelten deren Datenschutzbestimmungen.</p>
+      <p>Die Titelbilder und QR-Codes der Kahoot-Quiz liegen auf dieser Website. Links zu Kahoot, PayPal, YouTube oder Prüfungsanbietern führen zu anderen Websites. Dort gelten deren Datenschutzbestimmungen.</p>
       <h2>9. Deine Rechte</h2>
       <p>Du hast das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerspruch. Eine Einwilligung kannst du jederzeit widerrufen. Du kannst dich außerdem bei einer Datenschutz-Aufsichtsbehörde beschweren, zum Beispiel bei der Landesbeauftragten für Datenschutz und Informationsfreiheit Nordrhein-Westfalen.</p>
       <p class="dm-small">Stand: Oktober 2026</p>
