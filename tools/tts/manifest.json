@@ -41,7 +41,7 @@
    "key": "t89308c7b",
    "segments": [
     {
-     "voice": "m3",
+     "voice": "f2",
      "text": "Gute Besserung, Ali! Bis Montag."
     }
    ]
@@ -50,7 +50,7 @@
    "key": "t3a06b579",
    "segments": [
     {
-     "voice": "f1",
+     "voice": "m1",
      "text": "Hallo Frau Weber, ich bin krank. Ich kann heute nicht kommen. Ich komme am Montag wieder. Viele Grüße Ali"
     }
    ]
@@ -95,7 +95,7 @@
    "key": "t8d3a5113",
    "segments": [
     {
-     "voice": "f1",
+     "voice": "m2",
      "text": "Am Samstag kann ich erst um 16 Uhr. Ist das für dich in Ordnung?"
     }
    ]
@@ -104,7 +104,7 @@
    "key": "t3de06393",
    "segments": [
     {
-     "voice": "m3",
+     "voice": "f1",
      "text": "Hallo Omar, hast du am Samstag Zeit? Wir können uns um 15 Uhr am Eingang des Stadtparks treffen. Ich bringe Getränke mit. Kannst du etwas Obst mitbringen? Schreib mir bitte, ob du kommen kannst. Viele Grüße Mila"
     }
    ]
@@ -176,7 +176,7 @@
    "key": "t4d33d75f",
    "segments": [
     {
-     "voice": "m1",
+     "voice": "f1",
      "text": "Sehr geehrte Damen und Herren, am 2. Mai habe ich bei Ihnen eine blaue Jacke bestellt. Die Bestellung hat die Nummer 1234. Leider ist der Reißverschluss kaputt. Deshalb kann ich die Jacke nicht benutzen. Ich möchte Sie bitten, mir eine neue Jacke zu schicken. Wie kann ich die beschädigte Jacke zurücksenden? Vielen Dank für Ihre Antwort. Mit freundlichen Grüßen Mila Petrova"
     }
    ]
@@ -248,7 +248,7 @@
    "key": "t77d93b44",
    "segments": [
     {
-     "voice": "m2",
+     "voice": "f3",
      "text": "Sehr geehrter Herr Weber, vielen Dank für Ihre Nachricht. Bitte entschuldigen Sie, dass Ihre Bestellung noch nicht vollständig geliefert wurde und Sie bisher keine Information dazu erhalten haben. Nach Rücksprache mit unserem Lager ist ein Artikel erst ab Montag verfügbar. Wir können Ihnen anbieten, die bereits vorhandenen Artikel morgen zu versenden. Den fehlenden Artikel würden wir am Montag ohne zusätzliche Versandkosten nachschicken. Alternativ können wir die gesamte Bestellung am Montag versenden. Bitte teilen Sie uns mit, welche Lösung Ihnen lieber ist. Für Rückfragen stehe ich Ihnen gerne zur Verfügung. Mit freundlichen Grüßen Mila Petrova"
     }
    ]
@@ -284,7 +284,7 @@
    "key": "te59bec66",
    "segments": [
     {
-     "voice": "m1",
+     "voice": "f3",
      "text": "Liebe Kolleginnen und Kollegen, meiner Ansicht nach ist Homeoffice eine gute Möglichkeit – allerdings nicht für alle Abteilungen in gleichem Umfang. Ein wichtiges Argument dafür ist, dass viele von uns lange Fahrtwege haben. Wer zu Hause arbeitet, spart Zeit und kann sich oft besser konzentrieren. In unserer Buchhaltung hat das in der Testphase gut funktioniert. Man könnte zwar einwenden, dass die Zusammenarbeit leidet, allerdings lässt sich das mit festen Teamtagen lösen. In der Produktion oder im Lager ist Homeoffice dagegen kaum möglich. Abschließend möchte ich vorschlagen, dass jede Abteilung selbst eine passende Regelung entwickelt. Viele Grüße Mila"
     }
    ]
@@ -329,7 +329,7 @@
    "key": "t16470000",
    "segments": [
     {
-     "voice": "f3",
+     "voice": "m1",
      "text": "Hallo Mila, hier ist Omar. Wir treffen uns heute nicht um drei, sondern um vier, weil mein Bus Verspätung hat. Und wir treffen uns direkt am Kino, nicht am Bahnhof. Bis dann!"
     }
    ]
@@ -365,7 +365,7 @@
    "key": "t19b94e8a",
    "segments": [
     {
-     "voice": "f2",
+     "voice": "m2",
      "text": "Hallo Frau Jovanović, hier ist Markus Lenz. Das Meeting mit dem Kunden wird auf Donnerstag um neun Uhr verschoben. Könnten Sie bitte bis Mittwochabend die aktuellen Verkaufszahlen vorbereiten und an alle Teilnehmenden schicken? Die Präsentation übernehme ich selbst."
     }
    ]
@@ -400,7 +400,7 @@
    "key": "tc37ac09e",
    "segments": [
     {
-     "voice": "m1",
+     "voice": "f1",
      "text": "Guten Tag, Schulz von der Firma Brandt. Wir haben gestern 200 Kartons bestellt, brauchen aber dringend 300. Falls die zusätzliche Menge nicht bis Freitag lieferbar ist, nehmen wir vorerst nur die 200 und bestellen den Rest später."
     }
    ]
