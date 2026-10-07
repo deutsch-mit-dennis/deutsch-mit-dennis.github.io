@@ -6,12 +6,12 @@
   const SEEN = 'dm-tour-seen';
   // [Startsekunde, CSS-Selektor auf der Startseite, kurzer Hinweis]
   const STEPS = [
-    [0, '.dm-hero', 'Willkommen!'],
+    [0, null, 'Willkommen!'],
     [9.2, '.dm-paths', 'Hier wählst du deinen Lernweg'],
     [13.5, '.dm-tools', 'Direkt üben: Sprechen, Schreiben, Hören'],
     [19.2, '.dm-paths a[href="#lernweg/dtz"], .dm-tools a[href="#lid"]', 'Prüfungstraining: DTZ, B2, Leben in Deutschland'],
     [26.1, '.dm-stage', 'Deutsch mit Liedern'],
-    [30.4, '.dm-hero', 'Viel Erfolg!']
+    [30.4, null, 'Viel Erfolg!']
   ];
   const get = k => { try { return localStorage.getItem(k); } catch { return null; } };
   const set = (k, v) => { try { localStorage.setItem(k, v); } catch {} };
@@ -19,13 +19,17 @@
   const check = () => videoOk !== null ? Promise.resolve(videoOk)
     : fetch(VIDEO, { method: 'HEAD', cache: 'no-cache' }).then(r => (videoOk = r.ok)).catch(() => (videoOk = false));
 
-  function clearMarks() { document.querySelectorAll('.dm-tour-mark').forEach(e => e.classList.remove('dm-tour-mark')); }
+  function clearMarks() { document.querySelectorAll('.dm-tour-mark').forEach(e => e.classList.remove('dm-tour-mark')); document.body.classList.remove('dm-tour-dim'); }
   function mark(sel) {
     clearMarks();
+    if (!sel) return;
     const el = [...document.querySelectorAll(sel)].find(e => e.offsetParent !== null);
     if (!el) return;
     el.classList.add('dm-tour-mark');
-    el.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'center' });
+    document.body.classList.add('dm-tour-dim');
+    const r = el.getBoundingClientRect(), head = 80, avail = innerHeight - head;
+    const top = innerWidth < 720 ? r.top + scrollY - head - 12 : r.top + scrollY - head - Math.max(16, (avail - Math.min(r.height, avail)) / 2);
+    window.scrollTo({ top: Math.max(0, top), behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
   }
 
   function bubble() {
@@ -55,7 +59,7 @@
     let last = -1;
     v.ontimeupdate = () => {
       let i = 0; STEPS.forEach((s, k) => { if (v.currentTime >= s[0]) i = k; });
-      if (i !== last) { last = i; hint.textContent = STEPS[i][2]; mark(STEPS[i][1]); }
+      if (i !== last) { last = i; hint.textContent = STEPS[i][2]; mark(STEPS[i][1]); if (!STEPS[i][1] && i > 0) window.scrollTo({ top: 0, behavior: 'smooth' }); }
     };
     v.onended = () => { clearMarks(); hint.textContent = 'Viel Spaß beim Lernen!'; setTimeout(close, 2500); };
   }

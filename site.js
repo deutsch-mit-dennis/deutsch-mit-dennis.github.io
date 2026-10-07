@@ -1213,6 +1213,7 @@
     let raw = decodeURIComponent(location.hash.slice(1)).replace(/^\/+/, '');
     let p = raw.split('/');
     if (p[0] in ALIAS) { p[0] = ALIAS[p[0]]; if (p[0] === '') p = ['']; if (p[0] === 'lernen' && p[1] === 'beruf') p[1] = 'B2'; }
+    if (p[0] === 'lektion' && !p[1]) p = ['lernen'];
     if (p[0] === 'lernweg' && p[1] === 'everyday') p[1] = 'sprechen';
     if (p[0] === 'lernweg' && p[1] === 'writing') p[1] = 'schreiben';
     stopSpeaking();

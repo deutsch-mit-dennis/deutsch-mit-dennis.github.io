@@ -7,7 +7,6 @@ DM.teacher = {
   fullName: 'Dzianis Prudnikau',
   email: 'dennis.prudnikau@gmail.com',
   phone: '+49 173 8775907',
-  whatsapp: 'https://wa.me/491738775907',
   donate: 'https://www.paypal.com/paypalme/DennisPrudnikau',
   youtube: 'https://www.youtube.com/@deutsch-mit-Dennis',
   channelId: 'UCMacEMD2p8zCKY2UrGiMUrA',

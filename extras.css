@@ -464,3 +464,6 @@ li.sc-sp .sc-cat{background:#FDE3DC;color:#A3281E}li.sc-gr .sc-cat{background:#D
 .dm-rate-row{display:flex;gap:12px;align-items:center}
 .dm-rate .dm-btn{padding:8px 14px;font-size:15px}
 @media (prefers-reduced-motion:reduce){.dm-rate{transition:none}}
+/* Rundgang: Scheinwerfer auf den erklärten Bereich */
+.dm-tour-mark{position:relative;z-index:1030!important;outline:4px solid #FFD400!important;outline-offset:6px;border-radius:var(--dm-r);box-shadow:0 0 0 12px rgba(255,212,0,.35),0 0 0 100vmax rgba(15,20,40,.5)!important;transition:box-shadow .4s}
+body.dm-tour-dim .dm-header{z-index:1}
