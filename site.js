@@ -148,7 +148,7 @@
 
   /* ---------- Bausteine ---------- */
   const art3d = (n, anim = 'float') => `<img class="dm-3d dm-3d-${anim}" src="assets/3d/${n}.webp" alt="" width="192" height="192" aria-hidden="true">`;
-  const HEAD_ART = { lernweg: ['kompass', 'swing'], wegweiser: ['kompass', 'swing'], lernen: ['buecher', 'float'], ueben: ['idee', 'glow'], 'ueben/sprechen': ['sprechblase', 'bounce'], 'ueben/schreiben': ['schreiben', 'swing'], schreiben: ['memo', 'swing'], hoeren: ['kopfhoerer', 'float'], lieder: ['mikrofon', 'float'], kahoot: ['spiel', 'bounce'], pruefung: ['pokal', 'glow'], training: ['pokal', 'glow'], videos: ['video', 'swing'], material: ['blatt', 'float'], lernpakete: ['paket', 'bounce'], pinnwand: ['pin', 'swing'], quellen: ['register', 'float'] };
+  const HEAD_ART = { lernweg: ['kompass', 'swing'], wegweiser: ['kompass', 'swing'], lernen: ['buecher', 'float'], ueben: ['idee', 'glow'], 'ueben/sprechen': ['sprechblase', 'bounce'], 'ueben/schreiben': ['schreiben', 'swing'], schreiben: ['memo', 'swing'], hoeren: ['kopfhoerer', 'float'], lesen: ['buecher', 'float'], lieder: ['mikrofon', 'float'], kahoot: ['spiel', 'bounce'], pruefung: ['pokal', 'glow'], training: ['pokal', 'glow'], videos: ['video', 'swing'], material: ['blatt', 'float'], lernpakete: ['paket', 'bounce'], pinnwand: ['pin', 'swing'], quellen: ['register', 'float'] };
   function decorateHead() {
     const h = location.hash.slice(1).split('/'), key = HEAD_ART[h[0] + '/' + h[1]] ? h[0] + '/' + h[1] : h[0];
     let a = HEAD_ART[key]; if (h[0] === 'lieder' && h[1] && !['A1', 'A2', 'B1', 'B2', 'C1'].includes(h[1])) a = ['noten', 'float'];
@@ -213,9 +213,11 @@
         <a href="#ueben/sprechen/A1" data-img="sprechblase"><img class="dm-tool-3d" src="assets/3d/sprechblase.webp" alt="" width="192" height="192" loading="lazy" aria-hidden="true"><b>Sprechen</b><span>Gespräche aus dem Alltag, mit Satzanfängen und Beispiel zum Anhören.</span></a>
         <a href="#ueben/schreiben/A2" data-img="schreiben"><img class="dm-tool-3d" src="assets/3d/schreiben.webp" alt="" width="192" height="192" loading="lazy" aria-hidden="true"><b>Schreiben</b><span>Nachrichten, Briefe und E-Mails – mit Sofort-Korrektur, Checkliste und Mustertext.</span></a>
         <a href="#hoeren" data-img="kopfhoerer"><img class="dm-tool-3d" src="assets/3d/kopfhoerer.webp" alt="" width="192" height="192" loading="lazy" aria-hidden="true"><b>Hören</b><span>DTZ- und B2-Hörtraining mit natürlichen Stimmen: Ansagen, Mailbox, Gespräche.</span></a>
+        <a href="#lesen" data-img="buecher"><img class="dm-tool-3d" src="assets/3d/buecher.webp" alt="" width="192" height="192" loading="lazy" aria-hidden="true"><b>Lesen</b><span>Mitteilungen, E-Mails und Artikel verstehen – wie im DTZ und DTB B2.</span></a>
         <a href="#lid" data-img="gebaeude"><img class="dm-tool-3d" src="assets/3d/gebaeude.webp" alt="" width="192" height="192" loading="lazy" aria-hidden="true"><b>Leben in Deutschland</b><span>Lernspiele und Wissen für den Orientierungskurs.</span></a>
         <a href="#lieder" data-img="mikrofon"><img class="dm-tool-3d" src="assets/3d/mikrofon.webp" alt="" width="192" height="192" loading="lazy" aria-hidden="true"><b>Deutsch mit Liedern</b><span>25 eigene Lieder von A1 bis C1 – mit Text, Aufgaben und Lösungen.</span></a>
         <a href="#kahoot" data-img="spiel"><img class="dm-tool-3d" src="assets/3d/spiel.webp" alt="" width="192" height="192" loading="lazy" aria-hidden="true"><b>Kahoot-Quiz</b><span>Spielerisch wiederholen – allein oder mit dem ganzen Kurs.</span></a>
+        <a href="#material" data-img="blatt"><img class="dm-tool-3d" src="assets/3d/blatt.webp" alt="" width="192" height="192" loading="lazy" aria-hidden="true"><b>Materialien</b><span>Arbeitsblätter und Merkblätter als PDF – zum Ausdrucken.</span></a>
 
       </div>
     </section>
@@ -363,11 +365,12 @@
   /* ---------- Üben: Übersicht ---------- */
   function practiceHub() {
     page(`${crumbs([['Üben']])}
-      <div class="dm-head"><h1>Üben</h1><p class="dm-lead">Sprechen, schreiben und hören – ohne Prüfungsdruck. Wähle dein Niveau.</p></div>
+      <div class="dm-head"><h1>Üben</h1><p class="dm-lead">Sprechen, schreiben, hören und lesen – ohne Prüfungsdruck. Wähle dein Niveau.</p></div>
       <div class="dm-hub">
         <section class="dm-card dm-hub-card"><h2>💬 Sprechen</h2><p>Kurze Situationen aus dem Alltag und Beruf. Mit Satzanfängen, Rückfrage und Beispiel zum Anhören.</p>${levelLinks('ueben/sprechen')}</section>
         <section class="dm-card dm-hub-card"><h2>✍️ Schreiben</h2><p>Plane deinen Text, schreib ihn und vergleiche mit einem Muster. Dein Entwurf bleibt auf deinem Gerät gespeichert.</p>${levelLinks('ueben/schreiben')}<a class="dm-inline-link" href="#schreiben/bausteine">Schreib-Bausteine: Anrede, Gruß, Verbindungswörter</a></section>
         <section class="dm-card dm-hub-card"><h2>🎧 Hören</h2><p>Hörtraining für DTZ und DTB B2 mit natürlichen Stimmen – plus kurze Texte zum Einstieg.</p><div class="dm-pills"><a href="#hoeren/dtz-1"><b>DTZ</b><small>4 Übungssätze</small></a><a href="#hoeren/b2-1"><b>DTB B2</b><small>3 Übungssätze</small></a><a href="#hoeren"><b>Alle</b><small>Übersicht</small></a></div></section>
+        <section class="dm-card dm-hub-card"><h2>📖 Lesen</h2><p>Mitteilungen, Anzeigen, E-Mails und Artikel verstehen – mit Fragen und Erklärungen.</p><div class="dm-pills"><a href="#lesen/alltag"><b>Alltag</b><small>A2–B1 · DTZ</small></a><a href="#lesen/beruf"><b>Beruf</b><small>B1–B2 · DTB</small></a></div></section>
         <section class="dm-card dm-hub-card"><h2>🎲 Gemeinsam spielen</h2><p>Kahoot-Quiz für den Kurs oder zu Hause. Wörter und Redemittel festigen.</p><a class="dm-btn dm-btn-quiet" href="#kahoot">Zu den Kahoot-Quiz</a></section>
       </div>`);
   }
@@ -583,6 +586,45 @@
     };
     $('#dm-lq-reset').onclick = () => { $('#dm-lq').reset(); $$('.dm-feedback').forEach(el => { el.textContent = ''; el.className = 'dm-feedback'; }); $('#dm-lq-score').textContent = ''; };
   }
+  /* ---------- Leseverstehen ---------- */
+  const readSets = () => DM.reading || [];
+  function readingHub() {
+    const sets = readSets();
+    page(`${crumbs([['Üben', '#ueben'], ['Lesen']])}
+      <div class="dm-head"><h1>Lesen</h1><p class="dm-lead">Mitteilungen, Anzeigen, E-Mails und Artikel verstehen – wie im Alltag, im DTZ und im DTB B2. Jede Woche kommt ein neuer Text dazu.</p></div>
+      <div class="dm-paths">${sets.map((st, k) => { const done = st.items.filter(it => mem.done['lesen:' + it.id] !== undefined).length;
+        return `<a class="dm-path dm-g-${k ? 'ink' : 'sun'}" href="#lesen/${st.id}"><span class="dm-path-icon" aria-hidden="true">📖</span><span class="dm-path-text"><span class="dm-path-meta">${x(st.level)} · ${x(st.exam)}</span><b>${x(st.title)}</b><span>${st.items.length} Lesetexte: ${x([...new Set(st.items.map(i => i.type))].slice(0, 3).join(', '))} …</span>${done ? `<span class="dm-mini-progress"><i style="width:${Math.round(done / st.items.length * 100)}%"></i></span><small>${done} von ${st.items.length} bearbeitet</small>` : ''}</span></a>`; }).join('')}</div>
+      <p class="dm-small">Alle Lesetexte sind eigene Übungstexte im Stil der Prüfungen, keine offiziellen Prüfungsaufgaben.</p>`);
+  }
+  function reading(setId, raw) {
+    const st = readSets().find(s => s.id === setId); if (!st || !st.items.length) return readingHub();
+    const n = Math.max(0, Math.min(st.items.length - 1, Number(raw) || 0)), it = st.items[n];
+    page(`${crumbs([['Üben', '#ueben'], ['Lesen', '#lesen'], [st.title]])}
+      <div class="dm-head"><h1>${x(st.title)}</h1><p class="dm-lead">${x(st.intro)}</p></div>
+      <nav class="dm-scenes" aria-label="Lesetext wählen">${st.items.map((t, i) => `<a href="#lesen/${setId}/${i}" ${i === n ? 'aria-current="page"' : ''} class="${mem.done['lesen:' + t.id] !== undefined ? 'is-done' : ''}">${i + 1}. ${x(t.type)}</a>`).join('')}</nav>
+      <div class="dm-practice">
+        <section class="dm-card dm-read">
+          <p class="dm-path-meta">${x(it.type)} · Text ${n + 1} von ${st.items.length}</p>
+          <h2>${x(it.title)}</h2>
+          ${it.situation ? `<p class="dm-task">${x(it.situation)}</p>` : ''}
+          <div class="dm-read-text">${it.text.split('\n').map(p => `<p>${x(p)}</p>`).join('')}</div>
+        </section>
+        <section class="dm-card">
+          <h2>Fragen</h2>
+          <form id="dm-rq">${it.questions.map((q, i) => `<fieldset><legend>${i + 1}. ${x(q.q)}</legend>${q.options.map((o, j) => `<label class="dm-option"><input type="radio" name="q${i}" value="${j}"><span>${x(o)}</span></label>`).join('')}<p class="dm-feedback" id="dm-rf${i}"></p></fieldset>`).join('')}
+            <div class="dm-row"><button class="dm-btn">Antworten prüfen</button><button type="button" class="dm-btn dm-btn-quiet" id="dm-rq-reset">Neu versuchen</button></div>
+            <p id="dm-rq-score" role="status" aria-live="polite"></p></form>
+        </section>
+      </div>
+      <div class="dm-row dm-next">${n < st.items.length - 1 ? `<a class="dm-btn" href="#lesen/${setId}/${n + 1}">Nächster Text</a>` : `<a class="dm-btn" href="#lesen">Fertig – zur Übersicht</a>`}${n ? `<a class="dm-btn dm-btn-quiet" href="#lesen/${setId}/${n - 1}">Vorheriger Text</a>` : ''}</div>`);
+    $('#dm-rq').onsubmit = e => {
+      e.preventDefault(); const f = new FormData(e.target); let ok = 0, filled = 0;
+      it.questions.forEach((q, i) => { const v = f.get('q' + i), el = $('#dm-rf' + i), good = v !== null && Number(v) === q.answer; if (v !== null) filled++; if (good) ok++; el.className = 'dm-feedback ' + (v === null ? '' : good ? 'good' : 'bad'); el.textContent = v === null ? 'Wähle bitte eine Antwort.' : `${good ? 'Richtig.' : 'Noch nicht richtig.'} ${q.why}`; });
+      $('#dm-rq-score').textContent = filled === it.questions.length ? `${ok} von ${it.questions.length} richtig.${ok < it.questions.length ? ' Lies die markierte Stelle im Text noch einmal.' : ' 🎉'}` : 'Bitte beantworte alle Fragen.';
+      if (filled === it.questions.length) { mem.done['lesen:' + it.id] = ok; save(); if (ok === it.questions.length) celebrate(e.target); }
+    };
+    $('#dm-rq-reset').onclick = () => { $('#dm-rq').reset(); $$('.dm-feedback').forEach(el => { el.textContent = ''; el.className = 'dm-feedback'; }); $('#dm-rq-score').textContent = ''; };
+  }
   /* Kleine Konfetti-Animation bei allen richtigen Antworten */
   function celebrate(el) {
     if (!window.matchMedia?.('(prefers-reduced-motion: no-preference)').matches) return;
@@ -695,8 +737,8 @@
           ${card('#training/dtz-bild', 'Sprechen 2', 'Bild beschreiben', 'Beschreiben und erzählen')}
           ${card('#training/dtz-sprechen', 'Sprechen 3', 'Gemeinsam planen', 'Vorschlagen und einigen')}
           ${card('#training/dtz-schreiben', 'Schreiben', 'Einen Brief schreiben', 'Vier Leitpunkte, mit Muster')}
-          ${card('#training/dtz-lesen', 'Lesen', 'Mitteilungen verstehen', 'Informationen finden')}
-          ${card('#hoeren/alltag', 'Hören', 'Ansagen und Nachrichten', '8 Hörtexte mit Fragen')}
+          ${card('#lesen/alltag', 'Lesen', 'Mitteilungen verstehen', `${(readSets()[0] || { items: [] }).items.length} Lesetexte mit Fragen`)}
+          ${card('#hoeren/alltag', 'Hören', 'Ansagen und Nachrichten', `${(listenSet('alltag') || { items: [] }).items.length} Hörtexte mit Fragen`)}
         </div>
       </section>
       <section class="dm-exam-block dm-g-ink" aria-labelledby="dtb-h">
@@ -706,8 +748,8 @@
           ${card('#training/dtb-kollegen', 'Sprechen 2', 'Mit Kollegen sprechen', 'Eingehen und nachfragen')}
           ${card('#training/dtb-sprechen', 'Sprechen 3', 'Lösungen diskutieren', 'Abwägen und vereinbaren')}
           ${card('#training/dtb-schreiben', 'Schreiben', 'Kundenantwort', 'Mit internen Informationen')}
-          ${card('#training/dtb-lesen', 'Lesen', 'Betriebliche Regelung', 'Fristen und Einschränkungen')}
-          ${card('#hoeren/beruf', 'Hören', 'Hören im Beruf', '5 Hörtexte mit Fragen')}
+          ${card('#lesen/beruf', 'Lesen', 'Regelungen und E-Mails', `${(readSets()[1] || { items: [] }).items.length} Lesetexte mit Fragen`)}
+          ${card('#hoeren/beruf', 'Hören', 'Hören im Beruf', `${(listenSet('beruf') || { items: [] }).items.length} Hörtexte mit Fragen`)}
         </div>
       </section>
       <section class="dm-exam-block dm-g-mint" aria-labelledby="lid-h">
@@ -1164,8 +1206,8 @@
 
   /* ---------- Router ---------- */
   const legacyRoute = window.route;
-  const NAV = { '': 'start', lernweg: 'wege', wegweiser: 'wege', lernen: 'lernen', lektion: 'lernen', wortschatz: 'lernen', wort: 'lernen', ueben: 'ueben', schreiben: 'ueben', hoeren: 'ueben', kahoot: 'ueben', pruefung: 'pruefung', training: 'pruefung', orientierungskurs: 'pruefung', lid: 'pruefung', quellen: 'pruefung', videos: 'videos', 'ueber-mich': 'ueber', material: 'material', lernpakete: 'pakete', lieder: 'lieder' };
-  const TITLES = { '': 'Deutsch lernen mit Dennis', lernweg: 'Mein Lernweg', wegweiser: 'Welcher Weg passt?', lernen: 'Lektionen', lektion: 'Lektion', wortschatz: 'Wortschatz', wort: 'Wortkarte', ueben: 'Üben', schreiben: 'Schreib-Bausteine', hoeren: 'Hören', kahoot: 'Kahoot-Quiz', pruefung: 'Prüfungstraining', training: 'Prüfungstraining', orientierungskurs: 'Leben in Deutschland', lid: 'LiD-Trainer', quellen: 'Prüfungsinfos & Quellen', videos: 'Videos', 'ueber-mich': 'Über mich', impressum: 'Impressum', datenschutz: 'Datenschutz', pinnwand: 'Deine Meinung', material: 'Materialien', lernpakete: 'Lernpakete', lieder: 'Deutsch mit Liedern' };
+  const NAV = { '': 'start', lernweg: 'wege', wegweiser: 'wege', lernen: 'lernen', lektion: 'lernen', wortschatz: 'lernen', wort: 'lernen', ueben: 'ueben', schreiben: 'ueben', hoeren: 'ueben', lesen: 'ueben', kahoot: 'ueben', pruefung: 'pruefung', training: 'pruefung', orientierungskurs: 'pruefung', lid: 'pruefung', quellen: 'pruefung', videos: 'videos', 'ueber-mich': 'ueber', material: 'material', lernpakete: 'pakete', lieder: 'lieder' };
+  const TITLES = { '': 'Deutsch lernen mit Dennis', lernweg: 'Mein Lernweg', wegweiser: 'Welcher Weg passt?', lernen: 'Lektionen', lektion: 'Lektion', wortschatz: 'Wortschatz', wort: 'Wortkarte', ueben: 'Üben', schreiben: 'Schreib-Bausteine', hoeren: 'Hören', lesen: 'Lesen', kahoot: 'Kahoot-Quiz', pruefung: 'Prüfungstraining', training: 'Prüfungstraining', orientierungskurs: 'Leben in Deutschland', lid: 'LiD-Trainer', quellen: 'Prüfungsinfos & Quellen', videos: 'Videos', 'ueber-mich': 'Über mich', impressum: 'Impressum', datenschutz: 'Datenschutz', pinnwand: 'Deine Meinung', material: 'Materialien', lernpakete: 'Lernpakete', lieder: 'Deutsch mit Liedern' };
   const OWN = {
     '': () => home(),
     lernweg: p => p[1] ? pathPage(p[1]) : paths(),
@@ -1174,6 +1216,7 @@
     ueben: p => p[1] ? practice(p[1], p[2], p[3]) : practiceHub(),
     schreiben: () => toolkit(),
     hoeren: p => p[1] ? listening(p[1], p[2]) : listeningHub(),
+    lesen: p => p[1] ? reading(p[1], p[2]) : readingHub(),
     pruefung: () => exam(),
     videos: p => videos(p[1], p[2]),
     'ueber-mich': p => { about(); if (p[1] === 'nachweise') setTimeout(() => $('#nachweise')?.scrollIntoView({ behavior: 'smooth' }), 60); },

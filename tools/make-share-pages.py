@@ -80,6 +80,7 @@ SECTIONS = [
     ('pruefung', 'Prüfungstraining DTZ und B2', 'Schreiben, Sprechen, Hören und Lesen wie in der Prüfung – von einem lizenzierten Prüfer.'),
     ('ueben', 'Deutsch üben', 'Sprechen und Schreiben mit Sofort-Korrektur, Satzanfängen und Mustertexten. Kostenlos.'),
     ('hoeren', 'Hörtraining DTZ und B2', 'Ansagen, Mailbox-Nachrichten und Gespräche mit Aufgaben wie in der Prüfung.'),
+    ('lesen', 'Leseverstehen DTZ und B2', 'Mitteilungen, Anzeigen, E-Mails und Artikel verstehen – mit Fragen und Erklärungen. Jede Woche ein neuer Text.'),
     ('lid', 'Leben in Deutschland: alle 310 Fragen', 'Kostenloser Trainer für den Test „Leben in Deutschland“ – mit Lernmodus und Prüfungssimulation.'),
     ('ueber-mich', 'Über Dennis', 'Deutschlehrer seit 2017, lizenzierter DTZ- und telc-Prüfer, vom BAMF zugelassen bis C2.'),
 ]

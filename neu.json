@@ -1,6 +1,7 @@
 {
   "note": "Neu auf der Seite – neueste Einträge oben. Wird vom Redaktionsplan (geplante Aufgaben) ergänzt.",
   "items": [
+    { "date": "2026-10-07", "type": "uebung", "title": "Neu: Leseverstehen – 7 Texte für DTZ und B2 Beruf", "link": "#lesen" },
     { "date": "2026-10-07", "type": "neu", "title": "7 neue Merkblätter: Rechtsstaat, Sozialstaat und NS-Zeit (Orientierungskurs)", "link": "#orientierungskurs" },
     { "date": "2026-10-07", "type": "neu", "title": "Rundgang mit Dennis: die Seite in 30 Sekunden", "link": "#" },
     { "date": "2026-10-06", "type": "neu", "title": "Deine Meinung: Lob, Wünsche, Kritik und Fragen als Zettel", "link": "#pinnwand" },
