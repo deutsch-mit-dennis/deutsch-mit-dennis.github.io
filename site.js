@@ -813,6 +813,8 @@
       <p>${T.address.map(x).join('<br>')}</p>
       <h2>Hinweis</h2>
       <p>„Deutsch mit Dennis“ ist ein unabhängiges, kostenloses Lernangebot. Es ist kein Angebot der g.a.s.t., der telc gGmbH oder des Bundesamts für Migration und Flüchtlinge (BAMF). Die Übungen sind eigene Materialien und keine offiziellen Prüfungsaufgaben.</p>
+      <h2>Verkauf der Lernpakete</h2>
+      <p>Die kostenpflichtigen Lernpakete werden über die Digistore24 GmbH, St.-Godehard-Straße 32, 31139 Hildesheim, verkauft. Digistore24 ist Verkäufer und Vertragspartner; es gelten deren <a href="https://www.digistore24.com/page/terms/1/de" target="_blank" rel="noopener noreferrer">AGB</a>. Für Inhalt und Fragen zu den Paketen bin ich zuständig (Kontakt siehe oben).</p>
       <h2>Haftung für Links</h2>
       <p>Diese Website enthält Links zu externen Websites (zum Beispiel YouTube, Kahoot, Prüfungsanbieter). Für deren Inhalte sind ausschließlich die jeweiligen Anbieter verantwortlich. Bei Bekanntwerden von Rechtsverletzungen entferne ich solche Links umgehend.</p>
       <h2>Urheberrecht</h2>
