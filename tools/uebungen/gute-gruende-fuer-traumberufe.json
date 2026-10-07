@@ -1,0 +1,102 @@
+{
+  "file": "gute-gruende-fuer-traumberufe.pdf",
+  "mode": "append",
+  "title": "Gute Gründe für Traumberufe",
+  "level": "A1",
+  "blocks": [
+    {
+      "type": "task",
+      "heading": "1. Richtig oder falsch? Kreuzen Sie an.",
+      "instruction": "Lesen Sie noch einmal die Gründe auf dem Arbeitsblatt.",
+      "items": [
+        "a) Ein Bäcker fängt spät an zu arbeiten.   ☐ richtig   ☐ falsch",
+        "b) Polizisten arbeiten in einem Team.   ☐ richtig   ☐ falsch",
+        "c) Ein Kellner bewegt sich bei der Arbeit nur wenig.   ☐ richtig   ☐ falsch",
+        "d) Gute Köche können auf der ganzen Welt arbeiten.   ☐ richtig   ☐ falsch",
+        "e) Ein Schauspieler kann berühmt werden.   ☐ richtig   ☐ falsch",
+        "f) Die Arbeit von einem Anwalt ist leicht.   ☐ richtig   ☐ falsch"
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "Grammatik: Sätze mit „weil“",
+      "box": true,
+      "paragraphs": [
+        "Mit **weil** sagen wir einen Grund. Das Verb steht im weil-Satz **am Ende**.",
+        "Ich möchte Bäcker werden. Alle lieben frisches Brot. → Ich möchte Bäcker werden, **weil** alle frisches Brot **lieben**.",
+        "Mit Modalverb: Er kann Leben retten. → …, **weil** er Leben retten **kann**."
+      ]
+    },
+    {
+      "type": "task",
+      "heading": "2. Verbinden Sie die Sätze mit „weil“.",
+      "example": "Ich möchte Ärztin werden. Ich helfe gern kranken Menschen. → Ich möchte Ärztin werden, weil ich gern kranken Menschen helfe.",
+      "items": [
+        "a) Tom möchte Lehrer werden. Die Arbeit macht Spaß.\n__________________________________________________________________",
+        "b) Sara möchte Friseurin werden. Sie arbeitet gern kreativ mit Haaren.\n__________________________________________________________________",
+        "c) Ali möchte Mechaniker werden. Er liebt Autos und Technik.\n__________________________________________________________________",
+        "d) Maria möchte Polizistin werden. Kein Tag ist gleich.\n__________________________________________________________________",
+        "e) Ich möchte Ingenieur werden. Ich kann überall auf der Welt einen Job finden.\n__________________________________________________________________"
+      ]
+    },
+    {
+      "type": "task",
+      "heading": "3. Warum? Ergänzen Sie das Verb am Ende.",
+      "instruction": "Schreiben Sie das Verb in der richtigen Form.",
+      "items": [
+        "a) Er möchte Koch werden, weil er Menschen mit gutem Essen glücklich ___. (machen)",
+        "b) Sie möchte Verkäuferin werden, weil sie gern mit vielen Menschen ___. (sprechen)",
+        "c) Ich möchte Krankenpfleger werden, weil man immer Arbeit ___. (finden)",
+        "d) Wir möchten Feuerwehrleute werden, weil wir Menschen und Tiere retten ___. (wollen)",
+        "e) Viele möchten Kellner werden, weil die Gäste Trinkgeld ___. (geben)"
+      ]
+    },
+    {
+      "type": "task",
+      "heading": "4. Und Sie? Was ist Ihr Traumberuf? Warum?",
+      "instruction": "Schreiben Sie 3–4 Sätze. Benutzen Sie mindestens zwei Sätze mit „weil“.",
+      "example": "Mein Traumberuf ist Architektin, weil der Beruf kreativ und technisch ist.",
+      "lines": 6
+    }
+  ],
+  "solutions": [
+    {
+      "heading": "1. Richtig oder falsch?",
+      "items": [
+        "a) falsch (Man fängt früh an zu arbeiten.)",
+        "b) richtig",
+        "c) falsch (Ein Kellner bewegt sich viel bei der Arbeit.)",
+        "d) richtig",
+        "e) richtig",
+        "f) falsch (Die Arbeit ist schwierig. Man muss viel nachdenken.)"
+      ]
+    },
+    {
+      "heading": "2. Verbinden Sie die Sätze mit „weil“.",
+      "items": [
+        "a) Tom möchte Lehrer werden, weil die Arbeit Spaß macht.",
+        "b) Sara möchte Friseurin werden, weil sie gern kreativ mit Haaren arbeitet.",
+        "c) Ali möchte Mechaniker werden, weil er Autos und Technik liebt.",
+        "d) Maria möchte Polizistin werden, weil kein Tag gleich ist.",
+        "e) Ich möchte Ingenieur werden, weil ich überall auf der Welt einen Job finden kann."
+      ]
+    },
+    {
+      "heading": "3. Warum? Ergänzen Sie das Verb.",
+      "items": [
+        "a) macht",
+        "b) spricht",
+        "c) findet",
+        "d) wollen",
+        "e) geben"
+      ]
+    },
+    {
+      "heading": "4. Ihr Traumberuf",
+      "items": [
+        "Beispiel: Mein Traumberuf ist Koch. Ich möchte Koch werden, weil ich sehr gern koche. Ein Koch ist kreativ, und ich mache gern neues Essen. Ich finde den Beruf auch gut, weil gute Köche auf der ganzen Welt arbeiten können."
+      ]
+    }
+  ],
+  "note": "Bei Aufgabe 4 sind viele Antworten möglich."
+}

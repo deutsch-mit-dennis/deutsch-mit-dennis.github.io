@@ -1,0 +1,185 @@
+{
+  "file": "berufe-mit-uebersetzungen.pdf",
+  "mode": "append",
+  "title": "Berufe – mit Übersetzungen",
+  "level": "A1",
+  "blocks": [
+    {
+      "type": "task",
+      "heading": "1. Wie heißt der Beruf auf Deutsch?",
+      "instruction": "Schreiben Sie die männliche und die weibliche Form mit Artikel. In der letzten Spalte können Sie das Wort in Ihrer Sprache notieren."
+    },
+    {
+      "type": "table",
+      "rows": [
+        [
+          "Englisch",
+          "männlich",
+          "weiblich",
+          "in meiner Sprache"
+        ],
+        [
+          "doctor",
+          "der Arzt",
+          "die Ärztin",
+          ""
+        ],
+        [
+          "teacher",
+          "___",
+          "___",
+          ""
+        ],
+        [
+          "baker",
+          "___",
+          "___",
+          ""
+        ],
+        [
+          "mechanic",
+          "___",
+          "___",
+          ""
+        ],
+        [
+          "lawyer",
+          "___",
+          "___",
+          ""
+        ],
+        [
+          "engineer",
+          "___",
+          "___",
+          ""
+        ],
+        [
+          "firefighter",
+          "___",
+          "___",
+          ""
+        ]
+      ]
+    },
+    {
+      "type": "task",
+      "heading": "2. Englisch und Deutsch: Was passt zusammen?",
+      "instruction": "Verbinden Sie die Sätze. Schreiben Sie den Buchstaben.",
+      "items": [
+        "1) A mechanic repairs broken cars. ___",
+        "2) A teacher works with children. ___",
+        "3) Everyone loves fresh bread. ___",
+        "4) You can earn a lot of money. ___",
+        "5) Police officers work in a team. ___",
+        "6) He makes people happy with good food. ___"
+      ]
+    },
+    {
+      "type": "cards",
+      "cards": [
+        {
+          "label": "a",
+          "text": "Polizisten arbeiten in einem Team."
+        },
+        {
+          "label": "b",
+          "text": "Er macht Menschen mit gutem Essen glücklich."
+        },
+        {
+          "label": "c",
+          "text": "Ein Mechaniker repariert kaputte Autos."
+        },
+        {
+          "label": "d",
+          "text": "Man kann viel Geld verdienen."
+        },
+        {
+          "label": "e",
+          "text": "Alle lieben frisches Brot."
+        },
+        {
+          "label": "f",
+          "text": "Ein Lehrer arbeitet mit Kindern."
+        }
+      ]
+    },
+    {
+      "type": "task",
+      "heading": "3. Welches Wort passt? Ergänzen Sie.",
+      "wordbox": [
+        "Kunden",
+        "Leben",
+        "Trinkgeld",
+        "Frisur",
+        "Gefahr",
+        "Häuser"
+      ],
+      "items": [
+        "a) Ein Arzt kann ___ retten.",
+        "b) Ein Verkäufer hilft ___ und gibt Ratschläge.",
+        "c) Wenn die Gäste zufrieden sind, geben sie dem Kellner ___.",
+        "d) Ein Friseur macht Kunden mit einer neuen ___ glücklich.",
+        "e) Ein Architekt plant ___.",
+        "f) Ein Feuerwehrmann rettet Menschen und Tiere aus ___."
+      ]
+    },
+    {
+      "type": "task",
+      "heading": "4. Ordnen Sie die Wörter. Schreiben Sie Sätze.",
+      "instruction": "Das Verb steht auf Position 2.",
+      "example": "hilft / ein Arzt / kranken Menschen → Ein Arzt hilft kranken Menschen.",
+      "items": [
+        "a) erklärt / den Kindern / ein Lehrer / viele Dinge\n__________________________________________________________________",
+        "b) mit Haaren / arbeitet / ein Friseur / kreativ\n__________________________________________________________________",
+        "c) technische Probleme / ein Ingenieur / löst\n__________________________________________________________________",
+        "d) am Nachmittag / man / frei / hat\n__________________________________________________________________"
+      ]
+    }
+  ],
+  "solutions": [
+    {
+      "heading": "1. Wie heißt der Beruf auf Deutsch?",
+      "items": [
+        "teacher – der Lehrer / die Lehrerin",
+        "baker – der Bäcker / die Bäckerin",
+        "mechanic – der Mechaniker / die Mechanikerin",
+        "lawyer – der Anwalt / die Anwältin",
+        "engineer – der Ingenieur / die Ingenieurin",
+        "firefighter – der Feuerwehrmann / die Feuerwehrfrau",
+        "Die letzte Spalte ist individuell."
+      ]
+    },
+    {
+      "heading": "2. Englisch und Deutsch",
+      "items": [
+        "1) c",
+        "2) f",
+        "3) e",
+        "4) d",
+        "5) a",
+        "6) b"
+      ]
+    },
+    {
+      "heading": "3. Welches Wort passt?",
+      "items": [
+        "a) Leben",
+        "b) Kunden",
+        "c) Trinkgeld",
+        "d) Frisur",
+        "e) Häuser",
+        "f) Gefahr"
+      ]
+    },
+    {
+      "heading": "4. Ordnen Sie die Wörter.",
+      "items": [
+        "a) Ein Lehrer erklärt den Kindern viele Dinge.",
+        "b) Ein Friseur arbeitet kreativ mit Haaren.",
+        "c) Ein Ingenieur löst technische Probleme.",
+        "d) Man hat am Nachmittag frei. (auch möglich: Am Nachmittag hat man frei.)"
+      ]
+    }
+  ]
+}

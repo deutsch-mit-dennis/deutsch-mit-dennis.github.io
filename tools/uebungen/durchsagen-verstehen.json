@@ -1,0 +1,124 @@
+{
+  "file": "durchsagen-verstehen.pdf",
+  "mode": "replace",
+  "title": "Durchsagen verstehen",
+  "level": "A2",
+  "intro": "Im Alltag hören wir viele Durchsagen und Ansagen: am Bahnhof, im Supermarkt, am Flughafen oder am Telefon. Lesen Sie die Texte oder hören Sie zu: Ihre Lehrkraft liest vor.",
+  "blocks": [
+    {
+      "type": "text",
+      "heading": "Sechs Durchsagen und Ansagen",
+      "box": true,
+      "paragraphs": [
+        "**1  Am Bahnhof:** „Achtung an Gleis 4! Der ICE nach Hamburg, planmäßige Abfahrt 13:15 Uhr, fällt heute leider aus. Reisende nach Hamburg nehmen bitte den Regionalexpress um 13:28 Uhr von Gleis 6 und steigen in Bremen um. Wir bitten um Entschuldigung.“",
+        "**2  Im Supermarkt:** „Liebe Kundinnen und Kunden, unser Markt schließt in 15 Minuten. Bitte beenden Sie Ihren Einkauf und gehen Sie zu den Kassen. Die Kassen 1 bis 4 sind für Sie geöffnet. Wir wünschen Ihnen einen schönen Abend.“",
+        "**3  Im Kaufhaus:** „Liebe Kundinnen und Kunden, der kleine Jonas sucht seine Mama. Jonas ist vier Jahre alt und trägt eine rote Jacke. Er wartet an der Information im Erdgeschoss. Die Mutter von Jonas kommt bitte sofort zur Information.“",
+        "**4  Am Flughafen:** „Information für alle Passagiere des Fluges 318 nach Wien: Ihr Flug startet heute nicht von Gate B12, sondern von Gate C5. Das Boarding beginnt um 16:40 Uhr. Bitte gehen Sie jetzt zu Gate C5.“",
+        "**5  Im Bus:** „Nächste Haltestelle: Rathaus. Wegen einer Baustelle hält dieser Bus heute nicht am Marktplatz. Fahrgäste zum Marktplatz steigen bitte am Rathaus aus. Von dort sind es etwa fünf Minuten zu Fuß.“",
+        "**6  Am Telefon (Arztpraxis):** „Guten Tag, hier ist die Praxis Dr. Yilmaz. Unsere Praxis ist vom 12. bis zum 23. August wegen Urlaub geschlossen. In dringenden Fällen gehen Sie bitte zur Praxis Dr. Becker in der Lindenstraße 8. Ab dem 26. August sind wir wieder für Sie da.“"
+      ]
+    },
+    {
+      "type": "task",
+      "heading": "Aufgabe 1: Welche Überschrift passt?",
+      "instruction": "Lesen Sie die Überschriften a–h. Welche Überschrift passt zu welcher Durchsage? Zwei Überschriften passen nicht.",
+      "items": [
+        "a) Das Geschäft schließt bald.",
+        "b) Ein Zug kommt später an.",
+        "c) Ein Flug startet von einem anderen Gate.",
+        "d) Die Praxis macht Urlaub.",
+        "e) Ein Kind sucht seine Mutter.",
+        "f) Heute gibt es Sonderangebote.",
+        "g) Ein Zug fährt heute nicht.",
+        "h) Der Bus hält heute nicht überall."
+      ]
+    },
+    {
+      "type": "table",
+      "rows": [
+        [
+          "Durchsage",
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6"
+        ],
+        [
+          "Überschrift",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ]
+      ]
+    },
+    {
+      "type": "task",
+      "heading": "Aufgabe 2: Details verstehen",
+      "instruction": "Lesen Sie die Durchsagen noch einmal. Kreuzen Sie an: a, b oder c?",
+      "items": [
+        "1. Reisende nach Hamburg …\n☐ a) warten auf den nächsten ICE.\n☐ b) fahren mit dem Regionalexpress und steigen um.\n☐ c) fahren heute nicht.",
+        "2. Wie lange ist der Supermarkt noch geöffnet?\n☐ a) 4 Minuten\n☐ b) 15 Minuten\n☐ c) 50 Minuten",
+        "3. Wo wartet Jonas?\n☐ a) an der Information im Erdgeschoss\n☐ b) am Ausgang des Kaufhauses\n☐ c) in der Spielwarenabteilung",
+        "4. Wann beginnt das Boarding?\n☐ a) um 14:40 Uhr\n☐ b) um 16:04 Uhr\n☐ c) um 16:40 Uhr",
+        "5. Fahrgäste zum Marktplatz …\n☐ a) steigen am Rathaus aus und gehen zu Fuß.\n☐ b) steigen in einen anderen Bus um.\n☐ c) fahren bis zur Endhaltestelle.",
+        "6. Sie sind am 15. August krank. Was machen Sie?\n☐ a) Sie rufen noch einmal die Praxis Dr. Yilmaz an.\n☐ b) Sie gehen zur Praxis Dr. Becker.\n☐ c) Sie warten bis zum 26. August."
+      ]
+    },
+    {
+      "type": "task",
+      "heading": "Aufgabe 3: Schreiben Sie selbst eine Durchsage",
+      "instruction": "Wählen Sie eine Situation. Schreiben Sie eine kurze Durchsage (3–4 Sätze). Lesen Sie sie dann im Kurs laut vor.",
+      "wordbox": [
+        "Liebe Fahrgäste, …",
+        "Liebe Kundinnen und Kunden, …",
+        "Achtung, bitte!",
+        "Bitte beachten Sie: …",
+        "Wir bitten um Entschuldigung.",
+        "Vielen Dank."
+      ],
+      "items": [
+        "A) Der Bus nach Bochum hat 20 Minuten Verspätung.",
+        "B) In der Bäckerei im Supermarkt gibt es heute alle Brötchen zum halben Preis.",
+        "C) Im Bürgerbüro funktioniert der Computer nicht. Die Kunden müssen warten."
+      ],
+      "lines": 6
+    }
+  ],
+  "solutions": [
+    {
+      "heading": "Aufgabe 1: Welche Überschrift passt?",
+      "items": [
+        "1 – g (Der ICE „fällt aus“ = Er fährt heute nicht.)",
+        "2 – a (Der Markt „schließt in 15 Minuten“.)",
+        "3 – e (Jonas „sucht seine Mama“.)",
+        "4 – c (Gate C5 statt Gate B12)",
+        "5 – h (Der Bus hält heute nicht am Marktplatz.)",
+        "6 – d (Die Praxis ist „wegen Urlaub geschlossen“.)",
+        "Nicht passend: b (Kein Zug hat Verspätung, der ICE fällt ganz aus.) und f (Es gibt keine Sonderangebote.)"
+      ]
+    },
+    {
+      "heading": "Aufgabe 2: Details verstehen",
+      "items": [
+        "1. b – „nehmen bitte den Regionalexpress … und steigen in Bremen um“",
+        "2. b – „unser Markt schließt in 15 Minuten“",
+        "3. a – „Er wartet an der Information im Erdgeschoss.“",
+        "4. c – „Das Boarding beginnt um 16:40 Uhr.“",
+        "5. a – „steigen bitte am Rathaus aus … etwa fünf Minuten zu Fuß“",
+        "6. b – Vom 12. bis 23. August ist die Praxis geschlossen; in dringenden Fällen geht man zu Dr. Becker."
+      ]
+    },
+    {
+      "heading": "Aufgabe 3: Beispiel (Situation A)",
+      "items": [
+        "„Liebe Fahrgäste, bitte beachten Sie: Der Bus nach Bochum hat heute etwa 20 Minuten Verspätung. Grund ist ein Stau in der Innenstadt. Wir bitten um Entschuldigung. Vielen Dank.“"
+      ]
+    }
+  ],
+  "note": "Bei Durchsagen müssen Sie nicht jedes Wort verstehen. Achten Sie auf Schlüsselwörter: Zeiten, Zahlen, Orte und Wörter wie „fällt aus“, „Verspätung“, „nicht … sondern …“."
+}

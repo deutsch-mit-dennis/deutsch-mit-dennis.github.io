@@ -1,0 +1,97 @@
+{
+  "file": "verben-mit-akkusativ.pdf",
+  "mode": "append",
+  "title": "Verben mit Akkusativ",
+  "level": "A2",
+  "blocks": [
+    {"type": "text", "box": true, "heading": "Kurz wiederholt", "paragraphs": [
+      "Das Akkusativobjekt findet man mit der Frage **Wen?** (Person) oder **Was?** (Sache).",
+      "Im Akkusativ ändert sich nur das **Maskulinum**: der → **den**, ein → **einen**, kein → **keinen**, mein → **meinen**, dieser → **diesen**. Feminin (die/eine), Neutrum (das/ein) und Plural (die) bleiben gleich.",
+      "Personalpronomen: ich → **mich** · du → **dich** · er → **ihn** · sie → **sie** · es → **es** · wir → **uns** · ihr → **euch** · sie/Sie → **sie/Sie**"
+    ]},
+    {"type": "task", "heading": "1. Artikel im Akkusativ",
+     "instruction": "Ergänzen Sie das Wort in Klammern in der richtigen Form.",
+     "example": "Ich brauche **einen** Stift. (ein)",
+     "items": [
+       "a) Er bezahlt ___ Rechnung. (die)",
+       "b) Wir besuchen ___ Großeltern. (unser)",
+       "c) Ich finde ___ Schlüssel nicht. (der)",
+       "d) Sie packt ___ Koffer. (ihr)",
+       "e) Ich habe ___ Regenschirm vergessen. (mein)",
+       "f) Der Mechaniker repariert ___ Auto. (das)",
+       "g) Kennst du ___ Mann? (dieser)",
+       "h) Ich habe ___ Hund. (kein)",
+       "i) Er trinkt ___ Kaffee. (ein)",
+       "j) Sie trägt ___ schöne Jacke. (ein)"
+     ]},
+    {"type": "task", "heading": "2. Personalpronomen im Akkusativ",
+     "instruction": "Ergänzen Sie das Pronomen im Akkusativ.",
+     "example": "Ich hole **dich** um acht Uhr vom Bahnhof ab. (du)",
+     "items": [
+       "a) Mein Freund ruft ___ morgen an. (ich)",
+       "b) Wir laden ___ zu unserer Party ein. (ihr)",
+       "c) Herr Weber ist krank. Der Arzt untersucht ___. (er)",
+       "d) Das ist meine Nachbarin. Kennst du ___? (sie)",
+       "e) Unsere Kinder mögen ___ sehr. (wir)",
+       "f) Entschuldigung, ich verstehe ___ leider nicht. (Sie)",
+       "g) Das Buch ist toll. Ich lese ___ schon zum zweiten Mal. (es)",
+       "h) Wo sind meine Schlüssel? Ich suche ___ schon eine Stunde. (sie, Plural)"
+     ]},
+    {"type": "task", "heading": "3. Welches Verb passt?",
+     "instruction": "Ergänzen Sie die Verben aus dem Kasten in der richtigen Form. Achtung: Einige Verben sind trennbar.",
+     "wordbox": ["abholen", "anrufen", "anschauen", "ausfüllen", "bezahlen", "einkaufen", "einladen", "reservieren", "unterschreiben"],
+     "items": [
+       "a) Ich ___ meine Tochter um 16 Uhr vom Kindergarten ___.",
+       "b) Bitte ___ Sie das Formular ___.",
+       "c) Morgen ___ ich meinen Vermieter ___.",
+       "d) Am Samstag ___ wir Obst und Gemüse ___.",
+       "e) Ich ___ dich zu meinem Geburtstag ___.",
+       "f) Im Restaurant ___ mein Vater die Rechnung.",
+       "g) Wir ___ einen Tisch für vier Personen.",
+       "h) Sie müssen den Vertrag hier ___.",
+       "i) Heute Abend ___ wir einen Film ___."
+     ]},
+    {"type": "task", "heading": "4. Wen oder was?",
+     "instruction": "Fragen Sie nach dem unterstrichenen Akkusativobjekt. Schreiben Sie die Frage mit „Wen?“ oder „Was?“.",
+     "example": "Der Arzt untersucht [[den Patienten]]. → **Wen** untersucht der Arzt?",
+     "items": [
+       "a) Sie schreibt [[einen Brief]].\n→ ________________________________________",
+       "b) Die Lehrerin korrigiert [[die Hausaufgaben]].\n→ ________________________________________",
+       "c) Sie heiratet [[ihren Freund]].\n→ ________________________________________",
+       "d) Der Tourist fragt [[einen Polizisten]] nach dem Weg.\n→ ________________________________________",
+       "e) Die Mutter backt [[einen Kuchen]].\n→ ________________________________________",
+       "f) Er sucht [[seine Brille]].\n→ ________________________________________"
+     ]},
+    {"type": "task", "heading": "5. Mein Wochenende",
+     "instruction": "Was machen Sie am Wochenende? Schreiben Sie fünf Sätze. Benutzen Sie Verben von der Liste und ein Akkusativobjekt.",
+     "example": "Am Samstag besuche ich meinen Bruder. Wir kochen eine Suppe.",
+     "lines": 6}
+  ],
+  "solutions": [
+    {"heading": "1. Artikel im Akkusativ", "items": [
+      "a) die · b) unsere · c) den · d) ihren · e) meinen",
+      "f) das · g) diesen · h) keinen · i) einen · j) eine"
+    ]},
+    {"heading": "2. Personalpronomen im Akkusativ", "items": [
+      "a) mich · b) euch · c) ihn · d) sie",
+      "e) uns · f) Sie · g) es · h) sie"
+    ]},
+    {"heading": "3. Welches Verb passt?", "items": [
+      "a) hole … ab · b) füllen … aus · c) rufe … an",
+      "d) kaufen … ein · e) lade … ein · f) bezahlt",
+      "g) reservieren · h) unterschreiben · i) schauen … an"
+    ]},
+    {"heading": "4. Wen oder was?", "items": [
+      "a) Was schreibt sie?",
+      "b) Was korrigiert die Lehrerin?",
+      "c) Wen heiratet sie?",
+      "d) Wen fragt der Tourist nach dem Weg?",
+      "e) Was backt die Mutter?",
+      "f) Was sucht er?"
+    ]},
+    {"heading": "5. Mein Wochenende", "items": [
+      "Beispiel: Am Samstag kaufe ich das Gemüse ein. Dann putze ich die Fenster. Am Abend treffe ich meine Freunde im Park. Am Sonntag besuche ich meine Großeltern. Wir essen einen Kuchen und trinken einen Kaffee."
+    ]}
+  ],
+  "note": "Bei Aufgabe 5 sind viele Antworten möglich. Prüfen Sie: Steht das Objekt im Akkusativ (den/einen/meinen …)?"
+}

@@ -1,0 +1,76 @@
+{
+  "file": "mein-lieblingsgericht.pdf",
+  "mode": "append",
+  "title": "Mein Lieblingsgericht",
+  "level": "A1",
+  "blocks": [
+    {"type": "task", "heading": "1. Ein Text über Lasagne",
+     "instruction": "Ergänzen Sie den Text mit den Wörtern aus dem Kasten.",
+     "wordbox": ["aus", "braucht", "gern", "knusprig", "Lieblingsgericht", "riecht", "schmeckt", "typisches", "weich", "Zutaten"],
+     "items": [
+       "Mein ___ ist Lasagne. Das ist ein ___ Essen aus Italien.",
+       "Man ___ dafür Nudelplatten, Hackfleisch, Tomatensoße und viel Käse. Die ___ sind nicht teuer.",
+       "Die Lasagne sieht sehr lecker ___. Wenn sie aus dem Ofen kommt, ___ sie fantastisch.",
+       "Sie ___ sehr gut. Oben ist der Käse braun und ___, innen ist die Lasagne ganz ___.",
+       "Ich esse Lasagne sehr ___, weil sie warm und lecker ist."
+     ]},
+    {"type": "task", "heading": "2. Süß, salzig, sauer oder scharf?",
+     "instruction": "Sortieren Sie die Wörter aus dem Kasten. Schreiben Sie sie in die Tabelle.",
+     "wordbox": ["Brezel", "Chili", "Chips", "Essig", "Honig", "Peperoni", "Pommes", "Schokolade", "Zitrone", "Zucker"]},
+    {"type": "table", "rows": [
+      ["süß", "salzig", "sauer", "scharf"],
+      ["", "", "", ""],
+      ["", "", "", ""],
+      ["", "", "", ""]
+    ]},
+    {"type": "task", "heading": "3. Welches Wort passt?",
+     "instruction": "Unterstreichen Sie das passende Wort.",
+     "example": "Das Brot ist ([[knusprig]] / cremig).",
+     "items": [
+       "a) Der Salat ist frisch und (knackig / weich).",
+       "b) Die Suppe ist heiß und (cremig / knusprig).",
+       "c) Das Steak ist (saftig / sauer).",
+       "d) Der Kuchen riecht (süß / salzig).",
+       "e) Die Pizza ist (rund / lang).",
+       "f) Die Zitrone ist (sauer / scharf).",
+       "g) Das Fleisch ist nicht hart, es ist (weich / knackig).",
+       "h) Die Soße riecht (würzig / knackig)."
+     ]},
+    {"type": "task", "heading": "4. Mein Lieblingsgericht",
+     "instruction": "Schreiben Sie über Ihr Lieblingsgericht. Ergänzen Sie die Sätze. Die Redemittel auf Seite 1 und 2 helfen Ihnen.",
+     "items": [
+       "a) Mein Lieblingsgericht ist ______________________________________.",
+       "b) Das ist ein typisches Essen aus ______________________________________.",
+       "c) Man braucht ______________________________________.",
+       "d) Es ist ______________________ und sieht ______________________ aus.",
+       "e) Es riecht ______________________________________.",
+       "f) Es schmeckt ______________________. Es ist ______________________.",
+       "g) Ich esse es sehr gern, weil ______________________________________."
+     ]},
+    {"type": "task", "heading": "5. Im Kurs",
+     "instruction": "Lesen Sie Ihren Text vor. Ihr Partner oder Ihre Partnerin fragt: „Wie riecht es?“, „Wie schmeckt es?“, „Was braucht man?“ Notieren Sie das Lieblingsgericht von Ihrem Partner oder Ihrer Partnerin.",
+     "lines": 3}
+  ],
+  "solutions": [
+    {"heading": "1. Ein Text über Lasagne", "items": [
+      "Lieblingsgericht · typisches · braucht · Zutaten · aus · riecht · schmeckt · knusprig · weich · gern"
+    ]},
+    {"heading": "2. Süß, salzig, sauer oder scharf?", "items": [
+      "süß: Honig, Schokolade, Zucker",
+      "salzig: Brezel, Chips, Pommes",
+      "sauer: Essig, Zitrone",
+      "scharf: Chili, Peperoni"
+    ]},
+    {"heading": "3. Welches Wort passt?", "items": [
+      "a) knackig · b) cremig · c) saftig · d) süß",
+      "e) rund · f) sauer · g) weich · h) würzig"
+    ]},
+    {"heading": "4. Mein Lieblingsgericht", "items": [
+      "Beispiel: a) Mein Lieblingsgericht ist Couscous mit Gemüse. b) Das ist ein typisches Essen aus Marokko. c) Man braucht Couscous, Karotten, Zucchini, Kichererbsen und Gewürze. d) Es ist gelb und rot und sieht sehr lecker aus. e) Es riecht würzig. f) Es schmeckt fantastisch. Es ist heiß und ein bisschen scharf. g) Ich esse es sehr gern, weil es gesund und lecker ist."
+    ]},
+    {"heading": "5. Im Kurs", "items": [
+      "Beispiel: Das Lieblingsgericht von Amir ist Plov. Das ist ein typisches Essen aus Usbekistan. Man braucht Reis, Fleisch, Karotten und Zwiebeln. Es riecht würzig."
+    ]}
+  ],
+  "note": "Bei Aufgabe 4 und 5 sind viele Antworten möglich. Achten Sie auf die Verbposition: Nach „weil“ steht das Verb am Ende."
+}

@@ -1,0 +1,120 @@
+{
+  "file": "dtz-lesen-teil-2-anzeigen.pdf",
+  "mode": "replace",
+  "title": "DTZ Lesen Teil 2: Anzeigen",
+  "level": "A2–B1",
+  "intro": "Prüfungstraining: Fünf Personen suchen etwas. Sie lesen acht Anzeigen und finden die passende Anzeige. Tipp: Unterstreichen Sie zuerst in jeder Situation die wichtigen Informationen (Wer? Wann? Was genau?).",
+  "blocks": [
+    {
+      "type": "task",
+      "heading": "Die Situationen",
+      "instruction": "Lesen Sie die Situationen 1–5 und die Anzeigen A–H. Welche Anzeige passt zu welcher Situation? Sie können jede Anzeige nur einmal wählen. Für eine Situation gibt es keine passende Anzeige. Schreiben Sie dort ein **X**.",
+      "items": [
+        "1. Olga besucht von Montag bis Freitag einen Deutschkurs. Sie möchte am Wochenende ein bisschen Geld verdienen. Berufserfahrung hat sie noch nicht.",
+        "2. Familie Nowak hat zwei Kinder im Grundschulalter. Sie sucht eine ruhige Wohnung mit mindestens drei Zimmern. Die Schule soll nicht weit weg sein.",
+        "3. Amina möchte den Führerschein machen. Sie arbeitet tagsüber in einem Hotel und hat nur abends Zeit.",
+        "4. Herr Kaya möchte sein altes Fahrrad wieder benutzen. Die Bremsen funktionieren nicht. Er hat nur wenig Geld für eine Reparatur.",
+        "5. Frau Lindner möchte vormittags einen Schwimmkurs nur für Frauen besuchen. Ihre Kinder sind dann in der Kita."
+      ]
+    },
+    {
+      "type": "cards",
+      "heading": "Die Anzeigen",
+      "cards": [
+        {
+          "label": "A",
+          "title": "Bäckerei Sonnenkorn",
+          "text": "Wir suchen eine Aushilfe (m/w/d) für den Verkauf am Samstag und Sonntag, jeweils 6–12 Uhr. Keine Erfahrung nötig – wir arbeiten Sie gern ein!\nBewerbung direkt im Laden, Hauptstraße 14."
+        },
+        {
+          "label": "B",
+          "title": "Café am Park",
+          "text": "Servicekraft (m/w/d) in Teilzeit gesucht. Arbeitszeiten: Montag bis Freitag, 10–16 Uhr. Erfahrung in der Gastronomie ist Voraussetzung.\nTel. 0231 445 17 80"
+        },
+        {
+          "label": "C",
+          "title": "Ruhige 4-Zimmer-Wohnung",
+          "text": "95 m², 2. OG, Balkon, Spielplatz im Hof. Ruhige Seitenstraße, Grundschule und Kita in 5 Minuten zu Fuß. Frei ab 1. Januar.\nHausverwaltung Kessler, Tel. 0231 908 33 21"
+        },
+        {
+          "label": "D",
+          "title": "Helle 2-Zimmer-Wohnung",
+          "text": "Moderne Wohnung im Stadtzentrum, 52 m², Einbauküche, direkt an der Fußgängerzone. Ideal für Singles oder Paare.\nKontakt: wohnen-zentrum@beispiel.de"
+        },
+        {
+          "label": "E",
+          "title": "Fahrschule Weber",
+          "text": "Theorieunterricht: Montag und Mittwoch, 18:30–20:00 Uhr. Fahrstunden nach Absprache, auch abends und am Samstag. Wir sprechen Deutsch, Türkisch und Arabisch."
+        },
+        {
+          "label": "F",
+          "title": "Führerschein in 2 Wochen!",
+          "text": "Unser Ferien-Intensivkurs: Theorie und Praxis jeden Tag von 8 bis 13 Uhr. Nächster Kurs ab 3. März.\nFahrschule Turbo, Bahnhofstraße 2"
+        },
+        {
+          "label": "G",
+          "title": "Repair-Café im Stadtteilzentrum",
+          "text": "Kaputtes Fahrrad, Toaster oder Radio? Ehrenamtliche helfen Ihnen bei der Reparatur – kostenlos, nur Ersatzteile zahlen Sie selbst. Jeden Donnerstag, 17–20 Uhr."
+        },
+        {
+          "label": "H",
+          "title": "Hallenbad Nord – Schwimmkurse",
+          "text": "Frauenschwimmen mit Trainerin: dienstags und donnerstags, 19:30–20:30 Uhr.\nKinderschwimmkurs (4–6 Jahre): Montag bis Freitag, 10–11 Uhr.\nAnmeldung an der Kasse."
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "rows": [
+        [
+          "Situation",
+          "1",
+          "2",
+          "3",
+          "4",
+          "5"
+        ],
+        [
+          "Anzeige",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ]
+      ]
+    },
+    {
+      "type": "task",
+      "heading": "Zusatzaufgabe: Eine Suchanzeige schreiben",
+      "instruction": "Eine Person hat keine passende Anzeige gefunden. Schreiben Sie für diese Person eine kurze Suchanzeige für das Schwarze Brett (3–4 Sätze). Was sucht sie? Wann hat sie Zeit? Wie kann man sie erreichen?",
+      "wordbox": [
+        "Ich suche …",
+        "Ich habe … Zeit.",
+        "Wer kann mir helfen?",
+        "Bitte melden Sie sich unter …"
+      ],
+      "lines": 5
+    }
+  ],
+  "solutions": [
+    {
+      "heading": "Lösungen mit Begründung",
+      "items": [
+        "1 – **A**: Die Bäckerei sucht eine Aushilfe am Samstag und Sonntag, Erfahrung ist nicht nötig. (B passt nicht: Montag bis Freitag und mit Erfahrung.)",
+        "2 – **C**: Die Wohnung hat vier Zimmer, liegt ruhig, und die Grundschule ist nur 5 Minuten entfernt. (D hat nur zwei Zimmer.)",
+        "3 – **E**: Theorie und Fahrstunden gibt es auch abends. (F findet vormittags statt.)",
+        "4 – **G**: Im Repair-Café helfen Ehrenamtliche kostenlos bei der Reparatur von Fahrrädern.",
+        "5 – **X**: Das Frauenschwimmen ist nur abends; der Kurs am Vormittag ist für Kinder, nicht für Frauen.",
+        "Nicht gebraucht: B, D, F"
+      ]
+    },
+    {
+      "heading": "Zusatzaufgabe (Beispiel für Frau Lindner)",
+      "items": [
+        "„Ich suche einen Schwimmkurs nur für Frauen am Vormittag. Ich habe von Montag bis Freitag zwischen 9 und 12 Uhr Zeit. Wer kennt einen Kurs oder eine Schwimmgruppe? Bitte schreiben Sie mir: a.lindner@beispiel.de. Vielen Dank! – Anna Lindner“"
+      ]
+    }
+  ],
+  "note": "In der Prüfung passen oft zwei Anzeigen „fast“. Vergleichen Sie genau: Zeit, Ort, Person, Preis. Wenn ein Detail nicht stimmt, passt die Anzeige nicht."
+}

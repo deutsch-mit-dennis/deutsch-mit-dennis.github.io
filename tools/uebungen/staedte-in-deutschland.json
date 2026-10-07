@@ -1,0 +1,126 @@
+{
+  "file": "staedte-in-deutschland.pdf",
+  "mode": "append",
+  "title": "Städte in Deutschland",
+  "level": "A1",
+  "blocks": [
+    {
+      "type": "task",
+      "heading": "1. Richtig oder falsch? Kreuzen Sie an.",
+      "instruction": "Lesen Sie die Texte über die Städte noch einmal.",
+      "items": [
+        "a) Berlin ist die größte Stadt in Deutschland.   ☐ richtig   ☐ falsch",
+        "b) Hamburg liegt direkt am Meer.   ☐ richtig   ☐ falsch",
+        "c) In München gibt es das Oktoberfest.   ☐ richtig   ☐ falsch",
+        "d) Köln liegt am Fluss Elbe.   ☐ richtig   ☐ falsch",
+        "e) In Frankfurt ist der größte Flughafen von Deutschland.   ☐ richtig   ☐ falsch",
+        "f) Heidelberg ist eine Millionenstadt.   ☐ richtig   ☐ falsch",
+        "g) In Leipzig wohnen viele junge Leute und Studenten.   ☐ richtig   ☐ falsch",
+        "h) Mercedes-Benz und Porsche kommen aus Nürnberg.   ☐ richtig   ☐ falsch"
+      ]
+    },
+    {
+      "type": "task",
+      "heading": "2. Welche Stadt ist das?",
+      "wordbox": [
+        "Berlin",
+        "Hamburg",
+        "Köln",
+        "Frankfurt",
+        "Dresden",
+        "Stuttgart",
+        "Leipzig",
+        "Nürnberg"
+      ],
+      "items": [
+        "a) Die Leute sagen hier zur Begrüßung oft „Moin!“. → ___",
+        "b) Hier gibt es viele Hochhäuser. Man nennt die Stadt auch „Mainhattan“. → ___",
+        "c) Die Stadt ist berühmt für den Karneval im Februar. → ___",
+        "d) Hier sind das Brandenburger Tor und der Fernsehturm. → ___",
+        "e) Hier gibt es den ältesten Weihnachtsmarkt von Deutschland. → ___",
+        "f) Die Stadt ist bekannt für kleine Würstchen und Lebkuchen. → ___",
+        "g) Die Stadt liegt in einem „Kessel“ und hat viele Weinberge. → ___",
+        "h) Johann Sebastian Bach hat hier gelebt. → ___"
+      ]
+    },
+    {
+      "type": "task",
+      "heading": "3. Wo liegt die Stadt? Schreiben Sie Sätze.",
+      "wordbox": [
+        "im Norden",
+        "im Süden",
+        "im Osten",
+        "im Westen",
+        "im Südwesten"
+      ],
+      "example": "Berlin → Berlin liegt im Nordosten von Deutschland.",
+      "items": [
+        "a) München → __________________________________________________",
+        "b) Hamburg → __________________________________________________",
+        "c) Köln → __________________________________________________",
+        "d) Dresden → __________________________________________________",
+        "e) Heidelberg → __________________________________________________"
+      ]
+    },
+    {
+      "type": "task",
+      "heading": "4. Beantworten Sie die Fragen.",
+      "items": [
+        "a) Wie viele Einwohner hat Hamburg?\n__________________________________________________________________",
+        "b) An welchem Fluss liegt Heidelberg?\n__________________________________________________________________",
+        "c) Welche Sehenswürdigkeiten gibt es in München?\n__________________________________________________________________",
+        "d) Warum nennt man Dresden auch „Elbflorenz“?\n__________________________________________________________________",
+        "e) Welche Stadt möchten Sie gern besuchen? Warum?\n__________________________________________________________________"
+      ]
+    }
+  ],
+  "solutions": [
+    {
+      "heading": "1. Richtig oder falsch?",
+      "items": [
+        "a) richtig",
+        "b) falsch (Hamburg liegt am Fluss Elbe, nicht direkt am Meer.)",
+        "c) richtig",
+        "d) falsch (Köln liegt am Rhein.)",
+        "e) richtig",
+        "f) falsch (Heidelberg hat nur 160.000 Einwohner.)",
+        "g) richtig",
+        "h) falsch (Sie kommen aus Stuttgart.)"
+      ]
+    },
+    {
+      "heading": "2. Welche Stadt ist das?",
+      "items": [
+        "a) Hamburg",
+        "b) Frankfurt",
+        "c) Köln",
+        "d) Berlin",
+        "e) Dresden",
+        "f) Nürnberg",
+        "g) Stuttgart",
+        "h) Leipzig"
+      ]
+    },
+    {
+      "heading": "3. Wo liegt die Stadt?",
+      "items": [
+        "a) München liegt im Süden von Deutschland.",
+        "b) Hamburg liegt im Norden von Deutschland.",
+        "c) Köln liegt im Westen von Deutschland.",
+        "d) Dresden liegt im Osten von Deutschland.",
+        "e) Heidelberg liegt im Südwesten von Deutschland."
+      ]
+    },
+    {
+      "heading": "4. Beantworten Sie die Fragen.",
+      "items": [
+        "a) Hamburg hat 1,8 Millionen Einwohner.",
+        "b) Heidelberg liegt am Neckar.",
+        "c) In München gibt es den Marienplatz, die Frauenkirche und den Englischen Garten.",
+        "d) Weil die Architektur so schön ist wie in Italien.",
+        "e) Beispiel: Ich möchte gern Köln besuchen, weil ich den Kölner Dom sehen möchte."
+      ]
+    }
+  ],
+  "note": "Bei 4 e) sind viele Antworten möglich."
+}

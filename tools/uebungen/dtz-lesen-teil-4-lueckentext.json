@@ -1,0 +1,86 @@
+{
+  "file": "dtz-lesen-teil-4-lueckentext.pdf",
+  "mode": "replace",
+  "title": "DTZ Lesen Teil 5: Lückentext",
+  "level": "B1",
+  "intro": "Prüfungstraining: In einem formellen Brief oder einer E-Mail fehlen Wörter. Lesen Sie immer den ganzen Satz: Welches Wort passt grammatisch und inhaltlich?",
+  "blocks": [
+    {
+      "type": "text",
+      "heading": "Text 1: E-Mail an die Vermieterin",
+      "box": true,
+      "paragraphs": [
+        "**Betreff:** Heizung in der Wohnung Gartenstraße 12, 3. OG",
+        "Sehr geehrte Frau Krüger,",
+        "leider muss ich Ihnen mitteilen, **(1)** ___ die Heizung in meiner Wohnung seit Montag nicht mehr funktioniert. Ich habe schon versucht, sie selbst wieder einzuschalten, **(2)** ___ es hat nicht geklappt. Nachts ist es schon sehr kalt, und ich mache mir Sorgen um meine Kinder, **(3)** ___ in letzter Zeit oft erkältet sind.",
+        "**(4)** ___ Sie bitte so schnell wie möglich einen Handwerker schicken? Vormittags arbeite ich, **(5)** ___ kann der Handwerker nur nachmittags kommen. In dieser Woche bin ich jeden Tag ab 15 Uhr zu Hause.",
+        "Ich freue mich **(6)** ___ eine baldige Antwort.",
+        "Mit freundlichen Grüßen  –  Samira Haddad"
+      ]
+    },
+    {
+      "type": "task",
+      "heading": "Aufgabe 1",
+      "instruction": "Lesen Sie Text 1. Welches Wort passt in die Lücke? Kreuzen Sie an: a, b oder c.",
+      "items": [
+        "**(1)**    ☐ a) dass      ☐ b) ob      ☐ c) weil",
+        "**(2)**    ☐ a) denn      ☐ b) aber      ☐ c) oder",
+        "**(3)**    ☐ a) der      ☐ b) die      ☐ c) denen",
+        "**(4)**    ☐ a) Könnten      ☐ b) Müssten      ☐ c) Dürften",
+        "**(5)**    ☐ a) trotzdem      ☐ b) deshalb      ☐ c) obwohl",
+        "**(6)**    ☐ a) über      ☐ b) auf      ☐ c) an"
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "Text 2: E-Mail an die Volkshochschule",
+      "box": true,
+      "paragraphs": [
+        "**Betreff:** Wechsel in einen Abendkurs",
+        "Sehr geehrte Damen und Herren,",
+        "ich besuche zurzeit den Integrationskurs B1 am Vormittag. Ab dem 1. Dezember habe ich eine neue Arbeit in einer Bäckerei, **(1)** ___ ich von Montag bis Freitag von 8 bis 14 Uhr arbeite. Ich möchte den Kurs aber gern weitermachen, **(2)** ___ ich im Februar die Prüfung „Deutsch-Test für Zuwanderer“ machen möchte.",
+        "Deshalb möchte ich Sie fragen, **(3)** ___ ich in einen Abendkurs wechseln kann. Ich interessiere mich besonders **(4)** ___ den Kurs am Montag und Mittwoch. Bitte teilen Sie mir mit, welche Unterlagen ich für den Wechsel **(5)** ___ muss.",
+        "Für Ihre Hilfe bedanke ich mich **(6)** ___ Voraus.",
+        "Mit freundlichen Grüßen  –  Tomasz Nowicki"
+      ]
+    },
+    {
+      "type": "task",
+      "heading": "Aufgabe 2",
+      "instruction": "Lesen Sie Text 2. Welches Wort passt in die Lücke? Kreuzen Sie an: a, b oder c.",
+      "items": [
+        "**(1)**    ☐ a) in der      ☐ b) in dem      ☐ c) in denen",
+        "**(2)**    ☐ a) weil      ☐ b) deshalb      ☐ c) trotzdem",
+        "**(3)**    ☐ a) dass      ☐ b) ob      ☐ c) wenn",
+        "**(4)**    ☐ a) für      ☐ b) an      ☐ c) über",
+        "**(5)**    ☐ a) abgeben      ☐ b) abgegeben      ☐ c) abzugeben",
+        "**(6)**    ☐ a) im      ☐ b) in      ☐ c) vor"
+      ]
+    }
+  ],
+  "solutions": [
+    {
+      "heading": "Aufgabe 1 (E-Mail an die Vermieterin)",
+      "items": [
+        "(1) **a) dass** – „mitteilen, dass …“: Nach Verben des Sagens und Mitteilens folgt ein dass-Satz mit einer Information.",
+        "(2) **b) aber** – Gegensatz: Sie hat es versucht, aber es hat nicht geklappt. „Denn“ nennt einen Grund, „oder“ eine Alternative.",
+        "(3) **b) die** – Relativpronomen im Plural (die Kinder), Nominativ: Die Kinder sind oft erkältet. „Denen“ ist Dativ Plural.",
+        "(4) **a) Könnten** – Höfliche Bitte mit Konjunktiv II: „Könnten Sie bitte …?“",
+        "(5) **b) deshalb** – Folge: Sie arbeitet vormittags, deshalb kann der Handwerker nur nachmittags kommen. Nach „deshalb“ steht das Verb auf Position 2.",
+        "(6) **b) auf** – „sich freuen auf“ + Akkusativ = etwas kommt in der Zukunft. („sich freuen über“ = etwas ist schon da.)"
+      ]
+    },
+    {
+      "heading": "Aufgabe 2 (E-Mail an die Volkshochschule)",
+      "items": [
+        "(1) **a) in der** – Relativsatz mit Präposition: „die Bäckerei“ ist feminin, Singular → „in der“ (Wo? → Dativ).",
+        "(2) **a) weil** – Grund mit Nebensatz: Das Verb „möchte“ steht am Ende. Nach „deshalb“ und „trotzdem“ stünde das Verb auf Position 2.",
+        "(3) **b) ob** – Indirekte Ja/Nein-Frage: „Kann ich wechseln?“ → „Ich frage, ob ich wechseln kann.“",
+        "(4) **a) für** – „sich interessieren für“ + Akkusativ.",
+        "(5) **a) abgeben** – Modalverb „muss“ + Infinitiv ohne „zu“.",
+        "(6) **a) im** – feste Wendung: „im Voraus“ = schon vorher."
+      ]
+    }
+  ],
+  "note": "Typische Lücken im DTZ: Konnektoren (weil, dass, ob, deshalb, aber), Relativpronomen, Präpositionen bei Verben (sich freuen auf, sich interessieren für) und feste Wendungen in Briefen (Mit freundlichen Grüßen, im Voraus)."
+}

@@ -1,0 +1,80 @@
+{
+  "file": "trennbare-verben-partizip-ii.pdf",
+  "mode": "replace",
+  "title": "Trennbare Verben: Partizip II",
+  "level": "A2",
+  "blocks": [
+    {"type": "text", "heading": "Die Regel", "box": true, "paragraphs": [
+      "Bei trennbaren Verben steht **ge** zwischen Präfix und Verbstamm: ein|kaufen → ein**ge**kauft, an|rufen → an**ge**rufen.",
+      "Regelmäßige Verben enden auf **-t**: auf|räumen → auf**ge**räum**t**. Unregelmäßige Verben enden meistens auf **-en**: fern|sehen → fern**ge**seh**en**.",
+      "Die meisten Verben bilden das Perfekt mit **haben**. Verben der Bewegung (von A nach B) bilden das Perfekt mit **sein**: auf|stehen, ein|steigen, an|kommen, mit|kommen.",
+      "Das Partizip II steht am Satzende: Ich **habe** gestern **eingekauft**. Der Zug **ist** pünktlich **angekommen**."
+    ]},
+    {"type": "task", "heading": "Aufgabe 1: Partizip II bilden", "instruction": "Ergänzen Sie die Tabelle. Schreiben Sie das Partizip II und haben oder sein.", "items": []},
+    {"type": "table", "rows": [
+      ["Infinitiv", "Partizip II", "haben oder sein?"],
+      ["einkaufen", "eingekauft", "haben"],
+      ["1. aufräumen", "___", "___"],
+      ["2. anrufen", "___", "___"],
+      ["3. fernsehen", "___", "___"],
+      ["4. aufstehen", "___", "___"],
+      ["5. abholen", "___", "___"],
+      ["6. einsteigen", "___", "___"],
+      ["7. ankommen", "___", "___"],
+      ["8. mitbringen", "___", "___"],
+      ["9. ausmachen", "___", "___"],
+      ["10. zurückgeben", "___", "___"],
+      ["11. anfangen", "___", "___"],
+      ["12. mitkommen", "___", "___"]
+    ]},
+    {"type": "task", "heading": "Aufgabe 2: Sätze im Perfekt", "instruction": "Schreiben Sie die Sätze im Perfekt.", "example": "Ich kaufe im Supermarkt ein. → Ich habe im Supermarkt eingekauft.", "items": [
+      "1. Ich stehe um sechs Uhr auf.\n→ ______________________________________________",
+      "2. Maria ruft ihre Mutter an.\n→ ______________________________________________",
+      "3. Wir holen die Kinder vom Kindergarten ab.\n→ ______________________________________________",
+      "4. Der Kurs fängt um neun Uhr an.\n→ ______________________________________________",
+      "5. Herr Ahmadi steigt in den Bus ein.\n→ ______________________________________________",
+      "6. Machst du das Licht aus?\n→ ______________________________________________"
+    ]},
+    {"type": "task", "heading": "Aufgabe 3: Mein Samstag", "instruction": "Lesen Sie den Text. Ergänzen Sie die Verben im Perfekt: zuerst haben oder sein, dann das Partizip II.", "example": "Am Samstag **bin** ich erst um neun Uhr **aufgestanden**. (aufstehen)", "items": [
+      "1. Nach dem Frühstück ___ ich meine Wohnung ___. (aufräumen)",
+      "2. Dann ___ ich auf dem Markt Obst und Gemüse ___. (einkaufen)",
+      "3. Um zwölf Uhr ___ ich meine Schwester ___. (anrufen)",
+      "4. Am Nachmittag ___ meine Freundin Ayla ___. (vorbeikommen)",
+      "5. Sie ___ einen Kuchen ___. (mitbringen)",
+      "6. Am Abend ___ wir zusammen ___. (fernsehen)",
+      "7. Um elf Uhr ___ ich den Fernseher ___. (ausmachen)"
+    ]},
+    {"type": "task", "heading": "Aufgabe 4: Und Sie?", "instruction": "Beantworten Sie die Fragen im Perfekt. Schreiben Sie ganze Sätze.", "items": [
+      "1. Wann sind Sie heute aufgestanden?\n→ ______________________________________________",
+      "2. Wo haben Sie letzte Woche eingekauft?\n→ ______________________________________________",
+      "3. Wen haben Sie gestern angerufen?\n→ ______________________________________________",
+      "4. Was haben Sie am Wochenende ferngesehen?\n→ ______________________________________________"
+    ]}
+  ],
+  "solutions": [
+    {"heading": "Aufgabe 1", "items": [
+      "1. aufgeräumt – haben", "2. angerufen – haben", "3. ferngesehen – haben", "4. aufgestanden – sein",
+      "5. abgeholt – haben", "6. eingestiegen – sein", "7. angekommen – sein", "8. mitgebracht – haben",
+      "9. ausgemacht – haben", "10. zurückgegeben – haben", "11. angefangen – haben", "12. mitgekommen – sein"
+    ]},
+    {"heading": "Aufgabe 2", "items": [
+      "1. Ich bin um sechs Uhr aufgestanden.",
+      "2. Maria hat ihre Mutter angerufen.",
+      "3. Wir haben die Kinder vom Kindergarten abgeholt.",
+      "4. Der Kurs hat um neun Uhr angefangen.",
+      "5. Herr Ahmadi ist in den Bus eingestiegen.",
+      "6. Hast du das Licht ausgemacht?"
+    ]},
+    {"heading": "Aufgabe 3", "items": [
+      "1. habe … aufgeräumt", "2. habe … eingekauft", "3. habe … angerufen", "4. ist … vorbeigekommen",
+      "5. hat … mitgebracht", "6. haben … ferngesehen", "7. habe … ausgemacht"
+    ]},
+    {"heading": "Aufgabe 4", "items": [
+      "1. Beispiel: Ich bin heute um halb sieben aufgestanden.",
+      "2. Beispiel: Ich habe letzte Woche bei Aldi eingekauft.",
+      "3. Beispiel: Ich habe gestern meinen Bruder angerufen.",
+      "4. Beispiel: Ich habe am Wochenende einen Krimi ferngesehen."
+    ]}
+  ],
+  "note": "Bei Verben auf -ieren (telefonieren → telefoniert) und bei Verben mit untrennbarem Präfix (be-, er-, ver-) gibt es kein ge: Ich habe den Text verstanden."
+}

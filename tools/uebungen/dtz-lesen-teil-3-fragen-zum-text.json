@@ -1,0 +1,101 @@
+{
+  "file": "dtz-lesen-teil-3-fragen-zum-text.pdf",
+  "mode": "replace",
+  "title": "DTZ Lesen Teil 3: Fragen zum Text",
+  "level": "B1",
+  "intro": "Prüfungstraining: Sie lesen drei kurze Texte aus dem Alltag. Zu jedem Text gibt es eine Aufgabe „richtig oder falsch“ und zwei Aufgaben mit a, b oder c. Lesen Sie zuerst die Aufgaben, dann den Text.",
+  "blocks": [
+    {
+      "type": "text",
+      "heading": "Text 1: Ein Brief der Hausverwaltung",
+      "box": true,
+      "paragraphs": [
+        "Sehr geehrte Mieterinnen und Mieter,",
+        "am Dienstag, dem 14. Oktober, prüft die Firma Aqua-Service die Wasserleitungen im ganzen Haus. Deshalb gibt es an diesem Tag von 8 bis ca. 13 Uhr kein Wasser. Bitte stellen Sie sich vorher genug Trinkwasser bereit.",
+        "Bei dieser Gelegenheit baut die Firma in allen Wohnungen neue Wasserzähler ein. Der Techniker muss also in jede Wohnung. Wenn Sie am 14. Oktober nicht zu Hause sind, geben Sie Ihren Wohnungsschlüssel bitte bis Montag, 13. Oktober, bei unserem Hausmeister Herrn Schulte (Erdgeschoss links) ab.",
+        "Vielen Dank für Ihr Verständnis.",
+        "Mit freundlichen Grüßen – Hausverwaltung Brandt & Partner"
+      ]
+    },
+    {
+      "type": "task",
+      "heading": "Aufgaben zu Text 1",
+      "instruction": "Kreuzen Sie an.",
+      "items": [
+        "1. Am 14. Oktober gibt es den ganzen Tag kein Wasser.\n☐ richtig      ☐ falsch",
+        "2. Was passiert in den Wohnungen?\n☐ a) Die Heizkörper werden kontrolliert.\n☐ b) Es werden neue Wasserzähler eingebaut.\n☐ c) Die Wasserleitungen werden erneuert.",
+        "3. Was sollen Mieter tun, die am 14. Oktober nicht zu Hause sind?\n☐ a) Sie sollen einen neuen Termin vereinbaren.\n☐ b) Sie sollen der Hausverwaltung einen Brief schreiben.\n☐ c) Sie sollen dem Hausmeister ihren Schlüssel geben."
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "Text 2: Eine Information der Kita",
+      "box": true,
+      "paragraphs": [
+        "Liebe Eltern,",
+        "am Freitag, dem 7. November, feiern wir unser Laternenfest. Wir treffen uns um 17 Uhr im Garten der Kita und gehen dann gemeinsam mit den Kindern durch den Park. Danach gibt es im Gruppenraum warmen Tee und ein kleines Buffet.",
+        "Die Laternen basteln die Kinder in den nächsten Wochen in der Kita. Für das Material sammeln wir 3 Euro pro Kind. Bitte geben Sie das Geld bis zum 31. Oktober bei den Erzieherinnen ab. Wer etwas für das Buffet mitbringen möchte, trägt sich bitte in die Liste an der Gruppentür ein.",
+        "Bitte beachten Sie: Am 7. November schließt die Kita schon um 14 Uhr, damit wir alles vorbereiten können. Wenn Sie an diesem Tag nach 14 Uhr eine Betreuung für Ihr Kind brauchen, sprechen Sie bitte bis Mittwoch mit unserer Leiterin, Frau Demir.",
+        "Ihr Kita-Team „Sonnenblume“"
+      ]
+    },
+    {
+      "type": "task",
+      "heading": "Aufgaben zu Text 2",
+      "instruction": "Kreuzen Sie an.",
+      "items": [
+        "4. Am Tag des Laternenfests ist die Kita wie immer geöffnet.\n☐ richtig      ☐ falsch",
+        "5. Was müssen die Eltern bis zum 31. Oktober tun?\n☐ a) Sie müssen eine Laterne kaufen.\n☐ b) Sie müssen Geld für das Bastelmaterial bezahlen.\n☐ c) Sie müssen Essen für das Buffet mitbringen.",
+        "6. Ein Kind braucht am 7. November am Nachmittag eine Betreuung. Was sollen die Eltern tun?\n☐ a) Sie sollen mit Frau Demir sprechen.\n☐ b) Sie sollen sich in die Liste an der Gruppentür eintragen.\n☐ c) Sie sollen das Kind um 17 Uhr in den Garten bringen."
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "Text 3: Eine Meldung aus der Zeitung",
+      "box": true,
+      "paragraphs": [
+        "**Stadtbibliothek: Längere Öffnungszeiten und neues Sprachcafé**",
+        "Ab dem 1. Dezember hat die Stadtbibliothek länger geöffnet: Von Dienstag bis Donnerstag können Besucherinnen und Besucher jetzt bis 20 Uhr Bücher ausleihen und in Ruhe lernen. Montags bleibt die Bibliothek wie bisher geschlossen.",
+        "Neu ist auch das Sprachcafé: Jeden Donnerstag von 18 bis 19:30 Uhr können Menschen, die Deutsch lernen, mit Ehrenamtlichen ins Gespräch kommen. Eine Anmeldung ist nicht nötig, die Teilnahme ist kostenlos.",
+        "Wer einen Bibliotheksausweis möchte, bringt einen Personalausweis oder Reisepass und eine Meldebescheinigung mit. Der Ausweis kostet für Erwachsene 15 Euro im Jahr. Für Kinder und Jugendliche bis 18 Jahre ist er kostenlos."
+      ]
+    },
+    {
+      "type": "task",
+      "heading": "Aufgaben zu Text 3",
+      "instruction": "Kreuzen Sie an.",
+      "items": [
+        "7. Für das Sprachcafé muss man sich vorher anmelden.\n☐ richtig      ☐ falsch",
+        "8. Wann ist die Bibliothek ab Dezember geschlossen?\n☐ a) am Montag\n☐ b) am Donnerstagabend\n☐ c) am Dienstag ab 18 Uhr",
+        "9. Was braucht man für einen Bibliotheksausweis?\n☐ a) nur einen Reisepass\n☐ b) einen Ausweis oder Pass und eine Meldebescheinigung\n☐ c) eine Bescheinigung vom Deutschkurs"
+      ]
+    }
+  ],
+  "solutions": [
+    {
+      "heading": "Text 1: Brief der Hausverwaltung",
+      "items": [
+        "1. **falsch** – Es gibt nur von 8 bis ca. 13 Uhr kein Wasser, nicht den ganzen Tag.",
+        "2. **b** – „baut die Firma in allen Wohnungen neue Wasserzähler ein“. Die Leitungen werden nur geprüft (c), von Heizkörpern steht nichts im Text (a).",
+        "3. **c** – Sie geben ihren Schlüssel bis Montag beim Hausmeister Herrn Schulte ab."
+      ]
+    },
+    {
+      "heading": "Text 2: Information der Kita",
+      "items": [
+        "4. **falsch** – Am 7. November schließt die Kita schon um 14 Uhr.",
+        "5. **b** – Bis zum 31. Oktober sollen die Eltern 3 Euro für das Material abgeben. Das Buffet ist freiwillig („Wer … möchte“).",
+        "6. **a** – Wer nach 14 Uhr eine Betreuung braucht, spricht bis Mittwoch mit Frau Demir."
+      ]
+    },
+    {
+      "heading": "Text 3: Meldung aus der Zeitung",
+      "items": [
+        "7. **falsch** – „Eine Anmeldung ist nicht nötig.“",
+        "8. **a** – „Montags bleibt die Bibliothek wie bisher geschlossen.“ Dienstag bis Donnerstag ist bis 20 Uhr geöffnet.",
+        "9. **b** – Man braucht einen Personalausweis oder Reisepass und eine Meldebescheinigung."
+      ]
+    }
+  ],
+  "note": "Im Text stehen die Informationen oft mit anderen Worten als in der Aufgabe (z. B. „nicht nötig“ = „man muss nicht“). Suchen Sie die Stelle im Text und vergleichen Sie genau."
+}

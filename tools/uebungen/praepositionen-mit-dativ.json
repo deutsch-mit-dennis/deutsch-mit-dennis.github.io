@@ -1,0 +1,61 @@
+{
+  "file": "praepositionen-mit-dativ.pdf",
+  "mode": "append",
+  "title": "Präpositionen mit Dativ",
+  "level": "A2",
+  "blocks": [
+    {"type": "task", "heading": "Aufgabe 1: Welche Präposition passt?", "instruction": "Ergänzen Sie die Präpositionen aus dem Kasten. Jede Präposition passt nur einmal.", "wordbox": ["aus", "bei", "mit", "nach", "seit", "von", "zu", "gegenüber", "außer"], "example": "Ich fahre **mit** dem Bus zur Arbeit.", "items": [
+      "1. Mein Kollege kommt ___ der Türkei.",
+      "2. Ich wohne ___ drei Jahren in Deutschland.",
+      "3. Morgen gehe ich ___ meiner Ärztin.",
+      "4. ___ dem Kurs gehe ich nach Hause.",
+      "5. Das ist ein Geschenk ___ meiner Oma.",
+      "6. Meine Schwester arbeitet ___ einer Bank.",
+      "7. Die Apotheke ist dem Rathaus ___.",
+      "8. ___ meinem Bruder sind alle zur Party gekommen."
+    ]},
+    {"type": "task", "heading": "Aufgabe 2: Was ist richtig?", "instruction": "Wählen Sie die richtige Form und unterstreichen Sie sie.", "items": [
+      "1. Ich gehe mit ___ Freundin ins Kino.\na) meine\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0 b) meiner\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0 c) meinem",
+      "2. Er wohnt bei ___ Eltern.\na) seinen\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0 b) seine\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0 c) seiner",
+      "3. Wir kommen gerade aus ___ Supermarkt.\na) den\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0 b) der\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0 c) dem",
+      "4. Seit ___ Woche habe ich Husten.\na) einer\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0 b) eine\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0 c) einem",
+      "5. Das Buch ist von ___ Lehrer.\na) dem\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0 b) den\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0 c) der",
+      "6. Ich spiele mit ___ Kindern im Garten.\na) die\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0 b) der\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0 c) den"
+    ]},
+    {"type": "task", "heading": "Aufgabe 3: zum, zur, vom oder beim?", "instruction": "Ergänzen Sie. zu + dem = zum · zu + der = zur · von + dem = vom · bei + dem = beim", "items": [
+      "1. Ich gehe ___ Bahnhof. (der Bahnhof)",
+      "2. Die Kinder fahren ___ Schule. (die Schule)",
+      "3. Er kommt gerade ___ Zahnarzt. (der Zahnarzt)",
+      "4. ___ Essen sehen wir nicht fern. (das Essen)",
+      "5. Sie bringt den Brief ___ Post. (die Post)",
+      "6. Ich war gestern ___ Friseur. (der Friseur)"
+    ]},
+    {"type": "task", "heading": "Aufgabe 4: Fehler korrigieren", "instruction": "In jedem Satz ist ein Fehler. Schreiben Sie den Satz richtig.", "items": [
+      "1. Ich fahre mit der Zug nach Berlin.\n→ ______________________________________________",
+      "2. Sie kommt aus die Ukraine.\n→ ______________________________________________",
+      "3. Ich lerne seit ein Jahr Deutsch.\n→ ______________________________________________",
+      "4. Er wohnt bei seine Tante.\n→ ______________________________________________",
+      "5. Nach die Arbeit koche ich.\n→ ______________________________________________"
+    ]},
+    {"type": "task", "heading": "Aufgabe 5: Und Sie?", "instruction": "Schreiben Sie drei Sätze über sich. Benutzen Sie mit, seit, bei oder zu.", "example": "Ich lebe seit zwei Jahren in Deutschland.", "items": [], "lines": 3}
+  ],
+  "solutions": [
+    {"heading": "Aufgabe 1", "items": [
+      "1. aus", "2. seit", "3. zu", "4. Nach", "5. von", "6. bei", "7. gegenüber", "8. Außer"
+    ]},
+    {"heading": "Aufgabe 2", "items": [
+      "1. b) meiner", "2. a) seinen", "3. c) dem", "4. a) einer", "5. a) dem", "6. c) den"
+    ]},
+    {"heading": "Aufgabe 3", "items": [
+      "1. zum", "2. zur", "3. vom", "4. Beim", "5. zur", "6. beim"
+    ]},
+    {"heading": "Aufgabe 4", "items": [
+      "1. Ich fahre mit dem Zug nach Berlin.", "2. Sie kommt aus der Ukraine.", "3. Ich lerne seit einem Jahr Deutsch.",
+      "4. Er wohnt bei seiner Tante.", "5. Nach der Arbeit koche ich."
+    ]},
+    {"heading": "Aufgabe 5", "items": [
+      "Beispiel: Ich fahre mit dem Fahrrad zum Kurs. Am Wochenende bin ich oft bei meiner Familie. Seit Mai habe ich eine neue Arbeit."
+    ]}
+  ],
+  "note": "Im Dativ Plural bekommt das Nomen meistens ein -n: mit den Kindern, bei seinen Eltern."
+}

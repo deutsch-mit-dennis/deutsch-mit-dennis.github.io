@@ -1,0 +1,90 @@
+{
+  "file": "im-caf-und-beim-einkaufen.pdf",
+  "mode": "append",
+  "title": "Im Café und beim Einkaufen",
+  "level": "A1",
+  "blocks": [
+    {"type": "task", "heading": "1. Der, die oder das?",
+     "instruction": "Sortieren Sie die Nomen aus dem Kasten. Schreiben Sie sie in die Tabelle.",
+     "wordbox": ["Apfel", "Banane", "Brot", "Gabel", "Glas", "Kaffee", "Löffel", "Messer", "Milch", "Tasse", "Tee", "Wasser"]},
+    {"type": "table", "rows": [
+      ["der", "die", "das"],
+      ["", "", ""],
+      ["", "", ""],
+      ["", "", ""],
+      ["", "", ""]
+    ]},
+    {"type": "task", "heading": "2. Ein Apfel – zwei …",
+     "instruction": "Schreiben Sie den Plural.",
+     "example": "der Apfel → die **Äpfel**",
+     "items": [
+       "a) der Saft → die ___",
+       "b) das Glas → die ___",
+       "c) das Brötchen → die ___",
+       "d) die Tomate → die ___",
+       "e) der Markt → die ___",
+       "f) die Flasche → die ___",
+       "g) die Kellnerin → die ___",
+       "h) der Teller → die ___",
+       "i) die Kartoffel → die ___",
+       "j) das Café → die ___"
+     ]},
+    {"type": "text", "box": true, "heading": "Kurz wiederholt: Akkusativ", "paragraphs": [
+      "Nach **möchten, nehmen, kaufen, brauchen, bestellen, essen, trinken** steht der Akkusativ.",
+      "der → **den** · ein → **einen**: Ich möchte **einen** Kaffee. · die/eine, das/ein bleiben gleich: Ich nehme **eine** Cola und **ein** Eis."
+    ]},
+    {"type": "task", "heading": "3. Ein, eine oder einen?",
+     "instruction": "Ergänzen Sie den Artikel im Akkusativ.",
+     "example": "Ich möchte bitte **einen** Apfelsaft.",
+     "items": [
+       "a) Kann ich bitte ___ Glas Wasser haben?",
+       "b) Ich hätte gerne ___ Tasse Tee.",
+       "c) Er bestellt ___ Cola mit Eis.",
+       "d) Für die Suppe brauche ich ___ Löffel.",
+       "e) Ich kaufe ___ Brot beim Bäcker.",
+       "f) Ich esse jeden Tag ___ Orange.",
+       "g) Zum Frühstück esse ich ___ Joghurt.",
+       "h) Ich trinke lieber ___ Mineralwasser ohne Kohlensäure."
+     ]},
+    {"type": "task", "heading": "4. Der, die, das oder den?",
+     "instruction": "Ergänzen Sie den bestimmten Artikel. Nominativ oder Akkusativ?",
+     "example": "**Der** Kellner bringt die Speisekarte.",
+     "items": [
+       "a) Wir rufen ___ Kellner, um zu bezahlen.",
+       "b) ___ Rechnung ist nicht korrekt.",
+       "c) Gibst du mir bitte ___ Salz?",
+       "d) Kannst du mir bitte ___ Pfeffer geben?",
+       "e) ___ Supermarkt ist heute sehr voll.",
+       "f) Wir gehen in ___ Supermarkt.",
+       "g) Die Verkäuferin bedient ___ Kunden.",
+       "h) ___ Kuchen sieht lecker aus."
+     ]},
+    {"type": "task", "heading": "5. Im Café und im Supermarkt",
+     "instruction": "Was bestellen Sie im Café? Was kaufen Sie im Supermarkt? Schreiben Sie vier Sätze mit dem Akkusativ.",
+     "example": "Im Café möchte ich einen Tee und ein Stück Kuchen.",
+     "lines": 5}
+  ],
+  "solutions": [
+    {"heading": "1. Der, die oder das?", "items": [
+      "der: Apfel, Kaffee, Löffel, Tee",
+      "die: Banane, Gabel, Milch, Tasse",
+      "das: Brot, Glas, Messer, Wasser"
+    ]},
+    {"heading": "2. Ein Apfel – zwei …", "items": [
+      "a) die Säfte · b) die Gläser · c) die Brötchen · d) die Tomaten · e) die Märkte",
+      "f) die Flaschen · g) die Kellnerinnen · h) die Teller · i) die Kartoffeln · j) die Cafés"
+    ]},
+    {"heading": "3. Ein, eine oder einen?", "items": [
+      "a) ein · b) eine · c) eine · d) einen",
+      "e) ein · f) eine · g) einen · h) ein"
+    ]},
+    {"heading": "4. Der, die, das oder den?", "items": [
+      "a) den (Akk.) · b) Die (Nom.) · c) das (Akk.) · d) den (Akk.)",
+      "e) Der (Nom.) · f) den (Akk.) · g) den (Akk.) · h) Der (Nom.)"
+    ]},
+    {"heading": "5. Im Café und im Supermarkt", "items": [
+      "Beispiel: Im Café bestelle ich einen Kaffee mit Milch. Ich hätte auch gerne ein Stück Kuchen. Im Supermarkt kaufe ich eine Flasche Wasser und ein Brot. Für den Salat brauche ich eine Tomate und eine Zwiebel."
+    ]}
+  ],
+  "note": "Bei Aufgabe 5 sind viele Antworten möglich. Achten Sie auf den Akkusativ: einen Kaffee, eine Cola, ein Eis."
+}

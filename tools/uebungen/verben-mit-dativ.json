@@ -1,0 +1,98 @@
+{
+  "file": "verben-mit-dativ.pdf",
+  "mode": "append",
+  "title": "Verben mit Dativ",
+  "level": "A2",
+  "blocks": [
+    {"type": "text", "box": true, "heading": "Kurz wiederholt", "paragraphs": [
+      "Das Dativobjekt findet man mit der Frage **Wem?**",
+      "Artikel im Dativ: der → **dem** · die → **der** · das → **dem** · die (Plural) → **den** (+ n: den Kinder**n**). Ebenso: ein → **einem**, eine → **einer**, mein → **meinem**, meine → **meiner**, meine (Plural) → **meinen**.",
+      "Personalpronomen: ich → **mir** · du → **dir** · er → **ihm** · sie → **ihr** · es → **ihm** · wir → **uns** · ihr → **euch** · sie/Sie → **ihnen/Ihnen**"
+    ]},
+    {"type": "task", "heading": "1. Personalpronomen im Dativ",
+     "instruction": "Ergänzen Sie das Pronomen im Dativ.",
+     "example": "Kannst du **mir** bitte helfen? (ich)",
+     "items": [
+       "a) Ich antworte ___ später. (du)",
+       "b) Die Hose ist zu klein. Sie passt ___ nicht. (er)",
+       "c) Ich danke ___ für Ihre Hilfe. (Sie)",
+       "d) Das neue Auto gefällt ___ sehr. (wir)",
+       "e) Anna hat heute Geburtstag. Wir gratulieren ___. (sie)",
+       "f) Gehört das Buch ___? (ihr)",
+       "g) Die Großeltern wohnen weit weg. Die Enkel fehlen ___ sehr. (sie, Plural)",
+       "h) Er sagt nie die Wahrheit. Ich traue ___ nicht. (er)"
+     ]},
+    {"type": "task", "heading": "2. Artikel im Dativ",
+     "instruction": "Ergänzen Sie das Wort in Klammern in der richtigen Form.",
+     "example": "Die Polizei folgt **dem** Dieb. (der)",
+     "items": [
+       "a) Sie vertraut ___ besten Freundin. (ihr)",
+       "b) Rauchen schadet ___ Gesundheit. (die)",
+       "c) Das Kind widerspricht ___ Eltern. (sein)",
+       "d) Er möchte ___ Verein beitreten. (der)",
+       "e) Ich stimme ___ Vorschlag zu. (dein)",
+       "f) Wir schauen ___ Kindern beim Spielen zu. (die)",
+       "g) Der Hund gehorcht ___ Besitzer nicht. (sein)",
+       "h) Ich bin zufällig ___ alten Lehrerin begegnet. (mein)"
+     ]},
+    {"type": "task", "heading": "3. Akkusativ oder Dativ?",
+     "instruction": "Unterstreichen Sie die richtige Form. Fragen Sie: Wen? oder Wem?",
+     "example": "Ich helfe (dich / [[dir]]) beim Umzug.",
+     "items": [
+       "a) Ich besuche (dich / dir) am Sonntag.",
+       "b) Die Suppe schmeckt (mich / mir) gut.",
+       "c) Ich rufe (ihn / ihm) morgen an.",
+       "d) Ich glaube (ihn / ihm) kein Wort.",
+       "e) Wir fragen (den / dem) Lehrer.",
+       "f) Wir danken (den / dem) Lehrer.",
+       "g) Der Arzt untersucht (den / dem) Patienten.",
+       "h) Der Arzt rät (den / dem) Patienten, mehr Sport zu treiben."
+     ]},
+    {"type": "task", "heading": "4. Welches Verb passt?",
+     "instruction": "Ergänzen Sie die Verben aus dem Kasten in der richtigen Form.",
+     "wordbox": ["einfallen", "fehlen", "gefallen", "gehören", "passen", "passieren", "schmecken", "wehtun"],
+     "items": [
+       "a) Mein Kopf ___ mir ___.",
+       "b) Wem ___ diese Tasche? – Sie ___ mir.",
+       "c) Der Kuchen ___ mir sehr gut.",
+       "d) Die Schuhe sind zu klein. Sie ___ mir nicht.",
+       "e) Die neue Wohnung ___ uns sehr.",
+       "f) Wie heißt er noch mal? Sein Name ___ mir nicht ___.",
+       "g) Meine Familie ist weit weg. Sie ___ mir sehr.",
+       "h) Du siehst traurig aus. Ist dir etwas ___?"
+     ]},
+    {"type": "task", "heading": "5. Und Sie?",
+     "instruction": "Beantworten Sie die Fragen in ganzen Sätzen.",
+     "items": [
+       "a) Was gefällt Ihnen in Ihrer Stadt?\n________________________________________________________",
+       "b) Welches Essen schmeckt Ihnen am besten?\n________________________________________________________",
+       "c) Wer hilft Ihnen beim Deutschlernen?\n________________________________________________________",
+       "d) Wem vertrauen Sie?\n________________________________________________________",
+       "e) Was fehlt Ihnen in Deutschland?\n________________________________________________________"
+     ]}
+  ],
+  "solutions": [
+    {"heading": "1. Personalpronomen im Dativ", "items": [
+      "a) dir · b) ihm · c) Ihnen · d) uns",
+      "e) ihr · f) euch · g) ihnen · h) ihm"
+    ]},
+    {"heading": "2. Artikel im Dativ", "items": [
+      "a) ihrer · b) der · c) seinen · d) dem",
+      "e) deinem · f) den · g) seinem · h) meiner"
+    ]},
+    {"heading": "3. Akkusativ oder Dativ?", "items": [
+      "a) dich (besuchen + Akk.) · b) mir (schmecken + Dat.)",
+      "c) ihn (anrufen + Akk.) · d) ihm (glauben + Dat.)",
+      "e) den (fragen + Akk.) · f) dem (danken + Dat.)",
+      "g) den (untersuchen + Akk.) · h) dem (raten + Dat.)"
+    ]},
+    {"heading": "4. Welches Verb passt?", "items": [
+      "a) tut … weh · b) gehört … gehört · c) schmeckt · d) passen",
+      "e) gefällt · f) fällt … ein · g) fehlt · h) passiert"
+    ]},
+    {"heading": "5. Und Sie?", "items": [
+      "Beispiel: a) Der große Park gefällt mir sehr. b) Die Suppe von meiner Mutter schmeckt mir am besten. c) Meine Nachbarin hilft mir beim Deutschlernen. d) Ich vertraue meinem Bruder. e) Meine Freunde fehlen mir."
+    ]}
+  ],
+  "note": "Bei Aufgabe 5 sind viele Antworten möglich. Prüfen Sie: Steht die Person im Dativ (mir, meinem Bruder, meiner Freundin …)?"
+}

@@ -1,0 +1,150 @@
+{
+  "file": "berufe-maennlich-und-weiblich.pdf",
+  "mode": "append",
+  "title": "Berufe: männlich und weiblich",
+  "level": "A1",
+  "blocks": [
+    {
+      "type": "task",
+      "heading": "1. Männlich oder weiblich? Ergänzen Sie die Tabelle.",
+      "instruction": "Schreiben Sie den Beruf mit Artikel. Achtung: Bei manchen Berufen gibt es einen Umlaut (a → ä, o → ö).",
+      "example": "der Lehrer → die Lehrerin"
+    },
+    {
+      "type": "table",
+      "rows": [
+        [
+          "männlich",
+          "weiblich"
+        ],
+        [
+          "der Verkäufer",
+          "___"
+        ],
+        [
+          "___",
+          "die Ärztin"
+        ],
+        [
+          "der Koch",
+          "___"
+        ],
+        [
+          "___",
+          "die Polizistin"
+        ],
+        [
+          "der Anwalt",
+          "___"
+        ],
+        [
+          "___",
+          "die Friseurin"
+        ],
+        [
+          "der Ingenieur",
+          "___"
+        ],
+        [
+          "der Feuerwehrmann",
+          "___"
+        ]
+      ]
+    },
+    {
+      "type": "task",
+      "heading": "2. Der oder die? Ergänzen Sie den Artikel.",
+      "items": [
+        "a) ___ Kellnerin bringt uns die Getränke.",
+        "b) ___ Bäcker backt jeden Morgen frische Brötchen.",
+        "c) ___ Architektin plant und zeichnet neue Häuser.",
+        "d) ___ Mechaniker repariert mein kaputtes Auto.",
+        "e) ___ Krankenschwester pflegt die kranken Menschen.",
+        "f) ___ Schauspieler spielt eine Rolle in einem Theaterstück."
+      ]
+    },
+    {
+      "type": "task",
+      "heading": "3. Wer macht das? Schreiben Sie den Beruf.",
+      "instruction": "Schreiben Sie die männliche und die weibliche Form.",
+      "wordbox": [
+        "Friseur",
+        "Polizist",
+        "Lehrer",
+        "Arzt",
+        "Koch",
+        "Anwalt"
+      ],
+      "example": "Er/Sie untersucht den Patienten im Krankenhaus. → der Arzt / die Ärztin",
+      "items": [
+        "a) Er/Sie erklärt die deutsche Grammatik. → ________________________________________",
+        "b) Er/Sie regelt den Verkehr auf der Straße. → ________________________________________",
+        "c) Er/Sie schneidet mir die Haare. → ________________________________________",
+        "d) Er/Sie bereitet in der Restaurantküche das Essen zu. → ________________________________________",
+        "e) Er/Sie vertritt Klienten vor Gericht. → ________________________________________"
+      ]
+    },
+    {
+      "type": "task",
+      "heading": "4. Was sind die Personen von Beruf? Schreiben Sie Sätze.",
+      "instruction": "Achten Sie auf die Form: Mann oder Frau? Im Satz steht der Beruf ohne Artikel.",
+      "example": "Ahmed – Koch: Ahmed ist Koch. / Fatma – Koch: Fatma ist Köchin.",
+      "items": [
+        "a) Olga – Verkäufer: ________________________________________",
+        "b) Karim – Bäcker: ________________________________________",
+        "c) Anna – Arzt: ________________________________________",
+        "d) Marco – Kellner: ________________________________________",
+        "e) Leyla – Ingenieur: ________________________________________",
+        "f) Und Sie? Was sind Sie von Beruf?\n__________________________________________________________________"
+      ]
+    }
+  ],
+  "solutions": [
+    {
+      "heading": "1. Männlich oder weiblich?",
+      "items": [
+        "der Verkäufer – die Verkäuferin",
+        "der Arzt – die Ärztin",
+        "der Koch – die Köchin",
+        "der Polizist – die Polizistin",
+        "der Anwalt – die Anwältin",
+        "der Friseur – die Friseurin",
+        "der Ingenieur – die Ingenieurin",
+        "der Feuerwehrmann – die Feuerwehrfrau"
+      ]
+    },
+    {
+      "heading": "2. Der oder die?",
+      "items": [
+        "a) Die",
+        "b) Der",
+        "c) Die",
+        "d) Der",
+        "e) Die",
+        "f) Der"
+      ]
+    },
+    {
+      "heading": "3. Wer macht das?",
+      "items": [
+        "a) der Lehrer / die Lehrerin",
+        "b) der Polizist / die Polizistin",
+        "c) der Friseur / die Friseurin",
+        "d) der Koch / die Köchin",
+        "e) der Anwalt / die Anwältin"
+      ]
+    },
+    {
+      "heading": "4. Was sind die Personen von Beruf?",
+      "items": [
+        "a) Olga ist Verkäuferin.",
+        "b) Karim ist Bäcker.",
+        "c) Anna ist Ärztin.",
+        "d) Marco ist Kellner.",
+        "e) Leyla ist Ingenieurin.",
+        "f) Beispiel: Ich bin Mechaniker. / Ich bin Lehrerin von Beruf."
+      ]
+    }
+  ],
+  "note": "Bei 4 f) sind viele Antworten möglich."
+}

@@ -1,0 +1,83 @@
+{
+  "file": "ein-gespraech-am-esstisch.pdf",
+  "mode": "append",
+  "title": "Ein Gespräch am Esstisch",
+  "level": "A2",
+  "blocks": [
+    {"type": "task", "heading": "1. Was sagt man?",
+     "instruction": "Welcher Satz passt zur Situation? Schreiben Sie den Buchstaben.",
+     "wordbox": ["a) Mahlzeit!", "b) Das ist leider nicht so mein Geschmack.", "c) Gibst du mir bitte das Salz?", "d) Soll ich beim Abräumen helfen?", "e) Guten Appetit!", "f) Möchtest du Brot?", "g) Nein danke, ich bin satt.", "h) Du kannst sehr gut kochen!"],
+     "items": [
+       "1. Das Essen beginnt. ___",
+       "2. Sie brauchen Salz für Ihre Suppe. ___",
+       "3. Sie haben genug gegessen. ___",
+       "4. Das Essen schmeckt Ihnen sehr gut. ___",
+       "5. Sie mögen das Essen nicht, aber Sie möchten höflich sein. ___",
+       "6. Das Essen ist zu Ende. Sie möchten helfen. ___",
+       "7. Es ist 12 Uhr. Sie treffen Kollegen in der Kantine. ___",
+       "8. Sie bieten Ihrem Gast etwas an. ___"
+     ]},
+    {"type": "task", "heading": "2. Höflich oder unhöflich?",
+     "instruction": "Welche Antwort ist höflich? Kreuzen Sie an.",
+     "items": [
+       "a) „Möchtest du noch Suppe?“ – Sie sind satt.\n☐ Nein.\n☐ Nein danke, ich bin satt.",
+       "b) „Probier mal den Fisch!“ – Sie essen keinen Fisch.\n☐ Danke, aber ich esse keinen Fisch.\n☐ Fisch? Igitt!",
+       "c) „Schmeckt dir der Käse?“ – Sie mögen den Käse nicht.\n☐ Das schmeckt nicht.\n☐ Das ist leider nicht so mein Geschmack.",
+       "d) „Kannst du mir bitte das Brot geben?“\n☐ Ja, hier bitte.\n☐ Nimm es doch selbst.",
+       "e) „Möchtest du Kaffee oder Tee?“\n☐ Einen Kaffee, bitte.\n☐ Ich will Kaffee."
+     ]},
+    {"type": "task", "heading": "3. Beim Mittagessen",
+     "instruction": "Ergänzen Sie den Dialog mit den Wörtern aus dem Kasten.",
+     "wordbox": ["drin", "gekocht", "helfen", "leckere", "Mahlzeit", "Pläne", "riecht", "satt"],
+     "items": [
+       "**A:** „___! Mmmh, das ___ aber gut. Was ist das?“",
+       "**B:** „Das ist Gulasch. Ich habe es gestern ___.“",
+       "**A:** „Was ist da ___?“",
+       "**B:** „Rindfleisch, Zwiebeln, Paprika und Kartoffeln. Möchtest du noch etwas?“",
+       "**A:** „Nein danke, ich bin ___. Danke für das ___ Essen!“",
+       "**B:** „Gern geschehen. Was sind deine ___ für den Nachmittag?“",
+       "**A:** „Ich gehe zum Deutschkurs. Aber zuerst: Soll ich beim Abräumen ___?“"
+     ]},
+    {"type": "task", "heading": "4. Smalltalk: Wie heißt die Frage?",
+     "instruction": "Schreiben Sie die passende Frage. Die Fragen auf Seite 2 helfen Ihnen.",
+     "example": "„**Schmeckt es dir?**“ – „Ja, sehr! Die Suppe ist fantastisch.“",
+     "items": [
+       "a) „_________________________________?“ – „Ja, danke. Ich habe sehr gut geschlafen.“",
+       "b) „_________________________________?“ – „Ganz gut, aber anstrengend.“",
+       "c) „_________________________________?“ – „Ich war im Deutschkurs und dann einkaufen.“",
+       "d) „_________________________________?“ – „Ja, ich habe die Suppe selbst gekocht.“",
+       "e) „_________________________________?“ – „Heute Abend sehe ich einen Film.“",
+       "f) „_________________________________?“ – „Ja, danke. Ich kann nichts mehr essen.“"
+     ]},
+    {"type": "task", "heading": "5. Mein Dialog am Esstisch",
+     "instruction": "Schreiben Sie einen eigenen Dialog beim Frühstück oder beim Abendessen (8 bis 10 Zeilen). Benutzen Sie mindestens fünf Sätze aus dem Baukasten. Spielen Sie den Dialog dann mit einem Partner oder einer Partnerin.",
+     "lines": 9}
+  ],
+  "solutions": [
+    {"heading": "1. Was sagt man?", "items": [
+      "1 e · 2 c · 3 g · 4 h · 5 b · 6 d · 7 a · 8 f"
+    ]},
+    {"heading": "2. Höflich oder unhöflich?", "items": [
+      "a) Nein danke, ich bin satt.",
+      "b) Danke, aber ich esse keinen Fisch.",
+      "c) Das ist leider nicht so mein Geschmack.",
+      "d) Ja, hier bitte.",
+      "e) Einen Kaffee, bitte."
+    ]},
+    {"heading": "3. Beim Mittagessen", "items": [
+      "Mahlzeit · riecht · gekocht · drin · satt · leckere · Pläne · helfen"
+    ]},
+    {"heading": "4. Smalltalk: Wie heißt die Frage?", "items": [
+      "a) Hast du gut geschlafen?",
+      "b) Wie war dein Tag? / Wie war die Arbeit?",
+      "c) Was hast du heute gemacht?",
+      "d) Hast du das gekocht?",
+      "e) Was machst du heute noch? / Was sind deine Pläne für den Abend?",
+      "f) Bist du satt?"
+    ]},
+    {"heading": "5. Mein Dialog am Esstisch", "items": [
+      "Beispiel: A: Guten Appetit! – B: Danke, gleichfalls! Das riecht aber gut. Was ist das? – A: Das ist Reis mit Gemüse. Bedien dich! – B: Mmmh, das schmeckt sehr gut! Du kannst sehr gut kochen. – A: Danke! Möchtest du noch etwas? – B: Nein danke, ich bin satt. Wie war dein Tag? – A: Ganz gut. Und deiner? – B: Auch gut. Soll ich beim Abräumen helfen? – A: Ja, das ist nett, danke!"
+    ]}
+  ],
+  "note": "Bei Aufgabe 4 und 5 sind auch andere Antworten möglich, wenn sie zur Situation passen."
+}

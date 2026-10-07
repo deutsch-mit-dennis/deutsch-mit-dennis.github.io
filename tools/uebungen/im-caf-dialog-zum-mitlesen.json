@@ -1,0 +1,87 @@
+{
+  "file": "im-caf-dialog-zum-mitlesen.pdf",
+  "mode": "append",
+  "title": "Im Café: Dialog zum Mitlesen",
+  "level": "A1",
+  "blocks": [
+    {"type": "task", "heading": "1. Richtig oder falsch?",
+     "instruction": "Lesen Sie den Dialog auf Seite 1. Kreuzen Sie an.",
+     "items": [
+       "a) Sprecher 1 möchte einen Tee.\n☐ richtig      ☐ falsch",
+       "b) Ein Kaffee kostet 2,50 €.\n☐ richtig      ☐ falsch",
+       "c) Sprecher 1 bestellt auch ein Stück Apfelkuchen.\n☐ richtig      ☐ falsch",
+       "d) Der Apfelkuchen kostet 3,50 €.\n☐ richtig      ☐ falsch",
+       "e) Kaffee und Kuchen kosten zusammen 5,50 €.\n☐ richtig      ☐ falsch",
+       "f) Sprecher 1 bezahlt mit fünf Euro.\n☐ richtig      ☐ falsch",
+       "g) Sprecher 1 bekommt 50 Cent zurück.\n☐ richtig      ☐ falsch"
+     ]},
+    {"type": "task", "heading": "2. Fragen zum Dialog",
+     "instruction": "Beantworten Sie die Fragen.",
+     "items": [
+       "a) Was trinkt Sprecher 1?\n__________________________________________________",
+       "b) Was isst Sprecher 1?\n__________________________________________________",
+       "c) Wie viel kostet der Apfelkuchen?\n__________________________________________________",
+       "d) Wie viel kostet das zusammen?\n__________________________________________________",
+       "e) Wie viel Geld gibt Sprecher 1?\n__________________________________________________",
+       "f) Was sagt Sprecherin 2 am Ende?\n__________________________________________________"
+     ]},
+    {"type": "task", "heading": "3. Ein neuer Dialog: Was ist die richtige Reihenfolge?",
+     "instruction": "Ein Gast bestellt Tee und Kuchen. Nummerieren Sie die Sätze von 1 bis 10.",
+     "items": [
+       "___ a) **Kellnerin:** Das macht fünf Euro fünfzig (5,50 €).",
+       "___ b) **Gast:** Danke. Und ein Stück Schokoladenkuchen, bitte.",
+       "___ c) **Kellnerin:** Bitte schön! Guten Appetit!",
+       "___ d) **Gast:** Guten Tag! Ich möchte bitte einen Tee.",
+       "___ e) **Kellnerin:** Danke. Hier sind vier Euro fünfzig (4,50 €) zurück.",
+       "___ f) **Gast:** Wie viel kostet das zusammen?",
+       "___ g) **Kellnerin:** Gerne. Ein Tee kostet zwei Euro (2,00 €).",
+       "___ h) **Gast:** Vielen Dank!",
+       "___ i) **Kellnerin:** Sehr gut. Der Schokoladenkuchen kostet drei Euro fünfzig (3,50 €).",
+       "___ j) **Gast:** Ich gebe Ihnen zehn Euro (10,00 €)."
+     ]},
+    {"type": "task", "heading": "4. Rollenspiel: Im Café",
+     "instruction": "Arbeiten Sie zu zweit. A ist der Gast, B ist der Kellner oder die Kellnerin. Wählen Sie von der Karte ein Getränk und einen Kuchen oder ein Eis. Schreiben Sie den Dialog und spielen Sie ihn dann."},
+    {"type": "table", "rows": [
+      ["Getränke", "Preis", "Kuchen & Eis", "Preis"],
+      ["Kaffee", "2,50 €", "Apfelkuchen", "3,00 €"],
+      ["Tee", "2,00 €", "Käsekuchen", "3,20 €"],
+      ["Cola", "2,80 €", "Schokoladenkuchen", "3,50 €"],
+      ["Orangensaft", "3,00 €", "eine Kugel Eis", "1,50 €"]
+    ]},
+    {"type": "task", "heading": "",
+     "items": [
+       "**A:** Guten Tag! Ich möchte bitte _______________________.",
+       "**B:** Gerne. _______________________ kostet _______________.",
+       "**A:** Danke. Und _______________________, bitte.",
+       "**B:** Sehr gut. _______________________ kostet _______________.",
+       "**A:** Wie viel kostet das zusammen?",
+       "**B:** Das macht _______________________.",
+       "**A:** Ich gebe Ihnen _______________________.",
+       "**B:** Danke. Hier sind _______________________ zurück.",
+       "**A:** Vielen Dank!",
+       "**B:** Bitte schön! Guten Appetit!"
+     ]}
+  ],
+  "solutions": [
+    {"heading": "1. Richtig oder falsch?", "items": [
+      "a) falsch (Er möchte einen Kaffee.) · b) richtig · c) richtig",
+      "d) falsch (Er kostet 3,00 €.) · e) richtig",
+      "f) falsch (Er gibt sechs Euro.) · g) richtig"
+    ]},
+    {"heading": "2. Fragen zum Dialog", "items": [
+      "a) Er trinkt einen Kaffee.",
+      "b) Er isst ein Stück Apfelkuchen.",
+      "c) Der Apfelkuchen kostet drei Euro (3,00 €).",
+      "d) Das kostet zusammen fünf Euro fünfzig (5,50 €).",
+      "e) Er gibt sechs Euro (6,00 €).",
+      "f) Sie sagt: „Bitte schön! Guten Appetit!“"
+    ]},
+    {"heading": "3. Ein neuer Dialog", "items": [
+      "1 d · 2 g · 3 b · 4 i · 5 f · 6 a · 7 j · 8 e · 9 h · 10 c"
+    ]},
+    {"heading": "4. Rollenspiel: Im Café", "items": [
+      "Beispiel: A: Guten Tag! Ich möchte bitte eine Cola. – B: Gerne. Eine Cola kostet zwei Euro achtzig. – A: Danke. Und ein Stück Käsekuchen, bitte. – B: Sehr gut. Der Käsekuchen kostet drei Euro zwanzig. – A: Wie viel kostet das zusammen? – B: Das macht sechs Euro. – A: Ich gebe Ihnen zehn Euro. – B: Danke. Hier sind vier Euro zurück. – A: Vielen Dank! – B: Bitte schön! Guten Appetit!"
+    ]}
+  ],
+  "note": "Bei Aufgabe 2 reichen auch kurze Antworten (z. B. „Einen Kaffee.“). Bei Aufgabe 4 sind viele Dialoge möglich – rechnen Sie den Preis und das Rückgeld selbst aus."
+}

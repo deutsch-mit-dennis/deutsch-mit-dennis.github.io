@@ -1,0 +1,157 @@
+{
+  "file": "am-bahnhof-richtig-oder-falsch.pdf",
+  "mode": "replace",
+  "title": "Am Bahnhof: richtig oder falsch?",
+  "level": "A1",
+  "intro": "Herr Al-Masri möchte mit dem Zug fahren. Er kauft eine Fahrkarte am Schalter. Danach hört er eine Durchsage am Gleis. Lesen Sie die Texte oder hören Sie zu: Ihre Lehrkraft liest vor.",
+  "blocks": [
+    {
+      "type": "text",
+      "heading": "Text 1: Am Fahrkartenschalter",
+      "box": true,
+      "paragraphs": [
+        "**Mitarbeiterin:** Guten Morgen. Was kann ich für Sie tun?",
+        "**Herr Al-Masri:** Guten Morgen. Ich möchte eine Fahrkarte nach Münster, bitte.",
+        "**Mitarbeiterin:** Gern. Wann möchten Sie fahren?",
+        "**Herr Al-Masri:** Heute Vormittag, so um zehn Uhr.",
+        "**Mitarbeiterin:** Der nächste Zug fährt um 10:12 Uhr. Sie fahren zuerst mit der S-Bahn bis Dortmund. Dort steigen Sie in den Regionalexpress nach Münster um.",
+        "**Herr Al-Masri:** Ich muss also einmal umsteigen?",
+        "**Mitarbeiterin:** Ja, genau. In Dortmund haben Sie acht Minuten Zeit.",
+        "**Herr Al-Masri:** Und wann komme ich in Münster an?",
+        "**Mitarbeiterin:** Um 11:26 Uhr.",
+        "**Herr Al-Masri:** Von welchem Gleis fährt die S-Bahn ab?",
+        "**Mitarbeiterin:** Von Gleis 7.",
+        "**Herr Al-Masri:** Was kostet die Fahrkarte?",
+        "**Mitarbeiterin:** Einfach oder hin und zurück?",
+        "**Herr Al-Masri:** Nur einfach, bitte. Ich komme morgen mit dem Auto zurück.",
+        "**Mitarbeiterin:** Das macht 18,40 Euro.",
+        "**Herr Al-Masri:** Kann ich mit Karte bezahlen?",
+        "**Mitarbeiterin:** Ja, natürlich. … So, hier ist Ihre Fahrkarte. Gute Reise!",
+        "**Herr Al-Masri:** Vielen Dank. Auf Wiedersehen!"
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "Text 2: Durchsage am Gleis",
+      "box": true,
+      "paragraphs": [
+        "„Achtung an Gleis 7! Information zur S-Bahn nach Dortmund, Abfahrt 10:12 Uhr: Die S-Bahn hat heute etwa fünf Minuten Verspätung. Bitte beachten Sie: Die S-Bahn fährt heute nicht von Gleis 7 ab, sondern von Gleis 9. Wir bitten um Entschuldigung.“"
+      ]
+    },
+    {
+      "type": "task",
+      "heading": "Aufgabe 1: Richtig oder falsch?",
+      "instruction": "Lesen Sie Text 1 und Text 2. Kreuzen Sie an.",
+      "items": [
+        "1. Herr Al-Masri möchte nach Münster fahren.\n☐ richtig      ☐ falsch",
+        "2. Er möchte am Nachmittag fahren.\n☐ richtig      ☐ falsch",
+        "3. Er muss in Dortmund umsteigen.\n☐ richtig      ☐ falsch",
+        "4. Der Zug kommt um 11:26 Uhr in Münster an.\n☐ richtig      ☐ falsch",
+        "5. Herr Al-Masri kauft eine Fahrkarte hin und zurück.\n☐ richtig      ☐ falsch",
+        "6. Die Fahrkarte kostet 18,40 Euro.\n☐ richtig      ☐ falsch",
+        "7. Herr Al-Masri bezahlt bar.\n☐ richtig      ☐ falsch",
+        "8. Die S-Bahn fährt heute von Gleis 7 ab.\n☐ richtig      ☐ falsch"
+      ]
+    },
+    {
+      "type": "task",
+      "heading": "Aufgabe 2: Fragen beantworten",
+      "instruction": "Antworten Sie kurz.",
+      "example": "Wohin möchte Herr Al-Masri fahren? – **Nach Münster.**",
+      "items": [
+        "1. Wann fährt die S-Bahn ab?\n_________________________________________________",
+        "2. Wo muss Herr Al-Masri umsteigen?\n_________________________________________________",
+        "3. Wie viel Zeit hat er zum Umsteigen?\n_________________________________________________",
+        "4. Wie viele Minuten Verspätung hat die S-Bahn heute?\n_________________________________________________",
+        "5. Von welchem Gleis fährt die S-Bahn heute ab?\n_________________________________________________"
+      ]
+    },
+    {
+      "type": "task",
+      "heading": "Aufgabe 3: Wortschatz – Verben am Bahnhof",
+      "instruction": "Ergänzen Sie die Verben in der richtigen Form. Achtung: Viele Verben sind trennbar.",
+      "wordbox": [
+        "abfahren",
+        "ankommen",
+        "umsteigen",
+        "einsteigen",
+        "aussteigen",
+        "warten"
+      ],
+      "example": "Wann **fährt** der Bus **ab**? (abfahren)",
+      "items": [
+        "1. Der Zug ___ um 10:12 Uhr ___.",
+        "2. Wir ___ um 11:26 Uhr in Münster ___.",
+        "3. Es gibt keinen direkten Zug. Ich muss in Dortmund ___.",
+        "4. Der Zug ist da. Bitte ___ Sie schnell ___!",
+        "5. Ich wohne am Rathaus. Ich ___ an der nächsten Haltestelle ___.",
+        "6. Die S-Bahn hat Verspätung. Wir müssen fünf Minuten ___."
+      ]
+    },
+    {
+      "type": "task",
+      "heading": "Aufgabe 4: Rollenspiel am Schalter",
+      "instruction": "Arbeiten Sie zu zweit. Schreiben Sie den Dialog und spielen Sie ihn vor. Die Sätze im Kasten helfen.",
+      "wordbox": [
+        "Ich möchte eine Fahrkarte nach …",
+        "Wann fährt der nächste Zug?",
+        "Muss ich umsteigen?",
+        "Von welchem Gleis …?",
+        "Wann komme ich in … an?",
+        "Was kostet …?",
+        "Einfach oder hin und zurück?"
+      ],
+      "items": [
+        "**Rolle A – Kundin/Kunde:** Sie möchten heute Nachmittag nach Bonn fahren, hin und zurück. Fragen Sie nach Abfahrt, Gleis, Umsteigen, Ankunft und Preis.",
+        "**Rolle B – Mitarbeiterin/Mitarbeiter:** Abfahrt: 15:40 Uhr, Gleis 3 · Umsteigen: in Köln · Ankunft in Bonn: 17:05 Uhr · Preis: hin und zurück 31,20 Euro"
+      ],
+      "lines": 8
+    }
+  ],
+  "solutions": [
+    {
+      "heading": "Aufgabe 1: Richtig oder falsch?",
+      "items": [
+        "1. richtig – „Ich möchte eine Fahrkarte nach Münster.“",
+        "2. falsch – Er möchte am Vormittag fahren, um zehn Uhr.",
+        "3. richtig – Er fährt mit der S-Bahn bis Dortmund und steigt dort um.",
+        "4. richtig – Ankunft in Münster: 11:26 Uhr.",
+        "5. falsch – Er kauft nur eine einfache Fahrkarte.",
+        "6. richtig – „Das macht 18,40 Euro.“",
+        "7. falsch – Er bezahlt mit Karte.",
+        "8. falsch – Die S-Bahn fährt heute von Gleis 9 ab (Durchsage)."
+      ]
+    },
+    {
+      "heading": "Aufgabe 2: Fragen beantworten",
+      "items": [
+        "1. Um 10:12 Uhr (heute etwa fünf Minuten später).",
+        "2. In Dortmund.",
+        "3. Acht Minuten.",
+        "4. Etwa fünf Minuten.",
+        "5. Von Gleis 9."
+      ]
+    },
+    {
+      "heading": "Aufgabe 3: Verben am Bahnhof",
+      "items": [
+        "1. Der Zug **fährt** um 10:12 Uhr **ab**.",
+        "2. Wir **kommen** um 11:26 Uhr in Münster **an**.",
+        "3. Ich muss in Dortmund **umsteigen**. (Modalverb + Infinitiv am Ende)",
+        "4. Bitte **steigen** Sie schnell **ein**!",
+        "5. Ich **steige** an der nächsten Haltestelle **aus**.",
+        "6. Wir müssen fünf Minuten **warten**."
+      ]
+    },
+    {
+      "heading": "Aufgabe 4: Rollenspiel (Beispiel)",
+      "items": [
+        "A: Guten Tag. Ich möchte eine Fahrkarte nach Bonn, bitte. – B: Wann möchten Sie fahren?",
+        "A: Heute Nachmittag. Wann fährt der nächste Zug? – B: Um 15:40 Uhr von Gleis 3.",
+        "A: Muss ich umsteigen? – B: Ja, in Köln. – A: Wann komme ich in Bonn an? – B: Um 17:05 Uhr.",
+        "B: Einfach oder hin und zurück? – A: Hin und zurück, bitte. Was kostet das? – B: 31,20 Euro."
+      ]
+    }
+  ],
+  "note": "Trennbare Verben: Das Präfix steht am Satzende (Der Zug fährt um 9 Uhr ab.). Mit Modalverb steht das ganze Verb im Infinitiv am Ende (Ich muss umsteigen.)."
+}

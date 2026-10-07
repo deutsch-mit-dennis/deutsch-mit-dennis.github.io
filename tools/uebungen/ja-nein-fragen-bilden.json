@@ -1,0 +1,70 @@
+{
+  "file": "ja-nein-fragen-bilden.pdf",
+  "mode": "replace",
+  "title": "Ja-/Nein-Fragen bilden",
+  "level": "A1",
+  "blocks": [
+    {"type": "text", "heading": "Die Regel", "box": true, "paragraphs": [
+      "**Ja-/Nein-Frage:** Das **Verb** steht auf **Position 1**, dann kommt das Subjekt. Die Antwort ist „Ja“ oder „Nein“.",
+      "**W-Frage:** Das **W-Wort** steht auf Position 1, das **Verb** auf **Position 2**.",
+      "**Doch** = positive Antwort auf eine **negative** Frage (mit nicht oder kein): Kommst du **nicht** mit? – **Doch**, ich komme mit."
+    ]},
+    {"type": "table", "heading": "Wo steht das Verb?", "rows": [
+      ["Position 1", "Position 2", "Rest"],
+      ["Du", "kommst", "aus Syrien."],
+      ["**Kommst**", "du", "aus Syrien?  – Ja. / Nein."],
+      ["**Woher**", "**kommst**", "du?  – Aus Syrien."]
+    ]},
+    {"type": "task", "heading": "Aufgabe 1: Aus Aussagen werden Fragen", "instruction": "Machen Sie aus den Aussagen Ja-/Nein-Fragen.", "example": "Du sprichst Arabisch. → Sprichst du Arabisch?", "items": [
+      "1. Sie wohnen in Hagen.\n→ ______________________________________________",
+      "2. Du hast Kinder.\n→ ______________________________________________",
+      "3. Herr Novak arbeitet heute.\n→ ______________________________________________",
+      "4. Ihr lernt zusammen Deutsch.\n→ ______________________________________________",
+      "5. Der Bus fährt zum Bahnhof.\n→ ______________________________________________",
+      "6. Sie ist Ärztin.\n→ ______________________________________________"
+    ]},
+    {"type": "task", "heading": "Aufgabe 2: W-Fragen", "instruction": "Fragen Sie nach dem unterstrichenen Teil. Benutzen Sie die W-Wörter aus dem Kasten.", "wordbox": ["Wer?", "Was?", "Wo?", "Woher?", "Wann?", "Wie?"], "example": "Tom wohnt [[in Berlin]]. → Wo wohnt Tom?", "items": [
+      "1. [[Anna]] kommt aus Polen.\n→ ______________________________________________",
+      "2. Anna kommt [[aus Polen]].\n→ ______________________________________________",
+      "3. Familie Yilmaz wohnt [[in Hagen]].\n→ ______________________________________________",
+      "4. Der Kurs beginnt [[um neun Uhr]].\n→ ______________________________________________",
+      "5. Ali trinkt [[Tee]].\n→ ______________________________________________",
+      "6. Die Lehrerin heißt [[Frau Berger]].\n→ ______________________________________________"
+    ]},
+    {"type": "task", "heading": "Aufgabe 3: Ja, nein oder doch?", "instruction": "Ergänzen Sie ja, nein oder doch.", "example": "Trinkst du keinen Kaffee? – **Doch**, ich trinke gern Kaffee.", "items": [
+      "1. Sprechen Sie Englisch? – ___, ich spreche Englisch.",
+      "2. Hast du kein Auto? – ___, ich habe ein Auto.",
+      "3. Wohnst du in Köln? – ___, ich wohne in Bochum.",
+      "4. Kommst du nicht mit? – ___, ich komme mit.",
+      "5. Ist das dein Handy? – ___, das ist nicht mein Handy.",
+      "6. Arbeitet Ihr Mann nicht? – ___, er arbeitet bei der Post."
+    ]},
+    {"type": "task", "heading": "Aufgabe 4: Bei der Anmeldung", "instruction": "Ergänzen Sie den Dialog mit den Wörtern aus dem Kasten.", "wordbox": ["Kommen", "Haben", "Sprechen", "Wohnen", "Ja", "Doch"], "items": [
+      "A: Guten Tag! ___ Sie zum Deutschkurs?\nB: Ja, genau.",
+      "A: ___ Sie schon einen Termin für den Einstufungstest?\nB: Nein, noch nicht.",
+      "A: ___ Sie Englisch?\nB: Nein, leider nicht. Aber ich spreche ein bisschen Deutsch.",
+      "A: ___ Sie hier in Hagen?\nB: ___, in der Bahnhofstraße.",
+      "A: Haben Sie keinen Ausweis dabei?\nB: ___, hier ist mein Ausweis."
+    ]},
+    {"type": "task", "heading": "Aufgabe 5: Ihre Fragen", "instruction": "Was möchten Sie eine Person aus Ihrem Kurs fragen? Schreiben Sie drei Ja-/Nein-Fragen.", "items": [], "lines": 3}
+  ],
+  "solutions": [
+    {"heading": "Aufgabe 1", "items": [
+      "1. Wohnen Sie in Hagen?", "2. Hast du Kinder?", "3. Arbeitet Herr Novak heute?",
+      "4. Lernt ihr zusammen Deutsch?", "5. Fährt der Bus zum Bahnhof?", "6. Ist sie Ärztin?"
+    ]},
+    {"heading": "Aufgabe 2", "items": [
+      "1. Wer kommt aus Polen?", "2. Woher kommt Anna?", "3. Wo wohnt Familie Yilmaz?",
+      "4. Wann beginnt der Kurs?", "5. Was trinkt Ali?", "6. Wie heißt die Lehrerin?"
+    ]},
+    {"heading": "Aufgabe 3", "items": [
+      "1. Ja", "2. Doch", "3. Nein", "4. Doch", "5. Nein", "6. Doch"
+    ]},
+    {"heading": "Aufgabe 4", "items": [
+      "Kommen – Haben – Sprechen – Wohnen – Ja – Doch"
+    ]},
+    {"heading": "Aufgabe 5", "items": [
+      "Beispiel: Haben Sie Geschwister? Spielen Sie Fußball? Wohnen Sie schon lange hier?"
+    ]}
+  ]
+}

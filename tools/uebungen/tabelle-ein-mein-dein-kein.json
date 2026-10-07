@@ -1,0 +1,63 @@
+{
+  "file": "tabelle-ein-mein-dein-kein.pdf",
+  "mode": "append",
+  "title": "Tabelle: ein, mein, dein, kein",
+  "level": "A1",
+  "blocks": [
+    {"type": "task", "heading": "Aufgabe 1: Die richtige Endung", "instruction": "Ergänzen Sie die richtige Form. Das Wort in Klammern hilft. Achten Sie auf den Kasus.", "example": "Ich habe ___ Bruder. (ein) → Ich habe **einen** Bruder.", "items": [
+      "1. Das ist ___ Tasche. (mein)",
+      "2. Hast du ___ Auto? (ein)",
+      "3. Wo ist ___ Handy? (dein)",
+      "4. Er hat ___ Kinder. (kein)",
+      "5. Ich suche ___ Kugelschreiber. (mein)",
+      "6. Ich wohne mit ___ Schwester zusammen. (mein)",
+      "7. Fährst du mit ___ Fahrrad zur Arbeit? (dein)",
+      "8. Heute habe ich ___ Zeit. (kein)"
+    ]},
+    {"type": "task", "heading": "Aufgabe 2: Was ist richtig?", "instruction": "Wählen Sie die richtige Form und unterstreichen Sie sie.", "items": [
+      "1. Das ist ___ Lehrer.\na) mein\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0 b) meinen\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0 c) meinem",
+      "2. Ich brauche ___ Stift.\na) kein\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0 b) keinen\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0 c) keinem",
+      "3. Wir sitzen auf ___ Sofa.\na) dein\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0 b) deinen\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0 c) deinem",
+      "4. Ich helfe ___ Freundin.\na) meine\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0 b) meiner\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0 c) meinem",
+      "5. ___ Bücher liegen auf dem Tisch.\na) Dein\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0 b) Deine\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0 c) Deinen",
+      "6. Sie spielt mit ___ Kindern.\na) meine\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0 b) meinen\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0 c) meiner"
+    ]},
+    {"type": "task", "heading": "Aufgabe 3: Nein, ich habe kein …", "instruction": "Antworten Sie mit „Nein“ und kein.", "example": "Hast du ein Auto? → Nein, ich habe kein Auto.", "items": [
+      "1. Hast du einen Hund?\n→ ______________________________________________",
+      "2. Ist das eine Lampe?\n→ ______________________________________________",
+      "3. Brauchst du ein Wörterbuch?\n→ ______________________________________________",
+      "4. Habt ihr Kinder?\n→ ______________________________________________",
+      "5. Kaufst du einen Computer?\n→ ______________________________________________"
+    ]},
+    {"type": "task", "heading": "Aufgabe 4: Fehler korrigieren", "instruction": "In jedem Satz ist ein Fehler. Schreiben Sie den Satz richtig.", "items": [
+      "1. Ich habe keine Bruder.\n→ ______________________________________________",
+      "2. Das ist meinen Stuhl.\n→ ______________________________________________",
+      "3. Ich fahre mit mein Auto.\n→ ______________________________________________",
+      "4. Er hat einen Schwester.\n→ ______________________________________________",
+      "5. Wir helfen deine Mutter.\n→ ______________________________________________",
+      "6. Das ist das Auto von mein Vater.\n→ ______________________________________________"
+    ]},
+    {"type": "task", "heading": "Aufgabe 5: Meine Wohnung, meine Familie", "instruction": "Schreiben Sie drei Sätze über Ihre Wohnung oder Ihre Familie. Benutzen Sie ein, mein und kein.", "items": [], "lines": 3}
+  ],
+  "solutions": [
+    {"heading": "Aufgabe 1", "items": [
+      "1. meine (Nominativ, feminin)", "2. ein (Akkusativ, neutral)", "3. dein (Nominativ, neutral)", "4. keine (Akkusativ, Plural)",
+      "5. meinen (Akkusativ, maskulin)", "6. meiner (Dativ, feminin)", "7. deinem (Dativ, neutral)", "8. keine (Akkusativ, feminin)"
+    ]},
+    {"heading": "Aufgabe 2", "items": [
+      "1. a) mein", "2. b) keinen", "3. c) deinem", "4. b) meiner", "5. b) Deine", "6. b) meinen"
+    ]},
+    {"heading": "Aufgabe 3", "items": [
+      "1. Nein, ich habe keinen Hund.", "2. Nein, das ist keine Lampe.", "3. Nein, ich brauche kein Wörterbuch.",
+      "4. Nein, wir haben keine Kinder.", "5. Nein, ich kaufe keinen Computer."
+    ]},
+    {"heading": "Aufgabe 4", "items": [
+      "1. Ich habe keinen Bruder.", "2. Das ist mein Stuhl.", "3. Ich fahre mit meinem Auto.",
+      "4. Er hat eine Schwester.", "5. Wir helfen deiner Mutter.", "6. Das ist das Auto von meinem Vater."
+    ]},
+    {"heading": "Aufgabe 5", "items": [
+      "Beispiel: Meine Wohnung hat zwei Zimmer. Ich habe keinen Balkon. Mein Sohn hat ein Fahrrad."
+    ]}
+  ],
+  "note": "„helfen“ steht immer mit Dativ: Ich helfe meiner Freundin. „mit“ und „von“ stehen auch immer mit Dativ."
+}

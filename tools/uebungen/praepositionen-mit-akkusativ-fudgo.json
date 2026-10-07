@@ -1,0 +1,52 @@
+{
+  "file": "praepositionen-mit-akkusativ-fudgo.pdf",
+  "mode": "append",
+  "title": "Präpositionen mit Akkusativ (FUDGO)",
+  "level": "A2",
+  "blocks": [
+    {"type": "task", "heading": "Aufgabe 1: Welche Präposition passt?", "instruction": "Ergänzen Sie die Präpositionen aus dem Kasten. Zwei Präpositionen brauchen Sie zweimal.", "wordbox": ["für", "um", "durch", "gegen", "ohne", "bis", "entlang"], "example": "Ich trinke Tee immer **ohne** Zucker.", "items": [
+      "1. Wir gehen ___ den Park.",
+      "2. Das Geschenk ist ___ meine Mutter.",
+      "3. Der Kurs beginnt ___ neun Uhr.",
+      "4. Das Auto ist ___ einen Baum gefahren.",
+      "5. Gehen Sie diese Straße ___.",
+      "6. Der Bus fährt heute nur ___ Bochum.",
+      "7. Die Kinder laufen ___ das Haus.",
+      "8. Am Samstag spielt unsere Mannschaft ___ Dortmund.",
+      "9. Ich gehe nie ___ meinen Regenschirm aus dem Haus."
+    ]},
+    {"type": "task", "heading": "Aufgabe 2: Was ist richtig?", "instruction": "Wählen Sie die richtige Form und unterstreichen Sie sie.", "items": [
+      "1. Wir fahren durch ___ Tunnel.\na) der\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0 b) den\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0 c) dem",
+      "2. Die Familie sitzt um ___ Tisch.\na) den\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0 b) dem\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0 c) der",
+      "3. Die Blumen sind für ___ Freundin.\na) meine\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0 b) meiner\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0 c) meinem",
+      "4. Er geht ohne ___ Jacke nach draußen.\na) seiner\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0 b) seine\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0 c) seinem",
+      "5. Der Brief ist für ___.\na) du\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0 b) dir\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0 c) dich",
+      "6. Wir gehen ___ Fluss entlang.\na) dem\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0 b) der\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0 c) den",
+      "7. Ohne ___ fahren wir nicht in den Urlaub.\na) ihr\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0 b) euch\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0 c) eure"
+    ]},
+    {"type": "task", "heading": "Aufgabe 3: Fehler korrigieren", "instruction": "In jedem Satz ist ein Fehler. Schreiben Sie den Satz richtig.", "example": "Ich kaufe Brot für dem Abendessen. → Ich kaufe Brot für das Abendessen.", "items": [
+      "1. Das Geschenk ist für dem Lehrer.\n→ ______________________________________________",
+      "2. Wir laufen durch der Wald.\n→ ______________________________________________",
+      "3. Ich komme ohne mein Sohn.\n→ ______________________________________________",
+      "4. Viele Leute sind gegen dem Plan.\n→ ______________________________________________",
+      "5. Sie fährt entlang den Fluss.\n→ ______________________________________________"
+    ]},
+    {"type": "task", "heading": "Aufgabe 4: Mein Alltag", "instruction": "Schreiben Sie drei Sätze über Ihren Alltag. Benutzen Sie in jedem Satz eine Präposition mit Akkusativ (für, um, durch, gegen, ohne, bis, entlang).", "example": "Ich kaufe jeden Morgen Brötchen für meine Kinder.", "items": [], "lines": 3}
+  ],
+  "solutions": [
+    {"heading": "Aufgabe 1", "items": [
+      "1. durch", "2. für", "3. um", "4. gegen", "5. entlang", "6. bis", "7. um", "8. gegen", "9. ohne"
+    ]},
+    {"heading": "Aufgabe 2", "items": [
+      "1. b) den", "2. a) den", "3. a) meine", "4. b) seine", "5. c) dich", "6. c) den", "7. b) euch"
+    ]},
+    {"heading": "Aufgabe 3", "items": [
+      "1. Das Geschenk ist für den Lehrer.", "2. Wir laufen durch den Wald.", "3. Ich komme ohne meinen Sohn.",
+      "4. Viele Leute sind gegen den Plan.", "5. Sie fährt den Fluss entlang."
+    ]},
+    {"heading": "Aufgabe 4", "items": [
+      "Beispiel: Um acht Uhr fahre ich zur Arbeit. Ich gehe oft durch den Stadtpark. Ich trinke meinen Kaffee ohne Milch."
+    ]}
+  ],
+  "note": "Im Akkusativ ändert sich nur der Artikel bei maskulinen Nomen: der → den, ein → einen, mein → meinen. Feminin, neutral und Plural bleiben wie im Nominativ."
+}

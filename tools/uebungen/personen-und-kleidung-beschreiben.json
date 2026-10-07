@@ -1,0 +1,149 @@
+{
+  "file": "personen-und-kleidung-beschreiben.pdf",
+  "mode": "append",
+  "title": "Personen und Kleidung beschreiben",
+  "level": "A2",
+  "blocks": [
+    {
+      "type": "task",
+      "heading": "1. Der, die, das? Sortieren Sie die Kleidung in die Tabelle.",
+      "wordbox": [
+        "Pullover",
+        "Bluse",
+        "Hemd",
+        "Rock",
+        "Jacke",
+        "Kleid",
+        "Mantel",
+        "Hose",
+        "T-Shirt",
+        "Schal",
+        "Mütze",
+        "Hut"
+      ]
+    },
+    {
+      "type": "table",
+      "rows": [
+        [
+          "der (maskulin)",
+          "die (feminin)",
+          "das (neutral)"
+        ],
+        [
+          "___",
+          "___",
+          "___"
+        ],
+        [
+          "___",
+          "___",
+          "___"
+        ],
+        [
+          "___",
+          "___",
+          "___"
+        ],
+        [
+          "___",
+          "___",
+          "___"
+        ],
+        [
+          "___",
+          "___",
+          "___"
+        ]
+      ]
+    },
+    {
+      "type": "task",
+      "heading": "2. Was tragen die Personen? Ergänzen Sie Artikel und Adjektiv.",
+      "instruction": "Nach „tragen“ und „anhaben“ steht der Akkusativ. Achtung: maskulin → einen …en, feminin → eine …e, neutral → ein …es, Plural → …e.",
+      "example": "Der Mann trägt ___ (ein, warm) Pullover. → einen warmen",
+      "items": [
+        "a) Die Frau trägt ___ (ein, hellblau) Bluse.",
+        "b) Der Geschäftsmann trägt ___ (ein, elegant) Anzug.",
+        "c) Das Kind hat ___ (ein, bunt) T-Shirt an.",
+        "d) Sie trägt ___ (ein, gestreift) Schal.",
+        "e) Die Dame trägt ___ (ein, schön) Kleid.",
+        "f) Er trägt ___ (braun) Schuhe.",
+        "g) Der Arzt hat ___ (ein, weiß) Kittel an.",
+        "h) Das Mädchen hat ___ (ein, gelb) Mütze auf."
+      ]
+    },
+    {
+      "type": "task",
+      "heading": "3. Was passt nicht? Streichen Sie das Wort durch.",
+      "items": [
+        "a) blond – braun – lockig – grau",
+        "b) groß – klein – lang – schlank",
+        "c) der Rock – der Kittel – die Schürze – die Glatze",
+        "d) der Zopf – der Bart – die Brille – der Stiefel",
+        "e) jung – alt – kariert – mittelalt"
+      ]
+    },
+    {
+      "type": "task",
+      "heading": "4. Beschreiben Sie die Person.",
+      "instruction": "Lesen Sie die Notizen und schreiben Sie 5–6 Sätze. Benutzen Sie „Er ist …“, „Er hat …“, „Er trägt …“, „Er hat … an / auf“.",
+      "items": [
+        "**Person:** Mann, ca. 60 Jahre alt, groß, etwas kräftig · **Haare und Gesicht:** kurze graue Haare, Vollbart, Brille · **Kleidung:** grauer Mantel, kariertes Hemd, dunkelblaue Jeans, schwarze Schuhe, Hut"
+      ],
+      "lines": 6
+    },
+    {
+      "type": "task",
+      "heading": "5. Und Sie? Was tragen Sie heute?",
+      "instruction": "Beschreiben Sie sich oder eine Person aus Ihrem Kurs in 3–4 Sätzen: Aussehen und Kleidung.",
+      "lines": 4
+    }
+  ],
+  "solutions": [
+    {
+      "heading": "1. Der, die, das?",
+      "items": [
+        "der: Pullover, Rock, Mantel, Schal, Hut",
+        "die: Bluse, Jacke, Hose, Mütze",
+        "das: Hemd, Kleid, T-Shirt"
+      ]
+    },
+    {
+      "heading": "2. Was tragen die Personen?",
+      "items": [
+        "a) eine hellblaue (Bluse)",
+        "b) einen eleganten (Anzug)",
+        "c) ein buntes (T-Shirt)",
+        "d) einen gestreiften (Schal)",
+        "e) ein schönes (Kleid)",
+        "f) braune (Schuhe)",
+        "g) einen weißen (Kittel)",
+        "h) eine gelbe (Mütze)"
+      ]
+    },
+    {
+      "heading": "3. Was passt nicht?",
+      "items": [
+        "a) lockig (Haarstruktur, keine Haarfarbe)",
+        "b) lang (beschreibt Haare, nicht den Körper)",
+        "c) die Glatze (keine Kleidung)",
+        "d) der Stiefel (Kleidung für die Füße, nicht Kopf/Gesicht)",
+        "e) kariert (ein Muster, kein Alter)"
+      ]
+    },
+    {
+      "heading": "4. Beschreiben Sie die Person.",
+      "items": [
+        "Beispiel: Der Mann ist ca. 60 Jahre alt. Er ist groß und etwas kräftig. Er hat kurze graue Haare und einen Vollbart. Er trägt eine Brille. Er trägt einen grauen Mantel, ein kariertes Hemd und eine dunkelblaue Jeans. Er hat schwarze Schuhe an und einen Hut auf."
+      ]
+    },
+    {
+      "heading": "5. Und Sie?",
+      "items": [
+        "Beispiel: Ich bin schlank und habe lange schwarze Haare. Heute trage ich eine blaue Jeans und einen roten Pullover. Ich habe weiße Turnschuhe an."
+      ]
+    }
+  ],
+  "note": "Bei den Aufgaben 4 und 5 sind auch andere Formulierungen möglich."
+}

@@ -1,0 +1,118 @@
+{
+  "file": "dtz-sprechen-teil-3-wortschatz-zum-planen.pdf",
+  "mode": "append",
+  "title": "DTZ Sprechen Teil 3: Wortschatz zum Planen",
+  "level": "B1",
+  "blocks": [
+    {
+      "type": "task",
+      "heading": "1. Vorschlag, Zustimmung, Ablehnung oder Gegenvorschlag?",
+      "instruction": "Schreiben Sie den passenden Buchstaben: V = Vorschlag, Z = Zustimmung, A = Ablehnung, G = Gegenvorschlag.",
+      "items": [
+        "a) Wie wäre es, wenn wir am Samstag im Park grillen? ___",
+        "b) Das hört sich gut an. ___",
+        "c) Das ist mir zu teuer. ___",
+        "d) Lass uns lieber mit dem Bus fahren. ___",
+        "e) Ich schlage vor, wir besuchen ihn am Freitag im Krankenhaus. ___",
+        "f) Okay, einverstanden. ___",
+        "g) Tut mir leid, aber da kann ich nicht. ___",
+        "h) Das ist keine schlechte Idee, aber vielleicht ist es besser, wenn wir am Sonntag gehen. ___",
+        "i) Wir könnten einen Transporter mieten. ___",
+        "j) Super, da bin ich dabei. ___"
+      ]
+    },
+    {
+      "type": "task",
+      "heading": "2. Ergänzen Sie den Dialog.",
+      "instruction": "Ihre Kollegin Maria hat Geburtstag. Sie planen mit einem Kollegen eine kleine Überraschung.",
+      "wordbox": [
+        "Hast du eine Idee",
+        "Wie wäre es",
+        "einverstanden",
+        "besorge",
+        "Könntest du",
+        "Passt dir",
+        "mitbringen",
+        "dann machen wir das so"
+      ],
+      "items": [
+        "A: Maria hat am Freitag Geburtstag. Wir müssen noch etwas planen. ___?",
+        "B: ___, wenn wir ihr in der Mittagspause einen Kuchen schenken?",
+        "A: Okay, ___. Ich ___ den Kuchen in der Bäckerei. ___ eine Karte kaufen?",
+        "B: Ja, klar. Und wann treffen wir uns? ___ 11:30 Uhr in der Küche?",
+        "A: Ja, das passt. Soll ich auch Teller und Besteck ___?",
+        "B: Ja, gern. Gut, ___. Bis Freitag!"
+      ]
+    },
+    {
+      "type": "task",
+      "heading": "3. Reagieren Sie auf die Vorschläge.",
+      "instruction": "Schreiben Sie zu jedem Vorschlag eine positive Reaktion (+) und eine höfliche Ablehnung mit Gegenvorschlag (–). Benutzen Sie die „Sandwich-Methode“.",
+      "example": "Wir fahren mit dem Taxi. → (+) Ja, das ist eine super Idee. (–) Das ist keine schlechte Idee, aber das ist mir zu teuer. Lass uns lieber mit dem Bus fahren.",
+      "items": [
+        "a) Wir kaufen die Fahrräder neu im Geschäft.\n(+) ____________________________________________________________\n(–) ____________________________________________________________",
+        "b) Wir besuchen Ali am Montag um 10 Uhr im Krankenhaus.\n(+) ____________________________________________________________\n(–) ____________________________________________________________",
+        "c) Wir bringen Blumen mit.\n(+) ____________________________________________________________\n(–) ____________________________________________________________"
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "4. Planen Sie gemeinsam.",
+      "box": true,
+      "paragraphs": [
+        "**Situation:** Ein Freund aus Ihrem Deutschkurs zieht am Samstag in eine neue Wohnung. Er hat wenig Geld und braucht Hilfe. Planen Sie gemeinsam, was Sie tun wollen.",
+        "**Notizen:** Wann treffen? · Transport (Auto, Transporter, …)? · Kartons packen? · Wer hilft noch? · Essen und Getränke für die Helfer?"
+      ]
+    },
+    {
+      "type": "task",
+      "instruction": "Schreiben Sie einen Dialog zwischen A und B (8–10 Sätze). Machen Sie Vorschläge, stimmen Sie zu, lehnen Sie einmal höflich ab und machen Sie einen Gegenvorschlag. Fassen Sie am Ende zusammen.",
+      "lines": 11
+    }
+  ],
+  "solutions": [
+    {
+      "heading": "1. Vorschlag, Zustimmung, Ablehnung oder Gegenvorschlag?",
+      "items": [
+        "a) V   b) Z   c) A   d) G   e) V",
+        "f) Z   g) A   h) G   i) V   j) Z"
+      ]
+    },
+    {
+      "heading": "2. Ergänzen Sie den Dialog.",
+      "items": [
+        "A: Maria hat am Freitag Geburtstag. Wir müssen noch etwas planen. **Hast du eine Idee**?",
+        "B: **Wie wäre es**, wenn wir ihr in der Mittagspause einen Kuchen schenken?",
+        "A: Okay, **einverstanden**. Ich **besorge** den Kuchen in der Bäckerei. **Könntest du** eine Karte kaufen?",
+        "B: Ja, klar. Und wann treffen wir uns? **Passt dir** 11:30 Uhr in der Küche?",
+        "A: Ja, das passt. Soll ich auch Teller und Besteck **mitbringen**?",
+        "B: Ja, gern. Gut, **dann machen wir das so**. Bis Freitag!"
+      ]
+    },
+    {
+      "heading": "3. Reagieren Sie auf die Vorschläge.",
+      "items": [
+        "Beispiel a): (+) Das hört sich gut an. Dann haben wir auch eine Garantie. (–) An sich ist die Idee gut, aber neue Fahrräder sind sehr teuer. Ich schlage vor, wir suchen zuerst im Internet oder auf dem Flohmarkt.",
+        "Beispiel b): (+) Okay, einverstanden. Montag passt mir sehr gut. (–) Tut mir leid, aber am Montag um 10 Uhr habe ich Deutschkurs. Geht es auch am Abend? Ich glaube, ab 18 Uhr ist Besuchszeit.",
+        "Beispiel c): (+) Genau! Das finde ich auch. Blumen sind immer schön. (–) Das ist keine schlechte Idee, aber im Krankenhaus sind Blumen manchmal nicht erlaubt. Lass uns lieber Obst und Schokolade mitbringen."
+      ]
+    },
+    {
+      "heading": "4. Planen Sie gemeinsam.",
+      "items": [
+        "Beispieldialog:",
+        "A: Hast du gehört? Ahmed zieht am Samstag um. Er braucht Hilfe. Sollen wir ihm helfen?",
+        "B: Ja, natürlich! Wann treffen wir uns? Passt dir 9 Uhr?",
+        "A: 9 Uhr ist mir ein bisschen zu früh. Wie wäre es mit 10 Uhr?",
+        "B: Okay, einverstanden. Und wie transportieren wir die Möbel? Wir könnten einen Transporter mieten.",
+        "A: Das ist keine schlechte Idee, aber das ist teuer. Mein Bruder hat ein großes Auto. Ich frage ihn, ob er uns hilft.",
+        "B: Super Idee! Dann komme ich am Freitag zu Ahmed und helfe ihm, die Kartons zu packen.",
+        "A: Prima. Ich frage auch noch Olga und Karim aus dem Kurs, ob sie dabei sind.",
+        "B: Gut. Und für die Helfer besorge ich Pizza und Getränke.",
+        "A: Also: Ich frage meinen Bruder und die anderen. Du packst am Freitag mit Ahmed die Kartons und besorgst das Essen. Haben wir etwas vergessen?",
+        "B: Nein, ich glaube nicht. Dann machen wir es so. Abgemacht!"
+      ]
+    }
+  ],
+  "note": "Bei den Aufgaben 3 und 4 sind viele Antworten möglich. Wichtig in der Prüfung: nie nur „Nein“ sagen, sondern immer begründen und einen Gegenvorschlag machen."
+}

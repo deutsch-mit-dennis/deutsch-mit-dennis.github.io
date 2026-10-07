@@ -1,0 +1,76 @@
+{
+  "file": "fragen-mit-modalverben-muessen-koennen.pdf",
+  "mode": "replace",
+  "title": "Fragen mit Modalverben (müssen, können)",
+  "level": "A1",
+  "blocks": [
+    {"type": "text", "heading": "Die Regel", "box": true, "paragraphs": [
+      "**Aussage:** Das Modalverb steht auf Position 2, der **Infinitiv** steht am **Ende**: Ich **kann** heute **kommen**.",
+      "**Ja-/Nein-Frage:** Das Modalverb steht auf **Position 1**: **Kannst** du heute **kommen**?",
+      "**W-Frage:** Das W-Wort steht auf Position 1, das Modalverb auf **Position 2**: Wann **musst** du **arbeiten**?"
+    ]},
+    {"type": "task", "heading": "Aufgabe 1: Konjugation", "instruction": "Ergänzen Sie die Tabelle.", "items": []},
+    {"type": "table", "rows": [
+      ["Person", "müssen", "können"],
+      ["ich", "muss", "kann"],
+      ["du", "___", "___"],
+      ["er / sie / es", "___", "___"],
+      ["wir", "___", "___"],
+      ["ihr", "___", "___"],
+      ["sie / Sie", "___", "___"]
+    ]},
+    {"type": "task", "heading": "Aufgabe 2: Ja-/Nein-Fragen", "instruction": "Bilden Sie Ja-/Nein-Fragen. Das Modalverb steht auf Position 1.", "example": "du / heute / arbeiten / müssen → Musst du heute arbeiten?", "items": [
+      "1. Sie / mir / helfen / können\n→ ______________________________________________",
+      "2. ich / hier / parken / können\n→ ______________________________________________",
+      "3. wir / morgen / früh / aufstehen / müssen\n→ ______________________________________________",
+      "4. du / Fahrrad / fahren / können\n→ ______________________________________________",
+      "5. ihr / heute / die Hausaufgaben / machen / müssen\n→ ______________________________________________",
+      "6. Ihr Sohn / schon / schwimmen / können\n→ ______________________________________________"
+    ]},
+    {"type": "task", "heading": "Aufgabe 3: W-Fragen", "instruction": "Fragen Sie nach dem unterstrichenen Teil. Benutzen Sie die W-Wörter aus dem Kasten.", "wordbox": ["Wer?", "Was?", "Wann?", "Wo?", "Wie lange?", "Warum?"], "example": "Paul muss [[am Samstag]] arbeiten. → Wann muss Paul arbeiten?", "items": [
+      "1. [[Herr Petrov]] kann am Montag nicht kommen.\n→ ______________________________________________",
+      "2. Lina muss [[um acht Uhr]] beim Arzt sein.\n→ ______________________________________________",
+      "3. Man kann [[im Bürgerbüro]] einen Pass beantragen.\n→ ______________________________________________",
+      "4. Die Kinder müssen [[ihre Zimmer]] aufräumen.\n→ ______________________________________________",
+      "5. Tarek muss [[drei Wochen]] auf den Termin warten.\n→ ______________________________________________",
+      "6. Maria kann nicht kommen, [[denn sie ist krank]].\n→ ______________________________________________"
+    ]},
+    {"type": "task", "heading": "Aufgabe 4: Die Wortstellung ist falsch", "instruction": "Schreiben Sie die Fragen richtig.", "example": "Kannst du kommen morgen? → Kannst du morgen kommen?", "items": [
+      "1. Wann du musst arbeiten?\n→ ______________________________________________",
+      "2. Muss ich bezahlen jetzt?\n→ ______________________________________________",
+      "3. Wo ich kann parken?\n→ ______________________________________________",
+      "4. Können Sie sprechen langsam?\n→ ______________________________________________",
+      "5. Was wir müssen mitbringen?\n→ ______________________________________________"
+    ]},
+    {"type": "task", "heading": "Aufgabe 5: Was sagen Sie?", "instruction": "Lesen Sie die Situationen. Schreiben Sie eine Frage mit müssen oder können.", "example": "Sie brauchen Hilfe. → Können Sie mir bitte helfen?", "items": [
+      "1. Sie verstehen die Lehrerin nicht. Sie soll den Satz noch einmal sagen.\n→ ______________________________________________",
+      "2. Sie haben einen Brief vom Amt mit einem Formular. Ist das Formular wichtig?\n→ ______________________________________________",
+      "3. Sie sind am Bahnhof und haben keine Fahrkarte.\n→ ______________________________________________",
+      "4. Sie möchten am Samstag mit einem Freund grillen. Hat er Zeit?\n→ ______________________________________________"
+    ]}
+  ],
+  "solutions": [
+    {"heading": "Aufgabe 1", "items": [
+      "du musst – du kannst", "er / sie / es muss – er / sie / es kann", "wir müssen – wir können",
+      "ihr müsst – ihr könnt", "sie / Sie müssen – sie / Sie können"
+    ]},
+    {"heading": "Aufgabe 2", "items": [
+      "1. Können Sie mir helfen?", "2. Kann ich hier parken?", "3. Müssen wir morgen früh aufstehen?",
+      "4. Kannst du Fahrrad fahren?", "5. Müsst ihr heute die Hausaufgaben machen?", "6. Kann Ihr Sohn schon schwimmen?"
+    ]},
+    {"heading": "Aufgabe 3", "items": [
+      "1. Wer kann am Montag nicht kommen?", "2. Wann muss Lina beim Arzt sein?", "3. Wo kann man einen Pass beantragen?",
+      "4. Was müssen die Kinder aufräumen?", "5. Wie lange muss Tarek auf den Termin warten?", "6. Warum kann Maria nicht kommen?"
+    ]},
+    {"heading": "Aufgabe 4", "items": [
+      "1. Wann musst du arbeiten?", "2. Muss ich jetzt bezahlen?", "3. Wo kann ich parken?",
+      "4. Können Sie langsam sprechen?", "5. Was müssen wir mitbringen?"
+    ]},
+    {"heading": "Aufgabe 5", "items": [
+      "1. Beispiel: Können Sie das bitte wiederholen?",
+      "2. Beispiel: Muss ich das Formular ausfüllen?",
+      "3. Beispiel: Wo kann ich eine Fahrkarte kaufen?",
+      "4. Beispiel: Kannst du am Samstag kommen? / Musst du am Samstag arbeiten?"
+    ]}
+  ]
+}

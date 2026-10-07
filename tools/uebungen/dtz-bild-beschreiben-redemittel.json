@@ -1,0 +1,106 @@
+{
+  "file": "dtz-bild-beschreiben-redemittel.pdf",
+  "mode": "append",
+  "title": "DTZ Bild beschreiben: Redemittel",
+  "level": "B1",
+  "blocks": [
+    {
+      "type": "task",
+      "heading": "1. Welche Funktion hat der Satz? Ordnen Sie zu.",
+      "instruction": "Schreiben Sie den passenden Buchstaben: E = Einleitung, P = Personen, O = Ort, H = Handlung, V = Vermutung, M = meine Erfahrung.",
+      "items": [
+        "a) Im Hintergrund kann man einen Schrank erkennen. ___",
+        "b) Das Thema des Bildes ist Gesundheit. ___",
+        "c) Es könnte sein, dass sie über den nächsten Urlaub sprechen. ___",
+        "d) Die Frau ist ca. 35 Jahre alt und trägt eine Brille. ___",
+        "e) Der Apotheker berät die Kundin. ___",
+        "f) Bei uns zu Hause essen wir auch jeden Abend zusammen. ___",
+        "g) Auf dem Bild sehe ich eine Gruppe von Menschen. ___",
+        "h) Wahrscheinlich haben sie gerade Pause. ___",
+        "i) Auf der rechten Seite befindet sich ein Fenster. ___",
+        "j) Die Personen sehen entspannt aus. ___",
+        "k) In meinem Heimatland ist das ganz anders: Dort … ___",
+        "l) Die Kinder spielen am Klettergerüst. ___"
+      ]
+    },
+    {
+      "type": "task",
+      "heading": "2. Ergänzen Sie die Bildbeschreibung.",
+      "wordbox": [
+        "Auf dem Bild",
+        "Im Vordergrund",
+        "Im Hintergrund",
+        "trägt",
+        "sehen",
+        "aus",
+        "unterhalten sich",
+        "Ich vermute, dass",
+        "Wahrscheinlich",
+        "Bei mir"
+      ],
+      "items": [
+        "___ sehe ich eine Familie in der Küche. Das Thema des Bildes ist Familie. ___ sitzen ein Mann, eine Frau und zwei Kinder am Tisch. Der Mann ___ ein kariertes Hemd. Die Personen ___ glücklich ___. Sie essen gemeinsam zu Abend und ___. ___ kann man einen Kühlschrank und ein Fenster erkennen. Draußen ist es dunkel. ___ ist es schon spät. ___ die Familie über den Tag spricht. ___ zu Hause ist das ähnlich: Wir essen auch jeden Abend zusammen."
+      ]
+    },
+    {
+      "type": "task",
+      "heading": "3. Bilden Sie Vermutungen.",
+      "instruction": "Schreiben Sie die Sätze neu. Beginnen Sie mit dem Ausdruck in Klammern. Achten Sie auf die Position des Verbs.",
+      "example": "Der Mann ist krank. (Ich glaube, dass …) → Ich glaube, dass der Mann krank ist.",
+      "items": [
+        "a) Die Frau lernt für eine Prüfung. (Vielleicht …)\n__________________________________________________________________",
+        "b) Sie sind Kollegen. (Ich vermute, dass …)\n__________________________________________________________________",
+        "c) Das Paar ist gerade umgezogen. (Wahrscheinlich …)\n__________________________________________________________________",
+        "d) Die Arbeit ist sehr anstrengend. (Ich habe den Eindruck, dass …)\n__________________________________________________________________",
+        "e) Die Kinder haben viel Spaß. (Es sieht so aus, als ob …)\n__________________________________________________________________",
+        "f) Der Mann braucht Hilfe. (Es könnte sein, dass …)\n__________________________________________________________________"
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "4. Beschreiben Sie das Bild.",
+      "box": true,
+      "paragraphs": [
+        "**Das sehen Sie auf dem Bild:** eine Apotheke · rechts eine junge Frau, ca. 25 Jahre, Jacke und Schal, sie hält ein Taschentuch in der Hand · hinter der Theke ein älterer Apotheker mit weißem Kittel und Brille · er zeigt der Frau eine kleine Packung · im Hintergrund viele Regale mit Medikamenten · die Frau sieht müde aus"
+      ]
+    },
+    {
+      "type": "task",
+      "instruction": "Schreiben Sie eine Bildbeschreibung mit 7–9 Sätzen: Einleitung, Personen, Ort, Handlung, eine oder zwei Vermutungen und ein Satz zu Ihrer eigenen Erfahrung.",
+      "lines": 10
+    }
+  ],
+  "solutions": [
+    {
+      "heading": "1. Welche Funktion hat der Satz?",
+      "items": [
+        "a) O   b) E   c) V   d) P   e) H   f) M",
+        "g) E   h) V   i) O   j) P   k) M   l) H"
+      ]
+    },
+    {
+      "heading": "2. Ergänzen Sie die Bildbeschreibung.",
+      "items": [
+        "**Auf dem Bild** sehe ich eine Familie in der Küche. Das Thema des Bildes ist Familie. **Im Vordergrund** sitzen ein Mann, eine Frau und zwei Kinder am Tisch. Der Mann **trägt** ein kariertes Hemd. Die Personen **sehen** glücklich **aus**. Sie essen gemeinsam zu Abend und **unterhalten sich**. **Im Hintergrund** kann man einen Kühlschrank und ein Fenster erkennen. Draußen ist es dunkel. **Wahrscheinlich** ist es schon spät. **Ich vermute, dass** die Familie über den Tag spricht. **Bei mir** zu Hause ist das ähnlich: Wir essen auch jeden Abend zusammen."
+      ]
+    },
+    {
+      "heading": "3. Bilden Sie Vermutungen.",
+      "items": [
+        "a) Vielleicht lernt die Frau für eine Prüfung.",
+        "b) Ich vermute, dass sie Kollegen sind.",
+        "c) Wahrscheinlich ist das Paar gerade umgezogen.",
+        "d) Ich habe den Eindruck, dass die Arbeit sehr anstrengend ist.",
+        "e) Es sieht so aus, als ob die Kinder viel Spaß haben.",
+        "f) Es könnte sein, dass der Mann Hilfe braucht."
+      ]
+    },
+    {
+      "heading": "4. Beschreiben Sie das Bild.",
+      "items": [
+        "Beispiel: Auf dem Bild sehe ich zwei Personen in einer Apotheke. Das Thema des Bildes ist Gesundheit. Auf der rechten Seite steht eine junge Frau. Sie ist ca. 25 Jahre alt und trägt eine Jacke und einen Schal. Sie hält ein Taschentuch in der Hand. Hinter der Theke steht ein älterer Apotheker. Er trägt einen weißen Kittel und eine Brille. Er berät die Kundin und zeigt ihr eine kleine Packung. Im Hintergrund kann man viele Regale mit Medikamenten erkennen. Die Frau sieht müde aus. Ich vermute, dass sie erkältet ist. Wahrscheinlich kauft sie ein Medikament gegen Husten oder Schnupfen. Wenn ich erkältet bin, gehe ich auch zuerst in die Apotheke und lasse mich beraten."
+      ]
+    }
+  ],
+  "note": "Bei Aufgabe 4 sind auch andere Formulierungen möglich. Wichtig für die Prüfung: Einleitung – Personen – Ort – Handlung – Vermutung – eigene Erfahrung."
+}

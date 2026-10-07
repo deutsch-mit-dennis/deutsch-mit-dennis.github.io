@@ -1,0 +1,145 @@
+{
+  "file": "sich-vorstellen.pdf",
+  "mode": "append",
+  "title": "Sich vorstellen",
+  "level": "A1",
+  "blocks": [
+    {
+      "type": "task",
+      "heading": "1. Frage und Antwort: Was passt zusammen?",
+      "instruction": "Schreiben Sie den Buchstaben.",
+      "items": [
+        "1) Wie heißen Sie? ___",
+        "2) Woher kommen Sie? ___",
+        "3) Wo wohnen Sie? ___",
+        "4) Sind Sie verheiratet? ___",
+        "5) Haben Sie Kinder? ___",
+        "6) Was sind Sie von Beruf? ___",
+        "7) Welche Sprachen sprechen Sie? ___"
+      ]
+    },
+    {
+      "type": "cards",
+      "cards": [
+        {
+          "label": "a",
+          "text": "Ich wohne in Essen."
+        },
+        {
+          "label": "b",
+          "text": "Ich bin Verkäuferin von Beruf."
+        },
+        {
+          "label": "c",
+          "text": "Ich heiße Samira Haddad."
+        },
+        {
+          "label": "d",
+          "text": "Meine Muttersprache ist Arabisch. Ich spreche auch ein bisschen Englisch."
+        },
+        {
+          "label": "e",
+          "text": "Ich komme aus Syrien."
+        },
+        {
+          "label": "f",
+          "text": "Ja, ich habe zwei Kinder."
+        },
+        {
+          "label": "g",
+          "text": "Nein, ich bin ledig."
+        }
+      ]
+    },
+    {
+      "type": "task",
+      "heading": "2. du, Sie oder er/sie? Ergänzen Sie das Verb.",
+      "example": "Wie ___ du? (heißen) → Wie heißt du?",
+      "items": [
+        "a) Woher ___ du? (kommen)",
+        "b) Wo ___ Sie? (wohnen)",
+        "c) Was ___ er von Beruf? (sein)",
+        "d) ___ du verheiratet? (sein)",
+        "e) ___ sie Kinder? (haben)",
+        "f) Welche Sprachen ___ du? (sprechen)",
+        "g) Als was ___ Sie gearbeitet? (haben)"
+      ]
+    },
+    {
+      "type": "task",
+      "heading": "3. Wie ist die Frage? Schreiben Sie die Frage mit „Sie“.",
+      "example": "Ich heiße Pavel. → Wie heißen Sie?",
+      "items": [
+        "a) Ich komme aus der Ukraine.\n__________________________________________________________________",
+        "b) Ich wohne in Gevelsberg.\n__________________________________________________________________",
+        "c) Ja, ich bin verheiratet.\n__________________________________________________________________",
+        "d) Ich habe als Koch gearbeitet.\n__________________________________________________________________",
+        "e) Meine Muttersprachen sind Arabisch und Kurdisch.\n__________________________________________________________________"
+      ]
+    },
+    {
+      "type": "task",
+      "heading": "4. Das ist Hasan. Lesen Sie den Steckbrief und schreiben Sie einen Text.",
+      "instruction": "Schreiben Sie in der er-Form: Er heißt …, er kommt aus …",
+      "items": [
+        "Name: Hasan Demir · Land: Türkei · Wohnort: Hagen · Familienstand: verheiratet, drei Kinder · Beruf: Mechaniker · Sprachen: Türkisch (Muttersprache), ein bisschen Englisch"
+      ],
+      "lines": 5
+    },
+    {
+      "type": "task",
+      "heading": "5. Und Sie? Stellen Sie sich vor.",
+      "instruction": "Schreiben Sie 5–6 Sätze über sich: Name, Land, Wohnort, Familie, Beruf, Sprachen.",
+      "lines": 6
+    }
+  ],
+  "solutions": [
+    {
+      "heading": "1. Frage und Antwort",
+      "items": [
+        "1) c",
+        "2) e",
+        "3) a",
+        "4) g",
+        "5) f",
+        "6) b",
+        "7) d"
+      ]
+    },
+    {
+      "heading": "2. Ergänzen Sie das Verb.",
+      "items": [
+        "a) kommst",
+        "b) wohnen",
+        "c) ist",
+        "d) Bist",
+        "e) Hat",
+        "f) sprichst",
+        "g) haben"
+      ]
+    },
+    {
+      "heading": "3. Wie ist die Frage?",
+      "items": [
+        "a) Woher kommen Sie?",
+        "b) Wo wohnen Sie?",
+        "c) Sind Sie verheiratet?",
+        "d) Als was haben Sie gearbeitet?",
+        "e) Welche Sprachen sprechen Sie?"
+      ]
+    },
+    {
+      "heading": "4. Das ist Hasan.",
+      "items": [
+        "Beispiel: Er heißt Hasan Demir. Er kommt aus der Türkei und wohnt in Hagen. Er ist verheiratet und hat drei Kinder. Er ist Mechaniker von Beruf. Seine Muttersprache ist Türkisch. Er spricht auch ein bisschen Englisch."
+      ]
+    },
+    {
+      "heading": "5. Und Sie?",
+      "items": [
+        "Beispiel: Ich heiße Olena. Ich komme aus der Ukraine. Ich wohne in Essen. Ich bin verheiratet und habe ein Kind. Ich bin Lehrerin von Beruf. Meine Muttersprache ist Ukrainisch, und ich spreche auch ein bisschen Englisch."
+      ]
+    }
+  ],
+  "note": "Bei den Aufgaben 4 und 5 sind auch andere Formulierungen möglich. Achtung: „aus der Türkei“, „aus der Ukraine“ – diese Länder haben einen Artikel."
+}

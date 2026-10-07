@@ -1,0 +1,127 @@
+{
+  "file": "uhrzeiten-auf-einen-blick.pdf",
+  "mode": "append",
+  "title": "Uhrzeiten auf einen Blick",
+  "level": "A1",
+  "blocks": [
+    {
+      "type": "text",
+      "box": true,
+      "heading": "Kurz wiederholt",
+      "paragraphs": [
+        "**Informell** (im Alltag): 3:05 = fünf **nach** drei · 3:15 = **Viertel nach** drei · 3:30 = **halb vier** · 3:45 = **Viertel vor** vier · 3:55 = fünf **vor** vier",
+        "Achtung: **halb vier** = 3:30 (eine halbe Stunde **vor** vier). 3:25 = fünf **vor halb** vier · 3:35 = fünf **nach halb** vier",
+        "**Offiziell** (Termin, Bahnhof, Radio): 15:30 Uhr = fünfzehn Uhr dreißig"
+      ]
+    },
+    {
+      "type": "task",
+      "heading": "1. Wie spät ist es?",
+      "instruction": "Schreiben Sie die Uhrzeit informell.",
+      "example": "2:05 → Es ist **fünf nach zwei**.",
+      "items": [
+        "a) 3:10 → Es ist ______________________.",
+        "b) 7:15 → Es ist ______________________.",
+        "c) 9:30 → Es ist ______________________.",
+        "d) 11:45 → Es ist ______________________.",
+        "e) 4:20 → Es ist ______________________.",
+        "f) 5:25 → Es ist ______________________.",
+        "g) 1:35 → Es ist ______________________.",
+        "h) 8:50 → Es ist ______________________.",
+        "i) 6:05 → Es ist ______________________.",
+        "j) 12:00 → Es ist ______________________."
+      ]
+    },
+    {
+      "type": "task",
+      "heading": "2. Was passt zusammen?",
+      "instruction": "Welche Uhrzeit passt? Schreiben Sie die Zahl. Zwei Uhrzeiten im Kasten passen nicht.",
+      "wordbox": [
+        "2:45",
+        "3:15",
+        "3:35",
+        "6:30",
+        "7:30",
+        "8:30",
+        "8:40",
+        "10:25",
+        "12:15",
+        "12:30",
+        "12:50"
+      ],
+      "items": [
+        "a) halb acht → ________",
+        "b) Viertel vor drei → ________",
+        "c) fünf vor halb elf → ________",
+        "d) zwanzig vor neun → ________",
+        "e) Viertel nach zwölf → ________",
+        "f) fünf nach halb vier → ________",
+        "g) zehn vor eins → ________",
+        "h) halb eins → ________",
+        "i) Viertel nach drei → ________"
+      ]
+    },
+    {
+      "type": "task",
+      "heading": "3. Offiziell und informell",
+      "instruction": "Schreiben Sie die Uhrzeit offiziell und informell.",
+      "example": "08:15 Uhr → offiziell: **acht Uhr fünfzehn** · informell: **Viertel nach acht**",
+      "items": [
+        "a) 14:30 Uhr\n→ offiziell: ________________________   informell: ________________________",
+        "b) 09:45 Uhr\n→ offiziell: ________________________   informell: ________________________",
+        "c) 17:20 Uhr\n→ offiziell: ________________________   informell: ________________________",
+        "d) 13:10 Uhr\n→ offiziell: ________________________   informell: ________________________",
+        "e) 20:00 Uhr\n→ offiziell: ________________________   informell: ________________________"
+      ]
+    },
+    {
+      "type": "task",
+      "heading": "4. Mein Tag",
+      "instruction": "Beantworten Sie die Fragen. Schreiben Sie die Uhrzeit in Wörtern.",
+      "example": "Wann stehen Sie auf? → Ich stehe um **halb sieben** auf.",
+      "items": [
+        "a) Wann frühstücken Sie?\n→ Ich frühstücke um ______________________.",
+        "b) Wann beginnt Ihr Deutschkurs?\n→ Mein Deutschkurs beginnt um ______________________.",
+        "c) Wann essen Sie zu Mittag?\n→ Ich esse um ______________________ zu Mittag.",
+        "d) Wann kommen Sie nach Hause?\n→ Ich komme um ______________________ nach Hause.",
+        "e) Wann gehen Sie ins Bett?\n→ Ich gehe um ______________________ ins Bett."
+      ]
+    }
+  ],
+  "solutions": [
+    {
+      "heading": "1. Wie spät ist es?",
+      "items": [
+        "a) zehn nach drei · b) Viertel nach sieben · c) halb zehn",
+        "d) Viertel vor zwölf · e) zwanzig nach vier (auch: zehn vor halb fünf)",
+        "f) fünf vor halb sechs · g) fünf nach halb zwei · h) zehn vor neun",
+        "i) fünf nach sechs · j) zwölf (Uhr)"
+      ]
+    },
+    {
+      "heading": "2. Was passt zusammen?",
+      "items": [
+        "a) 7:30 · b) 2:45 · c) 10:25 · d) 8:40 · e) 12:15",
+        "f) 3:35 · g) 12:50 · h) 12:30 · i) 3:15",
+        "Nicht gebraucht: 6:30 und 8:30"
+      ]
+    },
+    {
+      "heading": "3. Offiziell und informell",
+      "items": [
+        "a) 14:30 Uhr – vierzehn Uhr dreißig – halb drei",
+        "b) 09:45 Uhr – neun Uhr fünfundvierzig – Viertel vor zehn",
+        "c) 17:20 Uhr – siebzehn Uhr zwanzig – zwanzig nach fünf (auch: zehn vor halb sechs)",
+        "d) 13:10 Uhr – dreizehn Uhr zehn – zehn nach eins",
+        "e) 20:00 Uhr – zwanzig Uhr – acht (Uhr)"
+      ]
+    },
+    {
+      "heading": "4. Mein Tag",
+      "items": [
+        "Beispiel: a) Ich frühstücke um sieben (Uhr). b) Mein Deutschkurs beginnt um halb neun. c) Ich esse um Viertel nach eins zu Mittag. d) Ich komme um fünf nach vier nach Hause. e) Ich gehe um halb elf ins Bett."
+      ]
+    }
+  ],
+  "note": "Bei Aufgabe 4 sind die Uhrzeiten individuell – wichtig ist die richtige Form mit „um“. Für 20 Minuten nach oder vor sagt man in vielen Regionen auch „zehn vor halb“ oder „zehn nach halb“ – beides ist richtig."
+}
