@@ -808,7 +808,7 @@
       <h2>Angaben gemäß § 5 DDG</h2>
       <p>${T.address.map(x).join('<br>')}</p>
       <h2>Kontakt</h2>
-      <p>E-Mail: <a href="mailto:${T.email}">${T.email}</a></p>
+      <p>Telefon: <a href="tel:${T.phone.replace(/\s/g, '')}">${T.phone}</a><br>E-Mail: <a href="mailto:${T.email}">${T.email}</a></p>
       <h2>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h2>
       <p>${T.address.map(x).join('<br>')}</p>
       <h2>Hinweis</h2>

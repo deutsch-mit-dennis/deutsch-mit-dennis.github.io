@@ -6,6 +6,7 @@ DM.teacher = {
   name: 'Dennis',
   fullName: 'Dzianis Prudnikau',
   email: 'dennis.prudnikau@gmail.com',
+  phone: '+49 173 8775907',
   whatsapp: 'https://wa.me/491738775907',
   donate: 'https://www.donationalerts.com/r/dennis_prudnikau',
   youtube: 'https://www.youtube.com/@deutsch-mit-Dennis',
