@@ -1062,7 +1062,7 @@
         st.innerHTML = '<b>Danke! Dein Zettel ist bei Dennis angekommen.</b> ' + (ok ? 'Nach kurzer Prüfung hängt er hier an der Wand.' : 'Er bleibt privat, weil du die Veröffentlichung nicht erlaubt hast.');
         celebrate(form.querySelector('button'));
       } catch {
-        const mail = `mailto:${T.email}?subject=${encodeURIComponent(body._subject)}&body=${encodeURIComponent(body.Zettel + '\n\n– ' + name + (ok ? '\n(Darf auf der Pinnwand erscheinen.)' : ''))}`;
+        const mail = `mailto:${T.email}?subject=${encodeURIComponent(body._subject)}&body=${encodeURIComponent(body.Zettel + '\n\n– ' + name + (ok ? '\n(Darf öffentlich erscheinen.)' : ''))}`;
         st.innerHTML = `Das Senden hat gerade nicht geklappt. <a href="${mail}">Schick den Zettel per E-Mail</a> – er ist schon ausgefüllt.`;
       } finally { form.querySelector('button').disabled = false; }
     };

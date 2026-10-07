@@ -4,7 +4,7 @@ function findLearningHelp(input,previous,selectedLanguage='de'){
  const q=norm(input),tokens=q.match(/[\p{L}\p{N}]+/gu)||[];
  const level=q.match(/\b(a1|a2|b1|b2)\b/)?.[1]?.toUpperCase();
  if(selectedLanguage==='de'){
-  const link= /b2.*(wiederhol|nicht bestanden|durchgefallen)|(wiederhol|durchgefallen).*b2/.test(q)?['B2 gezielt wiederholen','#lernweg/repeat']:/b2.*(vorbereit|anfang|start)|bsk/.test(q)?['Vorbereitung auf B2','#lernweg/bridge']:/schreib.*(besser|uben|verbessern)|(besser|mehr).*schreib/.test(q)?['Schreibwerkstatt','#ueben/schreiben/'+(level||'A2')]:/sprech.*(besser|uben|verbessern)|(besser|mehr).*sprech/.test(q)?['Sprechtraining','#ueben/sprechen/'+(level||'A2')]:/pinnwand|feedback|wunsch/.test(q)?['Unsere Pinnwand','#pinnwand']:null;
+  const link= /b2.*(wiederhol|nicht bestanden|durchgefallen)|(wiederhol|durchgefallen).*b2/.test(q)?['B2 gezielt wiederholen','#lernweg/repeat']:/b2.*(vorbereit|anfang|start)|bsk/.test(q)?['Vorbereitung auf B2','#lernweg/bridge']:/schreib.*(besser|uben|verbessern)|(besser|mehr).*schreib/.test(q)?['Schreibwerkstatt','#ueben/schreiben/'+(level||'A2')]:/sprech.*(besser|uben|verbessern)|(besser|mehr).*sprech/.test(q)?['Sprechtraining','#ueben/sprechen/'+(level||'A2')]:/pinnwand|meinung|feedback|wunsch/.test(q)?['Deine Meinung','#pinnwand']:null;
   if(link)return {topic:'learning',paragraphs:['Dafür gibt es einen eigenen Bereich. Wähle dort dein Niveau und übe mit Beispielen und Hilfen.'],actions:[link]};
  }
  const studyQuestion=/(wie|was|tipps?|methode|plan|besser|besten|effektiv|schnell|richtig|anfangen|beginnen).*(lern|deutsch|vokabel|worter)|(lern|deutsch|vokabel|worter).*(besser|besten|effektiv|schnell|richtig|tipps?|methode|plan)|how.*(learn|study)|как.*(учить|изучать)|كيف.*(أتعلم|اتعلم)/.test(q);
