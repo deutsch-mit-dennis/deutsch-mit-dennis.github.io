@@ -9,6 +9,8 @@ on:
     paths:
       - 'tools/update-youtube-feed.mjs'
       - 'tools/update-kahoot-feed.mjs'
+      - 'tools/make-feed.mjs'
+      - 'neu.json'
       - '.github/workflows/youtube-feed.yml'
 permissions:
   contents: write
@@ -28,11 +30,13 @@ jobs:
         run: node tools/update-youtube-feed.mjs
       - name: Kahoot
         run: node tools/update-kahoot-feed.mjs || echo "Kahoot-Sync übersprungen"
+      - name: RSS-Feed
+        run: node tools/make-feed.mjs
       - name: Speichern
         run: |
           git config user.name "sync-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add youtube-feed.json kahoot-feed.json assets/yt assets/kahoot
+          git add youtube-feed.json kahoot-feed.json feed.xml assets/yt assets/kahoot
           git diff --cached --quiet && exit 0
           git commit -m "Neue Videos und Kahoots synchronisiert"
           for i in 1 2 3; do git pull --rebase -q && git push && break; sleep 5; done

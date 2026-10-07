@@ -239,10 +239,10 @@
     </section>
 
     ${pkgTeaser()}`, 'dm-home');
-    fetch('neu.json?v=' + Math.floor(Date.now() / 36e5), { cache: 'no-cache' }).then(r => r.json()).then(j => {
-      const ico = { lied: ['noten', 'Lied'], hoeren: ['kopfhoerer', 'Hören'], sprechen: ['sprechblase', 'Sprechen'], schreiben: ['schreiben', 'Schreiben'], uebung: ['idee', 'Übung'], neu: ['funkeln', 'Neu'] };
+    (window.DMNews ? DMNews.items() : fetch('neu.json?v=' + Math.floor(Date.now() / 36e5), { cache: 'no-cache' }).then(r => r.json()).then(j => j.items || [])).then(items => {
+      const ico = { lied: ['noten', 'Lied'], hoeren: ['kopfhoerer', 'Hören'], sprechen: ['sprechblase', 'Sprechen'], schreiben: ['schreiben', 'Schreiben'], uebung: ['idee', 'Übung'], neu: ['funkeln', 'Neu'], video: ['video', 'Video'], kahoot: ['spiel', 'Kahoot'] };
       const ol = $('#dm-newslist'); if (!ol) return; ol.removeAttribute('aria-busy');
-      ol.innerHTML = (j.items || []).slice(0, 4).map(it => { const [img, lab] = ico[it.type] || ico.neu; return `<li><a href="${x(it.link)}"><img src="assets/3d/${img}.webp" alt="" width="192" height="192" loading="lazy"><span><small>${lab} · ${fmtDate(it.date)}</small><b>${x(it.title)}</b></span></a></li>`; }).join('');
+      ol.innerHTML = items.slice(0, 4).map(it => { const [img, lab] = ico[it.type] || ico.neu; return `<li><a href="${x(it.link)}"><img src="assets/3d/${img}.webp" alt="" width="192" height="192" loading="lazy"><span><small>${lab} · ${fmtDate(it.date)}</small><b>${x(it.title)}</b></span></a></li>`; }).join('');
     }).catch(() => $('.dm-news')?.remove());
     loadVideos().then(list => {
       const box = $('#dm-home-video .dm-vgrid'); if (!box) return;
@@ -884,7 +884,7 @@
       <p>Beim Aufruf der Website verarbeitet der Hosting-Anbieter technisch notwendige Daten (zum Beispiel IP-Adresse, Datum und Uhrzeit, aufgerufene Seite, Browsertyp), um die Seite auszuliefern und die Sicherheit zu gewährleisten. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO.</p>
       <p>Diese Website wird bei GitHub Pages gehostet, einem Dienst der GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA. Dabei können Daten auch in den USA verarbeitet werden. Mehr: <a href="https://docs.github.com/de/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener noreferrer">Datenschutzerklärung von GitHub</a>.</p>
       <h2>3. Lernstand auf deinem Gerät</h2>
-      <p>Dein Lernfortschritt, abgehakte Schritte und deine Übungstexte werden im Speicher deines Browsers (localStorage) gespeichert. Diese Daten werden nicht an mich oder Dritte übertragen. Du kannst sie jederzeit löschen.</p>
+      <p>Dein Lernfortschritt, abgehakte Schritte, deine Übungstexte und welche Neuigkeiten (🔔) du schon gesehen hast, werden im Speicher deines Browsers (localStorage) gespeichert. Diese Daten werden nicht an mich oder Dritte übertragen. Du kannst sie jederzeit löschen.</p>
       <p><button type="button" class="dm-btn dm-btn-quiet" id="dm-wipe">Meinen gespeicherten Lernstand löschen</button> <span id="dm-wipe-status" role="status"></span></p>
       <h2>4. YouTube-Videos</h2>
       <p>Videos werden erst geladen, wenn du auf „Videos hier anzeigen“ klickst. Erst dann werden Daten (zum Beispiel deine IP-Adresse) an YouTube (Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland) übertragen. Ich nutze den erweiterten Datenschutzmodus (youtube-nocookie.com). Deine Zustimmung wird auf deinem Gerät gespeichert; du kannst sie oben mit „Lernstand löschen“ zurücknehmen. Rechtsgrundlage ist deine Einwilligung (Art. 6 Abs. 1 lit. a DSGVO). Mehr: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Datenschutzerklärung von Google</a>.</p>
