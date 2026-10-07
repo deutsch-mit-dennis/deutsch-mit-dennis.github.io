@@ -1,6 +1,6 @@
 # Erzeugt alle Hörtexte als MP3 mit natürlichen Neural-Stimmen (siehe tools/tts/generate.py).
 # Natürlichste Stimmen: In GitHub unter Settings → Secrets and variables → Actions ein Secret
-# ELEVENLABS_API_KEY oder GEMINI_API_KEY (Google AI Studio) anlegen. Danach den Workflow einmal starten
+# ELEVENLABS_API_KEY, GOOGLE_TTS_API_KEY (Google Cloud Text-to-Speech) oder GEMINI_API_KEY (Google AI Studio) anlegen. Danach den Workflow einmal starten
 # (Actions → Hörtexte vertonen → Run workflow). Ohne Schlüssel werden freie Piper-Stimmen benutzt.
 name: Hörtexte vertonen
 on:
@@ -40,6 +40,7 @@ jobs:
         env:
           ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GOOGLE_TTS_API_KEY: ${{ secrets.GOOGLE_TTS_API_KEY }}
           TTS_FORCE: ${{ github.event.inputs.force }}
         run: python tools/tts/generate.py
       - name: Speichern

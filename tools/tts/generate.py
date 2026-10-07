@@ -6,8 +6,9 @@ Ausgabe:  audio/tts/<key>.mp3  +  audio/tts/index.json (welche Dateien es gibt)
 
 Stimmen-Anbieter (der erste verfügbare wird benutzt):
   1. ElevenLabs   – Repository-Secret ELEVENLABS_API_KEY  (sehr natürlich)
-  2. Google Gemini – Repository-Secret GEMINI_API_KEY      (AI Studio, sehr natürlich)
-  3. Piper        – freie Neural-Stimmen, ohne Schlüssel  (Standard)
+  2. Google Cloud Text-to-Speech (Chirp 3 HD) – Secret GOOGLE_TTS_API_KEY (sehr natürlich, 1 Mio. Zeichen/Monat frei)
+  3. Google Gemini – Repository-Secret GEMINI_API_KEY      (AI Studio, sehr natürlich)
+  4. Piper        – freie Neural-Stimmen, ohne Schlüssel  (Standard)
 Wechselt der Anbieter, werden alle Dateien automatisch neu erzeugt.
 """
 import base64, hashlib, json, os, subprocess, sys, tempfile, time, urllib.request, urllib.error, wave
@@ -24,6 +25,8 @@ FORCE = os.environ.get('TTS_FORCE', '') in ('1', 'true', 'yes')
 VOICES = {
     'elevenlabs': {'f1': 'EXAVITQu4vr4xnSDxMaL', 'f2': 'FGY2WhTYpPnrIDTdsKH5', 'f3': 'XrExE9yKIg1WjnnlVkGX',
                    'm1': 'JBFqnCBsd6RMkjVDRZzb', 'm2': 'onwK4e9ZLuTAKqWW03F9', 'm3': 'TX3LPaxmHKxFdv7VOQHJ'},
+    'google': {'f1': 'de-DE-Chirp3-HD-Aoede', 'f2': 'de-DE-Chirp3-HD-Kore', 'f3': 'de-DE-Chirp3-HD-Leda',
+               'm1': 'de-DE-Chirp3-HD-Charon', 'm2': 'de-DE-Chirp3-HD-Puck', 'm3': 'de-DE-Chirp3-HD-Orus'},
     'gemini': {'f1': 'Kore', 'f2': 'Aoede', 'f3': 'Leda', 'm1': 'Charon', 'm2': 'Puck', 'm3': 'Orus'},
     'piper': {'f1': 'de_DE-kerstin-low', 'f2': 'de_DE-ramona-low', 'f3': 'de_DE-eva_k-x_low',
               'm1': 'de_DE-thorsten-high', 'm2': 'de_DE-karlsson-low', 'm3': 'de_DE-pavoque-low'},
@@ -37,6 +40,7 @@ PIPER_PATH = {
 
 def engine():
     if os.environ.get('ELEVENLABS_API_KEY'): return 'elevenlabs'
+    if os.environ.get('GOOGLE_TTS_API_KEY'): return 'google'
     if os.environ.get('GEMINI_API_KEY'): return 'gemini'
     return 'piper'
 
@@ -123,7 +127,16 @@ def synth_gemini(text, role, wav):
             last = e
     raise last
 
-SYNTH = {'piper': synth_piper, 'elevenlabs': synth_eleven, 'gemini': synth_gemini}
+def synth_google(text, role, wav):
+    voice = voice_for('google', role)
+    body = {'input': {'text': text}, 'voice': {'languageCode': 'de-DE', 'name': voice},
+            'audioConfig': {'audioEncoding': 'LINEAR16', 'sampleRateHertz': 24000}}
+    raw = http('https://texttospeech.googleapis.com/v1/text:synthesize', body,
+               {'x-goog-api-key': os.environ['GOOGLE_TTS_API_KEY']})
+    data = base64.b64decode(json.loads(raw)['audioContent'])
+    open(wav, 'wb').write(data)  # LINEAR16 kommt als fertige WAV-Datei
+
+SYNTH = {'piper': synth_piper, 'elevenlabs': synth_eleven, 'gemini': synth_gemini, 'google': synth_google}
 
 # ---------- Ablauf ----------
 def signature(entry, eng):
@@ -166,7 +179,7 @@ def main():
             try: os.remove(os.path.join(OUT, k + '.mp3'))
             except FileNotFoundError: pass
     # Bessere Anbieter ersetzen ältere Aufnahmen; Piper ersetzt keine Premium-Aufnahmen.
-    rank = {'piper': 1, 'gemini': 2, 'elevenlabs': 3}
+    rank = {'piper': 1, 'gemini': 2, 'google': 2, 'elevenlabs': 3}
     todo = []
     for e in entries:
         sig = signature(e, eng)
