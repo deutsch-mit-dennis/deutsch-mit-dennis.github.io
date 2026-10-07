@@ -303,4 +303,4 @@ DM.credentials = [
 ];
 
 /* Besucherstatistik (Cloudflare Web Analytics, ohne Cookies). Token aus dem Cloudflare-Dashboard eintragen – leer = aus. */
-DM.analytics = { cloudflareToken: '' };
+DM.analytics = { cloudflareToken: '5baa2db512e542b7b389b4a14fd188aa' };
