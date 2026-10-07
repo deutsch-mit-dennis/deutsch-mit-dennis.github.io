@@ -194,6 +194,7 @@
         <p class="dm-lead">Kostenlose Übungen von A1 bis B2 Beruf – für deinen Alltag, deine Prüfung und deinen Job. Ohne Anmeldung.</p>
         <p class="dm-hand">Hallo! Ich bin Dennis, dein Deutschlehrer und zugelassener Prüfer. Wähle unten deinen Weg – ich zeige dir die nächsten Schritte.</p>
         <ul class="dm-trust"><li>✓ DTZ-Prüfer</li><li>✓ telc-Prüfer B1–C1</li><li>✓ BAMF-zugelassen bis C2</li></ul>
+        <p class="dm-tour-start"><a href="#" data-tour-start><span aria-hidden="true">▶</span> Rundgang mit Dennis ansehen (30 Sek.)</a></p>
         <div class="dm-row">
           ${last ? `<a class="dm-btn" href="#${x(last.route)}">Weitermachen: ${x(last.title)}</a><a class="dm-btn dm-btn-quiet" href="#wegweiser">Welcher Weg passt zu mir?</a>` : `<a class="dm-btn" href="#wegweiser">Welcher Weg passt zu mir?</a><a class="dm-btn dm-btn-quiet" href="#lernen/A1">Mit A1 beginnen</a>`}
         </div>

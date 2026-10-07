@@ -3,7 +3,7 @@
    Die Schritte (STEPS) markieren passend zur Sprechzeit einen Bereich der Startseite. */
 (function () {
   const VIDEO = 'assets/avatar/willkommen.mp4', SUBS = 'assets/avatar/willkommen.vtt', POSTER = 'assets/avatar/dennis-avatar.jpg';
-  const SEEN = 'dm-tour-seen';
+  const SEEN = 'dm-tour-seen', LATER = 'dm-tour-later';
   // [Startsekunde, CSS-Selektor auf der Startseite, kurzer Hinweis]
   const STEPS = [
     [0, null, 'Willkommen!'],
@@ -45,11 +45,11 @@
     document.body.appendChild(b);
     requestAnimationFrame(() => b.classList.add('dm-tour-in'));
     const v = b.querySelector('video'), hint = b.querySelector('.dm-tour-hint');
-    const close = () => { set(SEEN, '1'); v.pause(); clearMarks(); b.classList.remove('dm-tour-in'); setTimeout(() => b.remove(), 300); };
+    const hide = () => { v.pause(); clearMarks(); b.classList.remove('dm-tour-in'); setTimeout(() => b.remove(), 300); };
+    const close = () => { set(SEEN, '1'); hide(); };
     b.querySelector('.dm-tour-x').onclick = close;
-    b.querySelector('.dm-tour-later').onclick = close;
+    b.querySelector('.dm-tour-later').onclick = () => { try { sessionStorage.setItem(SEEN, '1'); } catch {} set(LATER, String((+get(LATER) || 0) + 1)); hide(); };
     b.querySelector('.dm-tour-play').onclick = () => {
-      set(SEEN, '1');
       if (location.hash && location.hash !== '#') location.hash = '';
       b.classList.add('dm-tour-open');
       b.querySelector('.dm-tour-intro').hidden = true;
@@ -61,16 +61,18 @@
       let i = 0; STEPS.forEach((s, k) => { if (v.currentTime >= s[0]) i = k; });
       if (i !== last) { last = i; hint.textContent = STEPS[i][2]; mark(STEPS[i][1]); if (!STEPS[i][1] && i > 0) window.scrollTo({ top: 0, behavior: 'smooth' }); }
     };
-    v.onended = () => { clearMarks(); hint.textContent = 'Viel Spaß beim Lernen!'; setTimeout(close, 2500); };
+    v.onended = () => { set(SEEN, '1'); clearMarks(); hint.textContent = 'Viel Spaß beim Lernen!'; setTimeout(close, 2500); };
   }
 
   window.DMTour = { start: () => check().then(ok => { if (!ok) return; location.hash = ''; setTimeout(() => { bubble(); document.querySelector('.dm-tour-play')?.click(); }, 400); }) };
 
   function maybeShow() {
     const onHome = !location.hash || location.hash === '#';
-    if (!onHome || get(SEEN)) return;
+    let later = false; try { later = !!sessionStorage.getItem(SEEN); } catch {}
+    if (!onHome || get(SEEN) || later || (+get(LATER) || 0) >= 3 || document.getElementById('dm-tour')) return;
     check().then(ok => { if (ok) setTimeout(bubble, 1800); });
   }
   document.addEventListener('click', e => { const a = e.target.closest('[data-tour-start]'); if (a) { e.preventDefault(); window.DMTour.start(); } });
+  window.addEventListener('hashchange', () => setTimeout(maybeShow, 300));
   if (document.readyState === 'complete') maybeShow(); else window.addEventListener('load', maybeShow);
 })();
