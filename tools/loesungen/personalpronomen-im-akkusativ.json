@@ -1,0 +1,29 @@
+{
+ "file": "personalpronomen-im-akkusativ.pdf",
+ "action": "add",
+ "reason": "Lückensätze und Auswahlaufgabe",
+ "sections": [
+  {
+   "heading": "Übung 1 – Ergänzen Sie",
+   "items": [
+    "1. dich",
+    "2. es",
+    "3. ihn",
+    "4. uns",
+    "5. euch",
+    "6. sie",
+    "7. Sie",
+    "8. mich"
+   ]
+  },
+  {
+   "heading": "Übung 2 – Wählen Sie die richtige Antwort",
+   "items": [
+    "1. ihn",
+    "2. uns",
+    "3. sie",
+    "4. dich"
+   ]
+  }
+ ]
+}

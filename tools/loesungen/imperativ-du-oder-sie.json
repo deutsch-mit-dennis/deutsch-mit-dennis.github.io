@@ -1,0 +1,29 @@
+{
+ "file": "imperativ-du-oder-sie.pdf",
+ "action": "add",
+ "reason": "Bitten im Imperativ mit „du“ und „Sie“ formulieren.",
+ "sections": [
+  {
+   "heading": "Übung 1 – „Du“ oder „Sie“?",
+   "items": [
+    "1. Lehrerin (wiederholen): Wiederholen Sie das bitte!",
+    "2. Freund (wiederholen): Wiederhol(e) das bitte!",
+    "3. Freund (helfen): Hilf mir bitte!",
+    "4. Lehrerin (helfen): Helfen Sie mir bitte!",
+    "5. Lehrerin (langsam sprechen): Sprechen Sie bitte langsam(er)!",
+    "6. Freund (langsam sprechen): Sprich bitte langsam(er)!"
+   ]
+  },
+  {
+   "heading": "Übung 2 – Formuliere die Bitten",
+   "items": [
+    "1. Buchstabieren Sie bitte Ihren Namen!",
+    "2. Mach bitte die Musik leiser!",
+    "3. Hier, nehmen Sie bitte das Geld!",
+    "4. Gib mir bitte das Salz!",
+    "5. Erklären Sie mir bitte den Weg zum Bahnhof!"
+   ]
+  }
+ ],
+ "note": "Auch andere Formulierungen sind möglich (z. B. mit „doch“ oder „mal“)."
+}

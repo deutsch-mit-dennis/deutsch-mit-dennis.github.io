@@ -1,0 +1,28 @@
+{
+ "file": "im-supermarkt-ein-eine-einen.pdf",
+ "action": "add",
+ "reason": "Lückentext und Satzbildung mit unbestimmtem Artikel.",
+ "sections": [
+  {
+   "heading": "Übung 1 – Im Supermarkt",
+   "items": [
+    "1. Ich brauche einen Apfel.",
+    "2. Ich kaufe auch eine Banane.",
+    "3. Ich nehme ein Brot.",
+    "4. Hast du einen Joghurt?",
+    "5. Ich möchte noch eine Flasche Wasser.",
+    "6. Zum Schluss finde ich einen Keks."
+   ]
+  },
+  {
+   "heading": "Übung 2 – Was ist das? Was hast du?",
+   "items": [
+    "1. Das ist ein Buch. Ich habe ein Buch.",
+    "2. Das ist eine Tasche. Ich habe eine Tasche.",
+    "3. Das ist ein Kuli. Ich habe einen Kuli.",
+    "4. Das ist ein Heft. Ich habe ein Heft."
+   ]
+  }
+ ],
+ "note": "Nur maskuline Nomen ändern sich im Akkusativ: ein → einen."
+}

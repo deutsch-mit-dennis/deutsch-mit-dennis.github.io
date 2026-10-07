@@ -474,3 +474,4 @@ body.dm-tour-dim .dm-header{z-index:1}
 .dm-tour-start{margin:-6px 0 16px}
 .dm-tour-start a{display:inline-flex;align-items:center;gap:8px;font-weight:700;color:var(--dm-tinte);text-decoration:none;border-bottom:2px solid var(--dm-marker)}
 .dm-tour-start a span{display:inline-grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--dm-tinte);color:#fff;font-size:12px}
+.dm-mat-loes{color:#1c7c3a;font-weight:600}

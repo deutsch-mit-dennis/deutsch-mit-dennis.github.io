@@ -1,0 +1,26 @@
+{
+ "file": "dativ-und-akkusativ-saetze-kurz-machen.pdf",
+ "action": "add",
+ "reason": "Umformungs- und Satzbauübungen mit Pronomen.",
+ "sections": [
+  {
+   "heading": "Übung 1 – Machen Sie die Sätze kurz! Benutzen Sie Pronomen.",
+   "items": [
+    "1. Der Lehrer erklärt sie ihm.",
+    "2. Ich zeige es ihnen.",
+    "3. Gibst du ihn ihm?",
+    "4. Wir schenken sie ihr."
+   ]
+  },
+  {
+   "heading": "Übung 2 – Bringen Sie die Wörter in die richtige Reihenfolge.",
+   "items": [
+    "1. Der Mann schenkt ihr Blumen.",
+    "2. Der Lehrer erklärt sie den Schülern.",
+    "3. Der Kellner bringt uns die Speisekarte.",
+    "4. Gibst du es dem Kind?"
+   ]
+  }
+ ],
+ "note": "Regel: Zwei Pronomen – zuerst Akkusativ, dann Dativ (sie ihm). Pronomen und Nomen – das Pronomen steht vor dem Nomen."
+}

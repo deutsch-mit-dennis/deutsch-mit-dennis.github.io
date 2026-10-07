@@ -1,0 +1,28 @@
+{
+ "file": "trennbare-verben-im-perfekt.pdf",
+ "action": "add",
+ "reason": "Umformung ins Perfekt und Lückentext Präsens/Perfekt.",
+ "sections": [
+  {
+   "heading": "Übung 1 – Sätze umwandeln",
+   "items": [
+    "1. Maria hat für das Wochenende eingekauft.",
+    "2. Du hast deine Tante angerufen.",
+    "3. Wir sind jeden Morgen um 7 Uhr aufgestanden.",
+    "4. Der Film hat um 20 Uhr angefangen.",
+    "5. Bist du heute Abend mitgekommen?"
+   ]
+  },
+  {
+   "heading": "Übung 2 – Präsens oder Perfekt?",
+   "items": [
+    "1. hole … ab / habe … abgeholt",
+    "2. machst … aus / Hast … ausgemacht",
+    "3. lade … ein / habe … eingeladen",
+    "4. sieht … fern / hat … ferngesehen",
+    "5. kommt … an / ist … angekommen"
+   ]
+  }
+ ],
+ "note": "Mit „sein“ im Perfekt: aufstehen, mitkommen, ankommen (Bewegung/Veränderung)."
+}

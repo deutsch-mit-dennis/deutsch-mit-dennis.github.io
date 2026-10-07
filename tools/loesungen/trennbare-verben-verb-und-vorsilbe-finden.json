@@ -1,0 +1,34 @@
+{
+ "file": "trennbare-verben-verb-und-vorsilbe-finden.pdf",
+ "action": "add",
+ "reason": "Trennbare Verben finden, Sätze bilden, Modalverben einsetzen.",
+ "sections": [
+  {
+   "heading": "Übung 1 – Finde die Teile",
+   "items": [
+    "1. kauft … ein → einkaufen",
+    "2. fährt … ab → abfahren",
+    "3. sehen … fern → fernsehen",
+    "4. Kommst … mit → mitkommen",
+    "5. mach … zu → zumachen"
+   ]
+  },
+  {
+   "heading": "Übung 2 – Baue die Sätze richtig",
+   "items": [
+    "1. Du rufst deine Oma an.",
+    "2. Wir kaufen am Samstag ein.",
+    "3. Der Unterricht fängt um 9 Uhr an.",
+    "4. Er macht die Tür auf."
+   ]
+  },
+  {
+   "heading": "Übung 3 – Mit Modalverben",
+   "items": [
+    "1. Wir wollen heute einkaufen.",
+    "2. Er kann heute Abend mitkommen.",
+    "3. Du sollst mich später anrufen."
+   ]
+  }
+ ]
+}

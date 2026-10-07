@@ -1,0 +1,27 @@
+{
+ "file": "dialoge-zum-vorlesen.pdf",
+ "action": "add",
+ "reason": "Zwei Dialoge mit Multiple-Choice-Fragen zum Text.",
+ "sections": [
+  {
+   "heading": "Fragen zum Text (Hörverstehen) – Dialog 1: Im Treppenhaus",
+   "items": [
+    "1. b) Drei Euro und zwanzig Cent (3,20 €)",
+    "2. b) 15",
+    "3. b) 80797",
+    "4. c) 32",
+    "5. c) 43"
+   ]
+  },
+  {
+   "heading": "Fragen zum Text (Hörverstehen) – Dialog 2: Am Bahnschalter",
+   "items": [
+    "1. c) 10:45 Uhr",
+    "2. b) Gleis 7",
+    "3. c) 59,50 €",
+    "4. a) 119 €",
+    "5. b) 2580"
+   ]
+  }
+ ]
+}

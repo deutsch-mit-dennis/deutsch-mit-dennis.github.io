@@ -1,0 +1,32 @@
+{
+ "file": "possessivartikel-einsetzen.pdf",
+ "action": "add",
+ "reason": "Lücken- und Auswahlübung zu Possessivartikeln.",
+ "sections": [
+  {
+   "heading": "Übung 1 – Setzen Sie den richtigen Possessivartikel ein.",
+   "items": [
+    "1. meinen",
+    "2. deine",
+    "3. sein",
+    "4. unseren",
+    "5. ihre",
+    "6. Ihren",
+    "7. ihre",
+    "8. euer"
+   ]
+  },
+  {
+   "heading": "Übung 2 – Unterstreichen Sie die richtige Form.",
+   "items": [
+    "1. deinen",
+    "2. unseren",
+    "3. ihre",
+    "4. eure",
+    "5. ihr",
+    "6. deine"
+   ]
+  }
+ ],
+ "note": "Akkusativ: Nur maskuline Nomen bekommen -en (meinen Schlüssel); feminin und Plural -e, neutral ohne Endung (ihr Badezimmer)."
+}

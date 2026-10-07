@@ -1,0 +1,33 @@
+{
+ "file": "fragen-zur-uhrzeit.pdf",
+ "action": "add",
+ "reason": "Zuordnung, Lückentext und Fragen bilden.",
+ "sections": [
+  {
+   "heading": "Übung 1 – Welche Frage passt?",
+   "items": [
+    "1. b) Wie lange dauert das Spiel?",
+    "2. c) Um wie viel Uhr beginnt die Schule?",
+    "3. a) Von wann bis wann arbeitest du?"
+   ]
+  },
+  {
+   "heading": "Übung 2 – Setze die richtige Frage ein",
+   "items": [
+    "1. Um wie viel Uhr isst du zu Mittag? (auch möglich: Wann …?)",
+    "2. Wie lange dauert die Pause?",
+    "3. Von wann bis wann hast du am Wochenende Zeit?",
+    "4. Wann treffen wir uns?"
+   ]
+  },
+  {
+   "heading": "Übung 3 – Stelle die Frage",
+   "items": [
+    "1. Von wann bis wann hast du Zeit?",
+    "2. Wie lange dauert die Reise?",
+    "3. Um wie viel Uhr schließt der Supermarkt? / Wann schließt der Supermarkt?"
+   ]
+  }
+ ],
+ "note": "„Wann?“ passt immer bei Zeitangaben; „Um wie viel Uhr?“ nur, wenn die Antwort eine genaue Uhrzeit ist."
+}

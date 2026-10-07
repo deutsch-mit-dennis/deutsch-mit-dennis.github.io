@@ -1,0 +1,18 @@
+{
+ "file": "am-bahnhof-richtig-oder-falsch.pdf",
+ "action": "add",
+ "reason": "Übung C ist lösbar; Übung A und B beziehen sich auf einen Hör-/Lesetext, der nicht auf dem Blatt steht.",
+ "sections": [
+  {
+   "heading": "Übung C – Wortschatz-Training (Verben)",
+   "items": [
+    "1. abfahren",
+    "2. einsteigen",
+    "3. umsteigen",
+    "4. entwerten",
+    "5. ankommen"
+   ]
+  }
+ ],
+ "note": "Übung A und B beziehen sich auf ein Gespräch zwischen Herrn Al-Masri und dem Bahnpersonal, das nicht auf dem Blatt abgedruckt ist. Die Lösungen hängen von diesem Text ab."
+}

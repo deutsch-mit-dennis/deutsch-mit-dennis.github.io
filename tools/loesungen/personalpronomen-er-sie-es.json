@@ -1,0 +1,28 @@
+{
+ "file": "personalpronomen-er-sie-es.pdf",
+ "action": "add",
+ "reason": "Lücken mit er, sie, es und Antworten mit Personalpronomen.",
+ "sections": [
+  {
+   "heading": "Übung 1 – Fülle die Lücken aus",
+   "items": [
+    "1. Er",
+    "2. Sie",
+    "3. Es",
+    "4. er",
+    "5. sie",
+    "6. Es"
+   ]
+  },
+  {
+   "heading": "Übung 2 – Fragen und Antworten",
+   "items": [
+    "1. Nein, sie funktioniert nicht.",
+    "2. Es schläft im Bett.",
+    "3. Ja, er ist kalt.",
+    "4. Nein, sie ist geschlossen.",
+    "5. Es ist sehr lecker."
+   ]
+  }
+ ]
+}

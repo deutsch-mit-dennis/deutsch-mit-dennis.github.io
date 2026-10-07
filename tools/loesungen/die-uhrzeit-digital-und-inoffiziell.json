@@ -1,0 +1,37 @@
+{
+ "file": "die-uhrzeit-digital-und-inoffiziell.pdf",
+ "action": "add",
+ "reason": "Zuordnung und Lückenaufgaben zur Uhrzeit",
+ "sections": [
+  {
+   "heading": "Übung 1 – Verbinde die richtige Uhrzeit",
+   "items": [
+    "1. 07:30 – c) halb acht",
+    "2. 04:15 – e) Viertel nach vier",
+    "3. 10:45 – a) Viertel vor elf",
+    "4. 02:35 – b) fünf nach halb drei",
+    "5. 05:50 – d) zehn vor sechs"
+   ]
+  },
+  {
+   "heading": "Übung 2 – Wie spät ist es?",
+   "items": [
+    "1. 06:05 → fünf nach sechs",
+    "2. 11:30 → halb zwölf",
+    "3. 01:45 → Viertel vor zwei",
+    "4. 08:40 → zwanzig vor neun",
+    "5. 03:25 → fünf vor halb vier",
+    "6. 12:15 → Viertel nach zwölf"
+   ]
+  },
+  {
+   "heading": "Übung 3 – Dialoge verstehen",
+   "items": [
+    "1. 17:15 (oder 05:15)",
+    "2. 11:50",
+    "3. 20:30 (oder 08:30)"
+   ]
+  }
+ ],
+ "note": "In Übung 3 ist je nach Tageszeit auch die Morgenzeit möglich (05:15 / 08:30)."
+}

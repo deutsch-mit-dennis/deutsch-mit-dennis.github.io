@@ -1,0 +1,27 @@
+{
+ "file": "dativ-nomen-durch-pronomen-ersetzen.pdf",
+ "action": "add",
+ "reason": "Ersetzungsübungen mit Lücken",
+ "sections": [
+  {
+   "heading": "Übung 1 – Ersetzen Sie die Nomen durch Pronomen",
+   "items": [
+    "1. Ich danke ihm. (Beispiel)",
+    "2. Der Lehrer hilft ihr.",
+    "3. Wir gratulieren ihnen.",
+    "4. Das Essen schmeckt ihm gut.",
+    "5. Kannst du uns helfen?",
+    "6. Gehört das Buch ihr?"
+   ]
+  },
+  {
+   "heading": "Übung 2 – Nominativ und Dativ ersetzen",
+   "items": [
+    "1. Es antwortet ihr.",
+    "2. Sie schenkt ihm ein Buch.",
+    "3. Er bringt ihnen das Essen.",
+    "4. Er gehört ihm."
+   ]
+  }
+ ]
+}

@@ -956,7 +956,7 @@
       const groups = cat === 'alle' ? Object.keys(C) : [cat];
       $('#dm-mlist').innerHTML = groups.map(g => {
         const items = list.filter(m => m.cat === g); if (!items.length) return '';
-        return `<section class="dm-mat-group">${cat === 'alle' ? `<h2>${C[g]}</h2>` : ''}<ul class="dm-mat-list">${items.map(m => `<li><a class="dm-mat" href="${m.file}" download target="_blank" rel="noopener"><span class="dm-mat-icon" aria-hidden="true">PDF</span><span class="dm-mat-text"><b>${x(m.title)}</b><span>${x(m.desc)}</span>${m.topics ? `<ul class="dm-mat-topics">${m.topics.map(t => `<li>${x(t)}</li>`).join('')}</ul>` : ''}<small>${m.level} · ${m.pages} ${m.pages === 1 ? 'Seite' : 'Seiten'} · ${size(m.kb)}</small></span><span class="dm-mat-dl">Herunterladen</span></a></li>`).join('')}</ul></section>`;
+        return `<section class="dm-mat-group">${cat === 'alle' ? `<h2>${C[g]}</h2>` : ''}<ul class="dm-mat-list">${items.map(m => `<li><a class="dm-mat" href="${m.file}" download target="_blank" rel="noopener"><span class="dm-mat-icon" aria-hidden="true">PDF</span><span class="dm-mat-text"><b>${x(m.title)}</b><span>${x(m.desc)}</span>${m.topics ? `<ul class="dm-mat-topics">${m.topics.map(t => `<li>${x(t)}</li>`).join('')}</ul>` : ''}<small>${m.level} · ${m.pages} ${m.pages === 1 ? 'Seite' : 'Seiten'} · ${size(m.kb)}${m.loes ? ' · <span class="dm-mat-loes">✓ mit Lösungen</span>' : ''}</small></span><span class="dm-mat-dl">Herunterladen</span></a></li>`).join('')}</ul></section>`;
       }).join('') || '<p class="dm-empty">Nichts gefunden. Versuche ein anderes Wort oder wähle „Alle“.</p>';
     };
     $('#dm-mq').oninput = draw; draw();
@@ -964,7 +964,7 @@
   function materialLinks(cat, heading) {
     const items = (DM.materials || []).filter(m => m.cat === cat).slice(0, 6);
     if (!items.length) return '';
-    return `<section class="dm-section"><div class="dm-section-head"><h2>${heading}</h2><a href="#material/${cat}">Alle ansehen</a></div><ul class="dm-mat-list dm-mat-compact">${items.map(m => `<li><a class="dm-mat" href="${m.file}" download target="_blank" rel="noopener"><span class="dm-mat-icon" aria-hidden="true">PDF</span><span class="dm-mat-text"><b>${x(m.title)}</b><small>${m.level} · ${m.pages} ${m.pages === 1 ? 'Seite' : 'Seiten'}</small></span></a></li>`).join('')}</ul></section>`;
+    return `<section class="dm-section"><div class="dm-section-head"><h2>${heading}</h2><a href="#material/${cat}">Alle ansehen</a></div><ul class="dm-mat-list dm-mat-compact">${items.map(m => `<li><a class="dm-mat" href="${m.file}" download target="_blank" rel="noopener"><span class="dm-mat-icon" aria-hidden="true">PDF</span><span class="dm-mat-text"><b>${x(m.title)}</b><small>${m.level} · ${m.pages} ${m.pages === 1 ? 'Seite' : 'Seiten'}${m.loes ? ' · ✓ mit Lösungen' : ''}</small></span></a></li>`).join('')}</ul></section>`;
   }
 
   /* Download-Links zu Dateien, die (noch) nicht auf dem Server liegen, ausblenden */
