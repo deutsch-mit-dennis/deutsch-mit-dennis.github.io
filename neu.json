@@ -1,7 +1,7 @@
 {
   "note": "Neu auf der Seite – neueste Einträge oben. Wird vom Redaktionsplan (geplante Aufgaben) ergänzt.",
   "items": [
-    { "date": "2026-10-06", "type": "neu", "title": "Pinnwand: Lob, Wünsche, Kritik und Fragen anpinnen", "link": "#pinnwand" },
+    { "date": "2026-10-06", "type": "neu", "title": "Deine Meinung: Lob, Wünsche, Kritik und Fragen als Zettel", "link": "#pinnwand" },
     { "date": "2026-10-06", "type": "sprechen", "title": "Sprech-Coach: einsprechen und automatisch korrigieren lassen", "link": "#ueben/sprechen/A1" },
     { "date": "2026-10-05", "type": "lied", "title": "25 eigene Lieder von A1 bis C1 – mit Aufgaben und PDF", "link": "#lieder" },
     { "date": "2026-10-04", "type": "hoeren", "title": "Hörtraining: 4 DTZ- und 3 DTB-B2-Übungssätze", "link": "#hoeren" }

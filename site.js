@@ -780,7 +780,7 @@
           </ul>
           ${note('Du hast eine Frage oder einen Wunsch für ein neues Thema? Schreib mir!', true)}
           <div class="dm-row"><a class="dm-btn" href="mailto:${T.email}">E-Mail schreiben</a><a class="dm-btn dm-btn-quiet" href="${T.youtube}" target="_blank" rel="noopener noreferrer">YouTube-Kanal ↗</a></div>
-          <p class="dm-small">Oder häng einen Zettel an unsere <a href="#pinnwand">Pinnwand</a>.</p>
+          <p class="dm-small">Oder schreib mir unter <a href="#pinnwand">„Deine Meinung“</a> einen Zettel.</p>
         </div>
       </section>
       <section class="dm-section dm-wall" id="nachweise" aria-labelledby="wall-h">
@@ -854,8 +854,8 @@
       <p>Die Lernpakete werden über die Digistore24 GmbH, St.-Godehard-Straße 32, 31139 Hildesheim, verkauft. Digistore24 ist Verkäufer und Vertragspartner. Erst wenn du auf „Jetzt kaufen“ klickst, öffnet sich das Bestellformular von Digistore24; vorher werden keine Daten an Digistore24 übertragen. Bei der Bestellung verarbeitet Digistore24 deine Bestell- und Zahlungsdaten. Ich erhalte von Digistore24 die für die Abwicklung nötigen Angaben (zum Beispiel Name, E-Mail-Adresse und gekauftes Produkt), um dir bei Fragen helfen zu können. Rechtsgrundlage ist die Vertragsabwicklung (Art. 6 Abs. 1 lit. b DSGVO). Mehr: <a href="https://www.digistore24.com/page/privacy/1/de" target="_blank" rel="noopener noreferrer">Datenschutzerklärung von Digistore24</a>.</p>
       <h2>4d. Einsprechen und korrigieren lassen</h2>
       <p>Bei den Sprechübungen kannst du dich aufnehmen. Erst nach deinem Klick auf „Aufnahme starten“ fragt dein Browser nach dem Mikrofon. Die Aufnahme bleibt auf deinem Gerät und wird nicht an mich übertragen. Für das automatische Mitschreiben nutzt dein Browser seine eingebaute Spracherkennung: In Chrome und Edge wird der Ton dafür an Google bzw. Microsoft übertragen und dort in Text umgewandelt; dabei können Daten auch außerhalb der EU verarbeitet werden. Den erkannten Text prüft danach LanguageTool (siehe 4a). Rechtsgrundlage ist deine Einwilligung durch den Klick (Art. 6 Abs. 1 lit. a DSGVO).</p>
-      <h2>4e. Pinnwand</h2>
-      <p>Wenn du einen Zettel für die Pinnwand abschickst, werden deine Angaben (Art des Zettels, Text, freiwillig Vorname und E-Mail-Adresse) über den Dienst FormSubmit (formsubmit.co) per E-Mail an mich weitergeleitet. Dabei wird auch deine IP-Adresse übertragen; die Verarbeitung kann außerhalb der EU stattfinden. Ohne Klick auf „Zettel abschicken“ wird nichts übertragen. Ich veröffentliche einen Zettel nur, wenn du das erlaubt hast – mit Vorname oder anonym, nie mit E-Mail-Adresse. Rechtsgrundlage ist deine Einwilligung (Art. 6 Abs. 1 lit. a DSGVO). Wenn du möchtest, dass ich einen Zettel wieder entferne, schreib mir einfach.</p>
+      <h2>4e. Deine Meinung (Zettel)</h2>
+      <p>Wenn du unter „Deine Meinung“ einen Zettel abschickst, werden deine Angaben (Art des Zettels, Text, freiwillig Vorname und E-Mail-Adresse) über den Dienst FormSubmit (formsubmit.co) per E-Mail an mich weitergeleitet. Dabei wird auch deine IP-Adresse übertragen; die Verarbeitung kann außerhalb der EU stattfinden. Ohne Klick auf „Zettel abschicken“ wird nichts übertragen. Ich veröffentliche einen Zettel nur, wenn du das erlaubt hast – mit Vorname oder anonym, nie mit E-Mail-Adresse. Rechtsgrundlage ist deine Einwilligung (Art. 6 Abs. 1 lit. a DSGVO). Wenn du möchtest, dass ich einen Zettel wieder entferne, schreib mir einfach.</p>
       <h2>5. Kontakt per E-Mail oder Telefon</h2>
       <p>Wenn du mir schreibst, verarbeite ich deine Nachricht und deine Kontaktdaten nur, um dir zu antworten.</p>
       <h2>6. Vorlesefunktion</h2>
@@ -1010,11 +1010,11 @@
   let pinCache = null;
   function feedback(filter) {
     const f = PIN_TYPES[filter] ? filter : 'alle';
-    page(`${crumbs([['Pinnwand']])}
-      <div class="dm-head"><h1>Unsere Pinnwand</h1><p class="dm-lead">Was gefällt dir? Was wünschst du dir? Was nervt? Was möchtest du wissen? Schreib einen Zettel – Dennis liest jeden und hängt ihn hier auf.</p></div>
+    page(`${crumbs([['Deine Meinung']])}
+      <div class="dm-head"><h1>Deine Meinung</h1><p class="dm-lead">Was gefällt dir? Was wünschst du dir? Was nervt? Was möchtest du wissen? Schreib einen Zettel – Dennis liest jeden und hängt ihn hier an die Wand.</p></div>
       <nav class="dm-pin-filter" aria-label="Zettel filtern">${['alle', 'lob', 'wunsch', 'kritik', 'frage'].map(k => `<a href="#pinnwand${k === 'alle' ? '' : '/' + k}" ${k === f ? 'aria-current="page"' : ''}>${k === 'alle' ? '🗂️ Alle' : PIN_TYPES[k][0] + ' ' + PIN_TYPES[k][1]}</a>`).join('')}</nav>
       <div class="dm-pin-layout">
-        <section class="dm-cork" aria-label="Pinnwand"><div class="dm-cork-grid" id="dm-cork" aria-busy="true"><p class="dm-hint">Zettel werden geladen …</p></div></section>
+        <section class="dm-cork" aria-label="Zettel von Lernenden"><div class="dm-cork-grid" id="dm-cork" aria-busy="true"><p class="dm-hint">Zettel werden geladen …</p></div></section>
         <form class="dm-card dm-pin-form" id="dm-pin-form" novalidate>
           <h2>📌 Zettel schreiben</h2>
           <fieldset><legend>Was möchtest du anpinnen?</legend><div class="dm-pin-kinds">${['lob', 'wunsch', 'kritik', 'frage'].map((k, i) => `<label class="dm-pin-kind dm-pk-${k}"><input type="radio" name="type" value="${k}" ${i === 0 ? 'checked' : ''}><span>${PIN_TYPES[k][0]}</span>${PIN_TYPES[k][1]}</label>`).join('')}</div></fieldset>
@@ -1025,14 +1025,14 @@
           <input id="dm-pin-name" name="name" maxlength="40" autocomplete="given-name">
           <label for="dm-pin-mail">Deine E-Mail <small>(freiwillig – nur wenn du eine Antwort möchtest, wird nicht veröffentlicht)</small></label>
           <input id="dm-pin-mail" name="email" type="email" maxlength="80" autocomplete="email">
-          <label class="dm-pin-ok"><input type="checkbox" name="ok" id="dm-pin-ok"> Mein Zettel darf auf der Pinnwand erscheinen (mit Vorname oder anonym). Bitte keine privaten Daten wie Adresse oder Telefonnummer.</label>
+          <label class="dm-pin-ok"><input type="checkbox" name="ok" id="dm-pin-ok"> Mein Zettel darf hier öffentlich erscheinen (mit Vorname oder anonym). Bitte keine privaten Daten wie Adresse oder Telefonnummer.</label>
           <input type="text" name="_honey" class="dm-pin-honey" tabindex="-1" autocomplete="off" aria-hidden="true">
           <button class="dm-btn" type="submit">Zettel abschicken</button>
           <p class="dm-small" id="dm-pin-status" role="status"></p>
           <p class="dm-small">Dein Zettel geht per E-Mail an Dennis (über den Dienst FormSubmit) und erscheint erst nach Prüfung. Mehr in der <a href="#datenschutz">Datenschutzerklärung</a>.</p>
         </form>
       </div>
-      <section class="dm-section dm-pin-other"><h2>Lieber direkt schreiben?</h2><div class="dm-row"><a class="dm-btn dm-btn-quiet" href="mailto:${T.email}?subject=${encodeURIComponent('Pinnwand')}">✉️ E-Mail</a><a class="dm-btn dm-btn-quiet" href="${T.youtube}" target="_blank" rel="noopener noreferrer">▶ YouTube-Kommentar</a></div></section>`);
+      <section class="dm-section dm-pin-other"><h2>Lieber direkt schreiben?</h2><div class="dm-row"><a class="dm-btn dm-btn-quiet" href="mailto:${T.email}?subject=${encodeURIComponent('Meine Meinung')}">✉️ E-Mail</a><a class="dm-btn dm-btn-quiet" href="${T.youtube}" target="_blank" rel="noopener noreferrer">▶ YouTube-Kommentar</a></div></section>`);
     const draw = notes => {
       const box = $('#dm-cork'); if (!box) return; box.removeAttribute('aria-busy');
       const list = notes.filter(n => f === 'alle' || n.type === f);
@@ -1052,14 +1052,14 @@
       if (fd.get('_honey')) return;
       if ((fd.get('text') || '').trim().length < 5) { st.textContent = 'Bitte schreib ein paar Worte auf deinen Zettel.'; ta.focus(); return; }
       const type = fd.get('type'), name = (fd.get('name') || '').trim() || 'anonym', ok = $('#dm-pin-ok').checked;
-      const body = { _subject: `Pinnwand: ${PIN_TYPES[type][1]} von ${name}`, _template: 'table', _captcha: 'false', Art: PIN_TYPES[type][1], Zettel: fd.get('text').trim(), Name: name, 'Darf veröffentlicht werden': ok ? 'ja' : 'nein' };
+      const body = { _subject: `Deine Meinung: ${PIN_TYPES[type][1]} von ${name}`, _template: 'table', _captcha: 'false', Art: PIN_TYPES[type][1], Zettel: fd.get('text').trim(), Name: name, 'Darf veröffentlicht werden': ok ? 'ja' : 'nein' };
       if (fd.get('email')) body._replyto = body['E-Mail'] = fd.get('email');
       st.textContent = 'Wird gesendet …'; form.querySelector('button').disabled = true;
       try {
         const r = await fetch(`https://formsubmit.co/ajax/${T.email}`, { method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' }, body: JSON.stringify(body) });
         if (!r.ok) throw 0;
         form.reset(); $('#dm-pin-count').textContent = '0 / 600';
-        st.innerHTML = '<b>Danke! Dein Zettel ist bei Dennis angekommen.</b> ' + (ok ? 'Nach kurzer Prüfung hängt er an der Pinnwand.' : 'Er bleibt privat, weil du die Veröffentlichung nicht erlaubt hast.');
+        st.innerHTML = '<b>Danke! Dein Zettel ist bei Dennis angekommen.</b> ' + (ok ? 'Nach kurzer Prüfung hängt er hier an der Wand.' : 'Er bleibt privat, weil du die Veröffentlichung nicht erlaubt hast.');
         celebrate(form.querySelector('button'));
       } catch {
         const mail = `mailto:${T.email}?subject=${encodeURIComponent(body._subject)}&body=${encodeURIComponent(body.Zettel + '\n\n– ' + name + (ok ? '\n(Darf auf der Pinnwand erscheinen.)' : ''))}`;
@@ -1164,7 +1164,7 @@
   /* ---------- Router ---------- */
   const legacyRoute = window.route;
   const NAV = { '': 'start', lernweg: 'wege', wegweiser: 'wege', lernen: 'lernen', lektion: 'lernen', wortschatz: 'lernen', wort: 'lernen', ueben: 'ueben', schreiben: 'ueben', hoeren: 'ueben', kahoot: 'ueben', pruefung: 'pruefung', training: 'pruefung', orientierungskurs: 'pruefung', lid: 'pruefung', quellen: 'pruefung', videos: 'videos', 'ueber-mich': 'ueber', material: 'material', lernpakete: 'pakete', lieder: 'lieder' };
-  const TITLES = { '': 'Deutsch lernen mit Dennis', lernweg: 'Mein Lernweg', wegweiser: 'Welcher Weg passt?', lernen: 'Lektionen', lektion: 'Lektion', wortschatz: 'Wortschatz', wort: 'Wortkarte', ueben: 'Üben', schreiben: 'Schreib-Bausteine', hoeren: 'Hören', kahoot: 'Kahoot-Quiz', pruefung: 'Prüfungstraining', training: 'Prüfungstraining', orientierungskurs: 'Leben in Deutschland', lid: 'LiD-Trainer', quellen: 'Prüfungsinfos & Quellen', videos: 'Videos', 'ueber-mich': 'Über mich', impressum: 'Impressum', datenschutz: 'Datenschutz', pinnwand: 'Pinnwand', material: 'Materialien', lernpakete: 'Lernpakete', lieder: 'Deutsch mit Liedern' };
+  const TITLES = { '': 'Deutsch lernen mit Dennis', lernweg: 'Mein Lernweg', wegweiser: 'Welcher Weg passt?', lernen: 'Lektionen', lektion: 'Lektion', wortschatz: 'Wortschatz', wort: 'Wortkarte', ueben: 'Üben', schreiben: 'Schreib-Bausteine', hoeren: 'Hören', kahoot: 'Kahoot-Quiz', pruefung: 'Prüfungstraining', training: 'Prüfungstraining', orientierungskurs: 'Leben in Deutschland', lid: 'LiD-Trainer', quellen: 'Prüfungsinfos & Quellen', videos: 'Videos', 'ueber-mich': 'Über mich', impressum: 'Impressum', datenschutz: 'Datenschutz', pinnwand: 'Deine Meinung', material: 'Materialien', lernpakete: 'Lernpakete', lieder: 'Deutsch mit Liedern' };
   const OWN = {
     '': () => home(),
     lernweg: p => p[1] ? pathPage(p[1]) : paths(),
@@ -1184,7 +1184,7 @@
     kahoot: () => kahootPage(),
     lieder: p => p[1] && !SONG_LEVELS.includes(p[1]) ? songPage(p[1]) : songsHub(p[1])
   };
-  const ALIAS = { buch: 'lernen', themen: 'lernen', cover: '', praxis: 'ueben', pruefungen: 'pruefung', start: '' };
+  const ALIAS = { meinung: 'pinnwand', buch: 'lernen', themen: 'lernen', cover: '', praxis: 'ueben', pruefungen: 'pruefung', start: '' };
 
   /* Zurück-Pfeil und Startseite auf jeder Unterseite */
   let navDepth = 0;
