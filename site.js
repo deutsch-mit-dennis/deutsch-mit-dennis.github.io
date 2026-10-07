@@ -792,7 +792,7 @@
         <dialog class="dm-lightbox" id="dm-lightbox"><form method="dialog"><button class="dm-lb-close" aria-label="Schließen">×</button></form><figure><img alt="" id="dm-lb-img"><figcaption id="dm-lb-cap"></figcaption></figure><div class="dm-row"><button type="button" class="dm-btn dm-btn-quiet" id="dm-lb-prev">← Zurück</button><button type="button" class="dm-btn dm-btn-quiet" id="dm-lb-next">Weiter →</button></div></dialog>
       </section>
       ${musicCard()}
-      <section class="dm-section dm-thanks"><div><h2>Danke sagen</h2><p>Alle Übungen auf dieser Seite bleiben kostenlos. Wenn du meine Arbeit unterstützen möchtest, freue ich mich über einen freiwilligen Beitrag.</p></div><a class="dm-btn dm-btn-sun" href="${T.donate}" target="_blank" rel="noopener noreferrer">♡ Danke sagen</a></section>`);
+      <section class="dm-section dm-thanks"><div><h2>Spendier mir einen Kaffee ☕</h2><p>Alle Übungen auf dieser Seite bleiben kostenlos. Wenn sie dir geholfen haben, freue ich mich über einen Kaffee – ganz freiwillig, per PayPal.</p></div><a class="dm-btn dm-btn-sun" href="${T.donate}" target="_blank" rel="noopener noreferrer">☕ Kaffee spendieren</a></section>`);
     const lb = $('#dm-lightbox'); let cur = 0;
     const show = i => { cur = (i + C.length) % C.length; const c = C[cur]; $('#dm-lb-img').src = `assets/nachweise/${c.id}.webp`; $('#dm-lb-img').alt = `${c.kind}: ${c.title}`; $('#dm-lb-cap').innerHTML = `<b>${x(c.title)}</b> · ${x(c.org)}<br><span>${x(c.desc)}</span>`; };
     $$('[data-cert]').forEach(b => b.onclick = () => { show(Number(b.dataset.cert)); lb.showModal ? lb.showModal() : lb.setAttribute('open', ''); });
