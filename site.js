@@ -903,7 +903,7 @@
       </div>
       <p id="dm-mcount" class="dm-small" role="status"></p>
       <div id="dm-mlist"></div>
-      <section class="dm-section dm-card dm-mat-lid"><div><h2>Leben in Deutschland</h2><p>Neun illustrierte Merkblätter zum Orientierungskurs findest du im Bereich „Deutschland verstehen“.</p></div><a class="dm-btn dm-btn-quiet" href="#orientierungskurs">Zu den Merkblättern</a></section>
+      <section class="dm-section dm-card dm-mat-lid"><div><h2>Leben in Deutschland</h2><p>16 illustrierte Merkblätter zum Orientierungskurs – von Politik und Wahlen über Rechtsstaat und Sozialstaat bis zur Geschichte – findest du im Bereich „Deutschland verstehen“.</p></div><a class="dm-btn dm-btn-quiet" href="#orientierungskurs">Zu den Merkblättern</a></section>
       <p class="dm-small">Alle Materialien sind von Dennis für seinen Unterricht erstellt. Du darfst sie zum Lernen und im Unterricht nutzen. Bitte veröffentliche sie nicht unter deinem Namen.</p>`);
     const norm = t => t.toLocaleLowerCase('de').normalize('NFD').replace(/\p{M}/gu, '').replace(/ß/g, 'ss');
     const draw = () => {
