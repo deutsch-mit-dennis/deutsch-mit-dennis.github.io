@@ -20,6 +20,10 @@ INDEX = os.path.join(OUT, 'index.json')
 STATUS = os.path.join(OUT, 'status.json')
 MAX_SECONDS = int(os.environ.get('TTS_MAX_SECONDS', '4800'))  # Zeitbudget pro Lauf
 FORCE = os.environ.get('TTS_FORCE', '') in ('1', 'true', 'yes')
+USAGE = os.path.join(OUT, 'usage.json')
+# Kostenbremse: höchstens so viele Zeichen pro Kalendermonat an einen Bezahl-Anbieter schicken.
+# Google Cloud Chirp 3 HD: 1.000.000 Zeichen/Monat frei – wir bleiben mit 600.000 weit darunter.
+MONTHLY_LIMIT = {'google': 600000, 'elevenlabs': 25000, 'gemini': 200000}
 
 # Stimmen je Rolle (f = Frau, m = Mann). Anpassbar über die Umgebungsvariable TTS_VOICES (JSON).
 VOICES = {
@@ -190,12 +194,21 @@ def main():
             same_text = cur.get('text') == signature(e, 'text')
             if same_text and rank.get(cur.get('engine'), 0) >= rank[eng]: continue
         todo.append((e, sig))
+    month = time.strftime('%Y-%m', time.gmtime())
+    try: usage = json.load(open(USAGE, encoding='utf-8'))
+    except Exception: usage = {}
+    used = usage.get(month, {}).get(eng, 0)
+    limit = int(os.environ.get('TTS_MONTHLY_LIMIT') or MONTHLY_LIMIT.get(eng, 10**12))
     start, done, errors = time.time(), 0, []
     print(f'Anbieter: {eng} · {len(entries)} Einträge · {len(todo)} zu erzeugen', flush=True)
     for e, sig in todo:
         if time.time() - start > MAX_SECONDS:
             print('Zeitbudget erreicht – der Rest folgt beim nächsten Lauf.'); break
+        chars = sum(len((s.get('say') or s['text']).strip()) for s in e['segments'])
+        if eng != 'piper' and used + chars > limit:
+            print(f'Monatsgrenze erreicht ({used} von {limit} Zeichen) – der Rest folgt nächsten Monat.'); break
         try:
+            if eng != 'piper': used += chars  # auch fehlgeschlagene Versuche zählen vorsichtshalber mit
             build(e, eng, os.path.join(OUT, e['key'] + '.mp3'))
             files[e['key']] = {'sig': sig, 'engine': eng, 'text': signature(e, 'text')}
             done += 1
@@ -203,14 +216,17 @@ def main():
         except Exception as ex:
             errors.append({'key': e['key'], 'error': str(ex)[:300]})
             print(f'  ✗ {e["key"]}: {ex}', flush=True)
-            if eng != 'piper' and len(errors) >= 5 and done == 0:
+            if eng != 'piper' and len(errors) >= 3 and done == 0:
                 print('Zu viele Fehler mit dem Anbieter – Abbruch.'); break
+    if eng != 'piper':
+        usage.setdefault(month, {})[eng] = used
+        json.dump(usage, open(USAGE, 'w', encoding='utf-8'), indent=1)
     engines = sorted({v.get('engine') for v in files.values()})
     json.dump({'updated': time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime()), 'engines': engines,
                'files': {k: {'v': v['sig'], 'engine': v.get('engine'), 'sig': v['sig'], 'text': v.get('text')} for k, v in sorted(files.items())}},
               open(INDEX, 'w', encoding='utf-8'), ensure_ascii=False, indent=0)
     json.dump({'run': time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime()), 'engine': eng, 'created': done,
-               'open': len(todo) - done, 'errors': errors[:40]}, open(STATUS, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
+               'open': len(todo) - done, 'chars_this_month': used, 'monthly_limit': limit, 'errors': errors[:40]}, open(STATUS, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
     print(f'Fertig: {done} erzeugt, {len(errors)} Fehler, {len(todo) - done} offen.')
 
 if __name__ == '__main__':
