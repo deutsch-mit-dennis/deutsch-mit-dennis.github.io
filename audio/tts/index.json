@@ -1,5 +1,5 @@
 {
-"updated": "2026-10-07T10:35:06Z",
+"updated": "2026-10-07T17:33:17Z",
 "engines": [
 "piper"
 ],
@@ -401,10 +401,10 @@
 "text": "5535c07ee4"
 },
 "t16470000": {
-"v": "c991f96962",
+"v": "98efa88765",
 "engine": "piper",
-"sig": "c991f96962",
-"text": "ccc30a4dc4"
+"sig": "98efa88765",
+"text": "fe53740ef6"
 },
 "t176cfab9": {
 "v": "bacccefc3e",
@@ -419,10 +419,10 @@
 "text": "af486cefb6"
 },
 "t19b94e8a": {
-"v": "0e0f358225",
+"v": "d1ccc8ab30",
 "engine": "piper",
-"sig": "0e0f358225",
-"text": "8fa16851b9"
+"sig": "d1ccc8ab30",
+"text": "3c4e4da0ff"
 },
 "t1ba9709e": {
 "v": "3e89fee1ee",
@@ -461,16 +461,16 @@
 "text": "4b5399f664"
 },
 "t3a06b579": {
-"v": "ef10b784ed",
+"v": "d5eae8ae91",
 "engine": "piper",
-"sig": "ef10b784ed",
-"text": "aa21c594a0"
+"sig": "d5eae8ae91",
+"text": "8d1992fa46"
 },
 "t3de06393": {
-"v": "f9dd266c30",
+"v": "d57092b87d",
 "engine": "piper",
-"sig": "f9dd266c30",
-"text": "947318a8f0"
+"sig": "d57092b87d",
+"text": "d93fffc19e"
 },
 "t406e4ca9": {
 "v": "944e4f0591",
@@ -485,10 +485,10 @@
 "text": "8ad52b786b"
 },
 "t4d33d75f": {
-"v": "0bfd0d1ddd",
+"v": "83baf5ae65",
 "engine": "piper",
-"sig": "0bfd0d1ddd",
-"text": "3bb04a3106"
+"sig": "83baf5ae65",
+"text": "933b557fca"
 },
 "t4f6d80b3": {
 "v": "aecf5e67ee",
@@ -521,10 +521,10 @@
 "text": "a27b0ce9fd"
 },
 "t77d93b44": {
-"v": "a4edf57c4b",
+"v": "5b112570bd",
 "engine": "piper",
-"sig": "a4edf57c4b",
-"text": "2af7b2cf88"
+"sig": "5b112570bd",
+"text": "e511d79fc8"
 },
 "t7e2e7181": {
 "v": "b410fb07a4",
@@ -539,10 +539,10 @@
 "text": "74c858adc5"
 },
 "t89308c7b": {
-"v": "3d3b7944c5",
+"v": "0fafe84c92",
 "engine": "piper",
-"sig": "3d3b7944c5",
-"text": "5357ee8561"
+"sig": "0fafe84c92",
+"text": "92ab75a165"
 },
 "t8abf068a": {
 "v": "f6265636ed",
@@ -551,10 +551,10 @@
 "text": "bb3ac76b9c"
 },
 "t8d3a5113": {
-"v": "00567c207a",
+"v": "ca2011238f",
 "engine": "piper",
-"sig": "00567c207a",
-"text": "4c3d3d35d7"
+"sig": "ca2011238f",
+"text": "7dd9f876ee"
 },
 "t957aad76": {
 "v": "7dc31a535a",
@@ -599,10 +599,10 @@
 "text": "fd5c03b0c8"
 },
 "tc37ac09e": {
-"v": "4b79374326",
+"v": "1d5e9e3801",
 "engine": "piper",
-"sig": "4b79374326",
-"text": "211504f595"
+"sig": "1d5e9e3801",
+"text": "050e3daf32"
 },
 "tc3b7c5ea": {
 "v": "0d391be711",
@@ -635,10 +635,10 @@
 "text": "49081c3808"
 },
 "te59bec66": {
-"v": "b2c68b17c0",
+"v": "d166444691",
 "engine": "piper",
-"sig": "b2c68b17c0",
-"text": "5d509797c8"
+"sig": "d166444691",
+"text": "8e19a4ef39"
 },
 "te6eff347": {
 "v": "fdfde2407e",
