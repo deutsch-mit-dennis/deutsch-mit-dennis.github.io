@@ -301,3 +301,6 @@ DM.credentials = [
   { id: 'master-germanistik', icon: '🎓', kind: 'Studium', title: 'Master of Arts Germanistik', org: 'Ruhr-Universität Bochum', desc: 'Masterarbeit über linguistische Aspekte des deutsch-russischen Sprachkontakts.' },
   { id: 'nlp-practitioner', icon: '🧠', kind: 'Weiterbildung', title: 'NLP-Practitioner (DVNLP)', org: 'Mea Voß Seminare', desc: 'Kommunikation und Lernbegleitung: 145 Stunden Ausbildung nach DVNLP-Richtlinien.' }
 ];
+
+/* Besucherstatistik (Cloudflare Web Analytics, ohne Cookies). Token aus dem Cloudflare-Dashboard eintragen – leer = aus. */
+DM.analytics = { cloudflareToken: '' };
