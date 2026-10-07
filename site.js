@@ -170,6 +170,20 @@
   const allScenes = L => [...((typeof practiceScenes !== 'undefined' && practiceScenes[L]) || []), ...(DM.extraScenes[L] || [])];
 
   /* ---------- Startseite ---------- */
+  function pkgTeaser() {
+    const P = (DM.packages || []).filter(k => k.buy);
+    if (!P.length) return '';
+    const prices = P.map(k => parseFloat(String(k.price).replace(',', '.'))).filter(n => !isNaN(n));
+    const from = prices.length ? Math.min(...prices).toFixed(2).replace('.', ',') + ' €' : '';
+    const pick = ['dtz-schreiben-20-briefe', 'lid-lernheft', 'b2-wiederholer'].map(id => P.find(k => k.id === id)).filter(Boolean);
+    return `<section class="dm-section dm-pkg-teaser" aria-labelledby="pkgt-h">
+      <div class="dm-pkg-teaser-copy"><p class="dm-kicker">Alles zum Üben bleibt kostenlos</p>
+        <h2 id="pkgt-h">Du willst gezielt mehr üben?</h2>
+        <p>Ausführliche PDF-Lernpakete mit Musterlösungen – für DTZ, B2 Beruf, „Leben in Deutschland“ und für Lehrkräfte${from ? ` · ab ${from}` : ''}.</p>
+        <a class="dm-btn" href="#lernpakete">Alle Lernpakete ansehen</a></div>
+      <ul class="dm-pkg-teaser-list">${pick.map(k => `<li><a href="#lernpakete/${k.id}"><img src="${k.img}" alt="" width="72" height="72" loading="lazy"><span><b>${x(k.title)}</b><small>${x(k.level)} · ${x(k.price)}</small></span></a></li>`).join('')}</ul>
+    </section>`;
+  }
   function home() {
     const last = mem.last && mem.last.route !== '' ? mem.last : null;
     page(`
@@ -221,12 +235,7 @@
       <div><h2>Wer ist Dennis?</h2><p>Seit 2017 im Deutschunterricht – DaF, Integrationskurse, DSH und TestDaF. Master in Germanistik, lizenzierter DTZ- und telc-Prüfer, vom BAMF zugelassen für Integrations- und Berufssprachkurse bis C2. Ich kenne die Prüfungen aus dem Unterricht und als Prüfer.</p><div class="dm-row"><a class="dm-btn dm-btn-quiet" href="#ueber-mich">Mehr über mich</a><a class="dm-btn dm-btn-quiet" href="#ueber-mich/nachweise">Meine Zulassungen ansehen</a></div></div>
     </section>
 
-    ${musicCard()}
-
-    <section class="dm-section dm-thanks">
-      <div><h2>Hat dir das Lernen geholfen?</h2><p>Alle Übungen, Videos und Merkblätter sind kostenlos. Wenn du Danke sagen möchtest, kannst du meine Arbeit mit einem freiwilligen Beitrag unterstützen.</p></div>
-      <a class="dm-btn dm-btn-sun" href="${T.donate}" target="_blank" rel="noopener noreferrer">♡ Danke sagen</a>
-    </section>`, 'dm-home');
+    ${pkgTeaser()}`, 'dm-home');
     fetch('neu.json?v=' + Math.floor(Date.now() / 36e5), { cache: 'no-cache' }).then(r => r.json()).then(j => {
       const ico = { lied: ['noten', 'Lied'], hoeren: ['kopfhoerer', 'Hören'], sprechen: ['sprechblase', 'Sprechen'], schreiben: ['schreiben', 'Schreiben'], uebung: ['idee', 'Übung'], neu: ['funkeln', 'Neu'] };
       const ol = $('#dm-newslist'); if (!ol) return; ol.removeAttribute('aria-busy');
@@ -596,7 +605,7 @@
         ${isHub ? '<h1 id="stage-h">Deutsch mit Liedern</h1>' : '<h2 id="stage-h">Deutsch mit Liedern</h2>'}
         <p class="dm-stage-lead">${all.length} eigene Lieder von A1 bis C1 – über Wohnung, Arzt, Arbeit, Gefühle und Grammatik. Hör zu, sing mit und lerne die Wörter mit Aufgaben und Lösungen.</p>
         <ul class="dm-stage-chips">${SONG_LEVELS.map(k => `<li><a href="#lieder/${k}">${k}</a></li>`).join('')}</ul>
-        <div class="dm-row">${sod ? `<a class="dm-btn dm-btn-sun" href="#lieder/${sod.id}">▶ Lied des Tages: ${x(sod.title)}</a>` : ''}${isHub ? '' : '<a class="dm-btn dm-btn-ghost" href="#lieder">Alle Lieder ansehen</a>'}</div>
+        <div class="dm-row">${sod ? `<a class="dm-btn dm-btn-sun" href="#lieder/${sod.id}">▶ Lied des Tages: „${x(sod.title)}“</a>` : ''}${isHub ? '' : '<a class="dm-btn dm-btn-ghost" href="#lieder">Alle Lieder ansehen</a>'}</div>
       </div>
       <div class="dm-stage-art" aria-hidden="true"><span class="dm-stage-disc"><i></i></span>${art3d('mikrofon', 'float')}<span class="dm-stage-eq"><i></i><i></i><i></i><i></i><i></i></span></div>
     </section>`;
@@ -749,7 +758,7 @@
           <p>In ${teachYears()} Jahren Unterricht habe ich <b>Deutsch als Fremdsprache von A1 bis B2</b> unterrichtet, <b>Integrationskurse</b> geleitet und Lernende auf die <b>DSH</b> und den <b>TestDaF</b> vorbereitet – also auf die Sprachprüfungen für das Studium in Deutschland.</p>
           <p>Ich habe einen Master in Germanistik. Ich bin <b>lizenzierter Prüfer für den DTZ</b> (Deutsch-Test für Zuwanderer), <b>telc-Prüfer für Deutsch B1–B2</b> und <b>Prüfender für den Deutsch-Test für den Beruf B2–C1</b>. Das Bundesamt für Migration und Flüchtlinge (BAMF) hat mich als <b>Lehrkraft für Integrationskurse</b> und für <b>Berufssprachkurse bis zum Niveau C2</b> zugelassen.</p>
           <p>Ich kenne die Prüfungen also von beiden Seiten: aus dem Unterricht und als Prüfer. Deshalb weiß ich genau, worauf es ankommt – und wo die größten Stolpersteine liegen.</p>
-          <p>Auf dieser Seite findest du, was sich in meinem Unterricht bewährt hat: Lektionen, Übungen zum Sprechen und Schreiben, Prüfungstraining und meine Erklärvideos. Alles kostenlos und ohne Anmeldung.</p>
+          <p>Auf dieser Seite findest du, was sich in meinem Unterricht bewährt hat: Lektionen, Übungen zum Sprechen und Schreiben, Prüfungstraining und meine Erklärvideos. Alle Übungen sind kostenlos und ohne Anmeldung.</p>
           <ul class="dm-facts">
             <li><b>seit 2017</b><span>im Unterricht</span></li>
             <li><b>DTZ</b><span>Prüferlizenz g.a.s.t.</span></li>
@@ -770,7 +779,7 @@
             <li>Sprechen kommt zuerst. Fehler gehören zum Lernen.</li>
           </ul>
           ${note('Du hast eine Frage oder einen Wunsch für ein neues Thema? Schreib mir!', true)}
-          <div class="dm-row"><a class="dm-btn" href="mailto:${T.email}">E-Mail schreiben</a><a class="dm-btn dm-btn-quiet" href="${T.whatsapp}" target="_blank" rel="noopener noreferrer">WhatsApp</a><a class="dm-btn dm-btn-quiet" href="${T.youtube}" target="_blank" rel="noopener noreferrer">YouTube-Kanal ↗</a></div>
+          <div class="dm-row"><a class="dm-btn" href="mailto:${T.email}">E-Mail schreiben</a><a class="dm-btn dm-btn-quiet" href="${T.youtube}" target="_blank" rel="noopener noreferrer">YouTube-Kanal ↗</a></div>
           <p class="dm-small">Oder häng einen Zettel an unsere <a href="#pinnwand">Pinnwand</a>.</p>
         </div>
       </section>
@@ -783,7 +792,7 @@
         <dialog class="dm-lightbox" id="dm-lightbox"><form method="dialog"><button class="dm-lb-close" aria-label="Schließen">×</button></form><figure><img alt="" id="dm-lb-img"><figcaption id="dm-lb-cap"></figcaption></figure><div class="dm-row"><button type="button" class="dm-btn dm-btn-quiet" id="dm-lb-prev">← Zurück</button><button type="button" class="dm-btn dm-btn-quiet" id="dm-lb-next">Weiter →</button></div></dialog>
       </section>
       ${musicCard()}
-      <section class="dm-section dm-thanks"><div><h2>Danke sagen</h2><p>Die Lernangebote bleiben kostenlos. Wenn du meine Arbeit unterstützen möchtest, freue ich mich über einen freiwilligen Beitrag.</p></div><a class="dm-btn dm-btn-sun" href="${T.donate}" target="_blank" rel="noopener noreferrer">♡ Danke sagen</a></section>`);
+      <section class="dm-section dm-thanks"><div><h2>Danke sagen</h2><p>Alle Übungen auf dieser Seite bleiben kostenlos. Wenn du meine Arbeit unterstützen möchtest, freue ich mich über einen freiwilligen Beitrag.</p></div><a class="dm-btn dm-btn-sun" href="${T.donate}" target="_blank" rel="noopener noreferrer">♡ Danke sagen</a></section>`);
     const lb = $('#dm-lightbox'); let cur = 0;
     const show = i => { cur = (i + C.length) % C.length; const c = C[cur]; $('#dm-lb-img').src = `assets/nachweise/${c.id}.webp`; $('#dm-lb-img').alt = `${c.kind}: ${c.title}`; $('#dm-lb-cap').innerHTML = `<b>${x(c.title)}</b> · ${x(c.org)}<br><span>${x(c.desc)}</span>`; };
     $$('[data-cert]').forEach(b => b.onclick = () => { show(Number(b.dataset.cert)); lb.showModal ? lb.showModal() : lb.setAttribute('open', ''); });
@@ -847,14 +856,14 @@
       <p>Bei den Sprechübungen kannst du dich aufnehmen. Erst nach deinem Klick auf „Aufnahme starten“ fragt dein Browser nach dem Mikrofon. Die Aufnahme bleibt auf deinem Gerät und wird nicht an mich übertragen. Für das automatische Mitschreiben nutzt dein Browser seine eingebaute Spracherkennung: In Chrome und Edge wird der Ton dafür an Google bzw. Microsoft übertragen und dort in Text umgewandelt; dabei können Daten auch außerhalb der EU verarbeitet werden. Den erkannten Text prüft danach LanguageTool (siehe 4a). Rechtsgrundlage ist deine Einwilligung durch den Klick (Art. 6 Abs. 1 lit. a DSGVO).</p>
       <h2>4e. Pinnwand</h2>
       <p>Wenn du einen Zettel für die Pinnwand abschickst, werden deine Angaben (Art des Zettels, Text, freiwillig Vorname und E-Mail-Adresse) über den Dienst FormSubmit (formsubmit.co) per E-Mail an mich weitergeleitet. Dabei wird auch deine IP-Adresse übertragen; die Verarbeitung kann außerhalb der EU stattfinden. Ohne Klick auf „Zettel abschicken“ wird nichts übertragen. Ich veröffentliche einen Zettel nur, wenn du das erlaubt hast – mit Vorname oder anonym, nie mit E-Mail-Adresse. Rechtsgrundlage ist deine Einwilligung (Art. 6 Abs. 1 lit. a DSGVO). Wenn du möchtest, dass ich einen Zettel wieder entferne, schreib mir einfach.</p>
-      <h2>5. Kontakt per E-Mail oder WhatsApp</h2>
-      <p>Wenn du mir schreibst, verarbeite ich deine Nachricht und deine Kontaktdaten nur, um dir zu antworten. Für WhatsApp gelten zusätzlich die Datenschutzbestimmungen von WhatsApp (Meta).</p>
+      <h2>5. Kontakt per E-Mail oder Telefon</h2>
+      <p>Wenn du mir schreibst, verarbeite ich deine Nachricht und deine Kontaktdaten nur, um dir zu antworten.</p>
       <h2>6. Vorlesefunktion</h2>
       <p>Die meisten Hörtexte sind als Audiodateien auf dieser Website gespeichert (künstlich erzeugte Stimmen). Wo es noch keine Datei gibt, nutzt die Vorlesefunktion die Sprachausgabe deines Browsers. Je nach Browser und gewählter Stimme kann der Text dafür an den Anbieter des Browsers (zum Beispiel Google, Microsoft oder Apple) übertragen werden.</p>
       <h2>7. Schriften</h2>
       <p>Die Schriften dieser Website liegen auf dem eigenen Server. Es werden keine Schriften von Google oder anderen Anbietern geladen.</p>
       <h2>8. Externe Links</h2>
-      <p>Die Titelbilder und QR-Codes der Kahoot-Quiz liegen auf dieser Website. Links zu Kahoot, DonationAlerts, WhatsApp, YouTube oder Prüfungsanbietern führen zu anderen Websites. Dort gelten deren Datenschutzbestimmungen.</p>
+      <p>Die Titelbilder und QR-Codes der Kahoot-Quiz liegen auf dieser Website. Links zu Kahoot, DonationAlerts, YouTube oder Prüfungsanbietern führen zu anderen Websites. Dort gelten deren Datenschutzbestimmungen.</p>
       <h2>9. Deine Rechte</h2>
       <p>Du hast das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerspruch. Eine Einwilligung kannst du jederzeit widerrufen. Du kannst dich außerdem bei einer Datenschutz-Aufsichtsbehörde beschweren, zum Beispiel bei der Landesbeauftragten für Datenschutz und Informationsfreiheit Nordrhein-Westfalen.</p>
       <p class="dm-small">Stand: Oktober 2026</p>
@@ -928,19 +937,20 @@
   /* ---------- Lernpakete (Kauf später über Digistore24) ---------- */
   function packages() {
     const P = DM.packages || [];
-    const card = k => `<article class="dm-card dm-pkg" id="paket-${k.id}">
-      ${k.img ? `<a class="dm-pkg-img" href="#lernpakete/${k.id}"><img src="${k.img}" alt="" loading="lazy" width="800" height="800"></a>` : ''}
-      <div class="dm-pkg-top"><span class="dm-pkg-icon" aria-hidden="true">${k.icon}</span>${k.buy ? (k.price ? `<span class="dm-pkg-price">${x(k.price)}</span>` : '') : '<span class="dm-pkg-lock" title="Noch nicht erhältlich">🔒 Bald erhältlich</span>'}</div>
-      <h2><a href="#lernpakete/${k.id}">${x(k.title)}</a></h2><p class="dm-pkg-meta">${x(k.level)} · ${x(k.target)}</p>
-      <p>${x(k.desc)}</p>
-      <ul class="dm-pkg-list">${k.contents.map(c => `<li>${x(c)}</li>`).join('')}</ul>
-      <div class="dm-pkg-buy">
-        <a class="dm-btn${k.buy ? '' : ' dm-btn-quiet'}" href="#lernpakete/${k.id}">${k.buy ? 'Details und Kauf' : 'Details ansehen'}</a>
-        ${k.preview ? `<a class="dm-btn dm-btn-quiet" href="${x(k.preview)}" target="_blank" rel="noopener">Leseprobe (PDF)</a>` : ''}
-        ${k.buy ? '' : `<a class="dm-pkg-notify" href="mailto:${T.email}?subject=${encodeURIComponent('Lernpaket: ' + k.title)}&body=${encodeURIComponent('Hallo Dennis,\nbitte gib mir Bescheid, wenn dieses Lernpaket erhältlich ist.\n')}">Benachrichtigen, wenn verfügbar</a>`}
+    const card = k => `<article class="dm-card dm-pkg dm-pkg-row" id="paket-${k.id}">
+      ${k.img ? `<a class="dm-pkg-thumb" href="#lernpakete/${k.id}" tabindex="-1" aria-hidden="true"><img src="${k.img}" alt="" loading="lazy" width="800" height="800"></a>` : ''}
+      <div class="dm-pkg-body">
+        <p class="dm-pkg-meta">${x(k.level)} · ${x(k.target)} · ${k.pages} Seiten PDF</p>
+        <h2><a href="#lernpakete/${k.id}">${x(k.title)}</a></h2>
+        <p class="dm-pkg-short">${x(k.contents.slice(0, 2).join(' · '))}</p>
+        <div class="dm-pkg-buy">
+          ${k.buy && k.price ? `<span class="dm-pkg-price">${x(k.price)}</span>` : '<span class="dm-pkg-lock">🔒 Bald erhältlich</span>'}
+          <a class="dm-btn" href="#lernpakete/${k.id}">${k.buy ? 'Details und Kauf' : 'Details ansehen'}</a>
+          ${k.preview ? `<a class="dm-pkg-probe" href="${x(k.preview)}" target="_blank" rel="noopener">Leseprobe (PDF)</a>` : ''}
+        </div>
       </div></article>`;
     page(`${crumbs([['Lernpakete']])}
-      <div class="dm-head"><h1>Lernpakete</h1><p class="dm-lead">Ausführliche PDF-Pakete zum Selbstlernen – mit Musterlösungen und Lösungsschlüssel. Die meisten Materialien auf dieser Seite bleiben kostenlos. Die Pakete sind für alle, die gezielt mehr üben möchten.</p></div>
+      <div class="dm-head"><h1>Lernpakete</h1><p class="dm-lead">Ausführliche PDF-Pakete zum Selbstlernen – mit Musterlösungen und Lösungsschlüssel. Alle Übungen auf dieser Website bleiben kostenlos. Die Pakete sind für alle, die gezielt mehr üben möchten – zum Ausdrucken, mit Lösungen.</p></div>
       <nav class="dm-tabs dm-tabs-small dm-pkg-jump" aria-label="Zielgruppe"><a href="#lernpakete" data-jump="pk-lernende"><b>Für Lernende</b><small>${P.filter(k => k.group !== 'lehrende').length} Pakete</small></a><a href="#lernpakete" data-jump="pk-lehrende"><b>Für Lehrkräfte</b><small>${P.filter(k => k.group === 'lehrende').length} Pakete</small></a></nav>
       <section class="dm-pkg-sec" id="pk-lernende"><h2>Für Lernende</h2><p class="dm-small">Selbstlernmaterial für DTZ, B2 Beruf und den Test „Leben in Deutschland“ – mit Musterlösungen.</p><div class="dm-pkg-grid">${P.filter(k => k.group !== 'lehrende').map(card).join('')}</div></section>
       <section class="dm-pkg-sec" id="pk-lehrende"><h2>Für Lehrkräfte</h2><p class="dm-small">Fertige Unterrichtsstunden für Integrationskurs und DaZ – mit Lehrerblatt, Kahoot-Quiz und Kopiervorlagen.</p><div class="dm-pkg-grid">${P.filter(k => k.group === 'lehrende').map(card).join('')}</div></section>
@@ -967,10 +977,10 @@
         <div class="dm-pkg-main">
           <p class="dm-pkg-meta">${teach ? 'Für Lehrkräfte' : 'Lernpaket'} · ${x(k.level)}${teach ? '' : ' · ' + x(k.target)}</p>
           <h1>${x(k.title)}</h1>
+          <section class="dm-card dm-pkg-buybox">${buyBox}</section>
           <p class="dm-lead">${x(k.desc)}</p>
           <h2>Das ist drin</h2>
           <ul class="dm-pkg-list">${k.contents.map(c => `<li>${x(c)}</li>`).join('')}</ul>
-          <section class="dm-card dm-pkg-buybox">${buyBox}</section>
           <h2>So bekommst du das Paket</h2>
           <ul class="dm-pkg-facts">
             <li><b>Format:</b> PDF${k.pages ? ` mit ${k.pages} Seiten` : ''} (A4), zum Lesen am Bildschirm und zum Ausdrucken.</li>
@@ -979,10 +989,19 @@
             <li><b>Nutzung:</b> ${teach ? 'Sie dürfen die Kopiervorlagen für Ihren eigenen Unterricht (eine Lehrkraft) beliebig oft kopieren und digital an Ihre Kursteilnehmenden weitergeben. Weiterverkauf, Veröffentlichung im Internet oder Weitergabe an andere Lehrkräfte sind nicht erlaubt.' : 'Für deinen persönlichen Gebrauch. Bitte nicht weitergeben oder im Internet veröffentlichen.'}</li>
           </ul>
           <p class="dm-small">Verkäufer und Vertragspartner ist die Digistore24 GmbH (St.-Godehard-Straße 32, 31139 Hildesheim). Es gelten deren <a href="https://www.digistore24.com/page/terms/1/de" target="_blank" rel="noopener noreferrer">AGB</a> und <a href="https://www.digistore24.com/page/privacy/1/de" target="_blank" rel="noopener noreferrer">Datenschutzerklärung</a>. Inhalt und Support: Dzianis Prudnikau, siehe <a href="#impressum">Impressum</a>. ${k.id === 'lid-lernheft' ? 'Die Fragen stammen aus dem öffentlichen Fragenkatalog zum Test „Leben in Deutschland“. Unabhängiges Lernmaterial, keine Verbindung zum BAMF.' : 'Unabhängiges Lernmaterial: keine Verbindung zu g.a.s.t., telc oder BAMF, keine offiziellen Prüfungsaufgaben.'}</p>
-          <p><a href="#lernpakete">← Alle Lernpakete</a></p>
+          <p class="dm-row"><a href="#lernpakete">← Alle Lernpakete</a> <button type="button" class="dm-btn dm-btn-quiet" id="dm-share" data-url="https://deutsch-mit-dennis.de/lernpakete/${k.id}/" data-title="${x(k.title)}">🔗 Link teilen</button></p>
         </div>
       </div>`);
     document.title = k.title + ' – Deutsch mit Dennis';
+    bindShare();
+  }
+  function bindShare() {
+    const b = $('#dm-share'); if (!b) return;
+    b.onclick = async () => {
+      const url = b.dataset.url, title = b.dataset.title;
+      try { if (navigator.share) { await navigator.share({ title, url }); return; } } catch (e) { if (e && e.name === 'AbortError') return; }
+      try { await navigator.clipboard.writeText(url); b.textContent = '✓ Link kopiert'; } catch { prompt('Link kopieren:', url); }
+    };
   }
 
   /* ---------- Feedback & Wünsche (ersetzt die Pinnwand) ---------- */
@@ -1013,7 +1032,7 @@
           <p class="dm-small">Dein Zettel geht per E-Mail an Dennis (über den Dienst FormSubmit) und erscheint erst nach Prüfung. Mehr in der <a href="#datenschutz">Datenschutzerklärung</a>.</p>
         </form>
       </div>
-      <section class="dm-section dm-pin-other"><h2>Lieber direkt schreiben?</h2><div class="dm-row"><a class="dm-btn dm-btn-quiet" href="mailto:${T.email}?subject=${encodeURIComponent('Pinnwand')}">✉️ E-Mail</a><a class="dm-btn dm-btn-quiet" href="${T.whatsapp}" target="_blank" rel="noopener noreferrer">💬 WhatsApp</a><a class="dm-btn dm-btn-quiet" href="${T.youtube}" target="_blank" rel="noopener noreferrer">▶ YouTube-Kommentar</a></div></section>`);
+      <section class="dm-section dm-pin-other"><h2>Lieber direkt schreiben?</h2><div class="dm-row"><a class="dm-btn dm-btn-quiet" href="mailto:${T.email}?subject=${encodeURIComponent('Pinnwand')}">✉️ E-Mail</a><a class="dm-btn dm-btn-quiet" href="${T.youtube}" target="_blank" rel="noopener noreferrer">▶ YouTube-Kommentar</a></div></section>`);
     const draw = notes => {
       const box = $('#dm-cork'); if (!box) return; box.removeAttribute('aria-busy');
       const list = notes.filter(n => f === 'alle' || n.type === f);

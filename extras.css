@@ -374,3 +374,58 @@ li.sc-sp .sc-cat{background:#FDE3DC;color:#A3281E}li.sc-gr .sc-cat{background:#D
 .dm-newslist a:hover img{transform:rotate(-10deg) scale(1.12)}
 .dm-newslist small{display:block;color:var(--dm-tinte);font-weight:700;font-size:13px}
 .dm-newslist b{display:block;line-height:1.3}
+
+/* ---- Überarbeitung 10/2026: Teilen, Handy, Lernpakete ---- */
+.dm-footer p{color:#DDE2EE!important}
+.dm-footer-bottom{color:#C3CADB!important}
+.dm-footer-bottom a,.dm-footer a{color:#fff}
+/* Hilfe-Knopf: auf dem Handy kompakt, Platz unten lassen */
+@media (max-width:720px){
+  #site-helper .help-launch{font-size:0!important;width:52px;height:52px;min-width:52px!important;min-height:52px!important;padding:0!important;border-radius:50%!important;display:grid;place-items:center}
+  #site-helper .help-launch::before{content:"?";font:800 24px/1 var(--dm-font)}
+  footer.dm-footer{padding-bottom:96px!important}
+  main{padding-bottom:84px}
+  .dm-crumbs{display:none}
+  .dm-trust{gap:6px}
+  .dm-trust li{font-size:13px;padding:3px 9px}
+  .dm-hero .dm-hand{font-size:1.05em;margin:10px 0 14px}
+}
+/* Lernpakete-Teaser auf der Startseite */
+.dm-pkg-teaser{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px;align-items:center;background:var(--dm-tinte-soft);border:1px solid var(--dm-line);border-radius:var(--dm-r);padding:28px}
+.dm-pkg-teaser h2{margin:4px 0 8px}
+.dm-kicker{margin:0;font-size:14px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--dm-gruen)}
+.dm-pkg-teaser-list{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.dm-pkg-teaser-list a{display:flex;gap:14px;align-items:center;background:#fff;border:1px solid var(--dm-line);border-radius:12px;padding:10px 14px;text-decoration:none;color:var(--dm-ink)}
+.dm-pkg-teaser-list a:hover{border-color:var(--dm-tinte)}
+.dm-pkg-teaser-list img{width:56px;height:56px;border-radius:8px;flex:none}
+.dm-pkg-teaser-list b{display:block;font-size:16px;line-height:1.3}
+.dm-pkg-teaser-list small{color:var(--dm-muted)}
+@media (max-width:760px){.dm-pkg-teaser{grid-template-columns:1fr;padding:20px}}
+/* Lernpakete-Übersicht: kompakte Zeilen */
+.dm-pkg-grid{grid-template-columns:repeat(auto-fill,minmax(440px,1fr))!important}
+.dm-pkg.dm-pkg-row{flex-direction:row;gap:18px;align-items:flex-start;padding:18px}
+.dm-pkg-thumb{flex:none;width:132px}
+.dm-pkg-thumb img{display:block;width:132px;height:132px;border-radius:10px;object-fit:cover}
+.dm-pkg-body{min-width:0;flex:1}
+.dm-pkg-row h2{font-size:20px;line-height:1.25;margin:2px 0 6px}
+.dm-pkg-row h2 a{text-decoration:none;color:var(--dm-ink)}
+.dm-pkg-row .dm-pkg-meta{margin:0;font-size:14px}
+.dm-pkg-short{margin:0 0 12px;font-size:15px;color:var(--dm-muted)}
+.dm-pkg-row .dm-pkg-buy{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin:0}
+.dm-pkg-probe{font-size:15px}
+@media (max-width:560px){
+  .dm-pkg-grid{grid-template-columns:1fr!important;gap:12px!important}
+  .dm-pkg.dm-pkg-row{padding:14px;gap:12px}
+  .dm-pkg-thumb,.dm-pkg-thumb img{width:84px;height:84px}
+  .dm-pkg-row h2{font-size:18px}
+  .dm-pkg-short{display:none}
+  .dm-pkg-row .dm-btn{padding:10px 14px;font-size:15px}
+}
+/* Paket-Detailseite: Bild auf dem Handy kleiner */
+@media (max-width:760px){.dm-pkg-media img{max-width:260px;margin:0 auto}.dm-pkg-media{align-items:center}}
+.dm-trust li{white-space:nowrap}
+@media (max-width:560px){
+  .dm-newslist li:nth-child(n+4){display:none}
+  .dm-vgrid-feature>:nth-child(n+2){display:none}
+  .dm-pkg-buybox{margin:12px 0 18px}
+}
