@@ -428,3 +428,9 @@ li.sc-sp .sc-cat{background:#FDE3DC;color:#A3281E}li.sc-gr .sc-cat{background:#D
   .dm-vgrid-feature>:nth-child(n+2){display:none}
   .dm-pkg-buybox{margin:12px 0 18px}
 }
+/* Pinnwand: Zettel-Farbe folgt der gewählten Art */
+.dm-pin-form textarea{transition:background-color .3s,border-color .3s}
+.dm-pin-form:has(input[name=type][value=lob]:checked) textarea{background:#FFF3A8;border-color:#E9D46A}
+.dm-pin-form:has(input[name=type][value=wunsch]:checked) textarea{background:#CDEBFF;border-color:#8CC6EC}
+.dm-pin-form:has(input[name=type][value=kritik]:checked) textarea{background:#FFD3C4;border-color:#EFA48B}
+.dm-pin-form:has(input[name=type][value=frage]:checked) textarea{background:#D9F5D0;border-color:#9ED48F}
