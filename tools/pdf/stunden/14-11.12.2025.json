@@ -1,0 +1,63 @@
+{
+ "id": "seit-vor-arbeitswelt-wen-wem",
+ "source": "11.12.2025",
+ "title": "seit und vor, Arbeitswelt und Stellenanzeigen, Wen oder Wem?",
+ "level": "A2",
+ "intro": "Du unterscheidest seit und vor, sprichst über Arbeit und Bewerbung, liest Stellenanzeigen wie in der DTZ und entscheidest zwischen Akkusativ und Dativ.",
+ "topics": [
+  {
+   "title": "seit oder vor?",
+   "goal": "Du sagst, wann etwas passiert ist und wie lange es schon dauert.",
+   "blocks": [
+    {"type": "table", "head": ["", "seit", "vor"], "rows": [
+     ["Bedeutung", "hat in der Vergangenheit angefangen und dauert noch an", "ein Punkt in der Vergangenheit, die Handlung ist vorbei"],
+     ["Frage", "Seit wann? Wie lange schon?", "Wann?"],
+     ["Verb", "meistens Präsens", "meistens Perfekt"],
+     ["Beispiel", "Ich wohne seit einem Jahr in Deutschland.", "Ich bin vor einem Jahr nach Deutschland gekommen."]
+    ]},
+    {"type": "rule", "text": "seit und vor stehen immer mit Dativ: einem Tag / Monat / Jahr, einer Stunde / Woche – im Plural mit -n: vor zwei Tagen, seit drei Jahren, vor vier Wochen."},
+    {"type": "examples", "items": ["Ich lerne seit zwei Jahren Deutsch.", "Ich bin seit drei Monaten verheiratet.", "Ich habe vor zwei Monaten geheiratet.", "Der Unterricht hat vor einer Stunde begonnen."]},
+    {"type": "exercise", "title": "Übung 1: seit oder vor?", "task": "Ergänze seit oder vor und die Endung.", "items": ["______ ein___ Jahr wohne ich hier.", "______ ein___ Woche habe ich Kopfschmerzen.", "______ zwei Jahre___ lerne ich Deutsch.", "______ ein___ Stunde habe ich gegessen.", "______ drei Tage___ war ich beim Arzt.", "______ ein___ Monat bin ich umgezogen."], "solutions": ["Seit einem", "Seit einer", "Seit zwei Jahren", "Vor einer", "Vor drei Tagen", "Vor einem"]},
+    {"type": "exercise", "title": "Übung 2: Antworte über dich", "task": "Antworte mit seit oder vor.", "items": ["Wann bist du nach Deutschland gekommen?", "Seit wann lebst du in dieser Stadt?", "Wie lange lernst du schon Deutsch?", "Wann hast du deine Wohnung gefunden?", "Wann warst du das letzte Mal im Urlaub?"], "solutions": ["Ich bin vor … nach Deutschland gekommen.", "Ich lebe seit … in dieser Stadt.", "Ich lerne seit … Deutsch.", "Ich habe sie vor … gefunden.", "Ich war vor … im Urlaub."]}
+   ]
+  },
+  {
+   "title": "Arbeitswelt: eine neue Stelle",
+   "goal": "Du kennst Wörter rund um Arbeit und Bewerbung.",
+   "blocks": [
+    {"type": "table", "head": ["Wort", "Beispiel"], "rows": [
+     ["der Beruf, -e", "Was sind Sie von Beruf?"], ["die Stelle, -n / der Job, -s", "Ich habe eine neue Stelle gefunden."], ["der Arbeitgeber / der Arbeitnehmer", "Die Firma hat viele Arbeitnehmer."],
+     ["die Aushilfe, -n / der Praktikant, -en", "Wir suchen eine Aushilfe für die Nachtschicht."], ["das Stellenangebot, -e", "Ist Anzeige A ein Stellenangebot oder Werbung?"],
+     ["die Bewerbung, -en", "Schicken Sie Ihre Bewerbung per E-Mail."], ["der Lebenslauf", "In meinem Lebenslauf stehen meine Schulen und Jobs."], ["das Zeugnis, -se", "Haben Sie Ihre Zeugnisse dabei?"],
+     ["die Erfahrung, -en", "Haben Sie schon Erfahrung in diesem Beruf?"], ["die Bezahlung / die Arbeitszeit, -en", "Wir bieten eine faire Bezahlung. Arbeitszeit: Mo–Fr, 14–22 Uhr."]
+    ]},
+    {"type": "table", "head": ["Verb", "Beispiel"], "rows": [
+     ["arbeiten als + Beruf", "Ich arbeite als Lehrerin."], ["arbeiten bei + Firma", "Er arbeitet bei BMW."], ["suchen, finden, bieten + Akk.", "Wir suchen einen Koch. Wir bieten einen interessanten Job."], ["sich bewerben bei / um", "Ich bewerbe mich bei der Firma Blum um die Stelle."]
+    ]},
+    {"type": "exercise", "title": "Übung 3: Ergänze", "task": "als, bei, Stelle, Bewerbung, Lebenslauf, seit", "items": ["Hallo, ich bin Maria. Ich arbeite ______ Siemens.", "Ich arbeite dort ______ Technikerin.", "Ich habe die ______ im Internet gefunden.", "Ich arbeite dort ______ zwei Jahren.", "Mein Bruder sucht Arbeit. Er schreibt gerade eine ______.", "Er muss noch seinen ______ schreiben."], "solutions": ["bei", "als", "Stelle", "seit", "Bewerbung", "Lebenslauf"]}
+   ]
+  },
+  {
+   "title": "Prüfungstraining DTZ Lesen: Anzeigen zuordnen",
+   "goal": "Du findest zu jeder Person die passende Anzeige – oder merkst, dass keine passt.",
+   "blocks": [
+    {"type": "list", "title": "Die Anzeigen", "items": ["A: Restaurant sucht Koch. Di–So, 16–23 Uhr. Gute Bezahlung + Trinkgeld.", "B: Büro sucht Aushilfe mit PC-Kenntnissen. Mo–Fr, 8–13 Uhr.", "C: Fahrer gesucht! Oft 3–4 Tage unterwegs. Logistik-Express.", "D: Kantine im Business-Park sucht Koch. Mo–Fr, 6–15 Uhr. Wochenende frei!", "E: Reinigungsfirma sucht Mitarbeiter für Büros. Erfahrung ist wichtig.", "F: Studenten aufgepasst! Versandhaus sucht Packhilfen. Nur Sa/So. Keine Erfahrung nötig."]},
+    {"type": "tip", "text": "Lies zuerst die Situationen und markiere die wichtigen Wörter (Wochenende frei, keine Erfahrung …). Achtung Falle: Oft passen zwei Anzeigen fast – nur ein Detail entscheidet. Manchmal passt keine Anzeige (X)."},
+    {"type": "exercise", "title": "Übung 4: Welche Anzeige passt?", "task": "Schreib A–F oder X.", "items": ["Ali ist Koch und möchte am Wochenende frei haben.", "Maria studiert und möchte am Wochenende Geld verdienen. Sie hat keine Erfahrung.", "Olga kann gut mit dem Computer arbeiten und sucht einen Job am Vormittag.", "Tarek hat einen Führerschein und möchte gern reisen.", "Frau Schneider sucht privat jemanden, der bei ihr zu Hause putzt."], "solutions": ["D (A ist auch für Köche, aber mit Wochenendarbeit)", "F", "B", "C", "X (E ist eine Firma für Büros, keine private Putzhilfe)"]}
+   ]
+  },
+  {
+   "title": "Wen oder Wem? Akkusativ oder Dativ",
+   "goal": "Du erkennst am Verb, ob du Akkusativ oder Dativ brauchst.",
+   "blocks": [
+    {"type": "table", "head": ["Wen? (Akkusativ) – direkter Kontakt", "Wem? (Dativ) – zu einer Person hin"], "rows": [
+     ["sehen: Wen siehst du? – den Mann", "geben: Wem gibst du das Buch? – dem Lehrer"],
+     ["anrufen: Wen rufst du an?", "schenken: Wem schenkst du Blumen?"], ["fragen: Wen fragst du?", "schicken: Wem schickst du die E-Mail?"],
+     ["lieben: Wen liebst du? – dich", "helfen: Wem hilfst du? – dir"], ["besuchen: Wen besuchst du?", "antworten, danken: Wem antwortest du?"]
+    ]},
+    {"type": "tip", "text": "fragen + Akkusativ, aber antworten + Dativ: Ich frage den Lehrer. Ich antworte dem Lehrer."},
+    {"type": "exercise", "title": "Übung 5: den, die, dem oder der?", "task": "Achte auf das Verb.", "items": ["Ich frage ______ Lehrer.", "Ich antworte ______ Lehrer.", "Wir helfen ______ Oma.", "Wir besuchen ______ Oma.", "Er liebt ______ Frau.", "Er schenkt ______ Frau Blumen."], "solutions": ["den", "dem", "der", "die", "die", "der"]}
+   ]
+  }
+ ]
+}

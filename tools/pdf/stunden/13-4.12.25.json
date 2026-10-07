@@ -1,0 +1,77 @@
+{
+ "id": "beim-arzt-krankmeldung-sollen",
+ "source": "4.12.25",
+ "title": "Beim Arzt, sich krankmelden und Ratschläge mit sollen",
+ "level": "A2",
+ "intro": "Du beschreibst Beschwerden, machst einen Termin, verstehst den Arzt, meldest dich krank und gibst Ratschläge mit sollen, sollten und doch / mal.",
+ "topics": [
+  {
+   "title": "Krankheit und Beschwerden",
+   "goal": "Du sagst, was dir fehlt.",
+   "blocks": [
+    {"type": "table", "head": ["Wort", "Beispiel"], "rows": [
+     ["das Fieber", "Ich habe Fieber (38 Grad)."], ["der Husten / der Schnupfen", "Er hat Husten. Er hustet."], ["die Schmerzen (Pl.)", "Kopfschmerzen, Halsschmerzen, Bauchschmerzen, Zahnschmerzen"],
+     ["die Grippe / die Erkältung", "Wir haben Grippe."], ["die Praxis", "Man geht meistens in die Praxis, nicht ins Krankenhaus."], ["der Termin", "Ich brauche einen Termin beim Arzt."],
+     ["die Versichertenkarte", "Haben Sie Ihre Karte dabei?"], ["das Medikament / die Tablette", "eine Tablette nehmen"], ["das Rezept", "Ich gebe Ihnen ein Rezept."],
+     ["die Krankschreibung / das Attest", "Ich bin bis Freitag krankgeschrieben."]
+    ]},
+    {"type": "rule", "text": "Ich habe + Nomen: Ich habe Kopfschmerzen. – … tut / tun weh: Mein Kopf tut weh. Meine Augen tun weh."},
+    {"type": "rule", "text": "seit + Dativ (Plural mit -n): seit zwei Tagen, seit drei Monaten, seit vier Jahren, seit gestern."},
+    {"type": "exercise", "title": "Übung 1: haben oder wehtun?", "task": "Ergänze.", "items": ["Mein Kopf ______ weh.", "Ich ______ Kopfschmerzen.", "Meine Ohren ______ weh.", "Er ______ Fieber.", "Der Hals ______ mir weh.", "Wir ______ Grippe."], "solutions": ["tut", "habe", "tun", "hat", "tut", "haben"]}
+   ]
+  },
+  {
+   "title": "In der Arztpraxis",
+   "goal": "Du machst einen Termin und verstehst die Fragen in der Praxis.",
+   "blocks": [
+    {"type": "table", "head": ["An der Anmeldung", "Im Sprechzimmer"], "rows": [
+     ["Haben Sie einen Termin?", "Was fehlt Ihnen? Wo haben Sie Schmerzen?"],
+     ["Sind Sie schon Patient bei uns?", "Seit wann haben Sie die Beschwerden?"],
+     ["Haben Sie Ihre Versichertenkarte dabei?", "Haben Sie Fieber?"],
+     ["Bitte nehmen Sie im Wartezimmer Platz.", "Machen Sie bitte den Mund auf. Atmen Sie tief ein und aus."],
+     ["Patient: Es ist dringend. Kann ich heute noch vorbeikommen?", "Ich verschreibe Ihnen ein Medikament. Ich schreibe Sie bis Freitag krank."]
+    ]},
+    {"type": "dialog", "title": "Dialog 1: Einen Termin vereinbaren", "lines": [
+     ["Praxis", "Praxis Dr. Berger, guten Tag."], ["Patient", "Guten Tag, ich möchte einen Termin vereinbaren. Ich habe starke Halsschmerzen und Fieber."],
+     ["Praxis", "Sind Sie schon Patient bei uns?"], ["Patient", "Ja, ich war letztes Jahr schon einmal da."],
+     ["Praxis", "Können Sie heute um 11 Uhr kommen?"], ["Patient", "Ja, das passt. Vielen Dank."], ["Praxis", "Bitte bringen Sie Ihre Versichertenkarte mit. Bis gleich."]
+    ]},
+    {"type": "dialog", "title": "Dialog 2: Die Untersuchung", "lines": [
+     ["Arzt", "Hallo Herr Al-Sayed. Was fehlt Ihnen denn?"], ["Patient", "Mein Hals tut weh und ich muss viel husten."], ["Arzt", "Haben Sie auch Fieber?"],
+     ["Patient", "Ja, heute Morgen hatte ich 38,5 Grad."], ["Arzt", "Machen Sie bitte den Mund auf und sagen Sie „Aaa“. – Atmen Sie tief ein … und aus."],
+     ["Patient", "Ist es schlimm?"], ["Arzt", "Nein, das ist eine Erkältung. Ich verschreibe Ihnen einen Hustensaft und Tabletten gegen das Fieber."],
+     ["Patient", "Muss ich arbeiten gehen?"], ["Arzt", "Nein, bleiben Sie zu Hause. Ich schreibe Sie bis Freitag krank."], ["Patient", "Danke, Herr Doktor."], ["Arzt", "Gute Besserung!"]
+    ]},
+    {"type": "exercise", "title": "Übung 2: Was passt?", "task": "Ordne die Antworten zu: A Ja, hier bitte. – B Am Hals. – C Dreimal am Tag nach dem Essen. – D Nein, es ist ein Notfall. – E Seit gestern Abend.", "items": ["Haben Sie einen Termin?", "Wo haben Sie Schmerzen?", "Haben Sie Ihre Karte dabei?", "Seit wann haben Sie Husten?", "Wie oft muss ich die Tabletten nehmen?"], "solutions": ["D", "B", "A", "E", "C"]},
+    {"type": "exercise", "title": "Übung 3: Was sagt der Arzt?", "task": "Bilde den Imperativ (Sie und du).", "items": ["den Mund aufmachen", "tief einatmen", "auf die Waage steigen", "diese Tabletten nehmen"], "solutions": ["Machen Sie bitte den Mund auf! / Mach bitte den Mund auf!", "Atmen Sie bitte tief ein! / Atme bitte tief ein!", "Steigen Sie bitte auf die Waage! / Steig bitte auf die Waage!", "Nehmen Sie bitte diese Tabletten! / Nimm bitte diese Tabletten!"]}
+   ]
+  },
+  {
+   "title": "Sich krankmelden",
+   "goal": "Du schreibst eine kurze Krankmeldung an Arbeit oder Kurs.",
+   "blocks": [
+    {"type": "text", "text": "<b>E-Mail</b><br/>Betreff: Krankmeldung – Amir Haddad<br/>Sehr geehrte Damen und Herren,<br/>hiermit melde ich mich krank. Ich bin bis zum 10.12. krankgeschrieben. Anbei finden Sie mein Attest.<br/>Mit freundlichen Grüßen<br/>Amir Haddad"},
+    {"type": "text", "text": "<b>Nachricht an den Kurs</b><br/>Hallo zusammen, ich bin krank und kann heute leider nicht zum Unterricht kommen. Ich gehe gleich zum Arzt und schicke das Attest per E-Mail. Viele Grüße, Amir"},
+    {"type": "list", "title": "Nützlich", "items": ["per Telefon = telefonisch, per E-Mail, per Post", "Im Laufe des Tages schicke ich Ihnen meine Krankmeldung.", "Antwort: Gute Besserung! Ruh dich aus! / Ruhen Sie sich aus!"]},
+    {"type": "exercise", "title": "Übung 4: Deine Krankmeldung", "task": "Du bist krank und kannst drei Tage nicht arbeiten. Schreib eine E-Mail an deinen Chef.", "items": ["Betreff: …"], "write": 6, "solutions": ["Prüfe: Betreff, Anrede, dass du krank bist, wie lange, Attest, Gruß."]}
+   ]
+  },
+  {
+   "title": "Ratschläge: sollen, sollten, doch und mal",
+   "goal": "Du gibst Anweisungen des Arztes weiter und gibst freundliche Tipps.",
+   "blocks": [
+    {"type": "table", "head": ["Person", "sollen", "sollten (Konjunktiv II)"], "rows": [
+     ["ich", "soll", "sollte"], ["du", "sollst", "solltest"], ["er / sie / es", "soll", "sollte"], ["wir", "sollen", "sollten"], ["ihr", "sollt", "solltet"], ["sie / Sie", "sollen", "sollten"]
+    ]},
+    {"type": "table", "head": ["Form", "Wann?", "Beispiel"], "rows": [
+     ["sollen", "Anweisung von jemand anderem weitergeben", "Der Arzt sagt, ich soll im Bett bleiben."],
+     ["sollten", "freundlicher Rat, Empfehlung", "Du solltest zum Arzt gehen."],
+     ["Imperativ + doch / mal", "lockerer Tipp unter Freunden", "Geh doch zum Arzt! Schlaf mal ein bisschen!"]
+    ]},
+    {"type": "exercise", "title": "Übung 5: Was hat der Arzt gesagt?", "task": "Schreib mit sollen.", "items": ["„Bleiben Sie drei Tage im Bett!“", "„Trinken Sie viel Wasser!“", "„Gehen Sie nicht zur Arbeit!“", "„Nehmen Sie Hustensaft!“"], "solutions": ["Ich soll drei Tage im Bett bleiben.", "Ich soll viel Wasser trinken.", "Ich soll nicht zur Arbeit gehen.", "Ich soll Hustensaft nehmen."]},
+    {"type": "exercise", "title": "Übung 6: Gib einen Rat mit „Du solltest …“", "task": "Problem und Rat verbinden.", "items": ["Ich habe Zahnschmerzen. (zum Zahnarzt gehen)", "Ich kann nachts nicht schlafen. (weniger Kaffee trinken)", "Mein Kopf tut weh. (eine Tablette nehmen)", "Ich habe Stress bei der Arbeit. (mit dem Chef sprechen)"], "solutions": ["Du solltest zum Zahnarzt gehen.", "Du solltest weniger Kaffee trinken.", "Du solltest eine Tablette nehmen.", "Du solltest mit deinem Chef sprechen. / Sprich doch mit deinem Chef!"]},
+    {"type": "exercise", "title": "Übung 7: Tipp mit doch / mal", "task": "Schreib einen Imperativ.", "items": ["einen Apotheker fragen", "einen Hustensaft probieren", "heute zu Hause bleiben", "sich ausruhen"], "solutions": ["Frag doch einen Apotheker!", "Probier mal einen Hustensaft!", "Bleib doch heute zu Hause!", "Ruh dich doch aus!"]}
+   ]
+  }
+ ]
+}

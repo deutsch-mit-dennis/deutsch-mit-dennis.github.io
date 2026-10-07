@@ -1,0 +1,54 @@
+{
+ "id": "ja-nein-doch-lesetraining-musik",
+ "source": "18.12.25",
+ "title": "Ja, Nein, Doch, Lesetraining und Musik",
+ "level": "A2",
+ "intro": "Du antwortest richtig auf negative Fragen, trainierst kurze Lesetexte wie in der DTZ und sprichst über Musik und Instrumente.",
+ "topics": [
+  {
+   "title": "Ja, Nein oder Doch?",
+   "goal": "Du antwortest auf positive und negative Fragen.",
+   "blocks": [
+    {"type": "table", "head": ["Frage", "Ich stimme zu", "Ich widerspreche"], "rows": [
+     ["positiv: Kommst du?", "Ja. (Ich komme.)", "Nein. (Ich komme nicht.)"],
+     ["negativ: Kommst du nicht?", "Nein. (Stimmt, ich komme nicht.)", "Doch! (Falsch – ich komme!)"]
+    ]},
+    {"type": "rule", "text": "Doch benutzt du nur nach einer negativen Frage (mit nicht oder kein), wenn die Antwort positiv ist."},
+    {"type": "dialog", "title": "In der Pause", "lines": [
+     ["A", "Hast du Hunger?"], ["B", "Ja, sehr."], ["A", "Hast du dein Pausenbrot dabei?"], ["B", "Nein, das habe ich zu Hause vergessen."],
+     ["A", "Hast du kein Geld dabei?"], ["B", "Doch, Geld habe ich. Ich kaufe mir etwas."], ["A", "Magst du keine Pizza?"], ["B", "Doch, Pizza liebe ich! Warum?"], ["A", "Weil es heute in der Kantine Pizza gibt."]
+    ]},
+    {"type": "dialog", "title": "Im Kurs", "lines": [
+     ["A", "Verstehst du den Lehrer nicht?"], ["B", "Doch, ich verstehe ihn gut. Er spricht langsam."], ["A", "Hast du heute keine Hausaufgaben gemacht?"], ["B", "Nein, ich hatte keine Zeit."], ["A", "Hast du keine Angst?"], ["B", "Doch, schon ein bisschen."]
+    ]},
+    {"type": "exercise", "title": "Übung 1: Ja, Nein oder Doch?", "task": "Ergänze.", "items": ["Kommst du heute Abend? – ______, ich komme gern.", "Hast du deine Mutter nicht angerufen? – ______, ich habe sie gestern angerufen.", "Ist das nicht dein Auto? – ______, das ist mein Auto.", "Bleibst du nicht zu Hause? – ______, ich bleibe nicht zu Hause. Ich gehe ins Kino.", "Trinkst du keinen Tee? – ______, ich trinke keinen Tee.", "Lernst du Deutsch? – ______, ich lerne Deutsch."], "solutions": ["Ja", "Doch", "Doch", "Nein", "Nein", "Ja"]}
+   ]
+  },
+  {
+   "title": "Lesetraining: kurze Nachrichten verstehen",
+   "goal": "Du findest in kurzen Texten die wichtige Information.",
+   "blocks": [
+    {"type": "text", "text": "<b>Text 1: E-Mail an die Kollegen</b><br/>Liebe Kolleginnen und Kollegen, mein Sohn ist heute Morgen krank geworden. Ich muss mit ihm zum Arzt gehen und komme erst um 13 Uhr ins Büro. Herr Schmidt, können wir unser Gespräch auf 14 Uhr verschieben? Viele Grüße, Petra Klein"},
+    {"type": "text", "text": "<b>Text 2: Notiz auf dem Küchentisch</b><br/>Hallo Schatz, im Kühlschrank sind noch Nudeln. Du musst sie nur kurz in der Mikrowelle warm machen. Ich komme erst um 21 Uhr vom Sport. Bitte gib dem Hund noch Futter! Kuss, Lena"},
+    {"type": "text", "text": "<b>Text 3: SMS von Ben</b><br/>Hi Tom, am Samstag fahren wir zum Fußballspiel nach Dortmund. Das Ticket kostet 15 Euro. Wir treffen uns um 14 Uhr am Bahnhof. Sag mir bitte bis heute Abend Bescheid, ob du mitkommst."},
+    {"type": "exercise", "title": "Übung 2: a, b oder c?", "task": "Kreuze die richtige Antwort an.", "items": ["Text 1: a) Frau Klein kommt heute nicht zur Arbeit. b) Sie kommt erst am Mittag zur Arbeit. c) Sie hat mit Herrn Schmidt einen Termin beim Arzt.", "Text 2: Was soll der Partner machen? a) Nudeln kochen b) zum Sport kommen c) dem Hund Futter geben", "Text 3: Was möchte Ben wissen? a) ob Tom Geld hat b) ob Tom am Samstag mitkommt c) wo der Bahnhof ist"], "solutions": ["b", "c", "b"]},
+    {"type": "tip", "text": "In der DTZ steht die Antwort selten mit denselben Wörtern im Text. Achte auf Synonyme: „erst um 13 Uhr“ = „am Mittag“."}
+   ]
+  },
+  {
+   "title": "Musik und Instrumente",
+   "goal": "Du sprichst über Musik, Instrumente und Musikunterricht.",
+   "blocks": [
+    {"type": "table", "head": ["Wort", "Beispiel"], "rows": [
+     ["das Instrument, -e", "Spielst du ein Instrument?"], ["das Klavier, -e", "Wir haben ein Klavier im Wohnzimmer."], ["die Gitarre, -n", "Am Lagerfeuer spielt er oft Gitarre."],
+     ["die Geige, -n", "Meine Tochter möchte Geige lernen."], ["das Schlagzeug, -e", "Mein Nachbar spielt Schlagzeug. Das ist sehr laut!"], ["die Trompete, -n", "Er spielt Trompete in einer Jazz-Band."],
+     ["die Musikschule, -n", "Ich nehme einmal pro Woche Klavierunterricht in der Musikschule."], ["die Note, -n", "Kannst du Noten lesen?"],
+     ["die Melodie, -n / der Rhythmus", "Beim Schlagzeug ist der Rhythmus wichtig."], ["das Konzert, -e", "Am Samstag gehen wir ins Konzert."]
+    ]},
+    {"type": "list", "title": "Verben und Adjektive", "items": ["spielen: Ich spiele seit drei Jahren Geige.", "üben: Man muss jeden Tag üben.", "singen: Er spielt Gitarre und singt dazu.", "stimmen: Vor dem Konzert muss ich die Gitarre stimmen.", "auf|treten: Die Band tritt am Samstag auf dem Stadtfest auf.", "musikalisch, begabt, auswendig: Ich spiele das Lied auswendig."]},
+    {"type": "exercise", "title": "Übung 3: Ergänze", "task": "üben, lesen, stimmen, spiele, auf", "items": ["Um gut zu werden, muss man jeden Tag ______.", "Kannst du Noten ______?", "Meine Gitarre klingt komisch. Ich muss sie ______.", "In meiner Freizeit ______ ich gern Klavier.", "Die Band tritt heute Abend im Park ______."], "solutions": ["üben", "lesen", "stimmen", "spiele", "auf"]},
+    {"type": "exercise", "title": "Übung 4: Fragen zur Musik", "task": "Bilde die Frage und antworte.", "items": ["spielen / du / ein Instrument / ?", "was / dein Lieblingsinstrument / sein / ?", "haben / du / als Kind / Musikunterricht / ?"], "solutions": ["Spielst du ein Instrument?", "Was ist dein Lieblingsinstrument?", "Hattest du als Kind Musikunterricht?"]}
+   ]
+  }
+ ]
+}

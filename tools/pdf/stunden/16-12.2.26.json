@@ -1,0 +1,63 @@
+{
+ "id": "adjektive-kleidung-bild-welcher-dieser",
+ "source": "12.2.26",
+ "title": "Adjektivendungen, Kleidung, Bild beschreiben und welcher/dieser",
+ "level": "A2–B1",
+ "intro": "Du setzt Adjektivendungen nach ein/eine richtig, beschreibst Kleidung und ein Bild wie in der Prüfung und fragst mit welcher, antwortest mit dieser.",
+ "topics": [
+  {
+   "title": "Adjektivendungen nach ein, eine, kein",
+   "goal": "Du setzt die Adjektivendung im Nominativ, Akkusativ und Dativ richtig.",
+   "blocks": [
+    {"type": "table", "head": ["", "maskulin (der)", "neutral (das)", "feminin (die)", "Plural (ohne Artikel)"], "rows": [
+     ["Nominativ: Da ist …", "ein alter Mann", "ein kleines Kind", "eine junge Frau", "nette Leute"],
+     ["Akkusativ: Er trägt …", "einen blauen Pullover", "ein kariertes Hemd", "eine rote Hose", "schwarze Schuhe"],
+     ["Dativ: mit …", "mit einem alten Hut", "mit einem kleinen Kind", "mit einer alten Dame", "mit braunen Stiefeln"]
+    ]},
+    {"type": "rule", "text": "Das Adjektiv zeigt das Genus, wenn der Artikel es nicht zeigt: ein alter (der), ein kleines (das). Im Dativ endet das Adjektiv immer auf -en."},
+    {"type": "tip", "text": "Merkhilfe Akkusativ: einen …en (2× n), eine …e (2× e), ein …es (das s). beige, rosa, lila bekommen keine Endung. dunkel → eine dunkle Bluse."},
+    {"type": "exercise", "title": "Übung 1: Ergänze die Endung", "task": "Nominativ oder Akkusativ?", "items": ["Da steht eine jung___ Frau.", "Im Hintergrund ist ein hoh___ Haus.", "Da sitzt ein alt___ Mann.", "Sie hat eine blau___ Jeans an.", "Ich kaufe einen warm___ Mantel.", "Er hat einen grau___ Anzug an.", "Auf dem Tisch steht ein lecker___ Kuchen."], "solutions": ["junge", "hohes", "alter", "blaue", "warmen", "grauen", "leckerer"]}
+   ]
+  },
+  {
+   "title": "Kleidung beschreiben",
+   "goal": "Du sagst, was Personen tragen.",
+   "blocks": [
+    {"type": "table", "head": ["der", "die", "das", "Plural"], "rows": [
+     ["der Anzug, der Rock, der Pullover", "die Hose, die Jeans, die Jacke", "das T-Shirt, das Hemd", "die Schuhe, die Stiefel"],
+     ["der Mantel, der Schal, der Hut", "die Bluse, die Mütze, die Brille", "das Kleid", "die Turnschuhe, die Socken, die Handschuhe"]
+    ]},
+    {"type": "list", "title": "Adjektive", "items": ["Muster: kariert, gestreift, gepunktet, geblümt", "Form: lang, kurz, eng, weit", "Stil: elegant, schick, sportlich, bequem, modern, altmodisch"]},
+    {"type": "examples", "items": ["Der Mann hat einen schicken Anzug an.", "Der Opa hat einen alten Hut auf.", "Sie hat eine enge Jeans und braune Stiefel an.", "Er trägt ein kariertes Hemd mit einer blauen Jeans.", "Einfacher: Sein Hemd ist kariert."]}
+   ]
+  },
+  {
+   "title": "Ein Bild beschreiben (Prüfung Sprechen)",
+   "goal": "Du beschreibst ein Bild in einer klaren Reihenfolge.",
+   "blocks": [
+    {"type": "list", "title": "So gehst du vor", "items": ["1. Überblick: Auf dem Bild sehe ich zwei Personen: einen jungen Mann und eine junge Frau.", "2. Wo? Links / rechts / in der Mitte / im Hintergrund …", "3. Personen: Links sitzt ein junger Mann. Er hat ein kariertes Hemd an.", "4. Was machen sie? Die beiden sitzen am Tisch und essen.", "5. Details: Auf dem Tisch steht ein Kuchen mit Obst.", "6. Vermutung: Vielleicht hat sie Geburtstag. Es kann sein, dass die beiden Hochzeitstag haben."]},
+    {"type": "examples", "title": "Nützliche Strukturen", "items": ["Ich sehe ein Kind, das im Wohnzimmer spielt.", "Ich sehe vier Kinder, die im Wohnzimmer spielen.", "Die Menschen tragen … / haben … an.", "Die Familie sitzt am Tisch und isst."]},
+    {"type": "exercise", "title": "Übung 2: Beschreibe ein Bild", "task": "Nimm ein Foto aus deinem Handy oder ein Bild aus dem Buch und beschreibe es in 6–8 Sätzen.", "items": ["Auf dem Bild sehe ich …"], "write": 8, "solutions": ["Prüfe: Überblick, Position, Kleidung mit Adjektiv, Tätigkeit, Details, eine Vermutung."]}
+   ]
+  },
+  {
+   "title": "welcher? – dieser!",
+   "goal": "Du fragst mit welcher und antwortest mit dieser.",
+   "blocks": [
+    {"type": "rule", "text": "welch- und dies- haben dieselben Endungen wie der bestimmte Artikel: der → welcher → dieser, den → welchen → diesen, dem → welchem → diesem."},
+    {"type": "table", "head": ["", "maskulin", "neutral", "feminin", "Plural"], "rows": [
+     ["Nominativ", "welcher / dieser", "welches / dieses", "welche / diese", "welche / diese"],
+     ["Akkusativ", "welchen / diesen", "welches / dieses", "welche / diese", "welche / diese"],
+     ["Dativ", "welchem / diesem", "welchem / diesem", "welcher / dieser", "welchen / diesen"]
+    ]},
+    {"type": "exercise", "title": "Übung 3: Ergänze", "task": "welch- oder dies- mit Endung.", "items": ["______ Pullover gefällt dir? (der, Nom.)", "Ich nehme ______ Hose hier. (die, Akk.)", "Ich kaufe ______ Hemd. (das, Akk.)", "______ Bus nimmst du? (der, Akk.)", "Mit ______ Freund gehst du ins Kino? (der, Dat.)", "Bei ______ Firma arbeitest du? (die, Dat.)"], "solutions": ["Welcher", "diese", "dieses", "Welchen", "welchem", "welcher"]},
+    {"type": "dialog", "title": "Gemeinsam etwas planen: ein Geschenk für Julia", "lines": [
+     ["A", "Julia hat bald Geburtstag. Wollen wir ihr einen Pullover kaufen? Hier gibt es zwei."], ["B", "Gute Idee. Welchen Pullover findest du besser? Den blauen oder den roten?"],
+     ["A", "Ich finde diesen roten Pullover sehr schick. Er passt gut zu ihr."], ["B", "Hmm, aber 50 Euro ist teuer. Und dieser blaue? Der kostet nur 30 Euro."],
+     ["A", "Den finde ich langweilig. Vielleicht doch lieber ein Buch?"], ["B", "Welches Buch denn?"], ["A", "Dieses Kochbuch hier. Sie kocht doch so gern."], ["B", "Au ja! Dieses Buch ist super und nicht so teuer. Das machen wir."]
+    ]},
+    {"type": "tip", "text": "Spielt den Dialog mit anderen Geschenken: eine Tasche (Welche Tasche? – Diese Tasche.) oder ein Parfüm (Welches? – Dieses.)."}
+   ]
+  }
+ ]
+}

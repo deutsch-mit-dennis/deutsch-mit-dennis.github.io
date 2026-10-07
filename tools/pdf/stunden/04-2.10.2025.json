@@ -1,0 +1,76 @@
+{
+ "id": "uhrzeit-zeitfragen-trennbare-verben",
+ "source": "2.10.2025",
+ "title": "Die Uhrzeit, Fragen zur Zeit und trennbare Verben",
+ "level": "A1",
+ "intro": "Du sagst die Uhrzeit im Alltag, fragst nach Zeitpunkt und Dauer und benutzt trennbare Verben wie aufstehen und anrufen.",
+ "topics": [
+  {
+   "title": "Die Uhrzeit im Alltag (inoffiziell)",
+   "goal": "Du verstehst und sagst Uhrzeiten so, wie man sie im Alltag spricht.",
+   "blocks": [
+    {"type": "list", "title": "Die wichtigsten Wörter", "items": ["nach: Minuten nach der vollen Stunde (08:05 = fünf nach acht)", "vor: Minuten vor der vollen Stunde (07:55 = fünf vor acht)", "Viertel: 15 Minuten", "halb: 30 Minuten – immer zur nächsten Stunde!"]},
+    {"type": "rule", "text": "halb schaut immer auf die nächste Stunde: 09:30 = halb zehn, 11:30 = halb zwölf."},
+    {"type": "table", "head": ["digital", "im Alltag"], "rows": [
+     ["08:00", "acht (Uhr)"], ["08:05", "fünf nach acht"], ["08:15", "Viertel nach acht"], ["08:20", "zwanzig nach acht"],
+     ["08:25", "fünf vor halb neun"], ["08:30", "halb neun"], ["08:35", "fünf nach halb neun"], ["08:40", "zwanzig vor neun"],
+     ["08:45", "Viertel vor neun"], ["08:50", "zehn vor neun"], ["08:55", "fünf vor neun"]
+    ]},
+    {"type": "tip", "text": "Im Alltag sagt man meistens kein „Uhr“: Es ist Viertel nach drei. Ob morgens oder abends, versteht man aus der Situation – sonst fragt man: Meinst du morgens oder abends?"},
+    {"type": "examples", "title": "Mein Tag", "items": ["Ich stehe um zehn nach sieben auf.", "Mein Bus fährt um halb acht ab.", "Unser Unterricht beginnt um halb neun und endet um halb eins.", "Ich hole mein Kind um zwei ab.", "Ich gehe um halb elf ins Bett."]},
+    {"type": "list", "title": "Essen am Tag", "items": ["frühstücken – Was isst du zum Frühstück?", "zu Mittag essen – Ich esse gern Suppe zu Mittag.", "zu Abend essen – Ich esse ein Brötchen zu Abend."]},
+    {"type": "exercise", "title": "Übung 1: Wie spät ist es?", "task": "Schreib die Uhrzeit, wie man sie im Alltag sagt.", "items": ["06:05", "11:30", "01:45", "08:40", "03:25", "12:15", "07:10", "12:35"], "solutions": ["fünf nach sechs", "halb zwölf", "Viertel vor zwei", "zwanzig vor neun", "fünf vor halb vier", "Viertel nach zwölf", "zehn nach sieben", "fünf nach halb eins"]},
+    {"type": "exercise", "title": "Übung 2: Welche Uhrzeit ist das?", "task": "Schreib die digitale Uhrzeit.", "items": ["Viertel nach fünf", "zehn vor zwölf", "halb neun", "fünf vor halb zehn", "Viertel vor sieben"], "solutions": ["5:15 / 17:15", "11:50 / 23:50", "8:30 / 20:30", "9:25 / 21:25", "6:45 / 18:45"]}
+   ]
+  },
+  {
+   "title": "Fragen zur Zeit: Wann? Um wie viel Uhr? Wie lange?",
+   "goal": "Du fragst nach Zeitpunkt, genauer Uhrzeit, Dauer, Anfang und Ende.",
+   "blocks": [
+    {"type": "table", "head": ["Frage", "Was fragt sie?", "Antwort"], "rows": [
+     ["Wann …?", "einen Zeitpunkt", "Am Montag. / Um drei. / Nach der Arbeit."],
+     ["Um wie viel Uhr …?", "eine genaue Uhrzeit", "Um Viertel vor neun."],
+     ["Wie lange …?", "eine Dauer", "Zwei Stunden. / 20 Minuten."],
+     ["Von wann bis wann …?", "Anfang und Ende", "Von 10 bis 12 Uhr."]
+    ]},
+    {"type": "table", "head": ["Präposition", "wofür?", "Beispiel"], "rows": [
+     ["um", "Uhrzeit", "Ich komme um 12 Uhr."],
+     ["am", "Tag, Datum, Tageszeit", "am Montag, am 1. Oktober, am Abend"],
+     ["im", "Monat, Jahreszeit", "im Juli, im Winter"],
+     ["ab", "ab diesem Zeitpunkt", "ab 12 Uhr (12 Uhr oder später)"],
+     ["von … bis", "Anfang und Ende", "von 8 bis 13 Uhr, von Montag bis Freitag"],
+     ["vom … bis zum", "Datum", "vom 1. bis zum 15. Oktober"]
+    ]},
+    {"type": "examples", "items": ["Wann haben Sie geöffnet? – Montags bis freitags von 8 bis 13 Uhr.", "Wir haben vom 13. bis zum 17. Oktober Herbstferien.", "Wie lange fährst du nach Hause? – Mit dem Bus eine Stunde, mit dem Fahrrad 20 Minuten."]},
+    {"type": "exercise", "title": "Übung 3: Welche Frage passt?", "task": "Ergänze: Wann / Um wie viel Uhr / Wie lange / Von wann bis wann.", "items": ["______ isst du zu Mittag? – Um Viertel nach eins.", "______ dauert die Pause? – 20 Minuten.", "______ hast du am Wochenende Zeit? – Von Samstag bis Sonntagabend.", "______ treffen wir uns? – Morgen Nachmittag."], "solutions": ["Um wie viel Uhr", "Wie lange", "Von wann bis wann", "Wann"]},
+    {"type": "exercise", "title": "Übung 4: Stell die Frage", "task": "Schreib die passende Frage zur Antwort.", "items": ["Ich habe von zwei bis vier Uhr Zeit.", "Die Reise dauert drei Wochen.", "Der Supermarkt schließt um zehn Uhr."], "solutions": ["Von wann bis wann hast du Zeit?", "Wie lange dauert die Reise?", "Wann / Um wie viel Uhr schließt der Supermarkt?"]}
+   ]
+  },
+  {
+   "title": "Trennbare Verben",
+   "goal": "Du benutzt Verben wie aufstehen, einkaufen und anrufen im Satz richtig.",
+   "blocks": [
+    {"type": "text", "text": "Stell dir ein trennbares Verb wie ein Känguru mit einem Baby im Beutel vor: Bei **anrufen** ist rufen die Mutter (das Hauptverb) und an- das Baby (die Vorsilbe)."},
+    {"type": "rule", "text": "Im Satz steht das Hauptverb auf Position 2. Die Vorsilbe springt ans Ende: anrufen → Ich rufe dich an."},
+    {"type": "table", "head": ["Infinitiv", "Beispielsatz"], "rows": [
+     ["aufstehen", "Ich stehe um 7 Uhr auf."],
+     ["einkaufen", "Wir kaufen im Supermarkt ein."],
+     ["mitkommen", "Kommst du heute Abend mit?"],
+     ["fernsehen", "Er sieht jeden Tag fern."],
+     ["abholen", "Ich hole dich um 18 Uhr ab."],
+     ["anfangen", "Der Kurs fängt um 8:30 Uhr an."],
+     ["aussehen", "Du siehst heute toll aus!"],
+     ["vorbereiten", "Der Koch bereitet das Essen vor."],
+     ["wegwerfen", "Sie wirft die alte Zeitung weg."],
+     ["zumachen", "Machst du bitte das Fenster zu?"]
+    ]},
+    {"type": "list", "title": "Diese Vorsilben sind trennbar", "items": ["ab-, an-, auf-, aus-, ein-, fern-, mit-, nach-, vor-, weg-, zu-"]},
+    {"type": "list", "title": "Diese Vorsilben sind nie trennbar", "items": ["be-, emp-, ent-, er-, ge-, miss-, ver-, zer-", "Ich besuche meine Tante. Verstehst du die Frage? Das Bild gefällt mir."]},
+    {"type": "rule", "text": "Mit Modalverb (können, müssen, wollen …) bleibt das Verb zusammen und steht im Infinitiv am Ende: Ich muss um 7 Uhr aufstehen. Wir können heute nicht einkaufen."},
+    {"type": "exercise", "title": "Übung 5: Wie heißt der Infinitiv?", "task": "Finde das trennbare Verb.", "items": ["Maria kauft im Supermarkt ein.", "Der Zug fährt um 18 Uhr ab.", "Wir sehen am Abend zusammen fern.", "Kommst du zur Party mit?", "Bitte mach das Fenster zu!"], "solutions": ["einkaufen", "abfahren", "fernsehen", "mitkommen", "zumachen"]},
+    {"type": "exercise", "title": "Übung 6: Bilde Sätze", "task": "Schreib Sätze im Präsens.", "items": ["du / deine Oma / anrufen", "wir / am Samstag / einkaufen", "der Unterricht / um 9 Uhr / anfangen", "er / die Tür / aufmachen"], "solutions": ["Du rufst deine Oma an.", "Wir kaufen am Samstag ein.", "Der Unterricht fängt um 9 Uhr an.", "Er macht die Tür auf."]},
+    {"type": "exercise", "title": "Übung 7: Mit Modalverb", "task": "Schreib den Satz mit dem Modalverb.", "items": ["Wir kaufen heute ein. (wollen)", "Er kommt heute Abend mit. (können)", "Du rufst mich später an. (sollen)"], "solutions": ["Wir wollen heute einkaufen.", "Er kann heute Abend mitkommen.", "Du sollst mich später anrufen."]}
+   ]
+  }
+ ]
+}

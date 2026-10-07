@@ -1,0 +1,69 @@
+{
+ "id": "possessivartikel-pronomen-perfekt",
+ "source": "6.11.2025",
+ "title": "Possessivartikel und Pronomen im Akkusativ, Perfekt mit haben",
+ "level": "A1",
+ "intro": "Du sagst, wem etwas gehört, benutzt mein, dein, sein … und mich, dich, ihn … im Akkusativ und erzählst im Perfekt, was du gemacht hast.",
+ "topics": [
+  {
+   "title": "Wem gehört das? Possessivartikel",
+   "goal": "Du sagst mit mein, dein, sein, ihr …, wem etwas gehört.",
+   "blocks": [
+    {"type": "table", "head": ["Person", "Possessivartikel", "Beispiel", "= gehört …"], "rows": [
+     ["ich", "mein", "Das ist mein Buch.", "Das Buch gehört mir."],
+     ["du", "dein", "Das ist dein Handy.", "Das Handy gehört dir."],
+     ["er / es", "sein", "Das ist sein Auto. (Ali)", "Das Auto gehört ihm."],
+     ["sie", "ihr", "Das ist ihr Fahrrad. (Maria)", "Das Fahrrad gehört ihr."],
+     ["wir", "unser", "Das ist unser Haus.", "Das Haus gehört uns."],
+     ["ihr", "euer", "Ist das euer Hund?", "Gehört der Hund euch?"],
+     ["sie / Sie", "ihr / Ihr", "Ist das Ihre Tasche?", "Gehört die Tasche Ihnen?"]
+    ]},
+    {"type": "tip", "text": "das Kind und das Mädchen sind neutral: Das Mädchen spielt mit seiner Puppe. Die Puppe gehört ihm."},
+    {"type": "list", "title": "Die drei Fragen", "items": ["Nominativ: Wer? Was? – Das ist mein Auto.", "Akkusativ: Wen? Was? – Ich kaufe sein Auto. Ich sehe den Lehrer.", "Dativ: Wem? – Das Auto gehört mir."]}
+   ]
+  },
+  {
+   "title": "Possessivartikel im Akkusativ",
+   "goal": "Du benutzt meinen, deinen, seinen … nach Verben mit Akkusativ.",
+   "blocks": [
+    {"type": "rule", "text": "Der Possessivartikel bekommt dieselbe Endung wie ein/kein. Nur maskulin ändert sich: mein → meinen."},
+    {"type": "table", "head": ["", "maskulin", "feminin", "neutral", "Plural"], "rows": [
+     ["Nominativ", "mein Freund", "meine Tante", "mein Kind", "meine Freunde"],
+     ["Akkusativ", "meinen Freund", "meine Tante", "mein Kind", "meine Freunde"]
+    ]},
+    {"type": "list", "title": "Verben mit Akkusativ", "items": ["besuchen, sehen, kaufen, brauchen, mögen, kennen, finden, putzen, bringen, bestellen, essen, trinken, machen"]},
+    {"type": "examples", "items": ["Ich besuche meinen Bruder. (der Bruder)", "Ich besuche meine Schwester. (die Schwester)", "Ich bringe mein Kind in die Schule. (das Kind)", "Er sucht seine Schlüssel. (Plural)"]},
+    {"type": "exercise", "title": "Übung 1: Welche Form ist richtig?", "task": "Wähle.", "items": ["Ich mag dein / deinen Pullover. (der)", "Er kennt unser / unseren Lehrer nicht.", "Findest du ihr / ihre Tasche?", "Wir brauchen euer / eure Hilfe. (die)", "Sie putzt ihr / ihren Badezimmer. (das)", "Besuchst du oft dein / deine Familie?"], "solutions": ["deinen", "unseren", "ihre", "eure", "ihr", "deine"]}
+   ]
+  },
+  {
+   "title": "Personalpronomen im Akkusativ",
+   "goal": "Du sagst Ich rufe dich an. Er sieht mich.",
+   "blocks": [
+    {"type": "table", "head": ["Nominativ", "Akkusativ", "Beispiel"], "rows": [
+     ["ich", "mich", "Du siehst mich."], ["du", "dich", "Ich frage dich."], ["er", "ihn", "Der Lehrer ist nett. Ich mag ihn."],
+     ["sie", "sie", "Ich rufe meine Schwester an. Ich rufe sie an."], ["es", "es", "Das Kind spielt. Ich sehe es."],
+     ["wir", "uns", "Er besucht uns."], ["ihr", "euch", "Ich lade euch ein."], ["sie / Sie", "sie / Sie", "Ich verstehe Sie nicht."]
+    ]},
+    {"type": "rule", "text": "Neue Formen gibt es nur bei ich → mich, du → dich, er → ihn, wir → uns, ihr → euch. sie, es und Sie bleiben gleich."},
+    {"type": "exercise", "title": "Übung 2: Ergänze das Pronomen", "task": "Setze das Pronomen im Akkusativ ein.", "items": ["Meine Schwester hat Geburtstag. Ich habe ______ schon angerufen.", "Du bist mein bester Freund. Ich mag ______ sehr.", "Wo ist der Schlüssel? Ich finde ______ nicht.", "Wir sind zu Hause. Besuchst du ______?", "Herr Weber, ich verstehe ______ leider nicht."], "solutions": ["sie", "dich", "ihn", "uns", "Sie"]}
+   ]
+  },
+  {
+   "title": "Das Perfekt mit haben",
+   "goal": "Du erzählst, was du gemacht hast.",
+   "blocks": [
+    {"type": "rule", "text": "Perfekt = haben (Position 2) + Partizip II (am Ende). Ich habe gestern Deutsch gelernt."},
+    {"type": "table", "head": ["Infinitiv", "Partizip II", "Regel"], "rows": [
+     ["machen", "gemacht", "ge- + Stamm + -t"], ["kaufen", "gekauft", "ge- + Stamm + -t"], ["spielen", "gespielt", ""], ["kochen", "gekocht", ""],
+     ["lernen", "gelernt", ""], ["putzen", "geputzt", ""], ["arbeiten", "gearbeitet", "Stamm auf -t/-d → -et"],
+     ["schreiben", "geschrieben", "unregelmäßig: -en"], ["lesen", "gelesen", ""], ["trinken", "getrunken", ""], ["schlafen", "geschlafen", ""], ["essen", "gegessen", ""], ["finden", "gefunden", ""]
+    ]},
+    {"type": "rule", "text": "Verben der Bewegung (gehen, fahren, kommen, aufstehen) bilden das Perfekt mit sein: Ich bin zur Schule gegangen."},
+    {"type": "examples", "title": "Position 1 kann wechseln – haben bleibt auf Position 2", "items": ["Ich habe am Wochenende mit meinen Kindern gespielt.", "Am Wochenende habe ich mit meinen Kindern gespielt.", "Das Auto habe ich letzte Woche in Berlin gekauft."]},
+    {"type": "list", "title": "Erzählen mit Reihenfolge", "items": ["Zuerst bin ich aufgestanden.", "Dann bin ich zur Schule gegangen.", "Danach habe ich Besuch bekommen.", "Zum Schluss habe ich das Essen gekocht."]},
+    {"type": "exercise", "title": "Übung 3: Schreib im Perfekt", "task": "Bilde Sätze.", "items": ["ich / am Samstag / meine Wohnung / putzen", "du / am Wochenende / was / machen / ?", "Maria / eine E-Mail / schreiben", "wir / am Abend / Pizza / essen", "du / am Sonntag / lange / schlafen / ?"], "solutions": ["Ich habe am Samstag meine Wohnung geputzt.", "Was hast du am Wochenende gemacht?", "Maria hat eine E-Mail geschrieben.", "Wir haben am Abend Pizza gegessen.", "Hast du am Sonntag lange geschlafen?"]}
+   ]
+  }
+ ]
+}

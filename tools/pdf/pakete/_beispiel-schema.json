@@ -1,0 +1,95 @@
+{
+ "id": "perfekt-trennbar-imperativ-anmeldung",
+ "source": "13.11.25",
+ "title": "Perfekt mit sein, trennbare Verben, Imperativ und Anmeldung",
+ "level": "A1–A2",
+ "intro": "Du bildest das Perfekt auch mit sein, mit trennbaren Verben und ohne ge-, gibst Anweisungen im Imperativ und stellst dich bei einer Anmeldung vor.",
+ "topics": [
+  {
+   "title": "Perfekt mit sein",
+   "goal": "Du weißt, wann das Perfekt mit sein gebildet wird.",
+   "blocks": [
+    {"type": "rule", "text": "Perfekt = haben oder sein (Position 2) + Partizip II (am Ende). sein benutzen wir bei Bewegung von A nach B und bei Veränderung."},
+    {"type": "table", "head": ["Infinitiv", "Perfekt mit sein"], "rows": [
+     ["gehen", "Ich bin zur Schule gegangen."], ["fahren", "Ich bin nach Hause gefahren."], ["fliegen", "Ich bin nach Frankreich geflogen."],
+     ["kommen", "Wann bist du gekommen?"], ["aufstehen", "Ich bin um 8 Uhr aufgestanden."], ["umziehen", "Ich bin nach Berlin umgezogen."],
+     ["aufwachsen", "Mein Kind ist schon aufgewachsen."], ["mitkommen", "Bist du ins Kino mitgekommen?"], ["ankommen", "Der Zug ist in Berlin angekommen."]
+    ]},
+    {"type": "table", "head": ["sein", "", "sein", ""], "rows": [["ich", "bin", "wir", "sind"], ["du", "bist", "ihr", "seid"], ["er / sie / es", "ist", "sie / Sie", "sind"]]},
+    {"type": "table", "title": "Achtung: ziehen mit Vorsilbe", "head": ["Verb", "Bedeutung", "Beispiel"], "rows": [
+     ["umziehen (sein)", "in eine neue Wohnung gehen", "Ich bin in die neue Wohnung umgezogen."],
+     ["einziehen / ausziehen (sein)", "in eine Wohnung hinein / heraus", "Der Vormieter ist ausgezogen. Jetzt kann ich endlich einziehen."],
+     ["sich umziehen (haben)", "andere Kleidung anziehen", "Ich habe mich nach der Arbeit umgezogen."],
+     ["anziehen / ausziehen (haben)", "Kleidung an / aus", "Es war kalt, ich habe eine dicke Jacke angezogen."]
+    ]}
+   ]
+  },
+  {
+   "title": "Perfekt bei trennbaren Verben",
+   "goal": "Du setzt -ge- an die richtige Stelle.",
+   "blocks": [
+    {"type": "rule", "text": "Bei trennbaren Verben steht -ge- zwischen Vorsilbe und Verb: an-ge-rufen, ein-ge-kauft."},
+    {"type": "table", "head": ["Infinitiv", "Partizip II", "Hilfsverb"], "rows": [
+     ["abholen", "abgeholt", "haben"], ["anrufen", "angerufen", "haben"], ["einkaufen", "eingekauft", "haben"], ["fernsehen", "ferngesehen", "haben"],
+     ["anmachen / ausmachen", "angemacht / ausgemacht", "haben"], ["mitbringen", "mitgebracht", "haben"], ["einladen", "eingeladen", "haben"],
+     ["anfangen", "angefangen", "haben"], ["aufstehen", "aufgestanden", "sein"], ["einsteigen", "eingestiegen", "sein"], ["ankommen", "angekommen", "sein"]
+    ]},
+    {"type": "examples", "title": "Präsens und Perfekt", "items": ["Ich kaufe heute ein. → Ich habe gestern eingekauft.", "Er bringt einen Kuchen mit. → Er hat einen Kuchen mitgebracht.", "Der Film fängt um 20 Uhr an. → Der Film hat um 20 Uhr angefangen."]},
+    {"type": "dialog", "title": "Partnerinterview", "lines": [
+     ["A", "Wann bist du heute aufgestanden?"], ["B", "Ich bin um 8 Uhr aufgestanden."],
+     ["A", "Hast du gestern eingekauft?"], ["B", "Ja, ich habe gestern eingekauft."],
+     ["A", "Hast du gestern jemanden angerufen?"], ["B", "Nein, ich habe niemanden angerufen."]
+    ]},
+    {"type": "exercise", "title": "Übung 1: Ergänze im Perfekt", "task": "abholen, ausmachen, einladen, fernsehen, ankommen", "items": ["Gestern ______ ich meine Kinder von der Schule ______.", "______ du das Licht ______, als du gegangen bist?", "Letzte Woche ______ ich meine Freunde zum Essen ______.", "Mein Vater ______ gestern bis 23 Uhr ______.", "Der Zug ______ pünktlich ______."], "solutions": ["habe – abgeholt", "Hast – ausgemacht", "habe – eingeladen", "hat – ferngesehen", "ist – angekommen"]}
+   ]
+  },
+  {
+   "title": "Perfekt ohne ge-",
+   "goal": "Du erkennst Verben, die im Partizip II kein ge- bekommen.",
+   "blocks": [
+    {"type": "rule", "text": "Verben auf -ieren und Verben mit nicht trennbarer Vorsilbe (be-, er-, ver-, emp-, ent-, ge-, miss-, zer-) haben kein ge-."},
+    {"type": "table", "head": ["Gruppe", "Beispiele"], "rows": [
+     ["-ieren", "organisieren → organisiert, telefonieren → telefoniert, studieren → studiert, reparieren → repariert, fotografieren → fotografiert, kopieren → kopiert"],
+     ["be-", "besuchen → besucht, bezahlen → bezahlt, bekommen → bekommen"],
+     ["ver-", "verkaufen → verkauft, vergessen → vergessen, verstehen → verstanden"]
+    ]},
+    {"type": "examples", "items": ["Ich habe gestern mit meiner Freundin telefoniert. (nicht: getelefoniert)", "Sie hat in Berlin Medizin studiert.", "Ich habe dein Geschenk bekommen."]},
+    {"type": "exercise", "title": "Übung 2: Partizip II", "task": "Mit oder ohne ge-?", "items": ["machen", "studieren", "anrufen", "verkaufen", "reparieren", "einkaufen", "notieren", "vergessen"], "solutions": ["gemacht", "studiert", "angerufen", "verkauft", "repariert", "eingekauft", "notiert", "vergessen"]},
+    {"type": "exercise", "title": "Übung 3: Schreib im Perfekt", "task": "Bilde den Satz im Perfekt.", "items": ["Er repariert mein Fahrrad.", "Wir bestellen eine Pizza.", "Ich verstehe die Frage nicht.", "Sie fotografiert den Dom."], "solutions": ["Er hat mein Fahrrad repariert.", "Wir haben eine Pizza bestellt.", "Ich habe die Frage nicht verstanden.", "Sie hat den Dom fotografiert."]}
+   ]
+  },
+  {
+   "title": "Der Imperativ: Anweisungen und Bitten",
+   "goal": "Du sagst höflich, was jemand tun soll – mit Sie und mit du.",
+   "blocks": [
+    {"type": "rule", "text": "Sie-Form: Verb + Sie + (bitte) + Rest. Schneiden Sie bitte das Fleisch! Bei trennbaren Verben steht die Vorsilbe am Ende: Waschen Sie bitte die Messer ab!"},
+    {"type": "examples", "title": "Am Arbeitsplatz", "items": ["Machen Sie bitte das Fenster auf / zu!", "Bringen Sie bitte Ihren Ausweis mit!", "Machen Sie bitte Ihre Handys aus! = Schalten Sie Ihre Handys aus!", "Es ist dunkel. Machen Sie bitte das Licht an!", "Holen Sie bitte Ihr Kind ab!"]},
+    {"type": "rule", "text": "du-Form: du-Form im Präsens, -st weg, ohne du. du machst → Mach! du kommst → Komm!"},
+    {"type": "table", "head": ["Regel", "Beispiel"], "rows": [
+     ["normal", "machen → Mach bitte die Hausaufgaben! lernen → Lern die Vokabeln!"],
+     ["e → i / ie bleibt", "geben → Gib mir den Stift! helfen → Hilf mir! lesen → Lies den Text!"],
+     ["a → ä fällt weg", "schlafen → Schlaf gut! fahren → Fahr vorsichtig!"],
+     ["Stamm auf -d / -t → -e", "arbeiten → Arbeite! warten → Warte auf mich!"],
+     ["trennbar", "anrufen → Ruf mich an! einkaufen → Kauf bitte Milch ein!"]
+    ]},
+    {"type": "exercise", "title": "Übung 4: Sie-Form", "task": "Was sagt die Teamleiterin?", "items": ["Sie / bitte / die Post / aufmachen", "Sie / die Rechnungen / kontrollieren", "Sie / die Informationen / an alle Kollegen / weiterleiten", "Sie / bitte / die Kaffeemaschine / ausmachen"], "solutions": ["Machen Sie bitte die Post auf!", "Kontrollieren Sie die Rechnungen!", "Leiten Sie die Informationen an alle Kollegen weiter!", "Machen Sie bitte die Kaffeemaschine aus!"]},
+    {"type": "exercise", "title": "Übung 5: Gib einen Rat (du)", "task": "Antworte im Imperativ.", "items": ["Mir ist kalt.", "Ich habe Hunger.", "Ich verstehe die Hausaufgabe nicht.", "Ich habe morgen einen Test.", "Ich bin so müde."], "solutions": ["Zieh eine Jacke an! / Mach das Fenster zu!", "Iss etwas!", "Frag deinen Lehrer!", "Lern heute noch!", "Geh schlafen! / Trink einen Kaffee!"]}
+   ]
+  },
+  {
+   "title": "Die Anmeldung: Persönliche Daten",
+   "goal": "Du füllst ein Formular aus und stellst dich mit deinen Daten vor.",
+   "blocks": [
+    {"type": "table", "head": ["Formular", "Beispiel"], "rows": [
+     ["Vorname / Familienname (Nachname)", "Svitlana / Pavlova"], ["Adresse: Straße, Hausnummer, PLZ, Ort", "Sperberstraße 4, 58285 Gevelsberg"],
+     ["Geburtsdatum", "6.9.1993 – der sechste neunte neunzehnhundertdreiundneunzig"], ["Geburtsort", "Lwiw (Ukraine)"],
+     ["Geschlecht", "männlich / weiblich / divers"], ["Familienstand", "ledig / verheiratet / geschieden / verwitwet"],
+     ["Unterschrift", "unterschreiben"]
+    ]},
+    {"type": "list", "title": "Jahreszahlen", "items": ["bis 1999 mit hundert: 1987 = neunzehnhundertsiebenundachtzig", "ab 2000 mit tausend: 2019 = zweitausendneunzehn, 2024 = zweitausendvierundzwanzig"]},
+    {"type": "list", "title": "Sich vorstellen", "items": ["Ich heiße … Ich komme aus … (Land / Stadt).", "Ich bin am … in … geboren.", "Ich wohne seit … in Deutschland. Jetzt wohne ich in …", "Ich bin verheiratet / ledig. Ich habe … Kinder / keine Kinder.", "Ich bin … von Beruf. Ich habe eine Ausbildung als … gemacht.", "Ich bin 2018 nach Deutschland umgezogen. Zurzeit suche ich eine Stelle als …"]},
+    {"type": "exercise", "title": "Übung 6: Stell dich vor", "task": "Schreib 6–8 Sätze über dich. Benutze auch das Perfekt.", "items": ["Ich heiße …"], "write": 8, "solutions": ["Freie Antwort. Prüfe: Name, Herkunft, Geburt, Wohnort, Familie, Beruf, ein Satz im Perfekt."]}
+   ]
+  }
+ ]
+}

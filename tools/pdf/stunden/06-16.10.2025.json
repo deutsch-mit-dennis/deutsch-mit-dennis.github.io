@@ -1,0 +1,67 @@
+{
+ "id": "email-elternabend-modalverben-praeteritum",
+ "source": "16.10.2025",
+ "title": "Eine E-Mail verstehen und beantworten, Fragen mit Modalverben, war und hatte",
+ "level": "A1–A2",
+ "intro": "Du verstehst eine kurze E-Mail, schreibst eine Antwort, stellst Fragen mit können und müssen und erzählst mit war und hatte von früher.",
+ "topics": [
+  {
+   "title": "Eine E-Mail verstehen: Der Elternabend",
+   "goal": "Du findest die wichtigen Informationen in einer E-Mail.",
+   "blocks": [
+    {"type": "text", "text": "Liebe Kolleginnen und Kollegen,<br/>am Montag ist um 18 Uhr Elternabend. Ich organisiere ihn und möchte am Freitag den Raum vorbereiten. Wer macht mit? Wir brauchen noch Blumen für die Tische. Kann jemand Obst und Kekse mitbringen? Getränke müssen wir nicht kaufen, Wasser und Limo haben wir schon. Leider haben wir nicht genug Stühle – wir müssen noch zehn Stühle holen.<br/>Bitte antwortet mir bis Mittwoch.<br/>Viele Grüße<br/>Jenny"},
+    {"type": "table", "head": ["Wort", "Erklärung"], "rows": [
+     ["der Elternabend, -e", "ein Treffen für Eltern in der Schule oder Kita"],
+     ["organisieren", "etwas planen und vorbereiten"],
+     ["vorbereiten (ich bereite vor)", "alles für etwas fertig machen"],
+     ["mitmachen (ich mache mit)", "zusammen mit anderen etwas tun"],
+     ["mitbringen (ich bringe mit)", "etwas zu einem Ort mitnehmen"],
+     ["genug", "so viel, wie man braucht"],
+     ["antworten", "auf eine Frage oder Nachricht reagieren"]
+    ]},
+    {"type": "exercise", "title": "Übung 1: W-Fragen", "task": "Antworte in einem ganzen Satz.", "items": ["Wer schreibt die E-Mail?", "Was ist am Montag?", "Was möchte Jenny am Freitag machen?", "Was brauchen sie für die Tische?", "Was müssen sie nicht kaufen? Warum?", "Bis wann sollen die Kollegen antworten?"], "solutions": ["Jenny schreibt die E-Mail.", "Am Montag ist Elternabend.", "Sie möchte den Raum vorbereiten.", "Sie brauchen Blumen.", "Sie müssen keine Getränke kaufen, weil sie schon Wasser und Limo haben.", "Bis Mittwoch."]},
+    {"type": "exercise", "title": "Übung 2: Richtig oder falsch?", "task": "Kreuze an.", "items": ["Der Elternabend ist am Freitag.", "Jenny will den Raum allein vorbereiten.", "Sie müssen noch Wasser kaufen.", "Sie haben genug Stühle.", "Jemand soll Obst und Kekse mitbringen."], "solutions": ["falsch (am Montag)", "falsch (Wer macht mit?)", "falsch", "falsch", "richtig"]}
+   ]
+  },
+  {
+   "title": "Eine Antwort schreiben",
+   "goal": "Du antwortest kurz und höflich und sagst, was du machen kannst.",
+   "blocks": [
+    {"type": "list", "title": "So baust du die Antwort auf", "items": ["Anrede: Liebe Jenny,", "Dank: vielen Dank für deine E-Mail.", "Was kannst du machen? Ich kann am Freitag helfen.", "Frage: Wann soll ich da sein?", "Gruß: Viele Grüße + Name"]},
+    {"type": "text", "text": "<b>Beispiel A2</b><br/>Liebe Jenny,<br/>vielen Dank für deine E-Mail. Ich helfe gern. Ich kann am Freitag kommen und den Raum mit dir vorbereiten. Ich kaufe auch die Blumen. Sag mir bitte, wann ich am Freitag da sein soll.<br/>Viele Grüße<br/>Amir"},
+    {"type": "text", "text": "<b>Beispiel B1</b><br/>Liebe Jenny,<br/>vielen Dank, dass du den Elternabend organisierst. Ich würde dich gern unterstützen: Am Freitag habe ich ab 14 Uhr Zeit und könnte dir beim Vorbereiten helfen. Außerdem könnte ich die Blumen kaufen oder Obst und Kekse mitbringen – beides schaffe ich leider nicht. Sag mir einfach, was dir lieber ist.<br/>Viele Grüße<br/>Amir"},
+    {"type": "exercise", "title": "Übung 3: Deine Antwort", "task": "Schreib Jenny eine Antwort mit 4–5 Sätzen. Sag, was du machen kannst, und stell eine Frage.", "items": ["Liebe Jenny, …"], "write": 7, "solutions": ["Freie Antwort. Prüfe: Anrede, Dank, was du machst, eine Frage, Gruß."]}
+   ]
+  },
+  {
+   "title": "Fragen mit Modalverben",
+   "goal": "Du bildest Ja-/Nein-Fragen und W-Fragen mit können und müssen.",
+   "blocks": [
+    {"type": "table", "head": ["Aussage", "Frage"], "rows": [
+     ["Du kannst mir helfen.", "Kannst du mir helfen? (Modalverb auf Position 1)"],
+     ["Wir müssen noch einkaufen.", "Müssen wir noch einkaufen?"],
+     ["Ich kann am Freitag helfen.", "Wann kannst du helfen? (W-Wort auf 1, Modalverb auf 2)"],
+     ["Wir müssen Blumen kaufen.", "Was müssen wir kaufen?"],
+     ["Jenny kann die Blumen kaufen.", "Wer kann die Blumen kaufen?"]
+    ]},
+    {"type": "rule", "text": "Das zweite Verb steht immer im Infinitiv am Ende: Kannst du mir bitte helfen?"},
+    {"type": "exercise", "title": "Übung 4: Ja-/Nein-Fragen", "task": "Bilde eine Frage.", "items": ["wir / noch / Stühle / holen / müssen", "du / am Freitag / arbeiten / müssen", "ihr / die Blumen / kaufen / können", "Sie / gut / Deutsch / sprechen / können"], "solutions": ["Müssen wir noch Stühle holen?", "Musst du am Freitag arbeiten?", "Könnt ihr die Blumen kaufen?", "Können Sie gut Deutsch sprechen?"]},
+    {"type": "exercise", "title": "Übung 5: W-Fragen", "task": "Frag nach dem markierten Teil.", "items": ["Ich kann **am Nachmittag** den Raum vorbereiten.", "**Jemand** muss Obst kaufen.", "Du kannst die Blumen **im Supermarkt** kaufen.", "Ich muss **10** Stühle holen."], "solutions": ["Wann kannst du den Raum vorbereiten?", "Wer muss Obst kaufen?", "Wo kann ich die Blumen kaufen?", "Wie viele Stühle musst du holen?"]},
+    {"type": "exercise", "title": "Übung 6: Fragen im Alltag", "task": "Ergänze können oder müssen.", "items": ["Im Supermarkt: Entschuldigung, wo ______ ich hier bezahlen?", "Im Kurs: ______ Sie das bitte wiederholen?", "Am Telefon: Mein Kind ist krank. Ich ______ heute zu Hause bleiben.", "Am Bahnhof: ______ ich hier ein Ticket nach Berlin kaufen?"], "solutions": ["kann", "Können", "muss", "Kann"]}
+   ]
+  },
+  {
+   "title": "Über früher sprechen: war und hatte",
+   "goal": "Du benutzt sein und haben in der Vergangenheit.",
+   "blocks": [
+    {"type": "rule", "text": "Für die Vergangenheit benutzen wir meistens das Perfekt (ich habe gegessen). Bei sein und haben benutzen wir fast immer das Präteritum: war und hatte."},
+    {"type": "table", "head": ["Person", "sein → war", "haben → hatte"], "rows": [
+     ["ich", "war", "hatte"], ["du", "warst", "hattest"], ["er / sie / es", "war", "hatte"], ["wir", "waren", "hatten"], ["ihr", "wart", "hattet"], ["sie / Sie", "waren", "hatten"]
+    ]},
+    {"type": "examples", "items": ["Gestern war ich krank. Ich hatte Fieber.", "Wo warst du im Urlaub? – Ich war in Italien.", "Hattet ihr als Kinder einen Hund? – Ja, wir hatten einen Dackel."]},
+    {"type": "exercise", "title": "Übung 7: war oder hatte?", "task": "Ergänze die richtige Form.", "items": ["Am Wochenende ______ wir im Kino.", "Du ______ gestern keine Zeit.", "Meine Oma ______ früher einen großen Garten.", "Wo ______ ihr gestern Abend?", "Es ______ ein schöner Tag und wir ______ viel Spaß.", "Lisa ______ müde, weil sie einen langen Arbeitstag ______."], "solutions": ["waren", "hattest", "hatte", "wart", "war – hatten", "war – hatte"]},
+    {"type": "exercise", "title": "Übung 8: Erzähl", "task": "Antworte mit war oder hatte.", "items": ["Wo warst du letztes Wochenende?", "Was war dein Lieblingsfach in der Schule?", "Hattest du als Kind ein Haustier?", "Wie war das Wetter gestern?"], "solutions": ["Freie Antworten, z. B.: Ich war bei meiner Schwester. / Mein Lieblingsfach war Mathe. / Ja, ich hatte eine Katze. / Das Wetter war schön."]}
+   ]
+  }
+ ]
+}

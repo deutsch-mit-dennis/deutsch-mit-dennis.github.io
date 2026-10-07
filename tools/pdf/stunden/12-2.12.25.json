@@ -1,0 +1,83 @@
+{
+ "id": "heimat-himmelsrichtungen-hoeflich-bitten",
+ "source": "2.12.25",
+ "title": "Heimat, Himmelsrichtungen, Städte in Deutschland und höflich bitten",
+ "level": "A2",
+ "intro": "Du sagst, wo eine Stadt liegt, sprichst über deine Heimat, stellst eine deutsche Stadt vor, beschreibst Kleidung auf einem Bild und bittest höflich um etwas.",
+ "topics": [
+  {
+   "title": "Himmelsrichtungen: Wo liegt das?",
+   "goal": "Du beschreibst die Lage einer Stadt.",
+   "blocks": [
+    {"type": "list", "title": "Die Himmelsrichtungen", "items": ["der Norden, der Osten, der Süden, der Westen", "der Nordosten, der Südwesten …", "im Zentrum = in der Mitte"]},
+    {"type": "tip", "text": "Merksatz im Uhrzeigersinn: Nie Ohne Seife Waschen – Norden, Osten, Süden, Westen."},
+    {"type": "rule", "text": "Wo? → Dativ: im (= in dem) Norden. [Stadt] liegt im [Richtung] von [Land]."},
+    {"type": "examples", "items": ["Hamburg liegt im Norden von Deutschland.", "Dresden liegt im Osten. Von Dresden ist es nicht weit nach Polen.", "Frankfurt liegt im Zentrum (etwas westlich).", "Köln liegt im Westen am Rhein.", "Freiburg liegt im Südwesten."]},
+    {"type": "exercise", "title": "Übung 1: Wo liegt …?", "task": "Antworte in einem Satz.", "items": ["Kiel", "München", "Dresden", "Köln", "deine Heimatstadt in deinem Land"], "solutions": ["Kiel liegt im Norden von Deutschland.", "München liegt im Süden von Deutschland.", "Dresden liegt im Osten von Deutschland.", "Köln liegt im Westen von Deutschland.", "Freie Antwort, z. B.: Meine Stadt liegt im Süden von Syrien."]}
+   ]
+  },
+  {
+   "title": "Meine Heimat",
+   "goal": "Du stellst Fragen zur Heimat und erzählst von deinem Land.",
+   "blocks": [
+    {"type": "table", "head": ["Frage", "Beispiel"], "rows": [
+     ["Wo? / Woher?", "Woher kommst du genau? Wo liegt das? Wo leben deine Eltern jetzt?"],
+     ["Was?", "Was vermisst du in Deutschland? (Essen, Wetter, Freunde?)"],
+     ["Wie?", "Wie ist das Wetter dort im Sommer? Wie sieht die Landschaft aus?"],
+     ["Wann?", "Wann warst du das letzte Mal in deiner Heimat? Wann feiert man wichtige Feste?"],
+     ["Wen? / Wer?", "Wen vermisst du am meisten? Wen besuchst du, wenn du dort bist?"]
+    ]},
+    {"type": "list", "title": "So antwortest du", "items": ["Ich komme aus … Meine Stadt liegt im … von …", "Die Hauptstadt ist … Das Meer / Die Berge sind im …", "Meine Muttersprachen sind Kurdisch und Arabisch.", "Ich vermisse besonders das Essen / die Sonne / meine Familie."]},
+    {"type": "exercise", "title": "Übung 2: Partnerinterview", "task": "Fragt euch gegenseitig und stellt dann euren Partner vor.", "items": ["Das ist … Sie / Er kommt aus …"], "write": 4, "solutions": ["z. B.: Das ist Alena. Sie kommt aus der Ukraine. Ihre Stadt liegt im Zentrum. Sie vermisst ihre Katze."]}
+   ]
+  },
+  {
+   "title": "Städte in Deutschland",
+   "goal": "Du stellst eine deutsche Stadt kurz vor.",
+   "blocks": [
+    {"type": "table", "head": ["Stadt", "Lage", "Besonderheit"], "rows": [
+     ["Berlin", "im Nordosten, an der Spree", "Hauptstadt, ca. 3,7 Mio. Einwohner, multikulturell, viel Geschichte (Mauer)"],
+     ["Hamburg", "im Norden, an der Elbe", "großer Hafen, Fischmarkt, oft regnerisch und windig"],
+     ["München", "im Süden (Bayern)", "Oktoberfest, nah an den Alpen, BMW"],
+     ["Köln", "im Westen, am Rhein", "der Dom, Karneval, Schokoladenmuseum"],
+     ["Frankfurt am Main", "im Zentrum (etwas westlich)", "Banken und Hochhäuser („Mainhattan“), großer Flughafen"],
+     ["Dresden", "im Osten, an der Elbe", "Barock, Weihnachtsmarkt (Striezelmarkt)"],
+     ["Stuttgart", "im Südwesten", "Autostadt: Mercedes-Benz und Porsche, Weinberge"],
+     ["Leipzig", "im Osten (Sachsen)", "Stadt der Musik (Bach)"],
+     ["Heidelberg", "im Südwesten, am Neckar", "klein (ca. 160.000), romantisch, alte Universität"]
+    ]},
+    {"type": "list", "title": "Redemittel", "items": ["Die Stadt liegt im … von Deutschland.", "Sie liegt am Fluss … / am Meer / in den Bergen.", "Die Stadt hat circa … Einwohner.", "Hier gibt es … (den Dom / einen Hafen / viele Museen)."]},
+    {"type": "exercise", "title": "Übung 3: Städte-Quiz", "task": "Welche Stadt ist das?", "items": ["die Hauptstadt von Deutschland", "Hier werden Mercedes und Porsche produziert.", "Hier gibt es den berühmten Dom und Karneval.", "Man nennt sie „Mainhattan“.", "Hier gibt es den Fischmarkt und einen großen Hafen."], "solutions": ["Berlin", "Stuttgart", "Köln", "Frankfurt am Main", "Hamburg"]}
+   ]
+  },
+  {
+   "title": "Bild beschreiben: Menschen und Kleidung",
+   "goal": "Du beschreibst, was die Personen auf einem Bild tragen.",
+   "blocks": [
+    {"type": "text", "text": "In der Prüfung (Sprechen Teil 2) sind auf dem Bild fast immer Menschen. Lerne, ihre Kleidung zu beschreiben: tragen = anhaben."},
+    {"type": "table", "head": ["", "maskulin (der)", "neutral (das)", "feminin (die)", "Plural"], "rows": [
+     ["Akkusativ: Er trägt …", "einen schwarzen Anzug", "ein weißes Hemd", "eine blaue Jacke", "braune Schuhe"],
+     ["Dativ: mit …", "mit einem schwarzen Anzug", "mit einem weißen Hemd", "mit einer blauen Jacke", "mit braunen Schuhen"]
+    ]},
+    {"type": "examples", "items": ["Der Mann trägt einen grauen Anzug mit einer roten Krawatte.", "Die Frau hat eine schwarze Hose und eine weiße Bluse an.", "Das Kind trägt eine gelbe Mütze."]},
+    {"type": "exercise", "title": "Übung 4: Ergänze die Endung", "task": "Akkusativ nach tragen.", "items": ["Sie trägt ein___ rot___ Kleid.", "Er trägt ein___ blau___ Pullover.", "Die Kinder tragen warm___ Jacken.", "Er hat ein___ grün___ Mütze auf."], "solutions": ["ein rotes", "einen blauen", "warme", "eine grüne"]}
+   ]
+  },
+  {
+   "title": "Höflich bitten: Imperativ mit bitte und Fragen",
+   "goal": "Du bittest freundlich und reagierst auf Bitten.",
+   "blocks": [
+    {"type": "table", "head": ["Position von bitte", "Beispiel"], "rows": [
+     ["in der Mitte (Standard)", "Mach bitte das Fenster auf."], ["am Anfang", "Bitte mach das Fenster auf."], ["am Ende", "Mach das Fenster auf, bitte."]
+    ]},
+    {"type": "table", "head": ["Stufe", "Satz", "Wirkung"], "rows": [
+     ["Imperativ", "Mach das Fenster zu!", "direkt, manchmal hart"], ["Imperativ + bitte", "Mach bitte das Fenster zu!", "freundlich"],
+     ["Frage", "Kannst du das Fenster zumachen?", "normal, höflich"], ["Konjunktiv II", "Könntest du bitte das Fenster zumachen?", "sehr höflich"]
+    ]},
+    {"type": "table", "head": ["Ja", "Nein"], "rows": [["Ja, gern. / Kein Problem. / Sofort.", "Tut mir leid, das geht nicht."], ["Natürlich!", "Ich habe leider keine Zeit."]]},
+    {"type": "exercise", "title": "Übung 5: Bilde höfliche Sätze", "task": "Bring die Wörter in die richtige Reihenfolge.", "items": ["Sie / leise / Seien / bitte / !", "mir / Hilf / bitte / kurz / !", "bitte / Wiederholen / den Satz / Sie / !", "Fahrt / nicht so schnell / bitte / !"], "solutions": ["Seien Sie bitte leise!", "Hilf mir bitte kurz!", "Wiederholen Sie bitte den Satz!", "Fahrt bitte nicht so schnell!"]},
+    {"type": "exercise", "title": "Übung 6: Noch höflicher", "task": "Schreib die Bitte als Frage mit können oder könnten.", "items": ["Gib mir einen Kuli!", "Kaufen Sie mir einen Kaffee!", "Mach das Licht an!"], "solutions": ["Kannst / Könntest du mir bitte einen Kuli geben?", "Können / Könnten Sie mir bitte einen Kaffee kaufen?", "Kannst / Könntest du bitte das Licht anmachen?"]}
+   ]
+  }
+ ]
+}

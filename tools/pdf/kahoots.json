@@ -1,0 +1,3282 @@
+[
+  {
+    "lesson_id": "sich-vorstellen-berufe",
+    "title": "Stunde 1: Sich vorstellen und Berufe (A1)",
+    "description": "Fragen zur Person mit du und Sie, mein/dein/Ihr, Berufe in männlicher und weiblicher Form und Begründungen mit weil.",
+    "questions": [
+      {
+        "question": "„Wie ___ Sie?“ – Welche Form ist richtig?",
+        "choices": [
+          {
+            "answer": "heißt",
+            "correct": false
+          },
+          {
+            "answer": "heißen",
+            "correct": true
+          },
+          {
+            "answer": "heiße",
+            "correct": false
+          },
+          {
+            "answer": "heißst",
+            "correct": false
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "„Woher ___ du?“",
+        "choices": [
+          {
+            "answer": "kommt",
+            "correct": false
+          },
+          {
+            "answer": "komme",
+            "correct": false
+          },
+          {
+            "answer": "kommen",
+            "correct": false
+          },
+          {
+            "answer": "kommst",
+            "correct": true
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "„Maria ___ Arabisch und Kurdisch.“",
+        "choices": [
+          {
+            "answer": "spricht",
+            "correct": true
+          },
+          {
+            "answer": "sprecht",
+            "correct": false
+          },
+          {
+            "answer": "sprechen",
+            "correct": false
+          },
+          {
+            "answer": "sprichst",
+            "correct": false
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "„Ist das ___ Schlüssel?“ (du, der Schlüssel)",
+        "choices": [
+          {
+            "answer": "deine",
+            "correct": false
+          },
+          {
+            "answer": "deinen",
+            "correct": false
+          },
+          {
+            "answer": "dein",
+            "correct": true
+          },
+          {
+            "answer": "deines",
+            "correct": false
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "„Sind das ___ Kinder?“ (höflich: Sie)",
+        "choices": [
+          {
+            "answer": "Ihr",
+            "correct": false
+          },
+          {
+            "answer": "Ihren",
+            "correct": false
+          },
+          {
+            "answer": "deine",
+            "correct": false
+          },
+          {
+            "answer": "Ihre",
+            "correct": true
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "Wie heißt die weibliche Form von „der Arzt“?",
+        "choices": [
+          {
+            "answer": "die Ärztin",
+            "correct": true
+          },
+          {
+            "answer": "die Arztin",
+            "correct": false
+          },
+          {
+            "answer": "die Ärzterin",
+            "correct": false
+          },
+          {
+            "answer": "die Arztfrau",
+            "correct": false
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "Welcher Satz ist richtig?",
+        "choices": [
+          {
+            "answer": "Ich bin eine Lehrerin von Beruf.",
+            "correct": false
+          },
+          {
+            "answer": "Ich habe Lehrerin von Beruf.",
+            "correct": false
+          },
+          {
+            "answer": "Ich bin Lehrerin von Beruf.",
+            "correct": true
+          },
+          {
+            "answer": "Ich bin von Lehrerin Beruf.",
+            "correct": false
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "„Was sind Sie von Beruf?“ – Welche Antwort passt?",
+        "choices": [
+          {
+            "answer": "Ich komme aus dem Iran.",
+            "correct": false
+          },
+          {
+            "answer": "Ich bin Mechaniker.",
+            "correct": true
+          },
+          {
+            "answer": "Ich bin verheiratet.",
+            "correct": false
+          },
+          {
+            "answer": "Ich wohne in Hagen.",
+            "correct": false
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "Welcher Satz mit „weil“ ist richtig?",
+        "choices": [
+          {
+            "answer": "Ich lerne Deutsch, weil ich in Deutschland arbeiten möchte.",
+            "correct": true
+          },
+          {
+            "answer": "Ich lerne Deutsch, weil ich möchte in Deutschland arbeiten.",
+            "correct": false
+          },
+          {
+            "answer": "Ich lerne Deutsch, weil möchte ich in Deutschland arbeiten.",
+            "correct": false
+          },
+          {
+            "answer": "Ich lerne Deutsch, weil ich in Deutschland möchte arbeiten.",
+            "correct": false
+          }
+        ],
+        "time": 20000
+      }
+    ]
+  },
+  {
+    "lesson_id": "artikel-der-kasus-bitten-cafe",
+    "title": "Stunde 2: der, Fälle, Bitten und im Café (A1)",
+    "description": "Maskuline Nomen erkennen, Nominativ/Akkusativ/Dativ, er/sie/es für Dinge, höfliche Bitten im Imperativ und bestellen im Café.",
+    "questions": [
+      {
+        "question": "Welches Nomen hat den Artikel „der“?",
+        "choices": [
+          {
+            "answer": "Student",
+            "correct": true
+          },
+          {
+            "answer": "Mädchen",
+            "correct": false
+          },
+          {
+            "answer": "Zeitung",
+            "correct": false
+          },
+          {
+            "answer": "Kino",
+            "correct": false
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "„Ich fahre mit ___ Bus.“",
+        "choices": [
+          {
+            "answer": "den",
+            "correct": false
+          },
+          {
+            "answer": "der",
+            "correct": false
+          },
+          {
+            "answer": "dem",
+            "correct": true
+          },
+          {
+            "answer": "das",
+            "correct": false
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "„Ich gehe ___ Bäckerei.“ (die Bäckerei)",
+        "choices": [
+          {
+            "answer": "zum",
+            "correct": false
+          },
+          {
+            "answer": "zur",
+            "correct": true
+          },
+          {
+            "answer": "zu die",
+            "correct": false
+          },
+          {
+            "answer": "zu den",
+            "correct": false
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "„Wo ist mein Schlüssel?“ – „Ich glaube, ___ liegt auf dem Tisch.“",
+        "choices": [
+          {
+            "answer": "er",
+            "correct": true
+          },
+          {
+            "answer": "sie",
+            "correct": false
+          },
+          {
+            "answer": "es",
+            "correct": false
+          },
+          {
+            "answer": "ihn",
+            "correct": false
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "„Wo ist meine Brille?“ – „___ liegt im Bad.“",
+        "choices": [
+          {
+            "answer": "Er",
+            "correct": false
+          },
+          {
+            "answer": "Es",
+            "correct": false
+          },
+          {
+            "answer": "Ihr",
+            "correct": false
+          },
+          {
+            "answer": "Sie",
+            "correct": true
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "Deine Freundin soll dir das Salz geben. Was sagst du?",
+        "choices": [
+          {
+            "answer": "Gebe mir bitte das Salz!",
+            "correct": false
+          },
+          {
+            "answer": "Gib mir bitte das Salz!",
+            "correct": true
+          },
+          {
+            "answer": "Gibst mir bitte das Salz!",
+            "correct": false
+          },
+          {
+            "answer": "Geben mir bitte das Salz!",
+            "correct": false
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "Im Amt: Die Person soll ihren Namen buchstabieren. Was sagst du?",
+        "choices": [
+          {
+            "answer": "Buchstabier Sie bitte Ihren Namen!",
+            "correct": false
+          },
+          {
+            "answer": "Buchstabieren bitte Sie Ihren Namen!",
+            "correct": false
+          },
+          {
+            "answer": "Buchstabieren Sie bitte Ihren Namen!",
+            "correct": true
+          },
+          {
+            "answer": "Buchstabiere bitte Ihren Namen!",
+            "correct": false
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "Im Café: „Ich möchte ___ Kaffee und ___ Wasser.“",
+        "choices": [
+          {
+            "answer": "ein – ein",
+            "correct": false
+          },
+          {
+            "answer": "einen – ein",
+            "correct": true
+          },
+          {
+            "answer": "einen – einen",
+            "correct": false
+          },
+          {
+            "answer": "eine – ein",
+            "correct": false
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "Welcher Satz ist richtig?",
+        "choices": [
+          {
+            "answer": "Ich gehe zur Arzt und fahre mit den Bus.",
+            "correct": false
+          },
+          {
+            "answer": "Ich gehe zum Arzt und fahre mit den Bus.",
+            "correct": false
+          },
+          {
+            "answer": "Ich gehe zu dem Arzt und fahre mit der Bus.",
+            "correct": false
+          },
+          {
+            "answer": "Ich gehe zum Arzt und fahre mit dem Bus.",
+            "correct": true
+          }
+        ],
+        "time": 20000
+      }
+    ]
+  },
+  {
+    "lesson_id": "artikel-das-cafe-zahlen-wie-gehts",
+    "title": "Stunde 3: das, Café, Zahlen und Wie geht's? (A1)",
+    "description": "Neutrale Nomen erkennen, im Café bezahlen, Preise und Zahlen verstehen, auf „Wie geht's?“ reagieren und ein/mein/kein benutzen.",
+    "questions": [
+      {
+        "question": "Welches Nomen hat den Artikel „das“?",
+        "choices": [
+          {
+            "answer": "Moment",
+            "correct": false
+          },
+          {
+            "answer": "Museum",
+            "correct": true
+          },
+          {
+            "answer": "Firma",
+            "correct": false
+          },
+          {
+            "answer": "Frühling",
+            "correct": false
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "Welchen Artikel hat „Tomatensuppe“?",
+        "choices": [
+          {
+            "answer": "der",
+            "correct": false
+          },
+          {
+            "answer": "das",
+            "correct": false
+          },
+          {
+            "answer": "die",
+            "correct": true
+          },
+          {
+            "answer": "den",
+            "correct": false
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "„Das macht 6,80 €.“ Du gibst 7 € und willst kein Wechselgeld. Was sagst du?",
+        "choices": [
+          {
+            "answer": "Das geht auf mich.",
+            "correct": false
+          },
+          {
+            "answer": "Stimmt so.",
+            "correct": true
+          },
+          {
+            "answer": "Zusammen oder getrennt?",
+            "correct": false
+          },
+          {
+            "answer": "Danke, gleichfalls!",
+            "correct": false
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "„Was ___ die Äpfel?“",
+        "choices": [
+          {
+            "answer": "kostet",
+            "correct": false
+          },
+          {
+            "answer": "kostest",
+            "correct": false
+          },
+          {
+            "answer": "koste",
+            "correct": false
+          },
+          {
+            "answer": "kosten",
+            "correct": true
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "Wie liest man den Preis 3,50 €?",
+        "choices": [
+          {
+            "answer": "drei Euro fünfzig",
+            "correct": true
+          },
+          {
+            "answer": "dreißig Euro fünf",
+            "correct": false
+          },
+          {
+            "answer": "fünfzig Euro drei",
+            "correct": false
+          },
+          {
+            "answer": "dreihundertfünfzig Euro",
+            "correct": false
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "„Mir geht es nicht so gut.“ – Welche Reaktion passt?",
+        "choices": [
+          {
+            "answer": "Das freut mich zu hören!",
+            "correct": false
+          },
+          {
+            "answer": "Danke, gleichfalls!",
+            "correct": false
+          },
+          {
+            "answer": "Oh, das tut mir leid. Was ist denn los?",
+            "correct": true
+          },
+          {
+            "answer": "Ich kann nicht klagen.",
+            "correct": false
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "„Wie geht es ___?“ (höflich: Sie)",
+        "choices": [
+          {
+            "answer": "Sie",
+            "correct": false
+          },
+          {
+            "answer": "dir",
+            "correct": false
+          },
+          {
+            "answer": "Ihr",
+            "correct": false
+          },
+          {
+            "answer": "Ihnen",
+            "correct": true
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "„Ich habe ___ Hund.“ (der Hund)",
+        "choices": [
+          {
+            "answer": "keinen",
+            "correct": true
+          },
+          {
+            "answer": "kein",
+            "correct": false
+          },
+          {
+            "answer": "keine",
+            "correct": false
+          },
+          {
+            "answer": "nicht",
+            "correct": false
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "„Ist das dein Stuhl?“ – „Nein, das ist ___ Stuhl. Das ist ___ Tisch.“",
+        "choices": [
+          {
+            "answer": "keinen – einen",
+            "correct": false
+          },
+          {
+            "answer": "nicht – ein",
+            "correct": false
+          },
+          {
+            "answer": "kein – ein",
+            "correct": true
+          },
+          {
+            "answer": "keine – eine",
+            "correct": false
+          }
+        ],
+        "time": 20000
+      }
+    ]
+  },
+  {
+    "lesson_id": "uhrzeit-zeitfragen-trennbare-verben",
+    "title": "Stunde 4: Uhrzeit, Zeitfragen, trennbare Verben (A1)",
+    "description": "Uhrzeiten im Alltag sagen, nach Zeitpunkt und Dauer fragen, Präpositionen am/um/im und trennbare Verben im Satz.",
+    "questions": [
+      {
+        "question": "Wie sagt man 09:30 im Alltag?",
+        "choices": [
+          {
+            "answer": "halb neun",
+            "correct": false
+          },
+          {
+            "answer": "Viertel nach neun",
+            "correct": false
+          },
+          {
+            "answer": "halb zehn",
+            "correct": true
+          },
+          {
+            "answer": "Viertel vor zehn",
+            "correct": false
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "Wie sagt man 08:25 im Alltag?",
+        "choices": [
+          {
+            "answer": "fünf nach halb neun",
+            "correct": false
+          },
+          {
+            "answer": "fünf vor halb acht",
+            "correct": false
+          },
+          {
+            "answer": "fünf nach acht",
+            "correct": false
+          },
+          {
+            "answer": "fünf vor halb neun",
+            "correct": true
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "„Viertel vor sieben“ – welche Uhrzeit ist das?",
+        "choices": [
+          {
+            "answer": "6:45",
+            "correct": true
+          },
+          {
+            "answer": "7:15",
+            "correct": false
+          },
+          {
+            "answer": "7:45",
+            "correct": false
+          },
+          {
+            "answer": "6:15",
+            "correct": false
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "„___ dauert die Pause?“ – „20 Minuten.“",
+        "choices": [
+          {
+            "answer": "Wann",
+            "correct": false
+          },
+          {
+            "answer": "Um wie viel Uhr",
+            "correct": false
+          },
+          {
+            "answer": "Wie lange",
+            "correct": true
+          },
+          {
+            "answer": "Von wann bis wann",
+            "correct": false
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "„Ich komme ___ Montag ___ 12 Uhr.“",
+        "choices": [
+          {
+            "answer": "um – am",
+            "correct": false
+          },
+          {
+            "answer": "am – um",
+            "correct": true
+          },
+          {
+            "answer": "im – um",
+            "correct": false
+          },
+          {
+            "answer": "am – im",
+            "correct": false
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "Welcher Satz ist richtig? (anrufen)",
+        "choices": [
+          {
+            "answer": "Ich rufe dich heute an.",
+            "correct": true
+          },
+          {
+            "answer": "Ich anrufe dich heute.",
+            "correct": false
+          },
+          {
+            "answer": "Ich rufe an dich heute.",
+            "correct": false
+          },
+          {
+            "answer": "Ich rufe dich heute anrufen.",
+            "correct": false
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "„Der Zug fährt um 18 Uhr ab.“ – Wie heißt der Infinitiv?",
+        "choices": [
+          {
+            "answer": "fahrab",
+            "correct": false
+          },
+          {
+            "answer": "abfährt",
+            "correct": false
+          },
+          {
+            "answer": "anfahren",
+            "correct": false
+          },
+          {
+            "answer": "abfahren",
+            "correct": true
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "Welches Verb ist NICHT trennbar?",
+        "choices": [
+          {
+            "answer": "aufstehen",
+            "correct": false
+          },
+          {
+            "answer": "verstehen",
+            "correct": true
+          },
+          {
+            "answer": "einkaufen",
+            "correct": false
+          },
+          {
+            "answer": "mitkommen",
+            "correct": false
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "Welcher Satz mit Modalverb ist richtig?",
+        "choices": [
+          {
+            "answer": "Er kann heute Abend kommen mit.",
+            "correct": false
+          },
+          {
+            "answer": "Er kann heute Abend mit kommt.",
+            "correct": false
+          },
+          {
+            "answer": "Er kann heute Abend mitkommen.",
+            "correct": true
+          },
+          {
+            "answer": "Er kommt heute Abend mitkönnen.",
+            "correct": false
+          }
+        ],
+        "time": 20000
+      }
+    ]
+  },
+  {
+    "lesson_id": "ihr-lebensmittel-akkusativ-esstisch",
+    "title": "Stunde 5: ihr/sie, Lebensmittel, Akkusativ (A1)",
+    "description": "Mehrere Personen mit ihr ansprechen, Lebensmittel mit Artikel, Akkusativ mit ein/kein und höfliche Sätze am Esstisch.",
+    "questions": [
+      {
+        "question": "„Anna und Tom, kommt ___ mit ins Kino?“",
+        "choices": [
+          {
+            "answer": "ihr",
+            "correct": true
+          },
+          {
+            "answer": "sie",
+            "correct": false
+          },
+          {
+            "answer": "Sie",
+            "correct": false
+          },
+          {
+            "answer": "du",
+            "correct": false
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "„Meine Kinder sind 12 und 14. ___ gehen zur Schule.“",
+        "choices": [
+          {
+            "answer": "Ihr",
+            "correct": false
+          },
+          {
+            "answer": "Er",
+            "correct": false
+          },
+          {
+            "answer": "Es",
+            "correct": false
+          },
+          {
+            "answer": "Sie",
+            "correct": true
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "„Oskar, Charlotte, ___ bitte einen Nachtisch mit!“",
+        "choices": [
+          {
+            "answer": "bringen",
+            "correct": false
+          },
+          {
+            "answer": "bringt",
+            "correct": true
+          },
+          {
+            "answer": "bringst",
+            "correct": false
+          },
+          {
+            "answer": "bring",
+            "correct": false
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "Welches Wort hat den Artikel „die“?",
+        "choices": [
+          {
+            "answer": "Käse",
+            "correct": false
+          },
+          {
+            "answer": "Ei",
+            "correct": false
+          },
+          {
+            "answer": "Wurst",
+            "correct": true
+          },
+          {
+            "answer": "Saft",
+            "correct": false
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "„Die Zitrone ist ___.“",
+        "choices": [
+          {
+            "answer": "knusprig",
+            "correct": false
+          },
+          {
+            "answer": "sauer",
+            "correct": true
+          },
+          {
+            "answer": "fettig",
+            "correct": false
+          },
+          {
+            "answer": "salzig",
+            "correct": false
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "„Sie isst ___ Joghurt.“ (der Joghurt)",
+        "choices": [
+          {
+            "answer": "ein",
+            "correct": false
+          },
+          {
+            "answer": "eine",
+            "correct": false
+          },
+          {
+            "answer": "einem",
+            "correct": false
+          },
+          {
+            "answer": "einen",
+            "correct": true
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "„Ich esse ___ Fisch.“ (der Fisch)",
+        "choices": [
+          {
+            "answer": "keinen",
+            "correct": true
+          },
+          {
+            "answer": "nicht",
+            "correct": false
+          },
+          {
+            "answer": "kein",
+            "correct": false
+          },
+          {
+            "answer": "keine",
+            "correct": false
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "„Möchtest du noch Brot?“ – Du bist satt. Was sagst du?",
+        "choices": [
+          {
+            "answer": "Nein, danke, ich habe satt.",
+            "correct": false
+          },
+          {
+            "answer": "Doch, ich bin satt.",
+            "correct": false
+          },
+          {
+            "answer": "Nein, danke, ich bin satt.",
+            "correct": true
+          },
+          {
+            "answer": "Ja, ich habe satt.",
+            "correct": false
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "„Schmeckt dir der Reis?“ – Welche Antwort ist richtig?",
+        "choices": [
+          {
+            "answer": "Ja, er schmeckt mich sehr gut.",
+            "correct": false
+          },
+          {
+            "answer": "Ja, sie schmeckt mir sehr gut.",
+            "correct": false
+          },
+          {
+            "answer": "Ja, er schmeckt ich sehr gut.",
+            "correct": false
+          },
+          {
+            "answer": "Ja, er schmeckt mir sehr gut.",
+            "correct": true
+          }
+        ],
+        "time": 20000
+      }
+    ]
+  },
+  {
+    "lesson_id": "email-elternabend-modalverben-praeteritum",
+    "title": "Stunde 6: E-Mail, Modalverben, war und hatte (A1–A2)",
+    "description": "Eine E-Mail zum Elternabend verstehen und beantworten, Fragen mit können und müssen bilden und mit war und hatte erzählen.",
+    "questions": [
+      {
+        "question": "E-Mail von Jenny: Wann ist der Elternabend?",
+        "choices": [
+          {
+            "answer": "am Freitag um 18 Uhr",
+            "correct": false
+          },
+          {
+            "answer": "am Mittwoch um 18 Uhr",
+            "correct": false
+          },
+          {
+            "answer": "am Montag um 8 Uhr",
+            "correct": false
+          },
+          {
+            "answer": "am Montag um 18 Uhr",
+            "correct": true
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "E-Mail von Jenny: Was haben sie schon?",
+        "choices": [
+          {
+            "answer": "Wasser und Limo",
+            "correct": true
+          },
+          {
+            "answer": "genug Stühle",
+            "correct": false
+          },
+          {
+            "answer": "Blumen für die Tische",
+            "correct": false
+          },
+          {
+            "answer": "Obst und Kekse",
+            "correct": false
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "Du antwortest Jenny. Welche Anrede ist richtig?",
+        "choices": [
+          {
+            "answer": "Lieber Jenny,",
+            "correct": false
+          },
+          {
+            "answer": "Liebe Frau Jenny,",
+            "correct": false
+          },
+          {
+            "answer": "Liebe Jenny,",
+            "correct": true
+          },
+          {
+            "answer": "Sehr geehrter Jenny,",
+            "correct": false
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "Welche Ja-/Nein-Frage ist richtig?",
+        "choices": [
+          {
+            "answer": "Müssen holen wir noch Stühle?",
+            "correct": false
+          },
+          {
+            "answer": "Müssen wir noch holen Stühle?",
+            "correct": false
+          },
+          {
+            "answer": "Wir noch Stühle holen müssen?",
+            "correct": false
+          },
+          {
+            "answer": "Müssen wir noch Stühle holen?",
+            "correct": true
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "„___ ihr die Blumen kaufen?“",
+        "choices": [
+          {
+            "answer": "Könnt",
+            "correct": true
+          },
+          {
+            "answer": "Können",
+            "correct": false
+          },
+          {
+            "answer": "Kannst",
+            "correct": false
+          },
+          {
+            "answer": "Kann",
+            "correct": false
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "„Ich muss 10 Stühle holen.“ – Frag nach der Zahl.",
+        "choices": [
+          {
+            "answer": "Was Stühle musst du holen?",
+            "correct": false
+          },
+          {
+            "answer": "Wie viele Stühle du musst holen?",
+            "correct": false
+          },
+          {
+            "answer": "Wie viele Stühle musst du holen?",
+            "correct": true
+          },
+          {
+            "answer": "Wann musst du Stühle holen?",
+            "correct": false
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "Im Kurs: „___ Sie das bitte wiederholen?“",
+        "choices": [
+          {
+            "answer": "Müssen",
+            "correct": false
+          },
+          {
+            "answer": "Können",
+            "correct": true
+          },
+          {
+            "answer": "Kann",
+            "correct": false
+          },
+          {
+            "answer": "Könnt",
+            "correct": false
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "„Wo ___ ihr gestern Abend?“",
+        "choices": [
+          {
+            "answer": "wart",
+            "correct": true
+          },
+          {
+            "answer": "waren",
+            "correct": false
+          },
+          {
+            "answer": "wartet",
+            "correct": false
+          },
+          {
+            "answer": "hattet",
+            "correct": false
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "„Lisa ___ müde, weil sie einen langen Arbeitstag ___.“",
+        "choices": [
+          {
+            "answer": "hatte – war",
+            "correct": false
+          },
+          {
+            "answer": "war – war",
+            "correct": false
+          },
+          {
+            "answer": "hatte – hatte",
+            "correct": false
+          },
+          {
+            "answer": "war – hatte",
+            "correct": true
+          }
+        ],
+        "time": 20000
+      }
+    ]
+  },
+  {
+    "lesson_id": "modalverben-wohnen-zahlen",
+    "title": "Stunde 7: Modalverben, Wohnen und große Zahlen (A1–A2)",
+    "description": "Alle Modalverben in Form und Bedeutung, Wörter rund ums Wohnen und die Miete sowie Jahreszahlen und große Zahlen richtig lesen.",
+    "questions": [
+      {
+        "question": "„Was ___ ihr trinken?“ (möchten)",
+        "choices": [
+          {
+            "answer": "möchten",
+            "correct": false
+          },
+          {
+            "answer": "möchtest",
+            "correct": false
+          },
+          {
+            "answer": "möchtet",
+            "correct": true
+          },
+          {
+            "answer": "möchte",
+            "correct": false
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "„Im Bus ___ man nicht essen.“ (Verbot)",
+        "choices": [
+          {
+            "answer": "muss",
+            "correct": false
+          },
+          {
+            "answer": "darf",
+            "correct": true
+          },
+          {
+            "answer": "möchte",
+            "correct": false
+          },
+          {
+            "answer": "will",
+            "correct": false
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "„Der Arzt sagt, ich ___ mehr Wasser trinken.“",
+        "choices": [
+          {
+            "answer": "soll",
+            "correct": true
+          },
+          {
+            "answer": "will",
+            "correct": false
+          },
+          {
+            "answer": "möchtest",
+            "correct": false
+          },
+          {
+            "answer": "sollt",
+            "correct": false
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "Welcher Satz ist richtig?",
+        "choices": [
+          {
+            "answer": "Mein Sohn will werden Pilot.",
+            "correct": false
+          },
+          {
+            "answer": "Mein Sohn wollt Pilot werden.",
+            "correct": false
+          },
+          {
+            "answer": "Mein Sohn will Pilot wird.",
+            "correct": false
+          },
+          {
+            "answer": "Mein Sohn will Pilot werden.",
+            "correct": true
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "Im Café: Welcher Satz ist höflich und richtig?",
+        "choices": [
+          {
+            "answer": "Ich will einen Kaffee.",
+            "correct": false
+          },
+          {
+            "answer": "Ich möchte einen Kaffee, bitte.",
+            "correct": true
+          },
+          {
+            "answer": "Ich möchte ein Kaffee, bitte.",
+            "correct": false
+          },
+          {
+            "answer": "Ich möchtet einen Kaffee, bitte.",
+            "correct": false
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "Kaltmiete + Nebenkosten = …",
+        "choices": [
+          {
+            "answer": "die Kaution",
+            "correct": false
+          },
+          {
+            "answer": "der Mietvertrag",
+            "correct": false
+          },
+          {
+            "answer": "die Warmmiete",
+            "correct": true
+          },
+          {
+            "answer": "die Kaltmiete",
+            "correct": false
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "Welches Wort hat den Artikel „der“?",
+        "choices": [
+          {
+            "answer": "Sofa",
+            "correct": false
+          },
+          {
+            "answer": "Kühlschrank",
+            "correct": true
+          },
+          {
+            "answer": "Küche",
+            "correct": false
+          },
+          {
+            "answer": "Bett",
+            "correct": false
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "Welcher Satz ist richtig? (umziehen)",
+        "choices": [
+          {
+            "answer": "Nächsten Monat wir ziehen um.",
+            "correct": false
+          },
+          {
+            "answer": "Nächsten Monat umziehen wir.",
+            "correct": false
+          },
+          {
+            "answer": "Nächsten Monat ziehen um wir.",
+            "correct": false
+          },
+          {
+            "answer": "Nächsten Monat ziehen wir um.",
+            "correct": true
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "Wie liest man die Jahreszahl 1982?",
+        "choices": [
+          {
+            "answer": "neunzehnhundertzweiundachtzig",
+            "correct": true
+          },
+          {
+            "answer": "neunzehnhundertachtzigzwei",
+            "correct": false
+          },
+          {
+            "answer": "neunzehnzweiundachtzig",
+            "correct": false
+          },
+          {
+            "answer": "neunhundertachtzigzwei",
+            "correct": false
+          }
+        ],
+        "time": 20000
+      }
+    ]
+  },
+  {
+    "lesson_id": "possessivartikel-pronomen-perfekt",
+    "title": "Stunde 8: Possessivartikel, Pronomen, Perfekt (A1)",
+    "description": "Mit mein, dein, sein, ihr … sagen, wem etwas gehört, Possessivartikel und Pronomen im Akkusativ und das Perfekt mit haben.",
+    "questions": [
+      {
+        "question": "„Das ist Marias Fahrrad. Das ist ___ Fahrrad.“",
+        "choices": [
+          {
+            "answer": "sein",
+            "correct": false
+          },
+          {
+            "answer": "ihre",
+            "correct": false
+          },
+          {
+            "answer": "ihr",
+            "correct": true
+          },
+          {
+            "answer": "ihren",
+            "correct": false
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "„Ist das ___ Hund?“ (ihr = mehrere Personen)",
+        "choices": [
+          {
+            "answer": "eure",
+            "correct": false
+          },
+          {
+            "answer": "euer",
+            "correct": true
+          },
+          {
+            "answer": "euren",
+            "correct": false
+          },
+          {
+            "answer": "ihr",
+            "correct": false
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "„Ich mag ___ Pullover.“ (du, der Pullover)",
+        "choices": [
+          {
+            "answer": "dein",
+            "correct": false
+          },
+          {
+            "answer": "deine",
+            "correct": false
+          },
+          {
+            "answer": "deinem",
+            "correct": false
+          },
+          {
+            "answer": "deinen",
+            "correct": true
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "„Sie putzt ___ Badezimmer.“ (das Badezimmer)",
+        "choices": [
+          {
+            "answer": "ihr",
+            "correct": true
+          },
+          {
+            "answer": "ihren",
+            "correct": false
+          },
+          {
+            "answer": "ihre",
+            "correct": false
+          },
+          {
+            "answer": "ihrem",
+            "correct": false
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "„Besuchst du oft ___ Familie?“",
+        "choices": [
+          {
+            "answer": "dein",
+            "correct": false
+          },
+          {
+            "answer": "deinen",
+            "correct": false
+          },
+          {
+            "answer": "deine",
+            "correct": true
+          },
+          {
+            "answer": "deiner",
+            "correct": false
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "„Wo ist der Schlüssel? Ich finde ___ nicht.“",
+        "choices": [
+          {
+            "answer": "er",
+            "correct": false
+          },
+          {
+            "answer": "es",
+            "correct": false
+          },
+          {
+            "answer": "ihm",
+            "correct": false
+          },
+          {
+            "answer": "ihn",
+            "correct": true
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "„Herr Weber, ich verstehe ___ leider nicht.“",
+        "choices": [
+          {
+            "answer": "Sie",
+            "correct": true
+          },
+          {
+            "answer": "Ihnen",
+            "correct": false
+          },
+          {
+            "answer": "dich",
+            "correct": false
+          },
+          {
+            "answer": "Ihr",
+            "correct": false
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "„Maria hat eine E-Mail ___.“",
+        "choices": [
+          {
+            "answer": "geschreibt",
+            "correct": false
+          },
+          {
+            "answer": "schreiben",
+            "correct": false
+          },
+          {
+            "answer": "geschrieben",
+            "correct": true
+          },
+          {
+            "answer": "geschriebt",
+            "correct": false
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "Welcher Satz im Perfekt ist richtig?",
+        "choices": [
+          {
+            "answer": "Am Samstag ich habe meine Wohnung geputzt.",
+            "correct": false
+          },
+          {
+            "answer": "Am Samstag habe ich meine Wohnung geputzt.",
+            "correct": true
+          },
+          {
+            "answer": "Am Samstag habe ich meine Wohnung putzen.",
+            "correct": false
+          },
+          {
+            "answer": "Am Samstag bin ich meine Wohnung geputzt.",
+            "correct": false
+          }
+        ],
+        "time": 20000
+      }
+    ]
+  },
+  {
+    "lesson_id": "perfekt-trennbar-imperativ-anmeldung",
+    "title": "Stunde 9: Perfekt mit sein, Imperativ, Anmeldung (A1–A2)",
+    "description": "Perfekt mit haben oder sein, Partizip II bei trennbaren Verben und ohne ge-, Imperativ mit Sie und du sowie Formulare ausfüllen.",
+    "questions": [
+      {
+        "question": "„Ich ___ um 8 Uhr aufgestanden.“",
+        "choices": [
+          {
+            "answer": "habe",
+            "correct": false
+          },
+          {
+            "answer": "hat",
+            "correct": false
+          },
+          {
+            "answer": "ist",
+            "correct": false
+          },
+          {
+            "answer": "bin",
+            "correct": true
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "„Ich ___ mich nach der Arbeit umgezogen.“ (andere Kleidung)",
+        "choices": [
+          {
+            "answer": "habe",
+            "correct": true
+          },
+          {
+            "answer": "bin",
+            "correct": false
+          },
+          {
+            "answer": "hat",
+            "correct": false
+          },
+          {
+            "answer": "ist",
+            "correct": false
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "Wie heißt das Partizip II von „einkaufen“?",
+        "choices": [
+          {
+            "answer": "geeinkauft",
+            "correct": false
+          },
+          {
+            "answer": "eingekaufen",
+            "correct": false
+          },
+          {
+            "answer": "eingekauft",
+            "correct": true
+          },
+          {
+            "answer": "eingekaufte",
+            "correct": false
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "„Der Zug ___ pünktlich ___.“",
+        "choices": [
+          {
+            "answer": "hat – angekommen",
+            "correct": false
+          },
+          {
+            "answer": "ist – angekommen",
+            "correct": true
+          },
+          {
+            "answer": "ist – geankommen",
+            "correct": false
+          },
+          {
+            "answer": "hat – angekommt",
+            "correct": false
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "Wie heißt das Partizip II von „telefonieren“?",
+        "choices": [
+          {
+            "answer": "telefoniert",
+            "correct": true
+          },
+          {
+            "answer": "getelefoniert",
+            "correct": false
+          },
+          {
+            "answer": "getelefonieren",
+            "correct": false
+          },
+          {
+            "answer": "telefonieren",
+            "correct": false
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "Formular: Was schreibst du bei „Familienstand“?",
+        "choices": [
+          {
+            "answer": "männlich",
+            "correct": false
+          },
+          {
+            "answer": "Gevelsberg",
+            "correct": false
+          },
+          {
+            "answer": "6.9.1993",
+            "correct": false
+          },
+          {
+            "answer": "verheiratet",
+            "correct": true
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "Imperativ (du) von „lesen“: Welcher Satz ist richtig?",
+        "choices": [
+          {
+            "answer": "Les den Text!",
+            "correct": false
+          },
+          {
+            "answer": "Lies den Text!",
+            "correct": true
+          },
+          {
+            "answer": "Liest den Text!",
+            "correct": false
+          },
+          {
+            "answer": "Lese den Text!",
+            "correct": false
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "Die Teamleiterin sagt (Sie-Form):",
+        "choices": [
+          {
+            "answer": "Aufmachen Sie bitte die Post!",
+            "correct": false
+          },
+          {
+            "answer": "Machen Sie bitte auf die Post!",
+            "correct": false
+          },
+          {
+            "answer": "Machen Sie bitte die Post auf!",
+            "correct": true
+          },
+          {
+            "answer": "Macht Sie bitte die Post auf!",
+            "correct": false
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "Welcher Satz ist richtig?",
+        "choices": [
+          {
+            "answer": "Ich habe 2018 nach Deutschland umgezogen.",
+            "correct": false
+          },
+          {
+            "answer": "Ich bin 2018 nach Deutschland umgezogen.",
+            "correct": true
+          },
+          {
+            "answer": "Ich bin 2018 nach Deutschland umgeziehen.",
+            "correct": false
+          },
+          {
+            "answer": "Ich bin 2018 nach Deutschland geumzogen.",
+            "correct": false
+          }
+        ],
+        "time": 20000
+      }
+    ]
+  },
+  {
+    "lesson_id": "dativ-wortstellung-einladungen",
+    "title": "Stunde 10: Dativ, zwei Objekte, Einladungen (A1–A2)",
+    "description": "Verben mit Dativ, Artikel und Pronomen im Dativ, die Reihenfolge von Dativ und Akkusativ im Satz und Einladungen annehmen oder absagen.",
+    "questions": [
+      {
+        "question": "Welches Verb steht mit Dativ (Wem?)?",
+        "choices": [
+          {
+            "answer": "sehen",
+            "correct": false
+          },
+          {
+            "answer": "besuchen",
+            "correct": false
+          },
+          {
+            "answer": "fragen",
+            "correct": false
+          },
+          {
+            "answer": "helfen",
+            "correct": true
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "„Ich helfe ___ Bruder.“ (der Bruder)",
+        "choices": [
+          {
+            "answer": "meinen",
+            "correct": false
+          },
+          {
+            "answer": "meinem",
+            "correct": true
+          },
+          {
+            "answer": "meiner",
+            "correct": false
+          },
+          {
+            "answer": "mein",
+            "correct": false
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "„Ihr helft ___ Eltern.“",
+        "choices": [
+          {
+            "answer": "eurem",
+            "correct": false
+          },
+          {
+            "answer": "eurer",
+            "correct": false
+          },
+          {
+            "answer": "euren",
+            "correct": true
+          },
+          {
+            "answer": "eure",
+            "correct": false
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "„Wir gratulieren den Nachbarn.“ – mit Pronomen:",
+        "choices": [
+          {
+            "answer": "Wir gratulieren sie.",
+            "correct": false
+          },
+          {
+            "answer": "Wir gratulieren ihnen.",
+            "correct": true
+          },
+          {
+            "answer": "Wir gratulieren ihn.",
+            "correct": false
+          },
+          {
+            "answer": "Wir gratulieren ihr.",
+            "correct": false
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "Du kannst nicht zur Party kommen. Was sagst du?",
+        "choices": [
+          {
+            "answer": "Ich komme sehr gern! Soll ich etwas mitbringen?",
+            "correct": false
+          },
+          {
+            "answer": "Das ist eine tolle Idee, ich bin dabei.",
+            "correct": false
+          },
+          {
+            "answer": "Danke, ich sage dir gern zu.",
+            "correct": false
+          },
+          {
+            "answer": "Es tut mir leid, ich habe an dem Tag schon einen Termin.",
+            "correct": true
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "„Der Kellner bringt mir den Salat.“ – mit zwei Pronomen:",
+        "choices": [
+          {
+            "answer": "Er bringt ihn mir.",
+            "correct": true
+          },
+          {
+            "answer": "Er bringt mir ihn.",
+            "correct": false
+          },
+          {
+            "answer": "Er bringt ihm mich.",
+            "correct": false
+          },
+          {
+            "answer": "Er bringt ihn mich.",
+            "correct": false
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "Welcher Satz ist richtig?",
+        "choices": [
+          {
+            "answer": "Ich schenke die Schwester die Blumen.",
+            "correct": false
+          },
+          {
+            "answer": "Ich schenke der Schwester den Blumen.",
+            "correct": false
+          },
+          {
+            "answer": "Ich schenke der Schwester die Blumen.",
+            "correct": true
+          },
+          {
+            "answer": "Ich schenke dem Schwester die Blumen.",
+            "correct": false
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "„Die Feier ___ am Freitag ___.“",
+        "choices": [
+          {
+            "answer": "statt – findet",
+            "correct": false
+          },
+          {
+            "answer": "fängt – statt",
+            "correct": false
+          },
+          {
+            "answer": "sagt – zu",
+            "correct": false
+          },
+          {
+            "answer": "findet – statt",
+            "correct": true
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "„Gibst du deinem Bruder den Stift?“ – mit zwei Pronomen:",
+        "choices": [
+          {
+            "answer": "Gibst du ihn ihm?",
+            "correct": true
+          },
+          {
+            "answer": "Gibst du ihm ihn?",
+            "correct": false
+          },
+          {
+            "answer": "Gibst du ihn ihn?",
+            "correct": false
+          },
+          {
+            "answer": "Gibst du ihm es?",
+            "correct": false
+          }
+        ],
+        "time": 20000
+      }
+    ]
+  },
+  {
+    "lesson_id": "bahnhof-datum-wo-wohin-wegbeschreibung",
+    "title": "Stunde 11: Bahnhof, Datum, Wo/Wohin, Weg (A1–A2)",
+    "description": "Wörter und Durchsagen am Bahnhof, das Datum mit Ordinalzahlen, in/an/bei/zu für Wo? und Wohin? und Wegbeschreibungen im Imperativ.",
+    "questions": [
+      {
+        "question": "Den Zug wechseln (Zug A → Zug B) heißt …",
+        "choices": [
+          {
+            "answer": "umsteigen",
+            "correct": true
+          },
+          {
+            "answer": "aussteigen",
+            "correct": false
+          },
+          {
+            "answer": "einsteigen",
+            "correct": false
+          },
+          {
+            "answer": "abfahren",
+            "correct": false
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "Durchsage: „Der Zug hat ca. 20 Minuten Verspätung.“ Das heißt:",
+        "choices": [
+          {
+            "answer": "Der Zug fällt aus.",
+            "correct": false
+          },
+          {
+            "answer": "Der Zug fährt pünktlich.",
+            "correct": false
+          },
+          {
+            "answer": "Der Zug kommt später.",
+            "correct": true
+          },
+          {
+            "answer": "Der Zug fährt 20 Minuten früher.",
+            "correct": false
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "Welcher Satz ist richtig?",
+        "choices": [
+          {
+            "answer": "Ich warte auf dem Gleis auf dich.",
+            "correct": false
+          },
+          {
+            "answer": "Ich warte an Gleis auf dich.",
+            "correct": false
+          },
+          {
+            "answer": "Ich warte im Gleis auf dich.",
+            "correct": false
+          },
+          {
+            "answer": "Ich warte am Gleis auf dich.",
+            "correct": true
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "„Der Termin ist am zwanzigst___ Juli.“",
+        "choices": [
+          {
+            "answer": "-en",
+            "correct": true
+          },
+          {
+            "answer": "-e",
+            "correct": false
+          },
+          {
+            "answer": "-er",
+            "correct": false
+          },
+          {
+            "answer": "-em",
+            "correct": false
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "„Heute ist der ___ Dezember.“ (1.12.)",
+        "choices": [
+          {
+            "answer": "einte",
+            "correct": false
+          },
+          {
+            "answer": "ersten",
+            "correct": false
+          },
+          {
+            "answer": "erste",
+            "correct": true
+          },
+          {
+            "answer": "einste",
+            "correct": false
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "„Ich gehe heute ___ Arzt.“",
+        "choices": [
+          {
+            "answer": "beim",
+            "correct": false
+          },
+          {
+            "answer": "zum",
+            "correct": true
+          },
+          {
+            "answer": "zur",
+            "correct": false
+          },
+          {
+            "answer": "in den",
+            "correct": false
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "„Ich war gestern ___ meiner Oma.“",
+        "choices": [
+          {
+            "answer": "bei",
+            "correct": true
+          },
+          {
+            "answer": "zu",
+            "correct": false
+          },
+          {
+            "answer": "an",
+            "correct": false
+          },
+          {
+            "answer": "in",
+            "correct": false
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "„Wir treffen uns ___ Bahnhof.“",
+        "choices": [
+          {
+            "answer": "an",
+            "correct": false
+          },
+          {
+            "answer": "zum",
+            "correct": false
+          },
+          {
+            "answer": "an den",
+            "correct": false
+          },
+          {
+            "answer": "am",
+            "correct": true
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "„Nehmen Sie den Bus!“ – Wie sagst du das zu einem Freund?",
+        "choices": [
+          {
+            "answer": "Nehm den Bus!",
+            "correct": false
+          },
+          {
+            "answer": "Nimm den Bus!",
+            "correct": true
+          },
+          {
+            "answer": "Nimmst den Bus!",
+            "correct": false
+          },
+          {
+            "answer": "Nehme den Bus!",
+            "correct": false
+          }
+        ],
+        "time": 20000
+      }
+    ]
+  },
+  {
+    "lesson_id": "heimat-himmelsrichtungen-hoeflich-bitten",
+    "title": "Stunde 12: Heimat, Städte, Kleidung, höflich bitten (A2)",
+    "description": "Himmelsrichtungen und Städte in Deutschland, Kleidung mit Adjektivendungen beschreiben und Bitten höflich formulieren.",
+    "questions": [
+      {
+        "question": "„Hamburg liegt ___ Norden von Deutschland.“",
+        "choices": [
+          {
+            "answer": "in",
+            "correct": false
+          },
+          {
+            "answer": "im",
+            "correct": true
+          },
+          {
+            "answer": "am",
+            "correct": false
+          },
+          {
+            "answer": "auf",
+            "correct": false
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "„Nie Ohne Seife Waschen“: Welche Richtung kommt nach Osten?",
+        "choices": [
+          {
+            "answer": "Süden",
+            "correct": true
+          },
+          {
+            "answer": "Westen",
+            "correct": false
+          },
+          {
+            "answer": "Norden",
+            "correct": false
+          },
+          {
+            "answer": "Nordosten",
+            "correct": false
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "Wo liegt München?",
+        "choices": [
+          {
+            "answer": "im Norden von Deutschland",
+            "correct": false
+          },
+          {
+            "answer": "im Osten von Deutschland",
+            "correct": false
+          },
+          {
+            "answer": "im Westen von Deutschland",
+            "correct": false
+          },
+          {
+            "answer": "im Süden von Deutschland",
+            "correct": true
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "Welche Stadt nennt man „Mainhattan“?",
+        "choices": [
+          {
+            "answer": "Köln",
+            "correct": false
+          },
+          {
+            "answer": "Frankfurt am Main",
+            "correct": true
+          },
+          {
+            "answer": "Berlin",
+            "correct": false
+          },
+          {
+            "answer": "Hamburg",
+            "correct": false
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "In welcher Stadt gibt es den berühmten Dom und Karneval?",
+        "choices": [
+          {
+            "answer": "Dresden",
+            "correct": false
+          },
+          {
+            "answer": "München",
+            "correct": false
+          },
+          {
+            "answer": "Köln",
+            "correct": true
+          },
+          {
+            "answer": "Stuttgart",
+            "correct": false
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "„Er trägt ___ blau___ Pullover.“ (der Pullover)",
+        "choices": [
+          {
+            "answer": "ein blauer",
+            "correct": false
+          },
+          {
+            "answer": "einen blauen",
+            "correct": true
+          },
+          {
+            "answer": "einen blaue",
+            "correct": false
+          },
+          {
+            "answer": "ein blauen",
+            "correct": false
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "„Sie trägt ___ rot___ Kleid.“ (das Kleid)",
+        "choices": [
+          {
+            "answer": "ein rote",
+            "correct": false
+          },
+          {
+            "answer": "eine rotes",
+            "correct": false
+          },
+          {
+            "answer": "einen roten",
+            "correct": false
+          },
+          {
+            "answer": "ein rotes",
+            "correct": true
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "Welche Bitte ist am höflichsten?",
+        "choices": [
+          {
+            "answer": "Könntest du bitte das Fenster zumachen?",
+            "correct": true
+          },
+          {
+            "answer": "Mach das Fenster zu!",
+            "correct": false
+          },
+          {
+            "answer": "Mach bitte das Fenster zu!",
+            "correct": false
+          },
+          {
+            "answer": "Kannst du das Fenster zumachen?",
+            "correct": false
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "Welcher Satz ist richtig?",
+        "choices": [
+          {
+            "answer": "Sind Sie bitte leise!",
+            "correct": false
+          },
+          {
+            "answer": "Sei Sie bitte leise!",
+            "correct": false
+          },
+          {
+            "answer": "Seien Sie bitte leise!",
+            "correct": true
+          },
+          {
+            "answer": "Seid Sie bitte leise!",
+            "correct": false
+          }
+        ],
+        "time": 20000
+      }
+    ]
+  },
+  {
+    "lesson_id": "beim-arzt-krankmeldung-sollen",
+    "title": "Stunde 13: Beim Arzt, krankmelden, sollen (A2)",
+    "description": "Beschwerden beschreiben, Fragen in der Arztpraxis verstehen, sich krankmelden und Ratschläge mit sollen, sollten und doch/mal geben.",
+    "questions": [
+      {
+        "question": "„Mein Kopf ___ weh.“",
+        "choices": [
+          {
+            "answer": "tun",
+            "correct": false
+          },
+          {
+            "answer": "tut",
+            "correct": true
+          },
+          {
+            "answer": "hat",
+            "correct": false
+          },
+          {
+            "answer": "habe",
+            "correct": false
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "„Meine Ohren ___ weh.“",
+        "choices": [
+          {
+            "answer": "tut",
+            "correct": false
+          },
+          {
+            "answer": "haben",
+            "correct": false
+          },
+          {
+            "answer": "sind",
+            "correct": false
+          },
+          {
+            "answer": "tun",
+            "correct": true
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "„Ich habe seit zwei ___ Husten.“",
+        "choices": [
+          {
+            "answer": "Tagen",
+            "correct": true
+          },
+          {
+            "answer": "Tage",
+            "correct": false
+          },
+          {
+            "answer": "Tag",
+            "correct": false
+          },
+          {
+            "answer": "Tages",
+            "correct": false
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "„Haben Sie Ihre Versichertenkarte dabei?“ – Was passt?",
+        "choices": [
+          {
+            "answer": "Am Hals.",
+            "correct": false
+          },
+          {
+            "answer": "Seit gestern Abend.",
+            "correct": false
+          },
+          {
+            "answer": "Ja, hier bitte.",
+            "correct": true
+          },
+          {
+            "answer": "Dreimal am Tag.",
+            "correct": false
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "„Wie oft muss ich die Tabletten nehmen?“ – Was passt?",
+        "choices": [
+          {
+            "answer": "Seit gestern Abend.",
+            "correct": false
+          },
+          {
+            "answer": "Nein, es ist ein Notfall.",
+            "correct": false
+          },
+          {
+            "answer": "Am Hals.",
+            "correct": false
+          },
+          {
+            "answer": "Dreimal am Tag nach dem Essen.",
+            "correct": true
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "Der Arzt sagt zu einem Kind (du): „tief einatmen“",
+        "choices": [
+          {
+            "answer": "Atme bitte tief ein!",
+            "correct": true
+          },
+          {
+            "answer": "Atm bitte tief ein!",
+            "correct": false
+          },
+          {
+            "answer": "Einatme bitte tief!",
+            "correct": false
+          },
+          {
+            "answer": "Atmest bitte tief ein!",
+            "correct": false
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "Welche Anrede passt in eine Krankmeldung an die Firma?",
+        "choices": [
+          {
+            "answer": "Sehr geehrter Damen und Herren,",
+            "correct": false
+          },
+          {
+            "answer": "Hallo zusammen,",
+            "correct": false
+          },
+          {
+            "answer": "Sehr geehrte Damen und Herren,",
+            "correct": true
+          },
+          {
+            "answer": "Hi Chef,",
+            "correct": false
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "Der Arzt sagt: „Bleiben Sie im Bett!“ Du erzählst es. Was ist richtig?",
+        "choices": [
+          {
+            "answer": "Ich soll im Bett bleibe.",
+            "correct": false
+          },
+          {
+            "answer": "Ich soll im Bett bleiben.",
+            "correct": true
+          },
+          {
+            "answer": "Ich bleibe soll im Bett.",
+            "correct": false
+          },
+          {
+            "answer": "Ich sollst im Bett bleiben.",
+            "correct": false
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "„Ich habe Zahnschmerzen.“ – Welcher Rat ist richtig?",
+        "choices": [
+          {
+            "answer": "Du solltest zum Zahnarzt gehen.",
+            "correct": true
+          },
+          {
+            "answer": "Du solltest zum Zahnarzt gehst.",
+            "correct": false
+          },
+          {
+            "answer": "Du sollst gehen zum Zahnarzt.",
+            "correct": false
+          },
+          {
+            "answer": "Geh doch zum Zahnarzt gehen!",
+            "correct": false
+          }
+        ],
+        "time": 20000
+      }
+    ]
+  },
+  {
+    "lesson_id": "seit-vor-arbeitswelt-wen-wem",
+    "title": "Stunde 14: seit/vor, Arbeitswelt, Wen oder Wem? (A2)",
+    "description": "seit und vor mit Dativ, Wörter rund um Arbeit und Bewerbung, Stellenanzeigen wie in der DTZ und Akkusativ oder Dativ nach dem Verb.",
+    "questions": [
+      {
+        "question": "„Ich lerne ___ zwei Jahren Deutsch.“ (und lerne noch)",
+        "choices": [
+          {
+            "answer": "seit",
+            "correct": true
+          },
+          {
+            "answer": "vor",
+            "correct": false
+          },
+          {
+            "answer": "ab",
+            "correct": false
+          },
+          {
+            "answer": "von",
+            "correct": false
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "„Ich bin ___ einem Jahr nach Deutschland gekommen.“",
+        "choices": [
+          {
+            "answer": "seit",
+            "correct": false
+          },
+          {
+            "answer": "ab",
+            "correct": false
+          },
+          {
+            "answer": "vor",
+            "correct": true
+          },
+          {
+            "answer": "von",
+            "correct": false
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "„Seit ___ Woche habe ich Kopfschmerzen.“",
+        "choices": [
+          {
+            "answer": "eine",
+            "correct": false
+          },
+          {
+            "answer": "einer",
+            "correct": true
+          },
+          {
+            "answer": "einem",
+            "correct": false
+          },
+          {
+            "answer": "einen",
+            "correct": false
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "„Vor drei ___ war ich beim Arzt.“",
+        "choices": [
+          {
+            "answer": "Tagen",
+            "correct": true
+          },
+          {
+            "answer": "Tage",
+            "correct": false
+          },
+          {
+            "answer": "Tag",
+            "correct": false
+          },
+          {
+            "answer": "Tages",
+            "correct": false
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "„Maria arbeitet ___ Siemens.“",
+        "choices": [
+          {
+            "answer": "als",
+            "correct": false
+          },
+          {
+            "answer": "zu",
+            "correct": false
+          },
+          {
+            "answer": "an",
+            "correct": false
+          },
+          {
+            "answer": "bei",
+            "correct": true
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "„Er arbeitet ___ Koch.“",
+        "choices": [
+          {
+            "answer": "bei",
+            "correct": false
+          },
+          {
+            "answer": "als",
+            "correct": true
+          },
+          {
+            "answer": "wie",
+            "correct": false
+          },
+          {
+            "answer": "für",
+            "correct": false
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "„In meinem ___ stehen meine Schulen und Jobs.“",
+        "choices": [
+          {
+            "answer": "Arbeitgeber",
+            "correct": false
+          },
+          {
+            "answer": "Stellenangebot",
+            "correct": false
+          },
+          {
+            "answer": "Lebenslauf",
+            "correct": true
+          },
+          {
+            "answer": "Bezahlung",
+            "correct": false
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "Anzeige: „Kantine sucht Koch. Mo–Fr, 6–15 Uhr. Wochenende frei!“ Wer passt?",
+        "choices": [
+          {
+            "answer": "Maria, Studentin, möchte nur am Wochenende arbeiten.",
+            "correct": false
+          },
+          {
+            "answer": "Ali, Koch, möchte am Wochenende frei haben.",
+            "correct": true
+          },
+          {
+            "answer": "Tarek, Fahrer, möchte gern reisen.",
+            "correct": false
+          },
+          {
+            "answer": "Olga, Bürokraft, sucht einen Job am Abend.",
+            "correct": false
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "„Ich antworte ___ Lehrer. Dann frage ich ___ Lehrerin.“",
+        "choices": [
+          {
+            "answer": "den – der",
+            "correct": false
+          },
+          {
+            "answer": "dem – der",
+            "correct": false
+          },
+          {
+            "answer": "den – die",
+            "correct": false
+          },
+          {
+            "answer": "dem – die",
+            "correct": true
+          }
+        ],
+        "time": 20000
+      }
+    ]
+  },
+  {
+    "lesson_id": "ja-nein-doch-lesetraining-musik",
+    "title": "Stunde 15: Ja, Nein, Doch, Lesen und Musik (A2)",
+    "description": "Richtig auf positive und negative Fragen antworten, kurze Nachrichten wie in der DTZ verstehen und über Musik und Instrumente sprechen.",
+    "questions": [
+      {
+        "question": "„Hast du kein Geld dabei?“ – „___, Geld habe ich.“",
+        "choices": [
+          {
+            "answer": "Ja",
+            "correct": false
+          },
+          {
+            "answer": "Doch",
+            "correct": true
+          },
+          {
+            "answer": "Nein",
+            "correct": false
+          },
+          {
+            "answer": "Nicht",
+            "correct": false
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "„Kommst du heute Abend?“ – „___, ich komme gern.“",
+        "choices": [
+          {
+            "answer": "Doch",
+            "correct": false
+          },
+          {
+            "answer": "Nein",
+            "correct": false
+          },
+          {
+            "answer": "Ja",
+            "correct": true
+          },
+          {
+            "answer": "Kein",
+            "correct": false
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "„Trinkst du keinen Tee?“ – „___, ich trinke keinen Tee.“",
+        "choices": [
+          {
+            "answer": "Ja",
+            "correct": false
+          },
+          {
+            "answer": "Nein",
+            "correct": true
+          },
+          {
+            "answer": "Doch",
+            "correct": false
+          },
+          {
+            "answer": "Nicht",
+            "correct": false
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "„Ist das nicht dein Auto?“ – „Doch!“ Was bedeutet das?",
+        "choices": [
+          {
+            "answer": "Das ist nicht mein Auto.",
+            "correct": false
+          },
+          {
+            "answer": "Ich habe kein Auto.",
+            "correct": false
+          },
+          {
+            "answer": "Ich weiß es nicht.",
+            "correct": false
+          },
+          {
+            "answer": "Das ist mein Auto.",
+            "correct": true
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "Frau Klein schreibt: „Ich komme erst um 13 Uhr ins Büro.“ Das heißt:",
+        "choices": [
+          {
+            "answer": "Sie kommt erst am Mittag zur Arbeit.",
+            "correct": true
+          },
+          {
+            "answer": "Sie kommt heute nicht zur Arbeit.",
+            "correct": false
+          },
+          {
+            "answer": "Sie kommt heute früher zur Arbeit.",
+            "correct": false
+          },
+          {
+            "answer": "Sie hat um 13 Uhr einen Arzttermin.",
+            "correct": false
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "Notiz: „Bitte gib dem Hund noch Futter!“ Was soll der Partner machen?",
+        "choices": [
+          {
+            "answer": "Nudeln kochen",
+            "correct": false
+          },
+          {
+            "answer": "zum Sport gehen",
+            "correct": false
+          },
+          {
+            "answer": "dem Hund Futter geben",
+            "correct": true
+          },
+          {
+            "answer": "mit dem Hund spazieren gehen",
+            "correct": false
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "SMS: „Sag mir bis heute Abend Bescheid, ob du mitkommst.“ Was will Ben wissen?",
+        "choices": [
+          {
+            "answer": "ob Tom Geld hat",
+            "correct": false
+          },
+          {
+            "answer": "wo der Bahnhof ist",
+            "correct": false
+          },
+          {
+            "answer": "wann das Spiel beginnt",
+            "correct": false
+          },
+          {
+            "answer": "ob Tom am Samstag mitkommt",
+            "correct": true
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "„Meine Gitarre klingt komisch. Ich muss sie ___.“",
+        "choices": [
+          {
+            "answer": "stimmen",
+            "correct": true
+          },
+          {
+            "answer": "üben",
+            "correct": false
+          },
+          {
+            "answer": "auftreten",
+            "correct": false
+          },
+          {
+            "answer": "singen",
+            "correct": false
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "„Die Band ___ heute Abend im Park ___.“",
+        "choices": [
+          {
+            "answer": "treten – auf",
+            "correct": false
+          },
+          {
+            "answer": "tretet – auf",
+            "correct": false
+          },
+          {
+            "answer": "tritt – auf",
+            "correct": true
+          },
+          {
+            "answer": "trittst – auf",
+            "correct": false
+          }
+        ],
+        "time": 20000
+      }
+    ]
+  },
+  {
+    "lesson_id": "adjektive-kleidung-bild-welcher-dieser",
+    "title": "Stunde 16: Adjektivendungen, Kleidung, welcher/dieser (A2–B1)",
+    "description": "Adjektivendungen nach ein/eine/kein, Kleidung und Bilder beschreiben wie in der Prüfung und Fragen mit welcher, Antworten mit dieser.",
+    "questions": [
+      {
+        "question": "„Da sitzt ein alt___ Mann.“",
+        "choices": [
+          {
+            "answer": "-en",
+            "correct": false
+          },
+          {
+            "answer": "-e",
+            "correct": false
+          },
+          {
+            "answer": "-er",
+            "correct": true
+          },
+          {
+            "answer": "-es",
+            "correct": false
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "„Im Hintergrund ist ein hoh___ Haus.“",
+        "choices": [
+          {
+            "answer": "-er",
+            "correct": false
+          },
+          {
+            "answer": "-e",
+            "correct": false
+          },
+          {
+            "answer": "-en",
+            "correct": false
+          },
+          {
+            "answer": "-es",
+            "correct": true
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "„Ich kaufe einen warm___ Mantel.“",
+        "choices": [
+          {
+            "answer": "-en",
+            "correct": true
+          },
+          {
+            "answer": "-er",
+            "correct": false
+          },
+          {
+            "answer": "-e",
+            "correct": false
+          },
+          {
+            "answer": "-es",
+            "correct": false
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "„Er trägt ein kariertes Hemd mit ___ blauen Jeans.“ (die Jeans)",
+        "choices": [
+          {
+            "answer": "einem",
+            "correct": false
+          },
+          {
+            "answer": "eine",
+            "correct": false
+          },
+          {
+            "answer": "einer",
+            "correct": true
+          },
+          {
+            "answer": "einen",
+            "correct": false
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "Welches Kleidungsstück hat den Artikel „das“?",
+        "choices": [
+          {
+            "answer": "Rock",
+            "correct": false
+          },
+          {
+            "answer": "Kleid",
+            "correct": true
+          },
+          {
+            "answer": "Bluse",
+            "correct": false
+          },
+          {
+            "answer": "Anzug",
+            "correct": false
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "„Sie hat eine ___ Bluse an.“ (dunkel)",
+        "choices": [
+          {
+            "answer": "dunkle",
+            "correct": true
+          },
+          {
+            "answer": "dunkele",
+            "correct": false
+          },
+          {
+            "answer": "dunkel",
+            "correct": false
+          },
+          {
+            "answer": "dunklen",
+            "correct": false
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "Bild beschreiben: Welcher Satz ist eine Vermutung?",
+        "choices": [
+          {
+            "answer": "Links sitzt ein junger Mann.",
+            "correct": false
+          },
+          {
+            "answer": "Auf dem Tisch steht ein Kuchen.",
+            "correct": false
+          },
+          {
+            "answer": "Er hat ein kariertes Hemd an.",
+            "correct": false
+          },
+          {
+            "answer": "Vielleicht hat sie Geburtstag.",
+            "correct": true
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "„___ Bus nimmst du?“ (der Bus, Akkusativ)",
+        "choices": [
+          {
+            "answer": "Welcher",
+            "correct": false
+          },
+          {
+            "answer": "Welchen",
+            "correct": true
+          },
+          {
+            "answer": "Welchem",
+            "correct": false
+          },
+          {
+            "answer": "Welches",
+            "correct": false
+          }
+        ],
+        "time": 20000
+      },
+      {
+        "question": "„Welchen Pullover kaufst du?“ – Welche Antwort ist richtig?",
+        "choices": [
+          {
+            "answer": "Ich kaufe dieser rote Pullover.",
+            "correct": false
+          },
+          {
+            "answer": "Ich kaufe diesen roter Pullover.",
+            "correct": false
+          },
+          {
+            "answer": "Ich kaufe diesen roten Pullover.",
+            "correct": true
+          },
+          {
+            "answer": "Ich kaufe dieses rote Pullover.",
+            "correct": false
+          }
+        ],
+        "time": 20000
+      }
+    ]
+  }
+]

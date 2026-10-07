@@ -1,0 +1,101 @@
+{
+ "id": "ihr-lebensmittel-akkusativ-esstisch",
+ "source": "9.10.2025",
+ "title": "ihr und sie, Lebensmittel, Akkusativ und Gespräche am Esstisch",
+ "level": "A1",
+ "intro": "Du sprichst mehrere Personen mit ihr an, benennst und beschreibst Lebensmittel, benutzt den Akkusativ mit kein und führst ein Gespräch beim Essen.",
+ "topics": [
+  {
+   "title": "ihr oder sie? Mehrere Personen ansprechen",
+   "goal": "Du unterscheidest ihr (mehrere Personen, du-Form) und sie/Sie.",
+   "blocks": [
+    {"type": "table", "head": ["Person", "kommen", "Wann benutzen?"], "rows": [
+     ["ich", "komme", ""],
+     ["du", "kommst", "eine Person, die du duzt"],
+     ["er / sie / es", "kommt", "über eine Person sprechen"],
+     ["wir", "kommen", ""],
+     ["ihr", "kommt", "mindestens zwei Personen, die du duzt"],
+     ["sie / Sie", "kommen", "über mehrere Personen sprechen / höfliche Anrede"]
+    ]},
+    {"type": "examples", "items": [
+     "Oskar und Charlotte bringen einen Nachtisch mit. → Sie bringen einen Nachtisch mit. (Aussage)",
+     "Oskar, Charlotte, bringt ihr einen Nachtisch mit? (Frage)",
+     "Oskar, Charlotte, bringt bitte einen Nachtisch mit! (Bitte)",
+     "Kinder, habt ihr die Hausaufgaben gemacht?",
+     "Haben Sie das Thema verstanden? (höflich, eine oder mehrere Personen)"
+    ]},
+    {"type": "rule", "text": "Imperativ mit ihr: wie die ihr-Form, aber ohne ihr. Ihr kommt. → Kommt bitte! Ihr macht die Tür zu. → Macht bitte die Tür zu!"},
+    {"type": "exercise", "title": "Übung 1: ihr, sie oder Sie?", "task": "Ergänze das Pronomen.", "items": ["Anna und Tom, kommt ______ mit ins Kino?", "Meine Kinder sind 12 und 14. ______ gehen zur Schule.", "Herr Weber, haben ______ Zeit?", "Ich habe einen Tisch und einen Schrank gekauft. ______ waren teuer."], "solutions": ["ihr", "Sie", "Sie", "Sie"]}
+   ]
+  },
+  {
+   "title": "Lebensmittel: Wörter und Mengen",
+   "goal": "Du kennst wichtige Lebensmittel mit Artikel und beschreibst, wie sie schmecken.",
+   "blocks": [
+    {"type": "table", "head": ["Obst", "Gemüse", "Getränke", "Milchprodukte und mehr"], "rows": [
+     ["der Apfel, die Banane", "die Gurke, die Tomate", "das Wasser, der Saft", "die Milch, der Käse"],
+     ["die Orange, die Zitrone", "die Zwiebel, die Paprika", "der Kaffee, der Tee", "der Joghurt, der Quark"],
+     ["die Weintraube", "der Salat, die Kartoffel", "die Limonade", "die Butter, das Ei, die Wurst"]
+    ]},
+    {"type": "list", "title": "Mengen", "items": ["eine Packung Milch – vier Packungen Mehl", "400 Gramm Zucker, ein Kilo Äpfel, ein Liter Saft", "Wo finde ich die Milch?"]},
+    {"type": "table", "head": ["Adjektiv", "Beispiel", "Gegenteil"], "rows": [
+     ["süß", "der Honig", "sauer, bitter"], ["sauer", "die Zitrone", "süß"], ["scharf", "die Chilischote", "mild"],
+     ["salzig", "die Salzbrezel", "süß"], ["frisch", "das Brötchen vom Bäcker", "alt, verdorben"], ["knusprig", "das warme Brötchen", "weich"],
+     ["fettig", "die Pommes", "mager"], ["heiß", "die Suppe", "kalt"]
+    ]},
+    {"type": "exercise", "title": "Übung 2: der, die oder das?", "task": "Ergänze den Artikel.", "items": ["___ Apfel", "___ Banane", "___ Brot", "___ Ei", "___ Käse", "___ Milch", "___ Saft", "___ Wurst"], "solutions": ["der", "die", "das", "das", "der", "die", "der", "die"]},
+    {"type": "exercise", "title": "Übung 3: Das passende Verb", "task": "essen, trinken, kochen, schmecken, backen, bestellen – in der richtigen Form.", "items": ["Am Abend ______ meine Mutter eine Suppe.", "Ich ______ gern Pizza mit Käse.", "Am Sonntag ______ wir einen Kuchen.", "Hmm, das Eis ______ fantastisch!", "Im Restaurant ______ ich einen Salat."], "solutions": ["kocht", "esse", "backen", "schmeckt", "bestelle"]},
+    {"type": "exercise", "title": "Übung 4: Bilde Sätze", "task": "Bring die Wörter in die richtige Reihenfolge.", "items": ["mag / Ich / Schokolade / sehr", "du / Was / am liebsten / isst / ?", "mir / nicht / Der Fisch / schmeckt"], "solutions": ["Ich mag Schokolade sehr.", "Was isst du am liebsten?", "Der Fisch schmeckt mir nicht."]}
+   ]
+  },
+  {
+   "title": "Der Akkusativ beim Essen und Einkaufen",
+   "goal": "Du benutzt den Akkusativ nach Verben wie essen, trinken, kaufen, brauchen.",
+   "blocks": [
+    {"type": "rule", "text": "Nur maskulin ändert sich im Akkusativ: der → den, ein → einen, kein → keinen. die, das und Plural bleiben gleich."},
+    {"type": "table", "head": ["", "maskulin", "neutral", "feminin", "Plural"], "rows": [
+     ["Nominativ (Wer? Was?)", "der / kein", "das / kein", "die / keine", "die / keine"],
+     ["Akkusativ (Wen? Was?)", "den / keinen", "das / kein", "die / keine", "die / keine"]
+    ]},
+    {"type": "table", "head": ["Verb", "maskulin", "feminin / neutral"], "rows": [
+     ["essen", "Sie isst einen Joghurt. – keinen Fisch.", "Sie isst eine Banane. / ein Eis."],
+     ["trinken", "Ich trinke einen Saft. – keinen Tee.", "Ich trinke die Cola. / das Wasser."],
+     ["kaufen", "Du kaufst den Apfel.", "Du kaufst die Milch. / das Brot."],
+     ["brauchen", "Wir brauchen einen Stuhl.", "Wir brauchen eine Lampe."],
+     ["mögen", "Ich mag den Hund.", "Ich mag die Katze."],
+     ["mitbringen", "Ich bringe den Salat mit.", "Ich bringe das Brot mit."]
+    ]},
+    {"type": "rule", "text": "kein steht vor Nomen: Ich esse keinen Fisch. Ich habe kein Haus. – nicht verneint Verben und Adjektive: Ich komme nicht. Die Suppe ist nicht heiß."},
+    {"type": "exercise", "title": "Übung 5: Antworte mit einem ganzen Satz", "task": "Achte auf den Akkusativ.", "items": ["Was isst du gern zum Frühstück?", "Was trinkst du am Morgen?", "Was magst du lieber: Fisch oder Fleisch?", "Du backst einen Kuchen. Was brauchst du?", "Was isst du gar nicht gern?"], "solutions": ["z. B.: Ich esse gern ein Brötchen und einen Joghurt.", "z. B.: Ich trinke einen Kaffee.", "z. B.: Ich mag lieber Fisch.", "z. B.: Ich brauche Mehl, Zucker, Eier und Butter.", "z. B.: Ich esse keinen Käse."]}
+   ]
+  },
+  {
+   "title": "Ein Gespräch am Esstisch",
+   "goal": "Du bietest etwas an, reagierst höflich, lobst das Essen und machst Smalltalk.",
+   "blocks": [
+    {"type": "table", "head": ["Situation", "Redemittel"], "rows": [
+     ["Anfang", "Guten Appetit! – Danke, gleichfalls! / Mahlzeit!"],
+     ["anbieten", "Möchtest du Brot? Nimm dir! / Bedien dich!"],
+     ["um etwas bitten", "Gibst du mir bitte das Salz? Kannst du mir die Butter geben?"],
+     ["annehmen / ablehnen", "Ja, gern. – Nein, danke, ich bin satt."],
+     ["loben", "Das schmeckt sehr gut! Das riecht gut! Du kannst toll kochen!"],
+     ["höflich kritisieren", "Das ist leider nicht so mein Geschmack."],
+     ["Meinung", "Wie findest du den Reis? – Ich finde ihn super. / Schmeckt dir der Reis? – Ja, er schmeckt mir."],
+     ["Ende", "Danke für das leckere Essen! Soll ich beim Abräumen helfen?"]
+    ]},
+    {"type": "list", "title": "Smalltalk-Fragen", "items": ["Wie war dein Tag?", "Hast du gut geschlafen?", "Was machst du heute noch?", "Wie war die Arbeit / der Deutschkurs?"]},
+    {"type": "dialog", "title": "Dialog: Beim Abendessen", "lines": [
+     ["A", "Guten Appetit! Das riecht sehr gut. Was ist das?"],
+     ["B", "Das ist eine Gemüsesuppe. Ich habe sie frisch gekocht."],
+     ["A", "Mmmh, sie schmeckt fantastisch!"],
+     ["B", "Danke! Möchtest du noch Brot dazu?"],
+     ["A", "Ja, gern. – Wie war dein Tag?"],
+     ["B", "Ganz gut, aber anstrengend."],
+     ["A", "Ich bin satt, danke. Soll ich beim Abräumen helfen?"],
+     ["B", "Ja, das ist nett!"]
+    ]},
+    {"type": "tip", "text": "Spielt den Dialog zu zweit und tauscht die Rollen. Ändert das Essen: Nudeln statt Suppe, Saft statt Kaffee."}
+   ]
+  }
+ ]
+}

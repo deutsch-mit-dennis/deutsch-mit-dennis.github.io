@@ -1,0 +1,117 @@
+{
+ "id": "sich-vorstellen-berufe",
+ "source": "11.09.25",
+ "title": "Sich vorstellen und über Berufe sprechen",
+ "level": "A1",
+ "intro": "Du stellst dich vor, fragst andere Personen nach ihren Angaben und sprichst über Berufe und deinen Traumberuf.",
+ "topics": [
+  {
+   "title": "Sich vorstellen: Fragen und Antworten",
+   "goal": "Du kannst Fragen zur Person stellen und beantworten – mit du, Sie und er/sie.",
+   "blocks": [
+    {"type": "table", "head": ["Thema", "du", "Sie (höflich)", "er / sie"], "rows": [
+     ["Name", "Wie heißt du?", "Wie heißen Sie?", "Wie heißt er/sie?"],
+     ["Herkunft", "Woher kommst du?", "Woher kommen Sie?", "Woher kommt er/sie?"],
+     ["Wohnort", "Wo wohnst du?", "Wo wohnen Sie?", "Wo wohnt er/sie?"],
+     ["Adresse", "Wie ist deine Adresse?", "Wie ist Ihre Adresse?", "Wie ist seine/ihre Adresse?"],
+     ["Familienstand", "Bist du verheiratet?", "Sind Sie verheiratet?", "Ist er/sie verheiratet?"],
+     ["Kinder", "Hast du Kinder?", "Haben Sie Kinder?", "Hat er/sie Kinder?"],
+     ["Beruf", "Was bist du von Beruf?", "Was sind Sie von Beruf?", "Was ist er/sie von Beruf?"],
+     ["Sprachen", "Welche Sprachen sprichst du?", "Welche Sprachen sprechen Sie?", "Welche Sprachen spricht er/sie?"]
+    ]},
+    {"type": "table", "head": ["Thema", "Antwort: ich", "Antwort: er / sie"], "rows": [
+     ["Name", "Ich heiße Ayse. / Mein Name ist Ayse.", "Sie heißt Ayse. / Ihr Name ist Ayse."],
+     ["Herkunft", "Ich komme aus der Türkei.", "Sie kommt aus der Türkei."],
+     ["Wohnort", "Ich wohne in Gevelsberg.", "Sie wohnt in Gevelsberg."],
+     ["Familienstand", "Ich bin verheiratet / ledig / geschieden.", "Sie ist verheiratet / ledig / geschieden."],
+     ["Kinder", "Ich habe zwei Kinder. / Ich habe keine Kinder.", "Sie hat eine Tochter und einen Sohn."],
+     ["Beruf", "Ich bin Lehrerin von Beruf. / Ich habe als Lehrerin gearbeitet.", "Sie ist Lehrerin von Beruf. / Sie hat keinen Beruf."],
+     ["Sprachen", "Meine Muttersprache ist Arabisch. Ich spreche auch ein bisschen Englisch.", "Ihre Muttersprache ist Arabisch. (er: Seine Muttersprache …)"]
+    ]},
+    {"type": "tip", "text": "Buchstabieren: Kannst du deinen Namen buchstabieren? – A-Y-S-E. Bei ä, ö, ü sagst du: A-Umlaut, O-Umlaut, U-Umlaut."},
+    {"type": "examples", "title": "Über eine andere Person sprechen", "items": [
+     "Wie heißt er? – Er heißt Reza.",
+     "Woher kommt er? – Er kommt aus dem Iran.",
+     "Ist er verheiratet? – Ja, er ist verheiratet.",
+     "Hat er Kinder? – Nein, er hat keine Kinder.",
+     "Wo wohnt er? – Er wohnt in Sprockhövel.",
+     "Was ist er von Beruf? – Er ist Altenpfleger von Beruf.",
+     "Welche Sprachen spricht er? – Er spricht Farsi."
+    ]},
+    {"type": "exercise", "title": "Übung 1: Ergänze die Verbform", "task": "Setze das Verb in der richtigen Form ein.", "items": [
+     "Wie ______ Sie? (heißen)", "Woher ______ du? (kommen)", "Er ______ in Hagen. (wohnen)", "______ du Kinder? (haben)", "Sie ______ Arabisch und Kurdisch. (sprechen)"],
+     "solutions": ["heißen", "kommst", "wohnt", "Hast", "spricht"]},
+    {"type": "exercise", "title": "Übung 2: Stell deine Partnerin oder deinen Partner vor", "task": "Frag eine Person im Kurs mit den Fragen aus der Tabelle. Schreib danach fünf Sätze mit er oder sie.", "items": ["Er/Sie heißt …", "Er/Sie kommt aus …", "Er/Sie wohnt in …", "Er/Sie ist … von Beruf.", "Seine/Ihre Muttersprache ist …"], "solutions": ["Freie Antwort. Achte auf die Verbendung -t bei er/sie: er heißt, sie wohnt, er kommt."]}
+   ]
+  },
+  {
+   "title": "Ist das dein …? – mein, dein, Ihr",
+   "goal": "Du fragst, wem etwas gehört, und antwortest mit dem Possessivartikel.",
+   "blocks": [
+    {"type": "table", "head": ["Nomen", "Frage (du)", "Frage (Sie)", "Antwort"], "rows": [
+     ["der Computer", "Ist das dein Computer?", "Ist das Ihr Computer?", "Ja, das ist mein Computer."],
+     ["das Handy", "Ist das dein Handy?", "Ist das Ihr Handy?", "Nein, das ist nicht mein Handy."],
+     ["die Brille", "Ist das deine Brille?", "Ist das Ihre Brille?", "Nein, das ist seine/ihre Brille."],
+     ["die Bücher (Plural)", "Sind das deine Bücher?", "Sind das Ihre Bücher?", "Ja, das sind meine Bücher."]
+    ]},
+    {"type": "rule", "text": "der und das → mein, dein, Ihr. die und Plural → meine, deine, Ihre. Bei mehreren Dingen heißt es: Sind das …?"},
+    {"type": "exercise", "title": "Übung 3: mein oder meine?", "task": "Ergänze.", "items": ["Das ist ______ Tasche. (die)", "Ist das ______ Schlüssel? (du, der)", "Sind das ______ Kinder? (Sie)", "Nein, das ist nicht ______ Auto. (ich, das)"], "solutions": ["meine", "dein", "Ihre", "mein"]}
+   ]
+  },
+  {
+   "title": "Berufe: männlich und weiblich",
+   "goal": "Du kennst wichtige Berufe in der männlichen und weiblichen Form.",
+   "blocks": [
+    {"type": "rule", "text": "Die weibliche Form endet meistens auf -in: der Lehrer → die Lehrerin. Oft kommt ein Umlaut dazu: der Arzt → die Ärztin, der Koch → die Köchin."},
+    {"type": "table", "head": ["männlich", "weiblich", "Beispielsatz"], "rows": [
+     ["der Arzt", "die Ärztin", "Die Ärztin untersucht den Patienten."],
+     ["der Lehrer", "die Lehrerin", "Der Lehrer erklärt die Grammatik."],
+     ["der Polizist", "die Polizistin", "Die Polizistin regelt den Verkehr."],
+     ["der Verkäufer", "die Verkäuferin", "Der Verkäufer hilft den Kunden."],
+     ["der Koch", "die Köchin", "Die Köchin bereitet das Essen zu."],
+     ["der Friseur", "die Friseurin", "Der Friseur schneidet mir die Haare."],
+     ["der Kellner", "die Kellnerin", "Die Kellnerin bringt die Getränke."],
+     ["der Bäcker", "die Bäckerin", "Der Bäcker backt frische Brötchen."],
+     ["der Mechaniker", "die Mechanikerin", "Die Mechanikerin repariert mein Auto."],
+     ["der Architekt", "die Architektin", "Der Architekt plant neue Häuser."],
+     ["der Anwalt", "die Anwältin", "Die Anwältin hilft bei Problemen mit dem Gesetz."],
+     ["der Ingenieur", "die Ingenieurin", "Der Ingenieur konstruiert eine Maschine."],
+     ["der Pflegefachmann", "die Pflegefachfrau", "Die Pflegefachfrau pflegt kranke Menschen."],
+     ["der Feuerwehrmann", "die Feuerwehrfrau", "Die Feuerwehrleute löschen das Feuer."]
+    ]},
+    {"type": "tip", "text": "Ich bin Lehrerin. / Ich bin Lehrerin von Beruf. – Ohne Artikel! Nicht: Ich bin eine Lehrerin."}
+   ]
+  },
+  {
+   "title": "Mein Traumberuf ist …, weil …",
+   "goal": "Du begründest deine Meinung mit weil. Das Verb steht am Ende.",
+   "blocks": [
+    {"type": "rule", "text": "Nach weil steht das konjugierte Verb am Ende des Satzes. Hauptsatz: Ich liebe Blumen. → Nebensatz: …, weil ich Blumen liebe."},
+    {"type": "table", "head": ["Hauptsatz", "Begründung mit weil"], "rows": [
+     ["Ein Arzt hilft kranken Menschen.", "Mein Traumberuf ist Arzt, weil er kranken Menschen hilft."],
+     ["Ein Arzt kann Leben retten.", "…, weil er Leben retten kann."],
+     ["Die Arbeit ist interessant.", "…, weil die Arbeit interessant ist."],
+     ["Eine Köchin ist kreativ.", "Ihr Traumberuf ist Köchin, weil sie kreativ ist."],
+     ["Ich liebe das Meer.", "Mein Traumberuf ist Seemann, weil ich das Meer liebe."],
+     ["Ich repariere gern Autos.", "Mein Traumberuf ist Mechaniker, weil ich gern Autos repariere."]
+    ]},
+    {"type": "list", "title": "Gute Gründe für einen Beruf", "items": [
+     "Man hilft Menschen. / Man arbeitet mit Menschen.",
+     "Die Arbeit ist interessant, spannend, kreativ.",
+     "Jeder Tag ist anders.",
+     "Man arbeitet im Team.",
+     "Man arbeitet mit den Händen und sieht sofort das Ergebnis.",
+     "Der Job ist sicher und man verdient gut."
+    ]},
+    {"type": "examples", "title": "Warum? – Weil …", "items": [
+     "Warum kommst du spät? – Weil mein Bus Verspätung hat.",
+     "Warum lernst du Deutsch? – Weil ich in Deutschland wohne. / Weil ich arbeiten möchte.",
+     "Warum kommst du nicht? – Weil ich keine Zeit habe.",
+     "Warum kommst du nicht zum Unterricht? – Weil ich einen Termin habe."
+    ]},
+    {"type": "exercise", "title": "Übung 4: Verbinde mit weil", "task": "Schreib einen Satz mit weil.", "items": ["Ich lerne Deutsch. Ich möchte in Deutschland arbeiten.", "Sie ist müde. Sie hat viel gearbeitet.", "Mein Traumberuf ist Bäcker. Ich mag frisches Brot.", "Er kommt nicht. Er ist krank."], "solutions": ["Ich lerne Deutsch, weil ich in Deutschland arbeiten möchte.", "Sie ist müde, weil sie viel gearbeitet hat.", "Mein Traumberuf ist Bäcker, weil ich frisches Brot mag.", "Er kommt nicht, weil er krank ist."]},
+    {"type": "exercise", "title": "Übung 5: Dein Traumberuf", "task": "Schreib drei Sätze: Was ist dein Traumberuf? Warum?", "items": ["Mein Traumberuf ist …, weil …"], "solutions": ["Freie Antwort. Prüfe: Steht das Verb nach weil am Ende?"]}
+   ]
+  }
+ ]
+}

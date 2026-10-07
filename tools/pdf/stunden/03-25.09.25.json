@@ -1,0 +1,128 @@
+{
+ "id": "artikel-das-cafe-zahlen-wie-gehts",
+ "source": "25.09.25",
+ "title": "Artikel das, im Café, Zahlen verstehen und Wie geht's?",
+ "level": "A1",
+ "intro": "Du erkennst neutrale Nomen, bestellst und bezahlst im Café, verstehst Preise und Nummern, antwortest auf „Wie geht's?“ und benutzt ein, mein, dein, kein.",
+ "topics": [
+  {
+   "title": "Wann heißt es das? Regeln für neutrale Nomen",
+   "goal": "Du erkennst an Endung und Bedeutung, dass ein Nomen neutral ist.",
+   "blocks": [
+    {"type": "table", "head": ["Endung", "Beispiele", "Ausnahme"], "rows": [
+     ["-chen, -lein", "das Mädchen, das Brötchen, das Fräulein", ""],
+     ["-ma", "das Klima, das Thema", "die Firma"],
+     ["-um", "das Museum, das Zentrum", ""],
+     ["-tum", "das Wachstum", "der Reichtum"],
+     ["-ment", "das Instrument, das Parlament", "der Moment"],
+     ["-o", "das Auto, das Büro, das Kino", ""]
+    ]},
+    {"type": "table", "head": ["Bedeutungsgruppe", "Beispiele"], "rows": [
+     ["Buchstaben und Farben", "das A, das Rot, das Blau"],
+     ["Hotels, Cafés, Kinos", "das Hilton, das Café Sonnenschein, das Cinemaxx"],
+     ["Metalle", "das Gold, das Silber – aber: die Bronze"],
+     ["Bruchzahlen", "das Viertel, das Drittel – aber: die Hälfte"],
+     ["Verben als Nomen", "das Lesen, das Spielen, das Lernen"]
+    ]},
+    {"type": "rule", "text": "Aus jedem Verb kann man ein neutrales Nomen machen. Es wird großgeschrieben: lesen → das Lesen."},
+    {"type": "examples", "items": ["Ich lese gern. → Das Lesen gefällt mir.", "Ich muss morgen einkaufen. → Wir fahren morgen zum Einkaufen.", "Das Lernen in der Schule war oft langweilig."]}
+   ]
+  },
+  {
+   "title": "Im Café: bestellen, nachfragen, bezahlen",
+   "goal": "Du führst ein Gespräch im Café vom Bestellen bis zum Bezahlen.",
+   "blocks": [
+    {"type": "dialog", "title": "Dialog", "lines": [
+     ["Kellnerin", "Guten Tag! Haben Sie schon etwas ausgewählt?"],
+     ["Gast", "Ja, ich hätte gern einen Cappuccino. Was kostet der?"],
+     ["Kellnerin", "Der Cappuccino kostet 3,50 €."],
+     ["Gast", "Und dann nehme ich noch ein Stück Apfelkuchen."],
+     ["Kellnerin", "Der Apfelkuchen ist heute im Angebot: 4,25 €."],
+     ["Gast", "Ich möchte bitte bezahlen."],
+     ["Kellnerin", "Das macht zusammen 7,75 €."],
+     ["Gast", "Hier sind 8 Euro. Stimmt so."],
+     ["Kellnerin", "Vielen Dank! Einen schönen Tag noch!"],
+     ["Gast", "Danke, Ihnen auch!"]
+    ]},
+    {"type": "table", "head": ["Situation", "Redemittel"], "rows": [
+     ["bestellen", "Ich nehme … / Ich hätte gern … / Bringen Sie mir bitte …"],
+     ["noch nicht bereit", "Ich brauche noch ein bisschen Zeit."],
+     ["Preis fragen", "Was kostet der Kuchen? – Was kostet die Cola? (der/die/das statt er/sie/es)"],
+     ["Wasser bestellen", "Ein Wasser, bitte. – Still oder mit Kohlensäure?"],
+     ["bezahlen", "Ich möchte bitte bezahlen. – Zusammen oder getrennt?"],
+     ["Trinkgeld", "Das macht 6,80 €. – Hier sind 7 €. Stimmt so."],
+     ["einladen", "Das geht auf mich! / Ich lade dich ein."],
+     ["Abschied", "Einen schönen Tag noch! – Danke, gleichfalls! / Ihnen auch!"]
+    ]},
+    {"type": "rule", "text": "schmecken, gefallen, kosten: Das Verb richtet sich nach der Sache. Der Kuchen schmeckt mir. – Die Äpfel schmecken mir. Was kostet der Schuh? – Was kosten die Schuhe?"},
+    {"type": "list", "title": "Wortbildung: zusammengesetzte Nomen", "items": ["der Apfel + der Kuchen = der Apfelkuchen", "die Tomate + die Suppe = die Tomatensuppe", "die Kinder + der Garten = der Kindergarten", "Das letzte Wort bestimmt den Artikel: die Tomate + der Saft = der Tomatensaft."]},
+    {"type": "list", "title": "Gefäße", "items": ["das Glas – die Gläser (Wasser, Wein)", "die Tasse – die Tassen (Tee, Kaffee)", "der Becher – die Becher (Kaffeebecher, Plastikbecher)"]}
+   ]
+  },
+  {
+   "title": "Zahlen verstehen: Preise, Nummern, Uhrzeiten",
+   "goal": "Du verstehst Zahlen in Gesprächen: Preise, Hausnummern, Postleitzahlen und Telefonnummern.",
+   "blocks": [
+    {"type": "dialog", "title": "Dialog 1: Im Treppenhaus", "lines": [
+     ["Sandra", "Hallo, ich bin Sandra. Ich bin gestern hier eingezogen. Kannst du ein gutes Café in der Nähe empfehlen?"],
+     ["Thomas", "Ja, klar! Das Café Sonnenschein in der Schillerstraße. Ein Cappuccino kostet dort nur 3,20 €."],
+     ["Sandra", "Das ist ja günstig! Welche Hausnummer?"],
+     ["Thomas", "Die Hausnummer ist 15, direkt an der Ecke."],
+     ["Sandra", "Ist unsere Postleitzahl 80799?"],
+     ["Thomas", "Fast! Sie ist 80797. Sollen wir unsere Nummern austauschen?"],
+     ["Sandra", "Gern! Meine Nummer ist 0151 67890543."],
+     ["Thomas", "Danke! Ich bin übrigens letzte Woche 32 geworden."]
+    ]},
+    {"type": "exercise", "title": "Übung 1: Fragen zu Dialog 1", "task": "Wähle die richtige Zahl.", "items": ["Was kostet der Cappuccino? a) 2,30 € b) 3,20 € c) 3,30 €", "Welche Hausnummer hat das Café? a) 50 b) 15 c) 5", "Wie ist die Postleitzahl? a) 80799 b) 80797 c) 80779", "Wie alt ist Thomas? a) 23 b) 22 c) 32", "Wie sind die letzten zwei Ziffern von Sandras Nummer? a) 54 b) 34 c) 43"], "solutions": ["b) 3,20 €", "b) 15", "b) 80797", "c) 32", "c) 43"]},
+    {"type": "dialog", "title": "Dialog 2: Am Ticketschalter", "lines": [
+     ["Herr Meier", "Ich möchte eine Fahrkarte nach Hamburg kaufen, am 18. Oktober, am besten vormittags."],
+     ["Mitarbeiterin", "Der ICE fährt um 10:45 Uhr von Gleis 7 und kommt um 14:30 Uhr in Hamburg an."],
+     ["Herr Meier", "Was kostet die einfache Fahrt?"],
+     ["Mitarbeiterin", "59,50 €. Mit Rückfahrt am 20. Oktober kostet es insgesamt 119 €."],
+     ["Herr Meier", "Super, das nehme ich. Haben Sie eine Durchwahl?"],
+     ["Mitarbeiterin", "Ja, meine Durchwahl ist 2580."]
+    ]},
+    {"type": "exercise", "title": "Übung 2: Fragen zu Dialog 2", "task": "Wähle die richtige Antwort.", "items": ["Wann fährt der Zug ab? a) 10:15 b) 14:30 c) 10:45", "Von welchem Gleis? a) 10 b) 7 c) 17", "Was kostet die einfache Fahrt? a) 119 € b) 95,50 € c) 59,50 €", "Was kosten Hin- und Rückfahrt? a) 119 € b) 190 € c) 129 €", "Wie ist die Durchwahl? a) 2518 b) 2580 c) 2850"], "solutions": ["c) 10:45 Uhr", "b) Gleis 7", "c) 59,50 €", "a) 119 €", "b) 2580"]},
+    {"type": "tip", "text": "Telefonnummern liest man in Gruppen und Ziffer für Ziffer: null-eins-fünf-eins … Preise: 3,50 € = drei Euro fünfzig."}
+   ]
+  },
+  {
+   "title": "Wie geht's? – Antworten",
+   "goal": "Du antwortest passend auf die Frage nach dem Befinden und reagierst auf die Antwort.",
+   "blocks": [
+    {"type": "table", "head": ["positiv", "neutral", "negativ"], "rows": [
+     ["Sehr gut, danke! Und dir? / Und Ihnen?", "Gut, danke.", "Nicht so gut."],
+     ["Super, danke der Nachfrage.", "Ganz gut, und selbst?", "Es geht so. / So lala."],
+     ["Alles bestens!", "Passt schon.", "Könnte besser sein."],
+     ["Ich kann nicht klagen.", "Muss ja.", "Mir ging es schon mal besser."]
+    ]},
+    {"type": "table", "head": ["Die andere Person sagt …", "Du reagierst"], "rows": [
+     ["etwas Positives", "Das freut mich (zu hören)!"],
+     ["etwas Negatives", "Oh, das tut mir leid. Was ist denn los?"],
+     ["Ich habe schlecht geschlafen.", "Das kenne ich. Hoffentlich wird der Tag trotzdem gut."]
+    ]},
+    {"type": "tip", "text": "Wie geht es dir? (du) – Wie geht es Ihnen? (Sie) – locker: Wie geht's? / Wie läuft's? / Alles klar?"}
+   ]
+  },
+  {
+   "title": "ein, mein, dein, kein",
+   "goal": "Du benutzt Artikel, Possessivartikel und Verneinung im Nominativ, Akkusativ und Dativ.",
+   "blocks": [
+    {"type": "examples", "title": "Ist das dein …? – Nein, das ist kein …", "items": [
+     "Ist das dein Stuhl? – Nein, das ist kein Stuhl. Das ist ein Tisch. Das ist mein Tisch.",
+     "Ist das deine Tasche? – Nein, das ist keine Tasche. Das ist eine Jacke.",
+     "Ist das dein Buch? – Nein, das ist kein Buch. Das ist ein Heft.",
+     "Sind das deine Stifte? – Nein, das sind keine Stifte. Das sind Pinsel."
+    ]},
+    {"type": "table", "head": ["", "maskulin", "neutral", "feminin", "Plural"], "rows": [
+     ["Nominativ", "ein / mein / kein", "ein / mein / kein", "eine / meine / keine", "– / meine / keine"],
+     ["Akkusativ", "einen / meinen / keinen", "ein / mein / kein", "eine / meine / keine", "– / meine / keine"],
+     ["Dativ", "einem / meinem / keinem", "einem / meinem / keinem", "einer / meiner / keiner", "– / meinen / keinen"]
+    ]},
+    {"type": "rule", "text": "dein, sein, ihr, unser … haben dieselben Endungen wie mein und kein. Im Plural gibt es kein ein: Das sind Birnen."},
+    {"type": "examples", "items": ["Ich hätte gern einen Kuchen, eine Pizza, ein Brötchen.", "Ich habe gestern keinen Kuchen, keine Pizza, kein Brötchen gekauft.", "Ich habe gestern deinen Vater, deine Mutter, dein Kind gesehen.", "Ich lerne mit meinen Büchern."]},
+    {"type": "exercise", "title": "Übung 3: kein, keine oder keinen?", "task": "Ergänze.", "items": ["Das ist ______ Uhr. Das ist eine Brille.", "Ich habe ______ Hund. (der)", "Das ist ______ Auto. Das ist ein Fahrrad.", "Wir haben ______ Kinder.", "Er trinkt ______ Kaffee. (der)"], "solutions": ["keine", "keinen", "kein", "keine", "keinen"]}
+   ]
+  }
+ ]
+}

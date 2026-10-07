@@ -1,0 +1,75 @@
+{
+ "id": "dativ-wortstellung-einladungen",
+ "source": "19.11.25",
+ "title": "Der Dativ, Wortstellung mit zwei Objekten und Einladungen",
+ "level": "A1–A2",
+ "intro": "Du benutzt Verben mit Dativ, ersetzt Nomen durch Pronomen, stellst zwei Objekte richtig in den Satz und lädst zu einer Feier ein, sagst zu oder ab.",
+ "topics": [
+  {
+   "title": "Verben mit Dativ: Wem?",
+   "goal": "Du erkennst Verben mit Dativ und fragst mit Wem?",
+   "blocks": [
+    {"type": "rule", "text": "Der Dativ antwortet auf die Frage Wem? Meistens ist der Dativ eine Person: Ich helfe dir. Ich schenke meiner Schwester ein Buch."},
+    {"type": "table", "head": ["Verb", "Beispiel"], "rows": [
+     ["helfen", "Ich helfe dir."], ["danken", "Ich danke meinem Vater."], ["gratulieren", "Wir gratulieren dir zum Geburtstag."],
+     ["antworten", "Er antwortet ihr."], ["gefallen", "Das Bild gefällt mir."], ["schmecken", "Der Kuchen schmeckt mir am besten."],
+     ["gehören", "Das Auto gehört ihm."], ["geben", "Ich gebe meinem Freund das Handy."], ["schenken", "Ich schenke dir ein Buch."], ["zeigen, bringen, kaufen, schicken", "Der Kellner bringt mir den Salat."]
+    ]},
+    {"type": "tip", "text": "Bei geben, schenken, zeigen, bringen gibt es zwei Fragen: Wem gibst du etwas? (Dativ, Person) – Was gibst du? (Akkusativ, Sache)"}
+   ]
+  },
+  {
+   "title": "Artikel und Pronomen im Dativ",
+   "goal": "Du kennst dem, der, den und mir, dir, ihm, ihr …",
+   "blocks": [
+    {"type": "table", "head": ["", "Nominativ", "Akkusativ", "Dativ", "Pronomen Dativ", "mit mein"], "rows": [
+     ["maskulin", "der Mann", "den Mann", "dem Mann", "ihm", "meinem Vater"],
+     ["neutral", "das Kind", "das Kind", "dem Kind", "ihm", "meinem Kind"],
+     ["feminin", "die Frau", "die Frau", "der Frau", "ihr", "meiner Frau"],
+     ["Plural", "die Eltern", "die Eltern", "den Eltern (+n)", "ihnen", "meinen Eltern"]
+    ]},
+    {"type": "table", "head": ["Nominativ", "Akkusativ", "Dativ"], "rows": [
+     ["ich", "mich", "mir"], ["du", "dich", "dir"], ["er / es", "ihn / es", "ihm"], ["sie", "sie", "ihr"], ["wir", "uns", "uns"], ["ihr", "euch", "euch"], ["sie / Sie", "sie / Sie", "ihnen / Ihnen"]
+    ]},
+    {"type": "rule", "text": "Im Dativ Plural bekommt das Nomen ein -n: den Kindern, meinen Freunden (aber: den Autos)."},
+    {"type": "exercise", "title": "Übung 1: Ersetze durch ein Pronomen", "task": "Schreib den Satz mit Pronomen im Dativ.", "items": ["Der Lehrer hilft der Schülerin.", "Wir gratulieren den Nachbarn.", "Das Essen schmeckt dem Kind gut.", "Kannst du Peter und mir helfen?", "Das Kind antwortet der Mutter."], "solutions": ["Der Lehrer hilft ihr.", "Wir gratulieren ihnen.", "Das Essen schmeckt ihm gut.", "Kannst du uns helfen?", "Es antwortet ihr."]},
+    {"type": "exercise", "title": "Übung 2: -em, -er oder -en?", "task": "Ergänze die Endung.", "items": ["Ich helfe mein___ Bruder. (der)", "Du gratulierst dein___ Schwester. (die)", "Er dankt sein___ Lehrer. (der)", "Wir antworten unser___ Kind. (das)", "Ihr helft eur___ Eltern.", "Sie schenkt ihr___ Mann ein Buch."], "solutions": ["meinem", "deiner", "seinem", "unserem", "euren", "ihrem"]}
+   ]
+  },
+  {
+   "title": "Wortstellung: Dativ und Akkusativ im Satz",
+   "goal": "Du stellst Person und Sache in die richtige Reihenfolge.",
+   "blocks": [
+    {"type": "table", "head": ["Fall", "Regel", "Beispiel"], "rows": [
+     ["Nomen + Nomen („groß + groß“)", "Dativ vor Akkusativ", "Ich schenke der Schwester die Blumen."],
+     ["Pronomen + Pronomen („klein + klein“)", "Akkusativ vor Dativ", "Ich schenke sie ihr."],
+     ["Pronomen + Nomen (Mix)", "Pronomen zuerst", "Ich schenke ihr die Blumen. / Ich schenke sie der Schwester."]
+    ]},
+    {"type": "tip", "text": "Merksatz: Nomen sind groß geschrieben, Pronomen klein. Klein kommt vor groß."},
+    {"type": "examples", "items": ["Der Vater schenkt dem Sohn ein Fahrrad. → Er schenkt es ihm.", "Der Kellner bringt mir den Salat. → Er bringt ihn mir.", "Zeigst du mir das Buch? → Zeigst du es mir?"]},
+    {"type": "exercise", "title": "Übung 3: Mit Pronomen", "task": "Ersetze beide Objekte durch Pronomen.", "items": ["Ich zeige meinen Freunden das Foto.", "Gibst du deinem Bruder den Stift?", "Wir schenken der Oma die Blumen.", "Der Chef schickt dem Mitarbeiter die E-Mail."], "solutions": ["Ich zeige es ihnen.", "Gibst du ihn ihm?", "Wir schenken sie ihr.", "Der Chef schickt sie ihm."]},
+    {"type": "exercise", "title": "Übung 4: Bilde Sätze", "task": "Achte auf die Reihenfolge.", "items": ["schenkt / der Mann / Blumen / ihr", "bringt / der Kellner / uns / die Speisekarte", "gibst / dem Kind / du / es / ?", "ihr / kauft / eine Tasche / eurer Tante / ?"], "solutions": ["Der Mann schenkt ihr Blumen.", "Der Kellner bringt uns die Speisekarte.", "Gibst du es dem Kind?", "Kauft ihr eurer Tante eine Tasche?"]}
+   ]
+  },
+  {
+   "title": "Einladungen und Feste",
+   "goal": "Du lädst ein, sagst zu oder sagst höflich ab.",
+   "blocks": [
+    {"type": "table", "head": ["Wort", "Beispiel"], "rows": [
+     ["die Einladung, -en", "Danke für die Einladung!"], ["die Feier, -n / das Fest, -e", "Die Feier findet bei uns zu Hause statt."],
+     ["der Geburtstag, -e", "Wir feiern meinen 30. Geburtstag."], ["die Hochzeit, -en", "Meine Schwester heiratet. Die Hochzeit ist im Mai."],
+     ["der Gast, Gäste / der Gastgeber", "Der Gastgeber begrüßt die Gäste."], ["das Geschenk, -e", "Was schenkst du ihm?"],
+     ["die Zusage / die Absage", "Ich brauche deine Zusage bis Freitag."]
+    ]},
+    {"type": "list", "title": "Wichtige Verben", "items": ["statt|finden: Die Feier findet am Freitag statt.", "zu|sagen: Ich sage dir gern zu. (= Ja, ich komme.)", "ab|sagen: Ich muss dir leider absagen.", "schenken + Dativ, gratulieren + Dativ, feiern"]},
+    {"type": "table", "head": ["Situation", "Redemittel"], "rows": [
+     ["einladen", "Ich mache am Samstag eine Party. Hast du Zeit und Lust? Die Feier findet am … um … statt."],
+     ["zusagen", "Ich komme sehr gern! Das ist eine tolle Idee, ich bin dabei. Soll ich etwas mitbringen?"],
+     ["absagen", "Es tut mir leid, ich habe an dem Tag schon einen Termin. Leider kann ich nicht kommen."]
+    ]},
+    {"type": "exercise", "title": "Übung 5: Ergänze", "task": "am, um, bei, stattfinden, feiern, absagen, mitbringen", "items": ["Wann ______ die Party ______? – Am Samstag um 20 Uhr.", "Wir ______ die ganze Nacht.", "Tut mir leid, ich bin krank. Ich muss leider ______.", "Kann ich einen Salat ______?", "Die Party ist ______ Samstag ______ uns zu Hause.", "Das Fest beginnt ______ 19 Uhr."], "solutions": ["findet – statt", "feiern", "absagen", "mitbringen", "am – bei", "um"]},
+    {"type": "exercise", "title": "Übung 6: Antworte auf die Einladung", "task": "Hallo Leute, am Samstag feiere ich meinen Geburtstag. Bitte gebt mir bis Freitag Bescheid, ob ihr kommt. – Schreib eine Zusage und frag, ob du etwas mitbringen sollst. Schreib dann eine Absage mit Grund.", "items": ["Zusage: …", "Absage: …"], "write": 4, "solutions": ["z. B.: Liebe Sara, danke für die Einladung! Ich komme sehr gern. Soll ich einen Salat mitbringen?", "z. B.: Liebe Sara, vielen Dank für die Einladung. Leider kann ich nicht kommen, weil ich arbeiten muss. Ich wünsche dir eine schöne Feier!"]}
+   ]
+  }
+ ]
+}

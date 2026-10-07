@@ -1,0 +1,4 @@
+pakete/*.json
+!pakete/_beispiel-schema.json
+pakete-out/
+__pycache__/

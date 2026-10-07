@@ -1,0 +1,126 @@
+{
+ "id": "artikel-der-kasus-bitten-cafe",
+ "source": "18.09.2025",
+ "title": "Artikel, Fälle, höfliche Bitten und im Café",
+ "level": "A1",
+ "intro": "Du erkennst maskuline Nomen, unterscheidest Nominativ, Akkusativ und Dativ, ersetzt Nomen durch er, sie, es, formulierst Bitten und bestellst im Café.",
+ "topics": [
+  {
+   "title": "Wann heißt es der? Regeln für maskuline Nomen",
+   "goal": "Du erkennst an Endung und Bedeutung, dass ein Nomen maskulin ist.",
+   "blocks": [
+    {"type": "table", "head": ["Endung", "Beispiele"], "rows": [
+     ["-ant, -ent, -and", "der Praktikant, der Student, der Doktorand"],
+     ["-eur", "der Ingenieur, der Friseur"],
+     ["-ismus", "der Kapitalismus"],
+     ["-ist", "der Pianist, der Polizist"],
+     ["-or", "der Motor, der Doktor"],
+     ["-ling", "der Lehrling, der Frühling"]
+    ]},
+    {"type": "table", "head": ["Bedeutungsgruppe", "Beispiele"], "rows": [
+     ["Tage, Monate, Jahreszeiten", "der Montag, der Juli, der Sommer"],
+     ["Himmelsrichtungen", "der Norden, der Süden"],
+     ["Automarken", "der Mercedes, der Opel – aber: das Auto"],
+     ["männliche Personen und Berufe", "der Mann, der Vater, der Arzt"],
+     ["männliche Tiere", "der Kater, der Löwe"],
+     ["Wetter", "der Regen, der Schnee, der Wind, der Sturm"]
+    ]},
+    {"type": "rule", "text": "Viele Nomen aus einem Verb ohne Endung sind maskulin: besuchen → der Besuch, unterrichten → der Unterricht, brauchen → der Brauch."},
+    {"type": "examples", "items": ["Der Lehrer unterrichtet Deutsch. – Wir haben heute Unterricht.", "Ich besuche den Deutschkurs. – Danke für den Besuch!"]}
+   ]
+  },
+  {
+   "title": "Nominativ, Akkusativ, Dativ",
+   "goal": "Du erkennst die drei Fälle an der Frage und am Artikel.",
+   "blocks": [
+    {"type": "table", "head": ["Fall", "Frage", "maskulin", "neutral", "feminin"], "rows": [
+     ["Nominativ", "Wer? Was?", "der", "das", "die"],
+     ["Akkusativ", "Wen? Was?", "den", "das", "die"],
+     ["Dativ", "Wem?", "dem", "dem", "der"]
+    ]},
+    {"type": "examples", "items": [
+     "Das ist der Mann. – Ich sehe den Mann. – Ich spreche mit dem Mann.",
+     "Das ist die Frau. – Ich sehe die Frau. – Ich spreche mit der Frau.",
+     "Das ist das Kind. – Ich sehe das Kind. – Ich spreche mit dem Kind."
+    ]},
+    {"type": "list", "title": "Verben mit Akkusativ", "items": ["haben, kaufen, möchten, besuchen, sehen, sagen, schreiben", "Ich kaufe den Tisch. Ich möchte den Kaffee. Ich besuche den Kurs."]},
+    {"type": "rule", "text": "Nach mit, zu, nach, von steht immer der Dativ. zu + dem = zum, zu + der = zur."},
+    {"type": "examples", "items": ["Ich fahre mit dem Auto / mit dem Taxi.", "Ich gehe zum Unterricht, zum Supermarkt, zum Arzt.", "Ich gehe zur Schule, zur Party, zur Arbeit."]},
+    {"type": "exercise", "title": "Übung 1: der, den oder dem?", "task": "Ergänze den Artikel.", "items": ["Ich sehe ______ Bus. (der Bus)", "Ich fahre mit ______ Bus.", "______ Bus kommt um acht.", "Ich gehe zu______ Bäckerei. (die Bäckerei)", "Ich gehe zu______ Arzt."], "solutions": ["den", "dem", "Der", "zur", "zum"]}
+   ]
+  },
+  {
+   "title": "er, sie, es für Dinge",
+   "goal": "Du ersetzt ein Nomen durch das passende Pronomen.",
+   "blocks": [
+    {"type": "table", "head": ["Artikel", "Pronomen", "Beispiel"], "rows": [
+     ["der", "er", "Der Stift ist neu. → Er ist neu."],
+     ["die", "sie", "Die Lampe ist an. → Sie ist an."],
+     ["das", "es", "Das Buch ist spannend. → Es ist spannend."]
+    ]},
+    {"type": "rule", "text": "Auch für Dinge sagt man er oder sie, nicht nur für Personen. Das Pronomen richtet sich nach dem Artikel."},
+    {"type": "list", "title": "Nützlich: an/aus und auf/zu", "items": ["Das Licht, der Computer, das Handy ist an / aus. → anmachen, ausmachen", "Das Fenster, die Tür, die Tasche ist auf / zu. → aufmachen, zumachen"]},
+    {"type": "exercise", "title": "Übung 2: er, sie oder es?", "task": "Setze das richtige Pronomen ein.", "items": [
+     "Wo ist mein Schlüssel? – Ich glaube, ______ liegt auf dem Tisch.",
+     "Gefällt dir die Jacke? – Ja, ______ ist sehr schön!",
+     "Ich lese ein Buch. ______ hat 300 Seiten.",
+     "Wo ist meine Brille? – ______ liegt im Bad.",
+     "Wie findest du mein Auto? – ______ ist wirklich schnell!",
+     "Funktioniert die Uhr? – Nein, ______ funktioniert nicht.",
+     "Ist der Saft kalt? – Ja, ______ ist kalt."
+    ], "solutions": ["er", "sie", "Es", "Sie", "Es", "sie", "er"]}
+   ]
+  },
+  {
+   "title": "Höfliche Bitten mit dem Imperativ",
+   "goal": "Du bittest eine Person um etwas – mit du oder mit Sie.",
+   "blocks": [
+    {"type": "table", "head": ["Verb", "du", "Sie"], "rows": [
+     ["machen", "Mach bitte das Fenster zu!", "Machen Sie bitte das Fenster zu!"],
+     ["wiederholen", "Wiederhol das bitte!", "Wiederholen Sie das bitte!"],
+     ["buchstabieren", "Buchstabier bitte deinen Namen!", "Buchstabieren Sie bitte Ihren Namen!"],
+     ["öffnen", "Öffne bitte das Fenster!", "Öffnen Sie bitte das Fenster!"],
+     ["anrufen", "Ruf mich bitte an!", "Rufen Sie mich bitte an!"]
+    ]},
+    {"type": "rule", "text": "du-Form: Verbstamm ohne -st und ohne du (du machst → Mach!). Sie-Form: Verb + Sie (Machen Sie!). Achtung bei e → i/ie: lesen → Lies!, geben → Gib!, sprechen → Sprich!, helfen → Hilf!"},
+    {"type": "tip", "text": "Das Wort bitte macht jede Aufforderung freundlicher. Es kann am Anfang, in der Mitte oder am Ende stehen."},
+    {"type": "exercise", "title": "Übung 3: Formuliere die Bitte", "task": "du oder Sie? Schreib eine passende Bitte.", "items": [
+     "Im Amt: Die Person soll ihren Namen buchstabieren.",
+     "Dein Bruder soll die Musik leiser machen.",
+     "Deine Freundin soll dir das Salz geben.",
+     "Ein Polizist soll dir den Weg zum Bahnhof zeigen.",
+     "Deine Lehrerin soll langsamer sprechen."
+    ], "solutions": ["Buchstabieren Sie bitte Ihren Namen.", "Mach bitte die Musik leiser!", "Gib mir bitte das Salz!", "Zeigen Sie mir bitte den Weg zum Bahnhof.", "Sprechen Sie bitte langsamer."]}
+   ]
+  },
+  {
+   "title": "Im Café: bestellen und bezahlen",
+   "goal": "Du bestellst Essen und Getränke und bezahlst.",
+   "blocks": [
+    {"type": "table", "head": ["Situation", "Redemittel"], "rows": [
+     ["bestellen", "Ich möchte einen Kaffee. / Ich hätte gern ein Wasser."],
+     ["etwas bitten", "Bringen Sie mir bitte die Speisekarte / einen Löffel."],
+     ["Preis", "Was kostet eine Brezel? – Was kosten zwei Brezeln?"],
+     ["bezahlen", "Zahlen, bitte! / Die Rechnung, bitte."],
+     ["Karte oder bar", "Kann ich mit Karte zahlen? – Ich zahle bar."],
+     ["anbieten", "Möchtest du etwas trinken? – Probier bitte den Kuchen!"],
+     ["Geschmack", "Schmeckt dir der Kuchen? – Ja, er schmeckt sehr gut."]
+    ]},
+    {"type": "table", "head": ["", "maskulin", "neutral", "feminin"], "rows": [
+     ["Nominativ: Das ist …", "ein Tee", "ein Wasser", "eine Cola"],
+     ["Akkusativ: Ich möchte …", "einen Tee", "ein Wasser", "eine Cola"]
+    ]},
+    {"type": "rule", "text": "Nur maskulin ändert sich im Akkusativ: ein → einen. Neutral und feminin bleiben gleich."},
+    {"type": "table", "head": ["der (→ einen)", "die (→ eine)", "das (→ ein)"], "rows": [
+     ["der Kaffee, der Tee", "die Milch, die Cola", "das Wasser, das Bier"],
+     ["der Kuchen, der Salat", "die Suppe, die Pizza", "das Brot, das Brötchen"],
+     ["der Saft, der Joghurt", "die Banane, die Tomate", "das Eis, das Obst"],
+     ["der Löffel, der Teller", "die Gabel, die Tasse", "das Messer, das Glas"],
+     ["der Zucker, der Pfeffer", "die Rechnung, die Speisekarte", "das Salz, das Öl"]
+    ]},
+    {"type": "exercise", "title": "Übung 4: ein, eine oder einen?", "task": "Ergänze den Artikel im Akkusativ.", "items": ["Ich brauche ______ Apfel.", "Ich kaufe ______ Banane.", "Ich nehme ______ Brot.", "Hast du ______ Joghurt?", "Ich möchte ______ Flasche Wasser."], "solutions": ["einen", "eine", "ein", "einen", "eine"]},
+    {"type": "exercise", "title": "Übung 5: Das ist … / Ich habe …", "task": "Schreib zwei Sätze wie im Beispiel: (der Stift) Das ist ein Stift. Ich habe einen Stift.", "items": ["das Buch", "die Tasche", "der Kuli", "das Heft"], "solutions": ["Das ist ein Buch. Ich habe ein Buch.", "Das ist eine Tasche. Ich habe eine Tasche.", "Das ist ein Kuli. Ich habe einen Kuli.", "Das ist ein Heft. Ich habe ein Heft."]}
+   ]
+  }
+ ]
+}

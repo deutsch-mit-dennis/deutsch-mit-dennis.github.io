@@ -1,0 +1,93 @@
+{
+ "id": "modalverben-wohnen-zahlen",
+ "source": "30.10.25",
+ "title": "Modalverben, Wohnen und große Zahlen",
+ "level": "A1–A2",
+ "intro": "Du benutzt alle Modalverben, sprichst über deine Wohnung, suchst eine Wohnung und liest Mieten, Jahreszahlen und Postleitzahlen richtig.",
+ "topics": [
+  {
+   "title": "Die Modalverben",
+   "goal": "Du weißt, was die Modalverben bedeuten, und bildest Sätze damit.",
+   "blocks": [
+    {"type": "table", "head": ["Modalverb", "Bedeutung", "Beispiel"], "rows": [
+     ["können", "Fähigkeit, Möglichkeit", "Ich kann gut kochen. Hier kann man ein Ticket kaufen."],
+     ["dürfen", "Erlaubnis, Verbot", "Darf ich fernsehen? Im Bus darf man nicht essen."],
+     ["müssen", "Notwendigkeit", "Ich muss zum Arzt gehen. Für den Job müssen Sie Deutsch sprechen."],
+     ["sollen", "Auftrag oder Rat von anderen", "Der Arzt sagt, ich soll mehr Wasser trinken."],
+     ["wollen", "starker Wunsch, Plan", "Ich will im Sommer nach Italien fahren."],
+     ["möchten", "höflicher Wunsch", "Ich möchte einen Kaffee, bitte."]
+    ]},
+    {"type": "table", "head": ["", "können", "dürfen", "müssen", "sollen", "wollen", "möchten"], "rows": [
+     ["ich", "kann", "darf", "muss", "soll", "will", "möchte"],
+     ["du", "kannst", "darfst", "musst", "sollst", "willst", "möchtest"],
+     ["er / sie / es", "kann", "darf", "muss", "soll", "will", "möchte"],
+     ["wir", "können", "dürfen", "müssen", "sollen", "wollen", "möchten"],
+     ["ihr", "könnt", "dürft", "müsst", "sollt", "wollt", "möchtet"],
+     ["sie / Sie", "können", "dürfen", "müssen", "sollen", "wollen", "möchten"]
+    ]},
+    {"type": "rule", "text": "ich und er/sie/es haben dieselbe Form und keine Endung: ich kann, er kann. Das zweite Verb steht im Infinitiv am Ende: Ich muss heute Deutsch lernen."},
+    {"type": "tip", "text": "Ich will … klingt oft unhöflich. Beim Bestellen und Bitten sagst du besser: Ich möchte …"},
+    {"type": "exercise", "title": "Übung 1: Die richtige Form", "task": "Ergänze das Modalverb.", "items": ["Ich ______ leider nicht kommen. (können)", "Du ______ deine Hausaufgaben machen. (müssen)", "Wir ______ hier nicht rauchen. (dürfen)", "Was ______ ihr trinken? (möchten)", "Meine Ärztin sagt, ich ______ im Bett bleiben. (sollen)", "Peter und Lisa ______ ein neues Auto kaufen. (wollen)"], "solutions": ["kann", "musst", "dürfen", "möchtet", "soll", "wollen"]},
+    {"type": "exercise", "title": "Übung 2: Bilde Sätze", "task": "Achte auf die Position der Verben.", "items": ["du / heute / länger / arbeiten / müssen", "wir / am Samstag / ins Kino / gehen / möchten", "man / im Flugzeug / das Handy / ausschalten / sollen", "mein Sohn / Pilot / werden / wollen"], "solutions": ["Du musst heute länger arbeiten.", "Wir möchten am Samstag ins Kino gehen.", "Man soll im Flugzeug das Handy ausschalten.", "Mein Sohn will Pilot werden."]},
+    {"type": "exercise", "title": "Übung 3: Welches Modalverb passt?", "task": "Ergänze.", "items": ["Entschuldigung, ______ ich Sie etwas fragen?", "Ich habe morgen eine Prüfung. Ich ______ heute viel lernen.", "Meine Tochter ist 15. Sie ______ abends nicht allein ausgehen.", "Mein Mann hat gesagt, ich ______ den Müll rausbringen.", "Er spricht fünf Sprachen. Er ______ gut mit Sprachen umgehen."], "solutions": ["darf / kann", "muss", "darf", "soll", "kann"]}
+   ]
+  },
+  {
+   "title": "Wohnen: Wörter und Sätze",
+   "goal": "Du beschreibst deine Wohnung und sprichst über Miete und Wohnungssuche.",
+   "blocks": [
+    {"type": "table", "head": ["Thema", "Wörter"], "rows": [
+     ["Wohnformen", "das Einfamilienhaus, das Mehrfamilienhaus, die Wohnung, die WG (Wohngemeinschaft), die Altbauwohnung"],
+     ["Räume", "das Wohnzimmer, das Schlafzimmer, das Kinderzimmer, die Küche, das Bad, die Toilette, der Flur, der Balkon, der Keller"],
+     ["Möbel", "das Sofa, der Sessel, der Tisch, der Schrank, das Regal, das Bett, die Lampe, der Teppich"],
+     ["Küche und Bad", "der Kühlschrank, der Herd, die Spülmaschine, die Dusche, das Waschbecken, die Waschmaschine"],
+     ["Adjektive", "groß / klein, hell / dunkel, teuer / günstig, ruhig / laut, modern / alt, möbliert / unmöbliert, zentral"]
+    ]},
+    {"type": "table", "head": ["Verb", "Beispiel"], "rows": [
+     ["mieten / vermieten", "Wir mieten die Wohnung seit drei Jahren. Frau Schmidt vermietet zwei Wohnungen."],
+     ["umziehen", "Nächsten Monat ziehen wir um."],
+     ["einziehen / ausziehen", "Wann könnt ihr einziehen? Ich muss bis Ende Juli ausziehen."],
+     ["einrichten", "Wir müssen das Wohnzimmer noch einrichten."],
+     ["aufräumen / putzen", "Bitte räum dein Zimmer auf! Samstags putze ich das Bad."]
+    ]},
+    {"type": "table", "head": ["Begriff", "Bedeutung"], "rows": [
+     ["der Mieter / der Vermieter", "wer die Wohnung mietet / wem die Wohnung gehört"],
+     ["die Kaltmiete", "Miete ohne Nebenkosten"],
+     ["die Nebenkosten", "Kosten für Wasser, Müll, Heizung"],
+     ["die Warmmiete", "Kaltmiete + Nebenkosten"],
+     ["die Kaution", "Sicherheit, die man am Anfang zahlt"],
+     ["der Mietvertrag", "der Vertrag zum Mieten"]
+    ]},
+    {"type": "list", "title": "Nützliche Sätze", "items": ["Ich suche eine 3-Zimmer-Wohnung.", "Wie hoch ist die Miete? Sind die Nebenkosten inklusive?", "Wann kann ich die Wohnung besichtigen?", "Die Wohnung ist hell und zentral. Mein Lieblingsplatz ist der Balkon.", "Die Heizung funktioniert nicht. Das Licht im Flur ist kaputt."]}
+   ]
+  },
+  {
+   "title": "Zahlen richtig lesen",
+   "goal": "Du liest Preise, Mieten, Jahreszahlen und Postleitzahlen.",
+   "blocks": [
+    {"type": "table", "head": ["Zahl", "So sagt man es"], "rows": [
+     ["23", "dreiundzwanzig (zuerst die Einer!)"],
+     ["29,95 €", "neunundzwanzig Euro fünfundneunzig"],
+     ["230", "zweihundertdreißig"],
+     ["499", "vierhundertneunundneunzig"],
+     ["1.540", "(ein)tausendfünfhundertvierzig"],
+     ["12.637", "zwölftausendsechshundertsiebenunddreißig"],
+     ["1982 (Jahr)", "neunzehnhundertzweiundachtzig"],
+     ["2026 (Jahr)", "zweitausendsechsundzwanzig"],
+     ["12045 (PLZ)", "eins-zwei-null-vier-fünf oder zwölftausendfünfundvierzig"]
+    ]},
+    {"type": "rule", "text": "Jahreszahlen bis 1999 liest man in Hunderten: 1987 = neunzehnhundertsiebenundachtzig. Ab 2000: zweitausend…"},
+    {"type": "dialog", "title": "Dialog: Anruf wegen einer Wohnung", "lines": [
+     ["A", "Guten Tag, mein Name ist Müller. Ich rufe wegen der Anzeige an. Ist die 3-Zimmer-Wohnung noch frei?"],
+     ["B", "Ja, die Wohnung in der Goethestraße 26 ist noch frei."],
+     ["A", "In der Anzeige steht, die Miete ist 1.150 Euro. Ist das richtig?"],
+     ["B", "Ja. Die Wohnung hat 89 Quadratmeter, die Nebenkosten sind circa 210 Euro."],
+     ["A", "Kann ich die Wohnung besichtigen?"],
+     ["B", "Gern. Passt es Ihnen am Mittwoch um 17 Uhr?"],
+     ["A", "Ja, das passt. Vielen Dank!"]
+    ]},
+    {"type": "exercise", "title": "Übung 4: Lies laut und schreib in Worten", "task": "Schreib die Zahl in Wörtern.", "items": ["Die Kaution beträgt 2.400 Euro.", "Das Haus ist von 1975.", "Die Nebenkosten sind 185 Euro.", "Der Bus 47 fährt zum Bahnhof."], "solutions": ["zweitausendvierhundert", "neunzehnhundertfünfundsiebzig", "hundertfünfundachtzig", "siebenundvierzig"]}
+   ]
+  }
+ ]
+}

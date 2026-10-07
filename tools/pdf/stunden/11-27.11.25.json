@@ -1,0 +1,85 @@
+{
+ "id": "bahnhof-datum-wo-wohin-wegbeschreibung",
+ "source": "27.11.25",
+ "title": "Am Bahnhof, das Datum, in/an/bei/zu und Wegbeschreibungen",
+ "level": "A1–A2",
+ "intro": "Du findest dich am Bahnhof zurecht, verstehst Durchsagen, sagst das Datum mit Ordinalzahlen, sagst wo und wohin und beschreibst einen Weg im Imperativ.",
+ "topics": [
+  {
+   "title": "Am Bahnhof",
+   "goal": "Du kennst die wichtigsten Wörter und kaufst ein Ticket.",
+   "blocks": [
+    {"type": "table", "head": ["Wort", "Erklärung"], "rows": [
+     ["das Gleis, -e", "Der Zug steht auf Gleis 5."], ["der Bahnsteig, -e", "Da warten die Leute auf den Zug."], ["der Fahrplan, -pläne", "Wann fährt der Zug ab?"],
+     ["der Fahrkartenautomat, -en", "Hier kauft man Tickets (Maschine)."], ["der Schalter, -", "Hier verkaufen Menschen Tickets."], ["die Fahrkarte, -n / das Ticket, -s", "Das brauche ich zum Fahren."],
+     ["die Durchsage, -n", "Information aus dem Lautsprecher"], ["der Anschluss, -anschlüsse", "der nächste Zug nach dem Umsteigen"], ["die Verspätung, -en / der Ausfall", "Der Zug kommt später. / Der Zug fällt aus."]
+    ]},
+    {"type": "table", "head": ["Verb", "Bedeutung"], "rows": [
+     ["ab|fahren / an|kommen", "Der Zug fährt um 10:10 ab und kommt um 12 Uhr an."], ["ein|steigen", "in den Zug gehen"], ["aus|steigen", "den Zug verlassen"], ["um|steigen", "den Zug wechseln (Zug A → Zug B)"], ["entwerten", "das Ticket stempeln"]
+    ]},
+    {"type": "table", "title": "auf Gleis, am Gleis, auf dem Gleis", "head": ["Ausdruck", "Wann?"], "rows": [
+     ["auf Gleis 5", "für Züge und Durchsagen: Der Zug nach München fährt auf Gleis 5 ab."],
+     ["am Gleis / auf dem Bahnsteig", "für Personen: Ich warte am Gleis auf dich."],
+     ["auf dem Gleis", "Gefahr! direkt auf den Schienen: Achtung, Personen auf dem Gleis!"]
+    ]},
+    {"type": "dialog", "title": "Am Schalter", "lines": [
+     ["Herr Al-Masri", "Guten Tag, ich möchte eine Fahrkarte nach Köln."], ["Mitarbeiterin", "Der nächste Zug fährt um 10:15 Uhr auf Gleis 12."], ["Herr Al-Masri", "Muss ich umsteigen?"],
+     ["Mitarbeiterin", "Nein, der Zug fährt direkt. Sie können das Ticket auch am Automaten kaufen."], ["Herr Al-Masri", "Ich kaufe es lieber bei Ihnen."],
+     ["Mitarbeiterin", "Gern. Haben Sie eine BahnCard?"], ["Herr Al-Masri", "Nein."], ["Mitarbeiterin", "Das macht dann 45 Euro, bitte."]
+    ]},
+    {"type": "exercise", "title": "Übung 1: Durchsagen verstehen", "task": "Lies die Durchsagen. Richtig oder falsch?", "items": ["„Achtung an Gleis 5: Der Intercity nach Hamburg, Abfahrt 10:10 Uhr, hat heute ca. 20 Minuten Verspätung.“ – Der Zug fährt pünktlich.", "„An Gleis 10: Der ICE aus Frankfurt fährt heute später ab. Grund ist eine Reparatur an einem Signal. Neue Abfahrtszeit: 10:45 Uhr.“ – Es gibt ein technisches Problem.", "„Vorsicht an Gleis 3, der Zug fährt ein. Bitte bleiben Sie hinter der weißen Linie und lassen Sie die Fahrgäste zuerst aussteigen.“ – Man soll an die Kante gehen.", "Durchsage 3 – Man soll erst die Leute aussteigen lassen."], "solutions": ["falsch (20 Minuten Verspätung)", "richtig", "falsch (hinter der weißen Linie bleiben)", "richtig"]}
+   ]
+  },
+  {
+   "title": "Ordinalzahlen und das Datum",
+   "goal": "Du sagst und verstehst ein Datum.",
+   "blocks": [
+    {"type": "table", "head": ["Typ", "Frage", "Beispiel"], "rows": [
+     ["Kardinalzahl: eins, zwei, drei", "Wie viele?", "Ich habe 3 Kinder."],
+     ["Ordinalzahl: erste, zweite, dritte", "Der Wievielte?", "Heute ist der 3. Mai."]
+    ]},
+    {"type": "rule", "text": "Ein Punkt hinter der Zahl (3.) = Ordinalzahl. 1.–19.: Zahl + -te (zweite, vierte; Ausnahmen: erste, dritte, siebte). Ab 20.: Zahl + -ste (zwanzigste, siebenundzwanzigste)."},
+    {"type": "table", "head": ["Frage", "Endung", "Beispiel"], "rows": [
+     ["Der Wievielte ist heute?", "der …-te", "Heute ist der siebenundzwanzigste November (27.11.)."],
+     ["Wann …? (am)", "am …-ten", "Ich bin am zehnten Februar geboren. Ich komme am ersten Mai."]
+    ]},
+    {"type": "list", "title": "Wofür brauchen wir Ordinalzahlen?", "items": ["Datum: am ersten Dezember", "Stockwerk: Ich wohne im dritten Stock.", "Reihenfolge: Er ist der Erste im Ziel. Erstens …, zweitens …"]},
+    {"type": "tip", "text": "Am Telefon sagt man oft „zwo“ statt „zwei“ und „Juno“ / „Julei“, damit man Juni und Juli nicht verwechselt."},
+    {"type": "exercise", "title": "Übung 2: Ergänze die Endung", "task": "-e oder -en?", "items": ["Der Termin ist am zwanzigst___ Juli.", "Wir fahren am dritt___ August in Urlaub.", "Heute ist der erst___ Dezember.", "Der Arzt hat am siebt___ April keine Zeit."], "solutions": ["zwanzigsten", "dritten", "erste", "siebten"]},
+    {"type": "exercise", "title": "Übung 3: Schreib das Datum in Wörtern", "task": "Beginne mit am.", "items": ["22.9.", "1.8.", "13.4.", "31.12."], "solutions": ["am zweiundzwanzigsten September", "am ersten August", "am dreizehnten April", "am einunddreißigsten Dezember"]}
+   ]
+  },
+  {
+   "title": "Wo? und Wohin? – in, an, bei, zu",
+   "goal": "Du wählst die richtige Präposition für Orte.",
+   "blocks": [
+    {"type": "rule", "text": "in = drinnen (Box, Raum): im Bus, in der Schule. an = daneben, an einem Punkt, an Wasser, an vertikalen Flächen: an der Haltestelle, am Fenster, am Meer, an der Wand."},
+    {"type": "table", "head": ["", "Wo? (Dativ)", "Wohin? (Akkusativ)"], "rows": [
+     ["Gebäude (Supermarkt, Kino, Schule)", "im Supermarkt, in der Schule, im Kino", "in den Supermarkt, in die Schule, ins Kino"],
+     ["Personen, Namen, Firmen", "bei Dennis, bei Lidl, beim Arzt, bei der Ärztin", "zu Dennis, zu Lidl, zum Arzt, zur Ärztin"],
+     ["Wasser (Fluss, Meer, See)", "am Rhein, an der Nordsee, an der Ruhr", "an den Rhein, an die Nordsee, ans Meer"],
+     ["Treffpunkt", "am Bahnhof, am Rathaus, an der Haltestelle", "zum Bahnhof, zur Haltestelle"]
+    ]},
+    {"type": "rule", "text": "Kurzformen: in + dem = im, an + dem = am, in + das = ins, an + das = ans, bei + dem = beim, zu + dem = zum, zu + der = zur."},
+    {"type": "tip", "text": "in der Bank = in der Sparkasse; auf der Bank = auf der Sitzbank im Park. Im Wasser ist man nur, wenn man schwimmt – sonst am See."},
+    {"type": "exercise", "title": "Übung 4: im, am, in der oder an der?", "task": "Ergänze.", "items": ["Peter sitzt ______ Kino.", "Der Bus wartet ______ Haltestelle.", "Wir treffen uns ______ Bahnhof.", "Die Kinder spielen ______ Strand.", "Wo kaufst du Fahrkarten? – ______ Schalter.", "Wo lernen wir? – ______ Schule."], "solutions": ["im", "an der", "am", "am", "Am", "In der"]},
+    {"type": "exercise", "title": "Übung 5: bei oder zu?", "task": "Ergänze.", "items": ["Ich gehe heute ______ Arzt.", "Ich war gestern ______ meiner Oma.", "Wir fahren am Samstag ______ IKEA.", "Sie arbeitet ______ einer Bäckerei."], "solutions": ["zum", "bei", "zu", "bei"]}
+   ]
+  },
+  {
+   "title": "Der Imperativ: drei Formen und Wegbeschreibungen",
+   "goal": "Du sagst jemandem den Weg – mit Sie, ihr und du.",
+   "blocks": [
+    {"type": "table", "head": ["Infinitiv", "Sie", "ihr", "du"], "rows": [
+     ["machen", "Machen Sie …!", "Macht …!", "Mach …!"], ["warten", "Warten Sie …!", "Wartet …!", "Warte …!"], ["essen", "Essen Sie …!", "Esst …!", "Iss …!"],
+     ["lesen", "Lesen Sie …!", "Lest …!", "Lies …!"], ["nehmen", "Nehmen Sie …!", "Nehmt …!", "Nimm …!"], ["fahren", "Fahren Sie …!", "Fahrt …!", "Fahr …!"], ["sein", "Seien Sie leise!", "Seid leise!", "Sei leise!"]
+    ]},
+    {"type": "rule", "text": "ihr-Form = Präsens ohne ihr: ihr geht → Geht! du-Form: du und -st streichen: du kommst → Komm! e → i/ie bleibt: Nimm! Lies!"},
+    {"type": "list", "title": "Den Weg beschreiben", "items": ["Gehen Sie immer geradeaus. / Geh geradeaus.", "Gehen Sie bis zur Ampel / bis zur Kreuzung.", "Biegen Sie an der Kreuzung links ab. / Bieg rechts ab.", "Gehen Sie am Park vorbei.", "Nehmen Sie den Bus Nummer 10. / Nimm die U5.", "Auf der linken Seite sehen Sie den Eingang."]},
+    {"type": "exercise", "title": "Übung 6: Tipps für einen kranken Freund", "task": "Schreib im Imperativ (du).", "items": ["zum Arzt gehen", "viel Wasser trinken", "Obst essen", "lange schlafen", "eine Tablette nehmen"], "solutions": ["Geh zum Arzt!", "Trink viel Wasser!", "Iss Obst!", "Schlaf lange!", "Nimm eine Tablette!"]},
+    {"type": "exercise", "title": "Übung 7: Sie → du", "task": "Ein Tourist bekommt die Sie-Form, ein Freund die du-Form.", "items": ["Gehen Sie geradeaus!", "Nehmen Sie den Bus!", "Biegen Sie sofort links ab!", "Fahren Sie langsam!"], "solutions": ["Geh geradeaus!", "Nimm den Bus!", "Bieg sofort links ab!", "Fahr langsam!"]},
+    {"type": "tip", "text": "Partnerspiel: A zeichnet heimlich ein Ziel in einen Stadtplan und beschreibt den Weg. B zeichnet mit. Seid ihr am selben Ziel angekommen?"}
+   ]
+  }
+ ]
+}
