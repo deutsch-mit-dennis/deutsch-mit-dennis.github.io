@@ -7,11 +7,11 @@
   // [Startsekunde, CSS-Selektor auf der Startseite, kurzer Hinweis]
   const STEPS = [
     [0, '.dm-hero', 'Willkommen!'],
-    [7, '.dm-paths', 'Hier wählst du deinen Lernweg'],
-    [13, '.dm-tools', 'Direkt üben: Sprechen, Schreiben, Hören'],
-    [19, '#main-navigation a[data-nav="pruefung"], .dm-tools a[href="#lid"]', 'Prüfungstraining: DTZ, B2, Leben in Deutschland'],
-    [24, '.dm-stage', 'Deutsch mit Liedern'],
-    [29, '.dm-hero', 'Viel Erfolg!']
+    [9.2, '.dm-paths', 'Hier wählst du deinen Lernweg'],
+    [13.5, '.dm-tools', 'Direkt üben: Sprechen, Schreiben, Hören'],
+    [19.2, '.dm-paths a[href="#lernweg/dtz"], .dm-tools a[href="#lid"]', 'Prüfungstraining: DTZ, B2, Leben in Deutschland'],
+    [26.1, '.dm-stage', 'Deutsch mit Liedern'],
+    [30.4, '.dm-hero', 'Viel Erfolg!']
   ];
   const get = k => { try { return localStorage.getItem(k); } catch { return null; } };
   const set = (k, v) => { try { localStorage.setItem(k, v); } catch {} };

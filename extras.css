@@ -444,7 +444,7 @@ li.sc-sp .sc-cat{background:#FDE3DC;color:#A3281E}li.sc-gr .sc-cat{background:#D
 .dm-tour-btns{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
 .dm-tour-btns .dm-btn{padding:8px 14px;font-size:15px}
 .dm-tour-later{border:0;background:none;color:var(--dm-muted);text-decoration:underline;cursor:pointer;font:inherit;font-size:15px;min-height:0!important}
-.dm-tour.dm-tour-open{width:min(300px,calc(100vw - 32px))}
+.dm-tour.dm-tour-open{width:min(250px,calc(100vw - 32px))}
 .dm-tour-player video{display:block;width:100%;max-height:60vh;border-radius:12px;background:#000}
 .dm-tour-hint{margin:8px 0 0;font-weight:700;font-size:15px;color:var(--dm-tinte)}
 .dm-tour-mark{outline:4px solid var(--dm-marker)!important;outline-offset:6px;border-radius:var(--dm-r);box-shadow:0 0 0 12px rgba(255,228,92,.35)!important;transition:outline-color .3s,box-shadow .3s}
