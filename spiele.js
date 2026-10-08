@@ -71,6 +71,7 @@
         <div class="ch-feedback" hidden></div>
         <div class="ch-actions"><button type="button" class="dm-btn" id="sp-next" hidden>Weiter</button></div>
       </section>`, 'sp-page');
+    window.scrollTo({ top: 0, behavior: 'instant' });
     const root = $('.sp-play'), area = $('.sp-area', root);
     const api = {
       el: area, esc, shuffle, pick: (a, n) => shuffle(a).slice(0, n),
@@ -108,6 +109,7 @@
         ${wrong.length ? `<details class="ch-review" open><summary>Das solltest du dir merken (${wrong.length})</summary><ul>${wrong.slice(0, 15).map(w => `<li><b>${esc(w.correct)}</b>${w.tip ? ` – ${esc(w.tip)}` : ''}</li>`).join('')}</ul></details>` : ''}
         <div class="ch-actions"><button type="button" class="dm-btn ch-go" id="sp-again">Nochmal spielen</button><a class="dm-btn dm-btn-quiet" href="#spiele">Andere Spiele</a></div>
       </section>`, 'sp-page');
+    window.scrollTo({ top: 0, behavior: 'instant' });
     if ((isBest && score > 0) || pct >= 0.9) DM.celebrate?.($('.sp-result'));
     $('#sp-again').onclick = () => play(g, opt);
   }

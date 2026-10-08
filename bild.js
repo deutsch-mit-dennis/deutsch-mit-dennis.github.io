@@ -74,6 +74,7 @@
             <div class="ch-actions"><button type="button" class="dm-btn" id="ch-check"${part === 'bauen' ? ' disabled' : ' hidden'}>Prüfen</button><button type="button" class="dm-btn" id="ch-next" hidden>${i + 1 < items.length ? 'Weiter' : 'Ergebnis'}</button></div>
           </section>
         </div>`, 'bd-page');
+      window.scrollTo({ top: 0, behavior: 'instant' });
       part === 'bauen' ? bindBuild(it) : bindGaps(it);
       $('#ch-next').onclick = () => { i++; i < items.length ? render() : result(); };
     };
@@ -119,6 +120,7 @@
           ${wrong.length ? `<details class="ch-review" open><summary>Merk dir diese Sätze (${wrong.length})</summary><ul>${wrong.map(w => `<li><b>${esc(w.correct)}</b>${w.tip ? ` – ${esc(w.tip)}` : ''}</li>`).join('')}</ul></details>` : ''}
           <div class="ch-actions">${next ? `<a class="dm-btn" href="#bild/${sc.id}/${next[0]}">Weiter: ${next[2]}</a>` : ''}<a class="dm-btn dm-btn-quiet" href="#bild/${sc.id}/${part}" onclick="setTimeout(()=>window.route&&route(),0)">Nochmal</a></div>
         </section>`, 'bd-page');
+      window.scrollTo({ top: 0, behavior: 'instant' });
       if (score >= items.length - 1 && DM.celebrate) DM.celebrate($('.bd-result'));
     };
     render();

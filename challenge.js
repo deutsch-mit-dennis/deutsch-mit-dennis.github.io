@@ -129,6 +129,7 @@
           <div class="ch-actions"><button type="button" class="dm-btn" id="ch-check"${t.type === 'satz' ? ' disabled' : ' hidden'}>Prüfen</button><button type="button" class="dm-btn" id="ch-next" hidden>${i + 1 < tasks.length ? 'Weiter' : 'Ergebnis ansehen'}</button></div>
           <p class="ch-keys dm-small">Tipp am Computer: Tasten 1–4 zum Antworten, Enter für „Weiter“.</p>
         </section>`, 'ch-page');
+      window.scrollTo({ top: 0, behavior: 'instant' });
       t.type === 'satz' ? bindSatz(t) : bindMC(t);
       $('#ch-next').onclick = () => { i++; i < tasks.length ? render() : result(); };
     };
@@ -197,6 +198,7 @@
           </div>
           <p class="dm-small">Weiterlernen: <a href="#lid">LiD-Trainer</a> · <a href="#ueben">Sprechen und Schreiben</a> · <a href="#hoeren">Hören</a></p>
         </section>`, 'ch-page');
+      window.scrollTo({ top: 0, behavior: 'instant' });
       const card = $('.ch-result'); if (score >= 7 && DM.celebrate) DM.celebrate(card);
       $('#ch-share').onclick = async () => {
         const text = `🔥 Tages-Challenge „Deutsch mit Dennis“: ${score}/10${practice ? '' : ` · ${st.streak} ${st.streak === 1 ? 'Tag' : 'Tage'} in Folge`}. Schaffst du mehr?`;
