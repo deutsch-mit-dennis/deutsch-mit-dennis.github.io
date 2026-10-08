@@ -1,0 +1,57 @@
+{
+ "hinweis": "Zusammengefasste Besucherzahlen (Cloudflare Web Analytics, ohne Cookies). Automatisch erzeugt.",
+ "stand": "2026-10-08T05:35:36.617Z",
+ "tag": "2026-10-07",
+ "gestern": {
+  "besuche": 15,
+  "seitenaufrufe": 110
+ },
+ "letzte7Tage": {
+  "besuche": 15,
+  "seitenaufrufe": 110
+ },
+ "herkunft": [
+  {
+   "name": "deutsch-mit-dennis.de",
+   "besuche": 0,
+   "aufrufe": 95
+  },
+  {
+   "name": "(direkt)",
+   "besuche": 15,
+   "aufrufe": 15
+  }
+ ],
+ "laender": [
+  {
+   "name": "DE",
+   "besuche": 15,
+   "aufrufe": 110
+  }
+ ],
+ "geraete": [
+  {
+   "name": "mobile",
+   "besuche": 14,
+   "aufrufe": 68
+  },
+  {
+   "name": "desktop",
+   "besuche": 1,
+   "aufrufe": 42
+  }
+ ],
+ "seiten": [
+  {
+   "name": "/",
+   "besuche": 15,
+   "aufrufe": 110
+  }
+ ],
+ "verlauf": {
+  "2026-10-07": {
+   "besuche": 15,
+   "seitenaufrufe": 110
+  }
+ }
+}
