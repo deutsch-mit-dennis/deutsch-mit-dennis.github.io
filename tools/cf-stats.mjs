@@ -2,7 +2,7 @@
 // Benötigt die Repository-Secrets CF_API_TOKEN (Berechtigung „Account Analytics: Read“) und CF_ACCOUNT_ID.
 // Es werden nur zusammengefasste Zahlen gespeichert – keine IP-Adressen, keine einzelnen Besuche.
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
-const TOKEN = process.env.CF_API_TOKEN, ACC = process.env.CF_ACCOUNT_ID, HOST = 'deutsch-mit-dennis.de';
+const TOKEN = process.env.CF_API_TOKEN, ACC = ((process.env.CF_ACCOUNT_ID || '').match(/[0-9a-f]{32}/i) || [])[0], HOST = 'deutsch-mit-dennis.de';
 const fail = e => { console.log('::error::' + String(e && e.message || e).replace(/\n/g, ' ').slice(0, 600)); process.exit(1); }; process.on('unhandledRejection', fail); process.on('uncaughtException', fail);
 if (!TOKEN || !ACC) { console.log('CF_API_TOKEN oder CF_ACCOUNT_ID fehlt – übersprungen.'); process.exit(0); }
 const api = async (path, body) => {
