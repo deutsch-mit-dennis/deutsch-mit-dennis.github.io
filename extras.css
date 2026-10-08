@@ -630,3 +630,23 @@ header.dm-header nav{margin-left:auto}
 .bd-model summary,.bd-rm-mini summary{cursor:pointer;font-weight:700}
 .bd-rm-mini dl{margin:8px 0 0}.bd-rm-mini dt{font-weight:700;margin-top:6px}.bd-rm-mini dd{margin:0}
 .bd-q li{margin:4px 0}
+/* Lernspiele (spiele.js) */
+.sp-page{max-width:980px;margin:0 auto}
+.sp-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:14px;margin:6px 0 24px}
+.sp-card{display:flex;gap:14px;align-items:flex-start;padding:16px 18px;background:#fff;border:1px solid var(--dm-line);border-radius:18px;text-decoration:none;color:var(--dm-ink);transition:transform .15s,box-shadow .15s}
+.sp-card:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(23,32,54,.1);border-color:var(--dm-tinte)}
+.sp-ic{display:grid;place-items:center;width:54px;height:54px;flex:0 0 54px;border-radius:16px;background:var(--dm-tinte-soft);font-size:28px}
+.sp-ic-big{width:84px;height:84px;font-size:44px;border-radius:24px;margin:0 auto 6px}
+.sp-t b{display:block;font-size:19px}.sp-t span{display:block;color:#3b4560;font-size:15px;line-height:1.4}.sp-t small{display:block;margin-top:4px;color:#5b6680;font-weight:700}
+.sp-intro{max-width:620px;margin:0 auto;text-align:center}.sp-intro .ch-level{justify-content:center}.sp-lead{font-size:18px;color:#3b4560}
+.sp-best{color:#7a5b20}
+.sp-play{max-width:720px;margin:0 auto}
+.sp-hud{flex-wrap:wrap}.sp-time.is-low{color:#c62828}
+.sp-area{margin-top:14px}
+.sp-result{max-width:620px;margin:0 auto}
+.sp-home{display:flex;align-items:center;gap:14px;padding:14px 20px;border-radius:20px;text-decoration:none;color:var(--dm-ink);background:#fff;border:1px solid var(--dm-line);margin:-6px 0 18px}
+.sp-home:hover{border-color:var(--dm-tinte)}
+.sp-home>span:first-child{font-size:34px}
+.sp-home b{display:block;font-size:19px}.sp-home small{display:block;color:#55607a;font-size:14px;line-height:1.4}
+.sp-home-go{margin-left:auto;font-weight:800;color:var(--dm-tinte);white-space:nowrap}
+@media (max-width:520px){.sp-home{flex-wrap:wrap}.sp-home-go{width:100%;text-align:center}}

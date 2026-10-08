@@ -1,0 +1,530 @@
+[
+ {
+  "text": "Praxis Dr. Becker, Krüger am Apparat. Guten Tag!",
+  "voice": "f1"
+ },
+ {
+  "text": "Wie bitte? Etwas freundlicher, bitte. Was kann ich für Sie tun?",
+  "voice": "f1"
+ },
+ {
+  "text": "Nein, hier ist die Arztpraxis Dr. Becker. Was kann ich für Sie tun?",
+  "voice": "f1"
+ },
+ {
+  "text": "Gern. Waren Sie schon einmal bei uns?",
+  "voice": "f1"
+ },
+ {
+  "text": "Entschuldigung, das habe ich nicht verstanden. Waren Sie schon einmal in unserer Praxis?",
+  "voice": "f1"
+ },
+ {
+  "text": "Ähm … ich meine: Waren Sie schon einmal hier in der Praxis?",
+  "voice": "f1"
+ },
+ {
+  "text": "Gut. Und was fehlt Ihnen?",
+  "voice": "f1"
+ },
+ {
+  "text": "Seit wann, sagen Sie? Das habe ich nicht genau verstanden.",
+  "voice": "f1"
+ },
+ {
+  "text": "Nein, ich meine: Welche Beschwerden haben Sie? Was tut Ihnen weh?",
+  "voice": "f1"
+ },
+ {
+  "text": "Oh, das tut mir leid. Können Sie morgen früh um halb neun kommen?",
+  "voice": "f1"
+ },
+ {
+  "text": "Bitte bleiben Sie höflich. Wann hätten Sie denn Zeit?",
+  "voice": "f1"
+ },
+ {
+  "text": "Also passt Ihnen halb neun nicht? Möchten Sie lieber eine andere Uhrzeit?",
+  "voice": "f1"
+ },
+ {
+  "text": "Am Nachmittag ist um 15 Uhr noch etwas frei.",
+  "voice": "f1"
+ },
+ {
+  "text": "Wie bitte? Passt Ihnen 15 Uhr oder nicht?",
+  "voice": "f1"
+ },
+ {
+  "text": "Ähm, ja … Aber passt Ihnen der Termin um 15 Uhr?",
+  "voice": "f1"
+ },
+ {
+  "text": "Wie ist Ihr Name, bitte?",
+  "voice": "f1"
+ },
+ {
+  "text": "Ich brauche Ihren Namen für den Termin. Bitte nennen Sie ihn mir.",
+  "voice": "f1"
+ },
+ {
+  "text": "Danke, aber ich brauche zuerst Ihren Namen.",
+  "voice": "f1"
+ },
+ {
+  "text": "Danke schön. Bringen Sie morgen bitte Ihre Versichertenkarte mit.",
+  "voice": "f1"
+ },
+ {
+  "text": "Wie bitte? Bringen Sie die Karte mit?",
+  "voice": "f1"
+ },
+ {
+  "text": "Na gut … Haben Sie das mit der Karte verstanden?",
+  "voice": "f1"
+ },
+ {
+  "text": "Gern geschehen. Gute Besserung und auf Wiederhören!",
+  "voice": "f1"
+ },
+ {
+  "text": "Schmitt, guten Tag.",
+  "voice": "m1"
+ },
+ {
+  "text": "Moment mal! Wir sind doch per Sie. Und worum geht es überhaupt?",
+  "voice": "m1"
+ },
+ {
+  "text": "Eine Wohnung? Ich habe leider gerade keine frei. Oder wohnen Sie schon bei mir?",
+  "voice": "m1"
+ },
+ {
+  "text": "Ach ja, guten Tag! Was kann ich für Sie tun?",
+  "voice": "m1"
+ },
+ {
+  "text": "Entschuldigung, wie bitte? Was ist mit dem Rohr?",
+  "voice": "m1"
+ },
+ {
+  "text": "Die Müllabfuhr kommt immer dienstags. Aber Sie klingen besorgt – ist etwas passiert?",
+  "voice": "m1"
+ },
+ {
+  "text": "Oh nein. Seit wann ist das so?",
+  "voice": "m1"
+ },
+ {
+  "text": "Bitte bleiben Sie höflich. Ich möchte Ihnen ja helfen. Seit wann tropft es denn?",
+  "voice": "m1"
+ },
+ {
+  "text": "Das weiß ich doch. Ich meine: Seit wann ist das Rohr undicht?",
+  "voice": "m1"
+ },
+ {
+  "text": "Haben Sie das Wasser schon abgestellt?",
+  "voice": "m1"
+ },
+ {
+  "text": "Wie bitte? Haben Sie es abgestellt?",
+  "voice": "m1"
+ },
+ {
+  "text": "Ähm … ich meine das Wasser im Bad. Haben Sie das Ventil zugedreht?",
+  "voice": "m1"
+ },
+ {
+  "text": "Sehr gut. Ich schicke Ihnen einen Handwerker. Wann sind Sie zu Hause?",
+  "voice": "m1"
+ },
+ {
+  "text": "Bitte etwas freundlicher. Der Handwerker tut sein Bestes. Wann genau sind Sie da?",
+  "voice": "m1"
+ },
+ {
+  "text": "Entschuldigung, wann sind Sie zu Hause?",
+  "voice": "m1"
+ },
+ {
+  "text": "Ja, das passt. Der Handwerker kommt morgen zwischen 9 und 12 Uhr.",
+  "voice": "m1"
+ },
+ {
+  "text": "Oh, herzlichen Glückwunsch! Aber passt Ihnen die Zeit von 9 bis 12 Uhr?",
+  "voice": "m1"
+ },
+ {
+  "text": "Na hören Sie mal! Genauer kann ich es leider nicht sagen.",
+  "voice": "m1"
+ },
+ {
+  "text": "Nein, keine Sorge. Die Kosten übernehme ich als Vermieter.",
+  "voice": "m1"
+ },
+ {
+  "text": "Bitte? Ich habe Sie nicht ganz verstanden.",
+  "voice": "m1"
+ },
+ {
+  "text": "Hm. Ein bisschen Dankbarkeit wäre schön.",
+  "voice": "m1"
+ },
+ {
+  "text": "Gern geschehen. Auf Wiederhören!",
+  "voice": "m1"
+ },
+ {
+  "text": "Jobcenter, Servicecenter, mein Name ist Weber. Was kann ich für Sie tun?",
+  "voice": "f2"
+ },
+ {
+  "text": "Bitte etwas höflicher. Worum geht es genau?",
+  "voice": "f2"
+ },
+ {
+  "text": "Dafür ist Ihr Arbeitsvermittler zuständig. Haben Sie schon einen Termin bei uns?",
+  "voice": "f2"
+ },
+ {
+  "text": "Darf ich fragen, warum?",
+  "voice": "f2"
+ },
+ {
+  "text": "Entschuldigung, können Sie das bitte noch einmal sagen?",
+  "voice": "f2"
+ },
+ {
+  "text": "Ich muss den Grund leider notieren. Ohne wichtigen Grund kann ich den Termin nicht verschieben.",
+  "voice": "f2"
+ },
+ {
+  "text": "Ein Vorstellungsgespräch ist natürlich ein wichtiger Grund. Wie ist Ihre Kundennummer?",
+  "voice": "f2"
+ },
+ {
+  "text": "Nicht die Hausnummer – die Kundennummer. Sie steht oben auf jedem Brief vom Jobcenter.",
+  "voice": "f2"
+ },
+ {
+  "text": "Wie bitte? Haben Sie die Nummer oder nicht?",
+  "voice": "f2"
+ },
+ {
+  "text": "Danke. Herr Krause hat am Montag um 9 Uhr oder am Dienstag um 14 Uhr Zeit.",
+  "voice": "f2"
+ },
+ {
+  "text": "Hm. Dann vielleicht Dienstag um 14 Uhr?",
+  "voice": "f2"
+ },
+ {
+  "text": "Den Termin am Dienstag? Habe ich Sie richtig verstanden?",
+  "voice": "f2"
+ },
+ {
+  "text": "Gut, dann trage ich Sie für Dienstag um 14 Uhr ein. Sie bekommen noch eine schriftliche Einladung.",
+  "voice": "f2"
+ },
+ {
+  "text": "Entschuldigung, wie bitte?",
+  "voice": "f2"
+ },
+ {
+  "text": "Nein, nein, wir schicken Ihnen die Einladung per Post. Haben Sie noch eine Frage?",
+  "voice": "f2"
+ },
+ {
+  "text": "Bringen Sie bitte Ihren Ausweis und Ihren Lebenslauf mit.",
+  "voice": "f2"
+ },
+ {
+  "text": "Ich verstehe, aber wir brauchen die Unterlagen. Bitte bringen Sie sie mit.",
+  "voice": "f2"
+ },
+ {
+  "text": "Ähm … ich meine Ihren Lebenslauf, also Ihre Bewerbungsunterlagen.",
+  "voice": "f2"
+ },
+ {
+  "text": "Haben Sie sonst noch Fragen?",
+  "voice": "f2"
+ },
+ {
+  "text": "Entschuldigung, wie meinen Sie das?",
+  "voice": "f2"
+ },
+ {
+  "text": "Hm … Also keine Fragen mehr?",
+  "voice": "f2"
+ },
+ {
+  "text": "Gern geschehen. Viel Erfolg beim Vorstellungsgespräch! Auf Wiederhören.",
+  "voice": "f2"
+ },
+ {
+  "text": "Guten Morgen! Was darf es sein?",
+  "voice": "m2"
+ },
+ {
+  "text": "Bitte bleiben Sie höflich. Was ist denn mit dem Brot?",
+  "voice": "m2"
+ },
+ {
+  "text": "Gern. Aber Sie haben da eine Tüte in der Hand – ist etwas nicht in Ordnung?",
+  "voice": "m2"
+ },
+ {
+  "text": "Oh, das tut mir leid. Darf ich mal sehen?",
+  "voice": "m2"
+ },
+ {
+  "text": "Wie bitte? Ist es schimmelig?",
+  "voice": "m2"
+ },
+ {
+  "text": "Aber ich muss das Brot sehen, wenn Sie es reklamieren möchten.",
+  "voice": "m2"
+ },
+ {
+  "text": "Stimmt, das ist wirklich schimmelig. Haben Sie den Kassenbon dabei?",
+  "voice": "m2"
+ },
+ {
+  "text": "Nein, nein, ich brauche den Bon nur für die Kasse. Bitte bleiben Sie freundlich.",
+  "voice": "m2"
+ },
+ {
+  "text": "Das freut mich. Aber haben Sie den Bon von gestern dabei?",
+  "voice": "m2"
+ },
+ {
+  "text": "Danke. Möchten Sie ein neues Brot oder lieber Ihr Geld zurück?",
+  "voice": "m2"
+ },
+ {
+  "text": "Ja – was denn? Ein neues Brot oder das Geld?",
+  "voice": "m2"
+ },
+ {
+  "text": "Entschuldigung, was möchten Sie?",
+  "voice": "m2"
+ },
+ {
+  "text": "Natürlich. Hier sind Ihre drei Euro achtzig. Es tut mir wirklich leid.",
+  "voice": "m2"
+ },
+ {
+  "text": "Der Chef ist gerade nicht da. Ich habe Ihnen doch das Geld zurückgegeben.",
+  "voice": "m2"
+ },
+ {
+  "text": "Wie bitte?",
+  "voice": "m2"
+ },
+ {
+  "text": "Darf ich Ihnen als Entschuldigung ein Croissant schenken?",
+  "voice": "m2"
+ },
+ {
+  "text": "Sie müssen nichts bezahlen – das Croissant ist ein Geschenk!",
+  "voice": "m2"
+ },
+ {
+  "text": "Ähm … Es ist nur eine kleine Entschuldigung. Möchten Sie es?",
+  "voice": "m2"
+ },
+ {
+  "text": "Gern geschehen. Einen schönen Tag noch!",
+  "voice": "m2"
+ },
+ {
+  "text": "Wir telefonieren doch nicht! Hier sagt man: Auf Wiedersehen.",
+  "voice": "m2"
+ },
+ {
+  "text": "Bitte?",
+  "voice": "m2"
+ },
+ {
+  "text": "Auf Wiedersehen!",
+  "voice": "m2"
+ },
+ {
+  "text": "Du, Maria geht doch nächsten Monat in Rente. Wollen wir zusammen eine kleine Abschiedsfeier für sie planen?",
+  "voice": "f3"
+ },
+ {
+  "text": "Schade. Ich dachte, wir machen das zusammen. Maria hat uns doch immer geholfen.",
+  "voice": "f3"
+ },
+ {
+  "text": "Schön für dich! Aber hast du Lust, die Feier mit mir zu planen?",
+  "voice": "f3"
+ },
+ {
+  "text": "Ich schlage vor, wir feiern am Freitag nach der Arbeit. Was meinst du?",
+  "voice": "f3"
+ },
+ {
+  "text": "Wie bitte? Kannst du am Freitag oder nicht?",
+  "voice": "f3"
+ },
+ {
+  "text": "Hey, das war nur ein Vorschlag. Hast du eine bessere Idee?",
+  "voice": "f3"
+ },
+ {
+  "text": "Donnerstag geht auch. Und wo feiern wir? Vielleicht in einem Restaurant?",
+  "voice": "f3"
+ },
+ {
+  "text": "Ich auch! Aber was meinst du: Restaurant oder lieber hier in der Firma?",
+  "voice": "f3"
+ },
+ {
+  "text": "Okay, okay … Was schlägst du denn vor?",
+  "voice": "f3"
+ },
+ {
+  "text": "Stimmt, der Pausenraum ist eine gute Idee. Und was machen wir mit dem Essen?",
+  "voice": "f3"
+ },
+ {
+  "text": "Wie meinst du das? Alle zusammen?",
+  "voice": "f3"
+ },
+ {
+  "text": "Ich meine doch für die Feier! Wer kümmert sich um das Essen?",
+  "voice": "f3"
+ },
+ {
+  "text": "Super! Ich backe einen Kuchen. Und was schenken wir Maria?",
+  "voice": "f3"
+ },
+ {
+  "text": "Hey, das ist nicht nett! Maria war zwanzig Jahre bei uns.",
+  "voice": "f3"
+ },
+ {
+  "text": "Wem? Entschuldige, das habe ich nicht richtig verstanden.",
+  "voice": "f3"
+ },
+ {
+  "text": "Das ist eine schöne Idee! Wer sammelt das Geld bei den Kollegen ein?",
+  "voice": "f3"
+ },
+ {
+  "text": "Hm, ich backe doch schon den Kuchen … Kannst du nicht das Geld einsammeln?",
+  "voice": "f3"
+ },
+ {
+  "text": "Das macht nichts. Ich meine: Wer von uns beiden sammelt das Geld ein?",
+  "voice": "f3"
+ },
+ {
+  "text": "Perfekt. Also: Donnerstag im Pausenraum, jeder bringt etwas mit, und du sammelst das Geld ein. Einverstanden?",
+  "voice": "f3"
+ },
+ {
+  "text": "Bist du jetzt einverstanden oder nicht?",
+  "voice": "f3"
+ },
+ {
+  "text": "Aber wir haben doch gerade Donnerstag ausgemacht! Also, einverstanden?",
+  "voice": "f3"
+ },
+ {
+  "text": "Super! Maria wird sich bestimmt sehr freuen.",
+  "voice": "f3"
+ },
+ {
+  "text": "Kita Sonnenschein, Hoffmann am Apparat. Guten Morgen!",
+  "voice": "f1"
+ },
+ {
+  "text": "Moment, bitte nicht gleich auflegen! Wer spricht denn da, und was ist mit Leyla?",
+  "voice": "f1"
+ },
+ {
+  "text": "Für Anmeldungen ist die Leitung zuständig. Oder geht Ihr Kind schon zu uns?",
+  "voice": "f1"
+ },
+ {
+  "text": "Guten Morgen! Was ist denn los?",
+  "voice": "f1"
+ },
+ {
+  "text": "Entschuldigung, wie bitte? Kommt Leyla heute nicht?",
+  "voice": "f1"
+ },
+ {
+  "text": "Oh, wie schön! Aber Sie klingen besorgt. Ist alles in Ordnung?",
+  "voice": "f1"
+ },
+ {
+  "text": "Oh, die Arme! Waren Sie schon beim Kinderarzt?",
+  "voice": "f1"
+ },
+ {
+  "text": "Ich frage nur, weil gerade einige Kinder krank sind. Bitte bleiben Sie freundlich.",
+  "voice": "f1"
+ },
+ {
+  "text": "Wann, sagen Sie? Um elf?",
+  "voice": "f1"
+ },
+ {
+  "text": "Gut. Bitte sagen Sie uns Bescheid, wenn es etwas Ansteckendes ist.",
+  "voice": "f1"
+ },
+ {
+  "text": "Nein, „Bescheid sagen“ heißt: Sie informieren uns. Rufen Sie uns bitte an, ja?",
+  "voice": "f1"
+ },
+ {
+  "text": "Bitte? Sie rufen uns an?",
+  "voice": "f1"
+ },
+ {
+  "text": "Danke. Wie lange bleibt Leyla wohl zu Hause?",
+  "voice": "f1"
+ },
+ {
+  "text": "Natürlich wissen Sie das noch nicht genau. Ich frage nur für unsere Planung.",
+  "voice": "f1"
+ },
+ {
+  "text": "Ich meine: Wie viele Tage bleibt Leyla zu Hause?",
+  "voice": "f1"
+ },
+ {
+  "text": "Kein Problem. Übrigens: Am Mittwoch ist Elternabend. Kommen Sie trotzdem?",
+  "voice": "f1"
+ },
+ {
+  "text": "Entschuldigung, das habe ich nicht ganz verstanden. Kommen Sie am Mittwoch?",
+  "voice": "f1"
+ },
+ {
+  "text": "Ach so, nein: Der Elternabend ist ein Treffen für alle Eltern hier in der Kita.",
+  "voice": "f1"
+ },
+ {
+  "text": "Prima. Dann gute Besserung für Leyla!",
+  "voice": "f1"
+ },
+ {
+  "text": "Ich bin doch gar nicht krank! Aber danke.",
+  "voice": "f1"
+ },
+ {
+  "text": "Bitte? Das habe ich jetzt nicht verstanden.",
+  "voice": "f1"
+ },
+ {
+  "text": "Gern. Auf Wiederhören!",
+  "voice": "f1"
+ }
+]

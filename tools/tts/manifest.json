@@ -1543,6 +1543,2337 @@
      "text": "Das Bild zeigt ein Wartezimmer in einer Arztpraxis. Rechts steht eine medizinische Fachangestellte hinter der Anmeldung. Sie trägt einen weißen Kittel und eine schwarze Brille und telefoniert gerade. Vor der Anmeldung steht ein älterer Mann, der einen braunen Mantel und einen grauen Hut trägt. In der Hand hält er einen schwarzen Stock. Ich glaube, er gibt der Frau seine Versichertenkarte. Links sitzt eine junge Frau, die ein rotes Kleid trägt und eine Zeitschrift liest. Daneben sitzt eine Mutter, die ein kleines Baby im Arm hält. Vielleicht ist das Baby krank. An der Wand gibt es eine runde Uhr. Ich gehe nicht gern zum Arzt, weil ich oft lange warten muss."
     }
    ]
+  },
+  {
+   "key": "t1cf2e08b",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Sehr geehrte Frau Dr. Lange, leider muss ich meinen Termin am Montag um 10 Uhr absagen. Mein Sohn ist krank und ich muss bei ihm zu Hause bleiben. Ich hätte gern einen neuen Termin in der nächsten Woche. Vormittags passt es mir am besten. Außerdem brauche ich ein neues Rezept für meine Blutdrucktabletten. Kann ich es nächste Woche in der Praxis abholen? Bitte geben Sie mir kurz Bescheid. Vielen Dank im Voraus! Mit freundlichen Grüßen Olena Kovalenko"
+    }
+   ]
+  },
+  {
+   "key": "te09f29ae",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Sehr geehrter Herr Schmitt, ich wohne in der Lindenstraße 12 im zweiten Stock und schreibe Ihnen wegen der Heizung. Seit einer Woche funktioniert die Heizung im Wohnzimmer nicht mehr. Die Wohnung ist sehr kalt. Ich habe die Heizung schon entlüftet, aber das hat leider nicht geholfen. Ich bin jeden Tag ab 15 Uhr zu Hause. Bitte schicken Sie so schnell wie möglich einen Handwerker. Vielen Dank im Voraus! Mit freundlichen Grüßen Ahmad Karimi"
+    }
+   ]
+  },
+  {
+   "key": "tdeb65969",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Sehr geehrte Damen und Herren, ich habe Ihre Anzeige im Internet gelesen und möchte mich für den Deutschkurs B1 anmelden. Ich habe den A2-Kurs schon abgeschlossen und möchte bald die DTZ-Prüfung machen. Ich kann nur vormittags, weil ich nachmittags arbeite. Wie viel kostet der Kurs? Kann ich die Kursgebühr auch in Raten bezahlen? Ich freue mich auf Ihre Antwort. Mit freundlichen Grüßen Maria Popescu"
+    }
+   ]
+  },
+  {
+   "key": "tb549b203",
+   "segments": [
+    {
+     "voice": "f3",
+     "text": "Liebe Sabine, vielen Dank für deine Einladung zu deiner Geburtstagsparty am Samstag! Leider kann ich nicht kommen, weil meine Eltern mich an diesem Wochenende besuchen. Hast du nächste Woche Zeit? Dann können wir zusammen ins Café gehen und ein bisschen nachfeiern. Ein kleines Geschenk habe ich auch schon für dich. Ich wünsche dir eine tolle Party! Liebe Grüße Amina"
+    }
+   ]
+  },
+  {
+   "key": "t1779d82f",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Liebe Jana, ich habe eine große Bitte an dich. Am Freitag habe ich einen wichtigen Termin bei der Ausländerbehörde. Könntest du am Freitag meine Spätschicht übernehmen? Dafür arbeite ich gern am Montag in deiner Frühschicht. Sag mir bitte bis Mittwoch Bescheid. Danke schon mal! Viele Grüße Tarek"
+    }
+   ]
+  },
+  {
+   "key": "t6df19b0a",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Liebe Frau Hoffmann, leider kann Elias heute nicht in die Kita kommen. Er hat seit gestern Abend Fieber und Husten. Der Kinderarzt sagt, er soll bis Mittwoch zu Hause bleiben. Darf Elias am Freitag trotzdem mit in den Zoo, wenn er wieder gesund ist? Vielen Dank für Ihr Verständnis. Viele Grüße Fatima Haddad"
+    }
+   ]
+  },
+  {
+   "key": "t5aff5461",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Praxis Dr. Becker, Krüger am Apparat. Guten Tag!"
+    }
+   ]
+  },
+  {
+   "key": "teddf7bc5",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Wie bitte? Etwas freundlicher, bitte. Was kann ich für Sie tun?"
+    }
+   ]
+  },
+  {
+   "key": "t1a5c58ac",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Nein, hier ist die Arztpraxis Dr. Becker. Was kann ich für Sie tun?"
+    }
+   ]
+  },
+  {
+   "key": "ta5d01953",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Gern. Waren Sie schon einmal bei uns?"
+    }
+   ]
+  },
+  {
+   "key": "tef6e7153",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Entschuldigung, das habe ich nicht verstanden. Waren Sie schon einmal in unserer Praxis?"
+    }
+   ]
+  },
+  {
+   "key": "ta5c95696",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Ähm … ich meine: Waren Sie schon einmal hier in der Praxis?"
+    }
+   ]
+  },
+  {
+   "key": "tdcdd9167",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Gut. Und was fehlt Ihnen?"
+    }
+   ]
+  },
+  {
+   "key": "tbf24e1a0",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Seit wann, sagen Sie? Das habe ich nicht genau verstanden."
+    }
+   ]
+  },
+  {
+   "key": "t53d67fe6",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Nein, ich meine: Welche Beschwerden haben Sie? Was tut Ihnen weh?"
+    }
+   ]
+  },
+  {
+   "key": "tee750c73",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Oh, das tut mir leid. Können Sie morgen früh um halb neun kommen?"
+    }
+   ]
+  },
+  {
+   "key": "tbe4a9bf7",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Bitte bleiben Sie höflich. Wann hätten Sie denn Zeit?"
+    }
+   ]
+  },
+  {
+   "key": "t3f30ecd7",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Also passt Ihnen halb neun nicht? Möchten Sie lieber eine andere Uhrzeit?"
+    }
+   ]
+  },
+  {
+   "key": "tf45af5c2",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Am Nachmittag ist um 15 Uhr noch etwas frei."
+    }
+   ]
+  },
+  {
+   "key": "tbf3d3170",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Wie bitte? Passt Ihnen 15 Uhr oder nicht?"
+    }
+   ]
+  },
+  {
+   "key": "t222ffb23",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Ähm, ja … Aber passt Ihnen der Termin um 15 Uhr?"
+    }
+   ]
+  },
+  {
+   "key": "t48ed248d",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Wie ist Ihr Name, bitte?"
+    }
+   ]
+  },
+  {
+   "key": "t56192267",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Ich brauche Ihren Namen für den Termin. Bitte nennen Sie ihn mir."
+    }
+   ]
+  },
+  {
+   "key": "tceab5682",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Danke, aber ich brauche zuerst Ihren Namen."
+    }
+   ]
+  },
+  {
+   "key": "ta6f1938e",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Danke schön. Bringen Sie morgen bitte Ihre Versichertenkarte mit."
+    }
+   ]
+  },
+  {
+   "key": "t1f909d21",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Wie bitte? Bringen Sie die Karte mit?"
+    }
+   ]
+  },
+  {
+   "key": "tf8550636",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Na gut … Haben Sie das mit der Karte verstanden?"
+    }
+   ]
+  },
+  {
+   "key": "t57b5e71a",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Gern geschehen. Gute Besserung und auf Wiederhören!"
+    }
+   ]
+  },
+  {
+   "key": "t3005b2e8",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Schmitt, guten Tag."
+    }
+   ]
+  },
+  {
+   "key": "t4e68424e",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Moment mal! Wir sind doch per Sie. Und worum geht es überhaupt?"
+    }
+   ]
+  },
+  {
+   "key": "te9b81d64",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Eine Wohnung? Ich habe leider gerade keine frei. Oder wohnen Sie schon bei mir?"
+    }
+   ]
+  },
+  {
+   "key": "t351970bf",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Ach ja, guten Tag! Was kann ich für Sie tun?"
+    }
+   ]
+  },
+  {
+   "key": "tad318bb6",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Entschuldigung, wie bitte? Was ist mit dem Rohr?"
+    }
+   ]
+  },
+  {
+   "key": "te248f37b",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Die Müllabfuhr kommt immer dienstags. Aber Sie klingen besorgt – ist etwas passiert?"
+    }
+   ]
+  },
+  {
+   "key": "t8abfd27e",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Oh nein. Seit wann ist das so?"
+    }
+   ]
+  },
+  {
+   "key": "t7f8fcf13",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Bitte bleiben Sie höflich. Ich möchte Ihnen ja helfen. Seit wann tropft es denn?"
+    }
+   ]
+  },
+  {
+   "key": "t9e603cb6",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Das weiß ich doch. Ich meine: Seit wann ist das Rohr undicht?"
+    }
+   ]
+  },
+  {
+   "key": "td550595c",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Haben Sie das Wasser schon abgestellt?"
+    }
+   ]
+  },
+  {
+   "key": "t83145864",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Wie bitte? Haben Sie es abgestellt?"
+    }
+   ]
+  },
+  {
+   "key": "t86f8be65",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Ähm … ich meine das Wasser im Bad. Haben Sie das Ventil zugedreht?"
+    }
+   ]
+  },
+  {
+   "key": "t4dc805c8",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Sehr gut. Ich schicke Ihnen einen Handwerker. Wann sind Sie zu Hause?"
+    }
+   ]
+  },
+  {
+   "key": "t298330d7",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Bitte etwas freundlicher. Der Handwerker tut sein Bestes. Wann genau sind Sie da?"
+    }
+   ]
+  },
+  {
+   "key": "t6120b89a",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Entschuldigung, wann sind Sie zu Hause?"
+    }
+   ]
+  },
+  {
+   "key": "tbbb2111c",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Ja, das passt. Der Handwerker kommt morgen zwischen 9 und 12 Uhr."
+    }
+   ]
+  },
+  {
+   "key": "tb5b2c97f",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Oh, herzlichen Glückwunsch! Aber passt Ihnen die Zeit von 9 bis 12 Uhr?"
+    }
+   ]
+  },
+  {
+   "key": "tdec246ac",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Na hören Sie mal! Genauer kann ich es leider nicht sagen."
+    }
+   ]
+  },
+  {
+   "key": "t240afba9",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Nein, keine Sorge. Die Kosten übernehme ich als Vermieter."
+    }
+   ]
+  },
+  {
+   "key": "te8cad2ab",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Bitte? Ich habe Sie nicht ganz verstanden."
+    }
+   ]
+  },
+  {
+   "key": "tb6a703ff",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Hm. Ein bisschen Dankbarkeit wäre schön."
+    }
+   ]
+  },
+  {
+   "key": "t5918eec6",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Gern geschehen. Auf Wiederhören!"
+    }
+   ]
+  },
+  {
+   "key": "t5d9ffba5",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Jobcenter, Servicecenter, mein Name ist Weber. Was kann ich für Sie tun?"
+    }
+   ]
+  },
+  {
+   "key": "te5f48c64",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Bitte etwas höflicher. Worum geht es genau?"
+    }
+   ]
+  },
+  {
+   "key": "t75917a3e",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Dafür ist Ihr Arbeitsvermittler zuständig. Haben Sie schon einen Termin bei uns?"
+    }
+   ]
+  },
+  {
+   "key": "tff1945d4",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Darf ich fragen, warum?"
+    }
+   ]
+  },
+  {
+   "key": "t18023adc",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Entschuldigung, können Sie das bitte noch einmal sagen?"
+    }
+   ]
+  },
+  {
+   "key": "t15708ae5",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Ich muss den Grund leider notieren. Ohne wichtigen Grund kann ich den Termin nicht verschieben."
+    }
+   ]
+  },
+  {
+   "key": "t15468749",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Ein Vorstellungsgespräch ist natürlich ein wichtiger Grund. Wie ist Ihre Kundennummer?"
+    }
+   ]
+  },
+  {
+   "key": "t2e9e6510",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Nicht die Hausnummer – die Kundennummer. Sie steht oben auf jedem Brief vom Jobcenter."
+    }
+   ]
+  },
+  {
+   "key": "tc780cf7b",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Wie bitte? Haben Sie die Nummer oder nicht?"
+    }
+   ]
+  },
+  {
+   "key": "t8aac6b9c",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Danke. Herr Krause hat am Montag um 9 Uhr oder am Dienstag um 14 Uhr Zeit."
+    }
+   ]
+  },
+  {
+   "key": "tff00f8d8",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Hm. Dann vielleicht Dienstag um 14 Uhr?"
+    }
+   ]
+  },
+  {
+   "key": "t1136f4e1",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Den Termin am Dienstag? Habe ich Sie richtig verstanden?"
+    }
+   ]
+  },
+  {
+   "key": "t21b06e69",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Gut, dann trage ich Sie für Dienstag um 14 Uhr ein. Sie bekommen noch eine schriftliche Einladung."
+    }
+   ]
+  },
+  {
+   "key": "tba051481",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Entschuldigung, wie bitte?"
+    }
+   ]
+  },
+  {
+   "key": "t3726bb09",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Nein, nein, wir schicken Ihnen die Einladung per Post. Haben Sie noch eine Frage?"
+    }
+   ]
+  },
+  {
+   "key": "t881f75ea",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Bringen Sie bitte Ihren Ausweis und Ihren Lebenslauf mit."
+    }
+   ]
+  },
+  {
+   "key": "tfeca5e7f",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Ich verstehe, aber wir brauchen die Unterlagen. Bitte bringen Sie sie mit."
+    }
+   ]
+  },
+  {
+   "key": "te8049388",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Ähm … ich meine Ihren Lebenslauf, also Ihre Bewerbungsunterlagen."
+    }
+   ]
+  },
+  {
+   "key": "t0e1d8b31",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Haben Sie sonst noch Fragen?"
+    }
+   ]
+  },
+  {
+   "key": "ta7080482",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Entschuldigung, wie meinen Sie das?"
+    }
+   ]
+  },
+  {
+   "key": "tc1fb223f",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Hm … Also keine Fragen mehr?"
+    }
+   ]
+  },
+  {
+   "key": "t1f4ba7c3",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Gern geschehen. Viel Erfolg beim Vorstellungsgespräch! Auf Wiederhören."
+    }
+   ]
+  },
+  {
+   "key": "t0f5f80c7",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Guten Morgen! Was darf es sein?"
+    }
+   ]
+  },
+  {
+   "key": "t36ddc564",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Bitte bleiben Sie höflich. Was ist denn mit dem Brot?"
+    }
+   ]
+  },
+  {
+   "key": "ta9d98cc3",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Gern. Aber Sie haben da eine Tüte in der Hand – ist etwas nicht in Ordnung?"
+    }
+   ]
+  },
+  {
+   "key": "t2593775c",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Oh, das tut mir leid. Darf ich mal sehen?"
+    }
+   ]
+  },
+  {
+   "key": "teaeecb78",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Wie bitte? Ist es schimmelig?"
+    }
+   ]
+  },
+  {
+   "key": "tcff77d2f",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Aber ich muss das Brot sehen, wenn Sie es reklamieren möchten."
+    }
+   ]
+  },
+  {
+   "key": "t7f99f46c",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Stimmt, das ist wirklich schimmelig. Haben Sie den Kassenbon dabei?"
+    }
+   ]
+  },
+  {
+   "key": "t35c0d6fa",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Nein, nein, ich brauche den Bon nur für die Kasse. Bitte bleiben Sie freundlich."
+    }
+   ]
+  },
+  {
+   "key": "tc53446e4",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Das freut mich. Aber haben Sie den Bon von gestern dabei?"
+    }
+   ]
+  },
+  {
+   "key": "t56409e8b",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Danke. Möchten Sie ein neues Brot oder lieber Ihr Geld zurück?"
+    }
+   ]
+  },
+  {
+   "key": "t7253c466",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Ja – was denn? Ein neues Brot oder das Geld?"
+    }
+   ]
+  },
+  {
+   "key": "tf9c1aa92",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Entschuldigung, was möchten Sie?"
+    }
+   ]
+  },
+  {
+   "key": "tb8c6a2ea",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Natürlich. Hier sind Ihre drei Euro achtzig. Es tut mir wirklich leid."
+    }
+   ]
+  },
+  {
+   "key": "t3346a922",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Der Chef ist gerade nicht da. Ich habe Ihnen doch das Geld zurückgegeben."
+    }
+   ]
+  },
+  {
+   "key": "td35682ed",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Wie bitte?"
+    }
+   ]
+  },
+  {
+   "key": "t66d21094",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Darf ich Ihnen als Entschuldigung ein Croissant schenken?"
+    }
+   ]
+  },
+  {
+   "key": "tbaf0bcb1",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Sie müssen nichts bezahlen – das Croissant ist ein Geschenk!"
+    }
+   ]
+  },
+  {
+   "key": "tf7fde701",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Ähm … Es ist nur eine kleine Entschuldigung. Möchten Sie es?"
+    }
+   ]
+  },
+  {
+   "key": "t9f747025",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Gern geschehen. Einen schönen Tag noch!"
+    }
+   ]
+  },
+  {
+   "key": "t4fb30746",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Wir telefonieren doch nicht! Hier sagt man: Auf Wiedersehen."
+    }
+   ]
+  },
+  {
+   "key": "t0a3edcbc",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Bitte?"
+    }
+   ]
+  },
+  {
+   "key": "tba19e111",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Auf Wiedersehen!"
+    }
+   ]
+  },
+  {
+   "key": "tddbf5538",
+   "segments": [
+    {
+     "voice": "f3",
+     "text": "Du, Maria geht doch nächsten Monat in Rente. Wollen wir zusammen eine kleine Abschiedsfeier für sie planen?"
+    }
+   ]
+  },
+  {
+   "key": "t6ebac123",
+   "segments": [
+    {
+     "voice": "f3",
+     "text": "Schade. Ich dachte, wir machen das zusammen. Maria hat uns doch immer geholfen."
+    }
+   ]
+  },
+  {
+   "key": "t585ec3e0",
+   "segments": [
+    {
+     "voice": "f3",
+     "text": "Schön für dich! Aber hast du Lust, die Feier mit mir zu planen?"
+    }
+   ]
+  },
+  {
+   "key": "t3c734a6f",
+   "segments": [
+    {
+     "voice": "f3",
+     "text": "Ich schlage vor, wir feiern am Freitag nach der Arbeit. Was meinst du?"
+    }
+   ]
+  },
+  {
+   "key": "t65e669f2",
+   "segments": [
+    {
+     "voice": "f3",
+     "text": "Wie bitte? Kannst du am Freitag oder nicht?"
+    }
+   ]
+  },
+  {
+   "key": "tebf40416",
+   "segments": [
+    {
+     "voice": "f3",
+     "text": "Hey, das war nur ein Vorschlag. Hast du eine bessere Idee?"
+    }
+   ]
+  },
+  {
+   "key": "tfb1a80c0",
+   "segments": [
+    {
+     "voice": "f3",
+     "text": "Donnerstag geht auch. Und wo feiern wir? Vielleicht in einem Restaurant?"
+    }
+   ]
+  },
+  {
+   "key": "tc95d6705",
+   "segments": [
+    {
+     "voice": "f3",
+     "text": "Ich auch! Aber was meinst du: Restaurant oder lieber hier in der Firma?"
+    }
+   ]
+  },
+  {
+   "key": "t06ddc661",
+   "segments": [
+    {
+     "voice": "f3",
+     "text": "Okay, okay … Was schlägst du denn vor?"
+    }
+   ]
+  },
+  {
+   "key": "t4ab17321",
+   "segments": [
+    {
+     "voice": "f3",
+     "text": "Stimmt, der Pausenraum ist eine gute Idee. Und was machen wir mit dem Essen?"
+    }
+   ]
+  },
+  {
+   "key": "tc3bdb18d",
+   "segments": [
+    {
+     "voice": "f3",
+     "text": "Wie meinst du das? Alle zusammen?"
+    }
+   ]
+  },
+  {
+   "key": "t1d5e3423",
+   "segments": [
+    {
+     "voice": "f3",
+     "text": "Ich meine doch für die Feier! Wer kümmert sich um das Essen?"
+    }
+   ]
+  },
+  {
+   "key": "t60598e1a",
+   "segments": [
+    {
+     "voice": "f3",
+     "text": "Super! Ich backe einen Kuchen. Und was schenken wir Maria?"
+    }
+   ]
+  },
+  {
+   "key": "t0fb51851",
+   "segments": [
+    {
+     "voice": "f3",
+     "text": "Hey, das ist nicht nett! Maria war zwanzig Jahre bei uns."
+    }
+   ]
+  },
+  {
+   "key": "tcd3aca68",
+   "segments": [
+    {
+     "voice": "f3",
+     "text": "Wem? Entschuldige, das habe ich nicht richtig verstanden."
+    }
+   ]
+  },
+  {
+   "key": "t4280ece2",
+   "segments": [
+    {
+     "voice": "f3",
+     "text": "Das ist eine schöne Idee! Wer sammelt das Geld bei den Kollegen ein?"
+    }
+   ]
+  },
+  {
+   "key": "t635ae612",
+   "segments": [
+    {
+     "voice": "f3",
+     "text": "Hm, ich backe doch schon den Kuchen … Kannst du nicht das Geld einsammeln?"
+    }
+   ]
+  },
+  {
+   "key": "tdc758f89",
+   "segments": [
+    {
+     "voice": "f3",
+     "text": "Das macht nichts. Ich meine: Wer von uns beiden sammelt das Geld ein?"
+    }
+   ]
+  },
+  {
+   "key": "t4836d462",
+   "segments": [
+    {
+     "voice": "f3",
+     "text": "Perfekt. Also: Donnerstag im Pausenraum, jeder bringt etwas mit, und du sammelst das Geld ein. Einverstanden?"
+    }
+   ]
+  },
+  {
+   "key": "t6192f5a4",
+   "segments": [
+    {
+     "voice": "f3",
+     "text": "Bist du jetzt einverstanden oder nicht?"
+    }
+   ]
+  },
+  {
+   "key": "t5bcc3711",
+   "segments": [
+    {
+     "voice": "f3",
+     "text": "Aber wir haben doch gerade Donnerstag ausgemacht! Also, einverstanden?"
+    }
+   ]
+  },
+  {
+   "key": "t4d060308",
+   "segments": [
+    {
+     "voice": "f3",
+     "text": "Super! Maria wird sich bestimmt sehr freuen."
+    }
+   ]
+  },
+  {
+   "key": "tf8051b6d",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Kita Sonnenschein, Hoffmann am Apparat. Guten Morgen!"
+    }
+   ]
+  },
+  {
+   "key": "teba70cd8",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Moment, bitte nicht gleich auflegen! Wer spricht denn da, und was ist mit Leyla?"
+    }
+   ]
+  },
+  {
+   "key": "td6db8c61",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Für Anmeldungen ist die Leitung zuständig. Oder geht Ihr Kind schon zu uns?"
+    }
+   ]
+  },
+  {
+   "key": "t430ff340",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Guten Morgen! Was ist denn los?"
+    }
+   ]
+  },
+  {
+   "key": "tf1ad6d64",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Entschuldigung, wie bitte? Kommt Leyla heute nicht?"
+    }
+   ]
+  },
+  {
+   "key": "td153aa92",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Oh, wie schön! Aber Sie klingen besorgt. Ist alles in Ordnung?"
+    }
+   ]
+  },
+  {
+   "key": "t1fe36d85",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Oh, die Arme! Waren Sie schon beim Kinderarzt?"
+    }
+   ]
+  },
+  {
+   "key": "t7ddc395d",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Ich frage nur, weil gerade einige Kinder krank sind. Bitte bleiben Sie freundlich."
+    }
+   ]
+  },
+  {
+   "key": "tf05016b7",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Wann, sagen Sie? Um elf?"
+    }
+   ]
+  },
+  {
+   "key": "t8ed630e7",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Gut. Bitte sagen Sie uns Bescheid, wenn es etwas Ansteckendes ist."
+    }
+   ]
+  },
+  {
+   "key": "tf4b4ddcb",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Nein, „Bescheid sagen“ heißt: Sie informieren uns. Rufen Sie uns bitte an, ja?"
+    }
+   ]
+  },
+  {
+   "key": "t70515b65",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Bitte? Sie rufen uns an?"
+    }
+   ]
+  },
+  {
+   "key": "t928d950d",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Danke. Wie lange bleibt Leyla wohl zu Hause?"
+    }
+   ]
+  },
+  {
+   "key": "t97b52481",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Natürlich wissen Sie das noch nicht genau. Ich frage nur für unsere Planung."
+    }
+   ]
+  },
+  {
+   "key": "tb1f3a459",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Ich meine: Wie viele Tage bleibt Leyla zu Hause?"
+    }
+   ]
+  },
+  {
+   "key": "t9eb386a9",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Kein Problem. Übrigens: Am Mittwoch ist Elternabend. Kommen Sie trotzdem?"
+    }
+   ]
+  },
+  {
+   "key": "t815adeef",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Entschuldigung, das habe ich nicht ganz verstanden. Kommen Sie am Mittwoch?"
+    }
+   ]
+  },
+  {
+   "key": "tfca2f094",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Ach so, nein: Der Elternabend ist ein Treffen für alle Eltern hier in der Kita."
+    }
+   ]
+  },
+  {
+   "key": "tbc7b4fcb",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Prima. Dann gute Besserung für Leyla!"
+    }
+   ]
+  },
+  {
+   "key": "t95e94475",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Ich bin doch gar nicht krank! Aber danke."
+    }
+   ]
+  },
+  {
+   "key": "t6c333c2f",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Bitte? Das habe ich jetzt nicht verstanden."
+    }
+   ]
+  },
+  {
+   "key": "t832eb682",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Gern. Auf Wiederhören!"
+    }
+   ]
+  },
+  {
+   "key": "t1d0d54ad",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Der Zug nach Dortmund fährt um vierzehn Uhr zwölf von Gleis sieben."
+    }
+   ]
+  },
+  {
+   "key": "tea8d045a",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Mein Termin ist am Dienstag um Viertel vor neun."
+    }
+   ]
+  },
+  {
+   "key": "t72e97ee5",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Der Deutschkurs beginnt morgen um halb acht."
+    }
+   ]
+  },
+  {
+   "key": "t7f2bafe5",
+   "segments": [
+    {
+     "voice": "f3",
+     "text": "Die Apotheke öffnet am Samstag um neun Uhr."
+    }
+   ]
+  },
+  {
+   "key": "t60c3caa0",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Das Flugzeug aus Istanbul landet um sechzehn Uhr fünfundvierzig."
+    }
+   ]
+  },
+  {
+   "key": "tfb1d0333",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Der nächste Bus fährt um dreizehn Uhr dreißig."
+    }
+   ]
+  },
+  {
+   "key": "tbb25d539",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Unsere Praxis ist heute bis achtzehn Uhr geöffnet."
+    }
+   ]
+  },
+  {
+   "key": "t59404b2b",
+   "segments": [
+    {
+     "voice": "m3",
+     "text": "Treffen wir uns um Viertel nach drei vor dem Kino?"
+    }
+   ]
+  },
+  {
+   "key": "t872ae37a",
+   "segments": [
+    {
+     "voice": "f3",
+     "text": "Ich hole die Kinder um zwanzig nach zwei vom Kindergarten ab."
+    }
+   ]
+  },
+  {
+   "key": "t93650207",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Hier ist Herr Becker. Unser Techniker kommt am Mittwoch um zehn nach elf."
+    }
+   ]
+  },
+  {
+   "key": "tef5552c7",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Achtung an Gleis drei: Der ICE nach München fährt heute um neunzehn Uhr achtzehn."
+    }
+   ]
+  },
+  {
+   "key": "t0fca9286",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Der Film beginnt um zwanzig Uhr fünfzehn."
+    }
+   ]
+  },
+  {
+   "key": "t42615bba",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Die Pause ist um fünf vor halb elf zu Ende."
+    }
+   ]
+  },
+  {
+   "key": "te06098b7",
+   "segments": [
+    {
+     "voice": "f3",
+     "text": "Bitte kommen Sie am Montag um zehn Uhr dreißig ins Jobcenter."
+    }
+   ]
+  },
+  {
+   "key": "t1b2eb8a0",
+   "segments": [
+    {
+     "voice": "m3",
+     "text": "Ich fange jeden Morgen um sechs Uhr mit der Arbeit an."
+    }
+   ]
+  },
+  {
+   "key": "te4400e19",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Der Supermarkt schließt heute schon um sechzehn Uhr."
+    }
+   ]
+  },
+  {
+   "key": "t1a395eb1",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Die Straßenbahnlinie hundertsieben fährt um siebzehn Uhr dreiundzwanzig."
+    }
+   ]
+  },
+  {
+   "key": "ted1a7767",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Das Elterngespräch ist am Donnerstag um halb fünf."
+    }
+   ]
+  },
+  {
+   "key": "t93a8c169",
+   "segments": [
+    {
+     "voice": "f3",
+     "text": "Die Sprechstunde beginnt um Viertel nach acht."
+    }
+   ]
+  },
+  {
+   "key": "t2589e015",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Der Regionalexpress aus Hagen kommt um elf Uhr siebenundvierzig an."
+    }
+   ]
+  },
+  {
+   "key": "t7f5d474f",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Ihr Flug nach Athen startet um sechs Uhr fünfzig."
+    }
+   ]
+  },
+  {
+   "key": "t8ee6b880",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Nehmen Sie die Tablette bitte jeden Abend um einundzwanzig Uhr."
+    }
+   ]
+  },
+  {
+   "key": "t952224ee",
+   "segments": [
+    {
+     "voice": "m3",
+     "text": "Das Spiel beginnt am Sonntag um fünfzehn Uhr dreißig."
+    }
+   ]
+  },
+  {
+   "key": "t468e0129",
+   "segments": [
+    {
+     "voice": "f3",
+     "text": "Der Elternabend findet am Mittwoch um neunzehn Uhr statt."
+    }
+   ]
+  },
+  {
+   "key": "te8e83985",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Schatz, ich komme heute erst um zehn nach sieben nach Hause."
+    }
+   ]
+  },
+  {
+   "key": "t5517e301",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Die S-Bahn nach Düsseldorf fährt um acht Uhr vierundfünfzig."
+    }
+   ]
+  },
+  {
+   "key": "t84af200d",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Die Besprechung ist morgen um Viertel vor zwölf."
+    }
+   ]
+  },
+  {
+   "key": "t937dd118",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Ihr Termin beim Zahnarzt ist am Freitag um vierzehn Uhr vierzig."
+    }
+   ]
+  },
+  {
+   "key": "t3118060c",
+   "segments": [
+    {
+     "voice": "f3",
+     "text": "Das Bürgerbüro öffnet montags um sieben Uhr dreißig."
+    }
+   ]
+  },
+  {
+   "key": "t690abc4c",
+   "segments": [
+    {
+     "voice": "m3",
+     "text": "Der Ausflug geht um halb neun am Bahnhof los."
+    }
+   ]
+  },
+  {
+   "key": "t1eba2ea3",
+   "segments": [
+    {
+     "voice": "f3",
+     "text": "Die Äpfel kosten heute nur zwei Euro neunundvierzig das Kilo."
+    }
+   ]
+  },
+  {
+   "key": "t1dd1368a",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Die Jacke kostet neunundfünfzig Euro."
+    }
+   ]
+  },
+  {
+   "key": "ta7cd60bd",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Eine Fahrkarte nach Köln kostet sechzehn Euro achtzig."
+    }
+   ]
+  },
+  {
+   "key": "tec4579f9",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Das Brot kostet drei Euro fünfzehn."
+    }
+   ]
+  },
+  {
+   "key": "td9148b92",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Die Wohnung kostet sechshundertfünfzig Euro warm."
+    }
+   ]
+  },
+  {
+   "key": "t8719fbb4",
+   "segments": [
+    {
+     "voice": "f3",
+     "text": "Die Waschmaschine kostet im Angebot nur dreihundertneunundneunzig Euro."
+    }
+   ]
+  },
+  {
+   "key": "t3a20f917",
+   "segments": [
+    {
+     "voice": "m3",
+     "text": "Das macht zusammen siebzehn Euro dreißig, bitte."
+    }
+   ]
+  },
+  {
+   "key": "t8a0395a5",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Ein Liter Milch kostet neunundneunzig Cent."
+    }
+   ]
+  },
+  {
+   "key": "t58f51a49",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Ein Haarschnitt kostet bei uns fünfundzwanzig Euro."
+    }
+   ]
+  },
+  {
+   "key": "t113a9530",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Das Monatsticket kostet dreiundsechzig Euro."
+    }
+   ]
+  },
+  {
+   "key": "t9ee33f8c",
+   "segments": [
+    {
+     "voice": "f3",
+     "text": "Die Tomaten kosten eins neunundsiebzig."
+    }
+   ]
+  },
+  {
+   "key": "tfece5248",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Das gebrauchte Fahrrad kostet hundertzwanzig Euro."
+    }
+   ]
+  },
+  {
+   "key": "t94b04671",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Ein Kaffee kostet zwei Euro zwanzig."
+    }
+   ]
+  },
+  {
+   "key": "t6e15f171",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Das Handy kostet nur zweihundertneunundvierzig Euro."
+    }
+   ]
+  },
+  {
+   "key": "t56f3a33f",
+   "segments": [
+    {
+     "voice": "m3",
+     "text": "Die Pizza Margherita kostet acht Euro fünfzig."
+    }
+   ]
+  },
+  {
+   "key": "tb72890a8",
+   "segments": [
+    {
+     "voice": "f3",
+     "text": "Die Reparatur kostet ungefähr achtzig Euro."
+    }
+   ]
+  },
+  {
+   "key": "t4fa0401e",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Ein Kilo Hackfleisch kostet heute sechs Euro neunundneunzig."
+    }
+   ]
+  },
+  {
+   "key": "t5812ce93",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Der Schwimmkurs für Kinder kostet fünfundsiebzig Euro."
+    }
+   ]
+  },
+  {
+   "key": "t6ae289c5",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Die Schuhe kosten vierunddreißig Euro neunzig."
+    }
+   ]
+  },
+  {
+   "key": "tb7c29597",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Die Nebenkosten betragen hundertachtzig Euro im Monat."
+    }
+   ]
+  },
+  {
+   "key": "t37c2f862",
+   "segments": [
+    {
+     "voice": "f3",
+     "text": "Eine Briefmarke für einen Brief kostet fünfundneunzig Cent."
+    }
+   ]
+  },
+  {
+   "key": "t5f368e46",
+   "segments": [
+    {
+     "voice": "m3",
+     "text": "Das Sofa kostet tausendzweihundert Euro."
+    }
+   ]
+  },
+  {
+   "key": "t4d898c5c",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Die Butter kostet heute eins neunundzwanzig."
+    }
+   ]
+  },
+  {
+   "key": "t84369f77",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Ein Einzelticket kostet drei Euro dreißig."
+    }
+   ]
+  },
+  {
+   "key": "tc5bd39fb",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Der Fernseher ist reduziert und kostet jetzt vierhundertneunzig Euro."
+    }
+   ]
+  },
+  {
+   "key": "t38790b13",
+   "segments": [
+    {
+     "voice": "f3",
+     "text": "Parken kostet hier einen Euro fünfzig pro Stunde."
+    }
+   ]
+  },
+  {
+   "key": "tdd6cd271",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Die Gebühr beträgt zweiundzwanzig Euro fünfzig."
+    }
+   ]
+  },
+  {
+   "key": "t72870d3c",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Die Petersilie kostet neunundachtzig Cent."
+    }
+   ]
+  },
+  {
+   "key": "t82f02db5",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Ein Doppelzimmer kostet fünfundachtzig Euro pro Nacht."
+    }
+   ]
+  },
+  {
+   "key": "teee41c1e",
+   "segments": [
+    {
+     "voice": "m3",
+     "text": "Sie bekommen drei Euro sechzig zurück."
+    }
+   ]
+  },
+  {
+   "key": "tfca7c5ba",
+   "segments": [
+    {
+     "voice": "f3",
+     "text": "Der Eintritt ins Schwimmbad kostet vier Euro siebzig."
+    }
+   ]
+  },
+  {
+   "key": "t90861b00",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Rufen Sie uns an unter null zwei null eins, drei vier fünf sechs sieben acht."
+    }
+   ]
+  },
+  {
+   "key": "t6a94f87b",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Hier ist Herr Yılmaz. Meine Handynummer ist null eins sieben drei, vier zwei sechs, neun eins acht null."
+    }
+   ]
+  },
+  {
+   "key": "t7835b58e",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Die Praxis erreichen Sie unter null zwei drei drei zwei, vierundzwanzig, achtundsechzig."
+    }
+   ]
+  },
+  {
+   "key": "t0e7f457c",
+   "segments": [
+    {
+     "voice": "f3",
+     "text": "Meine Durchwahl ist die drei sieben eins."
+    }
+   ]
+  },
+  {
+   "key": "t6434922f",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Meine Nummer ist null eins fünf sieben, achtundneunzig, sechsundvierzig, dreiunddreißig."
+    }
+   ]
+  },
+  {
+   "key": "t229ff0af",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Bitte rufen Sie zurück unter null zwei null zwei, neun acht sieben sechs fünf."
+    }
+   ]
+  },
+  {
+   "key": "t7b4ec14f",
+   "segments": [
+    {
+     "voice": "m3",
+     "text": "Der Hausmeister hat die Nummer null eins sechs null, fünf fünf drei, zwei zwei eins."
+    }
+   ]
+  },
+  {
+   "key": "t9fd26f2f",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Unsere Servicenummer lautet null acht null null, eins zwei drei, vier fünf sechs."
+    }
+   ]
+  },
+  {
+   "key": "t87ecc238",
+   "segments": [
+    {
+     "voice": "f3",
+     "text": "Hallo, hier ist Frau Novak. Meine Handynummer ist null eins sieben sechs, dreiundsiebzig, vierzehn, fünfundfünfzig."
+    }
+   ]
+  },
+  {
+   "key": "tff51cd97",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Die Schule erreichen Sie unter null zwei drei drei zwei, fünf eins sechs null."
+    }
+   ]
+  },
+  {
+   "key": "t69f8a92f",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Sie erreichen mich unter null zwo null eins, zwo drei drei sieben."
+    }
+   ]
+  },
+  {
+   "key": "t3db374bd",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Ein Taxi bestellen Sie unter null zwei null eins, sechsundachtzig, fünfundachtzig."
+    }
+   ]
+  },
+  {
+   "key": "t42c06957",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Ihre Kundennummer ist vier sieben eins neun drei."
+    }
+   ]
+  },
+  {
+   "key": "t7a08d03a",
+   "segments": [
+    {
+     "voice": "m3",
+     "text": "Ich wohne in der Hauptstraße einundachtzig."
+    }
+   ]
+  },
+  {
+   "key": "ta9f99cc5",
+   "segments": [
+    {
+     "voice": "f3",
+     "text": "Unsere neue Adresse ist Bahnhofstraße dreizehn."
+    }
+   ]
+  },
+  {
+   "key": "tee23b417",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Die Arztpraxis ist in der Goethestraße zwölf a."
+    }
+   ]
+  },
+  {
+   "key": "te0c1b854",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Die Postleitzahl von Gevelsberg ist fünf acht zwei acht fünf."
+    }
+   ]
+  },
+  {
+   "key": "t8ca88b45",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Ich wohne jetzt in der Schillerstraße sechzig."
+    }
+   ]
+  },
+  {
+   "key": "te7ed2216",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Der Kindergarten ist in der Lindenstraße siebenundvierzig."
+    }
+   ]
+  },
+  {
+   "key": "td74c172a",
+   "segments": [
+    {
+     "voice": "f3",
+     "text": "Kommen Sie bitte in die Kirchstraße fünfzehn."
+    }
+   ]
+  },
+  {
+   "key": "td9302d6e",
+   "segments": [
+    {
+     "voice": "m3",
+     "text": "Die Firma ist in der Industriestraße hundertzwölf."
+    }
+   ]
+  },
+  {
+   "key": "t400ed64f",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Die Postleitzahl ist vier fünf eins drei null."
+    }
+   ]
+  },
+  {
+   "key": "td3ccbf3f",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Notieren Sie bitte meine Nummer: null eins fünf eins, zwei sechs drei, vier vier acht."
+    }
+   ]
+  },
+  {
+   "key": "t1f6a7920",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Das Paket ist für die Gartenstraße neunzehn."
+    }
+   ]
+  },
+  {
+   "key": "t6cda2428",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Wir wohnen in der Ringstraße zweiundsechzig."
+    }
+   ]
+  },
+  {
+   "key": "tbc531304",
+   "segments": [
+    {
+     "voice": "f3",
+     "text": "Die Kita hat die Telefonnummer null zwei drei drei zwei, sieben null neun drei."
+    }
+   ]
+  },
+  {
+   "key": "t2accfa6e",
+   "segments": [
+    {
+     "voice": "m3",
+     "text": "Hier ist Herr Kowalski. Sie erreichen mich unter null eins sieben zwei, achtzehn, siebenundsechzig, neunzig."
+    }
+   ]
+  },
+  {
+   "key": "t617467af",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Ich wohne in der Mozartstraße dreiunddreißig b."
+    }
+   ]
+  },
+  {
+   "key": "td3554356",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Die Schule liegt in der Parkstraße siebzig."
+    }
+   ]
+  },
+  {
+   "key": "t9ab2d56e",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Unsere Nummer ist null zwei null eins, zweiundvierzig, null null, dreizehn."
+    }
+   ]
+  },
+  {
+   "key": "tcb3e4e3b",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Der Regionalexpress nach Hamm fährt heute von Gleis sechzehn."
+    }
+   ]
+  },
+  {
+   "key": "t3b5d4099",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Die Prüfung ist in Zimmer zweihundertvierzehn."
+    }
+   ]
+  },
+  {
+   "key": "tedb15f9c",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Zum Krankenhaus fahren Sie mit der Buslinie hundertsechsundvierzig."
+    }
+   ]
+  },
+  {
+   "key": "tce21ea7c",
+   "segments": [
+    {
+     "voice": "f3",
+     "text": "Die Praxis ist im dritten Stock."
+    }
+   ]
+  },
+  {
+   "key": "t70c92195",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Die Nummer siebenundachtzig bitte zu Schalter vier."
+    }
+   ]
+  },
+  {
+   "key": "tca9161fa",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Der ICE aus Berlin kommt heute an Gleis dreizehn an."
+    }
+   ]
+  },
+  {
+   "key": "t771a179b",
+   "segments": [
+    {
+     "voice": "m3",
+     "text": "Herr Schulz wartet in Raum hundertachtzehn."
+    }
+   ]
+  },
+  {
+   "key": "t079cfdb5",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Ich sitze in Wagen sieben auf Platz fünfundsechzig."
+    }
+   ]
+  },
+  {
+   "key": "tb1b9a2e5",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Ihr Zimmer hat die Nummer dreihundertzwölf."
+    }
+   ]
+  },
+  {
+   "key": "t28ff5167",
+   "segments": [
+    {
+     "voice": "f3",
+     "text": "Ich fahre jeden Tag mit der Straßenbahn achtzehn."
+    }
+   ]
+  },
+  {
+   "key": "ta95892d6",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Zur Feier kommen ungefähr vierzig Personen."
+    }
+   ]
+  },
+  {
+   "key": "td8cdf5b1",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Mein Sohn ist siebzehn Jahre alt."
+    }
+   ]
+  },
+  {
+   "key": "t3e361f72",
+   "segments": [
+    {
+     "voice": "m3",
+     "text": "Bis nach Bochum sind es noch dreiunddreißig Kilometer."
+    }
+   ]
+  },
+  {
+   "key": "te8530ee5",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Ich arbeite fünfundzwanzig Stunden pro Woche."
+    }
+   ]
+  },
+  {
+   "key": "t777a090a",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Ihr Termin ist am dritten Mai."
+    }
+   ]
+  },
+  {
+   "key": "te1903fd6",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Ich habe am siebzehnten März Geburtstag."
+    }
+   ]
+  },
+  {
+   "key": "t158b9ab7",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Der neue Kurs beginnt am ersten September."
+    }
+   ]
+  },
+  {
+   "key": "t367ce15a",
+   "segments": [
+    {
+     "voice": "f3",
+     "text": "Das Sommerfest ist am zwanzigsten Juni."
+    }
+   ]
+  },
+  {
+   "key": "tf3a38593",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Ich bin am zwölften zehnten neunzehnhundertneunundachtzig geboren."
+    }
+   ]
+  },
+  {
+   "key": "tcca9c37f",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Bitte schicken Sie die Unterlagen bis zum fünfzehnten Januar."
+    }
+   ]
+  },
+  {
+   "key": "tcc044458",
+   "segments": [
+    {
+     "voice": "m3",
+     "text": "Wir ziehen am achtundzwanzigsten Februar um."
+    }
+   ]
+  },
+  {
+   "key": "tf9104b73",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Die Prüfung findet am vierten Dezember statt."
+    }
+   ]
+  },
+  {
+   "key": "t5b4b71b5",
+   "segments": [
+    {
+     "voice": "f3",
+     "text": "Ich habe am dreißigsten April einen Termin beim Arzt."
+    }
+   ]
+  },
+  {
+   "key": "t285be614",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Heute ist der einundzwanzigste Oktober."
+    }
+   ]
+  },
+  {
+   "key": "t8ec6ef59",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Die Sommerferien beginnen am siebten Juli."
+    }
+   ]
+  },
+  {
+   "key": "tbcfdeb61",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Ich arbeite seit dem zweiten August bei der Firma."
+    }
+   ]
+  },
+  {
+   "key": "t3c07aba6",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Ich bin im Jahr zweitausendfünfzehn nach Deutschland gekommen."
+    }
+   ]
+  },
+  {
+   "key": "tbe9d9703",
+   "segments": [
+    {
+     "voice": "m3",
+     "text": "Mein Vater ist neunzehnhundertvierundsechzig geboren."
+    }
+   ]
+  },
+  {
+   "key": "t38e520df",
+   "segments": [
+    {
+     "voice": "f3",
+     "text": "Der Mietvertrag endet am einunddreißigsten Dezember."
+    }
+   ]
+  },
+  {
+   "key": "t600f9a23",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Ihre Lieferung kommt am neunten November."
+    }
+   ]
   }
  ]
 }

@@ -81,6 +81,7 @@ SECTIONS = [
     ('ueben', 'Deutsch üben', 'Sprechen und Schreiben mit Sofort-Korrektur, Satzanfängen und Mustertexten. Kostenlos.'),
     ('hoeren', 'Hörtraining DTZ und B2', 'Ansagen, Mailbox-Nachrichten und Gespräche mit Aufgaben wie in der Prüfung.'),
     ('lesen', 'Leseverstehen DTZ und B2', 'Mitteilungen, Anzeigen, E-Mails und Artikel verstehen – mit Fragen und Erklärungen. Jede Woche ein neuer Text.'),
+    ('spiele', 'Lernspiele: Deutsch spielend üben', 'Zahlen-Ohr, Dialog-Simulator, Verb-Rennen, Wort-Memory, Der-die-das-Wisch, Wo oder wohin? und Brief-Baukasten – am Handy und am Computer.'),
     ('bild', 'Bild beschreiben – DTZ-Trainer', 'Adjektivendungen und Relativsätze an vier Bildern üben – mit Musterbeschreibung zum Anhören und Arbeitsblättern.'),
     ('challenge', 'Tages-Challenge: 10 Aufgaben, jeden Tag neu', 'Artikel, Verben, Satzbau, Wortschatz und „Leben in Deutschland“ – 3 Minuten am Tag. Wie lang wird deine Lernserie?'),
     ('lid', 'Leben in Deutschland: alle 310 Fragen', 'Kostenloser Trainer für den Test „Leben in Deutschland“ – mit Lernmodus und Prüfungssimulation.'),

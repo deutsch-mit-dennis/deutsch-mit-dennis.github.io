@@ -1,0 +1,486 @@
+[
+ {
+  "text": "Der Zug nach Dortmund fährt um vierzehn Uhr zwölf von Gleis sieben.",
+  "voice": "f1"
+ },
+ {
+  "text": "Mein Termin ist am Dienstag um Viertel vor neun.",
+  "voice": "f2"
+ },
+ {
+  "text": "Der Deutschkurs beginnt morgen um halb acht.",
+  "voice": "m1"
+ },
+ {
+  "text": "Die Apotheke öffnet am Samstag um neun Uhr.",
+  "voice": "f3"
+ },
+ {
+  "text": "Das Flugzeug aus Istanbul landet um sechzehn Uhr fünfundvierzig.",
+  "voice": "m2"
+ },
+ {
+  "text": "Der nächste Bus fährt um dreizehn Uhr dreißig.",
+  "voice": "f1"
+ },
+ {
+  "text": "Unsere Praxis ist heute bis achtzehn Uhr geöffnet.",
+  "voice": "f2"
+ },
+ {
+  "text": "Treffen wir uns um Viertel nach drei vor dem Kino?",
+  "voice": "m3"
+ },
+ {
+  "text": "Ich hole die Kinder um zwanzig nach zwei vom Kindergarten ab.",
+  "voice": "f3"
+ },
+ {
+  "text": "Hier ist Herr Becker. Unser Techniker kommt am Mittwoch um zehn nach elf.",
+  "voice": "m1"
+ },
+ {
+  "text": "Achtung an Gleis drei: Der ICE nach München fährt heute um neunzehn Uhr achtzehn.",
+  "voice": "f1"
+ },
+ {
+  "text": "Der Film beginnt um zwanzig Uhr fünfzehn.",
+  "voice": "f2"
+ },
+ {
+  "text": "Die Pause ist um fünf vor halb elf zu Ende.",
+  "voice": "m2"
+ },
+ {
+  "text": "Bitte kommen Sie am Montag um zehn Uhr dreißig ins Jobcenter.",
+  "voice": "f3"
+ },
+ {
+  "text": "Ich fange jeden Morgen um sechs Uhr mit der Arbeit an.",
+  "voice": "m3"
+ },
+ {
+  "text": "Der Supermarkt schließt heute schon um sechzehn Uhr.",
+  "voice": "f1"
+ },
+ {
+  "text": "Die Straßenbahnlinie hundertsieben fährt um siebzehn Uhr dreiundzwanzig.",
+  "voice": "f2"
+ },
+ {
+  "text": "Das Elterngespräch ist am Donnerstag um halb fünf.",
+  "voice": "m1"
+ },
+ {
+  "text": "Die Sprechstunde beginnt um Viertel nach acht.",
+  "voice": "f3"
+ },
+ {
+  "text": "Der Regionalexpress aus Hagen kommt um elf Uhr siebenundvierzig an.",
+  "voice": "m2"
+ },
+ {
+  "text": "Ihr Flug nach Athen startet um sechs Uhr fünfzig.",
+  "voice": "f1"
+ },
+ {
+  "text": "Nehmen Sie die Tablette bitte jeden Abend um einundzwanzig Uhr.",
+  "voice": "f2"
+ },
+ {
+  "text": "Das Spiel beginnt am Sonntag um fünfzehn Uhr dreißig.",
+  "voice": "m3"
+ },
+ {
+  "text": "Der Elternabend findet am Mittwoch um neunzehn Uhr statt.",
+  "voice": "f3"
+ },
+ {
+  "text": "Schatz, ich komme heute erst um zehn nach sieben nach Hause.",
+  "voice": "m1"
+ },
+ {
+  "text": "Die S-Bahn nach Düsseldorf fährt um acht Uhr vierundfünfzig.",
+  "voice": "f1"
+ },
+ {
+  "text": "Die Besprechung ist morgen um Viertel vor zwölf.",
+  "voice": "f2"
+ },
+ {
+  "text": "Ihr Termin beim Zahnarzt ist am Freitag um vierzehn Uhr vierzig.",
+  "voice": "m2"
+ },
+ {
+  "text": "Das Bürgerbüro öffnet montags um sieben Uhr dreißig.",
+  "voice": "f3"
+ },
+ {
+  "text": "Der Ausflug geht um halb neun am Bahnhof los.",
+  "voice": "m3"
+ },
+ {
+  "text": "Die Äpfel kosten heute nur zwei Euro neunundvierzig das Kilo.",
+  "voice": "f3"
+ },
+ {
+  "text": "Die Jacke kostet neunundfünfzig Euro.",
+  "voice": "m1"
+ },
+ {
+  "text": "Eine Fahrkarte nach Köln kostet sechzehn Euro achtzig.",
+  "voice": "f1"
+ },
+ {
+  "text": "Das Brot kostet drei Euro fünfzehn.",
+  "voice": "f2"
+ },
+ {
+  "text": "Die Wohnung kostet sechshundertfünfzig Euro warm.",
+  "voice": "m2"
+ },
+ {
+  "text": "Die Waschmaschine kostet im Angebot nur dreihundertneunundneunzig Euro.",
+  "voice": "f3"
+ },
+ {
+  "text": "Das macht zusammen siebzehn Euro dreißig, bitte.",
+  "voice": "m3"
+ },
+ {
+  "text": "Ein Liter Milch kostet neunundneunzig Cent.",
+  "voice": "f1"
+ },
+ {
+  "text": "Ein Haarschnitt kostet bei uns fünfundzwanzig Euro.",
+  "voice": "f2"
+ },
+ {
+  "text": "Das Monatsticket kostet dreiundsechzig Euro.",
+  "voice": "m1"
+ },
+ {
+  "text": "Die Tomaten kosten eins neunundsiebzig.",
+  "voice": "f3"
+ },
+ {
+  "text": "Das gebrauchte Fahrrad kostet hundertzwanzig Euro.",
+  "voice": "m2"
+ },
+ {
+  "text": "Ein Kaffee kostet zwei Euro zwanzig.",
+  "voice": "f1"
+ },
+ {
+  "text": "Das Handy kostet nur zweihundertneunundvierzig Euro.",
+  "voice": "f2"
+ },
+ {
+  "text": "Die Pizza Margherita kostet acht Euro fünfzig.",
+  "voice": "m3"
+ },
+ {
+  "text": "Die Reparatur kostet ungefähr achtzig Euro.",
+  "voice": "f3"
+ },
+ {
+  "text": "Ein Kilo Hackfleisch kostet heute sechs Euro neunundneunzig.",
+  "voice": "m1"
+ },
+ {
+  "text": "Der Schwimmkurs für Kinder kostet fünfundsiebzig Euro.",
+  "voice": "f1"
+ },
+ {
+  "text": "Die Schuhe kosten vierunddreißig Euro neunzig.",
+  "voice": "f2"
+ },
+ {
+  "text": "Die Nebenkosten betragen hundertachtzig Euro im Monat.",
+  "voice": "m2"
+ },
+ {
+  "text": "Eine Briefmarke für einen Brief kostet fünfundneunzig Cent.",
+  "voice": "f3"
+ },
+ {
+  "text": "Das Sofa kostet tausendzweihundert Euro.",
+  "voice": "m3"
+ },
+ {
+  "text": "Die Butter kostet heute eins neunundzwanzig.",
+  "voice": "f1"
+ },
+ {
+  "text": "Ein Einzelticket kostet drei Euro dreißig.",
+  "voice": "f2"
+ },
+ {
+  "text": "Der Fernseher ist reduziert und kostet jetzt vierhundertneunzig Euro.",
+  "voice": "m1"
+ },
+ {
+  "text": "Parken kostet hier einen Euro fünfzig pro Stunde.",
+  "voice": "f3"
+ },
+ {
+  "text": "Die Gebühr beträgt zweiundzwanzig Euro fünfzig.",
+  "voice": "m2"
+ },
+ {
+  "text": "Die Petersilie kostet neunundachtzig Cent.",
+  "voice": "f1"
+ },
+ {
+  "text": "Ein Doppelzimmer kostet fünfundachtzig Euro pro Nacht.",
+  "voice": "f2"
+ },
+ {
+  "text": "Sie bekommen drei Euro sechzig zurück.",
+  "voice": "m3"
+ },
+ {
+  "text": "Der Eintritt ins Schwimmbad kostet vier Euro siebzig.",
+  "voice": "f3"
+ },
+ {
+  "text": "Rufen Sie uns an unter null zwei null eins, drei vier fünf sechs sieben acht.",
+  "voice": "f2"
+ },
+ {
+  "text": "Hier ist Herr Yılmaz. Meine Handynummer ist null eins sieben drei, vier zwei sechs, neun eins acht null.",
+  "voice": "m1"
+ },
+ {
+  "text": "Die Praxis erreichen Sie unter null zwei drei drei zwei, vierundzwanzig, achtundsechzig.",
+  "voice": "f1"
+ },
+ {
+  "text": "Meine Durchwahl ist die drei sieben eins.",
+  "voice": "f3"
+ },
+ {
+  "text": "Meine Nummer ist null eins fünf sieben, achtundneunzig, sechsundvierzig, dreiunddreißig.",
+  "voice": "m2"
+ },
+ {
+  "text": "Bitte rufen Sie zurück unter null zwei null zwei, neun acht sieben sechs fünf.",
+  "voice": "f2"
+ },
+ {
+  "text": "Der Hausmeister hat die Nummer null eins sechs null, fünf fünf drei, zwei zwei eins.",
+  "voice": "m3"
+ },
+ {
+  "text": "Unsere Servicenummer lautet null acht null null, eins zwei drei, vier fünf sechs.",
+  "voice": "f1"
+ },
+ {
+  "text": "Hallo, hier ist Frau Novak. Meine Handynummer ist null eins sieben sechs, dreiundsiebzig, vierzehn, fünfundfünfzig.",
+  "voice": "f3"
+ },
+ {
+  "text": "Die Schule erreichen Sie unter null zwei drei drei zwei, fünf eins sechs null.",
+  "voice": "m1"
+ },
+ {
+  "text": "Sie erreichen mich unter null zwo null eins, zwo drei drei sieben.",
+  "voice": "f2"
+ },
+ {
+  "text": "Ein Taxi bestellen Sie unter null zwei null eins, sechsundachtzig, fünfundachtzig.",
+  "voice": "m2"
+ },
+ {
+  "text": "Ihre Kundennummer ist vier sieben eins neun drei.",
+  "voice": "f1"
+ },
+ {
+  "text": "Ich wohne in der Hauptstraße einundachtzig.",
+  "voice": "m3"
+ },
+ {
+  "text": "Unsere neue Adresse ist Bahnhofstraße dreizehn.",
+  "voice": "f3"
+ },
+ {
+  "text": "Die Arztpraxis ist in der Goethestraße zwölf a.",
+  "voice": "m1"
+ },
+ {
+  "text": "Die Postleitzahl von Gevelsberg ist fünf acht zwei acht fünf.",
+  "voice": "f2"
+ },
+ {
+  "text": "Ich wohne jetzt in der Schillerstraße sechzig.",
+  "voice": "m2"
+ },
+ {
+  "text": "Der Kindergarten ist in der Lindenstraße siebenundvierzig.",
+  "voice": "f1"
+ },
+ {
+  "text": "Kommen Sie bitte in die Kirchstraße fünfzehn.",
+  "voice": "f3"
+ },
+ {
+  "text": "Die Firma ist in der Industriestraße hundertzwölf.",
+  "voice": "m3"
+ },
+ {
+  "text": "Die Postleitzahl ist vier fünf eins drei null.",
+  "voice": "f2"
+ },
+ {
+  "text": "Notieren Sie bitte meine Nummer: null eins fünf eins, zwei sechs drei, vier vier acht.",
+  "voice": "m1"
+ },
+ {
+  "text": "Das Paket ist für die Gartenstraße neunzehn.",
+  "voice": "f1"
+ },
+ {
+  "text": "Wir wohnen in der Ringstraße zweiundsechzig.",
+  "voice": "m2"
+ },
+ {
+  "text": "Die Kita hat die Telefonnummer null zwei drei drei zwei, sieben null neun drei.",
+  "voice": "f3"
+ },
+ {
+  "text": "Hier ist Herr Kowalski. Sie erreichen mich unter null eins sieben zwei, achtzehn, siebenundsechzig, neunzig.",
+  "voice": "m3"
+ },
+ {
+  "text": "Ich wohne in der Mozartstraße dreiunddreißig b.",
+  "voice": "f2"
+ },
+ {
+  "text": "Die Schule liegt in der Parkstraße siebzig.",
+  "voice": "f1"
+ },
+ {
+  "text": "Unsere Nummer ist null zwei null eins, zweiundvierzig, null null, dreizehn.",
+  "voice": "m1"
+ },
+ {
+  "text": "Der Regionalexpress nach Hamm fährt heute von Gleis sechzehn.",
+  "voice": "f1"
+ },
+ {
+  "text": "Die Prüfung ist in Zimmer zweihundertvierzehn.",
+  "voice": "m2"
+ },
+ {
+  "text": "Zum Krankenhaus fahren Sie mit der Buslinie hundertsechsundvierzig.",
+  "voice": "f2"
+ },
+ {
+  "text": "Die Praxis ist im dritten Stock.",
+  "voice": "f3"
+ },
+ {
+  "text": "Die Nummer siebenundachtzig bitte zu Schalter vier.",
+  "voice": "m1"
+ },
+ {
+  "text": "Der ICE aus Berlin kommt heute an Gleis dreizehn an.",
+  "voice": "f1"
+ },
+ {
+  "text": "Herr Schulz wartet in Raum hundertachtzehn.",
+  "voice": "m3"
+ },
+ {
+  "text": "Ich sitze in Wagen sieben auf Platz fünfundsechzig.",
+  "voice": "f2"
+ },
+ {
+  "text": "Ihr Zimmer hat die Nummer dreihundertzwölf.",
+  "voice": "m2"
+ },
+ {
+  "text": "Ich fahre jeden Tag mit der Straßenbahn achtzehn.",
+  "voice": "f3"
+ },
+ {
+  "text": "Zur Feier kommen ungefähr vierzig Personen.",
+  "voice": "m1"
+ },
+ {
+  "text": "Mein Sohn ist siebzehn Jahre alt.",
+  "voice": "f1"
+ },
+ {
+  "text": "Bis nach Bochum sind es noch dreiunddreißig Kilometer.",
+  "voice": "m3"
+ },
+ {
+  "text": "Ich arbeite fünfundzwanzig Stunden pro Woche.",
+  "voice": "f2"
+ },
+ {
+  "text": "Ihr Termin ist am dritten Mai.",
+  "voice": "f1"
+ },
+ {
+  "text": "Ich habe am siebzehnten März Geburtstag.",
+  "voice": "m1"
+ },
+ {
+  "text": "Der neue Kurs beginnt am ersten September.",
+  "voice": "f2"
+ },
+ {
+  "text": "Das Sommerfest ist am zwanzigsten Juni.",
+  "voice": "f3"
+ },
+ {
+  "text": "Ich bin am zwölften zehnten neunzehnhundertneunundachtzig geboren.",
+  "voice": "m2"
+ },
+ {
+  "text": "Bitte schicken Sie die Unterlagen bis zum fünfzehnten Januar.",
+  "voice": "f1"
+ },
+ {
+  "text": "Wir ziehen am achtundzwanzigsten Februar um.",
+  "voice": "m3"
+ },
+ {
+  "text": "Die Prüfung findet am vierten Dezember statt.",
+  "voice": "f2"
+ },
+ {
+  "text": "Ich habe am dreißigsten April einen Termin beim Arzt.",
+  "voice": "f3"
+ },
+ {
+  "text": "Heute ist der einundzwanzigste Oktober.",
+  "voice": "m1"
+ },
+ {
+  "text": "Die Sommerferien beginnen am siebten Juli.",
+  "voice": "f1"
+ },
+ {
+  "text": "Ich arbeite seit dem zweiten August bei der Firma.",
+  "voice": "m2"
+ },
+ {
+  "text": "Ich bin im Jahr zweitausendfünfzehn nach Deutschland gekommen.",
+  "voice": "f2"
+ },
+ {
+  "text": "Mein Vater ist neunzehnhundertvierundsechzig geboren.",
+  "voice": "m3"
+ },
+ {
+  "text": "Der Mietvertrag endet am einunddreißigsten Dezember.",
+  "voice": "f3"
+ },
+ {
+  "text": "Ihre Lieferung kommt am neunten November.",
+  "voice": "f1"
+ }
+]
