@@ -1,0 +1,33 @@
+# Holt jeden Morgen die Besucherzahlen von Cloudflare Web Analytics (stats/besuche.json).
+# Secrets: CF_API_TOKEN (Account Analytics: Read) und CF_ACCOUNT_ID.
+name: Besucherstatistik
+on:
+  schedule:
+    - cron: '7 4 * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: repo-bot
+  cancel-in-progress: false
+jobs:
+  stats:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Zahlen holen
+        env:
+          CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+          CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
+        run: node tools/cf-stats.mjs
+      - name: Speichern
+        run: |
+          git config user.name "stats-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add stats
+          git diff --cached --quiet && exit 0
+          git commit -m "Besucherstatistik aktualisiert"
+          for i in 1 2 3; do git pull --rebase -q && git push && break; sleep 5; done
