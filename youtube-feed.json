@@ -1,7 +1,14 @@
 {
   "channel": "UCMacEMD2p8zCKY2UrGiMUrA",
-  "updated": "2026-10-08T05:55:16.874Z",
+  "updated": "2026-10-08T10:52:07.948Z",
   "videos": [
+    {
+      "id": "EET_ufHc2vE",
+      "title": "Nationalsozialismus, Holocaust & Zweiter Weltkrieg einfach erklärt 🇩🇪 | LiD-Test",
+      "published": "2026-10-07T22:00:03+00:00",
+      "category": "orientierung",
+      "thumb": "assets/yt/EET_ufHc2vE.jpg"
+    },
     {
       "id": "E9aSYm2NBMg",
       "title": "Rechtsstaat & Sozialstaat einfach erklärt 🇩🇪 | Gerichte, Sozialversicherung & LiD-Test",
@@ -225,13 +232,6 @@
       "published": "",
       "category": "pruefung",
       "thumb": "assets/yt/tATeIVkdtMw.jpg"
-    },
-    {
-      "id": "EET_ufHc2vE",
-      "title": "Nationalsozialismus, Holocaust & Zweiter Weltkrieg einfach erklärt 🇩🇪 | LiD-Test",
-      "published": "",
-      "category": "orientierung",
-      "thumb": "assets/yt/EET_ufHc2vE.jpg"
     }
   ]
 }
