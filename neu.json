@@ -1,6 +1,7 @@
 {
   "note": "Neu auf der Seite – neueste Einträge oben. Wird vom Redaktionsplan (geplante Aufgaben) ergänzt.",
   "items": [
+    { "date": "2026-10-08", "type": "neu", "title": "Neu: Tages-Challenge – jeden Tag 10 Aufgaben, mit Lernserie 🔥", "link": "#challenge" },
     { "date": "2026-10-07", "type": "neu", "title": "Alle Arbeitsblätter jetzt mit Lösungen – 8 Blätter ganz neu, 18 mit zusätzlichen Übungen", "link": "#material" },
     { "date": "2026-10-07", "type": "uebung", "title": "Neu: Leseverstehen – 7 Texte für DTZ und B2 Beruf", "link": "#lesen" },
     { "date": "2026-10-07", "type": "neu", "title": "7 neue Merkblätter: Rechtsstaat, Sozialstaat und NS-Zeit (Orientierungskurs)", "link": "#orientierungskurs" },

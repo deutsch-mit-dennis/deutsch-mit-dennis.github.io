@@ -10,7 +10,7 @@
   const set = (k, v) => { try { localStorage.setItem(k, v); } catch {} };
   const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
   const day = s => { const d = new Date(s); return isNaN(d) ? '' : d.toLocaleDateString('de-DE', { day: 'numeric', month: 'long' }); };
-  const LABEL = { video: '▶ Video', kahoot: '🎯 Kahoot', lied: '♪ Lied', hoeren: '🎧 Hören', sprechen: '🗣 Sprechen', schreiben: '✍ Schreiben', uebung: '✏ Übung', neu: '✨ Neu' };
+  const LABEL = { challenge: '🔥 Challenge', video: '▶ Video', kahoot: '🎯 Kahoot', lied: '♪ Lied', hoeren: '🎧 Hören', sprechen: '🗣 Sprechen', schreiben: '✍ Schreiben', uebung: '✏ Übung', neu: '✨ Neu' };
   const j = u => fetch(u + '?v=' + Math.floor(Date.now() / 36e5), { cache: 'no-cache' }).then(r => r.ok ? r.json() : null).catch(() => null);
 
   let cache = null;
@@ -22,6 +22,10 @@
       (y && y.videos || []).forEach(v => v.published && out.push({ date: v.published, type: 'video', title: 'Neues Video: ' + v.title, link: '#videos/alle/' + v.id }));
       (k && k.kahoots || []).forEach(q => q.created && out.push({ date: q.created, type: 'kahoot', title: 'Neues Kahoot-Quiz: ' + q.title, link: '#kahoot' }));
       out.forEach(i => { i.key = i.type + '|' + i.link + '|' + i.title; i.t = +new Date(i.date) || 0; });
+      // Erinnerung an die Tages-Challenge (nur für alle, die schon einmal gespielt haben)
+      const ch = window.DMChallenge && DMChallenge.status();
+      if (ch && ch.total && !ch.doneToday) out.push({ date: new Date().toISOString(), type: 'challenge', link: '#challenge', t: Date.now() + 1,
+        title: ch.streak ? `Deine Tages-Challenge wartet – halte deine Serie von ${ch.streak} ${ch.streak === 1 ? 'Tag' : 'Tagen'}!` : 'Deine heutige Tages-Challenge wartet.', key: 'challenge|' + DMChallenge.today() });
       return out.sort((a, b) => b.t - a.t);
     });
     return cache;
