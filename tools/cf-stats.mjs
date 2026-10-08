@@ -3,6 +3,7 @@
 // Es werden nur zusammengefasste Zahlen gespeichert – keine IP-Adressen, keine einzelnen Besuche.
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
 const TOKEN = process.env.CF_API_TOKEN, ACC = process.env.CF_ACCOUNT_ID, HOST = 'deutsch-mit-dennis.de';
+process.on('unhandledRejection', e => { console.log('::error::' + String(e && e.message || e).replace(/\n/g, ' ').slice(0, 600)); process.exit(1); });
 if (!TOKEN || !ACC) { console.log('CF_API_TOKEN oder CF_ACCOUNT_ID fehlt – übersprungen.'); process.exit(0); }
 const api = async (path, body) => {
   const r = await fetch('https://api.cloudflare.com/client/v4' + path, {
