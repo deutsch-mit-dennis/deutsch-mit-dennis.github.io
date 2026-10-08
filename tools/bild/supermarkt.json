@@ -1,0 +1,192 @@
+{
+ "id": "supermarkt",
+ "title": "An der Kasse im Supermarkt",
+ "thema": "Einkaufen",
+ "level": "A2–B1",
+ "svg": "assets/bild/supermarkt.svg",
+ "alt": "Kasse in einem Supermarkt. Rechts sitzt eine Kassiererin mit grüner Weste und hält eine Flasche Wasser. Auf dem Band liegen ein Brot, rote Äpfel, gelbe Bananen und Milch. In der Mitte schiebt ein Mann mit rotem Pullover und Bart einen Einkaufswagen mit einer Wassermelone. Links stehen eine Frau mit gelber Jacke und rotem Korb und ein Mädchen mit blauem Kleid und grünem Luftballon.",
+ "personen": [
+  {
+   "id": "frau",
+   "name": "die Frau",
+   "box": [
+    1,
+    39,
+    15,
+    56
+   ]
+  },
+  {
+   "id": "kind",
+   "name": "das Mädchen",
+   "box": [
+    14.5,
+    35.5,
+    11,
+    59
+   ]
+  },
+  {
+   "id": "kunde",
+   "name": "der Kunde",
+   "box": [
+    25.5,
+    39,
+    16.5,
+    56
+   ]
+  },
+  {
+   "id": "band",
+   "name": "das Kassenband",
+   "box": [
+    46,
+    53,
+    29,
+    13
+   ]
+  },
+  {
+   "id": "kassiererin",
+   "name": "die Kassiererin",
+   "box": [
+    84.5,
+    37,
+    14.5,
+    28
+   ]
+  }
+ ],
+ "endungen": [
+  {
+   "who": "kunde",
+   "s": "Der Kunde trägt [ein|eine|einen*] [roter|rote|roten*] Pullover.",
+   "g": "der",
+   "tip": "der Pullover → Akkusativ maskulin: einen roten Pullover."
+  },
+  {
+   "who": "kunde",
+   "s": "Er trägt auch [einen|ein|eine*] [blaue*|blauen|blaues] Jeans.",
+   "g": "die",
+   "tip": "die Jeans → Akkusativ feminin: eine blaue Jeans."
+  },
+  {
+   "who": "kunde",
+   "s": "Der Kunde kauft [eine*|einen|ein] [große*|großen|großes] Wassermelone.",
+   "g": "die",
+   "tip": "die Wassermelone → feminin: eine große Wassermelone."
+  },
+  {
+   "who": "kassiererin",
+   "s": "Die Kassiererin hat [einen|ein|eine*] [grünen|grünes|grüne*] Weste an.",
+   "g": "die",
+   "tip": "die Weste → Akkusativ feminin: eine grüne Weste."
+  },
+  {
+   "who": "frau",
+   "s": "Die Frau hält [einen*|ein|eine] [roten*|rote|rotes] Korb in der Hand.",
+   "g": "der",
+   "tip": "der Korb → Akkusativ maskulin: einen roten Korb."
+  },
+  {
+   "who": "kind",
+   "s": "Das Mädchen trägt [ein*|einen|eine] [blaues*|blauen|blaue] Kleid.",
+   "g": "das",
+   "tip": "das Kleid → Akkusativ neutral: ein blaues Kleid."
+  },
+  {
+   "who": "kind",
+   "s": "Über dem Mädchen sehe ich [einen*|ein|eine] [grünen*|grüne|grünes] Luftballon.",
+   "g": "der",
+   "tip": "der Luftballon → Akkusativ maskulin: einen grünen Luftballon."
+  },
+  {
+   "who": "band",
+   "s": "Auf dem Band gibt es [einen|ein*|eine] [großen|große|großes*] Brot.",
+   "g": "das",
+   "tip": "das Brot → nach „es gibt“ Akkusativ: ein großes Brot."
+  },
+  {
+   "who": "band",
+   "s": "Ich sehe auch [rote*|roten|roter] Äpfel.",
+   "g": "pl",
+   "tip": "Plural ohne Artikel → Akkusativ: rote Äpfel."
+  },
+  {
+   "who": "frau",
+   "s": "Die Frau hat [lange*|langen|langes] schwarze Haare.",
+   "g": "pl",
+   "tip": "die Haare → Plural ohne Artikel: lange schwarze Haare."
+  }
+ ],
+ "relativ": [
+  {
+   "who": "kassiererin",
+   "s": "Rechts sitzt eine Kassiererin, [der|die*|das] eine grüne Weste trägt.",
+   "tip": "die Kassiererin → Relativpronomen die; das Verb steht am Ende."
+  },
+  {
+   "who": "kunde",
+   "s": "In der Mitte steht ein Mann, [der*|den|das] einen braunen Bart hat.",
+   "tip": "der Mann ist Subjekt im Relativsatz → der."
+  },
+  {
+   "who": "kind",
+   "s": "Neben der Frau steht ein kleines Mädchen, [der|die|das*] einen Luftballon hält.",
+   "tip": "das Mädchen → Relativpronomen das."
+  },
+  {
+   "who": "frau",
+   "s": "Links sehe ich einen roten Korb, [der|den*|die] die Frau in der Hand hält.",
+   "tip": "Die Frau hält den Korb → Akkusativ maskulin: den."
+  },
+  {
+   "who": "band",
+   "s": "Auf dem Band liegen Bananen, [der|die*|das] gelb sind.",
+   "tip": "Plural → Relativpronomen die; das Verb sind steht am Ende."
+  },
+  {
+   "who": "kassiererin",
+   "s": "Die Kassiererin hält eine Flasche Wasser, [die*|den|der] sie gleich scannt.",
+   "tip": "Sie scannt die Flasche → Akkusativ feminin: die."
+  }
+ ],
+ "bauen": [
+  {
+   "who": "kunde",
+   "start": "In der Mitte steht ein Mann,",
+   "words": [
+    "der",
+    "einen Einkaufswagen",
+    "schiebt"
+   ],
+   "end": "."
+  },
+  {
+   "who": "frau",
+   "start": "Links steht eine Frau,",
+   "words": [
+    "die",
+    "eine gelbe Jacke",
+    "trägt"
+   ],
+   "end": "."
+  },
+  {
+   "who": "kassiererin",
+   "start": "Rechts sitzt eine Kassiererin,",
+   "words": [
+    "die",
+    "eine Flasche Wasser",
+    "hält"
+   ],
+   "end": "."
+  }
+ ],
+ "muster": "Auf dem Bild sehe ich eine Kasse in einem Supermarkt. Rechts sitzt eine Kassiererin, die eine grüne Weste und eine weiße Bluse trägt. Sie hält eine Flasche Wasser in der Hand. Auf dem Band liegen ein großes Brot, rote Äpfel, gelbe Bananen und eine Packung Milch. In der Mitte steht ein Mann, der einen roten Pullover und eine blaue Jeans trägt. Er schiebt einen Einkaufswagen mit einer großen Wassermelone. Links steht eine Frau, die eine gelbe Jacke anhat und einen roten Korb hält. Neben ihr steht ein kleines Mädchen, das einen grünen Luftballon hat. Ich glaube, die Frau ist die Mutter von dem Mädchen. Ich kaufe meistens am Abend ein, weil es dann ruhiger ist.",
+ "fragen": [
+  "Wo kaufen Sie normalerweise ein?",
+  "Bezahlen Sie lieber bar oder mit Karte?",
+  "Was kaufen Sie jede Woche?"
+ ]
+}

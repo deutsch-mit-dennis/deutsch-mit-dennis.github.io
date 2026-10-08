@@ -1507,6 +1507,42 @@
      "text": "Die Wohnung hat keinen Balkon. Die Küche ist nicht klein."
     }
    ]
+  },
+  {
+   "key": "ta798c23a",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Auf dem Bild sehe ich ein Büro. Ich glaube, die Leute haben gerade Pause. Links sitzt ein Mann, der ein blaues Hemd trägt. Er hält eine rote Tasse in der Hand und trinkt einen Kaffee. Rechts sehe ich eine Frau, die eine graue Bluse trägt. Sie sitzt an einem weißen Schreibtisch und schreibt etwas. Im Vordergrund sitzen zwei Kollegen, die sich unterhalten. Die Frau hat eine grüne Jacke an, der Mann trägt einen gelben Pullover. Im Zimmer gibt es einen großen Tisch, ein großes Fenster und eine schwarze Kaffeemaschine. Vielleicht sprechen die Kollegen über das Wochenende. In meiner Pause trinke ich auch gern einen Kaffee und spreche mit meinen Kollegen."
+    }
+   ]
+  },
+  {
+   "key": "t98f8a296",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Das Bild zeigt eine Familie im Park. Das Wetter ist schön, die Sonne scheint. Links steht ein großer Baum. Daneben sehe ich einen Vater, der ein gelbes T-Shirt und einen grünen Rucksack trägt. Er spielt mit seinem Sohn. Der Junge, der ein weißes T-Shirt anhat, hält einen bunten Ball. Rechts sitzt eine Frau auf einer Bank. Sie trägt eine rote Jacke und liest ein blaues Buch. Vielleicht ist sie die Mutter. Neben der Bank läuft ein kleiner schwarzer Hund. Im Vordergrund liegt eine blau-weiße Decke mit roten Äpfeln. Ich glaube, die Familie macht ein Picknick. Am Wochenende gehe ich auch gern mit meiner Familie in den Park."
+    }
+   ]
+  },
+  {
+   "key": "t0d1397e4",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Auf dem Bild sehe ich eine Kasse in einem Supermarkt. Rechts sitzt eine Kassiererin, die eine grüne Weste und eine weiße Bluse trägt. Sie hält eine Flasche Wasser in der Hand. Auf dem Band liegen ein großes Brot, rote Äpfel, gelbe Bananen und eine Packung Milch. In der Mitte steht ein Mann, der einen roten Pullover und eine blaue Jeans trägt. Er schiebt einen Einkaufswagen mit einer großen Wassermelone. Links steht eine Frau, die eine gelbe Jacke anhat und einen roten Korb hält. Neben ihr steht ein kleines Mädchen, das einen grünen Luftballon hat. Ich glaube, die Frau ist die Mutter von dem Mädchen. Ich kaufe meistens am Abend ein, weil es dann ruhiger ist."
+    }
+   ]
+  },
+  {
+   "key": "tb64ccd23",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Das Bild zeigt ein Wartezimmer in einer Arztpraxis. Rechts steht eine medizinische Fachangestellte hinter der Anmeldung. Sie trägt einen weißen Kittel und eine schwarze Brille und telefoniert gerade. Vor der Anmeldung steht ein älterer Mann, der einen braunen Mantel und einen grauen Hut trägt. In der Hand hält er einen schwarzen Stock. Ich glaube, er gibt der Frau seine Versichertenkarte. Links sitzt eine junge Frau, die ein rotes Kleid trägt und eine Zeitschrift liest. Daneben sitzt eine Mutter, die ein kleines Baby im Arm hält. Vielleicht ist das Baby krank. An der Wand gibt es eine runde Uhr. Ich gehe nicht gern zum Arzt, weil ich oft lange warten muss."
+    }
+   ]
   }
  ]
 }

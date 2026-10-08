@@ -1,0 +1,202 @@
+{
+ "id": "arzt",
+ "title": "Im Wartezimmer beim Arzt",
+ "thema": "Gesundheit",
+ "level": "A2–B1",
+ "svg": "assets/bild/arzt.svg",
+ "alt": "Wartezimmer in einer Arztpraxis. Links steht eine große Pflanze. Eine junge Frau im roten Kleid sitzt auf einem grauen Stuhl und liest eine Zeitschrift. Auf dem Stuhl daneben liegt eine Tasche, dann sitzt eine Mutter im blauen Pullover mit einem Baby in einer gelben Decke. Ein älterer Mann mit braunem Mantel, grauem Hut und schwarzem Stock steht vor der Anmeldung. Dahinter telefoniert eine Frau mit weißem Kittel und Brille. An der Wand hängen eine runde Uhr und ein Bild.",
+ "personen": [
+  {
+   "id": "pflanze",
+   "name": "die Pflanze",
+   "box": [
+    0,
+    26,
+    17,
+    66
+   ]
+  },
+  {
+   "id": "leserin",
+   "name": "die junge Frau",
+   "box": [
+    15.5,
+    44,
+    13,
+    48
+   ]
+  },
+  {
+   "id": "uhr",
+   "name": "die Uhr",
+   "box": [
+    36,
+    9.5,
+    10,
+    16
+   ]
+  },
+  {
+   "id": "mutter",
+   "name": "die Mutter mit Baby",
+   "box": [
+    39,
+    42,
+    13.5,
+    50
+   ]
+  },
+  {
+   "id": "mann",
+   "name": "der ältere Mann",
+   "box": [
+    58,
+    35.5,
+    16,
+    59
+   ]
+  },
+  {
+   "id": "empfang",
+   "name": "die medizinische Fachangestellte",
+   "box": [
+    83,
+    31,
+    13.5,
+    32
+   ]
+  }
+ ],
+ "endungen": [
+  {
+   "who": "mann",
+   "s": "Der ältere Mann trägt [einen*|ein|eine] [braunen*|braune|brauner] Mantel.",
+   "g": "der",
+   "tip": "der Mantel → Akkusativ maskulin: einen braunen Mantel."
+  },
+  {
+   "who": "mann",
+   "s": "In der Hand hält er [einen*|ein|eine] [schwarzen*|schwarze|schwarzes] Stock.",
+   "g": "der",
+   "tip": "der Stock → Akkusativ maskulin: einen schwarzen Stock."
+  },
+  {
+   "who": "empfang",
+   "s": "Die Frau an der Anmeldung hat [einen*|ein|eine] [weißen*|weiße|weißes] Kittel an.",
+   "g": "der",
+   "tip": "der Kittel → Akkusativ maskulin: einen weißen Kittel."
+  },
+  {
+   "who": "empfang",
+   "s": "Sie trägt [einen|ein|eine*] [schwarze*|schwarzen|schwarzes] Brille.",
+   "g": "die",
+   "tip": "die Brille → Akkusativ feminin: eine schwarze Brille."
+  },
+  {
+   "who": "leserin",
+   "s": "Die junge Frau trägt [ein*|einen|eine] [rotes*|roten|rote] Kleid.",
+   "g": "das",
+   "tip": "das Kleid → Akkusativ neutral: ein rotes Kleid."
+  },
+  {
+   "who": "mutter",
+   "s": "Die Mutter hält [ein*|einen|eine] [kleines*|kleinen|kleine] Baby im Arm.",
+   "g": "das",
+   "tip": "das Baby → Akkusativ neutral: ein kleines Baby."
+  },
+  {
+   "who": "pflanze",
+   "s": "Links sehe ich [eine*|einen|ein] [große*|großen|großes] Pflanze.",
+   "g": "die",
+   "tip": "die Pflanze → Akkusativ feminin: eine große Pflanze."
+  },
+  {
+   "who": "uhr",
+   "s": "An der Wand gibt es [eine*|einen|ein] [runde*|runden|rundes] Uhr.",
+   "g": "die",
+   "tip": "die Uhr → nach „es gibt“ Akkusativ: eine runde Uhr."
+  },
+  {
+   "who": "leserin",
+   "s": "Im Wartezimmer gibt es [graue*|grauen|grauer] Stühle.",
+   "g": "pl",
+   "tip": "Plural ohne Artikel → Akkusativ: graue Stühle."
+  },
+  {
+   "who": "mann",
+   "s": "Der ältere Mann trägt [schwarze*|schwarzen|schwarzer] Schuhe.",
+   "g": "pl",
+   "tip": "die Schuhe → Plural ohne Artikel: schwarze Schuhe."
+  }
+ ],
+ "relativ": [
+  {
+   "who": "empfang",
+   "s": "Hinter der Anmeldung steht eine Frau, [der|die*|das] gerade telefoniert.",
+   "tip": "die Frau → Relativpronomen die; das Verb steht am Ende."
+  },
+  {
+   "who": "mann",
+   "s": "Vor der Anmeldung steht ein älterer Mann, [der*|den|das] einen grauen Hut trägt.",
+   "tip": "der Mann ist Subjekt im Relativsatz → der."
+  },
+  {
+   "who": "mutter",
+   "s": "Die Mutter hält ein Baby, [der|die|das*] eine weiße Mütze trägt.",
+   "tip": "das Baby → Relativpronomen das."
+  },
+  {
+   "who": "mann",
+   "s": "Der Mann hat einen Stock, [der|den*|das] er in der Hand hält.",
+   "tip": "Er hält den Stock → Akkusativ maskulin: den."
+  },
+  {
+   "who": "leserin",
+   "s": "Die junge Frau liest eine Zeitschrift, [die*|den|das] sie in den Händen hält.",
+   "tip": "Sie hält die Zeitschrift → Akkusativ feminin: die."
+  },
+  {
+   "who": "leserin",
+   "s": "An der Wand stehen drei Stühle, [der|die*|das] grau sind.",
+   "tip": "Plural → Relativpronomen die; das Verb sind steht am Ende."
+  }
+ ],
+ "bauen": [
+  {
+   "who": "leserin",
+   "start": "Links sitzt eine junge Frau,",
+   "words": [
+    "die",
+    "eine Zeitschrift",
+    "liest"
+   ],
+   "end": "."
+  },
+  {
+   "who": "mutter",
+   "start": "Daneben sitzt eine Mutter,",
+   "words": [
+    "die",
+    "einen blauen Pullover",
+    "trägt"
+   ],
+   "end": "."
+  },
+  {
+   "who": "mann",
+   "start": "Vor der Anmeldung steht ein älterer Mann,",
+   "words": [
+    "der",
+    "einen braunen Mantel",
+    "trägt"
+   ],
+   "end": "."
+  }
+ ],
+ "muster": "Das Bild zeigt ein Wartezimmer in einer Arztpraxis. Rechts steht eine medizinische Fachangestellte hinter der Anmeldung. Sie trägt einen weißen Kittel und eine schwarze Brille und telefoniert gerade. Vor der Anmeldung steht ein älterer Mann, der einen braunen Mantel und einen grauen Hut trägt. In der Hand hält er einen schwarzen Stock. Ich glaube, er gibt der Frau seine Versichertenkarte. Links sitzt eine junge Frau, die ein rotes Kleid trägt und eine Zeitschrift liest. Daneben sitzt eine Mutter, die ein kleines Baby im Arm hält. Vielleicht ist das Baby krank. An der Wand gibt es eine runde Uhr. Ich gehe nicht gern zum Arzt, weil ich oft lange warten muss.",
+ "fragen": [
+  "Wann waren Sie zuletzt beim Arzt?",
+  "Wie bekommen Sie einen Termin beim Arzt?",
+  "Was machen Sie, wenn Sie lange warten müssen?"
+ ]
+}

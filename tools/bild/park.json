@@ -1,0 +1,212 @@
+{
+ "id": "park",
+ "title": "Familie im Park",
+ "thema": "Freizeit",
+ "level": "A2–B1",
+ "svg": "assets/bild/park.svg",
+ "alt": "Eine Familie im Park bei Sonnenschein: Neben einem großen Baum steht ein Vater mit gelbem T-Shirt, blauer Hose und grünem Rucksack. Ein Junge im weißen T-Shirt hält einen bunten Ball. Rechts sitzt eine Frau in einer roten Jacke auf einer braunen Bank und liest ein blaues Buch. Ein kleiner schwarzer Hund läuft über die Wiese. Vorne liegt eine blau-weiße Decke mit roten Äpfeln.",
+ "personen": [
+  {
+   "id": "vater",
+   "name": "der Vater",
+   "box": [
+    28,
+    28,
+    15,
+    48
+   ]
+  },
+  {
+   "id": "junge",
+   "name": "der Junge",
+   "box": [
+    44,
+    37,
+    10,
+    38
+   ]
+  },
+  {
+   "id": "mutter",
+   "name": "die Mutter auf der Bank",
+   "box": [
+    80,
+    39,
+    10,
+    40
+   ]
+  },
+  {
+   "id": "hund",
+   "name": "der Hund",
+   "box": [
+    59,
+    64,
+    15,
+    16
+   ]
+  },
+  {
+   "id": "decke",
+   "name": "die Picknickdecke",
+   "box": [
+    28,
+    81,
+    45,
+    16
+   ]
+  },
+  {
+   "id": "baum",
+   "name": "der Baum",
+   "box": [
+    0,
+    6,
+    25,
+    72
+   ]
+  },
+  {
+   "id": "bank",
+   "name": "die Bank",
+   "box": [
+    71,
+    51,
+    28,
+    27
+   ]
+  }
+ ],
+ "endungen": [
+  {
+   "who": "vater",
+   "s": "Der Vater trägt [ein*|eine|einen] [gelbe|gelben|gelbes*] T-Shirt.",
+   "g": "das",
+   "tip": "das T-Shirt → Akkusativ neutral: ein gelbes T-Shirt."
+  },
+  {
+   "who": "vater",
+   "s": "Auf dem Rücken hat er [ein|eine|einen*] [grüne|grünen*|grünes] Rucksack.",
+   "g": "der",
+   "tip": "der Rucksack → Akkusativ maskulin: einen grünen Rucksack."
+  },
+  {
+   "who": "vater",
+   "s": "Er trägt [braune*|braunen|braunes] Schuhe.",
+   "g": "pl",
+   "tip": "Plural ohne Artikel → das Adjektiv endet auf -e: braune Schuhe."
+  },
+  {
+   "who": "junge",
+   "s": "Der Junge hat [ein*|eine|einen] [weiße|weißen|weißes*] T-Shirt an.",
+   "g": "das",
+   "tip": "das T-Shirt → Akkusativ neutral: ein weißes T-Shirt."
+  },
+  {
+   "who": "junge",
+   "s": "Er hält [ein|eine|einen*] [bunte|bunten*|buntes] Ball.",
+   "g": "der",
+   "tip": "der Ball → Akkusativ maskulin: einen bunten Ball."
+  },
+  {
+   "who": "mutter",
+   "s": "Die Mutter trägt [ein|eine*|einen] [rote*|roten|rotes] Jacke.",
+   "g": "die",
+   "tip": "die Jacke → Akkusativ feminin: eine rote Jacke."
+  },
+  {
+   "who": "mutter",
+   "s": "Sie liest [ein*|eine|einen] [blaue|blauen|blaues*] Buch.",
+   "g": "das",
+   "tip": "das Buch → Akkusativ neutral: ein blaues Buch."
+  },
+  {
+   "who": "hund",
+   "s": "Neben der Bank sehe ich [ein|eine|einen*] [schwarze|schwarzen*|schwarzes] Hund.",
+   "g": "der",
+   "tip": "der Hund → Akkusativ maskulin: einen schwarzen Hund."
+  },
+  {
+   "who": "decke",
+   "s": "Im Vordergrund gibt es [ein|eine*|einen] [blau-weiße*|blau-weißen|blau-weißes] Decke.",
+   "g": "die",
+   "tip": "Nach „es gibt“ kommt der Akkusativ: die Decke → eine blau-weiße Decke."
+  },
+  {
+   "who": "decke",
+   "s": "Auf der Decke sehe ich [rote*|roten|rotes] Äpfel.",
+   "g": "pl",
+   "tip": "Plural ohne Artikel → das Adjektiv endet auf -e: rote Äpfel."
+  }
+ ],
+ "relativ": [
+  {
+   "who": "vater",
+   "s": "Neben dem Baum steht ein Vater, [der*|die|den] einen grünen Rucksack trägt.",
+   "tip": "der Vater → Relativpronomen der; das Verb steht am Ende."
+  },
+  {
+   "who": "junge",
+   "s": "Ich sehe einen Jungen, [der*|den|die] einen bunten Ball hält.",
+   "tip": "Im Relativsatz ist der Junge das Subjekt (Nominativ) → der, nicht den."
+  },
+  {
+   "who": "mutter",
+   "s": "Auf der Bank sitzt eine Frau, [der|die*|das] eine rote Jacke trägt.",
+   "tip": "die Frau → Relativpronomen die; das Verb steht am Ende."
+  },
+  {
+   "who": "vater",
+   "s": "Der Rucksack, [der|den*|dem] der Vater trägt, ist grün.",
+   "tip": "Der Vater trägt den Rucksack → der Rucksack ist Akkusativ: den."
+  },
+  {
+   "who": "hund",
+   "s": "Neben der Bank läuft ein kleiner Hund, [der*|die|das] schwarz ist.",
+   "tip": "der Hund → Relativpronomen der; das Verb steht am Ende."
+  },
+  {
+   "who": "decke",
+   "s": "Auf der Decke liegen Äpfel, [der|die*|das] rot sind.",
+   "tip": "Plural → Relativpronomen die; das Verb im Plural steht am Ende."
+  }
+ ],
+ "bauen": [
+  {
+   "who": "mutter",
+   "start": "Auf der Bank sitzt eine Frau,",
+   "words": [
+    "die",
+    "ein Buch",
+    "liest"
+   ],
+   "end": "."
+  },
+  {
+   "who": "hund",
+   "start": "Neben der Bank sehe ich einen Hund,",
+   "words": [
+    "der",
+    "über die Wiese",
+    "läuft"
+   ],
+   "end": "."
+  },
+  {
+   "who": "baum",
+   "start": "Links steht ein großer Baum,",
+   "words": [
+    "der",
+    "viele grüne Blätter",
+    "hat"
+   ],
+   "end": "."
+  }
+ ],
+ "muster": "Das Bild zeigt eine Familie im Park. Das Wetter ist schön, die Sonne scheint. Links steht ein großer Baum. Daneben sehe ich einen Vater, der ein gelbes T-Shirt und einen grünen Rucksack trägt. Er spielt mit seinem Sohn. Der Junge, der ein weißes T-Shirt anhat, hält einen bunten Ball. Rechts sitzt eine Frau auf einer Bank. Sie trägt eine rote Jacke und liest ein blaues Buch. Vielleicht ist sie die Mutter. Neben der Bank läuft ein kleiner schwarzer Hund. Im Vordergrund liegt eine blau-weiße Decke mit roten Äpfeln. Ich glaube, die Familie macht ein Picknick. Am Wochenende gehe ich auch gern mit meiner Familie in den Park.",
+ "fragen": [
+  "Was machen Sie gern am Wochenende?",
+  "Gehen Sie oft in den Park? Mit wem?",
+  "Haben Sie ein Haustier?"
+ ]
+}

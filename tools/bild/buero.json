@@ -1,0 +1,212 @@
+{
+ "id": "buero",
+ "title": "Pause im Büro",
+ "thema": "Arbeit",
+ "level": "A2–B1",
+ "svg": "assets/bild/buero.svg",
+ "alt": "Ein Büro in der Pause: Links sitzt ein Mann im blauen Hemd und trinkt Kaffee aus einer roten Tasse. Rechts schreibt eine Frau in einer grauen Bluse an einem weißen Schreibtisch. Im Vordergrund unterhalten sich zwei Kollegen an einem großen braunen Tisch. Hinten sieht man ein großes Fenster, eine schwarze Kaffeemaschine und eine grüne Pflanze.",
+ "personen": [
+  {
+   "id": "mann",
+   "name": "der Mann links",
+   "box": [
+    6,
+    29,
+    21,
+    49
+   ]
+  },
+  {
+   "id": "frau",
+   "name": "die Frau rechts",
+   "box": [
+    79,
+    29,
+    14,
+    33
+   ]
+  },
+  {
+   "id": "kollegen",
+   "name": "die zwei Kollegen im Vordergrund",
+   "box": [
+    30,
+    45,
+    40,
+    38
+   ]
+  },
+  {
+   "id": "tisch",
+   "name": "der große Tisch",
+   "box": [
+    27,
+    77,
+    46,
+    23
+   ]
+  },
+  {
+   "id": "kaffeemaschine",
+   "name": "die Kaffeemaschine",
+   "box": [
+    25,
+    37,
+    9,
+    16
+   ]
+  },
+  {
+   "id": "fenster",
+   "name": "das Fenster",
+   "box": [
+    38,
+    7,
+    26,
+    38
+   ]
+  },
+  {
+   "id": "pflanze",
+   "name": "die Pflanze",
+   "box": [
+    62,
+    28,
+    14,
+    40
+   ]
+  }
+ ],
+ "endungen": [
+  {
+   "who": "mann",
+   "s": "Der Mann trägt [ein*|eine|einen] [blaue|blauen|blaues*] Hemd.",
+   "g": "das",
+   "tip": "das Hemd → Akkusativ neutral: ein blaues Hemd."
+  },
+  {
+   "who": "mann",
+   "s": "Er hält [ein|eine*|einen] [rote*|roten|rotes] Tasse in der Hand.",
+   "g": "die",
+   "tip": "die Tasse → Akkusativ feminin: eine rote Tasse."
+  },
+  {
+   "who": "mann",
+   "s": "Er trägt [braune*|braunen|braunes] Schuhe.",
+   "g": "pl",
+   "tip": "Plural ohne Artikel → das Adjektiv endet auf -e: braune Schuhe."
+  },
+  {
+   "who": "frau",
+   "s": "Die Frau rechts trägt [ein|eine*|einen] [graue*|grauen|graues] Bluse.",
+   "g": "die",
+   "tip": "die Bluse → Akkusativ feminin: eine graue Bluse."
+  },
+  {
+   "who": "kaffeemaschine",
+   "s": "Hinten sieht man [ein|eine*|einen] [schwarze*|schwarzen|schwarzes] Kaffeemaschine.",
+   "g": "die",
+   "tip": "die Kaffeemaschine → Akkusativ feminin: eine schwarze Kaffeemaschine."
+  },
+  {
+   "who": "kollegen",
+   "s": "Die Kollegin im Vordergrund trägt [ein|eine*|einen] [grüne*|grünen|grünes] Jacke.",
+   "g": "die",
+   "tip": "die Jacke → Akkusativ feminin: eine grüne Jacke."
+  },
+  {
+   "who": "kollegen",
+   "s": "Der Kollege hat [ein|eine|einen*] [gelbe|gelben*|gelbes] Pullover an.",
+   "g": "der",
+   "tip": "der Pullover → Akkusativ maskulin: einen gelben Pullover."
+  },
+  {
+   "who": "tisch",
+   "s": "Im Zimmer gibt es [ein|eine|einen*] [große|großen*|großes] Tisch.",
+   "g": "der",
+   "tip": "Nach „es gibt“ kommt der Akkusativ: einen großen Tisch."
+  },
+  {
+   "who": "fenster",
+   "s": "Ich sehe auch [ein*|eine|einen] [große|großen|großes*] Fenster.",
+   "g": "das",
+   "tip": "das Fenster → Akkusativ neutral: ein großes Fenster."
+  },
+  {
+   "who": "tisch",
+   "s": "Auf dem Tisch sehe ich zwei [weiße*|weißen|weißes] Tassen.",
+   "g": "pl",
+   "tip": "Nach Zahlen (zwei, drei …) wie Plural ohne Artikel: weiße Tassen."
+  }
+ ],
+ "relativ": [
+  {
+   "who": "mann",
+   "s": "Links sitzt ein Mann, [der*|die|den] ein blaues Hemd trägt.",
+   "tip": "der Mann → Relativpronomen der; das Verb steht am Ende."
+  },
+  {
+   "who": "frau",
+   "s": "Rechts sehe ich eine Frau, [der|die*|das] eine graue Bluse trägt.",
+   "tip": "die Frau → Relativpronomen die; das Verb steht am Ende."
+  },
+  {
+   "who": "kollegen",
+   "s": "Im Vordergrund sitzen zwei Kollegen, [der|die*|den] sich unterhalten.",
+   "tip": "Plural → Relativpronomen die; das Verb im Plural steht am Ende."
+  },
+  {
+   "who": "frau",
+   "s": "Der Stift, [der|den*|dem] die Frau in der Hand hält, ist rot.",
+   "tip": "Die Frau hält den Stift → der Stift ist Akkusativ: den."
+  },
+  {
+   "who": "tisch",
+   "s": "Im Zimmer gibt es einen großen Tisch, [der*|den|das] braun ist.",
+   "tip": "Im Relativsatz ist der Tisch das Subjekt (Nominativ) → der, nicht den."
+  },
+  {
+   "who": "fenster",
+   "s": "Ich sehe ein großes Fenster, [der|die|das*] sehr hell ist.",
+   "tip": "das Fenster → Relativpronomen das; das Verb steht am Ende."
+  }
+ ],
+ "bauen": [
+  {
+   "who": "frau",
+   "start": "Rechts sehe ich eine Frau,",
+   "words": [
+    "die",
+    "etwas",
+    "schreibt"
+   ],
+   "end": "."
+  },
+  {
+   "who": "mann",
+   "start": "Links sitzt ein Mann,",
+   "words": [
+    "der",
+    "einen Kaffee",
+    "trinkt"
+   ],
+   "end": "."
+  },
+  {
+   "who": "kollegen",
+   "start": "Im Vordergrund sitzen zwei Kollegen,",
+   "words": [
+    "die",
+    "eine Pause",
+    "haben"
+   ],
+   "end": "."
+  }
+ ],
+ "muster": "Auf dem Bild sehe ich ein Büro. Ich glaube, die Leute haben gerade Pause. Links sitzt ein Mann, der ein blaues Hemd trägt. Er hält eine rote Tasse in der Hand und trinkt einen Kaffee. Rechts sehe ich eine Frau, die eine graue Bluse trägt. Sie sitzt an einem weißen Schreibtisch und schreibt etwas. Im Vordergrund sitzen zwei Kollegen, die sich unterhalten. Die Frau hat eine grüne Jacke an, der Mann trägt einen gelben Pullover. Im Zimmer gibt es einen großen Tisch, ein großes Fenster und eine schwarze Kaffeemaschine. Vielleicht sprechen die Kollegen über das Wochenende. In meiner Pause trinke ich auch gern einen Kaffee und spreche mit meinen Kollegen.",
+ "fragen": [
+  "Was machen Sie in Ihrer Pause?",
+  "Trinken Sie lieber Kaffee oder Tee?",
+  "Sprechen Sie in der Pause oft mit Ihren Kollegen? Worüber?"
+ ]
+}
