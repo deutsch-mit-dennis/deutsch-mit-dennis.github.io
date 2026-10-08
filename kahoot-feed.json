@@ -1,7 +1,27 @@
 {
   "user": "28070f1f-b266-41cd-a90f-0e8f04c31f07",
-  "updated": "2026-10-07T15:23:38.318Z",
+  "updated": "2026-10-08T05:55:18.993Z",
   "kahoots": [
+    {
+      "uuid": "72c70f82-7636-4f71-aa9d-686b955919c3",
+      "title": "Bild beschreiben – DTZ Sprechen Teil 2",
+      "description": "20 Fragen zur Bildbeschreibung im DTZ (Sprechen Teil 2): Einstieg, Ort, Positionen, Personen, Handlungen, Gefühle, Vermutungen, Stimmung, Nachfragen der Prüfer und eigene Erfahrung auf A2/B1-Niveau.",
+      "questions": 20,
+      "created": "2026-10-06T19:20:28.887Z",
+      "url": "https://create.kahoot.it/details/72c70f82-7636-4f71-aa9d-686b955919c3",
+      "cover": "assets/kahoot/72c70f82-7636-4f71-aa9d-686b955919c3.jpg",
+      "qr": "assets/kahoot/72c70f82-7636-4f71-aa9d-686b955919c3-qr.svg"
+    },
+    {
+      "uuid": "d6da3193-9ae1-4c8a-ab27-1a0c96052910",
+      "title": "DTZ Teil 3: Gemeinsam etwas planen – Redemittel",
+      "description": "Vorbereitung auf DTZ Sprechen Teil 3: Redemittel für Vorschläge, Zustimmung, Ablehnung, Gegenvorschläge, Nachfragen, Aufgaben verteilen und Zusammenfassen.",
+      "questions": 9,
+      "created": "2026-10-04T10:48:57.121Z",
+      "url": "https://create.kahoot.it/details/d6da3193-9ae1-4c8a-ab27-1a0c96052910",
+      "cover": "assets/kahoot/d6da3193-9ae1-4c8a-ab27-1a0c96052910.jpg",
+      "qr": "assets/kahoot/d6da3193-9ae1-4c8a-ab27-1a0c96052910-qr.svg"
+    },
     {
       "uuid": "3f6d5758-6289-43c5-9741-c336e92fca0c",
       "title": "Gemeinsam etwas planen_DTZ",
