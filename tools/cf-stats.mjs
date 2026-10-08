@@ -13,18 +13,13 @@ const api = async (path, body) => {
   if (!r.ok || j.errors?.length) throw new Error(JSON.stringify(j.errors || j).slice(0, 400));
   return j;
 };
-// Site-Tag zur Domain suchen
-let siteTag = process.env.CF_SITE_TAG;
-if (!siteTag) {
-  const list = await api(`/accounts/${ACC}/rum/site_info/list?per_page=50`);
-  const s = (list.result || []).find(x => (x.ruleset?.zone_name || x.host || '').includes(HOST) || JSON.stringify(x).includes(HOST));
-  if (!s) throw new Error('Keine Web-Analytics-Seite für ' + HOST + ' gefunden.');
-  siteTag = s.site_tag;
-}
+// Filter: Hostname (Site-Tag optional über CF_SITE_TAG)
+const siteTag = process.env.CF_SITE_TAG;
+const siteFilter = siteTag ? `{siteTag: "${siteTag}"}` : `{requestHost: "${HOST}"}`;
 const day = d => d.toISOString().slice(0, 10);
 const now = new Date(), y0 = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate() - 1));
 const y1 = new Date(y0.getTime() + 864e5), w0 = new Date(y1.getTime() - 7 * 864e5);
-const q = (alias, dim, from, to, limit) => `${alias}: rumPageloadEventsAdaptiveGroups(filter: {AND: [{datetime_geq: "${from.toISOString()}", datetime_lt: "${to.toISOString()}"}, {siteTag: "${siteTag}"}]}, limit: ${limit}, orderBy: [count_DESC]) { count sum { visits } ${dim ? `dimensions { k: ${dim} }` : ''} }`;
+const q = (alias, dim, from, to, limit) => `${alias}: rumPageloadEventsAdaptiveGroups(filter: {AND: [{datetime_geq: "${from.toISOString()}", datetime_lt: "${to.toISOString()}"}, ${siteFilter}]}, limit: ${limit}, orderBy: [count_DESC]) { count sum { visits } ${dim ? `dimensions { k: ${dim} }` : ''} }`;
 const gql = `query { viewer { accounts(filter: {accountTag: "${ACC}"}) {
   ${q('gestern', '', y0, y1, 1)}
   ${q('woche', '', w0, y1, 1)}
