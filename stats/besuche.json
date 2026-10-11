@@ -1,32 +1,37 @@
 {
  "hinweis": "Zusammengefasste Besucherzahlen (Cloudflare Web Analytics, ohne Cookies). Automatisch erzeugt.",
- "stand": "2026-10-10T10:31:58.356Z",
- "tag": "2026-10-09",
+ "stand": "2026-10-11T10:44:26.258Z",
+ "tag": "2026-10-10",
  "gestern": {
-  "besuche": 27,
-  "seitenaufrufe": 157
+  "besuche": 12,
+  "seitenaufrufe": 69
  },
  "letzte7Tage": {
-  "besuche": 123,
-  "seitenaufrufe": 579
+  "besuche": 135,
+  "seitenaufrufe": 648
  },
  "herkunft": [
   {
    "name": "deutsch-mit-dennis.de",
    "besuche": 0,
-   "aufrufe": 456
+   "aufrufe": 513
   },
   {
    "name": "(direkt)",
-   "besuche": 123,
-   "aufrufe": 123
+   "besuche": 134,
+   "aufrufe": 134
+  },
+  {
+   "name": "dzianis-dennis.github.io",
+   "besuche": 1,
+   "aufrufe": 1
   }
  ],
  "laender": [
   {
    "name": "DE",
-   "besuche": 117,
-   "aufrufe": 573
+   "besuche": 127,
+   "aufrufe": 640
   },
   {
    "name": "US",
@@ -47,25 +52,35 @@
    "name": "GB",
    "besuche": 1,
    "aufrufe": 1
+  },
+  {
+   "name": "CA",
+   "besuche": 1,
+   "aufrufe": 1
+  },
+  {
+   "name": "FI",
+   "besuche": 1,
+   "aufrufe": 1
   }
  ],
  "geraete": [
   {
    "name": "mobile",
-   "besuche": 108,
-   "aufrufe": 491
+   "besuche": 118,
+   "aufrufe": 558
   },
   {
    "name": "desktop",
-   "besuche": 15,
-   "aufrufe": 88
+   "besuche": 17,
+   "aufrufe": 90
   }
  ],
  "seiten": [
   {
    "name": "/",
-   "besuche": 123,
-   "aufrufe": 579
+   "besuche": 135,
+   "aufrufe": 648
   }
  ],
  "verlauf": {
@@ -80,6 +95,10 @@
   "2026-10-09": {
    "besuche": 27,
    "seitenaufrufe": 157
+  },
+  "2026-10-10": {
+   "besuche": 12,
+   "seitenaufrufe": 69
   }
  }
 }
