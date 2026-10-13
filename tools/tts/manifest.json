@@ -3874,6 +3874,62 @@
      "text": "Ihre Lieferung kommt am neunten November."
     }
    ]
+  },
+  {
+   "key": "dtz-5-01",
+   "segments": [
+    {
+     "voice": "f3",
+     "text": "Guten Tag, Herr Nowak, hier ist Lena Schulte von der Löwen-Apotheke in der Bahnhofstraße. Das Medikament für Ihren Sohn ist heute leider noch nicht gekommen. Der Großhändler liefert es erst morgen Vormittag. Sie können es also ab morgen, 14 Uhr, bei uns abholen. Bitte bringen Sie das Rezept mit, das haben Sie gestern wieder mitgenommen. Und denken Sie daran: Am Mittwochnachmittag haben wir geschlossen. Auf Wiederhören.",
+     "say": "Guten Tag, Herr Nowak, hier ist Lena Schulte von der Löwen-Apotheke in der Bahnhofstraße. Das Medikament für Ihren Sohn ist heute leider noch nicht gekommen. Der Großhändler liefert es erst morgen Vormittag. Sie können es also ab morgen, vierzehn Uhr, bei uns abholen. Bitte bringen Sie das Rezept mit, das haben Sie gestern wieder mitgenommen. Und denken Sie daran: Am Mittwochnachmittag haben wir geschlossen. Auf Wiederhören."
+    }
+   ]
+  },
+  {
+   "key": "b2-4-01",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Guten Tag, Frau Nguyen, hier spricht Jörg Albers vom Tagungshotel Seeblick in Haltern. Es geht um Ihre Kundenveranstaltung am 27. November. Leider gibt es ein Problem mit dem großen Saal: Dort wird in dieser Woche die Lüftung erneuert, und die Firma wird nicht rechtzeitig fertig. Wir können Ihnen aber zwei kleinere Räume nebeneinander anbieten, die man mit einer Schiebewand verbinden kann. Das wäre zum gleichen Preis, und den Kaffee am Nachmittag übernehmen wir. Für die Planung bräuchte ich allerdings bis spätestens Freitag die genaue Teilnehmerzahl; bisher haben wir mit 60 Personen gerechnet. Sie erreichen mich direkt unter 02364 50 37 12. Vielen Dank und bis bald.",
+     "say": "Guten Tag, Frau Nguyen, hier spricht Jörg Albers vom Tagungshotel Seeblick in Haltern. Es geht um Ihre Kundenveranstaltung am siebenundzwanzigsten November. Leider gibt es ein Problem mit dem großen Saal: Dort wird in dieser Woche die Lüftung erneuert, und die Firma wird nicht rechtzeitig fertig. Wir können Ihnen aber zwei kleinere Räume nebeneinander anbieten, die man mit einer Schiebewand verbinden kann. Das wäre zum gleichen Preis, und den Kaffee am Nachmittag übernehmen wir. Für die Planung bräuchte ich allerdings bis spätestens Freitag die genaue Teilnehmerzahl; bisher haben wir mit sechzig Personen gerechnet. Sie erreichen mich direkt unter null zwei drei sechs vier, fünfzig, siebenunddreißig, zwölf. Vielen Dank und bis bald."
+    }
+   ]
+  },
+  {
+   "key": "t56ffc22a",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Guten Tag! Ich möchte zum Bahnhof fahren. Eine Fahrkarte, bitte. Was kostet das? Und wo muss ich aussteigen?"
+    }
+   ]
+  },
+  {
+   "key": "t22831e51",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Das kostet drei Euro zwanzig. Sie steigen an der vierten Haltestelle aus, am Hauptbahnhof."
+    }
+   ]
+  },
+  {
+   "key": "te7d5912b",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Liebe Frau Schulz, morgen kommt ein Paket für mich. Ich bin morgen nicht zu Hause, ich arbeite. Können Sie das Paket bitte annehmen? Ich hole es am Abend ab. Vielen Dank! Viele Grüße Amira"
+    }
+   ]
+  },
+  {
+   "key": "ta0e0b49e",
+   "segments": [
+    {
+     "voice": "f3",
+     "text": "Ja, gern! Ich bin den ganzen Tag zu Hause. Klingeln Sie einfach am Abend."
+    }
+   ]
   }
  ]
 }

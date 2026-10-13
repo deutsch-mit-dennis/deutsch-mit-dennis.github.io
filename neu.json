@@ -1,6 +1,10 @@
 {
   "note": "Neu auf der Seite – neueste Einträge oben. Wird vom Redaktionsplan (geplante Aufgaben) ergänzt.",
   "items": [
+    { "date": "2026-10-13", "type": "hoeren", "title": "Neuer DTZ-Hörtext: Die Apotheke ruft an (Übungssatz 5)", "link": "#hoeren/dtz-5/0" },
+    { "date": "2026-10-13", "type": "hoeren", "title": "Neuer B2-Hörtext: Mailbox vom Tagungshotel (Übungssatz 4)", "link": "#hoeren/b2-4/0" },
+    { "date": "2026-10-13", "type": "uebung", "title": "Sprechen A1: Im Bus eine Fahrkarte kaufen", "link": "#ueben/sprechen/A1/4" },
+    { "date": "2026-10-13", "type": "uebung", "title": "Schreiben A1: Ein Paket für mich – Nachricht an die Nachbarin", "link": "#ueben/schreiben/A1/5" },
     { "date": "2026-10-13", "type": "uebung", "title": "Neuer Lesetext: Reparieren statt wegwerfen (Zeitungsartikel, A2–B1)", "link": "#lesen/alltag/4" },
     { "date": "2026-10-13", "type": "uebung", "title": "Neuer Lesetext: Protokoll der Teambesprechung (B1–B2 Beruf)", "link": "#lesen/beruf/3" },
     { "date": "2026-10-08", "type": "uebung", "title": "Neu: 7 Lernspiele – Zahlen-Ohr, Dialog-Simulator, Verb-Rennen, Memory, Artikel-Wisch, Wo oder wohin? und Brief-Baukasten", "link": "#spiele" },
