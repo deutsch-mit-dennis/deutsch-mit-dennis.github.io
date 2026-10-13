@@ -47,6 +47,17 @@
             R('Wann kann Leyla bei Anzeige B anrufen?', ['Ab 17 Uhr.', 'Von 9 bis 18 Uhr.', 'Nur am Samstag.'], 0, '„Anrufen ab 17 Uhr“.'),
             R('Was bietet Anzeige C an?', ['Gebrauchte Fahrräder.', 'Reparaturen und Inspektionen.', 'Fahrradkurse für Kinder.'], 1, 'Die Werkstatt repariert Fahrräder und macht Inspektionen.')
           ]
+        },
+        {
+          id: 'alltag-repaircafe', type: 'Zeitungsartikel', title: 'Reparieren statt wegwerfen',
+          situation: 'In der Stadtteilzeitung lesen Sie einen kurzen Artikel.',
+          text: 'Neues Repair-Café in der Weststadt\nKaputter Toaster, Loch in der Jacke, Fahrrad ohne Licht? Seit September gibt es im Stadtteilzentrum Weststadt ein Repair-Café. Jeden ersten Samstag im Monat von 14 bis 17 Uhr helfen ehrenamtliche Helferinnen und Helfer beim Reparieren. Die Besucher bringen ihre kaputten Sachen mit und reparieren sie zusammen mit den Fachleuten.\n„Wir machen die Arbeit nicht einfach für die Leute. Sie sollen auch selbst etwas lernen“, sagt Organisatorin Petra Lindner. Zum ersten Treffen kamen 38 Besucher. Etwa zwei Drittel der Geräte konnten repariert werden.\nDie Reparatur ist kostenlos, nur Ersatzteile muss man selbst bezahlen. Über eine kleine Spende für Kaffee und Kuchen freut sich das Team. Eine Anmeldung ist nicht nötig. Große Geräte wie Waschmaschinen kann man leider nicht mitbringen.',
+          questions: [
+            R('Wann ist das Repair-Café geöffnet?', ['Jeden Samstag von 14 bis 17 Uhr.', 'Jeden ersten Samstag im Monat von 14 bis 17 Uhr.', 'Jeden ersten Sonntag im Monat.'], 1, 'Im Text steht: „Jeden ersten Samstag im Monat von 14 bis 17 Uhr“.'),
+            R('Was ist Petra Lindner wichtig?', ['Die Besucher sollen selbst etwas lernen.', 'Die Helfer sollen alles schnell allein reparieren.', 'Die Besucher sollen Kuchen mitbringen.'], 0, 'Sie sagt: „Sie sollen auch selbst etwas lernen.“'),
+            R('Was muss man bezahlen?', ['Die Reparatur.', 'Eine Anmeldegebühr.', 'Nur die Ersatzteile.'], 2, '„Die Reparatur ist kostenlos, nur Ersatzteile muss man selbst bezahlen.“ Eine Spende ist freiwillig.'),
+            R('Was stimmt?', ['Man muss sich vorher anmelden.', 'Beim ersten Treffen konnten die meisten Geräte repariert werden.', 'Man kann auch eine Waschmaschine mitbringen.'], 1, '„Etwa zwei Drittel der Geräte konnten repariert werden.“ Eine Anmeldung ist nicht nötig, große Geräte sind nicht möglich.')
+          ]
         }
       ]
     },
@@ -82,6 +93,17 @@
             R('Wann fand der Deutschkurs statt?', ['Am Wochenende.', 'Zweimal pro Woche nach der Frühschicht.', 'Jeden Tag vor der Arbeit.'], 1, '„zweimal pro Woche direkt nach der Frühschicht“.'),
             R('Was hat sich für Andrij verbessert?', ['Er verdient mehr Geld.', 'Er versteht Sicherheitsanweisungen besser und spricht in Besprechungen.', 'Er arbeitet jetzt nur noch in der Frühschicht.'], 1, 'Er versteht Sicherheitsanweisungen besser und traut sich, etwas zu sagen.'),
             R('Was ist für das nächste Jahr geplant?', ['Ein Kurs für Schreiben im Beruf.', 'Ein Englischkurs.', 'Kein weiterer Kurs.'], 0, 'Geplant ist „zusätzlich ein Kurs für Schreiben im Beruf“.')
+          ]
+        },
+        {
+          id: 'beruf-protokoll', type: 'Protokoll', title: 'Protokoll der Teambesprechung',
+          situation: 'Sie arbeiten im Versandlager eines Online-Händlers. Sie waren bei der Besprechung nicht dabei und lesen das Protokoll.',
+          text: 'Protokoll der Teambesprechung Lager und Versand\nDatum: 12. Oktober, 7:30–8:15 Uhr · Teilnehmende: Herr Demir (Teamleitung), Frau Nowak, Herr Ilić, Frau Schulte, Herr Baumann · Protokoll: Frau Schulte\nTOP 1 – Weihnachtsgeschäft: Ab dem 16. November rechnen wir mit etwa 40 Prozent mehr Bestellungen. Herr Demir hat deshalb zwei Aushilfen über eine Zeitarbeitsfirma angefordert. Sie beginnen bereits am 9. November, damit sie rechtzeitig eingearbeitet werden können. Die Einarbeitung übernimmt Frau Nowak.\nTOP 2 – Urlaubsplanung: Vom 16. November bis 23. Dezember gilt im Versand eine Urlaubssperre. Ausnahmen sind nur in dringenden Fällen und nach Absprache mit der Teamleitung möglich. Bereits genehmigter Urlaub bleibt bestehen.\nTOP 3 – Neue Handscanner: Die neuen Geräte werden in der Woche ab dem 26. Oktober geliefert. Herr Ilić hat sich bereit erklärt, sie vorab zu testen. Eine Schulung für alle findet am 2. November jeweils zu Beginn der Früh- und der Spätschicht statt (Dauer: 30 Minuten).\nTOP 4 – Verschiedenes: Herr Baumann weist darauf hin, dass das Rolltor an Rampe 3 häufig klemmt. Herr Demir meldet den Schaden noch heute beim Haustechniker.\nNächste Besprechung: 9. November, 7:30 Uhr',
+          questions: [
+            R('Warum werden Aushilfen eingesetzt?', ['Weil zwei Kollegen im November Urlaub haben.', 'Weil die neuen Handscanner getestet werden müssen.', 'Weil ab Mitte November deutlich mehr Bestellungen erwartet werden.'], 2, 'TOP 1: „Ab dem 16. November rechnen wir mit etwa 40 Prozent mehr Bestellungen.“'),
+            R('Was gilt für den Urlaub im Versand?', ['Bereits genehmigter Urlaub bleibt, neuer Urlaub ist nur in dringenden Fällen möglich.', 'Auch genehmigter Urlaub wird gestrichen.', 'Urlaub muss bis zum 16. November beantragt werden.'], 0, 'TOP 2: Urlaubssperre mit Ausnahmen nur in dringenden Fällen; „Bereits genehmigter Urlaub bleibt bestehen.“'),
+            R('Welche Aufgabe übernimmt Herr Ilić?', ['Er arbeitet die Aushilfen ein.', 'Er testet die neuen Handscanner.', 'Er meldet den Schaden an Rampe 3.'], 1, 'TOP 3: „Herr Ilić hat sich bereit erklärt, sie vorab zu testen.“ Die Einarbeitung macht Frau Nowak.'),
+            R('Was passiert mit dem Rolltor an Rampe 3?', ['Herr Baumann repariert es selbst.', 'Es wird in der nächsten Besprechung besprochen.', 'Die Teamleitung meldet den Schaden beim Haustechniker.'], 2, 'TOP 4: „Herr Demir meldet den Schaden noch heute beim Haustechniker.“')
           ]
         }
       ]
