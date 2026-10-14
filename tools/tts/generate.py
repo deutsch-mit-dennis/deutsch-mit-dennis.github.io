@@ -210,7 +210,7 @@ def main():
         if not FORCE and have and cur:
             if cur.get('sig') == sig: continue
             same_text = cur.get('text') == signature(e, 'text')
-            if same_text and rank.get(cur.get('engine'), 0) >= rank[eng]: continue
+            if same_text and cur.get('fx') == e.get('fx') and rank.get(cur.get('engine'), 0) >= rank[eng]: continue
         todo.append((e, sig))
     month = time.strftime('%Y-%m', time.gmtime())
     try: usage = json.load(open(USAGE, encoding='utf-8'))
@@ -228,7 +228,7 @@ def main():
         try:
             if eng != 'piper': used += chars  # auch fehlgeschlagene Versuche zählen vorsichtshalber mit
             build(e, eng, os.path.join(OUT, e['key'] + '.mp3'))
-            files[e['key']] = {'sig': sig, 'engine': eng, 'text': signature(e, 'text')}
+            files[e['key']] = {'sig': sig, 'engine': eng, 'text': signature(e, 'text'), **({'fx': e['fx']} if e.get('fx') else {})}
             done += 1
             print(f'  ✓ {e["key"]}', flush=True)
         except Exception as ex:
@@ -241,7 +241,7 @@ def main():
         json.dump(usage, open(USAGE, 'w', encoding='utf-8'), indent=1)
     engines = sorted({v.get('engine') for v in files.values()})
     json.dump({'updated': time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime()), 'engines': engines,
-               'files': {k: {'v': v['sig'], 'engine': v.get('engine'), 'sig': v['sig'], 'text': v.get('text')} for k, v in sorted(files.items())}},
+               'files': {k: {'v': v['sig'], 'engine': v.get('engine'), 'sig': v['sig'], 'text': v.get('text'), **({'fx': v['fx']} if v.get('fx') else {})} for k, v in sorted(files.items())}},
               open(INDEX, 'w', encoding='utf-8'), ensure_ascii=False, indent=0)
     json.dump({'run': time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime()), 'engine': eng, 'created': done,
                'open': len(todo) - done, 'chars_this_month': used, 'monthly_limit': limit, 'errors': errors[:40]}, open(STATUS, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
