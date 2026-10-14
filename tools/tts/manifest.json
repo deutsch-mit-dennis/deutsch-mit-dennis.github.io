@@ -423,7 +423,8 @@
      "say": "Guten Tag, Frau Kowalski, hier ist die Praxis Doktor Yilmaz in Bochum. Leider ist Frau Doktor Yilmaz am Donnerstag krank. Ihr Termin am Donnerstag um neun Uhr dreißig fällt deshalb aus. Wir können Ihnen Freitag um elf Uhr anbieten oder Montag um acht Uhr fünfzehn. Bitte rufen Sie uns kurz zurück. Danke und auf Wiederhören."
     }
    ],
-   "pause": 0.6
+   "pause": 0.6,
+   "fx": "telefon"
   },
   {
    "key": "dtz-1-02",
@@ -434,7 +435,8 @@
      "say": "Hallo Herr Demir, Peters hier von der Hausverwaltung Ruhrblick. Sie hatten wegen der Heizung angerufen. Der Monteur kommt morgen, also am Mittwoch, zwischen dreizehn und fünfzehn Uhr. Wenn Sie da nicht zu Hause sind, geben Sie den Schlüssel bitte bei Frau Lange im Erdgeschoss ab. Ach so, der Monteur muss auch ins Badezimmer. Danke!"
     }
    ],
-   "pause": 0.6
+   "pause": 0.6,
+   "fx": "telefon"
   },
   {
    "key": "dtz-1-03",
@@ -525,7 +527,8 @@
      "say": "Guten Tag, hier ist die Volkshochschule Essen, Anmeldung. Das ist eine Nachricht für die Teilnehmenden im Kurs „Deutsch am Computer“. Der Kurs am Montag, dem zwölften Oktober, fällt leider aus, weil die Kursleiterin krank ist. Wir holen die Stunde am Montag, dem neunzehnten Oktober, nach. Gleiche Uhrzeit, aber in Raum zweihundertvier statt in Raum hundertzehn. Vielen Dank."
     }
    ],
-   "pause": 0.6
+   "pause": 0.6,
+   "fx": "telefon"
   },
   {
    "key": "dtz-2-02",
@@ -635,7 +638,8 @@
      "say": "Ja, guten Tag, Frau Schneider, hier ist die Autowerkstatt Krüger aus Herne. Ihr Wagen ist fertig. Wir mussten nur die Bremsen vorne wechseln, nicht hinten. Deshalb wird es billiger: zweihundertachtzig Euro statt vierhundertfünfzig. Sie können das Auto heute bis achtzehn Uhr abholen. Morgen ist Samstag, da haben wir geschlossen. Tschüss!"
     }
    ],
-   "pause": 0.6
+   "pause": 0.6,
+   "fx": "telefon"
   },
   {
    "key": "dtz-3-02",
@@ -645,7 +649,8 @@
      "text": "Hi Nadia, ich bin's, Julia. Du, das mit morgen Nachmittag klappt bei mir leider nicht, ich muss länger arbeiten. Können wir uns stattdessen am Sonntag treffen? Nicht im Café am Markt, das hat sonntags zu, sondern lieber im Westpark, am Eingang bei der Jahrhunderthalle. So um drei? Schreib mir einfach kurz. Bis dann!"
     }
    ],
-   "pause": 0.6
+   "pause": 0.6,
+   "fx": "telefon"
   },
   {
    "key": "dtz-3-03",
@@ -737,7 +742,8 @@
      "say": "Guten Tag, hier spricht Frau Wagner von den Stadtwerken Bochum. Wir möchten am Dienstag, dem dritten November, Ihren Stromzähler ablesen. Unser Mitarbeiter kommt zwischen acht und zwölf Uhr. Wenn Sie nicht da sind, können Sie den Zählerstand auch selbst auf unserer Internetseite eingeben, bis spätestens zum zehnten November. Vielen Dank."
     }
    ],
-   "pause": 0.6
+   "pause": 0.6,
+   "fx": "telefon"
   },
   {
    "key": "dtz-4-02",
@@ -847,7 +853,8 @@
      "say": "Guten Tag, Frau Becker, hier ist Stefan Brandt von Brandt Verpackungen in Hamm. Es geht um Ihre Bestellung siebenundvierzig elf, also die Kartons und das Füllmaterial. Leider hat unser Zulieferer Probleme mit dem Papier. Deshalb können wir nicht wie vereinbart am Montag liefern, sondern frühestens am Donnerstag. Wenn das für Sie zu spät ist, könnten wir eine Teillieferung schicken, etwa die Hälfte der Kartons schon am Dienstag. Rufen Sie mich bitte bis morgen Mittag zurück, unter null zwei drei acht eins, acht acht vier zwei null. Vielen Dank."
     }
    ],
-   "pause": 0.6
+   "pause": 0.6,
+   "fx": "telefon"
   },
   {
    "key": "b2-1-02",
@@ -857,7 +864,8 @@
      "text": "Hallo Herr Nowicki, hier ist Claudia Lehmann aus der Personalabteilung. Ich rufe wegen Ihrer Fortbildung zum Thema Arbeitssicherheit an. Die Kostenübernahme ist genehmigt, aber mir fehlt noch Ihre unterschriebene Anmeldung. Könnten Sie die bitte bis Freitag einscannen und mir per Mail schicken? Das Original brauche ich nicht. Und noch etwas: Die Fortbildung findet nicht in Essen statt, wie ursprünglich geplant, sondern in Mülheim an der Ruhr. Die genaue Adresse schicke ich Ihnen noch. Danke und bis bald."
     }
    ],
-   "pause": 0.6
+   "pause": 0.6,
+   "fx": "telefon"
   },
   {
    "key": "b2-1-03",
@@ -1021,7 +1029,8 @@
      "say": "Hallo Frau Szymańska, hier ist Kevin Hartmann vom IT-Support. Sie hatten heute Morgen ein Ticket geschrieben, weil Sie sich nicht im Kundenportal anmelden können. Das liegt an der Umstellung auf die Zwei-Faktor-Anmeldung vom letzten Wochenende. Sie müssen auf Ihrem Diensthandy einmalig die Authenticator-App einrichten. Ich kann Ihnen das gern am Telefon erklären, das dauert etwa zehn Minuten. Ich bin heute noch bis sechzehn Uhr erreichbar, Durchwahl zwei drei fünf. Ansonsten melde ich mich morgen früh noch mal bei Ihnen."
     }
    ],
-   "pause": 0.6
+   "pause": 0.6,
+   "fx": "telefon"
   },
   {
    "key": "b2-2-02",
@@ -1031,7 +1040,8 @@
      "text": "Guten Tag, hier ist Birgit Laufenberg aus Witten. Sie wollten am Mittwoch um acht Uhr bei uns die neue Markise montieren. Leider hat sich bei uns etwas geändert: Mein Mann hat am Mittwoch einen Termin im Krankenhaus, nichts Schlimmes, aber wir sind den ganzen Tag nicht zu Hause. Ginge es vielleicht am Donnerstag oder Freitag? Am liebsten nachmittags, vormittags arbeite ich. Und die Einfahrt wird gerade neu gepflastert, parken Sie dann bitte lieber auf der Straße. Meine Nummer haben Sie ja. Danke!"
     }
    ],
-   "pause": 0.6
+   "pause": 0.6,
+   "fx": "telefon"
   },
   {
    "key": "b2-2-03",
@@ -1201,7 +1211,8 @@
      "say": "Guten Morgen, Frau Jankowski, hier ist Markus Feldmann, Fachkraft für Arbeitssicherheit. Ich wollte Sie daran erinnern, dass Ihre jährliche Sicherheitsunterweisung noch fehlt. Der nächste Termin ist am Dienstag, dem siebzehnten November, um vierzehn Uhr in Halle drei, im Besprechungsraum oben. Die Unterweisung dauert ungefähr eine Stunde und gilt natürlich als Arbeitszeit. Falls Sie da Schicht haben, gibt es noch einen Online-Termin am vierundzwanzigsten. Bitte geben Sie mir kurz Bescheid, welchen Termin Sie nehmen. Danke!"
     }
    ],
-   "pause": 0.6
+   "pause": 0.6,
+   "fx": "telefon"
   },
   {
    "key": "b2-3-02",
@@ -1211,7 +1222,8 @@
      "text": "Hi Daniel, hier ist Melanie. Ich liege leider mit Grippe im Bett und bin wahrscheinlich die ganze Woche krankgeschrieben. Kannst du bitte morgen die Präsentation beim Kunden in Bielefeld übernehmen? Die Folien liegen im Projektordner, Version vom Freitag. Nicht die alte vom Mittwoch, da sind die Preise noch falsch. Der Termin ist um zehn, Ansprechpartner ist Herr Gerdes. Ich habe ihm schon geschrieben, dass du kommst. Wenn du Fragen hast, schreib mir lieber eine Nachricht, ich kann gerade kaum sprechen."
     }
    ],
-   "pause": 0.6
+   "pause": 0.6,
+   "fx": "telefon"
   },
   {
    "key": "b2-3-03",
@@ -3880,20 +3892,22 @@
    "segments": [
     {
      "voice": "f3",
-     "text": "Guten Tag, Herr Nowak, hier ist Lena Schulte von der Löwen-Apotheke in der Bahnhofstraße. Das Medikament für Ihren Sohn ist heute leider noch nicht gekommen. Der Großhändler liefert es erst morgen Vormittag. Sie können es also ab morgen, 14 Uhr, bei uns abholen. Bitte bringen Sie das Rezept mit, das haben Sie gestern wieder mitgenommen. Und denken Sie daran: Am Mittwochnachmittag haben wir geschlossen. Auf Wiederhören.",
-     "say": "Guten Tag, Herr Nowak, hier ist Lena Schulte von der Löwen-Apotheke in der Bahnhofstraße. Das Medikament für Ihren Sohn ist heute leider noch nicht gekommen. Der Großhändler liefert es erst morgen Vormittag. Sie können es also ab morgen, vierzehn Uhr, bei uns abholen. Bitte bringen Sie das Rezept mit, das haben Sie gestern wieder mitgenommen. Und denken Sie daran: Am Mittwochnachmittag haben wir geschlossen. Auf Wiederhören."
+     "text": "Ja, guten Tag, Herr Nowak, hier ist Lena Schulte von der Löwen-Apotheke, in der Bahnhofstraße. Es geht um das Medikament für Ihren Sohn. Das ist heute leider doch noch nicht gekommen – der Großhändler liefert erst morgen Vormittag. Sie können es dann also ab morgen, ab 14 Uhr, bei uns abholen. Ach ja, und bringen Sie bitte das Rezept mit, das haben Sie gestern nämlich wieder mitgenommen. Und, ähm, denken Sie dran: Mittwochnachmittag haben wir zu. Gut, dann … bis morgen. Auf Wiederhören!",
+     "say": "Ja, guten Tag, Herr Nowak, hier ist Lena Schulte von der Löwen-Apotheke, in der Bahnhofstraße. Es geht um das Medikament für Ihren Sohn. Das ist heute leider doch noch nicht gekommen – der Großhändler liefert erst morgen Vormittag. Sie können es dann also ab morgen, ab vierzehn Uhr, bei uns abholen. Ach ja, und bringen Sie bitte das Rezept mit, das haben Sie gestern nämlich wieder mitgenommen. Und, ähm, denken Sie dran: Mittwochnachmittag haben wir zu. Gut, dann … bis morgen. Auf Wiederhören!"
     }
-   ]
+   ],
+   "fx": "telefon"
   },
   {
    "key": "b2-4-01",
    "segments": [
     {
      "voice": "m1",
-     "text": "Guten Tag, Frau Nguyen, hier spricht Jörg Albers vom Tagungshotel Seeblick in Haltern. Es geht um Ihre Kundenveranstaltung am 27. November. Leider gibt es ein Problem mit dem großen Saal: Dort wird in dieser Woche die Lüftung erneuert, und die Firma wird nicht rechtzeitig fertig. Wir können Ihnen aber zwei kleinere Räume nebeneinander anbieten, die man mit einer Schiebewand verbinden kann. Das wäre zum gleichen Preis, und den Kaffee am Nachmittag übernehmen wir. Für die Planung bräuchte ich allerdings bis spätestens Freitag die genaue Teilnehmerzahl; bisher haben wir mit 60 Personen gerechnet. Sie erreichen mich direkt unter 02364 50 37 12. Vielen Dank und bis bald.",
-     "say": "Guten Tag, Frau Nguyen, hier spricht Jörg Albers vom Tagungshotel Seeblick in Haltern. Es geht um Ihre Kundenveranstaltung am siebenundzwanzigsten November. Leider gibt es ein Problem mit dem großen Saal: Dort wird in dieser Woche die Lüftung erneuert, und die Firma wird nicht rechtzeitig fertig. Wir können Ihnen aber zwei kleinere Räume nebeneinander anbieten, die man mit einer Schiebewand verbinden kann. Das wäre zum gleichen Preis, und den Kaffee am Nachmittag übernehmen wir. Für die Planung bräuchte ich allerdings bis spätestens Freitag die genaue Teilnehmerzahl; bisher haben wir mit sechzig Personen gerechnet. Sie erreichen mich direkt unter null zwei drei sechs vier, fünfzig, siebenunddreißig, zwölf. Vielen Dank und bis bald."
+     "text": "Ja, guten Tag, Frau Nguyen, Jörg Albers hier, vom Tagungshotel Seeblick in Haltern. Ich ruf an wegen Ihrer Kundenveranstaltung am 27. November. Also, leider haben wir da ein Problem mit dem großen Saal: Da wird in der Woche die Lüftung erneuert, und die Firma wird – so wie es aussieht – nicht rechtzeitig fertig. Tut mir wirklich leid. Was wir Ihnen aber anbieten können: zwei kleinere Räume direkt nebeneinander, die kann man mit einer Schiebewand verbinden. Das wär zum gleichen Preis, und den Kaffee am Nachmittag, den übernehmen wir. Für die Planung bräuchte ich allerdings bis spätestens Freitag die genaue Teilnehmerzahl – bisher sind wir ja von 60 Personen ausgegangen. Sie erreichen mich direkt unter 02364 50 37 12. Ich wiederhole: 02364 50 37 12. Gut, vielen Dank, und bis bald!",
+     "say": "Ja, guten Tag, Frau Nguyen, Jörg Albers hier, vom Tagungshotel Seeblick in Haltern. Ich ruf an wegen Ihrer Kundenveranstaltung am siebenundzwanzigsten November. Also, leider haben wir da ein Problem mit dem großen Saal: Da wird in der Woche die Lüftung erneuert, und die Firma wird – so wie es aussieht – nicht rechtzeitig fertig. Tut mir wirklich leid. Was wir Ihnen aber anbieten können: zwei kleinere Räume direkt nebeneinander, die kann man mit einer Schiebewand verbinden. Das wär zum gleichen Preis, und den Kaffee am Nachmittag, den übernehmen wir. Für die Planung bräuchte ich allerdings bis spätestens Freitag die genaue Teilnehmerzahl – bisher sind wir ja von sechzig Personen ausgegangen. Sie erreichen mich direkt unter null zwei drei sechs vier … fünfzig … siebenunddreißig … zwölf. Ich wiederhole: null zwei drei sechs vier … fünfzig … siebenunddreißig … zwölf. Gut, vielen Dank, und bis bald!"
     }
-   ]
+   ],
+   "fx": "telefon"
   },
   {
    "key": "t56ffc22a",

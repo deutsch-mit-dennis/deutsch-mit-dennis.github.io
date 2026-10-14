@@ -916,11 +916,11 @@
 "segments": [
 {
 "voice": "f3",
-"text": "Guten Tag, Herr Nowak, hier ist Lena Schulte von der Löwen-Apotheke in der Bahnhofstraße. Das Medikament für Ihren Sohn ist heute leider noch nicht gekommen. Der Großhändler liefert es erst morgen Vormittag. Sie können es also ab morgen, 14 Uhr, bei uns abholen. Bitte bringen Sie das Rezept mit, das haben Sie gestern wieder mitgenommen. Und denken Sie daran: Am Mittwochnachmittag haben wir geschlossen. Auf Wiederhören.",
-"say": "Guten Tag, Herr Nowak, hier ist Lena Schulte von der Löwen-Apotheke in der Bahnhofstraße. Das Medikament für Ihren Sohn ist heute leider noch nicht gekommen. Der Großhändler liefert es erst morgen Vormittag. Sie können es also ab morgen, vierzehn Uhr, bei uns abholen. Bitte bringen Sie das Rezept mit, das haben Sie gestern wieder mitgenommen. Und denken Sie daran: Am Mittwochnachmittag haben wir geschlossen. Auf Wiederhören."
+"text": "Ja, guten Tag, Herr Nowak, hier ist Lena Schulte von der Löwen-Apotheke, in der Bahnhofstraße. Es geht um das Medikament für Ihren Sohn. Das ist heute leider doch noch nicht gekommen – der Großhändler liefert erst morgen Vormittag. Sie können es dann also ab morgen, ab 14 Uhr, bei uns abholen. Ach ja, und bringen Sie bitte das Rezept mit, das haben Sie gestern nämlich wieder mitgenommen. Und, ähm, denken Sie dran: Mittwochnachmittag haben wir zu. Gut, dann … bis morgen. Auf Wiederhören!",
+"say": "Ja, guten Tag, Herr Nowak, hier ist Lena Schulte von der Löwen-Apotheke, in der Bahnhofstraße. Es geht um das Medikament für Ihren Sohn. Das ist heute leider doch noch nicht gekommen – der Großhändler liefert erst morgen Vormittag. Sie können es dann also ab morgen, ab vierzehn Uhr, bei uns abholen. Ach ja, und bringen Sie bitte das Rezept mit, das haben Sie gestern nämlich wieder mitgenommen. Und, ähm, denken Sie dran: Mittwochnachmittag haben wir zu. Gut, dann … bis morgen. Auf Wiederhören!"
 }
 ],
-"text": "Guten Tag, Herr Nowak, hier ist Lena Schulte von der Löwen-Apotheke in der Bahnhofstraße. Das Medikament für Ihren Sohn ist heute leider noch nicht gekommen. Der Großhändler liefert es erst morgen Vormittag. Sie können es also ab morgen, 14 Uhr, bei uns abholen. Bitte bringen Sie das Rezept mit, das haben Sie gestern wieder mitgenommen. Und denken Sie daran: Am Mittwochnachmittag haben wir geschlossen. Auf Wiederhören.",
+"text": "Ja, guten Tag, Herr Nowak, hier ist Lena Schulte von der Löwen-Apotheke, in der Bahnhofstraße. Es geht um das Medikament für Ihren Sohn. Das ist heute leider doch noch nicht gekommen – der Großhändler liefert erst morgen Vormittag. Sie können es dann also ab morgen, ab 14 Uhr, bei uns abholen. Ach ja, und bringen Sie bitte das Rezept mit, das haben Sie gestern nämlich wieder mitgenommen. Und, ähm, denken Sie dran: Mittwochnachmittag haben wir zu. Gut, dann … bis morgen. Auf Wiederhören!",
 "questions": [
 {
 "q": "Wann kann Herr Nowak das Medikament abholen?",
@@ -930,7 +930,7 @@
 "Am Mittwochnachmittag."
 ],
 "answer": 1,
-"why": "Frau Schulte sagt: „Sie können es also ab morgen, 14 Uhr, bei uns abholen.“ Heute ist das Medikament noch nicht da, und am Mittwochnachmittag ist die Apotheke geschlossen."
+"why": "Frau Schulte sagt: „Sie können es dann also ab morgen, ab 14 Uhr, bei uns abholen.“ Heute ist das Medikament noch nicht da, und am Mittwochnachmittag ist die Apotheke geschlossen."
 }
 ]
 }
@@ -1980,11 +1980,11 @@
 "segments": [
 {
 "voice": "m1",
-"text": "Guten Tag, Frau Nguyen, hier spricht Jörg Albers vom Tagungshotel Seeblick in Haltern. Es geht um Ihre Kundenveranstaltung am 27. November. Leider gibt es ein Problem mit dem großen Saal: Dort wird in dieser Woche die Lüftung erneuert, und die Firma wird nicht rechtzeitig fertig. Wir können Ihnen aber zwei kleinere Räume nebeneinander anbieten, die man mit einer Schiebewand verbinden kann. Das wäre zum gleichen Preis, und den Kaffee am Nachmittag übernehmen wir. Für die Planung bräuchte ich allerdings bis spätestens Freitag die genaue Teilnehmerzahl; bisher haben wir mit 60 Personen gerechnet. Sie erreichen mich direkt unter 02364 50 37 12. Vielen Dank und bis bald.",
-"say": "Guten Tag, Frau Nguyen, hier spricht Jörg Albers vom Tagungshotel Seeblick in Haltern. Es geht um Ihre Kundenveranstaltung am siebenundzwanzigsten November. Leider gibt es ein Problem mit dem großen Saal: Dort wird in dieser Woche die Lüftung erneuert, und die Firma wird nicht rechtzeitig fertig. Wir können Ihnen aber zwei kleinere Räume nebeneinander anbieten, die man mit einer Schiebewand verbinden kann. Das wäre zum gleichen Preis, und den Kaffee am Nachmittag übernehmen wir. Für die Planung bräuchte ich allerdings bis spätestens Freitag die genaue Teilnehmerzahl; bisher haben wir mit sechzig Personen gerechnet. Sie erreichen mich direkt unter null zwei drei sechs vier, fünfzig, siebenunddreißig, zwölf. Vielen Dank und bis bald."
+"text": "Ja, guten Tag, Frau Nguyen, Jörg Albers hier, vom Tagungshotel Seeblick in Haltern. Ich ruf an wegen Ihrer Kundenveranstaltung am 27. November. Also, leider haben wir da ein Problem mit dem großen Saal: Da wird in der Woche die Lüftung erneuert, und die Firma wird – so wie es aussieht – nicht rechtzeitig fertig. Tut mir wirklich leid. Was wir Ihnen aber anbieten können: zwei kleinere Räume direkt nebeneinander, die kann man mit einer Schiebewand verbinden. Das wär zum gleichen Preis, und den Kaffee am Nachmittag, den übernehmen wir. Für die Planung bräuchte ich allerdings bis spätestens Freitag die genaue Teilnehmerzahl – bisher sind wir ja von 60 Personen ausgegangen. Sie erreichen mich direkt unter 02364 50 37 12. Ich wiederhole: 02364 50 37 12. Gut, vielen Dank, und bis bald!",
+"say": "Ja, guten Tag, Frau Nguyen, Jörg Albers hier, vom Tagungshotel Seeblick in Haltern. Ich ruf an wegen Ihrer Kundenveranstaltung am siebenundzwanzigsten November. Also, leider haben wir da ein Problem mit dem großen Saal: Da wird in der Woche die Lüftung erneuert, und die Firma wird – so wie es aussieht – nicht rechtzeitig fertig. Tut mir wirklich leid. Was wir Ihnen aber anbieten können: zwei kleinere Räume direkt nebeneinander, die kann man mit einer Schiebewand verbinden. Das wär zum gleichen Preis, und den Kaffee am Nachmittag, den übernehmen wir. Für die Planung bräuchte ich allerdings bis spätestens Freitag die genaue Teilnehmerzahl – bisher sind wir ja von sechzig Personen ausgegangen. Sie erreichen mich direkt unter null zwei drei sechs vier … fünfzig … siebenunddreißig … zwölf. Ich wiederhole: null zwei drei sechs vier … fünfzig … siebenunddreißig … zwölf. Gut, vielen Dank, und bis bald!"
 }
 ],
-"text": "Guten Tag, Frau Nguyen, hier spricht Jörg Albers vom Tagungshotel Seeblick in Haltern. Es geht um Ihre Kundenveranstaltung am 27. November. Leider gibt es ein Problem mit dem großen Saal: Dort wird in dieser Woche die Lüftung erneuert, und die Firma wird nicht rechtzeitig fertig. Wir können Ihnen aber zwei kleinere Räume nebeneinander anbieten, die man mit einer Schiebewand verbinden kann. Das wäre zum gleichen Preis, und den Kaffee am Nachmittag übernehmen wir. Für die Planung bräuchte ich allerdings bis spätestens Freitag die genaue Teilnehmerzahl; bisher haben wir mit 60 Personen gerechnet. Sie erreichen mich direkt unter 02364 50 37 12. Vielen Dank und bis bald.",
+"text": "Ja, guten Tag, Frau Nguyen, Jörg Albers hier, vom Tagungshotel Seeblick in Haltern. Ich ruf an wegen Ihrer Kundenveranstaltung am 27. November. Also, leider haben wir da ein Problem mit dem großen Saal: Da wird in der Woche die Lüftung erneuert, und die Firma wird – so wie es aussieht – nicht rechtzeitig fertig. Tut mir wirklich leid. Was wir Ihnen aber anbieten können: zwei kleinere Räume direkt nebeneinander, die kann man mit einer Schiebewand verbinden. Das wär zum gleichen Preis, und den Kaffee am Nachmittag, den übernehmen wir. Für die Planung bräuchte ich allerdings bis spätestens Freitag die genaue Teilnehmerzahl – bisher sind wir ja von 60 Personen ausgegangen. Sie erreichen mich direkt unter 02364 50 37 12. Ich wiederhole: 02364 50 37 12. Gut, vielen Dank, und bis bald!",
 "questions": [
 {
 "q": "Die Veranstaltung kann wie geplant im großen Saal stattfinden.",
@@ -1993,7 +1993,7 @@
 "falsch"
 ],
 "answer": 1,
-"why": "Im großen Saal wird die Lüftung erneuert, „und die Firma wird nicht rechtzeitig fertig“. Das Hotel bietet stattdessen zwei kleinere Räume an."
+"why": "Im großen Saal wird die Lüftung erneuert, und die Firma wird „nicht rechtzeitig fertig“. Das Hotel bietet stattdessen zwei kleinere Räume an."
 },
 {
 "q": "Was soll Frau Nguyen bis Freitag mitteilen?",
@@ -2003,7 +2003,7 @@
 "Ob sie den Termin verschieben möchte."
 ],
 "answer": 1,
-"why": "Herr Albers braucht „bis spätestens Freitag die genaue Teilnehmerzahl“. Die 60 Personen waren nur eine Schätzung."
+"why": "Herr Albers braucht „bis spätestens Freitag die genaue Teilnehmerzahl“. Von 60 Personen war das Hotel nur ausgegangen."
 }
 ]
 }

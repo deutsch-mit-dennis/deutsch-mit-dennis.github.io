@@ -145,6 +145,7 @@ SYNTH = {'piper': synth_piper, 'elevenlabs': synth_eleven, 'gemini': synth_gemin
 # ---------- Ablauf ----------
 def signature(entry, eng):
     payload = json.dumps([[s.get('voice'), s.get('say') or s['text']] for s in entry['segments']], ensure_ascii=False)
+    if entry.get('fx') and eng != 'text': payload += '|fx=' + entry['fx']  # Klangeffekt gehört zur Aufnahme
     return hashlib.sha1((eng + '|' + payload).encode()).hexdigest()[:10]
 
 def build(entry, eng, target):
@@ -166,6 +167,23 @@ def build(entry, eng, target):
         with open(lst, 'w') as f:
             f.write(f"file '{sil}'\n")
             for p in parts: f.write(f"file '{p}'\nfile '{sil}'\n")
+        fx = entry.get('fx')
+        if fx in ('telefon', 'mailbox'):
+            # Anrufbeantworter: Signalton, dann Stimme wie durchs Telefon (300–3400 Hz) mit leisem Leitungsrauschen.
+            speech = os.path.join(td, 'speech.wav')
+            run(['ffmpeg', '-y', '-loglevel', 'error', '-f', 'concat', '-safe', '0', '-i', lst, '-ar', '24000', '-ac', '1', speech])
+            beep = os.path.join(td, 'beep.wav')
+            run(['ffmpeg', '-y', '-loglevel', 'error', '-f', 'lavfi', '-i', 'anullsrc=r=24000:cl=mono:d=0.35',
+                 '-f', 'lavfi', '-i', 'sine=f=1000:r=24000:d=0.45', '-filter_complex',
+                 '[1]volume=0.25,afade=t=in:d=0.01,afade=t=out:st=0.43:d=0.02[b];[0][b]concat=n=2:v=0:a=1', beep])
+            run(['ffmpeg', '-y', '-loglevel', 'error', '-i', beep, '-i', speech,
+                 '-f', 'lavfi', '-i', 'anoisesrc=r=24000:c=pink:a=0.004',
+                 '-filter_complex',
+                 '[1]highpass=f=300,lowpass=f=3400,acompressor=threshold=-20dB:ratio=3:attack=5:release=80,volume=1.2[v];'
+                 '[2]highpass=f=300,lowpass=f=3000[n];[v][n]amix=inputs=2:duration=first:normalize=0[vn];'
+                 '[0][vn]concat=n=2:v=0:a=1,loudnorm=I=-17:TP=-1.5:LRA=11',
+                 '-ar', '44100', '-ac', '1', '-codec:a', 'libmp3lame', '-b:a', '64k', target])
+            return
         run(['ffmpeg', '-y', '-loglevel', 'error', '-f', 'concat', '-safe', '0', '-i', lst,
              '-af', 'loudnorm=I=-17:TP=-1.5:LRA=11', '-ar', '44100', '-ac', '1', '-codec:a', 'libmp3lame', '-b:a', '64k', target])
 

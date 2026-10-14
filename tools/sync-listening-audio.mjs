@@ -15,6 +15,7 @@ let added = 0;
 for (const set of Object.values(exam)) for (const it of set.items) {
   const segs = (it.segments && it.segments.length ? it.segments : [{ voice: 'f1', text: it.text }]).map(s => s.say ? { voice: s.voice, text: s.text, say: s.say } : { voice: s.voice, text: s.text });
   const entry = { key: it.id, segments: segs };
+  if (/Anrufbeantworter|Mailbox|Telefon/i.test(it.type || '')) entry.fx = 'telefon'; // klingt wie durchs Telefon, mit Signalton
   if (!have.has(it.id)) { man.entries.push(entry); added++; }
 }
 await writeFile(file, JSON.stringify(man, null, 1) + '\n');
