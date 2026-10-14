@@ -25,6 +25,16 @@
 .sp-lino-gap.is-ok{color:var(--dm-tinte);border-color:var(--dm-tinte)}
 .sp-lino-q .ch-opts{gap:8px}
 .sp-lino-q .ch-opt{min-height:52px;font-size:17px;justify-content:flex-start}
+.sp-lino-pick{display:flex;gap:14px;align-items:center;background:var(--dm-tinte-soft,#eef1fb);border-radius:16px;padding:10px 12px;margin:0 0 12px}
+.sp-lino-prev{width:96px;height:112px;flex:none;background:linear-gradient(#bfe3ff,#e8f6ff);border-radius:12px}
+.sp-lino-opts{display:grid;gap:8px;min-width:0;flex:1}
+.sp-lino-ptitle{margin:0;font-weight:700}
+.sp-lino-row{display:flex;flex-wrap:wrap;gap:6px}
+.sp-lino-row button{min-height:44px;padding:6px 12px;border-radius:99px;border:2px solid var(--dm-line,#d5dbea);background:#fff;font:700 15px var(--dm-font);color:var(--dm-ink,#172036);cursor:pointer}
+.sp-lino-row button[aria-pressed="true"]{border-color:var(--dm-tinte,#2341B5);background:var(--dm-tinte,#2341B5);color:#fff}
+.sp-lino-skins button{width:44px;padding:0;background:var(--sk)}
+.sp-lino-skins button[aria-pressed="true"]{background:var(--sk);box-shadow:0 0 0 3px #fff inset;outline:3px solid var(--dm-tinte,#2341B5);outline-offset:1px}
+@media (max-width:560px){.sp-lino-pick{flex-wrap:wrap;justify-content:center;gap:8px}.sp-lino-prev{width:72px;height:84px}.sp-lino-opts{flex-basis:100%}.sp-lino-ptitle{text-align:center}.sp-lino-row{justify-content:center}.sp-lino-row button{font-size:14.5px;padding:6px 12px}.sp-lino-skins button{width:42px}}
 .sp-lino-levels{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin:4px 0 6px}
 .sp-lino-lv{position:relative;display:flex;flex-direction:column;align-items:flex-start;gap:2px;min-height:96px;padding:12px 14px;border:2px solid var(--dm-line);border-radius:16px;background:#fff;color:var(--dm-ink);font:inherit;text-align:left;cursor:pointer}
 .sp-lino-lv:hover:not(:disabled){border-color:var(--dm-tinte)}
@@ -489,6 +499,123 @@
     } catch {}
   };
 
+  // Spielfigur: Junge (Lino) oder Mädchen (Lina), 5 Hautfarben, Mädchen wahlweise mit Kopftuch
+  const SKINS = ["#f7dcc6", "#eab98c", "#c98c5a", "#8f5b36", "#5c3a24"],
+    HAIRS = ["#a5652e", "#5a3a22", "#2e1f15", "#1f1510", "#130d09"],
+    SKIN_NAMES = ["sehr hell", "hell", "mittel", "dunkel", "sehr dunkel"],
+    HIJAB = "#7a3fa8";
+  const heroLook = (l) => {
+    l = l || {};
+    const g = l.g === "f" ? "f" : "m";
+    const skin = Number.isInteger(l.skin) && l.skin >= 0 && l.skin < SKINS.length ? l.skin : 1;
+    return { g, skin, hijab: g === "f" && !!l.hijab };
+  };
+  const heroName = (l) => (l.g === "f" ? "Lina" : "Lino");
+  function drawHero(c, x, y, look, air, ph, t) {
+    const rr = (X, Y, W, H, R) => {
+      c.beginPath();
+      c.moveTo(X + R, Y);
+      c.arcTo(X + W, Y, X + W, Y + H, R);
+      c.arcTo(X + W, Y + H, X, Y + H, R);
+      c.arcTo(X, Y + H, X, Y, R);
+      c.arcTo(X, Y, X + W, Y, R);
+      c.closePath();
+    };
+    const girl = look.g === "f",
+      skin = SKINS[look.skin],
+      hair = HAIRS[look.skin],
+      top = girl ? "#c2185b" : "#2341B5";
+    // Beine
+    c.strokeStyle = "#2b2f45";
+    c.lineWidth = 5;
+    c.lineCap = "round";
+    const l1 = air ? 4 : Math.sin(ph) * 6,
+      l2 = air ? -3 : -Math.sin(ph) * 6;
+    c.beginPath();
+    c.moveTo(x + 8, y + 24);
+    c.lineTo(x + 8 + l1, y + 33);
+    c.moveTo(x + 15, y + 24);
+    c.lineTo(x + 15 + l2, y + 33);
+    c.stroke();
+    // Rucksack
+    c.fillStyle = "#ffc928";
+    rr(x - 5, y + 11, 9, 13, 3);
+    c.fill();
+    // Pferdeschwanz (Mädchen ohne Kopftuch) – hinter dem Kopf
+    if (girl && !look.hijab) {
+      const sw = Math.sin(t * 10) * 1.5;
+      c.fillStyle = hair;
+      c.beginPath();
+      c.ellipse(x + 3, y + 7 + sw, 3.6, 7, -0.45, 0, 7);
+      c.fill();
+    }
+    // Körper (Kapuzenpulli, beim Mädchen etwas länger wie eine Tunika)
+    c.fillStyle = top;
+    rr(x + 1, y + 10, 21, girl ? 18 : 16, 6);
+    c.fill();
+    // Arm
+    c.strokeStyle = top;
+    c.lineWidth = 5;
+    c.beginPath();
+    c.moveTo(x + 14, y + 15);
+    c.lineTo(x + 21 + (air ? 3 : Math.cos(ph) * 3), y + (air ? 6 : 21));
+    c.stroke();
+    if (look.hijab) {
+      // Kopftuch: umrahmt das Gesicht und fällt über die Schultern
+      c.fillStyle = HIJAB;
+      c.beginPath();
+      c.arc(x + 13, y + 6, 10, 0, 7);
+      c.fill();
+      rr(x + 3, y + 6, 19, 10, 4);
+      c.fill();
+      c.fillStyle = skin;
+      c.beginPath();
+      c.ellipse(x + 14.5, y + 6.8, 5.4, 6.4, 0, 0, 7);
+      c.fill();
+    } else {
+      // Kopf und Haare
+      c.fillStyle = skin;
+      c.beginPath();
+      c.arc(x + 13, y + 6, 8, 0, 7);
+      c.fill();
+      c.fillStyle = hair;
+      c.beginPath();
+      c.arc(x + 12, y + 3, 8, Math.PI * 1.05, Math.PI * 1.95);
+      c.fill();
+      if (girl) {
+        c.beginPath();
+        c.arc(x + 9, y + 4, 5, Math.PI * 0.6, Math.PI * 1.6);
+        c.fill();
+      }
+    }
+    // Auge
+    c.fillStyle = "#172036";
+    c.beginPath();
+    c.arc(x + 17, y + 6, 1.6, 0, 7);
+    c.fill();
+    if (girl) {
+      c.strokeStyle = "#172036";
+      c.lineWidth = 1;
+      c.beginPath();
+      c.moveTo(x + 17.5, y + 4.4);
+      c.lineTo(x + 19.2, y + 3.3);
+      c.stroke();
+    }
+    // Schal (nicht zusammen mit Kopftuch)
+    if (!look.hijab) {
+      c.fillStyle = "#ff7a2f";
+      c.fillRect(x + 4, y + 11, 16, 4);
+      const fl = Math.sin(t * 16) * 3;
+      c.beginPath();
+      c.moveTo(x + 4, y + 11);
+      c.lineTo(x - 8, y + 9 + fl);
+      c.lineTo(x - 7, y + 15 + fl);
+      c.lineTo(x + 4, y + 15);
+      c.fill();
+    }
+    c.lineCap = "butt";
+  }
+
   // kleiner Zufallsgenerator mit Startwert – jede Welt sieht immer gleich aus
   const rng = (seed) => () => {
     seed = (seed * 1664525 + 1013904223) >>> 0;
@@ -587,7 +714,7 @@
     level: "A1–C1",
     desc: "Jump’n’Run in 5 Welten: Springe über Lücken und Fehlerkäfer und löse an jedem Tor eine Deutschfrage – von A1 bis C1.",
     intro:
-      "Lino läuft von selbst. Tippe auf das Spielfeld oder den großen Knopf (am Computer: Leertaste oder ↑), um zu springen – lange drücken springt höher. Springe über Lücken, hüpf auf die Fehlerkäfer und sammle Münzen. An jedem Tor wartet eine Frage. Jede Welt ist schwerer: A1, A2, B1, B2, C1.",
+      "Wähle zuerst deine Figur: Junge (Lino) oder Mädchen (Lina), Hautfarbe und – beim Mädchen – mit oder ohne Kopftuch. Deine Figur läuft von selbst. Tippe auf das Spielfeld oder den großen Knopf (am Computer: Leertaste oder ↑), um zu springen – lange drücken springt höher. Springe über Lücken, hüpf auf die Fehlerkäfer und sammle Münzen. An jedem Tor wartet eine Frage. Jede Welt ist schwerer: A1, A2, B1, B2, C1.",
     start(api) {
       const prog = load();
       prog.unlocked = Math.max(1, prog.unlocked || 1);
@@ -598,13 +725,45 @@
       function menu() {
         api.clearFeedback();
         api.hud({ step: "Welt wählen", progress: 0, score: total });
-        api.el.innerHTML = `<p class="dm-small" style="margin:0 0 8px">Wähle eine Welt. Jede neue Welt öffnet sich, wenn du die vorherige geschafft hast.</p>
+        const lk = heroLook(prog.look);
+        api.el.innerHTML = `<div class="sp-lino-pick">
+            <canvas class="sp-lino-prev" width="192" height="224" role="img" aria-label="Deine Spielfigur"></canvas>
+            <div class="sp-lino-opts">
+              <p class="sp-lino-ptitle">Deine Figur: <b>${heroName(lk)}</b></p>
+              <div class="sp-lino-row" role="group" aria-label="Junge oder Mädchen">
+                <button type="button" data-g="m" aria-pressed="${lk.g === "m"}">👦 Junge</button>
+                <button type="button" data-g="f" aria-pressed="${lk.g === "f"}">👧 Mädchen</button>
+              </div>
+              <div class="sp-lino-row sp-lino-skins" role="group" aria-label="Hautfarbe">${SKINS.map((c, k) => `<button type="button" data-skin="${k}" aria-pressed="${lk.skin === k}" aria-label="Hautfarbe ${SKIN_NAMES[k]}" title="${SKIN_NAMES[k]}" style="--sk:${c}"></button>`).join("")}</div>
+              ${lk.g === "f" ? `<div class="sp-lino-row" role="group" aria-label="Kopftuch">
+                <button type="button" data-h="0" aria-pressed="${!lk.hijab}">ohne Kopftuch</button>
+                <button type="button" data-h="1" aria-pressed="${lk.hijab}">mit Kopftuch</button>
+              </div>` : ""}
+            </div>
+          </div>
+          <p class="dm-small" style="margin:0 0 8px">Wähle eine Welt. Jede neue Welt öffnet sich, wenn du die vorherige geschafft hast.</p>
           <div class="sp-lino-levels">${WORLDS.map((w, i) => {
             const open = i < prog.unlocked,
               best = prog["best" + w.id];
             return `<button type="button" class="sp-lino-lv" data-i="${i}"${open ? "" : " disabled"}><i aria-hidden="true">${open ? (best != null ? "⭐" : "▶") : "🔒"}</i><b>${w.id}</b><span>Welt ${i + 1}: ${w.name}</span><small>${best != null ? `Rekord: ${best} Punkte` : open ? "Bereit" : "Noch gesperrt"}</small></button>`;
           }).join("")}</div>
           ${prog.unlocked < WORLDS.length ? '<p style="text-align:center;margin:6px 0 0"><button type="button" class="sp-lino-unlock">Ich kann schon mehr – alle Welten öffnen</button></p>' : ""}`;
+        const pc = api.el.querySelector(".sp-lino-prev");
+        if (pc) {
+          const c2 = pc.getContext("2d");
+          c2.setTransform(4.6, 0, 0, 4.6, 0, 0);
+          drawHero(c2, 12.5, 7.5, lk, false, 0.7, 0.3);
+        }
+        const setLook = (ch) => {
+          prog.look = heroLook({ ...lk, ...ch });
+          save(prog);
+          const keep = document.activeElement?.matches?.("[data-g],[data-skin],[data-h]") ? document.activeElement.outerHTML.match(/data-(g|skin|h)="[^"]*"/)[0] : null;
+          menu();
+          if (keep) api.el.querySelector(`[${keep}]`)?.focus({ preventScroll: true });
+        };
+        api.el.querySelectorAll("[data-g]").forEach((b) => (b.onclick = () => setLook({ g: b.dataset.g, hijab: b.dataset.g === "f" ? lk.hijab : false })));
+        api.el.querySelectorAll("[data-skin]").forEach((b) => (b.onclick = () => setLook({ skin: +b.dataset.skin })));
+        api.el.querySelectorAll("[data-h]").forEach((b) => (b.onclick = () => setLook({ hijab: b.dataset.h === "1" })));
         api.el
           .querySelectorAll(".sp-lino-lv")
           .forEach((b) => (b.onclick = () => play(+b.dataset.i)));
@@ -615,14 +774,16 @@
             save(prog);
             menu();
           };
-        api.el
-          .querySelector(".sp-lino-lv:not(:disabled)")
-          ?.focus({ preventScroll: true });
+        if (!document.activeElement?.closest?.(".sp-lino-pick"))
+          api.el
+            .querySelector(".sp-lino-lv:not(:disabled)")
+            ?.focus({ preventScroll: true });
       }
 
       function play(L) {
         api.clearFeedback();
         const W0 = WORLDS[L];
+        const look = heroLook(prog.look);
         const qs = api.shuffle(W0.questions).slice(0, GATES);
         const lvl = buildLevel(L);
         const narrow = api.el.clientWidth < 520;
@@ -631,7 +792,7 @@
           GROUND = VH - 48,
           T = lvl.T;
         const dpr = Math.min(2, window.devicePixelRatio || 1);
-        api.el.innerHTML = `<div class="sp-lino-wrap"><canvas width="${VW * dpr}" height="${VH * dpr}" aria-label="Spielfeld: Lino läuft durch die Welt ${W0.id}" role="img"></canvas><div class="sp-lino-banner">Welt ${W0.id}: ${W0.name}</div></div>
+        api.el.innerHTML = `<div class="sp-lino-wrap"><canvas width="${VW * dpr}" height="${VH * dpr}" aria-label="Spielfeld: ${heroName(look)} läuft durch die Welt ${W0.id}" role="img"></canvas><div class="sp-lino-banner">Welt ${W0.id}: ${W0.name}</div></div>
           <div class="sp-lino-panel"></div>`;
         const cv = api.el.querySelector("canvas"),
           ctx = cv.getContext("2d"),
@@ -1228,61 +1389,7 @@
           ctx.translate(P.x + 11, P.y + 34);
           ctx.scale(1.25, 1.25);
           ctx.translate(-(P.x + 11), -(P.y + 34));
-          const x = P.x,
-            y = P.y,
-            air = !P.onGround,
-            ph = P.run * 14;
-          // Beine
-          ctx.strokeStyle = "#2b2f45";
-          ctx.lineWidth = 5;
-          ctx.lineCap = "round";
-          const l1 = air ? 4 : Math.sin(ph) * 6,
-            l2 = air ? -3 : -Math.sin(ph) * 6;
-          ctx.beginPath();
-          ctx.moveTo(x + 8, y + 24);
-          ctx.lineTo(x + 8 + l1, y + 33);
-          ctx.moveTo(x + 15, y + 24);
-          ctx.lineTo(x + 15 + l2, y + 33);
-          ctx.stroke();
-          // Rucksack
-          ctx.fillStyle = "#ffc928";
-          roundRect(x - 5, y + 11, 9, 13, 3);
-          ctx.fill();
-          // Körper (Kapuzenpulli)
-          ctx.fillStyle = "#2341B5";
-          roundRect(x + 1, y + 10, 21, 16, 6);
-          ctx.fill();
-          // Arm
-          ctx.strokeStyle = "#2341B5";
-          ctx.lineWidth = 5;
-          ctx.beginPath();
-          ctx.moveTo(x + 14, y + 15);
-          ctx.lineTo(x + 21 + (air ? 3 : Math.cos(ph) * 3), y + (air ? 6 : 21));
-          ctx.stroke();
-          // Kopf
-          ctx.fillStyle = "#f2c79b";
-          ctx.beginPath();
-          ctx.arc(x + 13, y + 6, 8, 0, 7);
-          ctx.fill();
-          ctx.fillStyle = "#5a3a22";
-          ctx.beginPath();
-          ctx.arc(x + 12, y + 3, 8, Math.PI * 1.05, Math.PI * 1.95);
-          ctx.fill();
-          ctx.fillStyle = "#172036";
-          ctx.beginPath();
-          ctx.arc(x + 17, y + 6, 1.6, 0, 7);
-          ctx.fill();
-          // Schal
-          ctx.fillStyle = "#ff7a2f";
-          ctx.fillRect(x + 4, y + 11, 16, 4);
-          const fl = Math.sin(t * 16) * 3;
-          ctx.beginPath();
-          ctx.moveTo(x + 4, y + 11);
-          ctx.lineTo(x - 8, y + 9 + fl);
-          ctx.lineTo(x - 7, y + 15 + fl);
-          ctx.lineTo(x + 4, y + 15);
-          ctx.fill();
-          ctx.lineCap = "butt";
+          drawHero(ctx, P.x, P.y, look, !P.onGround, P.run * 14, t);
           ctx.restore();
         }
         function cloud(x, y) {
