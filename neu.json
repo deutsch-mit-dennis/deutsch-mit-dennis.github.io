@@ -1,6 +1,8 @@
 {
   "note": "Neu auf der Seite – neueste Einträge oben. Wird vom Redaktionsplan (geplante Aufgaben) ergänzt.",
   "items": [
+    { "date": "2026-10-14", "type": "uebung", "title": "Neuer Lesetext: Die Stadtbibliothek macht Pause (Aushang, A2–B1)", "link": "#lesen/alltag/5" },
+    { "date": "2026-10-14", "type": "uebung", "title": "Neuer Lesetext: Disponentin / Disponent gesucht (Stellenanzeige, B1–B2)", "link": "#lesen/beruf/4" },
     { "date": "2026-10-14", "type": "uebung", "title": "Neu: Jump’n’Run „Lino läuft“ – 5 Welten von A1 bis C1, an jedem Tor eine Deutschfrage", "link": "#spiele/lino" },
     { "date": "2026-10-14", "type": "uebung", "title": "Neu: 10 Lernspiele für DTB B2 Beruf, Alltag (Reisen, Einkaufen, Ämter) und den Test „Leben in Deutschland“", "link": "#spiele" },
     { "date": "2026-10-14", "type": "lied", "title": "15 neue Lieder von A1 bis C1 – mit Aufgaben, Lösungen und PDF", "link": "#lieder" },

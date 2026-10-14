@@ -58,6 +58,17 @@
             R('Was muss man bezahlen?', ['Die Reparatur.', 'Eine Anmeldegebühr.', 'Nur die Ersatzteile.'], 2, '„Die Reparatur ist kostenlos, nur Ersatzteile muss man selbst bezahlen.“ Eine Spende ist freiwillig.'),
             R('Was stimmt?', ['Man muss sich vorher anmelden.', 'Beim ersten Treffen konnten die meisten Geräte repariert werden.', 'Man kann auch eine Waschmaschine mitbringen.'], 1, '„Etwa zwei Drittel der Geräte konnten repariert werden.“ Eine Anmeldung ist nicht nötig, große Geräte sind nicht möglich.')
           ]
+        },
+        {
+          id: 'alltag-bibliothek', type: 'Aushang', title: 'Die Stadtbibliothek macht Pause',
+          situation: 'An der Tür der Stadtbibliothek hängt ein Aushang.',
+          text: 'Liebe Leserinnen und Leser,\ndie Stadtbibliothek ist vom 2. bis 20. November wegen Umbauarbeiten geschlossen. Wir bekommen neue Regale und einen größeren Bereich für Kinder.\nAlle Bücher und Medien, die Sie in dieser Zeit zurückgeben müssten, können Sie bis zum 27. November ohne Gebühren behalten. Sie können Bücher aber auch in die Rückgabebox neben dem Haupteingang werfen. DVDs und Spiele legen Sie bitte nicht in die Box. Geben Sie diese nach dem Umbau an der Theke ab.\nWährend der Schließung können Sie mit Ihrem Bibliotheksausweis weiter E-Books und Hörbücher online ausleihen.\nAb dem 21. November sind wir wieder zu den gewohnten Zeiten für Sie da. Am Eröffnungstag gibt es um 15 Uhr ein Vorlesefest für Kinder.\nIhr Team der Stadtbibliothek',
+          questions: [
+            R('Warum ist die Bibliothek im November geschlossen?', ['Weil viele Mitarbeiter krank sind.', 'Weil die Bibliothek in ein neues Gebäude umzieht.', 'Wegen Umbauarbeiten.'], 2, 'Im Text steht: „wegen Umbauarbeiten geschlossen“ – es gibt neue Regale und einen größeren Kinderbereich.'),
+            R('Was gilt für ausgeliehene Bücher?', ['Man kann sie bis zum 27. November ohne Gebühren behalten.', 'Man muss sie bis zum 2. November zurückgeben.', 'Man muss für die Zeit der Schließung Gebühren bezahlen.'], 0, '„… können Sie bis zum 27. November ohne Gebühren behalten.“'),
+            R('Was darf man nicht in die Rückgabebox legen?', ['Bücher.', 'DVDs und Spiele.', 'Den Bibliotheksausweis.'], 1, '„DVDs und Spiele legen Sie bitte nicht in die Box.“ Bücher darf man einwerfen.'),
+            R('Was passiert am 21. November?', ['Es gibt einen Flohmarkt mit alten Büchern.', 'Alle bekommen einen kostenlosen Bibliotheksausweis.', 'Es gibt ein Vorlesefest für Kinder.'], 2, '„Am Eröffnungstag gibt es um 15 Uhr ein Vorlesefest für Kinder.“ Eröffnungstag ist der 21. November.')
+          ]
         }
       ]
     },
@@ -104,6 +115,17 @@
             R('Was gilt für den Urlaub im Versand?', ['Bereits genehmigter Urlaub bleibt, neuer Urlaub ist nur in dringenden Fällen möglich.', 'Auch genehmigter Urlaub wird gestrichen.', 'Urlaub muss bis zum 16. November beantragt werden.'], 0, 'TOP 2: Urlaubssperre mit Ausnahmen nur in dringenden Fällen; „Bereits genehmigter Urlaub bleibt bestehen.“'),
             R('Welche Aufgabe übernimmt Herr Ilić?', ['Er arbeitet die Aushilfen ein.', 'Er testet die neuen Handscanner.', 'Er meldet den Schaden an Rampe 3.'], 1, 'TOP 3: „Herr Ilić hat sich bereit erklärt, sie vorab zu testen.“ Die Einarbeitung macht Frau Nowak.'),
             R('Was passiert mit dem Rolltor an Rampe 3?', ['Herr Baumann repariert es selbst.', 'Es wird in der nächsten Besprechung besprochen.', 'Die Teamleitung meldet den Schaden beim Haustechniker.'], 2, 'TOP 4: „Herr Demir meldet den Schaden noch heute beim Haustechniker.“')
+          ]
+        },
+        {
+          id: 'beruf-disposition', type: 'Stellenanzeige', title: 'Disponentin / Disponent gesucht',
+          situation: 'Sie suchen eine neue Stelle in der Logistik und lesen diese Anzeige in einem Jobportal.',
+          text: 'Hartmann Logistik GmbH – seit über 40 Jahren Ihr Partner für Transporte in ganz Europa\nFür unseren Standort in Kassel suchen wir ab dem 1. Januar eine Disponentin / einen Disponenten (m/w/d) im Nahverkehr – in Vollzeit oder Teilzeit (mindestens 30 Stunden pro Woche).\nIhre Aufgaben: Sie planen die täglichen Touren unserer 25 Lkw im Umkreis von 150 Kilometern. Sie sind Ansprechperson für unsere Fahrerinnen und Fahrer sowie für unsere Kunden und reagieren schnell auf Verspätungen, Staus und kurzfristige Änderungen.\nIhr Profil: Sie haben eine abgeschlossene Ausbildung als Kauffrau/Kaufmann für Spedition und Logistikdienstleistung oder vergleichbare Berufserfahrung. Sie sprechen und schreiben sicher Deutsch (mindestens B2); Englisch- oder Polnischkenntnisse sind von Vorteil. Auch unter Zeitdruck behalten Sie den Überblick.\nWir bieten: einen unbefristeten Arbeitsvertrag mit Bezahlung nach Tarif, 30 Tage Urlaub und Gleitzeit zwischen 6 und 18 Uhr. Samstags arbeiten Sie nur einmal im Monat, dafür bekommen Sie einen freien Tag in der Woche. Außerdem gibt es einen Zuschuss zum Deutschlandticket, kostenlose Parkplätze und eine dreimonatige Einarbeitung mit einer festen Patin oder einem festen Paten.\nInteresse? Dann senden Sie Ihre Bewerbung mit Lebenslauf und Zeugnissen bis zum 15. November über unser Online-Portal. Bitte nennen Sie Ihren frühestmöglichen Eintrittstermin. Fragen beantwortet Ihnen gern Frau Jana Roth aus der Personalabteilung unter 0561 47 39 20.',
+          questions: [
+            R('Welche Aufgabe gehört zu der Stelle?', ['Man fährt selbst Lkw im Nahverkehr.', 'Man plant die Touren und reagiert auf kurzfristige Änderungen.', 'Man stellt neue Fahrerinnen und Fahrer ein.'], 1, 'Unter „Ihre Aufgaben“: Touren planen und „schnell auf Verspätungen, Staus und kurzfristige Änderungen“ reagieren.'),
+            R('Wer kann sich bewerben?', ['Personen mit passender Ausbildung oder vergleichbarer Berufserfahrung.', 'Nur Personen mit einer Ausbildung im Speditionsbereich.', 'Nur Personen, die Polnisch sprechen.'], 0, '„… Ausbildung als Kauffrau/Kaufmann für Spedition … oder vergleichbare Berufserfahrung“. Polnisch ist nur „von Vorteil“.'),
+            R('Was stimmt zur Arbeitszeit?', ['Man arbeitet jeden Samstag.', 'Die Stelle gibt es nur in Vollzeit.', 'Man kann zwischen 6 und 18 Uhr flexibel arbeiten.'], 2, '„Gleitzeit zwischen 6 und 18 Uhr“. Samstags nur einmal im Monat; Teilzeit ab 30 Stunden ist möglich.'),
+            R('Was sollen die Bewerberinnen und Bewerber in der Bewerbung angeben?', ['Ihre Gehaltsvorstellung.', 'Ihren frühestmöglichen Eintrittstermin.', 'Ihre Wunschtouren.'], 1, '„Bitte nennen Sie Ihren frühestmöglichen Eintrittstermin.“ Das Gehalt ist nach Tarif geregelt.')
           ]
         }
       ]
