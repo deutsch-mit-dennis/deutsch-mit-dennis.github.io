@@ -1,6 +1,7 @@
 {
   "note": "Neu auf der Seite – neueste Einträge oben. Wird vom Redaktionsplan (geplante Aufgaben) ergänzt.",
   "items": [
+    { "date": "2026-10-14", "type": "uebung", "title": "Neu: Jump’n’Run „Lino läuft“ – 5 Welten von A1 bis C1, an jedem Tor eine Deutschfrage", "link": "#spiele/lino" },
     { "date": "2026-10-14", "type": "uebung", "title": "Neu: 10 Lernspiele für DTB B2 Beruf, Alltag (Reisen, Einkaufen, Ämter) und den Test „Leben in Deutschland“", "link": "#spiele" },
     { "date": "2026-10-14", "type": "lied", "title": "15 neue Lieder von A1 bis C1 – mit Aufgaben, Lösungen und PDF", "link": "#lieder" },
     { "date": "2026-10-13", "type": "neu", "title": "Neues Arbeitsblatt: Nebensätze mit weil, dass, wenn, obwohl (B1)", "link": "#material" },

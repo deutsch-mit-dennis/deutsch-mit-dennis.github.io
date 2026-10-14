@@ -36,6 +36,7 @@
   const crumbs = g => DM.crumbs([['Üben', '#ueben'], ['Lernspiele', '#spiele'], [g.title]]);
 
   const CATS = [
+    { id: 'abenteuer', icon: '🏃', t: 'Abenteuer', d: 'Laufen, springen und Deutsch lernen – von A1 bis C1 in einem Jump’n’Run.' },
     { id: 'basis', icon: '🧩', t: 'Wörter und Grammatik', d: 'Zahlen, Artikel, Verben, Memory und Briefe – für A1 bis B1.' },
     { id: 'alltag', icon: '🛒', t: 'Alltag: Reisen, Einkaufen, Ämter', d: 'Wortschatz für Bahnhof, Supermarkt, Arzt, Wohnung und Behörden – ganz ohne Prüfungsdruck.' },
     { id: 'b2', icon: '💼', t: 'Prüfung DTB B2 Beruf', d: 'Redemittel, Nomen-Verb-Verbindungen, Präpositionen und Konnektoren für den Beruf.' },
