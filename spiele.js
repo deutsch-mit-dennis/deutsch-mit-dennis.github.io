@@ -69,7 +69,7 @@
     DM.page(`${crumbs(g)}
       <section class="ch-card sp-intro"><span class="sp-ic sp-ic-big" aria-hidden="true">${g.icon}</span><h1>${esc(g.title)}</h1><p class="sp-lead">${esc(g.intro || g.desc)}</p>
         ${s.best != null ? `<p class="sp-best">🏆 Dein Rekord: <b>${s.best}</b> · ${s.plays || 0}× gespielt</p>` : ''}
-        ${g.options ? `<fieldset class="ch-level"><legend>${esc(g.optionsLabel || 'Wähle')}</legend>${g.options.map((o, i) => `<label><input type="radio" name="sp-opt" value="${esc(o.id)}"${(s.opt ? s.opt === o.id : i === 0) ? ' checked' : ''}><span>${esc(o.label)}</span></label>`).join('')}</fieldset>` : ''}
+        ${g.options ? `<fieldset class="ch-level"><legend>${esc(g.optionsLabel || 'Wähle')}</legend>${g.options.map((o, i) => `<label><input type="radio" name="sp-opt" value="${esc(o.id)}"${(g.options.some(x => x.id === s.opt) ? s.opt === o.id : i === 0) ? ' checked' : ''}><span>${esc(o.label)}</span></label>`).join('')}</fieldset>` : ''}
         <div class="ch-actions"><button type="button" class="dm-btn ch-go" id="sp-start">Spiel starten</button></div>
         <p class="dm-small"><a href="#spiele/${catOf(g)}">← Weitere Spiele: ${esc((CATS.find(k => k.id === catOf(g)) || CATS[0]).t)}</a></p>
       </section>`, 'sp-page');

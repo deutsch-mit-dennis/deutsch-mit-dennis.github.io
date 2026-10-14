@@ -190,6 +190,7 @@
     <section class="dm-hero">
       <figure class="dm-hero-photo"><img src="assets/dennis.webp" alt="Dennis, dein Deutschlehrer" width="626" height="1004" fetchpriority="high"></figure>
       <div class="dm-hero-copy">
+        <a class="lino-hero-chip" href="#spiele/lino"><span aria-hidden="true">🏃</span><span><b>Neu: Lino läuft</b> – das Deutsch-Jump’n’Run von A1 bis C1</span><span class="lino-hero-go" aria-hidden="true">▶</span></a>
         <h1>Deutsch lernen mit Dennis</h1>
         <p class="dm-lead">Kostenlose Übungen von A1 bis B2 Beruf – für deinen Alltag, deine Prüfung und deinen Job. Ohne Anmeldung.</p>
         <p class="dm-hand">Hallo! Ich bin Dennis, dein Deutschlehrer und zugelassener Prüfer. Wähle unten deinen Weg – ich zeige dir die nächsten Schritte.</p>
@@ -201,7 +202,38 @@
       </div>
     </section>
 
-    ${window.DMChallenge ? `<section class="dm-section ch-home" aria-label="Tages-Challenge und Lernspiele">${DMChallenge.teaser()}<a class="sp-home" href="#spiele"><span aria-hidden="true">🎮</span><span><b>Lernspiele</b><small>Zahlen-Ohr · Dialog-Simulator · Verb-Rennen · Wort-Memory · Der, die, das – Wisch! · Wo oder wohin? · Brief-Baukasten</small></span><span class="sp-home-go">Spielen →</span></a></section>` : ''}
+    <section class="dm-section lino-home" aria-labelledby="lino-h">
+      <a class="lino-home-card" href="#spiele/lino">
+        <svg class="lino-home-art" viewBox="0 0 320 180" aria-hidden="true" focusable="false">
+          <defs><linearGradient id="lhSky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9fd8ff"/><stop offset="1" stop-color="#e3f4ff"/></linearGradient></defs>
+          <rect width="320" height="180" fill="url(#lhSky)"/>
+          <g fill="#fff" opacity=".9"><circle cx="52" cy="34" r="11"/><circle cx="66" cy="28" r="14"/><circle cx="82" cy="35" r="10"/><circle cx="238" cy="26" r="9"/><circle cx="250" cy="21" r="12"/><circle cx="264" cy="27" r="9"/></g>
+          <path d="M0 120 Q60 88 120 108 T240 100 T320 96 V180 H0Z" fill="#7cc46a"/>
+          <rect x="0" y="142" width="128" height="38" fill="#8a5a32"/><rect x="0" y="142" width="128" height="8" fill="#4fb341"/>
+          <rect x="128" y="146" width="56" height="34" fill="#22160e"/>
+          <rect x="184" y="142" width="136" height="38" fill="#8a5a32"/><rect x="184" y="142" width="136" height="8" fill="#4fb341"/>
+          <g class="lino-home-coins" fill="#ffc928" stroke="#d18f00" stroke-width="2"><circle cx="140" cy="72" r="7"/><circle cx="158" cy="62" r="7"/><circle cx="176" cy="72" r="7"/></g>
+          <g transform="translate(250 92)"><rect x="-4" y="0" width="8" height="50" fill="#7d7f8c"/><rect x="26" y="0" width="8" height="50" fill="#7d7f8c"/><rect x="-10" y="-20" width="50" height="22" rx="6" fill="#2341B5"/><text x="15" y="-4" font-size="12" font-weight="800" fill="#fff" text-anchor="middle" font-family="system-ui,sans-serif">Tor ?</text><g stroke="#2341B5" stroke-width="2"><path d="M4 10H26M4 22H26M4 34H26M4 46H26"/></g></g>
+          <g class="lino-home-hero" transform="translate(150 78) rotate(-6)">
+            <path d="M-6 30 L-12 42 M4 30 L12 40" stroke="#2b2f45" stroke-width="6" stroke-linecap="round"/>
+            <rect x="-17" y="6" width="11" height="17" rx="3" fill="#ffc928"/>
+            <rect x="-8" y="4" width="26" height="28" rx="8" fill="#2341B5"/>
+            <path d="M12 12 L24 0" stroke="#2341B5" stroke-width="6" stroke-linecap="round"/>
+            <circle cx="5" cy="-6" r="10" fill="#f2c79b"/><path d="M-5 -8 A10 10 0 0 1 15 -9 L10 -12 Q4 -18 -4 -12Z" fill="#5a3a22"/><circle cx="10" cy="-6" r="1.8" fill="#172036"/>
+            <path d="M-6 4 H16 V9 H-6Z M-6 4 L-22 0 L-20 8 L-6 9Z" fill="#ff7a2f"/>
+          </g>
+        </svg>
+        <span class="lino-home-copy">
+          <span class="lino-home-kicker">Neu · Jump’n’Run</span>
+          <b id="lino-h">Lino läuft – das Deutsch-Abenteuer</b>
+          <span class="lino-home-text">Springe über Lücken und Fehlerkäfer. An jedem Tor wartet eine Deutschfrage – von ganz leicht bis schwer.</span>
+          <span class="lino-home-levels" aria-label="5 Welten: A1, A2, B1, B2, C1"><i>A1</i><i>A2</i><i>B1</i><i>B2</i><i>C1</i></span>
+          <span class="lino-home-go">▶ Jetzt spielen</span>
+        </span>
+      </a>
+    </section>
+
+    ${window.DMChallenge ? `<section class="dm-section ch-home" aria-label="Tages-Challenge und Lernspiele">${DMChallenge.teaser()}<a class="sp-home" href="#spiele"><span aria-hidden="true">🎮</span><span><b>Lernspiele</b><small>18 Spiele: Jump’n’Run · Artikel · Verben · Alltag · DTB B2 · Leben in Deutschland</small></span><span class="sp-home-go">Spielen →</span></a></section>` : ''}
 
     ${songStage(false)}
 

@@ -22,6 +22,7 @@
 .sp-kit-pic{font-size:clamp(40px,12vw,56px);line-height:1.1;margin:0 0 6px;font-family:"Apple Color Emoji","Segoe UI Emoji","Noto Color Emoji",sans-serif}
 .sp-kit-prompt{font:700 clamp(20px,5.2vw,27px)/1.42 var(--dm-font);color:var(--dm-ink);overflow-wrap:break-word;hyphens:auto;-webkit-hyphens:auto}
 .sp-kit-prompt.is-long{font-size:clamp(17px,4.4vw,21px);line-height:1.45}
+.sp-kit-prompt.is-big{font-size:clamp(46px,13vw,68px);line-height:1.1;color:var(--dm-tinte);letter-spacing:.02em}
 .sp-kit-prompt.is-hidden{color:#8a93a8;font-size:18px;font-weight:600}
 .sp-kit-sub{margin:8px 0 0;color:#5b6680;font-weight:700;font-size:16px}
 .sp-kit-gap{display:inline-block;min-width:3.2em;border-bottom:3px solid #c5cdf0;color:transparent;line-height:1.1}
@@ -77,7 +78,7 @@
           ${it.tag ? `<p class="sp-kit-tag">${api.esc(it.tag)}</p>` : ''}
           ${it.pic ? `<div class="sp-kit-pic" aria-hidden="true">${it.pic}</div>` : ''}
           ${it.say ? `<div><button type="button" class="sp-kit-say">🔊 ${hidden ? 'Nochmal hören' : 'Anhören'}</button></div>` : ''}
-          <div class="sp-kit-prompt${len > 95 ? ' is-long' : ''}${hidden ? ' is-hidden' : ''}">${hidden ? 'Hör gut zu …' : promptHtml(it)}</div>
+          <div class="sp-kit-prompt${len > 95 ? ' is-long' : ''}${cfg.big ? ' is-big' : ''}${hidden ? ' is-hidden' : ''}">${hidden ? 'Hör gut zu …' : promptHtml(it)}</div>
           ${it.sub ? `<p class="sp-kit-sub">${api.esc(it.sub)}</p>` : ''}
         </div>
         <div class="ch-opts sp-kit-opts${cols === 2 ? ' sp-kit-c2' : ''}" role="group" aria-label="Antworten">${opts.map((o, k) => `<button type="button" class="ch-opt" data-k="${k}" data-v="${api.esc(o)}"><kbd>${k + 1}</kbd><span>${api.esc(o)}</span></button>`).join('')}</div>

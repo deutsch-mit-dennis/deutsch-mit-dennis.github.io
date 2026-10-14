@@ -1,5 +1,5 @@
 {
-"updated": "2026-10-14T09:02:53Z",
+"updated": "2026-10-13T11:07:07Z",
 "engines": [
 "google"
 ],
@@ -111,12 +111,6 @@
 "engine": "google",
 "sig": "76f4363af0",
 "text": "1db6ae5b8b"
-},
-"b2-4-01": {
-"v": "464726478f",
-"engine": "google",
-"sig": "464726478f",
-"text": "52acec3325"
 },
 "dtz-1-01": {
 "v": "c66a515925",
@@ -285,12 +279,6 @@
 "engine": "google",
 "sig": "23f5668c91",
 "text": "72b0525444"
-},
-"dtz-5-01": {
-"v": "8a2f9d91db",
-"engine": "google",
-"sig": "8a2f9d91db",
-"text": "10c34056cc"
 },
 "ex-alltag": {
 "v": "503f094058",
@@ -621,12 +609,6 @@
 "engine": "google",
 "sig": "a239c2dc4d",
 "text": "16915c012d"
-},
-"t22831e51": {
-"v": "430f97f216",
-"engine": "google",
-"sig": "430f97f216",
-"text": "ce574dc7ca"
 },
 "t229ff0af": {
 "v": "2bbd2ae670",
@@ -981,12 +963,6 @@
 "engine": "google",
 "sig": "42e6ce65db",
 "text": "43a7bbae27"
-},
-"t56ffc22a": {
-"v": "d8cd7c65e2",
-"engine": "google",
-"sig": "d8cd7c65e2",
-"text": "1868b1dd20"
 },
 "t57b5e71a": {
 "v": "38a6089a53",
@@ -1540,12 +1516,6 @@
 "sig": "b76fb6427c",
 "text": "4f41c217dc"
 },
-"ta0e0b49e": {
-"v": "2b728e3978",
-"engine": "google",
-"sig": "2b728e3978",
-"text": "c877dca2f1"
-},
 "ta5c95696": {
 "v": "8ea9162df9",
 "engine": "google",
@@ -2025,12 +1995,6 @@
 "engine": "google",
 "sig": "0b3f8f427b",
 "text": "5b7f12e3ba"
-},
-"te7d5912b": {
-"v": "3f51870a9f",
-"engine": "google",
-"sig": "3f51870a9f",
-"text": "f2d9e39a8a"
 },
 "te7ed2216": {
 "v": "d96b51d2d9",

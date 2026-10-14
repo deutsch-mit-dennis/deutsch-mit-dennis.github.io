@@ -4,26 +4,26 @@
 
   /* Zeitstrahl: [Jahr, Ereignis] */
   const EVENTS = [
-    [1871, 'Gründung des Deutschen Kaiserreichs'],
-    [1914, 'Beginn des Ersten Weltkriegs'],
-    [1918, 'Ende des Ersten Weltkriegs'],
-    [1919, 'Frauen dürfen in Deutschland zum ersten Mal wählen'],
-    [1933, 'Adolf Hitler wird Reichskanzler – Beginn der NS-Diktatur'],
-    [1938, 'Novemberpogrome: Synagogen in ganz Deutschland brennen'],
-    [1939, 'Beginn des Zweiten Weltkriegs'],
-    [1945, 'Ende des Zweiten Weltkriegs in Europa'],
-    [1948, 'Währungsreform: Die D-Mark kommt in Westdeutschland'],
-    [1949, 'Das Grundgesetz tritt in Kraft – Gründung der Bundesrepublik Deutschland'],
-    [1953, '17. Juni: Volksaufstand in der DDR'],
-    [1955, 'Erstes Anwerbeabkommen für „Gastarbeiter“ (mit Italien)'],
-    [1957, 'Römische Verträge: Deutschland gründet mit fünf Ländern die EWG'],
-    [1961, 'Bau der Berliner Mauer'],
-    [1963, 'Élysée-Vertrag: Freundschaftsvertrag mit Frankreich'],
-    [1973, 'BRD und DDR werden Mitglieder der Vereinten Nationen (UNO)'],
-    [1989, 'Fall der Berliner Mauer (9. November)'],
-    [1990, 'Deutsche Wiedervereinigung (3. Oktober)'],
-    [2002, 'Der Euro wird in Deutschland Bargeld'],
-    [2005, 'Angela Merkel wird die erste Bundeskanzlerin']
+    [1871, 'Gründung des Deutschen Kaiserreichs', 'Gründung des Kaiserreichs'],
+    [1914, 'Beginn des Ersten Weltkriegs', 'Beginn des Ersten Weltkriegs'],
+    [1918, 'Ende des Ersten Weltkriegs', 'Ende des Ersten Weltkriegs'],
+    [1919, 'Frauen dürfen in Deutschland zum ersten Mal wählen', 'Frauen wählen zum ersten Mal'],
+    [1933, 'Adolf Hitler wird Reichskanzler – Beginn der NS-Diktatur', 'Hitler wird Reichskanzler'],
+    [1938, 'Novemberpogrome: Synagogen in ganz Deutschland brennen', 'Novemberpogrome'],
+    [1939, 'Beginn des Zweiten Weltkriegs', 'Beginn des Zweiten Weltkriegs'],
+    [1945, 'Ende des Zweiten Weltkriegs in Europa', 'Ende des Zweiten Weltkriegs'],
+    [1948, 'Währungsreform: Die D-Mark kommt in Westdeutschland', 'Die D-Mark kommt'],
+    [1949, 'Das Grundgesetz tritt in Kraft – Gründung der Bundesrepublik Deutschland', 'Das Grundgesetz tritt in Kraft'],
+    [1953, '17. Juni: Volksaufstand in der DDR', 'Volksaufstand in der DDR'],
+    [1955, 'Erstes Anwerbeabkommen für „Gastarbeiter“ (mit Italien)', 'Erste „Gastarbeiter“ kommen'],
+    [1957, 'Römische Verträge: Deutschland gründet mit fünf Ländern die EWG', 'Gründung der EWG'],
+    [1961, 'Bau der Berliner Mauer', 'Bau der Berliner Mauer'],
+    [1963, 'Élysée-Vertrag: Freundschaftsvertrag mit Frankreich', 'Freundschaftsvertrag mit Frankreich'],
+    [1973, 'BRD und DDR werden Mitglieder der Vereinten Nationen (UNO)', 'BRD und DDR werden UNO-Mitglieder'],
+    [1989, 'Fall der Berliner Mauer (9. November)', 'Fall der Berliner Mauer'],
+    [1990, 'Deutsche Wiedervereinigung (3. Oktober)', 'Deutsche Wiedervereinigung'],
+    [2002, 'Der Euro wird in Deutschland Bargeld', 'Der Euro wird Bargeld'],
+    [2005, 'Angela Merkel wird die erste Bundeskanzlerin', 'Erste Bundeskanzlerin']
   ];
 
   /* Wer macht was? [Aussage, Antwort, Gruppe] */
@@ -84,20 +84,21 @@
 
   DMGame.register({
     id: 'lid-zeitstrahl', cat: 'lid', title: 'Zeitstrahl Deutschland', icon: '📜', level: 'A2–B1',
-    desc: 'Mauerbau, Grundgesetz, Wiedervereinigung: Wann war das – und was war früher?',
-    intro: 'Wichtige Jahre der deutschen Geschichte kommen oft im Test vor. Wähle das richtige Jahr – oder tippe auf das Ereignis, das früher war. 15 Aufgaben, 3 Leben.',
+    desc: 'Mauerbau, Grundgesetz, Wiedervereinigung: Wann war das – und was ist in welchem Jahr passiert?',
+    intro: 'Wichtige Jahre der deutschen Geschichte kommen oft im Test vor. Wähle das richtige Jahr zum Ereignis – oder umgekehrt das Ereignis zum Jahr. 15 Aufgaben, 3 Leben.',
     optionsLabel: 'Aufgabe',
-    options: [{ id: 'jahr', label: 'Jahr wählen' }, { id: 'frueher', label: 'Was war früher?' }],
+    options: [{ id: 'jahr', label: 'Jahr wählen' }, { id: 'ereignis', label: 'Was ist passiert?' }],
     start(api, opt) {
       let items;
-      if (opt === 'frueher') {
-        items = [];
-        for (let n = 0; n < 40; n++) {
-          const [x, y] = api.pick(EVENTS, 2);
-          if (x[0] === y[0]) continue;
-          const early = x[0] < y[0] ? x : y, late = early === x ? y : x;
-          items.push({ q: 'Was war früher?', a: early[1], opts: [x[1], y[1]], keep: true, tip: `${early[0]}: ${early[1]} · ${late[0]}: ${late[1]}`, correct: `${early[0]} – ${early[1]}` });
-        }
+      if (opt === 'ereignis') {
+        // Jahr anzeigen, kurzes Ereignis wählen; Ablenker liegen mindestens 10 Jahre entfernt
+        items = EVENTS.map(([y, long, kurz]) => {
+          const words = t => new Set(t.toLowerCase().match(/[a-zäöüß]{5,}/g) || []);
+          const mine = words(kurz);
+          // keine ähnlich klingenden Ablenker (z. B. Erster/Zweiter Weltkrieg)
+          const far = EVENTS.filter(e => Math.abs(e[0] - y) >= 10 && ![...words(e[2])].some(w => mine.has(w))).map(e => e[2]);
+          return { q: String(y), sub: 'Was ist in diesem Jahr passiert?', a: kurz, opts: [kurz, ...api.pick(far, 2)], tip: long, correct: `${y}: ${long}` };
+        });
       } else {
         const years = EVENTS.map(e => e[0]);
         items = EVENTS.map(([y, e]) => {
@@ -105,7 +106,7 @@
           return { q: e, sub: 'In welchem Jahr war das?', a: String(y), opts: [String(y), ...api.pick(near, 3).map(String)].sort(), keep: true, correct: `${y}: ${e}` };
         });
       }
-      DMKit.mc(api, { items, rounds: 15, lives: 3, cols: opt === 'frueher' ? 1 : 2 });
+      DMKit.mc(api, { items, rounds: 15, lives: 3, cols: opt === 'ereignis' ? 1 : 2, big: opt === 'ereignis' });
     }
   });
 

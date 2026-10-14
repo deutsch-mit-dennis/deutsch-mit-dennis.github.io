@@ -70,9 +70,14 @@
     const onHome = !location.hash || location.hash === '#';
     let later = false; try { later = !!sessionStorage.getItem(SEEN); } catch {}
     if (!onHome || get(SEEN) || later || (+get(LATER) || 0) >= 3 || document.getElementById('dm-tour')) return;
-    check().then(ok => { if (ok) setTimeout(bubble, 1800); });
+    check().then(ok => { if (ok) setTimeout(() => { if (!location.hash || location.hash === '#') bubble(); }, 1800); });
   }
   document.addEventListener('click', e => { const a = e.target.closest('[data-tour-start]'); if (a) { e.preventDefault(); window.DMTour.start(); } });
-  window.addEventListener('hashchange', () => setTimeout(maybeShow, 300));
+  window.addEventListener('hashchange', () => {
+    // Begrüßung (noch nicht gestartet) ausblenden, sobald man die Startseite verlässt – z. B. beim Spielen
+    const t = document.getElementById('dm-tour'), onHome = !location.hash || location.hash === '#';
+    if (t && !onHome && t.querySelector('.dm-tour-player')?.hidden) { t.classList.remove('dm-tour-in'); setTimeout(() => t.remove(), 300); }
+    setTimeout(maybeShow, 300);
+  });
   if (document.readyState === 'complete') maybeShow(); else window.addEventListener('load', maybeShow);
 })();

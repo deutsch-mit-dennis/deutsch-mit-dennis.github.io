@@ -8,14 +8,16 @@
     st.id = "sp-lino-css";
     st.textContent = `
 .sp-lino .sp-area{margin-top:10px}
-.sp-lino-wrap{position:relative;border-radius:16px;overflow:hidden;background:#bfe3ff;box-shadow:0 6px 20px rgba(23,32,54,.12);touch-action:manipulation;-webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent}
-.sp-lino-wrap canvas{display:block;width:100%;height:auto;cursor:pointer}
+.sp-lino-wrap{position:relative;border-radius:16px;overflow:hidden;background:#bfe3ff;box-shadow:0 6px 20px rgba(23,32,54,.12);touch-action:manipulation;-webkit-user-select:none;user-select:none;-webkit-touch-callout:none;-webkit-tap-highlight-color:transparent}
+.sp-lino-wrap canvas{display:block;width:100%;height:auto;max-height:62vh;object-fit:contain;cursor:pointer;-webkit-touch-callout:none}
 .sp-lino-banner{position:absolute;left:50%;top:14px;transform:translateX(-50%);background:rgba(255,255,255,.94);border-radius:99px;padding:6px 16px;font:800 15px var(--dm-font);color:var(--dm-ink);box-shadow:0 4px 12px rgba(0,0,0,.12);white-space:nowrap;pointer-events:none;transition:opacity .3s}
 .sp-lino-banner[hidden]{display:block;opacity:0}
 .sp-lino-panel{margin-top:12px}
-.sp-lino-jump{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;min-height:64px;border:0;border-radius:18px;background:linear-gradient(180deg,#ff9a3c,#e5622b);color:#fff;font:800 20px var(--dm-font);box-shadow:0 5px 0 #b8461c;cursor:pointer;touch-action:manipulation;-webkit-user-select:none;user-select:none}
+.sp-lino-jump{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;min-height:64px;border:0;border-radius:18px;background:linear-gradient(180deg,#ff9a3c,#e5622b);color:#fff;font:800 20px var(--dm-font);box-shadow:0 5px 0 #b8461c;cursor:pointer;touch-action:manipulation;-webkit-user-select:none;user-select:none;-webkit-touch-callout:none;-webkit-tap-highlight-color:transparent}
 .sp-lino-jump:active{transform:translateY(3px);box-shadow:0 2px 0 #b8461c}
 .sp-lino-hint{margin:8px 0 0;text-align:center;color:#5b6680;font-size:14px}
+.sp-play.sp-lino{scroll-margin-top:96px}
+@media (max-height:520px){.sp-play.sp-lino{scroll-margin-top:74px}.sp-lino-wrap canvas{max-height:calc(100vh - 240px);min-height:140px}.sp-lino-hint{display:none}.sp-lino-panel{margin-top:8px}.sp-lino-jump{min-height:46px;font-size:18px}.sp-lino .sp-hud{margin-bottom:4px}}
 .sp-lino-q{background:#fff;border:2px solid var(--dm-tinte);border-radius:18px;padding:14px 14px 12px}
 .sp-lino-q .sp-lino-tag{display:inline-block;background:var(--dm-tinte-soft);color:var(--dm-tinte-dark);font-weight:800;font-size:13px;border-radius:99px;padding:3px 10px;margin:0 0 8px}
 .sp-lino-q p.sp-lino-text{margin:0 0 12px;font:700 clamp(18px,4.6vw,23px)/1.4 var(--dm-font);color:var(--dm-ink);overflow-wrap:break-word}
@@ -536,7 +538,7 @@
           add(5);
         } else if (f === "enemy") {
           const x0 = solid.length;
-          add(7);
+          add(L >= 2 ? 10 : 8); // Platz nach dem Käfer, damit danach keine Lücke direkt folgt
           enemies.push({
             x: (x0 + 4) * T,
             min: (x0 + 1) * T,
@@ -636,6 +638,12 @@
           panel = api.el.querySelector(".sp-lino-panel"),
           banner = api.el.querySelector(".sp-lino-banner");
         ctx.scale(dpr, dpr);
+        // Auf kleinen Bildschirmen (z. B. Handy quer) Spielfeld und Sprungknopf ganz zeigen
+        requestAnimationFrame(() => {
+          const card = api.el.closest(".sp-play") || api.el;
+          const b = panel.getBoundingClientRect();
+          if (b.top + 80 > innerHeight) card.scrollIntoView({ block: "start", behavior: "smooth" });
+        });
         const speed = 138 + L * 16,
           G = 1650,
           JUMP = 667;
@@ -657,6 +665,7 @@
           gateIdx = 0,
           checkpoint = 3 * T;
         let coyote = 0,
+          buffer = 0,
           state = "run",
           last = 0,
           held = false,
@@ -692,6 +701,7 @@
           jb.addEventListener("pointerup", release);
           jb.addEventListener("pointerleave", release);
           jb.addEventListener("pointercancel", release);
+          jb.addEventListener("contextmenu", (e) => e.preventDefault());
           jb.addEventListener("keydown", (e) => {
             if (e.key === "Enter") {
               e.preventDefault();
@@ -709,11 +719,12 @@
             P.vy = -JUMP * 0.78;
             P.onGround = false;
             coyote = 0;
-          }
+            buffer = 0;
+          } else buffer = 0.14; // kurz vor der Landung gedrückt → Sprung direkt nach der Landung
         }
         function release() {
+          // Loslassen beendet nur den Extra-Schub – ein kurzes Tippen ergibt trotzdem einen vollen Sprung
           held = false;
-          if (P.vy < -220) P.vy = -220;
         }
         cv.addEventListener("pointerdown", (e) => {
           e.preventDefault();
@@ -721,6 +732,7 @@
         });
         cv.addEventListener("pointerup", release);
         cv.addEventListener("pointercancel", release);
+        api.el.querySelector(".sp-lino-wrap").addEventListener("contextmenu", (e) => e.preventDefault());
         const onKey = (e) => {
           if (!api.el.isConnected) return removeEventListener("keydown", onKey);
           if (
@@ -825,6 +837,15 @@
             P.y = GROUND - P.h;
             P.vy = 0;
             P.onGround = true;
+          }
+          if (buffer > 0) {
+            buffer -= dt;
+            if (P.onGround) {
+              buffer = 0;
+              P.vy = -JUMP * 0.78;
+              P.onGround = false;
+              holdT = 0;
+            }
           }
           if (P.onGround) coyote = 0.11;
           else if (wasGround && P.vy >= 0) coyote = Math.max(coyote, 0.11);
@@ -954,6 +975,11 @@
                     ?.focus({ preventScroll: true });
                   cv.scrollIntoView({ block: "nearest", behavior: "smooth" });
                 });
+                // „Weiter laufen“ auf dem Handy sichtbar machen
+                setTimeout(() => {
+                  const nb = document.getElementById("sp-next");
+                  if (nb && nb.getBoundingClientRect().bottom > innerHeight) nb.scrollIntoView({ block: "end", behavior: "smooth" });
+                }, 60);
               }),
           );
         }
