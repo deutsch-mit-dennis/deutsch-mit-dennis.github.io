@@ -6,6 +6,7 @@
      desc: 'Ein Satz zur Karte',            // für die Übersicht
      intro: 'Ein, zwei Sätze Spielregel',   // Startbildschirm
      options: [{ id: 'A', label: 'A1–A2' }, { id: 'B', label: 'B1' }],   // optional: Auswahl vor dem Start (z. B. Niveau/Thema)
+     cat: 'basis' | 'alltag' | 'b2' | 'lid',  // Bereich auf der Übersicht (Standard: basis)
      start(api, option) { … }              // baut das Spiel in api.el
    });
 
@@ -32,17 +33,33 @@
   let activeTimer = null, keyHandler = null;
   const stopAll = () => { if (activeTimer) activeTimer.stop(); activeTimer = null; try { window.speechSynthesis?.cancel(); } catch {} };
 
-  const crumbs = g => DM.crumbs([['Üben', '#ueben'], ['Lernspiele', g ? '#spiele' : null], ...(g ? [[g.title]] : [])]);
+  const crumbs = g => DM.crumbs([['Üben', '#ueben'], ['Lernspiele', '#spiele'], [g.title]]);
 
-  function hub() {
+  const CATS = [
+    { id: 'basis', icon: '🧩', t: 'Wörter und Grammatik', d: 'Zahlen, Artikel, Verben, Memory und Briefe – für A1 bis B1.' },
+    { id: 'alltag', icon: '🛒', t: 'Alltag: Reisen, Einkaufen, Ämter', d: 'Wortschatz für Bahnhof, Supermarkt, Arzt, Wohnung und Behörden – ganz ohne Prüfungsdruck.' },
+    { id: 'b2', icon: '💼', t: 'Prüfung DTB B2 Beruf', d: 'Redemittel, Nomen-Verb-Verbindungen, Präpositionen und Konnektoren für den Beruf.' },
+    { id: 'lid', icon: '🇩🇪', t: 'Test „Leben in Deutschland“', d: 'Prüfungsfragen, Geschichte und Staat – spielerisch wiederholen.' }
+  ];
+  const catOf = g => g.cat || 'basis';
+  const card = (g, s) => `<a class="sp-card" href="#spiele/${g.id}"><span class="sp-ic" aria-hidden="true">${g.icon}</span><span class="sp-t"><b>${esc(g.title)}</b><span>${esc(g.desc)}</span><small>${esc(g.level || '')}${s[g.id]?.best != null ? ` · Rekord: ${s[g.id].best}` : ''}</small></span></a>`;
+  const BILD = '<a class="sp-card" href="#bild"><span class="sp-ic" aria-hidden="true">🖼</span><span class="sp-t"><b>Bild beschreiben</b><span>Endungen und Relativsätze an Bildern – wie im DTZ.</span><small>A2–B1</small></span></a>';
+
+  function hub(only) {
     stopAll();
-    const s = get();
-    DM.page(`${crumbs()}
-      <div class="dm-head"><h1>Lernspiele</h1><p class="dm-lead">Kurz, schnell und mit sofortiger Rückmeldung – auf dem Handy und am Computer. Ohne Anmeldung.</p></div>
-      ${window.DMChallenge ? DMChallenge.teaser() : ''}
-      <div class="sp-grid">${games.map(g => `<a class="sp-card" href="#spiele/${g.id}"><span class="sp-ic" aria-hidden="true">${g.icon}</span><span class="sp-t"><b>${esc(g.title)}</b><span>${esc(g.desc)}</span><small>${esc(g.level || '')}${s[g.id]?.best != null ? ` · Rekord: ${s[g.id].best}` : ''}</small></span></a>`).join('')}
-        <a class="sp-card" href="#bild"><span class="sp-ic" aria-hidden="true">🖼</span><span class="sp-t"><b>Bild beschreiben</b><span>Endungen und Relativsätze an Bildern – wie im DTZ.</span><small>A2–B1</small></span></a>
-      </div>`, 'sp-page');
+    const s = get(), c = CATS.find(x => x.id === only);
+    const section = k => {
+      const list = games.filter(g => catOf(g) === k.id);
+      if (!list.length) return '';
+      return `<section class="sp-cat" id="sp-cat-${k.id}" aria-labelledby="sp-h-${k.id}">
+        <h2 id="sp-h-${k.id}"><span aria-hidden="true">${k.icon}</span> ${esc(k.t)}</h2><p class="sp-cat-d">${esc(k.d)}</p>
+        <div class="sp-grid">${list.map(g => card(g, s)).join('')}${k.id === 'basis' ? BILD : ''}</div></section>`;
+    };
+    DM.page(`${DM.crumbs([['Üben', '#ueben'], ['Lernspiele', c ? '#spiele' : null], ...(c ? [[c.t]] : [])])}
+      <div class="dm-head"><h1>${c ? esc(c.t) : 'Lernspiele'}</h1><p class="dm-lead">${c ? esc(c.d) : 'Kurz, schnell und mit sofortiger Rückmeldung – auf dem Handy und am Computer. Ohne Anmeldung.'}</p></div>
+      ${!c && window.DMChallenge ? DMChallenge.teaser() : ''}
+      <nav class="sp-tabs" aria-label="Bereiche"><a href="#spiele"${!c ? ' aria-current="page"' : ''}>Alle</a>${CATS.map(k => `<a href="#spiele/${k.id}"${c === k ? ' aria-current="page"' : ''}><span aria-hidden="true">${k.icon}</span> ${esc(k.t.split(':')[0].replace('Test „Leben in Deutschland“', 'Leben in Deutschland'))}</a>`).join('')}</nav>
+      ${(c ? [c] : CATS).map(section).join('')}`, 'sp-page');
   }
 
   function intro(g) {
@@ -53,7 +70,7 @@
         ${s.best != null ? `<p class="sp-best">🏆 Dein Rekord: <b>${s.best}</b> · ${s.plays || 0}× gespielt</p>` : ''}
         ${g.options ? `<fieldset class="ch-level"><legend>${esc(g.optionsLabel || 'Wähle')}</legend>${g.options.map((o, i) => `<label><input type="radio" name="sp-opt" value="${esc(o.id)}"${(s.opt ? s.opt === o.id : i === 0) ? ' checked' : ''}><span>${esc(o.label)}</span></label>`).join('')}</fieldset>` : ''}
         <div class="ch-actions"><button type="button" class="dm-btn ch-go" id="sp-start">Spiel starten</button></div>
-        <p class="dm-small"><a href="#spiele">← Alle Lernspiele</a></p>
+        <p class="dm-small"><a href="#spiele/${catOf(g)}">← Weitere Spiele: ${esc((CATS.find(k => k.id === catOf(g)) || CATS[0]).t)}</a></p>
       </section>`, 'sp-page');
     $('#sp-start').onclick = () => {
       const opt = document.querySelector('input[name=sp-opt]:checked')?.value;
@@ -107,7 +124,7 @@
         <p class="ch-big">${score}${max ? ` <small>von ${max}</small>` : ' <small>Punkte</small>'}</p>
         ${!isBest ? `<p class="sp-best">Dein Rekord: <b>${s.best}</b></p>` : ''}
         ${wrong.length ? `<details class="ch-review" open><summary>Das solltest du dir merken (${wrong.length})</summary><ul>${wrong.slice(0, 15).map(w => `<li><b>${esc(w.correct)}</b>${w.tip ? ` – ${esc(w.tip)}` : ''}</li>`).join('')}</ul></details>` : ''}
-        <div class="ch-actions"><button type="button" class="dm-btn ch-go" id="sp-again">Nochmal spielen</button><a class="dm-btn dm-btn-quiet" href="#spiele">Andere Spiele</a></div>
+        <div class="ch-actions"><button type="button" class="dm-btn ch-go" id="sp-again">Nochmal spielen</button><a class="dm-btn dm-btn-quiet" href="#spiele/${catOf(g)}">Andere Spiele</a></div>
       </section>`, 'sp-page');
     window.scrollTo({ top: 0, behavior: 'instant' });
     if ((isBest && score > 0) || pct >= 0.9) DM.celebrate?.($('.sp-result'));
@@ -125,5 +142,5 @@
 
   window.DMGame = { register: g => { const i = games.findIndex(x => x.id === g.id); i >= 0 ? games.splice(i, 1, g) : games.push(g); }, list: () => games };
   DM.routes ||= {};
-  DM.routes.spiele = p => { const g = games.find(x => x.id === p[1]); g ? intro(g) : hub(); };
+  DM.routes.spiele = p => { const g = games.find(x => x.id === p[1]); g ? intro(g) : hub(CATS.some(k => k.id === p[1]) ? p[1] : null); };
 })();

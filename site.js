@@ -218,7 +218,7 @@
         <a href="#hoeren" data-img="kopfhoerer"><img class="dm-tool-3d" src="assets/3d/kopfhoerer.webp" alt="" width="192" height="192" loading="lazy" aria-hidden="true"><b>Hören</b><span>DTZ- und B2-Hörtraining mit natürlichen Stimmen: Ansagen, Mailbox, Gespräche.</span></a>
         <a href="#lesen" data-img="buecher"><img class="dm-tool-3d" src="assets/3d/buecher.webp" alt="" width="192" height="192" loading="lazy" aria-hidden="true"><b>Lesen</b><span>Mitteilungen, E-Mails und Artikel verstehen – wie im DTZ und DTB B2.</span></a>
         <a href="#lid" data-img="gebaeude"><img class="dm-tool-3d" src="assets/3d/gebaeude.webp" alt="" width="192" height="192" loading="lazy" aria-hidden="true"><b>Leben in Deutschland</b><span>Lernspiele und Wissen für den Orientierungskurs.</span></a>
-        <a href="#lieder" data-img="mikrofon"><img class="dm-tool-3d" src="assets/3d/mikrofon.webp" alt="" width="192" height="192" loading="lazy" aria-hidden="true"><b>Deutsch mit Liedern</b><span>25 eigene Lieder von A1 bis C1 – mit Text, Aufgaben und Lösungen.</span></a>
+        <a href="#lieder" data-img="mikrofon"><img class="dm-tool-3d" src="assets/3d/mikrofon.webp" alt="" width="192" height="192" loading="lazy" aria-hidden="true"><b>Deutsch mit Liedern</b><span>40 eigene Lieder von A1 bis C1 – mit Text, Aufgaben und Lösungen.</span></a>
         <a href="#kahoot" data-img="spiel"><img class="dm-tool-3d" src="assets/3d/spiel.webp" alt="" width="192" height="192" loading="lazy" aria-hidden="true"><b>Kahoot-Quiz</b><span>Spielerisch wiederholen – allein oder mit dem ganzen Kurs.</span></a>
         <a href="#material" data-img="blatt"><img class="dm-tool-3d" src="assets/3d/blatt.webp" alt="" width="192" height="192" loading="lazy" aria-hidden="true"><b>Materialien</b><span>Arbeitsblätter und Merkblätter als PDF – zum Ausdrucken.</span></a>
 
@@ -375,7 +375,7 @@
         <section class="dm-card dm-hub-card"><h2>✍️ Schreiben</h2><p>Plane deinen Text, schreib ihn und vergleiche mit einem Muster. Dein Entwurf bleibt auf deinem Gerät gespeichert.</p>${levelLinks('ueben/schreiben')}<a class="dm-inline-link" href="#schreiben/bausteine">Schreib-Bausteine: Anrede, Gruß, Verbindungswörter</a></section>
         <section class="dm-card dm-hub-card"><h2>🎧 Hören</h2><p>Hörtraining für DTZ und DTB B2 mit natürlichen Stimmen – plus kurze Texte zum Einstieg.</p><div class="dm-pills"><a href="#hoeren/dtz-1"><b>DTZ</b><small>5 Übungssätze</small></a><a href="#hoeren/b2-1"><b>DTB B2</b><small>4 Übungssätze</small></a><a href="#hoeren"><b>Alle</b><small>Übersicht</small></a></div></section>
         <section class="dm-card dm-hub-card"><h2>📖 Lesen</h2><p>Mitteilungen, Anzeigen, E-Mails und Artikel verstehen – mit Fragen und Erklärungen.</p><div class="dm-pills"><a href="#lesen/alltag"><b>Alltag</b><small>A2–B1 · DTZ</small></a><a href="#lesen/beruf"><b>Beruf</b><small>B1–B2 · DTB</small></a></div></section>
-        <section class="dm-card dm-hub-card"><h2>🎮 Lernspiele</h2><p>Zahlen hören, Dialoge führen, Verben und Artikel im Schnelltempo, Memory, Wo oder wohin? und Brief-Baukasten.</p><a class="dm-btn dm-btn-quiet" href="#spiele">Zu den Lernspielen</a></section>
+        <section class="dm-card dm-hub-card"><h2>🎮 Lernspiele</h2><p>17 Spiele: Grammatik und Wörter, Alltag (Reisen, Einkaufen, Ämter), DTB B2 Beruf und „Leben in Deutschland“.</p><a class="dm-btn dm-btn-quiet" href="#spiele">Zu den Lernspielen</a></section>
         <section class="dm-card dm-hub-card"><h2>🖼 Bild beschreiben</h2><p>Adjektivendungen und Relativsätze an Bildern üben – wie im DTZ, Teil Sprechen 2.</p><a class="dm-btn dm-btn-quiet" href="#bild">Zum Bild-Trainer</a></section>
         <section class="dm-card dm-hub-card"><h2>🎲 Gemeinsam spielen</h2><p>Kahoot-Quiz für den Kurs oder zu Hause. Wörter und Redemittel festigen.</p><a class="dm-btn dm-btn-quiet" href="#kahoot">Zu den Kahoot-Quiz</a></section>
       </div>`);
@@ -757,6 +757,7 @@
           ${card('#training/dtb-schreiben', 'Schreiben', 'Kundenantwort', 'Mit internen Informationen')}
           ${card('#lesen/beruf', 'Lesen', 'Regelungen und E-Mails', `${(readSets()[1] || { items: [] }).items.length} Lesetexte mit Fragen`)}
           ${card('#hoeren/beruf', 'Hören', 'Hören im Beruf', `${(listenSet('beruf') || { items: [] }).items.length} Hörtexte mit Fragen`)}
+          ${card('#spiele/b2', 'Lernspiele', 'Wortschatz und Grammatik B2', 'Nomen-Verb, Präpositionen, Konnektoren, Redemittel')}
         </div>
       </section>
       <section class="dm-exam-block dm-g-mint" aria-labelledby="lid-h">
@@ -764,6 +765,7 @@
         <div class="dm-examgrid">
           ${card('#lid', 'Neu', 'LiD-Trainer: alle 310 Fragen', 'Lernen, Fehler wiederholen, Test mit 33 Fragen und 60 Minuten')}
           ${card('#orientierungskurs', 'Lernspiele', 'Deutschland verstehen', 'Demokratie, Geschichte, Zusammenleben')}
+          ${card('#spiele/lid', 'Neu', 'LiD-Spiele', 'Überleben, Zeitstrahl, Wer macht was im Staat?')}
           ${card('#videos/orientierung', 'Videos', 'LiD einfach erklärt', 'Wahlen, Grundrechte, Bundestag')}
         </div>
       </section>

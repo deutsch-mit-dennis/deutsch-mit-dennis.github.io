@@ -654,3 +654,12 @@ header.dm-header nav{margin-left:auto}
 @media (max-width:520px){.sp-home{flex-wrap:wrap}.sp-home-go{width:100%;text-align:center}}
 /* Hilfe-Knopf in Spielen auf dem Handy ausblenden (verdeckt sonst Antworten) */
 @media (max-width:900px){body:has(.sp-play, .ch-play, .bd-play, .sp-result, .ch-result) #site-helper{display:none}}
+/* Lernspiele: Bereiche */
+.sp-tabs{display:flex;gap:8px;overflow-x:auto;padding:2px 2px 8px;margin:4px 0 14px;scrollbar-width:thin;-webkit-overflow-scrolling:touch}
+.sp-tabs a{flex:0 0 auto;display:inline-flex;align-items:center;gap:6px;min-height:44px;padding:8px 16px;border:2px solid var(--dm-line);border-radius:99px;background:#fff;color:var(--dm-ink);font-weight:700;text-decoration:none;white-space:nowrap}
+.sp-tabs a:hover{border-color:var(--dm-tinte)}
+.sp-tabs a[aria-current]{border-color:var(--dm-tinte);background:var(--dm-tinte-soft);color:var(--dm-tinte-dark)}
+.sp-cat{margin:0 0 10px;scroll-margin-top:80px}
+.sp-cat h2{font-size:clamp(21px,4.6vw,26px);margin:16px 0 2px}
+.sp-cat-d{margin:0 0 10px;color:#55607a}
+@media (max-width:520px){.sp-grid{grid-template-columns:1fr;gap:10px}.sp-card{padding:14px}}
