@@ -10,6 +10,8 @@
 .sp-lino .sp-area{margin-top:10px}
 .sp-lino-wrap{position:relative;border-radius:16px;overflow:hidden;background:#bfe3ff;box-shadow:0 6px 20px rgba(23,32,54,.12);touch-action:manipulation;-webkit-user-select:none;user-select:none;-webkit-touch-callout:none;-webkit-tap-highlight-color:transparent}
 .sp-lino-wrap canvas{display:block;width:100%;height:auto;max-height:62vh;object-fit:contain;cursor:pointer;-webkit-touch-callout:none}
+.sp-lino-snd{position:absolute;right:8px;top:8px;width:44px;height:44px;border:0;border-radius:50%;background:rgba(255,255,255,.88);font-size:20px;line-height:1;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.15);display:grid;place-items:center;padding:0}
+.sp-lino-snd:focus-visible{outline:3px solid var(--dm-tinte,#2341B5);outline-offset:2px}
 .sp-lino-banner{position:absolute;left:50%;top:14px;transform:translateX(-50%);background:rgba(255,255,255,.94);border-radius:99px;padding:6px 16px;font:800 15px var(--dm-font);color:var(--dm-ink);box-shadow:0 4px 12px rgba(0,0,0,.12);white-space:nowrap;pointer-events:none;transition:opacity .3s}
 .sp-lino-banner[hidden]{display:block;opacity:0}
 .sp-lino-panel{margin-top:12px}
@@ -499,6 +501,200 @@
     } catch {}
   };
 
+  // Ton: alles live mit der Web-Audio-API erzeugt (keine Dateien) – Musik je Welt und Geräusche
+  const SND = (() => {
+    const KEYS = "dm-lino-ton";
+    let enabled = true;
+    try {
+      enabled = localStorage.getItem(KEYS) !== "0";
+    } catch {}
+    let ac = null,
+      master,
+      music,
+      sfx,
+      noiseBuf,
+      timer = 0,
+      song = null,
+      step = 0,
+      nextT = 0;
+    const hz = (m) => 440 * Math.pow(2, (m - 69) / 12);
+    function init() {
+      if (!ac) {
+        const AC = window.AudioContext || window.webkitAudioContext;
+        if (!AC) return null;
+        try {
+          ac = new AC();
+        } catch {
+          return null;
+        }
+        master = ac.createGain();
+        master.gain.value = enabled ? 1 : 0;
+        master.connect(ac.destination);
+        music = ac.createGain();
+        music.gain.value = 0.17;
+        music.connect(master);
+        sfx = ac.createGain();
+        sfx.gain.value = 0.34;
+        sfx.connect(master);
+        noiseBuf = ac.createBuffer(1, ac.sampleRate * 0.5, ac.sampleRate);
+        const d = noiseBuf.getChannelData(0);
+        for (let i = 0; i < d.length; i++) d[i] = Math.random() * 2 - 1;
+      }
+      if (ac.state === "suspended" && !document.hidden) ac.resume().catch(() => {});
+      return ac;
+    }
+    function tone(f, t, dur, type = "square", vol = 0.5, f2 = 0, dest = sfx) {
+      const o = ac.createOscillator(),
+        g = ac.createGain();
+      o.type = type;
+      o.frequency.setValueAtTime(f, t);
+      if (f2) o.frequency.exponentialRampToValueAtTime(f2, t + dur);
+      g.gain.setValueAtTime(0.0001, t);
+      g.gain.exponentialRampToValueAtTime(vol, t + 0.012);
+      g.gain.exponentialRampToValueAtTime(0.0001, t + dur);
+      o.connect(g);
+      g.connect(dest);
+      o.start(t);
+      o.stop(t + dur + 0.03);
+    }
+    function noise(t, dur, vol, freq = 6000, dest = sfx) {
+      const n = ac.createBufferSource(),
+        flt = ac.createBiquadFilter(),
+        g = ac.createGain();
+      n.buffer = noiseBuf;
+      flt.type = "bandpass";
+      flt.frequency.value = freq;
+      g.gain.setValueAtTime(vol, t);
+      g.gain.exponentialRampToValueAtTime(0.0001, t + dur);
+      n.connect(flt);
+      flt.connect(g);
+      g.connect(dest);
+      n.start(t);
+      n.stop(t + dur + 0.02);
+    }
+    const FX = {
+      jump: (t) => tone(290, t, 0.17, "square", 0.42, 760),
+      coin: (t) => {
+        tone(988, t, 0.07, "square", 0.38);
+        tone(1319, t + 0.07, 0.2, "square", 0.38);
+      },
+      stomp: (t) => {
+        tone(500, t, 0.13, "square", 0.5, 110);
+        noise(t, 0.09, 0.35, 1800);
+      },
+      hurt: (t) => {
+        tone(440, t, 0.13, "sawtooth", 0.42, 220);
+        tone(330, t + 0.13, 0.25, "sawtooth", 0.42, 110);
+      },
+      fall: (t) => tone(900, t, 0.75, "triangle", 0.55, 80),
+      gate: (t) => [523, 659, 784, 1047].forEach((f, i) => tone(f, t + i * 0.055, 0.13, "triangle", 0.45)),
+      right: (t) => [659, 784, 988, 1319].forEach((f, i) => tone(f, t + i * 0.08, i === 3 ? 0.35 : 0.14, "square", 0.34)),
+      wrong: (t) => {
+        tone(311, t, 0.2, "square", 0.38);
+        tone(233, t + 0.2, 0.4, "square", 0.38);
+      },
+      win: (t) =>
+        [523, 659, 784, 1047, 0, 784, 1047, 1319].forEach((f, i) => f && tone(f, t + i * 0.12, i === 7 ? 0.7 : 0.14, "square", 0.34)),
+      over: (t) => {
+        [392, 370, 349, 330].forEach((f, i) => tone(f, t + i * 0.26, 0.3, "triangle", 0.5));
+        tone(262, t + 1.05, 0.8, "triangle", 0.5, 130);
+      },
+      start: (t) => [392, 523, 659].forEach((f, i) => tone(f, t + i * 0.07, 0.12, "triangle", 0.4)),
+    };
+    // Akkordfolge I–V–vi–IV, jede Welt mit eigener Tonart, eigenem Tempo und eigener Melodie
+    const PROG = [
+      [0, 4, 7],
+      [7, 11, 14],
+      [9, 12, 16],
+      [5, 9, 12],
+    ];
+    const PENT = [0, 2, 4, 7, 9, 12, 14, 16];
+    function sched() {
+      if (!song || !ac) return;
+      while (nextT < ac.currentTime + 0.18) {
+        const st = step % 64,
+          ch = PROG[Math.floor(st / 16)],
+          b = st % 16,
+          sp = song.sp,
+          r = song.root;
+        if (b % 4 === 0) tone(hz(r - 24 + ch[0]), nextT, sp * 3.4, "triangle", 0.9, 0, music);
+        if (b % 4 === 2) tone(hz(r - 12 + ch[0]), nextT, sp * 1.2, "triangle", 0.55, 0, music);
+        if (b % 4 === 2 || b % 4 === 3) tone(hz(r + ch[(b + st) % 3]), nextT, sp * 0.9, "square", 0.12, 0, music);
+        if (b % 8 === 4) noise(nextT, 0.12, 0.25, 2500, music);
+        if (b % 2 === 1) noise(nextT, 0.04, 0.12, 9000, music);
+        const n = song.mel[st];
+        if (n != null) tone(hz(r + 12 + n), nextT, sp * (song.len[st] || 1.6), "square", 0.3, 0, music);
+        nextT += sp;
+        step++;
+      }
+    }
+    return {
+      unlock: () => init(),
+      play(name) {
+        if (!enabled || !init() || !FX[name]) return;
+        try {
+          FX[name](ac.currentTime + 0.01);
+        } catch {}
+      },
+      startMusic(world) {
+        this.stopMusic();
+        if (!init()) return;
+        const root = [60, 62, 57, 64, 55][world] ?? 60,
+          bpm = [108, 114, 120, 126, 100][world] ?? 112;
+        let seed = world * 7919 + 17;
+        const rnd = () => ((seed = (seed * 1103515245 + 12345) & 0x7fffffff), seed / 0x7fffffff);
+        const motif = [],
+          len = [];
+        for (let i = 0; i < 16; i++) {
+          const on = i % 2 === 0 ? rnd() < 0.8 : rnd() < 0.25;
+          motif.push(on ? PENT[Math.floor(rnd() * PENT.length)] : null);
+          len.push(on && rnd() < 0.3 ? 3 : 1.6);
+        }
+        // Melodie: Motiv – Variation – Motiv – Schluss auf dem Grundton
+        const mel = [],
+          L2 = [];
+        for (let bar = 0; bar < 4; bar++)
+          for (let i = 0; i < 16; i++) {
+            let n = motif[i];
+            if (bar === 1 && n != null) n = PENT[Math.min(PENT.length - 1, PENT.indexOf(n) + 1)];
+            if (bar === 3 && i >= 12) n = i === 12 ? 0 : null;
+            mel.push(n);
+            L2.push(bar === 3 && i === 12 ? 4 : len[i]);
+          }
+        song = { root, sp: 60 / bpm / 4, mel, len: L2 };
+        step = 0;
+        nextT = ac.currentTime + 0.12;
+        timer = setInterval(sched, 40);
+      },
+      stopMusic() {
+        clearInterval(timer);
+        timer = 0;
+        song = null;
+      },
+      duck(on) {
+        if (ac && music) music.gain.setTargetAtTime(on ? 0.06 : 0.17, ac.currentTime, 0.15);
+      },
+      pause(on) {
+        if (!ac) return;
+        if (on) ac.suspend().catch(() => {});
+        else if (enabled) ac.resume().catch(() => {});
+      },
+      get on() {
+        return enabled;
+      },
+      set on(v) {
+        enabled = !!v;
+        try {
+          localStorage.setItem(KEYS, enabled ? "1" : "0");
+        } catch {}
+        if (ac && master) {
+          master.gain.setTargetAtTime(enabled ? 1 : 0, ac.currentTime, 0.04);
+          if (enabled) ac.resume().catch(() => {});
+        }
+      },
+    };
+  })();
+
   // Spielfigur: Junge (Lino) oder Mädchen (Lina), 5 Hautfarben, Mädchen wahlweise mit Kopftuch
   const SKINS = ["#f7dcc6", "#eab98c", "#c98c5a", "#8f5b36", "#5c3a24"],
     HAIRS = ["#a5652e", "#5a3a22", "#2e1f15", "#1f1510", "#130d09"],
@@ -714,7 +910,7 @@
     level: "A1–C1",
     desc: "Jump’n’Run in 5 Welten: Springe über Lücken und Fehlerkäfer und löse an jedem Tor eine Deutschfrage – von A1 bis C1.",
     intro:
-      "Wähle zuerst deine Figur: Junge (Lino) oder Mädchen (Lina), Hautfarbe und – beim Mädchen – mit oder ohne Kopftuch. Deine Figur läuft von selbst. Tippe auf das Spielfeld oder den großen Knopf (am Computer: Leertaste oder ↑), um zu springen – lange drücken springt höher. Springe über Lücken, hüpf auf die Fehlerkäfer und sammle Münzen. An jedem Tor wartet eine Frage. Jede Welt ist schwerer: A1, A2, B1, B2, C1.",
+      "Wähle zuerst deine Figur: Junge (Lino) oder Mädchen (Lina), Hautfarbe und – beim Mädchen – mit oder ohne Kopftuch. Deine Figur läuft von selbst. Tippe auf das Spielfeld oder den großen Knopf (am Computer: Leertaste oder ↑), um zu springen – lange drücken springt höher. Springe über Lücken, hüpf auf die Fehlerkäfer und sammle Münzen. An jedem Tor wartet eine Frage. Mit dem Knopf 🔊 oben rechts schaltest du Musik und Töne aus oder an. Jede Welt ist schwerer: A1, A2, B1, B2, C1.",
     start(api) {
       const prog = load();
       prog.unlocked = Math.max(1, prog.unlocked || 1);
@@ -792,13 +988,27 @@
           GROUND = VH - 48,
           T = lvl.T;
         const dpr = Math.min(2, window.devicePixelRatio || 1);
-        api.el.innerHTML = `<div class="sp-lino-wrap"><canvas width="${VW * dpr}" height="${VH * dpr}" aria-label="Spielfeld: ${heroName(look)} läuft durch die Welt ${W0.id}" role="img"></canvas><div class="sp-lino-banner">Welt ${W0.id}: ${W0.name}</div></div>
+        api.el.innerHTML = `<div class="sp-lino-wrap"><canvas width="${VW * dpr}" height="${VH * dpr}" aria-label="Spielfeld: ${heroName(look)} läuft durch die Welt ${W0.id}" role="img"></canvas><div class="sp-lino-banner">Welt ${W0.id}: ${W0.name}</div><button type="button" class="sp-lino-snd" aria-pressed="${SND.on}" aria-label="Ton">${SND.on ? "🔊" : "🔇"}</button></div>
           <div class="sp-lino-panel"></div>`;
         const cv = api.el.querySelector("canvas"),
           ctx = cv.getContext("2d"),
           panel = api.el.querySelector(".sp-lino-panel"),
           banner = api.el.querySelector(".sp-lino-banner");
         ctx.scale(dpr, dpr);
+        // Ton starten (der Klick auf die Welt erlaubt dem Browser die Wiedergabe)
+        SND.unlock();
+        SND.play("start");
+        SND.startMusic(L);
+        const sndBtn = api.el.querySelector(".sp-lino-snd");
+        sndBtn.addEventListener("pointerdown", (e) => e.stopPropagation());
+        sndBtn.onclick = (e) => {
+          e.stopPropagation();
+          SND.on = !SND.on;
+          if (SND.on && !(state === "dead")) SND.startMusic(L);
+          sndBtn.textContent = SND.on ? "🔊" : "🔇";
+          sndBtn.setAttribute("aria-pressed", SND.on);
+          sndBtn.blur();
+        };
         // Auf kleinen Bildschirmen (z. B. Handy quer) Spielfeld und Sprungknopf ganz zeigen
         requestAnimationFrame(() => {
           const card = api.el.closest(".sp-play") || api.el;
@@ -881,6 +1091,7 @@
             P.onGround = false;
             coyote = 0;
             buffer = 0;
+            SND.play("jump");
           } else buffer = 0.14; // kurz vor der Landung gedrückt → Sprung direkt nach der Landung
         }
         function release() {
@@ -909,6 +1120,7 @@
         addEventListener("keydown", onKey);
         addEventListener("keyup", onKey);
         const onVis = () => {
+          SND.pause(document.hidden);
           if (document.hidden && state === "run") {
             state = "pause";
           } else if (!document.hidden && state === "pause") {
@@ -922,6 +1134,8 @@
           removeEventListener("keyup", onKey);
           document.removeEventListener("visibilitychange", onVis);
           cancelAnimationFrame(raf);
+          SND.stopMusic();
+          SND.duck(false);
         }
 
         function solidAt(px) {
@@ -929,14 +1143,17 @@
           return i >= 0 && i < lvl.solid.length && lvl.solid[i];
         }
 
-        function hit() {
+        function hit(how) {
           if (P.inv > 0 || state !== "run") return;
           lives--;
           api.vibrate();
+          SND.play(how === "fall" ? "fall" : "hurt");
           hud();
           if (lives <= 0) {
             state = "dead";
             deadT = 0;
+            SND.stopMusic();
+            setTimeout(() => SND.play("over"), how === "fall" ? 700 : 350);
             return;
           }
           state = "respawn";
@@ -1006,6 +1223,7 @@
               P.vy = -JUMP * 0.78;
               P.onGround = false;
               holdT = 0;
+              SND.play("jump");
             }
           }
           if (P.onGround) coyote = 0.11;
@@ -1013,7 +1231,7 @@
           else coyote = Math.max(0, coyote - dt);
           if (P.y > VH + 40) {
             P.inv = 0;
-            hit();
+            hit("fall");
           }
           // Münzen
           for (const c of lvl.coins)
@@ -1023,6 +1241,7 @@
               Math.abs(c.y - (P.y + P.h / 2)) < 24
             ) {
               c.got = true;
+              SND.play("coin");
               coinsGot++;
               score += 10;
               hud();
@@ -1052,6 +1271,7 @@
                 en.alive = false;
                 en.dead = 0.5;
                 P.vy = -JUMP * 0.62;
+                SND.play("stomp");
                 score += 50;
                 hud();
               } else hit();
@@ -1070,6 +1290,8 @@
         function askGate() {
           state = "ask";
           held = false;
+          SND.play("gate");
+          SND.duck(true);
           const [q, a, w1, w2, tip] = qs[gateIdx];
           const opts = api.shuffle([a, w1, w2]);
           const qHtml = api
@@ -1099,6 +1321,7 @@
                 }
                 gate.open = true;
                 gate.ok = ok;
+                SND.play(ok ? "right" : "wrong");
                 if (ok) {
                   right++;
                   score += 100;
@@ -1117,9 +1340,11 @@
                     : `<b>Leider falsch – ein Herz weniger.</b><span>Richtig: <b>${api.esc(a)}</b> · ${api.esc(tip)}</span>`,
                 );
                 if (lives <= 0) {
+                  SND.stopMusic();
                   api.next("Weiter", () => {
                     state = "dead";
                     deadT = 1;
+                    SND.play("over");
                   });
                   return;
                 }
@@ -1131,6 +1356,7 @@
                   runPanel();
                   state = "run";
                   last = 0;
+                  SND.duck(false);
                   panel
                     .querySelector(".sp-lino-jump")
                     ?.focus({ preventScroll: true });
@@ -1147,6 +1373,7 @@
 
         function finishLevel() {
           cleanup();
+          SND.play("win");
           const bonus = lives * 50;
           score += bonus;
           total += score;
