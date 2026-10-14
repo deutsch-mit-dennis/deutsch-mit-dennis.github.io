@@ -1,7 +1,17 @@
 {
   "user": "28070f1f-b266-41cd-a90f-0e8f04c31f07",
-  "updated": "2026-10-14T10:16:46.210Z",
+  "updated": "2026-10-14T16:15:57.176Z",
   "kahoots": [
+    {
+      "uuid": "899bc30b-516a-45e2-9595-ff7fe0dcd496",
+      "title": "Teilung, Wiedervereinigung & EU – Modul 6 + 7",
+      "description": "20 Fragen zur Vorbereitung auf den Test „Leben in Deutschland“: Teilung Deutschlands, Mauerbau, Mauerfall, Wiedervereinigung (1945–1990) sowie Deutschland in Europa und die EU.",
+      "questions": 20,
+      "created": "2026-10-14T16:10:16.859Z",
+      "url": "https://create.kahoot.it/details/899bc30b-516a-45e2-9595-ff7fe0dcd496",
+      "cover": "assets/kahoot/899bc30b-516a-45e2-9595-ff7fe0dcd496.jpg",
+      "qr": "assets/kahoot/899bc30b-516a-45e2-9595-ff7fe0dcd496-qr.svg"
+    },
     {
       "uuid": "72c70f82-7636-4f71-aa9d-686b955919c3",
       "title": "Bild beschreiben – DTZ Sprechen Teil 2",
