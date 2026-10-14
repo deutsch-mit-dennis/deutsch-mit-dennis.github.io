@@ -1,20 +1,22 @@
 {
-"updated": "2026-10-14T09:18:38Z",
+"updated": "2026-10-14T09:27:03Z",
 "engines": [
 "google"
 ],
 "files": {
 "b2-1-01": {
-"v": "27396ca35a",
+"v": "441226767c",
 "engine": "google",
-"sig": "27396ca35a",
-"text": "92efc1e291"
+"sig": "441226767c",
+"text": "92efc1e291",
+"fx": "telefon"
 },
 "b2-1-02": {
-"v": "f9f40cd130",
+"v": "001a151211",
 "engine": "google",
-"sig": "f9f40cd130",
-"text": "a98dc5883c"
+"sig": "001a151211",
+"text": "a98dc5883c",
+"fx": "telefon"
 },
 "b2-1-03": {
 "v": "0dbce9bd33",
@@ -41,16 +43,18 @@
 "text": "de3119b5be"
 },
 "b2-2-01": {
-"v": "8b067e7809",
+"v": "376be54190",
 "engine": "google",
-"sig": "8b067e7809",
-"text": "03b3ea848c"
+"sig": "376be54190",
+"text": "03b3ea848c",
+"fx": "telefon"
 },
 "b2-2-02": {
-"v": "9fd1ff4f0f",
+"v": "717c8491cc",
 "engine": "google",
-"sig": "9fd1ff4f0f",
-"text": "d847ab1ca3"
+"sig": "717c8491cc",
+"text": "d847ab1ca3",
+"fx": "telefon"
 },
 "b2-2-03": {
 "v": "2a03f2475d",
@@ -77,16 +81,18 @@
 "text": "fdfbc90fdb"
 },
 "b2-3-01": {
-"v": "d866c87098",
+"v": "d5a8a5549f",
 "engine": "google",
-"sig": "d866c87098",
-"text": "6b97716dfd"
+"sig": "d5a8a5549f",
+"text": "6b97716dfd",
+"fx": "telefon"
 },
 "b2-3-02": {
-"v": "906b31e039",
+"v": "59a1e2557c",
 "engine": "google",
-"sig": "906b31e039",
-"text": "67928efab5"
+"sig": "59a1e2557c",
+"text": "67928efab5",
+"fx": "telefon"
 },
 "b2-3-03": {
 "v": "b1e70a98d1",
@@ -119,16 +125,18 @@
 "text": "2e2dead9ef"
 },
 "dtz-1-01": {
-"v": "c66a515925",
+"v": "a17f661fe9",
 "engine": "google",
-"sig": "c66a515925",
-"text": "925e1cf8ca"
+"sig": "a17f661fe9",
+"text": "925e1cf8ca",
+"fx": "telefon"
 },
 "dtz-1-02": {
-"v": "6cf22101b6",
+"v": "b6d7be9f3e",
 "engine": "google",
-"sig": "6cf22101b6",
-"text": "cff86560d3"
+"sig": "b6d7be9f3e",
+"text": "cff86560d3",
+"fx": "telefon"
 },
 "dtz-1-03": {
 "v": "603332fba9",
@@ -161,10 +169,11 @@
 "text": "b4e5de60fa"
 },
 "dtz-2-01": {
-"v": "02937f9ff9",
+"v": "8bd8b33eba",
 "engine": "google",
-"sig": "02937f9ff9",
-"text": "3d929bc868"
+"sig": "8bd8b33eba",
+"text": "3d929bc868",
+"fx": "telefon"
 },
 "dtz-2-02": {
 "v": "d53d617578",
@@ -203,16 +212,18 @@
 "text": "c92ae3bd09"
 },
 "dtz-3-01": {
-"v": "c955b2bbbd",
+"v": "800843ad8a",
 "engine": "google",
-"sig": "c955b2bbbd",
-"text": "e10f22f0af"
+"sig": "800843ad8a",
+"text": "e10f22f0af",
+"fx": "telefon"
 },
 "dtz-3-02": {
-"v": "d47b787eae",
+"v": "ed528b387c",
 "engine": "google",
-"sig": "d47b787eae",
-"text": "5c08494f24"
+"sig": "ed528b387c",
+"text": "5c08494f24",
+"fx": "telefon"
 },
 "dtz-3-03": {
 "v": "8406a1e6f4",
@@ -245,10 +256,11 @@
 "text": "08f355b3b2"
 },
 "dtz-4-01": {
-"v": "c1855d1177",
+"v": "890bfcbabb",
 "engine": "google",
-"sig": "c1855d1177",
-"text": "64a88ba1a9"
+"sig": "890bfcbabb",
+"text": "64a88ba1a9",
+"fx": "telefon"
 },
 "dtz-4-02": {
 "v": "512f53d3b0",
