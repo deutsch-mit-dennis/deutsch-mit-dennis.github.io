@@ -217,6 +217,7 @@
       </div>
     </section>
 
+    ${window.DMWitz ? DMWitz.card() : ''}
     <section class="dm-section lino-home" aria-labelledby="lino-h">
       <a class="lino-home-card" href="#spiele/lino">
         <svg class="lino-home-art" viewBox="0 0 320 180" aria-hidden="true" focusable="false">
