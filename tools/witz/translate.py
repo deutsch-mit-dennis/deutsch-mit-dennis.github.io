@@ -24,15 +24,16 @@ def post(url, body, headers, tries=5):
     for i in range(tries):
         try:
             req = urllib.request.Request(url, data=data, headers={'content-type': 'application/json', **headers})
-            with urllib.request.urlopen(req, timeout=180) as r:
+            with urllib.request.urlopen(req, timeout=90) as r:
                 return json.loads(r.read())
         except urllib.error.HTTPError as e:
             msg = e.read()[:400].decode('utf-8', 'replace')
             if e.code in (429, 500, 502, 503) and i < tries - 1:
-                time.sleep(20 * (i + 1)); continue
+                time.sleep(10 * (i + 1)); continue
             raise RuntimeError(f'HTTP {e.code}: {msg}')
 
 _models = None
+STAT = {}
 def gemini_models():
     """Verfügbare Gemini-Modelle abfragen und passende „flash“-Modelle (neueste zuerst) wählen."""
     global _models
@@ -65,14 +66,17 @@ Einträge:
 {json.dumps(items, ensure_ascii=False)}"""
     last = None
     for model in gemini_models()[:4]:
-        try:
-            j = post(f'https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent',
-                     {'contents': [{'parts': [{'text': prompt}]}], 'generationConfig': {'responseMimeType': 'application/json', 'temperature': 0.3}},
-                     {'x-goog-api-key': key})
-            txt = j['candidates'][0]['content']['parts'][0]['text']
-            return json.loads(txt)
-        except Exception as e:
-            last = RuntimeError(f'{model}: {e}')
+        for cfg in ({'responseMimeType': 'application/json', 'temperature': 0.3, 'thinkingConfig': {'thinkingBudget': 0}},
+                    {'responseMimeType': 'application/json', 'temperature': 0.3}):
+            try:
+                j = post(f'https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent',
+                         {'contents': [{'parts': [{'text': prompt}]}], 'generationConfig': cfg}, {'x-goog-api-key': key})
+                txt = j['candidates'][0]['content']['parts'][0]['text']
+                STAT['model'] = model
+                return json.loads(txt)
+            except Exception as e:
+                last = RuntimeError(f'{model}: {e}')
+                if 'HTTP 404' in str(e): break  # Modell gibt es nicht → nächstes Modell
     raise last
 
 def gtranslate(items, lang, name):
@@ -93,7 +97,8 @@ def main():
     if not eng:
         print('Kein Schlüssel (GEMINI_API_KEY oder GOOGLE_TTS_API_KEY) – nichts zu tun.'); return
     status = {'engine': eng, 'ok': [], 'errors': {}, 'open': []}
-    start, budget = time.time(), float(os.environ.get('WITZ_MAX_SECONDS', '2400'))
+    if eng == 'gemini': status['models'] = gemini_models()[:4]
+    start, budget = time.time(), float(os.environ.get('WITZ_MAX_SECONDS', '1500'))
     for code, name in d['langs']:
         if time.time() - start > budget:
             status['open'].append(code); continue  # Rest beim nächsten Lauf
@@ -104,16 +109,19 @@ def main():
         todo = {k: v for k, v in jokes.items() if k not in have}
         if not todo:
             status['ok'].append(code); continue
+        t0 = time.time()
         try:
-            for chunk_start in range(0, len(todo), 26):
-                part = dict(list(todo.items())[chunk_start:chunk_start + 26])
+            for chunk_start in range(0, len(todo), 13):
+                part = dict(list(todo.items())[chunk_start:chunk_start + 13])
                 res = (gemini if eng == 'gemini' else gtranslate)(part, code, name)
                 for k in part:
                     v = res.get(k)
                     if isinstance(v, dict) and v.get('t'): have[k] = {'t': str(v['t']).strip(), 'why': str(v.get('why', '')).strip()}
-                if eng == 'gemini': time.sleep(float(os.environ.get('GEMINI_PAUSE', '6')))
+                if eng == 'gemini': time.sleep(float(os.environ.get('GEMINI_PAUSE', '4')))
             json.dump(have, open(p, 'w', encoding='utf-8'), ensure_ascii=False, indent=0)
-            status['ok'].append(code); print('✓', code, len(have), flush=True)
+            status['ok'].append(code); status.setdefault('seconds', {})[code] = round(time.time() - t0)
+            status['model'] = STAT.get('model', eng); print('✓', code, len(have), round(time.time() - t0), 's', flush=True)
+            json.dump(status, open(os.path.join(OUT, 'status.json'), 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
         except Exception as e:
             status['errors'][code] = str(e)[:300]; print('✗', code, e, flush=True)
             if eng == 'gemini' and len(status['errors']) >= 4 and not status['ok']: break
