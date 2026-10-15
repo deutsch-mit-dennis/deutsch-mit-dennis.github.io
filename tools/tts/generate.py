@@ -23,8 +23,8 @@ FORCE = os.environ.get('TTS_FORCE', '') in ('1', 'true', 'yes')
 USAGE = os.path.join(OUT, 'usage.json')
 # Kostenbremse: höchstens so viele Zeichen pro Kalendermonat an einen Bezahl-Anbieter schicken.
 # Google Cloud Chirp 3 HD: 1.000.000 Zeichen/Monat frei – wir bleiben mit 600.000 weit darunter.
-# ElevenLabs: alle Hörtexte zusammen ca. 58.000 Zeichen (1 Credit pro Zeichen) – Grenze mit etwas Luft.
-MONTHLY_LIMIT = {'google': 600000, 'elevenlabs': 75000, 'gemini': 200000}
+# ElevenLabs: Kontingent des Tarifs (kostenlos 10.000 Credits/Monat, 1 Credit pro Zeichen). Bei Tarifwechsel anpassen.
+MONTHLY_LIMIT = {'google': 600000, 'elevenlabs': 10000, 'gemini': 200000}
 
 # Stimmen je Rolle (f = Frau, m = Mann). Anpassbar über die Umgebungsvariable TTS_VOICES (JSON).
 VOICES = {
@@ -227,6 +227,14 @@ def main():
             same_text = cur.get('text') == signature(e, 'text')
             if same_text and cur.get('fx') == e.get('fx') and rank.get(cur.get('engine'), 0) >= rank[eng]: continue
         todo.append((e, sig))
+    # Reihenfolge: zuerst Prüfungs-Hörtexte (neueste Sätze zuerst), dann Beispiele, dann kurze Sätze.
+    def prio(item):
+        k = item[0]['key']
+        if k.startswith(('dtz-', 'b2-')):
+            pre, nr, idx = (k.split('-') + ['0', '0'])[:3]
+            return (0, -int(nr) if nr.isdigit() else 0, idx)
+        return (1 if k.startswith('ex-') else 2, 0, k)
+    todo.sort(key=prio)
     month = time.strftime('%Y-%m', time.gmtime())
     try: usage = json.load(open(USAGE, encoding='utf-8'))
     except Exception: usage = {}
@@ -249,6 +257,9 @@ def main():
         except Exception as ex:
             errors.append({'key': e['key'], 'error': str(ex)[:300]})
             print(f'  ✗ {e["key"]}: {ex}', flush=True)
+            if 'quota_exceeded' in str(ex):
+                used = max(used, limit)  # Kontingent beim Anbieter aufgebraucht – nächsten Monat weiter
+                print('Kontingent beim Anbieter aufgebraucht – der Rest folgt nächsten Monat.'); break
             if eng != 'piper' and len(errors) >= 3 and done == 0:
                 print('Zu viele Fehler mit dem Anbieter – Abbruch.'); break
     if eng != 'piper':
