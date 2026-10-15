@@ -1,7 +1,8 @@
 {
-"updated": "2026-10-15T13:11:08Z",
+"updated": "2026-10-15T13:24:07Z",
 "engines": [
 "elevenlabs",
+"gemini",
 "google"
 ],
 "files": {
@@ -120,10 +121,11 @@
 "text": "1db6ae5b8b"
 },
 "b2-4-01": {
-"v": "37d1b6b01b",
-"engine": "google",
-"sig": "37d1b6b01b",
-"text": "2e2dead9ef"
+"v": "a6a859c7d9",
+"engine": "gemini",
+"sig": "a6a859c7d9",
+"text": "2e2dead9ef",
+"fx": "telefon"
 },
 "dtz-1-01": {
 "v": "a17f661fe9",
@@ -257,22 +259,22 @@
 "text": "08f355b3b2"
 },
 "dtz-4-01": {
-"v": "890bfcbabb",
-"engine": "google",
-"sig": "890bfcbabb",
+"v": "729396ac3c",
+"engine": "gemini",
+"sig": "729396ac3c",
 "text": "64a88ba1a9",
 "fx": "telefon"
 },
 "dtz-4-02": {
-"v": "512f53d3b0",
-"engine": "google",
-"sig": "512f53d3b0",
+"v": "09d663d590",
+"engine": "gemini",
+"sig": "09d663d590",
 "text": "c7ba7b4c6f"
 },
 "dtz-4-03": {
-"v": "1ee1c7d428",
-"engine": "google",
-"sig": "1ee1c7d428",
+"v": "50b9a9e493",
+"engine": "gemini",
+"sig": "50b9a9e493",
 "text": "ce46cb0d79"
 },
 "dtz-4-04": {
@@ -300,10 +302,11 @@
 "text": "72b0525444"
 },
 "dtz-5-01": {
-"v": "8d873ce210",
-"engine": "google",
-"sig": "8d873ce210",
-"text": "97550c8e40"
+"v": "f8393657de",
+"engine": "gemini",
+"sig": "f8393657de",
+"text": "97550c8e40",
+"fx": "telefon"
 },
 "ex-alltag": {
 "v": "503f094058",
