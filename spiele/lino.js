@@ -12,7 +12,7 @@
 .sp-lino-wrap canvas{display:block;width:100%;height:auto;max-height:62vh;object-fit:contain;cursor:pointer;-webkit-touch-callout:none}
 .sp-lino-snd{position:absolute;right:8px;top:8px;width:44px;height:44px;border:0;border-radius:50%;background:rgba(255,255,255,.88);font-size:20px;line-height:1;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.15);display:grid;place-items:center;padding:0}
 .sp-lino-snd:focus-visible{outline:3px solid var(--dm-tinte,#2341B5);outline-offset:2px}
-.sp-lino-banner{position:absolute;left:50%;top:14px;transform:translateX(-50%);background:rgba(255,255,255,.94);border-radius:99px;padding:6px 16px;font:800 15px var(--dm-font);color:var(--dm-ink);box-shadow:0 4px 12px rgba(0,0,0,.12);white-space:nowrap;pointer-events:none;transition:opacity .3s}
+.sp-lino-banner{position:absolute;left:50%;top:62px;transform:translateX(-50%);max-width:calc(100% - 24px);width:max-content;text-align:center;background:rgba(255,255,255,.95);border-radius:16px;padding:6px 14px;font:700 14.5px/1.35 var(--dm-font);color:var(--dm-ink);box-shadow:0 4px 12px rgba(0,0,0,.12);pointer-events:none;transition:opacity .3s}
 .sp-lino-banner[hidden]{display:block;opacity:0}
 .sp-lino-panel{margin-top:12px}
 .sp-lino-jump{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;min-height:64px;border:0;border-radius:18px;background:linear-gradient(180deg,#ff9a3c,#e5622b);color:#fff;font:800 20px var(--dm-font);box-shadow:0 5px 0 #b8461c;cursor:pointer;touch-action:manipulation;-webkit-user-select:none;user-select:none;-webkit-touch-callout:none;-webkit-tap-highlight-color:transparent}
@@ -49,6 +49,18 @@
 .sp-lino-res .ch-actions{justify-content:center;flex-wrap:wrap}
 .sp-lino-unlock{background:none;border:0;color:var(--dm-tinte);text-decoration:underline;font:inherit;font-size:14px;cursor:pointer;padding:6px}
 @media (hover:none){.sp-lino-q .ch-opt:hover:not(:disabled){border-color:var(--dm-line)}}
+.sp-lino-pause{right:60px}
+.sp-lino-q.is-bonus{border-color:#d9a400;background:linear-gradient(#fffaf0,#fff)}
+.sp-lino-q.is-bonus .sp-lino-tag{background:#ffe9a8;color:#6b4a00}
+.sp-lino-note{margin:-2px 0 10px;font-size:15px;color:#6b4a00;font-weight:700}
+.sp-lino-q .ch-opt.is-gone{opacity:.3;text-decoration:line-through}
+.sp-lino-joker{margin-top:10px;width:100%;min-height:46px;border:2px dashed #d9a400;border-radius:14px;background:#fff8e1;color:#5a3d00;font:800 15.5px var(--dm-font);cursor:pointer}
+.sp-lino-say{margin-top:8px;min-height:40px;border:0;border-radius:99px;padding:6px 14px;background:rgba(255,255,255,.8);font:700 15px var(--dm-font);color:inherit;cursor:pointer;box-shadow:0 1px 4px rgba(0,0,0,.12)}
+.sp-lino-legend{margin:12px 0 0;border:1px solid var(--dm-line,#d5dbea);border-radius:14px;padding:4px 12px;background:#fff}
+.sp-lino-legend summary{cursor:pointer;font-weight:800;padding:8px 0;min-height:28px}
+.sp-lino-legend ul{margin:0 0 10px;padding-left:0;list-style:none;display:grid;gap:6px}
+.sp-lino-legend li{display:flex;gap:8px;align-items:baseline;font-size:15px;line-height:1.4}
+.sp-lino-legend li b:first-child{flex:none;width:1.6em;text-align:center}
 `;
     document.head.appendChild(st);
   }
@@ -600,6 +612,16 @@
         tone(262, t + 1.05, 0.8, "triangle", 0.5, 130);
       },
       start: (t) => [392, 523, 659].forEach((f, i) => tone(f, t + i * 0.07, 0.12, "triangle", 0.4)),
+      bump: (t) => {
+        tone(180, t, 0.09, "square", 0.45, 90);
+        noise(t, 0.05, 0.25, 900);
+      },
+      power: (t) => [523, 659, 784, 1047, 1319, 1568].forEach((f, i) => tone(f, t + i * 0.045, 0.1, "square", 0.3)),
+      secret: (t) => {
+        [784, 988, 1175, 1568, 1976].forEach((f, i) => tone(f, t + i * 0.09, 0.4, "triangle", 0.35));
+        tone(392, t, 0.9, "sine", 0.3, 784);
+      },
+      joker: (t) => tone(660, t, 0.25, "triangle", 0.4, 1320),
     };
     // Akkordfolge I–V–vi–IV, jede Welt mit eigener Tonart, eigenem Tempo und eigener Melodie
     const PROG = [
@@ -639,8 +661,8 @@
       startMusic(world) {
         this.stopMusic();
         if (!init()) return;
-        const root = [60, 62, 57, 64, 55][world] ?? 60,
-          bpm = [108, 114, 120, 126, 100][world] ?? 112;
+        const root = [60, 62, 57, 64, 55, 53][world] ?? 60,
+          bpm = [108, 114, 120, 126, 100, 92][world] ?? 112;
         let seed = world * 7919 + 17;
         const rnd = () => ((seed = (seed * 1103515245 + 12345) & 0x7fffffff), seed / 0x7fffffff);
         const motif = [],
@@ -818,13 +840,25 @@
     return seed / 4294967296;
   };
 
+  /* Level: Boden aus Kacheln, Lücken, Käfer, Holzkisten (fest – auch von unten und von der Seite),
+     ?-Kisten mit Booster, Wolken (nur von oben begehbar), eine geheime Kammer pro Welt. */
+  const CRATE_H = 22,
+    BOOSTS = {
+      joker: { ic: "💡", name: "Joker", txt: "Am nächsten Tor verschwindet eine falsche Antwort." },
+      herz: { ic: "❤️", name: "Herz", txt: "Ein Leben zurück." },
+      magnet: { ic: "🧲", name: "Magnet", txt: "10 Sekunden: Münzen fliegen zu dir.", dur: 10 },
+      stern: { ic: "⭐", name: "Stern", txt: "8 Sekunden: Käfer können dir nichts tun.", dur: 8 },
+      doppel: { ic: "🪽", name: "Flügel", txt: "15 Sekunden: In der Luft noch einmal springen.", dur: 15 },
+    };
   function buildLevel(L) {
     const r = rng(1234 + L * 97),
-      T = 32;
+      T = 32,
+      GR = 360 - 48;
     const solid = [],
       coins = [],
       enemies = [],
       plats = [],
+      clouds = [],
       gates = [];
     const add = (n) => {
       for (let i = 0; i < n; i++) solid.push(true);
@@ -832,8 +866,17 @@
     const hole = (n) => {
       for (let i = 0; i < n; i++) solid.push(false);
     };
-    const gapMin = L < 2 ? 2 : 2,
+    const coin = (x, y) => coins.push({ x, y, got: false });
+    const gapMin = 2,
       gapMax = L < 2 ? 2 : 3;
+    // Booster für die ?-Kisten: Joker und Herz kommen in jeder Welt vor
+    const bag = ["joker", "herz", "magnet", "stern", "doppel", L < 2 ? "joker" : "herz"];
+    for (let i = bag.length - 1; i > 0; i--) {
+      const j = Math.floor(r() * (i + 1));
+      [bag[i], bag[j]] = [bag[j], bag[i]];
+    }
+    const secretSeg = 1 + Math.floor(r() * 3);
+    let secret = null;
     add(10);
     for (let g = 0; g < GATES; g++) {
       add(3);
@@ -847,40 +890,38 @@
         const j = Math.floor(r() * (i + 1));
         [feats[i], feats[j]] = [feats[j], feats[i]];
       }
+      // Die Kammer-Wolke braucht Platz: Kiste nicht direkt vor einer Lücke
+      if (g === secretSeg) {
+        const i = feats.indexOf("plat");
+        feats.splice(i, 1);
+        feats.push("plat");
+      }
       for (const f of feats) {
         if (f === "gap") {
           const w = gapMin + Math.floor(r() * (gapMax - gapMin + 1)),
             x0 = solid.length;
           hole(w);
-          for (let k = 0; k < 3; k++)
-            coins.push({
-              x: (x0 + w / 2) * T + (k - 1) * 22,
-              y: 360 - 48 - 70 - (k === 1 ? 18 : 0),
-              got: false,
-            });
+          for (let k = 0; k < 3; k++) coin((x0 + w / 2) * T + (k - 1) * 22, GR - 70 - (k === 1 ? 18 : 0));
           add(5);
         } else if (f === "enemy") {
           const x0 = solid.length;
           add(L >= 2 ? 10 : 8); // Platz nach dem Käfer, damit danach keine Lücke direkt folgt
-          enemies.push({
-            x: (x0 + 4) * T,
-            min: (x0 + 1) * T,
-            max: (x0 + 6) * T,
-            dir: -1,
-            sp: 22 + L * 9,
-            alive: true,
-            t: r() * 6,
-          });
+          enemies.push({ x: (x0 + 4) * T, min: (x0 + 1) * T, max: (x0 + 6) * T, dir: -1, sp: 22 + L * 9, alive: true, t: r() * 6 });
         } else {
-          const x0 = solid.length;
-          add(7);
-          plats.push({ x: (x0 + 2) * T, y: 360 - 48 - 78, w: 3 * T });
-          for (let k = 0; k < 3; k++)
-            coins.push({
-              x: (x0 + 2) * T + 16 + k * 32,
-              y: 360 - 48 - 104,
-              got: false,
-            });
+          const x0 = solid.length,
+            py = GR - 70;
+          add(g === secretSeg ? 10 : 7);
+          plats.push({ x: (x0 + 2) * T, y: py, w: 3 * T, q: 1, boost: bag[g % bag.length], used: false, bumpK: -1, bumpT: 0 });
+          for (let k = 0; k < 3; k++) coin((x0 + 2) * T + 16 + k * 32, py - 26);
+          if (g === secretSeg) {
+            // Wolke über den Kisten – nur mit langem Drücken (höherer Sprung) erreichbar
+            const cy = py - 132;
+            clouds.push({ x: (x0 + 4) * T, y: cy, w: 5 * T });
+            coin((x0 + 4) * T + 20, py - 62);
+            coin((x0 + 5) * T + 10, cy - 30);
+            coin((x0 + 6) * T + 10, cy - 30);
+            secret = { x: (x0 + 8) * T + 6, y: cy, used: false, ret: (x0 + 8) * T };
+          }
         }
       }
       add(4);
@@ -890,16 +931,18 @@
     add(8);
     const goal = solid.length * T;
     add(12);
-    return {
-      solid,
-      coins,
-      enemies,
-      plats,
-      gates,
-      goal,
-      T,
-      len: solid.length * T,
-    };
+    const mainLen = solid.length * T;
+    // Geheime Kammer: eigener Bereich weit hinter dem Ziel (die Kamera zeigt ihn nur, wenn man drin ist)
+    hole(20);
+    const c0 = solid.length;
+    add(36);
+    const ch = { x0: c0 * T, x1: (c0 + 36) * T, chest: { x: (c0 + 25) * T, open: false }, exit: (c0 + 32) * T };
+    for (let k = 0; k < 5; k++) coin((c0 + 5 + k) * T, GR - 22);
+    for (let k = 0; k < 5; k++) coin((c0 + 11 + k) * T + 16, GR - 40 - Math.sin((k / 4) * Math.PI) * 60);
+    plats.push({ x: (c0 + 18) * T, y: GR - 70, w: 3 * T, q: 1, boost: ["magnet", "doppel", "stern"][L % 3], used: false, bumpK: -1, bumpT: 0 });
+    for (let k = 0; k < 3; k++) coin((c0 + 18) * T + 16 + k * 32, GR - 96);
+    for (let k = 0; k < 3; k++) coin((c0 + 28 + k) * T + 16, GR - 22);
+    return { solid, coins, enemies, plats, clouds, gates, goal, secret, ch, T, mainLen, len: solid.length * T };
   }
 
   DMGame.register({
@@ -908,9 +951,9 @@
     title: "Lino läuft – das Deutsch-Abenteuer",
     icon: "🏃",
     level: "A1–C1",
-    desc: "Jump’n’Run in 5 Welten: Springe über Lücken und Fehlerkäfer und löse an jedem Tor eine Deutschfrage – von A1 bis C1.",
+    desc: "Jump’n’Run in 5 Welten: Springe über Lücken und Fehlerkäfer, finde Booster und geheime Kammern und löse an jedem Tor eine Deutschfrage – von A1 bis C1.",
     intro:
-      "Wähle zuerst deine Figur: Junge (Lino) oder Mädchen (Lina), Hautfarbe und – beim Mädchen – mit oder ohne Kopftuch. Deine Figur läuft von selbst. Tippe auf das Spielfeld oder den großen Knopf (am Computer: Leertaste oder ↑), um zu springen – lange drücken springt höher. Springe über Lücken, hüpf auf die Fehlerkäfer und sammle Münzen. An jedem Tor wartet eine Frage. Mit dem Knopf 🔊 oben rechts schaltest du Musik und Töne aus oder an. Jede Welt ist schwerer: A1, A2, B1, B2, C1.",
+      "Wähle zuerst deine Figur: Junge (Lino) oder Mädchen (Lina), Hautfarbe und – beim Mädchen – mit oder ohne Kopftuch. Deine Figur läuft von selbst. Tippe auf das Spielfeld oder den großen Knopf (am Computer: Leertaste oder ↑), um zu springen – lange drücken springt höher. Springe über Lücken, hüpf auf die Fehlerkäfer und sammle Münzen. Stoß die ❓-Kisten von unten an – darin stecken Booster wie Joker, Herz, Magnet, Stern und Flügel. In jeder Welt ist eine geheime Kammer mit Schatztruhe versteckt. An jedem Tor wartet eine Frage. Oben rechts: ⏸ Pause und 🔊 Ton. Jede Welt ist schwerer: A1, A2, B1, B2, C1.",
     start(api) {
       const prog = load();
       prog.unlocked = Math.max(1, prog.unlocked || 1);
@@ -940,9 +983,16 @@
           <p class="dm-small" style="margin:0 0 8px">Wähle eine Welt. Jede neue Welt öffnet sich, wenn du die vorherige geschafft hast.</p>
           <div class="sp-lino-levels">${WORLDS.map((w, i) => {
             const open = i < prog.unlocked,
-              best = prog["best" + w.id];
-            return `<button type="button" class="sp-lino-lv" data-i="${i}"${open ? "" : " disabled"}><i aria-hidden="true">${open ? (best != null ? "⭐" : "▶") : "🔒"}</i><b>${w.id}</b><span>Welt ${i + 1}: ${w.name}</span><small>${best != null ? `Rekord: ${best} Punkte` : open ? "Bereit" : "Noch gesperrt"}</small></button>`;
+              best = prog["best" + w.id],
+              key = prog.secrets?.[w.id];
+            return `<button type="button" class="sp-lino-lv" data-i="${i}"${open ? "" : " disabled"}><i aria-hidden="true">${open ? (best != null ? "⭐" : "▶") : "🔒"}</i><b>${w.id}</b><span>Welt ${i + 1}: ${w.name}</span><small>${best != null ? `Rekord: ${best} Punkte` : open ? "Bereit" : "Noch gesperrt"}${key ? " · 🗝 Kammer gefunden" : ""}</small></button>`;
           }).join("")}</div>
+          <details class="sp-lino-legend"><summary>Booster und Geheimnisse</summary><ul>
+            <li><b>❓</b><span><b>Kisten</b> sind fest. Stoß die ❓-Kiste von unten mit dem Kopf an – dann kommt ein Booster heraus.</span></li>
+            ${Object.values(BOOSTS).map((b) => `<li><b>${b.ic}</b><span><b>${b.name}:</b> ${b.txt}</span></li>`).join("")}
+            <li><b>☁️</b><span><b>Wolken</b> kannst du von unten durchspringen und oben darauf landen.</span></li>
+            <li><b>🗝</b><span><b>Geheime Kammer:</b> In jeder Welt versteckt – hoch oben. Tipp: Lange drücken springt höher. In der Kammer wartet eine Schatztruhe mit Bonusfrage – ohne Risiko.</span></li>
+          </ul></details>
           ${prog.unlocked < WORLDS.length ? '<p style="text-align:center;margin:6px 0 0"><button type="button" class="sp-lino-unlock">Ich kann schon mehr – alle Welten öffnen</button></p>' : ""}`;
         const pc = api.el.querySelector(".sp-lino-prev");
         if (pc) {
@@ -988,7 +1038,7 @@
           GROUND = VH - 48,
           T = lvl.T;
         const dpr = Math.min(2, window.devicePixelRatio || 1);
-        api.el.innerHTML = `<div class="sp-lino-wrap"><canvas width="${VW * dpr}" height="${VH * dpr}" aria-label="Spielfeld: ${heroName(look)} läuft durch die Welt ${W0.id}" role="img"></canvas><div class="sp-lino-banner">Welt ${W0.id}: ${W0.name}</div><button type="button" class="sp-lino-snd" aria-pressed="${SND.on}" aria-label="Ton">${SND.on ? "🔊" : "🔇"}</button></div>
+        api.el.innerHTML = `<div class="sp-lino-wrap"><canvas width="${VW * dpr}" height="${VH * dpr}" aria-label="Spielfeld: ${heroName(look)} läuft durch die Welt ${W0.id}" role="img"></canvas><div class="sp-lino-banner">Welt ${W0.id}: ${W0.name}</div><button type="button" class="sp-lino-snd sp-lino-pause" aria-pressed="false" aria-label="Pause">⏸</button><button type="button" class="sp-lino-snd" aria-pressed="${SND.on}" aria-label="Ton">${SND.on ? "🔊" : "🔇"}</button></div>
           <div class="sp-lino-panel"></div>`;
         const cv = api.el.querySelector("canvas"),
           ctx = cv.getContext("2d"),
@@ -999,12 +1049,19 @@
         SND.unlock();
         SND.play("start");
         SND.startMusic(L);
-        const sndBtn = api.el.querySelector(".sp-lino-snd");
+        const sndBtn = api.el.querySelector(".sp-lino-snd:not(.sp-lino-pause)"),
+          pauseBtn = api.el.querySelector(".sp-lino-pause");
+        pauseBtn.addEventListener("pointerdown", (e) => e.stopPropagation());
+        pauseBtn.onclick = (e) => {
+          e.stopPropagation();
+          togglePause();
+          pauseBtn.blur();
+        };
         sndBtn.addEventListener("pointerdown", (e) => e.stopPropagation());
         sndBtn.onclick = (e) => {
           e.stopPropagation();
           SND.on = !SND.on;
-          if (SND.on && !(state === "dead")) SND.startMusic(L);
+          if (SND.on && !(state === "dead")) SND.startMusic(inCh ? 5 : L);
           sndBtn.textContent = SND.on ? "🔊" : "🔇";
           sndBtn.setAttribute("aria-pressed", SND.on);
           sndBtn.blur();
@@ -1012,8 +1069,10 @@
         // Auf kleinen Bildschirmen (z. B. Handy quer) Spielfeld und Sprungknopf ganz zeigen
         requestAnimationFrame(() => {
           const card = api.el.closest(".sp-play") || api.el;
-          const b = panel.getBoundingClientRect();
-          if (b.top + 80 > innerHeight) card.scrollIntoView({ block: "start", behavior: "smooth" });
+          const c = cv.getBoundingClientRect(),
+            b = panel.getBoundingClientRect();
+          // Spielfeld oben verdeckt (z. B. nach dem Scrollen in der Weltkarte) oder Knopf unten nicht sichtbar → Karte nach oben holen
+          if (c.top < 70 || b.top + 80 > innerHeight) card.scrollIntoView({ block: "start", behavior: "instant" });
         });
         const speed = 138 + L * 16,
           G = 1650,
@@ -1043,11 +1102,44 @@
           holdT = 0,
           raf = 0,
           ended = false,
-          deadT = 0;
-        const wrong = [];
-        setTimeout(() => {
-          banner.hidden = true;
-        }, 2200);
+          deadT = 0,
+          inCh = false,
+          userPause = false,
+          flash = 0,
+          bannerT = 0;
+        const wrong = [],
+          wrongItems = [],
+          fx = [],
+          B = { joker: 0, magnet: 0, stern: 0, doppel: 0 };
+        const HEAD = 6; // die Figur wird 1,25-fach gezeichnet: der Kopf ragt etwas über die Rechenbox
+        function say(html, sec = 2.6) {
+          banner.innerHTML = html;
+          banner.hidden = false;
+          bannerT = sec;
+        }
+        function togglePause(force) {
+          const want = force ?? state !== "pause";
+          if (want && state === "run") {
+            state = "pause";
+            userPause = true;
+            held = false;
+            SND.pause(true);
+          } else if (!want && state === "pause") {
+            state = "run";
+            userPause = false;
+            last = 0;
+            SND.pause(false);
+          } else return;
+          pauseBtn.textContent = state === "pause" ? "▶" : "⏸";
+          pauseBtn.setAttribute("aria-label", state === "pause" ? "Weiterspielen" : "Pause");
+          pauseBtn.setAttribute("aria-pressed", state === "pause");
+        }
+        bannerT = 2.2;
+        if (!prog.secrets?.[W0.id] && L === 0 && !prog.hintSecret) {
+          prog.hintSecret = 1;
+          save(prog);
+          setTimeout(() => state === "run" && say("Psst … hier ist eine geheime Kammer versteckt ✨", 3.2), 2600);
+        }
 
         function hud() {
           api.hud({
@@ -1063,7 +1155,7 @@
 
         function runPanel() {
           panel.innerHTML = `<button type="button" class="sp-lino-jump" aria-label="Springen"><span aria-hidden="true">⤒</span> Springen</button>
-            <p class="sp-lino-hint">Tippe aufs Spielfeld oder den Knopf · Lange drücken = höher · Am Computer: Leertaste</p>`;
+            <p class="sp-lino-hint">Tippe aufs Spielfeld oder den Knopf · Lange drücken = höher · ❓-Kisten von unten anstoßen · Am Computer: Leertaste, P = Pause</p>`;
           const jb = panel.querySelector(".sp-lino-jump");
           jb.addEventListener("pointerdown", (e) => {
             e.preventDefault();
@@ -1092,6 +1184,13 @@
             coyote = 0;
             buffer = 0;
             SND.play("jump");
+          } else if (B.doppel > 0 && !P.dbl) {
+            // Flügel-Booster: zweiter Sprung in der Luft
+            P.dbl = true;
+            P.vy = -JUMP * 0.72;
+            holdT = 0;
+            SND.play("jump");
+            fx.push({ x: P.x + 11, y: P.y + 34, t: 0, puff: 1 });
           } else buffer = 0.14; // kurz vor der Landung gedrückt → Sprung direkt nach der Landung
         }
         function release() {
@@ -1100,6 +1199,7 @@
         }
         cv.addEventListener("pointerdown", (e) => {
           e.preventDefault();
+          if (state === "pause" && userPause) return togglePause(false);
           press();
         });
         cv.addEventListener("pointerup", release);
@@ -1107,6 +1207,10 @@
         api.el.querySelector(".sp-lino-wrap").addEventListener("contextmenu", (e) => e.preventDefault());
         const onKey = (e) => {
           if (!api.el.isConnected) return removeEventListener("keydown", onKey);
+          if (e.type === "keydown" && ["p", "P", "Escape"].includes(e.key) && (state === "run" || state === "pause")) {
+            e.preventDefault();
+            return togglePause();
+          }
           if (
             [" ", "ArrowUp", "w", "W"].includes(e.key) &&
             state === "run" &&
@@ -1120,10 +1224,10 @@
         addEventListener("keydown", onKey);
         addEventListener("keyup", onKey);
         const onVis = () => {
-          SND.pause(document.hidden);
+          if (!userPause) SND.pause(document.hidden);
           if (document.hidden && state === "run") {
             state = "pause";
-          } else if (!document.hidden && state === "pause") {
+          } else if (!document.hidden && state === "pause" && !userPause) {
             state = "run";
             last = 0;
           }
@@ -1144,7 +1248,7 @@
         }
 
         function hit(how) {
-          if (P.inv > 0 || state !== "run") return;
+          if (state !== "run" || (how !== "fall" && (P.inv > 0 || B.stern > 0))) return;
           lives--;
           api.vibrate();
           SND.play(how === "fall" ? "fall" : "hurt");
@@ -1166,45 +1270,136 @@
           P.vy = 0;
           P.onGround = true;
           P.inv = 1.6;
+          P.dbl = false;
+          B.magnet = B.stern = B.doppel = 0;
           state = "run";
+        }
+
+        function give(type, x, y) {
+          const b = BOOSTS[type];
+          SND.play("power");
+          if (type === "joker") B.joker++;
+          else if (type === "herz") {
+            if (lives < 3) lives++;
+            else score += 50;
+          } else B[type] = b.dur;
+          fx.push({ x, y, t: 0, text: b.ic + " " + b.name });
+          say(`${b.ic} <b>${b.name}!</b> ${type === "herz" && lives >= 3 ? "Herzen voll – +50 Punkte." : b.txt}`, 3);
+          hud();
+        }
+
+        function bump(pl) {
+          const cx = P.x + P.w / 2,
+            n = Math.round(pl.w / T);
+          pl.bumpK = Math.max(0, Math.min(n - 1, Math.floor((cx - pl.x) / T)));
+          pl.bumpT = 0.16;
+          SND.play("bump");
+          const qx = pl.x + pl.q * T + T / 2;
+          if (!pl.used && pl.q >= 0 && Math.abs(cx - qx) < T * 1.3) {
+            pl.used = true;
+            pl.bumpK = pl.q;
+            give(pl.boost, qx, pl.y - 10);
+          }
+          // Käfer oder Münzen auf der Kiste werden mit angestoßen
+          for (const c of lvl.coins)
+            if (!c.got && c.x > pl.x && c.x < pl.x + pl.w && c.y < pl.y && c.y > pl.y - 40) {
+              c.got = true;
+              coinsGot++;
+              score += 10;
+              SND.play("coin");
+            }
+          hud();
+        }
+
+        function enterChamber() {
+          const ch = lvl.ch;
+          inCh = true;
+          lvl.secret.used = true;
+          P.x = ch.x0 + 2 * T;
+          P.y = GROUND - P.h;
+          P.vy = 0;
+          P.onGround = true;
+          held = false;
+          flash = 0.6;
+          score += 100;
+          prog.secrets = { ...(prog.secrets || {}), [W0.id]: true };
+          save(prog);
+          SND.play("secret");
+          SND.startMusic(5);
+          say("🗝 <b>Geheime Kammer gefunden!</b> +100", 3);
+          hud();
+        }
+        function leaveChamber() {
+          inCh = false;
+          P.x = lvl.secret.ret;
+          P.y = GROUND - P.h;
+          P.vy = 0;
+          P.onGround = true;
+          P.inv = 1;
+          flash = 0.5;
+          SND.startMusic(L);
+          say("Zurück auf dem Weg ▶", 1.6);
         }
 
         function step(dt) {
           P.run += dt;
           if (P.inv > 0) P.inv -= dt;
-          // Bewegung nach rechts bis zum nächsten Tor
-          const gate = lvl.gates[gateIdx];
+          for (const k of ["magnet", "stern", "doppel"]) if (B[k] > 0) B[k] = Math.max(0, B[k] - dt);
           let vx = speed;
-          if (gate && !gate.open && P.x + P.w >= gate.x - 6) {
-            vx = 0;
-            P.x = gate.x - 6 - P.w;
-            if (P.onGround) return askGate();
+          if (!inCh) {
+            // Bewegung nach rechts bis zum nächsten Tor
+            const gate = lvl.gates[gateIdx];
+            if (gate && !gate.open && P.x + P.w >= gate.x - 6) {
+              vx = 0;
+              P.x = gate.x - 6 - P.w;
+              if (P.onGround) return askGate();
+            }
+          } else {
+            const chest = lvl.ch.chest;
+            if (!chest.open && P.x + P.w >= chest.x - 4) {
+              vx = 0;
+              P.x = chest.x - 4 - P.w;
+              if (P.onGround) return askChest();
+            }
           }
+          // waagerecht – Kisten sind fest: von links dagegen = anhalten
+          const oldX = P.x;
           P.x += vx * dt;
+          for (const pl of lvl.plats)
+            if (P.x + P.w > pl.x && oldX + P.w <= pl.x + 1 && P.y + P.h > pl.y + 3 && P.y - HEAD < pl.y + CRATE_H - 2) P.x = pl.x - P.w;
           if (held && P.vy < 0 && holdT < 0.26) {
             holdT += dt;
             P.vy -= 1200 * dt;
           }
           P.vy += G * dt;
           if (P.vy > 900) P.vy = 900;
-          const oldBottom = P.y + P.h;
+          const oldBottom = P.y + P.h,
+            oldTop = P.y - HEAD;
           P.y += P.vy * dt;
           const wasGround = P.onGround;
           P.onGround = false;
-          // Plattformen (nur von oben)
+          // Kisten: von oben landen, von unten mit dem Kopf anstoßen
           for (const pl of lvl.plats) {
-            if (
-              P.x + P.w > pl.x + 2 &&
-              P.x < pl.x + pl.w - 2 &&
-              oldBottom <= pl.y + 1 &&
-              P.y + P.h >= pl.y &&
-              P.vy >= 0
-            ) {
+            if (!(P.x + P.w > pl.x + 2 && P.x < pl.x + pl.w - 2)) continue;
+            const bottom = pl.y + CRATE_H;
+            if (P.vy >= 0 && oldBottom <= pl.y + 1 && P.y + P.h >= pl.y) {
               P.y = pl.y - P.h;
               P.vy = 0;
               P.onGround = true;
+            } else if (P.vy < 0 && oldTop >= bottom - 1 && P.y - HEAD < bottom) {
+              P.y = bottom + HEAD;
+              P.vy = 60;
+              holdT = 1;
+              bump(pl);
             }
           }
+          // Wolken: nur von oben
+          for (const cl of lvl.clouds)
+            if (P.x + P.w > cl.x + 2 && P.x < cl.x + cl.w - 2 && oldBottom <= cl.y + 1 && P.y + P.h >= cl.y && P.vy >= 0) {
+              P.y = cl.y - P.h;
+              P.vy = 0;
+              P.onGround = true;
+            }
           // Boden
           if (
             P.y + P.h >= GROUND &&
@@ -1216,6 +1411,7 @@
             P.vy = 0;
             P.onGround = true;
           }
+          if (P.onGround) P.dbl = false;
           if (buffer > 0) {
             buffer -= dt;
             if (P.onGround) {
@@ -1233,19 +1429,24 @@
             P.inv = 0;
             hit("fall");
           }
-          // Münzen
-          for (const c of lvl.coins)
-            if (
-              !c.got &&
-              Math.abs(c.x - (P.x + P.w / 2)) < 18 &&
-              Math.abs(c.y - (P.y + P.h / 2)) < 24
-            ) {
+          // Münzen (mit Magnet: fliegen heran)
+          const pcx = P.x + P.w / 2,
+            pcy = P.y + P.h / 2;
+          for (const c of lvl.coins) {
+            if (c.got) continue;
+            if (B.magnet > 0 && Math.abs(c.x - pcx) < 170 && Math.abs(c.y - pcy) < 200) {
+              const k = Math.min(1, dt * 9);
+              c.x += (pcx - c.x) * k;
+              c.y += (pcy - c.y) * k;
+            }
+            if (Math.abs(c.x - pcx) < 18 && Math.abs(c.y - pcy) < 24) {
               c.got = true;
               SND.play("coin");
               coinsGot++;
               score += 10;
               hud();
             }
+          }
           // Fehlerkäfer
           for (const en of lvl.enemies) {
             if (!en.alive) continue;
@@ -1261,84 +1462,90 @@
             }
             const ex = en.x - 14,
               ey = GROUND - 22;
-            if (
-              P.x + P.w > ex + 4 &&
-              P.x < ex + 24 &&
-              P.y + P.h > ey + 2 &&
-              P.y < GROUND
-            ) {
-              if (P.vy > 0 && oldBottom <= ey + 10) {
+            if (P.x + P.w > ex + 4 && P.x < ex + 24 && P.y + P.h > ey + 2 && P.y < GROUND) {
+              if ((P.vy > 0 && oldBottom <= ey + 10) || B.stern > 0) {
                 en.alive = false;
                 en.dead = 0.5;
-                P.vy = -JUMP * 0.62;
+                if (!(B.stern > 0) || P.vy > 0) P.vy = -JUMP * 0.62;
                 SND.play("stomp");
                 score += 50;
                 hud();
               } else hit();
             }
           }
-          for (const en of lvl.enemies)
-            if (!en.alive && en.dead > 0) en.dead -= dt;
+          for (const en of lvl.enemies) if (!en.alive && en.dead > 0) en.dead -= dt;
+          for (const pl of lvl.plats) if (pl.bumpT > 0) pl.bumpT -= dt;
+          // Geheime Kammer: Tür auf der Wolke / Ausgang in der Kammer
+          const sc = lvl.secret;
+          if (!inCh && sc && !sc.used && P.x + P.w > sc.x + 4 && P.x < sc.x + 26 && P.y + P.h > sc.y - 44 && P.y < sc.y) enterChamber();
+          if (inCh && P.x >= lvl.ch.exit) leaveChamber();
           // Ziel
-          if (gateIdx >= GATES && P.x >= lvl.goal) {
+          if (!inCh && gateIdx >= GATES && P.x >= lvl.goal) {
             state = "goal";
             finishLevel();
           }
-          camX = Math.max(0, Math.min(lvl.len - VW, P.x - VW * 0.3));
+          camX = inCh
+            ? Math.max(lvl.ch.x0, Math.min(lvl.ch.x1 - VW, P.x - VW * 0.3))
+            : Math.max(0, Math.min(lvl.mainLen - VW, P.x - VW * 0.3));
         }
 
-        function askGate() {
+        // Frage stellen (Tor oder Schatztruhe). item = [Satz mit ___, richtig, falsch, falsch, Tipp]
+        function quiz({ item, tag, note, bonus, onAnswer, onNext }) {
           state = "ask";
           held = false;
-          SND.play("gate");
           SND.duck(true);
-          const [q, a, w1, w2, tip] = qs[gateIdx];
+          const [q, a, w1, w2, tip] = item;
           const opts = api.shuffle([a, w1, w2]);
-          const qHtml = api
-            .esc(q)
-            .replace("___", '<span class="sp-lino-gap">&nbsp;</span>');
-          panel.innerHTML = `<div class="sp-lino-q" role="group" aria-label="Frage am Tor"><span class="sp-lino-tag">🚪 Tor ${gateIdx + 1} von ${GATES} · ${W0.id}</span>
+          const qHtml = api.esc(q).replace("___", '<span class="sp-lino-gap">&nbsp;</span>');
+          panel.innerHTML = `<div class="sp-lino-q${bonus ? " is-bonus" : ""}" role="group" aria-label="${bonus ? "Bonusfrage" : "Frage am Tor"}"><span class="sp-lino-tag">${tag}</span>
+            ${note ? `<p class="sp-lino-note">${note}</p>` : ""}
             <p class="sp-lino-text">${qHtml}</p>
-            <div class="ch-opts">${opts.map((o, k) => `<button type="button" class="ch-opt" data-k="${k}"><kbd>${k + 1}</kbd><span>${api.esc(o)}</span></button>`).join("")}</div></div>`;
+            <div class="ch-opts">${opts.map((o, k) => `<button type="button" class="ch-opt" data-k="${k}"><kbd>${k + 1}</kbd><span>${api.esc(o)}</span></button>`).join("")}</div>
+            ${!bonus && B.joker > 0 ? `<button type="button" class="sp-lino-joker">💡 Joker einsetzen (${B.joker}) – eine falsche Antwort verschwindet</button>` : ""}</div>`;
           const btns = [...panel.querySelectorAll(".ch-opt")];
           btns[0].focus({ preventScroll: true });
-          if (panel.getBoundingClientRect().bottom > innerHeight)
-            panel.scrollIntoView({ block: "end", behavior: "smooth" });
+          if (panel.getBoundingClientRect().bottom > innerHeight) panel.scrollIntoView({ block: "end", behavior: "smooth" });
+          const jk = panel.querySelector(".sp-lino-joker");
+          if (jk)
+            jk.onclick = () => {
+              B.joker--;
+              SND.play("joker");
+              const k = opts.findIndex((o) => o !== a);
+              btns[k].disabled = true;
+              btns[k].classList.add("is-gone");
+              btns[k].setAttribute("aria-label", "durch Joker entfernt");
+              jk.remove();
+              btns.find((x) => !x.disabled)?.focus({ preventScroll: true });
+            };
           btns.forEach(
             (b, k) =>
               (b.onclick = () => {
-                const ok = opts[k] === a,
-                  gate = lvl.gates[gateIdx];
+                const ok = opts[k] === a;
                 btns.forEach((x, j) => {
                   x.disabled = true;
                   if (opts[j] === a) x.classList.add("is-right");
                 });
+                panel.querySelector(".sp-lino-joker")?.remove();
                 if (!ok) b.classList.add("is-wrong");
                 const gap = panel.querySelector(".sp-lino-gap");
                 if (gap) {
                   gap.textContent = a;
                   gap.classList.add("is-ok");
                 }
-                gate.open = true;
-                gate.ok = ok;
                 SND.play(ok ? "right" : "wrong");
-                if (ok) {
-                  right++;
-                  score += 100;
-                } else {
-                  lives--;
-                  api.vibrate();
-                  const c = q.replace("___", a);
-                  wrong.push({ correct: c, tip });
-                  wrongAll.push({ correct: c, tip });
-                }
+                const full = q.replace("___", a);
+                const head = onAnswer(ok, full);
                 hud();
                 api.feedback(
                   ok,
-                  ok
-                    ? `<b>Richtig! Das Tor ist offen. +100</b><span>${api.esc(tip)}</span>`
-                    : `<b>Leider falsch – ein Herz weniger.</b><span>Richtig: <b>${api.esc(a)}</b> · ${api.esc(tip)}</span>`,
+                  `${head}<span>${ok ? api.esc(tip) : `Richtig: <b>${api.esc(a)}</b> · ${api.esc(tip)}`}</span><button type="button" class="sp-lino-say">🔈 Satz anhören</button>`,
                 );
+                const sb = document.querySelector(".ch-feedback .sp-lino-say");
+                if (sb)
+                  sb.onclick = () => {
+                    SND.duck(true);
+                    api.speak(full);
+                  };
                 if (lives <= 0) {
                   SND.stopMusic();
                   api.next("Weiter", () => {
@@ -1350,16 +1557,16 @@
                 }
                 api.next("Weiter laufen ▶", () => {
                   api.clearFeedback();
-                  gateIdx++;
-                  checkpoint = gate.x + 10;
+                  try {
+                    window.speechSynthesis?.cancel();
+                  } catch {}
+                  onNext?.();
                   hud();
                   runPanel();
                   state = "run";
                   last = 0;
                   SND.duck(false);
-                  panel
-                    .querySelector(".sp-lino-jump")
-                    ?.focus({ preventScroll: true });
+                  panel.querySelector(".sp-lino-jump")?.focus({ preventScroll: true });
                   cv.scrollIntoView({ block: "nearest", behavior: "smooth" });
                 });
                 // „Weiter laufen“ auf dem Handy sichtbar machen
@@ -1369,6 +1576,66 @@
                 }, 60);
               }),
           );
+        }
+
+        function askGate() {
+          SND.play("gate");
+          const item = qs[gateIdx],
+            gate = lvl.gates[gateIdx];
+          quiz({
+            item,
+            tag: `🚪 Tor ${gateIdx + 1} von ${GATES} · ${W0.id}`,
+            onAnswer(ok, full) {
+              gate.open = true;
+              gate.ok = ok;
+              if (ok) {
+                right++;
+                score += 100;
+                return "<b>Richtig! Das Tor ist offen. +100</b>";
+              }
+              lives--;
+              api.vibrate();
+              wrong.push({ correct: full, tip: item[4] });
+              wrongAll.push({ correct: full, tip: item[4] });
+              wrongItems.push(item);
+              return "<b>Leider falsch – ein Herz weniger.</b>";
+            },
+            onNext() {
+              gateIdx++;
+              checkpoint = gate.x + 10;
+            },
+          });
+        }
+
+        // Schatztruhe: Wiederholung einer falsch beantworteten Frage – oder eine neue Frage. Kein Risiko.
+        function askChest() {
+          SND.play("gate");
+          const chest = lvl.ch.chest,
+            rep = wrongItems.shift(),
+            pool = W0.questions.filter((x) => !qs.includes(x)),
+            item = rep || (pool.length ? api.pick(pool, 1)[0] : api.pick(W0.questions, 1)[0]);
+          quiz({
+            item,
+            bonus: true,
+            tag: "🗝 Schatztruhe · Bonusfrage",
+            note: rep ? "Zweite Chance: Diese Frage war vorhin schwierig." : "Ohne Risiko – hier verlierst du kein Herz.",
+            onAnswer(ok) {
+              chest.open = true;
+              if (!ok) return "<b>Nicht ganz – macht nichts, hier kostet es kein Herz.</b>";
+              score += 150;
+              let gift;
+              if (lives < 3) {
+                lives++;
+                gift = "❤️ +1 Herz";
+              } else {
+                B.joker++;
+                gift = "💡 +1 Joker";
+              }
+              SND.play("power");
+              fx.push({ x: chest.x + 18, y: GROUND - 50, t: 0, text: gift });
+              return `<b>Richtig! Die Truhe ist offen: +150 und ${gift}</b>`;
+            },
+          });
         }
 
         function finishLevel() {
@@ -1419,14 +1686,21 @@
         }
 
         /* ---------- Zeichnen ---------- */
+        const skyG = ctx.createLinearGradient(0, 0, 0, VH);
+        skyG.addColorStop(0, W0.sky[0]);
+        skyG.addColorStop(1, W0.sky[1]);
+        const caveG = ctx.createLinearGradient(0, 0, 0, VH);
+        caveG.addColorStop(0, "#1a110b");
+        caveG.addColorStop(1, "#4d3421");
+        const pitG = ctx.createLinearGradient(0, GROUND, 0, VH);
+        pitG.addColorStop(0, "rgba(20,14,10,.55)");
+        pitG.addColorStop(1, "rgba(5,3,2,.95)");
         function draw() {
           const t = performance.now() / 1000;
-          const g = ctx.createLinearGradient(0, 0, 0, VH);
-          g.addColorStop(0, W0.sky[0]);
-          g.addColorStop(1, W0.sky[1]);
-          ctx.fillStyle = g;
+          ctx.fillStyle = inCh ? caveG : skyG;
           ctx.fillRect(0, 0, VW, VH);
-          if (L === 4) {
+          if (inCh) cave(t);
+          else if (L === 4) {
             ctx.fillStyle = "rgba(255,255,255,.8)";
             for (let i = 0; i < 40; i++) {
               const sx = (i * 137 - camX * 0.05) % VW,
@@ -1444,10 +1718,12 @@
               cloud(((cx + VW + 200) % (VW + 200)) - 100, 50 + (i % 3) * 30);
             }
           }
-          hills(W0.hill2, 0.25, 150, 70);
-          hills(W0.hill, 0.45, 110, 50);
-          if (L === 1 || L === 4) city();
-          if (L === 3) zeche();
+          if (!inCh) {
+            hills(W0.hill2, 0.25, 150, 70);
+            hills(W0.hill, 0.45, 110, 50);
+            if (L === 1 || L === 4) city();
+            if (L === 3) zeche();
+          }
           ctx.save();
           ctx.translate(-Math.round(camX), 0);
           // Boden
@@ -1455,33 +1731,80 @@
             i1 = Math.min(lvl.solid.length, i0 + Math.ceil(VW / T) + 3);
           for (let i = i0; i < i1; i++)
             if (!lvl.solid[i]) {
-              const pit = ctx.createLinearGradient(0, GROUND, 0, VH);
-              pit.addColorStop(0, "rgba(20,14,10,.55)");
-              pit.addColorStop(1, "rgba(5,3,2,.95)");
-              ctx.fillStyle = pit;
+              ctx.fillStyle = pitG;
               ctx.fillRect(i * T, GROUND + 6, T, VH - GROUND);
             } else {
-              ctx.fillStyle = W0.ground;
+              ctx.fillStyle = inCh ? "#4a3626" : W0.ground;
               ctx.fillRect(i * T, GROUND, T, VH - GROUND);
-              ctx.fillStyle = W0.grass;
+              ctx.fillStyle = inCh ? "#7a5a3a" : W0.grass;
               ctx.fillRect(i * T, GROUND, T, 9);
               ctx.fillStyle = "rgba(0,0,0,.12)";
               ctx.fillRect(i * T + (i % 2 ? 6 : 18), GROUND + 20, 6, 6);
             }
-          // Plattformen (Holzkisten)
-          for (const pl of lvl.plats)
+          // Holzkisten und ?-Kisten
+          for (const pl of lvl.plats) {
+            if (pl.x > camX + VW + 40 || pl.x + pl.w < camX - 40) continue;
             for (let k = 0; k < pl.w / T; k++) {
-              const x = pl.x + k * T;
-              ctx.fillStyle = "#c98b4b";
-              ctx.fillRect(x, pl.y, T - 1, 22);
-              ctx.strokeStyle = "#8b5a2b";
-              ctx.lineWidth = 2;
-              ctx.strokeRect(x + 1, pl.y + 1, T - 3, 20);
-              ctx.beginPath();
-              ctx.moveTo(x + 2, pl.y + 2);
-              ctx.lineTo(x + T - 3, pl.y + 20);
-              ctx.stroke();
+              const x = pl.x + k * T,
+                up = pl.bumpT > 0 && pl.bumpK === k ? Math.sin((pl.bumpT / 0.16) * Math.PI) * 7 : 0,
+                y = pl.y - up,
+                isQ = k === pl.q && pl.q >= 0;
+              if (isQ && !pl.used) {
+                ctx.fillStyle = "#ffc928";
+                ctx.fillRect(x, y, T - 1, CRATE_H);
+                ctx.strokeStyle = "#b07a00";
+                ctx.lineWidth = 2;
+                ctx.strokeRect(x + 1, y + 1, T - 3, CRATE_H - 2);
+                ctx.fillStyle = "#7a4a00";
+                ctx.font = "900 17px system-ui,sans-serif";
+                ctx.textAlign = "center";
+                ctx.fillText("?", x + T / 2, y + 17 + Math.sin(t * 5) * 1);
+              } else {
+                ctx.fillStyle = isQ ? "#a8865f" : "#c98b4b";
+                ctx.fillRect(x, y, T - 1, CRATE_H);
+                ctx.strokeStyle = isQ ? "#6f5638" : "#8b5a2b";
+                ctx.lineWidth = 2;
+                ctx.strokeRect(x + 1, y + 1, T - 3, CRATE_H - 2);
+                if (!isQ) {
+                  ctx.beginPath();
+                  ctx.moveTo(x + 2, y + 2);
+                  ctx.lineTo(x + T - 3, y + CRATE_H - 2);
+                  ctx.stroke();
+                }
+              }
             }
+          }
+          // Wolken (nur von oben begehbar)
+          for (const cl of lvl.clouds) {
+            ctx.fillStyle = "rgba(255,255,255,.95)";
+            for (let x = cl.x + 12; x < cl.x + cl.w; x += 24) {
+              ctx.beginPath();
+              ctx.arc(x, cl.y + 8, 13, 0, 7);
+              ctx.fill();
+            }
+            ctx.fillStyle = "rgba(160,190,220,.5)";
+            ctx.fillRect(cl.x + 4, cl.y + 14, cl.w - 8, 4);
+          }
+          // Geheimtür auf der Wolke
+          const sc = lvl.secret;
+          if (sc && !sc.used) {
+            const glow = 0.5 + Math.sin(t * 4) * 0.25;
+            ctx.fillStyle = `rgba(255,214,80,${glow * 0.5})`;
+            ctx.beginPath();
+            ctx.arc(sc.x + 15, sc.y - 20, 26, 0, 7);
+            ctx.fill();
+            ctx.fillStyle = "#7b3f1d";
+            roundRect(sc.x + 2, sc.y - 42, 26, 42, 10);
+            ctx.fill();
+            ctx.fillStyle = "#ffc928";
+            ctx.beginPath();
+            ctx.arc(sc.x + 22, sc.y - 20, 2.6, 0, 7);
+            ctx.fill();
+            ctx.font = "15px system-ui,sans-serif";
+            ctx.textAlign = "center";
+            ctx.fillText("✨", sc.x + 15 + Math.sin(t * 3) * 10, sc.y - 50);
+          }
+          if (inCh) chamberProps(t);
           // Münzen
           for (const c of lvl.coins)
             if (!c.got) {
@@ -1604,14 +1927,161 @@
             ctx.restore();
           }
           lino(t);
+          // schwebende Texte (Booster, Truhe) und Wölkchen beim Doppelsprung
+          for (const f of fx) {
+            const a = Math.max(0, 1 - f.t / 1.4);
+            if (f.puff) {
+              ctx.fillStyle = `rgba(255,255,255,${a * 0.8})`;
+              ctx.beginPath();
+              ctx.arc(f.x - 8, f.y + f.t * 20, 6 + f.t * 14, 0, 7);
+              ctx.arc(f.x + 8, f.y + f.t * 20, 6 + f.t * 14, 0, 7);
+              ctx.fill();
+              continue;
+            }
+            ctx.globalAlpha = a;
+            ctx.font = "800 16px system-ui,sans-serif";
+            ctx.textAlign = "center";
+            ctx.lineWidth = 4;
+            ctx.strokeStyle = "rgba(255,255,255,.9)";
+            ctx.strokeText(f.text, f.x, f.y - f.t * 36);
+            ctx.fillStyle = "#172036";
+            ctx.fillText(f.text, f.x, f.y - f.t * 36);
+            ctx.globalAlpha = 1;
+          }
           ctx.restore();
+          boosterHud();
           if (state === "respawn" || state === "dead") {
             ctx.fillStyle = `rgba(214,51,43,${Math.max(0, 0.35 - deadT * 0.3)})`;
             ctx.fillRect(0, 0, VW, VH);
           }
+          if (flash > 0) {
+            ctx.fillStyle = `rgba(255,248,220,${Math.min(1, flash * 1.6)})`;
+            ctx.fillRect(0, 0, VW, VH);
+          }
+          if (state === "pause" && userPause) {
+            ctx.fillStyle = "rgba(23,32,54,.55)";
+            ctx.fillRect(0, 0, VW, VH);
+            ctx.fillStyle = "#fff";
+            ctx.textAlign = "center";
+            ctx.font = "800 30px system-ui,sans-serif";
+            ctx.fillText("⏸ Pause", VW / 2, VH / 2 - 6);
+            ctx.font = "600 16px system-ui,sans-serif";
+            ctx.fillText("Tippen oder ▶ drücken zum Weiterspielen", VW / 2, VH / 2 + 24);
+          }
+        }
+        // aktive Booster oben links
+        function boosterHud() {
+          const items = [];
+          if (B.joker > 0) items.push(["💡", "×" + B.joker, 1]);
+          for (const k of ["magnet", "stern", "doppel"]) if (B[k] > 0) items.push([BOOSTS[k].ic, Math.ceil(B[k]) + " s", B[k] / BOOSTS[k].dur]);
+          let x = 8;
+          for (const [ic, label, part] of items) {
+            ctx.fillStyle = "rgba(255,255,255,.9)";
+            roundRect(x, 8, 66, 30, 15);
+            ctx.fill();
+            ctx.fillStyle = "rgba(35,65,181,.18)";
+            roundRect(x, 8, 66 * Math.max(0.12, Math.min(1, part)), 30, 15);
+            ctx.fill();
+            ctx.font = "16px system-ui,sans-serif";
+            ctx.textAlign = "left";
+            ctx.fillText(ic, x + 7, 29);
+            ctx.font = "800 13px system-ui,sans-serif";
+            ctx.fillStyle = "#172036";
+            ctx.fillText(label, x + 30, 28);
+            x += 72;
+          }
+        }
+        function cave(t) {
+          // Höhle mit Kristallen und Fackeln
+          ctx.fillStyle = "#24170f";
+          ctx.beginPath();
+          ctx.moveTo(0, 0);
+          for (let x = 0; x <= VW + 20; x += 20) {
+            const wx = x + camX * 0.6;
+            ctx.lineTo(x, 26 + ((Math.sin(wx / 23) + 1) * 0.5) ** 3 * 34);
+          }
+          ctx.lineTo(VW, 0);
+          ctx.fill();
+          for (let i = 0; i < 9; i++) {
+            const bx = (((i * 113 - camX * 0.35) % (VW + 120)) + VW + 120) % (VW + 120) - 60,
+              by = 120 + ((i * 47) % 110),
+              hue = ["#7fe3ff", "#c49bff", "#7dffb0"][i % 3];
+            ctx.globalAlpha = 0.55 + Math.sin(t * 2 + i) * 0.2;
+            ctx.fillStyle = hue;
+            ctx.beginPath();
+            ctx.moveTo(bx, by);
+            ctx.lineTo(bx + 7, by + 14);
+            ctx.lineTo(bx, by + 30);
+            ctx.lineTo(bx - 7, by + 14);
+            ctx.fill();
+            ctx.globalAlpha = 1;
+          }
+        }
+        function chamberProps(t) {
+          const ch = lvl.ch;
+          // Fackeln
+          for (let k = 0; k < 4; k++) {
+            const x = ch.x0 + 140 + k * 260;
+            ctx.fillStyle = "#5a3b22";
+            ctx.fillRect(x - 3, GROUND - 120, 6, 34);
+            ctx.fillStyle = `rgba(255,${150 + Math.sin(t * 13 + k) * 40},40,.95)`;
+            ctx.beginPath();
+            ctx.ellipse(x, GROUND - 128 + Math.sin(t * 17 + k) * 1.5, 7, 12, 0, 0, 7);
+            ctx.fill();
+          }
+          // Schatztruhe
+          const c = ch.chest,
+            x = c.x,
+            y = GROUND - 30;
+          ctx.fillStyle = "#8b5a2b";
+          ctx.fillRect(x, y, 40, 30);
+          ctx.fillStyle = "#ffc928";
+          ctx.fillRect(x, y + 10, 40, 4);
+          ctx.fillRect(x + 17, y + 6, 6, 12);
+          ctx.fillStyle = "#6d4420";
+          if (c.open) {
+            ctx.fillRect(x - 2, y - 22, 44, 10);
+            ctx.fillStyle = `rgba(255,214,80,${0.5 + Math.sin(t * 6) * 0.2})`;
+            ctx.beginPath();
+            ctx.arc(x + 20, y - 4, 16, 0, 7);
+            ctx.fill();
+          } else {
+            roundRect(x - 2, y - 14, 44, 16, 8);
+            ctx.fill();
+            ctx.fillStyle = "#ffc928";
+            ctx.fillRect(x + 17, y - 4, 6, 8);
+          }
+          // Ausgang
+          const ex = ch.exit;
+          ctx.fillStyle = "rgba(160,220,255,.35)";
+          roundRect(ex - 6, GROUND - 74, 46, 74, 22);
+          ctx.fill();
+          ctx.strokeStyle = "#a0dcff";
+          ctx.lineWidth = 3;
+          ctx.stroke();
+          ctx.fillStyle = "#fff";
+          ctx.font = "800 12px system-ui,sans-serif";
+          ctx.textAlign = "center";
+          ctx.fillText("Ausgang", ex + 17, GROUND - 82);
         }
         function lino(t) {
           if (P.inv > 0 && Math.floor(t * 12) % 2 === 0) return;
+          if (B.stern > 0) {
+            ctx.fillStyle = `hsla(${(t * 360) % 360},90%,60%,.45)`;
+            ctx.beginPath();
+            ctx.arc(P.x + 11, P.y + 14, 28, 0, 7);
+            ctx.fill();
+          }
+          if (B.doppel > 0) {
+            const fl = Math.sin(t * (P.onGround ? 6 : 22)) * 5;
+            ctx.fillStyle = "rgba(255,255,255,.95)";
+            ctx.strokeStyle = "#9fb4d9";
+            ctx.lineWidth = 1.5;
+            ctx.beginPath();
+            ctx.ellipse(P.x - 4, P.y + 8 - fl, 11, 6, -0.6, 0, 7);
+            ctx.fill();
+            ctx.stroke();
+          }
           ctx.save();
           ctx.translate(P.x + 11, P.y + 34);
           ctx.scale(1.25, 1.25);
@@ -1698,6 +2168,10 @@
           raf = requestAnimationFrame(loop);
           const dt = last ? Math.min(1 / 30, (ts - last) / 1000) : 0;
           last = ts;
+          const rdt = last && dt ? dt : 1 / 60;
+          if (flash > 0) flash -= rdt;
+          if (bannerT > 0 && (bannerT -= rdt) <= 0) banner.hidden = true;
+          for (let i = fx.length - 1; i >= 0; i--) if ((fx[i].t += state === "pause" ? 0 : rdt) > 1.4) fx.splice(i, 1);
           if (state === "run") step(dt);
           else if (state === "respawn") {
             deadT += dt;
@@ -1726,6 +2200,13 @@
           },
           get gateIdx() {
             return gateIdx;
+          },
+          get inCh() {
+            return inCh;
+          },
+          B,
+          get score() {
+            return score;
           },
         };
       }
