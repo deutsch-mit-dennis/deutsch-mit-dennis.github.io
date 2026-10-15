@@ -74,7 +74,7 @@ def http(url, body, headers, tries=6):
                 return r.read()
         except urllib.error.HTTPError as e:
             msg = e.read()[:300].decode('utf-8', 'replace')
-            if e.code == 429 and ('per day' in msg.lower() or 'PerDay' in msg): raise RuntimeError(f'HTTP 429: {msg}')
+            if e.code == 429 and ('per day' in msg.lower() or 'PerDay' in msg or 'exceeded your current quota' in msg): raise RuntimeError(f'HTTP 429: {msg}')
             if e.code in (429, 500, 502, 503) and i < tries - 1:
                 time.sleep(min(90, 15 * (i + 1))); continue
             raise RuntimeError(f'HTTP {e.code}: {msg}')
