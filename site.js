@@ -193,7 +193,7 @@
     const tiles = [
       ['#challenge', 'dm-q-ch', '🔥', 'Tages-Challenge', chSub],
       ['#spiele', 'dm-q-sp', '🎮', 'Lernspiele', '18 Spiele'],
-      ['#spiele/lino', 'dm-q-lino', '🏃', 'Lino läuft', 'Jump’n’Run A1–C1'],
+      ['#spiele/lino', 'dm-q-lino', '🏃', 'Lino läuft', '8 Welten · jetzt mit Auto'],
       [sod ? '#lieder/' + sod.id : '#lieder', 'dm-q-song', '🎵', sod ? 'Lied des Tages' : 'Lieder', sod ? sod.title : '40 Lieder A1–C1']
     ];
     return `<nav class="dm-quick" aria-label="Schnellstart">${tiles.map(([u, c, i, t, s]) => `<a class="${c}" href="${x(u)}"><span class="dm-q-ico" aria-hidden="true">${i}</span><b>${x(t)}</b><small>${x(s)}</small></a>`).join('')}</nav>`;
@@ -239,10 +239,10 @@
           </g>
         </svg>
         <span class="lino-home-copy">
-          <span class="lino-home-kicker">Neu · Jump’n’Run</span>
+          <span class="lino-home-kicker">Neu: 🚗 Auto · 🛷 Schlitten · 🚲 Fahrrad</span>
           <b id="lino-h">Lino läuft – das Deutsch-Abenteuer</b>
-          <span class="lino-home-text">Springe über Lücken und Fehlerkäfer. An jedem Tor wartet eine Deutschfrage – von ganz leicht bis schwer.</span>
-          <span class="lino-home-levels" aria-label="5 Welten: A1, A2, B1, B2, C1"><i>A1</i><i>A2</i><i>B1</i><i>B2</i><i>C1</i></span>
+          <span class="lino-home-text">Springe über Lücken und Fehlerkäfer, fahre Auto über die Autobahn und Schlitten in Winterberg. An jedem Tor wartet eine Deutschfrage – von ganz leicht bis schwer.</span>
+          <span class="lino-home-levels" aria-label="8 Welten: A1, A2, B1, B2, C1 und drei Fahrzeug-Welten"><i>A1</i><i>A2</i><i>B1</i><i>B2</i><i>C1</i><i>🚗</i><i>🛷</i><i>🚲</i></span>
           <span class="lino-home-go">▶ Jetzt spielen</span>
         </span>
       </a>

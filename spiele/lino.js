@@ -60,6 +60,8 @@
 .sp-lino-q .ch-opt.is-gone{opacity:.3;text-decoration:line-through}
 .sp-lino-joker{margin-top:10px;width:100%;min-height:46px;border:2px dashed #d9a400;border-radius:14px;background:#fff8e1;color:#5a3d00;font:800 15.5px var(--dm-font);cursor:pointer}
 .sp-lino-say{margin-top:8px;min-height:40px;border:0;border-radius:99px;padding:6px 14px;background:rgba(255,255,255,.8);font:700 15px var(--dm-font);color:inherit;cursor:pointer;box-shadow:0 1px 4px rgba(0,0,0,.12)}
+.sp-lino-sub{margin:18px 0 4px;font-size:19px}
+.sp-lino-lv.is-ride{background:linear-gradient(135deg,#fff7e6,#eef6ff)}
 .sp-lino-legend{margin:12px 0 0;border:1px solid var(--dm-line,#d5dbea);border-radius:14px;padding:4px 12px;background:#fff}
 .sp-lino-legend summary{cursor:pointer;font-weight:800;padding:8px 0;min-height:28px}
 .sp-lino-legend ul{margin:0 0 10px;padding-left:0;list-style:none;display:grid;gap:6px}
@@ -501,7 +503,106 @@
         ],
       ],
     },
+    /* ---------- Neue Welten: unterwegs mit Fahrzeug (öffnen sich nach Welt A1) ---------- */
+    {
+      id: "Auto",
+      lv: "A2",
+      name: "Autobahn",
+      emoji: "🚗",
+      theme: "road",
+      ride: "car",
+      d: 1,
+      sky: ["#8fd0ff", "#eaf6ff"],
+      hill: "#86c26f",
+      hill2: "#6aa95a",
+      ground: "#4b4f58",
+      grass: "#9aa0a8",
+      questions: [
+        ["Ich fahre ___ Auto zur Arbeit.", "mit dem", "mit der", "mit den", "mit + Dativ: das Auto → mit dem Auto"],
+        ["Die Ampel ist rot. Ich muss ___.", "halten", "parken", "tanken", "Bei Rot hält man an."],
+        ["Der Tank ist fast leer. Ich muss ___.", "tanken", "waschen", "reparieren", "An der Tankstelle tankt man Benzin oder Diesel."],
+        ["Biegen Sie an der Kreuzung ___ ab.", "links", "geradeaus", "weiter", "links / rechts abbiegen"],
+        ["Fahren Sie immer ___ bis zum Bahnhof.", "geradeaus", "abbiegen", "zurück", "geradeaus = nicht links und nicht rechts"],
+        ["Mein Auto ist kaputt. Ich bringe es in die ___.", "Werkstatt", "Apotheke", "Bäckerei", "Autos repariert man in der Werkstatt."],
+        ["Hast du schon einen ___?", "Führerschein", "Fahrschein", "Fahrplan", "Mit dem Führerschein darf man Auto fahren."],
+        ["Wo kann ich hier ___?", "parken", "geparkt", "parkt", "Modalverb + Infinitiv am Ende: kann … parken"],
+        ["Ich bin gestern nach Köln ___.", "gefahren", "gefahrt", "fahren", "Perfekt mit sein: ich bin gefahren"],
+        ["Der Bus fährt ___ Hauptbahnhof.", "zum", "zur", "zu die", "der Bahnhof → zu dem = zum Bahnhof"],
+        ["Die Straße ist gesperrt. Es gibt eine ___.", "Umleitung", "Umzug", "Unterschrift", "Umleitung = ein anderer Weg wegen einer Sperrung"],
+        ["Im Stau ___ wir eine Stunde gewartet.", "haben", "sind", "werden", "warten → Perfekt mit haben"],
+        ["Bitte ___ Sie sich an!", "schnallen", "schnallst", "schnallt", "Imperativ mit Sie: Schnallen Sie sich an!"],
+        ["Das Auto ist ___ als das Fahrrad.", "schneller", "schnell", "am schnellsten", "Komparativ: schneller als"],
+        ["Ich suche einen Parkplatz in der ___ vom Kino.", "Nähe", "Nah", "Nahe", "in der Nähe von"],
+        ["Mit dem Auto ___ ich 20 Minuten ins Büro.", "brauche", "dauere", "nehme", "Ich brauche 20 Minuten. / Es dauert 20 Minuten."],
+      ],
+    },
+    {
+      id: "Schnee",
+      lv: "B1",
+      name: "Winterberg",
+      emoji: "🛷",
+      theme: "snow",
+      ride: "sled",
+      d: 2,
+      sky: ["#b9d6f2", "#f1f7ff"],
+      hill: "#e9f2fb",
+      hill2: "#c9dcef",
+      ground: "#dfeaf5",
+      grass: "#ffffff",
+      questions: [
+        ["Wir bleiben zu Hause, ___ es draußen stark schneit.", "weil", "obwohl", "deshalb", "weil + Grund, das Verb steht am Ende"],
+        ["___ es kalt ist, fahren wir Schlitten.", "Obwohl", "Weil", "Trotzdem", "obwohl = Gegengrund"],
+        ["Ich freue mich ___ die Winterferien.", "auf", "über", "an", "sich freuen auf + Akkusativ (etwas kommt noch)"],
+        ["Zieh eine Mütze an, ___ du dich nicht erkältest!", "damit", "dass", "weil", "damit = Ziel oder Zweck"],
+        ["Gestern ___ es den ganzen Tag.", "schneite", "schneit", "geschneit", "Präteritum: es schneite"],
+        ["Das ist der Berg, ___ wir letztes Jahr bestiegen haben.", "den", "der", "dem", "Relativpronomen im Akkusativ, maskulin: den"],
+        ["Wenn ich Zeit ___, würde ich Ski fahren lernen.", "hätte", "habe", "hatte", "Konjunktiv II: hätte"],
+        ["Ich interessiere mich ___ Wintersport.", "für", "auf", "an", "sich interessieren für + Akkusativ"],
+        ["Es ist so glatt, ___ man kaum laufen kann.", "dass", "damit", "ob", "so …, dass = Folge"],
+        ["Weißt du, ___ der Lift heute fährt?", "ob", "wenn", "dass", "indirekte Ja/Nein-Frage: ob"],
+        ["Nachdem wir gerodelt ___, tranken wir Kakao.", "waren", "haben", "sind", "nachdem + Plusquamperfekt: waren gerodelt"],
+        ["Der Weg wird jeden Morgen ___.", "geräumt", "räumen", "räumt", "Passiv: wird + Partizip II"],
+        ["Trotz ___ Kälte gehen wir spazieren.", "der", "die", "dem", "trotz + Genitiv: trotz der Kälte"],
+        ["Je mehr es schneit, ___ schöner wird es.", "desto", "als", "wie", "je …, desto"],
+        ["Bei dem Wetter habe ich keine Lust ___.", "rauszugehen", "rausgehen", "rauszugehst", "Lust haben + zu + Infinitiv"],
+        ["Pass auf, die Straßen sind ___ Schnee bedeckt.", "mit", "von", "aus", "mit Schnee bedeckt"],
+      ],
+    },
+    {
+      id: "Strand",
+      lv: "B2",
+      name: "Ostseestrand",
+      emoji: "🚲",
+      theme: "beach",
+      ride: "bike",
+      d: 3,
+      sky: ["#7fc9ff", "#fff3d1"],
+      hill: "#2f8fd1",
+      hill2: "#5bb5ea",
+      ground: "#e9cf94",
+      grass: "#f3e0ae",
+      questions: [
+        ["___ des schlechten Wetters fiel der Ausflug aus.", "Wegen", "Trotz", "Während", "wegen + Genitiv = Grund"],
+        ["Ich hätte gern ein Zimmer ___ Meerblick.", "mit", "von", "bei", "ein Zimmer mit Meerblick"],
+        ["Der Urlaub muss bis Ende März ___ werden.", "beantragt", "beantragen", "beantragte", "Passiv mit Modalverb: muss beantragt werden"],
+        ["Die Pension, ___ Preis sehr günstig war, lag direkt am Strand.", "deren", "dessen", "denen", "die Pension → deren (Genitiv, feminin)"],
+        ["Hätten wir früher gebucht, ___ wir ein Zimmer bekommen.", "hätten", "würden", "wären", "Konjunktiv II der Vergangenheit: hätten … bekommen"],
+        ["Der Flug ist ___ eines Streiks gestrichen worden.", "aufgrund", "anhand", "anstatt", "aufgrund + Genitiv = wegen"],
+        ["Sie hat sich ___ den Lärm im Hotel beschwert.", "über", "auf", "an", "sich beschweren über + Akkusativ"],
+        ["Am Strand ist auf Sonnenschutz ___ achten.", "zu", "um", "für", "sein + zu + Infinitiv (= man muss)"],
+        ["Die Kurtaxe wird ___ Ankunft bezahlt.", "bei", "mit", "zu", "bei Ankunft = wenn man ankommt"],
+        ["Es wäre schön, ___ wir mehr Zeit am Meer hätten.", "wenn", "ob", "als", "irrealer Wunsch: wenn … hätten"],
+        ["Nicht nur das Wetter, ___ auch das Essen war toll.", "sondern", "aber", "sowie", "nicht nur …, sondern auch"],
+        ["Ich bin es nicht gewohnt, so früh ___.", "aufzustehen", "aufstehen", "aufgestanden", "gewohnt sein + zu + Infinitiv"],
+        ["___ ich am Strand lag, ging die Sonne unter.", "Während", "Nachdem", "Bevor", "während = gleichzeitig"],
+        ["Die Reise wurde uns von einer Kollegin ___.", "empfohlen", "empfehlt", "empfahl", "Passiv Präteritum: wurde empfohlen"],
+        ["Er tut so, ___ er schon alles wüsste.", "als ob", "ob", "wie", "als ob + Konjunktiv II"],
+        ["Die Strandkörbe können online ___ werden.", "gemietet", "mieten", "gemietete", "Passiv mit Modalverb: können … gemietet werden"],
+      ],
+    },
   ];
+  const MAIN = 5; // Welten 1–5 (A1–C1); danach die Fahrzeug-Welten
+  const wTitle = (w) => (w.lv ? `${w.emoji} ${w.name}` : `Welt ${w.id}`);
   const GATES = 6,
     KEY = "dm-lino";
   const load = () => {
@@ -626,6 +727,10 @@
         tone(392, t, 0.9, "sine", 0.3, 784);
       },
       joker: (t) => tone(660, t, 0.25, "triangle", 0.4, 1320),
+      honk: (t) => {
+        tone(392, t, 0.12, "square", 0.4);
+        tone(392, t + 0.16, 0.22, "square", 0.4);
+      },
     };
     // Akkordfolge I–V–vi–IV, jede Welt mit eigener Tonart, eigenem Tempo und eigener Melodie
     const PROG = [
@@ -665,8 +770,8 @@
       startMusic(world) {
         this.stopMusic();
         if (!init()) return;
-        const root = [60, 62, 57, 64, 55, 53][world] ?? 60,
-          bpm = [108, 114, 120, 126, 100, 92][world] ?? 112;
+        const root = [60, 62, 57, 64, 55, 62, 57, 65, 0, 53][world] ?? 60,
+          bpm = [108, 114, 120, 126, 100, 134, 104, 116, 0, 92][world] ?? 112;
         let seed = world * 7919 + 17;
         const rnd = () => ((seed = (seed * 1103515245 + 12345) & 0x7fffffff), seed / 0x7fffffff);
         const motif = [],
@@ -855,6 +960,7 @@
       doppel: { ic: "🪽", name: "Flügel", txt: "15 Sekunden: In der Luft noch einmal springen.", dur: 15 },
     };
   function buildLevel(L) {
+    const d = WORLDS[L].d ?? L;
     const r = rng(1234 + L * 97),
       T = 32,
       GR = 360 - 48;
@@ -872,9 +978,9 @@
     };
     const coin = (x, y) => coins.push({ x, y, got: false });
     const gapMin = 2,
-      gapMax = L < 2 ? 2 : 3;
+      gapMax = d < 2 ? 2 : 3;
     // Booster für die ?-Kisten: Joker und Herz kommen in jeder Welt vor
-    const bag = ["joker", "herz", "magnet", "stern", "doppel", L < 2 ? "joker" : "herz"];
+    const bag = ["joker", "herz", "magnet", "stern", "doppel", d < 2 ? "joker" : "herz"];
     for (let i = bag.length - 1; i > 0; i--) {
       const j = Math.floor(r() * (i + 1));
       [bag[i], bag[j]] = [bag[j], bag[i]];
@@ -885,8 +991,8 @@
     for (let g = 0; g < GATES; g++) {
       add(3);
       const feats = [];
-      const nGap = [1, 1, 2, 2, 2][L] + (r() < 0.35 && L > 0 ? 1 : 0);
-      const nEn = [g > 1 ? 1 : 0, 1, 1, 2, 2][L] + (r() < 0.3 && L > 2 ? 1 : 0);
+      const nGap = [1, 1, 2, 2, 2][d] + (r() < 0.35 && d > 0 ? 1 : 0);
+      const nEn = [g > 1 ? 1 : 0, 1, 1, 2, 2][d] + (r() < 0.3 && d > 2 ? 1 : 0);
       for (let i = 0; i < nGap; i++) feats.push("gap");
       for (let i = 0; i < nEn; i++) feats.push("enemy");
       feats.push("plat");
@@ -909,8 +1015,8 @@
           add(5);
         } else if (f === "enemy") {
           const x0 = solid.length;
-          add(L >= 2 ? 10 : 8); // Platz nach dem Käfer, damit danach keine Lücke direkt folgt
-          enemies.push({ x: (x0 + 4) * T, min: (x0 + 1) * T, max: (x0 + 6) * T, dir: -1, sp: 22 + L * 9, alive: true, t: r() * 6 });
+          add(d >= 2 ? 10 : 8); // Platz nach dem Käfer, damit danach keine Lücke direkt folgt
+          enemies.push({ x: (x0 + 4) * T, min: (x0 + 1) * T, max: (x0 + 6) * T, dir: -1, sp: 22 + d * 9, alive: true, t: r() * 6 });
         } else {
           const x0 = solid.length,
             py = GR - 70;
@@ -955,9 +1061,9 @@
     title: "Lino läuft – das Deutsch-Abenteuer",
     icon: "🏃",
     level: "A1–C1",
-    desc: "Jump’n’Run in 5 Welten: Springe über Lücken und Fehlerkäfer, finde Booster und geheime Kammern und löse an jedem Tor eine Deutschfrage – von A1 bis C1.",
+    desc: "Jump’n’Run in 8 Welten: Springe über Lücken und Fehlerkäfer, fahre Auto, Schlitten und Fahrrad, finde Booster und geheime Kammern und löse an jedem Tor eine Deutschfrage – von A1 bis C1.",
     intro:
-      "Wähle zuerst deine Figur: Junge (Lino) oder Mädchen (Lina), Hautfarbe und – beim Mädchen – mit oder ohne Kopftuch. Deine Figur läuft von selbst. Tippe auf das Spielfeld oder den großen Knopf (am Computer: Leertaste oder ↑), um zu springen – lange drücken springt höher. Springe über Lücken, hüpf auf die Fehlerkäfer und sammle Münzen. Stoß die ❓-Kisten von unten an – darin stecken Booster wie Joker, Herz, Magnet, Stern und Flügel. In jeder Welt ist eine geheime Kammer mit Schatztruhe versteckt. An jedem Tor wartet eine Frage. Oben rechts: ⏸ Pause und 🔊 Ton. Jede Welt ist schwerer: A1, A2, B1, B2, C1.",
+      "Wähle zuerst deine Figur: Junge (Lino) oder Mädchen (Lina), Hautfarbe und – beim Mädchen – mit oder ohne Kopftuch. Deine Figur läuft von selbst. Tippe auf das Spielfeld oder den großen Knopf (am Computer: Leertaste oder ↑), um zu springen – lange drücken springt höher. Springe über Lücken, hüpf auf die Fehlerkäfer und sammle Münzen. Stoß die ❓-Kisten von unten an – darin stecken Booster wie Joker, Herz, Magnet, Stern und Flügel. In jeder Welt ist eine geheime Kammer mit Schatztruhe versteckt. An jedem Tor wartet eine Frage. Oben rechts: ⏸ Pause und 🔊 Ton. Jede Welt ist schwerer: A1, A2, B1, B2, C1. Neu: Nach Welt A1 öffnen sich drei Fahrzeug-Welten – mit dem Auto über die Autobahn (A2, mit Ampeln statt Toren), mit dem Schlitten durch Winterberg (B1) und mit dem Fahrrad an den Ostseestrand (B2).",
     start(api) {
       const prog = load();
       prog.unlocked = Math.max(1, prog.unlocked || 1);
@@ -965,6 +1071,10 @@
       const wrongAll = [];
       menu();
 
+      function isOpen(i) {
+        if (i < MAIN || prog.unlocked >= WORLDS.length) return i < prog.unlocked;
+        return prog.unlocked >= 2 && (i === MAIN || prog["best" + WORLDS[i - 1].id] != null);
+      }
       function menu() {
         api.clearFeedback();
         api.hud({ step: "Welt wählen", progress: 0, score: total });
@@ -986,10 +1096,10 @@
           </div>
           <p class="dm-small" style="margin:0 0 8px">Wähle eine Welt. Jede neue Welt öffnet sich, wenn du die vorherige geschafft hast.</p>
           <div class="sp-lino-levels">${WORLDS.map((w, i) => {
-            const open = i < prog.unlocked,
+            const open = isOpen(i),
               best = prog["best" + w.id],
               key = prog.secrets?.[w.id];
-            return `<button type="button" class="sp-lino-lv" data-i="${i}"${open ? "" : " disabled"}><i aria-hidden="true">${open ? (best != null ? "⭐" : "▶") : "🔒"}</i><b>${w.id}</b><span>Welt ${i + 1}: ${w.name}</span><small>${best != null ? `Rekord: ${best} Punkte` : open ? "Bereit" : "Noch gesperrt"}${key ? " · 🗝 Kammer gefunden" : ""}</small></button>`;
+            return `${i === MAIN ? '</div><h3 class="sp-lino-sub">Neu: Unterwegs mit Auto, Schlitten und Fahrrad</h3><p class="dm-small" style="margin:0 0 8px">Öffnen sich, wenn du Welt A1 geschafft hast – eine nach der anderen. An der Autobahn wartet statt Toren eine Ampel.</p><div class="sp-lino-levels">' : ""}<button type="button" class="sp-lino-lv${w.lv ? " is-ride" : ""}" data-i="${i}"${open ? "" : " disabled"}><i aria-hidden="true">${open ? (best != null ? "⭐" : w.lv ? w.emoji : "▶") : "🔒"}</i><b>${w.lv || w.id}</b><span>Welt ${i + 1}: ${w.name}</span><small>${best != null ? `Rekord: ${best} Punkte` : open ? "Bereit" : w.lv ? (i === MAIN ? "Nach Welt A1" : `Nach „${WORLDS[i - 1].name}“`) : "Noch gesperrt"}${key ? " · 🗝 Kammer gefunden" : ""}</small></button>`;
           }).join("")}</div>
           <details class="sp-lino-legend"><summary>Booster und Geheimnisse</summary><ul>
             <li><b>❓</b><span><b>Kisten</b> sind fest. Stoß die ❓-Kiste von unten mit dem Kopf an – dann kommt ein Booster heraus.</span></li>
@@ -997,7 +1107,7 @@
             <li><b>☁️</b><span><b>Wolken</b> kannst du von unten durchspringen und oben darauf landen.</span></li>
             <li><b>🗝</b><span><b>Geheime Kammer:</b> In jeder Welt versteckt – hoch oben. Tipp: Lange drücken springt höher. In der Kammer wartet eine Schatztruhe mit Bonusfrage – ohne Risiko.</span></li>
           </ul></details>
-          ${prog.unlocked < WORLDS.length ? '<p style="text-align:center;margin:6px 0 0"><button type="button" class="sp-lino-unlock">Ich kann schon mehr – alle Welten öffnen</button></p>' : ""}`;
+          ${WORLDS.some((w, i) => !isOpen(i)) ? '<p style="text-align:center;margin:6px 0 0"><button type="button" class="sp-lino-unlock">Ich kann schon mehr – alle Welten öffnen</button></p>' : ""}`;
         const pc = api.el.querySelector(".sp-lino-prev");
         if (pc) {
           const c2 = pc.getContext("2d");
@@ -1033,6 +1143,8 @@
       function play(L) {
         api.clearFeedback();
         const W0 = WORLDS[L];
+        const TH = W0.theme || ["", "city", "", "zeche", "night"][L],
+          ROAD = TH === "road";
         const look = heroLook(prog.look);
         const qs = api.shuffle(W0.questions).slice(0, GATES);
         const lvl = buildLevel(L);
@@ -1042,7 +1154,7 @@
           GROUND = VH - 48,
           T = lvl.T;
         const dpr = Math.min(2, window.devicePixelRatio || 1);
-        api.el.innerHTML = `<div class="sp-lino-wrap"><canvas width="${VW * dpr}" height="${VH * dpr}" aria-label="Spielfeld: ${heroName(look)} läuft durch die Welt ${W0.id}" role="img"></canvas><div class="sp-lino-banner">Welt ${W0.id}: ${W0.name}</div><button type="button" class="sp-lino-snd sp-lino-pause" aria-pressed="false" aria-label="Pause">⏸</button><button type="button" class="sp-lino-snd" aria-pressed="${SND.on}" aria-label="Ton">${SND.on ? "🔊" : "🔇"}</button></div>
+        api.el.innerHTML = `<div class="sp-lino-wrap"><canvas width="${VW * dpr}" height="${VH * dpr}" aria-label="Spielfeld: ${heroName(look)} läuft durch die Welt ${W0.name}" role="img"></canvas><div class="sp-lino-banner">${W0.lv ? `${W0.emoji} ${W0.name} · ${W0.lv}` : `Welt ${W0.id}: ${W0.name}`}</div><button type="button" class="sp-lino-snd sp-lino-pause" aria-pressed="false" aria-label="Pause">⏸</button><button type="button" class="sp-lino-snd" aria-pressed="${SND.on}" aria-label="Ton">${SND.on ? "🔊" : "🔇"}</button></div>
           <div class="sp-lino-panel"></div>`;
         const cv = api.el.querySelector("canvas"),
           ctx = cv.getContext("2d"),
@@ -1065,7 +1177,7 @@
         sndBtn.onclick = (e) => {
           e.stopPropagation();
           SND.on = !SND.on;
-          if (SND.on && !(state === "dead")) SND.startMusic(inCh ? 5 : L);
+          if (SND.on && !(state === "dead")) SND.startMusic(inCh ? 9 : L);
           sndBtn.textContent = SND.on ? "🔊" : "🔇";
           sndBtn.setAttribute("aria-pressed", SND.on);
           sndBtn.blur();
@@ -1078,7 +1190,7 @@
           // Spielfeld oben verdeckt (z. B. nach dem Scrollen in der Weltkarte) oder Knopf unten nicht sichtbar → Karte nach oben holen
           if (c.top < 70 || b.top + 80 > innerHeight) card.scrollIntoView({ block: "start", behavior: "instant" });
         });
-        const speed = 138 + L * 16,
+        const speed = 138 + (W0.d ?? L) * 16 + (W0.ride === "car" ? 14 : 0),
           G = 1650,
           JUMP = 667;
         const P = {
@@ -1150,7 +1262,7 @@
 
         function hud() {
           api.hud({
-            step: `${W0.id} · Tor ${Math.min(gateIdx + 1, GATES)}/${GATES}`,
+            step: `${W0.lv || W0.id} · ${ROAD ? "Ampel" : "Tor"} ${Math.min(gateIdx + 1, GATES)}/${GATES}`,
             progress: gateIdx / GATES,
             score: total + score,
             lives,
@@ -1399,7 +1511,7 @@
           prog.secrets = { ...(prog.secrets || {}), [W0.id]: true };
           save(prog);
           SND.play("secret");
-          SND.startMusic(5);
+          SND.startMusic(9);
           say("🗝 <b>Geheime Kammer gefunden!</b> +100", 3);
           hud();
         }
@@ -1680,14 +1792,15 @@
             gate = lvl.gates[gateIdx];
           quiz({
             item,
-            tag: `🚪 Tor ${gateIdx + 1} von ${GATES} · ${W0.id}`,
+            tag: `${ROAD ? "🚦 Ampel" : "🚪 Tor"} ${gateIdx + 1} von ${GATES} · ${W0.lv || W0.id}`,
             onAnswer(ok, full) {
               gate.open = true;
               gate.ok = ok;
               if (ok) {
                 right++;
                 score += 100;
-                return "<b>Richtig! Das Tor ist offen. +100</b>";
+                if (ROAD) SND.play("honk");
+                return ROAD ? "<b>Richtig! Die Ampel ist grün. +100</b>" : "<b>Richtig! Das Tor ist offen. +100</b>";
               }
               lives--;
               api.vibrate();
@@ -1743,14 +1856,13 @@
           hud();
           const stars = right >= 6 ? 3 : right >= 4 ? 2 : 1;
           prog["best" + W0.id] = Math.max(prog["best" + W0.id] || 0, score);
-          if (L + 2 > prog.unlocked)
-            prog.unlocked = Math.min(WORLDS.length, L + 2);
+          if (L < MAIN && L + 2 > prog.unlocked) prog.unlocked = Math.min(MAIN, L + 2);
           save(prog);
           const nextW = WORLDS[L + 1];
           panel.innerHTML = `<div class="sp-lino-res"><div class="sp-lino-stars" aria-label="${stars} von 3 Sternen">${"⭐".repeat(stars)}${"☆".repeat(3 - stars)}</div>
-            <h2>Welt ${W0.id} geschafft!</h2>
+            <h2>${wTitle(W0)} geschafft!</h2>
             <p>${right} von ${GATES} Fragen richtig · ${coinsGot} Münzen · Herz-Bonus ${bonus}<br><b>${score} Punkte</b></p>
-            <div class="ch-actions">${nextW ? `<button type="button" class="dm-btn ch-go" id="sp-lino-next">Weiter zu Welt ${nextW.id} ▶</button>` : `<button type="button" class="dm-btn ch-go" id="sp-lino-end">Abenteuer beenden 🏆</button>`}
+            <div class="ch-actions">${nextW ? `<button type="button" class="dm-btn ch-go" id="sp-lino-next">Weiter: ${nextW.lv ? `${nextW.emoji} ${nextW.name}` : `Welt ${nextW.id}`} ▶</button>` : `<button type="button" class="dm-btn ch-go" id="sp-lino-end">Abenteuer beenden 🏆</button>`}
               <button type="button" class="dm-btn dm-btn-quiet" id="sp-lino-menu">Weltkarte</button></div></div>`;
           DM.celebrate?.(panel);
           panel
@@ -1774,7 +1886,7 @@
           api.clearFeedback();
           panel.innerHTML = `<div class="sp-lino-res"><div class="sp-lino-stars" aria-hidden="true">💔</div><h2>Keine Herzen mehr</h2>
             <p>Du hast ${right} von ${GATES} Fragen richtig beantwortet. Versuch es noch einmal – die Welt bleibt gleich, die Fragen wechseln.</p>
-            <div class="ch-actions"><button type="button" class="dm-btn ch-go" id="sp-lino-retry">Welt ${W0.id} neu starten</button><button type="button" class="dm-btn dm-btn-quiet" id="sp-lino-stop">Beenden</button></div></div>`;
+            <div class="ch-actions"><button type="button" class="dm-btn ch-go" id="sp-lino-retry">${wTitle(W0)} neu starten</button><button type="button" class="dm-btn dm-btn-quiet" id="sp-lino-stop">Beenden</button></div></div>`;
           panel.querySelector("#sp-lino-retry").onclick = () => play(L);
           panel.querySelector("#sp-lino-stop").onclick = () =>
             api.finish({ score: total + score, max: 0, wrong: wrongAll });
@@ -1796,7 +1908,7 @@
           ctx.fillStyle = inCh ? caveG : skyG;
           ctx.fillRect(0, 0, VW, VH);
           if (inCh) cave(t);
-          else if (L === 4) {
+          else if (TH === "night") {
             ctx.fillStyle = "rgba(255,255,255,.8)";
             for (let i = 0; i < 40; i++) {
               const sx = (i * 137 - camX * 0.05) % VW,
@@ -1815,10 +1927,15 @@
             }
           }
           if (!inCh) {
-            hills(W0.hill2, 0.25, 150, 70);
-            hills(W0.hill, 0.45, 110, 50);
-            if (L === 1 || L === 4) city();
-            if (L === 3) zeche();
+            if (TH === "beach") beachBack(t);
+            else {
+              if (TH === "snow") mountains();
+              hills(W0.hill2, 0.25, 150, 70);
+              hills(W0.hill, 0.45, 110, 50);
+            }
+            if (TH === "city" || TH === "night") city();
+            if (TH === "zeche") zeche();
+            if (TH === "road") roadside();
           }
           ctx.save();
           ctx.translate(-Math.round(camX), 0);
@@ -1827,15 +1944,30 @@
             i1 = Math.min(lvl.solid.length, i0 + Math.ceil(VW / T) + 3);
           for (let i = i0; i < i1; i++)
             if (!lvl.solid[i]) {
-              ctx.fillStyle = pitG;
+              ctx.fillStyle = TH === "beach" && !inCh ? "#2f8fd1" : pitG;
               ctx.fillRect(i * T, GROUND + 6, T, VH - GROUND);
+              if (TH === "beach" && !inCh) {
+                ctx.fillStyle = "rgba(255,255,255,.55)";
+                ctx.fillRect(i * T + ((t * 20 + i * 9) % T), GROUND + 12 + (i % 2) * 8, 10, 2);
+              }
             } else {
               ctx.fillStyle = inCh ? "#4a3626" : W0.ground;
               ctx.fillRect(i * T, GROUND, T, VH - GROUND);
               ctx.fillStyle = inCh ? "#7a5a3a" : W0.grass;
               ctx.fillRect(i * T, GROUND, T, 9);
-              ctx.fillStyle = "rgba(0,0,0,.12)";
-              ctx.fillRect(i * T + (i % 2 ? 6 : 18), GROUND + 20, 6, 6);
+              if (TH === "road" && !inCh) {
+                // Fahrbahnmarkierung
+                if (i % 3 === 0) {
+                  ctx.fillStyle = "#f4f4f4";
+                  ctx.fillRect(i * T + 4, GROUND + 22, T + 8, 4);
+                }
+              } else if (TH === "snow" && !inCh) {
+                ctx.fillStyle = "rgba(120,160,210,.25)";
+                ctx.fillRect(i * T + (i % 2 ? 6 : 18), GROUND + 20, 8, 3);
+              } else {
+                ctx.fillStyle = "rgba(0,0,0,.12)";
+                ctx.fillRect(i * T + (i % 2 ? 6 : 18), GROUND + 20, 6, 6);
+              }
             }
           // Holzkisten und ?-Kisten
           for (const pl of lvl.plats) {
@@ -1929,6 +2061,7 @@
             }
           // Tore
           lvl.gates.forEach((gt, k) => {
+            if (ROAD) return trafficLight(gt, k, t);
             const x = gt.x,
               top = GROUND - 92;
             ctx.fillStyle = "#7d7f8c";
@@ -1989,6 +2122,10 @@
           // Fehlerkäfer
           for (const en of lvl.enemies) {
             if (!en.alive && !(en.dead > 0)) continue;
+            if (TH === "road" || TH === "snow" || TH === "beach") {
+              themedEnemy(en);
+              continue;
+            }
             const ex = en.x,
               ey = GROUND - 12,
               sq = en.alive ? 1 : 0.35;
@@ -2023,6 +2160,12 @@
             ctx.restore();
           }
           lino(t);
+          if (TH === "snow" && !inCh) {
+            ctx.save();
+            ctx.translate(Math.round(camX), 0);
+            snowfall(t);
+            ctx.restore();
+          }
           // schwebende Texte (Booster, Truhe) und Wölkchen beim Doppelsprung
           for (const f of fx) {
             const a = Math.max(0, 1 - f.t / 1.4);
@@ -2182,8 +2325,339 @@
           ctx.translate(P.x + 11, P.y + 34);
           ctx.scale(1.25, 1.25);
           ctx.translate(-(P.x + 11), -(P.y + 34));
-          drawHero(ctx, P.x, P.y, look, !P.onGround, P.run * 14, t);
+          drawHero(ctx, P.x, P.y, look, W0.ride ? W0.ride === "bike" && !P.onGround : !P.onGround, W0.ride === "bike" ? P.run * 14 : W0.ride ? 0.7 : P.run * 14, t);
           ctx.restore();
+          if (W0.ride && !inCh) vehicle(t);
+        }
+
+        /* ---------- Fahrzeuge und Themen-Welten ---------- */
+        function wheel(x, y, r, t) {
+          ctx.fillStyle = "#1d2230";
+          ctx.beginPath();
+          ctx.arc(x, y, r, 0, 7);
+          ctx.fill();
+          ctx.fillStyle = "#c9ced8";
+          ctx.beginPath();
+          ctx.arc(x, y, r * 0.45, 0, 7);
+          ctx.fill();
+          const a = P.run * 12;
+          ctx.strokeStyle = "#1d2230";
+          ctx.lineWidth = 1.5;
+          ctx.beginPath();
+          ctx.moveTo(x + Math.cos(a) * r * 0.45, y + Math.sin(a) * r * 0.45);
+          ctx.lineTo(x - Math.cos(a) * r * 0.45, y - Math.sin(a) * r * 0.45);
+          ctx.stroke();
+        }
+        function vehicle(t) {
+          const x = P.x + 11,
+            y = P.y + 34; // Füße der Figur
+          const tilt = P.onGround ? 0 : Math.max(-0.18, Math.min(0.18, P.vy / 2600));
+          ctx.save();
+          ctx.translate(x, y);
+          ctx.rotate(tilt);
+          if (W0.ride === "car") {
+            // kleines rotes Auto – die Figur sitzt darin
+            const bob = P.onGround ? Math.sin(t * 18) * 0.6 : 0;
+            ctx.fillStyle = "#e5322b";
+            roundRect(-26, -22 + bob, 54, 16, 6);
+            ctx.fill();
+            ctx.fillStyle = "#c4241e";
+            roundRect(-26, -12 + bob, 54, 6, 3);
+            ctx.fill();
+            ctx.fillStyle = "rgba(190,230,255,.55)";
+            roundRect(-14, -38 + bob, 30, 17, 6);
+            ctx.fill();
+            ctx.strokeStyle = "#e5322b";
+            ctx.lineWidth = 3;
+            roundRect(-14, -38 + bob, 30, 17, 6);
+            ctx.stroke();
+            ctx.fillStyle = "#ffe27a";
+            ctx.fillRect(22, -19 + bob, 6, 5);
+            ctx.fillStyle = "#ffffff";
+            ctx.font = "800 9px system-ui,sans-serif";
+            ctx.textAlign = "center";
+            ctx.fillText("DE", 0, -13 + bob);
+            wheel(-15, -4, 7, t);
+            wheel(17, -4, 7, t);
+            if (P.onGround && Math.floor(t * 10) % 2) {
+              ctx.fillStyle = "rgba(160,160,170,.45)";
+              ctx.beginPath();
+              ctx.arc(-32 - (t * 40) % 8, -8, 4, 0, 7);
+              ctx.fill();
+            }
+          } else if (W0.ride === "sled") {
+            ctx.strokeStyle = "#7a4a1e";
+            ctx.lineWidth = 3;
+            ctx.beginPath();
+            ctx.moveTo(-20, -1);
+            ctx.lineTo(16, -1);
+            ctx.quadraticCurveTo(26, -1, 24, -10);
+            ctx.stroke();
+            ctx.fillStyle = "#b5702e";
+            ctx.fillRect(-18, -9, 32, 5);
+            ctx.strokeStyle = "#7a4a1e";
+            ctx.lineWidth = 2;
+            for (const k of [-12, 6]) {
+              ctx.beginPath();
+              ctx.moveTo(k, -4);
+              ctx.lineTo(k, -1);
+              ctx.stroke();
+            }
+            if (P.onGround) {
+              ctx.fillStyle = "rgba(255,255,255,.9)";
+              for (let k = 0; k < 3; k++) {
+                ctx.beginPath();
+                ctx.arc(-24 - k * 7 - ((t * 60) % 7), -2 - k * 2, 3 - k * 0.6, 0, 7);
+                ctx.fill();
+              }
+            }
+          } else if (W0.ride === "bike") {
+            wheel(-14, -7, 8, t);
+            wheel(16, -7, 8, t);
+            ctx.strokeStyle = "#1f9d8a";
+            ctx.lineWidth = 3;
+            ctx.beginPath();
+            ctx.moveTo(-14, -7);
+            ctx.lineTo(-2, -20);
+            ctx.lineTo(12, -20);
+            ctx.lineTo(16, -7);
+            ctx.moveTo(-2, -20);
+            ctx.lineTo(2, -7);
+            ctx.lineTo(-14, -7);
+            ctx.moveTo(12, -20);
+            ctx.lineTo(10, -27);
+            ctx.stroke();
+            ctx.fillStyle = "#172036";
+            ctx.fillRect(-6, -23, 9, 3);
+          }
+          ctx.restore();
+        }
+        function trafficLight(gt, k, t) {
+          const x = gt.x + 14,
+            top = GROUND - 120;
+          ctx.fillStyle = "#5c616d";
+          ctx.fillRect(x - 3, top + 40, 6, GROUND - top - 40);
+          ctx.fillStyle = "#222631";
+          roundRect(x - 14, top, 28, 64, 8);
+          ctx.fill();
+          const red = !gt.open,
+            green = gt.open;
+          const lamp = (yy, on, col) => {
+            ctx.fillStyle = on ? col : "#3b404c";
+            ctx.beginPath();
+            ctx.arc(x, top + yy, 7, 0, 7);
+            ctx.fill();
+            if (on) {
+              ctx.fillStyle = col.replace(")", ",.25)").replace("rgb", "rgba");
+              ctx.beginPath();
+              ctx.arc(x, top + yy, 13, 0, 7);
+              ctx.fill();
+            }
+          };
+          lamp(12, red, "rgb(240,60,50)");
+          lamp(32, false, "rgb(255,200,40)");
+          lamp(52, green, "rgb(40,200,90)");
+          // Haltelinie und Schild
+          ctx.fillStyle = red ? "#ffffff" : "rgba(255,255,255,.4)";
+          ctx.fillRect(x - 16, GROUND + 2, 6, 24);
+          ctx.fillStyle = gt.open ? (gt.ok ? "#1f9d55" : "#d6332b") : "#2341B5";
+          roundRect(x - 34, top - 30, 68, 24, 8);
+          ctx.fill();
+          ctx.fillStyle = "#fff";
+          ctx.font = "800 13px system-ui,sans-serif";
+          ctx.textAlign = "center";
+          ctx.fillText(gt.open ? (gt.ok ? "✓ grün" : "✗ grün") : `Ampel ${k + 1}`, x, top - 13);
+        }
+        function themedEnemy(en) {
+          const ex = en.x,
+            sq = en.alive ? 1 : 0.35;
+          ctx.save();
+          ctx.translate(ex, GROUND - 12 + (1 - sq) * 10);
+          ctx.scale(1, sq);
+          if (TH === "road") {
+            // Verkehrshütchen
+            ctx.fillStyle = "#ff7a1a";
+            ctx.beginPath();
+            ctx.moveTo(-5, -14);
+            ctx.lineTo(5, -14);
+            ctx.lineTo(12, 10);
+            ctx.lineTo(-12, 10);
+            ctx.fill();
+            ctx.fillStyle = "#fff";
+            ctx.fillRect(-8, -2, 16, 4);
+            ctx.fillStyle = "#2b2f3a";
+            ctx.fillRect(-15, 9, 30, 4);
+            ctx.fillStyle = "#3a1010";
+            ctx.font = "900 10px system-ui,sans-serif";
+            ctx.textAlign = "center";
+            ctx.fillText("✗", 0, -5);
+          } else if (TH === "snow") {
+            // rollender Schneeball mit Gesicht
+            ctx.rotate(en.t * en.dir * 3);
+            ctx.fillStyle = "#ffffff";
+            ctx.strokeStyle = "#9ab8d8";
+            ctx.lineWidth = 2;
+            ctx.beginPath();
+            ctx.arc(0, -1, 13, 0, 7);
+            ctx.fill();
+            ctx.stroke();
+            ctx.rotate(-en.t * en.dir * 3);
+            ctx.fillStyle = "#d6332b";
+            ctx.font = "900 12px system-ui,sans-serif";
+            ctx.textAlign = "center";
+            ctx.fillText("✗", 0, 3);
+            ctx.fillStyle = "#172036";
+            ctx.beginPath();
+            ctx.arc(en.dir * 7, -5, 2, 0, 7);
+            ctx.fill();
+          } else {
+            // Krebs
+            ctx.strokeStyle = "#a3241c";
+            ctx.lineWidth = 2;
+            for (let k = -1; k <= 1; k += 2)
+              for (let j = 0; j < 3; j++) {
+                const lg = Math.sin(en.t * 16 + j) * 2;
+                ctx.beginPath();
+                ctx.moveTo(k * 8, 2 + j * 2);
+                ctx.lineTo(k * (15 + j) + lg, 9 + j);
+                ctx.stroke();
+              }
+            ctx.fillStyle = "#e0462f";
+            ctx.beginPath();
+            ctx.ellipse(0, 0, 14, 9, 0, 0, 7);
+            ctx.fill();
+            const cl = Math.sin(en.t * 6) * 0.3;
+            for (const k of [-1, 1]) {
+              ctx.beginPath();
+              ctx.ellipse(k * 17, -8, 6, 4, k * (0.6 + cl), 0, 7);
+              ctx.fill();
+            }
+            ctx.fillStyle = "#fff";
+            ctx.font = "900 11px system-ui,sans-serif";
+            ctx.textAlign = "center";
+            ctx.fillText("✗", 0, 4);
+            ctx.fillStyle = "#172036";
+            for (const k of [-4, 4]) {
+              ctx.beginPath();
+              ctx.arc(k, -10, 2, 0, 7);
+              ctx.fill();
+            }
+          }
+          ctx.restore();
+        }
+        function roadside() {
+          // Bäume und blaue Autobahnschilder am Rand
+          for (let i = 0; i < 8; i++) {
+            const bx = (((i * 150 - camX * 0.6) % (VW + 200)) + VW + 200) % (VW + 200) - 100;
+            ctx.fillStyle = "#6b4a2b";
+            ctx.fillRect(bx + 8, GROUND - 40, 6, 40);
+            ctx.fillStyle = i % 2 ? "#3f8f46" : "#4fa253";
+            ctx.beginPath();
+            ctx.arc(bx + 11, GROUND - 48, 18, 0, 7);
+            ctx.fill();
+          }
+          const sx = (((700 - camX * 0.8) % (VW + 500)) + VW + 500) % (VW + 500) - 250;
+          ctx.fillStyle = "#6f7480";
+          ctx.fillRect(sx + 10, GROUND - 120, 5, 120);
+          ctx.fillRect(sx + 105, GROUND - 120, 5, 120);
+          ctx.fillStyle = "#1f4fb8";
+          roundRect(sx, GROUND - 150, 120, 46, 6);
+          ctx.fill();
+          ctx.strokeStyle = "#fff";
+          ctx.lineWidth = 2;
+          roundRect(sx + 3, GROUND - 147, 114, 40, 5);
+          ctx.stroke();
+          ctx.fillStyle = "#fff";
+          ctx.font = "800 13px system-ui,sans-serif";
+          ctx.textAlign = "center";
+          ctx.fillText("A 40  Essen", sx + 60, GROUND - 130);
+          ctx.font = "700 11px system-ui,sans-serif";
+          ctx.fillText("Deutschland ↑", sx + 60, GROUND - 114);
+        }
+        function mountains() {
+          ctx.fillStyle = "#a9c3dd";
+          for (let i = 0; i < 6; i++) {
+            const bx = (((i * 220 - camX * 0.1) % (VW + 300)) + VW + 300) % (VW + 300) - 150,
+              h = 150 + ((i * 53) % 60);
+            ctx.beginPath();
+            ctx.moveTo(bx - 120, GROUND - 60);
+            ctx.lineTo(bx, GROUND - 60 - h);
+            ctx.lineTo(bx + 120, GROUND - 60);
+            ctx.fill();
+            ctx.fillStyle = "#ffffff";
+            ctx.beginPath();
+            ctx.moveTo(bx - 32, GROUND - 60 - h + 40);
+            ctx.lineTo(bx, GROUND - 60 - h);
+            ctx.lineTo(bx + 32, GROUND - 60 - h + 40);
+            ctx.lineTo(bx + 12, GROUND - 60 - h + 30);
+            ctx.lineTo(bx, GROUND - 60 - h + 42);
+            ctx.lineTo(bx - 12, GROUND - 60 - h + 30);
+            ctx.fill();
+            ctx.fillStyle = "#a9c3dd";
+          }
+        }
+        function snowfall(t) {
+          ctx.fillStyle = "rgba(255,255,255,.9)";
+          for (let i = 0; i < 45; i++) {
+            const x = ((((i * 97 + Math.sin(t + i) * 20 - camX * 0.3) % VW) + VW) % VW),
+              y = (i * 61 + t * (30 + (i % 5) * 8)) % VH;
+            ctx.beginPath();
+            ctx.arc(x, y, 1.5 + (i % 3) * 0.7, 0, 7);
+            ctx.fill();
+          }
+        }
+        function beachBack(t) {
+          ctx.fillStyle = "#ffd75e";
+          ctx.beginPath();
+          ctx.arc(VW - 90, 70, 30, 0, 7);
+          ctx.fill();
+          // Meer mit Wellen und Segelboot
+          ctx.fillStyle = W0.hill2;
+          ctx.fillRect(0, GROUND - 90, VW, 90);
+          ctx.fillStyle = W0.hill;
+          ctx.fillRect(0, GROUND - 50, VW, 50);
+          ctx.strokeStyle = "rgba(255,255,255,.6)";
+          ctx.lineWidth = 2;
+          for (let i = 0; i < 12; i++) {
+            const wx = (((i * 90 - camX * 0.2 + Math.sin(t + i) * 6) % (VW + 90)) + VW + 90) % (VW + 90) - 45;
+            ctx.beginPath();
+            ctx.arc(wx, GROUND - 70 + (i % 3) * 18, 8, Math.PI * 1.1, Math.PI * 1.9);
+            ctx.stroke();
+          }
+          const bx = (((400 - camX * 0.12) % (VW + 200)) + VW + 200) % (VW + 200) - 100,
+            by = GROUND - 92 + Math.sin(t * 1.5) * 2;
+          ctx.fillStyle = "#ffffff";
+          ctx.beginPath();
+          ctx.moveTo(bx, by);
+          ctx.lineTo(bx + 22, by - 40);
+          ctx.lineTo(bx + 22, by);
+          ctx.fill();
+          ctx.fillStyle = "#c0392b";
+          ctx.fillRect(bx - 10, by, 44, 7);
+          // Palmen und Strandkorb
+          for (let i = 0; i < 4; i++) {
+            const px = (((i * 260 + 80 - camX * 0.55) % (VW + 300)) + VW + 300) % (VW + 300) - 150;
+            if (i % 2) {
+              ctx.fillStyle = "#d9c08a";
+              roundRect(px, GROUND - 46, 34, 46, 8);
+              ctx.fill();
+              ctx.fillStyle = "#e5622b";
+              for (let k = 0; k < 4; k++) ctx.fillRect(px + 4 + k * 8, GROUND - 42, 3, 24);
+              continue;
+            }
+            ctx.strokeStyle = "#8a5a32";
+            ctx.lineWidth = 6;
+            ctx.beginPath();
+            ctx.moveTo(px, GROUND);
+            ctx.quadraticCurveTo(px + 10, GROUND - 60, px + 4, GROUND - 110);
+            ctx.stroke();
+            ctx.fillStyle = "#2f9a4a";
+            for (let k = 0; k < 5; k++) {
+              ctx.beginPath();
+              ctx.ellipse(px + 4 + Math.cos(k * 1.3) * 22, GROUND - 110 + Math.sin(k * 1.3) * 6, 26, 7, k * 1.3, 0, 7);
+              ctx.fill();
+            }
+          }
         }
         function cloud(x, y) {
           ctx.beginPath();
@@ -2210,13 +2684,13 @@
           ctx.fill();
         }
         function city() {
-          ctx.fillStyle = L === 4 ? "#161c3d" : "rgba(120,110,100,.45)";
+          ctx.fillStyle = TH === "night" ? "#161c3d" : "rgba(120,110,100,.45)";
           for (let i = 0; i < 14; i++) {
             const bx = (i * 70 - camX * 0.3) % (VW + 140);
             const x = ((bx + VW + 140) % (VW + 140)) - 70,
               h = 60 + ((i * 37) % 70);
             ctx.fillRect(x, GROUND - h, 50, h);
-            if (L === 4) {
+            if (TH === "night") {
               ctx.fillStyle = "#ffd86b";
               for (let w = 0; w < 4; w++)
                 if ((i + w) % 3)
