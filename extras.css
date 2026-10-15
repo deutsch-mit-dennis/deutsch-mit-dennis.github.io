@@ -704,3 +704,23 @@ header.dm-header nav{margin-left:auto}
 .dm-install-help h2{margin:0 0 8px;font-size:20px}
 .dm-install-help ol{padding-left:22px;margin:0 0 10px}
 .dm-app .dm-install,.dm-app .app-home{display:none!important}
+
+/* Schnellstart auf der Startseite (nur Handy) */
+.dm-quick{display:none}
+@media (max-width:760px){
+  .dm-quick{display:grid;grid-column:1/-1;grid-template-columns:1fr 1fr;gap:10px;margin:16px 0 4px}
+  .dm-quick a{display:flex;flex-direction:column;gap:2px;min-height:96px;padding:12px 14px;border-radius:18px;text-decoration:none;color:var(--dm-ink);background:#fff;border:1px solid var(--dm-line);box-shadow:0 4px 14px rgba(20,30,60,.06)}
+  .dm-quick a:active{transform:scale(.98)}
+  .dm-quick .dm-q-ico{font-size:28px;line-height:1.1}
+  .dm-quick b{font-size:17px;line-height:1.2}
+  .dm-quick small{font-size:13.5px;line-height:1.3;color:#55607a;overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+  .dm-quick .dm-q-ch{background:linear-gradient(135deg,#ffe7b8,#ffc9a1);border-color:transparent;color:#3d2a06}
+  .dm-quick .dm-q-ch small{color:#6b3d0a}
+  .dm-quick .dm-q-lino{background:linear-gradient(135deg,#ff9a3c,#e5622b);border-color:transparent;color:#fff}
+  .dm-quick .dm-q-lino small{color:#fff3e6}
+  .dm-quick .dm-q-song{background:linear-gradient(135deg,#2b2f77,#5b3fa8);border-color:transparent;color:#fff}
+  .dm-quick .dm-q-song small{color:#e3defc}
+  /* Handy-Start kompakter: Lino steckt jetzt im Schnellstart */
+  .dm-home .lino-hero-chip,.dm-home .dm-hero .dm-trust,.dm-home .dm-hero .dm-tour-start{display:none}
+}
+.dm-boot{min-height:60vh;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#55607a;text-align:center;padding:24px}

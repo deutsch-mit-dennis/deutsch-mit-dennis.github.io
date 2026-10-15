@@ -184,6 +184,20 @@
       <ul class="dm-pkg-teaser-list">${pick.map(k => `<li><a href="#lernpakete/${k.id}"><img src="${k.img}" alt="" width="72" height="72" loading="lazy"><span><b>${x(k.title)}</b><small>${x(k.level)} · ${x(k.price)}</small></span></a></li>`).join('')}</ul>
     </section>`;
   }
+  /* Schnellstart: auf dem Handy direkt unter der Überschrift (Challenge, Spiele, Lino, Lied des Tages) */
+  function quickStart() {
+    let ch = { streak: 0, doneToday: false };
+    try { if (window.DMChallenge) ch = DMChallenge.status() || ch; } catch (e) { /* Startseite trotzdem zeigen */ }
+    let sod = null; try { sod = songOfDay(); } catch (e) { sod = null; }
+    const chSub = ch.doneToday ? `✓ Heute geschafft · ${ch.streak} 🔥` : ch.streak ? `Serie: ${ch.streak} ${ch.streak === 1 ? 'Tag' : 'Tage'} 🔥` : '10 Aufgaben · 3 Min.';
+    const tiles = [
+      ['#challenge', 'dm-q-ch', '🔥', 'Tages-Challenge', chSub],
+      ['#spiele', 'dm-q-sp', '🎮', 'Lernspiele', '18 Spiele'],
+      ['#spiele/lino', 'dm-q-lino', '🏃', 'Lino läuft', 'Jump’n’Run A1–C1'],
+      [sod ? '#lieder/' + sod.id : '#lieder', 'dm-q-song', '🎵', sod ? 'Lied des Tages' : 'Lieder', sod ? sod.title : '40 Lieder A1–C1']
+    ];
+    return `<nav class="dm-quick" aria-label="Schnellstart">${tiles.map(([u, c, i, t, s]) => `<a class="${c}" href="${x(u)}"><span class="dm-q-ico" aria-hidden="true">${i}</span><b>${x(t)}</b><small>${x(s)}</small></a>`).join('')}</nav>`;
+  }
   function home() {
     const last = mem.last && mem.last.route !== '' ? mem.last : null;
     page(`
@@ -192,6 +206,7 @@
       <div class="dm-hero-copy">
         <a class="lino-hero-chip" href="#spiele/lino"><span aria-hidden="true">🏃</span><span><b>Neu: Lino läuft</b> – das Deutsch-Jump’n’Run von A1 bis C1</span><span class="lino-hero-go" aria-hidden="true">▶</span></a>
         <h1>Deutsch lernen mit Dennis</h1>
+        ${quickStart()}
         <p class="dm-lead">Kostenlose Übungen von A1 bis B2 Beruf – für deinen Alltag, deine Prüfung und deinen Job. Ohne Anmeldung.</p>
         <p class="dm-hand">Hallo! Ich bin Dennis, dein Deutschlehrer und zugelassener Prüfer. Wähle unten deinen Weg – ich zeige dir die nächsten Schritte.</p>
         <ul class="dm-trust"><li>✓ DTZ-Prüfer</li><li>✓ telc-Prüfer B1–C1</li><li>✓ BAMF-zugelassen bis C2</li></ul>
