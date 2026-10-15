@@ -32,6 +32,26 @@ def post(url, body, headers, tries=5):
                 time.sleep(20 * (i + 1)); continue
             raise RuntimeError(f'HTTP {e.code}: {msg}')
 
+_models = None
+def gemini_models():
+    """Verfügbare Gemini-Modelle abfragen und passende „flash“-Modelle (neueste zuerst) wählen."""
+    global _models
+    if _models is not None: return _models
+    import re
+    want = os.environ.get('GEMINI_MODEL')
+    try:
+        req = urllib.request.Request('https://generativelanguage.googleapis.com/v1beta/models?pageSize=200', headers={'x-goog-api-key': os.environ['GEMINI_API_KEY']})
+        ms = json.loads(urllib.request.urlopen(req, timeout=60).read()).get('models', [])
+        names = [m['name'].split('/')[-1] for m in ms if 'generateContent' in m.get('supportedGenerationMethods', [])]
+        ok = [n for n in names if 'flash' in n and not re.search(r'(tts|image|audio|live|thinking|exp|preview|lite|8b)', n)]
+        ver = lambda n: [float(x) for x in re.findall(r'\d+(?:\.\d+)?', n)[:1]] or [0]
+        ok.sort(key=ver, reverse=True)
+        print('Modelle:', ', '.join(ok[:5]) or '-', flush=True)
+    except Exception as e:
+        print('Modellliste nicht abrufbar:', e, flush=True); ok = []
+    _models = ([want] if want else []) + ok + ['gemini-flash-latest']
+    return _models
+
 def gemini(items, lang, name):
     key = os.environ['GEMINI_API_KEY']
     prompt = f"""Du übersetzt kurze deutsche Witze für Deutschlernende in die Sprache: {name} (Sprachcode {lang}).
@@ -44,7 +64,7 @@ Regeln:
 Einträge:
 {json.dumps(items, ensure_ascii=False)}"""
     last = None
-    for model in [os.environ.get('GEMINI_MODEL') or 'gemini-2.5-flash', 'gemini-2.0-flash']:
+    for model in gemini_models()[:4]:
         try:
             j = post(f'https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent',
                      {'contents': [{'parts': [{'text': prompt}]}], 'generationConfig': {'responseMimeType': 'application/json', 'temperature': 0.3}},
@@ -52,7 +72,7 @@ Einträge:
             txt = j['candidates'][0]['content']['parts'][0]['text']
             return json.loads(txt)
         except Exception as e:
-            last = e
+            last = RuntimeError(f'{model}: {e}')
     raise last
 
 def gtranslate(items, lang, name):
