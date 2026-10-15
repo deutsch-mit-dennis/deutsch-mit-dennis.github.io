@@ -1,5 +1,5 @@
 {
-"updated": "2026-10-15T13:46:24Z",
+"updated": "2026-10-15T14:24:41Z",
 "engines": [
 "elevenlabs",
 "gemini",
@@ -7,35 +7,35 @@
 ],
 "files": {
 "b2-1-01": {
-"v": "441226767c",
-"engine": "google",
-"sig": "441226767c",
+"v": "ad991467a5",
+"engine": "gemini",
+"sig": "ad991467a5",
 "text": "92efc1e291",
 "fx": "telefon"
 },
 "b2-1-02": {
-"v": "001a151211",
-"engine": "google",
-"sig": "001a151211",
+"v": "0ad25228db",
+"engine": "gemini",
+"sig": "0ad25228db",
 "text": "a98dc5883c",
 "fx": "telefon"
 },
 "b2-1-03": {
-"v": "0dbce9bd33",
-"engine": "google",
-"sig": "0dbce9bd33",
+"v": "850e8f632d",
+"engine": "gemini",
+"sig": "850e8f632d",
 "text": "f3476ecb0c"
 },
 "b2-1-04": {
-"v": "c6b56e6362",
-"engine": "google",
-"sig": "c6b56e6362",
+"v": "057ab0aa5d",
+"engine": "gemini",
+"sig": "057ab0aa5d",
 "text": "f277b76b7d"
 },
 "b2-1-05": {
-"v": "fab0f15325",
-"engine": "google",
-"sig": "fab0f15325",
+"v": "e13575847d",
+"engine": "gemini",
+"sig": "e13575847d",
 "text": "7bfb7b423f"
 },
 "b2-1-06": {
@@ -45,79 +45,79 @@
 "text": "de3119b5be"
 },
 "b2-2-01": {
-"v": "376be54190",
-"engine": "google",
-"sig": "376be54190",
+"v": "b5d7c76947",
+"engine": "gemini",
+"sig": "b5d7c76947",
 "text": "03b3ea848c",
 "fx": "telefon"
 },
 "b2-2-02": {
-"v": "717c8491cc",
-"engine": "google",
-"sig": "717c8491cc",
+"v": "cbad8329f6",
+"engine": "gemini",
+"sig": "cbad8329f6",
 "text": "d847ab1ca3",
 "fx": "telefon"
 },
 "b2-2-03": {
-"v": "2a03f2475d",
-"engine": "google",
-"sig": "2a03f2475d",
+"v": "a54b938ea8",
+"engine": "gemini",
+"sig": "a54b938ea8",
 "text": "9f4d20bdb5"
 },
 "b2-2-04": {
-"v": "eab46b29f7",
-"engine": "google",
-"sig": "eab46b29f7",
+"v": "6b5e372400",
+"engine": "gemini",
+"sig": "6b5e372400",
 "text": "8a484c6c1e"
 },
 "b2-2-05": {
-"v": "62eb5f5185",
-"engine": "google",
-"sig": "62eb5f5185",
+"v": "b3513cc6f6",
+"engine": "gemini",
+"sig": "b3513cc6f6",
 "text": "61966a08ec"
 },
 "b2-2-06": {
-"v": "28a595989d",
-"engine": "google",
-"sig": "28a595989d",
+"v": "0940b6e2e1",
+"engine": "gemini",
+"sig": "0940b6e2e1",
 "text": "fdfbc90fdb"
 },
 "b2-3-01": {
-"v": "d5a8a5549f",
-"engine": "google",
-"sig": "d5a8a5549f",
+"v": "0cffee55c4",
+"engine": "gemini",
+"sig": "0cffee55c4",
 "text": "6b97716dfd",
 "fx": "telefon"
 },
 "b2-3-02": {
-"v": "59a1e2557c",
-"engine": "google",
-"sig": "59a1e2557c",
+"v": "10db1566d1",
+"engine": "gemini",
+"sig": "10db1566d1",
 "text": "67928efab5",
 "fx": "telefon"
 },
 "b2-3-03": {
-"v": "b1e70a98d1",
-"engine": "google",
-"sig": "b1e70a98d1",
+"v": "fb068de75b",
+"engine": "gemini",
+"sig": "fb068de75b",
 "text": "bd242af845"
 },
 "b2-3-04": {
-"v": "16a9490ff2",
-"engine": "google",
-"sig": "16a9490ff2",
+"v": "28e8b3eafc",
+"engine": "gemini",
+"sig": "28e8b3eafc",
 "text": "7fe87534ab"
 },
 "b2-3-05": {
-"v": "bcc57fb04f",
-"engine": "google",
-"sig": "bcc57fb04f",
+"v": "bb3c6c9b9a",
+"engine": "gemini",
+"sig": "bb3c6c9b9a",
 "text": "51fafb45ec"
 },
 "b2-3-06": {
-"v": "76f4363af0",
-"engine": "google",
-"sig": "76f4363af0",
+"v": "23c24db0b5",
+"engine": "gemini",
+"sig": "23c24db0b5",
 "text": "1db6ae5b8b"
 },
 "b2-4-01": {
@@ -128,41 +128,41 @@
 "fx": "telefon"
 },
 "dtz-1-01": {
-"v": "a17f661fe9",
-"engine": "google",
-"sig": "a17f661fe9",
+"v": "eb56be0454",
+"engine": "gemini",
+"sig": "eb56be0454",
 "text": "925e1cf8ca",
 "fx": "telefon"
 },
 "dtz-1-02": {
-"v": "b6d7be9f3e",
-"engine": "google",
-"sig": "b6d7be9f3e",
+"v": "e3bc15320a",
+"engine": "gemini",
+"sig": "e3bc15320a",
 "text": "cff86560d3",
 "fx": "telefon"
 },
 "dtz-1-03": {
-"v": "603332fba9",
-"engine": "google",
-"sig": "603332fba9",
+"v": "9f6b4f10ca",
+"engine": "gemini",
+"sig": "9f6b4f10ca",
 "text": "7bc346fb72"
 },
 "dtz-1-04": {
-"v": "b2b87c420d",
-"engine": "google",
-"sig": "b2b87c420d",
+"v": "32a32331b1",
+"engine": "gemini",
+"sig": "32a32331b1",
 "text": "8966520001"
 },
 "dtz-1-05": {
-"v": "b4ae57cee7",
-"engine": "google",
-"sig": "b4ae57cee7",
+"v": "c88d79a55c",
+"engine": "gemini",
+"sig": "c88d79a55c",
 "text": "b5ff7f760b"
 },
 "dtz-1-06": {
-"v": "481706735b",
-"engine": "google",
-"sig": "481706735b",
+"v": "7e1a19699c",
+"engine": "gemini",
+"sig": "7e1a19699c",
 "text": "068f00df02"
 },
 "dtz-1-07": {
@@ -172,90 +172,90 @@
 "text": "b4e5de60fa"
 },
 "dtz-2-01": {
-"v": "8bd8b33eba",
-"engine": "google",
-"sig": "8bd8b33eba",
+"v": "c70c6bb7f5",
+"engine": "gemini",
+"sig": "c70c6bb7f5",
 "text": "3d929bc868",
 "fx": "telefon"
 },
 "dtz-2-02": {
-"v": "d53d617578",
-"engine": "google",
-"sig": "d53d617578",
+"v": "ef099b865f",
+"engine": "gemini",
+"sig": "ef099b865f",
 "text": "0cced762ec"
 },
 "dtz-2-03": {
-"v": "c3e79c77a8",
-"engine": "google",
-"sig": "c3e79c77a8",
+"v": "6d46eb43fb",
+"engine": "gemini",
+"sig": "6d46eb43fb",
 "text": "7b48f3ba5c"
 },
 "dtz-2-04": {
-"v": "9979c5d87a",
-"engine": "google",
-"sig": "9979c5d87a",
+"v": "c4a01e26b5",
+"engine": "gemini",
+"sig": "c4a01e26b5",
 "text": "bbb3c56976"
 },
 "dtz-2-05": {
-"v": "8819ce1f99",
-"engine": "google",
-"sig": "8819ce1f99",
+"v": "d68165f0fd",
+"engine": "gemini",
+"sig": "d68165f0fd",
 "text": "d9723a866e"
 },
 "dtz-2-06": {
-"v": "b869f1a66a",
-"engine": "google",
-"sig": "b869f1a66a",
+"v": "dc25f25144",
+"engine": "gemini",
+"sig": "dc25f25144",
 "text": "50eeedb4fb"
 },
 "dtz-2-07": {
-"v": "ae7fc54dfb",
-"engine": "google",
-"sig": "ae7fc54dfb",
+"v": "b413f7f2f7",
+"engine": "gemini",
+"sig": "b413f7f2f7",
 "text": "c92ae3bd09"
 },
 "dtz-3-01": {
-"v": "800843ad8a",
-"engine": "google",
-"sig": "800843ad8a",
+"v": "2cdfc65037",
+"engine": "gemini",
+"sig": "2cdfc65037",
 "text": "e10f22f0af",
 "fx": "telefon"
 },
 "dtz-3-02": {
-"v": "ed528b387c",
-"engine": "google",
-"sig": "ed528b387c",
+"v": "ba06448339",
+"engine": "gemini",
+"sig": "ba06448339",
 "text": "5c08494f24",
 "fx": "telefon"
 },
 "dtz-3-03": {
-"v": "8406a1e6f4",
-"engine": "google",
-"sig": "8406a1e6f4",
+"v": "8245637a06",
+"engine": "gemini",
+"sig": "8245637a06",
 "text": "e6c63b8830"
 },
 "dtz-3-04": {
-"v": "61dde5ff5e",
-"engine": "google",
-"sig": "61dde5ff5e",
+"v": "68b56be139",
+"engine": "gemini",
+"sig": "68b56be139",
 "text": "d95ab2c738"
 },
 "dtz-3-05": {
-"v": "f114422130",
-"engine": "google",
-"sig": "f114422130",
+"v": "73914a2671",
+"engine": "gemini",
+"sig": "73914a2671",
 "text": "dae2034b1f"
 },
 "dtz-3-06": {
-"v": "9d32e2b732",
-"engine": "google",
-"sig": "9d32e2b732",
+"v": "1cc6ac592f",
+"engine": "gemini",
+"sig": "1cc6ac592f",
 "text": "bd17494acf"
 },
 "dtz-3-07": {
-"v": "edf44d0aa8",
-"engine": "google",
-"sig": "edf44d0aa8",
+"v": "481b2e3921",
+"engine": "gemini",
+"sig": "481b2e3921",
 "text": "08f355b3b2"
 },
 "dtz-4-01": {
@@ -278,27 +278,27 @@
 "text": "ce46cb0d79"
 },
 "dtz-4-04": {
-"v": "2e17bd040b",
-"engine": "google",
-"sig": "2e17bd040b",
+"v": "15d4bb3e85",
+"engine": "gemini",
+"sig": "15d4bb3e85",
 "text": "9a8092137b"
 },
 "dtz-4-05": {
-"v": "d93788f484",
-"engine": "google",
-"sig": "d93788f484",
+"v": "35dd576d5b",
+"engine": "gemini",
+"sig": "35dd576d5b",
 "text": "6aec10b51e"
 },
 "dtz-4-06": {
-"v": "2ae463f5c4",
-"engine": "google",
-"sig": "2ae463f5c4",
+"v": "fdbe6a2fb6",
+"engine": "gemini",
+"sig": "fdbe6a2fb6",
 "text": "9cd2a9cf68"
 },
 "dtz-4-07": {
-"v": "23f5668c91",
-"engine": "google",
-"sig": "23f5668c91",
+"v": "2d4b076ba9",
+"engine": "gemini",
+"sig": "2d4b076ba9",
 "text": "72b0525444"
 },
 "dtz-5-01": {
