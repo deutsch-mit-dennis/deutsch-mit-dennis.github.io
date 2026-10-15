@@ -711,3 +711,6 @@ header.dm-header nav{margin-left:auto}
 .dm-boot{min-height:60vh;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#55607a;text-align:center;padding:24px}
 
 @media (max-width:760px){.dm-home .ch-home{display:none}} /* Challenge und Spiele stehen auf dem Handy schon im Schnellstart */
+
+/* Handy: Platz unter dem Inhalt, damit der runde Hilfe-Knopf nichts Wichtiges verdeckt */
+@media (max-width:760px){main#main{padding-bottom:76px}}

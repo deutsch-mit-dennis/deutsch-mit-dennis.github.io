@@ -1090,7 +1090,7 @@
     level: "A1–C1",
     desc: "Jump’n’Run in 8 Welten: Springe über Lücken und Fehlerkäfer, fahre Auto, Schlitten und Fahrrad, finde Booster und geheime Kammern, löse an jedem Tor eine Deutschfrage und besiege am Ende das Fehlermonster – von A1 bis C1.",
     intro:
-      "Wähle zuerst deine Figur: Junge (Lino) oder Mädchen (Lina), Hautfarbe und – beim Mädchen – mit oder ohne Kopftuch. Deine Figur läuft von selbst. Tippe auf das Spielfeld oder den großen Knopf (am Computer: Leertaste oder ↑), um zu springen – lange drücken springt höher. Springe über Lücken, hüpf auf die Fehlerkäfer und sammle Münzen. Stoß die ❓-Kisten von unten an – darin stecken Booster wie Joker, Herz, Magnet, Stern und Flügel. In jeder Welt ist eine geheime Kammer mit Schatztruhe versteckt. An jedem Tor wartet eine Frage. Oben rechts: ⏸ Pause und 🔊 Ton. Jede Welt ist schwerer: A1, A2, B1, B2, C1. Neu: Nach Welt A1 öffnen sich drei Fahrzeug-Welten – mit dem Auto über die Autobahn (A2, mit Ampeln statt Toren), mit dem Schlitten durch Winterberg (B1) und mit dem Fahrrad an den Ostseestrand (B2).",
+      "Deine Figur läuft von selbst – tippe zum Springen (lange drücken = höher). Löse an jedem Tor eine Deutschfrage, öffne ❓-Kisten und besiege am Ende das Fehlermonster. 8 Welten von A1 bis C1, auch mit Auto, Schlitten und Fahrrad.",
     start(api) {
       const prog = load();
       prog.unlocked = Math.max(1, prog.unlocked || 1);

@@ -1263,6 +1263,26 @@
     }
   }
 
+  /* Einheitlicher Seitenkopf: ältere Seiten bekommen die gleiche Brotkrumen-Zeile wie alle anderen */
+  const CRUMB_FOR = {
+    witz: [['Witz des Tages']],
+    quellen: [['Prüfungstraining', '#pruefung'], ['Prüfungsinfos & Quellen']],
+    orientierungskurs: [['Prüfungstraining', '#pruefung'], ['Leben in Deutschland']],
+    training: [['Prüfungstraining', '#pruefung'], ['Training']],
+  };
+  function unifyHead(p) {
+    const items = CRUMB_FOR[p[0]];
+    if (!items || mainEl.querySelector('.dm-crumbs')) return;
+    if (p[0] === 'orientierungskurs' && p[1]) return; // Unterseiten haben eigene Navigation
+    const h1 = mainEl.querySelector('h1');
+    if (!h1) return;
+    if (p[0] === 'quellen') {
+      h1.textContent = 'Prüfungsinfos & Quellen';
+      mainEl.querySelector(':scope > .eyebrow')?.remove();
+    }
+    const box = h1.closest('.lesson-head, .lid-heading, .wz-page') || h1;
+    box.insertAdjacentHTML('beforebegin', crumbs(items));
+  }
   /* ---------- Router ---------- */
   const legacyRoute = window.route;
   const NAV = { '': 'start', lernweg: 'wege', wegweiser: 'wege', lernen: 'lernen', lektion: 'lernen', wortschatz: 'lernen', wort: 'lernen', ueben: 'ueben', schreiben: 'ueben', hoeren: 'ueben', lesen: 'ueben', kahoot: 'ueben', challenge: 'spiele', spiele: 'spiele', bild: 'pruefung', pruefung: 'pruefung', training: 'pruefung', orientierungskurs: 'pruefung', lid: 'pruefung', quellen: 'pruefung', videos: 'videos', 'ueber-mich': 'ueber', material: 'material', lernpakete: 'pakete', lieder: 'lieder' };
@@ -1325,6 +1345,7 @@
     if (own) { own(p); setupExamBox(p); }
     else { try { legacyRoute(); } catch (e) { console.error(e); home(); } afterLegacy(p); }
     hideMissingDownloads();
+    unifyHead(p);
     addBackBar(p);
     const nav = NAV[p[0]] ?? '';
     $$('#main-navigation a[data-nav]').forEach(a => { const on = a.dataset.nav === nav; a.classList.toggle('active', on); if (on) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current'); });
