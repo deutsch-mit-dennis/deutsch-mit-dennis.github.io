@@ -247,7 +247,6 @@
         </span>
       </a>
     </section>
-    <section class="dm-section app-home" aria-label="App"><button type="button" class="dm-install dm-install-card"><span class="app-home-ico" aria-hidden="true"><img src="assets/app/icon-192.png" alt="" width="56" height="56"></span><span><b>Deutsch mit Dennis als App</b><small>Aufs Handy holen – mit eigenem Symbol, ohne Browserleiste, vieles auch offline.</small></span><span class="app-home-go">Installieren</span></button></section>
 
     ${window.DMChallenge ? `<section class="dm-section ch-home" aria-label="Tages-Challenge und Lernspiele">${DMChallenge.teaser()}<a class="sp-home" href="#spiele"><span aria-hidden="true">🎮</span><span><b>Lernspiele</b><small>18 Spiele: Jump’n’Run · Artikel · Verben · Alltag · DTB B2 · Leben in Deutschland</small></span><span class="sp-home-go">Spielen →</span></a></section>` : ''}
 

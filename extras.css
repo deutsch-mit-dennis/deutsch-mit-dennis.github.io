@@ -688,39 +688,3 @@ header.dm-header nav{margin-left:auto}
 .lino-hero-chip>span:first-child{font-size:26px;line-height:1}
 .lino-hero-chip b{font-weight:800}
 .lino-hero-go{margin-left:auto;display:grid;place-items:center;flex:0 0 34px;width:34px;height:34px;border-radius:50%;background:#fff;color:#e5622b;font-size:14px}
-
-/* App installieren */
-.dm-install{display:inline-flex;align-items:center;gap:6px;min-height:44px;margin-top:10px;padding:8px 16px;border-radius:99px;border:2px solid #FFE45C;background:#FFE45C;color:#172036;font:800 15px var(--dm-font);cursor:pointer}
-.dm-install,.app-home{display:none!important}
-.dm-can-install .dm-install{display:inline-flex!important}.dm-can-install .app-home{display:block!important}
-.dm-install-card{width:100%;margin:0;padding:14px 16px;border-radius:18px;border:2px solid var(--dm-line,#d5dbea);background:#fff;text-align:left;gap:14px;font-weight:400;font-size:15px;box-shadow:0 4px 14px rgba(23,32,54,.06)}
-.dm-install-card b{display:block;font-size:17px;color:var(--dm-ink,#172036)}
-.dm-install-card small{display:block;color:#5b6680;font-size:14px;line-height:1.35;margin-top:2px}
-.app-home-ico{flex:none}.app-home-ico img{display:block;width:56px;height:56px;border-radius:14px}
-.app-home-go{margin-left:auto;flex:none;background:#2341B5;color:#fff;border-radius:99px;padding:8px 14px;font-weight:800;font-size:14px}
-@media (max-width:420px){.app-home-go{display:none}}
-.dm-install-help{max-width:min(420px,calc(100vw - 32px));border:0;border-radius:18px;padding:20px 22px;box-shadow:0 20px 50px rgba(0,0,0,.25);font:16px/1.5 var(--dm-font);color:var(--dm-ink,#172036)}
-.dm-install-help::backdrop{background:rgba(23,32,54,.45)}
-.dm-install-help h2{margin:0 0 8px;font-size:20px}
-.dm-install-help ol{padding-left:22px;margin:0 0 10px}
-.dm-app .dm-install,.dm-app .app-home{display:none!important}
-
-/* Schnellstart auf der Startseite (nur Handy) */
-.dm-quick{display:none}
-@media (max-width:760px){
-  .dm-quick{display:grid;grid-column:1/-1;grid-template-columns:1fr 1fr;gap:10px;margin:16px 0 4px}
-  .dm-quick a{display:flex;flex-direction:column;gap:2px;min-height:96px;padding:12px 14px;border-radius:18px;text-decoration:none;color:var(--dm-ink);background:#fff;border:1px solid var(--dm-line);box-shadow:0 4px 14px rgba(20,30,60,.06)}
-  .dm-quick a:active{transform:scale(.98)}
-  .dm-quick .dm-q-ico{font-size:28px;line-height:1.1}
-  .dm-quick b{font-size:17px;line-height:1.2}
-  .dm-quick small{font-size:13.5px;line-height:1.3;color:#55607a;overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
-  .dm-quick .dm-q-ch{background:linear-gradient(135deg,#ffe7b8,#ffc9a1);border-color:transparent;color:#3d2a06}
-  .dm-quick .dm-q-ch small{color:#6b3d0a}
-  .dm-quick .dm-q-lino{background:linear-gradient(135deg,#ff9a3c,#e5622b);border-color:transparent;color:#fff}
-  .dm-quick .dm-q-lino small{color:#fff3e6}
-  .dm-quick .dm-q-song{background:linear-gradient(135deg,#2b2f77,#5b3fa8);border-color:transparent;color:#fff}
-  .dm-quick .dm-q-song small{color:#e3defc}
-  /* Handy-Start kompakter: Lino steckt jetzt im Schnellstart */
-  .dm-home .lino-hero-chip,.dm-home .dm-hero .dm-trust,.dm-home .dm-hero .dm-tour-start{display:none}
-}
-.dm-boot{min-height:60vh;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#55607a;text-align:center;padding:24px}
