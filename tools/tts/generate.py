@@ -23,18 +23,26 @@ FORCE = os.environ.get('TTS_FORCE', '') in ('1', 'true', 'yes')
 USAGE = os.path.join(OUT, 'usage.json')
 # Kostenbremse: höchstens so viele Zeichen pro Kalendermonat an einen Bezahl-Anbieter schicken.
 # Google Cloud Chirp 3 HD: 1.000.000 Zeichen/Monat frei – wir bleiben mit 600.000 weit darunter.
-MONTHLY_LIMIT = {'google': 600000, 'elevenlabs': 25000, 'gemini': 200000}
+# ElevenLabs: alle Hörtexte zusammen ca. 58.000 Zeichen (1 Credit pro Zeichen) – Grenze mit etwas Luft.
+MONTHLY_LIMIT = {'google': 600000, 'elevenlabs': 75000, 'gemini': 200000}
 
 # Stimmen je Rolle (f = Frau, m = Mann). Anpassbar über die Umgebungsvariable TTS_VOICES (JSON).
 VOICES = {
-    'elevenlabs': {'f1': 'EXAVITQu4vr4xnSDxMaL', 'f2': 'FGY2WhTYpPnrIDTdsKH5', 'f3': 'XrExE9yKIg1WjnnlVkGX',
-                   'm1': 'JBFqnCBsd6RMkjVDRZzb', 'm2': 'onwK4e9ZLuTAKqWW03F9', 'm3': 'TX3LPaxmHKxFdv7VOQHJ'},
+    # Deutsche Muttersprachler-Stimmen aus der ElevenLabs-Bibliothek (natürlicher als die englischen Standardstimmen)
+    'elevenlabs': {'f1': 'zKHQdbB8oaQ7roNTiDTK',   # Laura – warm, freundlich
+                   'f2': '1iF3vHdwHKuVKSPDK23Z',   # Louisa – warm, lebendig
+                   'f3': 'fBs1tCpaSMsPcbMkLQlk',   # Yvonne – mittleres Alter
+                   'm1': 'z1EhmmPwF0ENGYE8dBE6',   # Christian – Gesprächston
+                   'm2': 'f64OyGck4gc2zk7QOs55',   # Leo – ruhig, natürlich
+                   'm3': 'aTTiK3YzK3dXETpuDE2h'},  # Ben – jung
     'google': {'f1': 'de-DE-Chirp3-HD-Aoede', 'f2': 'de-DE-Chirp3-HD-Kore', 'f3': 'de-DE-Chirp3-HD-Leda',
                'm1': 'de-DE-Chirp3-HD-Charon', 'm2': 'de-DE-Chirp3-HD-Puck', 'm3': 'de-DE-Chirp3-HD-Orus'},
     'gemini': {'f1': 'Kore', 'f2': 'Aoede', 'f3': 'Leda', 'm1': 'Charon', 'm2': 'Puck', 'm3': 'Orus'},
     'piper': {'f1': 'de_DE-kerstin-low', 'f2': 'de_DE-ramona-low', 'f3': 'de_DE-eva_k-x_low',
               'm1': 'de_DE-thorsten-high', 'm2': 'de_DE-karlsson-low', 'm3': 'de_DE-pavoque-low'},
 }
+ELEVEN_FALLBACK = {'f1': 'EXAVITQu4vr4xnSDxMaL', 'f2': 'FGY2WhTYpPnrIDTdsKH5', 'f3': 'XrExE9yKIg1WjnnlVkGX',
+                   'm1': 'JBFqnCBsd6RMkjVDRZzb', 'm2': 'onwK4e9ZLuTAKqWW03F9', 'm3': 'TX3LPaxmHKxFdv7VOQHJ'}
 PIPER_PATH = {
     'de_DE-thorsten-high': 'de/de_DE/thorsten/high', 'de_DE-karlsson-low': 'de/de_DE/karlsson/low',
     'de_DE-pavoque-low': 'de/de_DE/pavoque/low', 'de_DE-kerstin-low': 'de/de_DE/kerstin/low',
@@ -102,9 +110,16 @@ def synth_piper(text, role, wav):
 def synth_eleven(text, role, wav):
     vid = voice_for('elevenlabs', role)
     body = {'text': text, 'model_id': os.environ.get('ELEVENLABS_MODEL', 'eleven_multilingual_v2'),
-            'voice_settings': {'stability': 0.45, 'similarity_boost': 0.8, 'style': 0.15, 'use_speaker_boost': True}}
-    mp3 = http(f'https://api.elevenlabs.io/v1/text-to-speech/{vid}?output_format=mp3_44100_128', body,
-               {'xi-api-key': os.environ['ELEVENLABS_API_KEY'], 'accept': 'audio/mpeg'})
+            'voice_settings': {'stability': 0.4, 'similarity_boost': 0.8, 'style': 0.2, 'use_speaker_boost': True, 'speed': 0.95}}
+    hdr = {'xi-api-key': os.environ['ELEVENLABS_API_KEY'], 'accept': 'audio/mpeg'}
+    try:
+        mp3 = http(f'https://api.elevenlabs.io/v1/text-to-speech/{vid}?output_format=mp3_44100_128', body, hdr)
+    except RuntimeError as e:
+        # Bibliotheksstimme nicht im Konto verfügbar → mehrsprachige Standardstimme derselben Rolle
+        fb = ELEVEN_FALLBACK.get(role if role in ELEVEN_FALLBACK else 'f1')
+        if 'voice' not in str(e).lower() or vid == fb: raise
+        print(f'    Stimme {vid} nicht verfügbar ({str(e)[:80]}) – nehme Standardstimme', flush=True)
+        mp3 = http(f'https://api.elevenlabs.io/v1/text-to-speech/{fb}?output_format=mp3_44100_128', body, hdr)
     tmp = wav + '.mp3'; open(tmp, 'wb').write(mp3)
     run(['ffmpeg', '-y', '-loglevel', 'error', '-i', tmp, '-ar', '24000', '-ac', '1', wav]); os.remove(tmp)
 
@@ -169,7 +184,7 @@ def build(entry, eng, target):
             for p in parts: f.write(f"file '{p}'\nfile '{sil}'\n")
         fx = entry.get('fx')
         if fx in ('telefon', 'mailbox'):
-            # Anrufbeantworter: Signalton, dann Stimme wie durchs Telefon (300–3400 Hz) mit leisem Leitungsrauschen.
+            # Anrufbeantworter: Signalton, dann Stimme leicht wie durchs Telefon (sanfter Filter, damit sie menschlich bleibt).
             speech = os.path.join(td, 'speech.wav')
             run(['ffmpeg', '-y', '-loglevel', 'error', '-f', 'concat', '-safe', '0', '-i', lst, '-ar', '24000', '-ac', '1', speech])
             beep = os.path.join(td, 'beep.wav')
@@ -177,15 +192,15 @@ def build(entry, eng, target):
                  '-f', 'lavfi', '-i', 'sine=f=1000:r=24000:d=0.45', '-filter_complex',
                  '[1]volume=0.25,afade=t=in:d=0.01,afade=t=out:st=0.43:d=0.02[b];[0][b]concat=n=2:v=0:a=1', beep])
             run(['ffmpeg', '-y', '-loglevel', 'error', '-i', beep, '-i', speech,
-                 '-f', 'lavfi', '-i', 'anoisesrc=r=24000:c=pink:a=0.004',
+                 '-f', 'lavfi', '-i', 'anoisesrc=r=24000:c=pink:a=0.0025',
                  '-filter_complex',
-                 '[1]highpass=f=300,lowpass=f=3400,acompressor=threshold=-20dB:ratio=3:attack=5:release=80,volume=1.2[v];'
+                 '[1]highpass=f=180,lowpass=f=5000,acompressor=threshold=-22dB:ratio=2:attack=10:release=120[v];'
                  '[2]highpass=f=300,lowpass=f=3000[n];[v][n]amix=inputs=2:duration=first:normalize=0[vn];'
                  '[0][vn]concat=n=2:v=0:a=1,loudnorm=I=-17:TP=-1.5:LRA=11',
-                 '-ar', '44100', '-ac', '1', '-codec:a', 'libmp3lame', '-b:a', '64k', target])
+                 '-ar', '44100', '-ac', '1', '-codec:a', 'libmp3lame', '-b:a', '96k', target])
             return
         run(['ffmpeg', '-y', '-loglevel', 'error', '-f', 'concat', '-safe', '0', '-i', lst,
-             '-af', 'loudnorm=I=-17:TP=-1.5:LRA=11', '-ar', '44100', '-ac', '1', '-codec:a', 'libmp3lame', '-b:a', '64k', target])
+             '-af', 'loudnorm=I=-17:TP=-1.5:LRA=11', '-ar', '44100', '-ac', '1', '-codec:a', 'libmp3lame', '-b:a', '96k', target])
 
 def main():
     os.makedirs(OUT, exist_ok=True)
