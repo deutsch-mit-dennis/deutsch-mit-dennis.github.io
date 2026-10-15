@@ -142,7 +142,7 @@ def synth_gemini(text, role, wav):
             pcm = base64.b64decode(j['candidates'][0]['content']['parts'][0]['inlineData']['data'])
             with wave.open(wav, 'wb') as w:
                 w.setnchannels(1); w.setsampwidth(2); w.setframerate(24000); w.writeframes(pcm)
-            time.sleep(float(os.environ.get('GEMINI_PAUSE', '7')))  # Ratenbegrenzung im kostenlosen Kontingent
+            time.sleep(float(os.environ.get('GEMINI_PAUSE', '2')))  # Ratenbegrenzung im kostenlosen Kontingent
             return
         except Exception as e:  # nächstes Modell probieren
             last = e
