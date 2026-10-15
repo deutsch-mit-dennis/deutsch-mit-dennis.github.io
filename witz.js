@@ -454,9 +454,14 @@
     out.innerHTML = `<p class="wz-wait">⏳ Übersetze …</p>`;
     btn.setAttribute("aria-expanded", "true");
     let tr = (await loadLang(lang))[fnv(j.t)];
-    if (!tr) tr = await onDevice(j, lang);
+    if (!tr)
+      tr = await Promise.race([
+        onDevice(j, lang),
+        new Promise((r) => setTimeout(() => r(null), 6000)),
+      ]);
+    if (sel.value !== lang) return; // inzwischen andere Sprache gewählt
     if (!tr) {
-      out.innerHTML = `<p class="wz-wait">Für diese Sprache ist die Übersetzung noch nicht fertig. Bitte versuche es später noch einmal – oder wähle eine andere Sprache.</p>`;
+      out.innerHTML = `<p class="wz-wait">Für diese Sprache ist die Übersetzung noch nicht fertig. Bitte versuche es später noch einmal – oder wähle eine andere Sprache.</p><button type="button" class="wz-close" data-wz-close>Schließen</button>`;
       return;
     }
     const rtl = RTL.includes(lang);
