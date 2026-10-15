@@ -27,6 +27,7 @@
 .sp-lino-hint{margin:8px 0 0;text-align:center;color:#5b6680;font-size:14px}
 .sp-play.sp-lino{scroll-margin-top:96px}
 .sp-lino-wrap canvas{scroll-margin-top:84px}
+@media (max-width:760px){body:has(.sp-lino-wrap) #site-helper{display:none}}
 @media (max-height:520px){.sp-play.sp-lino{scroll-margin-top:74px}.sp-lino-wrap canvas{max-height:calc(100vh - 240px);min-height:140px}.sp-lino-hint{display:none}.sp-lino-panel{margin-top:8px}.sp-lino-jump{min-height:46px;font-size:18px}.sp-lino .sp-hud{margin-bottom:4px}}
 .sp-lino-q{background:#fff;border:2px solid var(--dm-tinte);border-radius:18px;padding:14px 14px 12px}
 .sp-lino-q .sp-lino-tag{display:inline-block;background:var(--dm-tinte-soft);color:var(--dm-tinte-dark);font-weight:800;font-size:13px;border-radius:99px;padding:3px 10px;margin:0 0 8px}
@@ -1087,7 +1088,7 @@
     title: "Lino läuft – das Deutsch-Abenteuer",
     icon: "🏃",
     level: "A1–C1",
-    desc: "Jump’n’Run in 8 Welten: Springe über Lücken und Fehlerkäfer, fahre Auto, Schlitten und Fahrrad, finde Booster und geheime Kammern und löse an jedem Tor eine Deutschfrage – von A1 bis C1.",
+    desc: "Jump’n’Run in 8 Welten: Springe über Lücken und Fehlerkäfer, fahre Auto, Schlitten und Fahrrad, finde Booster und geheime Kammern, löse an jedem Tor eine Deutschfrage und besiege am Ende das Fehlermonster – von A1 bis C1.",
     intro:
       "Wähle zuerst deine Figur: Junge (Lino) oder Mädchen (Lina), Hautfarbe und – beim Mädchen – mit oder ohne Kopftuch. Deine Figur läuft von selbst. Tippe auf das Spielfeld oder den großen Knopf (am Computer: Leertaste oder ↑), um zu springen – lange drücken springt höher. Springe über Lücken, hüpf auf die Fehlerkäfer und sammle Münzen. Stoß die ❓-Kisten von unten an – darin stecken Booster wie Joker, Herz, Magnet, Stern und Flügel. In jeder Welt ist eine geheime Kammer mit Schatztruhe versteckt. An jedem Tor wartet eine Frage. Oben rechts: ⏸ Pause und 🔊 Ton. Jede Welt ist schwerer: A1, A2, B1, B2, C1. Neu: Nach Welt A1 öffnen sich drei Fahrzeug-Welten – mit dem Auto über die Autobahn (A2, mit Ampeln statt Toren), mit dem Schlitten durch Winterberg (B1) und mit dem Fahrrad an den Ostseestrand (B2).",
     start(api) {
