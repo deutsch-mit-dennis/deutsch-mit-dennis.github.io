@@ -92,8 +92,11 @@ def main():
     eng = 'gemini' if os.environ.get('GEMINI_API_KEY') else 'google' if os.environ.get('GOOGLE_TTS_API_KEY') else None
     if not eng:
         print('Kein Schlüssel (GEMINI_API_KEY oder GOOGLE_TTS_API_KEY) – nichts zu tun.'); return
-    status = {'engine': eng, 'ok': [], 'errors': {}}
+    status = {'engine': eng, 'ok': [], 'errors': {}, 'open': []}
+    start, budget = time.time(), float(os.environ.get('WITZ_MAX_SECONDS', '2400'))
     for code, name in d['langs']:
+        if time.time() - start > budget:
+            status['open'].append(code); continue  # Rest beim nächsten Lauf
         p = os.path.join(OUT, code + '.json')
         try: have = json.load(open(p, encoding='utf-8'))
         except Exception: have = {}
