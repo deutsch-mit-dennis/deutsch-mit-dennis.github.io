@@ -14,6 +14,9 @@
 .sp-lino-snd:focus-visible{outline:3px solid var(--dm-tinte,#2341B5);outline-offset:2px}
 .sp-lino-banner{position:absolute;left:50%;top:62px;transform:translateX(-50%);max-width:calc(100% - 24px);width:max-content;text-align:center;background:rgba(255,255,255,.95);border-radius:16px;padding:6px 14px;font:700 14.5px/1.35 var(--dm-font);color:var(--dm-ink);box-shadow:0 4px 12px rgba(0,0,0,.12);pointer-events:none;transition:opacity .3s}
 .sp-lino-banner[hidden]{display:block;opacity:0}
+@media (max-width:520px){.sp-lino-banner{top:54px;font-size:12.5px;padding:5px 10px;border-radius:12px}}
+/* Handy quer: Kopfzeile scrollt mit, damit das Spielfeld groß bleibt */
+@media (max-height:520px) and (orientation:landscape){body:has(.sp-lino-wrap) header.dm-header,body:has(.sp-lino-wrap) .dm-backbar{position:static}.sp-play.sp-lino{scroll-margin-top:6px!important}.sp-lino-wrap canvas{scroll-margin-top:6px}.sp-lino-wrap canvas{max-height:calc(100vh - 128px)!important}.sp-lino-banner{top:50px;font-size:12.5px;padding:4px 10px}}
 .sp-lino-panel{margin-top:12px}
 .sp-lino-jump{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;min-height:64px;border:0;border-radius:18px;background:linear-gradient(180deg,#ff9a3c,#e5622b);color:#fff;font:800 20px var(--dm-font);box-shadow:0 5px 0 #b8461c;cursor:pointer;touch-action:manipulation;-webkit-user-select:none;user-select:none;-webkit-touch-callout:none;-webkit-tap-highlight-color:transparent}
 .sp-lino-jump:active{transform:translateY(3px);box-shadow:0 2px 0 #b8461c}
@@ -23,6 +26,7 @@
 @media (prefers-reduced-motion:reduce){.sp-lino-jump.is-now{animation:none}}
 .sp-lino-hint{margin:8px 0 0;text-align:center;color:#5b6680;font-size:14px}
 .sp-play.sp-lino{scroll-margin-top:96px}
+.sp-lino-wrap canvas{scroll-margin-top:84px}
 @media (max-height:520px){.sp-play.sp-lino{scroll-margin-top:74px}.sp-lino-wrap canvas{max-height:calc(100vh - 240px);min-height:140px}.sp-lino-hint{display:none}.sp-lino-panel{margin-top:8px}.sp-lino-jump{min-height:46px;font-size:18px}.sp-lino .sp-hud{margin-bottom:4px}}
 .sp-lino-q{background:#fff;border:2px solid var(--dm-tinte);border-radius:18px;padding:14px 14px 12px}
 .sp-lino-q .sp-lino-tag{display:inline-block;background:var(--dm-tinte-soft);color:var(--dm-tinte-dark);font-weight:800;font-size:13px;border-radius:99px;padding:3px 10px;margin:0 0 8px}
@@ -601,6 +605,17 @@
       ],
     },
   ];
+  // Fehlermonster am Ende jeder Welt: [Name, Körperfarbe, dunkle Farbe]
+  const BOSSES = {
+    A1: ["Artikel-Troll", "#7bc96f", "#3f8a3a"],
+    A2: ["Verb-Krake", "#b07be0", "#6c3fa3"],
+    B1: ["Konnektor-Golem", "#8d9bb0", "#4f5d73"],
+    B2: ["Passiv-Drache", "#e0703c", "#9c3d17"],
+    C1: ["Nominalstil-Riese", "#5c6bd6", "#2c3790"],
+    Auto: ["Stau-Roboter", "#f2b33a", "#a8740c"],
+    Schnee: ["Eis-Yeti", "#bfe3ff", "#5b8fc4"],
+    Strand: ["Kauderwelsch-Krake", "#ff7f8f", "#b33b4d"],
+  };
   const MAIN = 5; // Welten 1–5 (A1–C1); danach die Fahrzeug-Welten
   const wTitle = (w) => (w.lv ? `${w.emoji} ${w.name}` : `Welt ${w.id}`);
   const GATES = 6,
@@ -727,6 +742,15 @@
         tone(392, t, 0.9, "sine", 0.3, 784);
       },
       joker: (t) => tone(660, t, 0.25, "triangle", 0.4, 1320),
+      roar: (t) => {
+        tone(110, t, 0.6, "sawtooth", 0.5, 55);
+        noise(t, 0.5, 0.35, 700);
+      },
+      bosshit: (t) => {
+        noise(t, 0.18, 0.45, 2500);
+        [880, 660, 440].forEach((f, i) => tone(f, t + i * 0.06, 0.1, "square", 0.4));
+      },
+      shoot: (t) => tone(300, t, 0.12, "triangle", 0.3, 160),
       honk: (t) => {
         tone(392, t, 0.12, "square", 0.4);
         tone(392, t + 0.16, 0.22, "square", 0.4);
@@ -770,8 +794,8 @@
       startMusic(world) {
         this.stopMusic();
         if (!init()) return;
-        const root = [60, 62, 57, 64, 55, 62, 57, 65, 0, 53][world] ?? 60,
-          bpm = [108, 114, 120, 126, 100, 134, 104, 116, 0, 92][world] ?? 112;
+        const root = [60, 62, 57, 64, 55, 62, 57, 65, 50, 53][world] ?? 60,
+          bpm = [108, 114, 120, 126, 100, 134, 104, 116, 152, 92][world] ?? 112;
         let seed = world * 7919 + 17;
         const rnd = () => ((seed = (seed * 1103515245 + 12345) & 0x7fffffff), seed / 0x7fffffff);
         const motif = [],
@@ -1038,7 +1062,9 @@
       gates.push({ x: solid.length * T, open: false, ok: null });
       add(5);
     }
-    add(8);
+    add(6);
+    const arena = solid.length * T; // Kampfplatz mit dem Fehlermonster
+    add(24);
     const goal = solid.length * T;
     add(12);
     const mainLen = solid.length * T;
@@ -1052,7 +1078,7 @@
     plats.push({ x: (c0 + 18) * T, y: GR - 70, w: 3 * T, q: 1, boost: ["magnet", "doppel", "stern"][L % 3], used: false, bumpK: -1, bumpT: 0 });
     for (let k = 0; k < 3; k++) coin((c0 + 18) * T + 16 + k * 32, GR - 96);
     for (let k = 0; k < 3; k++) coin((c0 + 28 + k) * T + 16, GR - 22);
-    return { solid, coins, enemies, plats, clouds, gates, goal, secret, ch, T, mainLen, len: solid.length * T };
+    return { solid, coins, enemies, plats, clouds, gates, goal, arena, secret, ch, T, mainLen, len: solid.length * T };
   }
 
   DMGame.register({
@@ -1099,11 +1125,12 @@
             const open = isOpen(i),
               best = prog["best" + w.id],
               key = prog.secrets?.[w.id];
-            return `${i === MAIN ? '</div><h3 class="sp-lino-sub">Neu: Unterwegs mit Auto, Schlitten und Fahrrad</h3><p class="dm-small" style="margin:0 0 8px">Öffnen sich, wenn du Welt A1 geschafft hast – eine nach der anderen. An der Autobahn wartet statt Toren eine Ampel.</p><div class="sp-lino-levels">' : ""}<button type="button" class="sp-lino-lv${w.lv ? " is-ride" : ""}" data-i="${i}"${open ? "" : " disabled"}><i aria-hidden="true">${open ? (best != null ? "⭐" : w.lv ? w.emoji : "▶") : "🔒"}</i><b>${w.lv || w.id}</b><span>Welt ${i + 1}: ${w.name}</span><small>${best != null ? `Rekord: ${best} Punkte` : open ? "Bereit" : w.lv ? (i === MAIN ? "Nach Welt A1" : `Nach „${WORLDS[i - 1].name}“`) : "Noch gesperrt"}${key ? " · 🗝 Kammer gefunden" : ""}</small></button>`;
+            return `${i === MAIN ? '</div><h3 class="sp-lino-sub">Neu: Unterwegs mit Auto, Schlitten und Fahrrad</h3><p class="dm-small" style="margin:0 0 8px">Öffnen sich, wenn du Welt A1 geschafft hast – eine nach der anderen. An der Autobahn wartet statt Toren eine Ampel.</p><div class="sp-lino-levels">' : ""}<button type="button" class="sp-lino-lv${w.lv ? " is-ride" : ""}" data-i="${i}"${open ? "" : " disabled"}><i aria-hidden="true">${open ? (best != null ? "⭐" : w.lv ? w.emoji : "▶") : "🔒"}</i><b>${w.lv || w.id}</b><span>Welt ${i + 1}: ${w.name}</span><small>${best != null ? `Rekord: ${best} Punkte` : open ? "Bereit" : w.lv ? (i === MAIN ? "Nach Welt A1" : `Nach „${WORLDS[i - 1].name}“`) : "Noch gesperrt"}${key ? " · 🗝 Kammer" : ""}${prog.bosses?.[w.id] ? " · 🏆 Monster besiegt" : ""}</small></button>`;
           }).join("")}</div>
           <details class="sp-lino-legend"><summary>Booster und Geheimnisse</summary><ul>
             <li><b>❓</b><span><b>Kisten</b> sind fest. Stoß die ❓-Kiste von unten mit dem Kopf an – dann kommt ein Booster heraus.</span></li>
             ${Object.values(BOOSTS).map((b) => `<li><b>${b.ic}</b><span><b>${b.name}:</b> ${b.txt}</span></li>`).join("")}
+            <li><b>👾</b><span><b>Fehlermonster:</b> Am Ende jeder Welt wartet ein Monster. Spring über die roten falschen Wörter, die es wirft (ab B1 fliegen manche lila Wörter oben vorbei – dann nicht springen). Danach kommt eine Frage: Jede richtige Antwort ist ein Treffer. 3 Treffer (ab B2: 4) – dann ist es besiegt.</span></li>
             <li><b>☁️</b><span><b>Wolken</b> kannst du von unten durchspringen und oben darauf landen.</span></li>
             <li><b>🗝</b><span><b>Geheime Kammer:</b> In jeder Welt versteckt – hoch oben. Tipp: Lange drücken springt höher. In der Kammer wartet eine Schatztruhe mit Bonusfrage – ohne Risiko.</span></li>
           </ul></details>
@@ -1230,6 +1257,26 @@
           wrongItems = [],
           fx = [],
           B = { joker: 0, magnet: 0, stern: 0, doppel: 0 };
+        // Fehlermonster
+        const BI = BOSSES[W0.id] || ["Fehlermonster", "#9b6bd6", "#5a3a8c"];
+        const boss = {
+          name: BI[0],
+          col: BI[1],
+          dark: BI[2],
+          hp: (W0.d ?? L) >= 3 ? 4 : 3,
+          max: (W0.d ?? L) >= 3 ? 4 : 3,
+          phase: "wait", // wait → intro → attack → (ask) → hurt → … → dead → gone
+          t: 0,
+          spawn: 0,
+          shots: [],
+          beam: null,
+          used: [],
+          stand: lvl.arena + 3 * T,
+          x: lvl.arena + 3 * T + VW - 170,
+          mouth: 0,
+          flash: 0,
+        };
+        const bossWords = W0.questions.flatMap((q) => [q[2], q[3]]).filter((w) => w && w.length <= 14);
         const HEAD = 6; // die Figur wird 1,25-fach gezeichnet: der Kopf ragt etwas über die Rechenbox
         function say(html, sec = 2.6) {
           banner.innerHTML = html;
@@ -1272,6 +1319,17 @@
         hud();
         runPanel();
 
+        // Spielfeld und Sprungknopf ganz zeigen (unter der festen Kopfzeile)
+        function showField() {
+          requestAnimationFrame(() => {
+            const hd = document.querySelector("header.dm-header"),
+              hh = hd && getComputedStyle(hd).position === "sticky" ? hd.getBoundingClientRect().height : 0,
+              card = api.el.closest(".sp-play") || api.el,
+              c = cv.getBoundingClientRect(),
+              jb = panel.getBoundingClientRect();
+            if (c.top < hh + 4 || jb.bottom > innerHeight) window.scrollBy({ top: card.getBoundingClientRect().top - hh - 8, behavior: "instant" });
+          });
+        }
         function runPanel() {
           panel.innerHTML = `<button type="button" class="sp-lino-jump" aria-label="Springen"><span aria-hidden="true">⤒</span> <span class="sp-lino-jl">Springen</span></button>
             <p class="sp-lino-hint">Tippe aufs Spielfeld oder den Knopf · Lange drücken = höher · ❓-Kiste: tippe direkt auf die Kiste oder auf den gelben Knopf · Am Computer: Leertaste, P = Pause</p>`;
@@ -1457,6 +1515,11 @@
           P.inv = 1.6;
           P.dbl = false;
           qTarget = null;
+          if (["intro", "attack", "hurt"].includes(boss.phase)) {
+            boss.shots = [];
+            boss.phase = "intro";
+            boss.t = 1.2;
+          }
           B.magnet = B.stern = B.doppel = 0;
           state = "run";
         }
@@ -1539,6 +1602,12 @@
               vx = 0;
               P.x = gate.x - 6 - P.w;
               if (P.onGround) return askGate();
+            }
+            // Kampfplatz: die Figur bleibt stehen, bis das Fehlermonster besiegt ist
+            if (gateIdx >= GATES && boss.phase !== "gone" && P.x + P.w >= boss.stand) {
+              vx = 0;
+              P.x = boss.stand - P.w;
+              if (boss.phase === "wait" && P.onGround) startBoss();
             }
           } else {
             const chest = lvl.ch.chest;
@@ -1660,6 +1729,10 @@
             }
           }
           for (const en of lvl.enemies) if (!en.alive && en.dead > 0) en.dead -= dt;
+          if (!inCh && boss.phase !== "wait" && boss.phase !== "gone") {
+            bossStep(dt);
+            if (state !== "run") return;
+          }
           for (const pl of lvl.plats) if (pl.bumpT > 0) pl.bumpT -= dt;
           // Geheime Kammer: Tür auf der Wolke / Ausgang in der Kammer
           const sc = lvl.secret;
@@ -1692,9 +1765,14 @@
             }
           }
           updateQ();
-          camX = inCh
-            ? Math.max(lvl.ch.x0, Math.min(lvl.ch.x1 - VW, P.x - VW * 0.3))
-            : Math.max(0, Math.min(lvl.mainLen - VW, P.x - VW * 0.3));
+          if (inCh) camX = Math.max(lvl.ch.x0, Math.min(lvl.ch.x1 - VW, P.x - VW * 0.3));
+          else {
+            let target = P.x - VW * 0.3;
+            // Kampf: Figur und Monster gleichzeitig zeigen
+            if (gateIdx >= GATES && boss.phase !== "gone") target = Math.max(target, Math.min(boss.stand - 80, P.x - 40));
+            target = Math.max(0, Math.min(lvl.mainLen - VW, target));
+            camX = gateIdx >= GATES && Math.abs(target - camX) > 1 ? camX + (target - camX) * Math.min(1, dt * 4) : target;
+          }
         }
 
         // Frage stellen (Tor oder Schatztruhe). item = [Satz mit ___, richtig, falsch, falsch, Tipp]
@@ -1775,7 +1853,7 @@
                   last = 0;
                   SND.duck(false);
                   panel.querySelector(".sp-lino-jump")?.focus({ preventScroll: true });
-                  cv.scrollIntoView({ block: "nearest", behavior: "smooth" });
+                  showField();
                 });
                 // „Weiter laufen“ auf dem Handy sichtbar machen
                 setTimeout(() => {
@@ -1861,7 +1939,7 @@
           const nextW = WORLDS[L + 1];
           panel.innerHTML = `<div class="sp-lino-res"><div class="sp-lino-stars" aria-label="${stars} von 3 Sternen">${"⭐".repeat(stars)}${"☆".repeat(3 - stars)}</div>
             <h2>${wTitle(W0)} geschafft!</h2>
-            <p>${right} von ${GATES} Fragen richtig · ${coinsGot} Münzen · Herz-Bonus ${bonus}<br><b>${score} Punkte</b></p>
+            <p>${right} von ${GATES} Fragen richtig · 👾 ${boss.name} besiegt · ${coinsGot} Münzen · Herz-Bonus ${bonus}<br><b>${score} Punkte</b></p>
             <div class="ch-actions">${nextW ? `<button type="button" class="dm-btn ch-go" id="sp-lino-next">Weiter: ${nextW.lv ? `${nextW.emoji} ${nextW.name}` : `Welt ${nextW.id}`} ▶</button>` : `<button type="button" class="dm-btn ch-go" id="sp-lino-end">Abenteuer beenden 🏆</button>`}
               <button type="button" class="dm-btn dm-btn-quiet" id="sp-lino-menu">Weltkarte</button></div></div>`;
           DM.celebrate?.(panel);
@@ -2159,6 +2237,7 @@
             ctx.fill();
             ctx.restore();
           }
+          drawBoss(t);
           lino(t);
           if (TH === "snow" && !inCh) {
             ctx.save();
@@ -2189,6 +2268,7 @@
           }
           ctx.restore();
           boosterHud();
+          bossBar();
           if (state === "respawn" || state === "dead") {
             ctx.fillStyle = `rgba(214,51,43,${Math.max(0, 0.35 - deadT * 0.3)})`;
             ctx.fillRect(0, 0, VW, VH);
@@ -2330,6 +2410,315 @@
           if (W0.ride && !inCh) vehicle(t);
         }
 
+
+        /* ---------- Fehlermonster: Kampf am Ende der Welt ---------- */
+        function startBoss() {
+          boss.phase = "intro";
+          boss.t = 0;
+          held = false;
+          qTarget = null;
+          SND.startMusic(8);
+          SND.play("roar");
+          say(`👾 <b>${boss.name}!</b> Rote Wörter: springen${(W0.d ?? L) >= 2 ? " · Lila Wörter: stehen bleiben" : ""}`, 3.6);
+        }
+        function bossShoot() {
+          const dd = W0.d ?? L,
+            // ab B1: manche Wörter fliegen hoch – dann NICHT springen, sondern stehen bleiben
+            high = dd >= 2 && boss.shots.length === 0 && Math.random() < 0.3;
+          boss.shots.push({
+            x: boss.x - 40,
+            y: high ? GROUND - 66 : GROUND - 14,
+            high,
+            vx: -(160 + dd * 14),
+            vy: 0,
+            hop: 0,
+            word: bossWords.length ? bossWords[Math.floor(Math.random() * bossWords.length)] : "✗",
+            r: 0,
+          });
+          boss.mouth = 0.35;
+          SND.play("shoot");
+        }
+        function bossStep(dt) {
+          const dd = W0.d ?? L;
+          boss.t += dt;
+          if (boss.mouth > 0) boss.mouth -= dt;
+          if (boss.flash > 0) boss.flash -= dt;
+          // falsche Wörter fliegen auf die Figur zu
+          const pcx = P.x + P.w / 2;
+          for (const sh of boss.shots) {
+            sh.x += sh.vx * dt;
+            sh.r += dt * 5;
+            if (sh.hop) {
+              sh.vy += 900 * dt;
+              sh.y += sh.vy * dt;
+              if (sh.y > GROUND - 14) {
+                sh.y = GROUND - 14;
+                sh.vy = -sh.hop;
+              }
+            }
+            if (!sh.dead && Math.abs(sh.x - pcx) < 18 && P.y + P.h > sh.y - 9 && P.y < sh.y + 9) {
+              if (B.stern > 0) {
+                sh.dead = true;
+                score += 20;
+                SND.play("stomp");
+                hud();
+              } else if (P.inv <= 0) {
+                sh.dead = true;
+                hit();
+                return;
+              }
+            }
+            if (!sh.dead && !sh.passed && sh.x < P.x - 16) {
+              sh.passed = true;
+              score += 10;
+            }
+          }
+          boss.shots = boss.shots.filter((sh) => !sh.dead && sh.x > camX - 80);
+          if (boss.phase === "intro") {
+            if (boss.t > 2.4) {
+              boss.phase = "attack";
+              boss.t = 0;
+              boss.spawn = 0.4;
+            }
+          } else if (boss.phase === "attack") {
+            const dur = 4.6 + dd * 0.5;
+            boss.spawn -= dt;
+            if (boss.t < dur && boss.spawn <= 0) {
+              bossShoot();
+              boss.spawn = Math.max(1, 1.55 - dd * 0.12) * (0.85 + Math.random() * 0.35);
+            }
+            if (boss.t >= dur && boss.shots.every((sh) => sh.x < P.x - 20) && P.onGround) askBoss();
+          } else if (boss.phase === "hurt") {
+            if (boss.t > 1.1) {
+              if (boss.hp <= 0) {
+                boss.phase = "dead";
+                boss.t = 0;
+                score += 300;
+                SND.play("win");
+                fx.push({ x: boss.x, y: GROUND - 110, t: 0, text: "🏆 +300" });
+                for (let k = 0; k < 10; k++) lvl.coins.push({ x: boss.x - 60 + k * 14, y: GROUND - 30 - (k % 3) * 18, got: false });
+                hud();
+              } else {
+                boss.phase = "attack";
+                boss.t = 0;
+                boss.spawn = 0.7;
+              }
+            }
+          } else if (boss.phase === "dead") {
+            if (boss.t > 1.6) {
+              boss.phase = "gone";
+              prog.bosses = { ...(prog.bosses || {}), [W0.id]: true };
+              save(prog);
+              SND.startMusic(L);
+              say(`🏆 <b>${boss.name} besiegt!</b> Lauf ins Ziel ▶`, 2.6);
+            }
+          }
+        }
+        function askBoss() {
+          let pool = W0.questions.filter((x) => !qs.includes(x) && !boss.used.includes(x));
+          if (!pool.length) pool = wrongItems.length ? wrongItems.slice() : W0.questions.filter((x) => x !== boss.used[boss.used.length - 1]);
+          const item = api.pick(pool, 1)[0];
+          boss.used.push(item);
+          boss.phase = "ask";
+          boss.shots = [];
+          quiz({
+            item,
+            tag: `👾 ${boss.name} · noch ${boss.hp} ${boss.hp === 1 ? "Treffer" : "Treffer"}`,
+            note: "Richtige Antwort = Treffer. Falsche Antwort = ein Herz weniger.",
+            onAnswer(ok, full) {
+              if (ok) {
+                boss.hp--;
+                score += 150;
+                boss.phase = "hurt";
+                boss.t = 0;
+                boss.beam = { t: 0 };
+                boss.flash = 0.6;
+                SND.play("bosshit");
+                return boss.hp <= 0 ? `<b>Volltreffer! Der ${boss.name} ist besiegt! +150</b>` : `<b>Treffer! +150 · Das Monster hat noch ${boss.hp} ${boss.hp === 1 ? "Leben" : "Leben"}.</b>`;
+              }
+              lives--;
+              api.vibrate();
+              wrong.push({ correct: full, tip: item[4] });
+              wrongAll.push({ correct: full, tip: item[4] });
+              boss.phase = "attack";
+              boss.t = 0;
+              boss.spawn = 0.9;
+              return "<b>Daneben – ein Herz weniger. Das Monster greift wieder an!</b>";
+            },
+          });
+        }
+        function drawBoss(t) {
+          if (boss.phase === "gone" || inCh) return;
+          if (boss.x > camX + VW + 120) return;
+          const dying = boss.phase === "dead" ? Math.min(1, boss.t / 1.4) : 0;
+          const bx = boss.x,
+            by = GROUND,
+            bob = Math.sin(t * 3) * 3,
+            stun = boss.phase === "ask" || boss.phase === "hurt";
+          ctx.save();
+          ctx.translate(bx, by);
+          ctx.scale(1 - dying * 0.6, 1 - dying * 0.9);
+          ctx.globalAlpha = 1 - dying;
+          const shake = boss.flash > 0 ? Math.sin(t * 60) * 4 : 0;
+          ctx.translate(shake, 0);
+          const body = boss.flash > 0 && Math.floor(t * 20) % 2 ? "#ffffff" : boss.col;
+          // Füße
+          ctx.fillStyle = boss.dark;
+          ctx.beginPath();
+          ctx.ellipse(-26, -6, 16, 8, 0, 0, 7);
+          ctx.ellipse(26, -6, 16, 8, 0, 0, 7);
+          ctx.fill();
+          // Körper
+          ctx.fillStyle = body;
+          ctx.beginPath();
+          ctx.ellipse(0, -58 + bob, 54, 52, 0, 0, 7);
+          ctx.fill();
+          ctx.strokeStyle = boss.dark;
+          ctx.lineWidth = 4;
+          ctx.stroke();
+          ctx.fillStyle = "rgba(255,255,255,.22)";
+          ctx.beginPath();
+          ctx.ellipse(0, -44 + bob, 32, 28, 0, 0, 7);
+          ctx.fill();
+          // Hörner
+          ctx.fillStyle = boss.dark;
+          for (const k of [-1, 1]) {
+            ctx.beginPath();
+            ctx.moveTo(k * 22, -100 + bob);
+            ctx.lineTo(k * 40, -132 + bob);
+            ctx.lineTo(k * 38, -96 + bob);
+            ctx.fill();
+          }
+          // Arme
+          ctx.strokeStyle = body;
+          ctx.lineWidth = 10;
+          ctx.lineCap = "round";
+          const wave = boss.mouth > 0 ? -18 : Math.sin(t * 4) * 6;
+          ctx.beginPath();
+          ctx.moveTo(-48, -60 + bob);
+          ctx.lineTo(-70, -48 + wave + bob);
+          ctx.moveTo(48, -60 + bob);
+          ctx.lineTo(68, -44 - wave * 0.5 + bob);
+          ctx.stroke();
+          ctx.lineCap = "butt";
+          // Augen (schauen zur Figur)
+          const look = Math.max(-3, Math.min(3, (P.x - bx) / 60));
+          for (const k of [-1, 1]) {
+            ctx.fillStyle = "#fff";
+            ctx.beginPath();
+            ctx.ellipse(k * 18, -78 + bob, 12, 13, 0, 0, 7);
+            ctx.fill();
+            ctx.fillStyle = "#172036";
+            if (stun) {
+              ctx.font = "900 15px system-ui,sans-serif";
+              ctx.textAlign = "center";
+              ctx.fillText("✕", k * 18, -73 + bob);
+            } else {
+              ctx.beginPath();
+              ctx.arc(k * 18 + look, -76 + bob, 5, 0, 7);
+              ctx.fill();
+            }
+            // böse Augenbrauen
+            ctx.strokeStyle = boss.dark;
+            ctx.lineWidth = 4;
+            ctx.beginPath();
+            ctx.moveTo(k * 30, -96 + bob);
+            ctx.lineTo(k * 8, -90 + bob);
+            ctx.stroke();
+          }
+          // Maul mit Zähnen
+          const open = boss.mouth > 0 ? 16 : stun ? 4 : 8;
+          ctx.fillStyle = "#3a0f18";
+          ctx.beginPath();
+          ctx.ellipse(0, -46 + bob, 24, open, 0, 0, 7);
+          ctx.fill();
+          ctx.fillStyle = "#fff";
+          for (let k = -2; k <= 2; k++) {
+            ctx.beginPath();
+            ctx.moveTo(k * 9 - 4, -46 - open + 2 + bob);
+            ctx.lineTo(k * 9 + 4, -46 - open + 2 + bob);
+            ctx.lineTo(k * 9, -46 - open + 9 + bob);
+            ctx.fill();
+          }
+          // ✗ auf dem Bauch
+          ctx.fillStyle = "rgba(214,51,43,.9)";
+          ctx.font = "900 20px system-ui,sans-serif";
+          ctx.textAlign = "center";
+          ctx.fillText("✗", 0, -14 + bob);
+          ctx.restore();
+          ctx.globalAlpha = 1;
+          // Sterne über dem Kopf, wenn das Monster betäubt ist
+          if (stun) {
+            ctx.font = "16px system-ui,sans-serif";
+            for (let k = 0; k < 3; k++) {
+              const a = t * 3 + (k * Math.PI * 2) / 3;
+              ctx.fillText("⭐", bx + Math.cos(a) * 34, GROUND - 140 + Math.sin(a) * 8);
+            }
+          }
+          // Treffer-Strahl: Wortstern von der Figur zum Monster
+          if (boss.beam && boss.phase === "hurt") {
+            const k = Math.min(1, boss.t / 0.45),
+              sx = P.x + 11 + (bx - P.x - 11) * k,
+              sy = P.y + 10 + (GROUND - 70 - P.y - 10) * k - Math.sin(k * Math.PI) * 60;
+            if (k < 1) {
+              ctx.font = "26px system-ui,sans-serif";
+              ctx.fillText("🌟", sx, sy);
+            } else if (boss.t < 0.9) {
+              ctx.font = "800 20px system-ui,sans-serif";
+              ctx.lineWidth = 4;
+              ctx.strokeStyle = "#fff";
+              ctx.strokeText("TREFFER!", bx, GROUND - 150);
+              ctx.fillStyle = "#d6332b";
+              ctx.fillText("TREFFER!", bx, GROUND - 150);
+            }
+          }
+          // fliegende falsche Wörter
+          for (const sh of boss.shots) {
+            ctx.font = "800 12px system-ui,sans-serif";
+            const w = Math.max(28, ctx.measureText(sh.word).width + 16);
+            const wy = sh.high ? Math.sin(sh.r * 2) * 3 : 0;
+            ctx.save();
+            ctx.translate(0, wy);
+            ctx.fillStyle = sh.high ? "#7b3fd0" : "#d6332b";
+            roundRect(sh.x - w / 2, sh.y - 11, w, 22, 11);
+            ctx.fill();
+            if (sh.high) {
+              // kleine Flügel: dieses Wort fliegt oben vorbei
+              ctx.fillStyle = "rgba(255,255,255,.9)";
+              ctx.beginPath();
+              ctx.ellipse(sh.x + w / 2 - 2, sh.y - 12, 8, 4, -0.5, 0, 7);
+              ctx.fill();
+            }
+            ctx.strokeStyle = sh.high ? "#3e1a7a" : "#7a1410";
+            ctx.lineWidth = 2;
+            ctx.stroke();
+            ctx.fillStyle = "#fff";
+            ctx.textAlign = "center";
+            ctx.fillText(sh.word, sh.x, sh.y + 4);
+            ctx.restore();
+          }
+        }
+        function bossBar() {
+          if (inCh || boss.phase === "wait" || boss.phase === "gone") return;
+          // links oben (rechts sind Pause und Ton); unter den Booster-Anzeigen
+          const hasB = B.joker > 0 || B.magnet > 0 || B.stern > 0 || B.doppel > 0,
+            w = Math.min(220, VW - 150),
+            x = 16,
+            y = hasB ? 70 : 32;
+          ctx.fillStyle = "rgba(23,32,54,.82)";
+          roundRect(x - 8, y - 22, w + 16, 40, 12);
+          ctx.fill();
+          ctx.fillStyle = "#fff";
+          ctx.font = "800 13px system-ui,sans-serif";
+          ctx.textAlign = "center";
+          ctx.fillText("👾 " + boss.name, x + w / 2, y - 6);
+          ctx.fillStyle = "rgba(255,255,255,.2)";
+          roundRect(x, y + 2, w, 9, 5);
+          ctx.fill();
+          ctx.fillStyle = "#ff5a4e";
+          roundRect(x, y + 2, Math.max(0, (w * boss.hp) / boss.max), 9, 5);
+          ctx.fill();
+        }
         /* ---------- Fahrzeuge und Themen-Welten ---------- */
         function wheel(x, y, r, t) {
           ctx.fillStyle = "#1d2230";
@@ -2777,6 +3166,12 @@
           B,
           get score() {
             return score;
+          },
+          // nur für automatische Tests
+          give: (type) => give(type, P.x, P.y),
+          boss,
+          get qMode() {
+            return qMode;
           },
         };
       }
