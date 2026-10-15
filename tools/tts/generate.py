@@ -74,6 +74,7 @@ def http(url, body, headers, tries=6):
                 return r.read()
         except urllib.error.HTTPError as e:
             msg = e.read()[:300].decode('utf-8', 'replace')
+            if e.code == 429 and ('per day' in msg.lower() or 'PerDay' in msg): raise RuntimeError(f'HTTP 429: {msg}')
             if e.code in (429, 500, 502, 503) and i < tries - 1:
                 time.sleep(min(90, 15 * (i + 1))); continue
             raise RuntimeError(f'HTTP {e.code}: {msg}')
@@ -126,8 +127,9 @@ def synth_eleven(text, role, wav):
 def synth_gemini(text, role, wav):
     voice = voice_for('gemini', role)
     models = [m for m in [os.environ.get('GEMINI_TTS_MODEL'), 'gemini-2.5-flash-preview-tts', 'gemini-2.5-pro-preview-tts'] if m]
-    prompt = ('Lies den folgenden deutschen Text natürlich, freundlich und in ruhigem, deutlichem Tempo vor, '
-              'wie ein Muttersprachler im Alltag. Lies nur den Text vor:\n\n' + text)
+    prompt = ('Sprich den folgenden deutschen Text wie ein echter Mensch im Alltag: natürlich, locker, mit lebendiger '
+              'Betonung und kleinen natürlichen Pausen, in ruhigem, gut verständlichem Tempo für Deutschlernende. '
+              'Lies genau diesen Text, ohne etwas hinzuzufügen:\n\n' + text)
     body = {'contents': [{'parts': [{'text': prompt}]}],
             'generationConfig': {'responseModalities': ['AUDIO'],
                                  'speechConfig': {'voiceConfig': {'prebuiltVoiceConfig': {'voiceName': voice}}}}}
@@ -202,10 +204,70 @@ def build(entry, eng, target):
         run(['ffmpeg', '-y', '-loglevel', 'error', '-f', 'concat', '-safe', '0', '-i', lst,
              '-af', 'loudnorm=I=-17:TP=-1.5:LRA=11', '-ar', '44100', '-ac', '1', '-codec:a', 'libmp3lame', '-b:a', '96k', target])
 
+def engines():
+    """Anbieter-Kette: ElevenLabs bis das Monatskontingent leer ist, danach Gemini (natürlich, kostenlos), sonst Google/Piper."""
+    chain = [k for k, env in (('elevenlabs', 'ELEVENLABS_API_KEY'), ('gemini', 'GEMINI_API_KEY')) if os.environ.get(env)]
+    if not chain: chain = [engine()]
+    return chain
+
+# Bessere Anbieter ersetzen ältere Aufnahmen; Piper ersetzt keine Premium-Aufnahmen.
+RANK = {'piper': 1, 'google': 2, 'gemini': 2.5, 'elevenlabs': 3}
+
+def prio(item):
+    """Zuerst Prüfungs-Hörtexte (neueste Sätze zuerst), dann Beispiele, dann kurze Sätze."""
+    k = item[0]['key']
+    if k.startswith(('dtz-', 'b2-')):
+        pre, nr, idx = (k.split('-') + ['0', '0'])[:3]
+        return (0, -int(nr) if nr.isdigit() else 0, idx)
+    return (1 if k.startswith('ex-') else 2, 0, k)
+
+def run_engine(eng, entries, files, usage, month, start):
+    todo = []
+    for e in entries:
+        sig = signature(e, eng)
+        cur = files.get(e['key'])
+        have = os.path.exists(os.path.join(OUT, e['key'] + '.mp3'))
+        if not FORCE and have and cur:
+            if cur.get('sig') == sig: continue
+            same_text = cur.get('text') == signature(e, 'text')
+            if same_text and cur.get('fx') == e.get('fx') and RANK.get(cur.get('engine'), 0) >= RANK[eng]: continue
+        todo.append((e, sig))
+    todo.sort(key=prio)
+    used = usage.get(month, {}).get(eng, 0)
+    limit = int(os.environ.get('TTS_MONTHLY_LIMIT_' + eng.upper()) or MONTHLY_LIMIT.get(eng, 10**12))
+    done, errors = 0, []
+    print(f'Anbieter: {eng} · {len(entries)} Einträge · {len(todo)} zu erzeugen', flush=True)
+    for e, sig in todo:
+        if time.time() - start > MAX_SECONDS:
+            print('Zeitbudget erreicht – der Rest folgt beim nächsten Lauf.'); break
+        chars = sum(len((s.get('say') or s['text']).strip()) for s in e['segments'])
+        if eng != 'piper' and used + chars > limit:
+            print(f'Monatsgrenze erreicht ({used} von {limit} Zeichen).'); break
+        try:
+            if eng != 'piper': used += chars  # auch fehlgeschlagene Versuche zählen vorsichtshalber mit
+            build(e, eng, os.path.join(OUT, e['key'] + '.mp3'))
+            files[e['key']] = {'sig': sig, 'engine': eng, 'text': signature(e, 'text'), **({'fx': e['fx']} if e.get('fx') else {})}
+            done += 1
+            print(f'  ✓ {e["key"]}', flush=True)
+        except Exception as ex:
+            msg = str(ex)
+            errors.append({'key': e['key'], 'error': msg[:300]})
+            print(f'  ✗ {e["key"]}: {msg[:200]}', flush=True)
+            if 'quota_exceeded' in msg:
+                used = max(used, limit)  # Kontingent beim Anbieter aufgebraucht – nächsten Monat weiter
+                print('Kontingent beim Anbieter aufgebraucht.'); break
+            if eng == 'gemini' and ('RESOURCE_EXHAUSTED' in msg or 'HTTP 429' in msg):
+                print('Tageskontingent von Gemini erreicht – morgen geht es weiter.'); break
+            if eng != 'piper' and len(errors) >= 3 and done == 0:
+                print('Zu viele Fehler mit dem Anbieter – Abbruch.'); break
+    if eng != 'piper':
+        usage.setdefault(month, {})[eng] = used
+    return {'engine': eng, 'created': done, 'open': len(todo) - done, 'chars_this_month': used,
+            'monthly_limit': limit, 'errors': errors[:20]}
+
 def main():
     os.makedirs(OUT, exist_ok=True)
     entries = json.load(open(MANIFEST, encoding='utf-8'))['entries']
-    eng = engine()
     try: index = json.load(open(INDEX, encoding='utf-8'))
     except Exception: index = {'files': {}}
     files = index.get('files', {})
@@ -215,63 +277,21 @@ def main():
             files.pop(k, None)
             try: os.remove(os.path.join(OUT, k + '.mp3'))
             except FileNotFoundError: pass
-    # Bessere Anbieter ersetzen ältere Aufnahmen; Piper ersetzt keine Premium-Aufnahmen.
-    rank = {'piper': 1, 'gemini': 2, 'google': 2, 'elevenlabs': 3}
-    todo = []
-    for e in entries:
-        sig = signature(e, eng)
-        cur = files.get(e['key'])
-        have = os.path.exists(os.path.join(OUT, e['key'] + '.mp3'))
-        if not FORCE and have and cur:
-            if cur.get('sig') == sig: continue
-            same_text = cur.get('text') == signature(e, 'text')
-            if same_text and cur.get('fx') == e.get('fx') and rank.get(cur.get('engine'), 0) >= rank[eng]: continue
-        todo.append((e, sig))
-    # Reihenfolge: zuerst Prüfungs-Hörtexte (neueste Sätze zuerst), dann Beispiele, dann kurze Sätze.
-    def prio(item):
-        k = item[0]['key']
-        if k.startswith(('dtz-', 'b2-')):
-            pre, nr, idx = (k.split('-') + ['0', '0'])[:3]
-            return (0, -int(nr) if nr.isdigit() else 0, idx)
-        return (1 if k.startswith('ex-') else 2, 0, k)
-    todo.sort(key=prio)
     month = time.strftime('%Y-%m', time.gmtime())
     try: usage = json.load(open(USAGE, encoding='utf-8'))
     except Exception: usage = {}
-    used = usage.get(month, {}).get(eng, 0)
-    limit = int(os.environ.get('TTS_MONTHLY_LIMIT') or MONTHLY_LIMIT.get(eng, 10**12))
-    start, done, errors = time.time(), 0, []
-    print(f'Anbieter: {eng} · {len(entries)} Einträge · {len(todo)} zu erzeugen', flush=True)
-    for e, sig in todo:
-        if time.time() - start > MAX_SECONDS:
-            print('Zeitbudget erreicht – der Rest folgt beim nächsten Lauf.'); break
-        chars = sum(len((s.get('say') or s['text']).strip()) for s in e['segments'])
-        if eng != 'piper' and used + chars > limit:
-            print(f'Monatsgrenze erreicht ({used} von {limit} Zeichen) – der Rest folgt nächsten Monat.'); break
-        try:
-            if eng != 'piper': used += chars  # auch fehlgeschlagene Versuche zählen vorsichtshalber mit
-            build(e, eng, os.path.join(OUT, e['key'] + '.mp3'))
-            files[e['key']] = {'sig': sig, 'engine': eng, 'text': signature(e, 'text'), **({'fx': e['fx']} if e.get('fx') else {})}
-            done += 1
-            print(f'  ✓ {e["key"]}', flush=True)
-        except Exception as ex:
-            errors.append({'key': e['key'], 'error': str(ex)[:300]})
-            print(f'  ✗ {e["key"]}: {ex}', flush=True)
-            if 'quota_exceeded' in str(ex):
-                used = max(used, limit)  # Kontingent beim Anbieter aufgebraucht – nächsten Monat weiter
-                print('Kontingent beim Anbieter aufgebraucht – der Rest folgt nächsten Monat.'); break
-            if eng != 'piper' and len(errors) >= 3 and done == 0:
-                print('Zu viele Fehler mit dem Anbieter – Abbruch.'); break
-    if eng != 'piper':
-        usage.setdefault(month, {})[eng] = used
-        json.dump(usage, open(USAGE, 'w', encoding='utf-8'), indent=1)
-    engines = sorted({v.get('engine') for v in files.values()})
-    json.dump({'updated': time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime()), 'engines': engines,
+    start, runs = time.time(), []
+    for eng in engines():
+        runs.append(run_engine(eng, entries, files, usage, month, start))
+        if time.time() - start > MAX_SECONDS: break
+    json.dump(usage, open(USAGE, 'w', encoding='utf-8'), indent=1)
+    used_engines = sorted({v.get('engine') for v in files.values()})
+    json.dump({'updated': time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime()), 'engines': used_engines,
                'files': {k: {'v': v['sig'], 'engine': v.get('engine'), 'sig': v['sig'], 'text': v.get('text'), **({'fx': v['fx']} if v.get('fx') else {})} for k, v in sorted(files.items())}},
               open(INDEX, 'w', encoding='utf-8'), ensure_ascii=False, indent=0)
-    json.dump({'run': time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime()), 'engine': eng, 'created': done,
-               'open': len(todo) - done, 'chars_this_month': used, 'monthly_limit': limit, 'errors': errors[:40]}, open(STATUS, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
-    print(f'Fertig: {done} erzeugt, {len(errors)} Fehler, {len(todo) - done} offen.')
+    json.dump({'run': time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime()), 'runs': runs},
+              open(STATUS, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
+    print('Fertig: ' + ' · '.join(f"{r['engine']} {r['created']} erzeugt, {r['open']} offen" for r in runs))
 
 if __name__ == '__main__':
     sys.exit(main())
