@@ -318,6 +318,7 @@
     ["nl", "Nederlands – Niederländisch"],
   ];
   const KEY = "dm-witz-lang";
+  const VERSION = "20261015b";
   const esc = (s) =>
     String(s).replace(
       /[&<>"]/g,
@@ -356,11 +357,33 @@
       .split("\n")
       .map((l) => `<span>${esc(l)}</span>`)
       .join("");
-  const trUrl = (j, lang) =>
-    "https://translate.google.com/?sl=de&tl=" +
-    encodeURIComponent(lang) +
-    "&op=translate&text=" +
-    encodeURIComponent(`${j.t}\n\n(Warum ist das lustig? ${j.why})`);
+  // Prüfwert über den Witztext (gleich wie in tools/witz/translate.py)
+  const fnv = (str) => {
+    let h = 0x811c9dc5;
+    for (const b of new TextEncoder().encode(str)) {
+      h ^= b;
+      h = Math.imul(h, 0x01000193) >>> 0;
+    }
+    return h.toString(16).padStart(8, "0");
+  };
+  const RTL = ["ar", "fa", "fa-AF", "ps", "ckb", "ur"];
+  const cache = {};
+  const loadLang = (lang) =>
+    (cache[lang] ||= fetch(`witz-i18n/${lang}.json?v=${VERSION}`)
+      .then((r) => (r.ok ? r.json() : {}))
+      .catch(() => ({})));
+  // Ersatz: KI-Übersetzung direkt im Browser (Chrome mit eingebautem Übersetzer), falls die Datei fehlt
+  async function onDevice(j, lang) {
+    try {
+      if (!("Translator" in self)) return null;
+      const a = await self.Translator.availability({ sourceLanguage: "de", targetLanguage: lang });
+      if (a === "unavailable") return null;
+      const tr = await self.Translator.create({ sourceLanguage: "de", targetLanguage: lang });
+      return { t: await tr.translate(j.t), why: await tr.translate(j.why) };
+    } catch {
+      return null;
+    }
+  }
   const dateLabel = (iso) =>
     new Date(iso + "T12:00:00").toLocaleDateString("de-DE", {
       weekday: "long",
@@ -372,7 +395,7 @@
     const lang = getLang();
     return `<div class="wz-tools">
       <label class="wz-lang"><span class="wz-sr">Sprache für die Übersetzung</span><select data-wz-lang aria-label="Sprache für die Übersetzung">${LANGS.map(([c, n]) => `<option value="${c}"${c === lang ? " selected" : ""}>${esc(n)}</option>`).join("")}</select></label>
-      <a class="wz-btn wz-tr" data-wz-tr="${id}" href="${esc(trUrl(j, lang))}" target="_blank" rel="noopener noreferrer">🌍 Übersetzen</a>
+      <button type="button" class="wz-btn wz-tr" data-wz-tr="${id}" aria-expanded="false">🌍 Übersetzen</button>
       <button type="button" class="wz-btn wz-quiet" data-wz-share="${id}">📤 Teilen</button>
     </div>`;
   }
@@ -382,6 +405,7 @@
       <p class="wz-text">${lines(j.t)}</p>
       <details class="wz-why"><summary>🤔 Warum ist das lustig?</summary><p>${esc(j.why)}</p></details>
       ${tools(j, id)}
+      <div class="wz-out" aria-live="polite" hidden></div>
     </div>`;
   }
 
@@ -411,11 +435,34 @@
         <div class="wz-head"><span class="wz-sun" aria-hidden="true">😄</span><h2>Heute, ${esc(dateLabel(d.iso))}</h2><span class="wz-lvl">${j.lvl}</span></div>
         ${block(j, "d" + d.n, true)}
       </div>
-      <p class="wz-note">Tipp: Viele Witze sind Wortspiele. In der Übersetzung ist das Spiel mit den Wörtern oft weg – deshalb übersetzen wir die Erklärung gleich mit.</p>
+      <p class="wz-note">Tipp: Viele Witze sind Wortspiele. In der Übersetzung ist das Spiel mit den Wörtern oft weg – deshalb steht die Erklärung gleich mit dabei. Die Übersetzungen wurden mit KI erstellt.</p>
       <h2 class="wz-past-h">Die Witze der letzten Tage</h2>
       <div class="wz-past">${past.map((x) => `<article class="wz-card is-small"><div class="wz-head"><h3>${esc(dateLabel(x.iso))}</h3><span class="wz-lvl">${x.j.lvl}</span></div>${block(x.j, "d" + x.n)}</article>`).join("")}</div>
       <p class="wz-foot">Morgen gibt es einen neuen Witz. Schau wieder vorbei! 🙂</p>
     </section>`;
+  }
+
+  async function translate(btn) {
+    const box = btn.closest(".wz-joke"),
+      out = box.querySelector(".wz-out"),
+      sel = box.querySelector("[data-wz-lang]"),
+      lang = sel.value,
+      j = jokeFor(+btn.dataset.wzTr.slice(1)),
+      name = sel.selectedOptions[0]?.textContent || lang;
+    out.hidden = false;
+    out.removeAttribute("dir");
+    out.innerHTML = `<p class="wz-wait">⏳ Übersetze …</p>`;
+    btn.setAttribute("aria-expanded", "true");
+    let tr = (await loadLang(lang))[fnv(j.t)];
+    if (!tr) tr = await onDevice(j, lang);
+    if (!tr) {
+      out.innerHTML = `<p class="wz-wait">Für diese Sprache ist die Übersetzung noch nicht fertig. Bitte versuche es später noch einmal – oder wähle eine andere Sprache.</p>`;
+      return;
+    }
+    const rtl = RTL.includes(lang);
+    out.innerHTML = `<p class="wz-out-h">🌍 ${esc(name)} <span>· mit KI übersetzt</span></p>
+      <div class="wz-out-b"${rtl ? ' dir="rtl"' : ""} lang="${esc(lang)}"><p class="wz-text">${lines(tr.t)}</p>${tr.why ? `<p class="wz-out-why">🤔 ${esc(tr.why)}</p>` : ""}</div>
+      <button type="button" class="wz-close" data-wz-close>Übersetzung schließen</button>`;
   }
 
   // Ereignisse (gelten für Startseite und Witz-Seite)
@@ -423,12 +470,23 @@
     const s = e.target.closest("[data-wz-lang]");
     if (!s) return;
     setLang(s.value);
+    loadLang(s.value);
     document.querySelectorAll("[data-wz-lang]").forEach((x) => {
       x.value = s.value;
     });
-    document.querySelectorAll("[data-wz-tr]").forEach((a) => {
-      a.href = trUrl(jokeFor(+a.dataset.wzTr.slice(1)), s.value);
-    });
+    // offene Übersetzung gleich in der neuen Sprache zeigen
+    const btn = s.closest(".wz-joke")?.querySelector("[data-wz-tr]");
+    if (btn && btn.getAttribute("aria-expanded") === "true") translate(btn);
+  });
+  document.addEventListener("click", (e) => {
+    const t = e.target.closest("[data-wz-tr]");
+    if (t) return translate(t);
+    const c = e.target.closest("[data-wz-close]");
+    if (c) {
+      const box = c.closest(".wz-joke");
+      box.querySelector(".wz-out").hidden = true;
+      box.querySelector("[data-wz-tr]").setAttribute("aria-expanded", "false");
+    }
   });
   document.addEventListener("click", async (e) => {
     const b = e.target.closest("[data-wz-share]");
@@ -474,6 +532,14 @@
 .wz-btn.wz-quiet{background:#fff;color:#2341B5}
 .wz-btn:focus-visible,.wz-lang select:focus-visible{outline:3px solid #2341B5;outline-offset:2px}
 .wz-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.wz-out{margin-top:12px;background:#fff;border:2px solid #c9d4ff;border-radius:16px;padding:12px 14px}
+.wz-out-h{margin:0 0 6px;font-weight:800;color:#2341B5;font-size:15px}
+.wz-out-h span{font-weight:600;color:#5b6680}
+.wz-out .wz-text{margin:0 0 6px}
+.wz-out-why{margin:6px 0 0;color:#3b4258;font-size:15.5px;line-height:1.5}
+.wz-out-b[dir=rtl]{text-align:right;font-size:1.05em}
+.wz-wait{margin:0;color:#5b6680}
+.wz-close{margin-top:8px;background:none;border:0;padding:6px 0;min-height:36px;color:#2341B5;font:700 14px var(--dm-font);text-decoration:underline;cursor:pointer}
 .wz-intro{max-width:62ch}
 .wz-note{color:#5b6680;font-size:15px;margin:10px 0 0}
 .wz-past-h{margin:26px 0 10px}
@@ -484,7 +550,7 @@
     document.head.appendChild(st);
   }
 
-  window.DMWitz = { today, card, count: JOKES.length };
+  window.DMWitz = { today, card, count: JOKES.length, all: JOKES, langs: LANGS };
   window.DM ||= {};
   DM.routes ||= {};
   DM.routes.witz = () => page();

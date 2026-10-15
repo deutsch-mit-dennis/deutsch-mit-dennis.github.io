@@ -1,0 +1,38 @@
+# Übersetzt die Witze des Tages (witz.js) mit KI in alle Sprachen → witz-i18n/*.json
+name: Witze übersetzen
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'witz.js'
+      - 'tools/witz/translate.py'
+      - '.github/workflows/witz.yml'
+permissions:
+  contents: write
+concurrency:
+  group: repo-bot
+  cancel-in-progress: false
+jobs:
+  translate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Übersetzen
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GOOGLE_TTS_API_KEY: ${{ secrets.GOOGLE_TTS_API_KEY }}
+        run: python3 tools/witz/translate.py
+      - name: Speichern
+        run: |
+          git config user.name "witz-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add witz-i18n
+          git diff --cached --quiet && exit 0
+          git commit -m "Witze übersetzt"
+          for i in 1 2 3 4 5; do git pull --rebase -q && git push && exit 0; sleep 8; done
+          exit 1
