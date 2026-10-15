@@ -17,6 +17,10 @@
 .sp-lino-panel{margin-top:12px}
 .sp-lino-jump{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;min-height:64px;border:0;border-radius:18px;background:linear-gradient(180deg,#ff9a3c,#e5622b);color:#fff;font:800 20px var(--dm-font);box-shadow:0 5px 0 #b8461c;cursor:pointer;touch-action:manipulation;-webkit-user-select:none;user-select:none;-webkit-touch-callout:none;-webkit-tap-highlight-color:transparent}
 .sp-lino-jump:active{transform:translateY(3px);box-shadow:0 2px 0 #b8461c}
+.sp-lino-jump.is-q{background:linear-gradient(180deg,#ffd84a,#f5a800);color:#3d2a06;box-shadow:0 6px 0 #b77d00}
+.sp-lino-jump.is-now{animation:linoQ .5s ease-in-out infinite alternate}
+@keyframes linoQ{from{transform:scale(1)}to{transform:scale(1.04)}}
+@media (prefers-reduced-motion:reduce){.sp-lino-jump.is-now{animation:none}}
 .sp-lino-hint{margin:8px 0 0;text-align:center;color:#5b6680;font-size:14px}
 .sp-play.sp-lino{scroll-margin-top:96px}
 @media (max-height:520px){.sp-play.sp-lino{scroll-margin-top:74px}.sp-lino-wrap canvas{max-height:calc(100vh - 240px);min-height:140px}.sp-lino-hint{display:none}.sp-lino-panel{margin-top:8px}.sp-lino-jump{min-height:46px;font-size:18px}.sp-lino .sp-hud{margin-bottom:4px}}
@@ -1106,7 +1110,10 @@
           inCh = false,
           userPause = false,
           flash = 0,
-          bannerT = 0;
+          bannerT = 0,
+          qHold = 0,
+          qTarget = null, // ❓-Kiste, unter der automatisch gesprungen wird
+          qMode = ""; // Zustand des Sprungknopfs: "", "near", "under"
         const wrong = [],
           wrongItems = [],
           fx = [],
@@ -1154,8 +1161,9 @@
         runPanel();
 
         function runPanel() {
-          panel.innerHTML = `<button type="button" class="sp-lino-jump" aria-label="Springen"><span aria-hidden="true">⤒</span> Springen</button>
-            <p class="sp-lino-hint">Tippe aufs Spielfeld oder den Knopf · Lange drücken = höher · ❓-Kisten von unten anstoßen · Am Computer: Leertaste, P = Pause</p>`;
+          panel.innerHTML = `<button type="button" class="sp-lino-jump" aria-label="Springen"><span aria-hidden="true">⤒</span> <span class="sp-lino-jl">Springen</span></button>
+            <p class="sp-lino-hint">Tippe aufs Spielfeld oder den Knopf · Lange drücken = höher · ❓-Kiste: tippe direkt auf die Kiste oder auf den gelben Knopf · Am Computer: Leertaste, P = Pause</p>`;
+          qMode = "";
           const jb = panel.querySelector(".sp-lino-jump");
           jb.addEventListener("pointerdown", (e) => {
             e.preventDefault();
@@ -1174,8 +1182,53 @@
           });
         }
 
+        /* ❓-Kisten-Hilfe fürs Handy: Kiste vor der Figur finden; Sprung genau darunter auslösen */
+        const qCenter = (pl) => pl.x + pl.q * T + T / 2;
+        function nextQ(range) {
+          const cx = P.x + P.w / 2;
+          let best = null;
+          for (const pl of lvl.plats) {
+            if (pl.used || pl.q < 0) continue;
+            if (inCh ? pl.x < lvl.ch.x0 : pl.x > lvl.mainLen) continue;
+            const qc = qCenter(pl);
+            if (cx > pl.x + pl.w - 6 || qc - cx > range) continue;
+            if (!best || pl.x < best.x) best = pl;
+          }
+          return best;
+        }
+        const underQ = (pl) => {
+          const cx = P.x + P.w / 2;
+          return cx > pl.x + 4 && cx < pl.x + pl.w - 4;
+        };
+        function setQMode(m) {
+          if (m === qMode) return;
+          qMode = m;
+          const jb = panel.querySelector(".sp-lino-jump");
+          if (!jb) return;
+          jb.classList.toggle("is-q", m !== "");
+          jb.classList.toggle("is-now", m === "under");
+          const l = jb.querySelector(".sp-lino-jl");
+          if (l) l.textContent = m === "under" ? "❓ Jetzt springen!" : m === "near" ? "❓ Kiste öffnen" : "Springen";
+          jb.setAttribute("aria-label", m ? "Springen und die Fragezeichen-Kiste öffnen" : "Springen");
+        }
+        function updateQ() {
+          if (state !== "run") return setQMode("");
+          const pl = qTarget && !qTarget.used ? qTarget : nextQ(3.2 * T);
+          if (!pl) return setQMode("");
+          setQMode(underQ(pl) ? "under" : "near");
+        }
         function press() {
           if (state !== "run") return;
+          // Kiste kurz vor der Figur: nicht zu früh springen, sondern genau unter dem ❓ (automatisch)
+          if (P.onGround && !qTarget) {
+            const pl = nextQ(3.2 * T);
+            if (pl && !underQ(pl) && P.y + P.h > pl.y + CRATE_H) {
+              // kurz tippen = Kiste öffnen; lange drücken = normaler hoher Sprung (z. B. auf die Kiste)
+              qTarget = pl;
+              qHold = 0;
+              return;
+            }
+          }
           held = true;
           holdT = 0;
           if (P.onGround || coyote > 0) {
@@ -1200,6 +1253,26 @@
         cv.addEventListener("pointerdown", (e) => {
           e.preventDefault();
           if (state === "pause" && userPause) return togglePause(false);
+          // Tipp direkt auf eine ❓-Kiste: die Figur springt automatisch darunter hoch
+          if (state === "run") {
+            const r = cv.getBoundingClientRect(),
+              k = Math.min(r.width / VW, r.height / VH),
+              ox = (r.width - VW * k) / 2,
+              oy = (r.height - VH * k) / 2,
+              wx = (e.clientX - r.left - ox) / k + camX,
+              wy = (e.clientY - r.top - oy) / k,
+              cx = P.x + P.w / 2;
+            const pl = lvl.plats.find((q) => !q.used && q.q >= 0 && wx > q.x - 16 && wx < q.x + q.w + 16 && wy > q.y - 40 && wy < q.y + CRATE_H + 40 && cx < q.x + q.w - 6);
+            if (pl) {
+              if (underQ(pl) && (P.onGround || coyote > 0)) press();
+              else if (P.y + P.h > pl.y + CRATE_H) {
+                qTarget = pl;
+                held = false;
+                say("👆 Gleich springt deine Figur unter die ❓-Kiste!", 1.6);
+              } else press();
+              return;
+            }
+          }
           press();
         });
         cv.addEventListener("pointerup", release);
@@ -1271,6 +1344,7 @@
           P.onGround = true;
           P.inv = 1.6;
           P.dbl = false;
+          qTarget = null;
           B.magnet = B.stern = B.doppel = 0;
           state = "run";
         }
@@ -1484,6 +1558,28 @@
             state = "goal";
             finishLevel();
           }
+          // Automatischer Sprung unter der gewählten ❓-Kiste
+          if (qTarget && held && P.onGround && (qHold += dt) > 0.2) {
+            qTarget = null;
+            P.vy = -JUMP * 0.78;
+            P.onGround = false;
+            coyote = 0;
+            holdT = 0;
+            SND.play("jump");
+          }
+          if (qTarget) {
+            const cx = P.x + P.w / 2;
+            if (qTarget.used || cx > qTarget.x + qTarget.w - 6) qTarget = null;
+            else if (P.onGround && cx >= Math.min(qCenter(qTarget), qTarget.x + qTarget.w - 14) - 6) {
+              qTarget = null;
+              P.vy = -JUMP * 0.78;
+              P.onGround = false;
+              coyote = 0;
+              holdT = 1; // kurzer Sprung reicht – der Kopf stößt an
+              SND.play("jump");
+            }
+          }
+          updateQ();
           camX = inCh
             ? Math.max(lvl.ch.x0, Math.min(lvl.ch.x1 - VW, P.x - VW * 0.3))
             : Math.max(0, Math.min(lvl.mainLen - VW, P.x - VW * 0.3));
