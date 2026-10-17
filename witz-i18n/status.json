@@ -47,14 +47,13 @@
   "mk",
   "ha",
   "yo",
-  "ig"
- ],
- "errors": {},
- "open": [
+  "ig",
   "sw",
   "ne",
   "nl"
  ],
+ "errors": {},
+ "open": [],
  "models": [
   "gemini-3.8-flash",
   "gemini-3.7-flash",
@@ -62,30 +61,9 @@
   "gemini-3.5-flash"
  ],
  "seconds": {
-  "pt": 54,
-  "fr": 59,
-  "vi": 58,
-  "ur": 62,
-  "hi": 61,
-  "bn": 60,
-  "ta": 64,
-  "zh-CN": 56,
-  "ja": 58,
-  "ko": 62,
-  "th": 73,
-  "tl": 60,
-  "ka": 63,
-  "hy": 73,
-  "az": 68,
-  "uz": 64,
-  "kk": 67,
-  "hu": 57,
-  "cs": 60,
-  "sk": 57,
-  "mk": 57,
-  "ha": 71,
-  "yo": 96,
-  "ig": 80
+  "sw": 62,
+  "ne": 63,
+  "nl": 50
  },
  "model": "gemini-3.8-flash"
 }
