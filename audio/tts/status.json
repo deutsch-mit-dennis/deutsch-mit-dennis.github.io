@@ -1,5 +1,5 @@
 {
- "run": "2026-10-16T08:51:34Z",
+ "run": "2026-10-17T08:20:08Z",
  "runs": [
   {
    "engine": "elevenlabs",
@@ -11,18 +11,22 @@
   },
   {
    "engine": "gemini",
-   "created": 149,
-   "open": 150,
-   "chars_this_month": 44099,
+   "created": 147,
+   "open": 3,
+   "chars_this_month": 56678,
    "monthly_limit": 200000,
    "errors": [
     {
-     "key": "t6434922f",
+     "key": "t90861b00",
      "error": "'content'"
     },
     {
-     "key": "t7f99f46c",
-     "error": "HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n"
+     "key": "t9ab2d56e",
+     "error": "'content'"
+    },
+    {
+     "key": "tf3a38593",
+     "error": "'content'"
     }
    ]
   }
