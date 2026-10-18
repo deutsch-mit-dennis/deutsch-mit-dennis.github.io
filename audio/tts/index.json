@@ -1,5 +1,5 @@
 {
-"updated": "2026-10-17T08:20:08Z",
+"updated": "2026-10-18T08:21:24Z",
 "engines": [
 "elevenlabs",
 "gemini",
@@ -2181,9 +2181,9 @@
 "text": "42f8add0cf"
 },
 "tf3a38593": {
-"v": "22325fdac6",
-"engine": "google",
-"sig": "22325fdac6",
+"v": "ab1db1681c",
+"engine": "gemini",
+"sig": "ab1db1681c",
 "text": "2f0f0a5fe4"
 },
 "tf45af5c2": {
