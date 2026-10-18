@@ -1,42 +1,37 @@
 {
  "hinweis": "Zusammengefasste Besucherzahlen (Cloudflare Web Analytics, ohne Cookies). Automatisch erzeugt.",
- "stand": "2026-10-17T08:28:18.514Z",
- "tag": "2026-10-16",
+ "stand": "2026-10-18T08:46:30.992Z",
+ "tag": "2026-10-17",
  "gestern": {
-  "besuche": 35,
-  "seitenaufrufe": 84
+  "besuche": 8,
+  "seitenaufrufe": 25
  },
  "letzte7Tage": {
-  "besuche": 135,
-  "seitenaufrufe": 510
+  "besuche": 131,
+  "seitenaufrufe": 466
  },
  "herkunft": [
   {
    "name": "deutsch-mit-dennis.de",
    "besuche": 0,
-   "aufrufe": 375
+   "aufrufe": 335
   },
   {
    "name": "(direkt)",
-   "besuche": 130,
-   "aufrufe": 130
+   "besuche": 127,
+   "aufrufe": 127
   },
   {
    "name": "www.google.com",
    "besuche": 4,
    "aufrufe": 4
-  },
-  {
-   "name": "dzianis-dennis.github.io",
-   "besuche": 1,
-   "aufrufe": 1
   }
  ],
  "laender": [
   {
    "name": "DE",
-   "besuche": 116,
-   "aufrufe": 488
+   "besuche": 114,
+   "aufrufe": 446
   },
   {
    "name": "US",
@@ -49,17 +44,12 @@
    "aufrufe": 6
   },
   {
-   "name": "FI",
-   "besuche": 2,
-   "aufrufe": 2
-  },
-  {
    "name": "FR",
    "besuche": 2,
    "aufrufe": 2
   },
   {
-   "name": "CA",
+   "name": "FI",
    "besuche": 1,
    "aufrufe": 1
   },
@@ -72,13 +62,13 @@
  "geraete": [
   {
    "name": "mobile",
-   "besuche": 99,
-   "aufrufe": 341
+   "besuche": 97,
+   "aufrufe": 299
   },
   {
    "name": "desktop",
-   "besuche": 34,
-   "aufrufe": 128
+   "besuche": 32,
+   "aufrufe": 126
   },
   {
    "name": "tablet",
@@ -89,8 +79,8 @@
  "seiten": [
   {
    "name": "/",
-   "besuche": 135,
-   "aufrufe": 510
+   "besuche": 131,
+   "aufrufe": 466
   }
  ],
  "verlauf": {
@@ -133,6 +123,10 @@
   "2026-10-16": {
    "besuche": 35,
    "seitenaufrufe": 84
+  },
+  "2026-10-17": {
+   "besuche": 8,
+   "seitenaufrufe": 25
   }
  }
 }
