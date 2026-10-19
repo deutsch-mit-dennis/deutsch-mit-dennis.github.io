@@ -202,7 +202,7 @@
         const subjPos = speech || sentStart(d) || (toks[d - 1] && /^(und|aber|oder|denn|weil|dass|wenn|ob|obwohl|damit|bevor|nachdem)$/i.test(toks[d - 1].t));
         if (subjPos && pl !== null && cand && det && det.w && (pl ? DETPL : DETSG).test(det.t)
           && !(toks[d - 1] && toks[d - 1].w && (PREP.test(toks[d - 1].t) || L.forms.has(toks[d - 1].t.toLowerCase())))
-          && !before.some(x => MODAL.test(x.t) || PERC.test(x.t))
+          && !before.some(x => MODAL.test(x.t)) && !(before.some(x => PERC.test(x.t)) && cand.some(([, p]) => p === 3))
           && !(n2 && n2.w && (PRON[n2.t.toLowerCase()] || MODAL.test(n2.t) || /^(hat|haben|ist|sind|wird|werden)$/i.test(n2.t)))) {
           const need = pl ? 5 : 2;
           if (!cand.some(([, p]) => p === need)) {
