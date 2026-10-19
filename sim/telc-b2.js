@@ -729,8 +729,8 @@
               h: "Text 3",
               lines: [
                 {
-                  s: "m",
-                  t: "Und jetzt die Verkehrsmeldungen. Auf der A40 Richtung Dortmund ist zwischen Essen-Frohnhausen und Essen-Zentrum nach einem Unfall mit einem Lkw nur ein Fahrstreifen frei. Der Stau ist inzwischen sechs Kilometer lang. Die Baustelle bei Bochum-Stahlhausen ist dagegen seit heute Morgen aufgehoben, dort läuft der Verkehr wieder normal.",
+                  s: "n",
+                  t: "Und jetzt der Verkehr. Auf der A vierzig Richtung Dortmund ist zwischen Essen-Frohnhausen und Essen-Zentrum nach einem Unfall mit einem Lastwagen nur ein Fahrstreifen frei. Der Stau dort ist inzwischen sechs Kilometer lang. Gute Nachrichten dagegen aus Bochum: Die Baustelle bei Bochum-Stahlhausen ist seit heute Morgen aufgehoben, da läuft der Verkehr wieder normal. Fahren Sie vorsichtig!",
                 },
               ],
             },
@@ -739,7 +739,7 @@
               lines: [
                 {
                   s: "f2",
-                  t: "Liebe Kundinnen und Kunden, wegen unserer jährlichen Inventur schließt unser Haus heute ausnahmsweise bereits um 18 Uhr. Ab morgen sind wir wieder wie gewohnt von 9.30 bis 20 Uhr für Sie da. Nutzen Sie bis Ladenschluss noch unsere Angebote im Erdgeschoss: Alle Wintermäntel sind heute 30 Prozent günstiger!",
+                  t: "Liebe Kundinnen und Kunden, wegen unserer jährlichen Inventur schließt unser Haus heute ausnahmsweise schon um achtzehn Uhr. Ab morgen sind wir wieder wie gewohnt von halb zehn bis zwanzig Uhr für Sie da. Nutzen Sie bis Ladenschluss noch unsere Angebote im Erdgeschoss: Alle Wintermäntel sind heute dreißig Prozent günstiger! Vielen Dank für Ihren Einkauf.",
                 },
               ],
             },
@@ -748,7 +748,7 @@
               lines: [
                 {
                   s: "m2",
-                  t: "Ein wichtiger Hinweis für alle, die heute Abend zum Open-Air-Konzert in den Stadtpark wollten: Wegen der angekündigten Gewitter wird das Konzert auf Sonntag, 20 Uhr, verschoben. Die gekauften Eintrittskarten behalten ihre Gültigkeit. Wer am Sonntag keine Zeit hat, bekommt sein Geld an den bekannten Vorverkaufsstellen zurück.",
+                  t: "Und noch ein wichtiger Hinweis für alle, die heute Abend zum Open-Air-Konzert in den Stadtpark wollten. Wegen der angekündigten Gewitter wird das Konzert verschoben, und zwar auf Sonntag, zwanzig Uhr. Ihre Eintrittskarten behalten ihre Gültigkeit. Und wer am Sonntag keine Zeit hat, bekommt sein Geld an den bekannten Vorverkaufsstellen zurück.",
                 },
               ],
             },
@@ -771,7 +771,7 @@
               au: 2,
               q: "Auf der A40 bei Essen gibt es Stau wegen einer Baustelle.",
               a: 1,
-              why: "Der Stau entsteht „nach einem Unfall mit einem Lkw“; die Baustelle bei Bochum ist aufgehoben.",
+              why: "Der Stau entsteht „nach einem Unfall mit einem Lastwagen“; die Baustelle bei Bochum ist aufgehoben.",
             },
             {
               au: 3,
@@ -783,7 +783,7 @@
               au: 4,
               q: "Die Eintrittskarten gelten auch für den neuen Termin.",
               a: 0,
-              why: "„Die gekauften Eintrittskarten behalten ihre Gültigkeit.“",
+              why: "„Ihre Eintrittskarten behalten ihre Gültigkeit.“",
             },
           ],
         },
@@ -866,10 +866,10 @@
             "Wählen Sie eines der beiden Themen und sprechen Sie etwa anderthalb Minuten zusammenhängend darüber. Ihre Partnerin / Ihr Partner hört zu und stellt Ihnen danach Fragen. Anschließend tauschen Sie die Rollen. In der Simulation stellt Ihnen die Partnerin die Fragen unten.",
           task: "Thema A: Ein Ereignis, das mein Leben verändert hat\nThema B: Ein Buch oder Film, der mich beeindruckt hat\n\nSprechen Sie über:\n– worum es geht bzw. was passiert ist\n– warum es für Sie wichtig war\n– was sich dadurch verändert hat bzw. was Sie daraus gelernt haben\n– ob Sie es anderen empfehlen würden",
           prompts: [
-            "Wie alt waren Sie damals?",
-            "Was war für Sie in dieser Zeit am schwierigsten?",
-            "Wie haben die Menschen in Ihrer Umgebung darauf reagiert?",
-            "Würden Sie heute etwas anders machen?",
+            "Danke, das war wirklich interessant. Darf ich mal fragen, wie alt Sie damals waren?",
+            "Hm, und was war für Sie in dieser Zeit am schwierigsten?",
+            "Und wie haben die Leute in Ihrer Umgebung darauf reagiert, also Familie oder Freunde?",
+            "Eine letzte Frage noch: Würden Sie heute etwas anders machen?",
           ],
           redemittel: [
             "Ich möchte heute über … sprechen.",
@@ -906,10 +906,10 @@
           ],
           task: "Sollte die Viertagewoche bei vollem Lohn für alle Beschäftigten eingeführt werden? Diskutieren Sie: Welche Vorteile und Nachteile sehen Sie? Für wen wäre das Modell geeignet, für wen nicht? Welche Erfahrungen haben Sie selbst oder Menschen in Ihrem Umfeld?",
           prompts: [
-            "Aber wer soll das bezahlen? Gerade kleine Firmen können sich das doch gar nicht leisten.",
-            "In der Pflege oder im Einzelhandel funktioniert das nicht – da braucht man die Leute jeden Tag.",
-            "Wenn man in vier Tagen genauso viel schaffen muss, wird der Stress doch nur größer.",
-            "Ich finde, jeder sollte selbst entscheiden können, an wie vielen Tagen er arbeitet.",
+            "Na ja, aber wer soll das bezahlen? Gerade kleine Firmen können sich das doch gar nicht leisten.",
+            "Und in der Pflege oder im Einzelhandel? Da funktioniert das nicht, da braucht man die Leute jeden Tag.",
+            "Also, ich weiß nicht. Wenn man in vier Tagen genauso viel schaffen muss, wird der Stress doch nur größer, oder?",
+            "Hm, ich finde ehrlich gesagt, jeder sollte selbst entscheiden können, an wie vielen Tagen er arbeitet.",
           ],
           redemittel: [
             "Meiner Meinung nach … / Ich bin der Ansicht, dass …",
@@ -941,10 +941,10 @@
             "Sie sollen mit Ihrer Partnerin / Ihrem Partner gemeinsam etwas planen. Machen Sie Vorschläge, reagieren Sie auf die Vorschläge Ihrer Partnerin / Ihres Partners und einigen Sie sich am Ende.",
           task: "Ihre Kollegin Frau Albers geht nach 25 Jahren in der Firma in den Ruhestand. Sie und Ihre Partnerin / Ihr Partner sollen eine Abschiedsfeier organisieren.\n\nPlanen Sie gemeinsam:\n– Wann und wo soll die Feier stattfinden?\n– Wer wird eingeladen?\n– Essen und Getränke\n– Geschenk\n– Programm (Rede, Überraschung …)\n– Wer übernimmt welche Aufgaben?",
           prompts: [
-            "Wie wäre es, wenn wir in der Kantine feiern? Das kostet nichts.",
-            "Ich würde nur unsere Abteilung einladen – sonst wird es zu groß.",
-            "Als Geschenk könnten wir ihr einfach einen Gutschein schenken.",
-            "Wer hält eigentlich die Rede? Ich bin darin nicht so gut.",
+            "Also, wie wär's, wenn wir einfach in der Kantine feiern? Das kostet nichts.",
+            "Hm, ich würde nur unsere Abteilung einladen. Sonst wird's zu groß, oder?",
+            "Und als Geschenk? Wir könnten ihr doch einfach einen Gutschein schenken.",
+            "Ach ja, wer hält eigentlich die Rede? Ich bin darin ehrlich gesagt nicht so gut.",
           ],
           redemittel: [
             "Ich schlage vor, dass wir …",
@@ -1276,7 +1276,7 @@
               lines: [
                 {
                   s: "m",
-                  t: "Ich fahre seit zwei Jahren mit dem Fahrrad zur Arbeit, auch im Winter. Nur wenn's glatt ist, nehme ich den Bus – da bin ich vorsichtig.",
+                  t: "Also, ich fahr seit zwei Jahren mit dem Fahrrad zur Arbeit, auch im Winter. Nur wenn's glatt ist, nehm ich den Bus. Da bin ich dann doch vorsichtig.",
                 },
               ],
             },
@@ -1285,7 +1285,7 @@
               lines: [
                 {
                   s: "f",
-                  t: "Homeoffice? Ist nichts für mich. Ich brauche die Kolleginnen um mich herum, sonst fühle ich mich ganz schnell allein.",
+                  t: "Homeoffice? Nee, ist nichts für mich. Ich brauch die Kolleginnen um mich herum, sonst fühl ich mich ganz schnell allein.",
                 },
               ],
             },
@@ -1302,7 +1302,7 @@
               au: 1,
               q: "Die Frau arbeitet lieber im Büro.",
               a: 0,
-              why: "„Homeoffice? Ist nichts für mich. Ich brauche die Kolleginnen um mich herum.“",
+              why: "„Homeoffice? Nee, ist nichts für mich. Ich brauch die Kolleginnen um mich herum.“",
             },
           ],
         },
@@ -1335,16 +1335,16 @@
               lines: [
                 {
                   s: "f",
-                  t: "Frau Novak, Sie haben vor drei Jahren ein Repair-Café gegründet. Wie kam es dazu?",
+                  t: "Frau Novak, Sie haben vor drei Jahren ein Repair-Café gegründet. Wie kam's denn dazu?",
                 },
                 {
                   s: "f2",
-                  t: "Also, eigentlich durch Zufall. Mein Toaster war kaputt, und im Geschäft hat man mir gesagt, eine Reparatur lohnt sich nicht. Ein Nachbar hat ihn dann in zehn Minuten repariert. Da dachte ich: So etwas brauchen wir öfter.",
+                  t: "Also, eigentlich durch Zufall. Mein Toaster war kaputt, und im Geschäft hieß es, ach, eine Reparatur lohnt sich nicht. Ein Nachbar hat ihn dann in zehn Minuten repariert. Und da dachte ich: So was brauchen wir öfter.",
                 },
-                { s: "f", t: "Und wer kommt zu Ihnen?" },
+                { s: "f", t: "Und wer kommt so zu Ihnen?" },
                 {
                   s: "f2",
-                  t: "Ganz gemischt. Viele denken, das sind nur Rentner, aber inzwischen kommen auch viele Studierende – die haben oft wenig Geld und wollen nicht ständig was Neues kaufen.",
+                  t: "Ganz gemischt, ehrlich. Viele denken, das sind nur Rentner, aber inzwischen kommen auch viele Studierende. Die haben oft wenig Geld und wollen nicht ständig was Neues kaufen.",
                 },
               ],
             },
@@ -1392,7 +1392,7 @@
               lines: [
                 {
                   s: "n",
-                  t: "Sehr geehrte Fahrgäste, wegen einer Signalstörung fällt die S-Bahn nach Düsseldorf heute aus. Bitte nutzen Sie den Regionalexpress um 9.12 Uhr von Gleis 3.",
+                  t: "Sehr geehrte Fahrgäste, wegen einer Signalstörung fällt die S-Bahn nach Düsseldorf heute aus. Bitte nutzen Sie den Regionalexpress um neun Uhr zwölf von Gleis drei. Ich wiederhole: Fahrgäste nach Düsseldorf nutzen bitte den Regionalexpress um neun Uhr zwölf, Gleis drei.",
                 },
               ],
             },
@@ -1401,7 +1401,7 @@
               lines: [
                 {
                   s: "f",
-                  t: "Hallo, hier ist die Mailbox vom Fitnessstudio Aktiv. Wir haben montags bis freitags von 6 bis 22 Uhr geöffnet, am Wochenende von 8 bis 20 Uhr.",
+                  t: "Hallo und herzlich willkommen beim Fitnessstudio Aktiv. Leider ist gerade niemand erreichbar. Unsere Öffnungszeiten: montags bis freitags von sechs bis zweiundzwanzig Uhr, am Wochenende von acht bis zwanzig Uhr. Bis bald!",
                 },
               ],
             },
@@ -1412,13 +1412,13 @@
               au: 0,
               q: "Fahrgäste nach Düsseldorf sollen einen anderen Zug nehmen.",
               a: 0,
-              why: "„Bitte nutzen Sie den Regionalexpress um 9.12 Uhr.“",
+              why: "„Bitte nutzen Sie den Regionalexpress um neun Uhr zwölf.“",
             },
             {
               au: 1,
               q: "Das Fitnessstudio ist am Wochenende geschlossen.",
               a: 1,
-              why: "Am Wochenende ist es von 8 bis 20 Uhr geöffnet.",
+              why: "Am Wochenende ist es „von acht bis zwanzig Uhr“ geöffnet.",
             },
           ],
         },
