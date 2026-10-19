@@ -867,8 +867,28 @@
   function exam() {
     const card = (url, part, title, desc) => `<a class="dm-exam" href="${url}"><span class="dm-tag">${part}</span><b>${title}</b><span>${desc}</span></a>`;
     page(`${crumbs([['Prüfungstraining']])}
-      <div class="dm-head"><h1>Prüfungstraining</h1><p class="dm-lead">Eigene Übungsaufgaben im Stil der Prüfungen – mit Mustertexten und Checklisten. Keine offiziellen Prüfungsaufgaben.</p></div>
-      <aside class="dm-card dm-exam-new"><b>⏱ Neu: Prüfungsmodus.</b> In jeder Aufgabe läuft auf Wunsch die Uhr wie in der Prüfung. Beim Schreiben zählt ein Wortzähler mit, beim Sprechen kannst du dich aufnehmen und anhören.</aside>
+      <div class="dm-head"><h1>Prüfungstraining</h1><p class="dm-lead">Eigene Übungsaufgaben im Stil der Prüfungen – DTZ, Leben in Deutschland, telc B1 und B2, DTB B1 und B2. Mit Mustertexten, Checklisten und kompletten Simulationen. Keine offiziellen Prüfungsaufgaben.</p></div>
+      <section class="dm-exam-block dm-g-sun dm-sim-block" aria-labelledby="sim-h">
+        <div class="dm-exam-head"><h2 id="sim-h">⏱ Neu: Prüfungssimulationen</h2><p>Komplette Prüfung mit echter Zeit für jeden Teil – mit Punkten, Bestehensregel und allen Lösungen</p><a href="#simulation">Alle Simulationen</a></div>
+        <div class="dm-examgrid">
+          ${card('#simulation/dtz', 'g.a.s.t. · A2–B1', 'DTZ', 'Hören, Lesen, Schreiben, Sprechen · ca. 2 Std.')}
+          ${card('#simulation/lid', 'BAMF-Katalog', 'Leben in Deutschland', '33 Fragen · 60 Min.')}
+          ${card('#simulation/telc-b1', 'telc · B1', 'telc Deutsch B1', 'Zertifikat Deutsch · ca. 3 Std.')}
+          ${card('#simulation/dtb-b1', 'telc · B1 Beruf', 'DTB B1', 'Deutsch-Test für den Beruf · ca. 2 Std.')}
+          ${card('#simulation/telc-b2', 'telc · B2', 'telc Deutsch B2', 'Allgemein · ca. 3 Std.')}
+          ${card('#simulation/dtb-b2', 'telc · B2 Beruf', 'DTB B2', 'Deutsch-Test für den Beruf · ca. 2,5 Std.')}
+        </div>
+      </section>
+      <section class="dm-exam-block dm-g-sky" aria-labelledby="telc-h">
+        <div class="dm-exam-head"><h2 id="telc-h">Gezielte Vorbereitung: telc B1, telc B2 und DTB</h2><p>Aufbau und Zeiten, Strategie und Fallen für jeden Teil, Mini-Übungen, Redemittel, Lernplan</p><a href="#vorbereitung">Alle Prüfungen</a></div>
+        <div class="dm-examgrid">
+          ${card('#vorbereitung/telc-b1', 'B1 allgemein', 'telc Deutsch B1', 'Lesen, Sprachbausteine, Hören, Brief, Sprechen')}
+          ${card('#vorbereitung/telc-b2', 'B2 allgemein', 'telc Deutsch B2', 'Formelle E-Mail, Diskussion, Sprachbausteine')}
+          ${card('#vorbereitung/dtb-b1', 'B1 Beruf', 'DTB B1', 'Kunden-E-Mail, Notiz, Gespräche im Team')}
+          ${card('#vorbereitung/dtb-b2', 'B2 Beruf', 'DTB B2', 'Beschwerde, Telefonnotiz, Forumsbeitrag')}
+        </div>
+      </section>
+      <aside class="dm-card dm-exam-new"><b>Tipp:</b> Auch in jeder einzelnen Trainingsaufgabe läuft auf Wunsch die Uhr wie in der Prüfung – mit Wortzähler beim Schreiben und Aufnahme beim Sprechen.</aside>
       <section class="dm-exam-block dm-g-sun" aria-labelledby="dtz-h">
         <div class="dm-exam-head"><h2 id="dtz-h">DTZ – Deutsch-Test für Zuwanderer</h2><p>A2–B1 · am Ende des Integrationskurses</p><a href="#lernweg/dtz">Lernweg DTZ öffnen</a></div>
         <div class="dm-examgrid">
@@ -1398,8 +1418,8 @@
   }
   /* ---------- Router ---------- */
   const legacyRoute = window.route;
-  const NAV = { '': 'start', lernweg: 'wege', wegweiser: 'wege', lernen: 'lernen', lektion: 'lernen', wortschatz: 'lernen', wort: 'lernen', ueben: 'ueben', schreiben: 'ueben', hoeren: 'ueben', lesen: 'ueben', kahoot: 'ueben', challenge: 'spiele', spiele: 'spiele', bild: 'pruefung', pruefung: 'pruefung', training: 'pruefung', orientierungskurs: 'pruefung', lid: 'pruefung', quellen: 'pruefung', videos: 'videos', 'ueber-mich': 'ueber', material: 'material', lernpakete: 'pakete', lieder: 'lieder' };
-  const TITLES = { '': 'Deutsch lernen mit Dennis', lernweg: 'Mein Lernweg', wegweiser: 'Welcher Weg passt?', lernen: 'Lektionen', lektion: 'Lektion', wortschatz: 'Wortschatz', wort: 'Wortkarte', ueben: 'Üben', schreiben: 'Schreib-Bausteine', hoeren: 'Hören', lesen: 'Lesen', kahoot: 'Kahoot-Quiz', challenge: 'Tages-Challenge', spiele: 'Lernspiele', bild: 'Bild beschreiben', pruefung: 'Prüfungstraining', training: 'Prüfungstraining', orientierungskurs: 'Leben in Deutschland', lid: 'LiD-Trainer', quellen: 'Prüfungsinfos & Quellen', videos: 'Videos', 'ueber-mich': 'Über mich', impressum: 'Impressum', datenschutz: 'Datenschutz', pinnwand: 'Deine Meinung', material: 'Materialien', lernpakete: 'Lernpakete', lieder: 'Deutsch mit Liedern', musik: 'Musik zum Lernen' };
+  const NAV = { '': 'start', lernweg: 'wege', wegweiser: 'wege', lernen: 'lernen', lektion: 'lernen', wortschatz: 'lernen', wort: 'lernen', ueben: 'ueben', schreiben: 'ueben', hoeren: 'ueben', lesen: 'ueben', kahoot: 'ueben', challenge: 'spiele', spiele: 'spiele', bild: 'pruefung', pruefung: 'pruefung', training: 'pruefung', orientierungskurs: 'pruefung', lid: 'pruefung', quellen: 'pruefung', simulation: 'pruefung', vorbereitung: 'pruefung', videos: 'videos', 'ueber-mich': 'ueber', material: 'material', lernpakete: 'pakete', lieder: 'lieder' };
+  const TITLES = { '': 'Deutsch lernen mit Dennis', lernweg: 'Mein Lernweg', wegweiser: 'Welcher Weg passt?', lernen: 'Lektionen', lektion: 'Lektion', wortschatz: 'Wortschatz', wort: 'Wortkarte', ueben: 'Üben', schreiben: 'Schreib-Bausteine', hoeren: 'Hören', lesen: 'Lesen', kahoot: 'Kahoot-Quiz', challenge: 'Tages-Challenge', spiele: 'Lernspiele', bild: 'Bild beschreiben', pruefung: 'Prüfungstraining', training: 'Prüfungstraining', orientierungskurs: 'Leben in Deutschland', lid: 'LiD-Trainer', quellen: 'Prüfungsinfos & Quellen', simulation: 'Prüfungssimulationen', vorbereitung: 'Gezielte Vorbereitung', videos: 'Videos', 'ueber-mich': 'Über mich', impressum: 'Impressum', datenschutz: 'Datenschutz', pinnwand: 'Deine Meinung', material: 'Materialien', lernpakete: 'Lernpakete', lieder: 'Deutsch mit Liedern', musik: 'Musik zum Lernen' };
   const OWN = {
     '': () => home(),
     lernweg: p => p[1] ? pathPage(p[1]) : paths(),
@@ -1471,7 +1491,7 @@
     revealCards();
     // Weitermachen merken: nur Lernseiten
     const routeStr = p.filter(Boolean).join('/');
-    if (['lektion', 'wortschatz', 'ueben', 'hoeren', 'training', 'lernweg', 'orientierungskurs', 'lid', 'lieder', 'challenge', 'bild', 'spiele'].includes(p[0]) && routeStr) {
+    if (['lektion', 'wortschatz', 'ueben', 'hoeren', 'training', 'lernweg', 'orientierungskurs', 'lid', 'lieder', 'challenge', 'bild', 'spiele', 'vorbereitung', 'simulation'].includes(p[0]) && routeStr && p[2] !== 'run' && p[2] !== 'ergebnis') {
       mem.visited[routeStr] = Date.now();
       mem.last = { route: routeStr, title: (h1 || TITLES[p[0]] || '').replace(/\.$/, '').slice(0, 48), ts: Date.now() };
       save();

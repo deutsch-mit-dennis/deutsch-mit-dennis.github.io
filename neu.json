@@ -1,6 +1,8 @@
 {
   "note": "Neu auf der Seite – neueste Einträge oben. Wird vom Redaktionsplan (geplante Aufgaben) ergänzt.",
   "items": [
+    { "date": "2026-10-19", "type": "neu", "title": "Neu: 6 Prüfungssimulationen mit echter Zeitvorgabe – DTZ, Leben in Deutschland, telc B1, DTB B1, telc B2 und DTB B2. Mit Punkten, Bestehensregel und allen Lösungen", "link": "#simulation" },
+    { "date": "2026-10-19", "type": "neu", "title": "Neu: Gezielte Vorbereitung auf telc B1, telc B2, DTB B1 und DTB B2 – Strategien für jeden Prüfungsteil, Mini-Übungen, Redemittel und Lernplan", "link": "#vorbereitung" },
     { "date": "2026-10-19", "type": "neu", "title": "Lino läuft wird größer: 14 Welten (ICE, Supermarkt, Arztpraxis, Bürgeramt, Büro, Vorstellungsgespräch), Tageslauf, Shop, Abzeichen und neue Fragen zum Hören, Artikel und Satzbau", "link": "#spiele/lino" },
     { "date": "2026-10-19", "type": "neu", "title": "Neu: Playlist – alle 40 Lieder am Stück hören, auch nach Niveau und in zufälliger Reihenfolge", "link": "#lieder/playlist/alle" },
     { "date": "2026-10-19", "type": "neu", "title": "Neues Arbeitsblatt: Nomen-Verb-Verbindungen – Beruf und Behörden (B2)", "link": "#material" },
