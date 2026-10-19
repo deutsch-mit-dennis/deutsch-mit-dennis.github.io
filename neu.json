@@ -1,6 +1,7 @@
 {
   "note": "Neu auf der Seite – neueste Einträge oben. Wird vom Redaktionsplan (geplante Aufgaben) ergänzt.",
   "items": [
+    { "date": "2026-10-19", "type": "neu", "title": "Neues Arbeitsblatt: Nomen-Verb-Verbindungen – Beruf und Behörden (B2)", "link": "#material" },
     { "date": "2026-10-19", "type": "hoeren", "title": "Neuer DTZ-Hörtext: Durchsage in der Straßenbahn (Übungssatz 5)", "link": "#hoeren/dtz-5/1" },
     { "date": "2026-10-19", "type": "hoeren", "title": "Neuer B2-Hörtext: Mailbox aus der Buchhaltung (Übungssatz 4)", "link": "#hoeren/b2-4/1" },
     { "date": "2026-10-19", "type": "uebung", "title": "Sprechen A2: In der Kita – heute holt jemand anderes ab", "link": "#ueben/sprechen/A2/4" },
@@ -29,7 +30,6 @@
     { "date": "2026-10-07", "type": "neu", "title": "7 neue Merkblätter: Rechtsstaat, Sozialstaat und NS-Zeit (Orientierungskurs)", "link": "#orientierungskurs" },
     { "date": "2026-10-07", "type": "neu", "title": "Rundgang mit Dennis: die Seite in 30 Sekunden", "link": "#" },
     { "date": "2026-10-06", "type": "neu", "title": "Deine Meinung: Lob, Wünsche, Kritik und Fragen als Zettel", "link": "#pinnwand" },
-    { "date": "2026-10-06", "type": "sprechen", "title": "Sprech-Coach: einsprechen und automatisch korrigieren lassen", "link": "#ueben/sprechen/A1" },
-    { "date": "2026-10-05", "type": "lied", "title": "25 eigene Lieder von A1 bis C1 – mit Aufgaben und PDF", "link": "#lieder" }
+    { "date": "2026-10-06", "type": "sprechen", "title": "Sprech-Coach: einsprechen und automatisch korrigieren lassen", "link": "#ueben/sprechen/A1" }
   ]
 }
