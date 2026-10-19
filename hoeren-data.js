@@ -933,6 +933,32 @@
 "why": "Frau Schulte sagt: „Sie können es dann also ab morgen, ab 14 Uhr, bei uns abholen.“ Heute ist das Medikament noch nicht da, und am Mittwochnachmittag ist die Apotheke geschlossen."
 }
 ]
+},
+{
+"id": "dtz-5-02",
+"teil": "Teil 2",
+"type": "Durchsage in der Straßenbahn",
+"situation": "Du fährst in Essen mit der Straßenbahn.",
+"segments": [
+{
+"voice": "m2",
+"text": "Liebe Fahrgäste, eine wichtige Information für alle, die heute in Richtung Rüttenscheid fahren wollen: Wegen einer Baustelle fährt die Linie 107 heute nur bis zum Hauptbahnhof. Bitte steigen Sie dort aus und nehmen Sie den Ersatzbus. Die Busse fahren alle 10 Minuten, und zwar nicht an der Straßenbahnhaltestelle, sondern am Ausgang Freiheit, auf der Südseite. Ihre Fahrkarte gilt auch im Ersatzbus. Ab Montag, dem 26. Oktober, fährt die Linie 107 wieder auf der normalen Strecke. Wir bitten um Ihr Verständnis.",
+"say": "Liebe Fahrgäste, eine wichtige Information für alle, die heute in Richtung Rüttenscheid fahren wollen: Wegen einer Baustelle fährt die Linie hundertsieben heute nur bis zum Hauptbahnhof. Bitte steigen Sie dort aus und nehmen Sie den Ersatzbus. Die Busse fahren alle zehn Minuten, und zwar nicht an der Straßenbahnhaltestelle, sondern am Ausgang Freiheit, auf der Südseite. Ihre Fahrkarte gilt auch im Ersatzbus. Ab Montag, dem sechsundzwanzigsten Oktober, fährt die Linie hundertsieben wieder auf der normalen Strecke. Wir bitten um Ihr Verständnis."
+}
+],
+"text": "Liebe Fahrgäste, eine wichtige Information für alle, die heute in Richtung Rüttenscheid fahren wollen: Wegen einer Baustelle fährt die Linie 107 heute nur bis zum Hauptbahnhof. Bitte steigen Sie dort aus und nehmen Sie den Ersatzbus. Die Busse fahren alle 10 Minuten, und zwar nicht an der Straßenbahnhaltestelle, sondern am Ausgang Freiheit, auf der Südseite. Ihre Fahrkarte gilt auch im Ersatzbus. Ab Montag, dem 26. Oktober, fährt die Linie 107 wieder auf der normalen Strecke. Wir bitten um Ihr Verständnis.",
+"questions": [
+{
+"q": "Was sollen Fahrgäste nach Rüttenscheid heute machen?",
+"options": [
+"Am Hauptbahnhof in einen Ersatzbus umsteigen.",
+"An der Straßenbahnhaltestelle auf die nächste Bahn warten.",
+"Am Hauptbahnhof eine neue Fahrkarte kaufen."
+],
+"answer": 0,
+"why": "Die Linie 107 fährt nur bis zum Hauptbahnhof: „Bitte steigen Sie dort aus und nehmen Sie den Ersatzbus.“ Der Bus fährt nicht an der Straßenbahnhaltestelle ab, und die Fahrkarte gilt auch im Bus."
+}
+]
 }
 ]
 },
@@ -2004,6 +2030,41 @@
 ],
 "answer": 1,
 "why": "Herr Albers braucht „bis spätestens Freitag die genaue Teilnehmerzahl“. Von 60 Personen war das Hotel nur ausgegangen."
+}
+]
+},
+{
+"id": "b2-4-02",
+"teil": "Teil 1",
+"type": "Mailbox",
+"situation": "Die Buchhaltung ruft Herrn Petrović an.",
+"segments": [
+{
+"voice": "f2",
+"text": "Ja, hallo Herr Petrović, hier ist Sabine Kröger aus der Buchhaltung. Es geht um Ihre Reisekostenabrechnung für die Messe in Hannover. Die ist bei mir angekommen, danke, aber, ähm, da fehlt leider noch was: Fürs Hotel hab ich nur die Buchungsbestätigung, nicht die eigentliche Rechnung mit der Mehrwertsteuer. Ohne die kann ich das nicht freigeben. Die Taxiquittungen sind alle da, das passt so. Sie müssen mir das Original auch nicht vorbeibringen – einfach einscannen und per Mail an mich schicken, das reicht völlig. Und noch was Wichtiges: Alles, was bis zum 5. November bei uns ist, wird mit dem Novembergehalt ausgezahlt. Was danach kommt, geht erst in den Dezember. Bei Fragen erreichen Sie mich unter der Durchwahl 418. Also, schönen Tag noch!",
+"say": "Ja, hallo Herr Petrović, hier ist Sabine Kröger aus der Buchhaltung. Es geht um Ihre Reisekostenabrechnung für die Messe in Hannover. Die ist bei mir angekommen, danke, aber, ähm, da fehlt leider noch was: Fürs Hotel hab ich nur die Buchungsbestätigung, nicht die eigentliche Rechnung mit der Mehrwertsteuer. Ohne die kann ich das nicht freigeben. Die Taxiquittungen sind alle da, das passt so. Sie müssen mir das Original auch nicht vorbeibringen – einfach einscannen und per Mail an mich schicken, das reicht völlig. Und noch was Wichtiges: Alles, was bis zum fünften November bei uns ist, wird mit dem Novembergehalt ausgezahlt. Was danach kommt, geht erst in den Dezember. Bei Fragen erreichen Sie mich unter der Durchwahl vier eins acht. Also, schönen Tag noch!"
+}
+],
+"text": "Ja, hallo Herr Petrović, hier ist Sabine Kröger aus der Buchhaltung. Es geht um Ihre Reisekostenabrechnung für die Messe in Hannover. Die ist bei mir angekommen, danke, aber, ähm, da fehlt leider noch was: Fürs Hotel hab ich nur die Buchungsbestätigung, nicht die eigentliche Rechnung mit der Mehrwertsteuer. Ohne die kann ich das nicht freigeben. Die Taxiquittungen sind alle da, das passt so. Sie müssen mir das Original auch nicht vorbeibringen – einfach einscannen und per Mail an mich schicken, das reicht völlig. Und noch was Wichtiges: Alles, was bis zum 5. November bei uns ist, wird mit dem Novembergehalt ausgezahlt. Was danach kommt, geht erst in den Dezember. Bei Fragen erreichen Sie mich unter der Durchwahl 418. Also, schönen Tag noch!",
+"questions": [
+{
+"q": "Die Reisekostenabrechnung von Herrn Petrović ist vollständig.",
+"options": [
+"richtig",
+"falsch"
+],
+"answer": 1,
+"why": "Es fehlt die Hotelrechnung mit der Mehrwertsteuer: „Ohne die kann ich das nicht freigeben.“ Nur die Taxiquittungen sind vollständig."
+},
+{
+"q": "Was soll Herr Petrović tun?",
+"options": [
+"Die Hotelrechnung im Original in die Buchhaltung bringen.",
+"Die Hotelrechnung einscannen und per Mail schicken.",
+"Die Taxiquittungen noch einmal einreichen."
+],
+"answer": 1,
+"why": "Frau Kröger sagt: „einfach einscannen und per Mail an mich schicken, das reicht völlig.“ Das Original braucht sie nicht, und die Taxiquittungen sind schon da."
 }
 ]
 }

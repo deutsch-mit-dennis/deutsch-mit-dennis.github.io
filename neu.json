@@ -1,6 +1,10 @@
 {
   "note": "Neu auf der Seite – neueste Einträge oben. Wird vom Redaktionsplan (geplante Aufgaben) ergänzt.",
   "items": [
+    { "date": "2026-10-19", "type": "hoeren", "title": "Neuer DTZ-Hörtext: Durchsage in der Straßenbahn (Übungssatz 5)", "link": "#hoeren/dtz-5/1" },
+    { "date": "2026-10-19", "type": "hoeren", "title": "Neuer B2-Hörtext: Mailbox aus der Buchhaltung (Übungssatz 4)", "link": "#hoeren/b2-4/1" },
+    { "date": "2026-10-19", "type": "uebung", "title": "Sprechen A2: In der Kita – heute holt jemand anderes ab", "link": "#ueben/sprechen/A2/4" },
+    { "date": "2026-10-19", "type": "uebung", "title": "Schreiben A2: Schicht tauschen – Nachricht an einen Kollegen", "link": "#ueben/schreiben/A2/5" },
     { "date": "2026-10-15", "type": "neu", "title": "Lino läuft: Am Ende jeder Welt wartet jetzt ein Fehlermonster – weiche den falschen Wörtern aus und besiege es mit richtigen Antworten", "link": "#spiele/lino" },
     { "date": "2026-10-15", "type": "neu", "title": "Neu: Witz des Tages – jeden Tag ein deutscher Witz mit Erklärung und Übersetzung in 50 Sprachen", "link": "#witz" },
     { "date": "2026-10-15", "type": "neu", "title": "2 neue Merkblätter Leben in Deutschland: Modul 6 – Teilung, Mauerbau und Wiedervereinigung und Modul 7 – Deutschland in Europa und die EU", "link": "#orientierungskurs" },
@@ -26,7 +30,6 @@
     { "date": "2026-10-07", "type": "neu", "title": "Rundgang mit Dennis: die Seite in 30 Sekunden", "link": "#" },
     { "date": "2026-10-06", "type": "neu", "title": "Deine Meinung: Lob, Wünsche, Kritik und Fragen als Zettel", "link": "#pinnwand" },
     { "date": "2026-10-06", "type": "sprechen", "title": "Sprech-Coach: einsprechen und automatisch korrigieren lassen", "link": "#ueben/sprechen/A1" },
-    { "date": "2026-10-05", "type": "lied", "title": "25 eigene Lieder von A1 bis C1 – mit Aufgaben und PDF", "link": "#lieder" },
-    { "date": "2026-10-04", "type": "hoeren", "title": "Hörtraining: 4 DTZ- und 3 DTB-B2-Übungssätze", "link": "#hoeren" }
+    { "date": "2026-10-05", "type": "lied", "title": "25 eigene Lieder von A1 bis C1 – mit Aufgaben und PDF", "link": "#lieder" }
   ]
 }

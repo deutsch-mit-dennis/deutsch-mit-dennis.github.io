@@ -3944,6 +3944,27 @@
      "text": "Ja, gern! Ich bin den ganzen Tag zu Hause. Klingeln Sie einfach am Abend."
     }
    ]
+  },
+  {
+   "key": "dtz-5-02",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Liebe Fahrgäste, eine wichtige Information für alle, die heute in Richtung Rüttenscheid fahren wollen: Wegen einer Baustelle fährt die Linie 107 heute nur bis zum Hauptbahnhof. Bitte steigen Sie dort aus und nehmen Sie den Ersatzbus. Die Busse fahren alle 10 Minuten, und zwar nicht an der Straßenbahnhaltestelle, sondern am Ausgang Freiheit, auf der Südseite. Ihre Fahrkarte gilt auch im Ersatzbus. Ab Montag, dem 26. Oktober, fährt die Linie 107 wieder auf der normalen Strecke. Wir bitten um Ihr Verständnis.",
+     "say": "Liebe Fahrgäste, eine wichtige Information für alle, die heute in Richtung Rüttenscheid fahren wollen: Wegen einer Baustelle fährt die Linie hundertsieben heute nur bis zum Hauptbahnhof. Bitte steigen Sie dort aus und nehmen Sie den Ersatzbus. Die Busse fahren alle zehn Minuten, und zwar nicht an der Straßenbahnhaltestelle, sondern am Ausgang Freiheit, auf der Südseite. Ihre Fahrkarte gilt auch im Ersatzbus. Ab Montag, dem sechsundzwanzigsten Oktober, fährt die Linie hundertsieben wieder auf der normalen Strecke. Wir bitten um Ihr Verständnis."
+    }
+   ]
+  },
+  {
+   "key": "b2-4-02",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Ja, hallo Herr Petrović, hier ist Sabine Kröger aus der Buchhaltung. Es geht um Ihre Reisekostenabrechnung für die Messe in Hannover. Die ist bei mir angekommen, danke, aber, ähm, da fehlt leider noch was: Fürs Hotel hab ich nur die Buchungsbestätigung, nicht die eigentliche Rechnung mit der Mehrwertsteuer. Ohne die kann ich das nicht freigeben. Die Taxiquittungen sind alle da, das passt so. Sie müssen mir das Original auch nicht vorbeibringen – einfach einscannen und per Mail an mich schicken, das reicht völlig. Und noch was Wichtiges: Alles, was bis zum 5. November bei uns ist, wird mit dem Novembergehalt ausgezahlt. Was danach kommt, geht erst in den Dezember. Bei Fragen erreichen Sie mich unter der Durchwahl 418. Also, schönen Tag noch!",
+     "say": "Ja, hallo Herr Petrović, hier ist Sabine Kröger aus der Buchhaltung. Es geht um Ihre Reisekostenabrechnung für die Messe in Hannover. Die ist bei mir angekommen, danke, aber, ähm, da fehlt leider noch was: Fürs Hotel hab ich nur die Buchungsbestätigung, nicht die eigentliche Rechnung mit der Mehrwertsteuer. Ohne die kann ich das nicht freigeben. Die Taxiquittungen sind alle da, das passt so. Sie müssen mir das Original auch nicht vorbeibringen – einfach einscannen und per Mail an mich schicken, das reicht völlig. Und noch was Wichtiges: Alles, was bis zum fünften November bei uns ist, wird mit dem Novembergehalt ausgezahlt. Was danach kommt, geht erst in den Dezember. Bei Fragen erreichen Sie mich unter der Durchwahl vier eins acht. Also, schönen Tag noch!"
+    }
+   ],
+   "fx": "telefon"
   }
  ]
 }
