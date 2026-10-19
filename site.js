@@ -704,7 +704,7 @@
         ${isHub ? '<h1 id="stage-h">Deutsch mit Liedern</h1>' : '<h2 id="stage-h">Deutsch mit Liedern</h2>'}
         <p class="dm-stage-lead">${all.length} eigene Lieder von A1 bis C1 – über Wohnung, Arzt, Arbeit, Gefühle und Grammatik. Hör zu, sing mit und lerne die Wörter mit Aufgaben und Lösungen.</p>
         <ul class="dm-stage-chips">${SONG_LEVELS.map(k => `<li><a href="#lieder/${k}">${k}</a></li>`).join('')}</ul>
-        <div class="dm-row">${sod ? `<a class="dm-btn dm-btn-sun" href="#lieder/${sod.id}">▶ Lied des Tages: „${x(sod.title)}“</a>` : ''}<a class="dm-btn dm-btn-ghost" href="#lieder/playlist">♫ Alle Lieder am Stück hören</a>${isHub ? '' : '<a class="dm-btn dm-btn-ghost" href="#lieder">Alle Lieder ansehen</a>'}</div>
+        <div class="dm-row">${sod ? `<a class="dm-btn dm-btn-sun" href="#lieder/${sod.id}">▶ Lied des Tages: „${x(sod.title)}“</a>` : ''}<a class="dm-btn dm-btn-ghost" href="#lieder/playlist">♫ Playlist</a>${isHub ? '' : '<a class="dm-btn dm-btn-ghost" href="#lieder">Alle Lieder ansehen</a>'}</div>
       </div>
       <div class="dm-stage-art" aria-hidden="true"><span class="dm-stage-disc"><i></i></span>${art3d('mikrofon', 'float')}<span class="dm-stage-eq"><i></i><i></i><i></i><i></i><i></i></span></div>
     </section>`;
