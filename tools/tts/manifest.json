@@ -9136,7 +9136,8 @@
      "text": "Super. Danke dir, echt!"
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 32
   },
   {
    "key": "tbc3fa789",
@@ -9166,7 +9167,8 @@
      "text": "Mhm. Trinken ins Protokoll. Geht klar."
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 33
   },
   {
    "key": "t7d21e5a9",
@@ -9200,7 +9202,8 @@
      "text": "Genau, beide zusammen. Und beide unterschreiben auf dem Zettel."
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 34
   },
   {
    "key": "t16a79482",
@@ -9234,7 +9237,8 @@
      "text": "Okay. Dann ruf ich ihn gleich mal an."
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 35
   },
   {
    "key": "t0b41d206",
@@ -9268,7 +9272,8 @@
      "text": "Keine Sorge. Wir machen im Dezember eine kurze Schulung, so eine halbe Stunde, während der Arbeitszeit."
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 36
   },
   {
    "key": "tee1549e5",
@@ -9298,7 +9303,8 @@
      "text": "Oh, zehn Euro. Gut, dass ich das weiß. Dann pass ich mal gut drauf auf."
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 37
   },
   {
    "key": "t9546f94b",
@@ -9340,7 +9346,8 @@
      "text": "Ach so, na dann nehm ich ihn gleich mit."
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 38
   },
   {
    "key": "te03c34b9",
@@ -9350,7 +9357,8 @@
      "text": "Ja, hallo, Herr Haddad, hier ist Melanie Groß von Personalservice Nordstern. Äh, wir hätten ab Montag einen Einsatz für Sie, im Lager bei der Firma Kaltenbach in Bochum. Frühschicht, Beginn um sechs Uhr. Bringen Sie bitte Ihre Sicherheitsschuhe mit, die Warnweste bekommen Sie dort. Und ganz wichtig: Rufen Sie mich bitte bis Freitag zurück, ob Sie den Einsatz annehmen. Meine Nummer ist null zwei drei vier, fünfundfünfzig, einundachtzig, zwanzig. Ich wiederhole: null zwei drei vier, fünfundfünfzig, einundachtzig, zwanzig. Danke, tschüss!"
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 39
   },
   {
    "key": "t59a8fd7e",
@@ -9360,7 +9368,8 @@
      "text": "Hallo Ewa, hier ist Gül. Du, ich bin krank, ich hab Fieber, mir geht's echt nicht gut. Kannst du morgen meine Schicht im Bistro übernehmen? Das ist die Spätschicht, von vierzehn bis zweiundzwanzig Uhr. Mit Herrn Stein hab ich schon gesprochen, der ist einverstanden. Dafür arbeite ich nächsten Samstag für dich, okay? Schreib mir einfach kurz eine SMS. Danke dir, tschüss!"
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 40
   },
   {
    "key": "t5f2bddbe",
@@ -9370,7 +9379,8 @@
      "text": "Guten Tag, hier spricht Herbert Voss, Hausverwaltung Voss und Partner. Es geht um die Treppenhausreinigung in der Gartenstraße zwölf. Die Mieter haben sich bei mir beschwert, die Reinigung ist diese Woche ausgefallen. Äh, ja. Bitte schicken Sie noch vor dem Wochenende jemanden vorbei. Und für nächstes Jahr bräuchte ich dann noch ein neues Angebot, und zwar auch für die Fenster. Rückruf bitte unter null zwei null eins, siebenundvierzig, neununddreißig, sechsundsechzig. Also noch mal: null zwei null eins, siebenundvierzig, neununddreißig, sechsundsechzig. Vielen Dank, auf Wiederhören."
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 41
   },
   {
    "key": "t8cf74f6d",
@@ -9380,7 +9390,8 @@
      "text": "Ja, guten Tag, hier ist Albrecht vom Bildungszentrum Rhein-Ruhr. Das ist eine Nachricht für Frau Jovanović. Es geht um Ihren Erste-Hilfe-Kurs am Samstag. Der findet leider nicht in Raum hundertvier statt, sondern in Gebäude B, Raum zwölf. Also noch mal: Gebäude B, Raum zwölf. Die Uhrzeit bleibt gleich, neun Uhr. Und bitte denken Sie an Ihren Personalausweis. Vielen Dank, auf Wiederhören."
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 42
   },
   {
    "key": "t1b15dd59",
@@ -9390,7 +9401,8 @@
      "text": "Hallo Herr Demirel, hier ist Brigitte Lang aus der Personalabteilung. Ich wollte Ihnen nur kurz sagen: Unser Gespräch wegen der Verlängerung von Ihrem Vertrag ist nicht am Mittwoch, sondern am Donnerstag. Gleiche Uhrzeit, also um halb elf. Ach ja, und noch was: Bringen Sie bitte die Bescheinigung von Ihrem Staplerkurs mit, die brauchen wir noch für die Personalakte. Gut, dann bis Donnerstag. Tschüss!"
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 43
   },
   {
    "key": "tfa7063a3",
@@ -9436,7 +9448,8 @@
      "text": "Genau. Vielen Dank! Auf Wiederhören."
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 45
   },
   {
    "key": "tbc28f4fe",
@@ -9446,7 +9459,8 @@
      "text": "So, dann fangen wir an. Bitte erzählen Sie etwas zum Thema Arbeiten im Team. Sie haben ungefähr eine Minute."
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 46
   },
   {
    "key": "td6fc67c0",
@@ -9456,7 +9470,8 @@
      "text": "Arbeiten Sie lieber allein oder im Team? Und warum?"
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 47
   },
   {
    "key": "t9b159b75",
@@ -9466,7 +9481,8 @@
      "text": "Was machen Sie, wenn ein Kollege oder eine Kollegin die Arbeit nicht richtig macht?"
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 48
   },
   {
    "key": "tcf55dfef",
@@ -9476,7 +9492,8 @@
      "text": "Wie war die Teamarbeit in Ihrem Heimatland? Gibt es da Unterschiede zu Deutschland?"
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 49
   },
   {
    "key": "td731ef63",
@@ -9486,7 +9503,8 @@
      "text": "Und zum Schluss: Was ist für Sie ein guter Teamleiter oder eine gute Teamleiterin?"
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 50
   },
   {
    "key": "tf911200b",
@@ -9496,7 +9514,8 @@
      "text": "Sie sind Kollegen und sitzen zusammen in der Pause. Erzählen Sie doch mal: Wie war Ihr erster Arbeitstag?"
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 51
   },
   {
    "key": "tf2f36311",
@@ -9506,7 +9525,8 @@
      "text": "Und jetzt fragen Sie bitte Ihre Partnerin oder Ihren Partner: Wie war das bei ihr oder bei ihm?"
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 52
   },
   {
    "key": "t81426c89",
@@ -9516,7 +9536,8 @@
      "text": "Was war für Sie schwierig? Und was hätten Sie sich gewünscht?"
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 53
   },
   {
    "key": "te2384080",
@@ -9526,7 +9547,8 @@
      "text": "Zum Schluss: Welche Tipps geben Sie neuen Kolleginnen und Kollegen?"
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 54
   },
   {
    "key": "t6775d7a8",
@@ -9536,7 +9558,8 @@
      "text": "Beginnen Sie bitte. Wer soll Frau Petrova in der ersten Woche begleiten?"
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 55
   },
   {
    "key": "t75cba421",
@@ -9546,7 +9569,8 @@
      "text": "Was zeigen Sie ihr denn am ersten Tag?"
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 56
   },
   {
    "key": "t2c248095",
@@ -9556,7 +9580,8 @@
      "text": "Welche Informationen und Unterlagen braucht sie noch?"
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 57
   },
   {
    "key": "tfd54da29",
@@ -9566,7 +9591,8 @@
      "text": "Wann soll es ein Feedbackgespräch geben, und mit wem?"
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 58
   },
   {
    "key": "t8e1f46be",
@@ -9576,7 +9602,8 @@
      "text": "Fassen Sie bitte zum Schluss zusammen: Wer übernimmt welche Aufgabe?"
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 59
   },
   {
    "key": "t25a9e69d",
@@ -9594,7 +9621,8 @@
      "text": "Nee, das schaffen wir nicht, heute Mittag ist alles voll. Nimm lieber das Einweggeschirr aus dem Lager. Nur für heute."
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 60
   },
   {
    "key": "t08dc1db9",
@@ -9612,7 +9640,8 @@
      "text": "Hm, mir ist der Ort eigentlich egal. Hauptsache, die Feier ist nicht am Freitag, da kann ich nie."
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 61
   },
   {
    "key": "td6e64ef7",
@@ -9630,7 +9659,8 @@
      "text": "Nein, abends nur den Wassertank leeren. Die Maschine bleibt an, die geht nachts automatisch aus."
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 62
   },
   {
    "key": "te74d37ed",
@@ -9640,7 +9670,8 @@
      "text": "Ja, hallo, Herr Ivanov, hier ist Frau Holt vom Personalbüro. Ich wollte nur kurz Bescheid sagen: Ihr Vorstellungsgespräch ist nicht um neun, sondern um elf Uhr. Also um elf. Und bitte bringen Sie Ihre Zeugnisse mit. Kaffee gibt's bei uns, keine Sorge! Tschüss."
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 63
   },
   {
    "key": "taefe1590",
@@ -9650,7 +9681,8 @@
      "text": "Ja, guten Tag, Berger hier, von der Firma Optik Klar. Äh, wir bräuchten nächste Woche jemanden für die Fensterreinigung in unserem Geschäft. Am Dienstag … ach nein, Mittwoch. Am Mittwoch, und zwar vor neun Uhr, bevor wir aufmachen."
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 64
   },
   {
    "key": "t08f15d1b",
@@ -9692,7 +9724,8 @@
      "text": "Mach ich. Sobald die Hagedorn-Sachen draußen sind."
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 103
   },
   {
    "key": "t83ac338e",
@@ -9742,7 +9775,8 @@
      "text": "Gut. Und ich sag der IT Bescheid wegen der doppelten Buchung. Das darf ja eigentlich nicht passieren."
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 104
   },
   {
    "key": "tafc52605",
@@ -9780,7 +9814,8 @@
      "text": "Ja, machen wir. Schreib’s bitte gleich draußen an die Tafel und sag dem Service Bescheid. Und ich ruf den Lieferanten noch mal an. Wir wollen ’ne Gutschrift für die fehlende Ware."
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 105
   },
   {
    "key": "t23c0456d",
@@ -9818,7 +9853,8 @@
      "text": "Gut. Dann sammeln wir jetzt erst mal weitere Meinungen aus dem Saal. Ja, bitte, da hinten …"
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 106
   },
   {
    "key": "t6a3892f1",
@@ -9828,7 +9864,8 @@
      "text": "So, guten Morgen zusammen, und herzlich willkommen bei Rhein-Ruhr Frischelogistik! Mein Name ist Katrin Seidel, ich leite die Personalabteilung. Und ich freu mich wirklich, dass Sie heute alle hier sind. Zwölf neue Kolleginnen und Kollegen auf einmal, das ist ein Rekord für uns! Ich möchte Ihnen in den nächsten Minuten kurz zeigen, wer wir eigentlich sind. Angefangen hat alles neunzehnhundertachtundneunzig. Unser Gründer, Reinhold Mertens, hat damals mit drei Kühl-Lkw Obst und Gemüse vom Großmarkt zu kleinen Lebensmittelgeschäften gefahren. Ein klassischer Familienbetrieb also. Seine Frau hat die Buchhaltung gemacht, und zwar am Küchentisch! Heute sind wir vierhundertzwanzig Beschäftigte, wir haben hundertdreißig Fahrzeuge und beliefern vor allem Supermärkte in ganz Nordrhein-Westfalen mit gekühlter Ware. Standorte haben wir drei: hier in Duisburg die Zentrale, dann Krefeld und Unna. In Unna haben wir zweitausendfünfundzwanzig eine neue Kühlhalle gebaut. Das ist eine der modernsten in der ganzen Region. Und was haben wir vor? Ein großes Thema ist bei uns der Klimaschutz. Ab dem kommenden Frühjahr setzen wir in den Innenstädten von Duisburg und Düsseldorf zwölf Elektro-Lkw ein. Für die langen Strecken bleiben wir aber erst mal beim Diesel. Da ist die Technik, ehrlich gesagt, noch nicht so weit. Jetzt zu dem, was Sie wahrscheinlich am meisten interessiert: Was bieten wir Ihnen? Wir zahlen nach Tarif, es gibt Urlaubsgeld und Weihnachtsgeld. Wer mit Bus und Bahn kommt, bekommt einen Zuschuss von dreißig Euro im Monat zum Deutschlandticket. Fahrrad-Leasing geht auch. Ich werde oft nach Firmenwagen gefragt. Die gibt’s bei uns aber nur für den Außendienst. Und eine eigene Kinderbetreuung … ja, das wünschen sich viele. Da sind wir mit der Stadt im Gespräch, aber versprechen kann ich Ihnen da noch nichts. Und wie geht’s für Sie jetzt weiter? Jede und jeder von Ihnen bekommt für die ersten drei Monate einen Paten oder eine Patin. Also eine erfahrene Kollegin oder einen erfahrenen Kollegen aus Ihrer Abteilung, die Ihnen bei allen Fragen hilft. Sie lernen die Abläufe direkt am Arbeitsplatz kennen, nicht im Kursraum. Einen Pflichtkurs gibt es nur zum Thema Hygiene und Kühlkette, und der dauert einen Tag. So, und gleich machen wir eine kleine Führung durch die Halle. Kommen Sie bitte mit."
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 107
   },
   {
    "key": "t2d897dc7",
@@ -9838,7 +9875,8 @@
      "text": "Ja, guten Tag, hier ist Bettina Kraus von der Linden-Apotheke. Ich ruf an wegen der Wochenlieferung für das Seniorenzentrum Am Stadtpark, und zwar für Ihren Bewohner Herrn Klaus Wendt, Zimmer zweihundertvierzehn, also zwei, eins, vier. Ähm, das Blutdruckmittel, das der Hausarzt verordnet hat, ist im Moment beim Hersteller nicht lieferbar. Wahrscheinlich die nächsten sechs Wochen nicht. Es gibt aber ein gleichwertiges Präparat von einer anderen Firma. Dafür brauchen wir allerdings ein neues Rezept, das alte können wir nicht einfach ändern. Könnten Sie bitte mit Doktor Hartmann Kontakt aufnehmen? Die restlichen Medikamente liefern wir ganz normal am Montag. Gut, vielen Dank, auf Wiederhören."
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 108
   },
   {
    "key": "t264ce37b",
@@ -9848,7 +9886,8 @@
      "text": "Ja, hallo, ist da die Schreinerei Vogt? Ach so, der Anrufbeantworter. Also, hier ist Markus Albers. Äh, Sie wollten bei uns ja am Dienstag, dem siebenundzwanzigsten, die Küche montieren. Also, ich wär am Dienstag zwar zu Hause, das ist nicht das Problem. Aber der Installateur hat sich gemeldet: Er schafft die Wasseranschlüsse erst bis Mittwoch. Und ohne die können Sie die Spüle ja nicht anschließen. Die Küche selbst ist komplett da, die steht bei uns in der Garage. Ginge es vielleicht am Donnerstag oder Freitag? Rufen Sie mich doch bitte zurück, unter null zwei drei vier, fünfundfünfzig, einundsiebzig, null acht. Ich wiederhole: null zwei drei vier, fünf fünf, sieben eins, null acht. Danke, tschüss."
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 109
   },
   {
    "key": "t9bb527cb",
@@ -9858,7 +9897,8 @@
      "text": "Hallo, Herr Popescu, hier ist Lisa Hartwig von Personalservice Ruhr. Ich hab gute Nachrichten für Sie! Ab Montag haben Sie einen neuen Einsatz, und zwar bei der Firma Metallbau Krüger in Hagen. Erst mal für drei Monate. Arbeitsbeginn ist um sechs Uhr. Am ersten Tag seien Sie aber bitte schon um Viertel vor sechs am Tor zwei, da holt Sie der Schichtleiter ab, Herr Baumann. Den Einsatzvertrag haben Sie ja letzte Woche schon bei uns unterschrieben, und Ihr Foto für den Werksausweis haben wir auch schon. Denken Sie nur bitte an Ihre Sicherheitsschuhe! Arbeitskleidung bekommen Sie dort, Schuhe aber nicht. Wenn Sie noch Fragen haben, erreichen Sie mich unter null zwei drei drei eins, neunzig, vierundvierzig, zwölf. Also noch mal: null zwei drei drei eins, neun null, vier vier, eins zwei. Viel Erfolg, tschüss!"
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 110
   },
   {
    "key": "t91de3e36",
@@ -9868,7 +9908,8 @@
      "text": "Ja, guten Tag, Jens Kowalczyk hier, von der Firma Optima Software in Dortmund. Wir haben bei Ihnen im Hotel für den sechsten November den Tagungsraum Phoenix gebucht, und dazu ein Mittagessen für fünfundzwanzig Personen. Da gibt’s jetzt zwei Änderungen. Erstens haben sich mehr Leute angemeldet, wir sind jetzt zweiunddreißig. Und zweitens verschiebt sich unser Programm am Vormittag ein bisschen. Könnten wir das Mittagessen statt um zwölf erst um halb eins haben? Beim Menü bleibt alles wie besprochen, äh, nur bei den vegetarischen Essen, da sind es jetzt sechs statt vier. Rufen Sie mich bitte kurz zurück, ob der Raum für zweiunddreißig Personen groß genug ist. Meine Nummer ist null zwei drei eins, dreiundsiebzig, zweiundachtzig, fünfzig. Danke schön, auf Wiederhören."
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 111
   },
   {
    "key": "t45eba600",
@@ -9878,7 +9919,8 @@
      "text": "Guten Tag, hier spricht Monika Strauß aus der Buchhaltung von Papierhaus Lenz in Bielefeld. Ich ruf an wegen unserer Rechnung Nummer vierundvierzig einundsiebzig, vom zweiten Oktober. Sie haben den Betrag, also die tausendzweihundertachtundsechzig Euro, zweimal an uns überwiesen. Einmal am neunten und dann noch mal am vierzehnten Oktober. Das ist aber überhaupt kein Problem! Wir können Ihnen das Geld zurücküberweisen, oder wir verrechnen es mit Ihrer nächsten Bestellung. Bitte schreiben Sie mir kurz eine E-Mail, was Ihnen lieber ist. Die Adresse steht unten auf der Rechnung. Vielen Dank, und noch einen schönen Tag!"
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 112
   },
   {
    "key": "te5dcef51",
@@ -9889,7 +9931,8 @@
     }
    ],
    "fx": "telefon",
-   "prio": 0
+   "prio": 0,
+   "ord": 114
   },
   {
    "key": "td256e0f9",
@@ -9899,7 +9942,8 @@
      "text": "Sie haben gesagt, Weiterbildung ist mit Familie und Schichtarbeit anstrengend. Wer sollte Ihrer Meinung nach die Kosten tragen, der Betrieb oder die Beschäftigten?"
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 115
   },
   {
    "key": "t54af3d89",
@@ -9909,7 +9953,8 @@
      "text": "Sollten Weiterbildungen in der Arbeitszeit oder in der Freizeit stattfinden?"
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 116
   },
   {
    "key": "t62ef4cc0",
@@ -9919,7 +9964,8 @@
      "text": "Und was würden Sie tun, wenn Ihr Arbeitgeber eine Weiterbildung ablehnt?"
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 117
   },
   {
    "key": "tcb955df9",
@@ -9929,7 +9975,8 @@
      "text": "Eine letzte Frage noch: Glauben Sie, dass Online-Kurse eine gute Alternative sind?"
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 118
   },
   {
    "key": "t50780f7f",
@@ -9939,7 +9986,8 @@
      "text": "Du, sag mal, ich muss ab nächstem Monat in den Wechseldienst. Du machst das doch schon lange. Wie ist das so?"
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 119
   },
   {
    "key": "tf74fed0f",
@@ -9949,7 +9997,8 @@
      "text": "Und die Nachtdienste? Davor hab ich ehrlich gesagt am meisten Angst. Wie schaffst du das, tagsüber zu schlafen?"
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 120
   },
   {
    "key": "tc8cc210e",
@@ -9959,7 +10008,8 @@
      "text": "Hm. Meine Frau arbeitet auch Vollzeit, und wir haben zwei Kinder. Wie kriegst du das mit der Familie hin?"
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 121
   },
   {
    "key": "t5e2cc8d8",
@@ -9969,7 +10019,8 @@
      "text": "Meinst du, ich kann mit der Pflegedienstleitung mal über meinen Dienstplan reden?"
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 122
   },
   {
    "key": "t12a39c59",
@@ -9979,7 +10030,8 @@
      "text": "Also, ich hab mir das mal angeschaut. Uns fehlen an beiden Feiertagen jeweils drei Leute im Frühdienst. Was meinst du, was sollen wir vorschlagen?"
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 123
   },
   {
    "key": "ta68ac6b6",
@@ -9989,7 +10041,8 @@
      "text": "Hm, Zeitarbeit find ich schwierig. Die kennen die Bewohner nicht. Und gerade an Weihnachten sind viele traurig und brauchen vertraute Gesichter."
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 124
   },
   {
    "key": "tb79abd6f",
@@ -9999,7 +10052,8 @@
      "text": "Eine Rotation klingt fair, ja. Aber was ist mit Kolleginnen mit kleinen Kindern? Die wollen an Heiligabend natürlich zu Hause sein."
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 125
   },
   {
    "key": "t5d3a7918",
@@ -10009,7 +10063,8 @@
      "text": "Und wie überzeugen wir die Teilzeitkräfte? Nur mit einem freundlichen Bitte wird das nicht klappen."
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 126
   },
   {
    "key": "t0c7a991e",
@@ -10019,7 +10074,8 @@
      "text": "Okay, dann fassen wir mal zusammen. Was schlagen wir der Wohnbereichsleitung vor?"
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 127
   },
   {
    "key": "te9c87ecf",
@@ -10037,7 +10093,8 @@
      "text": "Hm, Sonntag bringt mir nichts. Na gut, dann frag ich mal Petra."
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 128
   },
   {
    "key": "tf08ec092",
@@ -10051,7 +10108,8 @@
      "text": "Hm, Montag? Montag ist bei uns im Lager immer Chaos, da kommen die meisten Lieferungen. Mittwoch wär ruhiger."
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 129
   },
   {
    "key": "t8fd3e207",
@@ -10061,7 +10119,8 @@
      "text": "Ja, also, wir haben heute vierzehn Filialen. Und eine fünfzehnte, in Herne, die eröffnen wir im März. Ach, und wer bei uns anfängt, bekommt ab dem ersten Tag einen Rabatt von zwanzig Prozent auf alle Produkte."
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 130
   },
   {
    "key": "t8ac9bea1",
@@ -10071,7 +10130,8 @@
      "text": "Ja, hallo, hier ist Thomas Kurz. Äh, der Termin für die Wartung am Freitag, der passt mir leider nicht mehr. Könnten wir das auf Montag verschieben? Rufen Sie mich einfach kurz zurück. Danke!"
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 131
   },
   {
    "key": "t41bd8385",
@@ -10081,7 +10141,8 @@
      "text": "Hallo, hier ist Selin Engin aus der Buchhaltung. Ihre Reisekostenabrechnung ist angekommen, danke. Es fehlt aber noch die Hotelrechnung. Bringen Sie die bitte bis Mittwoch vorbei, ja? Danke, tschüss."
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 132
   },
   {
    "key": "t4c012581",
@@ -10092,7 +10153,8 @@
     }
    ],
    "fx": "telefon",
-   "prio": 0
+   "prio": 0,
+   "ord": 133
   },
   {
    "key": "ta17790b8",
@@ -10102,7 +10164,8 @@
      "text": "Ja, guten Tag, Herr Nowak, hier ist die Zahnarztpraxis Doktor Albers, Kessler am Apparat. Äh, es geht um Ihren Termin am Dienstag um neun Uhr. Den müssen wir leider absagen, Frau Doktor Albers ist an dem Tag auf einer Fortbildung. Wir können Ihnen aber einen neuen Termin geben, und zwar am Donnerstag um halb drei, also um vierzehn Uhr dreißig. Mittwoch geht leider nicht, da ist bei uns nachmittags zu. Wenn Ihnen der Donnerstag nicht passt, rufen Sie uns bitte kurz zurück. Die Nummer ist null zwei null eins, siebenundvierzig, achtunddreißig, neunzehn. Ich wiederhole: null zwei null eins, siebenundvierzig, achtunddreißig, neunzehn. Vielen Dank, und auf Wiederhören!"
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 1
   },
   {
    "key": "t06e0b539",
@@ -10112,7 +10175,8 @@
      "text": "Sehr geehrte Fahrgäste am Gleis fünf, bitte beachten Sie: Der Regional-Express eins nach Aachen, planmäßige Abfahrt zehn Uhr zwölf, fährt heute nicht von Gleis fünf, sondern von Gleis sieben. Ich wiederhole: Der Regional-Express eins nach Aachen, Abfahrt zehn Uhr zwölf, fährt heute von Gleis sieben. Der Zug hat zurzeit etwa fünf Minuten Verspätung. Wir bitten um Entschuldigung."
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 2
   },
   {
    "key": "t82e5bc8e",
@@ -10122,7 +10186,8 @@
      "text": "Ja, hallo, Frau Okafor, hier ist Sabine Brandt von der Kita Regenbogen. Äh, es geht um Ihre Tochter Amara. Der geht's heute nicht so gut, sie hat Bauchschmerzen und ein bisschen Fieber, achtunddreißig Komma zwei. Sie liegt jetzt bei uns in der Ruheecke. Könnten Sie Amara bitte möglichst bald abholen? Wir sind zwar bis sechzehn Uhr da, aber früher wäre natürlich besser für sie. Medikamente dürfen wir ihr leider nicht geben, das wissen Sie ja. Wenn Sie's nicht schaffen, kann vielleicht auch Ihr Mann kommen. Rufen Sie uns kurz an, ja? Null zwei drei null zwei, einundachtzig, sechsundvierzig, fünfzig. Also noch mal: null zwei drei null zwei, einundachtzig, sechsundvierzig, fünfzig. Danke, tschüss!"
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 3
   },
   {
    "key": "t8b768833",
@@ -10132,7 +10197,8 @@
      "text": "Liebe Kundinnen und Kunden, herzlich willkommen bei FrischMarkt! Heute haben wir ein ganz besonderes Angebot für Sie: Alle Säfte und alle Sorten Mineralwasser bekommen Sie bis Ladenschluss zwanzig Prozent günstiger. Ich wiederhole: alle Säfte und alle Sorten Mineralwasser heute zwanzig Prozent günstiger. Unser frisches Obst und Gemüse finden Sie wie immer gleich am Eingang. Und noch ein Hinweis: An Kasse drei können Sie heute nur mit Karte bezahlen. Vielen Dank für Ihren Einkauf!"
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 4
   },
   {
    "key": "tff7bc5ca",
@@ -10142,7 +10208,8 @@
      "text": "Und jetzt zum Verkehr. Auf der A vierzig von Dortmund Richtung Duisburg haben wir zwischen Essen-Huttrop und Essen-Zentrum sechs Kilometer Stau nach einem Unfall, der rechte Fahrstreifen ist gesperrt. Und dann noch die A dreiundvierzig Richtung Münster: Da gibt es wegen einer Baustelle bei Witten nur eine Fahrspur, rechnen Sie da mit etwa zehn Minuten mehr. Fahren Sie vorsichtig!"
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 5
   },
   {
    "key": "t9126ff84",
@@ -10152,7 +10219,8 @@
      "text": "Und nun das Wetter für morgen, Mittwoch. Am Vormittag regnet es noch im ganzen Land, bei Temperaturen um zwölf Grad. Ab Mittag wird es dann freundlicher, und am Nachmittag scheint oft die Sonne, bei bis zu achtzehn Grad. Also, nachmittags ruhig mal raus! Am Donnerstag kommt dann kräftiger Wind, und es wird wieder deutlich kühler."
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 6
   },
   {
    "key": "t9e2d0418",
@@ -10162,7 +10230,8 @@
      "text": "Und hier noch unser Tipp fürs Wochenende: In Hattingen ist wieder Altstadtfest! Am Samstag gibt es ab achtzehn Uhr Live-Musik auf dem Marktplatz, und am Sonntag ist dann von elf bis siebzehn Uhr ein großer Flohmarkt rund um die Kirche. Für die Kinder gibt es an beiden Tagen ein Karussell und Kinderschminken. Und das Beste: Der Eintritt ist frei."
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 7
   },
   {
    "key": "tb614f1c3",
@@ -10172,7 +10241,8 @@
      "text": "Gute Nachrichten für alle Schwimmerinnen und Schwimmer in Bochum: Das Hallenbad am Stadtpark öffnet nach der Renovierung wieder, und zwar ab dem dritten November. Und es gibt etwas Neues: Das Bad hat jetzt auch sonntags geöffnet, von acht bis vierzehn Uhr. Die Öffnungszeiten unter der Woche bleiben gleich, und auch die Preise ändern sich nicht: Erwachsene zahlen vier Euro fünfzig, Kinder zwei Euro."
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 8
   },
   {
    "key": "t65af3ecd",
@@ -10182,7 +10252,8 @@
      "text": "Und eine Information für alle Fahrgäste der Straßenbahnlinie hundertsieben: Wegen Bauarbeiten fährt die Linie am kommenden Wochenende nicht zwischen Hauptbahnhof und Karlsplatz. Bitte nutzen Sie die Ersatzbusse. Die fahren alle zehn Minuten ab der Haltestelle vor dem Hauptbahnhof. Ab Montag, fünf Uhr früh, fährt die hundertsieben dann wieder ganz normal."
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 9
   },
   {
    "key": "t74fff631",
@@ -10228,7 +10299,8 @@
      "text": "Prima. Danke schön, bis später!"
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 10
   },
   {
    "key": "t15e6a867",
@@ -10274,7 +10346,8 @@
      "text": "Okay, danke. Dann ruf ich heute noch meinen Vermieter an."
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 11
   },
   {
    "key": "t433d7e4b",
@@ -10308,7 +10381,8 @@
      "text": "Mach ich gleich heute. Danke dir, Olga!"
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 12
   },
   {
    "key": "t743591b5",
@@ -10346,7 +10420,8 @@
      "text": "Gern. Und gute Reise!"
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 13
   },
   {
    "key": "t64298e53",
@@ -10360,7 +10435,8 @@
      "text": "Ja, genau. Also, meine Tochter ist neun und hat seit einem halben Jahr ein Handy. Aber kein Smartphone, sondern so ein ganz einfaches Gerät, nur zum Telefonieren und für Kurznachrichten. Internet, Spiele, Videos, na ja, das braucht ein Kind in dem Alter doch noch nicht. Wenn der Bus mal nicht kommt, kann sie mich anrufen, und das reicht völlig. Viele Eltern denken ja, das Kind ist sonst traurig, weil die anderen alle ein Smartphone haben. Aber ehrlich gesagt, meine Tochter kommt gut damit klar."
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 14
   },
   {
    "key": "t0d029639",
@@ -10374,7 +10450,8 @@
      "text": "Hm, ehrlich gesagt sehe ich das nicht so negativ. Verbieten bringt nichts, die Kinder sehen Handys ja sowieso überall. Ich finde, Kinder müssen früh lernen, wie man mit dem Handy und dem Internet richtig umgeht. Also, was darf ich posten? Was ist gefährlich? Das machen wir auch im Unterricht. Natürlich bleiben die Handys während der Stunde in der Tasche, das ist klar. Aber grundsätzlich, ja: Mit Medien umgehen lernt man nur, wenn man sie auch benutzt."
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 15
   },
   {
    "key": "tc46ef24e",
@@ -10388,7 +10465,8 @@
      "text": "Also, bei uns gibt es eine klare Regel: Ein eigenes Handy gibt es erst, wenn die Kinder allein mit Bus und Bahn zur Schule fahren. Bei meinem älteren Sohn war das mit elf, als er aufs Gymnasium gekommen ist. Vorher hat er's einfach nicht gebraucht. Die Grundschule ist bei uns gleich um die Ecke, und nachmittags war er sowieso mit Freunden draußen auf dem Spielplatz. Klar, er hat sich manchmal beschwert, das gehört dazu. Aber jetzt hat er eins, und so passt das für uns."
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 16
   },
   {
    "key": "t83721dfa",
@@ -10398,7 +10476,8 @@
      "text": "Können Sie bitte Ihren Nachnamen buchstabieren?"
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 17
   },
   {
    "key": "t629e75b6",
@@ -10408,7 +10487,8 @@
      "text": "Danke. Und wie lange wohnen Sie schon in Ihrer Stadt?"
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 18
   },
   {
    "key": "tac1640a4",
@@ -10418,7 +10498,8 @@
      "text": "Und was gefällt Ihnen an Ihrem Wohnort? Und was gefällt Ihnen nicht so gut?"
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 19
   },
   {
    "key": "t2c5c104a",
@@ -10428,7 +10509,8 @@
      "text": "Mhm. Welche Sprache sprechen Sie denn zu Hause mit Ihrer Familie?"
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 20
   },
   {
    "key": "tc23c8d9c",
@@ -10438,7 +10520,8 @@
      "text": "Und zum Schluss: Was möchten Sie in Zukunft beruflich machen?"
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 21
   },
   {
    "key": "tc16b4a85",
@@ -10448,7 +10531,8 @@
      "text": "Sie haben gesagt, Sie gehen zum Arzt. Wie haben Sie Ihren Arzt oder Ihre Ärztin denn gefunden?"
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 22
   },
   {
    "key": "t32a663da",
@@ -10458,7 +10542,8 @@
      "text": "Mussten Sie schon mal lange auf einen Termin warten? Was haben Sie da gemacht?"
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 23
   },
   {
    "key": "tc378f3d2",
@@ -10468,7 +10553,8 @@
      "text": "Und was ist beim Arzt in Deutschland anders als in Ihrem Heimatland?"
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 24
   },
   {
    "key": "t78029a50",
@@ -10478,7 +10564,8 @@
      "text": "Eine Frage noch: Was machen Sie, wenn Ihr Kind am Wochenende krank wird?"
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 25
   },
   {
    "key": "t557b9a17",
@@ -10488,7 +10575,8 @@
      "text": "Also, ich schlage vor, wir feiern am letzten Kurstag, also am Freitag, direkt nach dem Unterricht. Was meinst du?"
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 26
   },
   {
    "key": "t04759ec6",
@@ -10498,7 +10586,8 @@
      "text": "Hm, und wo? Wir könnten doch in ein Restaurant gehen. Das ist schöner als der Kursraum, oder?"
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 27
   },
   {
    "key": "t2272cf6a",
@@ -10508,7 +10597,8 @@
      "text": "Okay. Und das Essen? Ich hab eine Idee: Jeder bringt was aus seinem Heimatland mit. Wie findest du das?"
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 28
   },
   {
    "key": "t1f04cc3b",
@@ -10518,7 +10608,8 @@
      "text": "Du, ich kann leider nicht einkaufen, ich hab kein Auto. Kannst du vielleicht die Getränke kaufen?"
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 29
   },
   {
    "key": "tb5f39e4d",
@@ -10528,7 +10619,8 @@
      "text": "Gut. Und wer sagt den anderen aus dem Kurs Bescheid?"
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 30
   },
   {
    "key": "td8f19a16",
@@ -10538,7 +10630,8 @@
      "text": "Ach ja, und das Geschenk! Wir könnten ihr einfach Blumen kaufen. Oder hast du eine bessere Idee?"
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 31
   },
   {
    "key": "ta00431d3",
@@ -10548,7 +10641,8 @@
      "text": "Und jetzt die Verkehrsmeldungen. Wer am Wochenende im Ruhrgebiet unterwegs ist, muss sich auf Behinderungen einstellen: Die A vierzig wird zwischen Essen-Kray und Gelsenkirchen in Richtung Dortmund voll gesperrt. Los geht's am Freitagabend um zweiundzwanzig Uhr, und die Sperrung dauert bis Montagmorgen, fünf Uhr. Grund sind Bauarbeiten an einer Brücke. In der Gegenrichtung, also Richtung Duisburg, ist die Strecke frei. Eine Umleitung ist ausgeschildert."
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 65
   },
   {
    "key": "t0e9aaaee",
@@ -10558,7 +10652,8 @@
      "text": "Und nun zum Wetter. Morgen ist Deutschland zweigeteilt: Im Norden und in der Mitte ziehen dichte Wolken auf, und es regnet immer wieder, zum Teil auch kräftig. Im Süden dagegen bleibt es sonnig und trocken. Die Höchstwerte liegen zwischen sechzehn Grad an der Küste und fünfundzwanzig Grad am Oberrhein. Zum Wochenende hin wird es dann überall etwas kühler."
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 66
   },
   {
    "key": "t0bc61bc7",
@@ -10568,7 +10663,8 @@
      "text": "Große Freude im Zoo Hannover: Dort ist in der Nacht zum Dienstag ein kleiner Elefant zur Welt gekommen. Mutter und Kind sind wohlauf. Das Elefantenmädchen wiegt ungefähr hundert Kilo. Wer es sehen möchte, muss sich allerdings noch etwas gedulden: Die beiden bleiben erst mal im Stall. Ab nächster Woche soll das Kleine dann zum ersten Mal auf die Außenanlage."
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 67
   },
   {
    "key": "ta32b2579",
@@ -10578,7 +10674,8 @@
      "text": "Gute Nachrichten für alle Pendlerinnen und Pendler: Der Streik bei der Bahn ist vorbei. Die Gewerkschaft und die Bahn haben sich heute Nachmittag geeinigt. Ab morgen früh sollen alle Züge wieder nach dem normalen Fahrplan fahren. Heute Abend müssen Fahrgäste aber noch mit Verspätungen und Zugausfällen rechnen."
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 68
   },
   {
    "key": "tcf872371",
@@ -10588,7 +10685,8 @@
      "text": "Und noch ein Tipp aus Leipzig: Dort feiert man am Samstag den Tag des öffentlichen Nahverkehrs. Den ganzen Tag können alle Fahrgäste kostenlos mit Bussen und Straßenbahnen fahren, egal ob Kinder oder Erwachsene. Am Hauptbahnhof gibt's außerdem ein Fest mit Musik, und Kinder dürfen sich eine historische Straßenbahn von innen anschauen."
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 69
   },
   {
    "key": "tc680934e",
@@ -10674,7 +10772,8 @@
      "text": "Danke schön. Hat Spaß gemacht."
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 70
   },
   {
    "key": "t6d3d2220",
@@ -10684,7 +10783,8 @@
      "text": "Achtung an Gleis sieben. Der ICE fünfhundertachtundsiebzig nach Hamburg-Altona, planmäßige Abfahrt vierzehn Uhr zwölf, fährt heute ausnahmsweise von Gleis neun. Ich wiederhole: Der ICE fünfhundertachtundsiebzig nach Hamburg-Altona fährt heute von Gleis neun. Bitte beachten Sie außerdem die geänderte Wagenreihung. Die Wagen der ersten Klasse halten im Abschnitt A."
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 71
   },
   {
    "key": "t4359713a",
@@ -10695,7 +10795,8 @@
     }
    ],
    "fx": "telefon",
-   "prio": 0
+   "prio": 0,
+   "ord": 72
   },
   {
    "key": "tf28919db",
@@ -10705,7 +10806,8 @@
      "text": "Liebe Kundinnen und Kunden, haben Sie heute schon aus dem Fenster geschaut? Passend zum Wetter gibt es in unserer Abteilung im Erdgeschoss alle Regenschirme und Regenjacken dreißig Prozent günstiger. Aber Achtung: Das Angebot gilt nur heute, bis Ladenschluss um zwanzig Uhr. Wir wünschen Ihnen einen schönen Einkauf!"
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 73
   },
   {
    "key": "t82bb6f2c",
@@ -10715,7 +10817,8 @@
      "text": "Und hier noch ein Tipp fürs Wochenende: Am Samstag ist wieder großer Flohmarkt am Rheinufer, und zwar von acht bis sechzehn Uhr. Am Sonntag gibt's dann an derselben Stelle einen Kinderflohmarkt, da dürfen nur Kinder verkaufen. Und ganz wichtig: Wer am Samstag selbst einen Stand haben möchte, muss sich vorher anmelden, im Internet, bis Donnerstag, achtzehn Uhr. Am Samstag selbst geht das leider nicht mehr. Also, nicht verpassen!"
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 74
   },
   {
    "key": "t14e7da7e",
@@ -10726,7 +10829,8 @@
     }
    ],
    "fx": "telefon",
-   "prio": 0
+   "prio": 0,
+   "ord": 75
   },
   {
    "key": "tf30d72b7",
@@ -10736,7 +10840,8 @@
      "text": "Hallo, ich bin Maria. Und wie heißen Sie?"
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 76
   },
   {
    "key": "tf86a7f00",
@@ -10746,7 +10851,8 @@
      "text": "Freut mich! Und woher kommen Sie?"
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 77
   },
   {
    "key": "tb925ee78",
@@ -10756,7 +10862,8 @@
      "text": "Wie lange wohnen Sie denn schon in Deutschland? Und wo genau wohnen Sie?"
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 78
   },
   {
    "key": "t8eae2d45",
@@ -10766,7 +10873,8 @@
      "text": "Und, wie gefällt Ihnen Ihre Stadt?"
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 79
   },
   {
    "key": "t5ec05bae",
@@ -10776,7 +10884,8 @@
      "text": "Haben Sie Familie hier?"
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 80
   },
   {
    "key": "t6c5dec2a",
@@ -10786,7 +10895,8 @@
      "text": "Was machen Sie beruflich?"
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 81
   },
   {
    "key": "tbac91dc5",
@@ -10796,7 +10906,8 @@
      "text": "Welche Sprachen sprechen Sie denn alles?"
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 82
   },
   {
    "key": "td434eaf2",
@@ -10806,7 +10917,8 @@
      "text": "Und was machen Sie gern in Ihrer Freizeit?"
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 83
   },
   {
    "key": "t7c35b60a",
@@ -10816,7 +10928,8 @@
      "text": "So, worum geht's denn in Ihrem Text?"
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 84
   },
   {
    "key": "t578b0719",
@@ -10826,7 +10939,8 @@
      "text": "Ah, interessant. Und warum bestellen die Leute online? Was steht dazu im Text?"
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 85
   },
   {
    "key": "t2d8bd885",
@@ -10836,7 +10950,8 @@
      "text": "Haben Sie selbst schon mal Lebensmittel im Internet bestellt?"
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 86
   },
   {
    "key": "tf0fb2248",
@@ -10846,7 +10961,8 @@
      "text": "Und wie ist das in Ihrem Heimatland? Kaufen die Leute dort auch online ein?"
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 87
   },
   {
    "key": "t4cc2c066",
@@ -10856,7 +10972,8 @@
      "text": "Also, ich finde das eigentlich ganz praktisch. Was meinen Sie?"
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 88
   },
   {
    "key": "te9017e54",
@@ -10866,7 +10983,8 @@
      "text": "Hm, aber ist das nicht schlecht für die kleinen Geschäfte?"
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 89
   },
   {
    "key": "t44a410d8",
@@ -10876,7 +10994,8 @@
      "text": "Würden Sie denn auch Obst und Gemüse online kaufen?"
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 90
   },
   {
    "key": "t683e5a40",
@@ -10886,7 +11005,8 @@
      "text": "Also, wann wollen wir die Feier machen? Ich dachte an den letzten Kurstag, direkt nach dem Unterricht."
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 91
   },
   {
    "key": "t6ba4cfb7",
@@ -10896,7 +11016,8 @@
      "text": "Okay. Und wo feiern wir? Im Kursraum ist es ein bisschen langweilig, oder?"
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 92
   },
   {
    "key": "t6da4616c",
@@ -10906,7 +11027,8 @@
      "text": "Hm, ein Café ist aber ziemlich teuer. Wir sind ja sechzehn Leute."
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 93
   },
   {
    "key": "t8ca20a46",
@@ -10916,7 +11038,8 @@
      "text": "Und was machen wir mit dem Essen? Soll jeder etwas mitbringen?"
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 94
   },
   {
    "key": "t54cb529b",
@@ -10926,7 +11049,8 @@
      "text": "Und das Geschenk? Ich würde ihr gern Blumen schenken."
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 95
   },
   {
    "key": "tce33d4d1",
@@ -10936,7 +11060,8 @@
      "text": "Wie viel Geld sammeln wir denn pro Person ein?"
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 96
   },
   {
    "key": "t9979124f",
@@ -10946,7 +11071,8 @@
      "text": "Gut. Und wer kümmert sich um was? Ich kann das Geld einsammeln."
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 97
   },
   {
    "key": "te11fa187",
@@ -10956,7 +11082,8 @@
      "text": "Das Hallenbad in Witten bleibt wegen Reparaturarbeiten bis Ende Februar geschlossen. Die Schwimmkurse für Kinder finden in dieser Zeit aber statt, und zwar im Hallenbad Herbede."
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 98
   },
   {
    "key": "tffc297ec",
@@ -10966,7 +11093,8 @@
      "text": "Am kommenden Sonntag haben die Geschäfte in der Hagener Innenstadt von dreizehn bis achtzehn Uhr geöffnet. Anlass ist das Herbstfest. Und: Parken ist an diesem Tag in allen städtischen Parkhäusern kostenlos."
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 99
   },
   {
    "key": "t22c31231",
@@ -10988,7 +11116,8 @@
      "text": "Vor allem Tomaten, Zucchini und Kräuter. Kartoffeln haben wir auch mal probiert, aber dafür ist der Boden leider zu schlecht."
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 100
   },
   {
    "key": "tffaccc98",
@@ -10998,7 +11127,8 @@
      "text": "Guten Tag, Sie sind verbunden mit dem Autohaus Reinhardt. Unsere Werkstatt ist heute wegen einer Betriebsfeier ab vierzehn Uhr geschlossen. Morgen früh sind wir ab halb acht wieder für Sie da. Vielen Dank für Ihren Anruf."
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 101
   },
   {
    "key": "t3c3ba7b2",
@@ -11008,7 +11138,8 @@
      "text": "Sehr geehrte Fahrgäste, wegen eines Unfalls fährt die Straßenbahnlinie drei heute nur bis zum Hauptbahnhof. Bitte benutzen Sie ab dort die Busse der Linie einunddreißig. Wir bitten um Ihr Verständnis."
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 102
   },
   {
    "key": "tb1d2b90d",
@@ -11018,7 +11149,8 @@
      "text": "Also, ich zahl eigentlich fast alles mit dem Handy. Im Supermarkt, an der Tankstelle, sogar im Kino. Geht einfach schneller, ne? Aber, äh, ganz ohne Bargeld geht's bei mir trotzdem nicht. Ich hab immer so zwanzig Euro im Portemonnaie, für den Wochenmarkt zum Beispiel, oder für den kleinen Bäcker bei uns um die Ecke. Der nimmt nämlich keine Karten."
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 134
   },
   {
    "key": "td0b833aa",
@@ -11028,7 +11160,8 @@
      "text": "Ich bin da altmodisch, das geb ich zu. Am Monatsanfang heb ich einen festen Betrag ab und teil mir das Geld ein. Und wenn das Portemonnaie leer ist, dann ist es eben leer. Mit der Karte, da merkt man ja gar nicht, wie viel man ausgibt. Zack, bezahlt, und am Monatsende wundert man sich. So weiß ich wenigstens immer genau, wo ich stehe."
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 135
   },
   {
    "key": "t99133bc0",
@@ -11038,7 +11171,8 @@
      "text": "Ich hab ein kleines Café in der Altstadt. Lange Zeit hab ich nur Bargeld genommen, weil ich für jede Kartenzahlung Gebühren zahlen muss. Aber immer mehr Gäste haben gefragt, und manche sind sogar wieder gegangen. Na ja. Seit letztem Jahr kann man bei mir auch mit Karte zahlen, und, ehrlich gesagt, seitdem verkauf ich mehr. Die Leute bestellen dann eben noch ein Stück Kuchen dazu. Also, die Gebühren, die lohnen sich."
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 136
   },
   {
    "key": "td806ac24",
@@ -11048,7 +11182,8 @@
      "text": "Praktisch ist das alles schon, keine Frage. Aber mich stört, dass bei jeder Zahlung irgendwo gespeichert wird, was ich wann und wo gekauft hab. Und wer hat denn Zugriff auf diese Daten? Die Bank, die Firma hinter der App, vielleicht noch andere? Das weiß doch keiner so genau. Deshalb zahl ich größere Sachen lieber bar."
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 137
   },
   {
    "key": "tb8374897",
@@ -11058,7 +11193,8 @@
      "text": "Ich bin Studentin und geh oft mit Freunden essen. Früher war das mit dem Bezahlen immer total kompliziert. Wer hat Kleingeld, wer kriegt noch was zurück, und so weiter. Heute zahlt einer die ganze Rechnung, und die anderen schicken ihm ihren Anteil einfach per App. Dauert zehn Sekunden. Bargeld hab ich, ehrlich gesagt, fast nie dabei."
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 138
   },
   {
    "key": "t860c4eb3",
@@ -11168,7 +11304,8 @@
      "text": "Danke schön, tschüss!"
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 139
   },
   {
    "key": "tbc8fee48",
@@ -11178,7 +11315,8 @@
      "text": "Sehr geehrte Fahrgäste, eine Gleisänderung an Gleis fünf. Der Intercity zwanzig siebenundvierzig nach München Hauptbahnhof, planmäßige Abfahrt vierzehn Uhr zweiundfünfzig, fährt heute ausnahmsweise von Gleis sieben ab. Ich wiederhole: Der Intercity nach München fährt heute von Gleis sieben. Wir bitten um Beachtung."
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 140
   },
   {
    "key": "tfd2fae75",
@@ -11188,7 +11326,8 @@
      "text": "Guten Tag, Sie sind verbunden mit der Hausarztpraxis Doktor Meinert. Unsere Praxis ist vom zwölften bis zum dreiundzwanzigsten Oktober wegen Urlaub geschlossen. In dringenden Fällen wenden Sie sich bitte an unsere Vertretung, die Praxis Doktor Aydın in der Bergstraße vierzehn. Die Telefonnummer ist null zwei drei vier, achtundfünfzig, neunzehn, null sieben. Ich wiederhole: null zwei drei vier, achtundfünfzig, neunzehn, null sieben. Bitte beachten Sie: Nachrichten auf diesem Anrufbeantworter werden während des Urlaubs nicht abgehört. Ab dem sechsundzwanzigsten Oktober sind wir wieder für Sie da. Auf Wiederhören."
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 141
   },
   {
    "key": "tfbecaeb5",
@@ -11198,7 +11337,8 @@
      "text": "Und jetzt der Verkehr. Auf der A vierzig Richtung Dortmund ist zwischen Essen-Frohnhausen und Essen-Zentrum nach einem Unfall mit einem Lastwagen nur ein Fahrstreifen frei. Der Stau dort ist inzwischen sechs Kilometer lang. Gute Nachrichten dagegen aus Bochum: Die Baustelle bei Bochum-Stahlhausen ist seit heute Morgen aufgehoben, da läuft der Verkehr wieder normal. Fahren Sie vorsichtig!"
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 142
   },
   {
    "key": "te48dead5",
@@ -11208,7 +11348,8 @@
      "text": "Liebe Kundinnen und Kunden, wegen unserer jährlichen Inventur schließt unser Haus heute ausnahmsweise schon um achtzehn Uhr. Ab morgen sind wir wieder wie gewohnt von halb zehn bis zwanzig Uhr für Sie da. Nutzen Sie bis Ladenschluss noch unsere Angebote im Erdgeschoss: Alle Wintermäntel sind heute dreißig Prozent günstiger! Vielen Dank für Ihren Einkauf."
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 143
   },
   {
    "key": "tf40870ff",
@@ -11218,7 +11359,8 @@
      "text": "Und noch ein wichtiger Hinweis für alle, die heute Abend zum Open-Air-Konzert in den Stadtpark wollten. Wegen der angekündigten Gewitter wird das Konzert verschoben, und zwar auf Sonntag, zwanzig Uhr. Ihre Eintrittskarten behalten ihre Gültigkeit. Und wer am Sonntag keine Zeit hat, bekommt sein Geld an den bekannten Vorverkaufsstellen zurück."
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 144
   },
   {
    "key": "t4ace5dde",
@@ -11228,7 +11370,8 @@
      "text": "Danke, das war wirklich interessant. Darf ich mal fragen, wie alt Sie damals waren?"
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 145
   },
   {
    "key": "tc1b611f1",
@@ -11238,7 +11381,8 @@
      "text": "Hm, und was war für Sie in dieser Zeit am schwierigsten?"
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 146
   },
   {
    "key": "t2fc1c5e7",
@@ -11248,7 +11392,8 @@
      "text": "Und wie haben die Leute in Ihrer Umgebung darauf reagiert, also Familie oder Freunde?"
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 147
   },
   {
    "key": "te2849b4a",
@@ -11258,7 +11403,8 @@
      "text": "Eine letzte Frage noch: Würden Sie heute etwas anders machen?"
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 148
   },
   {
    "key": "t268a0330",
@@ -11268,7 +11414,8 @@
      "text": "Na ja, aber wer soll das bezahlen? Gerade kleine Firmen können sich das doch gar nicht leisten."
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 149
   },
   {
    "key": "tcf17699d",
@@ -11278,7 +11425,8 @@
      "text": "Und in der Pflege oder im Einzelhandel? Da funktioniert das nicht, da braucht man die Leute jeden Tag."
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 150
   },
   {
    "key": "ta21eeea9",
@@ -11288,7 +11436,8 @@
      "text": "Also, ich weiß nicht. Wenn man in vier Tagen genauso viel schaffen muss, wird der Stress doch nur größer, oder?"
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 151
   },
   {
    "key": "t4068b474",
@@ -11298,7 +11447,8 @@
      "text": "Hm, ich finde ehrlich gesagt, jeder sollte selbst entscheiden können, an wie vielen Tagen er arbeitet."
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 152
   },
   {
    "key": "tc7c5318e",
@@ -11308,7 +11458,8 @@
      "text": "Also, wie wär's, wenn wir einfach in der Kantine feiern? Das kostet nichts."
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 153
   },
   {
    "key": "tde5d8a34",
@@ -11318,7 +11469,8 @@
      "text": "Hm, ich würde nur unsere Abteilung einladen. Sonst wird's zu groß, oder?"
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 154
   },
   {
    "key": "t229f2dcf",
@@ -11328,7 +11480,8 @@
      "text": "Und als Geschenk? Wir könnten ihr doch einfach einen Gutschein schenken."
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 155
   },
   {
    "key": "t5644a1e7",
@@ -11338,7 +11491,8 @@
      "text": "Ach ja, wer hält eigentlich die Rede? Ich bin darin ehrlich gesagt nicht so gut."
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 156
   },
   {
    "key": "t9772bf64",
@@ -11348,7 +11502,8 @@
      "text": "Also, ich fahr seit zwei Jahren mit dem Fahrrad zur Arbeit, auch im Winter. Nur wenn's glatt ist, nehm ich den Bus. Da bin ich dann doch vorsichtig."
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 157
   },
   {
    "key": "t0c7c65e2",
@@ -11358,7 +11513,8 @@
      "text": "Homeoffice? Nee, ist nichts für mich. Ich brauch die Kolleginnen um mich herum, sonst fühl ich mich ganz schnell allein."
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 158
   },
   {
    "key": "teedb4c23",
@@ -11380,7 +11536,8 @@
      "text": "Ganz gemischt, ehrlich. Viele denken, das sind nur Rentner, aber inzwischen kommen auch viele Studierende. Die haben oft wenig Geld und wollen nicht ständig was Neues kaufen."
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 159
   },
   {
    "key": "t8f9e17a8",
@@ -11390,7 +11547,8 @@
      "text": "Sehr geehrte Fahrgäste, wegen einer Signalstörung fällt die S-Bahn nach Düsseldorf heute aus. Bitte nutzen Sie den Regionalexpress um neun Uhr zwölf von Gleis drei. Ich wiederhole: Fahrgäste nach Düsseldorf nutzen bitte den Regionalexpress um neun Uhr zwölf, Gleis drei."
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 160
   },
   {
    "key": "ta13d0a03",
@@ -11400,7 +11558,8 @@
      "text": "Hallo und herzlich willkommen beim Fitnessstudio Aktiv. Leider ist gerade niemand erreichbar. Unsere Öffnungszeiten: montags bis freitags von sechs bis zweiundzwanzig Uhr, am Wochenende von acht bis zwanzig Uhr. Bis bald!"
     }
    ],
-   "prio": 0
+   "prio": 0,
+   "ord": 161
   }
  ]
 }

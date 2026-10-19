@@ -18,10 +18,14 @@ const man = JSON.parse(readFileSync(mp, 'utf8'));
 const have = new Set(man.entries.map(e => e.key));
 let n = 0;
 // prio 0 = Prüfungs-Hörtexte werden vor den kurzen Spielsätzen vertont
+// ord = Reihenfolge der Vertonung: eine Prüfung nach der anderen, jeweils in Prüfungsreihenfolge
+const EXAM_ORDER = ['dtz', 'dtb-b1', 'telc-b1', 'dtb-b2', 'telc-b2'];
+let ord = 0;
 const add = (key, segments, fx) => {
+  ord++;
   const old = man.entries.find(e => e.key === key);
-  if (old) { if (old.prio !== 0) { old.prio = 0; n++; } return; }
-  man.entries.push({ key, prio: 0, segments, ...(fx ? { fx } : {}) }); have.add(key); n++;
+  if (old) { if (old.prio !== 0 || old.ord !== ord) { old.prio = 0; old.ord = ord; n++; } return; }
+  man.entries.push({ key, prio: 0, ord, segments, ...(fx ? { fx } : {}) }); have.add(key); n++;
 };
 const walkPart = p => {
   for (const a of p.audio || []) {
@@ -32,7 +36,8 @@ const walkPart = p => {
   }
   for (const t of p.prompts || []) add(fnv(t), [{ voice: 'f2', text: t }]);
 };
-for (const ex of Object.values(ctx.window.SIM || {})) {
+const exams = Object.values(ctx.window.SIM || {}).sort((a, b) => (EXAM_ORDER.indexOf(a.id) + 99) % 99 - (EXAM_ORDER.indexOf(b.id) + 99) % 99);
+for (const ex of exams) {
   ex.sections.forEach(s => s.parts.forEach(walkPart));
   (ex.prep?.parts || []).forEach(q => q.mini && walkPart(q.mini));
 }

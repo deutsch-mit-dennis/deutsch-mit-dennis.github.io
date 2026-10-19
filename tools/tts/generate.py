@@ -232,7 +232,7 @@ RANK = {'piper': 1, 'google': 2, 'gemini': 3, 'elevenlabs': 3}
 
 def prio(item):
     """Zuerst Prüfungs-Hörtexte (Simulationen und Hörtraining, neueste zuerst), dann Beispiele, dann kurze Sätze."""
-    if item[0].get('prio') == 0: return (0, 0, item[0]['key'])
+    if item[0].get('prio') == 0: return (0, item[0].get('ord', 0), item[0]['key'])
     k = item[0]['key']
     if k.startswith(('dtz-', 'b2-')):
         pre, nr, idx = (k.split('-') + ['0', '0'])[:3]
