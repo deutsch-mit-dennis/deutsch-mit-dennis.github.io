@@ -469,7 +469,7 @@
               lines: [
                 {
                   s: "n",
-                  t: "Das Wetter: Morgen wird es zweigeteilt. Im Norden und in der Mitte Deutschlands ziehen dichte Wolken auf, und es regnet immer wieder, teilweise kräftig. Im Süden bleibt es dagegen sonnig und trocken. Die Temperaturen liegen zwischen 16 Grad an der Küste und 25 Grad am Oberrhein. Am Wochenende wird es dann überall etwas kühler.",
+                  t: "Und nun zum Wetter. Morgen ist Deutschland zweigeteilt: Im Norden und in der Mitte ziehen dichte Wolken auf, und es regnet immer wieder, zum Teil auch kräftig. Im Süden dagegen bleibt es sonnig und trocken. Die Höchstwerte liegen zwischen sechzehn Grad an der Küste und fünfundzwanzig Grad am Oberrhein. Zum Wochenende hin wird es dann überall etwas kühler.",
                 },
               ],
             },
@@ -478,7 +478,7 @@
               lines: [
                 {
                   s: "n",
-                  t: "Große Freude im Zoo Hannover: In der Nacht zum Dienstag ist dort ein kleiner Elefant zur Welt gekommen. Mutter und Kind sind gesund. Das Elefantenmädchen wiegt etwa 100 Kilo. Die Besucher müssen sich aber noch etwas gedulden: Die beiden bleiben zunächst im Stall. Ab nächster Woche soll das Jungtier dann zum ersten Mal auf die Außenanlage.",
+                  t: "Große Freude im Zoo Hannover: Dort ist in der Nacht zum Dienstag ein kleiner Elefant zur Welt gekommen. Mutter und Kind sind wohlauf. Das Elefantenmädchen wiegt ungefähr hundert Kilo. Wer es sehen möchte, muss sich allerdings noch etwas gedulden: Die beiden bleiben erst mal im Stall. Ab nächster Woche soll das Kleine dann zum ersten Mal auf die Außenanlage.",
                 },
               ],
             },
@@ -487,7 +487,7 @@
               lines: [
                 {
                   s: "n",
-                  t: "Gute Nachrichten für Pendlerinnen und Pendler: Der Streik bei der Bahn ist beendet. Gewerkschaft und Bahn haben sich am Nachmittag geeinigt. Ab morgen früh sollen alle Züge wieder nach dem normalen Fahrplan fahren. Heute Abend kann es allerdings noch zu Verspätungen und Ausfällen kommen.",
+                  t: "Gute Nachrichten für alle Pendlerinnen und Pendler: Der Streik bei der Bahn ist vorbei. Die Gewerkschaft und die Bahn haben sich heute Nachmittag geeinigt. Ab morgen früh sollen alle Züge wieder nach dem normalen Fahrplan fahren. Heute Abend müssen Fahrgäste aber noch mit Verspätungen und Zugausfällen rechnen.",
                 },
               ],
             },
@@ -496,7 +496,7 @@
               lines: [
                 {
                   s: "n",
-                  t: "Leipzig feiert am Samstag den Tag des öffentlichen Nahverkehrs. Den ganzen Tag können alle Fahrgäste kostenlos mit Bussen und Straßenbahnen fahren – egal ob Kinder oder Erwachsene. Am Hauptbahnhof gibt es außerdem ein Fest mit Musik, und Kinder dürfen sich eine historische Straßenbahn von innen ansehen.",
+                  t: "Und noch ein Tipp aus Leipzig: Dort feiert man am Samstag den Tag des öffentlichen Nahverkehrs. Den ganzen Tag können alle Fahrgäste kostenlos mit Bussen und Straßenbahnen fahren, egal ob Kinder oder Erwachsene. Am Hauptbahnhof gibt's außerdem ein Fest mit Musik, und Kinder dürfen sich eine historische Straßenbahn von innen anschauen.",
                 },
               ],
             },
@@ -506,7 +506,7 @@
               q: "Die A40 ist am Wochenende in Richtung Dortmund gesperrt.",
               au: 0,
               a: 0,
-              why: "„Die A40 wird … in Richtung Dortmund voll gesperrt“ – von Freitagabend bis Montagmorgen.",
+              why: "Die A40 wird „in Richtung Dortmund voll gesperrt“ – von Freitagabend bis Montagmorgen.",
             },
             {
               q: "Morgen scheint in ganz Deutschland die Sonne.",
@@ -518,7 +518,7 @@
               q: "Die Besucher können das Elefantenbaby schon ab heute sehen.",
               au: 2,
               a: 1,
-              why: "Mutter und Kind bleiben zunächst im Stall, erst „ab nächster Woche“ geht das Jungtier nach draußen.",
+              why: "Mutter und Kind bleiben „erst mal im Stall“, erst „ab nächster Woche“ geht das Elefantenbaby nach draußen.",
             },
             {
               q: "Ab morgen fahren die Züge wieder normal.",
@@ -548,75 +548,75 @@
               lines: [
                 {
                   s: "f",
-                  t: "Guten Tag und herzlich willkommen zu „Mittendrin“, unserer Sendung über Menschen aus der Region. Heute sitzt bei mir im Studio Mehmet Aydın. Herr Aydın, Sie sind 42 Jahre alt und arbeiten seit einem Jahr als Erzieher in einem Kindergarten in Bochum. Das ist ja eher ungewöhnlich, oder?",
+                  t: "Guten Tag und herzlich willkommen bei Mittendrin, unserer Sendung über Menschen aus der Region. Bei mir im Studio sitzt heute Mehmet Aydın. Herr Aydın, Sie sind zweiundvierzig und arbeiten seit einem Jahr als Erzieher in einem Kindergarten in Bochum. Das ist ja eher ungewöhnlich, oder?",
                 },
                 {
                   s: "m",
-                  t: "Ja, guten Tag. Also, ungewöhnlich ist es schon, ja. In meiner Kita bin ich der einzige Mann im Team. Wir sind elf Leute – zehn Frauen und ich.",
+                  t: "Ja, hallo, guten Tag. Also, ungewöhnlich ist das schon, ja. In meiner Kita bin ich der einzige Mann im Team. Wir sind elf Leute, zehn Frauen und ich.",
                 },
-                { s: "f", t: "Und was haben Sie vorher gemacht?" },
+                { s: "f", t: "Zehn Frauen und Sie, okay. Und was haben Sie vorher gemacht?" },
                 {
                   s: "m",
-                  t: "Ich war fast zwanzig Jahre bei einer Bank. Erst hab ich da die Ausbildung gemacht, dann war ich Kundenberater für Kredite. Das war, äh, eigentlich ein guter Job. Gutes Geld, nette Kollegen, da kann ich nichts sagen.",
+                  t: "Ich war fast zwanzig Jahre bei einer Bank. Erst hab ich da die Ausbildung gemacht, dann war ich Kundenberater, für Kredite. Und das war, äh, eigentlich ein guter Job. Gutes Geld, nette Kollegen, da kann ich nichts sagen.",
                 },
-                { s: "f", t: "Warum haben Sie dann gewechselt?" },
+                { s: "f", t: "Hm. Und warum haben Sie dann gewechselt?" },
                 {
                   s: "m",
-                  t: "Hm, das ist eine längere Geschichte. Meine Filiale wurde vor vier Jahren geschlossen. Ich hätte in eine andere Filiale nach Dortmund wechseln können, das hat man mir angeboten. Aber da hab ich gemerkt: Eigentlich will ich das gar nicht mehr. Ich saß den ganzen Tag am Computer und hab über Zahlen gesprochen. Und ich hab mich gefragt: Willst du das wirklich noch zwanzig Jahre machen?",
+                  t: "Tja, das ist eine längere Geschichte. Meine Filiale wurde vor vier Jahren geschlossen. Ich hätte nach Dortmund wechseln können, in eine andere Filiale, das hat man mir auch angeboten. Aber da hab ich gemerkt: Eigentlich will ich das gar nicht mehr. Ich saß den ganzen Tag am Computer und hab über Zahlen geredet. Und ich hab mich gefragt: Willst du das wirklich noch zwanzig Jahre machen?",
                 },
                 {
                   s: "f",
-                  t: "Und wie sind Sie dann auf den Beruf Erzieher gekommen?",
+                  t: "Und wie sind Sie dann ausgerechnet auf Erzieher gekommen?",
                 },
                 {
                   s: "m",
-                  t: "Durch meine eigenen Kinder, ehrlich gesagt. Ich hab zwei Töchter, und als die klein waren, bin ich oft bei Ausflügen vom Kindergarten mitgegangen, als Begleitung. Das hat mir unglaublich viel Spaß gemacht. Und eine Erzieherin hat dann mal zu mir gesagt: „Herr Aydın, Sie sollten das beruflich machen.“ Damals hab ich nur gelacht. Aber der Satz ist mir nicht mehr aus dem Kopf gegangen. Meine Frau war am Anfang übrigens eher skeptisch.",
+                  t: "Durch meine eigenen Kinder, ehrlich gesagt. Ich hab zwei Töchter, und als die klein waren, bin ich oft bei Ausflügen vom Kindergarten mitgegangen, so als Begleitung. Das hat mir unglaublich viel Spaß gemacht. Und dann hat eine Erzieherin mal zu mir gesagt: Herr Aydın, Sie sollten das beruflich machen. Da hab ich nur gelacht. Aber der Satz ist mir nicht mehr aus dem Kopf gegangen. Meine Frau war übrigens am Anfang eher skeptisch.",
                 },
                 {
                   s: "f",
-                  t: "Die Ausbildung dauert ja normalerweise mehrere Jahre. Wie haben Sie das finanziell geschafft?",
+                  t: "Mhm. Aber so eine Ausbildung dauert ja normalerweise mehrere Jahre. Wie haben Sie das denn finanziell geschafft?",
                 },
                 {
                   s: "m",
-                  t: "Ja, das war das größte Problem. Ich hab eine sogenannte praxisintegrierte Ausbildung gemacht, die dauert drei Jahre. Da arbeitet man von Anfang an schon in der Kita und bekommt auch ein Gehalt. Natürlich viel weniger als bei der Bank, ungefähr die Hälfte. Meine Frau arbeitet aber auch, und wir hatten vorher ein bisschen gespart. Trotzdem mussten wir auf manche Sachen verzichten. Wir sind zum Beispiel drei Jahre lang nicht in den Urlaub geflogen, wir waren dann eben an der Nordsee, mit dem Auto.",
+                  t: "Ja, das war das größte Problem. Ich hab eine sogenannte praxisintegrierte Ausbildung gemacht, die dauert drei Jahre. Da arbeitet man von Anfang an schon in der Kita und bekommt auch ein Gehalt. Natürlich viel weniger als bei der Bank, so ungefähr die Hälfte. Aber meine Frau arbeitet auch, und wir hatten vorher ein bisschen was gespart. Trotzdem mussten wir auf manches verzichten. Wir sind zum Beispiel drei Jahre lang nicht in den Urlaub geflogen. Wir sind dann eben mit dem Auto an die Nordsee gefahren.",
                 },
                 {
                   s: "f",
-                  t: "Und wie war es, mit fast vierzig wieder in die Schule zu gehen?",
+                  t: "Und wie war das, mit fast vierzig noch mal in die Schule zu gehen?",
                 },
                 {
                   s: "m",
-                  t: "Am Anfang komisch, ja. Die meisten in meiner Klasse waren so um die zwanzig, also halb so alt wie ich. Ich dachte, die finden mich bestimmt seltsam. Aber nein, das war gar kein Problem. Im Gegenteil: Ich hab den Jüngeren oft bei Bewerbungen geholfen, und sie haben mir dafür viele Spiele und Lieder beigebracht.",
+                  t: "Am Anfang komisch, ja. Die meisten in meiner Klasse waren so um die zwanzig, also halb so alt wie ich. Ich dachte, die finden mich bestimmt seltsam. Aber nee, das war überhaupt kein Problem. Im Gegenteil: Ich hab den Jüngeren oft bei Bewerbungen geholfen, und die haben mir dafür jede Menge Spiele und Lieder beigebracht.",
                 },
                 {
                   s: "f",
-                  t: "Wie reagieren denn die Eltern in der Kita auf einen männlichen Erzieher?",
+                  t: "Und die Eltern? Wie reagieren die denn auf einen Mann in der Kita?",
                 },
                 {
                   s: "m",
-                  t: "Die allermeisten ganz positiv. Viele Väter sagen: Endlich mal ein Mann! Am Anfang gab es zwei, drei Mütter, die ein bisschen skeptisch waren. Aber das hat sich schnell gelegt, als sie gesehen haben, wie die Kinder mit mir umgehen.",
+                  t: "Die allermeisten ganz positiv. Viele Väter sagen: Endlich mal ein Mann! Am Anfang gab's zwei, drei Mütter, die ein bisschen skeptisch waren. Aber das hat sich schnell gelegt, als sie gesehen haben, wie die Kinder mit mir umgehen.",
                 },
                 {
                   s: "f",
-                  t: "Gibt es etwas, was Sie an Ihrem alten Job vermissen?",
+                  t: "Gibt's denn etwas, das Sie an Ihrem alten Job vermissen?",
                 },
                 {
                   s: "m",
-                  t: "Ehrlich gesagt: das Gehalt. (lacht) Und manchmal die Ruhe. In einer Kita ist es laut, den ganzen Tag. Wenn ich abends nach Hause komme, brauche ich erst mal eine halbe Stunde für mich. Aber bereut hab ich den Wechsel keinen einzigen Tag.",
+                  t: "Ehrlich gesagt? Das Gehalt, ja. Und manchmal die Ruhe. In einer Kita ist es laut, den ganzen Tag. Wenn ich abends nach Hause komme, brauch ich erst mal eine halbe Stunde für mich. Aber bereut hab ich den Wechsel keinen einzigen Tag.",
                 },
                 {
                   s: "f",
-                  t: "Was würden Sie Menschen raten, die auch über einen Neuanfang nachdenken?",
+                  t: "Zum Schluss noch: Was würden Sie Leuten raten, die auch über einen Neuanfang nachdenken?",
                 },
                 {
                   s: "m",
-                  t: "Hm. Ich würde sagen: Nicht einfach sofort kündigen, sondern erst mal ausprobieren. Ich hab vor der Ausbildung zwei Wochen ein Praktikum gemacht, in meinem Urlaub. Danach wusste ich: Ja, das ist es. Und man sollte gut mit der Familie sprechen, denn die ganze Familie muss mitmachen.",
+                  t: "Hm, gute Frage. Ich würde sagen: Nicht einfach sofort kündigen, sondern erst mal ausprobieren. Ich hab vor der Ausbildung zwei Wochen ein Praktikum gemacht, in meinem Urlaub. Und danach wusste ich: Ja, das ist es. Und man sollte gut mit der Familie sprechen, denn die ganze Familie muss mitmachen.",
                 },
                 {
                   s: "f",
-                  t: "Herr Aydın, vielen Dank für das Gespräch und weiterhin viel Freude bei der Arbeit!",
+                  t: "Herr Aydın, vielen Dank für das Gespräch und weiterhin ganz viel Freude in der Kita!",
                 },
-                { s: "m", t: "Danke, sehr gern." },
+                { s: "m", t: "Danke schön. Hat Spaß gemacht." },
               ],
             },
           ],
@@ -697,7 +697,7 @@
               lines: [
                 {
                   s: "n",
-                  t: "Achtung an Gleis 7: Der ICE 578 nach Hamburg-Altona, planmäßige Abfahrt 14 Uhr 12, fährt heute ausnahmsweise von Gleis 9. Ich wiederhole: Der ICE 578 nach Hamburg-Altona fährt heute von Gleis 9. Bitte beachten Sie auch die geänderte Wagenreihung. Die Wagen der ersten Klasse halten im Abschnitt A.",
+                  t: "Achtung an Gleis sieben. Der ICE fünfhundertachtundsiebzig nach Hamburg-Altona, planmäßige Abfahrt vierzehn Uhr zwölf, fährt heute ausnahmsweise von Gleis neun. Ich wiederhole: Der ICE fünfhundertachtundsiebzig nach Hamburg-Altona fährt heute von Gleis neun. Bitte beachten Sie außerdem die geänderte Wagenreihung. Die Wagen der ersten Klasse halten im Abschnitt A.",
                 },
               ],
             },
@@ -705,8 +705,8 @@
               h: "Text 2 – Telefonansage",
               lines: [
                 {
-                  s: "f",
-                  t: "Guten Tag, Sie sind verbunden mit der Hausarztpraxis Dr. Lehmann. Unsere Praxis ist vom 13. bis zum 24. Oktober wegen Urlaub geschlossen. In dringenden Fällen wenden Sie sich bitte an unsere Vertretung, Frau Dr. Simon, in der Bahnhofstraße 12. Die Telefonnummer ist 0571/38 29 40, also null fünf sieben eins, achtunddreißig, neunundzwanzig, vierzig. Ab dem 26. Oktober sind wir wieder für Sie da.",
+                  s: "n",
+                  t: "Guten Tag, Sie sind verbunden mit der Hausarztpraxis Doktor Lehmann. Unsere Praxis ist vom dreizehnten bis zum vierundzwanzigsten Oktober wegen Urlaub geschlossen. In dringenden Fällen wenden Sie sich bitte an unsere Vertretung, Frau Doktor Simon, in der Bahnhofstraße zwölf. Die Telefonnummer ist null fünf sieben eins, achtunddreißig, neunundzwanzig, vierzig. Ich wiederhole: null fünf sieben eins, achtunddreißig, neunundzwanzig, vierzig. Ab dem sechsundzwanzigsten Oktober sind wir wieder für Sie da. Auf Wiederhören.",
                 },
               ],
             },
@@ -714,8 +714,8 @@
               h: "Text 3 – Im Kaufhaus",
               lines: [
                 {
-                  s: "f",
-                  t: "Liebe Kundinnen und Kunden, haben Sie das Wetter heute schon gesehen? Passend dazu gibt es in unserer Abteilung im Erdgeschoss alle Regenschirme und Regenjacken 30 Prozent günstiger. Aber Achtung: Das Angebot gilt nur heute, bis Ladenschluss um 20 Uhr. Wir wünschen Ihnen einen schönen Einkauf!",
+                  s: "n",
+                  t: "Liebe Kundinnen und Kunden, haben Sie heute schon aus dem Fenster geschaut? Passend zum Wetter gibt es in unserer Abteilung im Erdgeschoss alle Regenschirme und Regenjacken dreißig Prozent günstiger. Aber Achtung: Das Angebot gilt nur heute, bis Ladenschluss um zwanzig Uhr. Wir wünschen Ihnen einen schönen Einkauf!",
                 },
               ],
             },
@@ -724,7 +724,7 @@
               lines: [
                 {
                   s: "m",
-                  t: "Und hier noch ein Tipp fürs Wochenende: Am Samstag ist wieder großer Flohmarkt am Rheinufer, von 8 bis 16 Uhr. Am Sonntag gibt es dann an derselben Stelle einen Kinderflohmarkt – da dürfen nur Kinder verkaufen. Wer am Samstag selbst einen Stand haben möchte, muss sich vorher anmelden, und zwar bis Donnerstag, 18 Uhr, im Internet. Am Samstag selbst geht das leider nicht mehr.",
+                  t: "Und hier noch ein Tipp fürs Wochenende: Am Samstag ist wieder großer Flohmarkt am Rheinufer, und zwar von acht bis sechzehn Uhr. Am Sonntag gibt's dann an derselben Stelle einen Kinderflohmarkt, da dürfen nur Kinder verkaufen. Und ganz wichtig: Wer am Samstag selbst einen Stand haben möchte, muss sich vorher anmelden, im Internet, bis Donnerstag, achtzehn Uhr. Am Samstag selbst geht das leider nicht mehr. Also, nicht verpassen!",
                 },
               ],
             },
@@ -732,8 +732,8 @@
               h: "Text 5 – Telefonansage",
               lines: [
                 {
-                  s: "m",
-                  t: "Herzlich willkommen beim Bürgerbüro der Stadt Minden. Leider sind im Moment alle Plätze besetzt. Bitte beachten Sie: Termine für Ausweise, Reisepässe und Anmeldungen vergeben wir ausschließlich online unter www.minden-termin.de. Telefonisch können wir leider keine Termine vereinbaren. Für allgemeine Fragen bleiben Sie bitte in der Leitung.",
+                  s: "n",
+                  t: "Herzlich willkommen beim Bürgerbüro der Stadt Minden. Leider sind im Moment alle Plätze besetzt. Bitte beachten Sie: Termine für Ausweise, Reisepässe und Anmeldungen vergeben wir ausschließlich online, unter minden Bindestrich termin Punkt de. Telefonisch können wir leider keine Termine vereinbaren. Bei allgemeinen Fragen bleiben Sie bitte in der Leitung. Sie werden mit dem nächsten freien Platz verbunden.",
                 },
               ],
             },
@@ -743,25 +743,25 @@
               q: "Der ICE nach Hamburg fährt heute von Gleis 7 ab.",
               au: 0,
               a: 1,
-              why: "Er fährt „heute ausnahmsweise von Gleis 9“.",
+              why: "Er fährt „heute ausnahmsweise von Gleis neun“.",
             },
             {
               q: "In dringenden Fällen können Patienten während des Urlaubs zu Frau Dr. Simon gehen.",
               au: 1,
               a: 0,
-              why: "„In dringenden Fällen wenden Sie sich bitte an unsere Vertretung, Frau Dr. Simon.“",
+              why: "„In dringenden Fällen wenden Sie sich bitte an unsere Vertretung, Frau Doktor Simon.“",
             },
             {
               q: "Das Angebot für Regenschirme gilt nur heute.",
               au: 2,
               a: 0,
-              why: "„Das Angebot gilt nur heute, bis Ladenschluss um 20 Uhr.“",
+              why: "„Das Angebot gilt nur heute, bis Ladenschluss um zwanzig Uhr.“",
             },
             {
               q: "Man kann sich noch am Samstag als Verkäufer für den Flohmarkt anmelden.",
               au: 3,
               a: 1,
-              why: "Anmeldung nur bis Donnerstag, 18 Uhr; „Am Samstag selbst geht das leider nicht mehr.“",
+              why: "Anmeldung nur „bis Donnerstag, achtzehn Uhr“; „Am Samstag selbst geht das leider nicht mehr.“",
             },
             {
               q: "Einen Termin im Bürgerbüro bekommt man nur über das Internet.",
@@ -848,14 +848,14 @@
             "Unterhalten Sie sich mit Ihrer Partnerin / Ihrem Partner. Stellen Sie sich gegenseitig vor und stellen Sie Fragen. Antworten Sie in ganzen Sätzen und fragen Sie auch zurück.",
           task: "Sprechen Sie zum Beispiel über:\n– Name\n– Herkunft\n– Wohnort / Wohnung\n– Familie\n– Arbeit / Beruf / Ausbildung\n– Sprachen\n– Freizeit / Hobbys",
           prompts: [
-            "Hallo, ich heiße Maria. Wie heißen Sie denn?",
-            "Und woher kommen Sie?",
-            "Wie lange wohnen Sie schon in Deutschland – und wo genau wohnen Sie?",
-            "Wie gefällt Ihnen Ihre Stadt?",
-            "Haben Sie Familie?",
+            "Hallo, ich bin Maria. Und wie heißen Sie?",
+            "Freut mich! Und woher kommen Sie?",
+            "Wie lange wohnen Sie denn schon in Deutschland? Und wo genau wohnen Sie?",
+            "Und, wie gefällt Ihnen Ihre Stadt?",
+            "Haben Sie Familie hier?",
             "Was machen Sie beruflich?",
-            "Welche Sprachen sprechen Sie?",
-            "Was machen Sie gern in Ihrer Freizeit?",
+            "Welche Sprachen sprechen Sie denn alles?",
+            "Und was machen Sie gern in Ihrer Freizeit?",
           ],
           redemittel: [
             "Ich heiße … / Mein Name ist …",
@@ -892,13 +892,13 @@
             },
           ],
           prompts: [
-            "Worum geht es denn in Ihrem Text?",
-            "Interessant. Und warum bestellen die Leute online – was steht dazu im Text?",
-            "Haben Sie selbst schon einmal Lebensmittel im Internet bestellt?",
-            "Wie ist das in Ihrem Heimatland? Kaufen die Menschen dort auch online ein?",
-            "Ich finde das eigentlich praktisch. Was meinen Sie?",
-            "Aber ist das nicht schlecht für die kleinen Geschäfte?",
-            "Würden Sie Obst und Gemüse online kaufen?",
+            "So, worum geht's denn in Ihrem Text?",
+            "Ah, interessant. Und warum bestellen die Leute online? Was steht dazu im Text?",
+            "Haben Sie selbst schon mal Lebensmittel im Internet bestellt?",
+            "Und wie ist das in Ihrem Heimatland? Kaufen die Leute dort auch online ein?",
+            "Also, ich finde das eigentlich ganz praktisch. Was meinen Sie?",
+            "Hm, aber ist das nicht schlecht für die kleinen Geschäfte?",
+            "Würden Sie denn auch Obst und Gemüse online kaufen?",
           ],
           redemittel: [
             "In meinem Text geht es um … / Der Text berichtet über …",
@@ -930,13 +930,13 @@
             "Ihre Kursleiterin, Frau Brenner, geht nach vielen Jahren in Rente. Sie möchten mit Ihrer Partnerin / Ihrem Partner im Namen des Kurses eine kleine Abschiedsfeier organisieren. Planen Sie gemeinsam. Machen Sie Vorschläge, reagieren Sie auf die Vorschläge Ihrer Partnerin / Ihres Partners und einigen Sie sich am Ende.",
           task: "Abschiedsfeier für die Kursleiterin planen\n– Wann? (Tag, Uhrzeit)\n– Wo? (Kursraum, Café, Park …)\n– Essen und Getränke?\n– Geschenk?\n– Wer macht was?",
           prompts: [
-            "Also, wann wollen wir die Feier machen? Ich dachte an den letzten Kurstag, nach dem Unterricht.",
-            "Hm, und wo feiern wir? Im Kursraum ist es ein bisschen langweilig, oder?",
-            "Ein Café ist aber teuer. Wir sind ja 16 Leute.",
-            "Was machen wir mit dem Essen? Soll jeder etwas mitbringen?",
+            "Also, wann wollen wir die Feier machen? Ich dachte an den letzten Kurstag, direkt nach dem Unterricht.",
+            "Okay. Und wo feiern wir? Im Kursraum ist es ein bisschen langweilig, oder?",
+            "Hm, ein Café ist aber ziemlich teuer. Wir sind ja sechzehn Leute.",
+            "Und was machen wir mit dem Essen? Soll jeder etwas mitbringen?",
             "Und das Geschenk? Ich würde ihr gern Blumen schenken.",
-            "Wie viel Geld sammeln wir pro Person ein?",
-            "Gut. Wer kümmert sich um was? Ich kann das Geld einsammeln.",
+            "Wie viel Geld sammeln wir denn pro Person ein?",
+            "Gut. Und wer kümmert sich um was? Ich kann das Geld einsammeln.",
           ],
           redemittel: [
             "Wie wäre es, wenn wir …? / Ich schlage vor, dass …",
@@ -1275,7 +1275,7 @@
               lines: [
                 {
                   s: "n",
-                  t: "Das Hallenbad in Witten bleibt wegen Reparaturen bis Ende Februar geschlossen. Die Schwimmkurse für Kinder finden in dieser Zeit im Hallenbad Herbede statt.",
+                  t: "Das Hallenbad in Witten bleibt wegen Reparaturarbeiten bis Ende Februar geschlossen. Die Schwimmkurse für Kinder finden in dieser Zeit aber statt, und zwar im Hallenbad Herbede.",
                 },
               ],
             },
@@ -1284,7 +1284,7 @@
               lines: [
                 {
                   s: "n",
-                  t: "Am kommenden Sonntag haben in der Innenstadt von Hagen die Geschäfte von 13 bis 18 Uhr geöffnet. Grund ist das Herbstfest. Parken ist an diesem Tag in allen städtischen Parkhäusern kostenlos.",
+                  t: "Am kommenden Sonntag haben die Geschäfte in der Hagener Innenstadt von dreizehn bis achtzehn Uhr geöffnet. Anlass ist das Herbstfest. Und: Parken ist an diesem Tag in allen städtischen Parkhäusern kostenlos.",
                 },
               ],
             },
@@ -1332,16 +1332,16 @@
               lines: [
                 {
                   s: "f",
-                  t: "Frau Petrović, Sie haben vor zwei Jahren einen Gemeinschaftsgarten in Kassel gegründet. Wie viele Leute machen da mit?",
+                  t: "Frau Petrović, Sie haben vor zwei Jahren einen Gemeinschaftsgarten in Kassel gegründet. Wie viele Leute machen denn da inzwischen mit?",
                 },
                 {
                   s: "f2",
-                  t: "Inzwischen sind wir ungefähr dreißig. Am Anfang waren wir nur zu fünft, alles Nachbarn aus unserem Haus.",
+                  t: "Oh, inzwischen sind wir so um die dreißig. Am Anfang waren wir nur zu fünft, alles Nachbarn aus unserem Haus.",
                 },
-                { s: "f", t: "Und was bauen Sie an?" },
+                { s: "f", t: "Mhm. Und was bauen Sie da an?" },
                 {
                   s: "f2",
-                  t: "Vor allem Tomaten, Zucchini und Kräuter. Kartoffeln haben wir auch mal versucht, aber dafür ist der Boden leider zu schlecht.",
+                  t: "Vor allem Tomaten, Zucchini und Kräuter. Kartoffeln haben wir auch mal probiert, aber dafür ist der Boden leider zu schlecht.",
                 },
               ],
             },
@@ -1387,8 +1387,8 @@
               h: "Ansage 1",
               lines: [
                 {
-                  s: "m",
-                  t: "Sie sind verbunden mit dem Autohaus Reinhardt. Unsere Werkstatt ist heute wegen einer Betriebsfeier ab 14 Uhr geschlossen. Morgen sind wir ab 7 Uhr 30 wieder für Sie da.",
+                  s: "n",
+                  t: "Guten Tag, Sie sind verbunden mit dem Autohaus Reinhardt. Unsere Werkstatt ist heute wegen einer Betriebsfeier ab vierzehn Uhr geschlossen. Morgen früh sind wir ab halb acht wieder für Sie da. Vielen Dank für Ihren Anruf.",
                 },
               ],
             },
@@ -1396,8 +1396,8 @@
               h: "Ansage 2",
               lines: [
                 {
-                  s: "f",
-                  t: "Sehr geehrte Fahrgäste, wegen eines Unfalls fährt die Straßenbahnlinie 3 heute nur bis zum Hauptbahnhof. Bitte benutzen Sie ab dort die Busse der Linie 31.",
+                  s: "n",
+                  t: "Sehr geehrte Fahrgäste, wegen eines Unfalls fährt die Straßenbahnlinie drei heute nur bis zum Hauptbahnhof. Bitte benutzen Sie ab dort die Busse der Linie einunddreißig. Wir bitten um Ihr Verständnis.",
                 },
               ],
             },
@@ -1407,13 +1407,13 @@
               q: "Die Werkstatt ist heute den ganzen Tag geschlossen.",
               au: 0,
               a: 1,
-              why: "Sie ist nur „ab 14 Uhr“ geschlossen.",
+              why: "Sie ist nur „ab vierzehn Uhr“ geschlossen.",
             },
             {
               q: "Ab dem Hauptbahnhof soll man den Bus nehmen.",
               au: 1,
               a: 0,
-              why: "„Bitte benutzen Sie ab dort die Busse der Linie 31.“",
+              why: "„Bitte benutzen Sie ab dort die Busse der Linie einunddreißig.“",
             },
           ],
         },
