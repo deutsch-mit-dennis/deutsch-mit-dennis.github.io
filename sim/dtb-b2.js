@@ -415,44 +415,44 @@
               lines: [
                 {
                   s: "f",
-                  t: "Herr Schulte, gut, dass ich Sie treffe. Haben Sie für morgen um zehn den großen Besprechungsraum gebucht?",
+                  t: "Ah, Herr Schulte, gut, dass ich Sie treffe. Sagen Sie mal, haben Sie für morgen um zehn den großen Besprechungsraum gebucht?",
                 },
                 {
                   s: "m",
-                  t: "Ja, für den Workshop mit den neuen Auszubildenden. Warum?",
+                  t: "Ja, für den Workshop mit den neuen Azubis. Wieso?",
                 },
                 {
                   s: "f",
-                  t: "Weil der Vertrieb ihn auch gebucht hat. Im Kalender steht er zweimal drin. Irgendwie hat das System das nicht gemerkt.",
+                  t: "Weil der Vertrieb ihn auch gebucht hat. Der steht im Kalender zweimal drin. Irgendwie hat das System das nicht gemerkt.",
                 },
                 {
                   s: "m",
-                  t: "Na super. Und jetzt? Die Azubis haben die Einladung schon. Wie viele sind denn beim Vertrieb?",
+                  t: "Na super. Und jetzt? Die Azubis haben die Einladung ja schon. Wie viele sind denn beim Vertrieb?",
                 },
                 {
                   s: "f",
-                  t: "Die sind zu zwölft, mit Kunden aus Österreich. Und Sie?",
+                  t: "Die sind zu zwölft, mit Kunden aus Österreich. Und bei Ihnen?",
                 },
-                { s: "m", t: "Wir sind acht, mit mir neun." },
+                { s: "m", t: "Wir sind acht. Also, mit mir neun." },
                 {
                   s: "f",
-                  t: "Also, mein Vorschlag wäre: Sie gehen in den Schulungsraum im dritten Stock. Da passen fünfzehn Leute rein, und es gibt einen Beamer.",
+                  t: "Mhm. Also, mein Vorschlag wäre: Sie gehen in den Schulungsraum im dritten Stock. Da passen fünfzehn Leute rein, und ein Beamer ist auch da.",
                 },
                 {
                   s: "m",
-                  t: "Der Schulungsraum … ist der nicht dienstags immer für den Englischkurs reserviert?",
+                  t: "Der Schulungsraum? Moment mal, ist der nicht dienstags immer für den Englischkurs reserviert?",
                 },
                 {
                   s: "f",
-                  t: "Normalerweise schon, aber der Kurs fällt diese Woche aus, die Trainerin ist krank. Hab ich schon nachgeschaut.",
+                  t: "Normalerweise schon. Aber der Kurs fällt diese Woche aus, die Trainerin ist krank. Hab ich schon nachgeschaut.",
                 },
                 {
                   s: "m",
-                  t: "Ah, okay, dann machen wir das so. Ich schick den Azubis gleich eine Mail mit dem neuen Raum.",
+                  t: "Ach so. Okay, dann machen wir das so. Ich schick den Azubis gleich ’ne Mail mit dem neuen Raum.",
                 },
                 {
                   s: "f",
-                  t: "Gut. Und ich sag der IT Bescheid wegen der doppelten Buchung. Das darf eigentlich nicht passieren.",
+                  t: "Gut. Und ich sag der IT Bescheid wegen der doppelten Buchung. Das darf ja eigentlich nicht passieren.",
                 },
               ],
             },
@@ -461,19 +461,19 @@
               lines: [
                 {
                   s: "m",
-                  t: "Nadja, schau mal, der Fischlieferant war gerade da. Statt zwölf Kilo Lachs haben die nur sechs geliefert.",
+                  t: "Nadja, guck mal. Der Fischlieferant war grad da. Statt zwölf Kilo Lachs haben die nur sechs gebracht.",
                 },
                 {
                   s: "f",
-                  t: "Was? Wir haben heute Mittag Lachs auf der Tageskarte – und abends die Gesellschaft mit dreißig Personen!",
+                  t: "Was? Wir haben heute Mittag Lachs auf der Tageskarte! Und abends kommt die Gesellschaft mit dreißig Leuten.",
                 },
                 {
                   s: "m",
-                  t: "Ja eben. Ich hab schon angerufen. Die können den Rest erst morgen früh bringen.",
+                  t: "Ja, eben. Ich hab schon angerufen. Die können den Rest erst morgen früh bringen.",
                 },
                 {
                   s: "f",
-                  t: "Okay, okay. Lass uns überlegen. Die Gesellschaft heute Abend hat das Menü fest bestellt, mit Lachs. Da können wir nichts ändern.",
+                  t: "Okay. Okay … lass uns kurz überlegen. Die Gesellschaft heute Abend hat das Menü fest bestellt, mit Lachs. Da können wir nichts ändern.",
                 },
                 {
                   s: "m",
@@ -485,11 +485,11 @@
                 },
                 {
                   s: "m",
-                  t: "Ja, genug. Also Hähnchen mit Kräutersoße statt Lachs?",
+                  t: "Ja, genug. Also … Hähnchen mit Kräutersoße statt Lachs?",
                 },
                 {
                   s: "f",
-                  t: "Ja. Schreib’s bitte gleich draußen an die Tafel und sag dem Service Bescheid. Und ich ruf den Lieferanten nochmal an – wir wollen eine Gutschrift für die fehlende Ware.",
+                  t: "Ja, machen wir. Schreib’s bitte gleich draußen an die Tafel und sag dem Service Bescheid. Und ich ruf den Lieferanten noch mal an. Wir wollen ’ne Gutschrift für die fehlende Ware.",
                 },
               ],
             },
@@ -564,32 +564,32 @@
               lines: [
                 {
                   s: "m2",
-                  t: "So, liebe Kolleginnen und Kollegen, kommen wir zu Punkt drei: dem Pilotprojekt Vier-Tage-Woche. Die Idee ist: vier Tage mit je neuneinhalb Stunden statt fünf kürzerer Tage – also weiterhin 38 Stunden, beim gleichen Gehalt. Frau Kranz, Sie haben sich für den Betriebsrat zuerst gemeldet.",
+                  t: "So, liebe Kolleginnen und Kollegen, dann kommen wir zu Punkt drei, dem Pilotprojekt Vier-Tage-Woche. Kurz zur Idee: vier Tage mit je neuneinhalb Stunden statt fünf kürzerer Tage. Also weiterhin achtunddreißig Stunden pro Woche, beim gleichen Gehalt. Frau Kranz, Sie hatten sich für den Betriebsrat zuerst gemeldet. Bitte.",
                 },
                 {
                   s: "f",
-                  t: "Ja, danke. Also, grundsätzlich finden wir vom Betriebsrat die Idee gut. Viele Kolleginnen und Kollegen haben uns gesagt, dass sie sich einen Tag mehr Erholung wünschen. Aber – und das ist uns ganz wichtig: Das Ganze muss freiwillig sein. Wer bei fünf Tagen bleiben will, muss das können, ohne Nachteile. Und neuneinhalb Stunden an der Maschine, das ist anstrengend. Wir fordern deshalb eine zusätzliche Pause von fünfzehn Minuten.",
+                  t: "Ja, danke. Also, grundsätzlich finden wir vom Betriebsrat die Idee gut. Viele Kolleginnen und Kollegen haben uns gesagt, dass sie sich einfach einen Tag mehr Erholung wünschen. Aber, und das ist uns ganz wichtig, das Ganze muss freiwillig sein. Wer bei fünf Tagen bleiben will, muss das können. Ohne Nachteile. Und, na ja, neuneinhalb Stunden an der Maschine, das ist anstrengend, das wissen wir alle. Wir fordern deshalb eine zusätzliche Pause von fünfzehn Minuten.",
                 },
                 {
                   s: "m2",
-                  t: "Danke. Herr Ölmez, Sie leiten die Produktion. Wie sehen Sie das?",
+                  t: "Danke, Frau Kranz. Herr Ölmez, Sie leiten die Produktion. Wie sehen Sie das?",
                 },
                 {
                   s: "m",
-                  t: "Tja, ich will hier nicht der Spielverderber sein. Aber ich muss an die Abläufe denken. Unsere Maschinen laufen von Montag bis Freitag, und die Kunden wollen ihre Ware auch freitags. Wenn jetzt alle am Freitag frei haben wollen – und das wollen natürlich alle –, dann steht bei uns freitags die Halle leer. Also, wenn wir das machen, dann nur so, dass der freie Tag wechselt: Die eine Gruppe hat montags frei, die andere freitags, und alle paar Wochen wird getauscht. Und zur Freiwilligkeit, Frau Kranz: Das klingt gut, aber dann muss ich zwei Modelle parallel planen. Das ist ein enormer Aufwand.",
+                  t: "Tja … ich will hier nicht der Spielverderber sein, ehrlich nicht. Aber ich muss an die Abläufe denken. Unsere Maschinen laufen von Montag bis Freitag, und die Kunden wollen ihre Ware auch freitags. Wenn jetzt alle am Freitag frei haben wollen, und das wollen natürlich alle, dann steht bei uns freitags die Halle leer. Also, wenn wir das machen, dann nur so, dass der freie Tag wechselt. Die eine Gruppe hat montags frei, die andere freitags, und alle paar Wochen wird getauscht. Und zur Freiwilligkeit, Frau Kranz: Das klingt gut, keine Frage. Aber dann muss ich zwei Modelle parallel planen. Das ist ein enormer Aufwand.",
                 },
                 {
                   s: "m2",
-                  t: "Verstehe. Frau Weber, Sie arbeiten im Versand. Was sagen Sie?",
+                  t: "Verstehe. Frau Weber, Sie arbeiten im Versand. Was sagen Sie dazu?",
                 },
                 {
                   s: "f2",
-                  t: "Ja, also, ich sehe das ein bisschen gemischt. Für Kollegen, die jeden Tag eine Stunde mit dem Auto herfahren, ist das natürlich super. Die sparen sich einen ganzen Tag Fahrerei und Spritkosten. Aber ich hab zwei kleine Kinder, und die Kita macht um halb fünf zu. Wenn ich neuneinhalb Stunden arbeite plus Pause, dann schaff ich das einfach nicht. Ich wär eher für mehr Gleitzeit, dass man morgens flexibler anfangen kann. Und ehrlich gesagt, Frau Kranz: Eine Viertelstunde mehr Pause macht den Tag ja noch länger.",
+                  t: "Ja, also … ich seh das ein bisschen gemischt. Für Kollegen, die jeden Tag eine Stunde mit dem Auto herfahren, ist das natürlich super. Die sparen sich einen ganzen Tag Fahrerei, und die Spritkosten auch. Aber ich hab zwei kleine Kinder, und die Kita macht um halb fünf zu. Wenn ich da neuneinhalb Stunden arbeite, plus Pause, dann schaff ich das einfach nicht. Ich wär eher für mehr Gleitzeit, dass man morgens flexibler anfangen kann. Und, äh, ehrlich gesagt, Frau Kranz, nehmen Sie’s mir nicht übel: Eine Viertelstunde mehr Pause macht den Tag ja noch länger.",
                 },
-                { s: "f", t: "Das stimmt, das müssen wir mitdenken." },
+                { s: "f", t: "Nee, da haben Sie recht. Das müssen wir mitdenken." },
                 {
                   s: "m2",
-                  t: "Gut, dann sammeln wir jetzt erst einmal weitere Meinungen aus dem Saal …",
+                  t: "Gut. Dann sammeln wir jetzt erst mal weitere Meinungen aus dem Saal. Ja, bitte, da hinten …",
                 },
               ],
             },
@@ -635,23 +635,23 @@
               lines: [
                 {
                   s: "f",
-                  t: "Guten Morgen und herzlich willkommen bei Rhein-Ruhr Frischelogistik! Mein Name ist Katrin Seidel, ich leite die Personalabteilung, und ich freue mich, dass Sie heute alle hier sind – zwölf neue Kolleginnen und Kollegen auf einmal, das ist ein Rekord für uns.",
+                  t: "So, guten Morgen zusammen, und herzlich willkommen bei Rhein-Ruhr Frischelogistik! Mein Name ist Katrin Seidel, ich leite die Personalabteilung. Und ich freu mich wirklich, dass Sie heute alle hier sind. Zwölf neue Kolleginnen und Kollegen auf einmal, das ist ein Rekord für uns!",
                 },
                 {
                   s: "f",
-                  t: "Ich möchte Ihnen in den nächsten Minuten kurz zeigen, wer wir sind. Angefangen hat alles 1998: Unser Gründer, Reinhold Mertens, hat damals mit drei Kühl-Lkw Obst und Gemüse vom Großmarkt zu kleinen Lebensmittelgeschäften gefahren. Ein klassischer Familienbetrieb – seine Frau hat die Buchhaltung gemacht, am Küchentisch. Heute sind wir 420 Beschäftigte, haben 130 Fahrzeuge und beliefern vor allem Supermärkte in ganz Nordrhein-Westfalen mit gekühlter Ware. Wir haben drei Standorte: hier in Duisburg die Zentrale, dann Krefeld und Unna. In Unna haben wir 2025 eine neue Kühlhalle gebaut, eine der modernsten in der Region.",
+                  t: "Ich möchte Ihnen in den nächsten Minuten kurz zeigen, wer wir eigentlich sind. Angefangen hat alles neunzehnhundertachtundneunzig. Unser Gründer, Reinhold Mertens, hat damals mit drei Kühl-Lkw Obst und Gemüse vom Großmarkt zu kleinen Lebensmittelgeschäften gefahren. Ein klassischer Familienbetrieb also. Seine Frau hat die Buchhaltung gemacht, und zwar am Küchentisch! Heute sind wir vierhundertzwanzig Beschäftigte, wir haben hundertdreißig Fahrzeuge und beliefern vor allem Supermärkte in ganz Nordrhein-Westfalen mit gekühlter Ware. Standorte haben wir drei: hier in Duisburg die Zentrale, dann Krefeld und Unna. In Unna haben wir zweitausendfünfundzwanzig eine neue Kühlhalle gebaut. Das ist eine der modernsten in der ganzen Region.",
                 },
                 {
                   s: "f",
-                  t: "Was haben wir vor? Ein großes Thema ist Klimaschutz. Ab dem kommenden Frühjahr setzen wir in den Innenstädten von Duisburg und Düsseldorf zwölf Elektro-Lkw ein. Für die langen Strecken bleiben wir erst einmal beim Diesel – da ist die Technik, ehrlich gesagt, noch nicht so weit.",
+                  t: "Und was haben wir vor? Ein großes Thema ist bei uns der Klimaschutz. Ab dem kommenden Frühjahr setzen wir in den Innenstädten von Duisburg und Düsseldorf zwölf Elektro-Lkw ein. Für die langen Strecken bleiben wir aber erst mal beim Diesel. Da ist die Technik, ehrlich gesagt, noch nicht so weit.",
                 },
                 {
                   s: "f",
-                  t: "Jetzt zu dem, was Sie wahrscheinlich am meisten interessiert: Was bieten wir Ihnen? Wir zahlen nach Tarif, es gibt Urlaubs- und Weihnachtsgeld. Wer mit Bus und Bahn kommt, bekommt einen Zuschuss von 30 Euro im Monat zum Deutschlandticket. Fahrrad-Leasing ist auch möglich. Ich werde oft nach Firmenwagen gefragt – die gibt es bei uns nur für den Außendienst. Und eine eigene Kinderbetreuung, ja, das wünschen sich viele. Da sind wir mit der Stadt im Gespräch, aber versprechen kann ich noch nichts.",
+                  t: "Jetzt zu dem, was Sie wahrscheinlich am meisten interessiert: Was bieten wir Ihnen? Wir zahlen nach Tarif, es gibt Urlaubsgeld und Weihnachtsgeld. Wer mit Bus und Bahn kommt, bekommt einen Zuschuss von dreißig Euro im Monat zum Deutschlandticket. Fahrrad-Leasing geht auch. Ich werde oft nach Firmenwagen gefragt. Die gibt’s bei uns aber nur für den Außendienst. Und eine eigene Kinderbetreuung … ja, das wünschen sich viele. Da sind wir mit der Stadt im Gespräch, aber versprechen kann ich Ihnen da noch nichts.",
                 },
                 {
                   s: "f",
-                  t: "Und wie geht es für Sie jetzt weiter? Jede und jeder von Ihnen bekommt für die ersten drei Monate einen Paten oder eine Patin – also eine erfahrene Kollegin oder einen erfahrenen Kollegen aus Ihrer Abteilung, die Ihnen bei allen Fragen hilft. Sie lernen die Abläufe direkt am Arbeitsplatz kennen, nicht im Kursraum. Einen Pflichtkurs gibt es nur zum Thema Hygiene und Kühlkette, und der dauert einen Tag. So – gleich machen wir eine kleine Führung durch die Halle …",
+                  t: "Und wie geht’s für Sie jetzt weiter? Jede und jeder von Ihnen bekommt für die ersten drei Monate einen Paten oder eine Patin. Also eine erfahrene Kollegin oder einen erfahrenen Kollegen aus Ihrer Abteilung, die Ihnen bei allen Fragen hilft. Sie lernen die Abläufe direkt am Arbeitsplatz kennen, nicht im Kursraum. Einen Pflichtkurs gibt es nur zum Thema Hygiene und Kühlkette, und der dauert einen Tag. So, und gleich machen wir eine kleine Führung durch die Halle. Kommen Sie bitte mit.",
                 },
               ],
             },
@@ -666,7 +666,7 @@
                 "Sie hatte von Anfang an drei Standorte.",
               ],
               a: 1,
-              why: "„1998 … mit drei Kühl-Lkw … Ein klassischer Familienbetrieb.“",
+              why: "„Angefangen hat alles neunzehnhundertachtundneunzig … mit drei Kühl-Lkw … Ein klassischer Familienbetrieb also.“",
             },
             {
               q: "Was plant die Firma für das kommende Jahr?",
@@ -686,7 +686,7 @@
                 "eine betriebliche Kinderbetreuung",
               ],
               a: 0,
-              why: "„Zuschuss von 30 Euro im Monat zum Deutschlandticket.“ Firmenwagen nur für den Außendienst, Kinderbetreuung noch nicht sicher.",
+              why: "„Zuschuss von dreißig Euro im Monat zum Deutschlandticket.“ Firmenwagen nur für den Außendienst, Kinderbetreuung noch nicht sicher.",
             },
             {
               q: "Wie werden die neuen Mitarbeitenden eingearbeitet?",
@@ -712,7 +712,7 @@
               lines: [
                 {
                   s: "f",
-                  t: "Guten Tag, hier ist die Linden-Apotheke, Bettina Kraus. Ich rufe an wegen der Wochenlieferung für das Seniorenzentrum Am Stadtpark, und zwar für Ihren Bewohner Herrn Klaus Wendt, Zimmer 214, also zwei-eins-vier. Das Blutdruckmittel, das der Hausarzt verordnet hat, ist im Moment beim Hersteller nicht lieferbar – wahrscheinlich die nächsten sechs Wochen nicht. Es gibt aber ein gleichwertiges Präparat von einer anderen Firma. Dafür brauchen wir allerdings ein neues Rezept, das alte können wir nicht einfach ändern. Könnten Sie bitte mit Dr. Hartmann Kontakt aufnehmen? Die restlichen Medikamente liefern wir ganz normal am Montag. Vielen Dank, auf Wiederhören.",
+                  t: "Ja, guten Tag, hier ist Bettina Kraus von der Linden-Apotheke. Ich ruf an wegen der Wochenlieferung für das Seniorenzentrum Am Stadtpark, und zwar für Ihren Bewohner Herrn Klaus Wendt, Zimmer zweihundertvierzehn, also zwei, eins, vier. Ähm, das Blutdruckmittel, das der Hausarzt verordnet hat, ist im Moment beim Hersteller nicht lieferbar. Wahrscheinlich die nächsten sechs Wochen nicht. Es gibt aber ein gleichwertiges Präparat von einer anderen Firma. Dafür brauchen wir allerdings ein neues Rezept, das alte können wir nicht einfach ändern. Könnten Sie bitte mit Doktor Hartmann Kontakt aufnehmen? Die restlichen Medikamente liefern wir ganz normal am Montag. Gut, vielen Dank, auf Wiederhören.",
                 },
               ],
             },
@@ -721,7 +721,7 @@
               lines: [
                 {
                   s: "m",
-                  t: "Ja, hallo, Schreinerei Vogt? Hier spricht Markus Albers. Sie wollten bei uns ja am Dienstag, den 27., die Küche montieren. Ich wär am Dienstag zwar zu Hause, das ist nicht das Problem, aber der Installateur hat sich gemeldet: Er schafft die Wasseranschlüsse erst bis Mittwoch. Und ohne die können Sie die Spüle ja nicht anschließen. Die Küche selbst ist komplett da, die steht bei uns in der Garage. Ginge es vielleicht am Donnerstag oder Freitag? Rufen Sie mich doch bitte zurück unter 0234 / 55 71 08, also null-zwei-drei-vier, fünfundfünfzig, einundsiebzig, null-acht. Danke.",
+                  t: "Ja, hallo, ist da die Schreinerei Vogt? Ach so, der Anrufbeantworter. Also, hier ist Markus Albers. Äh, Sie wollten bei uns ja am Dienstag, dem siebenundzwanzigsten, die Küche montieren. Also, ich wär am Dienstag zwar zu Hause, das ist nicht das Problem. Aber der Installateur hat sich gemeldet: Er schafft die Wasseranschlüsse erst bis Mittwoch. Und ohne die können Sie die Spüle ja nicht anschließen. Die Küche selbst ist komplett da, die steht bei uns in der Garage. Ginge es vielleicht am Donnerstag oder Freitag? Rufen Sie mich doch bitte zurück, unter null zwei drei vier, fünfundfünfzig, einundsiebzig, null acht. Ich wiederhole: null zwei drei vier, fünf fünf, sieben eins, null acht. Danke, tschüss.",
                 },
               ],
             },
@@ -730,7 +730,7 @@
               lines: [
                 {
                   s: "f",
-                  t: "Guten Tag, Herr Popescu, hier ist Lisa Hartwig von Personalservice Ruhr. Ich hab gute Nachrichten: Ab Montag haben Sie einen neuen Einsatz bei der Firma Metallbau Krüger in Hagen, erst mal für drei Monate. Arbeitsbeginn ist um sechs Uhr – bitte seien Sie am ersten Tag schon um Viertel vor sechs am Tor 2, da holt Sie der Schichtleiter, Herr Baumann, ab. Den Einsatzvertrag haben Sie ja letzte Woche schon bei uns unterschrieben, und Ihr Foto für den Werksausweis haben wir auch schon. Denken Sie nur bitte an Ihre Sicherheitsschuhe – Arbeitskleidung bekommen Sie dort, Schuhe aber nicht. Bei Fragen erreichen Sie mich unter 02331 / 90 44 12. Viel Erfolg!",
+                  t: "Hallo, Herr Popescu, hier ist Lisa Hartwig von Personalservice Ruhr. Ich hab gute Nachrichten für Sie! Ab Montag haben Sie einen neuen Einsatz, und zwar bei der Firma Metallbau Krüger in Hagen. Erst mal für drei Monate. Arbeitsbeginn ist um sechs Uhr. Am ersten Tag seien Sie aber bitte schon um Viertel vor sechs am Tor zwei, da holt Sie der Schichtleiter ab, Herr Baumann. Den Einsatzvertrag haben Sie ja letzte Woche schon bei uns unterschrieben, und Ihr Foto für den Werksausweis haben wir auch schon. Denken Sie nur bitte an Ihre Sicherheitsschuhe! Arbeitskleidung bekommen Sie dort, Schuhe aber nicht. Wenn Sie noch Fragen haben, erreichen Sie mich unter null zwei drei drei eins, neunzig, vierundvierzig, zwölf. Also noch mal: null zwei drei drei eins, neun null, vier vier, eins zwei. Viel Erfolg, tschüss!",
                 },
               ],
             },
@@ -739,7 +739,7 @@
               lines: [
                 {
                   s: "m",
-                  t: "Guten Tag, hier ist Jens Kowalczyk von der Firma Optima Software in Dortmund. Wir haben bei Ihnen im Hotel für den 6. November den Tagungsraum „Phoenix“ und ein Mittagessen für 25 Personen gebucht. Es gibt zwei Änderungen: Erstens haben sich mehr Leute angemeldet, wir sind jetzt 32. Zweitens verschiebt sich unser Programm am Vormittag ein bisschen – könnten wir das Mittagessen statt um zwölf erst um halb eins haben? Beim Menü bleibt alles wie besprochen, äh, nur bei den vegetarischen Essen – das sind jetzt sechs statt vier. Rufen Sie mich bitte kurz zurück, ob der Raum für 32 Personen groß genug ist: 0231 / 73 82 50. Danke schön.",
+                  t: "Ja, guten Tag, Jens Kowalczyk hier, von der Firma Optima Software in Dortmund. Wir haben bei Ihnen im Hotel für den sechsten November den Tagungsraum Phoenix gebucht, und dazu ein Mittagessen für fünfundzwanzig Personen. Da gibt’s jetzt zwei Änderungen. Erstens haben sich mehr Leute angemeldet, wir sind jetzt zweiunddreißig. Und zweitens verschiebt sich unser Programm am Vormittag ein bisschen. Könnten wir das Mittagessen statt um zwölf erst um halb eins haben? Beim Menü bleibt alles wie besprochen, äh, nur bei den vegetarischen Essen, da sind es jetzt sechs statt vier. Rufen Sie mich bitte kurz zurück, ob der Raum für zweiunddreißig Personen groß genug ist. Meine Nummer ist null zwei drei eins, dreiundsiebzig, zweiundachtzig, fünfzig. Danke schön, auf Wiederhören.",
                 },
               ],
             },
@@ -748,7 +748,7 @@
               lines: [
                 {
                   s: "f",
-                  t: "Guten Tag, hier spricht Monika Strauß aus der Buchhaltung der Firma Papierhaus Lenz in Bielefeld. Ich rufe an wegen unserer Rechnung Nummer 4471 vom 2. Oktober. Sie haben den Betrag von 1.268 Euro zweimal an uns überwiesen, einmal am 9. und dann noch mal am 14. Oktober. Das ist überhaupt kein Problem – wir können das Geld zurücküberweisen oder mit Ihrer nächsten Bestellung verrechnen. Bitte schreiben Sie mir kurz eine E-Mail, was Ihnen lieber ist. Die Adresse steht unten auf der Rechnung. Vielen Dank und noch einen schönen Tag.",
+                  t: "Guten Tag, hier spricht Monika Strauß aus der Buchhaltung von Papierhaus Lenz in Bielefeld. Ich ruf an wegen unserer Rechnung Nummer vierundvierzig einundsiebzig, vom zweiten Oktober. Sie haben den Betrag, also die tausendzweihundertachtundsechzig Euro, zweimal an uns überwiesen. Einmal am neunten und dann noch mal am vierzehnten Oktober. Das ist aber überhaupt kein Problem! Wir können Ihnen das Geld zurücküberweisen, oder wir verrechnen es mit Ihrer nächsten Bestellung. Bitte schreiben Sie mir kurz eine E-Mail, was Ihnen lieber ist. Die Adresse steht unten auf der Rechnung. Vielen Dank, und noch einen schönen Tag!",
                 },
               ],
             },
@@ -764,7 +764,7 @@
                 "die Lieferung am Montag abbestellen",
               ],
               a: 0,
-              why: "„Dafür brauchen wir … ein neues Rezept … Könnten Sie bitte mit Dr. Hartmann Kontakt aufnehmen?“",
+              why: "„Dafür brauchen wir … ein neues Rezept … Könnten Sie bitte mit Doktor Hartmann Kontakt aufnehmen?“",
             },
             {
               au: 1,
@@ -797,7 +797,7 @@
                 "Alle Teilnehmenden möchten vegetarisch essen.",
               ],
               a: 1,
-              why: "„Wir sind jetzt 32“ und Mittagessen „erst um halb eins“. Nur sechs Personen essen vegetarisch.",
+              why: "„Wir sind jetzt zweiunddreißig“ und Mittagessen „erst um halb eins“. Nur sechs Personen essen vegetarisch.",
             },
             {
               au: 4,
@@ -834,7 +834,7 @@
               lines: [
                 {
                   s: "m",
-                  t: "Ja, guten Tag, hier ist Frank Lindner von der Hausverwaltung Lindner und Partner in Witten. Ich hätte gern Frau Lindemann gesprochen, aber da geht keiner ran, deshalb sprech ich Ihnen das jetzt auf. Es geht um das Mehrfamilienhaus in der Breite Straße 17, also Breite Straße eins-sieben, in Witten-Annen. Da ist seit heute früh die Heizung komplett ausgefallen, und warmes Wasser gibt es auch nicht. Da wohnen sechs Parteien, unter anderem eine ältere Dame über neunzig, die friert natürlich jetzt. Ähm, die Anlage ist bei Ihnen in der Wartung, die letzte Wartung war im Mai, glaube ich. Wir bräuchten also dringend heute noch einen Techniker, am besten bis vier Uhr. Den Schlüssel für den Heizungskeller hat der Hausmeister, Herr Okafor, der ist ab 13 Uhr im Haus. Seine Nummer ist 0176 / 23 45 81 90, also null-eins-sieben-sechs, dreiundzwanzig, fünfundvierzig, einundachtzig, neunzig. Und bitte rufen Sie mich zurück, wenn Sie wissen, wann jemand kommt – am besten auf dem Handy: 0172 / 98 01 336, ich wiederhole: null-eins-sieben-zwei, achtundneunzig, null-eins, drei-drei-sechs. Ach so, und falls es heute wirklich nicht mehr geht, sagen Sie mir bitte gleich Bescheid, dann besorge ich für die Mieter Heizlüfter. Danke!",
+                  t: "Ja, guten Tag, hier ist Frank Lindner von der Hausverwaltung Lindner und Partner in Witten. Ich hätte gern Frau Lindemann gesprochen, aber da geht keiner ran, deshalb sprech ich’s Ihnen jetzt auf. Es geht um das Mehrfamilienhaus in der Breite Straße siebzehn, also Breite Straße eins, sieben, in Witten-Annen. Da ist seit heute früh die Heizung komplett ausgefallen. Und warmes Wasser gibt’s auch nicht. Da wohnen sechs Parteien, unter anderem eine ältere Dame über neunzig, die friert jetzt natürlich. Ähm, die Anlage ist bei Ihnen in der Wartung, die letzte Wartung war im Mai, glaub ich. Wir bräuchten also dringend heute noch einen Techniker, am besten bis vier Uhr. Den Schlüssel für den Heizungskeller hat der Hausmeister, Herr Okafor. Der ist ab dreizehn Uhr im Haus. Seine Nummer ist null eins sieben sechs, dreiundzwanzig, fünfundvierzig, einundachtzig, neunzig. Also: null eins sieben sechs, zwei drei, vier fünf, acht eins, neun null. Und rufen Sie mich bitte zurück, wenn Sie wissen, wann jemand kommt. Am besten auf dem Handy: null eins sieben zwei, achtundneunzig, null eins, drei drei sechs. Ich wiederhole: null eins sieben zwei, neun acht, null eins, drei drei sechs. Ach so, und falls es heute wirklich nicht mehr geht, sagen Sie mir bitte gleich Bescheid. Dann besorg ich für die Mieter Heizlüfter. Ja, danke, tschüss!",
                 },
               ],
             },
@@ -867,7 +867,7 @@
               lines: [
                 {
                   s: "m",
-                  t: "Ja, guten Tag, hier ist Frank Lindner von der Hausverwaltung Lindner und Partner in Witten. Ich hätte gern Frau Lindemann gesprochen, aber da geht keiner ran, deshalb sprech ich Ihnen das jetzt auf. Es geht um das Mehrfamilienhaus in der Breite Straße 17, also Breite Straße eins-sieben, in Witten-Annen. Da ist seit heute früh die Heizung komplett ausgefallen, und warmes Wasser gibt es auch nicht. Da wohnen sechs Parteien, unter anderem eine ältere Dame über neunzig, die friert natürlich jetzt. Ähm, die Anlage ist bei Ihnen in der Wartung, die letzte Wartung war im Mai, glaube ich. Wir bräuchten also dringend heute noch einen Techniker, am besten bis vier Uhr. Den Schlüssel für den Heizungskeller hat der Hausmeister, Herr Okafor, der ist ab 13 Uhr im Haus. Seine Nummer ist 0176 / 23 45 81 90, also null-eins-sieben-sechs, dreiundzwanzig, fünfundvierzig, einundachtzig, neunzig. Und bitte rufen Sie mich zurück, wenn Sie wissen, wann jemand kommt – am besten auf dem Handy: 0172 / 98 01 336, ich wiederhole: null-eins-sieben-zwei, achtundneunzig, null-eins, drei-drei-sechs. Ach so, und falls es heute wirklich nicht mehr geht, sagen Sie mir bitte gleich Bescheid, dann besorge ich für die Mieter Heizlüfter. Danke!",
+                  t: "Ja, guten Tag, hier ist Frank Lindner von der Hausverwaltung Lindner und Partner in Witten. Ich hätte gern Frau Lindemann gesprochen, aber da geht keiner ran, deshalb sprech ich’s Ihnen jetzt auf. Es geht um das Mehrfamilienhaus in der Breite Straße siebzehn, also Breite Straße eins, sieben, in Witten-Annen. Da ist seit heute früh die Heizung komplett ausgefallen. Und warmes Wasser gibt’s auch nicht. Da wohnen sechs Parteien, unter anderem eine ältere Dame über neunzig, die friert jetzt natürlich. Ähm, die Anlage ist bei Ihnen in der Wartung, die letzte Wartung war im Mai, glaub ich. Wir bräuchten also dringend heute noch einen Techniker, am besten bis vier Uhr. Den Schlüssel für den Heizungskeller hat der Hausmeister, Herr Okafor. Der ist ab dreizehn Uhr im Haus. Seine Nummer ist null eins sieben sechs, dreiundzwanzig, fünfundvierzig, einundachtzig, neunzig. Also: null eins sieben sechs, zwei drei, vier fünf, acht eins, neun null. Und rufen Sie mich bitte zurück, wenn Sie wissen, wann jemand kommt. Am besten auf dem Handy: null eins sieben zwei, achtundneunzig, null eins, drei drei sechs. Ich wiederhole: null eins sieben zwei, neun acht, null eins, drei drei sechs. Ach so, und falls es heute wirklich nicht mehr geht, sagen Sie mir bitte gleich Bescheid. Dann besorg ich für die Mieter Heizlüfter. Ja, danke, tschüss!",
                 },
               ],
             },
@@ -1115,10 +1115,10 @@
             "Die Prüfenden stellen Ihnen Fragen zu Ihrem Thema. Antworten Sie ausführlich (2–4 Sätze) und begründen Sie Ihre Antworten. (Hier: Fragen zum Thema „Weiterbildung im Beruf“; zum Thema Homeoffice wären die Fragen ähnlich.)",
           task: "Beantworten Sie die Nachfragen der Prüfenden zu Ihrem Thema.",
           prompts: [
-            "Sie haben gesagt, Weiterbildung ist mit Familie und Schichtarbeit anstrengend. Wer sollte Ihrer Meinung nach die Kosten tragen – der Betrieb oder die Beschäftigten?",
+            "Sie haben gesagt, Weiterbildung ist mit Familie und Schichtarbeit anstrengend. Wer sollte Ihrer Meinung nach die Kosten tragen, der Betrieb oder die Beschäftigten?",
             "Sollten Weiterbildungen in der Arbeitszeit oder in der Freizeit stattfinden?",
-            "Was würden Sie tun, wenn Ihr Arbeitgeber eine Weiterbildung ablehnt?",
-            "Glauben Sie, dass Online-Kurse eine gute Alternative sind?",
+            "Und was würden Sie tun, wenn Ihr Arbeitgeber eine Weiterbildung ablehnt?",
+            "Eine letzte Frage noch: Glauben Sie, dass Online-Kurse eine gute Alternative sind?",
           ],
           redemittel: [
             "Das ist eine gute Frage. Ich denke, …",
@@ -1146,10 +1146,10 @@
             "Sie sprechen mit einer Kollegin / einem Kollegen in der Pause. Sie arbeiten beide in einem Seniorenzentrum. Reagieren Sie auf die Fragen, erzählen Sie von Ihren Erfahrungen und geben Sie Tipps. Fragen Sie auch nach.",
           task: "Ihr Kollege wechselt nächsten Monat von der festen Frühschicht in den Wechseldienst (Früh-, Spät- und Nachtdienst). Sie arbeiten schon seit Jahren im Wechseldienst. Er fragt Sie nach Ihren Erfahrungen.\n\n– Erzählen Sie von Ihren Erfahrungen.\n– Geben Sie Tipps (Schlaf, Familie, Freizeit).\n– Fragen Sie nach seiner Situation.\n– Bieten Sie Hilfe an.",
           prompts: [
-            "Du, ich muss ab nächstem Monat in den Wechseldienst. Du machst das doch schon lange – wie ist das so?",
-            "Und die Nachtdienste? Davor habe ich am meisten Angst. Wie schaffst du es, tagsüber zu schlafen?",
-            "Meine Frau arbeitet auch Vollzeit, und wir haben zwei Kinder. Wie bekommst du das mit der Familie hin?",
-            "Meinst du, ich kann mit der Pflegedienstleitung über meinen Dienstplan sprechen?",
+            "Du, sag mal, ich muss ab nächstem Monat in den Wechseldienst. Du machst das doch schon lange. Wie ist das so?",
+            "Und die Nachtdienste? Davor hab ich ehrlich gesagt am meisten Angst. Wie schaffst du das, tagsüber zu schlafen?",
+            "Hm. Meine Frau arbeitet auch Vollzeit, und wir haben zwei Kinder. Wie kriegst du das mit der Familie hin?",
+            "Meinst du, ich kann mit der Pflegedienstleitung mal über meinen Dienstplan reden?",
           ],
           redemittel: [
             "Also, am Anfang war das für mich auch …",
@@ -1179,11 +1179,11 @@
             "Sie arbeiten mit Ihrer Partnerin / Ihrem Partner im selben Team. Es gibt ein Problem. Sammeln Sie Vorschläge, diskutieren Sie Vor- und Nachteile und einigen Sie sich auf eine Lösung.",
           task: "Situation: Sie arbeiten in einem Seniorenzentrum. Für Weihnachten und Silvester fehlt Personal: Drei Kolleginnen sind länger krank, und sehr viele haben Urlaub beantragt. Die Wohnbereichsleitung bittet Sie beide, bis Freitag einen Vorschlag zu machen.\n\nMögliche Ideen:\n– Zeitarbeitskräfte oder Springer\n– Bonus / höhere Zuschläge für Feiertagsdienste\n– Rotation: Wer letztes Jahr frei hatte, arbeitet dieses Jahr\n– Teilzeitkräfte fragen, ob sie freiwillig mehr arbeiten\n– kürzere Dienste an den Feiertagen\n– eigene Ideen",
           prompts: [
-            "Partner/in: Also, ich habe mir das angeschaut – es fehlen uns an beiden Feiertagen jeweils drei Leute im Frühdienst. Was meinst du, was sollen wir vorschlagen?",
-            "Zeitarbeit finde ich schwierig. Die kennen die Bewohner nicht, und gerade an Weihnachten sind viele traurig und brauchen vertraute Gesichter.",
-            "Eine Rotation klingt fair, aber was ist mit Kolleginnen mit kleinen Kindern? Die wollen an Heiligabend natürlich zu Hause sein.",
-            "Und wie überzeugen wir die Teilzeitkräfte? Nur mit „bitte“ wird das nicht klappen.",
-            "Okay, fassen wir zusammen: Was schlagen wir der Wohnbereichsleitung vor?",
+            "Also, ich hab mir das mal angeschaut. Uns fehlen an beiden Feiertagen jeweils drei Leute im Frühdienst. Was meinst du, was sollen wir vorschlagen?",
+            "Hm, Zeitarbeit find ich schwierig. Die kennen die Bewohner nicht. Und gerade an Weihnachten sind viele traurig und brauchen vertraute Gesichter.",
+            "Eine Rotation klingt fair, ja. Aber was ist mit Kolleginnen mit kleinen Kindern? Die wollen an Heiligabend natürlich zu Hause sein.",
+            "Und wie überzeugen wir die Teilzeitkräfte? Nur mit einem freundlichen Bitte wird das nicht klappen.",
+            "Okay, dann fassen wir mal zusammen. Was schlagen wir der Wohnbereichsleitung vor?",
           ],
           redemittel: [
             "Ich schlage vor, dass …",
@@ -1506,15 +1506,15 @@
               lines: [
                 {
                   s: "f",
-                  t: "Ali, kannst du am Samstag meinen Frühdienst übernehmen? Meine Schwester heiratet.",
+                  t: "Du, Ali, kannst du am Samstag meinen Frühdienst übernehmen? Meine Schwester heiratet.",
                 },
                 {
                   s: "m",
-                  t: "Samstag früh geht leider nicht, da hab ich schon was vor. Aber Sonntag könnte ich.",
+                  t: "Oh, Glückwunsch! Aber Samstag früh geht leider nicht, da hab ich schon was vor. Sonntag könnt ich.",
                 },
                 {
                   s: "f",
-                  t: "Hm, Sonntag bringt mir nichts. Dann frag ich mal Petra.",
+                  t: "Hm, Sonntag bringt mir nichts. Na gut, dann frag ich mal Petra.",
                 },
               ],
             },
@@ -1537,7 +1537,7 @@
                 "Sie sagt die Hochzeit ab.",
               ],
               a: 1,
-              why: "„Dann frag ich mal Petra.“",
+              why: "„Na gut, dann frag ich mal Petra.“",
             },
           ],
         },
@@ -1567,11 +1567,11 @@
               lines: [
                 {
                   s: "f",
-                  t: "Ich finde, wir sollten die Teambesprechung auf Montag legen. Dann starten alle informiert in die Woche.",
+                  t: "Also, ich fänd’s gut, wenn wir die Teambesprechung auf Montag legen. Dann starten alle informiert in die Woche.",
                 },
                 {
                   s: "m",
-                  t: "Montag ist bei uns im Lager immer Chaos, da kommen die meisten Lieferungen. Mittwoch wäre ruhiger.",
+                  t: "Hm, Montag? Montag ist bei uns im Lager immer Chaos, da kommen die meisten Lieferungen. Mittwoch wär ruhiger.",
                 },
               ],
             },
@@ -1616,7 +1616,7 @@
               lines: [
                 {
                   s: "m",
-                  t: "Wir haben heute 14 Filialen. Eine fünfzehnte in Herne eröffnen wir im März. Und wer bei uns anfängt, bekommt ab dem ersten Tag einen Rabatt von 20 Prozent auf alle Produkte.",
+                  t: "Ja, also, wir haben heute vierzehn Filialen. Und eine fünfzehnte, in Herne, die eröffnen wir im März. Ach, und wer bei uns anfängt, bekommt ab dem ersten Tag einen Rabatt von zwanzig Prozent auf alle Produkte.",
                 },
               ],
             },
@@ -1628,7 +1628,7 @@
               q: "Wie viele Filialen hat die Bäckerei jetzt?",
               opts: ["14", "15", "20"],
               a: 0,
-              why: "„Wir haben heute 14 Filialen.“ Die 15. kommt erst im März.",
+              why: "„Wir haben heute vierzehn Filialen.“ Die fünfzehnte kommt erst im März.",
             },
             {
               au: 0,
@@ -1639,7 +1639,7 @@
                 "Rabatt auf die Produkte",
               ],
               a: 2,
-              why: "„Rabatt von 20 Prozent auf alle Produkte.“",
+              why: "„Rabatt von zwanzig Prozent auf alle Produkte.“",
             },
           ],
         },
@@ -1669,7 +1669,7 @@
               lines: [
                 {
                   s: "m",
-                  t: "Hallo, hier ist Herr Kurz. Der Termin für die Wartung am Freitag passt mir nicht mehr. Könnten wir das auf Montag verschieben?",
+                  t: "Ja, hallo, hier ist Thomas Kurz. Äh, der Termin für die Wartung am Freitag, der passt mir leider nicht mehr. Könnten wir das auf Montag verschieben? Rufen Sie mich einfach kurz zurück. Danke!",
                 },
               ],
             },
@@ -1678,7 +1678,7 @@
               lines: [
                 {
                   s: "f",
-                  t: "Hier ist Frau Engin von der Buchhaltung. Ihre Reisekostenabrechnung ist da, es fehlt aber noch die Hotelrechnung. Bitte bringen Sie sie bis Mittwoch vorbei.",
+                  t: "Hallo, hier ist Selin Engin aus der Buchhaltung. Ihre Reisekostenabrechnung ist angekommen, danke. Es fehlt aber noch die Hotelrechnung. Bringen Sie die bitte bis Mittwoch vorbei, ja? Danke, tschüss.",
                 },
               ],
             },
@@ -1735,7 +1735,7 @@
               lines: [
                 {
                   s: "f",
-                  t: "Guten Tag, Weber hier vom Getränkehandel Krause. Die Lieferung für Ihr Restaurant kommt nicht heute, sondern erst morgen um 9 Uhr. Bitte rufen Sie mich zurück, falls dann niemand da ist: 0201 / 44 18 20.",
+                  t: "Ja, guten Tag, Weber hier, vom Getränkehandel Krause. Es geht um die Lieferung für Ihr Restaurant. Die kommt leider nicht heute, sondern erst morgen um neun Uhr. Bitte rufen Sie mich zurück, falls dann niemand da ist. Unter null zwei null eins, vierundvierzig, achtzehn, zwanzig. Ich wiederhole: null zwei null eins, vier vier, eins acht, zwei null. Danke, tschüss.",
                 },
               ],
             },
@@ -1747,7 +1747,7 @@
               q: "Wann kommt die Lieferung?",
               opts: ["heute um 9 Uhr", "morgen um 9 Uhr", "morgen Nachmittag"],
               a: 1,
-              why: "„nicht heute, sondern erst morgen um 9 Uhr“.",
+              why: "„nicht heute, sondern erst morgen um neun Uhr“.",
             },
             {
               au: 0,
