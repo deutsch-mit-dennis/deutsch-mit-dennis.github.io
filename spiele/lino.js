@@ -1241,9 +1241,9 @@
     title: "Lino läuft – das Deutsch-Abenteuer",
     icon: "🏃",
     level: "A1–C1",
-    desc: "Jump’n’Run in 12 Welten: Springe über Lücken und Fehlerkäfer, fahre Auto, Schlitten, Fahrrad und Zug, löse an jedem Tor eine Deutschfrage (auch Hören, Satzbau und der/die/das), sammle Münzen für den Shop, spiel jeden Tag den Tageslauf und besiege die Fehlermonster – von A1 bis C1.",
+    desc: "Jump’n’Run in 14 Welten: Springe über Lücken und Fehlerkäfer, fahre Auto, Schlitten, Fahrrad und Zug, löse an jedem Tor eine Deutschfrage (auch Hören, Satzbau und der/die/das), sammle Münzen für den Shop, spiel jeden Tag den Tageslauf und besiege die Fehlermonster – von A1 bis C1.",
     intro:
-      "Deine Figur läuft von selbst – tippe zum Springen (lange drücken = höher). Löse an jedem Tor eine Deutschfrage, öffne ❓-Kisten und besiege am Ende das Fehlermonster. 12 Welten von A1 bis C1 – mit Shop, Abzeichen und jeden Tag einem neuen Tageslauf.",
+      "Deine Figur läuft von selbst – tippe zum Springen (lange drücken = höher). Löse an jedem Tor eine Deutschfrage, öffne ❓-Kisten und besiege am Ende das Fehlermonster. 14 Welten von A1 bis C1 – mit Shop, Abzeichen und jeden Tag einem neuen Tageslauf.",
     start(api) {
       const prog = load();
       prog.unlocked = Math.max(1, prog.unlocked || 1);
@@ -1374,7 +1374,7 @@
           ${[
             ["main", "", ""],
             ["ride", "Unterwegs mit Auto, Schlitten, Fahrrad und Zug", "Öffnen sich nach Welt A1 – eine nach der anderen. An der Autobahn wartet statt Toren eine Ampel."],
-            ["alltag", "Neu: Alltag in Deutschland", "Supermarkt, Arztpraxis und Amt – mit Wörtern, die du jeden Tag brauchst. Öffnen sich nach Welt A1."],
+            ["alltag", "Neu: Alltag in Deutschland", "Supermarkt, Arztpraxis, Amt, Büro und Vorstellungsgespräch – mit Wörtern, die du jeden Tag brauchst. Die erste öffnet sich nach Welt A1, dann eine nach der anderen."],
           ].map(([grp, title, sub]) => `${title ? `<h3 class="sp-lino-sub">${title}</h3><p class="dm-small" style="margin:0 0 8px">${sub}</p>` : ""}<div class="sp-lino-levels">${WORLDS.map((w, i) => [w, i]).filter(([w]) => groupOf(w) === grp).map(([w, i]) => {
             const open = isOpen(i),
               best = prog["best" + w.id],
@@ -2427,8 +2427,8 @@
               hills(W0.hill2, 0.25, 150, 70);
               hills(W0.hill, 0.45, 110, 50);
             }
-            if (TH === "city" || TH === "night" || TH === "market" || TH === "clinic" || TH === "office") city();
-            if (TH === "market" || TH === "clinic" || TH === "office") signs();
+            if (TH === "city" || TH === "night" || TH === "market" || TH === "clinic" || TH === "office" || TH === "work" || TH === "hire") city();
+            if (TH === "market" || TH === "clinic" || TH === "office" || TH === "work" || TH === "hire") signs();
             if (TH === "zeche") zeche();
             if (TH === "road") roadside();
           }
@@ -3559,8 +3559,8 @@
           }
         }
         function signs() {
-          // Schilder der Alltagswelten: 🛒 Supermarkt, ✚ Praxis, 🏛 Amt
-          const lab = { market: ["SUPERMARKT", "#2e9e6b"], clinic: ["PRAXIS ✚", "#1f9d8a"], office: ["BÜRGERAMT", "#2341B5"] }[TH];
+          // Schilder der Alltagswelten: 🛒 Supermarkt, ✚ Praxis, 🏛 Amt, 💼 Büro, 🤝 Personalabteilung
+          const lab = { market: ["SUPERMARKT", "#2e9e6b"], clinic: ["PRAXIS ✚", "#1f9d8a"], office: ["BÜRGERAMT", "#2341B5"], work: ["BÜRO · 3. OG", "#3d6f8f"], hire: ["PERSONAL", "#7a54a0"] }[TH];
           for (let i = 0; i < 3; i++) {
             const bx = (i * 300 + 120 - camX * 0.3) % (VW + 300),
               x = ((bx + VW + 300) % (VW + 300)) - 150;

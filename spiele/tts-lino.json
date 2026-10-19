@@ -1290,5 +1290,253 @@
  {
   "text": "Wenn sich Ihre Adresse ändert, müssen Sie es melden.",
   "voice": "m2"
+ },
+ {
+  "text": "Könnten Sie mir die Unterlagen bis Freitag zuschicken?",
+  "voice": "m2"
+ },
+ {
+  "text": "Die Besprechung wurde auf nächste Woche verschoben.",
+  "voice": "m2"
+ },
+ {
+  "text": "Ich bin heute leider krank und kann nicht zur Arbeit kommen.",
+  "voice": "m2"
+ },
+ {
+  "text": "Bitte geben Sie mir Bescheid, falls Sie Fragen haben.",
+  "voice": "m2"
+ },
+ {
+  "text": "Der Kunde hat sich über die Lieferung beschwert.",
+  "voice": "m2"
+ },
+ {
+  "text": "Wir müssen das Projekt bis Ende des Monats abschließen.",
+  "voice": "m2"
+ },
+ {
+  "text": "Ich kümmere mich um die Bestellung.",
+  "voice": "m2"
+ },
+ {
+  "text": "Mein Arbeitsvertrag ist auf ein Jahr befristet.",
+  "voice": "m2"
+ },
+ {
+  "text": "Leider kann ich an dem Termin nicht teilnehmen.",
+  "voice": "m2"
+ },
+ {
+  "text": "Die Präsentation wird von meiner Kollegin vorbereitet.",
+  "voice": "m2"
+ },
+ {
+  "text": "Ich hätte eine Frage zu meiner Gehaltsabrechnung.",
+  "voice": "m2"
+ },
+ {
+  "text": "Könnten wir das Gespräch auf morgen verschieben?",
+  "voice": "m2"
+ },
+ {
+  "text": "Im Anhang finden Sie die Rechnung.",
+  "voice": "m2"
+ },
+ {
+  "text": "Schließen Sie bitte die Tür, wenn Sie gehen.",
+  "voice": "m2"
+ },
+ {
+  "text": "Wegen des Streiks komme ich später.",
+  "voice": "m2"
+ },
+ {
+  "text": "Ich arbeite seit drei Jahren in dieser Firma.",
+  "voice": "m2"
+ },
+ {
+  "text": "Das Meeting fällt heute aus, wir treffen uns stattdessen am Donnerstag um zehn.",
+  "voice": "m2"
+ },
+ {
+  "text": "Bitte reichen Sie Ihren Urlaubsantrag spätestens zwei Wochen vorher ein.",
+  "voice": "m2"
+ },
+ {
+  "text": "Herr Klein ist gerade in einer Besprechung. Soll ich ihm etwas ausrichten?",
+  "voice": "m2"
+ },
+ {
+  "text": "Die Krankmeldung muss ab dem dritten Tag beim Arbeitgeber sein.",
+  "voice": "m2"
+ },
+ {
+  "text": "die Besprechung",
+  "voice": "m2"
+ },
+ {
+  "text": "der Vertrag",
+  "voice": "m2"
+ },
+ {
+  "text": "das Gehalt",
+  "voice": "m2"
+ },
+ {
+  "text": "der Drucker",
+  "voice": "m2"
+ },
+ {
+  "text": "das Angebot",
+  "voice": "m2"
+ },
+ {
+  "text": "die Abteilung",
+  "voice": "m2"
+ },
+ {
+  "text": "Könnten Sie mir bitte die Datei noch einmal schicken?",
+  "voice": "m2"
+ },
+ {
+  "text": "Ich melde mich, sobald ich mehr weiß.",
+  "voice": "m2"
+ },
+ {
+  "text": "Die Rechnung wurde gestern bezahlt.",
+  "voice": "m2"
+ },
+ {
+  "text": "Leider kann ich morgen nicht zur Besprechung kommen.",
+  "voice": "m2"
+ },
+ {
+  "text": "Ich bewerbe mich auf die Stelle als Buchhalterin.",
+  "voice": "m2"
+ },
+ {
+  "text": "Ich verfüge über langjährige Erfahrung im Vertrieb.",
+  "voice": "m2"
+ },
+ {
+  "text": "Während meiner Ausbildung habe ich ein Praktikum gemacht.",
+  "voice": "m2"
+ },
+ {
+  "text": "Ich lege großen Wert auf Teamarbeit.",
+  "voice": "m2"
+ },
+ {
+  "text": "Was hat Sie dazu bewogen, sich bei uns zu bewerben?",
+  "voice": "m2"
+ },
+ {
+  "text": "Zu meinen Stärken zählen Zuverlässigkeit und Geduld.",
+  "voice": "m2"
+ },
+ {
+  "text": "Ich bin es gewohnt, unter Zeitdruck zu arbeiten.",
+  "voice": "m2"
+ },
+ {
+  "text": "Ich habe die Stelle gekündigt, weil ich mich weiterentwickeln möchte.",
+  "voice": "m2"
+ },
+ {
+  "text": "Wann könnten Sie frühestens anfangen?",
+  "voice": "m2"
+ },
+ {
+  "text": "Meine Gehaltsvorstellung liegt bei 45.000 Euro brutto im Jahr.",
+  "voice": "m2"
+ },
+ {
+  "text": "Ich würde mich über eine Zusage sehr freuen.",
+  "voice": "m2"
+ },
+ {
+  "text": "Berufserfahrung Erfahrung habe ich vor allem im Kundenservice gesammelt.",
+  "voice": "m2"
+ },
+ {
+  "text": "Ich habe mich mit Ihrem Unternehmen intensiv beschäftigt.",
+  "voice": "m2"
+ },
+ {
+  "text": "Die Probezeit beträgt in der Regel sechs Monate.",
+  "voice": "m2"
+ },
+ {
+  "text": "Ich könnte mir gut vorstellen, mehr Verantwortung zu übernehmen.",
+  "voice": "m2"
+ },
+ {
+  "text": "Haben Sie noch Fragen an uns?",
+  "voice": "m2"
+ },
+ {
+  "text": "Erzählen Sie doch mal: Warum möchten Sie gerade bei uns arbeiten?",
+  "voice": "m2"
+ },
+ {
+  "text": "Die Stelle ist zunächst auf zwei Jahre befristet, mit Option auf Übernahme.",
+  "voice": "m2"
+ },
+ {
+  "text": "Wir melden uns bis Ende nächster Woche bei Ihnen.",
+  "voice": "m2"
+ },
+ {
+  "text": "Wo sehen Sie sich in fünf Jahren?",
+  "voice": "m2"
+ },
+ {
+  "text": "der Lebenslauf",
+  "voice": "m2"
+ },
+ {
+  "text": "das Anschreiben",
+  "voice": "m2"
+ },
+ {
+  "text": "die Stelle",
+  "voice": "m2"
+ },
+ {
+  "text": "das Zeugnis",
+  "voice": "m2"
+ },
+ {
+  "text": "die Erfahrung",
+  "voice": "m2"
+ },
+ {
+  "text": "der Arbeitgeber",
+  "voice": "m2"
+ },
+ {
+  "text": "die Probezeit",
+  "voice": "m2"
+ },
+ {
+  "text": "das Gespräch",
+  "voice": "m2"
+ },
+ {
+  "text": "Ich habe mich auf Ihre Stellenanzeige beworben.",
+  "voice": "m2"
+ },
+ {
+  "text": "Ich würde gern mehr über das Team erfahren.",
+  "voice": "m2"
+ },
+ {
+  "text": "Bevor ich nach Deutschland kam, habe ich als Lehrer gearbeitet.",
+  "voice": "m2"
+ },
+ {
+  "text": "Mir ist wichtig, dass ich mich weiterbilden kann.",
+  "voice": "m2"
  }
 ]

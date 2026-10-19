@@ -8545,6 +8545,564 @@
      "text": "Wenn sich Ihre Adresse ändert, müssen Sie es melden."
     }
    ]
+  },
+  {
+   "key": "t0db67d92",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Könnten Sie mir die Unterlagen bis Freitag zuschicken?"
+    }
+   ]
+  },
+  {
+   "key": "teedc4ad3",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Die Besprechung wurde auf nächste Woche verschoben."
+    }
+   ]
+  },
+  {
+   "key": "t821355a7",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Ich bin heute leider krank und kann nicht zur Arbeit kommen."
+    }
+   ]
+  },
+  {
+   "key": "tea69751c",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Bitte geben Sie mir Bescheid, falls Sie Fragen haben."
+    }
+   ]
+  },
+  {
+   "key": "t2ddbf1d3",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Der Kunde hat sich über die Lieferung beschwert."
+    }
+   ]
+  },
+  {
+   "key": "t2b88196b",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Wir müssen das Projekt bis Ende des Monats abschließen."
+    }
+   ]
+  },
+  {
+   "key": "te25b9faf",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Ich kümmere mich um die Bestellung."
+    }
+   ]
+  },
+  {
+   "key": "tf8f5229e",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Mein Arbeitsvertrag ist auf ein Jahr befristet."
+    }
+   ]
+  },
+  {
+   "key": "t1ee49477",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Leider kann ich an dem Termin nicht teilnehmen."
+    }
+   ]
+  },
+  {
+   "key": "t56a78850",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Die Präsentation wird von meiner Kollegin vorbereitet."
+    }
+   ]
+  },
+  {
+   "key": "t90ef537f",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Ich hätte eine Frage zu meiner Gehaltsabrechnung."
+    }
+   ]
+  },
+  {
+   "key": "t5c873c46",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Könnten wir das Gespräch auf morgen verschieben?"
+    }
+   ]
+  },
+  {
+   "key": "t6a336875",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Im Anhang finden Sie die Rechnung."
+    }
+   ]
+  },
+  {
+   "key": "te53bfc2a",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Schließen Sie bitte die Tür, wenn Sie gehen."
+    }
+   ]
+  },
+  {
+   "key": "t883e7790",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Wegen des Streiks komme ich später."
+    }
+   ]
+  },
+  {
+   "key": "t13794bfa",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Ich arbeite seit drei Jahren in dieser Firma."
+    }
+   ]
+  },
+  {
+   "key": "t1088c403",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Das Meeting fällt heute aus, wir treffen uns stattdessen am Donnerstag um zehn."
+    }
+   ]
+  },
+  {
+   "key": "t297ac4ce",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Bitte reichen Sie Ihren Urlaubsantrag spätestens zwei Wochen vorher ein."
+    }
+   ]
+  },
+  {
+   "key": "ta0dc11ea",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Herr Klein ist gerade in einer Besprechung. Soll ich ihm etwas ausrichten?"
+    }
+   ]
+  },
+  {
+   "key": "t87c3c075",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Die Krankmeldung muss ab dem dritten Tag beim Arbeitgeber sein."
+    }
+   ]
+  },
+  {
+   "key": "t5df69205",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "die Besprechung"
+    }
+   ]
+  },
+  {
+   "key": "tbf6b09d3",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "der Vertrag"
+    }
+   ]
+  },
+  {
+   "key": "t13d1cb66",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "das Gehalt"
+    }
+   ]
+  },
+  {
+   "key": "t294c1910",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "der Drucker"
+    }
+   ]
+  },
+  {
+   "key": "t3d2de623",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "das Angebot"
+    }
+   ]
+  },
+  {
+   "key": "tf6b8dfb2",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "die Abteilung"
+    }
+   ]
+  },
+  {
+   "key": "tf2b5c9eb",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Könnten Sie mir bitte die Datei noch einmal schicken?"
+    }
+   ]
+  },
+  {
+   "key": "t75281aed",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Ich melde mich, sobald ich mehr weiß."
+    }
+   ]
+  },
+  {
+   "key": "t99955746",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Die Rechnung wurde gestern bezahlt."
+    }
+   ]
+  },
+  {
+   "key": "t96f602ec",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Leider kann ich morgen nicht zur Besprechung kommen."
+    }
+   ]
+  },
+  {
+   "key": "t6ac0abac",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Ich bewerbe mich auf die Stelle als Buchhalterin."
+    }
+   ]
+  },
+  {
+   "key": "t7c49c0de",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Ich verfüge über langjährige Erfahrung im Vertrieb."
+    }
+   ]
+  },
+  {
+   "key": "t9af254bd",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Während meiner Ausbildung habe ich ein Praktikum gemacht."
+    }
+   ]
+  },
+  {
+   "key": "t81e1f77d",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Ich lege großen Wert auf Teamarbeit."
+    }
+   ]
+  },
+  {
+   "key": "t8c188158",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Was hat Sie dazu bewogen, sich bei uns zu bewerben?"
+    }
+   ]
+  },
+  {
+   "key": "tc2f0a504",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Zu meinen Stärken zählen Zuverlässigkeit und Geduld."
+    }
+   ]
+  },
+  {
+   "key": "t377cfe8a",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Ich bin es gewohnt, unter Zeitdruck zu arbeiten."
+    }
+   ]
+  },
+  {
+   "key": "tf5c5a482",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Ich habe die Stelle gekündigt, weil ich mich weiterentwickeln möchte."
+    }
+   ]
+  },
+  {
+   "key": "tb27c8325",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Wann könnten Sie frühestens anfangen?"
+    }
+   ]
+  },
+  {
+   "key": "t7eb4597e",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Meine Gehaltsvorstellung liegt bei 45.000 Euro brutto im Jahr."
+    }
+   ]
+  },
+  {
+   "key": "ta4d71066",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Ich würde mich über eine Zusage sehr freuen."
+    }
+   ]
+  },
+  {
+   "key": "t67844e79",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Berufserfahrung Erfahrung habe ich vor allem im Kundenservice gesammelt."
+    }
+   ]
+  },
+  {
+   "key": "t5c2f647c",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Ich habe mich mit Ihrem Unternehmen intensiv beschäftigt."
+    }
+   ]
+  },
+  {
+   "key": "td4bd93d1",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Die Probezeit beträgt in der Regel sechs Monate."
+    }
+   ]
+  },
+  {
+   "key": "t81e0f680",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Ich könnte mir gut vorstellen, mehr Verantwortung zu übernehmen."
+    }
+   ]
+  },
+  {
+   "key": "tebd12cff",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Haben Sie noch Fragen an uns?"
+    }
+   ]
+  },
+  {
+   "key": "t216451d7",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Erzählen Sie doch mal: Warum möchten Sie gerade bei uns arbeiten?"
+    }
+   ]
+  },
+  {
+   "key": "tda7b39c7",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Die Stelle ist zunächst auf zwei Jahre befristet, mit Option auf Übernahme."
+    }
+   ]
+  },
+  {
+   "key": "t8de66c96",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Wir melden uns bis Ende nächster Woche bei Ihnen."
+    }
+   ]
+  },
+  {
+   "key": "tf9ee330d",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Wo sehen Sie sich in fünf Jahren?"
+    }
+   ]
+  },
+  {
+   "key": "t0c943585",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "der Lebenslauf"
+    }
+   ]
+  },
+  {
+   "key": "tb790ded9",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "das Anschreiben"
+    }
+   ]
+  },
+  {
+   "key": "tad8b30aa",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "die Stelle"
+    }
+   ]
+  },
+  {
+   "key": "td77f4d36",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "das Zeugnis"
+    }
+   ]
+  },
+  {
+   "key": "tb4a9a0c9",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "die Erfahrung"
+    }
+   ]
+  },
+  {
+   "key": "td2512564",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "der Arbeitgeber"
+    }
+   ]
+  },
+  {
+   "key": "tcdae16cb",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "die Probezeit"
+    }
+   ]
+  },
+  {
+   "key": "t5d99e86c",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "das Gespräch"
+    }
+   ]
+  },
+  {
+   "key": "t36957d58",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Ich habe mich auf Ihre Stellenanzeige beworben."
+    }
+   ]
+  },
+  {
+   "key": "t1972d084",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Ich würde gern mehr über das Team erfahren."
+    }
+   ]
+  },
+  {
+   "key": "t941fbc51",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Bevor ich nach Deutschland kam, habe ich als Lehrer gearbeitet."
+    }
+   ]
+  },
+  {
+   "key": "t35e40cfe",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Mir ist wichtig, dass ich mich weiterbilden kann."
+    }
+   ]
   }
  ]
 }

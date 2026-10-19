@@ -196,7 +196,7 @@
     const tiles = [
       ['#challenge', 'dm-q-ch', '🔥', 'Tages-Challenge', chSub],
       ['#spiele', 'dm-q-sp', '🎮', 'Lernspiele', '18 Spiele'],
-      ['#spiele/lino', 'dm-q-lino', '🏃', 'Lino läuft', '12 Welten · Tageslauf & Shop'],
+      ['#spiele/lino', 'dm-q-lino', '🏃', 'Lino läuft', '14 Welten · Tageslauf & Shop'],
       [sod ? '#lieder/' + sod.id : '#lieder', 'dm-q-song', '🎵', sod ? 'Lied des Tages' : 'Lieder', sod ? sod.title : '40 Lieder A1–C1']
     ];
     return `<nav class="dm-quick" aria-label="Schnellstart">${tiles.map(([u, c, i, t, s]) => `<a class="${c}" href="${x(u)}"><span class="dm-q-ico" aria-hidden="true">${i}</span><b>${x(t)}</b><small>${x(s)}</small></a>`).join('')}</nav>`;
@@ -246,7 +246,7 @@
           <span class="lino-home-kicker">Neu: 📅 Tageslauf · 🛍️ Shop · 🏅 Abzeichen</span>
           <b id="lino-h">Lino läuft – das Deutsch-Abenteuer</b>
           <span class="lino-home-text">Springe, fahre Auto, Schlitten und ICE. An jedem Tor eine Deutschfrage – jetzt auch zum Hören, mit Artikeln und Satzbau. Sammle Münzen für Mütze und Krone – und jeden Tag wartet ein neuer Tageslauf.</span>
-          <span class="lino-home-levels" aria-label="12 Welten: A1 bis C1, vier Fahrzeug-Welten und drei Alltagswelten"><i>A1</i><i>A2</i><i>B1</i><i>B2</i><i>C1</i><i>🚗</i><i>🛷</i><i>🚲</i><i>🚆</i><i>🛒</i><i>🩺</i><i>🏛️</i></span>
+          <span class="lino-home-levels" aria-label="14 Welten: A1 bis C1, vier Fahrzeug-Welten und fünf Alltagswelten"><i>A1</i><i>A2</i><i>B1</i><i>B2</i><i>C1</i><i>🚗</i><i>🛷</i><i>🚲</i><i>🚆</i><i>🛒</i><i>🩺</i><i>🏛️</i><i>💼</i><i>🤝</i></span>
           <span class="lino-home-go">▶ Jetzt spielen</span>
         </span>
       </a>
