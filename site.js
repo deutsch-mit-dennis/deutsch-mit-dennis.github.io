@@ -814,8 +814,9 @@
       $('#dm-pl-stage').innerHTML = `<div class="dm-suno"><iframe src="https://suno.com/embed/${x(sg.suno)}?autoplay=1" title="${x(sg.title)}" allow="autoplay; encrypted-media"></iframe></div>`;
       const fr = $('#dm-pl-stage iframe');
       // Uhrzeit-basiert: bleibt genau, auch wenn der Browser Timer im Hintergrund-Tab bremst
-      fr.onload = () => { loading = false; endAt = Date.now() + len * 1000; show(); };
-      setTimeout(() => { if (fr.isConnected && loading) { loading = false; endAt = Date.now() + len * 1000; show(); } }, 15000);
+      let loadedAt = 0;
+      fr.onload = () => { if (loadedAt) return; loadedAt = Date.now(); loading = false; endAt = loadedAt + len * 1000; show(); };   // nur das erste Laden zählt
+      setTimeout(() => { if (fr.isConnected && loading) { loadedAt = Date.now(); loading = false; endAt = loadedAt + len * 1000; show(); } }, 15000);
       $$('#dm-pl-list li').forEach(li => { const on = +li.dataset.k === cur; li.classList.toggle('is-now', on); li.querySelector('.dm-pl-item').setAttribute('aria-current', on ? 'true' : 'false'); });
       $(`#dm-pl-list li[data-k="${cur}"]`)?.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
       show();
@@ -823,7 +824,8 @@
       plTimer = setInterval(() => {
         if (!document.body.contains(now)) { clearInterval(plTimer); plTimer = null; return; }
         // Tippt jemand im Player auf ▶ (z. B. auf dem Handy, wenn Autoplay blockiert ist), beginnt das Lied erst jetzt
-        if (!tapped && document.activeElement === fr) { tapped = true; endAt = Date.now() + len * 1000; }
+        // Nur in den ersten 30 s: Autoplay war blockiert und jemand startet das Lied selbst. Spätere Klicks (Pause, Spulen) ändern nichts.
+        if (!tapped && document.activeElement === fr) { tapped = true; if (loadedAt && Date.now() - loadedAt < 30000) endAt = Date.now() + len * 1000; }
         if (paused) { endAt += 1000; return; }
         if (loading) return;
         left = Math.ceil((endAt - Date.now()) / 1000); show();
