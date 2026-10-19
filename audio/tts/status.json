@@ -1,10 +1,10 @@
 {
- "run": "2026-10-19T10:18:28Z",
+ "run": "2026-10-19T10:24:28Z",
  "runs": [
   {
    "engine": "elevenlabs",
    "created": 0,
-   "open": 855,
+   "open": 917,
    "chars_this_month": 10000,
    "monthly_limit": 10000,
    "errors": []
@@ -12,8 +12,8 @@
   {
    "engine": "gemini",
    "created": 0,
-   "open": 384,
-   "chars_this_month": 62374,
+   "open": 446,
+   "chars_this_month": 62389,
    "monthly_limit": 200000,
    "errors": [
     {
