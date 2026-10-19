@@ -445,11 +445,11 @@
               lines: [
                 {
                   s: "n",
-                  t: "Willkommen bei „Hallo Revier“! Heute fragen wir: Sollen Kinder in der Grundschule schon ein eigenes Handy haben? Frau Jansen, Sie haben eine Tochter …",
+                  t: "Hallo und herzlich willkommen bei Hallo Revier! Heute fragen wir: Sollen Kinder in der Grundschule schon ein eigenes Handy haben? Bei mir am Telefon ist Frau Jansen. Frau Jansen, Sie haben eine Tochter, richtig?",
                 },
                 {
                   s: "f",
-                  t: "Ja, also, meine Tochter ist neun und hat seit einem halben Jahr ein Handy. Aber kein Smartphone, sondern so ein ganz einfaches Gerät, nur zum Telefonieren und für SMS. Internet, Spiele, Videos – das braucht ein Kind in dem Alter doch noch nicht. Wenn der Bus mal nicht kommt, kann sie mich anrufen, und das reicht völlig. Viele Eltern denken, das Kind ist sonst traurig, weil die anderen alle ein Smartphone haben. Aber meine Tochter kommt gut damit klar.",
+                  t: "Ja, genau. Also, meine Tochter ist neun und hat seit einem halben Jahr ein Handy. Aber kein Smartphone, sondern so ein ganz einfaches Gerät, nur zum Telefonieren und für Kurznachrichten. Internet, Spiele, Videos, na ja, das braucht ein Kind in dem Alter doch noch nicht. Wenn der Bus mal nicht kommt, kann sie mich anrufen, und das reicht völlig. Viele Eltern denken ja, das Kind ist sonst traurig, weil die anderen alle ein Smartphone haben. Aber ehrlich gesagt, meine Tochter kommt gut damit klar.",
                 },
               ],
             },
@@ -458,11 +458,11 @@
               lines: [
                 {
                   s: "n",
-                  t: "Herr Brandt, Sie sind Lehrer an einer Grundschule. Wie sehen Sie das?",
+                  t: "Vielen Dank, Frau Jansen. Und jetzt Herr Brandt. Herr Brandt, Sie sind Lehrer an einer Grundschule. Wie sehen Sie das?",
                 },
                 {
                   s: "m",
-                  t: "Ehrlich gesagt sehe ich das nicht so negativ. Verbieten bringt nichts, die Kinder sehen Handys ja sowieso überall. Ich finde, Kinder müssen früh lernen, wie man mit dem Handy und dem Internet richtig umgeht: Was darf ich posten? Was ist gefährlich? Das machen wir auch im Unterricht. Natürlich bleiben die Handys während der Stunde in der Tasche, das ist klar. Aber grundsätzlich gilt: Mit Medien umgehen lernt man nur, wenn man sie auch benutzt.",
+                  t: "Hm, ehrlich gesagt sehe ich das nicht so negativ. Verbieten bringt nichts, die Kinder sehen Handys ja sowieso überall. Ich finde, Kinder müssen früh lernen, wie man mit dem Handy und dem Internet richtig umgeht. Also, was darf ich posten? Was ist gefährlich? Das machen wir auch im Unterricht. Natürlich bleiben die Handys während der Stunde in der Tasche, das ist klar. Aber grundsätzlich, ja: Mit Medien umgehen lernt man nur, wenn man sie auch benutzt.",
                 },
               ],
             },
@@ -471,11 +471,11 @@
               lines: [
                 {
                   s: "n",
-                  t: "Und zum Schluss Herr Schäfer, Vater von zwei Söhnen.",
+                  t: "Danke schön. Und zum Schluss noch Herr Schäfer, Vater von zwei Söhnen. Herr Schäfer, wie machen Sie das?",
                 },
                 {
                   s: "m2",
-                  t: "Bei uns gibt es eine klare Regel: Ein eigenes Handy gibt es erst, wenn die Kinder allein mit Bus und Bahn zur Schule fahren. Bei meinem älteren Sohn war das mit elf, als er aufs Gymnasium gekommen ist. Vorher hat er es einfach nicht gebraucht. Die Grundschule ist bei uns gleich um die Ecke, und nachmittags war er sowieso mit Freunden draußen auf dem Spielplatz. Klar, er hat sich manchmal beschwert. Aber jetzt hat er eins, und so passt das für uns.",
+                  t: "Also, bei uns gibt es eine klare Regel: Ein eigenes Handy gibt es erst, wenn die Kinder allein mit Bus und Bahn zur Schule fahren. Bei meinem älteren Sohn war das mit elf, als er aufs Gymnasium gekommen ist. Vorher hat er's einfach nicht gebraucht. Die Grundschule ist bei uns gleich um die Ecke, und nachmittags war er sowieso mit Freunden draußen auf dem Spielplatz. Klar, er hat sich manchmal beschwert, das gehört dazu. Aber jetzt hat er eins, und so passt das für uns.",
                 },
               ],
             },
@@ -872,10 +872,10 @@
           task: "Sprechen Sie über sich:\n– Name\n– Herkunft\n– Wohnort\n– Familie\n– Arbeit/Beruf\n– Sprachen",
           prompts: [
             "Können Sie bitte Ihren Nachnamen buchstabieren?",
-            "Wie lange wohnen Sie schon in Ihrer Stadt?",
-            "Was gefällt Ihnen an Ihrem Wohnort? Was gefällt Ihnen nicht so gut?",
-            "Welche Sprache sprechen Sie zu Hause mit Ihrer Familie?",
-            "Was möchten Sie in Zukunft beruflich machen?",
+            "Danke. Und wie lange wohnen Sie schon in Ihrer Stadt?",
+            "Und was gefällt Ihnen an Ihrem Wohnort? Und was gefällt Ihnen nicht so gut?",
+            "Mhm. Welche Sprache sprechen Sie denn zu Hause mit Ihrer Familie?",
+            "Und zum Schluss: Was möchten Sie in Zukunft beruflich machen?",
           ],
           redemittel: [
             "Ich heiße … / Mein Name ist …",
@@ -905,10 +905,10 @@
             "Sie sehen ein Foto. Beschreiben Sie zuerst das Bild (2A). Erzählen Sie dann von Ihren eigenen Erfahrungen zum Thema (2B). Danach stellt Ihnen die Prüferin noch einige Fragen.",
           task: "Foto: Eine Familie sitzt im Wartezimmer einer Kinderarztpraxis. Die Mutter hält ein kleines Kind von etwa zwei Jahren auf dem Schoß. Das Kind hat rote Wangen und ist in eine Decke gewickelt. Der Vater füllt auf einem Klemmbrett einen Fragebogen aus. Neben den Eltern sitzt ein Junge von etwa sechs Jahren auf dem Boden in einer Spielecke und baut mit Bauklötzen. An der Wand hängen bunte Kinderzeichnungen und ein Plakat zum Thema Impfen. Im Hintergrund sieht man die Anmeldung: Eine Arzthelferin sitzt am Computer und telefoniert. Auch andere Eltern mit Kindern warten im Raum.\n\n2A: Was sehen Sie auf dem Bild? Was machen die Personen?\n2B: Welche Erfahrungen haben Sie mit Arztbesuchen in Deutschland (für Ihre Kinder oder für sich selbst)? Wie ist das in Ihrem Heimatland?",
           prompts: [
-            "Wie haben Sie Ihren Arzt oder Ihre Ärztin gefunden?",
-            "Mussten Sie schon einmal lange auf einen Termin warten? Was haben Sie gemacht?",
-            "Was ist beim Arzt in Deutschland anders als in Ihrem Heimatland?",
-            "Was machen Sie, wenn Ihr Kind am Wochenende krank wird?",
+            "Sie haben gesagt, Sie gehen zum Arzt. Wie haben Sie Ihren Arzt oder Ihre Ärztin denn gefunden?",
+            "Mussten Sie schon mal lange auf einen Termin warten? Was haben Sie da gemacht?",
+            "Und was ist beim Arzt in Deutschland anders als in Ihrem Heimatland?",
+            "Eine Frage noch: Was machen Sie, wenn Ihr Kind am Wochenende krank wird?",
           ],
           redemittel: [
             "Auf dem Bild sehe ich … / Das Foto zeigt …",
@@ -938,12 +938,12 @@
             "Sie planen zusammen mit Ihrem Partner / Ihrer Partnerin etwas. Machen Sie Vorschläge, reagieren Sie auf die Vorschläge Ihres Partners / Ihrer Partnerin und einigen Sie sich am Ende. Hier sagt die Partnerin ihre Vorschläge nacheinander – reagieren Sie jedes Mal darauf.",
           task: "Ihr Deutschkurs ist bald zu Ende. Ihre Kursleiterin, Frau Krüger, geht danach in Rente. Sie möchten zusammen mit Ihrem Partner / Ihrer Partnerin eine kleine Abschiedsfeier für sie organisieren.\n\nPlanen Sie gemeinsam:\n– Wann? (Tag, Uhrzeit)\n– Wo? (Kursraum, Restaurant, Park …)\n– Essen und Getränke?\n– Wer macht was? (einkaufen, Raum schmücken, die anderen informieren …)\n– Geschenk?",
           prompts: [
-            "Ich schlage vor, wir feiern am letzten Kurstag, also am Freitag, direkt nach dem Unterricht. Was meinst du?",
-            "Wir könnten doch in ein Restaurant gehen. Das ist schöner als der Kursraum, oder?",
-            "Und das Essen? Jeder bringt etwas aus seinem Heimatland mit – wie findest du das?",
-            "Ich kann leider nicht einkaufen, ich habe kein Auto. Kannst du die Getränke kaufen?",
-            "Wer sagt den anderen aus dem Kurs Bescheid?",
-            "Als Geschenk könnten wir ihr einfach Blumen kaufen. Oder hast du eine bessere Idee?",
+            "Also, ich schlage vor, wir feiern am letzten Kurstag, also am Freitag, direkt nach dem Unterricht. Was meinst du?",
+            "Hm, und wo? Wir könnten doch in ein Restaurant gehen. Das ist schöner als der Kursraum, oder?",
+            "Okay. Und das Essen? Ich hab eine Idee: Jeder bringt was aus seinem Heimatland mit. Wie findest du das?",
+            "Du, ich kann leider nicht einkaufen, ich hab kein Auto. Kannst du vielleicht die Getränke kaufen?",
+            "Gut. Und wer sagt den anderen aus dem Kurs Bescheid?",
+            "Ach ja, und das Geschenk! Wir könnten ihr einfach Blumen kaufen. Oder hast du eine bessere Idee?",
           ],
           redemittel: [
             "Vorschläge machen: Ich schlage vor, … / Wir könnten doch … / Wie wäre es mit …? / Was hältst du von …?",
