@@ -93,6 +93,9 @@
 .sp-lino-badges li.is-got{color:var(--dm-ink,#172036);font-weight:700}
 .sp-lino-badges li span{font-size:20px;width:1.4em;text-align:center}
 .sp-lino-st{letter-spacing:1px}
+.sp-lino-savep{font-size:14px;color:#5b6680;margin:6px 0;display:block}
+.sp-lino-code{min-height:0!important;height:auto;width:100%;box-sizing:border-box;font:13px/1.4 ui-monospace,Menlo,Consolas,monospace;padding:8px;border:2px solid var(--dm-line,#d5dbea);border-radius:10px;word-break:break-all;resize:vertical}
+.sp-lino-save .sp-lino-row{margin:6px 0}
 .sp-lino-bonus{margin:6px 0;font-weight:700;color:#7a4a00}
 .sp-lino-newbadge{display:grid;gap:6px;margin:8px auto;max-width:420px}
 .sp-lino-newbadge span{background:#fff4cc;border:2px solid #f0c64a;border-radius:14px;padding:8px 10px;font-weight:700;animation:linoPop .5s ease-out}
@@ -723,17 +726,131 @@
   const wTitle = (w) => (w.daily ? "📅 Tageslauf" : w.lv ? `${w.emoji} ${w.name}` : `Welt ${w.id}`);
   const GATES = 6,
     KEY = "dm-lino";
-  const load = () => {
+  /* Spielstand: bleibt im Browser. Damit nie etwas verloren geht (z. B. wenn Lino in zwei Tabs offen ist),
+     wird beim Speichern mit dem gespeicherten Stand zusammengeführt: Gekauftes, Sterne, Abzeichen und Rekorde
+     kommen nur dazu. Münzen = verdient (coinsTotal) − ausgegeben (spent). Zusätzlich: Sicherungskopie,
+     IndexedDB und ein Spielstand-Code zum Übertragen. */
+  const BAK = KEY + "-sicherung";
+  const parse = (t) => {
     try {
-      return JSON.parse(localStorage.getItem(KEY) || "{}");
+      const o = JSON.parse(t || "{}");
+      return o && typeof o === "object" ? o : {};
     } catch {
       return {};
     }
   };
+  const ledger = (o) => {
+    o.coins = Math.max(0, o.coins || 0);
+    o.coinsTotal = Math.max(o.coinsTotal || 0, o.coins);
+    o.spent = Math.max(o.spent || 0, o.coinsTotal - o.coins);
+    return o;
+  };
+  const mergeInto = (s, cur) => {
+    if (!cur || typeof cur !== "object") return s;
+    ledger(s);
+    ledger(cur);
+    s.owned = [...new Set([...(cur.owned || []), ...(s.owned || [])])];
+    for (const k of ["badges", "secrets", "bosses"]) if (cur[k]) s[k] = { ...cur[k], ...(s[k] || {}) };
+    if (cur.stars) {
+      s.stars = { ...(s.stars || {}) };
+      for (const [w, v] of Object.entries(cur.stars)) s.stars[w] = Math.max(s.stars[w] || 0, v || 0);
+    }
+    for (const k of Object.keys(cur)) if (/^best/.test(k) && typeof cur[k] === "number") s[k] = Math.max(s[k] ?? -1e9, cur[k]);
+    for (const k of ["unlocked", "coinsTotal", "spent"]) s[k] = Math.max(s[k] || 0, cur[k] || 0);
+    for (const k of ["allOpen", "perfect", "hintSecret"]) if (cur[k]) s[k] = cur[k];
+    if (cur.cnt) {
+      s.cnt = { ...(s.cnt || {}) };
+      for (const [k, v] of Object.entries(cur.cnt)) s.cnt[k] = Math.max(s.cnt[k] || 0, v || 0);
+    }
+    if (cur.streak && (!s.streak || cur.streak.last > s.streak.last || (cur.streak.last === s.streak.last && cur.streak.n > s.streak.n))) s.streak = cur.streak;
+    if (cur.daily && (!s.daily || cur.daily.day > s.daily.day || (cur.daily.day === s.daily.day && (cur.daily.best || 0) > (s.daily.best || 0)))) s.daily = cur.daily;
+    if (!s.look && cur.look) s.look = cur.look;
+    s.coins = Math.max(0, s.coinsTotal - s.spent);
+    return s;
+  };
+  const IDB = {
+    db: null,
+    open() {
+      if (this.db || !window.indexedDB) return Promise.resolve(this.db);
+      return new Promise((res) => {
+        try {
+          const r = indexedDB.open("dm-lino", 1);
+          r.onupgradeneeded = () => r.result.createObjectStore("s");
+          r.onsuccess = () => res((this.db = r.result));
+          r.onerror = () => res(null);
+        } catch {
+          res(null);
+        }
+      });
+    },
+    async get() {
+      const db = await this.open();
+      if (!db) return null;
+      return new Promise((res) => {
+        try {
+          const q = db.transaction("s").objectStore("s").get("prog");
+          q.onsuccess = () => res(q.result || null);
+          q.onerror = () => res(null);
+        } catch {
+          res(null);
+        }
+      });
+    },
+    async put(t) {
+      const db = await this.open();
+      try {
+        db?.transaction("s", "readwrite").objectStore("s").put(t, "prog");
+      } catch {}
+    },
+  };
+  const load = () => {
+    let s = {};
+    try {
+      s = parse(localStorage.getItem(KEY));
+      if (!Object.keys(s).length) s = parse(localStorage.getItem(BAK));
+      else mergeInto(s, parse(localStorage.getItem(BAK)));
+    } catch {}
+    return Object.keys(s).length ? ledger(s) : s;
+  };
+  let persistAsked = false;
   const save = (s) => {
     try {
-      localStorage.setItem(KEY, JSON.stringify(s));
+      mergeInto(s, parse(localStorage.getItem(KEY)));
+      const t = JSON.stringify(s);
+      localStorage.setItem(KEY, t);
+      localStorage.setItem(BAK, t);
+      IDB.put(t);
     } catch {}
+    if (!persistAsked && (s.owned || []).length && navigator.storage?.persist) {
+      persistAsked = true;
+      navigator.storage.persisted().then((p) => p || navigator.storage.persist()).catch(() => {});
+    }
+  };
+  // Beim Laden der Seite: Stand aus IndexedDB zurückholen, falls der Browser-Speicher geleert wurde
+  IDB.get().then((t) => {
+    if (!t) return;
+    try {
+      const cur = parse(localStorage.getItem(KEY)), bak = parse(t);
+      const merged = mergeInto(Object.keys(cur).length ? cur : bak, bak);
+      localStorage.setItem(KEY, JSON.stringify(merged));
+    } catch {}
+  });
+  /* Spielstand-Code: zum Sichern und Übertragen auf ein anderes Gerät */
+  const EXPORT = ["owned", "look", "coins", "coinsTotal", "spent", "stars", "badges", "secrets", "bosses", "unlocked", "allOpen", "perfect", "streak", "daily", "cnt"];
+  const toCode = (s) => {
+    const o = { v: 1 };
+    for (const k of Object.keys(s)) if (EXPORT.includes(k) || /^best/.test(k)) o[k] = s[k];
+    return "LINO-" + btoa(unescape(encodeURIComponent(JSON.stringify(o))));
+  };
+  const fromCode = (c) => {
+    const m = String(c || "").replace(/\s+/g, "").match(/^LINO-([A-Za-z0-9+/=]+)$/);
+    if (!m) return null;
+    try {
+      const o = JSON.parse(decodeURIComponent(escape(atob(m[1]))));
+      return o && o.v === 1 ? o : null;
+    } catch {
+      return null;
+    }
   };
 
   // Ton: alles live mit der Web-Audio-API erzeugt (keine Dateien) – Musik je Welt und Geräusche
@@ -1247,6 +1364,15 @@
     start(api) {
       const prog = load();
       prog.unlocked = Math.max(1, prog.unlocked || 1);
+      // Leerer Speicher? Dann Sicherung aus IndexedDB holen und das Menü neu zeichnen
+      if (!(prog.owned || []).length && !prog.coinsTotal)
+        IDB.get().then((t) => {
+          const o = parse(t);
+          if (!Object.keys(o).length) return;
+          mergeInto(prog, o);
+          save(prog);
+          if (api.el.isConnected && api.el.querySelector(".sp-lino-pick")) menu();
+        });
       let total = 0;
       const wrongAll = [];
       menu();
@@ -1384,6 +1510,14 @@
             return `<button type="button" class="sp-lino-lv${w.lv ? " is-ride" : ""}" data-i="${i}"${open ? "" : " disabled"}><i aria-hidden="true">${open ? (w.lv ? w.emoji : best != null ? "✔️" : "▶") : "🔒"}</i><b>${w.lv || w.id}</b><span>${w.lv ? "" : `Welt ${i + 1}: `}${w.name}</span><small>${best != null ? `<span class="sp-lino-st" aria-label="${sn} von 3 Sternen">${"⭐".repeat(sn)}${"☆".repeat(3 - sn)}</span> Rekord ${best}` : open ? "Bereit" : w.lv || w.after ? `Nach „${aft?.name || "A1"}“` : "Noch gesperrt"}${key ? " · 🗝" : ""}${prog.bosses?.[w.id] ? " · 🏆" : ""}</small></button>`;
           }).join("")}</div>`).join("")}
           ${badgeHtml}
+          <details class="sp-lino-badges sp-lino-save" data-nocheck><summary>💾 Spielstand sichern &amp; übertragen</summary>
+            <p class="sp-lino-savep">Dein Spielstand (Münzen, gekaufte Teile, Sterne, Abzeichen) bleibt auf diesem Gerät gespeichert. Mit diesem Code kannst du ihn sichern oder auf ein anderes Handy, Tablet oder einen anderen Browser übertragen. Beim Einfügen geht nichts verloren – es wird nur ergänzt.</p>
+            <textarea class="sp-lino-code" readonly rows="4" spellcheck="false" aria-label="Dein Spielstand-Code">${toCode(prog)}</textarea>
+            <div class="sp-lino-row"><button type="button" data-save="copy">📋 Code kopieren</button>${navigator.share ? '<button type="button" data-save="share">📤 Teilen</button>' : ""}</div>
+            <label class="sp-lino-savep" for="lino-code-in"><b>Code von einem anderen Gerät einfügen:</b></label>
+            <textarea id="lino-code-in" class="sp-lino-code" rows="3" spellcheck="false" autocomplete="off" autocapitalize="off" placeholder="LINO-…"></textarea>
+            <div class="sp-lino-row"><button type="button" data-save="load">⬇️ Spielstand übernehmen</button></div>
+          </details>
           <details class="sp-lino-legend"><summary>Booster und Geheimnisse</summary><ul>
             <li><b>❓</b><span><b>Kisten</b> sind fest. Stoß die ❓-Kiste von unten mit dem Kopf an – dann kommt ein Booster heraus.</span></li>
             ${Object.values(BOOSTS).map((b) => `<li><b>${b.ic}</b><span><b>${b.name}:</b> ${b.txt}</span></li>`).join("")}
@@ -1438,6 +1572,43 @@
               api.clearFeedback();
               menu();
               api.el.querySelector(`[data-buy="${it.id}"]`)?.focus({ preventScroll: true });
+            }),
+        );
+        const codeOut = api.el.querySelector(".sp-lino-save textarea[readonly]");
+        api.el.querySelectorAll("[data-save]").forEach(
+          (b) =>
+            (b.onclick = async () => {
+              const what = b.dataset.save;
+              if (what === "copy") {
+                let ok = false;
+                try {
+                  await navigator.clipboard.writeText(codeOut.value);
+                  ok = true;
+                } catch {
+                  codeOut.select();
+                  try {
+                    ok = document.execCommand("copy");
+                  } catch {}
+                }
+                api.feedback(true, ok ? "<b>Code kopiert.</b><span>Bewahre ihn gut auf, z. B. in einer Notiz oder E-Mail an dich.</span>" : "<b>Bitte den Code markieren und kopieren.</b>");
+              } else if (what === "share") {
+                try {
+                  await navigator.share({ title: "Mein Spielstand – Lino läuft", text: codeOut.value });
+                } catch {}
+              } else {
+                const inp = api.el.querySelector("#lino-code-in");
+                const o = fromCode(inp.value);
+                if (!o) {
+                  api.feedback(false, "<b>Der Code ist nicht gültig.</b><span>Er beginnt mit „LINO-“. Bitte komplett kopieren und einfügen.</span>");
+                  return;
+                }
+                const before = (prog.owned || []).length;
+                mergeInto(prog, o);
+                save(prog);
+                checkBadges();
+                menu();
+                api.feedback(true, `<b>Spielstand übernommen.</b><span>🪙 ${prog.coins} Münzen · ${(prog.owned || []).length} gekaufte Teile${(prog.owned || []).length > before ? " (neu dazu: " + ((prog.owned || []).length - before) + ")" : ""}.</span>`);
+              }
             }),
         );
         const u = api.el.querySelector(".sp-lino-unlock");
