@@ -2192,7 +2192,10 @@
             // „Weiter laufen“ auf dem Handy sichtbar machen
             setTimeout(() => {
               const nb = document.getElementById("sp-next");
-              if (nb && nb.getBoundingClientRect().bottom > innerHeight) nb.scrollIntoView({ block: "end", behavior: "smooth" });
+              if (nb && nb.getBoundingClientRect().bottom > innerHeight - 12) {
+                nb.style.scrollMarginBottom = "16px";
+                nb.scrollIntoView({ block: "end", behavior: "smooth" });
+              }
             }, 60);
           };
           if (type === "order") {
@@ -2214,7 +2217,8 @@
                       const ok = built.map((x) => x.w).join(" ") === a;
                       boxB.querySelectorAll("button").forEach((x) => (x.disabled = true));
                       boxB.classList.add(ok ? "is-right" : "is-wrong");
-                      panel.querySelector(".sp-lino-undo")?.remove();
+                      panel.querySelector(".sp-lino-undo")?.closest(".ch-actions")?.remove();
+                      boxP.remove();
                       done(ok);
                       return;
                     }
