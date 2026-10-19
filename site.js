@@ -774,7 +774,10 @@
     if (mem.plShuffle) for (let i = order.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [order[i], order[j]] = [order[j], order[i]]; }
     const list = order.map(i => base[i]);
     const total = list.reduce((a, sg) => a + (SONG_SEC[sg.suno] || 200), 0);
-    let cur = -1, left = 0, paused = false, loading = false, tapped = false;
+    let cur = -1, left = 0, endAt = 0, paused = false, loading = false, tapped = false;
+    // Zurück im Tab: sofort prüfen, ob das nächste Lied dran ist
+    const onVis = () => { if (!document.body.contains(now)) return document.removeEventListener('visibilitychange', onVis); if (!document.hidden && cur >= 0 && !paused && !loading && endAt && Date.now() >= endAt) play(cur + 1); };
+    document.addEventListener('visibilitychange', onVis);
     page(`${crumbs([['Deutsch mit Liedern', '#lieder'], ['Playlist']])}
       <div class="dm-head"><p class="dm-path-meta">Deutsch mit Liedern · ${list.length} Lieder · ca. ${Math.round(total / 60)} Minuten</p><h1>Playlist: alle Lieder am Stück</h1>
         <p class="dm-lead">Starte einmal – danach läuft ein Lied nach dem anderen. Zum Lernen mit Text und Aufgaben öffnest du ein Lied über „Text &amp; Aufgaben“.</p></div>
@@ -806,12 +809,13 @@
       cur = (k + list.length) % list.length;
       const sg = list[cur];
       const len = (SONG_SEC[sg.suno] || 200) + 2;
-      left = len; loading = true; tapped = false;   // Countdown startet erst, wenn der Player geladen ist
+      left = len; endAt = 0; loading = true; tapped = false;   // Countdown startet erst, wenn der Player geladen ist
       paused = false; btnP.textContent = '⏸ Automatisch weiter: an'; btnP.setAttribute('aria-pressed', 'false');
       $('#dm-pl-stage').innerHTML = `<div class="dm-suno"><iframe src="https://suno.com/embed/${x(sg.suno)}?autoplay=1" title="${x(sg.title)}" allow="autoplay; encrypted-media"></iframe></div>`;
       const fr = $('#dm-pl-stage iframe');
-      fr.onload = () => { loading = false; left = len; show(); };
-      setTimeout(() => { if (fr.isConnected && loading) { loading = false; show(); } }, 15000);
+      // Uhrzeit-basiert: bleibt genau, auch wenn der Browser Timer im Hintergrund-Tab bremst
+      fr.onload = () => { loading = false; endAt = Date.now() + len * 1000; show(); };
+      setTimeout(() => { if (fr.isConnected && loading) { loading = false; endAt = Date.now() + len * 1000; show(); } }, 15000);
       $$('#dm-pl-list li').forEach(li => li.classList.toggle('is-now', +li.dataset.k === cur));
       $(`#dm-pl-list li[data-k="${cur}"]`)?.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
       show();
@@ -819,9 +823,10 @@
       plTimer = setInterval(() => {
         if (!document.body.contains(now)) { clearInterval(plTimer); plTimer = null; return; }
         // Tippt jemand im Player auf ▶ (z. B. auf dem Handy, wenn Autoplay blockiert ist), beginnt das Lied erst jetzt
-        if (!tapped && document.activeElement === fr) { tapped = true; left = len; }
-        if (paused || loading) return;
-        left -= 1; show();
+        if (!tapped && document.activeElement === fr) { tapped = true; endAt = Date.now() + len * 1000; }
+        if (paused) { endAt += 1000; return; }
+        if (loading) return;
+        left = Math.ceil((endAt - Date.now()) / 1000); show();
         if (left <= 0) play(cur + 1);
       }, 1000);
     };
