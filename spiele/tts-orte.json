@@ -1,0 +1,178 @@
+[
+ {
+  "text": "Einmal nach Dortmund, hin und zurück, bitte.",
+  "voice": "m1"
+ },
+ {
+  "text": "Achtung an Gleis 3: Der Regionalexpress hat zehn Minuten Verspätung.",
+  "voice": "m1"
+ },
+ {
+  "text": "Muss ich in Duisburg umsteigen?",
+  "voice": "m1"
+ },
+ {
+  "text": "Wo finde ich das Mehl? – In Gang drei, ganz oben im Regal.",
+  "voice": "m1",
+  "segments": [
+   {
+    "voice": "m1",
+    "text": "Wo finde ich das Mehl?"
+   },
+   {
+    "voice": "f1",
+    "text": "In Gang drei, ganz oben im Regal."
+   }
+  ]
+ },
+ {
+  "text": "Möchten Sie den Kassenbon? Und haben Sie eine Kundenkarte?",
+  "voice": "m1"
+ },
+ {
+  "text": "Die Pfandflaschen geben Sie bitte am Automaten neben dem Eingang ab.",
+  "voice": "m1"
+ },
+ {
+  "text": "Ich möchte meine neue Adresse anmelden.",
+  "voice": "m1"
+ },
+ {
+  "text": "Haben Sie die Wohnungsgeberbestätigung von Ihrem Vermieter dabei?",
+  "voice": "m1"
+ },
+ {
+  "text": "Ihr neuer Personalausweis ist in ungefähr vier Wochen fertig.",
+  "voice": "m1"
+ },
+ {
+  "text": "Haben Sie Ihre Gesundheitskarte dabei? Nehmen Sie bitte noch im Wartezimmer Platz.",
+  "voice": "m1"
+ },
+ {
+  "text": "Machen Sie bitte den Oberkörper frei. Ich höre Sie jetzt ab.",
+  "voice": "m1"
+ },
+ {
+  "text": "Seit wann haben Sie die Schmerzen?",
+  "voice": "m1"
+ },
+ {
+  "text": "Für dieses Medikament brauchen Sie ein Rezept.",
+  "voice": "m1"
+ },
+ {
+  "text": "Das Medikament haben wir nicht da. Wir bestellen es, Sie können es heute Nachmittag abholen.",
+  "voice": "m1"
+ },
+ {
+  "text": "Gegen den Husten empfehle ich Ihnen diesen Saft.",
+  "voice": "m1"
+ },
+ {
+  "text": "Ich möchte ein Girokonto eröffnen.",
+  "voice": "m1"
+ },
+ {
+  "text": "Ihre neue Karte und die PIN bekommen Sie getrennt per Post.",
+  "voice": "m1"
+ },
+ {
+  "text": "Der Geldautomat hat meine Karte nicht zurückgegeben.",
+  "voice": "m1"
+ },
+ {
+  "text": "Ich möchte dieses Paket nach Polen schicken.",
+  "voice": "m1"
+ },
+ {
+  "text": "Den Brief bitte als Einschreiben.",
+  "voice": "m1"
+ },
+ {
+  "text": "Ich habe eine Benachrichtigungskarte im Briefkasten gefunden. Hier ist mein Ausweis.",
+  "voice": "m1"
+ },
+ {
+  "text": "Bitte bringen Sie zum nächsten Termin Ihren Lebenslauf und Ihre Kontoauszüge mit.",
+  "voice": "m1"
+ },
+ {
+  "text": "Haben Sie sich schon auf die Stelle als Lagerhelfer beworben?",
+  "voice": "m1"
+ },
+ {
+  "text": "Ihr Weiterbewilligungsantrag muss bis Ende des Monats bei uns sein.",
+  "voice": "m1"
+ },
+ {
+  "text": "Haben Sie reserviert? – Ja, auf den Namen Ahmadi.",
+  "voice": "m1",
+  "segments": [
+   {
+    "voice": "m1",
+    "text": "Haben Sie reserviert?"
+   },
+   {
+    "voice": "f1",
+    "text": "Ja, auf den Namen Ahmadi."
+   }
+  ]
+ },
+ {
+  "text": "Zahlen Sie zusammen oder getrennt?",
+  "voice": "m1"
+ },
+ {
+  "text": "Was darf ich Ihnen zu trinken bringen?",
+  "voice": "m1"
+ },
+ {
+  "text": "Der Elternabend ist am Donnerstag um 19 Uhr im Klassenraum.",
+  "voice": "m1"
+ },
+ {
+  "text": "Bitte geben Sie die Einverständniserklärung für den Ausflug bis Freitag ab.",
+  "voice": "m1"
+ },
+ {
+  "text": "Ihre Tochter hat heute im Unterricht sehr gut mitgearbeitet.",
+  "voice": "m1"
+ },
+ {
+  "text": "Ihr Auto ist fertig. Wir haben die Bremsen erneuert.",
+  "voice": "m1"
+ },
+ {
+  "text": "Die Winterreifen können wir Ihnen nächste Woche wechseln.",
+  "voice": "m1"
+ },
+ {
+  "text": "Das Frühstück gibt es von 7 bis 10 Uhr im Erdgeschoss.",
+  "voice": "m1"
+ },
+ {
+  "text": "Haben Sie noch ein Doppelzimmer für zwei Nächte frei?",
+  "voice": "m1"
+ },
+ {
+  "text": "Bitte geben Sie bei der Abreise die Schlüsselkarte an der Rezeption ab.",
+  "voice": "m1"
+ },
+ {
+  "text": "Die Wohnung hat 65 Quadratmeter. Die Kaution beträgt drei Kaltmieten.",
+  "voice": "m1"
+ },
+ {
+  "text": "Ist die Küche in der Miete schon dabei?",
+  "voice": "m1"
+ },
+ {
+  "text": "Ich hätte gern sechs Brötchen und ein Vollkornbrot, bitte.",
+  "voice": "m1"
+ },
+ {
+  "text": "Soll ich Ihnen das Brot schneiden?",
+  "voice": "m1"
+ }
+]

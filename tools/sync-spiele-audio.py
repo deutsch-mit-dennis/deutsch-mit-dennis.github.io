@@ -13,6 +13,7 @@ for f in sorted(glob.glob(os.path.join(R, 'spiele', 'tts-*.json'))):
     for it in json.load(open(f, encoding='utf-8')):
         k = fnv(it['text'])
         if k in have: continue
-        man['entries'].append({'key': k, 'segments': [{'voice': it.get('voice', 'f1'), 'text': it['text']}]}); have.add(k); n += 1
+        segs = it.get('segments') or [{'voice': it.get('voice', 'f1'), 'text': it['text']}]   # Dialoge: mehrere Stimmen
+        man['entries'].append({'key': k, 'segments': segs}); have.add(k); n += 1
 json.dump(man, open(mp, 'w', encoding='utf-8'), ensure_ascii=False, indent=1); open(mp, 'a').write('\n')
 print(n, 'neue Sprechtexte,', len(man['entries']), 'gesamt')

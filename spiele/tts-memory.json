@@ -1,0 +1,406 @@
+[
+ {
+  "text": "der Apfel",
+  "voice": "f2"
+ },
+ {
+  "text": "die Banane",
+  "voice": "f2"
+ },
+ {
+  "text": "die Tomate",
+  "voice": "f2"
+ },
+ {
+  "text": "die Kartoffel",
+  "voice": "f2"
+ },
+ {
+  "text": "das Brot",
+  "voice": "f2"
+ },
+ {
+  "text": "der Käse",
+  "voice": "f2"
+ },
+ {
+  "text": "das Ei",
+  "voice": "f2"
+ },
+ {
+  "text": "die Milch",
+  "voice": "f2"
+ },
+ {
+  "text": "der Kaffee",
+  "voice": "f2"
+ },
+ {
+  "text": "der Tee",
+  "voice": "f2"
+ },
+ {
+  "text": "die Zitrone",
+  "voice": "f2"
+ },
+ {
+  "text": "die Karotte",
+  "voice": "f2"
+ },
+ {
+  "text": "der Fisch",
+  "voice": "f2"
+ },
+ {
+  "text": "die Pizza",
+  "voice": "f2"
+ },
+ {
+  "text": "der Kuchen",
+  "voice": "f2"
+ },
+ {
+  "text": "die Gurke",
+  "voice": "f2"
+ },
+ {
+  "text": "die Erdbeere",
+  "voice": "f2"
+ },
+ {
+  "text": "der Reis",
+  "voice": "f2"
+ },
+ {
+  "text": "das Eis",
+  "voice": "f2"
+ },
+ {
+  "text": "die Zwiebel",
+  "voice": "f2"
+ },
+ {
+  "text": "die Butter",
+  "voice": "f2"
+ },
+ {
+  "text": "die Suppe",
+  "voice": "f2"
+ },
+ {
+  "text": "die Hose",
+  "voice": "f2"
+ },
+ {
+  "text": "das T-Shirt",
+  "voice": "f2"
+ },
+ {
+  "text": "das Kleid",
+  "voice": "f2"
+ },
+ {
+  "text": "die Jacke",
+  "voice": "f2"
+ },
+ {
+  "text": "der Schuh",
+  "voice": "f2"
+ },
+ {
+  "text": "die Socke",
+  "voice": "f2"
+ },
+ {
+  "text": "der Hut",
+  "voice": "f2"
+ },
+ {
+  "text": "die Kappe",
+  "voice": "f2"
+ },
+ {
+  "text": "der Schal",
+  "voice": "f2"
+ },
+ {
+  "text": "der Handschuh",
+  "voice": "f2"
+ },
+ {
+  "text": "die Brille",
+  "voice": "f2"
+ },
+ {
+  "text": "das Hemd",
+  "voice": "f2"
+ },
+ {
+  "text": "der Stiefel",
+  "voice": "f2"
+ },
+ {
+  "text": "die Tasche",
+  "voice": "f2"
+ },
+ {
+  "text": "der Rucksack",
+  "voice": "f2"
+ },
+ {
+  "text": "der Badeanzug",
+  "voice": "f2"
+ },
+ {
+  "text": "der Bikini",
+  "voice": "f2"
+ },
+ {
+  "text": "der Ring",
+  "voice": "f2"
+ },
+ {
+  "text": "der Turnschuh",
+  "voice": "f2"
+ },
+ {
+  "text": "der Regenschirm",
+  "voice": "f2"
+ },
+ {
+  "text": "das Bett",
+  "voice": "f2"
+ },
+ {
+  "text": "das Sofa",
+  "voice": "f2"
+ },
+ {
+  "text": "der Stuhl",
+  "voice": "f2"
+ },
+ {
+  "text": "die Tür",
+  "voice": "f2"
+ },
+ {
+  "text": "das Fenster",
+  "voice": "f2"
+ },
+ {
+  "text": "die Dusche",
+  "voice": "f2"
+ },
+ {
+  "text": "die Badewanne",
+  "voice": "f2"
+ },
+ {
+  "text": "die Toilette",
+  "voice": "f2"
+ },
+ {
+  "text": "der Spiegel",
+  "voice": "f2"
+ },
+ {
+  "text": "der Schlüssel",
+  "voice": "f2"
+ },
+ {
+  "text": "der Wecker",
+  "voice": "f2"
+ },
+ {
+  "text": "der Fernseher",
+  "voice": "f2"
+ },
+ {
+  "text": "das Bild",
+  "voice": "f2"
+ },
+ {
+  "text": "die Kerze",
+  "voice": "f2"
+ },
+ {
+  "text": "der Besen",
+  "voice": "f2"
+ },
+ {
+  "text": "der Eimer",
+  "voice": "f2"
+ },
+ {
+  "text": "die Seife",
+  "voice": "f2"
+ },
+ {
+  "text": "die Pflanze",
+  "voice": "f2"
+ },
+ {
+  "text": "der Korb",
+  "voice": "f2"
+ },
+ {
+  "text": "der Briefkasten",
+  "voice": "f2"
+ },
+ {
+  "text": "das Haus",
+  "voice": "f2"
+ },
+ {
+  "text": "das Auge",
+  "voice": "f2"
+ },
+ {
+  "text": "das Ohr",
+  "voice": "f2"
+ },
+ {
+  "text": "die Nase",
+  "voice": "f2"
+ },
+ {
+  "text": "der Mund",
+  "voice": "f2"
+ },
+ {
+  "text": "der Zahn",
+  "voice": "f2"
+ },
+ {
+  "text": "die Hand",
+  "voice": "f2"
+ },
+ {
+  "text": "der Fuß",
+  "voice": "f2"
+ },
+ {
+  "text": "das Bein",
+  "voice": "f2"
+ },
+ {
+  "text": "der Arm",
+  "voice": "f2"
+ },
+ {
+  "text": "das Herz",
+  "voice": "f2"
+ },
+ {
+  "text": "die Zunge",
+  "voice": "f2"
+ },
+ {
+  "text": "das Gehirn",
+  "voice": "f2"
+ },
+ {
+  "text": "der Knochen",
+  "voice": "f2"
+ },
+ {
+  "text": "die Tablette",
+  "voice": "f2"
+ },
+ {
+  "text": "das Pflaster",
+  "voice": "f2"
+ },
+ {
+  "text": "das Thermometer",
+  "voice": "f2"
+ },
+ {
+  "text": "die Spritze",
+  "voice": "f2"
+ },
+ {
+  "text": "der Krankenwagen",
+  "voice": "f2"
+ },
+ {
+  "text": "das Krankenhaus",
+  "voice": "f2"
+ },
+ {
+  "text": "der Rollstuhl",
+  "voice": "f2"
+ },
+ {
+  "text": "der Koch",
+  "voice": "f2"
+ },
+ {
+  "text": "die Ärztin",
+  "voice": "f2"
+ },
+ {
+  "text": "der Lehrer",
+  "voice": "f2"
+ },
+ {
+  "text": "die Polizistin",
+  "voice": "f2"
+ },
+ {
+  "text": "der Bauarbeiter",
+  "voice": "f2"
+ },
+ {
+  "text": "die Feuerwehrfrau",
+  "voice": "f2"
+ },
+ {
+  "text": "der Mechaniker",
+  "voice": "f2"
+ },
+ {
+  "text": "die Bäuerin",
+  "voice": "f2"
+ },
+ {
+  "text": "der Pilot",
+  "voice": "f2"
+ },
+ {
+  "text": "die Programmiererin",
+  "voice": "f2"
+ },
+ {
+  "text": "die Sängerin",
+  "voice": "f2"
+ },
+ {
+  "text": "der Hammer",
+  "voice": "f2"
+ },
+ {
+  "text": "das Büro",
+  "voice": "f2"
+ },
+ {
+  "text": "die Fabrik",
+  "voice": "f2"
+ },
+ {
+  "text": "das Geld",
+  "voice": "f2"
+ },
+ {
+  "text": "der Lastwagen",
+  "voice": "f2"
+ },
+ {
+  "text": "der Kalender",
+  "voice": "f2"
+ },
+ {
+  "text": "der Laptop",
+  "voice": "f2"
+ }
+]

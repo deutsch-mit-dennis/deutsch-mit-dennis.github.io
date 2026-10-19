@@ -57,8 +57,10 @@
       if (stem !== f[0] && !/[aeiouäöü]$/.test(stem)) { const k = stem.toLowerCase(); if (!forms.has(k)) forms.set(k, [[lemma, -1]]); }
     }
     const lower = new Map(Object.keys(j.nouns).map(n => [n.toLowerCase(), n]));
-    return (LEX = { ...j, forms, lower });
-  }).catch(() => (LEX = { nouns: {}, verbs: {}, forms: new Map(), lower: new Map() }));
+    const plural = new Map();   // „Menschen“ → „Mensch“ (nur Pluralformen, die sich vom Singular unterscheiden)
+    for (const [n, [, pl]] of Object.entries(j.nouns)) if (pl && pl !== n && /^\p{Lu}\p{L}+$/u.test(pl)) plural.set(pl, n);
+    return (LEX = { ...j, forms, lower, plural });
+  }).catch(() => (LEX = { nouns: {}, verbs: {}, forms: new Map(), lower: new Map(), plural: new Map() }));
   const PRON = { ich: [0], du: [1], er: [2], es: [2], man: [2], sie: [2, 5], wir: [3], ihr: [4] };
   const PNAME = ['ich', 'du', 'er/sie/es', 'wir', 'ihr', 'sie/Sie'];
   const SUB = /^(weil|dass|wenn|ob|obwohl|als|damit|bevor|nachdem|während|bis|da|sobald|falls|seitdem|sodass|wie|wo|was|wer|der|die|das|den|dem|deren|dessen)$/i;
@@ -67,12 +69,22 @@
   const POSS = /^(ein|kein|mein|dein|sein|ihr|unser|euer|Ihr)(e|en|em|er|es)?$/i;
   const DETS = /^(der|die|das|den|dem|des|ein|eine|einen|einem|einer|eines|kein|keine|keinen|keinem|keiner|mein|meine|meinen|meinem|meiner|dein|deine|deinen|deinem|deiner|sein|seine|seinen|seinem|seiner|unser|unsere|unseren|unserem|unserer|im|am|zum|zur|vom|beim|ins|ans)$/i;
   const AKKVERB = /^(habe|hast|hat|haben|habt|brauche|brauchst|braucht|brauchen|kaufe|kaufst|kauft|kaufen|suche|suchst|sucht|suchen|möchte|möchtest|möchten|sehe|siehst|sieht|sehen|seht|nehme|nimmst|nimmt|nehmen|nehmt|esse|isst|essen|esst|trinke|trinkst|trinkt|trinken|finde|findest|findet|finden|besuche|besuchst|besucht|besuchen|kenne|kennst|kennt|kennen|bestelle|bestellst|bestellt|bestellen|liebe|liebst|liebt|lieben|gibt)$/i;
+  const LANG = /^(deutsch|englisch|russisch|ukrainisch|arabisch|türkisch|polnisch|französisch|spanisch|italienisch|persisch|kurdisch|rumänisch|chinesisch|albanisch|serbisch|kroatisch|bosnisch|bulgarisch|griechisch|portugiesisch|vietnamesisch|georgisch|armenisch|ungarisch|tschechisch|japanisch|koreanisch|hindi|tamilisch|somalisch|tigrinya|dari|paschtu|belarussisch|weißrussisch|litauisch|lettisch|moldauisch|niederländisch)$/i;
+  const SPLIT = { 'Mutter Sprache': 'Muttersprache', 'Mutter Sprachen': 'Muttersprachen', 'Haupt Bahnhof': 'Hauptbahnhof', 'Bus Haltestelle': 'Bushaltestelle', 'Fahr Karte': 'Fahrkarte', 'Kranken Haus': 'Krankenhaus', 'Kinder Garten': 'Kindergarten', 'Arbeits Platz': 'Arbeitsplatz', 'Lebens Lauf': 'Lebenslauf', 'Fuß Ball': 'Fußball', 'Wochen Ende': 'Wochenende', 'Geburts Tag': 'Geburtstag', 'Super Markt': 'Supermarkt', 'Kühl Schrank': 'Kühlschrank', 'Straßen Bahn': 'Straßenbahn', 'Arbeits Zeit': 'Arbeitszeit', 'Haus Aufgaben': 'Hausaufgaben', 'Haus Aufgabe': 'Hausaufgabe', 'Deutsch Kurs': 'Deutschkurs', 'Integrations Kurs': 'Integrationskurs', 'Jobcenter': 'Jobcenter' };
+  const DETSG = /^(ein|eine|der|die|das|mein|meine|dein|deine|sein|seine|ihr|ihre|unser|unsere|euer|eure|kein|keine|dieser|diese|dieses|jeder|jede|jedes)$/i;
+  const DETPL = /^(die|meine|deine|seine|ihre|unsere|eure|keine|diese|viele|alle|einige|manche|beide|zwei|drei|vier|fünf|sechs|sieben|acht|neun|zehn|elf|zwölf|meine)$/i;
+  const PLONLY = /^(Leute|Eltern|Geschwister|Großeltern|Kinder)$/;
+  const PERC = /^(sehe|siehst|sieht|sehen|seht|höre|hörst|hört|hören|lasse|lässt|lassen|helfe|hilfst|hilft|helfen)$/i;
+  const PREP = /^(mit|bei|von|zu|aus|nach|seit|für|ohne|gegen|durch|um|in|an|auf|über|unter|vor|hinter|neben|zwischen)$/i;
+  const NOART = /^(Geld|Milch|Wasser|Kaffee|Tee|Brot|Fleisch|Fisch|Käse|Gemüse|Saft|Bier|Arbeit|Zeit|Hilfe|Musik|Sport|Urlaub|Regen|Sonne|Schnee|Morgen|Abend|Leben|Essen|Platz|Erfahrung|Verantwortung|Qualität|Ersatz|Zustimmung|Heimat|Tag|Woche|Monat|Jahr|Minute|Stunde|Uhr|Nacht|Wochenende|Haus|Familie|Frühstück|Entschuldigung|Beispiel|Grund|Kuchen|Suppe|Obst|Glück|Weg|Ende|Name)$/;
+  const PRESENT = /^(lerne|lernst|lernt|lernen|wohne|wohnst|wohnt|wohnen|arbeite|arbeitest|arbeitet|arbeiten|lebe|lebst|lebt|leben|bin|bist|ist|sind|seid|studiere|studierst|studiert|studieren|spreche|sprichst|spricht|sprechen|mache|machst|macht|machen|besuche|besuchst|besucht|besuchen|kenne|kennst|kennt|kennen|habe|hast|hat|haben|habt)$/i;
+  const PAST = /^(war|warst|waren|wart|hatte|hattest|hatten|kam|kamen|zog|zogen|wurde|wurden|ging|gingen|fing|fingen|begann|begannen)$/i;
   const keepCase = (src, w) => src[0] === src[0].toUpperCase() ? w[0].toUpperCase() + w.slice(1) : w;
-  function learnerChecks(text, L) {
+  function learnerChecks(text, L, speech) {
     const out = [], toks = [];
     for (const m of text.matchAll(/[\p{L}ß]+|[.!?;:,\n]/gu)) toks.push({ t: m[0], i: m.index, w: /\p{L}/u.test(m[0]) });
     const add = (tok, msg, rep, cat = 'GRAMMAR', len) => out.push({ offset: tok.i, length: len ?? tok.t.length, message: msg, replacements: rep ? [{ value: rep }] : [], rule: { id: 'DMD_LERNER', category: { id: cat } }, own: true });
-    const sentStart = k => k === 0 || /[.!?\n]/.test(toks[k - 1].t);
+    const sentStart = k => k <= 0 || /[.!?\n]/.test(toks[k - 1].t);
     const clauseStart = k => { let j = k; while (j > 0 && toks[j - 1].w) j--; return j; };
     const isQuestion = k => { let j = k; while (j < toks.length && !/[.!?\n]/.test(toks[j].t)) j++; return toks[j]?.t === '?'; };
     const isSub = k => { const s = clauseStart(k); if (s >= toks.length || s === k || !SUB.test(toks[s].t)) return false;
@@ -148,8 +160,103 @@
         const N = L.lower.get(nTok.t.toLowerCase());
         add(nTok, `Nomen schreibt man im Deutschen groß: „${N}“.`, N, 'CASING');
       }
+      // E) „Meinen Namen ist …“ → „Mein Name ist …“
+      if (tok.t === 'Namen' && nx && /^ist$/i.test(nx.t)) {
+        if (pv && /^(meinen|meine|meinem|meiner)$/i.test(pv.t)) add(pv, 'Nominativ: Es heißt „Mein Name ist …“ (nicht „meinen Namen“).', keepCase(pv.t, 'mein') + ' Name', 'GRAMMAR', tok.i + tok.t.length - pv.i);
+        else add(tok, 'Nominativ: Es heißt „Name ist …“, z. B. „Mein Name ist Anna.“', 'Name');
+      }
+      // F) „Ich habe 34 Jahre alt“ → „Ich bin 34 Jahre alt“
+      if (/^jahre$/i.test(tok.t) && nx && /^alt$/i.test(nx.t)) {
+        for (let j = k - 1; j >= Math.max(0, k - 3) && toks[j].w; j--) {
+          const c = (L.forms.get(toks[j].t.toLowerCase()) || []).find(([lemma]) => lemma === 'haben');
+          if (c) { const right = L.verbs.sein[c[1] < 0 ? 0 : c[1]]; add(toks[j], `Das Alter sagt man mit „sein“: „Ich bin 34 Jahre alt.“ Hier: „${right}“.`, keepCase(toks[j].t, right)); break; }
+        }
+      }
+      // G) „Ich lerne Deutsch vor zwei Jahren“ → „seit zwei Jahren“ (Gegenwart)
+      if (/^vor$/i.test(tok.t)) {
+        const z = [toks[k + 1], toks[k + 2]].find(x => x && x.w && /^(Jahren|Monaten|Wochen|Tagen|Stunden|Minuten)$/.test(x.t));
+        if (z && (z === toks[k + 1] || toks[k + 1].w && !/^\p{Lu}/u.test(toks[k + 1].t))) {
+          let a = clauseStart(k), b = k; while (b < toks.length && !/[.!?\n]/.test(toks[b].t)) b++;
+          const cl = toks.slice(a, b);
+          if (cl.some(x => PRESENT.test(x.t)) && !cl.some(x => PAST.test(x.t) || /^ge\p{L}{3,}(t|en)$/iu.test(x.t)))
+            { const ph = text.slice(tok.i + tok.t.length, z.i + z.t.length).trim();
+            add(tok, `Die Handlung dauert noch an (Gegenwart). Dann heißt es „seit ${ph}“. „Vor ${ph}“ benutzt man für die Vergangenheit: „Ich bin vor zwei Jahren gekommen.“`, keepCase(tok.t, 'seit')); }
+        }
+      }
+      // H) Sprachen als Nomen groß: „Ich spreche russisch“ → „Russisch“
+      if (LANG.test(tok.t) && /^\p{Ll}/u.test(tok.t) && !(nx && nx.w && /^\p{Lu}/u.test(nx.t)) && !(pv && /^(typisch|sehr|so|zu|ganz|echt|richtig|nicht)$/i.test(pv.t))) {
+        add(tok, `Sprachen sind hier Nomen und werden großgeschrieben: „${tok.t[0].toUpperCase() + tok.t.slice(1)}“.`, tok.t[0].toUpperCase() + tok.t.slice(1), 'CASING');
+      }
+      // I) Getrennt geschriebene Wörter: „Mutter Sprache“ → „Muttersprache“
+      if (nx && nx.w && SPLIT[tok.t + ' ' + nx.t] && nx.i === tok.i + tok.t.length + 1) {
+        const one = SPLIT[tok.t + ' ' + nx.t];
+        add(tok, `Das ist ein Wort: „${one}“.`, one, 'COMPOUNDING', nx.i + nx.t.length - tok.i);
+      }
+      // J) Nomen als Subjekt + Verb: „die Menschen steht“, „ein Mann tragen“
+      if (/^\p{Lu}/u.test(tok.t) && nx && nx.w && /^\p{Ll}/u.test(nx.t) && !(tok.t === 'Namen' && /^ist$/i.test(nx.t))) {
+        const pl = L.plural.get(tok.t) || PLONLY.test(tok.t) ? true : (L.nouns[tok.t] && L.nouns[tok.t][1] !== tok.t ? false : null);
+        const cand = L.forms.get(nx.t.toLowerCase());
+        let d = k - 1; if (toks[d] && toks[d].w && /^\p{Lu}/u.test(toks[d].t) && SPLIT[toks[d].t + ' ' + tok.t]) d--;
+        const det = toks[d];
+        const n2 = toks[k + 2], before = toks.slice(Math.max(0, d - 4), d);
+        const subjPos = speech || sentStart(d) || (toks[d - 1] && /^(und|aber|oder|denn|weil|dass|wenn|ob|obwohl|damit|bevor|nachdem)$/i.test(toks[d - 1].t));
+        if (subjPos && pl !== null && cand && det && det.w && (pl ? DETPL : DETSG).test(det.t)
+          && !(toks[d - 1] && toks[d - 1].w && (PREP.test(toks[d - 1].t) || L.forms.has(toks[d - 1].t.toLowerCase())))
+          && !before.some(x => MODAL.test(x.t) || PERC.test(x.t))
+          && !(n2 && n2.w && (PRON[n2.t.toLowerCase()] || MODAL.test(n2.t) || /^(hat|haben|ist|sind|wird|werden)$/i.test(n2.t)))) {
+          const need = pl ? 5 : 2;
+          if (!cand.some(([, p]) => p === need)) {
+            const lemma = cand[0][0], right = L.verbs[lemma][need];
+            add(nx, `Subjekt „${text.slice(det.i, tok.i + tok.t.length)}“ ist ${pl ? 'Plural' : 'Singular'} – das Verb heißt „${right}“ (${pl ? 'sie' : 'er/sie/es'} ${right}).`, keepCase(nx.t, right));
+          }
+        }
+      }
+      // K) Präposition ohne Artikel: „um Hauptbahnhof“, „mit Bus“, „in Schule“
+      const artPrep = /^(in|an|um|bei|von|mit|auf)$/i.test(tok.t) && !(/^(mit|von)$/i.test(tok.t) && pv && pv.w && /^\p{Lu}/u.test(pv.t) && !sentStart(k - 1));
+      if (artPrep && nx && nx.w && L.nouns[nx.t] && L.nouns[nx.t][1] !== nx.t && !NOART.test(nx.t) && !/^(Vorteil|Nachteil)$/.test(nx.t) || (PREP.test(tok.t) && /^(nach|zu)$/i.test(tok.t) && nx && L.nouns[nx.t] && /^(Bahnhof|Hauptbahnhof|Arzt|Ärztin|Supermarkt|Schule|Apotheke|Post|Bank|Kita|Kindergarten|Haltestelle|Bushaltestelle|Polizei|Krankenhaus|Flughafen|Markt|Amt|Kurs|Chef|Chefin|Firma|Büro|Restaurant|Kino|Park)$/.test(nx.t))) {
+        const g = L.nouns[nx.t][0], nn = toks[k + 2];
+        if (!(nn && nn.w && /^\p{Lu}/u.test(nn.t))) {
+          const lw = tok.t.toLowerCase(), f = g === 'f';
+          const fix = { in: f ? 'in der' : 'im', an: f ? 'an der' : 'am', um: f ? 'an der' : 'am', zu: f ? 'zur' : 'zum', nach: f ? 'zur' : 'zum', bei: f ? 'bei der' : 'beim', von: f ? 'von der' : 'vom', mit: f ? 'mit der' : 'mit dem' }[lw];
+          const msg = lw === 'um' ? `„um“ passt hier nicht. Wo? → „${fix} ${nx.t}“.` : /^(nach)$/.test(lw) ? `Zu Personen und Orten wie „${nx.t}“ sagt man „${fix} ${nx.t}“.` : `Hier fehlt wahrscheinlich ein Artikel${fix ? `: „${fix} ${nx.t}“` : ` (der/die/das, ein/eine)`}.`;
+          add(tok, msg, fix ? keepCase(tok.t, fix) : null);
+        }
+      }
+      // L) Gesprochener Text: Wort doppelt („die die Menschen“)
+      if (speech && nx && nx.w && nx.t.toLowerCase() === low && low.length > 1 && nx.i === tok.i + tok.t.length + 1) {
+        add(tok, 'Dieses Wort steht zweimal hintereinander. Beim Sprechen passiert das schnell – sag es nur einmal.', tok.t, 'STYLE', nx.i + nx.t.length - tok.i);
+      }
     });
     return out;
+  }
+
+
+  /* Gesprochener Text kommt ohne Punkte aus der Spracherkennung („… ist Dennis ich komme aus Belarus ich habe …“).
+     Ohne Satzgrenzen findet LanguageTool kaum Fehler. Darum setzen wir vor der Prüfung Punkte an wahrscheinlichen
+     Satzanfängen (vor „ich“, „mein“ … nach einem Nomen, nach „Guten Tag“) und rechnen die Fundstellen danach zurück. */
+  const STARTERS = /^(ich|du|er|wir|ihr|mein|meine|dein|deine|unser|unsere)$/;
+  const NOSPLIT = /^(und|aber|oder|denn|sondern|weil|dass|wenn|ob|als|wie|wo|was|wer|warum|wann|wohin|woher|damit|obwohl|bevor|nachdem|während|bis|da|sobald|falls|seit|seitdem|mit|bei|von|zu|aus|nach|für|ohne|gegen|durch|um|in|an|auf|über|unter|vor|hinter|neben|zwischen|auch|nicht|noch|schon|gern|gerne|so|also|deshalb|trotzdem|dann|jetzt|heute|morgen|gestern|hier|dort|sehr|nur|immer|oft|manchmal|zusammen|sagt|sage|sagen|glaube|denke|finde|weiß|meint|meine)$/;
+  function prepSpeech(text, L) {
+    const tk = [...text.matchAll(/[\p{L}\p{N}ß]+|[.!?;:,\n]/gu)].map(m => ({ t: m[0], i: m.index, w: /[\p{L}\p{N}]/u.test(m[0]) }));
+    const ins = [], caps = new Set();
+    for (let k = 1; k < tk.length; k++) {
+      const cur = tk[k], pv = tk[k - 1];
+      if (!cur.w || !pv.w) continue;
+      const lc = cur.t.toLowerCase(), lp = pv.t.toLowerCase();
+      const greet = (/^(tag|morgen|abend)$/.test(lp) && /^guten$/i.test(tk[k - 2]?.t || '')) || (/^(hallo|hi)$/.test(lp) && k === 1);
+      const start = STARTERS.test(lc) && !NOSPLIT.test(lp) && !L.forms.has(lp) && !PRON[lp] && !STARTERS.test(lp) && !/^\p{N}+$/u.test(lp);
+      if (greet || start) { ins.push(pv.i + pv.t.length); caps.add(cur.i); }
+    }
+    if (!ins.length) return { text, map: (o, l) => [o, l] };
+    let out = '', last = 0;
+    const at2 = [];   // Position des eingefügten Punkts im neuen Text
+    ins.forEach(p => { out += text.slice(last, p); at2.push(out.length); out += '.'; last = p; });
+    out += text.slice(last);
+    const chars = [...out];
+    caps.forEach(i => { const j = i + ins.filter(p => p <= i).length; chars[j] = chars[j].toUpperCase(); });
+    out = chars.join('');
+    const back = x => x - at2.filter(q => q < x).length;
+    return { text: out, map: (o, l) => { const a = back(o), b = back(o + l); return b > a ? [a, b - a] : null; } };
   }
 
   async function check(ta, panel, btn) {
@@ -162,16 +269,18 @@
     btn.disabled = true; btn.classList.add('is-busy'); panel.hidden = false; panel.innerHTML = '<p class="sc-loading"><span></span> Dein Text wird geprüft …</p>';
     let data = { matches: [] }, ltFailed = false;
     const L = await lexReady();
+    const speech = ta.dataset.speech === '1';
+    const P = speech ? prepSpeech(text, L) : { text, map: (o, l) => [o, l] };
+    const remap = list => list.map(m => { const r = P.map(m.offset, m.length); return r && { ...m, offset: r[0], length: r[1] }; }).filter(Boolean);
     try {
-      const r = await fetch(API, { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: new URLSearchParams({ text, language: 'de-DE', level: 'picky' }) });
+      const r = await fetch(API, { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: new URLSearchParams({ text: P.text, language: 'de-DE', level: 'picky' }) });
       if (r.status === 429) throw new Error('limit');
       if (!r.ok) throw new Error('http');
       data = await r.json();
     } catch (e) { ltFailed = e.message || 'http'; }
     btn.disabled = false; btn.classList.remove('is-busy');
-    const speech = ta.dataset.speech === '1';
-    const lt = (data.matches || []).filter(m => !speech || (!['PUNCTUATION', 'TYPOGRAPHY'].includes(m.rule?.category?.id) && !/UPPERCASE_SENTENCE_START|KOMMA|COMMA|PUNCT|SATZZEICHEN|LEERZEICHEN|WHITESPACE/i.test(m.rule?.id || '')));
-    const own = learnerChecks(text, L).filter(o => !lt.some(m => o.offset < m.offset + m.length && m.offset < o.offset + o.length));
+    const lt = remap((data.matches || []).filter(m => !speech || (!['PUNCTUATION', 'TYPOGRAPHY'].includes(m.rule?.category?.id) && !/UPPERCASE_SENTENCE_START|KOMMA|COMMA|PUNCT|SATZZEICHEN|LEERZEICHEN|WHITESPACE|PUNKT|SENTENCE_FRAGMENT|SATZ_OHNE/i.test(m.rule?.id || ''))));
+    const own = remap(learnerChecks(P.text, L, speech)).filter(o => !lt.some(m => o.offset < m.offset + m.length && m.offset < o.offset + o.length));
     const matches = [...lt, ...own].sort((a, b) => a.offset - b.offset);
     const ex = extraChecks(text, ta), words = ex.words, out = speech ? [] : ex.out;
     const counts = {};

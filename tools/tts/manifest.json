@@ -3965,6 +3965,2795 @@
     }
    ],
    "fx": "telefon"
+  },
+  {
+   "key": "t9e66e2f2",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Ich heiße Anna."
+    }
+   ]
+  },
+  {
+   "key": "t7e337d8b",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Der Tisch ist groß."
+    }
+   ]
+  },
+  {
+   "key": "tc86626f9",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "„Wie geht es dir?“ – „Danke, gut!“"
+    }
+   ]
+  },
+  {
+   "key": "tfac6e5aa",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Du kommst aus Syrien."
+    }
+   ]
+  },
+  {
+   "key": "tfeccc8ed",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Wir wohnen in Essen."
+    }
+   ]
+  },
+  {
+   "key": "t004e0a5e",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Das ist meine Mutter."
+    }
+   ]
+  },
+  {
+   "key": "t5ab9aa48",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Ich habe einen Bruder."
+    }
+   ]
+  },
+  {
+   "key": "te232b2d6",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Er ist Lehrer."
+    }
+   ]
+  },
+  {
+   "key": "t93862f14",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Es ist 8:30 Uhr. Das heißt: Es ist halb neun."
+    }
+   ]
+  },
+  {
+   "key": "tbce15fa0",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Am Morgen sagt man: „Guten Morgen!“"
+    }
+   ]
+  },
+  {
+   "key": "t7be5e00a",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Trinkst du Kaffee?"
+    }
+   ]
+  },
+  {
+   "key": "t5d5b7fee",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Die Banane ist gelb."
+    }
+   ]
+  },
+  {
+   "key": "tb333b1d8",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Sieben plus fünf ist zwölf."
+    }
+   ]
+  },
+  {
+   "key": "ta1c683e8",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Wo ist die Toilette, bitte?"
+    }
+   ]
+  },
+  {
+   "key": "t48b980a1",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Gestern bin ich ins Kino gegangen."
+    }
+   ]
+  },
+  {
+   "key": "tb12fa5df",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Ich habe einen Brief geschrieben."
+    }
+   ]
+  },
+  {
+   "key": "t194e681c",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Ich gebe dem Kind das Buch."
+    }
+   ]
+  },
+  {
+   "key": "t1bb9277d",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Wir fahren mit dem Bus."
+    }
+   ]
+  },
+  {
+   "key": "t0793f802",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Hier darfst du nicht rauchen."
+    }
+   ]
+  },
+  {
+   "key": "t9f6b092c",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Ich lege das Handy auf den Tisch."
+    }
+   ]
+  },
+  {
+   "key": "t14bdd6d3",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Das Handy liegt auf dem Tisch."
+    }
+   ]
+  },
+  {
+   "key": "tb25be54e",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Ich bleibe zu Hause, weil ich krank bin."
+    }
+   ]
+  },
+  {
+   "key": "td2dfb7ec",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Berlin ist größer als Essen."
+    }
+   ]
+  },
+  {
+   "key": "td6f5cdda",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Ich interessiere mich für Musik."
+    }
+   ]
+  },
+  {
+   "key": "ta8ef5ad7",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Wann fährt der Zug ab?"
+    }
+   ]
+  },
+  {
+   "key": "t18af660e",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Kannst du mir helfen?"
+    }
+   ]
+  },
+  {
+   "key": "tc70c78ec",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Als Kind wohnte ich in einem Dorf."
+    }
+   ]
+  },
+  {
+   "key": "t5910ce19",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Ich weiß nicht, ob er heute kommt."
+    }
+   ]
+  },
+  {
+   "key": "tb99b8768",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Das ist der Mann, dem ich geholfen habe."
+    }
+   ]
+  },
+  {
+   "key": "tc2a1751c",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Wenn ich Zeit hätte, würde ich reisen."
+    }
+   ]
+  },
+  {
+   "key": "tab0ca33b",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Das Rathaus wurde 1950 gebaut."
+    }
+   ]
+  },
+  {
+   "key": "t02f8c27b",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Obwohl es regnet, gehen wir spazieren."
+    }
+   ]
+  },
+  {
+   "key": "t95a85db7",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Ich freue mich auf das Wochenende."
+    }
+   ]
+  },
+  {
+   "key": "t358d41f9",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Er hat vergessen, die Tür abzuschließen."
+    }
+   ]
+  },
+  {
+   "key": "te6189dd1",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Als ich nach Deutschland kam, sprach ich kein Deutsch."
+    }
+   ]
+  },
+  {
+   "key": "tf67bb88d",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Je mehr ich lerne, desto besser spreche ich."
+    }
+   ]
+  },
+  {
+   "key": "t9d4971e7",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Ich warte schon lange auf den Bus."
+    }
+   ]
+  },
+  {
+   "key": "tbf59c118",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Die Frau, deren Auto kaputt ist, ruft die Werkstatt an."
+    }
+   ]
+  },
+  {
+   "key": "t75492497",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Du siehst müde aus. Du solltest früher ins Bett gehen."
+    }
+   ]
+  },
+  {
+   "key": "t8bef05d1",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Trotz des Regens fand das Fest statt."
+    }
+   ]
+  },
+  {
+   "key": "tdd80fdf7",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Der Antrag muss bis Freitag eingereicht werden."
+    }
+   ]
+  },
+  {
+   "key": "t5df9ba8d",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Wir müssen jetzt eine Entscheidung treffen."
+    }
+   ]
+  },
+  {
+   "key": "t5dc52931",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Er tut so, als ob er nichts gehört hätte."
+    }
+   ]
+  },
+  {
+   "key": "t985ab05c",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Das Problem lässt sich leicht lösen."
+    }
+   ]
+  },
+  {
+   "key": "t2075670d",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Ich beziehe mich auf Ihre E-Mail vom 3. Mai."
+    }
+   ]
+  },
+  {
+   "key": "ta242833b",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Nicht nur die Kosten, sondern auch die Zeit ist wichtig."
+    }
+   ]
+  },
+  {
+   "key": "t6b2a5853",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Die Kosten werden von der Firma übernommen."
+    }
+   ]
+  },
+  {
+   "key": "td59827f3",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Wegen der Verspätung bitten wir um Entschuldigung."
+    }
+   ]
+  },
+  {
+   "key": "t9be36fee",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Sie hat bestanden, obwohl sie wenig gelernt hatte."
+    }
+   ]
+  },
+  {
+   "key": "t40de9d37",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Wer übernimmt die Verantwortung für das Projekt?"
+    }
+   ]
+  },
+  {
+   "key": "t13f3a422",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Kaum war er angekommen, klingelte das Telefon."
+    }
+   ]
+  },
+  {
+   "key": "ta1a349f3",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Die mühsam gelernten Regeln vergisst man nicht so schnell."
+    }
+   ]
+  },
+  {
+   "key": "t514a877b",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Der Minister sagte, er habe nichts davon gewusst."
+    }
+   ]
+  },
+  {
+   "key": "tee92421d",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Angesichts der schwierigen Lage müssen wir handeln."
+    }
+   ]
+  },
+  {
+   "key": "t9f64c4ad",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Sie hat mir reinen Wein eingeschenkt."
+    }
+   ]
+  },
+  {
+   "key": "tf620a248",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Mit dem neuen Job ist sie ins kalte Wasser gesprungen."
+    }
+   ]
+  },
+  {
+   "key": "t40e91a80",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "„Weil die Preise steigen“ im Nominalstil: aufgrund der steigenden Preise"
+    }
+   ]
+  },
+  {
+   "key": "t1f65c605",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "So sehr er sich auch bemüht, er schafft es nicht."
+    }
+   ]
+  },
+  {
+   "key": "te64dfbc1",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Hätte ich das gewusst, wäre ich früher gekommen."
+    }
+   ]
+  },
+  {
+   "key": "t7df742a3",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Er ist ein Mensch, auf den man sich verlassen kann."
+    }
+   ]
+  },
+  {
+   "key": "ta5887b3c",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Der Vorschlag stieß auf breite Zustimmung."
+    }
+   ]
+  },
+  {
+   "key": "t7a21436e",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Infolge des Sturms fiel der Strom aus."
+    }
+   ]
+  },
+  {
+   "key": "t2f9b3def",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Die Ergebnisse sind mit Vorsicht zu interpretieren."
+    }
+   ]
+  },
+  {
+   "key": "tc5b850c6",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Ich fahre mit dem Auto zur Arbeit."
+    }
+   ]
+  },
+  {
+   "key": "tae69010f",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Die Ampel ist rot. Ich muss halten."
+    }
+   ]
+  },
+  {
+   "key": "t1ddd5447",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Der Tank ist fast leer. Ich muss tanken."
+    }
+   ]
+  },
+  {
+   "key": "te0d66d07",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Biegen Sie an der Kreuzung links ab."
+    }
+   ]
+  },
+  {
+   "key": "t2220fc0b",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Fahren Sie immer geradeaus bis zum Bahnhof."
+    }
+   ]
+  },
+  {
+   "key": "t53c9cf45",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Mein Auto ist kaputt. Ich bringe es in die Werkstatt."
+    }
+   ]
+  },
+  {
+   "key": "tbb177b4f",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Hast du schon einen Führerschein?"
+    }
+   ]
+  },
+  {
+   "key": "tfd71ac4b",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Wo kann ich hier parken?"
+    }
+   ]
+  },
+  {
+   "key": "t8f5dc782",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Ich bin gestern nach Köln gefahren."
+    }
+   ]
+  },
+  {
+   "key": "ta01cfef3",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Der Bus fährt zum Hauptbahnhof."
+    }
+   ]
+  },
+  {
+   "key": "t3e0922c3",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Die Straße ist gesperrt. Es gibt eine Umleitung."
+    }
+   ]
+  },
+  {
+   "key": "t24c991b3",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Im Stau haben wir eine Stunde gewartet."
+    }
+   ]
+  },
+  {
+   "key": "t552851b1",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Bitte schnallen Sie sich an!"
+    }
+   ]
+  },
+  {
+   "key": "tb805e948",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Das Auto ist schneller als das Fahrrad."
+    }
+   ]
+  },
+  {
+   "key": "tbb77dff2",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Ich suche einen Parkplatz in der Nähe vom Kino."
+    }
+   ]
+  },
+  {
+   "key": "tc7eb5176",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Mit dem Auto brauche ich 20 Minuten ins Büro."
+    }
+   ]
+  },
+  {
+   "key": "tbf902682",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Wir bleiben zu Hause, weil es draußen stark schneit."
+    }
+   ]
+  },
+  {
+   "key": "t77b9d8e0",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Obwohl es kalt ist, fahren wir Schlitten."
+    }
+   ]
+  },
+  {
+   "key": "ta0b27389",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Ich freue mich auf die Winterferien."
+    }
+   ]
+  },
+  {
+   "key": "t785f7a40",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Zieh eine Mütze an, damit du dich nicht erkältest!"
+    }
+   ]
+  },
+  {
+   "key": "t520efdca",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Gestern schneite es den ganzen Tag."
+    }
+   ]
+  },
+  {
+   "key": "t77597a25",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Das ist der Berg, den wir letztes Jahr bestiegen haben."
+    }
+   ]
+  },
+  {
+   "key": "tad173e5d",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Wenn ich Zeit hätte, würde ich Ski fahren lernen."
+    }
+   ]
+  },
+  {
+   "key": "t0f977cd4",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Ich interessiere mich für Wintersport."
+    }
+   ]
+  },
+  {
+   "key": "ta0dea3d1",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Es ist so glatt, dass man kaum laufen kann."
+    }
+   ]
+  },
+  {
+   "key": "t0dda8e27",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Weißt du, ob der Lift heute fährt?"
+    }
+   ]
+  },
+  {
+   "key": "t1f9abdba",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Nachdem wir gerodelt waren, tranken wir Kakao."
+    }
+   ]
+  },
+  {
+   "key": "t115d57ea",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Der Weg wird jeden Morgen geräumt."
+    }
+   ]
+  },
+  {
+   "key": "t18c3cf2a",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Trotz der Kälte gehen wir spazieren."
+    }
+   ]
+  },
+  {
+   "key": "t56ef0897",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Je mehr es schneit, desto schöner wird es."
+    }
+   ]
+  },
+  {
+   "key": "t5d19f99f",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Bei dem Wetter habe ich keine Lust rauszugehen."
+    }
+   ]
+  },
+  {
+   "key": "tf1535e67",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Pass auf, die Straßen sind mit Schnee bedeckt."
+    }
+   ]
+  },
+  {
+   "key": "t408d39b3",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Wegen des schlechten Wetters fiel der Ausflug aus."
+    }
+   ]
+  },
+  {
+   "key": "t28f308bd",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Ich hätte gern ein Zimmer mit Meerblick."
+    }
+   ]
+  },
+  {
+   "key": "t9574e664",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Der Urlaub muss bis Ende März beantragt werden."
+    }
+   ]
+  },
+  {
+   "key": "t7e50f74a",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Die Pension, deren Preis sehr günstig war, lag direkt am Strand."
+    }
+   ]
+  },
+  {
+   "key": "t3a46214f",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Hätten wir früher gebucht, hätten wir ein Zimmer bekommen."
+    }
+   ]
+  },
+  {
+   "key": "t4abcebe8",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Der Flug ist aufgrund eines Streiks gestrichen worden."
+    }
+   ]
+  },
+  {
+   "key": "t9fb3387e",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Sie hat sich über den Lärm im Hotel beschwert."
+    }
+   ]
+  },
+  {
+   "key": "t774fc8c1",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Am Strand ist auf Sonnenschutz zu achten."
+    }
+   ]
+  },
+  {
+   "key": "tff4946bc",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Die Kurtaxe wird bei Ankunft bezahlt."
+    }
+   ]
+  },
+  {
+   "key": "tc32f313a",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Es wäre schön, wenn wir mehr Zeit am Meer hätten."
+    }
+   ]
+  },
+  {
+   "key": "tfa6623c6",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Nicht nur das Wetter, sondern auch das Essen war toll."
+    }
+   ]
+  },
+  {
+   "key": "t88ae59d7",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Ich bin es nicht gewohnt, so früh aufzustehen."
+    }
+   ]
+  },
+  {
+   "key": "t9f1a53ca",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Während ich am Strand lag, ging die Sonne unter."
+    }
+   ]
+  },
+  {
+   "key": "tdb03b65f",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Die Reise wurde uns von einer Kollegin empfohlen."
+    }
+   ]
+  },
+  {
+   "key": "t5c235cf6",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Er tut so, als ob er schon alles wüsste."
+    }
+   ]
+  },
+  {
+   "key": "t30172dfd",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Die Strandkörbe können online gemietet werden."
+    }
+   ]
+  },
+  {
+   "key": "ta3e6c90c",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "der Apfel"
+    }
+   ]
+  },
+  {
+   "key": "t41f233ce",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "die Banane"
+    }
+   ]
+  },
+  {
+   "key": "t429ac5a3",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "die Tomate"
+    }
+   ]
+  },
+  {
+   "key": "td024fb7b",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "die Kartoffel"
+    }
+   ]
+  },
+  {
+   "key": "ta9dd10c6",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "das Brot"
+    }
+   ]
+  },
+  {
+   "key": "tb0252e7e",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "der Käse"
+    }
+   ]
+  },
+  {
+   "key": "t230589e3",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "das Ei"
+    }
+   ]
+  },
+  {
+   "key": "ta601d644",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "die Milch"
+    }
+   ]
+  },
+  {
+   "key": "t67435b3a",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "der Kaffee"
+    }
+   ]
+  },
+  {
+   "key": "t303f678a",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "der Tee"
+    }
+   ]
+  },
+  {
+   "key": "t21073100",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "die Zitrone"
+    }
+   ]
+  },
+  {
+   "key": "tc95b2c43",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "die Karotte"
+    }
+   ]
+  },
+  {
+   "key": "t9767c255",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "der Fisch"
+    }
+   ]
+  },
+  {
+   "key": "tec242427",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "die Pizza"
+    }
+   ]
+  },
+  {
+   "key": "t94a165c0",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "der Kuchen"
+    }
+   ]
+  },
+  {
+   "key": "t1308465f",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "die Gurke"
+    }
+   ]
+  },
+  {
+   "key": "t50b81551",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "die Erdbeere"
+    }
+   ]
+  },
+  {
+   "key": "ta2a5b2d9",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "der Reis"
+    }
+   ]
+  },
+  {
+   "key": "tb1b78db0",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "das Eis"
+    }
+   ]
+  },
+  {
+   "key": "tadceefb5",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "die Zwiebel"
+    }
+   ]
+  },
+  {
+   "key": "tb8aa7845",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "die Butter"
+    }
+   ]
+  },
+  {
+   "key": "t33c25b76",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "die Suppe"
+    }
+   ]
+  },
+  {
+   "key": "t68f4b7ca",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "die Hose"
+    }
+   ]
+  },
+  {
+   "key": "t7c79f28e",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "das T-Shirt"
+    }
+   ]
+  },
+  {
+   "key": "te0f4d698",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "das Kleid"
+    }
+   ]
+  },
+  {
+   "key": "tf04f3db3",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "die Jacke"
+    }
+   ]
+  },
+  {
+   "key": "t91765c37",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "der Schuh"
+    }
+   ]
+  },
+  {
+   "key": "t57a3abe2",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "die Socke"
+    }
+   ]
+  },
+  {
+   "key": "tb380f169",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "der Hut"
+    }
+   ]
+  },
+  {
+   "key": "t60794102",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "die Kappe"
+    }
+   ]
+  },
+  {
+   "key": "t8d946aff",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "der Schal"
+    }
+   ]
+  },
+  {
+   "key": "t297e2e28",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "der Handschuh"
+    }
+   ]
+  },
+  {
+   "key": "t3e811aa1",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "die Brille"
+    }
+   ]
+  },
+  {
+   "key": "te246cdc7",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "das Hemd"
+    }
+   ]
+  },
+  {
+   "key": "tc5f2e7d0",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "der Stiefel"
+    }
+   ]
+  },
+  {
+   "key": "t084e3a49",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "die Tasche"
+    }
+   ]
+  },
+  {
+   "key": "t84509f5d",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "der Rucksack"
+    }
+   ]
+  },
+  {
+   "key": "t38665e5d",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "der Badeanzug"
+    }
+   ]
+  },
+  {
+   "key": "t7e05de5c",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "der Bikini"
+    }
+   ]
+  },
+  {
+   "key": "tc211f1ca",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "der Ring"
+    }
+   ]
+  },
+  {
+   "key": "tda23db2a",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "der Turnschuh"
+    }
+   ]
+  },
+  {
+   "key": "t6b1be405",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "der Regenschirm"
+    }
+   ]
+  },
+  {
+   "key": "t7908fca0",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "das Bett"
+    }
+   ]
+  },
+  {
+   "key": "t2952255e",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "das Sofa"
+    }
+   ]
+  },
+  {
+   "key": "t92711272",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "der Stuhl"
+    }
+   ]
+  },
+  {
+   "key": "t3cfe7198",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "die Tür"
+    }
+   ]
+  },
+  {
+   "key": "t13a6c80a",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "das Fenster"
+    }
+   ]
+  },
+  {
+   "key": "tdee683b5",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "die Dusche"
+    }
+   ]
+  },
+  {
+   "key": "tfb841924",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "die Badewanne"
+    }
+   ]
+  },
+  {
+   "key": "t9af5649d",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "die Toilette"
+    }
+   ]
+  },
+  {
+   "key": "t35e61513",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "der Spiegel"
+    }
+   ]
+  },
+  {
+   "key": "t3d65f69a",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "der Schlüssel"
+    }
+   ]
+  },
+  {
+   "key": "t0a567341",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "der Wecker"
+    }
+   ]
+  },
+  {
+   "key": "tb5509d90",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "der Fernseher"
+    }
+   ]
+  },
+  {
+   "key": "td6fa0d5c",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "das Bild"
+    }
+   ]
+  },
+  {
+   "key": "t35778c3e",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "die Kerze"
+    }
+   ]
+  },
+  {
+   "key": "tc9d326ed",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "der Besen"
+    }
+   ]
+  },
+  {
+   "key": "t8f069f3e",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "der Eimer"
+    }
+   ]
+  },
+  {
+   "key": "t4fbc789b",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "die Seife"
+    }
+   ]
+  },
+  {
+   "key": "td16fad39",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "die Pflanze"
+    }
+   ]
+  },
+  {
+   "key": "tf2d1b53e",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "der Korb"
+    }
+   ]
+  },
+  {
+   "key": "t978a8600",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "der Briefkasten"
+    }
+   ]
+  },
+  {
+   "key": "t8c1e4cca",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "das Haus"
+    }
+   ]
+  },
+  {
+   "key": "t47259ceb",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "das Auge"
+    }
+   ]
+  },
+  {
+   "key": "t32d65228",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "das Ohr"
+    }
+   ]
+  },
+  {
+   "key": "ta12ce772",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "die Nase"
+    }
+   ]
+  },
+  {
+   "key": "t3a6a2144",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "der Mund"
+    }
+   ]
+  },
+  {
+   "key": "t44058da3",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "der Zahn"
+    }
+   ]
+  },
+  {
+   "key": "t93a3bdfa",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "die Hand"
+    }
+   ]
+  },
+  {
+   "key": "tce469407",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "der Fuß"
+    }
+   ]
+  },
+  {
+   "key": "t94c642c7",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "das Bein"
+    }
+   ]
+  },
+  {
+   "key": "tb021de2a",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "der Arm"
+    }
+   ]
+  },
+  {
+   "key": "tce83840a",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "das Herz"
+    }
+   ]
+  },
+  {
+   "key": "tf472111c",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "die Zunge"
+    }
+   ]
+  },
+  {
+   "key": "tc2dc4ab6",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "das Gehirn"
+    }
+   ]
+  },
+  {
+   "key": "t53ea1a6a",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "der Knochen"
+    }
+   ]
+  },
+  {
+   "key": "t6920f410",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "die Tablette"
+    }
+   ]
+  },
+  {
+   "key": "t5d8dec90",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "das Pflaster"
+    }
+   ]
+  },
+  {
+   "key": "tab2f66df",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "das Thermometer"
+    }
+   ]
+  },
+  {
+   "key": "tb8749b22",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "die Spritze"
+    }
+   ]
+  },
+  {
+   "key": "t1086332a",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "der Krankenwagen"
+    }
+   ]
+  },
+  {
+   "key": "t91e4b140",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "das Krankenhaus"
+    }
+   ]
+  },
+  {
+   "key": "t9e7e4077",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "der Rollstuhl"
+    }
+   ]
+  },
+  {
+   "key": "teeacde19",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "der Koch"
+    }
+   ]
+  },
+  {
+   "key": "ta69cd193",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "die Ärztin"
+    }
+   ]
+  },
+  {
+   "key": "tc99fd512",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "der Lehrer"
+    }
+   ]
+  },
+  {
+   "key": "tc69288ec",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "die Polizistin"
+    }
+   ]
+  },
+  {
+   "key": "t552c2824",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "der Bauarbeiter"
+    }
+   ]
+  },
+  {
+   "key": "tce9c408a",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "die Feuerwehrfrau"
+    }
+   ]
+  },
+  {
+   "key": "t22f7a585",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "der Mechaniker"
+    }
+   ]
+  },
+  {
+   "key": "td8a6af67",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "die Bäuerin"
+    }
+   ]
+  },
+  {
+   "key": "te28bd5de",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "der Pilot"
+    }
+   ]
+  },
+  {
+   "key": "t8d882bcc",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "die Programmiererin"
+    }
+   ]
+  },
+  {
+   "key": "t5d621cb0",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "die Sängerin"
+    }
+   ]
+  },
+  {
+   "key": "te8bed9be",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "der Hammer"
+    }
+   ]
+  },
+  {
+   "key": "t2e2784fd",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "das Büro"
+    }
+   ]
+  },
+  {
+   "key": "td76e1b0a",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "die Fabrik"
+    }
+   ]
+  },
+  {
+   "key": "t8cd66bc9",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "das Geld"
+    }
+   ]
+  },
+  {
+   "key": "t7aec89c6",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "der Lastwagen"
+    }
+   ]
+  },
+  {
+   "key": "ta2847452",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "der Kalender"
+    }
+   ]
+  },
+  {
+   "key": "tee580ac4",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "der Laptop"
+    }
+   ]
+  },
+  {
+   "key": "t26e6c4be",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Einmal nach Dortmund, hin und zurück, bitte."
+    }
+   ]
+  },
+  {
+   "key": "td024cffe",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Achtung an Gleis 3: Der Regionalexpress hat zehn Minuten Verspätung."
+    }
+   ]
+  },
+  {
+   "key": "t676b12f3",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Muss ich in Duisburg umsteigen?"
+    }
+   ]
+  },
+  {
+   "key": "t2d1da97c",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Wo finde ich das Mehl?"
+    },
+    {
+     "voice": "f1",
+     "text": "In Gang drei, ganz oben im Regal."
+    }
+   ]
+  },
+  {
+   "key": "t7ff5b106",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Möchten Sie den Kassenbon? Und haben Sie eine Kundenkarte?"
+    }
+   ]
+  },
+  {
+   "key": "t43139ed4",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Die Pfandflaschen geben Sie bitte am Automaten neben dem Eingang ab."
+    }
+   ]
+  },
+  {
+   "key": "t25c0dce5",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Ich möchte meine neue Adresse anmelden."
+    }
+   ]
+  },
+  {
+   "key": "tc1394686",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Haben Sie die Wohnungsgeberbestätigung von Ihrem Vermieter dabei?"
+    }
+   ]
+  },
+  {
+   "key": "tb9dee2a0",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Ihr neuer Personalausweis ist in ungefähr vier Wochen fertig."
+    }
+   ]
+  },
+  {
+   "key": "t99206c8a",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Haben Sie Ihre Gesundheitskarte dabei? Nehmen Sie bitte noch im Wartezimmer Platz."
+    }
+   ]
+  },
+  {
+   "key": "ta6c3d701",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Machen Sie bitte den Oberkörper frei. Ich höre Sie jetzt ab."
+    }
+   ]
+  },
+  {
+   "key": "t28131003",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Seit wann haben Sie die Schmerzen?"
+    }
+   ]
+  },
+  {
+   "key": "t0ce64a07",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Für dieses Medikament brauchen Sie ein Rezept."
+    }
+   ]
+  },
+  {
+   "key": "t2266bdf9",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Das Medikament haben wir nicht da. Wir bestellen es, Sie können es heute Nachmittag abholen."
+    }
+   ]
+  },
+  {
+   "key": "te4e61d8d",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Gegen den Husten empfehle ich Ihnen diesen Saft."
+    }
+   ]
+  },
+  {
+   "key": "t49049540",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Ich möchte ein Girokonto eröffnen."
+    }
+   ]
+  },
+  {
+   "key": "t8b807512",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Ihre neue Karte und die PIN bekommen Sie getrennt per Post."
+    }
+   ]
+  },
+  {
+   "key": "tdfb23cb8",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Der Geldautomat hat meine Karte nicht zurückgegeben."
+    }
+   ]
+  },
+  {
+   "key": "t10bb8ea7",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Ich möchte dieses Paket nach Polen schicken."
+    }
+   ]
+  },
+  {
+   "key": "ta097460d",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Den Brief bitte als Einschreiben."
+    }
+   ]
+  },
+  {
+   "key": "t266c649d",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Ich habe eine Benachrichtigungskarte im Briefkasten gefunden. Hier ist mein Ausweis."
+    }
+   ]
+  },
+  {
+   "key": "t800679f7",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Bitte bringen Sie zum nächsten Termin Ihren Lebenslauf und Ihre Kontoauszüge mit."
+    }
+   ]
+  },
+  {
+   "key": "t9dffe931",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Haben Sie sich schon auf die Stelle als Lagerhelfer beworben?"
+    }
+   ]
+  },
+  {
+   "key": "t370b8386",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Ihr Weiterbewilligungsantrag muss bis Ende des Monats bei uns sein."
+    }
+   ]
+  },
+  {
+   "key": "tbd0f8fa0",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Haben Sie reserviert?"
+    },
+    {
+     "voice": "f1",
+     "text": "Ja, auf den Namen Ahmadi."
+    }
+   ]
+  },
+  {
+   "key": "t1276b4c4",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Zahlen Sie zusammen oder getrennt?"
+    }
+   ]
+  },
+  {
+   "key": "te851bc1b",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Was darf ich Ihnen zu trinken bringen?"
+    }
+   ]
+  },
+  {
+   "key": "t27b2d628",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Der Elternabend ist am Donnerstag um 19 Uhr im Klassenraum."
+    }
+   ]
+  },
+  {
+   "key": "t8d9087fb",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Bitte geben Sie die Einverständniserklärung für den Ausflug bis Freitag ab."
+    }
+   ]
+  },
+  {
+   "key": "t74cade9e",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Ihre Tochter hat heute im Unterricht sehr gut mitgearbeitet."
+    }
+   ]
+  },
+  {
+   "key": "t384cfd06",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Ihr Auto ist fertig. Wir haben die Bremsen erneuert."
+    }
+   ]
+  },
+  {
+   "key": "t020e5995",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Die Winterreifen können wir Ihnen nächste Woche wechseln."
+    }
+   ]
+  },
+  {
+   "key": "t8dd2f056",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Das Frühstück gibt es von 7 bis 10 Uhr im Erdgeschoss."
+    }
+   ]
+  },
+  {
+   "key": "t63a19d4c",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Haben Sie noch ein Doppelzimmer für zwei Nächte frei?"
+    }
+   ]
+  },
+  {
+   "key": "t70bb8ddb",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Bitte geben Sie bei der Abreise die Schlüsselkarte an der Rezeption ab."
+    }
+   ]
+  },
+  {
+   "key": "td5fd68fe",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Die Wohnung hat 65 Quadratmeter. Die Kaution beträgt drei Kaltmieten."
+    }
+   ]
+  },
+  {
+   "key": "t49119486",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Ist die Küche in der Miete schon dabei?"
+    }
+   ]
+  },
+  {
+   "key": "t35da07d1",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Ich hätte gern sechs Brötchen und ein Vollkornbrot, bitte."
+    }
+   ]
+  },
+  {
+   "key": "t7738a416",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Soll ich Ihnen das Brot schneiden?"
+    }
+   ]
+  },
+  {
+   "key": "tcc040587",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Stell die Vase auf das Regal."
+    }
+   ]
+  },
+  {
+   "key": "t6bb7ee36",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Stell die Vase auf den Tisch."
+    }
+   ]
+  },
+  {
+   "key": "t0f8074a3",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Stell die Vase ins Regal."
+    }
+   ]
+  },
+  {
+   "key": "t9ded5fdb",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Stell die Vase auf den Kühlschrank."
+    }
+   ]
+  },
+  {
+   "key": "t62fb2313",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Stell die Tasse auf den Tisch."
+    }
+   ]
+  },
+  {
+   "key": "tc977a275",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Stell die Flasche in den Kühlschrank."
+    }
+   ]
+  },
+  {
+   "key": "tab39ee11",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Stell die Flasche unter den Tisch."
+    }
+   ]
+  },
+  {
+   "key": "t92272a27",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Stell die Lampe neben das Sofa."
+    }
+   ]
+  },
+  {
+   "key": "t9837ce9d",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Stell die Lampe auf das Regal."
+    }
+   ]
+  },
+  {
+   "key": "t35b1f077",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Stell die Lampe hinter das Sofa."
+    }
+   ]
+  },
+  {
+   "key": "t268391c0",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Stell die Lampe zwischen das Regal und das Sofa."
+    }
+   ]
+  },
+  {
+   "key": "t1bf8d068",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Stell die Pflanze ans Fenster."
+    }
+   ]
+  },
+  {
+   "key": "t0a27e7f6",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Stell die Pflanze zwischen das Sofa und den Tisch."
+    }
+   ]
+  },
+  {
+   "key": "t8cd8af4c",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Stell die Pflanze neben das Bett."
+    }
+   ]
+  },
+  {
+   "key": "t86355875",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Stell die Tasche vor die Tür."
+    }
+   ]
+  },
+  {
+   "key": "tfafc1265",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Stell die Tasche unter den Tisch."
+    }
+   ]
+  },
+  {
+   "key": "t6d74bb6d",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Stell den Teller ins Regal."
+    }
+   ]
+  },
+  {
+   "key": "tb5f2c5db",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Leg das Buch auf den Tisch."
+    }
+   ]
+  },
+  {
+   "key": "t679f7e7e",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Leg das Buch ins Regal."
+    }
+   ]
+  },
+  {
+   "key": "t4c0551f0",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Leg das Buch unter das Bett."
+    }
+   ]
+  },
+  {
+   "key": "t10ebd4b5",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Leg den Schlüssel auf den Schrank."
+    }
+   ]
+  },
+  {
+   "key": "t3a2f4280",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Leg den Schlüssel auf den Tisch."
+    }
+   ]
+  },
+  {
+   "key": "t5552bc2c",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Leg das Handy auf das Sofa."
+    }
+   ]
+  },
+  {
+   "key": "t76011a3e",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Leg das Handy auf das Bett."
+    }
+   ]
+  },
+  {
+   "key": "t0000d304",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Leg die Brille auf das Regal."
+    }
+   ]
+  },
+  {
+   "key": "t2aadbf2e",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Leg die Jacke auf das Bett."
+    }
+   ]
+  },
+  {
+   "key": "t78ef057c",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Leg die Jacke auf das Sofa."
+    }
+   ]
+  },
+  {
+   "key": "t44b8e120",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Leg den Ball unter das Sofa."
+    }
+   ]
+  },
+  {
+   "key": "t1c09985b",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Leg den Ball auf den Teppich."
+    }
+   ]
+  },
+  {
+   "key": "tfcd75da6",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Leg die Zeitung neben das Bett."
+    }
+   ]
+  },
+  {
+   "key": "t34af933f",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Leg die Zeitung auf den Teppich."
+    }
+   ]
+  },
+  {
+   "key": "t2ce20016",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Leg den Brief auf den Tisch."
+    }
+   ]
+  },
+  {
+   "key": "t3f720e0c",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Leg den Hut auf den Schrank."
+    }
+   ]
+  },
+  {
+   "key": "t483a2527",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Häng die Jacke an die Tür."
+    }
+   ]
+  },
+  {
+   "key": "tbde5ca81",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Häng die Jacke in den Schrank."
+    }
+   ]
+  },
+  {
+   "key": "t9744a369",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Häng die Jacke an den Schrank."
+    }
+   ]
+  },
+  {
+   "key": "t44633fa5",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Häng die Uhr an die Wand."
+    }
+   ]
+  },
+  {
+   "key": "t8469fd09",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Häng die Uhr über die Tür."
+    }
+   ]
+  },
+  {
+   "key": "t4c0b7696",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Häng die Uhr zwischen das Bild und das Fenster."
+    }
+   ]
+  },
+  {
+   "key": "td83db62a",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Häng den Spiegel neben das Fenster."
+    }
+   ]
+  },
+  {
+   "key": "t4c378d0c",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Häng den Spiegel an die Wand."
+    }
+   ]
+  },
+  {
+   "key": "te0ca6536",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Häng den Kalender an den Kühlschrank."
+    }
+   ]
+  },
+  {
+   "key": "t5d937fb1",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Häng den Kalender neben das Bild."
+    }
+   ]
+  },
+  {
+   "key": "t927393fe",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Häng die Lampe über den Tisch."
+    }
+   ]
+  },
+  {
+   "key": "t836f5e75",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Häng den Hut an die Tür."
+    }
+   ]
+  },
+  {
+   "key": "ta5fd4a19",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Häng die Tasche an die Tür."
+    }
+   ]
+  },
+  {
+   "key": "t9726504f",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Setz die Katze auf das Sofa."
+    }
+   ]
+  },
+  {
+   "key": "t8fb606b4",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Setz die Katze auf den Teppich."
+    }
+   ]
+  },
+  {
+   "key": "ta96c2251",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Setz die Katze auf das Bett."
+    }
+   ]
+  },
+  {
+   "key": "t4b0e5558",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Setz die Katze vor den Kühlschrank."
+    }
+   ]
+  },
+  {
+   "key": "t2ce7067b",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Setz die Katze ins Regal."
+    }
+   ]
+  },
+  {
+   "key": "t8e537c44",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Setz die Katze unter den Tisch."
+    }
+   ]
+  },
+  {
+   "key": "t37ef57bb",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Setz den Teddy auf das Bett."
+    }
+   ]
+  },
+  {
+   "key": "tdd93beb9",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Setz den Teddy auf das Sofa."
+    }
+   ]
+  },
+  {
+   "key": "t6f36e11d",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Setz den Teddy ins Regal."
+    }
+   ]
+  },
+  {
+   "key": "t988369a8",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Steck den Schlüssel in die Tür."
+    }
+   ]
+  },
+  {
+   "key": "tc8487689",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Steck den Stecker in die Steckdose."
+    }
+   ]
+  },
+  {
+   "key": "t16c4dc03",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Steck den Brief hinter das Bild."
+    }
+   ]
   }
  ]
 }

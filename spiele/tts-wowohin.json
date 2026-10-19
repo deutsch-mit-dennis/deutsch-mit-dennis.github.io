@@ -1,0 +1,234 @@
+[
+ {
+  "text": "Stell die Vase auf das Regal.",
+  "voice": "f1"
+ },
+ {
+  "text": "Stell die Vase auf den Tisch.",
+  "voice": "f1"
+ },
+ {
+  "text": "Stell die Vase ins Regal.",
+  "voice": "f1"
+ },
+ {
+  "text": "Stell die Vase auf den Kühlschrank.",
+  "voice": "f1"
+ },
+ {
+  "text": "Stell die Tasse auf den Tisch.",
+  "voice": "f1"
+ },
+ {
+  "text": "Stell die Flasche in den Kühlschrank.",
+  "voice": "f1"
+ },
+ {
+  "text": "Stell die Flasche unter den Tisch.",
+  "voice": "f1"
+ },
+ {
+  "text": "Stell die Lampe neben das Sofa.",
+  "voice": "f1"
+ },
+ {
+  "text": "Stell die Lampe auf das Regal.",
+  "voice": "f1"
+ },
+ {
+  "text": "Stell die Lampe hinter das Sofa.",
+  "voice": "f1"
+ },
+ {
+  "text": "Stell die Lampe zwischen das Regal und das Sofa.",
+  "voice": "f1"
+ },
+ {
+  "text": "Stell die Pflanze ans Fenster.",
+  "voice": "f1"
+ },
+ {
+  "text": "Stell die Pflanze zwischen das Sofa und den Tisch.",
+  "voice": "f1"
+ },
+ {
+  "text": "Stell die Pflanze neben das Bett.",
+  "voice": "f1"
+ },
+ {
+  "text": "Stell die Tasche vor die Tür.",
+  "voice": "f1"
+ },
+ {
+  "text": "Stell die Tasche unter den Tisch.",
+  "voice": "f1"
+ },
+ {
+  "text": "Stell den Teller ins Regal.",
+  "voice": "f1"
+ },
+ {
+  "text": "Leg das Buch auf den Tisch.",
+  "voice": "f1"
+ },
+ {
+  "text": "Leg das Buch ins Regal.",
+  "voice": "f1"
+ },
+ {
+  "text": "Leg das Buch unter das Bett.",
+  "voice": "f1"
+ },
+ {
+  "text": "Leg den Schlüssel auf den Schrank.",
+  "voice": "f1"
+ },
+ {
+  "text": "Leg den Schlüssel auf den Tisch.",
+  "voice": "f1"
+ },
+ {
+  "text": "Leg das Handy auf das Sofa.",
+  "voice": "f1"
+ },
+ {
+  "text": "Leg das Handy auf das Bett.",
+  "voice": "f1"
+ },
+ {
+  "text": "Leg die Brille auf das Regal.",
+  "voice": "f1"
+ },
+ {
+  "text": "Leg die Jacke auf das Bett.",
+  "voice": "f1"
+ },
+ {
+  "text": "Leg die Jacke auf das Sofa.",
+  "voice": "f1"
+ },
+ {
+  "text": "Leg den Ball unter das Sofa.",
+  "voice": "f1"
+ },
+ {
+  "text": "Leg den Ball auf den Teppich.",
+  "voice": "f1"
+ },
+ {
+  "text": "Leg die Zeitung neben das Bett.",
+  "voice": "f1"
+ },
+ {
+  "text": "Leg die Zeitung auf den Teppich.",
+  "voice": "f1"
+ },
+ {
+  "text": "Leg den Brief auf den Tisch.",
+  "voice": "f1"
+ },
+ {
+  "text": "Leg den Hut auf den Schrank.",
+  "voice": "f1"
+ },
+ {
+  "text": "Häng die Jacke an die Tür.",
+  "voice": "f1"
+ },
+ {
+  "text": "Häng die Jacke in den Schrank.",
+  "voice": "f1"
+ },
+ {
+  "text": "Häng die Jacke an den Schrank.",
+  "voice": "f1"
+ },
+ {
+  "text": "Häng die Uhr an die Wand.",
+  "voice": "f1"
+ },
+ {
+  "text": "Häng die Uhr über die Tür.",
+  "voice": "f1"
+ },
+ {
+  "text": "Häng die Uhr zwischen das Bild und das Fenster.",
+  "voice": "f1"
+ },
+ {
+  "text": "Häng den Spiegel neben das Fenster.",
+  "voice": "f1"
+ },
+ {
+  "text": "Häng den Spiegel an die Wand.",
+  "voice": "f1"
+ },
+ {
+  "text": "Häng den Kalender an den Kühlschrank.",
+  "voice": "f1"
+ },
+ {
+  "text": "Häng den Kalender neben das Bild.",
+  "voice": "f1"
+ },
+ {
+  "text": "Häng die Lampe über den Tisch.",
+  "voice": "f1"
+ },
+ {
+  "text": "Häng den Hut an die Tür.",
+  "voice": "f1"
+ },
+ {
+  "text": "Häng die Tasche an die Tür.",
+  "voice": "f1"
+ },
+ {
+  "text": "Setz die Katze auf das Sofa.",
+  "voice": "f1"
+ },
+ {
+  "text": "Setz die Katze auf den Teppich.",
+  "voice": "f1"
+ },
+ {
+  "text": "Setz die Katze auf das Bett.",
+  "voice": "f1"
+ },
+ {
+  "text": "Setz die Katze vor den Kühlschrank.",
+  "voice": "f1"
+ },
+ {
+  "text": "Setz die Katze ins Regal.",
+  "voice": "f1"
+ },
+ {
+  "text": "Setz die Katze unter den Tisch.",
+  "voice": "f1"
+ },
+ {
+  "text": "Setz den Teddy auf das Bett.",
+  "voice": "f1"
+ },
+ {
+  "text": "Setz den Teddy auf das Sofa.",
+  "voice": "f1"
+ },
+ {
+  "text": "Setz den Teddy ins Regal.",
+  "voice": "f1"
+ },
+ {
+  "text": "Steck den Schlüssel in die Tür.",
+  "voice": "f1"
+ },
+ {
+  "text": "Steck den Stecker in die Steckdose.",
+  "voice": "f1"
+ },
+ {
+  "text": "Steck den Brief hinter das Bild.",
+  "voice": "f1"
+ }
+]

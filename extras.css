@@ -714,3 +714,36 @@ header.dm-header nav{margin-left:auto}
 
 /* Handy: Platz unter dem Inhalt, damit der runde Hilfe-Knopf nichts Wichtiges verdeckt */
 @media (max-width:760px){main#main{padding-bottom:76px}}
+
+/* Lieder-Playlist */
+.dm-pl{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:20px;align-items:start;margin-top:6px}
+.dm-pl-player{position:sticky;top:84px}
+.dm-pl-start{display:grid;place-items:center;min-height:200px;border-radius:14px;background:linear-gradient(135deg,#1B1446,#3A1F7A 60%,#7B2F8E);margin-bottom:6px}
+.dm-pl-now{min-height:1.5em;margin:10px 0 6px}
+.dm-pl-now span{color:var(--dm-muted)}
+.dm-pl-ctrl{align-items:center;gap:8px}
+.dm-pl-ctrl .dm-btn{min-height:44px}
+.dm-pl-shuffle{display:inline-flex;align-items:center;gap:8px;min-height:44px;cursor:pointer}
+.dm-pl-shuffle input{width:20px;height:20px}
+.dm-pl-list{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.dm-pl-list li{display:flex;align-items:center;gap:8px;padding:6px 10px 6px 6px;border:1px solid var(--dm-line);border-radius:14px;background:var(--dm-surface)}
+.dm-pl-list li.is-now{border-color:var(--dm-tinte);box-shadow:0 0 0 2px var(--dm-tinte-soft)}
+.dm-pl-list li.is-now .dm-song-disc{animation:dmSpinDisc 2.4s linear infinite}
+.dm-pl-item{flex:1;min-width:0;display:flex;align-items:center;gap:12px;padding:4px;border:0;background:none;text-align:left;font:inherit;color:inherit;cursor:pointer;min-height:44px}
+.dm-pl-item .dm-song-disc{flex:0 0 44px;height:44px}
+.dm-pl-t{display:grid;min-width:0;flex:1}
+.dm-pl-t b{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.dm-pl-t small{color:var(--dm-muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.dm-pl-len{color:var(--dm-muted);font-variant-numeric:tabular-nums}
+.dm-pl-open{font-size:14px;white-space:nowrap;padding:10px 4px}
+@media (max-width:860px){.dm-pl{grid-template-columns:1fr}.dm-pl-player{position:static}}
+@media (max-width:480px){.dm-pl-list li{flex-wrap:wrap}.dm-pl-open{margin-left:56px;padding:6px 4px}}
+@media (prefers-reduced-motion:reduce){.dm-pl-list li.is-now .dm-song-disc{animation:none}}
+
+/* Musik zum Lernen: Liste aus music-feed.json */
+.dm-music-list[data-music-feed]{margin-top:10px}
+.dm-music-more{margin:14px 0 0}
+.dm-music-page{grid-template-columns:160px minmax(0,1fr);align-items:start}
+.dm-music-page h2{margin-top:18px}
+.dm-music-page h2:first-child{margin-top:0}
+@media (max-width:700px){.dm-music-page{grid-template-columns:1fr}.dm-music-page .dm-music-art{height:90px}}

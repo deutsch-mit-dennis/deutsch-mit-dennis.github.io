@@ -1,4 +1,4 @@
-# Holt jeden Morgen neue YouTube-Videos (mit Vorschaubildern) und neue öffentliche Kahoots.
+# Holt jeden Morgen neue YouTube-Videos (mit Vorschaubildern), instrumentale Musik vom Musikkanal und neue öffentliche Kahoots.
 name: Videos und Kahoots synchronisieren
 on:
   schedule:
@@ -8,6 +8,7 @@ on:
     branches: [main]
     paths:
       - 'tools/update-youtube-feed.mjs'
+      - 'tools/update-music-feed.mjs'
       - 'tools/update-kahoot-feed.mjs'
       - 'tools/make-feed.mjs'
       - 'neu.json'
@@ -28,6 +29,10 @@ jobs:
       - run: npm install --no-save qrcode@1
       - name: YouTube
         run: node tools/update-youtube-feed.mjs
+      - name: Musik (nur instrumental, deutsche Titel)
+        run: node tools/update-music-feed.mjs || echo "Musik-Sync übersprungen"
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
       - name: Kahoot
         run: node tools/update-kahoot-feed.mjs || echo "Kahoot-Sync übersprungen"
       - name: RSS-Feed
@@ -36,7 +41,7 @@ jobs:
         run: |
           git config user.name "sync-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add youtube-feed.json kahoot-feed.json feed.xml assets/yt assets/kahoot
+          git add youtube-feed.json music-feed.json kahoot-feed.json feed.xml assets/yt assets/kahoot
           git diff --cached --quiet && exit 0
           git commit -m "Neue Videos und Kahoots synchronisiert"
           for i in 1 2 3; do git pull --rebase -q && git push && break; sleep 5; done

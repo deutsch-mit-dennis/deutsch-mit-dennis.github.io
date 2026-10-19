@@ -24,7 +24,10 @@
   /* ---------- Sprachausgabe (Vorlesen) ---------- */
   const synth = window.speechSynthesis;
   let voicesDE = [];
-  const loadVoices = () => { if (!synth) return; voicesDE = synth.getVoices().filter(v => /^de(-|_|$)/i.test(v.lang)); };
+  // Natürlich klingende Stimmen zuerst (Edge „Online (Natural)“, Chrome „Google Deutsch“, Apple „Premium/Enhanced“) – roboterhafte (eSpeak u. ä.) zuletzt
+  const voiceScore = v => (/natural|neural|online/i.test(v.name) ? 40 : 0) + (/premium|enhanced|erweitert/i.test(v.name) ? 30 : 0) + (/^google/i.test(v.name) ? 20 : 0)
+    + (/^(anna|petra|helena|markus|yannick|katja|conrad|amala|seraphina|florian)\b/i.test(v.name) ? 10 : 0) + (/^de-DE$/i.test(v.lang) ? 5 : 0) - (/espeak|compact|pico|robot/i.test(v.name) ? 50 : 0);
+  const loadVoices = () => { if (!synth) return; voicesDE = synth.getVoices().filter(v => /^de(-|_|$)/i.test(v.lang)).sort((a, b) => voiceScore(b) - voiceScore(a)); };
   if (synth) { loadVoices(); synth.onvoiceschanged = loadVoices; }
   /* Aufgenommene Hörtexte (Neural-Stimmen, erzeugt per GitHub Action, siehe tools/tts).
      Gibt es zu einem Text eine Datei, wird sie abgespielt – sonst liest die Stimme des Geräts. */
@@ -701,7 +704,7 @@
         ${isHub ? '<h1 id="stage-h">Deutsch mit Liedern</h1>' : '<h2 id="stage-h">Deutsch mit Liedern</h2>'}
         <p class="dm-stage-lead">${all.length} eigene Lieder von A1 bis C1 – über Wohnung, Arzt, Arbeit, Gefühle und Grammatik. Hör zu, sing mit und lerne die Wörter mit Aufgaben und Lösungen.</p>
         <ul class="dm-stage-chips">${SONG_LEVELS.map(k => `<li><a href="#lieder/${k}">${k}</a></li>`).join('')}</ul>
-        <div class="dm-row">${sod ? `<a class="dm-btn dm-btn-sun" href="#lieder/${sod.id}">▶ Lied des Tages: „${x(sod.title)}“</a>` : ''}${isHub ? '' : '<a class="dm-btn dm-btn-ghost" href="#lieder">Alle Lieder ansehen</a>'}</div>
+        <div class="dm-row">${sod ? `<a class="dm-btn dm-btn-sun" href="#lieder/${sod.id}">▶ Lied des Tages: „${x(sod.title)}“</a>` : ''}${isHub ? '<a class="dm-btn dm-btn-ghost" href="#lieder/playlist">♫ Alle Lieder am Stück hören</a>' : '<a class="dm-btn dm-btn-ghost" href="#lieder">Alle Lieder ansehen</a>'}</div>
       </div>
       <div class="dm-stage-art" aria-hidden="true"><span class="dm-stage-disc"><i></i></span>${art3d('mikrofon', 'float')}<span class="dm-stage-eq"><i></i><i></i><i></i><i></i><i></i></span></div>
     </section>`;
@@ -753,6 +756,75 @@
         $('#dm-gap-res').textContent = `${ok} von ${gap.items.length} richtig.${ok === gap.items.length ? ' Super!' : ' Hör noch einmal genau hin.'}`; if (ok === gap.items.length) { mem.done['lied:' + sg.id] = Date.now(); save(); celebrate(f); } };
       $('#dm-gap-show').onclick = () => $$('input', f).forEach(inp => { inp.value = gap.solutions[inp.dataset.k] || ''; inp.classList.add('is-shown'); });
     }
+  }
+
+
+  /* ---------- Lieder-Playlist: alle Lieder am Stück (zusätzlich zu den Liedseiten) ----------
+     Suno gibt die Audiodateien nicht frei, deshalb spielt die Playlist die Suno-Einbettung mit autoplay
+     und wechselt nach der Länge des Lieds (Sekunden, von suno.com/song/<id>). Neue Lieder ohne Länge: 200 s. */
+  const SONG_SEC = {"07b5f491-6d96-44b2-b963-7ba44454bfab":141.6,"0f07ffdb-0a97-4ece-aa73-2c75dd32df2e":208.8,"13c56584-365c-4c1c-bcc6-f97ffbf73f84":210,"18d78355-2a3f-444a-9499-f9d8f55f0feb":220.7,"1946ba08-31af-4d8e-abc5-201fd9fc48d2":186,"1c673ea8-5bca-4174-94e2-79b77a8987c1":131.1,"217a3994-df38-4360-93fe-ce8e20a8f7ac":167.5,"2f5f7692-f67a-4a0a-bef1-219e4e5191ef":122.4,"36eff134-6100-491b-9267-394a7dee9313":196.8,"39346fc5-7cbb-448c-80e8-d6ba300fbf91":139.6,"39bbc327-f3fb-420d-a1f5-dc241fe946bd":194.5,"44c8d365-d480-467a-86e4-64c6db5b7833":194.5,"4b7dd70f-7896-4953-a910-821437e1f6d7":90.6,"4d1b6fcd-760c-475d-bd70-c55e4c64dda6":192.4,"4f76df7f-b281-422d-b745-7e66c3b13c47":213.2,"5a31ebb4-d8c5-4698-ade6-a374b3aa67a7":156.3,"5f30763c-3eea-4475-9c08-3f312ac8bc1b":137.6,"64f12bae-7c1d-4803-9b88-b715b163025d":168.4,"65539704-d378-4075-8c7e-001e087b2eb2":129.9,"6c9d3ac3-84f9-4b25-988d-85ff256835f8":186.8,"738c1f98-da42-49e1-acc8-0850e495b2a5":164,"7715aa6c-ec7c-42ed-b809-f2bf13e58c4f":173.4,"794b6a6b-8b28-4223-b2a0-04b302fbe879":161.2,"813498ce-c42d-4010-9b78-4f8ea4b3511c":191.6,"86e74151-b1fc-47a8-9324-8220ab24be3b":167,"874925b3-692d-4486-b1ab-a2b0169e42b8":237,"87e14303-4687-40f3-a2a3-b175cbd80a08":122.7,"88b843f0-f9c8-4708-87fd-b06d7c93a228":207.9,"8b3848a8-409a-4f9b-8260-33b640325ea1":167.2,"8d74b826-5bfd-440e-933b-976eec4dd73c":192.5,"967c84df-bfdc-455a-87db-c0676a2eaaa2":128.8,"9e3baa40-62d9-4b26-abd8-660b39d8ab83":201.8,"ada65927-853a-49ab-8e9f-28a1dcb3fe58":215,"ae3f2989-09b4-4168-87f5-8a90bebc2ecd":186.5,"bbdcc6c2-b283-464e-8d0c-35740db927ea":150.8,"c8fb898d-da1a-4035-b120-61c7e328a384":183.2,"d899bdd0-7cb7-422b-b2c7-bc1251011787":154.6,"e63b841b-2ff3-4ec5-ad8a-952b5cc8e96e":216.8,"ea390cc6-e053-464f-9a95-f1cd0ded87e5":159.6,"ec35d526-3c46-4345-b94b-817ebd93de34":174};
+  const mmss = t => `${Math.floor(t / 60)}:${String(Math.floor(t % 60)).padStart(2, '0')}`;
+  let plTimer = null;
+  function songPlaylist(sel) {
+    clearInterval(plTimer); plTimer = null;
+    const filt = ['alle', ...SONG_LEVELS].includes(sel) ? sel : (mem.plLevel || 'alle');
+    mem.plLevel = filt; save();
+    const base = (DM.songs || []).filter(sg => sg.suno && (filt === 'alle' || sg.level === filt));
+    let order = base.map((_, i) => i);
+    if (mem.plShuffle) for (let i = order.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [order[i], order[j]] = [order[j], order[i]]; }
+    const list = order.map(i => base[i]);
+    const total = list.reduce((a, sg) => a + (SONG_SEC[sg.suno] || 200), 0);
+    let cur = -1, left = 0, paused = false;
+    page(`${crumbs([['Deutsch mit Liedern', '#lieder'], ['Playlist']])}
+      <div class="dm-head"><p class="dm-path-meta">Deutsch mit Liedern · ${list.length} Lieder · ca. ${Math.round(total / 60)} Minuten</p><h1>Playlist: alle Lieder am Stück</h1>
+        <p class="dm-lead">Starte einmal – danach läuft ein Lied nach dem anderen. Zum Lernen mit Text und Aufgaben öffnest du ein Lied über „Text &amp; Aufgaben“.</p></div>
+      <nav class="dm-tabs" aria-label="Niveau">${['alle', ...SONG_LEVELS].map(k => `<a href="#lieder/playlist/${k}" ${k === filt ? 'aria-current="page"' : ''}><b>${k === 'alle' ? 'Alle' : k}</b><small>${(DM.songs || []).filter(sg => sg.suno && (k === 'alle' || sg.level === k)).length} Lieder</small></a>`).join('')}</nav>
+      <div class="dm-pl">
+        <section class="dm-card dm-pl-player" aria-labelledby="pl-now">
+          <div id="dm-pl-stage">${sunoConsent() ? `<div class="dm-pl-start"><button type="button" class="dm-btn dm-btn-sun" id="dm-pl-go">▶ Playlist starten</button></div>`
+            : `<div class="dm-consent"><p><b>Die Lieder werden von Suno geladen.</b> Beim Abspielen überträgt dein Browser Daten (zum Beispiel deine IP-Adresse) an Suno. Mehr in der <a href="#datenschutz">Datenschutzerklärung</a>.</p><div class="dm-row"><button type="button" class="dm-btn" id="dm-pl-go">▶ Einverstanden – Playlist starten</button></div></div>`}</div>
+          <p class="dm-pl-now" id="pl-now" aria-live="polite"></p>
+          <div class="dm-row dm-pl-ctrl">
+            <button type="button" class="dm-btn dm-btn-quiet" id="dm-pl-prev" aria-label="Vorheriges Lied">⏮ Zurück</button>
+            <button type="button" class="dm-btn dm-btn-quiet" id="dm-pl-pause" aria-pressed="false">⏸ Automatisch weiter: an</button>
+            <button type="button" class="dm-btn dm-btn-quiet" id="dm-pl-next" aria-label="Nächstes Lied">Weiter ⏭</button>
+            <label class="dm-pl-shuffle"><input type="checkbox" id="dm-pl-shuffle" ${mem.plShuffle ? 'checked' : ''}> Zufällige Reihenfolge</label>
+          </div>
+          <p class="dm-small">Hältst du ein Lied im Player an, tippe auch hier auf „Automatisch weiter“, damit die Playlist wartet. Auf manchen Handys musst du jedes Lied einmal selbst starten.</p>
+        </section>
+        <ol class="dm-pl-list" id="dm-pl-list">${list.map((sg, k) => `<li class="dm-lv-${sg.level.toLowerCase()}" data-k="${k}"><button type="button" class="dm-pl-item" data-k="${k}"><span class="dm-song-disc" aria-hidden="true"><i></i></span><span class="dm-pl-t"><b>${x(sg.title)}</b><small>${sg.level} · ${x(sg.theme)}</small></span><span class="dm-pl-len">${mmss(SONG_SEC[sg.suno] || 200)}</span></button><a class="dm-pl-open" href="#lieder/${sg.id}">Text &amp; Aufgaben</a></li>`).join('')}</ol>
+      </div>
+      <div class="dm-row dm-next"><a class="dm-btn dm-btn-quiet" href="#lieder">Zurück zu allen Liedern</a></div>`);
+    const now = $('#pl-now'), btnP = $('#dm-pl-pause');
+    const show = () => {
+      if (cur < 0) return;
+      const sg = list[cur];
+      now.innerHTML = `<b>${cur + 1}/${list.length}: ${x(sg.title)}</b> <span>(${sg.level})</span>${paused ? ' · angehalten' : ` · nächstes Lied in ${mmss(Math.max(0, left))}`}`;
+    };
+    const play = k => {
+      if (!list.length) return;
+      cur = (k + list.length) % list.length;
+      const sg = list[cur];
+      left = (SONG_SEC[sg.suno] || 200) + 3;   // kurze Pause zwischen den Liedern (Laden des Players)
+      paused = false; btnP.textContent = '⏸ Automatisch weiter: an'; btnP.setAttribute('aria-pressed', 'false');
+      $('#dm-pl-stage').innerHTML = `<div class="dm-suno"><iframe src="https://suno.com/embed/${x(sg.suno)}?autoplay=1" title="${x(sg.title)}" allow="autoplay; encrypted-media"></iframe></div>`;
+      $$('#dm-pl-list li').forEach(li => li.classList.toggle('is-now', +li.dataset.k === cur));
+      $(`#dm-pl-list li[data-k="${cur}"]`)?.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+      show();
+      clearInterval(plTimer);
+      plTimer = setInterval(() => {
+        if (!document.body.contains(now)) { clearInterval(plTimer); plTimer = null; return; }
+        if (paused) return;
+        left -= 1; show();
+        if (left <= 0) play(cur + 1);
+      }, 1000);
+    };
+    $('#dm-pl-go').onclick = () => { mem.sunoConsent = true; save(); play(Math.max(0, cur)); };
+    $('#dm-pl-next').onclick = () => { if (sunoConsent()) play(cur + 1); };
+    $('#dm-pl-prev').onclick = () => { if (sunoConsent()) play(cur - 1); };
+    btnP.onclick = () => { if (cur < 0) return; paused = !paused; btnP.textContent = paused ? '▶ Automatisch weiter: aus' : '⏸ Automatisch weiter: an'; btnP.setAttribute('aria-pressed', String(paused)); show(); };
+    $$('.dm-pl-item').forEach(b => b.onclick = () => { mem.sunoConsent = true; save(); play(+b.dataset.k); });
+    $('#dm-pl-shuffle').onchange = e => { mem.plShuffle = e.target.checked; save(); songPlaylist(filt); };
   }
 
   /* ---------- Kahoot (wird täglich mit dem Kahoot-Profil synchronisiert) ---------- */
@@ -909,7 +981,31 @@
       <div class="dm-music-art" aria-hidden="true"><span>♪</span><span>♫</span><span>♪</span><i></i><i></i><i></i><i></i><i></i><i></i></div>
       <div><p class="dm-path-meta">Tipp von Dennis</p><h2 id="music-h">Mit Musik fokussiert Deutsch lernen</h2>
       <p>Ruhige Musik ohne Gesang hilft vielen beim Konzentrieren – beim Vokabellernen, Schreiben oder Wiederholen. Diese Stücke habe ich selbst gemacht, alle sind rein instrumental:</p>
-      <ul class="dm-music-list">${MUSIC_PICKS.map(([id, t, d]) => `<li><a href="https://www.youtube.com/watch?v=${id}" target="_blank" rel="noopener noreferrer"><b>▶ ${x(t)}</b><small>${x(d)} · ohne Gesang</small></a></li>`).join('')}</ul></div></section>`;
+      <ul class="dm-music-list">${MUSIC_PICKS.map(([id, t, d]) => `<li><a href="https://www.youtube.com/watch?v=${id}" target="_blank" rel="noopener noreferrer"><b>▶ ${x(t)}</b><small>${x(d)} · ohne Gesang</small></a></li>`).join('')}</ul>
+      <ul class="dm-music-list" data-music-feed="3"></ul>
+      <p class="dm-music-more"><a class="dm-btn" href="#musik">Alle Musikstücke ansehen</a></p></div></section>`;
+  /* Hintergrundmusik vom zweiten Musikkanal – nur instrumentale Stücke mit deutschem Titel (music-feed.json, täglich aktualisiert) */
+  let musicPromise;
+  const loadMusic = () => musicPromise ||= fetch('music-feed.json', { cache: 'no-cache' }).then(r => r.ok ? r.json() : Promise.reject()).then(d => (d.videos || []).filter(v => v.instrumental && v.de && /^[\w-]{11}$/.test(v.id))).catch(() => []);
+  const fmtLen = l => { if (!l) return ''; const p = l.split(':').map(Number); const sec = p.reduce((a, n) => a * 60 + n, 0); return sec >= 3600 ? `${Math.floor(sec / 3600)}:${String(Math.floor(sec % 3600 / 60)).padStart(2, '0')} Std.` : `${Math.round(sec / 60)} Min.`; };
+  const musicItem = v => `<li><a href="https://www.youtube.com/watch?v=${v.id}" target="_blank" rel="noopener noreferrer" lang="de"><b>▶ ${x(v.de)}</b><small>${v.len ? fmtLen(v.len) + ' · ' : ''}ohne Gesang</small></a></li>`;
+  function fillMusic(root = document) {
+    const boxes = $$('[data-music-feed]', root); if (!boxes.length) return;
+    loadMusic().then(list => boxes.forEach(ul => { const n = +ul.dataset.musicFeed || list.length; ul.innerHTML = list.slice(0, n).map(musicItem).join(''); ul.hidden = !list.length; }));
+  }
+  function musicPage() {
+    page(`${crumbs([['Musik zum Lernen']])}
+      <div class="dm-head"><h1>Musik zum Lernen</h1><p class="dm-lead">Ruhige Musik ohne Gesang hilft vielen beim Konzentrieren – beim Vokabellernen, Schreiben oder Wiederholen. Alle Stücke hat Dennis selbst gemacht. Sie öffnen sich auf YouTube.</p></div>
+      <section class="dm-section dm-music dm-music-page">
+        <div class="dm-music-art" aria-hidden="true"><span>♪</span><span>♫</span><span>♪</span><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        <div><h2>Entspannt und fokussiert</h2>
+        <ul class="dm-music-list">${MUSIC_PICKS.map(([id, t, d]) => `<li><a href="https://www.youtube.com/watch?v=${id}" target="_blank" rel="noopener noreferrer"><b>▶ ${x(t)}</b><small>${x(d)} · ohne Gesang</small></a></li>`).join('')}</ul>
+        <h2>Slawische Klänge – Gusli, Hirtenflöte und Natur</h2>
+        <p>Lange Stücke als ruhiger Hintergrund. Neue Stücke ohne Gesang erscheinen hier automatisch, mit deutschem Titel.</p>
+        <ul class="dm-music-list" data-music-feed="0"><li><small>Wird geladen …</small></li></ul></div>
+      </section>`);
+    fillMusic(mainEl);
+  }
   function impressum() {
     page(`${crumbs([['Impressum']])}
       <article class="dm-legal"><h1>Impressum</h1>
@@ -946,7 +1042,7 @@
       <p>Videos werden erst geladen, wenn du auf „Videos hier anzeigen“ klickst. Erst dann werden Daten (zum Beispiel deine IP-Adresse) an YouTube (Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland) übertragen. Ich nutze den erweiterten Datenschutzmodus (youtube-nocookie.com). Deine Zustimmung wird auf deinem Gerät gespeichert; du kannst sie oben mit „Lernstand löschen“ zurücknehmen. Rechtsgrundlage ist deine Einwilligung (Art. 6 Abs. 1 lit. a DSGVO). Mehr: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Datenschutzerklärung von Google</a>.</p>
       <p>Die Vorschaubilder der Videos liegen auf dieser Website selbst. Beim Anzeigen der Bilder werden keine Daten an YouTube übertragen.</p>
       <h2>4b. Lieder (Suno)</h2>
-      <p>Die Lieder im Bereich „Deutsch mit Liedern“ werden erst geladen, wenn du auf „Lied hier abspielen“ klickst. Dann werden Daten (zum Beispiel deine IP-Adresse) an Suno, Inc. (USA) übertragen; dabei können Daten in den USA verarbeitet werden. Rechtsgrundlage ist deine Einwilligung (Art. 6 Abs. 1 lit. a DSGVO). Du kannst sie oben mit „Lernstand löschen“ widerrufen. Mehr: <a href="https://suno.com/privacy" target="_blank" rel="noopener noreferrer">Datenschutzerklärung von Suno</a>.</p>
+      <p>Die Lieder im Bereich „Deutsch mit Liedern“ werden erst geladen, wenn du auf „Lied hier abspielen“ oder „Playlist starten“ klickst. Dann werden Daten (zum Beispiel deine IP-Adresse) an Suno, Inc. (USA) übertragen; dabei können Daten in den USA verarbeitet werden. Rechtsgrundlage ist deine Einwilligung (Art. 6 Abs. 1 lit. a DSGVO). Du kannst sie oben mit „Lernstand löschen“ widerrufen. Mehr: <a href="https://suno.com/privacy" target="_blank" rel="noopener noreferrer">Datenschutzerklärung von Suno</a>.</p>
       <h2>4a. Schreib-Check (LanguageTool)</h2>
       <p>Wenn du bei einem Schreibfeld auf „Text prüfen“ klickst, wird der Text aus diesem Feld zur Rechtschreib- und Grammatikprüfung an LanguageTool übertragen (LanguageTooler GmbH, Boschstraße 23a, 22761 Hamburg, Deutschland). Dabei wird auch deine IP-Adresse übermittelt. Ohne Klick wird nichts übertragen. Für die Verarbeitung beim Anbieter gelten dessen Datenschutzbestimmungen. Rechtsgrundlage ist deine Einwilligung durch den Klick (Art. 6 Abs. 1 lit. a DSGVO). Schreib bitte keine sensiblen persönlichen Daten in die Übungsfelder. Mehr: <a href="https://languagetool.org/legal/privacy" target="_blank" rel="noopener noreferrer">Datenschutzerklärung von LanguageTool</a>.</p>
       <h2>4c. Kauf von Lernpaketen (Digistore24)</h2>
@@ -1290,7 +1386,7 @@
   /* ---------- Router ---------- */
   const legacyRoute = window.route;
   const NAV = { '': 'start', lernweg: 'wege', wegweiser: 'wege', lernen: 'lernen', lektion: 'lernen', wortschatz: 'lernen', wort: 'lernen', ueben: 'ueben', schreiben: 'ueben', hoeren: 'ueben', lesen: 'ueben', kahoot: 'ueben', challenge: 'spiele', spiele: 'spiele', bild: 'pruefung', pruefung: 'pruefung', training: 'pruefung', orientierungskurs: 'pruefung', lid: 'pruefung', quellen: 'pruefung', videos: 'videos', 'ueber-mich': 'ueber', material: 'material', lernpakete: 'pakete', lieder: 'lieder' };
-  const TITLES = { '': 'Deutsch lernen mit Dennis', lernweg: 'Mein Lernweg', wegweiser: 'Welcher Weg passt?', lernen: 'Lektionen', lektion: 'Lektion', wortschatz: 'Wortschatz', wort: 'Wortkarte', ueben: 'Üben', schreiben: 'Schreib-Bausteine', hoeren: 'Hören', lesen: 'Lesen', kahoot: 'Kahoot-Quiz', challenge: 'Tages-Challenge', spiele: 'Lernspiele', bild: 'Bild beschreiben', pruefung: 'Prüfungstraining', training: 'Prüfungstraining', orientierungskurs: 'Leben in Deutschland', lid: 'LiD-Trainer', quellen: 'Prüfungsinfos & Quellen', videos: 'Videos', 'ueber-mich': 'Über mich', impressum: 'Impressum', datenschutz: 'Datenschutz', pinnwand: 'Deine Meinung', material: 'Materialien', lernpakete: 'Lernpakete', lieder: 'Deutsch mit Liedern' };
+  const TITLES = { '': 'Deutsch lernen mit Dennis', lernweg: 'Mein Lernweg', wegweiser: 'Welcher Weg passt?', lernen: 'Lektionen', lektion: 'Lektion', wortschatz: 'Wortschatz', wort: 'Wortkarte', ueben: 'Üben', schreiben: 'Schreib-Bausteine', hoeren: 'Hören', lesen: 'Lesen', kahoot: 'Kahoot-Quiz', challenge: 'Tages-Challenge', spiele: 'Lernspiele', bild: 'Bild beschreiben', pruefung: 'Prüfungstraining', training: 'Prüfungstraining', orientierungskurs: 'Leben in Deutschland', lid: 'LiD-Trainer', quellen: 'Prüfungsinfos & Quellen', videos: 'Videos', 'ueber-mich': 'Über mich', impressum: 'Impressum', datenschutz: 'Datenschutz', pinnwand: 'Deine Meinung', material: 'Materialien', lernpakete: 'Lernpakete', lieder: 'Deutsch mit Liedern', musik: 'Musik zum Lernen' };
   const OWN = {
     '': () => home(),
     lernweg: p => p[1] ? pathPage(p[1]) : paths(),
@@ -1302,14 +1398,15 @@
     lesen: p => p[1] ? reading(p[1], p[2]) : readingHub(),
     pruefung: () => exam(),
     videos: p => videos(p[1], p[2]),
-    'ueber-mich': p => { about(); if (p[1] === 'nachweise') setTimeout(() => $('#nachweise')?.scrollIntoView({ behavior: 'smooth' }), 60); },
+    musik: () => musicPage(),
+    'ueber-mich': p => { about(); fillMusic(mainEl); if (p[1] === 'nachweise') setTimeout(() => $('#nachweise')?.scrollIntoView({ behavior: 'smooth' }), 60); },
     impressum: () => impressum(),
     datenschutz: () => datenschutz(),
     pinnwand: p => feedback(p[1]),
     material: p => materials(p[1], p[2]),
     lernpakete: p => p[1] ? packagePage(p[1]) : packages(),
     kahoot: () => kahootPage(),
-    lieder: p => p[1] && !SONG_LEVELS.includes(p[1]) ? songPage(p[1]) : songsHub(p[1])
+    lieder: p => p[1] === 'playlist' ? songPlaylist(p[2]) : p[1] && !SONG_LEVELS.includes(p[1]) ? songPage(p[1]) : songsHub(p[1])
   };
   const ALIAS = { meinung: 'pinnwand', buch: 'lernen', themen: 'lernen', cover: '', praxis: 'ueben', pruefungen: 'pruefung', start: '' };
 
