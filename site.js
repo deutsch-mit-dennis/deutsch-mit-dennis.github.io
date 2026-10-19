@@ -209,7 +209,7 @@
         ${quickStart()}
         <p class="dm-lead">Kostenlose Übungen von A1 bis B2 Beruf – für deinen Alltag, deine Prüfung und deinen Job. Ohne Anmeldung.</p>
         <p class="dm-hand">Hallo! Ich bin Dennis, dein Deutschlehrer und zugelassener Prüfer. Wähle unten deinen Weg – ich zeige dir die nächsten Schritte.</p>
-        <ul class="dm-trust"><li>✓ DTZ-Prüfer</li><li>✓ telc-Prüfer B1–C1</li><li>✓ BAMF-zugelassen bis C2</li></ul>
+        <ul class="dm-trust"><li>✓ DTZ-Prüfer</li><li>✓ telc-Prüfer B1–C1</li><li>✓ Lehrkraft mit BAMF-Zulassung bis C2</li></ul>
         <p class="dm-tour-start"><a href="#" data-tour-start><span aria-hidden="true">▶</span> Rundgang mit Dennis ansehen (30 Sek.)</a></p>
         <div class="dm-row">
           ${last ? `<a class="dm-btn" href="#${x(last.route)}">Weitermachen: ${x(last.title)}</a><a class="dm-btn dm-btn-quiet" href="#wegweiser">Welcher Weg passt zu mir?</a>` : `<a class="dm-btn" href="#wegweiser">Welcher Weg passt zu mir?</a><a class="dm-btn dm-btn-quiet" href="#lernen/A1">Mit A1 beginnen</a>`}
@@ -863,7 +863,7 @@
             <li><b>DTZ</b><span>Prüferlizenz g.a.s.t.</span></li>
             <li><b>B1–B2</b><span>telc-Prüferlizenz</span></li>
             <li><b>B2–C1</b><span>DTB-Prüfendenlizenz</span></li>
-            <li><b>bis C2</b><span>BAMF-Zulassung</span></li>
+            <li><b>bis C2</b><span>BAMF-Zulassung als Lehrkraft</span></li>
           </ul>
           <h2>Meine Erfahrung im Unterricht</h2>
           <ul class="dm-exp">
@@ -920,7 +920,7 @@
       <h2>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h2>
       <p>${T.address.map(x).join('<br>')}</p>
       <h2>Hinweis</h2>
-      <p>„Deutsch mit Dennis“ ist ein unabhängiges Lernangebot. Die Website ist kostenlos; einzelne Lernpakete sind kostenpflichtig. Es ist kein Angebot der g.a.s.t., der telc gGmbH oder des Bundesamts für Migration und Flüchtlinge (BAMF). Die Übungen sind eigene Materialien und keine offiziellen Prüfungsaufgaben.</p>
+      <p>„Deutsch mit Dennis“ ist ein unabhängiges Lernangebot. Die Website ist kostenlos; einzelne Lernpakete sind kostenpflichtig. Es ist kein Angebot der g.a.s.t., der telc gGmbH oder des Bundesamts für Migration und Flüchtlinge (BAMF). Die Website wird nicht vom BAMF unterstützt und nicht im Auftrag des BAMF oder der Bundesrepublik Deutschland betrieben. Die Übungen sind eigene Materialien und keine offiziellen Prüfungsaufgaben. Ausnahme: Die Fragen zum Test „Leben in Deutschland“ stammen aus dem Gesamtfragenkatalog des BAMF (<a href="#quellen">Quellenangabe</a>).</p>
       <h2>Verkauf der Lernpakete</h2>
       <p>Die kostenpflichtigen Lernpakete werden über die Digistore24 GmbH, St.-Godehard-Straße 32, 31139 Hildesheim, verkauft. Digistore24 ist Verkäufer und Vertragspartner; es gelten deren <a href="https://www.digistore24.com/page/terms/1/de" target="_blank" rel="noopener noreferrer">AGB</a>. Für Inhalt und Fragen zu den Paketen bin ich zuständig (Kontakt siehe oben).</p>
       <h2>Haftung für Links</h2>
@@ -1083,6 +1083,7 @@
           <p class="dm-lead">${x(k.desc)}</p>
           <h2>Das ist drin</h2>
           <ul class="dm-pkg-list">${k.contents.map(c => `<li>${x(c)}</li>`).join('')}</ul>
+          ${k.note ? `<p class="dm-small dm-pkg-note">${x(k.note)}</p>` : ''}
           <h2>So bekommst du das Paket</h2>
           <ul class="dm-pkg-facts">
             <li><b>Format:</b> PDF${k.pages ? ` mit ${k.pages} Seiten` : ''} (A4), zum Lesen am Bildschirm und zum Ausdrucken.</li>
@@ -1255,6 +1256,9 @@
     setupExamBox(p);
     if (p[0] === 'quellen') {
       const sec = $$('main section').find(s => /Deine Eingaben/.test(s.querySelector('h2')?.textContent || ''));
+      const lidSec = document.createElement('section'); lidSec.className = 'panel'; lidSec.id = 'quelle-lid';
+      lidSec.innerHTML = '<h2>Fragen zum Test „Leben in Deutschland“</h2><p>Die Fragen im LiD-Trainer, in den LiD-Spielen, in der Tages-Challenge und im Lernheft stammen aus dem Gesamtfragenkatalog zum Test „Leben in Deutschland“ und zum Einbürgerungstest. Herausgeber ist das Bundesamt für Migration und Flüchtlinge (BAMF): <a href="https://www.bamf.de/SharedDocs/Anlagen/DE/Integration/Einbuergerung/gesamtfragenkatalog-lebenindeutschland.pdf?__blob=publicationFile" target="_blank" rel="noopener">Gesamtfragenkatalog als PDF (bamf.de) ↗</a>. Der Katalog unterliegt nicht dem Urheberrecht und darf für Lernplattformen verwendet werden (Auskunft des BAMF-Service-Centers, Oktober 2026).</p><p><b>Wichtig:</b> „Deutsch mit Dennis“ ist ein privates, unabhängiges Lernangebot. Es wird nicht vom BAMF unterstützt und nicht im Auftrag des BAMF oder der Bundesrepublik Deutschland betrieben. Die Erklärungen, Übungen und Spiele rund um die Fragen sind eigene Materialien.</p>';
+      if (!$('#quelle-lid')) (sec || $$('main section').pop())?.after(lidSec);
       if (sec) sec.innerHTML = '<h2>Deine Eingaben</h2><p>In „Üben“ (Sprechen, Schreiben, Hören) und in „Mein Lernweg“ bleiben deine Texte und dein Fortschritt im Speicher deines Browsers – nur auf diesem Gerät. Texte in den Lektionen und im Prüfungstraining bleiben nur, solange die Seite geöffnet ist. Lade wichtige Texte vorher herunter. Freie Texte und die Aussprache werden nicht automatisch bewertet.</p><p>Mehr dazu in der <a href="#datenschutz">Datenschutzerklärung</a>.</p>';
     }
     if (p[0] === 'orientierungskurs' && !p[1]) videoSection('orientierung', 'Videos: Leben in Deutschland').then(sec => sec && mainEl.append(sec));

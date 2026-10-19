@@ -45,7 +45,7 @@
       ...pick(L(D.wort), 1, r).map(it => mc('wort', 'Wortschatz', it))
     ];
     const lid = pick(lidItems(), 1, r)[0];
-    if (lid) { const order = shuffle([0, 1, 2, 3], r); tasks.push({ type: 'lid', label: `Leben in Deutschland · Frage ${esc(lid.nr)}`, q: lid.q, o: order.map(i => lid.o[i]), a: order.indexOf(lid.a), tip: 'Aus dem offiziellen Fragenkatalog „Leben in Deutschland“.' }); }
+    if (lid) { const order = shuffle([0, 1, 2, 3], r); tasks.push({ type: 'lid', label: `Leben in Deutschland · Frage ${esc(lid.nr)}`, q: lid.q, o: order.map(i => lid.o[i]), a: order.indexOf(lid.a), tip: 'Quelle: Gesamtfragenkatalog „Leben in Deutschland“ des Bundesamts für Migration und Flüchtlinge (BAMF). Deutsch mit Dennis ist ein unabhängiges Angebot und wird nicht vom BAMF unterstützt.' }); }
     // Artikel nicht alle hintereinander: leicht mischen, aber mit einem Artikel anfangen
     return [tasks[0], ...shuffle(tasks.slice(1), r)];
   }

@@ -54,7 +54,7 @@
       if (!list.length) return '';
       return `<section class="sp-cat" id="sp-cat-${k.id}" aria-labelledby="sp-h-${k.id}">
         <h2 id="sp-h-${k.id}"><span aria-hidden="true">${k.icon}</span> ${esc(k.t)}</h2><p class="sp-cat-d">${esc(k.d)}</p>
-        <div class="sp-grid">${list.map(g => card(g, s)).join('')}${k.id === 'basis' ? BILD : ''}</div></section>`;
+        <div class="sp-grid">${list.map(g => card(g, s)).join('')}${k.id === 'basis' ? BILD : ''}</div>${k.id === 'lid' && window.LID_QUELLE_HTML ? window.LID_QUELLE_HTML : ''}</section>`;
     };
     DM.page(`${DM.crumbs([['Üben', '#ueben'], ['Lernspiele', c ? '#spiele' : null], ...(c ? [[c.t]] : [])])}
       <div class="dm-head"><h1>${c ? esc(c.t) : 'Lernspiele'}</h1><p class="dm-lead">${c ? esc(c.d) : 'Kurz, schnell und mit sofortiger Rückmeldung – auf dem Handy und am Computer. Ohne Anmeldung.'}</p></div>
@@ -71,6 +71,7 @@
         ${s.best != null ? `<p class="sp-best">🏆 Dein Rekord: <b>${s.best}</b> · ${s.plays || 0}× gespielt</p>` : ''}
         ${g.options ? `<fieldset class="ch-level"><legend>${esc(g.optionsLabel || 'Wähle')}</legend>${g.options.map((o, i) => `<label><input type="radio" name="sp-opt" value="${esc(o.id)}"${(g.options.some(x => x.id === s.opt) ? s.opt === o.id : i === 0) ? ' checked' : ''}><span>${esc(o.label)}</span></label>`).join('')}</fieldset>` : ''}
         <div class="ch-actions"><button type="button" class="dm-btn ch-go" id="sp-start">Spiel starten</button></div>
+        ${catOf(g) === 'lid' && window.LID_QUELLE_HTML ? window.LID_QUELLE_HTML : ''}
         <p class="dm-small"><a href="#spiele/${catOf(g)}">← Weitere Spiele: ${esc((CATS.find(k => k.id === catOf(g)) || CATS[0]).t)}</a></p>
       </section>`, 'sp-page');
     $('#sp-start').onclick = () => {
