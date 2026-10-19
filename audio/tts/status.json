@@ -1,24 +1,29 @@
 {
- "run": "2026-10-19T13:54:51Z",
+ "run": "2026-10-19T14:08:10Z",
  "runs": [
-  {
-   "engine": "elevenlabs",
-   "created": 0,
-   "open": 1076,
-   "chars_this_month": 10000,
-   "monthly_limit": 10000,
-   "errors": []
-  },
   {
    "engine": "gemini",
    "created": 0,
    "open": 605,
-   "chars_this_month": 62404,
+   "chars_this_month": 62497,
    "monthly_limit": 200000,
    "errors": [
     {
-     "key": "t01bcc855",
+     "key": "t04759ec6",
      "error": "HTTP 402: {\n  \"error\": {\n    \"code\": 402,\n    \"message\": \"Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage your project and billing. Learn more at https://ai.google.dev/gemini-api/docs/billing#prepay. \",\n    \"status\": \"RESOURCE_EXHAUSTED\"\n  }\n}\n"
+    }
+   ]
+  },
+  {
+   "engine": "elevenlabs",
+   "created": 0,
+   "open": 605,
+   "chars_this_month": 30000,
+   "monthly_limit": 30000,
+   "errors": [
+    {
+     "key": "t04759ec6",
+     "error": "HTTP 401: {\"detail\":{\"type\":\"invalid_request\",\"code\":\"quota_exceeded\",\"message\":\"This request exceeds your quota of 10000. You have 0 credits remaining, while 93 credits are required for this request. Upgrade your plan or add credits to continue using the API: https://elevenlabs.io/app/subscription/"
     }
    ]
   }
