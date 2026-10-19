@@ -279,7 +279,7 @@
       data = await r.json();
     } catch (e) { ltFailed = e.message || 'http'; }
     btn.disabled = false; btn.classList.remove('is-busy');
-    const lt = remap((data.matches || []).filter(m => !speech || (!['PUNCTUATION', 'TYPOGRAPHY'].includes(m.rule?.category?.id) && !/UPPERCASE_SENTENCE_START|KOMMA|COMMA|PUNCT|SATZZEICHEN|LEERZEICHEN|WHITESPACE|PUNKT|SENTENCE_FRAGMENT|SATZ_OHNE/i.test(m.rule?.id || ''))));
+    const lt = remap((data.matches || []).filter(m => !speech || (!['PUNCTUATION', 'TYPOGRAPHY'].includes(m.rule?.category?.id) && !/UPPERCASE_SENTENCE_START|KOMMA|COMMA|PUNCT|SATZZEICHEN|LEERZEICHEN|WHITESPACE|PUNKT|SENTENCE_FRAGMENT|SATZ_OHNE|WORD_REPEAT_BEGINNING/i.test(m.rule?.id || ''))));
     const own = remap(learnerChecks(P.text, L, speech)).filter(o => !lt.some(m => o.offset < m.offset + m.length && m.offset < o.offset + o.length));
     const matches = [...lt, ...own].sort((a, b) => a.offset - b.offset);
     const ex = extraChecks(text, ta), words = ex.words, out = speech ? [] : ex.out;
