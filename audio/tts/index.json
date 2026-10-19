@@ -1,5 +1,5 @@
 {
-"updated": "2026-10-18T08:21:24Z",
+"updated": "2026-10-19T07:27:21Z",
 "engines": [
 "elevenlabs",
 "gemini",
@@ -125,6 +125,13 @@
 "engine": "gemini",
 "sig": "a6a859c7d9",
 "text": "2e2dead9ef",
+"fx": "telefon"
+},
+"b2-4-02": {
+"v": "4942f6ad77",
+"engine": "gemini",
+"sig": "4942f6ad77",
+"text": "2aed00577d",
 "fx": "telefon"
 },
 "dtz-1-01": {
@@ -307,6 +314,12 @@
 "sig": "f8393657de",
 "text": "97550c8e40",
 "fx": "telefon"
+},
+"dtz-5-02": {
+"v": "23450290c4",
+"engine": "gemini",
+"sig": "23450290c4",
+"text": "8e01506b58"
 },
 "ex-alltag": {
 "v": "89ced11fe5",
