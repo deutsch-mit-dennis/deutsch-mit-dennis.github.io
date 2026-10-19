@@ -275,8 +275,10 @@ def run_engine(eng, entries, files, usage, month, start):
             errors.append({'key': e['key'], 'error': msg[:300]})
             print(f'  ✗ {e["key"]}: {msg[:200]}', flush=True)
             if 'quota_exceeded' in msg:
-                used = max(used, limit)  # Kontingent beim Anbieter aufgebraucht – nächsten Monat weiter
-                print('Kontingent beim Anbieter aufgebraucht.'); break
+                # Kontingent beim Anbieter aufgebraucht. Nicht als „Monat verbraucht“ merken: nach einem
+                # Tarif- oder Schlüsselwechsel soll der nächste Lauf sofort wieder starten (Restguthaben kommt per API).
+                used -= chars
+                print('Kontingent beim Anbieter aufgebraucht (Schlüssel/Tarif prüfen).'); break
             if eng == 'gemini' and 'HTTP 402' in msg:
                 print('Gemini-Guthaben aufgebraucht – ElevenLabs übernimmt.'); break
             if eng == 'gemini' and ('RESOURCE_EXHAUSTED' in msg or 'HTTP 429' in msg):
