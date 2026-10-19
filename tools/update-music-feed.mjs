@@ -81,7 +81,8 @@ for (const v of byId.values()) {
   classified++;
 }
 
-// 3. Deutsche Titel
+// 3. Deutsche Titel (neu übersetzen, wenn der Originaltitel auf YouTube geändert wurde)
+for (const v of byId.values()) if (v.de && v.deFrom && v.deFrom !== v.title) { delete v.de; delete v.deFrom; }
 const todo = [...byId.values()].filter(v => v.instrumental && !v.de);
 if (todo.length && process.env.GEMINI_API_KEY) {
   const key = process.env.GEMINI_API_KEY;
@@ -107,7 +108,7 @@ ${JSON.stringify(items, null, 0)}`;
       if (!r.ok) throw new Error(`HTTP ${r.status}`);
       const out = JSON.parse((await r.json()).candidates[0].content.parts[0].text);
       let n = 0;
-      for (const v of todo) if (typeof out[v.id] === 'string' && out[v.id].trim()) { v.de = out[v.id].trim(); n++; }
+      for (const v of todo) if (typeof out[v.id] === 'string' && out[v.id].trim()) { v.de = out[v.id].trim(); v.deFrom = v.title; n++; }
       console.log(`Übersetzt mit ${model}: ${n} Titel`);
       break;
     } catch (e) { console.warn(`Übersetzung mit ${model} fehlgeschlagen:`, e.message); }
