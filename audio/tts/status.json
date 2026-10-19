@@ -1,11 +1,11 @@
 {
- "run": "2026-10-19T14:09:56Z",
+ "run": "2026-10-19T14:34:35Z",
  "runs": [
   {
    "engine": "gemini",
    "created": 0,
    "open": 605,
-   "chars_this_month": 62590,
+   "chars_this_month": 62683,
    "monthly_limit": 200000,
    "errors": [
     {
@@ -16,16 +16,11 @@
   },
   {
    "engine": "elevenlabs",
-   "created": 0,
-   "open": 605,
-   "chars_this_month": 0,
-   "monthly_limit": 30000,
-   "errors": [
-    {
-     "key": "t04759ec6",
-     "error": "HTTP 401: {\"detail\":{\"type\":\"invalid_request\",\"code\":\"quota_exceeded\",\"message\":\"This request exceeds your quota of 10000. You have 0 credits remaining, while 93 credits are required for this request. Upgrade your plan or add credits to continue using the API: https://elevenlabs.io/app/subscription/"
-    }
-   ]
+   "created": 75,
+   "open": 530,
+   "chars_this_month": 29795,
+   "monthly_limit": 30030,
+   "errors": []
   }
  ]
 }
