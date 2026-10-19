@@ -17,7 +17,12 @@ const mp = path.join(R, 'tools', 'tts', 'manifest.json');
 const man = JSON.parse(readFileSync(mp, 'utf8'));
 const have = new Set(man.entries.map(e => e.key));
 let n = 0;
-const add = (key, segments, fx) => { if (have.has(key)) return; man.entries.push({ key, segments, ...(fx ? { fx } : {}) }); have.add(key); n++; };
+// prio 0 = Prüfungs-Hörtexte werden vor den kurzen Spielsätzen vertont
+const add = (key, segments, fx) => {
+  const old = man.entries.find(e => e.key === key);
+  if (old) { if (old.prio !== 0) { old.prio = 0; n++; } return; }
+  man.entries.push({ key, prio: 0, segments, ...(fx ? { fx } : {}) }); have.add(key); n++;
+};
 const walkPart = p => {
   for (const a of p.audio || []) {
     // aufeinanderfolgende Zeilen derselben Stimme zusammenfassen

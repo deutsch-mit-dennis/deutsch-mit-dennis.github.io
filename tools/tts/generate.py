@@ -4,7 +4,7 @@
 Läuft auf GitHub Actions (.github/workflows/audio.yml). Eingabe: tools/tts/manifest.json
 Ausgabe:  audio/tts/<key>.mp3  +  audio/tts/index.json (welche Dateien es gibt)
 
-Stimmen-Anbieter (der erste verfügbare wird benutzt):
+Anbieter-Kette: zuerst Gemini, bei leerem Guthaben ElevenLabs (siehe engines()). Stimmen-Anbieter:
   1. ElevenLabs   – Repository-Secret ELEVENLABS_API_KEY  (sehr natürlich)
   2. Google Cloud Text-to-Speech (Chirp 3 HD) – Secret GOOGLE_TTS_API_KEY (sehr natürlich, 1 Mio. Zeichen/Monat frei)
   3. Google Gemini – Repository-Secret GEMINI_API_KEY      (AI Studio, sehr natürlich)
@@ -23,8 +23,9 @@ FORCE = os.environ.get('TTS_FORCE', '') in ('1', 'true', 'yes')
 USAGE = os.path.join(OUT, 'usage.json')
 # Kostenbremse: höchstens so viele Zeichen pro Kalendermonat an einen Bezahl-Anbieter schicken.
 # Google Cloud Chirp 3 HD: 1.000.000 Zeichen/Monat frei – wir bleiben mit 600.000 weit darunter.
-# ElevenLabs: Kontingent des Tarifs (kostenlos 10.000 Credits/Monat, 1 Credit pro Zeichen). Bei Tarifwechsel anpassen.
-MONTHLY_LIMIT = {'google': 600000, 'elevenlabs': 10000, 'gemini': 200000}
+# ElevenLabs: Starter-Tarif (30.000 Credits/Monat, 1 Credit pro Zeichen). Das echte Restguthaben wird vor jedem
+# Lauf über die API abgefragt (eleven_remaining); dieser Wert gilt nur, wenn die Abfrage nicht klappt.
+MONTHLY_LIMIT = {'google': 600000, 'elevenlabs': 30000, 'gemini': 200000}
 
 # Stimmen je Rolle (f = Frau, m = Mann). Anpassbar über die Umgebungsvariable TTS_VOICES (JSON).
 VOICES = {
@@ -205,16 +206,33 @@ def build(entry, eng, target):
              '-af', 'loudnorm=I=-17:TP=-1.5:LRA=11', '-ar', '44100', '-ac', '1', '-codec:a', 'libmp3lame', '-b:a', '96k', target])
 
 def engines():
-    """Anbieter-Kette: ElevenLabs bis das Monatskontingent leer ist, danach Gemini (natürlich, kostenlos), sonst Google/Piper."""
-    chain = [k for k, env in (('elevenlabs', 'ELEVENLABS_API_KEY'), ('gemini', 'GEMINI_API_KEY')) if os.environ.get(env)]
+    """Anbieter-Kette (Wunsch von Dennis, 19.10.2026): zuerst Gemini; ist dort das Guthaben aufgebraucht,
+    übernimmt ElevenLabs (bezahlter Starter-Tarif). Reihenfolge änderbar über TTS_ORDER, z. B. "elevenlabs,gemini"."""
+    order = [x.strip() for x in os.environ.get('TTS_ORDER', 'gemini,elevenlabs').split(',') if x.strip()]
+    env = {'gemini': 'GEMINI_API_KEY', 'elevenlabs': 'ELEVENLABS_API_KEY', 'google': 'GOOGLE_TTS_API_KEY'}
+    chain = [k for k in order if os.environ.get(env.get(k, ''))]
     if not chain: chain = [engine()]
     return chain
 
+def eleven_remaining():
+    """Restguthaben (Zeichen) im ElevenLabs-Konto laut API – None, wenn die Abfrage nicht klappt."""
+    try:
+        req = urllib.request.Request('https://api.elevenlabs.io/v1/user/subscription', headers={'xi-api-key': os.environ['ELEVENLABS_API_KEY']})
+        j = json.load(urllib.request.urlopen(req, timeout=30))
+        rest = int(j['character_limit']) - int(j['character_count'])
+        print(f"ElevenLabs-Konto: Tarif {j.get('tier')}, {j['character_count']} von {j['character_limit']} Zeichen verbraucht, Rest {rest}", flush=True)
+        return max(0, rest - 300)  # kleine Reserve
+    except Exception as ex:
+        print(f'ElevenLabs-Guthaben nicht abfragbar ({str(ex)[:120]}) – nehme Monatsgrenze', flush=True)
+        return None
+
 # Bessere Anbieter ersetzen ältere Aufnahmen; Piper ersetzt keine Premium-Aufnahmen.
-RANK = {'piper': 1, 'google': 2, 'gemini': 2.5, 'elevenlabs': 3}
+# Gemini und ElevenLabs gelten als gleichwertig: vorhandene Aufnahmen werden nicht noch einmal (kostenpflichtig) neu erzeugt.
+RANK = {'piper': 1, 'google': 2, 'gemini': 3, 'elevenlabs': 3}
 
 def prio(item):
-    """Zuerst Prüfungs-Hörtexte (neueste Sätze zuerst), dann Beispiele, dann kurze Sätze."""
+    """Zuerst Prüfungs-Hörtexte (Simulationen und Hörtraining, neueste zuerst), dann Beispiele, dann kurze Sätze."""
+    if item[0].get('prio') == 0: return (0, 0, item[0]['key'])
     k = item[0]['key']
     if k.startswith(('dtz-', 'b2-')):
         pre, nr, idx = (k.split('-') + ['0', '0'])[:3]
@@ -235,6 +253,9 @@ def run_engine(eng, entries, files, usage, month, start):
     todo.sort(key=prio)
     used = usage.get(month, {}).get(eng, 0)
     limit = int(os.environ.get('TTS_MONTHLY_LIMIT_' + eng.upper()) or MONTHLY_LIMIT.get(eng, 10**12))
+    if eng == 'elevenlabs' and todo:
+        rest = eleven_remaining()
+        if rest is not None: limit = used + rest
     done, errors = 0, []
     print(f'Anbieter: {eng} · {len(entries)} Einträge · {len(todo)} zu erzeugen', flush=True)
     for e, sig in todo:
@@ -256,6 +277,8 @@ def run_engine(eng, entries, files, usage, month, start):
             if 'quota_exceeded' in msg:
                 used = max(used, limit)  # Kontingent beim Anbieter aufgebraucht – nächsten Monat weiter
                 print('Kontingent beim Anbieter aufgebraucht.'); break
+            if eng == 'gemini' and 'HTTP 402' in msg:
+                print('Gemini-Guthaben aufgebraucht – ElevenLabs übernimmt.'); break
             if eng == 'gemini' and ('RESOURCE_EXHAUSTED' in msg or 'HTTP 429' in msg):
                 print('Tageskontingent von Gemini erreicht – morgen geht es weiter.'); break
             if eng != 'piper' and len(errors) >= 3 and done == 0:
