@@ -795,7 +795,7 @@
           </div>
           <p class="dm-small">Hältst du ein Lied im Player an, tippe auch hier auf „Automatisch weiter“, damit die Playlist wartet. Auf manchen Handys musst du jedes Lied einmal selbst starten.</p>
         </section>
-        <ol class="dm-pl-list" id="dm-pl-list">${list.map((sg, k) => `<li class="dm-lv-${sg.level.toLowerCase()}" data-k="${k}"><button type="button" class="dm-pl-item" data-k="${k}"><span class="dm-song-disc" aria-hidden="true"><i></i></span><span class="dm-pl-t"><b>${x(sg.title)}</b><small>${sg.level} · ${x(sg.theme)}</small></span><span class="dm-pl-len">${mmss(SONG_SEC[sg.suno] || 200)}</span></button><a class="dm-pl-open" href="#lieder/${sg.id}">Text &amp; Aufgaben</a></li>`).join('')}</ol>
+        <ol class="dm-pl-list" id="dm-pl-list">${list.map((sg, k) => `<li class="dm-lv-${sg.level.toLowerCase()}" data-k="${k}"><button type="button" class="dm-pl-item" data-k="${k}"><span class="dm-song-disc" aria-hidden="true"><i></i></span><span class="dm-pl-t"><span class="dm-pl-badge" aria-hidden="true"><i></i><i></i><i></i> Läuft gerade</span><b>${x(sg.title)}</b><small>${sg.level} · ${x(sg.theme)}</small></span><span class="dm-pl-len">${mmss(SONG_SEC[sg.suno] || 200)}</span></button><a class="dm-pl-open" href="#lieder/${sg.id}">Text &amp; Aufgaben</a></li>`).join('')}</ol>
       </div>
       <div class="dm-row dm-next"><a class="dm-btn dm-btn-quiet" href="#lieder">Zurück zu allen Liedern</a></div>`);
     const now = $('#pl-now'), btnP = $('#dm-pl-pause');
@@ -816,7 +816,7 @@
       // Uhrzeit-basiert: bleibt genau, auch wenn der Browser Timer im Hintergrund-Tab bremst
       fr.onload = () => { loading = false; endAt = Date.now() + len * 1000; show(); };
       setTimeout(() => { if (fr.isConnected && loading) { loading = false; endAt = Date.now() + len * 1000; show(); } }, 15000);
-      $$('#dm-pl-list li').forEach(li => li.classList.toggle('is-now', +li.dataset.k === cur));
+      $$('#dm-pl-list li').forEach(li => { const on = +li.dataset.k === cur; li.classList.toggle('is-now', on); li.querySelector('.dm-pl-item').setAttribute('aria-current', on ? 'true' : 'false'); });
       $(`#dm-pl-list li[data-k="${cur}"]`)?.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
       show();
       clearInterval(plTimer);

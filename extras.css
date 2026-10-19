@@ -747,3 +747,14 @@ header.dm-header nav{margin-left:auto}
 .dm-music-page h2{margin-top:18px}
 .dm-music-page h2:first-child{margin-top:0}
 @media (max-width:700px){.dm-music-page{grid-template-columns:1fr}.dm-music-page .dm-music-art{height:90px}}
+
+/* Playlist: laufendes Lied deutlich markieren */
+.dm-pl-list li.is-now{background:linear-gradient(135deg,#1B1446,#3A1F7A 60%,#7B2F8E);border-color:transparent;box-shadow:0 8px 22px rgba(58,31,122,.35)}
+.dm-pl-list li.is-now .dm-pl-t b{color:#fff}
+.dm-pl-list li.is-now .dm-pl-t small,.dm-pl-list li.is-now .dm-pl-len{color:rgba(255,255,255,.8)}
+.dm-pl-list li.is-now .dm-pl-open{color:#FFD66B}
+.dm-pl-badge{display:none;align-items:flex-end;gap:2px;font-size:12px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;color:#FFD66B;margin-bottom:2px}
+.dm-pl-list li.is-now .dm-pl-badge{display:inline-flex}
+.dm-pl-badge i{display:inline-block;width:3px;height:12px;border-radius:2px;background:#FFD66B;transform-origin:bottom;animation:dmEq 1s ease-in-out infinite}
+.dm-pl-badge i:nth-child(2){animation-delay:-.35s}.dm-pl-badge i:nth-child(3){animation-delay:-.7s;margin-right:4px}
+@media (prefers-reduced-motion:reduce){.dm-pl-badge i{animation:none}}
