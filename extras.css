@@ -737,7 +737,7 @@ header.dm-header nav{margin-left:auto}
 .dm-pl-len{color:var(--dm-muted);font-variant-numeric:tabular-nums}
 .dm-pl-open{font-size:14px;white-space:nowrap;padding:10px 4px}
 @media (max-width:860px){.dm-pl{grid-template-columns:1fr}.dm-pl-player{position:static}}
-@media (max-width:480px){.dm-pl-list li{flex-wrap:wrap}.dm-pl-open{margin-left:56px;padding:6px 4px}}
+@media (max-width:560px){.dm-pl-list li{flex-wrap:wrap;row-gap:0}.dm-pl-item{flex:1 1 100%}.dm-pl-t b,.dm-pl-t small{white-space:normal}.dm-pl-open{margin-left:60px;padding:2px 4px 8px}.dm-pl-ctrl .dm-btn{flex:1 1 auto}}
 @media (prefers-reduced-motion:reduce){.dm-pl-list li.is-now .dm-song-disc{animation:none}}
 
 /* Musik zum Lernen: Liste aus music-feed.json */

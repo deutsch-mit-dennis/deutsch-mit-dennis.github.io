@@ -774,7 +774,7 @@
     if (mem.plShuffle) for (let i = order.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [order[i], order[j]] = [order[j], order[i]]; }
     const list = order.map(i => base[i]);
     const total = list.reduce((a, sg) => a + (SONG_SEC[sg.suno] || 200), 0);
-    let cur = -1, left = 0, paused = false;
+    let cur = -1, left = 0, paused = false, loading = false, tapped = false;
     page(`${crumbs([['Deutsch mit Liedern', '#lieder'], ['Playlist']])}
       <div class="dm-head"><p class="dm-path-meta">Deutsch mit Liedern · ${list.length} Lieder · ca. ${Math.round(total / 60)} Minuten</p><h1>Playlist: alle Lieder am Stück</h1>
         <p class="dm-lead">Starte einmal – danach läuft ein Lied nach dem anderen. Zum Lernen mit Text und Aufgaben öffnest du ein Lied über „Text &amp; Aufgaben“.</p></div>
@@ -799,22 +799,28 @@
     const show = () => {
       if (cur < 0) return;
       const sg = list[cur];
-      now.innerHTML = `<b>${cur + 1}/${list.length}: ${x(sg.title)}</b> <span>(${sg.level})</span>${paused ? ' · angehalten' : ` · nächstes Lied in ${mmss(Math.max(0, left))}`}`;
+      now.innerHTML = `<b>${cur + 1}/${list.length}: ${x(sg.title)}</b> <span>(${sg.level})</span>${paused ? ' · angehalten' : loading ? ' · wird geladen …' : ` · nächstes Lied in ${mmss(Math.max(0, left))}`}`;
     };
     const play = k => {
       if (!list.length) return;
       cur = (k + list.length) % list.length;
       const sg = list[cur];
-      left = (SONG_SEC[sg.suno] || 200) + 3;   // kurze Pause zwischen den Liedern (Laden des Players)
+      const len = (SONG_SEC[sg.suno] || 200) + 2;
+      left = len; loading = true; tapped = false;   // Countdown startet erst, wenn der Player geladen ist
       paused = false; btnP.textContent = '⏸ Automatisch weiter: an'; btnP.setAttribute('aria-pressed', 'false');
       $('#dm-pl-stage').innerHTML = `<div class="dm-suno"><iframe src="https://suno.com/embed/${x(sg.suno)}?autoplay=1" title="${x(sg.title)}" allow="autoplay; encrypted-media"></iframe></div>`;
+      const fr = $('#dm-pl-stage iframe');
+      fr.onload = () => { loading = false; left = len; show(); };
+      setTimeout(() => { if (fr.isConnected && loading) { loading = false; show(); } }, 15000);
       $$('#dm-pl-list li').forEach(li => li.classList.toggle('is-now', +li.dataset.k === cur));
       $(`#dm-pl-list li[data-k="${cur}"]`)?.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
       show();
       clearInterval(plTimer);
       plTimer = setInterval(() => {
         if (!document.body.contains(now)) { clearInterval(plTimer); plTimer = null; return; }
-        if (paused) return;
+        // Tippt jemand im Player auf ▶ (z. B. auf dem Handy, wenn Autoplay blockiert ist), beginnt das Lied erst jetzt
+        if (!tapped && document.activeElement === fr) { tapped = true; left = len; }
+        if (paused || loading) return;
         left -= 1; show();
         if (left <= 0) play(cur + 1);
       }, 1000);
