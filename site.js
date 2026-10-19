@@ -196,7 +196,7 @@
     const tiles = [
       ['#challenge', 'dm-q-ch', '🔥', 'Tages-Challenge', chSub],
       ['#spiele', 'dm-q-sp', '🎮', 'Lernspiele', '18 Spiele'],
-      ['#spiele/lino', 'dm-q-lino', '🏃', 'Lino läuft', '8 Welten · jetzt mit Auto'],
+      ['#spiele/lino', 'dm-q-lino', '🏃', 'Lino läuft', '12 Welten · Tageslauf & Shop'],
       [sod ? '#lieder/' + sod.id : '#lieder', 'dm-q-song', '🎵', sod ? 'Lied des Tages' : 'Lieder', sod ? sod.title : '40 Lieder A1–C1']
     ];
     return `<nav class="dm-quick" aria-label="Schnellstart">${tiles.map(([u, c, i, t, s]) => `<a class="${c}" href="${x(u)}"><span class="dm-q-ico" aria-hidden="true">${i}</span><b>${x(t)}</b><small>${x(s)}</small></a>`).join('')}</nav>`;
@@ -207,7 +207,7 @@
     <section class="dm-hero">
       <figure class="dm-hero-photo"><img src="assets/dennis.webp" alt="Dennis, dein Deutschlehrer" width="626" height="1004" fetchpriority="high"></figure>
       <div class="dm-hero-copy">
-        <a class="lino-hero-chip" href="#spiele/lino"><span aria-hidden="true">🏃</span><span><b>Neu: Lino läuft</b> – mit Auto, Schlitten und Fehlermonster</span><span class="lino-hero-go" aria-hidden="true">▶</span></a>
+        <a class="lino-hero-chip" href="#spiele/lino"><span aria-hidden="true">🏃</span><span><b>Neu bei Lino:</b> Tageslauf, Shop, ICE und Supermarkt</span><span class="lino-hero-go" aria-hidden="true">▶</span></a>
         <h1>Deutsch lernen mit Dennis</h1>
         ${quickStart()}
         <p class="dm-lead">Kostenlose Übungen von A1 bis B2 Beruf – für deinen Alltag, deine Prüfung und deinen Job. Ohne Anmeldung.</p>
@@ -243,10 +243,10 @@
           </g>
         </svg>
         <span class="lino-home-copy">
-          <span class="lino-home-kicker">Neu: 🚗 Auto · 🛷 Schlitten · 🚲 Fahrrad</span>
+          <span class="lino-home-kicker">Neu: 📅 Tageslauf · 🛍️ Shop · 🏅 Abzeichen</span>
           <b id="lino-h">Lino läuft – das Deutsch-Abenteuer</b>
-          <span class="lino-home-text">Springe über Lücken und Fehlerkäfer, fahre Auto und Schlitten. An jedem Tor wartet eine Deutschfrage – und am Ende ein Fehlermonster, das du mit richtigen Antworten besiegst.</span>
-          <span class="lino-home-levels" aria-label="8 Welten: A1, A2, B1, B2, C1 und drei Fahrzeug-Welten"><i>A1</i><i>A2</i><i>B1</i><i>B2</i><i>C1</i><i>🚗</i><i>🛷</i><i>🚲</i></span>
+          <span class="lino-home-text">Springe, fahre Auto, Schlitten und ICE. An jedem Tor eine Deutschfrage – jetzt auch zum Hören, mit Artikeln und Satzbau. Sammle Münzen für Mütze und Krone – und jeden Tag wartet ein neuer Tageslauf.</span>
+          <span class="lino-home-levels" aria-label="12 Welten: A1 bis C1, vier Fahrzeug-Welten und drei Alltagswelten"><i>A1</i><i>A2</i><i>B1</i><i>B2</i><i>C1</i><i>🚗</i><i>🛷</i><i>🚲</i><i>🚆</i><i>🛒</i><i>🩺</i><i>🏛️</i></span>
           <span class="lino-home-go">▶ Jetzt spielen</span>
         </span>
       </a>

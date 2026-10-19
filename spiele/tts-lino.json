@@ -56,6 +56,94 @@
   "voice": "m2"
  },
  {
+  "text": "Wie heißt du?",
+  "voice": "m2"
+ },
+ {
+  "text": "Ich komme aus Syrien.",
+  "voice": "m2"
+ },
+ {
+  "text": "Das ist ein Buch.",
+  "voice": "m2"
+ },
+ {
+  "text": "Ich trinke gern Kaffee.",
+  "voice": "m2"
+ },
+ {
+  "text": "Heute ist Montag. Morgen ist Dienstag.",
+  "voice": "m2"
+ },
+ {
+  "text": "Er hat zwei Kinder.",
+  "voice": "m2"
+ },
+ {
+  "text": "Wie viel kostet das?",
+  "voice": "m2"
+ },
+ {
+  "text": "Ich habe keine Zeit.",
+  "voice": "m2"
+ },
+ {
+  "text": "Der Apfel ist rot.",
+  "voice": "m2"
+ },
+ {
+  "text": "Ich heiße Maria und ich komme aus Spanien.",
+  "voice": "m2"
+ },
+ {
+  "text": "Der Bus kommt um halb neun.",
+  "voice": "m2"
+ },
+ {
+  "text": "Ein Kilo Äpfel kostet zwei Euro fünfzig.",
+  "voice": "m2"
+ },
+ {
+  "text": "Meine Telefonnummer ist null eins sieben, drei vier fünf.",
+  "voice": "m2"
+ },
+ {
+  "text": "der Tisch",
+  "voice": "m2"
+ },
+ {
+  "text": "die Lampe",
+  "voice": "m2"
+ },
+ {
+  "text": "das Fenster",
+  "voice": "m2"
+ },
+ {
+  "text": "der Stuhl",
+  "voice": "m2"
+ },
+ {
+  "text": "die Tasche",
+  "voice": "m2"
+ },
+ {
+  "text": "das Brot",
+  "voice": "m2"
+ },
+ {
+  "text": "der Hund",
+  "voice": "m2"
+ },
+ {
+  "text": "die Katze",
+  "voice": "m2"
+ },
+ {
+  "text": "das Haus",
+  "voice": "m2"
+ },
+ {
   "text": "Gestern bin ich ins Kino gegangen.",
   "voice": "m2"
  },
@@ -108,6 +196,86 @@
   "voice": "m2"
  },
  {
+  "text": "Ich gebe meiner Mutter Blumen.",
+  "voice": "m2"
+ },
+ {
+  "text": "Ich stehe morgen um 7 Uhr auf.",
+  "voice": "m2"
+ },
+ {
+  "text": "Das Wetter ist heute besser als gestern.",
+  "voice": "m2"
+ },
+ {
+  "text": "Wir treffen uns am Bahnhof.",
+  "voice": "m2"
+ },
+ {
+  "text": "Ich habe Kopfschmerzen. Ich gehe zum Arzt.",
+  "voice": "m2"
+ },
+ {
+  "text": "Er war letzte Woche krank.",
+  "voice": "m2"
+ },
+ {
+  "text": "Ich kann heute leider nicht kommen, ich bin krank.",
+  "voice": "m2"
+ },
+ {
+  "text": "Der Zug nach Köln fährt heute von Gleis sieben.",
+  "voice": "m2"
+ },
+ {
+  "text": "Wir treffen uns am Samstag um drei vor dem Kino.",
+  "voice": "m2"
+ },
+ {
+  "text": "Die Praxis ist am Mittwochnachmittag geschlossen.",
+  "voice": "m2"
+ },
+ {
+  "text": "der Bahnhof",
+  "voice": "m2"
+ },
+ {
+  "text": "die Wohnung",
+  "voice": "m2"
+ },
+ {
+  "text": "das Mädchen",
+  "voice": "m2"
+ },
+ {
+  "text": "die Rechnung",
+  "voice": "m2"
+ },
+ {
+  "text": "das Zimmer",
+  "voice": "m2"
+ },
+ {
+  "text": "der Termin",
+  "voice": "m2"
+ },
+ {
+  "text": "die Freiheit",
+  "voice": "m2"
+ },
+ {
+  "text": "das Gemüse",
+  "voice": "m2"
+ },
+ {
+  "text": "Ich gehe heute Abend ins Kino.",
+  "voice": "m2"
+ },
+ {
+  "text": "Am Wochenende besuche ich meine Oma.",
+  "voice": "m2"
+ },
+ {
   "text": "Ich weiß nicht, ob er heute kommt.",
   "voice": "m2"
  },
@@ -153,6 +321,66 @@
  },
  {
   "text": "Du siehst müde aus. Du solltest früher ins Bett gehen.",
+  "voice": "m2"
+ },
+ {
+  "text": "Das ist die Frau, der ich geholfen habe.",
+  "voice": "m2"
+ },
+ {
+  "text": "Ich hätte gern mehr Zeit, aber ich arbeite viel.",
+  "voice": "m2"
+ },
+ {
+  "text": "Kannst du mir sagen, wo der Bahnhof ist?",
+  "voice": "m2"
+ },
+ {
+  "text": "Er hat versprochen, pünktlich zu kommen.",
+  "voice": "m2"
+ },
+ {
+  "text": "Ich ärgere mich über den Lärm.",
+  "voice": "m2"
+ },
+ {
+  "text": "Die Wohnung wird nächste Woche renoviert.",
+  "voice": "m2"
+ },
+ {
+  "text": "Statt zu arbeiten, ging er spazieren.",
+  "voice": "m2"
+ },
+ {
+  "text": "Obwohl es geregnet hat, sind wir spazieren gegangen.",
+  "voice": "m2"
+ },
+ {
+  "text": "Ich würde gern umziehen, aber ich finde keine Wohnung.",
+  "voice": "m2"
+ },
+ {
+  "text": "Der Termin wird auf nächsten Dienstag verschoben.",
+  "voice": "m2"
+ },
+ {
+  "text": "Bitte bringen Sie zum Termin Ihren Ausweis und die Versichertenkarte mit.",
+  "voice": "m2"
+ },
+ {
+  "text": "Ich lerne Deutsch, weil ich hier arbeiten möchte.",
+  "voice": "m2"
+ },
+ {
+  "text": "Kannst du mir sagen, wann der Kurs beginnt?",
+  "voice": "m2"
+ },
+ {
+  "text": "Gestern habe ich mit meiner Chefin gesprochen.",
+  "voice": "m2"
+ },
+ {
+  "text": "Ich hoffe, dass du bald wieder gesund bist.",
   "voice": "m2"
  },
  {
@@ -204,6 +432,62 @@
   "voice": "m2"
  },
  {
+  "text": "Je früher wir anfangen, desto eher sind wir fertig.",
+  "voice": "m2"
+ },
+ {
+  "text": "Er tut so, als hätte er nichts gehört.",
+  "voice": "m2"
+ },
+ {
+  "text": "Die Besprechung wurde wegen Krankheit abgesagt.",
+  "voice": "m2"
+ },
+ {
+  "text": "Die Unterlagen müssen bis Freitag eingereicht werden.",
+  "voice": "m2"
+ },
+ {
+  "text": "Ich gehe davon aus, dass alles klappt.",
+  "voice": "m2"
+ },
+ {
+  "text": "Sie bewirbt sich um eine Stelle als Pflegerin.",
+  "voice": "m2"
+ },
+ {
+  "text": "Trotz seiner Erfahrung bekam er die Stelle nicht.",
+  "voice": "m2"
+ },
+ {
+  "text": "Das Problem ließ sich leicht lösen.",
+  "voice": "m2"
+ },
+ {
+  "text": "Aufgrund von Bauarbeiten verkehren die Züge nur im Stundentakt.",
+  "voice": "m2"
+ },
+ {
+  "text": "Die Bewerbungsfrist wurde bis Ende des Monats verlängert.",
+  "voice": "m2"
+ },
+ {
+  "text": "Wer früher geht, muss die Stunden am Freitag nacharbeiten.",
+  "voice": "m2"
+ },
+ {
+  "text": "Die Lieferung verzögert sich voraussichtlich um zwei Tage.",
+  "voice": "m2"
+ },
+ {
+  "text": "Wenn ich mehr Zeit hätte, würde ich reisen.",
+  "voice": "m2"
+ },
+ {
+  "text": "Er behauptet, die Arbeit schon erledigt zu haben.",
+  "voice": "m2"
+ },
+ {
   "text": "Die mühsam gelernten Regeln vergisst man nicht so schnell.",
   "voice": "m2"
  },
@@ -249,6 +533,62 @@
  },
  {
   "text": "Die Ergebnisse sind mit Vorsicht zu interpretieren.",
+  "voice": "m2"
+ },
+ {
+  "text": "Die Maßnahme ist nach wie vor umstritten.",
+  "voice": "m2"
+ },
+ {
+  "text": "Es bleibt abzuwarten, ob das Projekt gelingt.",
+  "voice": "m2"
+ },
+ {
+  "text": "Die Firma sieht sich gezwungen, Stellen abzubauen.",
+  "voice": "m2"
+ },
+ {
+  "text": "Er nahm die Kritik zum Anlass, alles zu ändern.",
+  "voice": "m2"
+ },
+ {
+  "text": "Ungeachtet der hohen Kosten wurde das Projekt fortgesetzt.",
+  "voice": "m2"
+ },
+ {
+  "text": "Die Ergebnisse lassen keine eindeutigen Schlüsse zu.",
+  "voice": "m2"
+ },
+ {
+  "text": "Das Thema wurde kontrovers diskutiert.",
+  "voice": "m2"
+ },
+ {
+  "text": "Die Studie legt nahe, dass Bewegung das Gedächtnis stärkt.",
+  "voice": "m2"
+ },
+ {
+  "text": "Von einer Einigung kann bislang keine Rede sein.",
+  "voice": "m2"
+ },
+ {
+  "text": "Die Maßnahme stieß bei den Beschäftigten auf wenig Gegenliebe.",
+  "voice": "m2"
+ },
+ {
+  "text": "Er hat die Frist zwar verpasst, wurde aber dennoch berücksichtigt.",
+  "voice": "m2"
+ },
+ {
+  "text": "Ungeachtet aller Bedenken wurde das Projekt fortgesetzt.",
+  "voice": "m2"
+ },
+ {
+  "text": "Es bleibt abzuwarten, ob sich die Lage entspannt.",
+  "voice": "m2"
+ },
+ {
+  "text": "Hätte man früher reagiert, wäre der Schaden geringer.",
   "voice": "m2"
  },
  {
@@ -316,6 +656,50 @@
   "voice": "m2"
  },
  {
+  "text": "Ich muss das Auto in die Werkstatt bringen.",
+  "voice": "m2"
+ },
+ {
+  "text": "Auf der Autobahn darf man nicht wenden.",
+  "voice": "m2"
+ },
+ {
+  "text": "Der Reifen ist platt. Wir brauchen Hilfe.",
+  "voice": "m2"
+ },
+ {
+  "text": "Bitte fahren Sie etwas langsamer!",
+  "voice": "m2"
+ },
+ {
+  "text": "Achtung, auf der A40 gibt es fünf Kilometer Stau.",
+  "voice": "m2"
+ },
+ {
+  "text": "Die nächste Tankstelle kommt in zwei Kilometern.",
+  "voice": "m2"
+ },
+ {
+  "text": "Biegen Sie an der Ampel rechts ab und dann sofort links.",
+  "voice": "m2"
+ },
+ {
+  "text": "der Reifen",
+  "voice": "m2"
+ },
+ {
+  "text": "die Ampel",
+  "voice": "m2"
+ },
+ {
+  "text": "das Lenkrad",
+  "voice": "m2"
+ },
+ {
+  "text": "der Führerschein",
+  "voice": "m2"
+ },
+ {
   "text": "Wir bleiben zu Hause, weil es draußen stark schneit.",
   "voice": "m2"
  },
@@ -380,6 +764,38 @@
   "voice": "m2"
  },
  {
+  "text": "Ich habe mir beim Skifahren das Bein gebrochen.",
+  "voice": "m2"
+ },
+ {
+  "text": "Es ist so kalt, dass der See zugefroren ist.",
+  "voice": "m2"
+ },
+ {
+  "text": "Wenn es nicht so kalt wäre, würden wir rausgehen.",
+  "voice": "m2"
+ },
+ {
+  "text": "Wir fahren erst los, wenn der Schnee geräumt ist.",
+  "voice": "m2"
+ },
+ {
+  "text": "Der Skilift ist wegen Sturm heute geschlossen.",
+  "voice": "m2"
+ },
+ {
+  "text": "Wir treffen uns um vier Uhr an der Hütte zum Kakao.",
+  "voice": "m2"
+ },
+ {
+  "text": "Nimm lieber Handschuhe mit, es wird heute minus zehn Grad.",
+  "voice": "m2"
+ },
+ {
+  "text": "Wir bleiben drinnen, weil es stark schneit.",
+  "voice": "m2"
+ },
+ {
   "text": "Wegen des schlechten Wetters fiel der Ausflug aus.",
   "voice": "m2"
  },
@@ -441,6 +857,438 @@
  },
  {
   "text": "Die Strandkörbe können online gemietet werden.",
+  "voice": "m2"
+ },
+ {
+  "text": "Die Unterkunft war günstig, dennoch sehr sauber.",
+  "voice": "m2"
+ },
+ {
+  "text": "Wir haben das Hotel auf Empfehlung einer Freundin gebucht.",
+  "voice": "m2"
+ },
+ {
+  "text": "Ich wäre gern länger geblieben.",
+  "voice": "m2"
+ },
+ {
+  "text": "Der Strand war völlig überfüllt.",
+  "voice": "m2"
+ },
+ {
+  "text": "Das Baden ist heute wegen starker Strömung verboten.",
+  "voice": "m2"
+ },
+ {
+  "text": "Die Fähre nach Rügen fährt ausnahmsweise erst um vierzehn Uhr.",
+  "voice": "m2"
+ },
+ {
+  "text": "Strandkörbe kann man nur noch für die nächste Woche mieten.",
+  "voice": "m2"
+ },
+ {
+  "text": "Hätten wir früher gebucht, wäre es billiger gewesen.",
+  "voice": "m2"
+ },
+ {
+  "text": "Der Zug hat infolge einer Signalstörung Verspätung.",
+  "voice": "m2"
+ },
+ {
+  "text": "Fahrgäste werden gebeten, auf ihr Gepäck zu achten.",
+  "voice": "m2"
+ },
+ {
+  "text": "Der Anschluss ist aufgrund der Verspätung nicht mehr zu erreichen.",
+  "voice": "m2"
+ },
+ {
+  "text": "Die Fahrkarte ist nur in Verbindung mit Ausweis gültig.",
+  "voice": "m2"
+ },
+ {
+  "text": "Er beschwerte sich über die unzuverlässige Verbindung.",
+  "voice": "m2"
+ },
+ {
+  "text": "Die Strecke wird derzeit modernisiert.",
+  "voice": "m2"
+ },
+ {
+  "text": "Ab Hamm fährt der Zug in zwei Teilen weiter.",
+  "voice": "m2"
+ },
+ {
+  "text": "Wir bitten, die Unannehmlichkeiten zu entschuldigen.",
+  "voice": "m2"
+ },
+ {
+  "text": "Sofern Sie umsteigen, beachten Sie die Durchsagen.",
+  "voice": "m2"
+ },
+ {
+  "text": "Der Speisewagen ist vorübergehend geschlossen.",
+  "voice": "m2"
+ },
+ {
+  "text": "Die Bahn hat eine Entschädigung in Aussicht gestellt.",
+  "voice": "m2"
+ },
+ {
+  "text": "Die Reservierung ist unabhängig von der Fahrkarte gültig.",
+  "voice": "m2"
+ },
+ {
+  "text": "Im Ruhebereich ist das Telefonieren untersagt.",
+  "voice": "m2"
+ },
+ {
+  "text": "Er stieg aus, kaum dass der Zug hielt.",
+  "voice": "m2"
+ },
+ {
+  "text": "Die Fahrgastrechte sind gesetzlich geregelt.",
+  "voice": "m2"
+ },
+ {
+  "text": "Bei mehr als 60 Minuten Verspätung stehen Ihnen 25 Prozent zu.",
+  "voice": "m2"
+ },
+ {
+  "text": "Information zu ICE 615: Heute ca. zwanzig Minuten später, Grund ist eine Reparatur am Zug.",
+  "voice": "m2"
+ },
+ {
+  "text": "Bitte beachten Sie: Wagen eins bis sieben halten heute im Abschnitt A.",
+  "voice": "m2"
+ },
+ {
+  "text": "Reisende nach Dortmund steigen bitte in Hagen in die S-Bahn um.",
+  "voice": "m2"
+ },
+ {
+  "text": "Aufgrund einer Störung verkehrt der Zug heute nicht.",
+  "voice": "m2"
+ },
+ {
+  "text": "Wir bitten Sie, die Verspätung zu entschuldigen.",
+  "voice": "m2"
+ },
+ {
+  "text": "Ich möchte ein Kilo Tomaten.",
+  "voice": "m2"
+ },
+ {
+  "text": "Was kostet die Milch?",
+  "voice": "m2"
+ },
+ {
+  "text": "Ich brauche eine Flasche Wasser.",
+  "voice": "m2"
+ },
+ {
+  "text": "Haben Sie frisches Brot?",
+  "voice": "m2"
+ },
+ {
+  "text": "Wo finde ich die Eier?",
+  "voice": "m2"
+ },
+ {
+  "text": "Ich bezahle mit Karte.",
+  "voice": "m2"
+ },
+ {
+  "text": "Brauchen Sie eine Tüte?",
+  "voice": "m2"
+ },
+ {
+  "text": "Das macht zusammen 7,50 Euro.",
+  "voice": "m2"
+ },
+ {
+  "text": "Ich nehme einen Apfel.",
+  "voice": "m2"
+ },
+ {
+  "text": "Die Bananen sind im Angebot. Sie sind billig.",
+  "voice": "m2"
+ },
+ {
+  "text": "Entschuldigung, wo ist die Kasse?",
+  "voice": "m2"
+ },
+ {
+  "text": "Ich kaufe Käse und Wurst – beides!",
+  "voice": "m2"
+ },
+ {
+  "text": "Möchten Sie den Kassenbon?",
+  "voice": "m2"
+ },
+ {
+  "text": "Zwei Liter Milch, bitte.",
+  "voice": "m2"
+ },
+ {
+  "text": "Ich habe kein Kleingeld. Kann ich mit einem Schein bezahlen?",
+  "voice": "m2"
+ },
+ {
+  "text": "Der Laden schließt um 20 Uhr.",
+  "voice": "m2"
+ },
+ {
+  "text": "Das macht zusammen zwölf Euro achtzig.",
+  "voice": "m2"
+ },
+ {
+  "text": "Die Milch finden Sie in Gang drei, ganz hinten.",
+  "voice": "m2"
+ },
+ {
+  "text": "Heute im Angebot: Erdbeeren, die Schale für nur zwei Euro.",
+  "voice": "m2"
+ },
+ {
+  "text": "Kasse vier ist jetzt auch geöffnet.",
+  "voice": "m2"
+ },
+ {
+  "text": "der Apfel",
+  "voice": "m2"
+ },
+ {
+  "text": "die Banane",
+  "voice": "m2"
+ },
+ {
+  "text": "das Ei",
+  "voice": "m2"
+ },
+ {
+  "text": "der Käse",
+  "voice": "m2"
+ },
+ {
+  "text": "die Milch",
+  "voice": "m2"
+ },
+ {
+  "text": "das Brötchen",
+  "voice": "m2"
+ },
+ {
+  "text": "die Tomate",
+  "voice": "m2"
+ },
+ {
+  "text": "der Saft",
+  "voice": "m2"
+ },
+ {
+  "text": "Ich möchte einen Termin machen.",
+  "voice": "m2"
+ },
+ {
+  "text": "Mein Kopf tut weh.",
+  "voice": "m2"
+ },
+ {
+  "text": "Ich habe im Bauch Schmerzen.",
+  "voice": "m2"
+ },
+ {
+  "text": "Seit wann haben Sie Fieber?",
+  "voice": "m2"
+ },
+ {
+  "text": "Bitte bringen Sie Ihre Versichertenkarte mit.",
+  "voice": "m2"
+ },
+ {
+  "text": "Sie sollen drei Tage im Bett bleiben.",
+  "voice": "m2"
+ },
+ {
+  "text": "Ich brauche eine Krankmeldung für meinen Chef.",
+  "voice": "m2"
+ },
+ {
+  "text": "Nehmen Sie die Tabletten nach dem Essen.",
+  "voice": "m2"
+ },
+ {
+  "text": "Das Medikament bekommen Sie in der Apotheke.",
+  "voice": "m2"
+ },
+ {
+  "text": "Mir ist schwindlig. Ich muss mich hinlegen.",
+  "voice": "m2"
+ },
+ {
+  "text": "Ich habe mich in den Finger geschnitten.",
+  "voice": "m2"
+ },
+ {
+  "text": "Der Arzt hat mir ein Rezept geschrieben.",
+  "voice": "m2"
+ },
+ {
+  "text": "Bitte setzen Sie sich ins Wartezimmer.",
+  "voice": "m2"
+ },
+ {
+  "text": "Gute Besserung!",
+  "voice": "m2"
+ },
+ {
+  "text": "Ich bin gegen Penicillin allergisch.",
+  "voice": "m2"
+ },
+ {
+  "text": "Haben Sie noch heute Nachmittag einen Termin frei?",
+  "voice": "m2"
+ },
+ {
+  "text": "Nehmen Sie die Tropfen dreimal am Tag, immer nach dem Essen.",
+  "voice": "m2"
+ },
+ {
+  "text": "Praxis Dr. Weber. Wir haben am Donnerstag um zehn Uhr noch einen Termin frei.",
+  "voice": "m2"
+ },
+ {
+  "text": "Sie müssen nüchtern zur Blutabnahme kommen, also bitte nicht frühstücken.",
+  "voice": "m2"
+ },
+ {
+  "text": "Die Praxis ist vom zwölften bis zwanzigsten August im Urlaub.",
+  "voice": "m2"
+ },
+ {
+  "text": "das Rezept",
+  "voice": "m2"
+ },
+ {
+  "text": "die Tablette",
+  "voice": "m2"
+ },
+ {
+  "text": "das Krankenhaus",
+  "voice": "m2"
+ },
+ {
+  "text": "die Praxis",
+  "voice": "m2"
+ },
+ {
+  "text": "der Schmerz",
+  "voice": "m2"
+ },
+ {
+  "text": "Ich habe seit gestern starke Kopfschmerzen.",
+  "voice": "m2"
+ },
+ {
+  "text": "Können Sie mir bitte ein Rezept geben?",
+  "voice": "m2"
+ },
+ {
+  "text": "Ich möchte mich in der neuen Wohnung anmelden.",
+  "voice": "m2"
+ },
+ {
+  "text": "Bitte füllen Sie das Formular aus.",
+  "voice": "m2"
+ },
+ {
+  "text": "Dafür brauchen Sie einen Termin.",
+  "voice": "m2"
+ },
+ {
+  "text": "Der Antrag muss unterschrieben werden.",
+  "voice": "m2"
+ },
+ {
+  "text": "Bringen Sie bitte eine Kopie des Mietvertrags mit.",
+  "voice": "m2"
+ },
+ {
+  "text": "Ihr Ausweis ist leider abgelaufen.",
+  "voice": "m2"
+ },
+ {
+  "text": "Ich habe einen Brief vom Jobcenter bekommen.",
+  "voice": "m2"
+ },
+ {
+  "text": "Wir melden uns, sobald Ihre Unterlagen vollständig sind.",
+  "voice": "m2"
+ },
+ {
+  "text": "Sie müssen innerhalb von zwei Wochen antworten.",
+  "voice": "m2"
+ },
+ {
+  "text": "Ich verstehe den Bescheid nicht. Können Sie ihn mir erklären?",
+  "voice": "m2"
+ },
+ {
+  "text": "Gegen den Bescheid kann man Widerspruch einlegen.",
+  "voice": "m2"
+ },
+ {
+  "text": "Die Bearbeitung dauert etwa vier Wochen.",
+  "voice": "m2"
+ },
+ {
+  "text": "Bitte ziehen Sie eine Nummer und warten Sie.",
+  "voice": "m2"
+ },
+ {
+  "text": "Ich bin dazu verpflichtet, Änderungen zu melden.",
+  "voice": "m2"
+ },
+ {
+  "text": "Haben Sie alle Unterlagen dabei?",
+  "voice": "m2"
+ },
+ {
+  "text": "Wenn Sie Fragen haben, rufen Sie uns an.",
+  "voice": "m2"
+ },
+ {
+  "text": "Nummer einundvierzig bitte zu Platz drei.",
+  "voice": "m2"
+ },
+ {
+  "text": "Für die Anmeldung brauchen wir Ihren Pass und die Bestätigung vom Vermieter.",
+  "voice": "m2"
+ },
+ {
+  "text": "Ihr Antrag ist eingegangen, wird aber erst in drei Wochen bearbeitet.",
+  "voice": "m2"
+ },
+ {
+  "text": "Bitte reichen Sie die fehlenden Kontoauszüge bis zum Monatsende nach.",
+  "voice": "m2"
+ },
+ {
+  "text": "Ich möchte einen Antrag auf Wohngeld stellen.",
+  "voice": "m2"
+ },
+ {
+  "text": "Können Sie mir sagen, welche Unterlagen ich brauche?",
+  "voice": "m2"
+ },
+ {
+  "text": "Der Bescheid wurde mir letzte Woche zugeschickt.",
+  "voice": "m2"
+ },
+ {
+  "text": "Wenn sich Ihre Adresse ändert, müssen Sie es melden.",
   "voice": "m2"
  }
 ]

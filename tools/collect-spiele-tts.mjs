@@ -1,12 +1,12 @@
 // Sammelt die Sätze, die Lernspiele zur Laufzeit vorlesen, und schreibt sie nach spiele/tts-<spiel>.json.
 // Danach: python3 tools/sync-spiele-audio.py  → der Workflow „Hörtexte vertonen“ erzeugt die MP3s (natürliche Stimme).
-// Aufruf: node tools/collect-spiele-tts.mjs   (nach Änderungen an ORTE, Memory-Themen, Wo/wohin-Aufgaben oder Lino-Fragen)
+// Aufruf: node tools/collect-spiele-tts.mjs   (nach Änderungen an ORTE, Memory-Themen, Wo/wohin-Aufgaben oder Lino-Fragen in lino.js / lino-extra.js)
 import { readFile, writeFile } from 'node:fs/promises';
 import vm from 'node:vm';
 const R = new URL('../', import.meta.url);
 
 // Spiel-Datei in einer Sandbox ausführen und die benötigten Konstanten/Funktionen herausreichen
-async function load(file, names) {
+async function load(file, names, pre = []) {
   let src = await readFile(new URL(file, R), 'utf8');
   const end = src.lastIndexOf('})');
   src = src.slice(0, end) + `;globalThis.__out = { ${names.map(n => `${n}: typeof ${n} !== 'undefined' ? ${n} : undefined`).join(', ')} };\n` + src.slice(end);
@@ -14,7 +14,9 @@ async function load(file, names) {
   const stub = new Proxy(function () {}, { get: (t, k) => k === Symbol.toPrimitive ? () => '' : stub, apply: () => stub, construct: () => stub, set: () => true });
   const ctx = { window: { DMGame: stub, DMKit: stub, DM: {} }, document: stub, DMGame: stub, DMKit: stub, console, Math, JSON, Object, Array, String, Number, Set, Map, setTimeout() {}, requestAnimationFrame() {}, localStorage: { getItem: () => null, setItem() {} } };
   ctx.globalThis = ctx; ctx.self = ctx.window;
-  vm.createContext(ctx); vm.runInContext(src, ctx, { filename: file });
+  vm.createContext(ctx);
+  for (const f of pre) vm.runInContext(await readFile(new URL(f, R), 'utf8'), ctx, { filename: f });
+  vm.runInContext(src, ctx, { filename: file });
   return ctx.__out;
 }
 const uniq = a => [...new Set(a.map(s => s.replace(/\s+/g, ' ').trim()).filter(Boolean))];
@@ -47,6 +49,6 @@ await write('memory', uniq(words), 'f2');
 const ww = await load('spiele/wowohin.js', ['TASKS', 'VERB', 'OBJ', 'phrase', 'objNP']);
 await write('wowohin', uniq(ww.TASKS.map(task => { const [vk, ok] = task; return `${ww.VERB[vk].imp} ${ww.objNP(ww.OBJ[ok], 'Akk')} ${ww.phrase(task, 'Akk')}.`; })), 'f1');
 
-// Lino läuft: Satz mit der richtigen Lösung
-const lino = await load('spiele/lino.js', ['WORLDS']);
-await write('lino', uniq(lino.WORLDS.flatMap(w => (w.questions || []).map(([q, a]) => q.replace('___', a)))), 'm2');
+// Lino läuft: Satz mit der richtigen Lösung (Lücken, Artikel, Satzbau) und die Hörsätze – inkl. spiele/lino-extra.js
+const lino = await load('spiele/lino.js', ['WORLDS', 'itFull'], ['spiele/lino-extra.js']);
+await write('lino', uniq(lino.WORLDS.flatMap(w => [...w.all.map(lino.itFull), ...w.hear.map(h => h.say)])), 'm2');

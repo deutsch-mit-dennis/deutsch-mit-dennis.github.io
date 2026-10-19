@@ -1,4 +1,4 @@
-/* Jump'n'Run „Lino läuft“ – 5 Welten von A1 bis C1. Lino läuft automatisch, Tippen/Leertaste = springen.
+/* Jump'n'Run „Lino läuft“ – Welten von A1 bis C1 (+ spiele/lino-extra.js: weitere Fragen, Fragetypen, Welten). Lino läuft automatisch, Tippen/Leertaste = springen.
    An jedem Tor wartet eine Deutschfrage. Lücken, Fehlerkäfer und Münzen auf dem Weg. (spiele.js / DMGame) */
 (() => {
   if (!window.DMGame) return;
@@ -72,6 +72,44 @@
 .sp-lino-legend ul{margin:0 0 10px;padding-left:0;list-style:none;display:grid;gap:6px}
 .sp-lino-legend li{display:flex;gap:8px;align-items:baseline;font-size:15px;line-height:1.4}
 .sp-lino-legend li b:first-child{flex:none;width:1.6em;text-align:center}
+/* Erweiterung: Statistik, Tageslauf, Shop, Abzeichen, neue Fragetypen */
+.sp-lino-stats{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 10px}
+.sp-lino-stats span{background:#fff;border:2px solid var(--dm-line,#d5dbea);border-radius:99px;padding:5px 12px;font-size:15px}
+.sp-lino-daily{display:flex;gap:12px;align-items:center;width:100%;text-align:left;padding:12px 14px;border:0;border-radius:18px;background:linear-gradient(135deg,#ff9a3c,#e5622b);color:#fff;font:inherit;cursor:pointer;box-shadow:0 5px 0 #b8461c;margin:0 0 12px}
+.sp-lino-daily:active{transform:translateY(3px);box-shadow:0 2px 0 #b8461c}
+.sp-lino-daily b{font-size:20px}.sp-lino-daily small{display:block;font-size:13.5px;opacity:.95;margin-top:2px}
+.sp-lino-daily.is-done{background:linear-gradient(135deg,#2e9e6b,#1f7a52);box-shadow:0 5px 0 #145c3c}
+.sp-lino-dic{font-size:30px;flex:none}
+.sp-lino-shop,.sp-lino-badges{border:2px solid var(--dm-line,#d5dbea);border-radius:16px;padding:4px 12px 8px;background:#fff;margin:0 0 6px}
+.sp-lino-shop summary,.sp-lino-badges summary{cursor:pointer;font-weight:800;padding:8px 0;min-height:28px}
+.sp-lino-shopcat{margin:8px 0 4px;font-weight:800;font-size:14px;color:#5b6680}
+.sp-lino-shopgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(118px,1fr));gap:8px}
+.sp-lino-item{display:grid;justify-items:center;gap:2px;padding:8px 6px;min-height:84px;border:2px solid var(--dm-line,#d5dbea);border-radius:14px;background:#fff;font:inherit;color:var(--dm-ink,#172036);cursor:pointer}
+.sp-lino-item span{font-size:26px;line-height:1}.sp-lino-item b{font-size:13.5px;text-align:center}.sp-lino-item small{font-size:12.5px;color:#7a5b20;font-weight:700}
+.sp-lino-item.is-on{border-color:var(--dm-tinte,#2341B5);background:var(--dm-tinte-soft,#eef1fb)}
+.sp-lino-item[aria-disabled="true"]{opacity:.55}
+.sp-lino-badges ul{list-style:none;margin:4px 0 6px;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:6px}
+.sp-lino-badges li{display:flex;gap:8px;align-items:center;font-size:14px;color:#8a91a5}
+.sp-lino-badges li.is-got{color:var(--dm-ink,#172036);font-weight:700}
+.sp-lino-badges li span{font-size:20px;width:1.4em;text-align:center}
+.sp-lino-st{letter-spacing:1px}
+.sp-lino-bonus{margin:6px 0;font-weight:700;color:#7a4a00}
+.sp-lino-newbadge{display:grid;gap:6px;margin:8px auto;max-width:420px}
+.sp-lino-newbadge span{background:#fff4cc;border:2px solid #f0c64a;border-radius:14px;padding:8px 10px;font-weight:700;animation:linoPop .5s ease-out}
+@keyframes linoPop{from{transform:scale(.8);opacity:0}to{transform:none;opacity:1}}
+.sp-lino-listen{min-height:44px;margin:0 8px 8px 0;padding:6px 16px;border:0;border-radius:99px;background:var(--dm-tinte,#2341B5);color:#fff;font:800 16px var(--dm-font);cursor:pointer;vertical-align:middle}
+.sp-lino-heard{display:inline-block;font-size:15px;font-weight:400;color:#5b6680;font-style:italic}
+.sp-lino-doors{display:grid!important;grid-template-columns:repeat(3,1fr);gap:10px}
+.sp-lino-q .sp-lino-door{flex-direction:column;justify-content:center!important;min-height:96px;font-size:21px;font-weight:800;border-radius:16px 16px 6px 6px}
+.sp-lino-dw{font-size:30px;line-height:1}
+.sp-lino-d-der{background:#e8f0ff}.sp-lino-d-die{background:#ffe8ef}.sp-lino-d-das{background:#e7f7ee}
+.sp-lino-built,.sp-lino-pool{display:flex;flex-wrap:wrap;gap:8px;min-height:52px;padding:8px;border-radius:14px}
+.sp-lino-built{border:2px dashed #c5cdf0;background:#f7f8ff;margin-bottom:8px}
+.sp-lino-built.is-right{border:2px solid #1f9d55;background:#eaf8f0}.sp-lino-built.is-wrong{border:2px solid #d6332b;background:#fdecea}
+.sp-lino-chip{min-height:44px;padding:6px 14px;border:2px solid var(--dm-line,#d5dbea);border-radius:12px;background:#fff;font:700 17px var(--dm-font);color:var(--dm-ink,#172036);cursor:pointer}
+.sp-lino-chip.is-in{border-color:var(--dm-tinte,#2341B5);color:var(--dm-tinte,#2341B5)}
+.sp-lino-ph{color:#9aa3b8;font-size:15px;align-self:center}
+@media (prefers-reduced-motion:reduce){.sp-lino-newbadge span{animation:none}}
 `;
     document.head.appendChild(st);
   }
@@ -617,8 +655,72 @@
     Schnee: ["Eis-Yeti", "#bfe3ff", "#5b8fc4"],
     Strand: ["Kauderwelsch-Krake", "#ff7f8f", "#b33b4d"],
   };
-  const MAIN = 5; // Welten 1–5 (A1–C1); danach die Fahrzeug-Welten
-  const wTitle = (w) => (w.lv ? `${w.emoji} ${w.name}` : `Welt ${w.id}`);
+  /* ---------- Erweiterung (spiele/lino-extra.js): mehr Fragen, neue Fragetypen, neue Welten ---------- */
+  const LX = window.LINO_X || {};
+  for (const w of LX.worlds || []) WORLDS.push(w);
+  Object.assign(BOSSES, LX.bosses || {});
+  for (const w of WORLDS) {
+    const g = (k) => (LX[k] || {})[w.id] || [];
+    w.questions = [...w.questions, ...g("more")];
+    w.hear = [...(w.hear || []), ...g("hear")].map((h) => ({ t: "hear", say: h[0], q: h[1], a: h[2], w: [h[3], h[4]], tip: h[5] }));
+    w.art = [...(w.art || []), ...g("art")].map((x) => ({ t: "art", noun: x[0], a: x[1], w: ["der", "die", "das"].filter((y) => y !== x[1]), tip: x[2] }));
+    w.order = [...(w.order || []), ...g("order")].map((o) => ({ t: "order", s: o[0], a: o[0], tip: o[1] }));
+    w.all = [...w.questions, ...w.hear, ...w.art, ...w.order];
+  }
+  // Fragen: Array = Lückensatz, Objekt = Hörfrage / Artikel-Tor / Satzbau
+  const itObj = (it) => !Array.isArray(it);
+  const itTip = (it) => (itObj(it) ? it.tip : it[4]);
+  const itAns = (it) => (itObj(it) ? it.a : it[1]);
+  const itWrong = (it) => (itObj(it) ? it.w || [] : [it[2], it[3]]);
+  const itFull = (it) => (!itObj(it) ? it[0].replace("___", it[1]) : it.t === "art" ? `${it.a} ${it.noun}` : it.t === "order" ? it.s : it.say);
+  const itKey = (it) => (itObj(it) ? `${it.t}:${it.say || it.noun || it.s}` : it[0]);
+  const groupOf = (w) => w.group || (w.lv ? "ride" : "main");
+  // Tag (Europe/Berlin) als Zahl – für Tageslauf, Serie und Wiederholung
+  const dayNum = () => {
+    let d;
+    try {
+      d = new Intl.DateTimeFormat("en-CA", { timeZone: "Europe/Berlin" }).format(new Date());
+    } catch {
+      d = new Date().toISOString().slice(0, 10);
+    }
+    return Math.round(Date.parse(d + "T00:00:00Z") / 864e5);
+  };
+  // Shop: Münzen ausgeben für Mützen, Rucksäcke, Spuren und Autofarben
+  const SHOP = [
+    { id: "hat-muetze", cat: "hat", name: "Wollmütze", ic: "🧶", price: 40 },
+    { id: "hat-cap", cat: "hat", name: "Basecap", ic: "🧢", price: 60 },
+    { id: "hat-kopfhoerer", cat: "hat", name: "Kopfhörer", ic: "🎧", price: 100 },
+    { id: "hat-krone", cat: "hat", name: "Krone", ic: "👑", price: 250 },
+    { id: "pack-rot", cat: "pack", name: "Roter Rucksack", ic: "🎒", price: 30, col: "#e5322b" },
+    { id: "pack-gruen", cat: "pack", name: "Grüner Rucksack", ic: "🎒", price: 30, col: "#2e9e6b" },
+    { id: "pack-lila", cat: "pack", name: "Lila Rucksack", ic: "🎒", price: 30, col: "#7b61ff" },
+    { id: "trail-sterne", cat: "trail", name: "Sternenspur", ic: "✨", price: 120, fx: ["✨", "⭐"] },
+    { id: "trail-herzen", cat: "trail", name: "Herzspur", ic: "💖", price: 120, fx: ["💖", "💗"] },
+    { id: "trail-noten", cat: "trail", name: "Notenspur", ic: "🎵", price: 150, fx: ["🎵", "🎶"] },
+    { id: "car-blau", cat: "car", name: "Blaues Auto", ic: "🚙", price: 80, col: "#2a6fd6" },
+    { id: "car-gold", cat: "car", name: "Goldenes Auto", ic: "🏎️", price: 300, col: "#e0a800" },
+  ];
+  const SHOP_CATS = { hat: "Auf dem Kopf", pack: "Rucksack", trail: "Spur hinter dir", car: "Autofarbe (Autobahn)" };
+  const shopItem = (id) => SHOP.find((x) => x.id === id);
+  // Abzeichen
+  const BADGES = [
+    { id: "erste", ic: "🚩", name: "Erste Welt geschafft" },
+    { id: "haupt", ic: "🗺️", name: "Alle Welten A1–C1 geschafft" },
+    { id: "boss3", ic: "👾", name: "3 Fehlermonster besiegt" },
+    { id: "bossalle", ic: "🏆", name: "Alle Fehlermonster besiegt" },
+    { id: "kammer3", ic: "🗝", name: "3 geheime Kammern gefunden" },
+    { id: "perfekt", ic: "💯", name: "Alle 6 Tore richtig" },
+    { id: "sterne20", ic: "🌟", name: "20 Sterne gesammelt" },
+    { id: "tag1", ic: "📅", name: "Erster Tageslauf" },
+    { id: "serie3", ic: "🔥", name: "3 Tage am Stück" },
+    { id: "serie7", ic: "🔥", name: "7 Tage am Stück" },
+    { id: "muenzen500", ic: "🪙", name: "500 Münzen gesammelt" },
+    { id: "shop", ic: "🛍️", name: "Erster Einkauf im Shop" },
+    { id: "hoeren10", ic: "🎧", name: "10 Hörfragen richtig" },
+    { id: "satz10", ic: "🧩", name: "10 Sätze richtig gebaut" },
+  ];
+  const MAIN = 5; // Welten 1–5 (A1–C1); danach die Fahrzeug- und Alltagswelten
+  const wTitle = (w) => (w.daily ? "📅 Tageslauf" : w.lv ? `${w.emoji} ${w.name}` : `Welt ${w.id}`);
   const GATES = 6,
     KEY = "dm-lino";
   const load = () => {
@@ -860,7 +962,8 @@
     l = l || {};
     const g = l.g === "f" ? "f" : "m";
     const skin = Number.isInteger(l.skin) && l.skin >= 0 && l.skin < SKINS.length ? l.skin : 1;
-    return { g, skin, hijab: g === "f" && !!l.hijab };
+    const own = (id, cat) => (shopItem(id)?.cat === cat ? id : null);
+    return { g, skin, hijab: g === "f" && !!l.hijab, hat: own(l.hat, "hat"), pack: own(l.pack, "pack"), trail: own(l.trail, "trail"), car: own(l.car, "car") };
   };
   const heroName = (l) => (l.g === "f" ? "Lina" : "Lino");
   function drawHero(c, x, y, look, air, ph, t) {
@@ -890,7 +993,7 @@
     c.lineTo(x + 15 + l2, y + 33);
     c.stroke();
     // Rucksack
-    c.fillStyle = "#ffc928";
+    c.fillStyle = shopItem(look.pack)?.col || "#ffc928";
     rr(x - 5, y + 11, 9, 13, 3);
     c.fill();
     // Pferdeschwanz (Mädchen ohne Kopftuch) – hinter dem Kopf
@@ -953,6 +1056,8 @@
       c.lineTo(x + 19.2, y + 3.3);
       c.stroke();
     }
+    // Kopfbedeckung aus dem Shop
+    if (look.hat) drawHat(c, x, y, look.hat, look.hijab, rr);
     // Schal (nicht zusammen mit Kopftuch)
     if (!look.hijab) {
       c.fillStyle = "#ff7a2f";
@@ -966,6 +1071,54 @@
       c.fill();
     }
     c.lineCap = "butt";
+  }
+
+  function drawHat(c, x, y, id, hij, rr) {
+    const top = hij ? -4.5 : -2.5;
+    if (id === "hat-muetze") {
+      c.fillStyle = "#d6332b";
+      c.beginPath();
+      c.arc(x + 13, y + 3, hij ? 10 : 8.6, Math.PI, 0);
+      c.fill();
+      c.fillStyle = "#f1f1f1";
+      rr(x + 3.5, y + 1.5, 19, 4, 2);
+      c.fill();
+      c.beginPath();
+      c.arc(x + 13, y + top - 4, 3, 0, 7);
+      c.fill();
+    } else if (id === "hat-cap") {
+      c.fillStyle = "#2a6fd6";
+      c.beginPath();
+      c.arc(x + 13, y + 3, hij ? 10 : 8.4, Math.PI, 0);
+      c.fill();
+      rr(x + 16, y + 1, 11, 3.2, 1.5);
+      c.fill();
+    } else if (id === "hat-kopfhoerer") {
+      c.strokeStyle = "#1f2433";
+      c.lineWidth = 2.2;
+      c.beginPath();
+      c.arc(x + 12, y + 5, hij ? 11 : 9.5, Math.PI * 1.05, Math.PI * 1.95);
+      c.stroke();
+      c.fillStyle = "#e5322b";
+      rr(x + 4, y + 3.5, 5, 7, 2);
+      c.fill();
+    } else if (id === "hat-krone") {
+      c.fillStyle = "#ffcf33";
+      c.strokeStyle = "#b8860b";
+      c.lineWidth = 1;
+      c.beginPath();
+      const b = y + top + 1;
+      c.moveTo(x + 6, b);
+      c.lineTo(x + 6, b - 6);
+      c.lineTo(x + 9.5, b - 3);
+      c.lineTo(x + 13, b - 8);
+      c.lineTo(x + 16.5, b - 3);
+      c.lineTo(x + 20, b - 6);
+      c.lineTo(x + 20, b);
+      c.closePath();
+      c.fill();
+      c.stroke();
+    }
   }
 
   // kleiner Zufallsgenerator mit Startwert – jede Welt sieht immer gleich aus
@@ -984,9 +1137,9 @@
       stern: { ic: "⭐", name: "Stern", txt: "8 Sekunden: Käfer können dir nichts tun.", dur: 8 },
       doppel: { ic: "🪽", name: "Flügel", txt: "15 Sekunden: In der Luft noch einmal springen.", dur: 15 },
     };
-  function buildLevel(L) {
+  function buildLevel(L, seed) {
     const d = WORLDS[L].d ?? L;
-    const r = rng(1234 + L * 97),
+    const r = rng(seed ?? 1234 + L * 97),
       T = 32,
       GR = 360 - 48;
     const solid = [],
@@ -1088,9 +1241,9 @@
     title: "Lino läuft – das Deutsch-Abenteuer",
     icon: "🏃",
     level: "A1–C1",
-    desc: "Jump’n’Run in 8 Welten: Springe über Lücken und Fehlerkäfer, fahre Auto, Schlitten und Fahrrad, finde Booster und geheime Kammern, löse an jedem Tor eine Deutschfrage und besiege am Ende das Fehlermonster – von A1 bis C1.",
+    desc: "Jump’n’Run in 12 Welten: Springe über Lücken und Fehlerkäfer, fahre Auto, Schlitten, Fahrrad und Zug, löse an jedem Tor eine Deutschfrage (auch Hören, Satzbau und der/die/das), sammle Münzen für den Shop, spiel jeden Tag den Tageslauf und besiege die Fehlermonster – von A1 bis C1.",
     intro:
-      "Deine Figur läuft von selbst – tippe zum Springen (lange drücken = höher). Löse an jedem Tor eine Deutschfrage, öffne ❓-Kisten und besiege am Ende das Fehlermonster. 8 Welten von A1 bis C1, auch mit Auto, Schlitten und Fahrrad.",
+      "Deine Figur läuft von selbst – tippe zum Springen (lange drücken = höher). Löse an jedem Tor eine Deutschfrage, öffne ❓-Kisten und besiege am Ende das Fehlermonster. 12 Welten von A1 bis C1 – mit Shop, Abzeichen und jeden Tag einem neuen Tageslauf.",
     start(api) {
       const prog = load();
       prog.unlocked = Math.max(1, prog.unlocked || 1);
@@ -1099,13 +1252,106 @@
       menu();
 
       function isOpen(i) {
-        if (i < MAIN || prog.unlocked >= WORLDS.length) return i < prog.unlocked;
+        const w = WORLDS[i];
+        if (prog.unlocked >= WORLDS.length || prog.allOpen) return true;
+        if (i < MAIN) return i < prog.unlocked;
+        if (w.after) return prog["best" + w.after] != null || (w.after === "A1" && prog.unlocked >= 2);
         return prog.unlocked >= 2 && (i === MAIN || prog["best" + WORLDS[i - 1].id] != null);
+      }
+      function starsOf(w) {
+        return (prog.stars || {})[w.id] || 0;
+      }
+      function totalStars() {
+        return WORLDS.reduce((a, w) => a + starsOf(w), 0);
+      }
+      // Abzeichen prüfen – gibt die neu erreichten zurück
+      function checkBadges() {
+        const b = (prog.badges ||= {}),
+          ids = WORLDS.map((w) => w.id),
+          cnt = (o) => ids.filter((id) => o?.[id]).length,
+          got = [];
+        const cond = {
+          erste: ids.some((id) => prog["best" + id] != null),
+          haupt: WORLDS.slice(0, MAIN).every((w) => prog["best" + w.id] != null),
+          boss3: cnt(prog.bosses) >= 3,
+          bossalle: cnt(prog.bosses) >= ids.length,
+          kammer3: cnt(prog.secrets) >= 3,
+          perfekt: !!prog.perfect,
+          sterne20: totalStars() >= 20,
+          tag1: !!prog.daily,
+          serie3: (prog.streak?.n || 0) >= 3,
+          serie7: (prog.streak?.n || 0) >= 7,
+          muenzen500: (prog.coinsTotal || 0) >= 500,
+          shop: (prog.owned || []).length > 0,
+          hoeren10: (prog.cnt?.hear || 0) >= 10,
+          satz10: (prog.cnt?.order || 0) >= 10,
+        };
+        for (const x of BADGES)
+          if (cond[x.id] && !b[x.id]) {
+            b[x.id] = dayNum();
+            got.push(x);
+          }
+        if (got.length) save(prog);
+        return got;
+      }
+      // Wiederholung über mehrere Tage: falsche Fragen kommen nach 1, 3 und 7 Tagen wieder
+      function revAdd(it, wid) {
+        const k = itKey(it);
+        prog.rev = (prog.rev || []).filter((r) => r.k !== k);
+        prog.rev.push({ k, w: wid, it, due: dayNum() + 1, box: 0 });
+        if (prog.rev.length > 60) prog.rev.shift();
+        save(prog);
+      }
+      function revDone(it, ok) {
+        const r = (prog.rev || []).find((x) => x.k === itKey(it));
+        if (!r) return;
+        if (ok && ++r.box >= 3) prog.rev = prog.rev.filter((x) => x !== r);
+        else if (ok) r.due = dayNum() + [1, 3, 7][r.box];
+        else {
+          r.box = 0;
+          r.due = dayNum() + 1;
+        }
+        save(prog);
+      }
+      function revDue() {
+        return (prog.rev || []).filter((r) => r.due <= dayNum() && r.it);
+      }
+      // Tageslauf: jeden Tag eine andere Welt-Kulisse und gemischte Fragen – für alle gleich
+      function dailyWorld() {
+        const day = dayNum(),
+          open = WORLDS.map((w, i) => i).filter((i) => isOpen(i));
+        const pool = open.length ? open : [0];
+        return pool[day % pool.length];
+      }
+      function pickItems(W, n) {
+        const sp = [];
+        if (W.hear?.length) sp.push(api.pick(W.hear, 1)[0]);
+        const extra = [W.art, W.order].filter((x) => x?.length);
+        if (extra.length) sp.push(api.pick(api.pick(extra, 1)[0], 1)[0]);
+        const mc = api.shuffle(W.questions).slice(0, n - sp.length);
+        // Sonderfragen nicht ganz am Anfang
+        const out = [mc[0], ...api.shuffle([...mc.slice(1), ...sp])];
+        return out.filter(Boolean).slice(0, n);
       }
       function menu() {
         api.clearFeedback();
         api.hud({ step: "Welt wählen", progress: 0, score: total });
         const lk = heroLook(prog.look);
+        const day = dayNum(),
+          dw = WORLDS[dailyWorld()],
+          dDone = prog.daily?.day === day,
+          st = prog.streak && prog.streak.last >= day - 1 ? prog.streak.n : 0,
+          due = revDue().length;
+        const owned = new Set(prog.owned || []);
+        const shopHtml = `<details class="sp-lino-shop"${prog.shopOpen ? " open" : ""}><summary>🛍️ Shop · <b>🪙 ${prog.coins || 0}</b> Münzen</summary>
+          <p class="dm-small" style="margin:4px 0 8px">Münzen sammelst du im Spiel. Tippe auf ein Teil zum Kaufen – gekaufte Teile kannst du an- und ausziehen.</p>
+          ${Object.entries(SHOP_CATS).map(([cat, title]) => `<p class="sp-lino-shopcat">${title}</p><div class="sp-lino-shopgrid">${SHOP.filter((x) => x.cat === cat).map((x) => {
+            const has = owned.has(x.id), on = lk[cat] === x.id;
+            return `<button type="button" class="sp-lino-item${on ? " is-on" : ""}" data-buy="${x.id}" aria-pressed="${on}"${!has && (prog.coins || 0) < x.price ? ' aria-disabled="true"' : ""}><span aria-hidden="true">${x.ic}</span><b>${x.name}</b><small>${has ? (on ? "✓ angezogen" : "Anziehen") : `🪙 ${x.price}`}</small></button>`;
+          }).join("")}</div>`).join("")}
+        </details>`;
+        const got = BADGES.filter((x) => prog.badges?.[x.id]);
+        const badgeHtml = `<details class="sp-lino-badges"><summary>🏅 Abzeichen · ${got.length} von ${BADGES.length}</summary><ul>${BADGES.map((x) => `<li class="${prog.badges?.[x.id] ? "is-got" : ""}"><span aria-hidden="true">${prog.badges?.[x.id] ? x.ic : "🔒"}</span>${x.name}</li>`).join("")}</ul></details>`;
         api.el.innerHTML = `<div class="sp-lino-pick">
             <canvas class="sp-lino-prev" width="192" height="224" role="img" aria-label="Deine Spielfigur"></canvas>
             <div class="sp-lino-opts">
@@ -1121,13 +1367,23 @@
               </div>` : ""}
             </div>
           </div>
-          <p class="dm-small" style="margin:0 0 8px">Wähle eine Welt. Jede neue Welt öffnet sich, wenn du die vorherige geschafft hast.</p>
-          <div class="sp-lino-levels">${WORLDS.map((w, i) => {
+          <div class="sp-lino-stats"><span>⭐ <b>${totalStars()}</b> / ${WORLDS.length * 3}</span><span>🪙 <b>${prog.coins || 0}</b></span><span>🔥 <b>${st}</b> ${st === 1 ? "Tag" : "Tage"}</span><span>🏅 <b>${got.length}</b></span></div>
+          <button type="button" class="sp-lino-daily${dDone ? " is-done" : ""}" data-daily="1"><span class="sp-lino-dic" aria-hidden="true">📅</span><span><b>Tageslauf</b> ${dDone ? `· heute geschafft (${prog.daily.best} Punkte) – noch mal?` : "· jeden Tag neu"}<small>Heute: ${dw.emoji || "🌍"} Kulisse „${dw.name}“ · Fragen aus allen offenen Welten${due ? ` · ${due} ${due === 1 ? "Frage" : "Fragen"} zum Wiederholen` : ""}${st ? ` · Serie: ${st} ${st === 1 ? "Tag" : "Tage"} 🔥` : ""}</small></span></button>
+          ${shopHtml}
+          <p class="dm-small" style="margin:12px 0 8px">Wähle eine Welt. Jede neue Welt öffnet sich, wenn du die vorherige geschafft hast.</p>
+          ${[
+            ["main", "", ""],
+            ["ride", "Unterwegs mit Auto, Schlitten, Fahrrad und Zug", "Öffnen sich nach Welt A1 – eine nach der anderen. An der Autobahn wartet statt Toren eine Ampel."],
+            ["alltag", "Neu: Alltag in Deutschland", "Supermarkt, Arztpraxis und Amt – mit Wörtern, die du jeden Tag brauchst. Öffnen sich nach Welt A1."],
+          ].map(([grp, title, sub]) => `${title ? `<h3 class="sp-lino-sub">${title}</h3><p class="dm-small" style="margin:0 0 8px">${sub}</p>` : ""}<div class="sp-lino-levels">${WORLDS.map((w, i) => [w, i]).filter(([w]) => groupOf(w) === grp).map(([w, i]) => {
             const open = isOpen(i),
               best = prog["best" + w.id],
-              key = prog.secrets?.[w.id];
-            return `${i === MAIN ? '</div><h3 class="sp-lino-sub">Neu: Unterwegs mit Auto, Schlitten und Fahrrad</h3><p class="dm-small" style="margin:0 0 8px">Öffnen sich, wenn du Welt A1 geschafft hast – eine nach der anderen. An der Autobahn wartet statt Toren eine Ampel.</p><div class="sp-lino-levels">' : ""}<button type="button" class="sp-lino-lv${w.lv ? " is-ride" : ""}" data-i="${i}"${open ? "" : " disabled"}><i aria-hidden="true">${open ? (best != null ? "⭐" : w.lv ? w.emoji : "▶") : "🔒"}</i><b>${w.lv || w.id}</b><span>Welt ${i + 1}: ${w.name}</span><small>${best != null ? `Rekord: ${best} Punkte` : open ? "Bereit" : w.lv ? (i === MAIN ? "Nach Welt A1" : `Nach „${WORLDS[i - 1].name}“`) : "Noch gesperrt"}${key ? " · 🗝 Kammer" : ""}${prog.bosses?.[w.id] ? " · 🏆 Monster besiegt" : ""}</small></button>`;
-          }).join("")}</div>
+              key = prog.secrets?.[w.id],
+              sn = starsOf(w),
+              aft = w.after ? WORLDS.find((x) => x.id === w.after) : i === MAIN ? WORLDS[0] : WORLDS[i - 1];
+            return `<button type="button" class="sp-lino-lv${w.lv ? " is-ride" : ""}" data-i="${i}"${open ? "" : " disabled"}><i aria-hidden="true">${open ? (w.lv ? w.emoji : best != null ? "✔️" : "▶") : "🔒"}</i><b>${w.lv || w.id}</b><span>${w.lv ? "" : `Welt ${i + 1}: `}${w.name}</span><small>${best != null ? `<span class="sp-lino-st" aria-label="${sn} von 3 Sternen">${"⭐".repeat(sn)}${"☆".repeat(3 - sn)}</span> Rekord ${best}` : open ? "Bereit" : w.lv || w.after ? `Nach „${aft?.name || "A1"}“` : "Noch gesperrt"}${key ? " · 🗝" : ""}${prog.bosses?.[w.id] ? " · 🏆" : ""}</small></button>`;
+          }).join("")}</div>`).join("")}
+          ${badgeHtml}
           <details class="sp-lino-legend"><summary>Booster und Geheimnisse</summary><ul>
             <li><b>❓</b><span><b>Kisten</b> sind fest. Stoß die ❓-Kiste von unten mit dem Kopf an – dann kommt ein Booster heraus.</span></li>
             ${Object.values(BOOSTS).map((b) => `<li><b>${b.ic}</b><span><b>${b.name}:</b> ${b.txt}</span></li>`).join("")}
@@ -1155,10 +1411,40 @@
         api.el
           .querySelectorAll(".sp-lino-lv")
           .forEach((b) => (b.onclick = () => play(+b.dataset.i)));
+        api.el.querySelector("[data-daily]").onclick = () => play(dailyWorld(), true);
+        const shopEl = api.el.querySelector(".sp-lino-shop");
+        shopEl.ontoggle = () => {
+          prog.shopOpen = shopEl.open;
+          save(prog);
+        };
+        api.el.querySelectorAll("[data-buy]").forEach(
+          (b) =>
+            (b.onclick = () => {
+              const it = shopItem(b.dataset.buy);
+              prog.owned ||= [];
+              if (!prog.owned.includes(it.id)) {
+                if ((prog.coins || 0) < it.price) {
+                  api.feedback(false, `<b>Noch ${it.price - (prog.coins || 0)} Münzen</b><span>Sammle Münzen in den Welten oder im Tageslauf.</span>`);
+                  return;
+                }
+                prog.coins -= it.price;
+                prog.owned.push(it.id);
+                SND.unlock();
+                SND.play("power");
+                prog.look = heroLook({ ...lk, [it.cat]: it.id });
+              } else prog.look = heroLook({ ...lk, [it.cat]: lk[it.cat] === it.id ? null : it.id });
+              save(prog);
+              checkBadges();
+              api.clearFeedback();
+              menu();
+              api.el.querySelector(`[data-buy="${it.id}"]`)?.focus({ preventScroll: true });
+            }),
+        );
         const u = api.el.querySelector(".sp-lino-unlock");
         if (u)
           u.onclick = () => {
             prog.unlocked = WORLDS.length;
+            prog.allOpen = true;
             save(prog);
             menu();
           };
@@ -1168,21 +1454,39 @@
             ?.focus({ preventScroll: true });
       }
 
-      function play(L) {
+      function play(L, daily = false) {
         api.clearFeedback();
-        const W0 = WORLDS[L];
+        const today = dayNum();
+        const W0 = daily ? { ...WORLDS[L], id: "Tag", base: WORLDS[L].id, name: "Tageslauf", daily: true, lv: WORLDS[L].lv, emoji: "📅" } : WORLDS[L];
+        const MUS = L < 8 ? L : L + 2; // Musik 8 = Monster, 9 = Kammer
         const TH = W0.theme || ["", "city", "", "zeche", "night"][L],
           ROAD = TH === "road";
         const look = heroLook(prog.look);
-        const qs = api.shuffle(W0.questions).slice(0, GATES);
-        const lvl = buildLevel(L);
+        let qs;
+        if (daily) {
+          // bis zu 2 fällige Wiederholungen + gemischte Fragen aus allen offenen Welten (für alle gleich: fester Startwert)
+          const r = rng(today * 31 + 7),
+            open = WORLDS.filter((w, i) => isOpen(i)),
+            rev = revDue().slice(0, 2).map((x) => x.it),
+            picks = [];
+          for (let k = 0; picks.length < GATES - rev.length && k < 60; k++) {
+            const w = open[Math.floor(r() * open.length)],
+              src = k % 4 === 1 && w.hear.length ? w.hear : k % 4 === 3 && (w.art.length || w.order.length) ? (w.art.length ? w.art : w.order) : w.questions,
+              it = src[Math.floor(r() * src.length)];
+            if (it && !picks.includes(it) && !rev.some((x) => itKey(x) === itKey(it))) picks.push(it);
+          }
+          qs = [...rev, ...picks];
+          W0.questions = open.flatMap((w) => w.questions);
+          W0.all = open.flatMap((w) => w.all);
+        } else qs = pickItems(W0, GATES);
+        const lvl = buildLevel(L, daily ? today * 7 + 3 : undefined);
         const narrow = api.el.clientWidth < 520;
         const VW = narrow ? 480 : 640,
           VH = 360,
           GROUND = VH - 48,
           T = lvl.T;
         const dpr = Math.min(2, window.devicePixelRatio || 1);
-        api.el.innerHTML = `<div class="sp-lino-wrap"><canvas width="${VW * dpr}" height="${VH * dpr}" aria-label="Spielfeld: ${heroName(look)} läuft durch die Welt ${W0.name}" role="img"></canvas><div class="sp-lino-banner">${W0.lv ? `${W0.emoji} ${W0.name} · ${W0.lv}` : `Welt ${W0.id}: ${W0.name}`}</div><button type="button" class="sp-lino-snd sp-lino-pause" aria-pressed="false" aria-label="Pause">⏸</button><button type="button" class="sp-lino-snd" aria-pressed="${SND.on}" aria-label="Ton">${SND.on ? "🔊" : "🔇"}</button></div>
+        api.el.innerHTML = `<div class="sp-lino-wrap"><canvas width="${VW * dpr}" height="${VH * dpr}" aria-label="Spielfeld: ${heroName(look)} läuft durch die Welt ${W0.name}" role="img"></canvas><div class="sp-lino-banner">${W0.daily ? `📅 Tageslauf · Kulisse „${WORLDS[L].name}“` : W0.lv ? `${W0.emoji} ${W0.name} · ${W0.lv}` : `Welt ${W0.id}: ${W0.name}`}</div><button type="button" class="sp-lino-snd sp-lino-pause" aria-pressed="false" aria-label="Pause">⏸</button><button type="button" class="sp-lino-snd" aria-pressed="${SND.on}" aria-label="Ton">${SND.on ? "🔊" : "🔇"}</button></div>
           <div class="sp-lino-panel"></div>`;
         const cv = api.el.querySelector("canvas"),
           ctx = cv.getContext("2d"),
@@ -1192,7 +1496,7 @@
         // Ton starten (der Klick auf die Welt erlaubt dem Browser die Wiedergabe)
         SND.unlock();
         SND.play("start");
-        SND.startMusic(L);
+        SND.startMusic(MUS);
         const sndBtn = api.el.querySelector(".sp-lino-snd:not(.sp-lino-pause)"),
           pauseBtn = api.el.querySelector(".sp-lino-pause");
         pauseBtn.addEventListener("pointerdown", (e) => e.stopPropagation());
@@ -1205,7 +1509,7 @@
         sndBtn.onclick = (e) => {
           e.stopPropagation();
           SND.on = !SND.on;
-          if (SND.on && !(state === "dead")) SND.startMusic(inCh ? 9 : L);
+          if (SND.on && !(state === "dead")) SND.startMusic(inCh ? 9 : MUS);
           sndBtn.textContent = SND.on ? "🔊" : "🔇";
           sndBtn.setAttribute("aria-pressed", SND.on);
           sndBtn.blur();
@@ -1236,6 +1540,7 @@
           score = 0,
           right = 0,
           coinsGot = 0,
+          trailT = 0,
           gateIdx = 0,
           checkpoint = 3 * T;
         let coyote = 0,
@@ -1259,7 +1564,7 @@
           fx = [],
           B = { joker: 0, magnet: 0, stern: 0, doppel: 0 };
         // Fehlermonster
-        const BI = BOSSES[W0.id] || ["Fehlermonster", "#9b6bd6", "#5a3a8c"];
+        const BI = BOSSES[W0.base || W0.id] || ["Fehlermonster", "#9b6bd6", "#5a3a8c"];
         const boss = {
           name: BI[0],
           col: BI[1],
@@ -1587,7 +1892,7 @@
           P.onGround = true;
           P.inv = 1;
           flash = 0.5;
-          SND.startMusic(L);
+          SND.startMusic(MUS);
           say("Zurück auf dem Weg ▶", 1.6);
         }
 
@@ -1781,17 +2086,46 @@
           state = "ask";
           held = false;
           SND.duck(true);
-          const [q, a, w1, w2, tip] = item;
-          const opts = api.shuffle([a, w1, w2]);
-          const qHtml = api.esc(q).replace("___", '<span class="sp-lino-gap">&nbsp;</span>');
-          panel.innerHTML = `<div class="sp-lino-q${bonus ? " is-bonus" : ""}" role="group" aria-label="${bonus ? "Bonusfrage" : "Frage am Tor"}"><span class="sp-lino-tag">${tag}</span>
+          const type = itObj(item) ? item.t : "mc",
+            a = itAns(item),
+            tip = itTip(item),
+            full = itFull(item);
+          const gapHtml = '<span class="sp-lino-gap">&nbsp;</span>';
+          let opts = [],
+            body;
+          if (type === "order") {
+            body = `<p class="sp-lino-text sp-lino-oq">Bau den Satz: Tippe die Wörter in der richtigen Reihenfolge.</p>
+              <div class="sp-lino-built" aria-live="polite"></div><div class="sp-lino-pool"></div>
+              <div class="ch-actions" style="margin-top:8px"><button type="button" class="dm-btn dm-btn-quiet sp-lino-undo">↩ Zurück</button></div>`;
+          } else {
+            opts = type === "art" ? ["der", "die", "das"] : api.shuffle([a, ...itWrong(item)]);
+            const text =
+              type === "hear"
+                ? `<button type="button" class="sp-lino-listen">🔊 Anhören</button><span class="sp-lino-heard" hidden></span><br>${api.esc(item.q)}`
+                : type === "art"
+                  ? `Welche Tür? ${gapHtml} <b>${api.esc(item.noun)}</b>`
+                  : api.esc(item[0]).replace("___", gapHtml);
+            body = `<p class="sp-lino-text">${text}</p>
+              <div class="ch-opts${type === "art" ? " sp-lino-doors" : ""}">${opts.map((o, k) => `<button type="button" class="ch-opt${type === "art" ? ` sp-lino-door sp-lino-d-${o}` : ""}" data-k="${k}">${type === "art" ? `<span class="sp-lino-dw" aria-hidden="true">🚪</span>` : `<kbd>${k + 1}</kbd>`}<span>${api.esc(o)}</span></button>`).join("")}</div>`;
+          }
+          const label = { mc: "", hear: "🎧 Hörfrage · ", art: "🚪 der, die oder das? · ", order: "🧩 Satzbau · " }[type];
+          panel.innerHTML = `<div class="sp-lino-q${bonus ? " is-bonus" : ""}" role="group" aria-label="${bonus ? "Bonusfrage" : "Frage am Tor"}"><span class="sp-lino-tag">${label}${tag}</span>
             ${note ? `<p class="sp-lino-note">${note}</p>` : ""}
-            <p class="sp-lino-text">${qHtml}</p>
-            <div class="ch-opts">${opts.map((o, k) => `<button type="button" class="ch-opt" data-k="${k}"><kbd>${k + 1}</kbd><span>${api.esc(o)}</span></button>`).join("")}</div>
-            ${!bonus && B.joker > 0 ? `<button type="button" class="sp-lino-joker">💡 Joker einsetzen (${B.joker}) – eine falsche Antwort verschwindet</button>` : ""}</div>`;
-          const btns = [...panel.querySelectorAll(".ch-opt")];
-          btns[0].focus({ preventScroll: true });
+            ${body}
+            ${!bonus && B.joker > 0 && type !== "order" ? `<button type="button" class="sp-lino-joker">💡 Joker einsetzen (${B.joker}) – eine falsche Antwort verschwindet</button>` : ""}</div>`;
           if (panel.getBoundingClientRect().bottom > innerHeight) panel.scrollIntoView({ block: "end", behavior: "smooth" });
+          const btns = [...panel.querySelectorAll(".ch-opt")];
+          if (type === "hear") {
+            const lb = panel.querySelector(".sp-lino-listen");
+            lb.onclick = () => {
+              SND.duck(true);
+              api.speak(item.say);
+            };
+            setTimeout(() => {
+              if (state === "ask" && lb.isConnected) api.speak(item.say);
+            }, 350);
+            lb.focus({ preventScroll: true });
+          } else btns[0]?.focus({ preventScroll: true });
           const jk = panel.querySelector(".sp-lino-joker");
           if (jk)
             jk.onclick = () => {
@@ -1804,6 +2138,106 @@
               jk.remove();
               btns.find((x) => !x.disabled)?.focus({ preventScroll: true });
             };
+          const done = (ok) => {
+            panel.querySelector(".sp-lino-joker")?.remove();
+            const gap = panel.querySelector(".sp-lino-gap");
+            if (gap) {
+              gap.textContent = a;
+              gap.classList.add("is-ok");
+            }
+            const heard = panel.querySelector(".sp-lino-heard");
+            if (heard) {
+              heard.hidden = false;
+              heard.textContent = `„${item.say}“`;
+            }
+            if (ok && (type === "hear" || type === "order")) {
+              prog.cnt ||= {};
+              prog.cnt[type] = (prog.cnt[type] || 0) + 1;
+              save(prog);
+            }
+            SND.play(ok ? "right" : "wrong");
+            const head = onAnswer(ok, full);
+            hud();
+            const right = type === "order" ? `Richtig: <b>${api.esc(a)}</b>` : `Richtig: <b>${api.esc(type === "art" ? full : a)}</b>`;
+            api.feedback(ok, `${head}<span>${ok ? api.esc(tip || "") : `${right}${tip ? ` · ${api.esc(tip)}` : ""}`}</span><button type="button" class="sp-lino-say">🔈 Satz anhören</button>`);
+            const sb = document.querySelector(".ch-feedback .sp-lino-say");
+            if (sb)
+              sb.onclick = () => {
+                SND.duck(true);
+                api.speak(full);
+              };
+            if (lives <= 0) {
+              SND.stopMusic();
+              api.next("Weiter", () => {
+                state = "dead";
+                deadT = 1;
+                SND.play("over");
+              });
+              return;
+            }
+            api.next("Weiter laufen ▶", () => {
+              api.clearFeedback();
+              try {
+                window.speechSynthesis?.cancel();
+              } catch {}
+              onNext?.();
+              hud();
+              runPanel();
+              state = "run";
+              last = 0;
+              SND.duck(false);
+              panel.querySelector(".sp-lino-jump")?.focus({ preventScroll: true });
+              showField();
+            });
+            // „Weiter laufen“ auf dem Handy sichtbar machen
+            setTimeout(() => {
+              const nb = document.getElementById("sp-next");
+              if (nb && nb.getBoundingClientRect().bottom > innerHeight) nb.scrollIntoView({ block: "end", behavior: "smooth" });
+            }, 60);
+          };
+          if (type === "order") {
+            const words = a.split(" ");
+            let mix = api.shuffle(words.map((w, i) => ({ w, i })));
+            for (let k = 0; k < 6 && mix.every((x, j) => x.w === words[j]); k++) mix = api.shuffle(mix);
+            const built = [],
+              boxB = panel.querySelector(".sp-lino-built"),
+              boxP = panel.querySelector(".sp-lino-pool");
+            const render = () => {
+              boxB.innerHTML = built.length ? built.map((x, j) => `<button type="button" class="sp-lino-chip is-in" data-j="${j}">${api.esc(x.w)}</button>`).join("") : '<span class="sp-lino-ph">Hier entsteht dein Satz …</span>';
+              boxP.innerHTML = mix.map((x, j) => (built.includes(x) ? "" : `<button type="button" class="sp-lino-chip" data-m="${j}">${api.esc(x.w)}</button>`)).join("");
+              boxP.querySelectorAll("[data-m]").forEach(
+                (b) =>
+                  (b.onclick = () => {
+                    built.push(mix[+b.dataset.m]);
+                    if (built.length === words.length) {
+                      render();
+                      const ok = built.map((x) => x.w).join(" ") === a;
+                      boxB.querySelectorAll("button").forEach((x) => (x.disabled = true));
+                      boxB.classList.add(ok ? "is-right" : "is-wrong");
+                      panel.querySelector(".sp-lino-undo")?.remove();
+                      done(ok);
+                      return;
+                    }
+                    render();
+                    boxP.querySelector("button")?.focus({ preventScroll: true });
+                  }),
+              );
+              boxB.querySelectorAll("[data-j]").forEach(
+                (b) =>
+                  (b.onclick = () => {
+                    built.splice(+b.dataset.j);
+                    render();
+                  }),
+              );
+            };
+            panel.querySelector(".sp-lino-undo").onclick = () => {
+              built.pop();
+              render();
+            };
+            render();
+            boxP.querySelector("button")?.focus({ preventScroll: true });
+            return;
+          }
           btns.forEach(
             (b, k) =>
               (b.onclick = () => {
@@ -1812,55 +2246,8 @@
                   x.disabled = true;
                   if (opts[j] === a) x.classList.add("is-right");
                 });
-                panel.querySelector(".sp-lino-joker")?.remove();
                 if (!ok) b.classList.add("is-wrong");
-                const gap = panel.querySelector(".sp-lino-gap");
-                if (gap) {
-                  gap.textContent = a;
-                  gap.classList.add("is-ok");
-                }
-                SND.play(ok ? "right" : "wrong");
-                const full = q.replace("___", a);
-                const head = onAnswer(ok, full);
-                hud();
-                api.feedback(
-                  ok,
-                  `${head}<span>${ok ? api.esc(tip) : `Richtig: <b>${api.esc(a)}</b> · ${api.esc(tip)}`}</span><button type="button" class="sp-lino-say">🔈 Satz anhören</button>`,
-                );
-                const sb = document.querySelector(".ch-feedback .sp-lino-say");
-                if (sb)
-                  sb.onclick = () => {
-                    SND.duck(true);
-                    api.speak(full);
-                  };
-                if (lives <= 0) {
-                  SND.stopMusic();
-                  api.next("Weiter", () => {
-                    state = "dead";
-                    deadT = 1;
-                    SND.play("over");
-                  });
-                  return;
-                }
-                api.next("Weiter laufen ▶", () => {
-                  api.clearFeedback();
-                  try {
-                    window.speechSynthesis?.cancel();
-                  } catch {}
-                  onNext?.();
-                  hud();
-                  runPanel();
-                  state = "run";
-                  last = 0;
-                  SND.duck(false);
-                  panel.querySelector(".sp-lino-jump")?.focus({ preventScroll: true });
-                  showField();
-                });
-                // „Weiter laufen“ auf dem Handy sichtbar machen
-                setTimeout(() => {
-                  const nb = document.getElementById("sp-next");
-                  if (nb && nb.getBoundingClientRect().bottom > innerHeight) nb.scrollIntoView({ block: "end", behavior: "smooth" });
-                }, 60);
+                done(ok);
               }),
           );
         }
@@ -1875,6 +2262,7 @@
             onAnswer(ok, full) {
               gate.open = true;
               gate.ok = ok;
+              if (ok) revDone(item, true);
               if (ok) {
                 right++;
                 score += 100;
@@ -1883,9 +2271,10 @@
               }
               lives--;
               api.vibrate();
-              wrong.push({ correct: full, tip: item[4] });
-              wrongAll.push({ correct: full, tip: item[4] });
+              wrong.push({ correct: full, tip: itTip(item) });
+              wrongAll.push({ correct: full, tip: itTip(item) });
               wrongItems.push(item);
+              revAdd(item, W0.base || W0.id);
               return "<b>Leider falsch – ein Herz weniger.</b>";
             },
             onNext() {
@@ -1900,15 +2289,17 @@
           SND.play("gate");
           const chest = lvl.ch.chest,
             rep = wrongItems.shift(),
-            pool = W0.questions.filter((x) => !qs.includes(x)),
-            item = rep || (pool.length ? api.pick(pool, 1)[0] : api.pick(W0.questions, 1)[0]);
+            old = rep ? null : revDue()[0]?.it,
+            pool = W0.all.filter((x) => !qs.includes(x)),
+            item = rep || old || (pool.length ? api.pick(pool, 1)[0] : api.pick(W0.all, 1)[0]);
           quiz({
             item,
             bonus: true,
             tag: "🗝 Schatztruhe · Bonusfrage",
-            note: rep ? "Zweite Chance: Diese Frage war vorhin schwierig." : "Ohne Risiko – hier verlierst du kein Herz.",
+            note: rep ? "Zweite Chance: Diese Frage war vorhin schwierig." : old ? "Wiederholung: Diese Frage war an einem anderen Tag schwierig." : "Ohne Risiko – hier verlierst du kein Herz.",
             onAnswer(ok) {
               chest.open = true;
+              if (old) revDone(item, ok);
               if (!ok) return "<b>Nicht ganz – macht nichts, hier kostet es kein Herz.</b>";
               score += 150;
               let gift;
@@ -1934,15 +2325,34 @@
           total += score;
           hud();
           const stars = right >= 6 ? 3 : right >= 4 ? 2 : 1;
-          prog["best" + W0.id] = Math.max(prog["best" + W0.id] || 0, score);
-          if (L < MAIN && L + 2 > prog.unlocked) prog.unlocked = Math.min(MAIN, L + 2);
+          let extra = "";
+          if (W0.daily) {
+            const first = prog.daily?.day !== today;
+            prog.daily = { day: today, best: first ? score : Math.max(prog.daily.best || 0, score) };
+            if (first) {
+              const sk = prog.streak || { n: 0, last: 0 };
+              prog.streak = { n: sk.last === today - 1 ? sk.n + 1 : 1, last: today };
+              coinsGot += 50;
+              extra = `<p class="sp-lino-bonus">📅 Tageslauf geschafft: <b>+50 Münzen</b> · 🔥 Serie: <b>${prog.streak.n} ${prog.streak.n === 1 ? "Tag" : "Tage"}</b></p>`;
+            } else extra = `<p class="sp-lino-bonus">Morgen wartet ein neuer Tageslauf. 🔥 Serie: <b>${prog.streak?.n || 1}</b></p>`;
+          } else {
+            prog["best" + W0.id] = Math.max(prog["best" + W0.id] || 0, score);
+            prog.stars = { ...(prog.stars || {}), [W0.id]: Math.max(prog.stars?.[W0.id] || 0, stars) };
+            if (L < MAIN && L + 2 > prog.unlocked) prog.unlocked = Math.min(MAIN, L + 2);
+          }
+          if (right >= GATES) prog.perfect = true;
+          prog.coins = (prog.coins || 0) + coinsGot;
+          prog.coinsTotal = (prog.coinsTotal || 0) + coinsGot;
           save(prog);
-          const nextW = WORLDS[L + 1];
+          const nb = checkBadges();
+          if (nb.length) extra += `<div class="sp-lino-newbadge">${nb.map((x) => `<span>${x.ic} Neues Abzeichen: <b>${x.name}</b></span>`).join("")}</div>`;
+          const nextW = W0.daily ? null : WORLDS[L + 1];
           panel.innerHTML = `<div class="sp-lino-res"><div class="sp-lino-stars" aria-label="${stars} von 3 Sternen">${"⭐".repeat(stars)}${"☆".repeat(3 - stars)}</div>
-            <h2>${wTitle(W0)} geschafft!</h2>
-            <p>${right} von ${GATES} Fragen richtig · 👾 ${boss.name} besiegt · ${coinsGot} Münzen · Herz-Bonus ${bonus}<br><b>${score} Punkte</b></p>
-            <div class="ch-actions">${nextW ? `<button type="button" class="dm-btn ch-go" id="sp-lino-next">Weiter: ${nextW.lv ? `${nextW.emoji} ${nextW.name}` : `Welt ${nextW.id}`} ▶</button>` : `<button type="button" class="dm-btn ch-go" id="sp-lino-end">Abenteuer beenden 🏆</button>`}
-              <button type="button" class="dm-btn dm-btn-quiet" id="sp-lino-menu">Weltkarte</button></div></div>`;
+            <h2>${W0.daily ? "📅 Tageslauf" : wTitle(W0)} geschafft!</h2>
+            <p>${right} von ${GATES} Fragen richtig · 👾 ${boss.name} besiegt · 🪙 ${coinsGot} Münzen · Herz-Bonus ${bonus}<br><b>${score} Punkte</b> · im Shop: 🪙 ${prog.coins}</p>
+            ${extra}
+            <div class="ch-actions">${nextW ? `<button type="button" class="dm-btn ch-go" id="sp-lino-next">Weiter: ${nextW.lv ? `${nextW.emoji} ${nextW.name}` : `Welt ${nextW.id}`} ▶</button>` : W0.daily ? "" : `<button type="button" class="dm-btn ch-go" id="sp-lino-end">Abenteuer beenden 🏆</button>`}
+              <button type="button" class="dm-btn${W0.daily ? " ch-go" : " dm-btn-quiet"}" id="sp-lino-menu">Weltkarte</button></div></div>`;
           DM.celebrate?.(panel);
           panel
             .querySelector("#sp-lino-next")
@@ -1955,7 +2365,8 @@
           panel.querySelector("#sp-lino-menu").onclick = menu;
           (
             panel.querySelector("#sp-lino-next") ||
-            panel.querySelector("#sp-lino-end")
+            panel.querySelector("#sp-lino-end") ||
+            panel.querySelector("#sp-lino-menu")
           ).focus({ preventScroll: true });
           panel.scrollIntoView({ block: "nearest", behavior: "smooth" });
         }
@@ -1963,10 +2374,14 @@
         function gameOver() {
           cleanup();
           api.clearFeedback();
+          prog.coins = (prog.coins || 0) + coinsGot;
+          prog.coinsTotal = (prog.coinsTotal || 0) + coinsGot;
+          save(prog);
+          checkBadges();
           panel.innerHTML = `<div class="sp-lino-res"><div class="sp-lino-stars" aria-hidden="true">💔</div><h2>Keine Herzen mehr</h2>
-            <p>Du hast ${right} von ${GATES} Fragen richtig beantwortet. Versuch es noch einmal – die Welt bleibt gleich, die Fragen wechseln.</p>
+            <p>Du hast ${right} von ${GATES} Fragen richtig beantwortet. Deine ${coinsGot} Münzen hast du behalten 🪙. Versuch es noch einmal – die Welt bleibt gleich, die Fragen wechseln.</p>
             <div class="ch-actions"><button type="button" class="dm-btn ch-go" id="sp-lino-retry">${wTitle(W0)} neu starten</button><button type="button" class="dm-btn dm-btn-quiet" id="sp-lino-stop">Beenden</button></div></div>`;
-          panel.querySelector("#sp-lino-retry").onclick = () => play(L);
+          panel.querySelector("#sp-lino-retry").onclick = () => play(L, !!W0.daily);
           panel.querySelector("#sp-lino-stop").onclick = () =>
             api.finish({ score: total + score, max: 0, wrong: wrongAll });
           panel.querySelector("#sp-lino-retry").focus({ preventScroll: true });
@@ -2012,7 +2427,8 @@
               hills(W0.hill2, 0.25, 150, 70);
               hills(W0.hill, 0.45, 110, 50);
             }
-            if (TH === "city" || TH === "night") city();
+            if (TH === "city" || TH === "night" || TH === "market" || TH === "clinic" || TH === "office") city();
+            if (TH === "market" || TH === "clinic" || TH === "office") signs();
             if (TH === "zeche") zeche();
             if (TH === "road") roadside();
           }
@@ -2040,6 +2456,12 @@
                   ctx.fillStyle = "#f4f4f4";
                   ctx.fillRect(i * T + 4, GROUND + 22, T + 8, 4);
                 }
+              } else if (TH === "rail" && !inCh) {
+                // Schwellen und Schienen
+                ctx.fillStyle = "#5b4636";
+                ctx.fillRect(i * T + 4, GROUND + 14, 22, 6);
+                ctx.fillStyle = "#c9ced6";
+                ctx.fillRect(i * T, GROUND + 12, T, 3);
               } else if (TH === "snow" && !inCh) {
                 ctx.fillStyle = "rgba(120,160,210,.25)";
                 ctx.fillRect(i * T + (i % 2 ? 6 : 18), GROUND + 20, 8, 3);
@@ -2257,6 +2679,14 @@
               ctx.fill();
               continue;
             }
+            if (f.trail) {
+              ctx.globalAlpha = a * 0.9;
+              ctx.font = "13px system-ui,sans-serif";
+              ctx.textAlign = "center";
+              ctx.fillText(f.text, f.x - (f.t - 0.6) * 30, f.y - (f.t - 0.6) * 10);
+              ctx.globalAlpha = 1;
+              continue;
+            }
             ctx.globalAlpha = a;
             ctx.font = "800 16px system-ui,sans-serif";
             ctx.textAlign = "center";
@@ -2385,6 +2815,12 @@
           ctx.fillText("Ausgang", ex + 17, GROUND - 82);
         }
         function lino(t) {
+          // Spur aus dem Shop (Sterne, Herzen, Noten)
+          const tr = shopItem(look.trail);
+          if (tr && !inCh && state === "run" && (trailT -= 1 / 60) <= 0) {
+            trailT = 0.12;
+            fx.push({ x: P.x - 4, y: P.y + 18 + Math.random() * 8, t: 0.6, text: tr.fx[Math.floor(Math.random() * tr.fx.length)], trail: true });
+          }
           if (P.inv > 0 && Math.floor(t * 12) % 2 === 0) return;
           if (B.stern > 0) {
             ctx.fillStyle = `hsla(${(t * 360) % 360},90%,60%,.45)`;
@@ -2508,23 +2944,24 @@
           } else if (boss.phase === "dead") {
             if (boss.t > 1.6) {
               boss.phase = "gone";
-              prog.bosses = { ...(prog.bosses || {}), [W0.id]: true };
+              if (!W0.daily) prog.bosses = { ...(prog.bosses || {}), [W0.id]: true };
               save(prog);
-              SND.startMusic(L);
+              SND.startMusic(MUS);
               say(`🏆 <b>${boss.name} besiegt!</b> Lauf ins Ziel ▶`, 2.6);
             }
           }
         }
         function askBoss() {
-          let pool = W0.questions.filter((x) => !qs.includes(x) && !boss.used.includes(x));
-          if (!pool.length) pool = wrongItems.length ? wrongItems.slice() : W0.questions.filter((x) => x !== boss.used[boss.used.length - 1]);
+          const bp = W0.all.filter((x) => !itObj(x) || x.t !== "order");
+          let pool = bp.filter((x) => !qs.includes(x) && !boss.used.includes(x));
+          if (!pool.length) pool = wrongItems.length ? wrongItems.slice() : bp.filter((x) => x !== boss.used[boss.used.length - 1]);
           const item = api.pick(pool, 1)[0];
           boss.used.push(item);
           boss.phase = "ask";
           boss.shots = [];
           quiz({
             item,
-            tag: `👾 ${boss.name} · noch ${boss.hp} ${boss.hp === 1 ? "Treffer" : "Treffer"}`,
+            tag: `👾 ${boss.name} · noch ${boss.hp} ${boss.hp === 1 ? "Treffer" : "Treffer nötig"}`,
             note: "Richtige Antwort = Treffer. Falsche Antwort = ein Herz weniger.",
             onAnswer(ok, full) {
               if (ok) {
@@ -2535,12 +2972,13 @@
                 boss.beam = { t: 0 };
                 boss.flash = 0.6;
                 SND.play("bosshit");
-                return boss.hp <= 0 ? `<b>Volltreffer! Der ${boss.name} ist besiegt! +150</b>` : `<b>Treffer! +150 · Das Monster hat noch ${boss.hp} ${boss.hp === 1 ? "Leben" : "Leben"}.</b>`;
+                return boss.hp <= 0 ? `<b>Volltreffer! Der ${boss.name} ist besiegt! +150</b>` : `<b>Treffer! +150 · Das Monster hat noch ${boss.hp} ${boss.hp === 1 ? "Leben" : "Leben übrig"}.</b>`;
               }
               lives--;
               api.vibrate();
-              wrong.push({ correct: full, tip: item[4] });
-              wrongAll.push({ correct: full, tip: item[4] });
+              wrong.push({ correct: full, tip: itTip(item) });
+              wrongAll.push({ correct: full, tip: itTip(item) });
+              revAdd(item, W0.base || W0.id);
               boss.phase = "attack";
               boss.t = 0;
               boss.spawn = 0.9;
@@ -2746,9 +3184,10 @@
           ctx.translate(x, y);
           ctx.rotate(tilt);
           if (W0.ride === "car") {
-            // kleines rotes Auto – die Figur sitzt darin
-            const bob = P.onGround ? Math.sin(t * 18) * 0.6 : 0;
-            ctx.fillStyle = "#e5322b";
+            // kleines Auto (Farbe aus dem Shop) – die Figur sitzt darin
+            const bob = P.onGround ? Math.sin(t * 18) * 0.6 : 0,
+              carCol = shopItem(look.car)?.col || "#e5322b";
+            ctx.fillStyle = carCol;
             roundRect(-26, -22 + bob, 54, 16, 6);
             ctx.fill();
             ctx.fillStyle = "#c4241e";
@@ -2757,7 +3196,7 @@
             ctx.fillStyle = "rgba(190,230,255,.55)";
             roundRect(-14, -38 + bob, 30, 17, 6);
             ctx.fill();
-            ctx.strokeStyle = "#e5322b";
+            ctx.strokeStyle = carCol;
             ctx.lineWidth = 3;
             roundRect(-14, -38 + bob, 30, 17, 6);
             ctx.stroke();
@@ -2800,6 +3239,31 @@
                 ctx.arc(-24 - k * 7 - ((t * 60) % 7), -2 - k * 2, 3 - k * 0.6, 0, 7);
                 ctx.fill();
               }
+            }
+          } else if (W0.ride === "train") {
+            // kleiner ICE-Triebkopf: weiß mit rotem Streifen, Figur im Fenster
+            const bob = P.onGround ? Math.sin(t * 22) * 0.5 : 0;
+            ctx.fillStyle = "#f4f6f8";
+            ctx.beginPath();
+            ctx.moveTo(-30, -6 + bob);
+            ctx.lineTo(-30, -40 + bob);
+            ctx.lineTo(14, -40 + bob);
+            ctx.quadraticCurveTo(34, -36 + bob, 36, -6 + bob);
+            ctx.closePath();
+            ctx.fill();
+            ctx.strokeStyle = "#aab2be";
+            ctx.lineWidth = 1.5;
+            ctx.stroke();
+            ctx.fillStyle = "#e5322b";
+            ctx.fillRect(-30, -16 + bob, 64, 4);
+            ctx.fillStyle = "rgba(60,80,110,.75)";
+            roundRect(16, -36 + bob, 14, 12, 4);
+            ctx.fill();
+            ctx.fillStyle = "#3b404c";
+            for (const k of [-20, 0, 22]) {
+              ctx.beginPath();
+              ctx.arc(k, -4, 5, 0, 7);
+              ctx.fill();
             }
           } else if (W0.ride === "bike") {
             wheel(-14, -7, 8, t);
@@ -3094,6 +3558,21 @@
             }
           }
         }
+        function signs() {
+          // Schilder der Alltagswelten: 🛒 Supermarkt, ✚ Praxis, 🏛 Amt
+          const lab = { market: ["SUPERMARKT", "#2e9e6b"], clinic: ["PRAXIS ✚", "#1f9d8a"], office: ["BÜRGERAMT", "#2341B5"] }[TH];
+          for (let i = 0; i < 3; i++) {
+            const bx = (i * 300 + 120 - camX * 0.3) % (VW + 300),
+              x = ((bx + VW + 300) % (VW + 300)) - 150;
+            ctx.fillStyle = lab[1];
+            roundRect(x, GROUND - 118, 104, 24, 6);
+            ctx.fill();
+            ctx.fillStyle = "#fff";
+            ctx.font = "800 12px system-ui,sans-serif";
+            ctx.textAlign = "center";
+            ctx.fillText(lab[0], x + 52, GROUND - 101);
+          }
+        }
         function zeche() {
           const x =
             ((((300 - camX * 0.3) % (VW + 300)) + VW + 300) % (VW + 300)) - 150;
@@ -3153,7 +3632,7 @@
             return state;
           },
           get answer() {
-            return qs[gateIdx] && qs[gateIdx][1];
+            return qs[gateIdx] && itAns(qs[gateIdx]);
           },
           get lives() {
             return lives;
@@ -3174,6 +3653,12 @@
           get qMode() {
             return qMode;
           },
+          get item() {
+            return qs[gateIdx];
+          },
+          setItem: (it) => (qs[gateIdx] = it),
+          allGates: () => (gateIdx = GATES),
+          W0,
         };
       }
     },
