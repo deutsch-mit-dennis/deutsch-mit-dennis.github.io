@@ -9,6 +9,8 @@ DM.teacher = {
   phone: '+49 173 8775907',
   donate: 'https://www.paypal.com/paypalme/DennisPrudnikau',
   youtube: 'https://www.youtube.com/@deutsch-mit-Dennis',
+  instagram: 'https://www.instagram.com/deutsch.mit.dennis/',
+  tiktok: 'https://www.tiktok.com/@deutsch.mit.dennis',
   channelId: 'UCMacEMD2p8zCKY2UrGiMUrA',
   address: ['Dzianis Prudnikau', 'Sperberstr. 42', '58285 Gevelsberg']
 };

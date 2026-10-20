@@ -937,7 +937,7 @@
       const current = id && list.find(v => v.id === id);
       page(`${crumbs([['Videos']])}
         <div class="dm-head dm-head-row"><div><h1>Videos</h1><p class="dm-lead">Erklärvideos von Dennis auf YouTube. Neue Videos erscheinen hier automatisch.</p></div>
-          <a class="dm-btn dm-btn-quiet" href="${T.youtube}?sub_confirmation=1" target="_blank" rel="noopener noreferrer">Kanal abonnieren ↗</a></div>
+          <div class="dm-row"><a class="dm-btn dm-btn-quiet" href="${T.youtube}?sub_confirmation=1" target="_blank" rel="noopener noreferrer">Kanal abonnieren ↗</a><a class="dm-btn dm-btn-quiet" href="${T.instagram}" target="_blank" rel="noopener noreferrer">Instagram ↗</a><a class="dm-btn dm-btn-quiet" href="${T.tiktok}" target="_blank" rel="noopener noreferrer">TikTok ↗</a></div></div>
         <section class="dm-video-stage">
           <div id="dm-player-box">${current ? playerHTML(embedFor(current.id), current.title) + `<p class="dm-player-caption">${x(current.title)}</p>` : playerHTML(embedFor(null), 'Neueste Videos von Deutsch mit Dennis') + (ytConsent() ? '<p class="dm-player-caption">Die neuesten Videos des Kanals – über das Listensymbol oben rechts im Player wählst du weitere aus.</p>' : '')}</div>
         </section>
@@ -983,7 +983,7 @@
             <li>Sprechen kommt zuerst. Fehler gehören zum Lernen.</li>
           </ul>
           ${note('Du hast eine Frage oder einen Wunsch für ein neues Thema? Schreib mir!', true)}
-          <div class="dm-row"><a class="dm-btn" href="mailto:${T.email}">E-Mail schreiben</a><a class="dm-btn dm-btn-quiet" href="${T.youtube}" target="_blank" rel="noopener noreferrer">YouTube-Kanal ↗</a></div>
+          <div class="dm-row"><a class="dm-btn" href="mailto:${T.email}">E-Mail schreiben</a><a class="dm-btn dm-btn-quiet" href="${T.youtube}" target="_blank" rel="noopener noreferrer">YouTube-Kanal ↗</a><a class="dm-btn dm-btn-quiet" href="${T.instagram}" target="_blank" rel="noopener noreferrer">Instagram ↗</a><a class="dm-btn dm-btn-quiet" href="${T.tiktok}" target="_blank" rel="noopener noreferrer">TikTok ↗</a></div>
           <p class="dm-small">Oder schreib mir unter <a href="#pinnwand">„Deine Meinung“</a> einen Zettel.</p>
         </div>
       </section>
