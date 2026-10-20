@@ -1,6 +1,7 @@
 {
   "note": "Neu auf der Seite – neueste Einträge oben. Wird vom Redaktionsplan (geplante Aufgaben) ergänzt.",
   "items": [
+    { "date": "2026-10-20", "type": "neu", "title": "Prüfungssimulationen: Schriftliche und mündliche Prüfung jetzt getrennt starten – eine Uhr für die ganze schriftliche bzw. mündliche Prüfung, danach das Gesamtergebnis", "link": "#simulation" },
     { "date": "2026-10-19", "type": "neu", "title": "Lino läuft: Gekaufte Teile und Münzen bleiben jetzt sicher gespeichert – und mit dem Spielstand-Code kannst du deinen Stand auf ein anderes Gerät übertragen", "link": "#spiele/lino" },
     { "date": "2026-10-19", "type": "neu", "title": "Neu: 6 Prüfungssimulationen mit echter Zeitvorgabe – DTZ, Leben in Deutschland, telc B1, DTB B1, telc B2 und DTB B2. Mit Punkten, Bestehensregel und allen Lösungen", "link": "#simulation" },
     { "date": "2026-10-19", "type": "neu", "title": "Neu: Gezielte Vorbereitung auf telc B1, telc B2, DTB B1 und DTB B2 – Strategien für jeden Prüfungsteil, Mini-Übungen, Redemittel und Lernplan", "link": "#vorbereitung" },

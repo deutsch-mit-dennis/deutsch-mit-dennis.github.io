@@ -212,3 +212,26 @@
 .sim-opts-pic .sim-opt{padding:8px}
 .sim-opts-pic img{display:block;width:100%;max-width:160px;height:auto}
 @media (max-width:380px){.sim-opts-pic{gap:6px}.sim-opt{padding:10px 12px}}
+
+/* Start: schriftlich / mündlich */
+.sim-startlead{max-width:70ch;margin:0 0 14px}
+.sim-startgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:0 0 20px}
+@media (max-width:700px){.sim-startgrid{grid-template-columns:1fr}}
+.sim-startcard{display:grid;gap:8px;align-content:start;border-top:5px solid var(--dm-tinte)}
+.sim-startcard h3{margin:0;font-size:21px}
+.sim-startmin{margin:0;font-size:17px}.sim-startmin span{color:var(--dm-muted);font-size:15px}
+.sim-startcard ul{margin:0;padding-left:20px;color:var(--dm-muted);font-size:15px;line-height:1.5}
+.sim-startcard .dm-btn{width:100%;margin-top:4px}
+.sim-more{margin:0 0 20px}
+.sim-more>summary{cursor:pointer;font-weight:700;color:var(--dm-tinte);min-height:40px;display:flex;align-items:center}
+.sim-more .sim-steps{margin-top:14px}
+.sim-combo{display:grid;gap:4px;margin:0 0 18px;border-left:5px solid var(--dm-sun)}
+.sim-combo.ok{border-left-color:var(--dm-gruen)}
+.sim-combo small{color:var(--dm-muted)}
+#sim-combo .sim-verdict{margin:0 0 16px}
+.sim-hmode{color:var(--dm-muted);font-size:14px}
+.sim-progress{height:5px;border-radius:3px;background:var(--dm-line);margin:-8px 0 12px;overflow:hidden}
+.sim-progress i{display:block;height:100%;width:0;background:var(--dm-tinte);transition:width .5s linear}
+.sim-blocksec{margin:0 0 8px}
+.sim-sechead{font-size:24px;margin:26px 0 12px;padding:10px 14px;border-radius:12px;background:var(--dm-tinte-soft);scroll-margin-top:calc(var(--sim-top,0px) + 90px)}
+.sim-sechead small{font-size:14px;font-weight:400;color:var(--dm-muted)}

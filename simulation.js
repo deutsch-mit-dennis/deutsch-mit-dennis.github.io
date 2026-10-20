@@ -3,7 +3,7 @@
    LiD-Simulation: Fragen aus window.LID_KATALOG (BAMF-Gesamtfragenkatalog).
    Fortschritt und Antworten bleiben nur im Browser (DM.store.sim). */
 (() => {
-  const V = '20261019b';
+  const V = '20261020a';
   const $ = (s, r = document) => r.querySelector(s);
   const $$ = (s, r = document) => [...r.querySelectorAll(s)];
   const e = s => DM.esc(s);
@@ -216,20 +216,26 @@
     return optList + audio + body;
   }
 
+  const blockTimes = m => {
+    const oral = m.secs.filter(([t]) => /^Sprechen/.test(t)), wr = m.secs.filter(([t]) => !/^Sprechen/.test(t));
+    const sum = a => a.reduce((x, [, min, prep]) => x + min + (prep || 0), 0);
+    return oral.length ? `📝 schriftlich ${sum(wr)} Min. · 🗣 mündlich ${sum(oral)} Min.` : `⏱ ${sum(wr)} Min.`;
+  };
   /* ---------- Übersicht #simulation ---------- */
   function hub() {
     const S = store();
     const card = id => {
       const m = META[id], st = S[id], last = (S[id + '_hist'] || []).slice(-1)[0];
       const status = st && !st.done ? `<span class="sim-badge">⏸ angefangen</span>` : last ? `<span class="sim-badge ${last.pass ? 'ok' : ''}">Letztes Ergebnis: ${last.pct} %</span>` : '';
-      return `<a class="sim-card dm-g-${m.g}" href="#simulation/${id}"><span class="dm-tag">${e(m.who)}</span><b>${e(m.title)}</b><span class="sim-dur">⏱ ${e(m.total)}</span><span class="sim-secs">${m.secs.map(([t, min, prep]) => `<i>${e(t)} · ${min} Min.${prep ? ` (+${prep} Vorb.)` : ''}</i>`).join('')}</span>${status}</a>`;
+      return `<a class="sim-card dm-g-${m.g}" href="#simulation/${id}"><span class="dm-tag">${e(m.who)}</span><b>${e(m.title)}</b><span class="sim-dur">${blockTimes(m)}</span><span class="sim-secs">${m.secs.map(([t, min, prep]) => `<i>${e(t)} · ${min} Min.${prep ? ` (+${prep} Vorb.)` : ''}</i>`).join('')}</span>${status}</a>`;
     };
     DM.page(`${DM.crumbs([['Prüfungstraining', '#pruefung'], ['Prüfungssimulationen']])}
       <div class="dm-head"><h1>Prüfungssimulationen</h1><p class="dm-lead">Sechs komplette Prüfungen zum Üben – mit der echten Zeit für jeden Prüfungsteil. Am Ende siehst du deine Punkte, ob du bestanden hättest und alle Lösungen mit Erklärung.</p></div>
       <div class="sim-grid">${ORDER.map(card).join('')}</div>
       <section class="dm-card sim-how"><h2>So läuft eine Simulation</h2>
         <ul class="sim-list">
-          <li><b>⏱ Echte Zeit:</b> Jeder Prüfungsteil hat seine eigene Uhr. Ist die Zeit um, wird der Teil automatisch abgegeben.</li>
+          <li><b>⏱ Schriftlich und mündlich getrennt:</b> Du startest die schriftliche oder die mündliche Prüfung – ab dann läuft eine Uhr für die ganze schriftliche bzw. mündliche Prüfung. Ist die Zeit um, wird automatisch abgegeben.</li>
+          <li><b>🏁 Gesamtergebnis:</b> Hast du beide Teile gemacht, siehst du, ob du die ganze Prüfung bestanden hättest.</li>
           <li><b>🔒 Wie in der Prüfung:</b> Nach der Abgabe kannst du nicht mehr zurück. Hörtexte hörst du nur so oft wie in der Prüfung.</li>
           <li><b>✍️ Schreiben:</b> mit Wortzähler. Danach vergleichst du mit dem Mustertext und bewertest dich mit einer Checkliste.</li>
           <li><b>🗣 Sprechen:</b> Die Prüferin bzw. die Partnerin wird vorgelesen. Du kannst dich aufnehmen und danach anhören.</li>
@@ -238,6 +244,14 @@
         <p class="dm-small">Eigene Übungsaufgaben im Stil der Prüfungen – keine offiziellen Prüfungsaufgaben. Unabhängiges Angebot, nicht von g.a.s.t., telc oder BAMF. Kopfhörer und ein ruhiger Ort helfen.</p></section>
       <section class="dm-card"><h2>Erst gezielt vorbereiten?</h2><p>Für telc B1, telc B2, DTB B1 und DTB B2 gibt es Strategien für jeden Prüfungsteil, typische Fallen, Redemittel und einen 4-Wochen-Lernplan.</p><a class="dm-btn dm-btn-quiet" href="#vorbereitung">Zur gezielten Vorbereitung</a></section>`, 'sim-page');
   }
+
+  /* ---------- Schriftliche und mündliche Prüfung ---------- */
+  const isOralSec = s => s.parts.some(p => p.kind === 'speak');
+  const groupIdx = (ex, g) => ex.sections.map((s, i) => i).filter(i => (g === 'oral') === isOralSec(ex.sections[i]));
+  const groupMin = (ex, g) => groupIdx(ex, g).reduce((a, i) => a + ex.sections[i].minutes + (ex.sections[i].prepMinutes || 0), 0);
+  const GROUP = { written: { ic: '📝', name: 'Schriftliche Prüfung' }, oral: { ic: '🗣', name: 'Mündliche Prüfung' } };
+  const isBlock = st => st.mode === 'written' || st.mode === 'oral';
+  const modeLabel = m => ({ full: 'Teil für Teil', written: 'schriftlich', oral: 'mündlich', single: 'einzelner Teil' }[m] || '');
 
   /* ---------- Startseite einer Simulation ---------- */
   async function intro(id) {
@@ -250,21 +264,41 @@
       return `<li class="sim-step"><span class="sim-stepno">${si + 1}</span><div><b>${e(s.title)}</b> <span class="sim-min">⏱ ${s.minutes} Min.${s.prepMinutes ? ` + ${s.prepMinutes} Min. Vorbereitung` : ''}</span><ul>${parts.map(t => `<li>${e(t)}</li>`).join('')}</ul>${ex.id === 'lid' || ex.sections.length < 2 ? '' : `<button type="button" class="dm-btn dm-btn-quiet sim-single" data-single="${si}">Nur diesen Teil üben</button>`}</div></li>`;
     }).join('');
     const running = st && !st.done;
-    const curSec = running ? ex.sections[st.secs[st.k]] : null;
+    const curSec = running ? ex.sections[st.secs[Math.min(st.k, st.secs.length - 1)]] : null;
+    const runTitle = running ? (isBlock(st) ? GROUP[st.mode].name : curSec.title) : '';
     const hist = store()[id + '_hist'] || [];
+    const hasOral = groupIdx(ex, 'oral').length > 0;
+    const startCard = g => {
+      const idx = groupIdx(ex, g), mins = groupMin(ex, g), prep = idx.reduce((a, i) => a + (ex.sections[i].prepMinutes || 0), 0);
+      const last = [...hist].reverse().find(h => h.mode === g);
+      return `<div class="sim-startcard dm-card"><h3>${GROUP[g].ic} ${id === 'lid' ? 'Test „Leben in Deutschland“' : GROUP[g].name}</h3>
+        <p class="sim-startmin">⏱ <b>${mins} Minuten</b>${prep ? ` <span>(davon ${prep} Min. Vorbereitung)</span>` : ''}</p>
+        <ul>${idx.map(i => `<li>${e(ex.sections[i].title)} <span>· ${ex.sections[i].minutes}${ex.sections[i].prepMinutes ? ` + ${ex.sections[i].prepMinutes}` : ''} Min.</span></li>`).join('')}</ul>
+        ${last ? `<p class="dm-small">Zuletzt: <b>${last.pct} %</b> am ${new Date(last.date).toLocaleDateString('de-DE')}</p>` : ''}
+        <button type="button" class="dm-btn" data-start="${g}" ${running ? 'disabled' : ''}>▶ ${id === 'lid' ? 'Test' : GROUP[g].name} starten</button></div>`;
+    };
+    const combo = combined(id, ex);
     DM.page(`${DM.crumbs([['Prüfungstraining', '#pruefung'], ['Simulationen', '#simulation'], [m.short]])}
       <div class="dm-head"><span class="dm-tag">${e(m.who)}</span><h1>Simulation: ${e(ex.title)}</h1><p class="dm-lead">${e(ex.intro)}</p></div>
-      ${running ? `<aside class="dm-card sim-resume"><b>Du bist mitten in der Simulation.</b> <span>${e(curSec.title)} – noch ${mmss(st.left)} Min.${st.phase === 'break' ? ' (Pause vor dem nächsten Teil)' : ''}</span><div class="dm-row"><a class="dm-btn" href="#simulation/${id}/run">▶ Fortsetzen</a><button type="button" class="dm-btn dm-btn-quiet" id="sim-new">Neu beginnen</button></div></aside>` : ''}
-      <h2 class="sim-h2">Ablauf der Prüfung</h2><ol class="sim-steps">${rows}</ol>
+      ${running ? `<aside class="dm-card sim-resume"><b>Du bist mitten in der Simulation.</b> <span>${e(runTitle)} – noch ${mmss(st.left)} Min.${st.phase === 'break' ? ' (Pause vor dem nächsten Teil)' : ''}</span><div class="dm-row"><a class="dm-btn" href="#simulation/${id}/run">▶ Fortsetzen</a><button type="button" class="dm-btn dm-btn-quiet" id="sim-new">Neu beginnen</button></div></aside>` : ''}
+      <h2 class="sim-h2">Prüfung starten</h2>
+      <p class="sim-startlead">${hasOral ? 'Starte die schriftliche und die mündliche Prüfung getrennt – wie am Prüfungstag. Sobald du startest, läuft <b>eine Uhr für die gesamte schriftliche bzw. mündliche Prüfung</b>. Die Zeit teilst du dir selbst ein; ist sie um, wird automatisch abgegeben.' : 'Sobald du startest, läuft die Uhr für den gesamten Test. Ist sie um, wird automatisch abgegeben.'}</p>
+      <div class="sim-startgrid">${startCard('written')}${hasOral ? startCard('oral') : ''}</div>
+      ${combo ? `<aside class="dm-card sim-combo ${combo.verdict.pass ? 'ok' : 'no'}"><b>Gesamtergebnis (schriftlich + mündlich): ${e(combo.verdict.head)}</b>${combo.verdict.lines.map(l => `<span>${e(l)}</span>`).join('')}<small>Aus deiner letzten schriftlichen (${combo.wDate}) und mündlichen Prüfung (${combo.oDate}).</small></aside>` : ''}
       ${ruleBox(ex)}
       ${id === 'lid' ? `<p class="dm-small">Für die drei Bundesland-Fragen nimmt die Simulation die Fragen für Nordrhein-Westfalen.</p>` : ''}
-      <div class="dm-row sim-start">${running ? '' : `<button type="button" class="dm-btn" id="sim-go">▶ Simulation starten (${e(m.total)})</button>`}${PREP.includes(id) ? `<a class="dm-btn dm-btn-quiet" href="#vorbereitung/${id}">Gezielte Vorbereitung</a>` : ''}</div>
-      ${hist.length ? `<section class="dm-card"><h2>Deine Ergebnisse</h2><ul class="sim-hist">${hist.slice(-5).reverse().map(h => `<li><span>${new Date(h.date).toLocaleDateString('de-DE')}</span><b>${h.pct} %</b><span>${h.pass ? '✓ bestanden' : h.single ? 'einzelner Teil' : '✗ noch nicht bestanden'}</span></li>`).join('')}</ul></section>` : ''}
+      ${ex.sections.length > 1 ? `<details class="sim-more dm-card"><summary>Andere Möglichkeiten: Teil für Teil oder nur einen Teil üben</summary>
+        <p>Bei <b>Teil für Teil</b> hat jeder Prüfungsteil seine eigene Uhr, mit Pause dazwischen. Du kannst auch nur einen einzelnen Teil üben.</p>
+        <button type="button" class="dm-btn dm-btn-quiet" id="sim-go" ${running ? 'disabled' : ''}>▶ Ganze Prüfung Teil für Teil (${e(m.total)})</button>
+        <ol class="sim-steps">${rows}</ol></details>` : ''}
+      ${PREP.includes(id) ? `<div class="dm-row sim-start"><a class="dm-btn dm-btn-quiet" href="#vorbereitung/${id}">Gezielte Vorbereitung</a></div>` : ''}
+      ${hist.length ? `<section class="dm-card"><h2>Deine Ergebnisse</h2><ul class="sim-hist">${hist.slice(-6).reverse().map(h => `<li><span>${new Date(h.date).toLocaleDateString('de-DE')}</span><span class="sim-hmode">${e(modeLabel(h.mode || (h.single ? 'single' : 'full')))}</span><b>${h.pct} %</b><span>${h.pass === true ? '✓ bestanden' : h.pass === false && (h.mode === 'full' || !h.mode) && !h.single ? '✗ noch nicht bestanden' : ''}</span></li>`).join('')}</ul></section>` : ''}
       <p class="dm-small">Eigene Übungsaufgaben im Stil der Prüfung – keine offiziellen Aufgaben.</p>
       ${id === 'lid' ? window.LID_QUELLE_HTML || '' : ''}`, 'sim-page');
     $('#sim-go')?.addEventListener('click', () => begin(id, ex, 'full'));
+    $$('[data-start]').forEach(b => b.addEventListener('click', () => begin(id, ex, b.dataset.start)));
     $('#sim-new')?.addEventListener('click', ev => { const b = ev.currentTarget; if (!b.dataset.sure) { b.dataset.sure = 1; b.textContent = 'Wirklich? Dein Stand wird gelöscht.'; return; } delete store()[id]; save(); intro(id); });
-    $$('[data-single]').forEach(b => b.addEventListener('click', () => begin(id, ex, 'single', +b.dataset.single)));
+    $$('[data-single]').forEach(b => { b.disabled = running; b.addEventListener('click', () => begin(id, ex, 'single', +b.dataset.single)); });
   }
   function ruleBox(ex) {
     const R = {
@@ -282,9 +316,11 @@
   /* ---------- Ablauf ---------- */
   function begin(id, ex, mode, si) {
     stopAll();
-    const st = { v: 1, mode, secs: mode === 'full' ? ex.sections.map((_, i) => i) : [si], k: 0, left: 0, phase: '', ans: {}, write: {}, rate: {}, plays: {}, prompt: {}, notes: {}, started: Date.now(), done: false };
+    const secs = mode === 'full' ? ex.sections.map((_, i) => i) : mode === 'written' || mode === 'oral' ? groupIdx(ex, mode) : [si];
+    const st = { v: 1, mode, secs, k: 0, left: 0, phase: '', ans: {}, write: {}, rate: {}, plays: {}, prompt: {}, notes: {}, started: Date.now(), done: false };
     if (id === 'lid') { st.lidQs = lidPick(); }
-    startSection(ex, st);
+    if (isBlock(st)) { st.phase = 'work'; st.left = groupMin(ex, mode) * 60; st.total = st.left; }
+    else startSection(ex, st);
     store()[id] = st; save();
     location.hash = `#simulation/${id}/run`;
   }
@@ -313,6 +349,7 @@
     draw();
   }
   function draw() {
+    if (isBlock(cur.st)) return drawBlock();
     const { id, ex, st } = cur;
     const s = ex.sections[st.secs[st.k]];
     const total = st.secs.length;
@@ -330,6 +367,34 @@
       ${isPrep ? `<aside class="dm-card sim-rule"><b>Vorbereitungszeit (${s.prepMinutes} Min.)</b><p>Lies alle Aufgaben und mach dir Notizen. In der Prüfung darfst du die Notizen benutzen – aber keine ganzen Sätze vorlesen. Danach beginnt das Gespräch.</p></aside>` : ''}
       <div class="sim-parts" data-nocheck>${parts.map((p, pi) => `<section class="sim-part" id="sim-p${pi}" data-key="${p._key}"><h2>${e(p.title)}${p.kind === 'speak' ? ` <small>ca. ${p.minutes} Min.</small>` : ''}</h2><p class="sim-instr">${e(instrOf(p))}</p>${p.kind === 'write' ? writeHTML(p, st) : p.kind === 'speak' ? speakHTML(p, st, isPrep) : partHTML(p, st, 'run')}</section>`).join('')}</div>
       <div class="sim-end"><button type="button" class="dm-btn" id="sim-submit2">${isPrep ? 'Vorbereitung beenden – Gespräch beginnen' : `${e(s.title)} abgeben`}</button><p class="dm-small" id="sim-open"></p></div>`, 'sim-page sim-run');
+    bindRun();
+    counts();
+    stickTop();
+    tickStart();
+  }
+  /* Schriftliche bzw. mündliche Prüfung: alle Teile auf einer Seite, eine Uhr für alles */
+  function drawBlock() {
+    const { id, ex, st } = cur;
+    const g = GROUP[st.mode], secs = st.secs.map(i => ex.sections[i]);
+    const name = id === 'lid' ? 'Test „Leben in Deutschland“' : g.name;
+    const plan = secs.length > 1 ? `<p class="sim-note">⏱ <b>Gesamtzeit ${Math.round(st.total / 60)} Minuten</b> – teile sie dir selbst ein. Empfehlung wie in der Prüfung: ${secs.map(s => `${e(s.title)} ${s.minutes}${s.prepMinutes ? ` (+${s.prepMinutes} Vorbereitung)` : ''} Min.`).join(' · ')}.</p>` : '';
+    const prepBox = st.mode === 'oral' && secs.some(s => s.prepMinutes) ? `<aside class="dm-card sim-rule"><b>Erst vorbereiten, dann sprechen</b><p>Die ersten ${secs.reduce((a, s) => a + (s.prepMinutes || 0), 0)} Minuten sind Vorbereitungszeit: Lies alle Aufgaben und schreib Stichpunkte in die Notizfelder. Danach führst du die Gespräche – die Notizen darfst du benutzen, aber keine ganzen Sätze vorlesen.</p></aside>` : '';
+    const chips = st.secs.flatMap(si => ex.sections[si].parts.map((p, pi) => `<a href="#" data-goto="sim-p${si}-${pi}" class="sim-chip">${e(shortTitle(p.title))}<small data-count="${si}-${pi}"></small></a>`)).join('');
+    const body = st.secs.map(si => {
+      const s = ex.sections[si];
+      return `<div class="sim-blocksec">${secs.length > 1 ? `<h2 class="sim-sechead">${e(s.title)} <small>empfohlen ${s.minutes}${s.prepMinutes ? ` + ${s.prepMinutes}` : ''} Min.</small></h2>` : ''}${s.note ? `<p class="sim-note">${e(s.note)}</p>` : ''}${voiceNote(s)}
+        ${s.parts.map((p, pi) => `<section class="sim-part" id="sim-p${si}-${pi}" data-key="${p._key}"><h2>${e(p.title)}${p.kind === 'speak' ? ` <small>ca. ${p.minutes} Min.</small>` : ''}</h2><p class="sim-instr">${e(instrOf(p))}</p>${p.kind === 'write' ? writeHTML(p, st) : p.kind === 'speak' ? speakHTML(p, st, false, !!s.prepMinutes) : partHTML(p, st, 'run')}</section>`).join('')}</div>`;
+    }).join('');
+    DM.page(`<div class="sim-bar" role="region" aria-label="Prüfungsuhr">
+        <div class="sim-bar-t"><small>${e(META[id].short)} · ${g.ic} Gesamtzeit ${Math.round(st.total / 60)} Min.</small><b>${e(name)}</b></div>
+        <div class="sim-clock" id="sim-clock" aria-live="off">${mmss(st.left)}</div>
+        <button type="button" class="dm-btn sim-submit" id="sim-submit">Abgeben</button>
+      </div>
+      <div class="sim-progress" aria-hidden="true"><i id="sim-prog"></i></div>
+      ${chips && st.secs.reduce((a, si) => a + ex.sections[si].parts.length, 0) > 1 ? `<nav class="sim-chips" aria-label="Teile">${chips}</nav>` : ''}
+      ${plan}${prepBox}
+      <div class="sim-parts" data-nocheck>${body}</div>
+      <div class="sim-end"><button type="button" class="dm-btn" id="sim-submit2">${e(name)} abgeben</button><p class="dm-small" id="sim-open"></p></div>`, 'sim-page sim-run');
     bindRun();
     counts();
     stickTop();
@@ -377,6 +442,7 @@
     const c = $('#sim-clock'); if (!c || !cur) return;
     const l = cur.st.left;
     c.textContent = mmss(l);
+    const pr = $('#sim-prog'); if (pr && cur.st.total) pr.style.width = Math.max(0, Math.min(100, 100 - l / cur.st.total * 100)) + '%';
     c.classList.toggle('is-warn', l <= 300 && l > 60);
     c.classList.toggle('is-alarm', l <= 60);
     if (l === 300 || l === 60) toast(l === 300 ? 'Noch 5 Minuten.' : 'Noch 1 Minute.');
@@ -385,7 +451,7 @@
     const { st } = cur;
     clearInterval(timer);
     if (st.phase === 'prep') { toast('Die Vorbereitungszeit ist vorbei. Jetzt beginnt das Gespräch.'); endPrep(); return; }
-    toast('Die Zeit ist um. Dieser Teil wurde abgegeben.');
+    toast(isBlock(st) ? `Die Zeit ist um. ${GROUP[st.mode].name} wurde abgegeben.` : 'Die Zeit ist um. Dieser Teil wurde abgegeben.');
     finishSection();
   }
   function endPrep() {
@@ -395,12 +461,12 @@
   function finishSection() {
     const { id, ex, st } = cur;
     stopAudio(); stopRec();
-    st.k++;
+    st.k = isBlock(st) ? st.secs.length : st.k + 1;
     if (st.k >= st.secs.length) {
       st.done = true; st.finished = Date.now();
       const r = score(ex, st);
       const hist = store()[id + '_hist'] ||= [];
-      hist.push({ date: Date.now(), pct: r.pct, pass: r.verdict?.pass || false, single: st.mode === 'single' });
+      hist.push({ date: Date.now(), mode: st.mode, pct: r.pct, pass: r.verdict ? (r.verdict.pass ?? null) : null, single: st.mode === 'single', sk: skMap(r.sk) });
       if (hist.length > 20) hist.splice(0, hist.length - 20);
       save(); clearInterval(timer); cur = null;
       location.hash = `#simulation/${id}/ergebnis`;
@@ -410,11 +476,12 @@
   }
   function counts() {
     if (!cur) return;
-    const { ex, st } = cur; const s = ex.sections[st.secs[st.k]];
+    const { ex, st } = cur;
+    const list = isBlock(st) ? st.secs.flatMap(si => ex.sections[si].parts.map((p, pi) => [p, `${si}-${pi}`])) : ex.sections[st.secs[st.k]].parts.map((p, pi) => [p, String(pi)]);
     let open = 0;
-    s.parts.forEach((p, pi) => {
+    list.forEach(([p, k]) => {
       const its = p.items || []; const done = its.filter(it => st.ans[it._n] != null).length; open += its.length - done;
-      const el = $(`[data-count="${pi}"]`);
+      const el = $(`[data-count="${k}"]`);
       if (el) el.textContent = its.length ? ` ${done}/${its.length}` : p.kind === 'write' ? ` ${words(st.write[p._key]?.text)} W.` : '';
     });
     const o = $('#sim-open'); if (o) o.textContent = open ? `Noch ${open} Aufgabe${open === 1 ? '' : 'n'} ohne Antwort.` : st.phase === 'prep' ? '' : 'Alle Aufgaben beantwortet.';
@@ -522,13 +589,14 @@
     recorder.start();
     btn.textContent = '■ Aufnahme stoppen'; btn.classList.add('is-rec');
   }
-  function speakHTML(p, st, isPrep) {
+  function speakHTML(p, st, isPrep, withNotes = false) {
     const key = p._key, n = st.prompt[key] || 0, total = (p.prompts || []).length;
     const canRec = !!(navigator.mediaDevices?.getUserMedia && window.MediaRecorder);
     const url = recs[(cur?.id || '') + key];
-    return `<div class="sim-taskcard">${para(p.task)}</div>${materialHTML(p)}
+    const notes = `<label class="sim-wlabel" for="n-${key}">Deine Notizen (Stichpunkte)</label><textarea id="n-${key}" class="sim-textarea sim-notes" data-notes="${key}" rows="4">${e(st.notes[key] || '')}</textarea>`;
+    return `<div class="sim-taskcard">${para(p.task)}</div>${materialHTML(p)}${withNotes && !isPrep ? notes : ''}
       ${isPrep ? `<label class="sim-wlabel" for="n-${key}">Deine Notizen (Stichpunkte)</label><textarea id="n-${key}" class="sim-textarea sim-notes" data-notes="${key}" rows="4">${e(st.notes[key] || '')}</textarea>`
-        : `${st.notes[key] ? `<details class="sim-det"><summary>Deine Notizen</summary><p class="sim-pre">${e(st.notes[key])}</p></details>` : ''}
+        : `${st.notes[key] && !withNotes ? `<details class="sim-det"><summary>Deine Notizen</summary><p class="sim-pre">${e(st.notes[key])}</p></details>` : ''}
         ${total ? `<div class="sim-prompts"><button type="button" class="dm-btn dm-btn-quiet sim-ask" data-key="${key}" ${n >= total ? 'disabled' : ''}>${n === 0 ? '▶ Gespräch beginnen' : n >= total ? 'Alle Fragen gestellt' : `▶ Nächste Äußerung (${n + 1}/${total})`}</button><p class="sim-said" data-said="${key}">${n ? `<b>Gesprächspartner/in:</b> ${e(p.prompts[n - 1])}` : 'Die Prüferin oder deine Partnerin spricht. Antworte laut.'}</p></div>` : ''}
         <div class="sim-recrow">${canRec ? `<button type="button" class="dm-btn dm-btn-quiet sim-recbtn" data-rec="${key}">${url ? '🎙 Neu aufnehmen' : '🎙 Mich aufnehmen'}</button>` : '<span class="dm-small">Aufnehmen ist in diesem Browser nicht möglich.</span>'}<span data-recbox="${key}">${url ? `<audio controls src="${url}"></audio>` : ''}</span></div>`}
       ${p.redemittel?.length ? `<details class="sim-det"><summary>Hilfe: Redemittel</summary><ul class="sim-chiplist">${p.redemittel.map(r => `<li>${e(r)}</li>`).join('')}</ul></details>` : ''}`;
@@ -573,14 +641,15 @@
     }));
     for (const [k, v] of Object.entries(ex.skills)) {
       if (!raw[k]) continue;
-      const full = st.mode === 'full';
+      const full = st.mode === 'full' || isBlock(st);
       const max = full ? v.max : raw[k].max;
       const got = full && raw[k].max ? raw[k].got / raw[k].max * v.max : raw[k].got;
       sk[k] = { label: v.label, got: Math.round(got * 2) / 2, max };
     }
     const sum = Object.values(sk).reduce((a, b) => a + b.got, 0), mx = Object.values(sk).reduce((a, b) => a + b.max, 0);
     const pct = mx ? Math.round(sum / mx * 100) : 0;
-    const verdict = st.mode === 'full' ? judge(ex.rule, sk) : null;
+    const all = Object.keys(ex.skills).every(k => sk[k]);
+    const verdict = st.mode === 'full' || (isBlock(st) && all) ? judge(ex.rule, sk) : isBlock(st) ? judgePart(ex.rule, sk, st.mode) : null;
     return { sk, pct, verdict, unrated, sum, mx };
   }
   function judge(rule, sk) {
@@ -612,6 +681,39 @@
     return null;
   }
   const fmt = n => String(Math.round(n * 2) / 2).replace('.', ',');
+  /* Ergebnis nur der schriftlichen bzw. mündlichen Prüfung */
+  function judgePart(rule, sk, mode) {
+    const g = k => sk[k]?.got || 0, mark = ok => ok ? '✓' : '✗';
+    const other = mode === 'written' ? 'mündliche' : 'schriftliche';
+    const tail = `Für das Gesamtergebnis mach auch die ${other} Prüfung.`;
+    if (rule === 'telc') {
+      if (mode === 'written') { const w = g('lesen') + g('sb') + g('hoeren') + g('schreiben'); return { pass: w >= 135, head: w >= 135 ? 'Schriftliche Prüfung bestanden' : 'Schriftliche Prüfung noch nicht bestanden', lines: [`${fmt(w)} von 225 Punkten (nötig: 135) ${mark(w >= 135)}`, tail] }; }
+      const m = g('muendlich'); return { pass: m >= 45, head: m >= 45 ? 'Mündliche Prüfung bestanden' : 'Mündliche Prüfung noch nicht bestanden', lines: [`${fmt(m)} von 75 Punkten (nötig: 45) ${mark(m >= 45)}`, tail] };
+    }
+    if (rule === 'dtb') {
+      const ks = mode === 'written' ? ['lesen', 'hoeren', 'schreiben'] : ['sprechen'];
+      const lines = ks.map(k => `${sk[k]?.label || k}: ${fmt(g(k))} von 60 (60 % = 36) ${mark(g(k) >= 36)}`);
+      const tot = ks.reduce((a, k) => a + g(k), 0);
+      return { pass: null, head: `${mode === 'written' ? 'Schriftlicher' : 'Mündlicher'} Teil: ${fmt(tot)} von ${ks.length * 60} Punkten`, lines: [...lines, 'Beim DTB zählen alle vier Fertigkeiten zusammen (mind. 144 von 240, drei Fertigkeiten mit 60 %, die schwächste mit 40 %). ' + tail] };
+    }
+    if (rule === 'dtz') {
+      const lv = (v, b1, a2) => v >= b1 ? 'B1' : v >= a2 ? 'A2' : 'unter A2';
+      if (mode === 'written') { const hl = lv(g('hl'), 33, 20), s = lv(g('s'), 15, 7); return { pass: null, head: `Schriftlich: Hören/Lesen ${hl}, Schreiben ${s}`, lines: [`Hören und Lesen: ${fmt(g('hl'))} von 45 → ${hl}`, `Schreiben: ${fmt(g('s'))} von 20 → ${s}`, 'Das Zertifikat hängt vom Sprechen ab (Sprechen + das bessere Ergebnis aus Hören/Lesen oder Schreiben). ' + tail] }; }
+      const m = lv(g('m'), 75, 35); return { pass: null, head: `Sprechen: ${m}`, lines: [`Sprechen: ${fmt(g('m'))} von 100 → ${m}`, tail] };
+    }
+    return null;
+  }
+  const skMap = sk => Object.fromEntries(Object.entries(sk).map(([k, v]) => [k, v.got]));
+  /* Gesamtergebnis aus der letzten schriftlichen und der letzten mündlichen Prüfung */
+  function combined(id, ex) {
+    const hist = store()[id + '_hist'] || [];
+    const w = [...hist].reverse().find(h => h.mode === 'written' && h.sk), o = [...hist].reverse().find(h => h.mode === 'oral' && h.sk);
+    if (!w || !o) return null;
+    const sk = {};
+    for (const [k, v] of Object.entries(ex.skills)) sk[k] = { label: v.label, max: v.max, got: (w.sk[k] ?? 0) + (o.sk[k] ?? 0) };
+    const d = h => new Date(h.date).toLocaleDateString('de-DE');
+    return { verdict: judge(ex.rule, sk), wDate: d(w), oDate: d(o) };
+  }
 
   async function result(id) {
     let ex;
@@ -621,14 +723,18 @@
     if (!st.done) { location.replace(`#simulation/${id}/run`); return; }
     if (id === 'lid') ex = lidExam(st); else prepare(ex);
     stopAll();
-    const ctx = { id, ex, st };
+    const other = st.mode === 'written' ? 'oral' : 'written';
     const paint = () => {
       const r = score(ex, st);
       const bars = Object.entries(r.sk).map(([k, v]) => { const pc = v.max ? Math.round(v.got / v.max * 100) : 0; return `<li><span>${e(v.label)}</span><span class="sim-barbg"><i style="width:${pc}%" class="${pc >= 60 ? 'ok' : pc >= 40 ? 'mid' : 'low'}"></i></span><b>${fmt(v.got)} / ${v.max}</b></li>`; }).join('');
-      $('#sim-sum').innerHTML = `${r.verdict ? `<div class="sim-verdict ${r.verdict.pass ? 'ok' : 'no'}"><b>${e(r.verdict.head)}</b>${r.verdict.lines.map(l => `<span>${e(l)}</span>`).join('')}</div>` : `<div class="sim-verdict"><b>${r.pct} % richtig</b><span>Einzelner Prüfungsteil – für ein Gesamtergebnis mach die ganze Simulation.</span></div>`}
+      $('#sim-sum').innerHTML = `${r.verdict ? `<div class="sim-verdict ${r.verdict.pass === true ? 'ok' : r.verdict.pass === false ? 'no' : ''}"><b>${e(r.verdict.head)}</b>${r.verdict.lines.map(l => `<span>${e(l)}</span>`).join('')}</div>` : `<div class="sim-verdict"><b>${r.pct} % richtig</b><span>Einzelner Prüfungsteil – für ein Gesamtergebnis mach die schriftliche und die mündliche Prüfung.</span></div>`}
         <ul class="sim-bars">${bars}</ul>
         ${r.unrated ? `<p class="sim-hint">✍️ Noch ${r.unrated} Schreib- bzw. Sprechaufgabe${r.unrated === 1 ? '' : 'n'} ohne Bewertung (zählt bis dahin mit 0 Punkten). Bewerte dich unten mit der Checkliste.</p>` : '<p class="dm-small">Schreiben und Sprechen hast du selbst bewertet – das ist eine Schätzung. Sei ehrlich streng, dann ist das Ergebnis realistisch.</p>'}`;
-      const hist = store()[id + '_hist']; if (hist?.length) { hist[hist.length - 1].pct = r.pct; hist[hist.length - 1].pass = r.verdict?.pass || false; }
+      const hist = store()[id + '_hist']; if (hist?.length) { const h = hist[hist.length - 1]; h.pct = r.pct; h.pass = r.verdict ? (r.verdict.pass ?? null) : null; h.sk = skMap(r.sk); h.mode ||= st.mode; }
+      const combo = isBlock(st) && ex.rule !== 'lid' ? combined(id, ex) : null;
+      const other = st.mode === 'written' ? 'oral' : 'written';
+      $('#sim-combo').innerHTML = combo ? `<div class="sim-verdict ${combo.verdict.pass ? 'ok' : 'no'}"><b>Gesamtergebnis: ${e(combo.verdict.head)}</b>${combo.verdict.lines.map(l => `<span>${e(l)}</span>`).join('')}<span class="dm-small">Aus deiner letzten schriftlichen (${combo.wDate}) und mündlichen Prüfung (${combo.oDate}).</span></div>` : '';
+      const nb = $('#sim-nextblock'); if (nb) nb.hidden = !(isBlock(st) && groupIdx(ex, other).length && ex.rule !== 'lid');
     };
     const sections = st.secs.map(si => {
       const s = ex.sections[si];
@@ -641,14 +747,17 @@
       }).join('')}</details>`;
     }).join('');
     DM.page(`${DM.crumbs([['Prüfungstraining', '#pruefung'], ['Simulationen', '#simulation'], [META[id].short, `#simulation/${id}`], ['Ergebnis']])}
-      <div class="dm-head"><h1>Dein Ergebnis: ${e(META[id].short)}</h1><p class="dm-lead">${st.mode === 'full' ? 'Simulation vollständig.' : 'Einzelner Prüfungsteil.'} Unten findest du alle Lösungen mit Erklärung.</p></div>
+      <div class="dm-head"><h1>Dein Ergebnis: ${e(META[id].short)}</h1><p class="dm-lead">${st.mode === 'full' ? 'Simulation vollständig.' : isBlock(st) ? (id === 'lid' ? 'Test vollständig.' : `${GROUP[st.mode].name} vollständig.`) : 'Einzelner Prüfungsteil.'} Unten findest du alle Lösungen mit Erklärung.</p></div>
       <section class="dm-card sim-sum" id="sim-sum" aria-live="polite"></section>
+      <div id="sim-combo"></div>
+      <div class="dm-row sim-tools" id="sim-nextblock" hidden><button type="button" class="dm-btn" id="sim-other">${GROUP[other].ic} ${GROUP[other].name} starten (${groupMin(ex, other)} Min.)</button></div>
       <div class="dm-row sim-tools"><label class="sim-toggle"><input type="checkbox" id="sim-only"> Nur Fehler zeigen</label><button type="button" class="dm-btn dm-btn-quiet" id="sim-again">Neue Simulation</button><a class="dm-btn dm-btn-quiet" href="#simulation">Alle Simulationen</a>${PREP.includes(id) ? `<a class="dm-btn dm-btn-quiet" href="#vorbereitung/${id}">Gezielt üben</a>` : ''}</div>
       <div class="sim-review">${sections}</div>
       ${id === 'lid' ? window.LID_QUELLE_HTML || '' : '<p class="dm-small">Eigene Übungsaufgaben im Stil der Prüfung – keine offiziellen Aufgaben. Die Bewertung ist eine Schätzung.</p>'}`, 'sim-page');
     paint();
     $('#sim-only').onchange = ev => main().classList.toggle('sim-only-wrong', ev.target.checked);
     $('#sim-again').onclick = () => begin(id, ex, st.mode, st.secs[0]);
+    $('#sim-other').onclick = () => begin(id, ex, other);
     main().onclick = ev => {
       const play = ev.target.closest('.sim-play');
       if (play) { miniCtx = { st: { plays: {} }, clip: key => findClip(ex, key) }; playClip(play); }
