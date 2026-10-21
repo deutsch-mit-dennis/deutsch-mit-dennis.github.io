@@ -1,0 +1,236 @@
+[
+  {
+    "id": "a2-09-nachtschicht",
+    "level": "A2",
+    "title": "Wenn die Stadt schläft",
+    "theme": "Arbeit in der Nachtschicht: Arbeitsweg, Kollegen, Pause, freie Zeit",
+    "grammar": "Nebensätze mit wenn (Zeit und Bedingung): Verb am Ende; nach dem wenn-Satz kommt das Verb zuerst (Wenn die Stadt schläft, bin ich wach.)",
+    "intro": "Andere schlafen, du arbeitest – dieses Lied erzählt von einer Nacht im Lager. Du übst Sätze mit wenn und siehst, wo das Verb steht.",
+    "lyrics": "[Verse 1]\nUm zehn Uhr am Abend ziehe ich die Jacke an,\ndie Straße ist nass vom Regen, ich warte auf die Bahn.\nIch habe Nachtschicht im Lager, ich packe Karton für Karton,\ndie Lampen in der Halle sind weiß – ich kenne sie schon.\n\n[Chorus]\nWenn die Stadt schläft, bin ich wach,\nwenn du träumst, denke ich an dich – die ganze Nacht.\nWenn der Morgen kommt, fahre ich nach Haus,\nund wenn du aufstehst, ruhe ich mich aus.\n\n[Verse 2]\nUm zwei Uhr machen wir Pause, wir trinken heißen Tee,\ndraußen fällt der Regen – oder ist es schon Schnee?\nMeine Kollegin Marta lacht: „Wenn du müde bist,\ndann trink noch einen Kaffee – du weißt, wie lang die Nacht ist.“\n\n[Chorus]\nWenn die Stadt schläft, bin ich wach,\nwenn du träumst, denke ich an dich – die ganze Nacht.\nWenn der Morgen kommt, fahre ich nach Haus,\nund wenn du aufstehst, ruhe ich mich aus.\n\n[Bridge]\nAm Wochenende habe ich frei,\ndann sind wir zusammen, nur wir zwei.\nWenn ich Zeit habe, gehen wir in den Park,\nund wenn du lachst, fühle ich mich stark.\n\n[Chorus]\nWenn die Stadt schläft, bin ich wach,\nwenn du träumst, denke ich an dich – die ganze Nacht.\nWenn der Morgen kommt, fahre ich nach Haus,\nund wenn du aufstehst, ruhe ich mich aus.\n\n[Outro]\nWenn die Stadt schläft, bin ich wach –\nbis morgen früh. Gute Nacht.",
+    "vocab": [
+      [
+        "die Nachtschicht, die Nachtschichten",
+        "Arbeit in der Nacht"
+      ],
+      [
+        "das Lager, die Lager",
+        "großer Raum oder Gebäude für Waren"
+      ],
+      [
+        "der Karton, die Kartons",
+        "eine Kiste aus Pappe"
+      ],
+      [
+        "die Halle, die Hallen",
+        "ein sehr großer Raum"
+      ],
+      [
+        "die Pause, die Pausen",
+        "kurze Zeit ohne Arbeit"
+      ],
+      [
+        "der Kollege, die Kollegen / die Kollegin, die Kolleginnen",
+        "Person, die mit mir zusammen arbeitet"
+      ],
+      [
+        "müde",
+        "Ich möchte schlafen."
+      ],
+      [
+        "aufstehen",
+        "aus dem Bett kommen"
+      ],
+      [
+        "sich ausruhen",
+        "nichts tun, sich erholen"
+      ],
+      [
+        "frei haben",
+        "nicht arbeiten müssen"
+      ]
+    ],
+    "gap": {
+      "type": "gap",
+      "title": "Aufgabe 2: Lückentext",
+      "instruction": "Hör das Lied und ergänze die fehlenden Wörter.",
+      "items": [
+        "die Straße ist nass vom ___, ich warte auf die Bahn.",
+        "Ich habe Nachtschicht im ___, ich packe Karton für Karton,",
+        "Um zwei Uhr machen wir ___, wir trinken heißen Tee,",
+        "Wenn der Morgen kommt, fahre ich nach ___,",
+        "Am Wochenende habe ich ___,"
+      ],
+      "solutions": [
+        "Regen",
+        "Lager",
+        "Pause",
+        "Haus",
+        "frei"
+      ]
+    },
+    "tf": [
+      [
+        "Die Person geht um zehn Uhr am Morgen zur Arbeit.",
+        false,
+        "Sie zieht um zehn Uhr am Abend die Jacke an."
+      ],
+      [
+        "Die Person arbeitet nachts in einem Lager.",
+        true,
+        ""
+      ],
+      [
+        "Um zwei Uhr machen die Kollegen Pause.",
+        true,
+        ""
+      ],
+      [
+        "Marta sagt: „Wenn du müde bist, geh nach Hause.“",
+        false,
+        "Sie sagt: „Trink noch einen Kaffee.“"
+      ],
+      [
+        "Am Wochenende muss die Person arbeiten.",
+        false,
+        "Am Wochenende hat sie frei."
+      ]
+    ],
+    "gram": {
+      "title": "Grammatik – Nebensätze mit wenn",
+      "instruction": "Verbinde die Sätze mit wenn. Der wenn-Satz steht vorne – achte auf die Position der Verben.",
+      "items": [
+        "Die Stadt schläft. Ich bin wach.",
+        "Der Morgen kommt. Ich fahre nach Hause.",
+        "Ich bin müde. Ich trinke einen Kaffee.",
+        "Du stehst auf. Ich ruhe mich aus.",
+        "Ich habe Zeit. Wir gehen in den Park.",
+        "Es regnet. Ich nehme die Bahn."
+      ],
+      "solutions": [
+        "Wenn die Stadt schläft, bin ich wach.",
+        "Wenn der Morgen kommt, fahre ich nach Hause.",
+        "Wenn ich müde bin, trinke ich einen Kaffee.",
+        "Wenn du aufstehst, ruhe ich mich aus.",
+        "Wenn ich Zeit habe, gehen wir in den Park.",
+        "Wenn es regnet, nehme ich die Bahn."
+      ]
+    }
+  },
+  {
+    "id": "a2-10-roter-schal",
+    "level": "A2",
+    "title": "Ein roter Schal",
+    "theme": "Menschen beschreiben: Aussehen, Kleidung und Charakter",
+    "grammar": "Adjektivdeklination nach dem unbestimmten Artikel im Nominativ und Akkusativ (ein dunkler Mantel, eine junge Frau, ein kleines Lächeln, einen warmen Blick)",
+    "intro": "Spät am Abend in der Bahn sieht ein Mann eine Frau – und vergisst sie nicht mehr. Du lernst, wie du Menschen beschreibst, und übst die Adjektivendungen nach ein, eine und einen.",
+    "lyrics": "[Verse 1]\nEs ist spät, die Bahn ist fast leer,\ndraußen fällt ein leiser Regen, die Stadt glänzt wie ein Meer.\nAm Fenster sitzt eine junge Frau, sie liest ein dickes Buch,\nich sehe sie nur kurz – und das ist schon genug.\n\n[Chorus]\nEin dunkler Mantel, ein roter Schal,\nein kleines Lächeln – nur ein einziges Mal.\nDu hast einen warmen Blick und ein freundliches Gesicht –\nwer bist du? Ich weiß es nicht.\n\n[Verse 2]\nSie hat lange, schwarze Haare und eine runde Brille,\nin der Bahn ist eine große Stille.\nIch bin ein schüchterner Mann, ich sage kein Wort,\nund an der nächsten Haltestelle steigt sie aus – sie ist fort.\n\n[Chorus]\nEin dunkler Mantel, ein roter Schal,\nein kleines Lächeln – nur ein einziges Mal.\nDu hast einen warmen Blick und ein freundliches Gesicht –\nwer bist du? Ich weiß es nicht.\n\n[Bridge]\nVielleicht sehe ich morgen ein bekanntes Gesicht,\nvielleicht sitzt sie wieder da im warmen Licht.\nDann bin ich ein mutiger Mann, dann sage ich: „Hallo!“ –\nund vielleicht hat sie ein Lächeln für mich – einfach so.\n\n[Chorus]\nEin dunkler Mantel, ein roter Schal,\nein kleines Lächeln – nur ein einziges Mal.\nDu hast einen warmen Blick und ein freundliches Gesicht –\nwer bist du? Ich weiß es nicht.\n\n[Outro]\nEin dunkler Mantel, ein roter Schal –\nbis morgen, vielleicht, noch einmal.",
+    "vocab": [
+      [
+        "der Mantel, die Mäntel",
+        "eine lange, warme Jacke"
+      ],
+      [
+        "der Schal, die Schals",
+        "Man trägt ihn im Winter um den Hals."
+      ],
+      [
+        "das Lächeln",
+        "ein freundliches Gesicht mit kleinem Lachen"
+      ],
+      [
+        "der Blick, die Blicke",
+        "wie man jemanden ansieht"
+      ],
+      [
+        "das Gesicht, die Gesichter",
+        "Augen, Nase und Mund sind im Gesicht."
+      ],
+      [
+        "die Brille, die Brillen",
+        "Damit sieht man besser."
+      ],
+      [
+        "schüchtern",
+        "Man spricht nicht gern mit fremden Menschen."
+      ],
+      [
+        "mutig",
+        "Man hat keine Angst."
+      ],
+      [
+        "aussteigen",
+        "aus der Bahn oder dem Bus gehen"
+      ],
+      [
+        "die Haltestelle, die Haltestellen",
+        "Hier hält der Bus oder die Bahn."
+      ]
+    ],
+    "gap": {
+      "type": "gap",
+      "title": "Aufgabe 2: Lückentext",
+      "instruction": "Hör das Lied und ergänze die fehlenden Wörter.",
+      "items": [
+        "draußen fällt ein leiser ___, die Stadt glänzt wie ein Meer.",
+        "Am Fenster sitzt eine junge Frau, sie liest ein dickes ___,",
+        "Sie hat lange, schwarze Haare und eine runde ___,",
+        "ein kleines ___ – nur ein einziges Mal.",
+        "Ich bin ein schüchterner Mann, ich sage kein ___,"
+      ],
+      "solutions": [
+        "Regen",
+        "Buch",
+        "Brille",
+        "Lächeln",
+        "Wort"
+      ]
+    },
+    "tf": [
+      [
+        "Die Bahn ist sehr voll.",
+        false,
+        "Die Bahn ist fast leer."
+      ],
+      [
+        "Die Frau liest ein dickes Buch.",
+        true,
+        ""
+      ],
+      [
+        "Die Frau hat kurze, blonde Haare.",
+        false,
+        "Sie hat lange, schwarze Haare."
+      ],
+      [
+        "Der Mann spricht in der Bahn mit der Frau.",
+        false,
+        "Er sagt kein Wort."
+      ],
+      [
+        "Der Mann hofft, dass er die Frau morgen wiedersieht.",
+        true,
+        ""
+      ]
+    ],
+    "gram": {
+      "title": "Grammatik – Adjektive nach ein, eine, einen",
+      "instruction": "Ergänze das Adjektiv in Klammern mit der richtigen Endung.",
+      "items": [
+        "Sie trägt einen ___ Mantel. (dunkel)",
+        "Das ist ein ___ Schal. (rot)",
+        "Sie hat ein ___ Gesicht. (freundlich)",
+        "Ich sehe eine ___ Frau. (jung)",
+        "Er ist ein ___ Mann. (schüchtern)",
+        "Sie liest ein ___ Buch. (dick)"
+      ],
+      "solutions": [
+        "dunklen",
+        "roter",
+        "freundliches",
+        "junge",
+        "schüchterner",
+        "dickes"
+      ]
+    }
+  }
+]
