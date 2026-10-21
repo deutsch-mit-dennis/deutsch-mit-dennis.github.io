@@ -360,7 +360,7 @@ textarea#dm-draft:focus{border-color:var(--dm-tinte);outline:none}
 
 /* ---------- Fußzeile ---------- */
 footer.dm-footer{display:block!important;background:var(--dm-ink)!important;color:#C9D0E0;padding:48px clamp(16px,4vw,48px) 32px!important;margin:0;border:0}
-.dm-footer-grid{max-width:1240px;margin:0 auto;display:grid;grid-template-columns:1.4fr repeat(3,1fr);gap:28px}
+.dm-footer-grid{max-width:1240px;margin:0 auto;display:grid;grid-template-columns:1.4fr repeat(4,1fr);gap:28px}
 .dm-footer .logo{display:inline-flex;gap:.3em;align-items:baseline;color:#fff;text-decoration:none;font-weight:700;font-size:22px}
 .dm-footer .logo span{font-family:var(--dm-hand);font-size:1.45em;color:var(--dm-marker);transform:rotate(-3deg);display:inline-block}
 .dm-footer h2{font-size:15px;color:#fff;margin:4px 0 10px;letter-spacing:0}
@@ -370,7 +370,7 @@ footer.dm-footer{display:block!important;background:var(--dm-ink)!important;colo
 .dm-footer p{margin:10px 0 0;font-size:15px;max-width:36ch}
 .dm-footer-bottom{max-width:1240px;margin:32px auto 0;padding-top:18px;border-top:1px solid rgba(255,255,255,.15);display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between;font-size:14px;color:#9EA8BF}
 @media (max-width:860px){.dm-footer-grid{grid-template-columns:1fr 1fr}}
-@media (max-width:480px){.dm-footer-grid{grid-template-columns:1fr}}
+@media (max-width:480px){.dm-footer-grid{grid-template-columns:1fr 1fr;gap:22px 16px}.dm-footer-grid>div:first-child{grid-column:1/-1}}
 
 /* ---------- Hilfe-Knopf ---------- */
 #site-helper .help-launch{background:var(--dm-ink)!important;color:#fff!important;border:2px solid #fff!important;font:700 16px var(--dm-font)!important;box-shadow:0 6px 20px rgba(23,32,54,.25)!important}

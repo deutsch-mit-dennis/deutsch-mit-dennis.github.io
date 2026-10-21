@@ -187,7 +187,7 @@
       <ul class="dm-pkg-teaser-list">${pick.map(k => `<li><a href="#lernpakete/${k.id}"><img src="${k.img}" alt="" width="72" height="72" loading="lazy"><span><b>${x(k.title)}</b><small>${x(k.level)} · ${x(k.price)}</small></span></a></li>`).join('')}</ul>
     </section>`;
   }
-  /* Schnellstart: auf dem Handy direkt unter der Überschrift (Challenge, Spiele, Lino, Lied des Tages) */
+  /* Schnellstart: auf dem Handy direkt unter der Überschrift (Challenge, Probeprüfung, Lino, Lied des Tages) */
   function quickStart() {
     let ch = { streak: 0, doneToday: false };
     try { if (window.DMChallenge) ch = DMChallenge.status() || ch; } catch (e) { /* Startseite trotzdem zeigen */ }
@@ -195,7 +195,7 @@
     const chSub = ch.doneToday ? `✓ Heute geschafft · ${ch.streak} 🔥` : ch.streak ? `Serie: ${ch.streak} ${ch.streak === 1 ? 'Tag' : 'Tage'} 🔥` : '10 Aufgaben · 3 Min.';
     const tiles = [
       ['#challenge', 'dm-q-ch', '🔥', 'Tages-Challenge', chSub],
-      ['#spiele', 'dm-q-sp', '🎮', 'Lernspiele', '18 Spiele'],
+      ['#simulation', 'dm-q-sp', '⏱', 'Probeprüfung', 'DTZ, LiD, telc, DTB · mit Uhr'],
       ['#spiele/lino', 'dm-q-lino', '🏃', 'Lino läuft', '14 Welten · Tageslauf & Shop'],
       [sod ? '#lieder/' + sod.id : '#lieder', 'dm-q-song', '🎵', sod ? 'Lied des Tages' : 'Lieder', sod ? sod.title : '50 Lieder A1–C1']
     ];
@@ -207,7 +207,7 @@
     <section class="dm-hero">
       <figure class="dm-hero-photo"><img src="assets/dennis.webp" alt="Dennis, dein Deutschlehrer" width="626" height="1004" fetchpriority="high"></figure>
       <div class="dm-hero-copy">
-        <a class="lino-hero-chip" href="#spiele/lino"><span aria-hidden="true">🏃</span><span><b>Neu bei Lino:</b> Tageslauf, Shop, ICE und Supermarkt</span><span class="lino-hero-go" aria-hidden="true">▶</span></a>
+        <a class="lino-hero-chip" href="#simulation"><span aria-hidden="true">⏱</span><span><b>Neu:</b> 6 Probeprüfungen mit echter Zeit – DTZ, LiD, telc und DTB</span><span class="lino-hero-go" aria-hidden="true">▶</span></a>
         <h1>Deutsch lernen mit Dennis</h1>
         ${quickStart()}
         <p class="dm-lead">Kostenlose Übungen von A1 bis B2 Beruf – für deinen Alltag, deine Prüfung und deinen Job. Ohne Anmeldung.</p>
@@ -265,12 +265,13 @@
     <section class="dm-section dm-tools" aria-labelledby="tools-h">
       <div class="dm-section-head"><h2 id="tools-h">Direkt üben</h2></div>
       <div class="dm-toolgrid">
+        <a href="#simulation" data-img="pokal"><img class="dm-tool-3d" src="assets/3d/pokal.webp" alt="" width="192" height="192" loading="lazy" aria-hidden="true"><b>Probeprüfungen</b><span>DTZ, Leben in Deutschland, telc B1/B2, DTB B1/B2 – mit echter Zeit, Punkten und Lösungen.</span></a>
         <a href="#ueben/sprechen/A1" data-img="sprechblase"><img class="dm-tool-3d" src="assets/3d/sprechblase.webp" alt="" width="192" height="192" loading="lazy" aria-hidden="true"><b>Sprechen</b><span>Gespräche aus dem Alltag, mit Satzanfängen und Beispiel zum Anhören.</span></a>
         <a href="#ueben/schreiben/A2" data-img="schreiben"><img class="dm-tool-3d" src="assets/3d/schreiben.webp" alt="" width="192" height="192" loading="lazy" aria-hidden="true"><b>Schreiben</b><span>Nachrichten, Briefe und E-Mails – mit Sofort-Korrektur, Checkliste und Mustertext.</span></a>
-        <a href="#hoeren" data-img="kopfhoerer"><img class="dm-tool-3d" src="assets/3d/kopfhoerer.webp" alt="" width="192" height="192" loading="lazy" aria-hidden="true"><b>Hören</b><span>DTZ- und B2-Hörtraining mit natürlichen Stimmen: Ansagen, Mailbox, Gespräche.</span></a>
-        <a href="#lesen" data-img="buecher"><img class="dm-tool-3d" src="assets/3d/buecher.webp" alt="" width="192" height="192" loading="lazy" aria-hidden="true"><b>Lesen</b><span>Mitteilungen, E-Mails und Artikel verstehen – wie im DTZ und DTB B2.</span></a>
+        <a href="#hoeren" data-img="kopfhoerer"><img class="dm-tool-3d" src="assets/3d/kopfhoerer.webp" alt="" width="192" height="192" loading="lazy" aria-hidden="true"><b>Hören</b><span>Hörtraining für Alltag und Beruf mit natürlichen Stimmen: Ansagen, Mailbox, Gespräche.</span></a>
+        <a href="#lesen" data-img="buecher"><img class="dm-tool-3d" src="assets/3d/buecher.webp" alt="" width="192" height="192" loading="lazy" aria-hidden="true"><b>Lesen</b><span>Mitteilungen, Anzeigen, E-Mails und Artikel verstehen – wie in der Prüfung.</span></a>
         <a href="#lid" data-img="gebaeude"><img class="dm-tool-3d" src="assets/3d/gebaeude.webp" alt="" width="192" height="192" loading="lazy" aria-hidden="true"><b>Leben in Deutschland</b><span>Lernspiele und Wissen für den Orientierungskurs.</span></a>
-        <a href="#lieder" data-img="mikrofon"><img class="dm-tool-3d" src="assets/3d/mikrofon.webp" alt="" width="192" height="192" loading="lazy" aria-hidden="true"><b>Deutsch mit Liedern</b><span>40 eigene Lieder von A1 bis C1 – mit Text, Aufgaben und Lösungen.</span></a>
+        <a href="#lieder" data-img="mikrofon"><img class="dm-tool-3d" src="assets/3d/mikrofon.webp" alt="" width="192" height="192" loading="lazy" aria-hidden="true"><b>Deutsch mit Liedern</b><span>50 eigene Lieder von A1 bis C1 – mit Text, Aufgaben und Lösungen.</span></a>
         <a href="#kahoot" data-img="spiel"><img class="dm-tool-3d" src="assets/3d/spiel.webp" alt="" width="192" height="192" loading="lazy" aria-hidden="true"><b>Kahoot-Quiz</b><span>Spielerisch wiederholen – allein oder mit dem ganzen Kurs.</span></a>
         <a href="#material" data-img="blatt"><img class="dm-tool-3d" src="assets/3d/blatt.webp" alt="" width="192" height="192" loading="lazy" aria-hidden="true"><b>Materialien</b><span>Arbeitsblätter und Merkblätter als PDF – zum Ausdrucken.</span></a>
 

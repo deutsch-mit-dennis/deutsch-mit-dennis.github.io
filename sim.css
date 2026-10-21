@@ -170,7 +170,8 @@
 .sim-anchors a{display:inline-flex;align-items:center;min-height:40px;padding:6px 14px;border-radius:20px;background:var(--dm-tinte-soft);color:var(--dm-tinte);font-weight:700;text-decoration:none;font-size:15px}
 .sim-prep{margin:0 0 10px;padding:0}
 .sim-prep>summary{display:flex;gap:10px;align-items:center;flex-wrap:wrap;padding:16px 18px;cursor:pointer;min-height:56px}
-.sim-prep>summary b{font-size:18px}
+.sim-prep>summary b{font-size:18px;flex:1 1 180px}
+.sim-prep>summary small{white-space:nowrap}
 .sim-prep>summary small{color:var(--dm-muted);margin-left:auto}
 .sim-prep[open]>summary{border-bottom:1px solid var(--dm-line)}
 .sim-prep>:not(summary){margin-left:18px;margin-right:18px}

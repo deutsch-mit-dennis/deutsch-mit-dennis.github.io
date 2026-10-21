@@ -296,11 +296,11 @@ li.sc-sp .sc-cat{background:#FDE3DC;color:#A3281E}li.sc-gr .sc-cat{background:#D
 @keyframes dmSpot{0%,100%{opacity:.55;rotate:-8deg}50%{opacity:1;rotate:8deg}}
 .dm-stage-hub{margin-top:0}
 /* Navigation: Lieder hervorheben */
-#main-navigation a[data-nav="spiele"]{position:relative}
-#main-navigation a[data-nav="spiele"]::after{content:"neu";position:absolute;top:-4px;right:-6px;padding:1px 6px;border-radius:99px;background:#FF5C8A;color:#fff;font-size:10px;font-weight:800;line-height:1.5;letter-spacing:.03em;animation:dmPulseTag 2.4s ease-in-out infinite}
+#main-navigation a[data-nav="pruefung"]{position:relative}
+#main-navigation a[data-nav="pruefung"]::after{content:"neu";position:absolute;top:-4px;right:-6px;padding:1px 6px;border-radius:99px;background:#FF5C8A;color:#fff;font-size:10px;font-weight:800;line-height:1.5;letter-spacing:.03em;animation:dmPulseTag 2.4s ease-in-out infinite}
 @keyframes dmPulseTag{0%,100%{transform:scale(1)}50%{transform:scale(1.12)}}
 @media (max-width:760px){.dm-stage{grid-template-columns:1fr;text-align:left}.dm-stage-art{min-height:170px;order:-1}.dm-stage-lead{font-size:16px}}
-@media (prefers-reduced-motion:reduce){.dm-stage h1,.dm-stage-kicker::before,.dm-stage-disc,.dm-stage-eq i,.dm-stage-lights i,.dm-stage-notes span,#main-navigation a[data-nav="spiele"]::after{animation:none!important}.dm-stage-notes span{opacity:.6}}
+@media (prefers-reduced-motion:reduce){.dm-stage h1,.dm-stage-kicker::before,.dm-stage-disc,.dm-stage-eq i,.dm-stage-lights i,.dm-stage-notes span,#main-navigation a[data-nav="pruefung"]::after{animation:none!important}.dm-stage-notes span{opacity:.6}}
 
 /* ---------- Pinnwand ---------- */
 .dm-pin-filter{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 18px}
@@ -760,3 +760,8 @@ header.dm-header nav{margin-left:auto}
 @media (prefers-reduced-motion:reduce){.dm-pl-badge i{animation:none}}
 
 .dm-song-new{font-style:normal;font-weight:800;color:#fff;background:#e0457b;border-radius:6px;padding:0 6px;font-size:12px;letter-spacing:.02em}
+
+@media (max-width:1180px){#main-navigation a[data-nav="pruefung"]::after{position:static;display:inline-block;margin-left:8px;vertical-align:middle}}
+/* Einheitlichkeit 21.10.: Nummer in LiD-Karten mit Abstand, Hilfe-Knopf am Handy kleiner und weiter am Rand */
+.lid-card .lid-number{margin:0 10px 6px 0;vertical-align:middle}
+@media (max-width:600px){#site-helper{right:10px!important;bottom:10px!important}#site-helper .help-launch{width:46px!important;height:46px!important;min-width:46px!important;min-height:46px!important;padding:0!important;opacity:.94}}
