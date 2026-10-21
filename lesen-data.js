@@ -69,6 +69,17 @@
             R('Was darf man nicht in die Rückgabebox legen?', ['Bücher.', 'DVDs und Spiele.', 'Den Bibliotheksausweis.'], 1, '„DVDs und Spiele legen Sie bitte nicht in die Box.“ Bücher darf man einwerfen.'),
             R('Was passiert am 21. November?', ['Es gibt einen Flohmarkt mit alten Büchern.', 'Alle bekommen einen kostenlosen Bibliotheksausweis.', 'Es gibt ein Vorlesefest für Kinder.'], 2, '„Am Eröffnungstag gibt es um 15 Uhr ein Vorlesefest für Kinder.“ Eröffnungstag ist der 21. November.')
           ]
+        },
+        {
+          id: 'alltag-schwimmkurs', type: 'Anzeigen', title: 'Ein Schwimmkurs für Zofia',
+          situation: 'Ihr Nachbar Tomasz möchte, dass seine Tochter Zofia (8 Jahre) schwimmen lernt. Er arbeitet von Montag bis Freitag bis 18 Uhr. Am Schwarzen Brett im Sportverein hängen vier Anzeigen.',
+          text: 'A) Schwimmen lernen ist nie zu spät! Kurs für Erwachsene ohne Vorkenntnisse, dienstags von 19 bis 20 Uhr im Hallenbad Süd. 10 Termine, 90 €. Anmeldung online: schwimmschule-delfin.de\nB) Seepferdchen-Kurs für Kinder von 5 bis 7 Jahren, montags und mittwochs um 16 Uhr im Hallenbad Nord. Eltern dürfen zuschauen. 75 €. Tel. 0561 70 44 18.\nC) Freie Plätze! Schwimmkurs für Kinder von 7 bis 10 Jahren, samstags von 10 bis 11 Uhr im Hallenbad Nord. 8 Termine, 64 €. Start: 7. November. Anmeldung bis zum 31. Oktober per E-Mail: kurse@tsv-nord.de\nD) Verkaufe Badeanzug für Mädchen (Größe 128) und Schwimmbrille, kaum benutzt, zusammen 10 €. Nur Abholung. Tel. 0152 33 67 90.',
+          questions: [
+            R('Welche Anzeige passt zu Tomasz?', ['Anzeige A', 'Anzeige B', 'Anzeige C'], 2, 'Anzeige C: ein Kurs für Kinder von 7 bis 10 Jahren am Samstag – Tomasz arbeitet nur unter der Woche.'),
+            R('Warum passt Anzeige B nicht?', ['Der Kurs ist zu teuer.', 'Zofia ist zu alt, und der Kurs ist unter der Woche.', 'Eltern dürfen nicht zuschauen.'], 1, 'Der Kurs ist „für Kinder von 5 bis 7 Jahren“ und „montags und mittwochs um 16 Uhr“. Zofia ist 8, und Tomasz arbeitet dann.'),
+            R('Bis wann muss Tomasz Zofia für Kurs C anmelden?', ['Bis zum 31. Oktober.', 'Bis zum 7. November.', 'Am ersten Kurstag.'], 0, '„Anmeldung bis zum 31. Oktober per E-Mail“. Der 7. November ist der Kursbeginn.'),
+            R('Was bietet Anzeige D an?', ['Einen Schwimmkurs nur für Mädchen.', 'Gebrauchte Schwimmsachen.', 'Neue Schwimmbrillen im Geschäft.'], 1, 'Jemand verkauft einen Badeanzug und eine Schwimmbrille, „kaum benutzt“, zusammen für 10 €.')
+          ]
         }
       ]
     },
@@ -126,6 +137,17 @@
             R('Wer kann sich bewerben?', ['Personen mit passender Ausbildung oder vergleichbarer Berufserfahrung.', 'Nur Personen mit einer Ausbildung im Speditionsbereich.', 'Nur Personen, die Polnisch sprechen.'], 0, '„… Ausbildung als Kauffrau/Kaufmann für Spedition … oder vergleichbare Berufserfahrung“. Polnisch ist nur „von Vorteil“.'),
             R('Was stimmt zur Arbeitszeit?', ['Man arbeitet jeden Samstag.', 'Die Stelle gibt es nur in Vollzeit.', 'Man kann zwischen 6 und 18 Uhr flexibel arbeiten.'], 2, '„Gleitzeit zwischen 6 und 18 Uhr“. Samstags nur einmal im Monat; Teilzeit ab 30 Stunden ist möglich.'),
             R('Was sollen die Bewerberinnen und Bewerber in der Bewerbung angeben?', ['Ihre Gehaltsvorstellung.', 'Ihren frühestmöglichen Eintrittstermin.', 'Ihre Wunschtouren.'], 1, '„Bitte nennen Sie Ihren frühestmöglichen Eintrittstermin.“ Das Gehalt ist nach Tarif geregelt.')
+          ]
+        },
+        {
+          id: 'beruf-anerkennung', type: 'Forumsbeitrag', title: 'Anerkennung des Berufsabschlusses – lohnt sich das?',
+          situation: 'In einem Internetforum für Fachkräfte lesen Sie eine Frage und eine Antwort zum Thema Anerkennung.',
+          text: 'Beitrag von Elif_K., 14. Oktober\nHallo zusammen, ich bin gelernte Elektronikerin aus der Türkei und arbeite seit einem Jahr als Helferin in einem Elektrobetrieb in Bielefeld. Mein Chef ist zufrieden mit mir, aber ich verdiene deutlich weniger als meine Kollegen mit deutschem Abschluss. Hat jemand Erfahrung mit dem Anerkennungsverfahren? Wie lange dauert es, und was kostet es?\nAntwort von Marko_B., 15. Oktober\nHallo Elif, ich habe das letztes Jahr gemacht (Elektriker aus Serbien). Zuständig war bei mir die Handwerkskammer. Zuerst habe ich mich bei einer kostenlosen Beratungsstelle informiert – das kann ich nur empfehlen, denn dort hat man mir genau gesagt, welche Unterlagen ich brauche. Das Übersetzen der Zeugnisse hat fast zwei Monate gedauert, das Verfahren selbst dann noch etwa drei Monate. Die Gebühr lag bei 400 Euro, die Übersetzungen kamen extra dazu. Mein Arbeitgeber hat mir die Hälfte der Kosten erstattet, weil er mich danach als Fachkraft einsetzen wollte. Frag deinen Chef also ruhig!\nÜbrigens wurde mein Abschluss zuerst nur teilweise anerkannt. Ich musste noch einen Lehrgang zu den deutschen Sicherheitsvorschriften besuchen. Seit Juni habe ich die volle Anerkennung und verdiene rund 600 Euro mehr im Monat. Für mich hat sich der Aufwand also klar gelohnt.',
+          questions: [
+            R('Warum schreibt Elif ins Forum?', ['Sie sucht eine neue Stelle als Elektronikerin.', 'Sie möchte wissen, wie das Anerkennungsverfahren abläuft.', 'Sie hat Streit mit ihrem Chef.'], 1, 'Sie fragt: „Hat jemand Erfahrung mit dem Anerkennungsverfahren? Wie lange dauert es, und was kostet es?“ Ihr Chef ist zufrieden mit ihr.'),
+            R('Was empfiehlt Marko als ersten Schritt?', ['Sich bei einer kostenlosen Beratungsstelle informieren.', 'Sofort einen Antrag bei der Handwerkskammer stellen.', 'Die Zeugnisse selbst übersetzen.'], 0, '„Zuerst habe ich mich bei einer kostenlosen Beratungsstelle informiert – das kann ich nur empfehlen“.'),
+            R('Wie hat Markos Arbeitgeber geholfen?', ['Er hat die Zeugnisse übersetzen lassen.', 'Er hat alle Kosten übernommen.', 'Er hat die Hälfte der Kosten bezahlt.'], 2, '„Mein Arbeitgeber hat mir die Hälfte der Kosten erstattet“ – also nicht alle Kosten.'),
+            R('Was stimmt?', ['Markos Abschluss wurde sofort vollständig anerkannt.', 'Marko musste einen zusätzlichen Lehrgang besuchen, bevor er die volle Anerkennung bekam.', 'Marko verdient heute genauso viel wie vorher.'], 1, 'Der Abschluss wurde „zuerst nur teilweise anerkannt“; Marko musste einen Lehrgang zu Sicherheitsvorschriften besuchen. Heute verdient er rund 600 Euro mehr.')
           ]
         }
       ]
