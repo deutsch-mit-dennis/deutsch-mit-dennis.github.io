@@ -854,7 +854,7 @@
       title: "Mündliche Prüfung",
       minutes: 15,
       prepMinutes: 20,
-      note: "Paarprüfung. In der Vorbereitungszeit bereiten Sie alle drei Teile vor; Notizen dürfen Sie mitnehmen, aber nicht ablesen.",
+      note: "Paarprüfung. In der Vorbereitungszeit bereitest du alle drei Teile vor; Notizen darfst du mitnehmen, aber nicht ablesen.",
       parts: [
         {
           kind: "speak",
@@ -971,7 +971,7 @@
 
   // ───────────────────────── VORBEREITUNG ─────────────────────────
   prep: {
-    lead: "Die Prüfung telc Deutsch B2 bestätigt, dass Sie sich im Alltag und im Beruf selbstständig und differenziert auf Deutsch verständigen können. Sie besteht aus einer schriftlichen Prüfung (Lesen, Sprachbausteine, Hören, Schreiben) und einer mündlichen Paarprüfung. Viele brauchen sie für den Beruf, für die Anerkennung eines Abschlusses oder als nächsten Schritt in Richtung Studium.",
+    lead: "Die Prüfung telc Deutsch B2 bestätigt, dass du dich im Alltag und im Beruf selbstständig und differenziert auf Deutsch verständigen kannst. Sie besteht aus einer schriftlichen Prüfung (Lesen, Sprachbausteine, Hören, Schreiben) und einer mündlichen Paarprüfung. Viele brauchen sie für den Beruf, für die Anerkennung eines Abschlusses oder als nächsten Schritt in Richtung Studium.",
     facts: [
       [
         "Dauer",
@@ -987,7 +987,7 @@
       ],
       [
         "Ergebnis",
-        "Zertifikat mit Gesamtnote (sehr gut, gut, befriedigend, ausreichend). Wer nur den schriftlichen oder nur den mündlichen Teil nicht besteht, kann diesen Teil unter bestimmten Bedingungen einzeln wiederholen – fragen Sie Ihr Prüfungszentrum.",
+        "Zertifikat mit Gesamtnote (sehr gut, gut, befriedigend, ausreichend). Wer nur den schriftlichen oder nur den mündlichen Teil nicht besteht, kann diesen Teil unter bestimmten Bedingungen einzeln wiederholen – frag dein Prüfungszentrum.",
       ],
       [
         "Wer braucht sie?",
@@ -999,19 +999,19 @@
         name: "Leseverstehen Teil 1",
         skill: "Lesen",
         time: "ca. 15 Min.",
-        what: "Sie ordnen fünf kurzen Texten (z. B. Buchbeschreibungen) die passende Überschrift zu. Es gibt zehn Überschriften, fünf bleiben übrig.",
+        what: "Du ordnest fünf kurzen Texten (z. B. Buchbeschreibungen) die passende Überschrift zu. Es gibt zehn Überschriften, fünf bleiben übrig.",
         steps: [
-          "Lesen Sie zuerst alle Überschriften und markieren Sie das Schlüsselwort (z. B. „sparen“, „Chefs“, „Träume“).",
-          "Lesen Sie jeden Text einmal zügig und fragen Sie: Was ist das Hauptthema – nicht ein Detail?",
-          "Vergleichen Sie Ihre Wahl mit ähnlichen Überschriften und suchen Sie den Satz, der die andere ausschließt.",
-          "Streichen Sie benutzte Überschriften durch und lassen Sie schwierige Texte bis zum Schluss.",
+          "Lies zuerst alle Überschriften und markiere das Schlüsselwort (z. B. „sparen“, „Chefs“, „Träume“).",
+          "Lies jeden Text einmal zügig und frag dich: Was ist das Hauptthema – nicht ein Detail?",
+          "Vergleiche deine Wahl mit ähnlichen Überschriften und such den Satz, der die andere ausschließt.",
+          "Streiche benutzte Überschriften durch und lass schwierige Texte bis zum Schluss.",
         ],
         traps: [
           "Ein Wort aus der Überschrift kommt im Text vor, aber nur am Rande („Träume … nur am Rande“).",
           "Zwei Überschriften passen zum Thema, aber nur eine zur Zielgruppe (Beschäftigte vs. Vorgesetzte).",
           "Negationen übersehen: „Rezepte sucht man vergeblich“.",
         ],
-        tip: "Fragen Sie sich bei jedem Text: Wie würde ich ihn in fünf Wörtern zusammenfassen? Die passende Überschrift sagt dasselbe mit anderen Wörtern.",
+        tip: "Frag dich bei jedem Text: Wie würde ich ihn in fünf Wörtern zusammenfassen? Die passende Überschrift sagt dasselbe mit anderen Wörtern.",
         mini: {
           title: "Mini-Übung: Überschriften",
           instr:
@@ -1050,19 +1050,19 @@
         name: "Leseverstehen Teil 2",
         skill: "Lesen",
         time: "ca. 20 Min.",
-        what: "Sie lesen einen längeren Zeitungs- oder Magazinartikel (ca. 500–600 Wörter) und beantworten fünf Multiple-Choice-Aufgaben mit je drei Lösungen.",
+        what: "Du liest einen längeren Zeitungs- oder Magazinartikel (ca. 500–600 Wörter) und beantwortest fünf Multiple-Choice-Aufgaben mit je drei Lösungen.",
         steps: [
-          "Lesen Sie zuerst Überschrift und Untertitel: Worum geht es?",
-          "Lesen Sie die Fragen (noch ohne Lösungen) – sie folgen meist der Reihenfolge des Textes.",
-          "Suchen Sie für jede Frage die passende Textstelle und lesen Sie dort genau.",
-          "Prüfen Sie jede Lösung a, b, c: Was steht wirklich im Text, was ist nur ähnlich formuliert?",
+          "Lies zuerst Überschrift und Untertitel: Worum geht es?",
+          "Lies die Fragen (noch ohne Lösungen) – sie folgen meist der Reihenfolge des Textes.",
+          "Such für jede Frage die passende Textstelle und lies dort genau.",
+          "Prüfe jede Lösung a, b, c: Was steht wirklich im Text, was ist nur ähnlich formuliert?",
         ],
         traps: [
           "Eine Lösung verwendet Wörter aus dem Text, sagt aber etwas anderes („unzuverlässig“ ≠ „keine Verbindung“).",
           "Aussagen von verschiedenen Personen verwechseln (Expertin vs. Bürgermeister).",
-          "Zu viel Allgemeinwissen: Nur der Text zählt, nicht, was Sie selbst für richtig halten.",
+          "Zu viel Allgemeinwissen: Nur der Text zählt, nicht, was du selbst für richtig hältst.",
         ],
-        tip: "Unterstreichen Sie im Text die Belegstelle. Wenn Sie keine Stelle finden, ist die Lösung wahrscheinlich falsch.",
+        tip: "Unterstreiche im Text die Belegstelle. Wenn du keine Stelle findest, ist die Lösung wahrscheinlich falsch.",
         mini: {
           title: "Mini-Übung: Detailverstehen",
           instr: "Lesen Sie den Text. Welche Lösung (a, b oder c) ist richtig?",
@@ -1100,19 +1100,19 @@
         name: "Leseverstehen Teil 3",
         skill: "Lesen",
         time: "ca. 20 Min.",
-        what: "Sie ordnen zehn Situationen zwölf Anzeigen zu. Für ein bis zwei Situationen gibt es keine passende Anzeige – dann wählen Sie x.",
+        what: "Du ordnest zehn Situationen zwölf Anzeigen zu. Für ein bis zwei Situationen gibt es keine passende Anzeige – dann wählst du x.",
         steps: [
-          "Lesen Sie jede Situation und markieren Sie alle Bedingungen (wer, wann, wo, was genau).",
-          "Überfliegen Sie die Anzeigen und notieren Sie zu jeder ein Stichwort.",
-          "Prüfen Sie jede mögliche Anzeige gegen ALLE Bedingungen der Situation.",
-          "Erst ganz am Ende entscheiden Sie sich für x – wenn wirklich keine Anzeige alle Bedingungen erfüllt.",
+          "Lies jede Situation und markiere alle Bedingungen (wer, wann, wo, was genau).",
+          "Überfliege die Anzeigen und notiere zu jeder ein Stichwort.",
+          "Prüfe jede mögliche Anzeige gegen ALLE Bedingungen der Situation.",
+          "Erst ganz am Ende entscheidest du dich für x – wenn wirklich keine Anzeige alle Bedingungen erfüllt.",
         ],
         traps: [
           "Zwei Anzeigen zum selben Thema, aber nur eine passt im Detail (online vs. vor Ort, Kinder vs. Erwachsene).",
           "Eine kleine Einschränkung am Ende der Anzeige („Haustiere leider nicht erlaubt“).",
           "x zu früh wählen – oder gar nicht, obwohl es vorkommt.",
         ],
-        tip: "Jede Anzeige gibt es nur einmal. Wenn Sie eine Anzeige zweimal wählen möchten, stimmt eine der beiden Zuordnungen nicht.",
+        tip: "Jede Anzeige gibt es nur einmal. Wenn du eine Anzeige zweimal wählen möchtest, stimmt eine der beiden Zuordnungen nicht.",
         mini: {
           title: "Mini-Übung: Anzeigen",
           instr:
@@ -1162,17 +1162,17 @@
         time: "ca. 15 Min.",
         what: "In einem formellen Brief oder einer E-Mail gibt es zehn Lücken mit je drei Lösungen. Geprüft wird vor allem Grammatik: Präpositionen und Kasus, Konnektoren, Relativpronomen, Passiv, Konjunktiv II.",
         steps: [
-          "Lesen Sie den ganzen Satz, nicht nur die Wörter direkt an der Lücke.",
-          "Fragen Sie: Welche Wortart fehlt? Welcher Kasus? Wo steht das Verb?",
-          "Prüfen Sie bei Konnektoren die Verbposition (weil → Verb am Ende, deshalb → Verb auf Position 2).",
-          "Setzen Sie die Lösung ein und lesen Sie den Satz noch einmal leise mit.",
+          "Lies den ganzen Satz, nicht nur die Wörter direkt an der Lücke.",
+          "Frag dich: Welche Wortart fehlt? Welcher Kasus? Wo steht das Verb?",
+          "Prüfe bei Konnektoren die Verbposition (weil → Verb am Ende, deshalb → Verb auf Position 2).",
+          "Setz die Lösung ein und lies den Satz noch einmal leise mit.",
         ],
         traps: [
           "Konnektoren mit gleicher Bedeutung, aber anderer Wortstellung (denn / weil / deshalb).",
           "Relativpronomen nach Präposition: „von denen“, nicht „von die“.",
           "Feste Präpositionen: „ausgestattet mit“, „Antwort auf“, „sich interessieren für“.",
         ],
-        tip: "Lernen Sie Verben und Nomen immer mit ihrer Präposition und dem Kasus – das bringt in diesem Teil die meisten Punkte.",
+        tip: "Lerne Verben und Nomen immer mit ihrer Präposition und dem Kasus – das bringt in diesem Teil die meisten Punkte.",
         mini: {
           title: "Mini-Übung: Grammatik im Brief",
           instr: "Welches Wort (a, b oder c) passt in die Lücke?",
@@ -1210,17 +1210,17 @@
         time: "ca. 20 Min.",
         what: "Ein Text hat zehn Lücken; dazu gibt es 15 Wörter (a–o). Jedes Wort passt nur einmal, fünf bleiben übrig. Hier geht es vor allem um Wortschatz und feste Verbindungen.",
         steps: [
-          "Ordnen Sie die 15 Wörter zuerst nach Wortart: Nomen, Verben, Adjektive, Konnektoren, Pronomen.",
-          "Bestimmen Sie für jede Lücke die Wortart (Artikel davor? Verb am Satzende?).",
-          "Beginnen Sie mit den sicheren Lücken und streichen Sie benutzte Wörter.",
-          "Prüfen Sie bei Nomen das Genus („einer aktuellen …“ → feminin).",
+          "Ordne die 15 Wörter zuerst nach Wortart: Nomen, Verben, Adjektive, Konnektoren, Pronomen.",
+          "Bestimme für jede Lücke die Wortart (Artikel davor? Verb am Satzende?).",
+          "Beginne mit den sicheren Lücken und streiche benutzte Wörter.",
+          "Prüfe bei Nomen das Genus („einer aktuellen …“ → feminin).",
         ],
         traps: [
           "Zwei Wörter mit ähnlicher Bedeutung, aber unterschiedlicher Grammatik (Umfrage / Ergebnis).",
           "Verben mit fester Präposition („warnen vor“, „reagieren auf“).",
           "Konnektoren mit falscher Wortstellung (weil statt denn).",
         ],
-        tip: "Achten Sie auf das Wort direkt vor der Lücke: Artikel, Präposition oder „sich“ verraten oft schon die Lösung.",
+        tip: "Achte auf das Wort direkt vor der Lücke: Artikel, Präposition oder „sich“ verraten oft schon die Lösung.",
         mini: {
           title: "Mini-Übung: Wortschatz",
           instr:
@@ -1253,19 +1253,19 @@
         name: "Hörverstehen Teil 1",
         skill: "Hören",
         time: "ca. 5 Min.",
-        what: "Sie hören mehrere kurze Meinungen oder Beiträge zu einem Thema – nur einmal. Zu jedem Beitrag entscheiden Sie, ob eine Aussage richtig oder falsch ist.",
+        what: "Du hörst mehrere kurze Meinungen oder Beiträge zu einem Thema – nur einmal. Zu jedem Beitrag entscheidest du, ob eine Aussage richtig oder falsch ist.",
         steps: [
-          "Nutzen Sie die Lesezeit: Markieren Sie in jeder Aussage das wichtigste Wort.",
-          "Achten Sie auf die Grundhaltung der Person: Ist sie dafür, dagegen oder unentschieden?",
-          "Entscheiden Sie sofort nach jedem Beitrag – es gibt keine Wiederholung.",
-          "Wenn Sie unsicher sind, kreuzen Sie trotzdem an und gehen Sie weiter.",
+          "Nutze die Lesezeit: Markiere in jeder Aussage das wichtigste Wort.",
+          "Achte auf die Grundhaltung der Person: Ist sie dafür, dagegen oder unentschieden?",
+          "Entscheide sofort nach jedem Beitrag – es gibt keine Wiederholung.",
+          "Wenn du unsicher bist, kreuz trotzdem an und geh weiter.",
         ],
         traps: [
           "Einschränkungen wie „aber“, „trotzdem“, „ganz ohne … geht's nicht“ drehen die Aussage.",
           "Die Person nennt zuerst ein Gegenargument und dann ihre eigentliche Meinung.",
           "Absolute Wörter in der Aussage („gar nicht mehr“, „immer“) sind oft falsch.",
         ],
-        tip: "Hören Sie besonders auf den letzten Satz jedes Beitrags – dort steht oft das Fazit der Person.",
+        tip: "Hör besonders auf den letzten Satz jedes Beitrags – dort steht oft das Fazit der Person.",
         mini: {
           title: "Mini-Übung: Meinungen",
           instr: "Sie hören zwei Äußerungen einmal. Richtig oder falsch?",
@@ -1311,19 +1311,19 @@
         name: "Hörverstehen Teil 2",
         skill: "Hören",
         time: "ca. 10 Min.",
-        what: "Sie hören ein längeres Radiointerview zweimal und entscheiden bei zehn Aussagen, ob sie richtig oder falsch sind.",
+        what: "Du hörst ein längeres Radiointerview zweimal und entscheidest bei zehn Aussagen, ob sie richtig oder falsch sind.",
         steps: [
-          "Lesen Sie alle zehn Aussagen vorher – sie folgen dem Ablauf des Interviews.",
-          "Beim ersten Hören: Kreuzen Sie an, was Sie sicher verstehen.",
-          "Beim zweiten Hören: Konzentrieren Sie sich auf die offenen Aussagen.",
-          "Achten Sie auf Fragen der Moderatorin – sie kündigen das nächste Thema an.",
+          "Lies alle zehn Aussagen vorher – sie folgen dem Ablauf des Interviews.",
+          "Beim ersten Hören: Kreuz an, was du sicher verstehst.",
+          "Beim zweiten Hören: Konzentrier dich auf die offenen Aussagen.",
+          "Achte auf Fragen der Moderatorin – sie kündigen das nächste Thema an.",
         ],
         traps: [
           "Die Moderatorin sagt etwas („Viele denken, man hat Ihnen gekündigt“) – der Gast widerspricht.",
           "Zahlen und Vergleiche: „der Älteste“, „verkürzt“, „seit einem Jahr“.",
           "Pläne für die Zukunft werden als heutige Tatsachen formuliert („heute leitet er …“).",
         ],
-        tip: "Notieren Sie beim ersten Hören nur Stichwörter neben die Aussagen. Entscheiden Sie endgültig erst beim zweiten Durchgang.",
+        tip: "Notiere beim ersten Hören nur Stichwörter neben die Aussagen. Entscheide endgültig erst beim zweiten Durchgang.",
         mini: {
           title: "Mini-Übung: Interview",
           instr:
@@ -1370,11 +1370,11 @@
         name: "Hörverstehen Teil 3",
         skill: "Hören",
         time: "ca. 5 Min.",
-        what: "Sie hören kurze Durchsagen, Telefonansagen oder Radiohinweise zweimal und entscheiden jeweils, ob eine Aussage richtig oder falsch ist.",
+        what: "Du hörst kurze Durchsagen, Telefonansagen oder Radiohinweise zweimal und entscheidest jeweils, ob eine Aussage richtig oder falsch ist.",
         steps: [
-          "Lesen Sie die Aussage und überlegen Sie: Nach welcher Information muss ich suchen (Ort, Zeit, Grund)?",
-          "Achten Sie auf Wörter wie „heute“, „ausnahmsweise“, „ab morgen“, „stattdessen“.",
-          "Nutzen Sie das zweite Hören zur Kontrolle der Details.",
+          "Lies die Aussage und überleg: Nach welcher Information muss ich suchen (Ort, Zeit, Grund)?",
+          "Achte auf Wörter wie „heute“, „ausnahmsweise“, „ab morgen“, „stattdessen“.",
+          "Nutze das zweite Hören zur Kontrolle der Details.",
         ],
         traps: [
           "Mehrere Orte, Zeiten oder Gründe werden genannt – nur einer passt zur Aussage (Unfall vs. Baustelle).",
@@ -1427,7 +1427,7 @@
         name: "Schriftlicher Ausdruck",
         skill: "Schreiben",
         time: "30 Min.",
-        what: "Sie wählen eine von zwei Aufgaben, meist eine Bitte um Informationen oder eine Beschwerde, und schreiben einen formellen Brief bzw. eine formelle E-Mail. Von vier Leitpunkten bearbeiten Sie mindestens drei.",
+        what: "Du wählst eine von zwei Aufgaben, meist eine Bitte um Informationen oder eine Beschwerde, und schreibst einen formellen Brief bzw. eine formelle E-Mail. Von vier Leitpunkten bearbeitest du mindestens drei.",
         steps: [
           "2–3 Minuten: Aufgabe wählen und Stichwörter zu jedem Leitpunkt notieren.",
           "Gliederung festlegen: Betreff – Anrede – Einleitung – Leitpunkte in sinnvoller Reihenfolge – Schluss – Gruß.",
@@ -1439,13 +1439,13 @@
           "Zu unhöflich bei der Beschwerde („Sie müssen sofort …“) oder zu informell („Hallo“, „Liebe Grüße“).",
           "Leitpunkte nur in einem Halbsatz erwähnen – dann gibt es kaum Punkte dafür.",
         ],
-        tip: "Lieber drei Leitpunkte ausführlich als vier nur kurz. Und schreiben Sie lieber 180 sichere Wörter als 250 mit vielen Fehlern.",
+        tip: "Lieber drei Leitpunkte ausführlich als vier nur kurz. Und schreib lieber 180 sichere Wörter als 250 mit vielen Fehlern.",
       },
       {
         name: "Mündliche Prüfung Teil 1: Präsentation",
         skill: "Sprechen",
         time: "ca. 5 Min. (für beide)",
-        what: "Sie sprechen etwa anderthalb Minuten über ein Thema aus Ihrem Leben (z. B. ein wichtiges Ereignis, ein Buch oder einen Film). Danach stellt Ihnen Ihre Partnerin bzw. Ihr Partner Fragen – und umgekehrt.",
+        what: "Du sprichst etwa anderthalb Minuten über ein Thema aus deinem Leben (z. B. ein wichtiges Ereignis, ein Buch oder einen Film). Danach stellt dir deine Partnerin bzw. dein Partner Fragen – und umgekehrt.",
         steps: [
           "In der Vorbereitung: Thema wählen und vier Stichpunkte notieren (Was? Warum wichtig? Was hat sich verändert? Empfehlung?).",
           "Mit einem klaren Einleitungssatz beginnen: „Ich möchte heute über … sprechen.“",
@@ -1457,31 +1457,31 @@
           "Zu kurz sprechen und dann schweigen.",
           "Bei der Partnerin nicht zuhören und eine Frage stellen, die schon beantwortet wurde.",
         ],
-        tip: "Planen Sie einen persönlichen Moment ein (ein Gefühl, eine kleine Anekdote). Das macht die Präsentation lebendig und zeigt B2-Wortschatz.",
+        tip: "Plane einen persönlichen Moment ein (ein Gefühl, eine kleine Anekdote). Das macht die Präsentation lebendig und zeigt B2-Wortschatz.",
       },
       {
         name: "Mündliche Prüfung Teil 2: Diskussion",
         skill: "Sprechen",
         time: "ca. 5 Min.",
-        what: "Sie lesen einen kurzen Zeitungstext zu einem kontroversen Thema und diskutieren mit Ihrer Partnerin bzw. Ihrem Partner. Wichtig sind Meinung, Begründung und das Eingehen auf Gegenargumente.",
+        what: "Du liest einen kurzen Zeitungstext zu einem kontroversen Thema und diskutierst mit deiner Partnerin bzw. deinem Partner. Wichtig sind Meinung, Begründung und das Eingehen auf Gegenargumente.",
         steps: [
           "In der Vorbereitung: Je zwei Argumente dafür und dagegen notieren, dazu ein Beispiel.",
           "Mit einer klaren Meinung starten und begründen.",
           "Auf die Partnerin reagieren: zustimmen, widersprechen, nachfragen.",
-          "Am Ende kurz zusammenfassen: Wo sind Sie sich einig, wo nicht?",
+          "Am Ende kurz zusammenfassen: Wo seid ihr euch einig, wo nicht?",
         ],
         traps: [
           "Monologe halten statt zu diskutieren.",
           "Sofort der Partnerin in allem zustimmen – dann entsteht keine Diskussion.",
           "Nur den Zeitungstext wiederholen, ohne eigene Gedanken.",
         ],
-        tip: "Gute Diskussionen wechseln ab: Argument – Reaktion – Gegenargument. Sagen Sie ruhig auch: „Da hast du recht, aber …“.",
+        tip: "Gute Diskussionen wechseln ab: Argument – Reaktion – Gegenargument. Sag ruhig auch: „Da hast du recht, aber …“.",
       },
       {
         name: "Mündliche Prüfung Teil 3: Gemeinsam etwas planen",
         skill: "Sprechen",
         time: "ca. 5 Min.",
-        what: "Sie planen mit Ihrer Partnerin bzw. Ihrem Partner etwas (z. B. eine Feier, einen Ausflug, ein Projekt). Auf der Aufgabenkarte stehen Punkte, zu denen Sie Vorschläge machen und sich einigen sollen.",
+        what: "Du planst mit deiner Partnerin bzw. deinem Partner etwas (z. B. eine Feier, einen Ausflug, ein Projekt). Auf der Aufgabenkarte stehen Punkte, zu denen ihr Vorschläge machen und euch einigen sollt.",
         steps: [
           "In der Vorbereitung: Zu jedem Punkt eine eigene Idee notieren.",
           "Vorschläge machen und begründen, Vorschläge der Partnerin bewerten.",
@@ -1493,7 +1493,7 @@
           "Nur „Ja, gut.“ sagen, ohne eigene Ideen.",
           "Alles allein bestimmen und die Partnerin nicht einbeziehen.",
         ],
-        tip: "Fragen Sie aktiv: „Was meinst du?“ – Zusammenarbeit wird in diesem Teil ausdrücklich bewertet.",
+        tip: "Frag aktiv: „Was meinst du?“ – Zusammenarbeit wird in diesem Teil ausdrücklich bewertet.",
       },
     ],
     redemittel: [

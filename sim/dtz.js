@@ -7,7 +7,7 @@
   provider: "g.a.s.t.",
   level: "A2–B1",
   intro:
-    "Die Abschlussprüfung des Integrationskurses: Der DTZ zeigt, ob Sie Deutsch auf Niveau A2 oder B1 können. Hier üben Sie die ganze Prüfung mit Zeitvorgabe – Hören, Lesen, Schreiben und Sprechen.",
+    "Die Abschlussprüfung des Integrationskurses: Der DTZ zeigt, ob du Deutsch auf Niveau A2 oder B1 kannst. Hier übst du die ganze Prüfung mit Zeitvorgabe – Hören, Lesen, Schreiben und Sprechen.",
   rule: "dtz",
   skills: {
     hl: { label: "Hören und Lesen", max: 45 },
@@ -20,7 +20,7 @@
       id: "hoeren",
       title: "Hören",
       minutes: 25,
-      note: "Vier Teile, 20 Aufgaben. Lesen Sie vor jedem Hörtext zuerst die Aufgabe.",
+      note: "Vier Teile, 20 Aufgaben. Lies vor jedem Hörtext zuerst die Aufgabe.",
       parts: [
         {
           title: "Hören Teil 1: Ansagen am Telefon und Durchsagen",
@@ -517,7 +517,7 @@
       id: "lesen",
       title: "Lesen",
       minutes: 45,
-      note: "Fünf Teile, 25 Aufgaben. Sie müssen nicht jedes Wort verstehen – suchen Sie die wichtigen Informationen.",
+      note: "Fünf Teile, 25 Aufgaben. Du musst nicht jedes Wort verstehen – such die wichtigen Informationen.",
       parts: [
         {
           title: "Lesen Teil 1: Wegweiser",
@@ -859,7 +859,7 @@
       id: "sprechen",
       title: "Sprechen",
       minutes: 16,
-      note: "In der echten Prüfung sprechen Sie zu zweit mit zwei Prüfenden. Hier wird die Paarprüfung simuliert: Lesen Sie die Fragen und Impulse und antworten Sie laut.",
+      note: "In der echten Prüfung sprichst du zu zweit mit zwei Prüfenden. Hier wird die Paarprüfung simuliert: Lies die Fragen und Impulse und antworte laut.",
       parts: [
         {
           kind: "speak",

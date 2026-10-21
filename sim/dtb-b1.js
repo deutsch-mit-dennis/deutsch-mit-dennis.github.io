@@ -21,7 +21,7 @@
       id: "lesen",
       title: "Lesen",
       minutes: 40,
-      note: "Vier Teile. Arbeiten Sie zügig – pro Teil ca. 10 Minuten.",
+      note: "Vier Teile. Arbeite zügig – pro Teil ca. 10 Minuten.",
       parts: [
         {
           title: "Lesen Teil 1: Stellenanzeigen",
@@ -342,7 +342,7 @@
       id: "hoeren",
       title: "Hören",
       minutes: 20,
-      note: "Teil 1–3 hören Sie nur einmal, Teil 4 zweimal. Lesen Sie die Aufgaben immer vor dem Hören.",
+      note: "Teil 1–3 hörst du nur einmal, Teil 4 zweimal. Lies die Aufgaben immer vor dem Hören.",
       parts: [
         {
           title: "Hören Teil 1: Arbeitsabläufe, Probleme, Vorschläge",
@@ -827,7 +827,7 @@
       id: "hoeren-schreiben",
       title: "Hören und Schreiben",
       minutes: 5,
-      note: "Sie hören ein Telefonat zweimal. Machen Sie schon beim ersten Hören Stichpunkte.",
+      note: "Du hörst ein Telefonat zweimal. Mach schon beim ersten Hören Stichpunkte.",
       parts: [
         {
           title: "Hören und Schreiben Teil 1: Ein Telefonat verstehen",
@@ -1079,7 +1079,7 @@
       title: "Sprechen",
       minutes: 16,
       prepMinutes: 0,
-      note: "Keine Vorbereitungszeit. Teil 1 sprechen Sie allein, Teil 2 und 3 mit Ihrer Partnerin oder Ihrem Partner.",
+      note: "Keine Vorbereitungszeit. Teil 1 sprichst du allein, Teil 2 und 3 mit deiner Partnerin oder deinem Partner.",
       parts: [
         {
           kind: "speak",
@@ -1214,7 +1214,7 @@
 
   // ───────────────────────────── VORBEREITUNG ─────────────────────────────
   prep: {
-    lead: "Der DTB B1 (Deutsch-Test für den Beruf) prüft Deutsch im Berufsalltag: Stellenanzeigen, Arbeitsanweisungen, Kunden-E-Mails, Telefonnotizen, Gespräche mit Kollegen. Sie brauchen ihn meist am Ende eines Berufssprachkurses B1 oder eines Spezialkurses – und er ist ein guter Nachweis für Bewerbungen.",
+    lead: "Der DTB B1 (Deutsch-Test für den Beruf) prüft Deutsch im Berufsalltag: Stellenanzeigen, Arbeitsanweisungen, Kunden-E-Mails, Telefonnotizen, Gespräche mit Kollegen. Du brauchst ihn meist am Ende eines Berufssprachkurses B1 oder eines Spezialkurses – und er ist ein guter Nachweis für Bewerbungen.",
     facts: [
       ["Anbieter", "telc gGmbH im Auftrag des BAMF"],
       [
@@ -1227,7 +1227,7 @@
       ],
       [
         "Bestehen",
-        "Wie beim DTB B2 gilt: insgesamt mindestens 60 % (144 Punkte), in mindestens drei Fertigkeiten 60 % und in der vierten mindestens 40 %. Die genaue Bewertung steht in Ihrem Ergebnisbogen.",
+        "Wie beim DTB B2 gilt: insgesamt mindestens 60 % (144 Punkte), in mindestens drei Fertigkeiten 60 % und in der vierten mindestens 40 %. Die genaue Bewertung steht in deinem Ergebnisbogen.",
       ],
       [
         "Wer braucht sie?",
@@ -1239,12 +1239,12 @@
         name: "Lesen Teil 1 – Stellenanzeigen",
         skill: "Lesen",
         time: "ca. 10 Min.",
-        what: "Sie lesen fünf kurze Situationen und acht Stellenanzeigen. Sie ordnen jeder Person eine Anzeige zu; für eine Person passt oft keine Anzeige (x).",
+        what: "Du liest fünf kurze Situationen und acht Stellenanzeigen. Du ordnest jeder Person eine Anzeige zu; für eine Person passt oft keine Anzeige (x).",
         steps: [
-          "Lesen Sie zuerst die Personen und unterstreichen Sie die Bedingungen: Arbeitszeit, Teilzeit/Vollzeit, Branche, Führerschein/Staplerschein, Ort.",
-          "Lesen Sie dann die Anzeigen nur nach diesen Punkten durch (Scanning).",
-          "Prüfen Sie jede Bedingung der Person – eine falsche Bedingung reicht, und die Anzeige passt nicht.",
-          "Streichen Sie verwendete Anzeigen durch.",
+          "Lies zuerst die Personen und unterstreiche die Bedingungen: Arbeitszeit, Teilzeit/Vollzeit, Branche, Führerschein/Staplerschein, Ort.",
+          "Lies dann die Anzeigen nur nach diesen Punkten durch (Scanning).",
+          "Prüfe jede Bedingung der Person – eine falsche Bedingung reicht, und die Anzeige passt nicht.",
+          "Streiche verwendete Anzeigen durch.",
           "Wenn wirklich keine Anzeige alle Bedingungen erfüllt: x.",
         ],
         traps: [
@@ -1252,7 +1252,7 @@
           "Gleiche Wörter in Person und Anzeige („Lager“), aber eine Bedingung fehlt (Staplerschein).",
           "Man vergisst die x-Lösung und zwingt eine Anzeige passend.",
         ],
-        tip: "Ich sehe oft: Die Leute lesen die Anzeigen ganz genau – das kostet Zeit. Lesen Sie die Personen genau und die Anzeigen nur suchend.",
+        tip: "Ich sehe oft: Die Leute lesen die Anzeigen ganz genau – das kostet Zeit. Lies die Personen genau und die Anzeigen nur suchend.",
         mini: {
           instr:
             "Welche Anzeige passt? Für eine Person gibt es keine passende Anzeige (x).",
@@ -1294,19 +1294,19 @@
         name: "Lesen Teil 2 – Informationen zu Weiterbildungen",
         skill: "Lesen",
         time: "ca. 10 Min.",
-        what: "Sie lesen einen längeren Informationstext, z. B. ein Kursprogramm. Zu vier Aussagen wählen Sie a, b oder c.",
+        what: "Du liest einen längeren Informationstext, z. B. ein Kursprogramm. Zu vier Aussagen wählst du a, b oder c.",
         steps: [
-          "Lesen Sie zuerst die Aufgabe und markieren Sie das Schlüsselwort (z. B. „Excel“, „Anmeldung“).",
-          "Suchen Sie im Text den passenden Abschnitt (Überschriften helfen).",
-          "Lesen Sie diesen Abschnitt genau und vergleichen Sie jede Option.",
-          "Achten Sie auf kleine Wörter: nur, immer, auch, nicht, meistens.",
+          "Lies zuerst die Aufgabe und markiere das Schlüsselwort (z. B. „Excel“, „Anmeldung“).",
+          "Such im Text den passenden Abschnitt (Überschriften helfen).",
+          "Lies diesen Abschnitt genau und vergleiche jede Option.",
+          "Achte auf kleine Wörter: nur, immer, auch, nicht, meistens.",
         ],
         traps: [
           "„Viele Firmen übernehmen die Kosten“ ≠ „Die Firma bezahlt immer“.",
           "Eine Option nennt Informationen aus einem anderen Kurs.",
           "Zahlen und Tage werden vertauscht (zwei Wochen / sieben Tage).",
         ],
-        tip: "Wörter wie „immer“, „nur“ oder „alle“ in einer Option sind oft ein Warnsignal. Prüfen Sie, ob der Text wirklich so absolut ist.",
+        tip: "Wörter wie „immer“, „nur“ oder „alle“ in einer Option sind oft ein Warnsignal. Prüfe, ob der Text wirklich so absolut ist.",
         mini: {
           instr: "Lesen Sie den Text. Welche Antwort passt?",
           material: [
@@ -1343,19 +1343,19 @@
         name: "Lesen Teil 3 – Arbeitsanweisungen verstehen",
         skill: "Lesen",
         time: "ca. 10 Min.",
-        what: "Sie lesen eine Anweisung aus dem Betrieb, z. B. Sicherheitsregeln, einen Hygieneplan oder eine Bedienungsanleitung. Vier Aufgaben a/b/c.",
+        what: "Du liest eine Anweisung aus dem Betrieb, z. B. Sicherheitsregeln, einen Hygieneplan oder eine Bedienungsanleitung. Vier Aufgaben a/b/c.",
         steps: [
-          "Lesen Sie die Frage und stellen Sie sich die Situation vor: Was muss ich tun?",
-          "Suchen Sie den passenden Punkt in der Anweisung.",
-          "Achten Sie auf Verbote und Pflichten: muss, darf nicht, nur, nie, sofort.",
-          "Prüfen Sie, wer etwas tut (ich? der Schichtleiter? die Qualitätskontrolle?).",
+          "Lies die Frage und stell dir die Situation vor: Was muss ich tun?",
+          "Such den passenden Punkt in der Anweisung.",
+          "Achte auf Verbote und Pflichten: muss, darf nicht, nur, nie, sofort.",
+          "Prüfe, wer etwas tut (ich? der Schichtleiter? die Qualitätskontrolle?).",
         ],
         traps: [
           "Eine Option nennt eine Handlung aus dem Text, aber eine andere Person macht sie.",
           "„auch nicht für ein paar Minuten“ wird überlesen.",
           "Zwei Schritte gehören zusammen, eine Option nennt nur einen.",
         ],
-        tip: "In Arbeitsanweisungen ist jedes kleine Wort wichtig – genau wie im echten Betrieb. Lesen Sie Verneinungen zweimal.",
+        tip: "In Arbeitsanweisungen ist jedes kleine Wort wichtig – genau wie im echten Betrieb. Lies Verneinungen zweimal.",
         mini: {
           instr: "Lesen Sie die Anweisung. Welche Antwort passt?",
           material: [
@@ -1392,11 +1392,11 @@
         name: "Lesen Teil 4 – Aufgaben und Aufgabenverteilung",
         skill: "Lesen",
         time: "ca. 10 Min.",
-        what: "Sie lesen eine E-Mail, Notiz oder einen Plan der Teamleitung. Zu fünf Aussagen entscheiden Sie: richtig oder falsch.",
+        what: "Du liest eine E-Mail, Notiz oder einen Plan der Teamleitung. Zu fünf Aussagen entscheidest du: richtig oder falsch.",
         steps: [
-          "Lesen Sie die Aussage und markieren Sie Person, Tag, Uhrzeit, Aufgabe.",
-          "Suchen Sie die Stelle im Text.",
-          "Vergleichen Sie genau: Wer macht was, wann?",
+          "Lies die Aussage und markiere Person, Tag, Uhrzeit, Aufgabe.",
+          "Such die Stelle im Text.",
+          "Vergleiche genau: Wer macht was, wann?",
           "Nur wenn alles stimmt: richtig.",
         ],
         traps: [
@@ -1404,7 +1404,7 @@
           "„ab sofort nicht mehr“ – eine alte Regel gilt nicht mehr.",
           "Fristen: „bis zum 15.“ und „danach nicht mehr“.",
         ],
-        tip: "Machen Sie sich eine kleine Tabelle im Kopf: Wer? – Was? – Wann? Dann sehen Sie Vertauschungen sofort.",
+        tip: "Mach dir eine kleine Tabelle im Kopf: Wer? – Was? – Wann? Dann siehst du Vertauschungen sofort.",
         mini: {
           instr: "Richtig oder falsch?",
           material: [
@@ -1432,18 +1432,18 @@
         name: "Lesen und Schreiben Teil 1 – Kundenanfrage verstehen",
         skill: "Lesen",
         time: "ca. 5 Min.",
-        what: "Sie lesen eine Kunden-E-Mail und eine Notiz Ihrer Chefin. Zwei Fragen a/b/c zeigen, ob Sie das Anliegen verstanden haben.",
+        what: "Du liest eine Kunden-E-Mail und eine Notiz deiner Chefin. Zwei Fragen a/b/c zeigen, ob du das Anliegen verstanden hast.",
         steps: [
-          "Lesen Sie die Kunden-E-Mail: Was ist das Problem? Was wünscht der Kunde zusätzlich?",
-          "Lesen Sie die Notiz der Chefin – sie ist die Grundlage für Teil 2.",
-          "Beantworten Sie die zwei Fragen.",
-          "Markieren Sie schon jetzt alle Punkte der Notiz für Ihre Antwort.",
+          "Lies die Kunden-E-Mail: Was ist das Problem? Was wünscht der Kunde zusätzlich?",
+          "Lies die Notiz der Chefin – sie ist die Grundlage für Teil 2.",
+          "Beantworte die zwei Fragen.",
+          "Markiere schon jetzt alle Punkte der Notiz für deine Antwort.",
         ],
         traps: [
           "Eine Option übertreibt (Kündigung), obwohl der Kunde zufrieden war.",
           "Ein Wort aus dem Text (Mülleimer) wird falsch verwendet („kaputt“).",
         ],
-        tip: "Diese zwei Aufgaben sind schnelle Punkte. Nutzen Sie die Zeit vor allem für die Antwort-E-Mail.",
+        tip: "Diese zwei Aufgaben sind schnelle Punkte. Nutze die Zeit vor allem für die Antwort-E-Mail.",
         mini: {
           instr: "Welche Antwort passt?",
           material: [
@@ -1480,9 +1480,9 @@
         name: "Lesen und Schreiben Teil 2 – Antwort-E-Mail an Kunden",
         skill: "Schreiben",
         time: "ca. 15 Min.",
-        what: "Sie schreiben eine Antwort an den Kunden und setzen alle Punkte aus der Notiz Ihrer Chefin um (mind. 70 Wörter).",
+        what: "Du schreibst eine Antwort an den Kunden und setzt alle Punkte aus der Notiz deiner Chefin um (mind. 70 Wörter).",
         steps: [
-          "Machen Sie aus jedem Punkt der Notiz einen Satz – Reihenfolge der Notiz übernehmen.",
+          "Mach aus jedem Punkt der Notiz einen Satz – Reihenfolge der Notiz übernehmen.",
           "Formelle Anrede, Dank für die E-Mail, Entschuldigung.",
           "Konkrete Angaben (Tag, Uhrzeit, Telefonnummer) genau abschreiben.",
           "Freundlicher Schluss + „Mit freundlichen Grüßen“ + Name + Firma.",
@@ -1493,25 +1493,25 @@
           "Sie-Form und du-Form gemischt.",
           "Notiz-Stil wird abgeschrieben („Samstag: Dezember nein“) statt ganzer Sätze.",
         ],
-        tip: "Die Notiz ist Ihre Checkliste. Wer alle Punkte in ganzen, höflichen Sätzen bringt, hat schon den größten Teil der Punkte.",
+        tip: "Die Notiz ist deine Checkliste. Wer alle Punkte in ganzen, höflichen Sätzen bringt, hat schon den größten Teil der Punkte.",
       },
       {
         name: "Hören Teil 1 – Arbeitsabläufe, Probleme, Vorschläge",
         skill: "Hören",
         time: "ca. 6 Min.",
-        what: "Vier kurze Gespräche unter Kollegen. Zu jedem Gespräch eine Richtig/Falsch-Aussage und eine Frage a/b/c. Sie hören nur einmal.",
+        what: "Vier kurze Gespräche unter Kollegen. Zu jedem Gespräch eine Richtig/Falsch-Aussage und eine Frage a/b/c. Du hörst nur einmal.",
         steps: [
-          "Lesen Sie vor jedem Gespräch beide Aufgaben.",
-          "Achten Sie auf Problem und Lösung: Was ist kaputt/falsch? Wer macht was?",
-          "Achten Sie auf Korrekturen: „nicht …, sondern …“, „das nicht, aber …“.",
-          "Entscheiden Sie sofort und gehen Sie weiter.",
+          "Lies vor jedem Gespräch beide Aufgaben.",
+          "Achte auf Problem und Lösung: Was ist kaputt/falsch? Wer macht was?",
+          "Achte auf Korrekturen: „nicht …, sondern …“, „das nicht, aber …“.",
+          "Entscheide sofort und geh weiter.",
         ],
         traps: [
           "Ein Vorschlag wird abgelehnt („Nein, nein, … dann red ich selbst mit ihr“).",
           "Was heute passiert und was morgen passiert, wird vermischt.",
           "„schon wieder“, „auch letzte Woche“ zeigen: nicht zum ersten Mal.",
         ],
-        tip: "Bei einmaligem Hören gilt: Lieber eine schnelle Entscheidung als hängen bleiben – sonst verpassen Sie das nächste Gespräch.",
+        tip: "Bei einmaligem Hören gilt: Lieber eine schnelle Entscheidung als hängen bleiben – sonst verpasst du das nächste Gespräch.",
         mini: {
           instr: "Sie hören ein Gespräch einmal. Lösen Sie die Aufgaben.",
           audio: [
@@ -1558,12 +1558,12 @@
         name: "Hören Teil 2 – Meinungen",
         skill: "Hören",
         time: "ca. 4 Min.",
-        what: "Sie hören eine Teambesprechung. Sie ordnen zwei Personen die passende Meinung zu; zwei Aussagen bleiben übrig.",
+        what: "Du hörst eine Teambesprechung. Du ordnest zwei Personen die passende Meinung zu; zwei Aussagen bleiben übrig.",
         steps: [
-          "Lesen Sie die vier Aussagen und merken Sie sich die Schlüsselwörter.",
-          "Notieren Sie beim Hören zu jedem Namen ein Stichwort.",
-          "Unterscheiden Sie: Wer sagt seine eigene Meinung, wer gibt nur Informationen (oft die Chefin)?",
-          "Achten Sie auf Sätze mit „Ich finde …“, „Mein Problem ist …“, „Für mich ist wichtig …“.",
+          "Lies die vier Aussagen und merk dir die Schlüsselwörter.",
+          "Notiere beim Hören zu jedem Namen ein Stichwort.",
+          "Unterscheide: Wer sagt seine eigene Meinung, wer gibt nur Informationen (oft die Chefin)?",
+          "Achte auf Sätze mit „Ich finde …“, „Mein Problem ist …“, „Für mich ist wichtig …“.",
         ],
         traps: [
           "Eine Aussage stammt von der Chefin, nicht von den gesuchten Personen.",
@@ -1618,10 +1618,10 @@
         time: "ca. 4 Min.",
         what: "Zwei Gespräche, z. B. eine Einweisung in ein Gerät oder ein Verkaufsgespräch. Je zwei Fragen a/b/c, einmal hören.",
         steps: [
-          "Lesen Sie die Fragen: Geht es um einen Ablauf (zuerst, dann) oder um ein Produkt (Preis, Unterschied)?",
-          "Bei Produkten: Merken Sie, welche Eigenschaft zu welchem Produkt gehört.",
-          "Bei Abläufen: Achten Sie auf Bedingungen („wenn …, dann …“).",
-          "Achten Sie auf die Entscheidung am Ende des Gesprächs.",
+          "Lies die Fragen: Geht es um einen Ablauf (zuerst, dann) oder um ein Produkt (Preis, Unterschied)?",
+          "Bei Produkten: Merk dir, welche Eigenschaft zu welchem Produkt gehört.",
+          "Bei Abläufen: Achte auf Bedingungen („wenn …, dann …“).",
+          "Achte auf die Entscheidung am Ende des Gesprächs.",
         ],
         traps: [
           "Eigenschaften von zwei Produkten werden vertauscht.",
@@ -1666,19 +1666,19 @@
         name: "Hören Teil 4 – Anliegen",
         skill: "Hören",
         time: "ca. 6 Min.",
-        what: "Fünf Nachrichten auf dem Anrufbeantworter oder der Mailbox. Zu jeder Nachricht eine Frage a/b/c. Sie hören zweimal.",
+        what: "Fünf Nachrichten auf dem Anrufbeantworter oder der Mailbox. Zu jeder Nachricht eine Frage a/b/c. Du hörst zweimal.",
         steps: [
-          "Lesen Sie die Frage: Was soll man tun? Was ändert sich? Was soll man mitbringen?",
+          "Lies die Frage: Was soll man tun? Was ändert sich? Was soll man mitbringen?",
           "Beim ersten Hören: Antwort wählen.",
           "Beim zweiten Hören: kontrollieren, besonders Korrekturen („nicht …, sondern …“).",
-          "Achten Sie darauf, wer was macht.",
+          "Achte darauf, wer was macht.",
         ],
         traps: [
           "Gegenstände, die man vor Ort bekommt (Warnweste), statt solche, die man mitbringt.",
           "„Die Uhrzeit bleibt gleich“ – die Uhrzeit wird genannt, ändert sich aber nicht.",
           "Etwas ist schon erledigt („Mit Herrn Stein hab ich schon gesprochen“).",
         ],
-        tip: "Mailbox-Nachrichten enden meistens mit der Bitte. Hören Sie das Ende beim zweiten Mal besonders genau.",
+        tip: "Mailbox-Nachrichten enden meistens mit der Bitte. Hör das Ende beim zweiten Mal besonders genau.",
         mini: {
           instr: "Sie hören eine Nachricht zweimal. Welche Antwort passt?",
           audio: [
@@ -1713,18 +1713,18 @@
         name: "Hören und Schreiben Teil 1 – Telefonat verstehen",
         skill: "Hören",
         time: "ca. 2 Min.",
-        what: "Sie hören ein Kundentelefonat zweimal und beantworten eine Frage a/b/c zum Anliegen.",
+        what: "Du hörst ein Kundentelefonat zweimal und beantwortest eine Frage a/b/c zum Anliegen.",
         steps: [
-          "Lesen Sie die Frage und die Felder der Notiz (Teil 2) schon vor dem Hören.",
-          "Notieren Sie beim ersten Hören Stichpunkte: Name, Firma, Zahlen.",
-          "Achten Sie auf Selbstkorrekturen der Anruferin.",
-          "Beantworten Sie die Frage nach dem Gesamtanliegen.",
+          "Lies die Frage und die Felder der Notiz (Teil 2) schon vor dem Hören.",
+          "Notiere beim ersten Hören Stichpunkte: Name, Firma, Zahlen.",
+          "Achte auf Selbstkorrekturen der Anruferin.",
+          "Beantworte die Frage nach dem Gesamtanliegen.",
         ],
         traps: [
           "Die Anruferin korrigiert sich („zwei Nächte … nein, eine Nacht“).",
           "Eine Option nennt ein Detail, aber nicht das ganze Anliegen.",
         ],
-        tip: "Diese Aufgabe und die Notiz gehören zusammen: Ihre Stichpunkte aus dem ersten Hören sind schon die halbe Notiz.",
+        tip: "Diese Aufgabe und die Notiz gehören zusammen: Deine Stichpunkte aus dem ersten Hören sind schon die halbe Notiz.",
         mini: {
           instr: "Sie hören ein Telefonat. Welche Antwort passt?",
           audio: [
@@ -1757,7 +1757,7 @@
         name: "Hören und Schreiben Teil 2 – Gesprächsnotiz",
         skill: "Schreiben",
         time: "ca. 3 Min.",
-        what: "Sie hören das Telefonat noch einmal und schreiben eine Notiz für eine Kollegin / einen Kollegen: Wer? Anliegen, Termin/Details, Was tun?",
+        what: "Du hörst das Telefonat noch einmal und schreibst eine Notiz für eine Kollegin / einen Kollegen: Wer? Anliegen, Termin/Details, Was tun?",
         steps: [
           "Stichpunkte genügen – keine ganzen Sätze nötig.",
           "Name, Firma und Telefonnummer vollständig und korrekt notieren.",
@@ -1769,18 +1769,18 @@
           "Die korrigierte Information wird nicht notiert.",
           "Zu lange Sätze – dann fehlt die Zeit für wichtige Details.",
         ],
-        tip: "Eine gute Notiz kann die Kollegin lesen, ohne nachzufragen. Fragen Sie sich am Ende: Kann sie jetzt sofort handeln?",
+        tip: "Eine gute Notiz kann die Kollegin lesen, ohne nachzufragen. Frag dich am Ende: Kann sie jetzt sofort handeln?",
       },
       {
         name: "Sprachbausteine Teil 1 – Auf Anfragen reagieren",
         skill: "Schreiben",
         time: "ca. 4 Min.",
-        what: "Eine E-Mail mit sechs Lücken. Sie wählen jeweils die passende Formulierung (a, b oder c) – Grammatik und typische Wendungen für Anfragen, Bitten und Vorschläge.",
+        what: "Eine E-Mail mit sechs Lücken. Du wählst jeweils die passende Formulierung (a, b oder c) – Grammatik und typische Wendungen für Anfragen, Bitten und Vorschläge.",
         steps: [
-          "Lesen Sie den ganzen Satz – auch nach der Lücke (Verb am Ende = Nebensatz).",
-          "Überlegen Sie die Funktion: Bitte? Vorschlag? Grund? Zustimmung?",
-          "Prüfen Sie feste Verbindungen: sich freuen auf, warten auf, nachfragen ob.",
-          "Setzen Sie die Option ein und lesen Sie laut im Kopf.",
+          "Lies den ganzen Satz – auch nach der Lücke (Verb am Ende = Nebensatz).",
+          "Überleg dir die Funktion: Bitte? Vorschlag? Grund? Zustimmung?",
+          "Prüfe feste Verbindungen: sich freuen auf, warten auf, nachfragen ob.",
+          "Setz die Option ein und lies laut im Kopf.",
         ],
         traps: [
           "Konnektoren mit anderer Wortstellung (deshalb vs. weil).",
@@ -1816,7 +1816,7 @@
         name: "Sprachbausteine und Schreiben Teil 2 – Meinung im Team-Chat",
         skill: "Schreiben",
         time: "ca. 6 Min.",
-        what: "Sie antworten kurz (mind. 40 Wörter) im Team-Chat oder Intranet auf einen Vorschlag und begründen Ihre Meinung.",
+        what: "Du antwortest kurz (mind. 40 Wörter) im Team-Chat oder Intranet auf einen Vorschlag und begründest deine Meinung.",
         steps: [
           "Kurz grüßen und Bezug nehmen („danke für die Frage“).",
           "Meinung in einem Satz sagen.",
@@ -1835,11 +1835,11 @@
         name: "Sprechen Teil 1A – Über ein Thema sprechen",
         skill: "Sprechen",
         time: "ca. 2 Min.",
-        what: "Sie sprechen ca. eine Minute allein über ein Thema aus dem Berufsleben, z. B. „Arbeiten im Team“ oder „Mein Arbeitsweg“. Stichpunkte helfen.",
+        what: "Du sprichst ca. eine Minute allein über ein Thema aus dem Berufsleben, z. B. „Arbeiten im Team“ oder „Mein Arbeitsweg“. Stichpunkte helfen.",
         steps: [
           "Einleitung: „Ich möchte etwas über … erzählen.“",
           "Jeden Stichpunkt mit 2–3 Sätzen bearbeiten.",
-          "Ein konkretes Beispiel aus Ihrem Arbeitsleben bringen.",
+          "Ein konkretes Beispiel aus deinem Arbeitsleben bringen.",
           "Mit einem Satz abschließen.",
         ],
         traps: [
@@ -1847,13 +1847,13 @@
           "Zu kurz (20 Sekunden) – dann fehlen Punkte.",
           "Auswendig gelernter Text, der nicht zum Thema passt.",
         ],
-        tip: "Bereiten Sie zu Themen wie Arbeitsweg, Arbeitszeit, Team, Weiterbildung, Kunden je ein kleines Beispiel aus Ihrem Leben vor.",
+        tip: "Bereite zu Themen wie Arbeitsweg, Arbeitszeit, Team, Weiterbildung, Kunden je ein kleines Beispiel aus deinem Leben vor.",
       },
       {
         name: "Sprechen Teil 1B – Fragen beantworten",
         skill: "Sprechen",
         time: "ca. 2 Min.",
-        what: "Die Prüfenden stellen Ihnen Fragen zu Ihrem Thema. Sie antworten spontan und begründen.",
+        what: "Die Prüfenden stellen dir Fragen zu deinem Thema. Du antwortest spontan und begründest.",
         steps: [
           "Gut zuhören – bei Unklarheit nachfragen.",
           "Direkt antworten, dann begründen (weil, denn).",
@@ -1870,12 +1870,12 @@
         name: "Sprechen Teil 2 – Erfahrungen austauschen",
         skill: "Sprechen",
         time: "ca. 4 Min.",
-        what: "Sie sprechen mit Ihrer Partnerin / Ihrem Partner wie unter Kollegen über Erfahrungen, z. B. den ersten Arbeitstag.",
+        what: "Du sprichst mit deiner Partnerin / deinem Partner wie unter Kollegen über Erfahrungen, z. B. den ersten Arbeitstag.",
         steps: [
-          "Erzählen Sie kurz von sich.",
-          "Stellen Sie Fragen: „Und wie war das bei dir?“",
-          "Reagieren Sie: „Das kenne ich!“, „Das war bei mir anders.“",
-          "Sprechen Sie über Wünsche und Tipps.",
+          "Erzähl kurz von dir.",
+          "Stell Fragen: „Und wie war das bei dir?“",
+          "Reagiere: „Das kenne ich!“, „Das war bei mir anders.“",
+          "Sprich über Wünsche und Tipps.",
         ],
         traps: [
           "Zwei Monologe nacheinander statt Gespräch.",
@@ -1887,7 +1887,7 @@
         name: "Sprechen Teil 3 – Etwas gemeinsam planen",
         skill: "Sprechen",
         time: "ca. 5 Min.",
-        what: "Sie planen mit Ihrer Partnerin / Ihrem Partner etwas im Betrieb, z. B. die Einarbeitung einer neuen Kollegin oder ein Betriebsfest. Sie machen Vorschläge und einigen sich.",
+        what: "Du planst mit deiner Partnerin / deinem Partner etwas im Betrieb, z. B. die Einarbeitung einer neuen Kollegin oder ein Betriebsfest. Ihr macht Vorschläge und einigt euch.",
         steps: [
           "Mit einem Vorschlag beginnen („Ich schlage vor, dass …“).",
           "Auf jeden Vorschlag reagieren: zustimmen oder höflich ablehnen + Alternative.",

@@ -7,7 +7,7 @@
   provider: "telc",
   level: "B1",
   intro:
-    "Die allgemeine B1-Prüfung für den Alltag – zum Beispiel für Ausbildung, Arbeit oder die Einbürgerung. Sie üben hier alle Teile mit echter Zeitvorgabe.",
+    "Die allgemeine B1-Prüfung für den Alltag – zum Beispiel für Ausbildung, Arbeit oder die Einbürgerung. Du übst hier alle Teile mit echter Zeitvorgabe.",
   rule: "telc",
   skills: {
     lesen: { label: "Leseverstehen", max: 75 },
@@ -277,7 +277,7 @@
             {
               q: "Sie erwarten ein Baby und möchten günstig Kleidung für das Kind kaufen.",
               a: 10,
-              why: "Anzeige k: Babykleidung ab Größe 50 zu kleinen Preisen (Yoga in f ist für Sie, nicht für Kleidung).",
+              why: "Anzeige k: Babykleidung ab Größe 50 zu kleinen Preisen (Yoga in f ist für sie, nicht für Kleidung).",
             },
           ],
         },
@@ -836,7 +836,7 @@
       title: "Mündliche Prüfung",
       minutes: 15,
       prepMinutes: 20,
-      note: "Die mündliche Prüfung ist eine Paarprüfung. Sie haben vorher 20 Minuten Zeit, um sich auf Teil 2 und Teil 3 vorzubereiten. Die Rolle der Partnerin übernimmt hier die Simulation.",
+      note: "Die mündliche Prüfung ist eine Paarprüfung. Du hast vorher 20 Minuten Zeit, um dich auf Teil 2 und Teil 3 vorzubereiten. Die Rolle der Partnerin übernimmt hier die Simulation.",
       parts: [
         {
           kind: "speak",
@@ -963,7 +963,7 @@
   ],
   // ==================================================================== VORBEREITUNG
   prep: {
-    lead: "Das Zertifikat telc Deutsch B1 zeigt, dass Sie sich im Alltag und bei der Arbeit selbstständig auf Deutsch verständigen können. Die Prüfung hat einen schriftlichen Teil (Lesen, Sprachbausteine, Hören, Schreiben) und eine mündliche Paarprüfung. Viele brauchen das Zertifikat für Ausbildung, Beruf oder die Einbürgerung.",
+    lead: "Das Zertifikat telc Deutsch B1 zeigt, dass du dich im Alltag und bei der Arbeit selbstständig auf Deutsch verständigen kannst. Die Prüfung hat einen schriftlichen Teil (Lesen, Sprachbausteine, Hören, Schreiben) und eine mündliche Paarprüfung. Viele brauchen das Zertifikat für Ausbildung, Beruf oder die Einbürgerung.",
     facts: [
       [
         "Dauer",
@@ -979,7 +979,7 @@
       ],
       [
         "Teilbestehen",
-        "Wer nur den schriftlichen oder nur den mündlichen Teil besteht, kann den anderen Teil einzeln wiederholen – bis zum Ende des folgenden Kalenderjahres. Fragen Sie im Zweifel bei Ihrem Prüfungszentrum nach.",
+        "Wer nur den schriftlichen oder nur den mündlichen Teil besteht, kann den anderen Teil einzeln wiederholen – bis zum Ende des folgenden Kalenderjahres. Frag im Zweifel bei deinem Prüfungszentrum nach.",
       ],
       [
         "Ergebnis",
@@ -995,19 +995,19 @@
         name: "Leseverstehen Teil 1",
         skill: "Lesen",
         time: "ca. 15 Min.",
-        what: "Sie lesen fünf kurze Zeitungsmeldungen und zehn Überschriften. Sie suchen für jeden Text die passende Überschrift – fünf Überschriften bleiben übrig.",
+        what: "Du liest fünf kurze Zeitungsmeldungen und zehn Überschriften. Du suchst für jeden Text die passende Überschrift – fünf Überschriften bleiben übrig.",
         steps: [
-          "Lesen Sie zuerst alle zehn Überschriften und markieren Sie das Schlüsselwort (z. B. „sonntags“, „abgesagt“, „Preise“).",
-          "Lesen Sie jeden Text einmal schnell: Was ist die Hauptinformation? Fassen Sie sie in 3–4 Wörtern zusammen.",
-          "Vergleichen Sie Ihre Zusammenfassung mit den Überschriften – nicht einzelne Wörter.",
-          "Fangen Sie mit dem leichtesten Text an und streichen Sie benutzte Überschriften durch.",
+          "Lies zuerst alle zehn Überschriften und markiere das Schlüsselwort (z. B. „sonntags“, „abgesagt“, „Preise“).",
+          "Lies jeden Text einmal schnell: Was ist die Hauptinformation? Fass sie in 3–4 Wörtern zusammen.",
+          "Vergleiche deine Zusammenfassung mit den Überschriften – nicht einzelne Wörter.",
+          "Fang mit dem leichtesten Text an und streiche benutzte Überschriften durch.",
         ],
         traps: [
           "Zu einem Text passen meist zwei Überschriften zum gleichen Thema – nur eine trifft die Hauptaussage.",
           "Ein Wort aus der Überschrift steht im Text, aber mit „nicht“ oder „nur wenige“ (z. B. Preise werden NICHT erhöht).",
           "Eine Überschrift passt nur zu einem Detail, nicht zum ganzen Text.",
         ],
-        tip: "Fragen Sie sich bei jeder Überschrift: Würde ein Journalist genau diesen Text so nennen? Wenn nur ein Satz passt, ist es die falsche Überschrift.",
+        tip: "Frag dich bei jeder Überschrift: Würde ein Journalist genau diesen Text so nennen? Wenn nur ein Satz passt, ist es die falsche Überschrift.",
         mini: {
           instr:
             "Welche Überschrift (a–d) passt zu welchem Text? Zwei Überschriften bleiben übrig.",
@@ -1045,19 +1045,19 @@
         name: "Leseverstehen Teil 2",
         skill: "Lesen",
         time: "ca. 20 Min.",
-        what: "Sie lesen einen längeren Zeitungsartikel (ca. 350–400 Wörter) und beantworten fünf Multiple-Choice-Aufgaben mit a, b oder c. Die Aufgaben folgen meistens der Reihenfolge im Text.",
+        what: "Du liest einen längeren Zeitungsartikel (ca. 350–400 Wörter) und beantwortest fünf Multiple-Choice-Aufgaben mit a, b oder c. Die Aufgaben folgen meistens der Reihenfolge im Text.",
         steps: [
-          "Lesen Sie zuerst den Titel und die fünf Aufgaben – so wissen Sie, worauf Sie achten müssen.",
-          "Lesen Sie den Text abschnittsweise. Suchen Sie die Stelle zu Aufgabe 1, dann zu Aufgabe 2 usw.",
-          "Lesen Sie die passende Stelle genau und prüfen Sie alle drei Lösungen.",
-          "Streichen Sie Lösungen, die der Text klar widerlegt.",
+          "Lies zuerst den Titel und die fünf Aufgaben – so weißt du, worauf du achten musst.",
+          "Lies den Text abschnittsweise. Such die Stelle zu Aufgabe 1, dann zu Aufgabe 2 usw.",
+          "Lies die passende Stelle genau und prüfe alle drei Lösungen.",
+          "Streiche Lösungen, die der Text klar widerlegt.",
         ],
         traps: [
           "Falsche Lösungen benutzen oft dieselben Wörter wie der Text, sagen aber etwas anderes.",
           "Zeitangaben: „am Anfang“ und „heute“ werden verwechselt.",
           "Eine Lösung ist allgemein richtig, steht aber nicht im Text.",
         ],
-        tip: "Achten Sie auf kleine Wörter wie „nur“, „noch nicht“, „schon“, „früher“. Genau dort verstecken sich die meisten Fallen.",
+        tip: "Achte auf kleine Wörter wie „nur“, „noch nicht“, „schon“, „früher“. Genau dort verstecken sich die meisten Fallen.",
         mini: {
           instr: "Lesen Sie den Text. Welche Lösung (a, b oder c) ist richtig?",
           material: [
@@ -1094,19 +1094,19 @@
         name: "Leseverstehen Teil 3",
         skill: "Lesen",
         time: "ca. 20 Min.",
-        what: "Sie lesen zehn Situationen und zwölf Anzeigen. Sie suchen für jede Situation eine passende Anzeige. Für ein bis zwei Situationen passt keine Anzeige – dann wählen Sie x.",
+        what: "Du liest zehn Situationen und zwölf Anzeigen. Du suchst für jede Situation eine passende Anzeige. Für ein bis zwei Situationen passt keine Anzeige – dann wählst du x.",
         steps: [
-          "Markieren Sie in jeder Situation die wichtigen Bedingungen: Wer? (Alter), Was?, Wann?, Wie viel?",
-          "Lesen Sie die Anzeigen quer: Welches Thema hat jede Anzeige? Notieren Sie ein Stichwort daneben.",
-          "Ordnen Sie zu und prüfen Sie ALLE Bedingungen der Situation – nicht nur das Thema.",
-          "Jede Anzeige gibt es nur einmal: Streichen Sie benutzte Anzeigen durch.",
+          "Markiere in jeder Situation die wichtigen Bedingungen: Wer? (Alter), Was?, Wann?, Wie viel?",
+          "Lies die Anzeigen quer: Welches Thema hat jede Anzeige? Notiere ein Stichwort daneben.",
+          "Ordne zu und prüfe ALLE Bedingungen der Situation – nicht nur das Thema.",
+          "Jede Anzeige gibt es nur einmal: Streiche benutzte Anzeigen durch.",
         ],
         traps: [
           "Thema passt, aber ein Detail nicht: Alter („ab 8 Jahren“), Uhrzeit („nur vormittags“), Ort oder Zielgruppe.",
           "Zwei Anzeigen zum gleichen Thema (z. B. zwei Sportangebote) – nur eine erfüllt alle Bedingungen.",
           "Man vergisst die Möglichkeit x und zwingt eine Anzeige in die Situation.",
         ],
-        tip: "Wenn Sie bei einer Situation lange suchen und es immer „fast“ passt, ist x oft die richtige Lösung. In der Prüfung gibt es meistens eine oder zwei solche Situationen.",
+        tip: "Wenn du bei einer Situation lange suchst und es immer „fast“ passt, ist x oft die richtige Lösung. In der Prüfung gibt es meistens eine oder zwei solche Situationen.",
         mini: {
           instr:
             "Welche Anzeige (a–d) passt? Wenn keine Anzeige passt, wählen Sie x.",
@@ -1158,20 +1158,20 @@
         name: "Sprachbausteine Teil 1",
         skill: "Sprachbausteine",
         time: "ca. 15 Min.",
-        what: "Sie lesen einen Brief mit zehn Lücken. Für jede Lücke gibt es drei Möglichkeiten (a, b, c). Hier wird vor allem Grammatik geprüft.",
+        what: "Du liest einen Brief mit zehn Lücken. Für jede Lücke gibt es drei Möglichkeiten (a, b, c). Hier wird vor allem Grammatik geprüft.",
         steps: [
-          "Lesen Sie den ganzen Satz, nicht nur das Wort vor der Lücke.",
-          "Fragen Sie: Was für ein Wort fehlt? Präposition, Artikel/Endung, Relativpronomen, Konnektor, Verbform?",
-          "Prüfen Sie Kasus (Akk./Dat.), Genus und Position des Verbs nach dem Konnektor.",
-          "Setzen Sie Ihre Lösung ein und lesen Sie den Satz noch einmal leise.",
+          "Lies den ganzen Satz, nicht nur das Wort vor der Lücke.",
+          "Frag dich: Was für ein Wort fehlt? Präposition, Artikel/Endung, Relativpronomen, Konnektor, Verbform?",
+          "Prüfe Kasus (Akk./Dat.), Genus und Position des Verbs nach dem Konnektor.",
+          "Setz deine Lösung ein und lies den Satz noch einmal leise.",
         ],
         traps: [
-          "weil / denn / deshalb: Achten Sie auf die Position des Verbs danach.",
+          "weil / denn / deshalb: Achte auf die Position des Verbs danach.",
           "wenn / als / wann: „als“ nur für eine einmalige Situation in der Vergangenheit.",
           "Verben mit festen Präpositionen: sich freuen über / auf, warten auf, denken an.",
           "Relativpronomen nach Präposition: mit denen, bei dem, für die.",
         ],
-        tip: "Lernen Sie Verben immer mit Präposition und Kasus (sich interessieren für + Akk.). Das bringt in diesem Teil die meisten Punkte.",
+        tip: "Lerne Verben immer mit Präposition und Kasus (sich interessieren für + Akk.). Das bringt in diesem Teil die meisten Punkte.",
         mini: {
           instr: "Welches Wort (a, b oder c) passt in die Lücke?",
           material: [
@@ -1206,12 +1206,12 @@
         name: "Sprachbausteine Teil 2",
         skill: "Sprachbausteine",
         time: "ca. 15 Min.",
-        what: "Sie lesen einen Text, oft einen formellen Brief oder eine Mitteilung, mit zehn Lücken. Dazu gibt es 15 Wörter (a–o). Jedes Wort passt nur einmal, fünf bleiben übrig.",
+        what: "Du liest einen Text, oft einen formellen Brief oder eine Mitteilung, mit zehn Lücken. Dazu gibt es 15 Wörter (a–o). Jedes Wort passt nur einmal, fünf bleiben übrig.",
         steps: [
-          "Lesen Sie die 15 Wörter und sortieren Sie sie grob: Präpositionen, Konnektoren, Pronomen, Adverbien.",
-          "Lesen Sie den Text und überlegen Sie bei jeder Lücke, welche Wortart fehlt.",
-          "Füllen Sie zuerst die sicheren Lücken aus und streichen Sie die Wörter durch.",
-          "Prüfen Sie am Ende die übrigen Lücken mit den restlichen Wörtern.",
+          "Lies die 15 Wörter und sortiere sie grob: Präpositionen, Konnektoren, Pronomen, Adverbien.",
+          "Lies den Text und überleg bei jeder Lücke, welche Wortart fehlt.",
+          "Füll zuerst die sicheren Lücken aus und streiche die Wörter durch.",
+          "Prüfe am Ende die übrigen Lücken mit den restlichen Wörtern.",
         ],
         traps: [
           "Ähnliche Wörter: ihm / ihn, dafür / damit, seit / seitdem.",
@@ -1252,19 +1252,19 @@
         name: "Hörverstehen Teil 1",
         skill: "Hören",
         time: "ca. 5 Min.",
-        what: "Sie hören fünf kurze Radiomeldungen (Nachrichten, Wetter, Verkehr). Sie hören jeden Text nur EINMAL und entscheiden, ob eine Aussage richtig oder falsch ist.",
+        what: "Du hörst fünf kurze Radiomeldungen (Nachrichten, Wetter, Verkehr). Du hörst jeden Text nur EINMAL und entscheidest, ob eine Aussage richtig oder falsch ist.",
         steps: [
-          "Lesen Sie die Aussagen vor dem Hören und markieren Sie die wichtigste Information (Ort, Zeit, Zahl, „nur“, „alle“).",
-          "Konzentrieren Sie sich beim Hören auf diese eine Information.",
-          "Entscheiden Sie sofort nach dem Text – es gibt keine zweite Chance.",
-          "Wenn Sie unsicher sind: Kreuzen Sie trotzdem an und gehen Sie zum nächsten Text.",
+          "Lies die Aussagen vor dem Hören und markiere die wichtigste Information (Ort, Zeit, Zahl, „nur“, „alle“).",
+          "Konzentrier dich beim Hören auf diese eine Information.",
+          "Entscheide sofort nach dem Text – es gibt keine zweite Chance.",
+          "Wenn du unsicher bist: Kreuz trotzdem an und geh zum nächsten Text.",
         ],
         traps: [
           "Nur ein Teil der Aussage stimmt (Sonne – ja, aber nur im Süden).",
           "Zeitangaben: „ab heute“ statt „ab nächster Woche“.",
           "Wörter wie „nur“, „alle“, „ganz“ machen eine Aussage oft falsch.",
         ],
-        tip: "Sie hören nur einmal – nicht in Panik geraten, wenn Sie ein Wort nicht verstehen. Meistens wird die wichtige Information mit anderen Worten noch einmal gesagt.",
+        tip: "Du hörst nur einmal – nicht in Panik geraten, wenn du ein Wort nicht verstehst. Meistens wird die wichtige Information mit anderen Worten noch einmal gesagt.",
         mini: {
           instr: "Sie hören zwei kurze Meldungen einmal. Richtig oder falsch?",
           plays: 1,
@@ -1309,19 +1309,19 @@
         name: "Hörverstehen Teil 2",
         skill: "Hören",
         time: "ca. 15 Min.",
-        what: "Sie hören ein längeres Radiogespräch oder Interview zweimal. Dazu gibt es zehn Aussagen: richtig oder falsch? Die Aussagen kommen in der Reihenfolge des Gesprächs.",
+        what: "Du hörst ein längeres Radiogespräch oder Interview zweimal. Dazu gibt es zehn Aussagen: richtig oder falsch? Die Aussagen kommen in der Reihenfolge des Gesprächs.",
         steps: [
-          "Nutzen Sie die Lesezeit: Lesen Sie alle zehn Aussagen und unterstreichen Sie Schlüsselwörter.",
-          "Beim ersten Hören: Kreuzen Sie an, was Sie sicher wissen, und folgen Sie dem Gespräch Aussage für Aussage.",
-          "Beim zweiten Hören: Prüfen Sie die unsicheren Aussagen.",
-          "Achten Sie darauf, WER etwas sagt oder meint (der Gast, seine Frau, andere Personen).",
+          "Nutze die Lesezeit: Lies alle zehn Aussagen und unterstreiche Schlüsselwörter.",
+          "Beim ersten Hören: Kreuz an, was du sicher weißt, und folge dem Gespräch Aussage für Aussage.",
+          "Beim zweiten Hören: Prüfe die unsicheren Aussagen.",
+          "Achte darauf, WER etwas sagt oder meint (der Gast, seine Frau, andere Personen).",
         ],
         traps: [
           "Die Person nennt eine Möglichkeit, die sie dann NICHT gewählt hat („Ich hätte … können, aber …“).",
           "Eine Meinung wird einer anderen Person zugeordnet (die Frau statt die Kollegin).",
           "Mengenangaben: „viele“ in der Aussage, aber „zwei, drei“ im Gespräch.",
         ],
-        tip: "Verlieren Sie nicht den Faden: Wenn Sie merken, dass das Gespräch schon bei Aussage 5 ist, lassen Sie 4 erst einmal offen und hören Sie beim zweiten Mal genau hin.",
+        tip: "Verlier nicht den Faden: Wenn du merkst, dass das Gespräch schon bei Aussage 5 ist, lass 4 erst einmal offen und hör beim zweiten Mal genau hin.",
         mini: {
           instr: "Sie hören ein kurzes Gespräch zweimal. Richtig oder falsch?",
           plays: 2,
@@ -1366,18 +1366,18 @@
         name: "Hörverstehen Teil 3",
         skill: "Hören",
         time: "ca. 10 Min.",
-        what: "Sie hören fünf kurze Durchsagen und Ansagen, zum Beispiel am Bahnhof, im Kaufhaus, am Telefon oder im Radio. Sie hören jeden Text zweimal und entscheiden: richtig oder falsch?",
+        what: "Du hörst fünf kurze Durchsagen und Ansagen, zum Beispiel am Bahnhof, im Kaufhaus, am Telefon oder im Radio. Du hörst jeden Text zweimal und entscheidest: richtig oder falsch?",
         steps: [
-          "Lesen Sie die Aussage und überlegen Sie: Wo bin ich? Welche Information brauche ich (Gleis, Uhrzeit, Datum, Telefonnummer)?",
+          "Lies die Aussage und überleg: Wo bin ich? Welche Information brauche ich (Gleis, Uhrzeit, Datum, Telefonnummer)?",
           "Beim ersten Hören die Information suchen, beim zweiten Hören kontrollieren.",
-          "Achten Sie auf Änderungen: „heute ausnahmsweise“, „statt“, „nicht mehr“.",
+          "Achte auf Änderungen: „heute ausnahmsweise“, „statt“, „nicht mehr“.",
         ],
         traps: [
           "Die alte und die neue Information werden beide genannt (Gleis 7 → Gleis 9).",
           "Bedingungen: „nur bis Donnerstag“, „nur online“, „nur heute“.",
           "Zahlen klingen ähnlich: 13 / 30, 14 / 40.",
         ],
-        tip: "Bei Durchsagen kommt die wichtige Information oft zweimal („Ich wiederhole …“). Notieren Sie Zahlen sofort auf dem Aufgabenblatt.",
+        tip: "Bei Durchsagen kommt die wichtige Information oft zweimal („Ich wiederhole …“). Notiere Zahlen sofort auf dem Aufgabenblatt.",
         mini: {
           instr: "Sie hören zwei Ansagen zweimal. Richtig oder falsch?",
           plays: 2,
@@ -1422,13 +1422,13 @@
         name: "Schriftlicher Ausdruck",
         skill: "Schreiben",
         time: "30 Min.",
-        what: "Sie wählen eine von zwei Aufgaben und schreiben einen Brief oder eine E-Mail – persönlich an eine Freundin oder halbformell an eine Firma. Dabei bearbeiten Sie vier Leitpunkte.",
+        what: "Du wählst eine von zwei Aufgaben und schreibst einen Brief oder eine E-Mail – persönlich an eine Freundin oder halbformell an eine Firma. Dabei bearbeitest du vier Leitpunkte.",
         steps: [
-          "Wählen Sie schnell (max. 2 Minuten) – die Aufgabe, zu der Ihnen sofort Ideen kommen.",
-          "Notieren Sie zu jedem Leitpunkt zwei Stichwörter und legen Sie eine sinnvolle Reihenfolge fest.",
-          "Schreiben Sie: Anrede – Einleitung (Bezug) – vier Leitpunkte in eigenen Absätzen – Schluss – Gruß.",
-          "Verbinden Sie die Sätze mit Konnektoren (denn, deshalb, außerdem, aber, weil).",
-          "Planen Sie 5 Minuten am Ende ein, um Verbformen, Endungen und Du/Sie zu kontrollieren.",
+          "Wähl schnell (max. 2 Minuten) – die Aufgabe, zu der dir sofort Ideen kommen.",
+          "Notiere zu jedem Leitpunkt zwei Stichwörter und leg eine sinnvolle Reihenfolge fest.",
+          "Schreib: Anrede – Einleitung (Bezug) – vier Leitpunkte in eigenen Absätzen – Schluss – Gruß.",
+          "Verbinde die Sätze mit Konnektoren (denn, deshalb, außerdem, aber, weil).",
+          "Plane 5 Minuten am Ende ein, um Verbformen, Endungen und Du/Sie zu kontrollieren.",
         ],
         traps: [
           "Ein Leitpunkt wird vergessen – das kostet viele Punkte.",
@@ -1442,24 +1442,24 @@
         name: "Sprechen Teil 1: Kontaktaufnahme",
         skill: "Sprechen",
         time: "ca. 3 Min.",
-        what: "Sie und Ihre Partnerin / Ihr Partner lernen sich kennen. Sie stellen sich gegenseitig Fragen zu Herkunft, Wohnen, Arbeit, Familie, Sprachen und Hobbys.",
+        what: "Du und deine Partnerin / dein Partner lernt euch kennen. Ihr stellt euch gegenseitig Fragen zu Herkunft, Wohnen, Arbeit, Familie, Sprachen und Hobbys.",
         steps: [
-          "Bereiten Sie zu jedem Thema 2–3 Sätze über sich vor – mit Details (seit wann, warum, wie).",
-          "Hören Sie Ihrer Partnerin zu und stellen Sie Gegenfragen.",
-          "Reagieren Sie natürlich: „Oh, interessant! Und wie gefällt es Ihnen dort?“",
+          "Bereite zu jedem Thema 2–3 Sätze über dich vor – mit Details (seit wann, warum, wie).",
+          "Hör deiner Partnerin zu und stell Gegenfragen.",
+          "Reagiere natürlich: „Oh, interessant! Und wie gefällt es Ihnen dort?“",
         ],
         traps: [
           "Nur Ein-Wort-Antworten („Syrien.“ – „Zwei.“).",
           "Man spricht nur über sich und fragt nicht zurück.",
           "Auswendig gelernte Monologe ohne Kontakt zur Partnerin.",
         ],
-        tip: "Teil 1 ist das Aufwärmen. Sprechen Sie lieber einfach und flüssig – und zeigen Sie mit Rückfragen, dass Sie ein echtes Gespräch führen.",
+        tip: "Teil 1 ist das Aufwärmen. Sprich lieber einfach und flüssig – und zeig mit Rückfragen, dass du ein echtes Gespräch führst.",
       },
       {
         name: "Sprechen Teil 2: Gespräch über ein Thema",
         skill: "Sprechen",
         time: "ca. 6 Min.",
-        what: "Jede Person hat einen kurzen Text zum gleichen Thema gelesen. Sie berichten kurz über Ihren Text, erzählen von eigenen Erfahrungen und tauschen Meinungen aus.",
+        what: "Jede Person hat einen kurzen Text zum gleichen Thema gelesen. Du berichtest kurz über deinen Text, erzählst von eigenen Erfahrungen, und ihr tauscht Meinungen aus.",
         steps: [
           "In der Vorbereitungszeit: 3–4 Stichwörter zum Inhalt notieren (Thema, Zahl, Gründe, Kritik).",
           "Den Inhalt mit eigenen Worten zusammenfassen – nicht vorlesen.",
@@ -1471,25 +1471,25 @@
           "Nur den Text zusammenfassen und keine eigene Meinung sagen.",
           "Der Partnerin nicht zuhören und nicht auf ihren Text reagieren.",
         ],
-        tip: "Stellen Sie Ihrer Partnerin am Ende eine Frage zu ihrem Text oder ihrer Meinung. So zeigen Sie, dass Sie ein Gespräch führen können – genau das wird bewertet.",
+        tip: "Stell deiner Partnerin am Ende eine Frage zu ihrem Text oder ihrer Meinung. So zeigst du, dass du ein Gespräch führen kannst – genau das wird bewertet.",
       },
       {
         name: "Sprechen Teil 3: Gemeinsam etwas planen",
         skill: "Sprechen",
         time: "ca. 6 Min.",
-        what: "Sie planen zusammen mit Ihrer Partnerin / Ihrem Partner etwas, zum Beispiel eine Feier oder einen Ausflug. Auf der Aufgabenkarte stehen Stichpunkte, über die Sie sprechen sollen.",
+        what: "Du planst zusammen mit deiner Partnerin / deinem Partner etwas, zum Beispiel eine Feier oder einen Ausflug. Auf der Aufgabenkarte stehen Stichpunkte, über die ihr sprechen sollt.",
         steps: [
-          "Gehen Sie die Stichpunkte der Reihe nach durch – keinen vergessen.",
-          "Machen Sie eigene Vorschläge und begründen Sie sie.",
-          "Reagieren Sie auf die Vorschläge: zustimmen oder höflich widersprechen und eine Alternative nennen.",
-          "Verteilen Sie Aufgaben und fassen Sie am Ende das Ergebnis zusammen.",
+          "Geh die Stichpunkte der Reihe nach durch – keinen vergessen.",
+          "Mach eigene Vorschläge und begründe sie.",
+          "Reagiere auf die Vorschläge: zustimmen oder höflich widersprechen und eine Alternative nennen.",
+          "Verteile Aufgaben und fasse am Ende das Ergebnis zusammen.",
         ],
         traps: [
           "Zu allem nur „Ja, gut.“ sagen – dann gibt es keine Diskussion.",
           "Eine Person redet die ganze Zeit, die andere kommt nicht zu Wort.",
           "Man vergisst, sich am Ende zu einigen.",
         ],
-        tip: "Widersprechen Sie ruhig einmal – höflich und mit Begründung. Eine kleine Diskussion mit einer Einigung zeigt Ihr Sprachniveau viel besser als ständiges Zustimmen.",
+        tip: "Widersprich ruhig einmal – höflich und mit Begründung. Eine kleine Diskussion mit einer Einigung zeigt dein Sprachniveau viel besser als ständiges Zustimmen.",
       },
     ],
     redemittel: [
@@ -1603,7 +1603,7 @@
       {
         w: "Woche 1",
         tasks: [
-          "Eine komplette Simulation machen, um Ihr Niveau zu sehen – Punkte notieren.",
+          "Eine komplette Simulation machen, um dein Niveau zu sehen – Punkte notieren.",
           "Prüfungsaufbau lernen: Welche Teile gibt es, wie viel Zeit, wie viele Punkte?",
           "Lesen Teil 1: jeden Tag zwei kurze Zeitungsmeldungen lesen und in einer Zeile zusammenfassen.",
           "Sprechen Teil 1: Vorstellung (Herkunft, Familie, Arbeit, Hobbys) laut üben und aufnehmen.",
@@ -1627,7 +1627,7 @@
           "Schreiben: eine halbformelle E-Mail (Anfrage an eine Firma) in 30 Minuten schreiben.",
           "Sprechen Teil 2: einen kurzen Zeitungstext in 1 Minute mit eigenen Worten zusammenfassen und Meinung sagen.",
           "Sprechen Teil 3: mit einer Lernpartnerin eine Feier oder einen Ausflug planen.",
-          "Typische Fehler aus Ihren Texten sammeln und eine eigene Fehlerliste machen.",
+          "Typische Fehler aus deinen Texten sammeln und eine eigene Fehlerliste machen.",
         ],
       },
       {
