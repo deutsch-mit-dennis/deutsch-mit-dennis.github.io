@@ -195,7 +195,7 @@
     const chSub = ch.doneToday ? `✓ Heute geschafft · ${ch.streak} 🔥` : ch.streak ? `Serie: ${ch.streak} ${ch.streak === 1 ? 'Tag' : 'Tage'} 🔥` : '10 Aufgaben · 3 Min.';
     const tiles = [
       ['#challenge', 'dm-q-ch', '🔥', 'Tages-Challenge', chSub],
-      ['#simulation', 'dm-q-sp', '⏱', 'Probeprüfung', 'DTZ, LiD, telc, DTB · mit Uhr'],
+      ['#simulation', 'dm-q-sp', '🎯', 'Probeprüfung', 'DTZ, LiD, telc, DTB · mit Uhr'],
       ['#spiele/lino', 'dm-q-lino', '🏃', 'Lino läuft', '14 Welten · Tageslauf & Shop'],
       [sod ? '#lieder/' + sod.id : '#lieder', 'dm-q-song', '🎵', sod ? 'Lied des Tages' : 'Lieder', sod ? sod.title : '50 Lieder A1–C1']
     ];
@@ -220,7 +220,30 @@
       </div>
     </section>
 
-    ${window.DMWitz ? DMWitz.card() : ''}
+    <section class="dm-section" aria-labelledby="wege-h">
+      <div class="dm-section-head"><h2 id="wege-h">Wähle deinen Weg</h2><p>Du kannst jederzeit wechseln.</p></div>
+      <div class="dm-paths">${(DM.pathHome || DM.pathOrder).map(id => pathCard(id)).join('')}</div>
+      <p class="dm-center"><a class="dm-btn dm-btn-quiet" href="#lernweg">Alle ${DM.pathOrder.length} Lernwege ansehen →</a></p>
+    </section>
+
+    <section class="dm-section dm-tools" aria-labelledby="tools-h">
+      <div class="dm-section-head"><h2 id="tools-h">Direkt üben</h2></div>
+      <div class="dm-toolgrid">
+        <a href="#simulation" data-img="pokal"><img class="dm-tool-3d" src="assets/3d/pokal.webp" alt="" width="192" height="192" loading="lazy" aria-hidden="true"><b>Probeprüfungen</b><span>DTZ, Leben in Deutschland, telc B1/B2, DTB B1/B2 – mit echter Zeit, Punkten und Lösungen.</span></a>
+        <a href="#ueben/sprechen/A1" data-img="sprechblase"><img class="dm-tool-3d" src="assets/3d/sprechblase.webp" alt="" width="192" height="192" loading="lazy" aria-hidden="true"><b>Sprechen</b><span>Gespräche aus dem Alltag, mit Satzanfängen und Beispiel zum Anhören.</span></a>
+        <a href="#ueben/schreiben/A2" data-img="schreiben"><img class="dm-tool-3d" src="assets/3d/schreiben.webp" alt="" width="192" height="192" loading="lazy" aria-hidden="true"><b>Schreiben</b><span>Nachrichten, Briefe und E-Mails – mit Sofort-Korrektur, Checkliste und Mustertext.</span></a>
+        <a href="#hoeren" data-img="kopfhoerer"><img class="dm-tool-3d" src="assets/3d/kopfhoerer.webp" alt="" width="192" height="192" loading="lazy" aria-hidden="true"><b>Hören</b><span>Hörtraining für Alltag und Beruf mit natürlichen Stimmen: Ansagen, Mailbox, Gespräche.</span></a>
+        <a href="#lesen" data-img="buecher"><img class="dm-tool-3d" src="assets/3d/buecher.webp" alt="" width="192" height="192" loading="lazy" aria-hidden="true"><b>Lesen</b><span>Mitteilungen, Anzeigen, E-Mails und Artikel verstehen – wie in der Prüfung.</span></a>
+        <a href="#lid" data-img="gebaeude"><img class="dm-tool-3d" src="assets/3d/gebaeude.webp" alt="" width="192" height="192" loading="lazy" aria-hidden="true"><b>Leben in Deutschland</b><span>Lernspiele und Wissen für den Orientierungskurs.</span></a>
+        <a href="#lieder" data-img="mikrofon"><img class="dm-tool-3d" src="assets/3d/mikrofon.webp" alt="" width="192" height="192" loading="lazy" aria-hidden="true"><b>Deutsch mit Liedern</b><span>50 eigene Lieder von A1 bis C1 – mit Text, Aufgaben und Lösungen.</span></a>
+        <a href="#kahoot" data-img="spiel"><img class="dm-tool-3d" src="assets/3d/spiel.webp" alt="" width="192" height="192" loading="lazy" aria-hidden="true"><b>Kahoot-Quiz</b><span>Spielerisch wiederholen – allein oder mit dem ganzen Kurs.</span></a>
+        <a href="#material" data-img="blatt"><img class="dm-tool-3d" src="assets/3d/blatt.webp" alt="" width="192" height="192" loading="lazy" aria-hidden="true"><b>Materialien</b><span>Arbeitsblätter und Merkblätter als PDF – zum Ausdrucken.</span></a>
+
+      </div>
+    </section>
+
+    ${window.DMChallenge ? `<section class="dm-section ch-home" aria-label="Tages-Challenge und Lernspiele">${DMChallenge.teaser()}<a class="sp-home" href="#spiele"><span aria-hidden="true">🎮</span><span><b>Lernspiele</b><small>18 Spiele: Jump’n’Run · Artikel · Verben · Alltag · DTB B2 · Leben in Deutschland</small></span><span class="sp-home-go">Spielen →</span></a></section>` : ''}
+
     <section class="dm-section lino-home" aria-labelledby="lino-h">
       <a class="lino-home-card" href="#spiele/lino">
         <svg class="lino-home-art" viewBox="0 0 320 180" aria-hidden="true" focusable="false">
@@ -252,31 +275,7 @@
       </a>
     </section>
 
-    ${window.DMChallenge ? `<section class="dm-section ch-home" aria-label="Tages-Challenge und Lernspiele">${DMChallenge.teaser()}<a class="sp-home" href="#spiele"><span aria-hidden="true">🎮</span><span><b>Lernspiele</b><small>18 Spiele: Jump’n’Run · Artikel · Verben · Alltag · DTB B2 · Leben in Deutschland</small></span><span class="sp-home-go">Spielen →</span></a></section>` : ''}
-
     ${songStage(false)}
-
-    <section class="dm-section" aria-labelledby="wege-h">
-      <div class="dm-section-head"><h2 id="wege-h">Wähle deinen Weg</h2><p>Du kannst jederzeit wechseln.</p></div>
-      <div class="dm-paths">${(DM.pathHome || DM.pathOrder).map(id => pathCard(id)).join('')}</div>
-      <p class="dm-center"><a class="dm-btn dm-btn-quiet" href="#lernweg">Alle ${DM.pathOrder.length} Lernwege ansehen →</a></p>
-    </section>
-
-    <section class="dm-section dm-tools" aria-labelledby="tools-h">
-      <div class="dm-section-head"><h2 id="tools-h">Direkt üben</h2></div>
-      <div class="dm-toolgrid">
-        <a href="#simulation" data-img="pokal"><img class="dm-tool-3d" src="assets/3d/pokal.webp" alt="" width="192" height="192" loading="lazy" aria-hidden="true"><b>Probeprüfungen</b><span>DTZ, Leben in Deutschland, telc B1/B2, DTB B1/B2 – mit echter Zeit, Punkten und Lösungen.</span></a>
-        <a href="#ueben/sprechen/A1" data-img="sprechblase"><img class="dm-tool-3d" src="assets/3d/sprechblase.webp" alt="" width="192" height="192" loading="lazy" aria-hidden="true"><b>Sprechen</b><span>Gespräche aus dem Alltag, mit Satzanfängen und Beispiel zum Anhören.</span></a>
-        <a href="#ueben/schreiben/A2" data-img="schreiben"><img class="dm-tool-3d" src="assets/3d/schreiben.webp" alt="" width="192" height="192" loading="lazy" aria-hidden="true"><b>Schreiben</b><span>Nachrichten, Briefe und E-Mails – mit Sofort-Korrektur, Checkliste und Mustertext.</span></a>
-        <a href="#hoeren" data-img="kopfhoerer"><img class="dm-tool-3d" src="assets/3d/kopfhoerer.webp" alt="" width="192" height="192" loading="lazy" aria-hidden="true"><b>Hören</b><span>Hörtraining für Alltag und Beruf mit natürlichen Stimmen: Ansagen, Mailbox, Gespräche.</span></a>
-        <a href="#lesen" data-img="buecher"><img class="dm-tool-3d" src="assets/3d/buecher.webp" alt="" width="192" height="192" loading="lazy" aria-hidden="true"><b>Lesen</b><span>Mitteilungen, Anzeigen, E-Mails und Artikel verstehen – wie in der Prüfung.</span></a>
-        <a href="#lid" data-img="gebaeude"><img class="dm-tool-3d" src="assets/3d/gebaeude.webp" alt="" width="192" height="192" loading="lazy" aria-hidden="true"><b>Leben in Deutschland</b><span>Lernspiele und Wissen für den Orientierungskurs.</span></a>
-        <a href="#lieder" data-img="mikrofon"><img class="dm-tool-3d" src="assets/3d/mikrofon.webp" alt="" width="192" height="192" loading="lazy" aria-hidden="true"><b>Deutsch mit Liedern</b><span>50 eigene Lieder von A1 bis C1 – mit Text, Aufgaben und Lösungen.</span></a>
-        <a href="#kahoot" data-img="spiel"><img class="dm-tool-3d" src="assets/3d/spiel.webp" alt="" width="192" height="192" loading="lazy" aria-hidden="true"><b>Kahoot-Quiz</b><span>Spielerisch wiederholen – allein oder mit dem ganzen Kurs.</span></a>
-        <a href="#material" data-img="blatt"><img class="dm-tool-3d" src="assets/3d/blatt.webp" alt="" width="192" height="192" loading="lazy" aria-hidden="true"><b>Materialien</b><span>Arbeitsblätter und Merkblätter als PDF – zum Ausdrucken.</span></a>
-
-      </div>
-    </section>
 
     <section class="dm-section dm-news" aria-labelledby="news-h">
       <div class="dm-section-head"><h2 id="news-h">Neu auf der Seite</h2><p>Jede Woche kommt etwas dazu.</p></div>
@@ -288,6 +287,7 @@
       <div class="dm-vgrid dm-vgrid-feature" aria-busy="true"><p class="dm-hint">Videos werden geladen …</p></div>
     </section>
 
+    ${window.DMWitz ? DMWitz.card() : ''}
     <section class="dm-section dm-about-teaser">
       <img src="assets/dennis.webp" alt="" width="120" height="192" loading="lazy">
       <div><h2>Wer ist Dennis?</h2><p>Seit 2017 im Deutschunterricht – DaF, Integrationskurse, DSH und TestDaF. Master in Germanistik, lizenzierter DTZ- und telc-Prüfer, vom BAMF zugelassen für Integrations- und Berufssprachkurse bis C2. Ich kenne die Prüfungen aus dem Unterricht und als Prüfer.</p><div class="dm-row"><a class="dm-btn dm-btn-quiet" href="#ueber-mich">Mehr über mich</a><a class="dm-btn dm-btn-quiet" href="#ueber-mich/nachweise">Meine Zulassungen ansehen</a></div></div>
@@ -587,6 +587,10 @@
       <div class="dm-head dm-head-art"><div><h1>Hören</h1><p class="dm-lead">Ansagen, Mailbox-Nachrichten, Gespräche und Radiobeiträge – mit Fragen und Lösungen. Die Texte sind mit natürlichen Stimmen aufgenommen, verschiedene Personen sprechen.</p></div><span class="dm-wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span></div>
       <section class="dm-section"><div class="dm-section-head"><h2>DTZ Hören – Übungssätze</h2><p>A2–B1 · alle vier Teile wie in der Prüfung</p></div>
         <div class="dm-paths">${group('dtz').map(([id, s]) => setCard(id, s, 'sun')).join('')}</div></section>
+      ${group('telcb1').length ? `<section class="dm-section"><div class="dm-section-head"><h2>telc B1 Hören – allgemein</h2><p>B1 · Radiomeldungen, Interview, Durchsagen – richtig oder falsch</p></div>
+        <div class="dm-paths">${group('telcb1').map(([id, s]) => setCard(id, s, 'sky')).join('')}</div></section>` : ''}
+      ${group('dtbb1').length ? `<section class="dm-section"><div class="dm-section-head"><h2>DTB B1 Hören – Beruf</h2><p>B1 Beruf · Mailbox, Durchsagen im Betrieb, Gespräche im Team</p></div>
+        <div class="dm-paths">${group('dtbb1').map(([id, s]) => setCard(id, s, 'ink')).join('')}</div></section>` : ''}
       <section class="dm-section"><div class="dm-section-head"><h2>DTB B2 Hören – Beruf</h2><p>B2 · Mailbox, Besprechung, Kundengespräch, Radio</p></div>
         <div class="dm-paths">${group('b2').map(([id, s]) => setCard(id, s, 'ink')).join('')}</div></section>
       <section class="dm-section"><div class="dm-section-head"><h2>Kurze Hörtexte zum Einstieg</h2></div>
@@ -867,67 +871,78 @@
   }
 
   /* ---------- Prüfung ---------- */
-  function exam() {
+  function exam(tab) {
     const card = (url, part, title, desc) => `<a class="dm-exam" href="${url}"><span class="dm-tag">${part}</span><b>${title}</b><span>${desc}</span></a>`;
+    const hs = (id, fb) => listenSet(id) ? '#hoeren/' + id : '#hoeren/' + fb;
+    const simCards = (id, w, m) => card(`#simulation/${id}/schriftlich`, 'Probeprüfung', 'Schriftlich mit Uhr', w) + card(`#simulation/${id}/muendlich`, 'Probeprüfung', 'Mündlich mit Uhr', m);
+    const T = {
+      dtz: { label: 'DTZ', h: 'DTZ – Deutsch-Test für Zuwanderer', p: 'g.a.s.t. · A2–B1 · am Ende des Integrationskurses', path: 'dtz', color: 'sun',
+        cards: () => simCards('dtz', 'Hören, Lesen, Schreiben · 100 Min.', 'Drei Sprechteile · 16 Min.') +
+          card('#training/dtz-vorstellen', 'Sprechen 1', 'Sich vorstellen', 'Steckbrief und Nachfragen') +
+          card('#training/dtz-bild', 'Sprechen 2', 'Bild beschreiben', 'Beschreiben und erzählen') +
+          card('#bild', 'Sprechen 2 · Trainer', 'Bild-Trainer', '4 Bilder Schritt für Schritt – mit Musterbeschreibung') +
+          card('#training/dtz-sprechen', 'Sprechen 3', 'Gemeinsam planen', 'Vorschlagen und einigen') +
+          card('#training/dtz-schreiben', 'Schreiben', 'Einen Brief schreiben', 'Vier Leitpunkte, mit Muster') +
+          card('#lesen/alltag', 'Lesen', 'Mitteilungen verstehen', `${(readSets()[0] || { items: [] }).items.length} Lesetexte mit Fragen`) +
+          card('#hoeren/dtz-1', 'Hören', 'DTZ-Hörtraining', 'Übungssätze mit allen vier Teilen') },
+      lid: { label: 'Leben in D.', h: 'Test „Leben in Deutschland“', p: 'Orientierungskurs und Einbürgerung · 33 Fragen in 60 Minuten', path: 'lid', color: 'mint',
+        cards: () => card('#simulation/lid', 'Probeprüfung', 'Test mit Uhr', '33 Fragen · 60 Min. · mit Auswertung') +
+          card('#lid', 'Lernen', 'LiD-Trainer: alle 310 Fragen', 'Block für Block lernen, Fehler wiederholen') +
+          card('#orientierungskurs', 'Verstehen', 'Deutschland verstehen', 'Demokratie, Geschichte, Zusammenleben – mit Missionen') +
+          card('#spiele/lid', 'Lernspiele', 'LiD-Spiele', 'Zeitstrahl, Wer macht was im Staat?') +
+          card('#videos/orientierung', 'Videos', 'LiD einfach erklärt', 'Wahlen, Grundrechte, Bundestag') },
+      telcb1: { label: 'telc B1', h: 'telc Deutsch B1 (Zertifikat Deutsch)', p: 'B1 allgemein · zum Beispiel für Einbürgerung, Ausbildung oder Arbeit', path: 'telcb1', color: 'sky',
+        cards: () => simCards('telc-b1', 'Lesen, Sprachbausteine, Hören, Brief · 150 Min.', 'Paarprüfung · 15 Min. + 20 Min. Vorbereitung') +
+          card('#vorbereitung/telc-b1', 'Vorbereitung', 'Aufbau und Strategien', 'Jeder Teil mit Fallen, Mini-Übung und Lernplan') +
+          card('#lesen/alltag', 'Lesen', 'Lesen üben', 'Anzeigen, Mitteilungen, Artikel') +
+          card(hs('telcb1-1', 'alltag'), 'Hören', 'Hören üben', 'Radio, Interview, Durchsagen') +
+          card('#ueben/schreiben/B1/2', 'Schreiben', 'Einen Brief schreiben', 'Leitpunkte bearbeiten, mit Mustertext') +
+          card('#ueben/sprechen/B1/0', 'Sprechen', 'Gemeinsam etwas planen', 'Vorschläge machen und sich einigen') },
+      telcb2: { label: 'telc B2', h: 'telc Deutsch B2', p: 'B2 allgemein · zum Beispiel für Arbeit, Anerkennung oder Studium', path: 'telcb2', color: 'sky',
+        cards: () => simCards('telc-b2', 'Lesen, Sprachbausteine, Hören, E-Mail · 140 Min.', 'Paarprüfung · 15 Min. + 20 Min. Vorbereitung') +
+          card('#vorbereitung/telc-b2', 'Vorbereitung', 'Aufbau und Strategien', 'Jeder Teil mit Fallen, Mini-Übung und Lernplan') +
+          card('#lesen/beruf', 'Lesen', 'Lesen auf B2', 'Längere Texte, Regelungen, Artikel') +
+          card('#ueben/schreiben/B2/2', 'Schreiben', 'Formelle E-Mail', 'Bitte um Information oder Beschwerde') +
+          card('#ueben/schreiben/B2/3', 'Schreiben', 'Meinung vertreten', 'Argumente sammeln und gewichten') +
+          card('#spiele/b2', 'Lernspiele', 'Wortschatz und Grammatik B2', 'Nomen-Verb, Präpositionen, Konnektoren') },
+      dtbb1: { label: 'DTB B1', h: 'DTB B1 – Deutsch-Test für den Beruf', p: 'Berufssprachkurs B1 · Deutsch im Berufsalltag', path: 'dtbb1', color: 'ink',
+        cards: () => simCards('dtb-b1', 'Lesen, Hören, Schreiben · 95 Min.', 'Drei Sprechteile · 16 Min.') +
+          card('#vorbereitung/dtb-b1', 'Vorbereitung', 'Aufbau und Strategien', 'Jeder Teil mit Fallen, Mini-Übung und Lernplan') +
+          card('#lesen/beruf', 'Lesen', 'Lesen im Beruf', 'Regelungen, E-Mails, Anzeigen') +
+          card(hs('dtbb1-1', 'beruf'), 'Hören', 'Hören im Beruf', 'Mailbox, Durchsagen, Gespräche im Team') +
+          card('#lektion/arbeit/3', 'Sprechen', 'Über die eigene Arbeit sprechen', 'Dialog lesen, eigene Erfahrungen ergänzen') },
+      dtbb2: { label: 'DTB B2', h: 'DTB B2 – Deutsch-Test für den Beruf', p: 'Berufssprachkurs B2 · Vorbereitung und Wiederholung', path: 'dtbb2', color: 'ink',
+        cards: () => simCards('dtb-b2', 'Lesen, Hören, Schreiben · 125 Min.', 'Drei Sprechteile · 16 Min.') +
+          card('#vorbereitung/dtb-b2', 'Vorbereitung', 'Aufbau und Strategien', 'Jeder Teil mit Fallen, Mini-Übung und Lernplan') +
+          card('#training/dtb-thema', 'Sprechen 1', 'Über ein Thema sprechen', 'Strukturieren und Beispiele geben') +
+          card('#training/dtb-kollegen', 'Sprechen 2', 'Mit Kollegen sprechen', 'Eingehen und nachfragen') +
+          card('#training/dtb-sprechen', 'Sprechen 3', 'Lösungen diskutieren', 'Abwägen und vereinbaren') +
+          card('#training/dtb-schreiben', 'Schreiben', 'Kundenantwort', 'Mit internen Informationen') +
+          card('#lesen/beruf', 'Lesen', 'Regelungen und E-Mails', `${(readSets()[1] || { items: [] }).items.length} Lesetexte mit Fragen`) +
+          card('#hoeren/b2-1', 'Hören', 'DTB-B2-Hörtraining', 'Mailbox, Besprechung, Kundengespräch, Radio') +
+          card('#spiele/b2', 'Lernspiele', 'Wortschatz und Grammatik B2', 'Nomen-Verb, Präpositionen, Konnektoren') }
+    };
+    if (!T[tab]) tab = T[mem.examTab] ? mem.examTab : 'dtz';
+    if (mem.examTab !== tab) { mem.examTab = tab; save(); }
+    const t = T[tab], P = DM.paths[t.path];
     page(`${crumbs([['Prüfungstraining']])}
-      <div class="dm-head"><h1>Prüfungstraining</h1><p class="dm-lead">Eigene Übungsaufgaben im Stil der Prüfungen – DTZ, Leben in Deutschland, telc B1 und B2, DTB B1 und B2. Mit Mustertexten, Checklisten und kompletten Simulationen. Keine offiziellen Prüfungsaufgaben.</p></div>
-      <section class="dm-exam-block dm-g-sun dm-sim-block" aria-labelledby="sim-h">
-        <div class="dm-exam-head"><h2 id="sim-h">⏱ Neu: Prüfungssimulationen</h2><p>Komplette Prüfung mit echter Zeit für jeden Teil – mit Punkten, Bestehensregel und allen Lösungen</p><a href="#simulation">Alle Simulationen</a></div>
-        <div class="dm-examgrid">
-          ${card('#simulation/dtz', 'g.a.s.t. · A2–B1', 'DTZ', 'Hören, Lesen, Schreiben, Sprechen · ca. 2 Std.')}
-          ${card('#simulation/lid', 'BAMF-Katalog', 'Leben in Deutschland', '33 Fragen · 60 Min.')}
-          ${card('#simulation/telc-b1', 'telc · B1', 'telc Deutsch B1', 'Zertifikat Deutsch · ca. 3 Std.')}
-          ${card('#simulation/dtb-b1', 'telc · B1 Beruf', 'DTB B1', 'Deutsch-Test für den Beruf · ca. 2 Std.')}
-          ${card('#simulation/telc-b2', 'telc · B2', 'telc Deutsch B2', 'Allgemein · ca. 3 Std.')}
-          ${card('#simulation/dtb-b2', 'telc · B2 Beruf', 'DTB B2', 'Deutsch-Test für den Beruf · ca. 2,5 Std.')}
-        </div>
+      <div class="dm-head"><h1>Prüfungstraining</h1><p class="dm-lead">Wähle deine Prüfung: Probeprüfung mit echter Zeit, gezieltes Training und dein Lernweg.</p></div>
+      <div class="sp-filter-wrap"><nav class="sp-tabs dm-examtabs" aria-label="Prüfung wählen">${Object.entries(T).map(([k, v]) => `<a href="#pruefung/${k}"${k === tab ? ' aria-current="page"' : ''}>${x(v.label)}</a>`).join('')}</nav></div>
+      <section class="dm-exam-block dm-g-${t.color}" aria-labelledby="ex-h">
+        <div class="dm-exam-head"><h2 id="ex-h">${x(t.h)}</h2><p>${x(t.p)}</p>${P ? `<a href="#lernweg/${t.path}">Lernweg „${x(P.title)}“ öffnen</a>` : ''}</div>
+        <div class="dm-examgrid">${t.cards()}</div>
       </section>
-      <section class="dm-exam-block dm-g-sky" aria-labelledby="telc-h">
-        <div class="dm-exam-head"><h2 id="telc-h">Gezielte Vorbereitung: telc B1, telc B2 und DTB</h2><p>Aufbau und Zeiten, Strategie und Fallen für jeden Teil, Mini-Übungen, Redemittel, Lernplan</p><a href="#vorbereitung">Alle Prüfungen</a></div>
-        <div class="dm-examgrid">
-          ${card('#vorbereitung/telc-b1', 'B1 allgemein', 'telc Deutsch B1', 'Lesen, Sprachbausteine, Hören, Brief, Sprechen')}
-          ${card('#vorbereitung/telc-b2', 'B2 allgemein', 'telc Deutsch B2', 'Formelle E-Mail, Diskussion, Sprachbausteine')}
-          ${card('#vorbereitung/dtb-b1', 'B1 Beruf', 'DTB B1', 'Kunden-E-Mail, Notiz, Gespräche im Team')}
-          ${card('#vorbereitung/dtb-b2', 'B2 Beruf', 'DTB B2', 'Beschwerde, Telefonnotiz, Forumsbeitrag')}
-        </div>
-      </section>
-      <aside class="dm-card dm-exam-new"><b>Tipp:</b> Auch in jeder einzelnen Trainingsaufgabe läuft auf Wunsch die Uhr wie in der Prüfung – mit Wortzähler beim Schreiben und Aufnahme beim Sprechen.</aside>
-      <section class="dm-exam-block dm-g-sun" aria-labelledby="dtz-h">
-        <div class="dm-exam-head"><h2 id="dtz-h">DTZ – Deutsch-Test für Zuwanderer</h2><p>A2–B1 · am Ende des Integrationskurses</p><a href="#lernweg/dtz">Lernweg DTZ öffnen</a></div>
-        <div class="dm-examgrid">
-          ${card('#training/dtz-vorstellen', 'Sprechen 1', 'Sich vorstellen', 'Steckbrief und Nachfragen')}
-          ${card('#training/dtz-bild', 'Sprechen 2', 'Bild beschreiben', 'Beschreiben und erzählen')}
-          ${card('#bild', 'Sprechen 2 · Trainer', 'Bild-Trainer: Endungen & Relativsätze', '4 Bilder, Schritt für Schritt – mit Musterbeschreibung')}
-          ${card('#training/dtz-sprechen', 'Sprechen 3', 'Gemeinsam planen', 'Vorschlagen und einigen')}
-          ${card('#training/dtz-schreiben', 'Schreiben', 'Einen Brief schreiben', 'Vier Leitpunkte, mit Muster')}
-          ${card('#lesen/alltag', 'Lesen', 'Mitteilungen verstehen', `${(readSets()[0] || { items: [] }).items.length} Lesetexte mit Fragen`)}
-          ${card('#hoeren/alltag', 'Hören', 'Ansagen und Nachrichten', `${(listenSet('alltag') || { items: [] }).items.length} Hörtexte mit Fragen`)}
-        </div>
-      </section>
-      <section class="dm-exam-block dm-g-ink" aria-labelledby="dtb-h">
-        <div class="dm-exam-head"><h2 id="dtb-h">B2 Beruf – Deutsch-Test für den Beruf</h2><p>Berufssprachkurs B2 · Vorbereitung und Wiederholung</p><a href="#lernweg/repeat">Lernweg B2 wiederholen</a></div>
-        <div class="dm-examgrid">
-          ${card('#training/dtb-thema', 'Sprechen 1', 'Über ein Thema sprechen', 'Strukturieren und Beispiele geben')}
-          ${card('#training/dtb-kollegen', 'Sprechen 2', 'Mit Kollegen sprechen', 'Eingehen und nachfragen')}
-          ${card('#training/dtb-sprechen', 'Sprechen 3', 'Lösungen diskutieren', 'Abwägen und vereinbaren')}
-          ${card('#training/dtb-schreiben', 'Schreiben', 'Kundenantwort', 'Mit internen Informationen')}
-          ${card('#lesen/beruf', 'Lesen', 'Regelungen und E-Mails', `${(readSets()[1] || { items: [] }).items.length} Lesetexte mit Fragen`)}
-          ${card('#hoeren/beruf', 'Hören', 'Hören im Beruf', `${(listenSet('beruf') || { items: [] }).items.length} Hörtexte mit Fragen`)}
-          ${card('#spiele/b2', 'Lernspiele', 'Wortschatz und Grammatik B2', 'Nomen-Verb, Präpositionen, Konnektoren, Redemittel')}
-        </div>
-      </section>
-      <section class="dm-exam-block dm-g-mint" aria-labelledby="lid-h">
-        <div class="dm-exam-head"><h2 id="lid-h">Leben in Deutschland</h2><p>Orientierungskurs · Test „Leben in Deutschland“</p></div>
-        <div class="dm-examgrid">
-          ${card('#lid', 'Neu', 'LiD-Trainer: alle 310 Fragen', 'Lernen, Fehler wiederholen, Test mit 33 Fragen und 60 Minuten')}
-          ${card('#orientierungskurs', 'Lernspiele', 'Deutschland verstehen', 'Demokratie, Geschichte, Zusammenleben')}
-          ${card('#spiele/lid', 'Neu', 'LiD-Spiele', 'Überleben, Zeitstrahl, Wer macht was im Staat?')}
-          ${card('#videos/orientierung', 'Videos', 'LiD einfach erklärt', 'Wahlen, Grundrechte, Bundestag')}
-        </div>
-      </section>
+      <p class="dm-center"><a class="dm-btn dm-btn-quiet" href="#simulation">Alle 6 Probeprüfungen im Überblick</a></p>
       <section class="dm-card dm-official"><h2>Offizielle Informationen und Modelltests</h2><p>Prüfungsaufbau, Bewertung und offizielle Übungssätze findest du bei den Prüfungsanbietern. Die Links haben wir für dich gesammelt.</p><a class="dm-btn dm-btn-quiet" href="#quellen">Prüfungsinfos und Quellen</a></section>
       ${materialLinks('pruefung', 'Arbeitsblätter zur Prüfung')}
       <div id="dm-exam-videos"></div>`);
+    const tabs = $('.dm-examtabs'), wrap = tabs && tabs.parentElement;
+    if (tabs) {
+      const upd = () => wrap.classList.toggle('is-end', tabs.scrollLeft + tabs.clientWidth >= tabs.scrollWidth - 4);
+      tabs.addEventListener('scroll', upd, { passive: true });
+      const cur = tabs.querySelector('[aria-current]'); if (cur && cur.offsetLeft + cur.offsetWidth > tabs.clientWidth) tabs.scrollLeft = cur.offsetLeft - 16;
+      upd();
+    }
     videoSection('pruefung', 'Videos zur Prüfung').then(sec => sec && $('#dm-exam-videos')?.replaceWith(sec));
   }
 
@@ -1422,7 +1437,7 @@
   /* ---------- Router ---------- */
   const legacyRoute = window.route;
   const NAV = { '': 'start', lernweg: 'wege', wegweiser: 'wege', lernen: 'lernen', lektion: 'lernen', wortschatz: 'lernen', wort: 'lernen', ueben: 'ueben', schreiben: 'ueben', hoeren: 'ueben', lesen: 'ueben', kahoot: 'ueben', challenge: 'spiele', spiele: 'spiele', bild: 'pruefung', pruefung: 'pruefung', training: 'pruefung', orientierungskurs: 'pruefung', lid: 'pruefung', quellen: 'pruefung', simulation: 'pruefung', vorbereitung: 'pruefung', videos: 'videos', 'ueber-mich': 'ueber', material: 'material', lernpakete: 'pakete', lieder: 'lieder' };
-  const TITLES = { '': 'Deutsch lernen mit Dennis', lernweg: 'Mein Lernweg', wegweiser: 'Welcher Weg passt?', lernen: 'Lektionen', lektion: 'Lektion', wortschatz: 'Wortschatz', wort: 'Wortkarte', ueben: 'Üben', schreiben: 'Schreib-Bausteine', hoeren: 'Hören', lesen: 'Lesen', kahoot: 'Kahoot-Quiz', challenge: 'Tages-Challenge', spiele: 'Lernspiele', bild: 'Bild beschreiben', pruefung: 'Prüfungstraining', training: 'Prüfungstraining', orientierungskurs: 'Leben in Deutschland', lid: 'LiD-Trainer', quellen: 'Prüfungsinfos & Quellen', simulation: 'Prüfungssimulationen', vorbereitung: 'Gezielte Vorbereitung', videos: 'Videos', 'ueber-mich': 'Über mich', impressum: 'Impressum', datenschutz: 'Datenschutz', pinnwand: 'Deine Meinung', material: 'Materialien', lernpakete: 'Lernpakete', lieder: 'Deutsch mit Liedern', musik: 'Musik zum Lernen' };
+  const TITLES = { '': 'Deutsch lernen mit Dennis', lernweg: 'Mein Lernweg', wegweiser: 'Welcher Weg passt?', lernen: 'Lektionen', lektion: 'Lektion', wortschatz: 'Wortschatz', wort: 'Wortkarte', ueben: 'Üben', schreiben: 'Schreib-Bausteine', hoeren: 'Hören', lesen: 'Lesen', kahoot: 'Kahoot-Quiz', challenge: 'Tages-Challenge', spiele: 'Lernspiele', bild: 'Bild beschreiben', pruefung: 'Prüfungstraining', training: 'Prüfungstraining', orientierungskurs: 'Deutschland verstehen', lid: 'Leben in Deutschland – 310 Fragen', quellen: 'Prüfungsinfos & Quellen', simulation: 'Prüfungssimulationen', vorbereitung: 'Gezielte Vorbereitung', videos: 'Videos', 'ueber-mich': 'Über mich', impressum: 'Impressum', datenschutz: 'Datenschutz', pinnwand: 'Deine Meinung', material: 'Materialien', lernpakete: 'Lernpakete', lieder: 'Deutsch mit Liedern', musik: 'Musik zum Lernen' };
   const OWN = {
     '': () => home(),
     lernweg: p => p[1] ? pathPage(p[1]) : paths(),
@@ -1432,7 +1447,7 @@
     schreiben: () => toolkit(),
     hoeren: p => p[1] ? listening(p[1], p[2]) : listeningHub(),
     lesen: p => p[1] ? reading(p[1], p[2]) : readingHub(),
-    pruefung: () => exam(),
+    pruefung: p => exam(p[1]),
     videos: p => videos(p[1], p[2]),
     musik: () => musicPage(),
     'ueber-mich': p => { about(); fillMusic(mainEl); if (p[1] === 'nachweise') setTimeout(() => $('#nachweise')?.scrollIntoView({ behavior: 'smooth' }), 60); },

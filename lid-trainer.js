@@ -20,8 +20,8 @@
   const isPicAnswer = q => q.img.length === 4 && /^Bild \d$/.test(q.a[0]);
   const known = q => { const s = mem()[q.id]; return s && s.last === true; };
   const wrongList = () => K.filter(q => mem()[q.id]?.last === false);
-  const head = (title, lead) => `${DM.crumbs([['Prüfungstraining', '#pruefung'], ['LiD-Trainer', title ? '#lid' : null], ...(title ? [[title]] : [])])}
-    <div class="dm-head"><h1>${title || 'LiD-Trainer: alle 310 Fragen'}</h1>${lead ? `<p class="dm-lead">${lead}</p>` : ''}</div>`;
+  const head = (title, lead) => `${DM.crumbs([['Prüfungstraining', '#pruefung/lid'], ['Leben in Deutschland', title ? '#lid' : null], ...(title ? [[title]] : [])])}
+    <div class="dm-head"><h1>${title || 'Leben in Deutschland: alle 310 Fragen'}</h1>${lead ? `<p class="dm-lead">${lead}</p>` : ''}</div>${!title && window.lidHubNav ? lidHubNav('#lid') : ''}`;
   const foot = () => `<p class="dm-small lid-src">Fragen und Antworten: offizieller Gesamtfragenkatalog des BAMF (300 allgemeine Fragen + 10 Fragen Nordrhein-Westfalen), Stand ${e(window.LID_KATALOG_STAND || '')}. Herausgeber: Bundesamt für Migration und Flüchtlinge (BAMF). Aufbereitet nach dem Datensatz <a href="https://github.com/YehorAltshuler/bamf-lid-dataset" target="_blank" rel="noopener">bamf-lid-dataset</a>. Den Katalog als PDF findest du beim <a href="https://www.bamf.de/SharedDocs/Anlagen/DE/Integration/Einbuergerung/gesamtfragenkatalog-lebenindeutschland.pdf?__blob=publicationFile" target="_blank" rel="noopener">BAMF ↗</a>.</p><p class="dm-small"><b>Hinweis:</b> ${e(window.LID_HINWEIS_TEXT || '')}</p>`;
 
   function questionHTML(q, { chosen = null, reveal = false, name = 'a' } = {}) {

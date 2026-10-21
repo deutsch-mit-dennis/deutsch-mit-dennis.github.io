@@ -59,8 +59,15 @@
     DM.page(`${DM.crumbs([['Üben', '#ueben'], ['Lernspiele', c ? '#spiele' : null], ...(c ? [[c.t]] : [])])}
       <div class="dm-head"><h1>${c ? esc(c.t) : 'Lernspiele'}</h1><p class="dm-lead">${c ? esc(c.d) : 'Kurz, schnell und mit sofortiger Rückmeldung – auf dem Handy und am Computer. Ohne Anmeldung.'}</p></div>
       ${!c && window.DMChallenge ? DMChallenge.teaser() : ''}
-      <nav class="sp-tabs" aria-label="Bereiche"><a href="#spiele"${!c ? ' aria-current="page"' : ''}>Alle</a>${CATS.map(k => `<a href="#spiele/${k.id}"${c === k ? ' aria-current="page"' : ''}><span aria-hidden="true">${k.icon}</span> ${esc(k.t.split(':')[0].replace('Test „Leben in Deutschland“', 'Leben in Deutschland'))}</a>`).join('')}</nav>
+      <div class="sp-filter-wrap"><nav class="sp-tabs" aria-label="Bereiche"><a href="#spiele"${!c ? ' aria-current="page"' : ''}>Alle</a>${CATS.map(k => `<a href="#spiele/${k.id}"${c === k ? ' aria-current="page"' : ''}><span aria-hidden="true">${k.icon}</span> ${esc(k.t.split(':')[0].replace('Test „Leben in Deutschland“', 'Leben in Deutschland'))}</a>`).join('')}</nav></div>
       ${(c ? [c] : CATS).map(section).join('')}`, 'sp-page');
+    const tabs = document.querySelector('.sp-tabs'), wrap = tabs && tabs.parentElement;
+    if (tabs) {
+      const upd = () => wrap.classList.toggle('is-end', tabs.scrollLeft + tabs.clientWidth >= tabs.scrollWidth - 4);
+      tabs.addEventListener('scroll', upd, { passive: true });
+      const cur = tabs.querySelector('[aria-current]'); if (cur && cur.offsetLeft > tabs.clientWidth - 60) tabs.scrollLeft = cur.offsetLeft - 16;
+      upd();
+    }
   }
 
   function intro(g) {

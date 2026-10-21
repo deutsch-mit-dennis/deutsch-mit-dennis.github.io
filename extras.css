@@ -765,3 +765,47 @@ header.dm-header nav{margin-left:auto}
 /* Einheitlichkeit 21.10.: Nummer in LiD-Karten mit Abstand, Hilfe-Knopf am Handy kleiner und weiter am Rand */
 .lid-card .lid-number{margin:0 10px 6px 0;vertical-align:middle}
 @media (max-width:600px){#site-helper{right:10px!important;bottom:10px!important}#site-helper .help-launch{width:46px!important;height:46px!important;min-width:46px!important;min-height:46px!important;padding:0!important;opacity:.94}}
+/* Startseite am Handy: „Direkt üben“ als kompakte Kacheln (2 Spalten, ohne Beschreibung) */
+@media (max-width:520px){
+  .dm-home .dm-toolgrid{grid-template-columns:1fr 1fr;gap:10px;border-top:0}
+  .dm-home .dm-toolgrid a[data-img],.dm-home .dm-toolgrid a:nth-child(n){position:relative;padding:12px 10px 12px 52px!important;min-height:64px;align-content:center;border:1px solid var(--dm-line);border-radius:14px;background:#fff}
+  .dm-home .dm-toolgrid b{font-size:15.5px;line-height:1.25}
+  .dm-home .dm-toolgrid span{display:none}
+  .dm-home .dm-tool-3d{left:8px;top:50%;width:38px;height:38px;margin-top:-19px}
+}
+/* Lernspiele: Filterleiste zeigt, dass man wischen kann */
+.sp-filter-wrap{position:relative}
+@media (max-width:760px){.sp-filter-wrap::after{content:"";position:absolute;top:0;right:0;bottom:6px;width:48px;pointer-events:none;background:linear-gradient(90deg,rgba(251,251,248,0),var(--dm-paper) 70%)}.sp-filter-wrap.is-end::after{display:none}}
+/* Leben in Deutschland: gemeinsame Navigation und modernisierte Missionsseite */
+.lid-hub{margin:6px 0 4px}
+.lid-subnav{margin-top:0}
+.lid-subnav a{min-height:40px;font-size:15px;border-width:1px}
+.lid-card h2{font-size:22px!important;margin:10px 0 6px!important}
+.lid-card p{color:var(--dm-muted);margin:0 0 10px}
+.lid-card>span:last-child{color:var(--dm-tinte);font-weight:700;font-size:15px}
+.lid-progress{background:var(--dm-surface);border:1px solid var(--dm-line);border-radius:var(--dm-r);padding:16px 18px!important;margin:14px 0 18px}
+.lid-progress progress{accent-color:var(--dm-gruen)}
+.lid-games h2{font-size:24px}
+.lid-games .oral-card{display:block;padding:18px;border:1px solid var(--dm-line);border-radius:var(--dm-r);background:var(--dm-surface);text-decoration:none;color:var(--dm-ink)}
+.lid-games .oral-card:hover{border-color:var(--dm-tinte)}
+.lid-games .oral-card h3{margin:0 0 6px;font-size:19px}
+.lid-games .oral-card p{margin:0;color:var(--dm-muted);font-size:16px}
+.lid-games .oral-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px}
+@media (max-width:760px){.lid-grid{grid-template-columns:1fr!important;gap:12px!important}.lid-card{padding:18px!important}}
+/* Merkblätter LiD am Handy: 2 Spalten, kompakt */
+@media (max-width:600px){
+  .ok-material-grid{grid-template-columns:1fr 1fr!important;gap:10px!important}
+  .ok-material-card{padding:8px!important;gap:6px!important;border-radius:12px!important}
+  .ok-material-card .ok-preview span{display:none}
+  .ok-material-card .ok-preview img{height:170px;width:100%;object-fit:cover;object-position:top}
+  .ok-material-card h3{font-size:14.5px!important;line-height:1.3;margin:0}
+  .ok-material-card .btn{font-size:13px!important;padding:8px 10px!important;min-height:40px;width:100%;text-align:center}
+}
+/* Startseite am Handy kürzer */
+@media (max-width:520px){
+  .dm-home .dm-paths .dm-path-text>span:not(.dm-path-meta):not(.dm-mini-progress){display:none}
+  .dm-home .dm-paths .dm-path{padding-top:14px;padding-bottom:14px}
+  .dm-home .dm-about-teaser>img{display:none}
+  .dm-home .dm-about-teaser p{font-size:16px}
+  .dm-home .dm-pkg-teaser-list li:nth-child(n+2){display:none}
+}
