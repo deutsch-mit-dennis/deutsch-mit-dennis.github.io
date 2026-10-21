@@ -1,0 +1,236 @@
+[
+ {
+  "id": "a1-09-ist-es-noch-weit",
+  "level": "A1",
+  "title": "Ist es noch weit?",
+  "theme": "In der Stadt: nach dem Weg fragen, Orte und Wege (geradeaus, links, rechts)",
+  "grammar": "Ja-/Nein-Fragen mit dem Verb auf Position 1 (Ist es noch weit? Fährt hier ein Bus?) und Antworten mit ja, nein und nicht",
+  "intro": "Nachts allein in einer neuen Stadt – wo ist nur die Gartenstraße? Mit diesem Lied fragst du nach dem Weg und übst Ja-/Nein-Fragen und Antworten mit nicht.",
+  "lyrics": "[Verse 1]\nEs ist Nacht, die Stadt ist still,\nich bin neu hier, ich weiß nicht viel.\nDer Regen fällt, die Lichter sind an,\nich steige aus und frage einen Mann:\n„Entschuldigung, ist das die Gartenstraße?“\n„Nein, das ist sie nicht. Gehen Sie geradeaus,\ndann links, dann rechts – dann sind Sie zu Hause.“\n\n[Chorus]\nIst es noch weit? – Nein, nicht weit.\nIst es schon spät? – Ja, es ist spät.\nSiehst du das Licht? – Ja, ich sehe das Licht.\nIst es noch weit? – Nein, nicht weit, nicht weit.\n\n[Verse 2]\nDa ist ein Kiosk, da ist ein Park,\nder Park ist dunkel, der Wind ist stark.\n„Fährt hier ein Bus?“ – „Nein, nicht mehr.\nDie Straße ist leer, der Platz ist leer.“\n„Ist das ein Problem?“ – „Nein, gar nicht.\nSie gehen zehn Minuten – dann sehen Sie ein Licht.“\nIch gehe allein, Schritt für Schritt,\ndie Nacht ist kalt, der Mond geht mit.\n\n[Chorus]\nIst es noch weit? – Nein, nicht weit.\nIst es schon spät? – Ja, es ist spät.\nSiehst du das Licht? – Ja, ich sehe das Licht.\nIst es noch weit? – Nein, nicht weit, nicht weit.\n\n[Bridge]\nIch bin nicht müde, ich bin nicht allein,\ndie Stadt ist groß, mein Weg ist klein.\nEin Fenster ist hell, die Bahn fährt vorbei –\nGartenstraße, Nummer drei.\n\n[Chorus]\nIst es noch weit? – Nein, nicht weit.\nIst es schon spät? – Ja, es ist spät.\nSiehst du das Licht? – Ja, ich sehe das Licht.\nIst es noch weit? – Nein, nicht weit, nicht weit.\n\n[Outro]\nIst das mein Haus? – Ja, das ist dein Haus.\nIst es noch weit? – Nein. Nicht mehr weit.",
+  "vocab": [
+   [
+    "die Stadt, die Städte",
+    "Ort mit vielen Häusern und Menschen"
+   ],
+   [
+    "die Nacht, die Nächte",
+    "Zeit, wenn es dunkel ist und man schläft"
+   ],
+   [
+    "der Regen",
+    "Wasser fällt vom Himmel"
+   ],
+   [
+    "das Licht, die Lichter",
+    "Es macht hell, z. B. eine Lampe."
+   ],
+   [
+    "aussteigen",
+    "aus dem Bus oder aus der Bahn gehen"
+   ],
+   [
+    "die Straße, die Straßen",
+    "Hier fahren Autos, hier gehen Menschen."
+   ],
+   [
+    "geradeaus",
+    "nicht links, nicht rechts"
+   ],
+   [
+    "weit",
+    "nicht nah – man geht lange"
+   ],
+   [
+    "der Kiosk, die Kioske",
+    "kleiner Laden für Getränke, Zeitungen und Snacks"
+   ],
+   [
+    "das Fenster, die Fenster",
+    "Durch das Fenster sieht man nach draußen."
+   ]
+  ],
+  "gap": {
+   "type": "gap",
+   "title": "Aufgabe 2: Lückentext",
+   "instruction": "Hör das Lied und ergänze die fehlenden Wörter.",
+   "items": [
+    "ich bin neu hier, ich weiß nicht ___.",
+    "Der Regen fällt, die ___ sind an,",
+    "„Nein, das ist sie nicht. Gehen Sie ___,",
+    "der Park ist dunkel, der ___ ist stark.",
+    "Gartenstraße, ___ drei."
+   ],
+   "solutions": [
+    "viel",
+    "Lichter",
+    "geradeaus",
+    "Wind",
+    "Nummer"
+   ]
+  },
+  "tf": [
+   [
+    "Die Person ist neu in der Stadt.",
+    true,
+    ""
+   ],
+   [
+    "Es ist Morgen und die Sonne scheint.",
+    false,
+    "Es ist Nacht und es regnet."
+   ],
+   [
+    "Der Mann sagt: „Das ist die Gartenstraße.“",
+    false,
+    "Er sagt: „Nein, das ist sie nicht.“"
+   ],
+   [
+    "Hier fährt kein Bus mehr.",
+    true,
+    ""
+   ],
+   [
+    "Die Person geht mit einem Freund nach Hause.",
+    false,
+    "Die Person geht allein."
+   ]
+  ],
+  "gram": {
+   "title": "Grammatik – Ja-/Nein-Fragen",
+   "instruction": "Mach aus dem Satz eine Ja-/Nein-Frage. Das Verb steht auf Position 1.",
+   "items": [
+    "Das ist die Gartenstraße.",
+    "Es ist noch weit.",
+    "Hier fährt ein Bus.",
+    "Du siehst das Licht.",
+    "Sie wohnen in der Stadt.",
+    "Der Park ist dunkel."
+   ],
+   "solutions": [
+    "Ist das die Gartenstraße?",
+    "Ist es noch weit?",
+    "Fährt hier ein Bus?",
+    "Siehst du das Licht?",
+    "Wohnen Sie in der Stadt?",
+    "Ist der Park dunkel?"
+   ]
+  }
+ },
+ {
+  "id": "a1-10-ich-rufe-dich-an",
+  "level": "A1",
+  "title": "Ich rufe dich an",
+  "theme": "Familie in der Ferne: telefonieren, Videoanruf, Heimweh",
+  "grammar": "Personalpronomen im Akkusativ (mich, dich, ihn, sie, es, uns, euch: Hörst du mich? Ich sehe dich.)",
+  "intro": "Deine Familie ist weit weg, aber am Telefon ist sie ganz nah. Mit diesem Lied übst du die Pronomen mich, dich, ihn, sie, uns und euch.",
+  "lyrics": "[Verse 1]\nEs ist elf Uhr, die Stadt schläft schon,\nich sitze am Fenster mit meinem Telefon.\nDraußen fährt die letzte Bahn,\nich denke an dich und rufe dich an.\nDu bist so weit, in einem anderen Land,\nich habe dein Foto in meiner Hand.\n\n[Chorus]\nHörst du mich? Ich höre dich.\nSiehst du mich? Ich sehe dich.\nIch rufe dich an, ich rufe dich an –\ndie Nacht ist lang, ich rufe dich an.\n\n[Verse 2]\nDa bist du, Mama, du lachst und winkst,\nmein Bruder ist auch da, er singt.\nIch sehe dich, ich sehe ihn,\nund Papa fragt: „Wie ist Berlin?“\n„Besuchst du uns?“, fragt er leise.\n„Ja, ich besuche euch. Ich plane die Reise.“\n\n[Chorus]\nHörst du mich? Ich höre dich.\nSiehst du mich? Ich sehe dich.\nIch rufe dich an, ich rufe dich an –\ndie Nacht ist lang, ich rufe dich an.\n\n[Bridge]\nDas Bild ist weg, das Netz ist schwach,\nich warte im Dunkeln, ich bin noch wach.\n„Hallo? Hallo? Verstehst du mich?“\n„Ja, wir verstehen dich. Wir lieben dich.“\n\n[Chorus]\nHörst du mich? Ich höre dich.\nSiehst du mich? Ich sehe dich.\nIch rufe dich an, ich rufe dich an –\ndie Nacht ist lang, ich rufe dich an.\n\n[Outro]\n„Gute Nacht“, sage ich, „schlaft gut“ –\nmorgen rufe ich euch wieder an.",
+  "vocab": [
+   [
+    "anrufen",
+    "mit dem Telefon sprechen: Ich rufe dich an."
+   ],
+   [
+    "das Telefon, die Telefone",
+    "Damit spricht man mit anderen Menschen, hier: das Handy."
+   ],
+   [
+    "das Fenster, die Fenster",
+    "Durch das Fenster sieht man nach draußen."
+   ],
+   [
+    "das Land, die Länder",
+    "z. B. Deutschland, Syrien, die Ukraine"
+   ],
+   [
+    "das Foto, die Fotos",
+    "ein Bild von der Kamera oder vom Handy"
+   ],
+   [
+    "winken",
+    "die Hand bewegen und „Hallo!“ oder „Tschüss!“ sagen"
+   ],
+   [
+    "besuchen",
+    "zu einer Person fahren und dort Zeit haben"
+   ],
+   [
+    "die Reise, die Reisen",
+    "Man fährt in eine andere Stadt oder in ein anderes Land."
+   ],
+   [
+    "das Netz",
+    "die Verbindung für Handy und Internet"
+   ],
+   [
+    "wach",
+    "nicht schlafen"
+   ]
+  ],
+  "gap": {
+   "type": "gap",
+   "title": "Aufgabe 2: Lückentext",
+   "instruction": "Hör das Lied und ergänze die fehlenden Wörter.",
+   "items": [
+    "ich sitze am ___ mit meinem Telefon.",
+    "ich denke an dich und rufe dich ___.",
+    "ich habe dein ___ in meiner Hand.",
+    "Ich sehe dich, ich sehe ___,",
+    "Das Bild ist weg, das ___ ist schwach,"
+   ],
+   "solutions": [
+    "Fenster",
+    "an",
+    "Foto",
+    "ihn",
+    "Netz"
+   ]
+  },
+  "tf": [
+   [
+    "Es ist elf Uhr in der Nacht.",
+    true,
+    ""
+   ],
+   [
+    "Die Mama wohnt auch in Berlin.",
+    false,
+    "Sie wohnt weit weg, in einem anderen Land."
+   ],
+   [
+    "Der Bruder singt.",
+    true,
+    ""
+   ],
+   [
+    "Papa fragt: „Besuchst du uns?“",
+    true,
+    ""
+   ],
+   [
+    "Das Bild ist die ganze Zeit sehr gut.",
+    false,
+    "Das Bild ist weg, das Netz ist schwach."
+   ]
+  ],
+  "gram": {
+   "title": "Grammatik – Personalpronomen im Akkusativ",
+   "instruction": "Ergänze das Personalpronomen im Akkusativ. Das Wort in Klammern hilft dir.",
+   "items": [
+    "Hörst du ___? (ich)",
+    "Ich sehe ___, Mama. (du)",
+    "Mein Bruder singt. Ich höre ___. (er)",
+    "Besuchst du ___? (wir)",
+    "Ich besuche ___ bald. (ihr)",
+    "Das ist meine Mama. Ich liebe ___. (sie)"
+   ],
+   "solutions": [
+    "Hörst du mich?",
+    "Ich sehe dich, Mama.",
+    "Mein Bruder singt. Ich höre ihn.",
+    "Besuchst du uns?",
+    "Ich besuche euch bald.",
+    "Das ist meine Mama. Ich liebe sie."
+   ]
+  }
+ }
+]
