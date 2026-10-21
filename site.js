@@ -709,18 +709,19 @@
       <div class="dm-stage-art" aria-hidden="true"><span class="dm-stage-disc"><i></i></span>${art3d('mikrofon', 'float')}<span class="dm-stage-eq"><i></i><i></i><i></i><i></i><i></i></span></div>
     </section>`;
   }
+  const songIsNew = sg => sg.added && Date.now() - new Date(sg.added) < 21 * 864e5;
   function songCard(sg) {
     const done = mem.done['lied:' + sg.id];
     return `<a class="dm-song dm-lv-${sg.level.toLowerCase()}" href="#lieder/${sg.id}"><span class="dm-song-disc" aria-hidden="true"><i></i></span>
-      <span class="dm-song-text"><span class="dm-path-meta">${sg.level}${done ? ' · ✓ geübt' : ''}</span><b>${x(sg.title)}</b><span>${x(sg.theme)}</span></span></a>`;
+      <span class="dm-song-text"><span class="dm-path-meta">${sg.level}${songIsNew(sg) && !done ? ' · <em class="dm-song-new">Neu</em>' : ''}${done ? ' · ✓ geübt' : ''}</span><b>${x(sg.title)}</b><span>${x(sg.theme)}</span></span></a>`;
   }
   function songsHub(sel) {
     if (!SONG_LEVELS.includes(sel)) sel = mem.songLevel && SONG_LEVELS.includes(mem.songLevel) ? mem.songLevel : 'A1';
     mem.songLevel = sel; save();
-    const list = (DM.songs || []).filter(sg => sg.level === sel);
+    const list = (DM.songs || []).filter(sg => sg.level === sel).sort((a, b) => (songIsNew(b) ? 1 : 0) - (songIsNew(a) ? 1 : 0));
     page(`${crumbs([['Deutsch mit Liedern']])}
       ${songStage(true)}
-      <nav class="dm-tabs" aria-label="Niveau">${SONG_LEVELS.map(k => `<a href="#lieder/${k}" ${k === sel ? 'aria-current="page"' : ''}><b>${k}</b><small>${(DM.songs || []).filter(sg => sg.level === k).length} Lieder</small></a>`).join('')}</nav>
+      <nav class="dm-tabs" aria-label="Niveau">${SONG_LEVELS.map(k => `<a href="#lieder/${k}" ${k === sel ? 'aria-current="page"' : ''}><b>${k}</b><small>${(DM.songs || []).filter(sg => sg.level === k).length} Lieder${(DM.songs || []).some(sg => sg.level === k && songIsNew(sg)) ? ' · <em class="dm-song-new">neu</em>' : ''}</small></a>`).join('')}</nav>
       <div class="dm-songs">${list.map(songCard).join('')}</div>
       <aside class="dm-card dm-song-how"><h2>So lernst du mit einem Lied</h2><ol class="dm-list"><li>Hör das Lied einmal nur zu. Worum geht es?</li><li>Lies die wichtigen Wörter und mach die Lückenaufgabe.</li><li>Hör noch einmal und lies den Text mit.</li><li>Sing mit – das trainiert Aussprache und Satzmelodie.</li><li>Lade das PDF herunter: Liedtext, Aufgaben und Lösungen.</li></ol></aside>
       `);

@@ -758,3 +758,5 @@ header.dm-header nav{margin-left:auto}
 .dm-pl-badge i{display:inline-block;width:3px;height:12px;border-radius:2px;background:#FFD66B;transform-origin:bottom;animation:dmEq 1s ease-in-out infinite}
 .dm-pl-badge i:nth-child(2){animation-delay:-.35s}.dm-pl-badge i:nth-child(3){animation-delay:-.7s;margin-right:4px}
 @media (prefers-reduced-motion:reduce){.dm-pl-badge i{animation:none}}
+
+.dm-song-new{font-style:normal;font-weight:800;color:#fff;background:#e0457b;border-radius:6px;padding:0 6px;font-size:12px;letter-spacing:.02em}

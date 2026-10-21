@@ -1,7 +1,7 @@
 /* Benachrichtigung über neue Inhalte.
    Quellen: neu.json (Material, Übungen …), youtube-feed.json (Videos), kahoot-feed.json (Quizze).
    Was der Browser schon kennt, steht in localStorage 'dm-seen' (Liste von Schlüsseln).
-   Beim ersten Besuch gilt alles als bekannt – Benachrichtigungen gibt es ab dem zweiten Besuch.
+   Beim ersten Besuch gilt alles, was älter als 3 Tage ist, als bekannt.
    🔔 im Kopf zeigt die Zahl neuer Einträge; beim Öffnen gelten sie als gesehen.
    Zusätzlich einmal pro Sitzung ein kleiner Hinweis oben rechts. */
 (function () {
@@ -96,7 +96,7 @@
 
   function start() {
     load().then(items => {
-      if (get(SEEN) === null) { markSeen(items); return; } // erster Besuch: nichts melden
+      if (get(SEEN) === null) { markSeen(items.filter(i => Date.now() - i.t > 3 * 864e5)); } // erster Besuch: nur Älteres gilt als bekannt
       const nw = fresh(items);
       badge(nw.length);
       if (nw.length) setTimeout(() => showToast(nw), 2500);
