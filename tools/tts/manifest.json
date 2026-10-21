@@ -11560,6 +11560,721 @@
    ],
    "prio": 0,
    "ord": 161
+  },
+  {
+   "key": "telcb1-1-01",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Radio Ruhrwelle, es ist zwölf Uhr. Die Nachrichten. In Dortmund ist heute Vormittag der neue Radweg zwischen der Innenstadt und dem Phoenix-See freigegeben worden. Die Strecke ist rund vier Kilometer lang und führt zum größten Teil an der Emscher entlang. Die Stadt hat fast zwei Jahre daran gebaut. Zur Eröffnung gibt es am Samstag eine gemeinsame Radtour, Start ist um elf Uhr am Rathaus. Bochum und Gelsenkirchen: Wegen eines Warnstreiks fahren dort morgen ab drei Uhr früh keine Busse und Straßenbahnen. Die Gewerkschaft hat die Beschäftigten der Verkehrsbetriebe zu einem ganztägigen Streik aufgerufen. S-Bahnen und Regionalzüge sind nicht betroffen, sie fahren nach Fahrplan. Die Krankenkassen in Nordrhein-Westfalen raten älteren Menschen, sich jetzt gegen Grippe impfen zu lassen. Für alle ab sechzig Jahren ist die Impfung kostenlos. Termine gibt es in den Hausarztpraxen, in vielen Städten auch in Apotheken. Die Museumsnacht im Ruhrgebiet war ein großer Erfolg: Mehr als zwölftausend Menschen haben am Samstag die Museen in Essen, Bochum und Duisburg besucht. Das sind fast dreitausend mehr als im letzten Jahr. Die Veranstalter wollen die Museumsnacht deshalb im nächsten Jahr um eine Stunde verlängern. Und zum Wetter: Heute Nachmittag ziehen von Westen Regenschauer auf, am Abend sind auch Gewitter möglich. Die Temperaturen liegen bei vierzehn Grad. Morgen wird es freundlicher, mit viel Sonne und bis zu siebzehn Grad."
+    }
+   ]
+  },
+  {
+   "key": "telcb1-1-02",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Und hier bei mir im Studio sitzt jetzt Kemal Aydın. Hallo, Herr Aydın, schön, dass Sie da sind!"
+    },
+    {
+     "voice": "m2",
+     "text": "Hallo, ich freu mich auch."
+    },
+    {
+     "voice": "f1",
+     "text": "Sie haben in Witten ein Repair-Café gegründet. Erklären Sie unseren Hörerinnen und Hörern doch mal kurz: Was ist das eigentlich?"
+    },
+    {
+     "voice": "m2",
+     "text": "Ja, gerne. Also, ganz einfach: Die Leute bringen kaputte Sachen mit. Einen Toaster, eine Lampe, ein Fahrrad, eine Hose mit Loch … und wir versuchen, das zusammen zu reparieren. Und das ist wichtig: zusammen. Wir machen das nicht einfach für die Leute, die sitzen mit am Tisch und schauen zu. Oder sie machen selbst mit."
+    },
+    {
+     "voice": "f1",
+     "text": "Und wie sind Sie auf die Idee gekommen?"
+    },
+    {
+     "voice": "m2",
+     "text": "Ach, das war eigentlich Zufall. Ich war über dreißig Jahre Elektriker, bei den Stadtwerken. Und als ich dann in Rente gegangen bin, da, ähm … da hatte ich plötzlich so viel Zeit. Meine Frau hat gesagt: Kemal, du kannst nicht den ganzen Tag im Keller sitzen! Und dann hab ich in der Zeitung von einem Repair-Café in Köln gelesen. Und ich dachte: So was gibt's in Witten noch nicht. Das mach ich."
+    },
+    {
+     "voice": "f1",
+     "text": "Und wo treffen Sie sich?"
+    },
+    {
+     "voice": "m2",
+     "text": "Im Gemeindehaus von der evangelischen Kirche, in der Nähe vom Rathaus. Jeden ersten Samstag im Monat, von zehn bis eins. Am Anfang waren wir in einem kleinen Raum im Jugendzentrum, aber der war viel zu eng."
+    },
+    {
+     "voice": "f1",
+     "text": "Was kostet denn so eine Reparatur bei Ihnen?"
+    },
+    {
+     "voice": "m2",
+     "text": "Nichts. Also, wirklich gar nichts. Es gibt eine Spendenbox, da kann jeder was reinwerfen, wenn er möchte. Davon kaufen wir Werkzeug und Kaffee. Nur die Ersatzteile, die muss man selbst bezahlen, wenn wir welche brauchen."
+    }
+   ]
+  },
+  {
+   "key": "telcb1-1-03",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Sie machen das ja nicht allein. Wer hilft denn bei Ihnen mit?"
+    },
+    {
+     "voice": "m2",
+     "text": "Inzwischen sind wir zwölf Leute. Da ist eine Schneiderin dabei, Frau Petrenko, die kommt aus der Ukraine und kann wirklich alles nähen. Dann zwei Studenten von der Uni, die kennen sich mit Handys und Laptops aus. Davon hab ich ehrlich gesagt keine Ahnung. Und die Fahrräder, die macht Herr Schulte. Der ist schon über achtzig, aber topfit."
+    },
+    {
+     "voice": "f1",
+     "text": "Über achtzig, toll! Und klappt denn jede Reparatur?"
+    },
+    {
+     "voice": "m2",
+     "text": "Nee, leider nicht. Ich würde sagen, so zwei Drittel schaffen wir. Manchmal fehlt ein Teil, manchmal ist ein Gerät so gebaut, dass man es gar nicht aufmachen kann. Also, das ärgert mich wirklich. Das machen manche Firmen ja mit Absicht."
+    },
+    {
+     "voice": "f1",
+     "text": "Was war denn Ihre schönste Reparatur?"
+    },
+    {
+     "voice": "m2",
+     "text": "Oh, da gab's einige. Aber ich erinnere mich an eine ältere Dame, die kam mit einem Radio. Das war noch von ihrem Vater, aus den Sechzigerjahren, und es lief seit Jahren nicht mehr. Wir haben zwei Stunden gesucht, und am Ende war's nur ein loses Kabel. Und als dann die Musik lief … da hat sie geweint. Ja. Das vergisst man nicht."
+    },
+    {
+     "voice": "f1",
+     "text": "Und wenn jetzt jemand zuhört und denkt: Da möchte ich mitmachen, als Helfer?"
+    },
+    {
+     "voice": "m2",
+     "text": "Sehr gerne! Wir suchen vor allem Leute, die nähen können, weil Frau Petrenko nicht jedes Mal Zeit hat. Man muss kein Profi sein. Einfach am ersten Samstag vorbeikommen. Oder vorher eine Mail schreiben, die Adresse steht auf unserer Internetseite."
+    },
+    {
+     "voice": "f1",
+     "text": "Herr Aydın, vielen Dank für den Besuch bei uns!"
+    },
+    {
+     "voice": "m2",
+     "text": "Ich danke Ihnen."
+    }
+   ]
+  },
+  {
+   "key": "telcb1-1-04",
+   "segments": [
+    {
+     "voice": "f3",
+     "text": "Hallo, Frau Mansouri, hier ist Tanja vom Sportpark Herne. Sie haben sich ja für den Schwimmkurs für Erwachsene angemeldet, der am Dienstag anfangen sollte. Den müssen wir leider um eine Woche verschieben, weil im Hallenbad gerade die Lüftung repariert wird. Also, der erste Termin ist jetzt Dienstag, der vierzehnte, gleiche Uhrzeit, um halb acht abends. Die Kursgebühr bezahlen Sie dann einfach beim ersten Termin, bar oder mit Karte. Bis dann, tschüss!"
+    }
+   ],
+   "fx": "telefon"
+  },
+  {
+   "key": "telcb1-1-05",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Achtung an Gleis vier: Die S-Bahn S eins nach Dortmund Hauptbahnhof, planmäßige Abfahrt sechzehn Uhr dreiundzwanzig, fällt heute aus. Fahrgäste nach Dortmund nehmen bitte den Regionalexpress um sechzehn Uhr einunddreißig von Gleis sechs. Der Regionalexpress hält heute zusätzlich in Bochum-Langendreer. Wir bitten um Entschuldigung."
+    }
+   ]
+  },
+  {
+   "key": "telcb1-1-06",
+   "segments": [
+    {
+     "voice": "m3",
+     "text": "Liebe Kundinnen und Kunden, nur noch heute: In unserer Gartenabteilung bekommen Sie alle Blumenzwiebeln zum halben Preis. Und eine Bitte an alle, die mit dem Auto da sind: Der Parkplatz hinter dem Markt wird heute schon um achtzehn Uhr geschlossen. Bitte fahren Sie Ihr Fahrzeug bis dahin heraus. Der Parkplatz vor dem Eingang bleibt wie immer bis zweiundzwanzig Uhr geöffnet. Vielen Dank für Ihren Einkauf."
+    }
+   ]
+  },
+  {
+   "key": "telcb1-1-07",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Guten Tag. Sie sind verbunden mit dem Bürgerbüro der Stadt Recklinghausen. Leider rufen Sie außerhalb unserer Öffnungszeiten an. Wir sind montags bis freitags von acht bis zwölf Uhr für Sie da, donnerstags zusätzlich von vierzehn bis achtzehn Uhr. Für einen neuen Personalausweis oder Reisepass brauchen Sie einen Termin. Den buchen Sie bitte online auf unserer Internetseite. Wenn Sie ein fertiges Dokument abholen möchten, brauchen Sie keinen Termin. Vielen Dank für Ihren Anruf."
+    }
+   ],
+   "fx": "telefon"
+  },
+  {
+   "key": "telcb1-1-08",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Und jetzt der Verkehr. Auf der A vierzig zwischen Essen-Frohnhausen und Essen-Zentrum ist nach einem Unfall die linke Spur gesperrt. Die rechte Spur ist frei, dort staut es sich aber auf sechs Kilometern. Auf der A zweiundvierzig in Richtung Dortmund ist die Ausfahrt Bottrop-Süd ab heute Abend bis Montag früh wegen Bauarbeiten gesperrt. Eine Umleitung ist ausgeschildert. Kommen Sie gut an!"
+    }
+   ]
+  },
+  {
+   "key": "telcb1-2-01",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Sie hören Radio Emscherland. Die Nachrichten um siebzehn Uhr. Die Stadtbibliothek in Gelsenkirchen öffnet ab dem nächsten Monat auch sonntags, und zwar von elf bis sechzehn Uhr. Eine Beratung gibt es am Sonntag nicht, Bücher ausleihen und zurückgeben kann man aber an den Automaten. Die Stadt möchte damit vor allem Familien und Berufstätige erreichen. In Hagen bleibt die Brücke über die Volme an der Badstraße weiter gesperrt, allerdings nur für Autos und Lastwagen. Bei einer Prüfung haben Fachleute Schäden am Beton gefunden. Fußgänger und Radfahrer dürfen die Brücke weiter benutzen. Die Reparatur dauert voraussichtlich bis zum Ende des Jahres. In Nordrhein-Westfalen gibt es in diesem Jahr etwas mehr Ausbildungsplätze als im letzten Jahr. Trotzdem sind noch viele Stellen frei, besonders im Handwerk und in der Gastronomie. Die Agentur für Arbeit rät Jugendlichen ohne Ausbildungsplatz, sich auch jetzt noch zu bewerben. Viele Betriebe stellen auch nach dem ersten September noch ein. In Moers sucht ein Verein für Igelschutz dringend Helferinnen und Helfer. Wegen des warmen Herbstes sind viele junge Igel noch zu klein für den Winterschlaf. Die Freiwilligen sollen die Tiere füttern und versorgen. Wer einen kleinen Igel findet, soll ihn aber nicht einfach mitnehmen, sondern zuerst beim Verein anrufen. Das Wetter: In der Nacht wird es frostig, bis minus drei Grad. Vor allem auf dem Land kann es auf den Straßen glatt werden. Morgen bleibt es trocken und sonnig, aber kalt, mit höchstens fünf Grad."
+    }
+   ]
+  },
+  {
+   "key": "telcb1-2-02",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "In unserer Reihe „Neu im Job“ bin ich heute mit Amira Haddad verbunden. Frau Haddad, Sie fahren seit einem halben Jahr Straßenbahn in Essen. Hallo!"
+    },
+    {
+     "voice": "f2",
+     "text": "Hallo, guten Tag!"
+    },
+    {
+     "voice": "m1",
+     "text": "Was haben Sie denn vorher gemacht?"
+    },
+    {
+     "voice": "f2",
+     "text": "Also, in Syrien war ich Grundschullehrerin, fast acht Jahre lang. Hier in Deutschland ging das nicht so einfach, weil mein Studium nur zum Teil anerkannt wurde. Ich hätte noch mal zwei Jahre studieren müssen. Und, na ja, mit zwei Kindern … das war für mich keine Option."
+    },
+    {
+     "voice": "m1",
+     "text": "Und wie sind Sie dann auf die Straßenbahn gekommen?"
+    },
+    {
+     "voice": "f2",
+     "text": "Das war tatsächlich in meinem Deutschkurs. Da kam jemand von den Verkehrsbetrieben und hat erzählt, dass sie dringend Fahrerinnen und Fahrer suchen. Und dass man während der Ausbildung schon Geld bekommt. Ich hab erst gelacht, ehrlich! Ich hatte ja nicht mal einen Führerschein. Aber den braucht man für die Straßenbahn gar nicht."
+    },
+    {
+     "voice": "m1",
+     "text": "Echt? Das wusste ich auch nicht."
+    },
+    {
+     "voice": "f2",
+     "text": "Ja, das wissen viele nicht. Für den Bus braucht man natürlich einen, aber für die Bahn nicht."
+    },
+    {
+     "voice": "m1",
+     "text": "Und wie lange hat die Ausbildung gedauert?"
+    },
+    {
+     "voice": "f2",
+     "text": "Sechs Monate, mit Theorie und Praxis. Die Theorie war schwer, so viele Fachwörter: Signale, Weichen, Technik … Ich hab abends mit meinem Sohn gelernt. Der hat mich immer abgefragt."
+    }
+   ]
+  },
+  {
+   "key": "telcb1-2-03",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Und jetzt, nach einem halben Jahr: Wie ist der Alltag?"
+    },
+    {
+     "voice": "f2",
+     "text": "Gut! Wirklich. Ich fahre meistens die Linie hundertsieben, von Gelsenkirchen bis nach Bredeney. Der Schichtdienst ist manchmal anstrengend, besonders die Frühschicht. Da fange ich schon um Viertel nach vier an. Aber mein Mann arbeitet im Büro, und wir planen das gut mit den Kindern."
+    },
+    {
+     "voice": "m1",
+     "text": "Wie reagieren denn die Fahrgäste?"
+    },
+    {
+     "voice": "f2",
+     "text": "Meistens freundlich. Manchmal sagt ein älterer Herr: Oh, heute fährt ja eine Frau! Aber das ist nett gemeint, glaube ich. Schwierig ist eher der Verkehr. Autos, die auf den Schienen stehen, oder Leute, die mit dem Handy über die Straße laufen, ohne zu gucken. Da muss man immer, immer aufpassen."
+    },
+    {
+     "voice": "m1",
+     "text": "Vermissen Sie die Schule manchmal?"
+    },
+    {
+     "voice": "f2",
+     "text": "Ja, ehrlich gesagt schon. Die Kinder, das Unterrichten … Aber wissen Sie, ich hab jetzt einen sicheren Arbeitsplatz, einen unbefristeten Vertrag, und ich verdiene mein eigenes Geld. Das war mir wichtig. Und vielleicht, irgendwann später, mache ich die Anerkennung als Lehrerin doch noch. Mal sehen."
+    },
+    {
+     "voice": "m1",
+     "text": "Was raten Sie Leuten, die auch über so einen Wechsel nachdenken?"
+    },
+    {
+     "voice": "f2",
+     "text": "Einfach fragen! Die Verkehrsbetriebe machen jeden Monat einen Infoabend, da kann man auch mal im Fahrsimulator sitzen. Und keine Angst vor der Sprache. Ich hatte am Anfang B eins, und das hat gereicht. Man lernt im Job sehr viel dazu."
+    },
+    {
+     "voice": "m1",
+     "text": "Frau Haddad, vielen Dank, und weiterhin gute Fahrt!"
+    },
+    {
+     "voice": "f2",
+     "text": "Danke schön! Tschüss!"
+    }
+   ]
+  },
+  {
+   "key": "telcb1-2-04",
+   "segments": [
+    {
+     "voice": "m3",
+     "text": "Ja, hallo, Herr Kowalczyk, hier ist das Autohaus Brenner in Bottrop, Werkstatt, Meier am Apparat. Ihr Wagen ist fertig. Die Bremsen waren in Ordnung, wir haben nur die Reifen gewechselt und die Inspektion gemacht. Sie können das Auto heute bis achtzehn Uhr abholen. Morgen ist ja Samstag, da haben wir nur bis zwölf Uhr auf. Den Schlüssel bekommen Sie bei uns an der Kasse. Schönen Tag noch!"
+    }
+   ],
+   "fx": "telefon"
+  },
+  {
+   "key": "telcb1-2-05",
+   "segments": [
+    {
+     "voice": "f3",
+     "text": "Liebe Besucherinnen und Besucher, der kleine Yusuf, fünf Jahre alt, sucht seine Mama. Yusuf trägt eine rote Jacke und eine blaue Mütze. Er wartet jetzt an der Information im Erdgeschoss, direkt neben dem Haupteingang. Die Mutter von Yusuf wird gebeten, bitte sofort zur Information im Erdgeschoss zu kommen. Vielen Dank."
+    }
+   ]
+  },
+  {
+   "key": "telcb1-2-06",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Meine Damen und Herren, in wenigen Minuten erreichen wir Duisburg Hauptbahnhof. Wegen einer Störung an der Strecke endet dieser Zug heute leider in Duisburg. Reisende nach Düsseldorf und Köln steigen bitte in den Regionalexpress um, der auf dem gegenüberliegenden Gleis wartet. Ihre Fahrkarten bleiben gültig. Wir bitten um Entschuldigung."
+    }
+   ]
+  },
+  {
+   "key": "telcb1-2-07",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Hi Olena, ich bin's, Bea! Du, wegen Samstag: Das Grillen bei uns im Garten fällt leider ins Wasser … also, wörtlich, es soll ja den ganzen Tag regnen. Wir feiern stattdessen bei Marco in der Wohnung, der hat doch so ein großes Wohnzimmer. Gleiche Zeit, um sieben. Und du musst keinen Salat mehr mitbringen, den macht jetzt Marco. Bring einfach was zu trinken mit, okay? Wenn was ist, ruf mich an. Ciao!"
+    }
+   ],
+   "fx": "telefon"
+  },
+  {
+   "key": "telcb1-2-08",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Guten Tag, Sie sind verbunden mit der Praxis Doktor Okonkwo. Unsere Praxis ist vom zwanzigsten bis zum einunddreißigsten Oktober wegen Urlaub geschlossen. In dringenden Fällen wenden Sie sich bitte an unsere Vertretung, die Praxis Doktor Lindner in der Hauptstraße zwölf, hier in Unna. Nachts und am Wochenende erreichen Sie den ärztlichen Bereitschaftsdienst unter der Nummer eins eins sechs, eins eins sieben. Ab dem dritten November sind wir wieder für Sie da."
+    }
+   ],
+   "fx": "telefon"
+  },
+  {
+   "key": "dtbb1-1-01",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Hallo Dragan, hier ist Svetlana, aus der Frühschicht. Du, ich hab eine Bitte. Mein Sohn hat am Donnerstag eine kleine Operation, nichts Schlimmes, aber ich möchte ihn ins Krankenhaus begleiten. Könntest du am Donnerstag meine Frühschicht übernehmen? Ich würde dafür am Samstag deine Spätschicht machen. Mit Frau Weber von der Schichtleitung hab ich schon gesprochen, die ist einverstanden, wenn du auch ja sagst. Schreib mir einfach kurz eine Nachricht, bis heute Abend, ja? Danke dir!"
+    }
+   ],
+   "fx": "telefon"
+  },
+  {
+   "key": "dtbb1-1-02",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Ja, guten Tag, Krüger hier. Ich hatte bei Ihnen die Malerarbeiten für mein Büro in der Kortumstraße bestellt, für nächsten Mittwoch. Jetzt ist mir aufgefallen: Am Mittwoch ist bei uns Inventur, da geht's leider überhaupt nicht. Könnten Ihre Leute vielleicht schon am Montag kommen? Oder sonst erst am Freitag, das ginge auch. Und noch was: Die Wände sollen jetzt doch nicht weiß werden, sondern hellgrau, so wie auf dem Muster, das ich Ihrem Kollegen gezeigt habe. Rufen Sie mich bitte zurück, unter null zwei drei vier, neun sechs, fünfundzwanzig, achtzig. Danke schön."
+    }
+   ],
+   "fx": "telefon"
+  },
+  {
+   "key": "dtbb1-1-03",
+   "segments": [
+    {
+     "voice": "f3",
+     "text": "Hallo, Herr Osei, Lisa Brandt hier, von Personal Plus in Dortmund. Ich hab gute Nachrichten für Sie: Die Firma Lagertechnik Sommer möchte Sie gerne kennenlernen. Das Vorstellungsgespräch wäre am Dienstag um zehn Uhr, direkt im Lager in Dortmund-Ellinghausen. Bringen Sie bitte Ihre Sicherheitsschuhe mit, denn nach dem Gespräch machen Sie gleich einen kleinen Probearbeitstag, so zwei, drei Stunden. Ihren Staplerschein müssen Sie nicht mitbringen, eine Kopie hab ich der Firma schon geschickt. Melden Sie sich bitte kurz, ob der Termin passt. Danke!"
+    }
+   ],
+   "fx": "telefon"
+  },
+  {
+   "key": "dtbb1-1-04",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Achtung, eine Durchsage für alle Mitarbeiterinnen und Mitarbeiter. Wegen eines technischen Problems an der Lüftung muss Halle zwei ab vierzehn Uhr leer sein. Die Spätschicht arbeitet heute deshalb in Halle drei und beginnt eine halbe Stunde später als sonst, also um halb drei. Die Schichtleiter treffen sich bitte schon um Viertel vor zwei im Besprechungsraum im ersten Stock. Vielen Dank."
+    }
+   ]
+  },
+  {
+   "key": "dtbb1-1-05",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Guten Morgen, liebe Kolleginnen und Kollegen. Eine kurze Information: Am Donnerstag um zehn Uhr haben wir eine Übung mit Feueralarm. Wenn der Alarm kommt, verlassen Sie bitte sofort das Gebäude, und zwar über die Treppen, nicht mit dem Aufzug. Bitte nehmen Sie auch die Kundinnen und Kunden in Ihrem Bereich mit. Der Treffpunkt ist diesmal nicht der Hof hinter dem Lager, sondern der Parkplatz vor dem Haupteingang. Danke für Ihre Mithilfe."
+    }
+   ]
+  },
+  {
+   "key": "dtbb1-1-06",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Hey, Jonas, gut, dass du da bist. Wollen wir gleich die Übergabe machen?"
+    },
+    {
+     "voice": "m3",
+     "text": "Ja, klar. Moment, ich hol mir nur schnell einen Kaffee … So. Leg los."
+    },
+    {
+     "voice": "f2",
+     "text": "Also, viel ist heute nicht los. Aber: Zimmer zweihundertzwölf, Herr Gruber. Der hat sich beschwert, dass die Heizung nicht richtig warm wird. Ich hab dem Haustechniker Bescheid gesagt, der kommt aber erst morgen früh."
+    },
+    {
+     "voice": "m3",
+     "text": "Und bis dahin? Der friert doch."
+    },
+    {
+     "voice": "f2",
+     "text": "Nee, nee, ich hab ihm einen kleinen Heizlüfter aufs Zimmer gebracht. Er war ganz zufrieden. Du musst da also nichts mehr machen, außer er ruft noch mal an."
+    },
+    {
+     "voice": "m3",
+     "text": "Okay. Was noch?"
+    },
+    {
+     "voice": "f2",
+     "text": "Dann kommt heute Abend noch eine Gruppe, zwölf Personen, ein Chor aus Polen. Die wollten eigentlich um sechs da sein, aber der Busfahrer hat angerufen: Die stehen im Stau. Das wird eher neun."
+    },
+    {
+     "voice": "m3",
+     "text": "Neun? Dann ist die Küche ja schon zu."
+    },
+    {
+     "voice": "f2",
+     "text": "Genau, deswegen hab ich mit der Küche gesprochen. Die machen belegte Brötchen, die stehen ab halb neun im Frühstücksraum. Und die Schlüsselkarten liegen schon fertig hier, in dem Umschlag."
+    },
+    {
+     "voice": "m3",
+     "text": "Super, danke. Und die bezahlen dann beim Einchecken?"
+    },
+    {
+     "voice": "f2",
+     "text": "Nein, die Rechnung geht an den Verein, die bezahlen hier gar nichts. Steht alles im System."
+    },
+    {
+     "voice": "m3",
+     "text": "Perfekt. Dann schönen Feierabend!"
+    },
+    {
+     "voice": "f2",
+     "text": "Danke, dir eine ruhige Nacht!"
+    }
+   ]
+  },
+  {
+   "key": "dtbb1-1-07",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Schreinerei Lindemann, guten Tag."
+    },
+    {
+     "voice": "f3",
+     "text": "Ja, hallo, Kaya hier. Ich hab bei Ihnen vor drei Wochen eine Arbeitsplatte für die Küche bestellt, und die sollte eigentlich diese Woche eingebaut werden."
+    },
+    {
+     "voice": "m2",
+     "text": "Moment, Kaya … ja, hier hab ich's. Eiche, drei Meter zwanzig, richtig?"
+    },
+    {
+     "voice": "f3",
+     "text": "Genau. Und, ähm, ich hab noch nichts von Ihnen gehört. Kommt da jetzt jemand oder nicht?"
+    },
+    {
+     "voice": "m2",
+     "text": "Oh, das tut mir leid, da hätten wir uns melden müssen. Die Platte ist schon da, aber mein Kollege, der sie einbauen sollte, ist krank. Ich könnte Ihnen nächsten Dienstag anbieten, vormittags."
+    },
+    {
+     "voice": "f3",
+     "text": "Dienstag … hm, da arbeite ich bis zwei. Ginge das auch nachmittags?"
+    },
+    {
+     "voice": "m2",
+     "text": "Nachmittags ist schwierig, da sind wir auf einer anderen Baustelle. Aber warten Sie mal … Mittwoch ginge, ab ein Uhr. Passt Ihnen das?"
+    },
+    {
+     "voice": "f3",
+     "text": "Mittwoch ab eins, ja, das passt. Dauert das lange?"
+    },
+    {
+     "voice": "m2",
+     "text": "Ungefähr drei Stunden. Ach, und ganz wichtig: Die alte Platte muss dann schon raus sein. Oder sollen wir das machen?"
+    },
+    {
+     "voice": "f3",
+     "text": "Oh … das kann mein Mann, glaub ich, nicht. Können Sie das machen?"
+    },
+    {
+     "voice": "m2",
+     "text": "Kein Problem, das machen wir mit, und wir nehmen die alte Platte auch mit. Das kostet aber vierzig Euro extra, für die Entsorgung."
+    },
+    {
+     "voice": "f3",
+     "text": "Okay, das ist in Ordnung."
+    },
+    {
+     "voice": "m2",
+     "text": "Gut, dann trag ich Sie für Mittwoch, dreizehn Uhr, ein. Und noch mal Entschuldigung für die Verspätung."
+    }
+   ]
+  },
+  {
+   "key": "dtbb1-1-08",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "So, ich glaube, wir sind vollzählig. Ich möchte heute nur zwei Punkte besprechen, wir haben ja alle nicht viel Zeit. Erstens: die neue App für die Dokumentation. Ab dem ersten Dezember schreiben wir die Berichte nicht mehr auf Papier, sondern auf dem Tablet."
+    },
+    {
+     "voice": "m3",
+     "text": "Endlich! Ich sitz jeden Abend fast eine Stunde an diesen Zetteln."
+    },
+    {
+     "voice": "f2",
+     "text": "Ja, schon, aber … also, ich bin mit Apps nicht so fit. Gibt es dafür eine Schulung?"
+    },
+    {
+     "voice": "f1",
+     "text": "Ja, genau, das wollte ich gerade sagen. Es gibt zwei Termine, am zwölften und am neunzehnten November, jeweils nachmittags hier im Büro. Jeder macht einen Termin mit. Die Liste hängt in der Küche, bitte tragen Sie sich bis Freitag ein."
+    },
+    {
+     "voice": "f2",
+     "text": "Okay, dann nehm ich gleich den ersten."
+    },
+    {
+     "voice": "f1",
+     "text": "Gut. Zweiter Punkt: die Dienstwagen. Ab nächstem Monat haben wir zwei Elektroautos statt der alten Kleinwagen. Die müssen abends an die Ladestation hier auf dem Hof."
+    },
+    {
+     "voice": "m3",
+     "text": "Und wenn meine letzte Tour in Datteln ist? Muss ich dann extra noch mal hierher fahren?"
+    },
+    {
+     "voice": "f1",
+     "text": "Das, ähm … das ist eine gute Frage. Nein. Wer abends weit weg ist, darf das Auto mit nach Hause nehmen und lädt es am nächsten Morgen hier. Aber bitte vorher mit mir absprechen."
+    },
+    {
+     "voice": "f2",
+     "text": "Und wer erklärt uns, wie das Laden funktioniert?"
+    },
+    {
+     "voice": "f1",
+     "text": "Das macht Herr Nowak, der fährt privat ja schon elektrisch. Herr Nowak, ginge das nächste Woche?"
+    },
+    {
+     "voice": "m3",
+     "text": "Klar, mach ich. Das dauert keine zehn Minuten."
+    },
+    {
+     "voice": "f1",
+     "text": "Prima. Dann sind wir durch. Danke Ihnen!"
+    }
+   ]
+  },
+  {
+   "key": "dtbb1-2-01",
+   "segments": [
+    {
+     "voice": "m3",
+     "text": "Morgen, Frau Yıldız, hier ist Andreas Brückner. Ich … ähm, ich bin leider krank. Ich hab Fieber, war grad beim Arzt, und der hat mich bis Mittwoch krankgeschrieben. Die Krankmeldung läuft ja jetzt elektronisch, die müssen Sie also nicht von mir bekommen. Aber: Ich hab heute um elf den Termin mit dem Kunden von der Firma Hagedorn, wegen der neuen Regale. Könnten Sie den bitte absagen? Oder, noch besser, vielleicht kann Herr Mazur den übernehmen. Die Unterlagen liegen auf meinem Schreibtisch, in der blauen Mappe. Danke, und tut mir leid!"
+    }
+   ],
+   "fx": "telefon"
+  },
+  {
+   "key": "dtbb1-2-02",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Guten Tag, hier ist Natalia Wróbel vom Getränkehandel Wróbel. Eine Nachricht für Herrn Ferreira vom Restaurant Porto. Es geht um Ihre Bestellung für Freitag. Das alkoholfreie Bier ist leider gerade nicht lieferbar. Wir könnten Ihnen stattdessen eine andere Marke bringen, zum gleichen Preis. Wenn Sie das nicht möchten, liefern wir am Freitag alles andere wie bestellt, und das Bier kommt dann nächste Woche Dienstag. Bitte geben Sie mir bis morgen um zwölf Bescheid. Wenn ich nichts von Ihnen höre, liefern wir die andere Marke. Danke und schönen Tag noch!"
+    }
+   ],
+   "fx": "telefon"
+  },
+  {
+   "key": "dtbb1-2-03",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Hallo Rahim, hier ist Herr Engel, aus der Werkstatt. Wegen morgen: Wir fahren nicht wie geplant um sieben zur Baustelle nach Wuppertal, sondern erst um acht. Das Material wird später geliefert. Du musst also nicht in die Werkstatt kommen. Ich hol dich um Viertel vor acht am Bahnhof Gevelsberg West ab, mit dem Firmenwagen. Und zieh warme Sachen an, wir arbeiten den ganzen Tag draußen. Bis morgen!"
+    }
+   ],
+   "fx": "telefon"
+  },
+  {
+   "key": "dtbb1-2-04",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Liebe Kolleginnen und Kollegen, bitte kurz zuhören: Die Warenlieferung, die normalerweise um sechs Uhr kommt, ist morgen schon um fünf da. Wer morgen Frühdienst im Lager hat, fängt deshalb bitte eine Stunde früher an. Die Stunde wird natürlich auf Ihrem Arbeitszeitkonto gutgeschrieben. Alle anderen, auch an den Kassen, beginnen zur normalen Zeit. Danke!"
+    }
+   ]
+  },
+  {
+   "key": "dtbb1-2-05",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Achtung, eine Durchsage der Werksleitung. Ab sofort müssen alle Personen in den Lagerhallen eine Warnweste tragen. Das gilt auch für Besucher und für Fahrer von anderen Firmen. Warnwesten bekommen Sie am Empfang an Tor eins. Bitte informieren Sie auch Ihre Besucher. Vielen Dank für Ihre Mithilfe."
+    }
+   ]
+  },
+  {
+   "key": "dtbb1-2-06",
+   "segments": [
+    {
+     "voice": "f3",
+     "text": "Na, Murat, auch Mittagspause? Ist hier noch frei?"
+    },
+    {
+     "voice": "m1",
+     "text": "Klar, setz dich. Und, wie war dein Urlaub?"
+    },
+    {
+     "voice": "f3",
+     "text": "Schön, aber viel zu kurz! Sag mal, ich hab gehört, du machst die Weiterbildung zum Vorarbeiter?"
+    },
+    {
+     "voice": "m1",
+     "text": "Ja, ab Januar. Jeden Freitag und Samstag, ein Jahr lang, in Dortmund bei der Handwerkskammer."
+    },
+    {
+     "voice": "f3",
+     "text": "Puh, auch samstags? Das ist ja heftig."
+    },
+    {
+     "voice": "m1",
+     "text": "Ja, schon. Aber die Firma bezahlt die Hälfte, den Rest zahl ich selbst. Und freitags krieg ich frei. Den Samstag, ja … den muss ich halt opfern."
+    },
+    {
+     "voice": "f3",
+     "text": "Und was sagt deine Frau dazu?"
+    },
+    {
+     "voice": "m1",
+     "text": "Na ja, begeistert ist sie nicht. Aber sie weiß, dass ich danach mehr verdiene. Sag mal, wär das nicht auch was für dich?"
+    },
+    {
+     "voice": "f3",
+     "text": "Ich? Nee … also, ich weiß nicht. Mein Deutsch, das Schriftliche, das ist noch nicht so gut."
+    },
+    {
+     "voice": "m1",
+     "text": "Ach, komm. Die bieten da sogar einen Vorbereitungskurs an, für Deutsch und Mathe. Abends, online. Ich schick dir den Link."
+    },
+    {
+     "voice": "f3",
+     "text": "Okay, ja, schick mal. Anschauen kostet ja nichts."
+    }
+   ]
+  },
+  {
+   "key": "dtbb1-2-07",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Umzüge Rhein-Ruhr, Schmitz am Apparat, guten Tag."
+    },
+    {
+     "voice": "m2",
+     "text": "Guten Tag, Papadopoulos. Ich ziehe Ende November um, von Duisburg nach Moers, und ich bräuchte ein Angebot."
+    },
+    {
+     "voice": "f1",
+     "text": "Gerne. Wie groß ist denn die Wohnung?"
+    },
+    {
+     "voice": "m2",
+     "text": "Drei Zimmer, so ungefähr siebzig Quadratmeter. Im dritten Stock, und, ähm, es gibt leider keinen Aufzug."
+    },
+    {
+     "voice": "f1",
+     "text": "Okay, dritter Stock ohne Aufzug … Und die neue Wohnung?"
+    },
+    {
+     "voice": "m2",
+     "text": "Erdgeschoss, zum Glück."
+    },
+    {
+     "voice": "f1",
+     "text": "Gut. Brauchen Sie auch Hilfe beim Einpacken, oder machen Sie das selbst?"
+    },
+    {
+     "voice": "m2",
+     "text": "Nee, einpacken machen wir selbst. Aber die Küche, die müsste abgebaut und in Moers wieder aufgebaut werden."
+    },
+    {
+     "voice": "f1",
+     "text": "Das können wir machen. Am besten komme ich vorher einmal bei Ihnen vorbei und schaue mir alles an. Dann kann ich Ihnen einen genauen Preis sagen. Ginge es diese Woche Donnerstag?"
+    },
+    {
+     "voice": "m2",
+     "text": "Donnerstag bin ich bis fünf auf der Arbeit. Freitag wäre besser."
+    },
+    {
+     "voice": "f1",
+     "text": "Freitag um halb vier?"
+    },
+    {
+     "voice": "m2",
+     "text": "Ja, perfekt."
+    },
+    {
+     "voice": "f1",
+     "text": "Und die Kartons bringe ich Ihnen am Freitag gleich mit. Die ersten zwanzig sind kostenlos."
+    },
+    {
+     "voice": "m2",
+     "text": "Ah, prima, danke!"
+    }
+   ]
+  },
+  {
+   "key": "dtbb1-2-08",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Morgen, zusammen. Ich mach's kurz. Ihr habt es sicher gemerkt: Seit die Briefe mit den neuen Preisen raus sind, haben wir fast doppelt so viele Anrufe."
+    },
+    {
+     "voice": "m3",
+     "text": "Gemerkt? Gestern hatte ich über achtzig Gespräche. Meine Mittagspause war, na ja, zehn Minuten."
+    },
+    {
+     "voice": "m2",
+     "text": "Ja, ich weiß, so geht das nicht weiter. Deshalb ändern wir zwei Sachen. Erstens: Bis Ende des Monats öffnet die Hotline schon um sieben statt um acht. Schluss ist aber wie bisher um sechs."
+    },
+    {
+     "voice": "f3",
+     "text": "Und wer macht die Stunde am Morgen? Ich bring meine Tochter um halb acht in die Kita, das schaff ich nicht."
+    },
+    {
+     "voice": "m2",
+     "text": "Keine Sorge, Grace, das ist freiwillig. Ich mach eine Liste, und wer früh kann, trägt sich ein. Piotr, du hattest doch gesagt, du fängst gern früh an?"
+    },
+    {
+     "voice": "m3",
+     "text": "Ja, das passt mir eigentlich ganz gut. Dann bin ich nachmittags früher zu Hause."
+    },
+    {
+     "voice": "m2",
+     "text": "Super. Zweitens: Viele Kunden fragen immer dasselbe. Deshalb stellen wir bis Mittwoch die häufigsten Fragen mit Antworten auf die Internetseite. Bitte schickt mir bis morgen die drei Fragen, die ihr am häufigsten hört."
+    },
+    {
+     "voice": "f3",
+     "text": "Per Mail?"
+    },
+    {
+     "voice": "m2",
+     "text": "Per Mail, oder schreibt sie einfach hier an die Tafel, ist mir egal. Hauptsache bis morgen."
+    },
+    {
+     "voice": "m3",
+     "text": "Und die Pausen? Bleibt's bei zehn Minuten?"
+    },
+    {
+     "voice": "m2",
+     "text": "Nein, auf keinen Fall. Die Mittagspause ist Pflicht, dreißig Minuten, für alle. Wenn es zu voll ist, hören die Kunden eben eine Ansage, dass sie warten müssen. Gesundheit geht vor."
+    }
+   ]
   }
  ]
 }

@@ -3,6 +3,12 @@
  "items": [
   {
    "date": "2026-10-21",
+   "type": "hoeren",
+   "title": "Neues Hörtraining: je 2 Übungssätze für telc B1 und DTB B1",
+   "link": "#hoeren"
+  },
+  {
+   "date": "2026-10-21",
    "type": "neu",
    "title": "Mein Lernweg: neue Wege für LiD, telc B1/B2 und DTB B1/B2 – mit Probeprüfungen",
    "link": "#lernweg"

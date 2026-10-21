@@ -2069,5 +2069,1617 @@
 ]
 }
 ]
+},
+"telcb1-1": {
+"title": "telc B1 Hören · Übungssatz 1",
+"level": "B1",
+"exam": "telc B1",
+"intro": "Aufgebaut wie die telc-Prüfung Deutsch B1: Radionachrichten (Teil 1), ein Interview im Radio (Teil 2) und kurze Durchsagen und Nachrichten auf dem Anrufbeantworter (Teil 3). Entscheide bei jeder Aussage: richtig oder falsch? In der Prüfung hörst du Teil 1 nur einmal, Teil 2 und Teil 3 zweimal.",
+"group": "telcb1",
+"items": [
+{
+"id": "telcb1-1-01",
+"teil": "Teil 1",
+"type": "Radionachrichten",
+"situation": "Du hörst die Nachrichten im Radio. Es gibt fünf Meldungen. Zu jeder Meldung gibt es eine Aussage.",
+"segments": [
+{
+"voice": "m1",
+"text": "Radio Ruhrwelle, es ist zwölf Uhr. Die Nachrichten. In Dortmund ist heute Vormittag der neue Radweg zwischen der Innenstadt und dem Phoenix-See freigegeben worden. Die Strecke ist rund vier Kilometer lang und führt zum größten Teil an der Emscher entlang. Die Stadt hat fast zwei Jahre daran gebaut. Zur Eröffnung gibt es am Samstag eine gemeinsame Radtour, Start ist um elf Uhr am Rathaus. Bochum und Gelsenkirchen: Wegen eines Warnstreiks fahren dort morgen ab drei Uhr früh keine Busse und Straßenbahnen. Die Gewerkschaft hat die Beschäftigten der Verkehrsbetriebe zu einem ganztägigen Streik aufgerufen. S-Bahnen und Regionalzüge sind nicht betroffen, sie fahren nach Fahrplan. Die Krankenkassen in Nordrhein-Westfalen raten älteren Menschen, sich jetzt gegen Grippe impfen zu lassen. Für alle ab sechzig Jahren ist die Impfung kostenlos. Termine gibt es in den Hausarztpraxen, in vielen Städten auch in Apotheken. Die Museumsnacht im Ruhrgebiet war ein großer Erfolg: Mehr als zwölftausend Menschen haben am Samstag die Museen in Essen, Bochum und Duisburg besucht. Das sind fast dreitausend mehr als im letzten Jahr. Die Veranstalter wollen die Museumsnacht deshalb im nächsten Jahr um eine Stunde verlängern. Und zum Wetter: Heute Nachmittag ziehen von Westen Regenschauer auf, am Abend sind auch Gewitter möglich. Die Temperaturen liegen bei vierzehn Grad. Morgen wird es freundlicher, mit viel Sonne und bis zu siebzehn Grad."
+}
+],
+"text": "Radio Ruhrwelle, es ist zwölf Uhr. Die Nachrichten. In Dortmund ist heute Vormittag der neue Radweg zwischen der Innenstadt und dem Phoenix-See freigegeben worden. Die Strecke ist rund vier Kilometer lang und führt zum größten Teil an der Emscher entlang. Die Stadt hat fast zwei Jahre daran gebaut. Zur Eröffnung gibt es am Samstag eine gemeinsame Radtour, Start ist um elf Uhr am Rathaus. Bochum und Gelsenkirchen: Wegen eines Warnstreiks fahren dort morgen ab drei Uhr früh keine Busse und Straßenbahnen. Die Gewerkschaft hat die Beschäftigten der Verkehrsbetriebe zu einem ganztägigen Streik aufgerufen. S-Bahnen und Regionalzüge sind nicht betroffen, sie fahren nach Fahrplan. Die Krankenkassen in Nordrhein-Westfalen raten älteren Menschen, sich jetzt gegen Grippe impfen zu lassen. Für alle ab sechzig Jahren ist die Impfung kostenlos. Termine gibt es in den Hausarztpraxen, in vielen Städten auch in Apotheken. Die Museumsnacht im Ruhrgebiet war ein großer Erfolg: Mehr als zwölftausend Menschen haben am Samstag die Museen in Essen, Bochum und Duisburg besucht. Das sind fast dreitausend mehr als im letzten Jahr. Die Veranstalter wollen die Museumsnacht deshalb im nächsten Jahr um eine Stunde verlängern. Und zum Wetter: Heute Nachmittag ziehen von Westen Regenschauer auf, am Abend sind auch Gewitter möglich. Die Temperaturen liegen bei vierzehn Grad. Morgen wird es freundlicher, mit viel Sonne und bis zu siebzehn Grad.",
+"questions": [
+{
+"q": "Meldung 1: Auf dem neuen Radweg in Dortmund kann man ab sofort fahren.",
+"options": [
+"richtig",
+"falsch"
+],
+"answer": 0,
+"why": "Der Radweg ist „heute Vormittag … freigegeben worden“. Die Radtour am Samstag ist nur die Eröffnungsfeier."
+},
+{
+"q": "Meldung 2: Morgen fahren in Bochum auch keine Regionalzüge.",
+"options": [
+"richtig",
+"falsch"
+],
+"answer": 1,
+"why": "Nur Busse und Straßenbahnen streiken. Der Sprecher sagt: „S-Bahnen und Regionalzüge sind nicht betroffen.“"
+},
+{
+"q": "Meldung 3: Menschen ab sechzig müssen für die Grippeimpfung nichts bezahlen.",
+"options": [
+"richtig",
+"falsch"
+],
+"answer": 0,
+"why": "„Für alle ab sechzig Jahren ist die Impfung kostenlos.“"
+},
+{
+"q": "Meldung 4: Zur Museumsnacht kamen weniger Besucher als im letzten Jahr.",
+"options": [
+"richtig",
+"falsch"
+],
+"answer": 1,
+"why": "Es kamen „fast dreitausend mehr als im letzten Jahr“."
+},
+{
+"q": "Meldung 5: Morgen soll es mehr regnen als heute.",
+"options": [
+"richtig",
+"falsch"
+],
+"answer": 1,
+"why": "Heute kommen Regen und Gewitter. Morgen wird es „freundlicher, mit viel Sonne“."
+}
+]
+},
+{
+"id": "telcb1-1-02",
+"teil": "Teil 2",
+"type": "Radiointerview",
+"situation": "Du hörst ein Interview im Radio. Moderatorin Julia Hartmann spricht mit Kemal Aydın, der in Witten ein Repair-Café gegründet hat. Erster Teil.",
+"segments": [
+{
+"voice": "f1",
+"text": "Und hier bei mir im Studio sitzt jetzt Kemal Aydın. Hallo, Herr Aydın, schön, dass Sie da sind!"
+},
+{
+"voice": "m2",
+"text": "Hallo, ich freu mich auch."
+},
+{
+"voice": "f1",
+"text": "Sie haben in Witten ein Repair-Café gegründet. Erklären Sie unseren Hörerinnen und Hörern doch mal kurz: Was ist das eigentlich?"
+},
+{
+"voice": "m2",
+"text": "Ja, gerne. Also, ganz einfach: Die Leute bringen kaputte Sachen mit. Einen Toaster, eine Lampe, ein Fahrrad, eine Hose mit Loch … und wir versuchen, das zusammen zu reparieren. Und das ist wichtig: zusammen. Wir machen das nicht einfach für die Leute, die sitzen mit am Tisch und schauen zu. Oder sie machen selbst mit."
+},
+{
+"voice": "f1",
+"text": "Und wie sind Sie auf die Idee gekommen?"
+},
+{
+"voice": "m2",
+"text": "Ach, das war eigentlich Zufall. Ich war über dreißig Jahre Elektriker, bei den Stadtwerken. Und als ich dann in Rente gegangen bin, da, ähm … da hatte ich plötzlich so viel Zeit. Meine Frau hat gesagt: Kemal, du kannst nicht den ganzen Tag im Keller sitzen! Und dann hab ich in der Zeitung von einem Repair-Café in Köln gelesen. Und ich dachte: So was gibt's in Witten noch nicht. Das mach ich."
+},
+{
+"voice": "f1",
+"text": "Und wo treffen Sie sich?"
+},
+{
+"voice": "m2",
+"text": "Im Gemeindehaus von der evangelischen Kirche, in der Nähe vom Rathaus. Jeden ersten Samstag im Monat, von zehn bis eins. Am Anfang waren wir in einem kleinen Raum im Jugendzentrum, aber der war viel zu eng."
+},
+{
+"voice": "f1",
+"text": "Was kostet denn so eine Reparatur bei Ihnen?"
+},
+{
+"voice": "m2",
+"text": "Nichts. Also, wirklich gar nichts. Es gibt eine Spendenbox, da kann jeder was reinwerfen, wenn er möchte. Davon kaufen wir Werkzeug und Kaffee. Nur die Ersatzteile, die muss man selbst bezahlen, wenn wir welche brauchen."
+}
+],
+"text": "Und hier bei mir im Studio sitzt jetzt Kemal Aydın. Hallo, Herr Aydın, schön, dass Sie da sind! – Hallo, ich freu mich auch. – Sie haben in Witten ein Repair-Café gegründet. Erklären Sie unseren Hörerinnen und Hörern doch mal kurz: Was ist das eigentlich? – Ja, gerne. Also, ganz einfach: Die Leute bringen kaputte Sachen mit. Einen Toaster, eine Lampe, ein Fahrrad, eine Hose mit Loch … und wir versuchen, das zusammen zu reparieren. Und das ist wichtig: zusammen. Wir machen das nicht einfach für die Leute, die sitzen mit am Tisch und schauen zu. Oder sie machen selbst mit. – Und wie sind Sie auf die Idee gekommen? – Ach, das war eigentlich Zufall. Ich war über dreißig Jahre Elektriker, bei den Stadtwerken. Und als ich dann in Rente gegangen bin, da, ähm … da hatte ich plötzlich so viel Zeit. Meine Frau hat gesagt: Kemal, du kannst nicht den ganzen Tag im Keller sitzen! Und dann hab ich in der Zeitung von einem Repair-Café in Köln gelesen. Und ich dachte: So was gibt's in Witten noch nicht. Das mach ich. – Und wo treffen Sie sich? – Im Gemeindehaus von der evangelischen Kirche, in der Nähe vom Rathaus. Jeden ersten Samstag im Monat, von zehn bis eins. Am Anfang waren wir in einem kleinen Raum im Jugendzentrum, aber der war viel zu eng. – Was kostet denn so eine Reparatur bei Ihnen? – Nichts. Also, wirklich gar nichts. Es gibt eine Spendenbox, da kann jeder was reinwerfen, wenn er möchte. Davon kaufen wir Werkzeug und Kaffee. Nur die Ersatzteile, die muss man selbst bezahlen, wenn wir welche brauchen.",
+"questions": [
+{
+"q": "Die Besucher geben ihre Sachen ab und holen sie später repariert wieder ab.",
+"options": [
+"richtig",
+"falsch"
+],
+"answer": 1,
+"why": "Herr Aydın sagt: „Wir machen das nicht einfach für die Leute, die sitzen mit am Tisch.“ Man repariert zusammen."
+},
+{
+"q": "Herr Aydın hat früher als Elektriker gearbeitet.",
+"options": [
+"richtig",
+"falsch"
+],
+"answer": 0,
+"why": "„Ich war über dreißig Jahre Elektriker, bei den Stadtwerken.“"
+},
+{
+"q": "Die Idee für das Repair-Café hatte seine Frau.",
+"options": [
+"richtig",
+"falsch"
+],
+"answer": 1,
+"why": "Seine Frau wollte nur nicht, dass er den ganzen Tag im Keller sitzt. Die Idee kam aus der Zeitung: Er hat von einem Repair-Café in Köln gelesen."
+},
+{
+"q": "Das Repair-Café findet einmal im Monat statt.",
+"options": [
+"richtig",
+"falsch"
+],
+"answer": 0,
+"why": "Es ist „jeden ersten Samstag im Monat, von zehn bis eins“."
+},
+{
+"q": "Die Besucher müssen nichts bezahlen, auch nicht für Ersatzteile.",
+"options": [
+"richtig",
+"falsch"
+],
+"answer": 1,
+"why": "Die Reparatur ist kostenlos, aber: „Nur die Ersatzteile, die muss man selbst bezahlen.“"
+}
+]
+},
+{
+"id": "telcb1-1-03",
+"teil": "Teil 2",
+"type": "Radiointerview",
+"situation": "Das Interview mit Kemal Aydın geht weiter. Zweiter Teil.",
+"segments": [
+{
+"voice": "f1",
+"text": "Sie machen das ja nicht allein. Wer hilft denn bei Ihnen mit?"
+},
+{
+"voice": "m2",
+"text": "Inzwischen sind wir zwölf Leute. Da ist eine Schneiderin dabei, Frau Petrenko, die kommt aus der Ukraine und kann wirklich alles nähen. Dann zwei Studenten von der Uni, die kennen sich mit Handys und Laptops aus. Davon hab ich ehrlich gesagt keine Ahnung. Und die Fahrräder, die macht Herr Schulte. Der ist schon über achtzig, aber topfit."
+},
+{
+"voice": "f1",
+"text": "Über achtzig, toll! Und klappt denn jede Reparatur?"
+},
+{
+"voice": "m2",
+"text": "Nee, leider nicht. Ich würde sagen, so zwei Drittel schaffen wir. Manchmal fehlt ein Teil, manchmal ist ein Gerät so gebaut, dass man es gar nicht aufmachen kann. Also, das ärgert mich wirklich. Das machen manche Firmen ja mit Absicht."
+},
+{
+"voice": "f1",
+"text": "Was war denn Ihre schönste Reparatur?"
+},
+{
+"voice": "m2",
+"text": "Oh, da gab's einige. Aber ich erinnere mich an eine ältere Dame, die kam mit einem Radio. Das war noch von ihrem Vater, aus den Sechzigerjahren, und es lief seit Jahren nicht mehr. Wir haben zwei Stunden gesucht, und am Ende war's nur ein loses Kabel. Und als dann die Musik lief … da hat sie geweint. Ja. Das vergisst man nicht."
+},
+{
+"voice": "f1",
+"text": "Und wenn jetzt jemand zuhört und denkt: Da möchte ich mitmachen, als Helfer?"
+},
+{
+"voice": "m2",
+"text": "Sehr gerne! Wir suchen vor allem Leute, die nähen können, weil Frau Petrenko nicht jedes Mal Zeit hat. Man muss kein Profi sein. Einfach am ersten Samstag vorbeikommen. Oder vorher eine Mail schreiben, die Adresse steht auf unserer Internetseite."
+},
+{
+"voice": "f1",
+"text": "Herr Aydın, vielen Dank für den Besuch bei uns!"
+},
+{
+"voice": "m2",
+"text": "Ich danke Ihnen."
+}
+],
+"text": "Sie machen das ja nicht allein. Wer hilft denn bei Ihnen mit? – Inzwischen sind wir zwölf Leute. Da ist eine Schneiderin dabei, Frau Petrenko, die kommt aus der Ukraine und kann wirklich alles nähen. Dann zwei Studenten von der Uni, die kennen sich mit Handys und Laptops aus. Davon hab ich ehrlich gesagt keine Ahnung. Und die Fahrräder, die macht Herr Schulte. Der ist schon über achtzig, aber topfit. – Über achtzig, toll! Und klappt denn jede Reparatur? – Nee, leider nicht. Ich würde sagen, so zwei Drittel schaffen wir. Manchmal fehlt ein Teil, manchmal ist ein Gerät so gebaut, dass man es gar nicht aufmachen kann. Also, das ärgert mich wirklich. Das machen manche Firmen ja mit Absicht. – Was war denn Ihre schönste Reparatur? – Oh, da gab's einige. Aber ich erinnere mich an eine ältere Dame, die kam mit einem Radio. Das war noch von ihrem Vater, aus den Sechzigerjahren, und es lief seit Jahren nicht mehr. Wir haben zwei Stunden gesucht, und am Ende war's nur ein loses Kabel. Und als dann die Musik lief … da hat sie geweint. Ja. Das vergisst man nicht. – Und wenn jetzt jemand zuhört und denkt: Da möchte ich mitmachen, als Helfer? – Sehr gerne! Wir suchen vor allem Leute, die nähen können, weil Frau Petrenko nicht jedes Mal Zeit hat. Man muss kein Profi sein. Einfach am ersten Samstag vorbeikommen. Oder vorher eine Mail schreiben, die Adresse steht auf unserer Internetseite. – Herr Aydın, vielen Dank für den Besuch bei uns! – Ich danke Ihnen.",
+"questions": [
+{
+"q": "Im Team gibt es Studenten, die sich mit Handys und Laptops auskennen.",
+"options": [
+"richtig",
+"falsch"
+],
+"answer": 0,
+"why": "„Dann zwei Studenten von der Uni, die kennen sich mit Handys und Laptops aus.“"
+},
+{
+"q": "Fast alle Reparaturen sind erfolgreich.",
+"options": [
+"richtig",
+"falsch"
+],
+"answer": 1,
+"why": "„Nee, leider nicht.“ Sie schaffen nur ungefähr zwei Drittel."
+},
+{
+"q": "Herr Aydın ärgert sich über Geräte, die man nicht öffnen kann.",
+"options": [
+"richtig",
+"falsch"
+],
+"answer": 0,
+"why": "Er sagt über diese Geräte: „Also, das ärgert mich wirklich.“"
+},
+{
+"q": "In das alte Radio musste ein teures Ersatzteil eingebaut werden.",
+"options": [
+"richtig",
+"falsch"
+],
+"answer": 1,
+"why": "Das Problem war „nur ein loses Kabel“. Ein Ersatzteil war nicht nötig."
+},
+{
+"q": "Neue Helfer müssen eine handwerkliche Ausbildung haben.",
+"options": [
+"richtig",
+"falsch"
+],
+"answer": 1,
+"why": "Herr Aydın sagt: „Man muss kein Profi sein.“"
+}
+]
+},
+{
+"id": "telcb1-1-04",
+"teil": "Teil 3",
+"type": "Anrufbeantworter",
+"situation": "Du hörst eine Nachricht auf deinem Anrufbeantworter.",
+"segments": [
+{
+"voice": "f3",
+"text": "Hallo, Frau Mansouri, hier ist Tanja vom Sportpark Herne. Sie haben sich ja für den Schwimmkurs für Erwachsene angemeldet, der am Dienstag anfangen sollte. Den müssen wir leider um eine Woche verschieben, weil im Hallenbad gerade die Lüftung repariert wird. Also, der erste Termin ist jetzt Dienstag, der vierzehnte, gleiche Uhrzeit, um halb acht abends. Die Kursgebühr bezahlen Sie dann einfach beim ersten Termin, bar oder mit Karte. Bis dann, tschüss!"
+}
+],
+"text": "Hallo, Frau Mansouri, hier ist Tanja vom Sportpark Herne. Sie haben sich ja für den Schwimmkurs für Erwachsene angemeldet, der am Dienstag anfangen sollte. Den müssen wir leider um eine Woche verschieben, weil im Hallenbad gerade die Lüftung repariert wird. Also, der erste Termin ist jetzt Dienstag, der vierzehnte, gleiche Uhrzeit, um halb acht abends. Die Kursgebühr bezahlen Sie dann einfach beim ersten Termin, bar oder mit Karte. Bis dann, tschüss!",
+"questions": [
+{
+"q": "Der Schwimmkurs beginnt eine Woche später als geplant.",
+"options": [
+"richtig",
+"falsch"
+],
+"answer": 0,
+"why": "Tanja sagt: „Den müssen wir leider um eine Woche verschieben.“ Die Uhrzeit bleibt gleich."
+}
+]
+},
+{
+"id": "telcb1-1-05",
+"teil": "Teil 3",
+"type": "Durchsage am Bahnhof",
+"situation": "Du stehst am Hauptbahnhof in Bochum und willst nach Dortmund fahren.",
+"segments": [
+{
+"voice": "f1",
+"text": "Achtung an Gleis vier: Die S-Bahn S eins nach Dortmund Hauptbahnhof, planmäßige Abfahrt sechzehn Uhr dreiundzwanzig, fällt heute aus. Fahrgäste nach Dortmund nehmen bitte den Regionalexpress um sechzehn Uhr einunddreißig von Gleis sechs. Der Regionalexpress hält heute zusätzlich in Bochum-Langendreer. Wir bitten um Entschuldigung."
+}
+],
+"text": "Achtung an Gleis vier: Die S-Bahn S eins nach Dortmund Hauptbahnhof, planmäßige Abfahrt sechzehn Uhr dreiundzwanzig, fällt heute aus. Fahrgäste nach Dortmund nehmen bitte den Regionalexpress um sechzehn Uhr einunddreißig von Gleis sechs. Der Regionalexpress hält heute zusätzlich in Bochum-Langendreer. Wir bitten um Entschuldigung.",
+"questions": [
+{
+"q": "Fahrgäste nach Dortmund sollen auf die nächste S-Bahn warten.",
+"options": [
+"richtig",
+"falsch"
+],
+"answer": 1,
+"why": "Die S-Bahn fällt aus. Fahrgäste sollen „den Regionalexpress um sechzehn Uhr einunddreißig von Gleis sechs“ nehmen."
+}
+]
+},
+{
+"id": "telcb1-1-06",
+"teil": "Teil 3",
+"type": "Durchsage im Baumarkt",
+"situation": "Du kaufst in einem Baumarkt in Oberhausen ein. Dein Auto steht auf dem Parkplatz hinter dem Markt.",
+"segments": [
+{
+"voice": "m3",
+"text": "Liebe Kundinnen und Kunden, nur noch heute: In unserer Gartenabteilung bekommen Sie alle Blumenzwiebeln zum halben Preis. Und eine Bitte an alle, die mit dem Auto da sind: Der Parkplatz hinter dem Markt wird heute schon um achtzehn Uhr geschlossen. Bitte fahren Sie Ihr Fahrzeug bis dahin heraus. Der Parkplatz vor dem Eingang bleibt wie immer bis zweiundzwanzig Uhr geöffnet. Vielen Dank für Ihren Einkauf."
+}
+],
+"text": "Liebe Kundinnen und Kunden, nur noch heute: In unserer Gartenabteilung bekommen Sie alle Blumenzwiebeln zum halben Preis. Und eine Bitte an alle, die mit dem Auto da sind: Der Parkplatz hinter dem Markt wird heute schon um achtzehn Uhr geschlossen. Bitte fahren Sie Ihr Fahrzeug bis dahin heraus. Der Parkplatz vor dem Eingang bleibt wie immer bis zweiundzwanzig Uhr geöffnet. Vielen Dank für Ihren Einkauf.",
+"questions": [
+{
+"q": "Du musst dein Auto vor achtzehn Uhr vom Parkplatz holen.",
+"options": [
+"richtig",
+"falsch"
+],
+"answer": 0,
+"why": "Dein Auto steht hinter dem Markt, und dieser Parkplatz „wird heute schon um achtzehn Uhr geschlossen“. Bis zweiundzwanzig Uhr ist nur der Parkplatz vor dem Eingang offen."
+}
+]
+},
+{
+"id": "telcb1-1-07",
+"teil": "Teil 3",
+"type": "Telefonansage",
+"situation": "Du rufst beim Bürgerbüro in Recklinghausen an, weil du einen neuen Personalausweis abholen möchtest.",
+"segments": [
+{
+"voice": "m2",
+"text": "Guten Tag. Sie sind verbunden mit dem Bürgerbüro der Stadt Recklinghausen. Leider rufen Sie außerhalb unserer Öffnungszeiten an. Wir sind montags bis freitags von acht bis zwölf Uhr für Sie da, donnerstags zusätzlich von vierzehn bis achtzehn Uhr. Für einen neuen Personalausweis oder Reisepass brauchen Sie einen Termin. Den buchen Sie bitte online auf unserer Internetseite. Wenn Sie ein fertiges Dokument abholen möchten, brauchen Sie keinen Termin. Vielen Dank für Ihren Anruf."
+}
+],
+"text": "Guten Tag. Sie sind verbunden mit dem Bürgerbüro der Stadt Recklinghausen. Leider rufen Sie außerhalb unserer Öffnungszeiten an. Wir sind montags bis freitags von acht bis zwölf Uhr für Sie da, donnerstags zusätzlich von vierzehn bis achtzehn Uhr. Für einen neuen Personalausweis oder Reisepass brauchen Sie einen Termin. Den buchen Sie bitte online auf unserer Internetseite. Wenn Sie ein fertiges Dokument abholen möchten, brauchen Sie keinen Termin. Vielen Dank für Ihren Anruf.",
+"questions": [
+{
+"q": "Du brauchst einen Termin, um deinen Ausweis abzuholen.",
+"options": [
+"richtig",
+"falsch"
+],
+"answer": 1,
+"why": "Einen Termin braucht man nur für den Antrag. Für die Abholung gilt: „brauchen Sie keinen Termin“."
+}
+]
+},
+{
+"id": "telcb1-1-08",
+"teil": "Teil 3",
+"type": "Verkehrsfunk",
+"situation": "Du fährst mit dem Auto auf der A vierzig von Duisburg nach Essen.",
+"segments": [
+{
+"voice": "f2",
+"text": "Und jetzt der Verkehr. Auf der A vierzig zwischen Essen-Frohnhausen und Essen-Zentrum ist nach einem Unfall die linke Spur gesperrt. Die rechte Spur ist frei, dort staut es sich aber auf sechs Kilometern. Auf der A zweiundvierzig in Richtung Dortmund ist die Ausfahrt Bottrop-Süd ab heute Abend bis Montag früh wegen Bauarbeiten gesperrt. Eine Umleitung ist ausgeschildert. Kommen Sie gut an!"
+}
+],
+"text": "Und jetzt der Verkehr. Auf der A vierzig zwischen Essen-Frohnhausen und Essen-Zentrum ist nach einem Unfall die linke Spur gesperrt. Die rechte Spur ist frei, dort staut es sich aber auf sechs Kilometern. Auf der A zweiundvierzig in Richtung Dortmund ist die Ausfahrt Bottrop-Süd ab heute Abend bis Montag früh wegen Bauarbeiten gesperrt. Eine Umleitung ist ausgeschildert. Kommen Sie gut an!",
+"questions": [
+{
+"q": "Die A vierzig ist bei Essen komplett gesperrt.",
+"options": [
+"richtig",
+"falsch"
+],
+"answer": 1,
+"why": "Nur „die linke Spur“ ist gesperrt. „Die rechte Spur ist frei“, aber es gibt Stau."
+}
+]
+}
+]
+},
+"telcb1-2": {
+"title": "telc B1 Hören · Übungssatz 2",
+"level": "B1",
+"exam": "telc B1",
+"intro": "Der zweite Durchgang im telc-Format: Nachrichten aus dem Ruhrgebiet, ein Gespräch mit einer Straßenbahnfahrerin und fünf kurze Ansagen. Lies vor dem Hören immer zuerst die Aussagen. Achte darauf, ob etwas geändert oder verneint wird.",
+"group": "telcb1",
+"items": [
+{
+"id": "telcb1-2-01",
+"teil": "Teil 1",
+"type": "Radionachrichten",
+"situation": "Du hörst die Nachrichten im Radio. Es gibt fünf Meldungen. Zu jeder Meldung gibt es eine Aussage.",
+"segments": [
+{
+"voice": "f1",
+"text": "Sie hören Radio Emscherland. Die Nachrichten um siebzehn Uhr. Die Stadtbibliothek in Gelsenkirchen öffnet ab dem nächsten Monat auch sonntags, und zwar von elf bis sechzehn Uhr. Eine Beratung gibt es am Sonntag nicht, Bücher ausleihen und zurückgeben kann man aber an den Automaten. Die Stadt möchte damit vor allem Familien und Berufstätige erreichen. In Hagen bleibt die Brücke über die Volme an der Badstraße weiter gesperrt, allerdings nur für Autos und Lastwagen. Bei einer Prüfung haben Fachleute Schäden am Beton gefunden. Fußgänger und Radfahrer dürfen die Brücke weiter benutzen. Die Reparatur dauert voraussichtlich bis zum Ende des Jahres. In Nordrhein-Westfalen gibt es in diesem Jahr etwas mehr Ausbildungsplätze als im letzten Jahr. Trotzdem sind noch viele Stellen frei, besonders im Handwerk und in der Gastronomie. Die Agentur für Arbeit rät Jugendlichen ohne Ausbildungsplatz, sich auch jetzt noch zu bewerben. Viele Betriebe stellen auch nach dem ersten September noch ein. In Moers sucht ein Verein für Igelschutz dringend Helferinnen und Helfer. Wegen des warmen Herbstes sind viele junge Igel noch zu klein für den Winterschlaf. Die Freiwilligen sollen die Tiere füttern und versorgen. Wer einen kleinen Igel findet, soll ihn aber nicht einfach mitnehmen, sondern zuerst beim Verein anrufen. Das Wetter: In der Nacht wird es frostig, bis minus drei Grad. Vor allem auf dem Land kann es auf den Straßen glatt werden. Morgen bleibt es trocken und sonnig, aber kalt, mit höchstens fünf Grad."
+}
+],
+"text": "Sie hören Radio Emscherland. Die Nachrichten um siebzehn Uhr. Die Stadtbibliothek in Gelsenkirchen öffnet ab dem nächsten Monat auch sonntags, und zwar von elf bis sechzehn Uhr. Eine Beratung gibt es am Sonntag nicht, Bücher ausleihen und zurückgeben kann man aber an den Automaten. Die Stadt möchte damit vor allem Familien und Berufstätige erreichen. In Hagen bleibt die Brücke über die Volme an der Badstraße weiter gesperrt, allerdings nur für Autos und Lastwagen. Bei einer Prüfung haben Fachleute Schäden am Beton gefunden. Fußgänger und Radfahrer dürfen die Brücke weiter benutzen. Die Reparatur dauert voraussichtlich bis zum Ende des Jahres. In Nordrhein-Westfalen gibt es in diesem Jahr etwas mehr Ausbildungsplätze als im letzten Jahr. Trotzdem sind noch viele Stellen frei, besonders im Handwerk und in der Gastronomie. Die Agentur für Arbeit rät Jugendlichen ohne Ausbildungsplatz, sich auch jetzt noch zu bewerben. Viele Betriebe stellen auch nach dem ersten September noch ein. In Moers sucht ein Verein für Igelschutz dringend Helferinnen und Helfer. Wegen des warmen Herbstes sind viele junge Igel noch zu klein für den Winterschlaf. Die Freiwilligen sollen die Tiere füttern und versorgen. Wer einen kleinen Igel findet, soll ihn aber nicht einfach mitnehmen, sondern zuerst beim Verein anrufen. Das Wetter: In der Nacht wird es frostig, bis minus drei Grad. Vor allem auf dem Land kann es auf den Straßen glatt werden. Morgen bleibt es trocken und sonnig, aber kalt, mit höchstens fünf Grad.",
+"questions": [
+{
+"q": "Meldung 1: Die Bibliothek in Gelsenkirchen ist bald auch am Sonntag geöffnet.",
+"options": [
+"richtig",
+"falsch"
+],
+"answer": 0,
+"why": "Sie „öffnet ab dem nächsten Monat auch sonntags“, von elf bis sechzehn Uhr."
+},
+{
+"q": "Meldung 2: Die Brücke in Hagen ist für alle gesperrt.",
+"options": [
+"richtig",
+"falsch"
+],
+"answer": 1,
+"why": "Sie ist „nur für Autos und Lastwagen“ gesperrt. Fußgänger und Radfahrer dürfen sie weiter benutzen."
+},
+{
+"q": "Meldung 3: Im Handwerk sind alle Ausbildungsplätze besetzt.",
+"options": [
+"richtig",
+"falsch"
+],
+"answer": 1,
+"why": "Es sind „noch viele Stellen frei, besonders im Handwerk und in der Gastronomie“."
+},
+{
+"q": "Meldung 4: Der Verein in Moers sucht Menschen, die sich um junge Igel kümmern.",
+"options": [
+"richtig",
+"falsch"
+],
+"answer": 0,
+"why": "Der Verein „sucht dringend Helferinnen und Helfer“, die die Tiere füttern und versorgen."
+},
+{
+"q": "Meldung 5: In der Nacht können die Straßen glatt werden.",
+"options": [
+"richtig",
+"falsch"
+],
+"answer": 0,
+"why": "„Vor allem auf dem Land kann es auf den Straßen glatt werden.“"
+}
+]
+},
+{
+"id": "telcb1-2-02",
+"teil": "Teil 2",
+"type": "Radiointerview",
+"situation": "In der Radioreihe „Neu im Job“ spricht Moderator Thomas Berger mit Amira Haddad. Sie fährt Straßenbahn in Essen. Erster Teil.",
+"segments": [
+{
+"voice": "m1",
+"text": "In unserer Reihe „Neu im Job“ bin ich heute mit Amira Haddad verbunden. Frau Haddad, Sie fahren seit einem halben Jahr Straßenbahn in Essen. Hallo!"
+},
+{
+"voice": "f2",
+"text": "Hallo, guten Tag!"
+},
+{
+"voice": "m1",
+"text": "Was haben Sie denn vorher gemacht?"
+},
+{
+"voice": "f2",
+"text": "Also, in Syrien war ich Grundschullehrerin, fast acht Jahre lang. Hier in Deutschland ging das nicht so einfach, weil mein Studium nur zum Teil anerkannt wurde. Ich hätte noch mal zwei Jahre studieren müssen. Und, na ja, mit zwei Kindern … das war für mich keine Option."
+},
+{
+"voice": "m1",
+"text": "Und wie sind Sie dann auf die Straßenbahn gekommen?"
+},
+{
+"voice": "f2",
+"text": "Das war tatsächlich in meinem Deutschkurs. Da kam jemand von den Verkehrsbetrieben und hat erzählt, dass sie dringend Fahrerinnen und Fahrer suchen. Und dass man während der Ausbildung schon Geld bekommt. Ich hab erst gelacht, ehrlich! Ich hatte ja nicht mal einen Führerschein. Aber den braucht man für die Straßenbahn gar nicht."
+},
+{
+"voice": "m1",
+"text": "Echt? Das wusste ich auch nicht."
+},
+{
+"voice": "f2",
+"text": "Ja, das wissen viele nicht. Für den Bus braucht man natürlich einen, aber für die Bahn nicht."
+},
+{
+"voice": "m1",
+"text": "Und wie lange hat die Ausbildung gedauert?"
+},
+{
+"voice": "f2",
+"text": "Sechs Monate, mit Theorie und Praxis. Die Theorie war schwer, so viele Fachwörter: Signale, Weichen, Technik … Ich hab abends mit meinem Sohn gelernt. Der hat mich immer abgefragt."
+}
+],
+"text": "In unserer Reihe „Neu im Job“ bin ich heute mit Amira Haddad verbunden. Frau Haddad, Sie fahren seit einem halben Jahr Straßenbahn in Essen. Hallo! – Hallo, guten Tag! – Was haben Sie denn vorher gemacht? – Also, in Syrien war ich Grundschullehrerin, fast acht Jahre lang. Hier in Deutschland ging das nicht so einfach, weil mein Studium nur zum Teil anerkannt wurde. Ich hätte noch mal zwei Jahre studieren müssen. Und, na ja, mit zwei Kindern … das war für mich keine Option. – Und wie sind Sie dann auf die Straßenbahn gekommen? – Das war tatsächlich in meinem Deutschkurs. Da kam jemand von den Verkehrsbetrieben und hat erzählt, dass sie dringend Fahrerinnen und Fahrer suchen. Und dass man während der Ausbildung schon Geld bekommt. Ich hab erst gelacht, ehrlich! Ich hatte ja nicht mal einen Führerschein. Aber den braucht man für die Straßenbahn gar nicht. – Echt? Das wusste ich auch nicht. – Ja, das wissen viele nicht. Für den Bus braucht man natürlich einen, aber für die Bahn nicht. – Und wie lange hat die Ausbildung gedauert? – Sechs Monate, mit Theorie und Praxis. Die Theorie war schwer, so viele Fachwörter: Signale, Weichen, Technik … Ich hab abends mit meinem Sohn gelernt. Der hat mich immer abgefragt.",
+"questions": [
+{
+"q": "Frau Haddad hat in Syrien als Lehrerin gearbeitet.",
+"options": [
+"richtig",
+"falsch"
+],
+"answer": 0,
+"why": "„In Syrien war ich Grundschullehrerin, fast acht Jahre lang.“"
+},
+{
+"q": "Ihr Studium wurde in Deutschland vollständig anerkannt.",
+"options": [
+"richtig",
+"falsch"
+],
+"answer": 1,
+"why": "Es wurde „nur zum Teil anerkannt“. Sie hätte noch zwei Jahre studieren müssen."
+},
+{
+"q": "Von der Arbeit bei den Verkehrsbetrieben hat sie in ihrem Deutschkurs erfahren.",
+"options": [
+"richtig",
+"falsch"
+],
+"answer": 0,
+"why": "„Das war tatsächlich in meinem Deutschkurs. Da kam jemand von den Verkehrsbetrieben.“"
+},
+{
+"q": "Für die Arbeit in der Straßenbahn braucht man einen Autoführerschein.",
+"options": [
+"richtig",
+"falsch"
+],
+"answer": 1,
+"why": "Frau Haddad sagt: „Aber den braucht man für die Straßenbahn gar nicht.“ Nur für den Bus braucht man einen."
+},
+{
+"q": "Die Ausbildung hat ein Jahr gedauert.",
+"options": [
+"richtig",
+"falsch"
+],
+"answer": 1,
+"why": "Die Ausbildung dauerte „sechs Monate, mit Theorie und Praxis“."
+}
+]
+},
+{
+"id": "telcb1-2-03",
+"teil": "Teil 2",
+"type": "Radiointerview",
+"situation": "Das Gespräch mit Amira Haddad geht weiter. Zweiter Teil.",
+"segments": [
+{
+"voice": "m1",
+"text": "Und jetzt, nach einem halben Jahr: Wie ist der Alltag?"
+},
+{
+"voice": "f2",
+"text": "Gut! Wirklich. Ich fahre meistens die Linie hundertsieben, von Gelsenkirchen bis nach Bredeney. Der Schichtdienst ist manchmal anstrengend, besonders die Frühschicht. Da fange ich schon um Viertel nach vier an. Aber mein Mann arbeitet im Büro, und wir planen das gut mit den Kindern."
+},
+{
+"voice": "m1",
+"text": "Wie reagieren denn die Fahrgäste?"
+},
+{
+"voice": "f2",
+"text": "Meistens freundlich. Manchmal sagt ein älterer Herr: Oh, heute fährt ja eine Frau! Aber das ist nett gemeint, glaube ich. Schwierig ist eher der Verkehr. Autos, die auf den Schienen stehen, oder Leute, die mit dem Handy über die Straße laufen, ohne zu gucken. Da muss man immer, immer aufpassen."
+},
+{
+"voice": "m1",
+"text": "Vermissen Sie die Schule manchmal?"
+},
+{
+"voice": "f2",
+"text": "Ja, ehrlich gesagt schon. Die Kinder, das Unterrichten … Aber wissen Sie, ich hab jetzt einen sicheren Arbeitsplatz, einen unbefristeten Vertrag, und ich verdiene mein eigenes Geld. Das war mir wichtig. Und vielleicht, irgendwann später, mache ich die Anerkennung als Lehrerin doch noch. Mal sehen."
+},
+{
+"voice": "m1",
+"text": "Was raten Sie Leuten, die auch über so einen Wechsel nachdenken?"
+},
+{
+"voice": "f2",
+"text": "Einfach fragen! Die Verkehrsbetriebe machen jeden Monat einen Infoabend, da kann man auch mal im Fahrsimulator sitzen. Und keine Angst vor der Sprache. Ich hatte am Anfang B eins, und das hat gereicht. Man lernt im Job sehr viel dazu."
+},
+{
+"voice": "m1",
+"text": "Frau Haddad, vielen Dank, und weiterhin gute Fahrt!"
+},
+{
+"voice": "f2",
+"text": "Danke schön! Tschüss!"
+}
+],
+"text": "Und jetzt, nach einem halben Jahr: Wie ist der Alltag? – Gut! Wirklich. Ich fahre meistens die Linie hundertsieben, von Gelsenkirchen bis nach Bredeney. Der Schichtdienst ist manchmal anstrengend, besonders die Frühschicht. Da fange ich schon um Viertel nach vier an. Aber mein Mann arbeitet im Büro, und wir planen das gut mit den Kindern. – Wie reagieren denn die Fahrgäste? – Meistens freundlich. Manchmal sagt ein älterer Herr: Oh, heute fährt ja eine Frau! Aber das ist nett gemeint, glaube ich. Schwierig ist eher der Verkehr. Autos, die auf den Schienen stehen, oder Leute, die mit dem Handy über die Straße laufen, ohne zu gucken. Da muss man immer, immer aufpassen. – Vermissen Sie die Schule manchmal? – Ja, ehrlich gesagt schon. Die Kinder, das Unterrichten … Aber wissen Sie, ich hab jetzt einen sicheren Arbeitsplatz, einen unbefristeten Vertrag, und ich verdiene mein eigenes Geld. Das war mir wichtig. Und vielleicht, irgendwann später, mache ich die Anerkennung als Lehrerin doch noch. Mal sehen. – Was raten Sie Leuten, die auch über so einen Wechsel nachdenken? – Einfach fragen! Die Verkehrsbetriebe machen jeden Monat einen Infoabend, da kann man auch mal im Fahrsimulator sitzen. Und keine Angst vor der Sprache. Ich hatte am Anfang B eins, und das hat gereicht. Man lernt im Job sehr viel dazu. – Frau Haddad, vielen Dank, und weiterhin gute Fahrt! – Danke schön! Tschüss!",
+"questions": [
+{
+"q": "Bei der Frühschicht fängt Frau Haddad vor fünf Uhr an.",
+"options": [
+"richtig",
+"falsch"
+],
+"answer": 0,
+"why": "Sie fängt „schon um Viertel nach vier“ an, also vor fünf Uhr."
+},
+{
+"q": "Die Fahrgäste sind oft unfreundlich zu ihr.",
+"options": [
+"richtig",
+"falsch"
+],
+"answer": 1,
+"why": "Sie sagt: „Meistens freundlich.“ Sogar der Satz des älteren Herrn ist „nett gemeint“."
+},
+{
+"q": "Frau Haddad findet den Straßenverkehr manchmal schwierig.",
+"options": [
+"richtig",
+"falsch"
+],
+"answer": 0,
+"why": "„Schwierig ist eher der Verkehr“, zum Beispiel Autos auf den Schienen."
+},
+{
+"q": "Sie möchte vielleicht später doch noch als Lehrerin anerkannt werden.",
+"options": [
+"richtig",
+"falsch"
+],
+"answer": 0,
+"why": "„Vielleicht, irgendwann später, mache ich die Anerkennung als Lehrerin doch noch.“"
+},
+{
+"q": "Frau Haddad meint, dass man für den Job sehr gute Deutschkenntnisse braucht.",
+"options": [
+"richtig",
+"falsch"
+],
+"answer": 1,
+"why": "Sie sagt: „Keine Angst vor der Sprache. Ich hatte am Anfang B eins, und das hat gereicht.“"
+}
+]
+},
+{
+"id": "telcb1-2-04",
+"teil": "Teil 3",
+"type": "Anrufbeantworter",
+"situation": "Du hörst eine Nachricht von der Autowerkstatt.",
+"segments": [
+{
+"voice": "m3",
+"text": "Ja, hallo, Herr Kowalczyk, hier ist das Autohaus Brenner in Bottrop, Werkstatt, Meier am Apparat. Ihr Wagen ist fertig. Die Bremsen waren in Ordnung, wir haben nur die Reifen gewechselt und die Inspektion gemacht. Sie können das Auto heute bis achtzehn Uhr abholen. Morgen ist ja Samstag, da haben wir nur bis zwölf Uhr auf. Den Schlüssel bekommen Sie bei uns an der Kasse. Schönen Tag noch!"
+}
+],
+"text": "Ja, hallo, Herr Kowalczyk, hier ist das Autohaus Brenner in Bottrop, Werkstatt, Meier am Apparat. Ihr Wagen ist fertig. Die Bremsen waren in Ordnung, wir haben nur die Reifen gewechselt und die Inspektion gemacht. Sie können das Auto heute bis achtzehn Uhr abholen. Morgen ist ja Samstag, da haben wir nur bis zwölf Uhr auf. Den Schlüssel bekommen Sie bei uns an der Kasse. Schönen Tag noch!",
+"questions": [
+{
+"q": "Herr Kowalczyk kann sein Auto am Samstag nicht abholen.",
+"options": [
+"richtig",
+"falsch"
+],
+"answer": 1,
+"why": "Am Samstag ist die Werkstatt „nur bis zwölf Uhr“ offen. Vormittags kann er das Auto also abholen."
+}
+]
+},
+{
+"id": "telcb1-2-05",
+"teil": "Teil 3",
+"type": "Durchsage im Einkaufszentrum",
+"situation": "Du bist in einem Einkaufszentrum in Mülheim an der Ruhr.",
+"segments": [
+{
+"voice": "f3",
+"text": "Liebe Besucherinnen und Besucher, der kleine Yusuf, fünf Jahre alt, sucht seine Mama. Yusuf trägt eine rote Jacke und eine blaue Mütze. Er wartet jetzt an der Information im Erdgeschoss, direkt neben dem Haupteingang. Die Mutter von Yusuf wird gebeten, bitte sofort zur Information im Erdgeschoss zu kommen. Vielen Dank."
+}
+],
+"text": "Liebe Besucherinnen und Besucher, der kleine Yusuf, fünf Jahre alt, sucht seine Mama. Yusuf trägt eine rote Jacke und eine blaue Mütze. Er wartet jetzt an der Information im Erdgeschoss, direkt neben dem Haupteingang. Die Mutter von Yusuf wird gebeten, bitte sofort zur Information im Erdgeschoss zu kommen. Vielen Dank.",
+"questions": [
+{
+"q": "Die Mutter soll zur Information im Erdgeschoss kommen.",
+"options": [
+"richtig",
+"falsch"
+],
+"answer": 0,
+"why": "Die Mutter „wird gebeten, bitte sofort zur Information im Erdgeschoss zu kommen“."
+}
+]
+},
+{
+"id": "telcb1-2-06",
+"teil": "Teil 3",
+"type": "Durchsage im Zug",
+"situation": "Du sitzt im Regionalexpress und möchtest nach Köln fahren.",
+"segments": [
+{
+"voice": "f1",
+"text": "Meine Damen und Herren, in wenigen Minuten erreichen wir Duisburg Hauptbahnhof. Wegen einer Störung an der Strecke endet dieser Zug heute leider in Duisburg. Reisende nach Düsseldorf und Köln steigen bitte in den Regionalexpress um, der auf dem gegenüberliegenden Gleis wartet. Ihre Fahrkarten bleiben gültig. Wir bitten um Entschuldigung."
+}
+],
+"text": "Meine Damen und Herren, in wenigen Minuten erreichen wir Duisburg Hauptbahnhof. Wegen einer Störung an der Strecke endet dieser Zug heute leider in Duisburg. Reisende nach Düsseldorf und Köln steigen bitte in den Regionalexpress um, der auf dem gegenüberliegenden Gleis wartet. Ihre Fahrkarten bleiben gültig. Wir bitten um Entschuldigung.",
+"questions": [
+{
+"q": "Der Zug fährt heute weiter bis Köln.",
+"options": [
+"richtig",
+"falsch"
+],
+"answer": 1,
+"why": "Der Zug „endet … heute leider in Duisburg“. Nach Köln musst du umsteigen."
+}
+]
+},
+{
+"id": "telcb1-2-07",
+"teil": "Teil 3",
+"type": "Anrufbeantworter",
+"situation": "Deine Freundin Bea hat dir eine Nachricht hinterlassen.",
+"segments": [
+{
+"voice": "f2",
+"text": "Hi Olena, ich bin's, Bea! Du, wegen Samstag: Das Grillen bei uns im Garten fällt leider ins Wasser … also, wörtlich, es soll ja den ganzen Tag regnen. Wir feiern stattdessen bei Marco in der Wohnung, der hat doch so ein großes Wohnzimmer. Gleiche Zeit, um sieben. Und du musst keinen Salat mehr mitbringen, den macht jetzt Marco. Bring einfach was zu trinken mit, okay? Wenn was ist, ruf mich an. Ciao!"
+}
+],
+"text": "Hi Olena, ich bin's, Bea! Du, wegen Samstag: Das Grillen bei uns im Garten fällt leider ins Wasser … also, wörtlich, es soll ja den ganzen Tag regnen. Wir feiern stattdessen bei Marco in der Wohnung, der hat doch so ein großes Wohnzimmer. Gleiche Zeit, um sieben. Und du musst keinen Salat mehr mitbringen, den macht jetzt Marco. Bring einfach was zu trinken mit, okay? Wenn was ist, ruf mich an. Ciao!",
+"questions": [
+{
+"q": "Die Feier findet zur gleichen Zeit statt, aber an einem anderen Ort.",
+"options": [
+"richtig",
+"falsch"
+],
+"answer": 0,
+"why": "Sie feiern „bei Marco in der Wohnung“ statt im Garten, und zwar zur „gleichen Zeit, um sieben“."
+}
+]
+},
+{
+"id": "telcb1-2-08",
+"teil": "Teil 3",
+"type": "Telefonansage",
+"situation": "Du rufst bei deiner Hausarztpraxis in Unna an.",
+"segments": [
+{
+"voice": "m1",
+"text": "Guten Tag, Sie sind verbunden mit der Praxis Doktor Okonkwo. Unsere Praxis ist vom zwanzigsten bis zum einunddreißigsten Oktober wegen Urlaub geschlossen. In dringenden Fällen wenden Sie sich bitte an unsere Vertretung, die Praxis Doktor Lindner in der Hauptstraße zwölf, hier in Unna. Nachts und am Wochenende erreichen Sie den ärztlichen Bereitschaftsdienst unter der Nummer eins eins sechs, eins eins sieben. Ab dem dritten November sind wir wieder für Sie da."
+}
+],
+"text": "Guten Tag, Sie sind verbunden mit der Praxis Doktor Okonkwo. Unsere Praxis ist vom zwanzigsten bis zum einunddreißigsten Oktober wegen Urlaub geschlossen. In dringenden Fällen wenden Sie sich bitte an unsere Vertretung, die Praxis Doktor Lindner in der Hauptstraße zwölf, hier in Unna. Nachts und am Wochenende erreichen Sie den ärztlichen Bereitschaftsdienst unter der Nummer eins eins sechs, eins eins sieben. Ab dem dritten November sind wir wieder für Sie da.",
+"questions": [
+{
+"q": "In dringenden Fällen sollen die Patienten zur Praxis Doktor Lindner gehen.",
+"options": [
+"richtig",
+"falsch"
+],
+"answer": 0,
+"why": "„In dringenden Fällen wenden Sie sich bitte an unsere Vertretung, die Praxis Doktor Lindner.“"
+}
+]
+}
+]
+},
+"dtbb1-1": {
+"title": "DTB B1 Hören · Übungssatz 1",
+"level": "B1 Beruf",
+"exam": "DTB B1",
+"intro": "Berufsalltag in Pflege, Handwerk, Hotel und Lager: Mailbox-Nachrichten von Kollegen und Kunden, Durchsagen im Betrieb, eine Übergabe an der Rezeption, ein Gespräch mit einer Kundin und eine Teambesprechung. Achte darauf, wer was tun soll und was sich geändert hat.",
+"group": "dtbb1",
+"items": [
+{
+"id": "dtbb1-1-01",
+"teil": "Teil 1",
+"type": "Mailbox",
+"situation": "Du arbeitest in einem Seniorenheim in Hattingen. Deine Kollegin Svetlana hat dir, Dragan, eine Nachricht hinterlassen.",
+"segments": [
+{
+"voice": "f2",
+"text": "Hallo Dragan, hier ist Svetlana, aus der Frühschicht. Du, ich hab eine Bitte. Mein Sohn hat am Donnerstag eine kleine Operation, nichts Schlimmes, aber ich möchte ihn ins Krankenhaus begleiten. Könntest du am Donnerstag meine Frühschicht übernehmen? Ich würde dafür am Samstag deine Spätschicht machen. Mit Frau Weber von der Schichtleitung hab ich schon gesprochen, die ist einverstanden, wenn du auch ja sagst. Schreib mir einfach kurz eine Nachricht, bis heute Abend, ja? Danke dir!"
+}
+],
+"text": "Hallo Dragan, hier ist Svetlana, aus der Frühschicht. Du, ich hab eine Bitte. Mein Sohn hat am Donnerstag eine kleine Operation, nichts Schlimmes, aber ich möchte ihn ins Krankenhaus begleiten. Könntest du am Donnerstag meine Frühschicht übernehmen? Ich würde dafür am Samstag deine Spätschicht machen. Mit Frau Weber von der Schichtleitung hab ich schon gesprochen, die ist einverstanden, wenn du auch ja sagst. Schreib mir einfach kurz eine Nachricht, bis heute Abend, ja? Danke dir!",
+"questions": [
+{
+"q": "Was möchte Svetlana?",
+"options": [
+"Am Donnerstag frei haben, ohne eine Schicht zu tauschen.",
+"Mit Dragan die Schicht tauschen.",
+"Am Samstag frei haben."
+],
+"answer": 1,
+"why": "Sie möchte, dass Dragan ihre Frühschicht am Donnerstag übernimmt, und macht dafür seine Spätschicht am Samstag. Das ist ein Tausch."
+},
+{
+"q": "Was soll Dragan tun?",
+"options": [
+"Svetlana bis heute Abend eine Nachricht schreiben.",
+"Frau Weber um Erlaubnis bitten.",
+"Svetlana im Krankenhaus besuchen."
+],
+"answer": 0,
+"why": "„Schreib mir einfach kurz eine Nachricht, bis heute Abend.“ Mit Frau Weber hat Svetlana schon gesprochen."
+}
+]
+},
+{
+"id": "dtbb1-1-02",
+"teil": "Teil 1",
+"type": "Mailbox",
+"situation": "Du arbeitest im Büro eines Malerbetriebs in Bochum. Ein Kunde hat auf die Mailbox gesprochen.",
+"segments": [
+{
+"voice": "m2",
+"text": "Ja, guten Tag, Krüger hier. Ich hatte bei Ihnen die Malerarbeiten für mein Büro in der Kortumstraße bestellt, für nächsten Mittwoch. Jetzt ist mir aufgefallen: Am Mittwoch ist bei uns Inventur, da geht's leider überhaupt nicht. Könnten Ihre Leute vielleicht schon am Montag kommen? Oder sonst erst am Freitag, das ginge auch. Und noch was: Die Wände sollen jetzt doch nicht weiß werden, sondern hellgrau, so wie auf dem Muster, das ich Ihrem Kollegen gezeigt habe. Rufen Sie mich bitte zurück, unter null zwei drei vier, neun sechs, fünfundzwanzig, achtzig. Danke schön."
+}
+],
+"text": "Ja, guten Tag, Krüger hier. Ich hatte bei Ihnen die Malerarbeiten für mein Büro in der Kortumstraße bestellt, für nächsten Mittwoch. Jetzt ist mir aufgefallen: Am Mittwoch ist bei uns Inventur, da geht's leider überhaupt nicht. Könnten Ihre Leute vielleicht schon am Montag kommen? Oder sonst erst am Freitag, das ginge auch. Und noch was: Die Wände sollen jetzt doch nicht weiß werden, sondern hellgrau, so wie auf dem Muster, das ich Ihrem Kollegen gezeigt habe. Rufen Sie mich bitte zurück, unter null zwei drei vier, neun sechs, fünfundzwanzig, achtzig. Danke schön.",
+"questions": [
+{
+"q": "Warum ruft Herr Krüger an?",
+"options": [
+"Er möchte den Auftrag absagen.",
+"Er möchte einen anderen Termin.",
+"Er beschwert sich über die Arbeit."
+],
+"answer": 1,
+"why": "Am Mittwoch ist Inventur. Er fragt nach Montag oder Freitag. Den Auftrag will er nicht absagen."
+},
+{
+"q": "Welche Farbe sollen die Wände bekommen?",
+"options": [
+"Weiß.",
+"Hellgrau.",
+"Das soll der Maler entscheiden."
+],
+"answer": 1,
+"why": "„Die Wände sollen jetzt doch nicht weiß werden, sondern hellgrau.“"
+}
+]
+},
+{
+"id": "dtbb1-1-03",
+"teil": "Teil 1",
+"type": "Mailbox",
+"situation": "Herr Osei sucht eine Stelle im Lager. Eine Mitarbeiterin der Zeitarbeitsfirma ruft an.",
+"segments": [
+{
+"voice": "f3",
+"text": "Hallo, Herr Osei, Lisa Brandt hier, von Personal Plus in Dortmund. Ich hab gute Nachrichten für Sie: Die Firma Lagertechnik Sommer möchte Sie gerne kennenlernen. Das Vorstellungsgespräch wäre am Dienstag um zehn Uhr, direkt im Lager in Dortmund-Ellinghausen. Bringen Sie bitte Ihre Sicherheitsschuhe mit, denn nach dem Gespräch machen Sie gleich einen kleinen Probearbeitstag, so zwei, drei Stunden. Ihren Staplerschein müssen Sie nicht mitbringen, eine Kopie hab ich der Firma schon geschickt. Melden Sie sich bitte kurz, ob der Termin passt. Danke!"
+}
+],
+"text": "Hallo, Herr Osei, Lisa Brandt hier, von Personal Plus in Dortmund. Ich hab gute Nachrichten für Sie: Die Firma Lagertechnik Sommer möchte Sie gerne kennenlernen. Das Vorstellungsgespräch wäre am Dienstag um zehn Uhr, direkt im Lager in Dortmund-Ellinghausen. Bringen Sie bitte Ihre Sicherheitsschuhe mit, denn nach dem Gespräch machen Sie gleich einen kleinen Probearbeitstag, so zwei, drei Stunden. Ihren Staplerschein müssen Sie nicht mitbringen, eine Kopie hab ich der Firma schon geschickt. Melden Sie sich bitte kurz, ob der Termin passt. Danke!",
+"questions": [
+{
+"q": "Was soll Herr Osei zum Termin mitbringen?",
+"options": [
+"Seine Sicherheitsschuhe.",
+"Seinen Staplerschein.",
+"Eine Kopie seines Lebenslaufs."
+],
+"answer": 0,
+"why": "„Bringen Sie bitte Ihre Sicherheitsschuhe mit.“ Den Staplerschein hat Frau Brandt schon geschickt."
+}
+]
+},
+{
+"id": "dtbb1-1-04",
+"teil": "Teil 2",
+"type": "Durchsage im Betrieb",
+"situation": "Du arbeitest in einer Fabrik in Gelsenkirchen in der Spätschicht. Normalerweise beginnt deine Schicht um vierzehn Uhr in Halle zwei.",
+"segments": [
+{
+"voice": "m1",
+"text": "Achtung, eine Durchsage für alle Mitarbeiterinnen und Mitarbeiter. Wegen eines technischen Problems an der Lüftung muss Halle zwei ab vierzehn Uhr leer sein. Die Spätschicht arbeitet heute deshalb in Halle drei und beginnt eine halbe Stunde später als sonst, also um halb drei. Die Schichtleiter treffen sich bitte schon um Viertel vor zwei im Besprechungsraum im ersten Stock. Vielen Dank."
+}
+],
+"text": "Achtung, eine Durchsage für alle Mitarbeiterinnen und Mitarbeiter. Wegen eines technischen Problems an der Lüftung muss Halle zwei ab vierzehn Uhr leer sein. Die Spätschicht arbeitet heute deshalb in Halle drei und beginnt eine halbe Stunde später als sonst, also um halb drei. Die Schichtleiter treffen sich bitte schon um Viertel vor zwei im Besprechungsraum im ersten Stock. Vielen Dank.",
+"questions": [
+{
+"q": "Wann beginnt heute die Spätschicht?",
+"options": [
+"Um vierzehn Uhr.",
+"Um halb drei.",
+"Um Viertel vor zwei."
+],
+"answer": 1,
+"why": "Die Spätschicht beginnt „eine halbe Stunde später als sonst, also um halb drei“. Um Viertel vor zwei treffen sich nur die Schichtleiter."
+}
+]
+},
+{
+"id": "dtbb1-1-05",
+"teil": "Teil 2",
+"type": "Durchsage im Betrieb",
+"situation": "Du arbeitest in einem Möbelhaus in Recklinghausen. Vor Ladenöffnung hörst du eine Durchsage.",
+"segments": [
+{
+"voice": "f1",
+"text": "Guten Morgen, liebe Kolleginnen und Kollegen. Eine kurze Information: Am Donnerstag um zehn Uhr haben wir eine Übung mit Feueralarm. Wenn der Alarm kommt, verlassen Sie bitte sofort das Gebäude, und zwar über die Treppen, nicht mit dem Aufzug. Bitte nehmen Sie auch die Kundinnen und Kunden in Ihrem Bereich mit. Der Treffpunkt ist diesmal nicht der Hof hinter dem Lager, sondern der Parkplatz vor dem Haupteingang. Danke für Ihre Mithilfe."
+}
+],
+"text": "Guten Morgen, liebe Kolleginnen und Kollegen. Eine kurze Information: Am Donnerstag um zehn Uhr haben wir eine Übung mit Feueralarm. Wenn der Alarm kommt, verlassen Sie bitte sofort das Gebäude, und zwar über die Treppen, nicht mit dem Aufzug. Bitte nehmen Sie auch die Kundinnen und Kunden in Ihrem Bereich mit. Der Treffpunkt ist diesmal nicht der Hof hinter dem Lager, sondern der Parkplatz vor dem Haupteingang. Danke für Ihre Mithilfe.",
+"questions": [
+{
+"q": "Was sollen die Mitarbeitenden bei dem Alarm tun?",
+"options": [
+"An ihrem Arbeitsplatz warten.",
+"Mit den Kunden über die Treppen nach draußen gehen.",
+"Sich im Hof hinter dem Lager treffen."
+],
+"answer": 1,
+"why": "Alle sollen das Gebäude „über die Treppen“ verlassen und die Kunden mitnehmen. Treffpunkt ist „nicht der Hof hinter dem Lager“, sondern der Parkplatz vor dem Haupteingang."
+}
+]
+},
+{
+"id": "dtbb1-1-06",
+"teil": "Teil 3",
+"type": "Gespräch unter Kollegen",
+"situation": "Schichtwechsel an der Rezeption eines Hotels in Essen. Mai Linh übergibt an ihren Kollegen Jonas.",
+"segments": [
+{
+"voice": "f2",
+"text": "Hey, Jonas, gut, dass du da bist. Wollen wir gleich die Übergabe machen?"
+},
+{
+"voice": "m3",
+"text": "Ja, klar. Moment, ich hol mir nur schnell einen Kaffee … So. Leg los."
+},
+{
+"voice": "f2",
+"text": "Also, viel ist heute nicht los. Aber: Zimmer zweihundertzwölf, Herr Gruber. Der hat sich beschwert, dass die Heizung nicht richtig warm wird. Ich hab dem Haustechniker Bescheid gesagt, der kommt aber erst morgen früh."
+},
+{
+"voice": "m3",
+"text": "Und bis dahin? Der friert doch."
+},
+{
+"voice": "f2",
+"text": "Nee, nee, ich hab ihm einen kleinen Heizlüfter aufs Zimmer gebracht. Er war ganz zufrieden. Du musst da also nichts mehr machen, außer er ruft noch mal an."
+},
+{
+"voice": "m3",
+"text": "Okay. Was noch?"
+},
+{
+"voice": "f2",
+"text": "Dann kommt heute Abend noch eine Gruppe, zwölf Personen, ein Chor aus Polen. Die wollten eigentlich um sechs da sein, aber der Busfahrer hat angerufen: Die stehen im Stau. Das wird eher neun."
+},
+{
+"voice": "m3",
+"text": "Neun? Dann ist die Küche ja schon zu."
+},
+{
+"voice": "f2",
+"text": "Genau, deswegen hab ich mit der Küche gesprochen. Die machen belegte Brötchen, die stehen ab halb neun im Frühstücksraum. Und die Schlüsselkarten liegen schon fertig hier, in dem Umschlag."
+},
+{
+"voice": "m3",
+"text": "Super, danke. Und die bezahlen dann beim Einchecken?"
+},
+{
+"voice": "f2",
+"text": "Nein, die Rechnung geht an den Verein, die bezahlen hier gar nichts. Steht alles im System."
+},
+{
+"voice": "m3",
+"text": "Perfekt. Dann schönen Feierabend!"
+},
+{
+"voice": "f2",
+"text": "Danke, dir eine ruhige Nacht!"
+}
+],
+"text": "Hey, Jonas, gut, dass du da bist. Wollen wir gleich die Übergabe machen? – Ja, klar. Moment, ich hol mir nur schnell einen Kaffee … So. Leg los. – Also, viel ist heute nicht los. Aber: Zimmer zweihundertzwölf, Herr Gruber. Der hat sich beschwert, dass die Heizung nicht richtig warm wird. Ich hab dem Haustechniker Bescheid gesagt, der kommt aber erst morgen früh. – Und bis dahin? Der friert doch. – Nee, nee, ich hab ihm einen kleinen Heizlüfter aufs Zimmer gebracht. Er war ganz zufrieden. Du musst da also nichts mehr machen, außer er ruft noch mal an. – Okay. Was noch? – Dann kommt heute Abend noch eine Gruppe, zwölf Personen, ein Chor aus Polen. Die wollten eigentlich um sechs da sein, aber der Busfahrer hat angerufen: Die stehen im Stau. Das wird eher neun. – Neun? Dann ist die Küche ja schon zu. – Genau, deswegen hab ich mit der Küche gesprochen. Die machen belegte Brötchen, die stehen ab halb neun im Frühstücksraum. Und die Schlüsselkarten liegen schon fertig hier, in dem Umschlag. – Super, danke. Und die bezahlen dann beim Einchecken? – Nein, die Rechnung geht an den Verein, die bezahlen hier gar nichts. Steht alles im System. – Perfekt. Dann schönen Feierabend! – Danke, dir eine ruhige Nacht!",
+"questions": [
+{
+"q": "Was hat Mai Linh wegen der Heizung in Zimmer zweihundertzwölf gemacht?",
+"options": [
+"Sie hat Herrn Gruber ein anderes Zimmer gegeben.",
+"Sie hat ein Gerät zum Heizen ins Zimmer gebracht.",
+"Sie hat die Heizung selbst repariert."
+],
+"answer": 1,
+"why": "„Ich hab ihm einen kleinen Heizlüfter aufs Zimmer gebracht.“ Der Haustechniker kommt erst morgen."
+},
+{
+"q": "Wann kommt die Gruppe wahrscheinlich an?",
+"options": [
+"Um sechs Uhr.",
+"Um halb neun.",
+"Gegen neun Uhr."
+],
+"answer": 2,
+"why": "Wegen des Staus „wird das eher neun“. Um halb neun stehen nur die Brötchen bereit."
+},
+{
+"q": "Wie bezahlt die Gruppe?",
+"options": [
+"Beim Einchecken an der Rezeption.",
+"Der Verein bekommt die Rechnung.",
+"Jonas muss die Rechnung noch schreiben."
+],
+"answer": 1,
+"why": "„Die Rechnung geht an den Verein, die bezahlen hier gar nichts.“"
+}
+]
+},
+{
+"id": "dtbb1-1-07",
+"teil": "Teil 3",
+"type": "Gespräch mit einer Kundin",
+"situation": "Frau Kaya ruft bei einer Schreinerei in Schwelm an. Herr Lindemann nimmt das Gespräch an.",
+"segments": [
+{
+"voice": "m2",
+"text": "Schreinerei Lindemann, guten Tag."
+},
+{
+"voice": "f3",
+"text": "Ja, hallo, Kaya hier. Ich hab bei Ihnen vor drei Wochen eine Arbeitsplatte für die Küche bestellt, und die sollte eigentlich diese Woche eingebaut werden."
+},
+{
+"voice": "m2",
+"text": "Moment, Kaya … ja, hier hab ich's. Eiche, drei Meter zwanzig, richtig?"
+},
+{
+"voice": "f3",
+"text": "Genau. Und, ähm, ich hab noch nichts von Ihnen gehört. Kommt da jetzt jemand oder nicht?"
+},
+{
+"voice": "m2",
+"text": "Oh, das tut mir leid, da hätten wir uns melden müssen. Die Platte ist schon da, aber mein Kollege, der sie einbauen sollte, ist krank. Ich könnte Ihnen nächsten Dienstag anbieten, vormittags."
+},
+{
+"voice": "f3",
+"text": "Dienstag … hm, da arbeite ich bis zwei. Ginge das auch nachmittags?"
+},
+{
+"voice": "m2",
+"text": "Nachmittags ist schwierig, da sind wir auf einer anderen Baustelle. Aber warten Sie mal … Mittwoch ginge, ab ein Uhr. Passt Ihnen das?"
+},
+{
+"voice": "f3",
+"text": "Mittwoch ab eins, ja, das passt. Dauert das lange?"
+},
+{
+"voice": "m2",
+"text": "Ungefähr drei Stunden. Ach, und ganz wichtig: Die alte Platte muss dann schon raus sein. Oder sollen wir das machen?"
+},
+{
+"voice": "f3",
+"text": "Oh … das kann mein Mann, glaub ich, nicht. Können Sie das machen?"
+},
+{
+"voice": "m2",
+"text": "Kein Problem, das machen wir mit, und wir nehmen die alte Platte auch mit. Das kostet aber vierzig Euro extra, für die Entsorgung."
+},
+{
+"voice": "f3",
+"text": "Okay, das ist in Ordnung."
+},
+{
+"voice": "m2",
+"text": "Gut, dann trag ich Sie für Mittwoch, dreizehn Uhr, ein. Und noch mal Entschuldigung für die Verspätung."
+}
+],
+"text": "Schreinerei Lindemann, guten Tag. – Ja, hallo, Kaya hier. Ich hab bei Ihnen vor drei Wochen eine Arbeitsplatte für die Küche bestellt, und die sollte eigentlich diese Woche eingebaut werden. – Moment, Kaya … ja, hier hab ich's. Eiche, drei Meter zwanzig, richtig? – Genau. Und, ähm, ich hab noch nichts von Ihnen gehört. Kommt da jetzt jemand oder nicht? – Oh, das tut mir leid, da hätten wir uns melden müssen. Die Platte ist schon da, aber mein Kollege, der sie einbauen sollte, ist krank. Ich könnte Ihnen nächsten Dienstag anbieten, vormittags. – Dienstag … hm, da arbeite ich bis zwei. Ginge das auch nachmittags? – Nachmittags ist schwierig, da sind wir auf einer anderen Baustelle. Aber warten Sie mal … Mittwoch ginge, ab ein Uhr. Passt Ihnen das? – Mittwoch ab eins, ja, das passt. Dauert das lange? – Ungefähr drei Stunden. Ach, und ganz wichtig: Die alte Platte muss dann schon raus sein. Oder sollen wir das machen? – Oh … das kann mein Mann, glaub ich, nicht. Können Sie das machen? – Kein Problem, das machen wir mit, und wir nehmen die alte Platte auch mit. Das kostet aber vierzig Euro extra, für die Entsorgung. – Okay, das ist in Ordnung. – Gut, dann trag ich Sie für Mittwoch, dreizehn Uhr, ein. Und noch mal Entschuldigung für die Verspätung.",
+"questions": [
+{
+"q": "Warum wurde die Arbeitsplatte noch nicht eingebaut?",
+"options": [
+"Sie ist noch nicht geliefert worden.",
+"Ein Mitarbeiter ist krank.",
+"Frau Kaya war nicht zu Hause."
+],
+"answer": 1,
+"why": "Herr Lindemann sagt: „Die Platte ist schon da, aber mein Kollege, der sie einbauen sollte, ist krank.“"
+},
+{
+"q": "Wann kommt die Schreinerei?",
+"options": [
+"Am Dienstagvormittag.",
+"Am Dienstagnachmittag.",
+"Am Mittwochnachmittag."
+],
+"answer": 2,
+"why": "Dienstagvormittag arbeitet Frau Kaya, nachmittags hat die Schreinerei keine Zeit. Sie einigen sich auf „Mittwoch, dreizehn Uhr“."
+},
+{
+"q": "Was passiert mit der alten Arbeitsplatte?",
+"options": [
+"Frau Kayas Mann baut sie vorher ab.",
+"Die Schreinerei baut sie ab und nimmt sie gegen Bezahlung mit.",
+"Sie bleibt im Keller von Frau Kaya."
+],
+"answer": 1,
+"why": "„Das machen wir mit, und wir nehmen die alte Platte auch mit. Das kostet aber vierzig Euro extra.“"
+}
+]
+},
+{
+"id": "dtbb1-1-08",
+"teil": "Teil 4",
+"type": "Teambesprechung",
+"situation": "Teambesprechung bei einem Pflegedienst in Recklinghausen. Es sprechen Teamleiterin Frau Schäfer, Herr Nowak und Frau Ahmadi.",
+"segments": [
+{
+"voice": "f1",
+"text": "So, ich glaube, wir sind vollzählig. Ich möchte heute nur zwei Punkte besprechen, wir haben ja alle nicht viel Zeit. Erstens: die neue App für die Dokumentation. Ab dem ersten Dezember schreiben wir die Berichte nicht mehr auf Papier, sondern auf dem Tablet."
+},
+{
+"voice": "m3",
+"text": "Endlich! Ich sitz jeden Abend fast eine Stunde an diesen Zetteln."
+},
+{
+"voice": "f2",
+"text": "Ja, schon, aber … also, ich bin mit Apps nicht so fit. Gibt es dafür eine Schulung?"
+},
+{
+"voice": "f1",
+"text": "Ja, genau, das wollte ich gerade sagen. Es gibt zwei Termine, am zwölften und am neunzehnten November, jeweils nachmittags hier im Büro. Jeder macht einen Termin mit. Die Liste hängt in der Küche, bitte tragen Sie sich bis Freitag ein."
+},
+{
+"voice": "f2",
+"text": "Okay, dann nehm ich gleich den ersten."
+},
+{
+"voice": "f1",
+"text": "Gut. Zweiter Punkt: die Dienstwagen. Ab nächstem Monat haben wir zwei Elektroautos statt der alten Kleinwagen. Die müssen abends an die Ladestation hier auf dem Hof."
+},
+{
+"voice": "m3",
+"text": "Und wenn meine letzte Tour in Datteln ist? Muss ich dann extra noch mal hierher fahren?"
+},
+{
+"voice": "f1",
+"text": "Das, ähm … das ist eine gute Frage. Nein. Wer abends weit weg ist, darf das Auto mit nach Hause nehmen und lädt es am nächsten Morgen hier. Aber bitte vorher mit mir absprechen."
+},
+{
+"voice": "f2",
+"text": "Und wer erklärt uns, wie das Laden funktioniert?"
+},
+{
+"voice": "f1",
+"text": "Das macht Herr Nowak, der fährt privat ja schon elektrisch. Herr Nowak, ginge das nächste Woche?"
+},
+{
+"voice": "m3",
+"text": "Klar, mach ich. Das dauert keine zehn Minuten."
+},
+{
+"voice": "f1",
+"text": "Prima. Dann sind wir durch. Danke Ihnen!"
+}
+],
+"text": "So, ich glaube, wir sind vollzählig. Ich möchte heute nur zwei Punkte besprechen, wir haben ja alle nicht viel Zeit. Erstens: die neue App für die Dokumentation. Ab dem ersten Dezember schreiben wir die Berichte nicht mehr auf Papier, sondern auf dem Tablet. – Endlich! Ich sitz jeden Abend fast eine Stunde an diesen Zetteln. – Ja, schon, aber … also, ich bin mit Apps nicht so fit. Gibt es dafür eine Schulung? – Ja, genau, das wollte ich gerade sagen. Es gibt zwei Termine, am zwölften und am neunzehnten November, jeweils nachmittags hier im Büro. Jeder macht einen Termin mit. Die Liste hängt in der Küche, bitte tragen Sie sich bis Freitag ein. – Okay, dann nehm ich gleich den ersten. – Gut. Zweiter Punkt: die Dienstwagen. Ab nächstem Monat haben wir zwei Elektroautos statt der alten Kleinwagen. Die müssen abends an die Ladestation hier auf dem Hof. – Und wenn meine letzte Tour in Datteln ist? Muss ich dann extra noch mal hierher fahren? – Das, ähm … das ist eine gute Frage. Nein. Wer abends weit weg ist, darf das Auto mit nach Hause nehmen und lädt es am nächsten Morgen hier. Aber bitte vorher mit mir absprechen. – Und wer erklärt uns, wie das Laden funktioniert? – Das macht Herr Nowak, der fährt privat ja schon elektrisch. Herr Nowak, ginge das nächste Woche? – Klar, mach ich. Das dauert keine zehn Minuten. – Prima. Dann sind wir durch. Danke Ihnen!",
+"questions": [
+{
+"q": "Was sollen alle bis Freitag tun?",
+"options": [
+"Sich für eine Schulung eintragen.",
+"Die App auf ihrem Tablet installieren.",
+"Ihre Berichte auf Papier abgeben."
+],
+"answer": 0,
+"why": "„Die Liste hängt in der Küche, bitte tragen Sie sich bis Freitag ein.“"
+},
+{
+"q": "Was gilt für die Elektroautos?",
+"options": [
+"Man muss sie immer abends auf dem Hof laden.",
+"Nach Absprache darf man sie mit nach Hause nehmen.",
+"Man darf sie nur für kurze Touren benutzen."
+],
+"answer": 1,
+"why": "„Wer abends weit weg ist, darf das Auto mit nach Hause nehmen … Aber bitte vorher mit mir absprechen.“ Also nicht immer auf dem Hof."
+},
+{
+"q": "Wer erklärt, wie man die Autos lädt?",
+"options": [
+"Frau Schäfer.",
+"Herr Nowak.",
+"Ein Mitarbeiter vom Autohaus."
+],
+"answer": 1,
+"why": "Frau Schäfer sagt: „Das macht Herr Nowak, der fährt privat ja schon elektrisch.“"
+}
+]
+}
+]
+},
+"dtbb1-2": {
+"title": "DTB B1 Hören · Übungssatz 2",
+"level": "B1 Beruf",
+"exam": "DTB B1",
+"intro": "Diesmal im Büro, im Supermarkt, auf dem Bau, im Kundenservice und bei einer Umzugsfirma. Hör genau auf Uhrzeiten und Bedingungen: Oft wird ein Plan im Text noch geändert.",
+"group": "dtbb1",
+"items": [
+{
+"id": "dtbb1-2-01",
+"teil": "Teil 1",
+"type": "Mailbox",
+"situation": "Du arbeitest im Büro einer Firma für Ladeneinrichtung in Bochum. Dein Kollege Andreas Brückner hat dir, Frau Yıldız, eine Nachricht hinterlassen.",
+"segments": [
+{
+"voice": "m3",
+"text": "Morgen, Frau Yıldız, hier ist Andreas Brückner. Ich … ähm, ich bin leider krank. Ich hab Fieber, war grad beim Arzt, und der hat mich bis Mittwoch krankgeschrieben. Die Krankmeldung läuft ja jetzt elektronisch, die müssen Sie also nicht von mir bekommen. Aber: Ich hab heute um elf den Termin mit dem Kunden von der Firma Hagedorn, wegen der neuen Regale. Könnten Sie den bitte absagen? Oder, noch besser, vielleicht kann Herr Mazur den übernehmen. Die Unterlagen liegen auf meinem Schreibtisch, in der blauen Mappe. Danke, und tut mir leid!"
+}
+],
+"text": "Morgen, Frau Yıldız, hier ist Andreas Brückner. Ich … ähm, ich bin leider krank. Ich hab Fieber, war grad beim Arzt, und der hat mich bis Mittwoch krankgeschrieben. Die Krankmeldung läuft ja jetzt elektronisch, die müssen Sie also nicht von mir bekommen. Aber: Ich hab heute um elf den Termin mit dem Kunden von der Firma Hagedorn, wegen der neuen Regale. Könnten Sie den bitte absagen? Oder, noch besser, vielleicht kann Herr Mazur den übernehmen. Die Unterlagen liegen auf meinem Schreibtisch, in der blauen Mappe. Danke, und tut mir leid!",
+"questions": [
+{
+"q": "Was soll Frau Yıldız mit dem Termin um elf Uhr machen?",
+"options": [
+"Ihn auf Mittwoch verschieben.",
+"Ihn absagen oder an Herrn Mazur geben.",
+"Selbst zu dem Kunden fahren."
+],
+"answer": 1,
+"why": "Herr Brückner fragt: „Könnten Sie den bitte absagen? Oder … vielleicht kann Herr Mazur den übernehmen.“"
+},
+{
+"q": "Was sagt Herr Brückner über die Krankmeldung?",
+"options": [
+"Er schickt sie heute per Post.",
+"Sie kommt elektronisch, er muss sie nicht schicken.",
+"Er bringt sie am Mittwoch mit."
+],
+"answer": 1,
+"why": "„Die Krankmeldung läuft ja jetzt elektronisch, die müssen Sie also nicht von mir bekommen.“"
+}
+]
+},
+{
+"id": "dtbb1-2-02",
+"teil": "Teil 1",
+"type": "Mailbox",
+"situation": "Herr Ferreira hat ein Restaurant in Herne. Sein Getränkelieferant hat ihm eine Nachricht hinterlassen.",
+"segments": [
+{
+"voice": "f2",
+"text": "Guten Tag, hier ist Natalia Wróbel vom Getränkehandel Wróbel. Eine Nachricht für Herrn Ferreira vom Restaurant Porto. Es geht um Ihre Bestellung für Freitag. Das alkoholfreie Bier ist leider gerade nicht lieferbar. Wir könnten Ihnen stattdessen eine andere Marke bringen, zum gleichen Preis. Wenn Sie das nicht möchten, liefern wir am Freitag alles andere wie bestellt, und das Bier kommt dann nächste Woche Dienstag. Bitte geben Sie mir bis morgen um zwölf Bescheid. Wenn ich nichts von Ihnen höre, liefern wir die andere Marke. Danke und schönen Tag noch!"
+}
+],
+"text": "Guten Tag, hier ist Natalia Wróbel vom Getränkehandel Wróbel. Eine Nachricht für Herrn Ferreira vom Restaurant Porto. Es geht um Ihre Bestellung für Freitag. Das alkoholfreie Bier ist leider gerade nicht lieferbar. Wir könnten Ihnen stattdessen eine andere Marke bringen, zum gleichen Preis. Wenn Sie das nicht möchten, liefern wir am Freitag alles andere wie bestellt, und das Bier kommt dann nächste Woche Dienstag. Bitte geben Sie mir bis morgen um zwölf Bescheid. Wenn ich nichts von Ihnen höre, liefern wir die andere Marke. Danke und schönen Tag noch!",
+"questions": [
+{
+"q": "Was passiert, wenn Herr Ferreira sich nicht meldet?",
+"options": [
+"Er bekommt am Freitag eine andere Marke.",
+"Das Bier kommt erst am Dienstag.",
+"Die ganze Lieferung kommt später."
+],
+"answer": 0,
+"why": "„Wenn ich nichts von Ihnen höre, liefern wir die andere Marke.“ Das Bier kommt nur dann am Dienstag, wenn er die andere Marke ablehnt."
+}
+]
+},
+{
+"id": "dtbb1-2-03",
+"teil": "Teil 1",
+"type": "Mailbox",
+"situation": "Rahim macht eine Ausbildung bei einem Dachdecker in Gevelsberg. Sein Ausbilder ruft an.",
+"segments": [
+{
+"voice": "m1",
+"text": "Hallo Rahim, hier ist Herr Engel, aus der Werkstatt. Wegen morgen: Wir fahren nicht wie geplant um sieben zur Baustelle nach Wuppertal, sondern erst um acht. Das Material wird später geliefert. Du musst also nicht in die Werkstatt kommen. Ich hol dich um Viertel vor acht am Bahnhof Gevelsberg West ab, mit dem Firmenwagen. Und zieh warme Sachen an, wir arbeiten den ganzen Tag draußen. Bis morgen!"
+}
+],
+"text": "Hallo Rahim, hier ist Herr Engel, aus der Werkstatt. Wegen morgen: Wir fahren nicht wie geplant um sieben zur Baustelle nach Wuppertal, sondern erst um acht. Das Material wird später geliefert. Du musst also nicht in die Werkstatt kommen. Ich hol dich um Viertel vor acht am Bahnhof Gevelsberg West ab, mit dem Firmenwagen. Und zieh warme Sachen an, wir arbeiten den ganzen Tag draußen. Bis morgen!",
+"questions": [
+{
+"q": "Wo trifft Rahim morgen Herrn Engel?",
+"options": [
+"In der Werkstatt.",
+"Am Bahnhof.",
+"Auf der Baustelle in Wuppertal."
+],
+"answer": 1,
+"why": "„Du musst also nicht in die Werkstatt kommen. Ich hol dich … am Bahnhof Gevelsberg West ab.“"
+},
+{
+"q": "Warum fahren sie später los?",
+"options": [
+"Herr Engel hat noch einen anderen Termin.",
+"Das Material kommt später.",
+"Das Wetter ist schlecht."
+],
+"answer": 1,
+"why": "„Das Material wird später geliefert.“ Das Wetter ist kalt, aber kein Grund für die Änderung."
+}
+]
+},
+{
+"id": "dtbb1-2-04",
+"teil": "Teil 2",
+"type": "Durchsage im Betrieb",
+"situation": "Du arbeitest in einem Supermarkt in Castrop-Rauxel an der Kasse. Im Pausenraum hörst du eine Durchsage.",
+"segments": [
+{
+"voice": "f1",
+"text": "Liebe Kolleginnen und Kollegen, bitte kurz zuhören: Die Warenlieferung, die normalerweise um sechs Uhr kommt, ist morgen schon um fünf da. Wer morgen Frühdienst im Lager hat, fängt deshalb bitte eine Stunde früher an. Die Stunde wird natürlich auf Ihrem Arbeitszeitkonto gutgeschrieben. Alle anderen, auch an den Kassen, beginnen zur normalen Zeit. Danke!"
+}
+],
+"text": "Liebe Kolleginnen und Kollegen, bitte kurz zuhören: Die Warenlieferung, die normalerweise um sechs Uhr kommt, ist morgen schon um fünf da. Wer morgen Frühdienst im Lager hat, fängt deshalb bitte eine Stunde früher an. Die Stunde wird natürlich auf Ihrem Arbeitszeitkonto gutgeschrieben. Alle anderen, auch an den Kassen, beginnen zur normalen Zeit. Danke!",
+"questions": [
+{
+"q": "Wer muss morgen früher anfangen?",
+"options": [
+"Alle Mitarbeitenden.",
+"Nur der Frühdienst im Lager.",
+"Die Kolleginnen und Kollegen an den Kassen."
+],
+"answer": 1,
+"why": "„Wer morgen Frühdienst im Lager hat, fängt deshalb bitte eine Stunde früher an.“ Du arbeitest an der Kasse und beginnst zur normalen Zeit."
+}
+]
+},
+{
+"id": "dtbb1-2-05",
+"teil": "Teil 2",
+"type": "Durchsage im Betrieb",
+"situation": "Du arbeitest als Fahrer und lieferst Ware an ein Logistikzentrum in Unna.",
+"segments": [
+{
+"voice": "m2",
+"text": "Achtung, eine Durchsage der Werksleitung. Ab sofort müssen alle Personen in den Lagerhallen eine Warnweste tragen. Das gilt auch für Besucher und für Fahrer von anderen Firmen. Warnwesten bekommen Sie am Empfang an Tor eins. Bitte informieren Sie auch Ihre Besucher. Vielen Dank für Ihre Mithilfe."
+}
+],
+"text": "Achtung, eine Durchsage der Werksleitung. Ab sofort müssen alle Personen in den Lagerhallen eine Warnweste tragen. Das gilt auch für Besucher und für Fahrer von anderen Firmen. Warnwesten bekommen Sie am Empfang an Tor eins. Bitte informieren Sie auch Ihre Besucher. Vielen Dank für Ihre Mithilfe.",
+"questions": [
+{
+"q": "Was ist neu?",
+"options": [
+"Alle müssen in den Hallen eine Warnweste tragen.",
+"Fremde Fahrer dürfen die Hallen nicht mehr betreten.",
+"Warnwesten gibt es ab sofort in der Lagerhalle."
+],
+"answer": 0,
+"why": "„Ab sofort müssen alle Personen in den Lagerhallen eine Warnweste tragen.“ Die Westen gibt es am Empfang an Tor eins, nicht in der Halle."
+}
+]
+},
+{
+"id": "dtbb1-2-06",
+"teil": "Teil 3",
+"type": "Gespräch unter Kollegen",
+"situation": "Mittagspause in der Kantine einer Metallbaufirma in Hamm. Ioana und Murat unterhalten sich.",
+"segments": [
+{
+"voice": "f3",
+"text": "Na, Murat, auch Mittagspause? Ist hier noch frei?"
+},
+{
+"voice": "m1",
+"text": "Klar, setz dich. Und, wie war dein Urlaub?"
+},
+{
+"voice": "f3",
+"text": "Schön, aber viel zu kurz! Sag mal, ich hab gehört, du machst die Weiterbildung zum Vorarbeiter?"
+},
+{
+"voice": "m1",
+"text": "Ja, ab Januar. Jeden Freitag und Samstag, ein Jahr lang, in Dortmund bei der Handwerkskammer."
+},
+{
+"voice": "f3",
+"text": "Puh, auch samstags? Das ist ja heftig."
+},
+{
+"voice": "m1",
+"text": "Ja, schon. Aber die Firma bezahlt die Hälfte, den Rest zahl ich selbst. Und freitags krieg ich frei. Den Samstag, ja … den muss ich halt opfern."
+},
+{
+"voice": "f3",
+"text": "Und was sagt deine Frau dazu?"
+},
+{
+"voice": "m1",
+"text": "Na ja, begeistert ist sie nicht. Aber sie weiß, dass ich danach mehr verdiene. Sag mal, wär das nicht auch was für dich?"
+},
+{
+"voice": "f3",
+"text": "Ich? Nee … also, ich weiß nicht. Mein Deutsch, das Schriftliche, das ist noch nicht so gut."
+},
+{
+"voice": "m1",
+"text": "Ach, komm. Die bieten da sogar einen Vorbereitungskurs an, für Deutsch und Mathe. Abends, online. Ich schick dir den Link."
+},
+{
+"voice": "f3",
+"text": "Okay, ja, schick mal. Anschauen kostet ja nichts."
+}
+],
+"text": "Na, Murat, auch Mittagspause? Ist hier noch frei? – Klar, setz dich. Und, wie war dein Urlaub? – Schön, aber viel zu kurz! Sag mal, ich hab gehört, du machst die Weiterbildung zum Vorarbeiter? – Ja, ab Januar. Jeden Freitag und Samstag, ein Jahr lang, in Dortmund bei der Handwerkskammer. – Puh, auch samstags? Das ist ja heftig. – Ja, schon. Aber die Firma bezahlt die Hälfte, den Rest zahl ich selbst. Und freitags krieg ich frei. Den Samstag, ja … den muss ich halt opfern. – Und was sagt deine Frau dazu? – Na ja, begeistert ist sie nicht. Aber sie weiß, dass ich danach mehr verdiene. Sag mal, wär das nicht auch was für dich? – Ich? Nee … also, ich weiß nicht. Mein Deutsch, das Schriftliche, das ist noch nicht so gut. – Ach, komm. Die bieten da sogar einen Vorbereitungskurs an, für Deutsch und Mathe. Abends, online. Ich schick dir den Link. – Okay, ja, schick mal. Anschauen kostet ja nichts.",
+"questions": [
+{
+"q": "Wann findet Murats Weiterbildung statt?",
+"options": [
+"Jeden Abend online.",
+"Freitags und samstags.",
+"Nur samstags."
+],
+"answer": 1,
+"why": "„Jeden Freitag und Samstag, ein Jahr lang.“ Online und abends ist nur der Vorbereitungskurs."
+},
+{
+"q": "Wer bezahlt die Weiterbildung?",
+"options": [
+"Murat allein.",
+"Die Firma allein.",
+"Die Firma und Murat zusammen."
+],
+"answer": 2,
+"why": "„Die Firma bezahlt die Hälfte, den Rest zahl ich selbst.“"
+},
+{
+"q": "Was macht Ioana am Ende?",
+"options": [
+"Sie meldet sich sofort für die Weiterbildung an.",
+"Sie möchte sich den Vorbereitungskurs ansehen.",
+"Sie sagt, dass sie kein Interesse hat."
+],
+"answer": 1,
+"why": "Sie ist unsicher, sagt aber: „Okay, ja, schick mal. Anschauen kostet ja nichts.“"
+}
+]
+},
+{
+"id": "dtbb1-2-07",
+"teil": "Teil 3",
+"type": "Gespräch mit einem Kunden",
+"situation": "Herr Papadopoulos ruft bei einer Umzugsfirma in Duisburg an. Frau Schmitz nimmt das Gespräch an.",
+"segments": [
+{
+"voice": "f1",
+"text": "Umzüge Rhein-Ruhr, Schmitz am Apparat, guten Tag."
+},
+{
+"voice": "m2",
+"text": "Guten Tag, Papadopoulos. Ich ziehe Ende November um, von Duisburg nach Moers, und ich bräuchte ein Angebot."
+},
+{
+"voice": "f1",
+"text": "Gerne. Wie groß ist denn die Wohnung?"
+},
+{
+"voice": "m2",
+"text": "Drei Zimmer, so ungefähr siebzig Quadratmeter. Im dritten Stock, und, ähm, es gibt leider keinen Aufzug."
+},
+{
+"voice": "f1",
+"text": "Okay, dritter Stock ohne Aufzug … Und die neue Wohnung?"
+},
+{
+"voice": "m2",
+"text": "Erdgeschoss, zum Glück."
+},
+{
+"voice": "f1",
+"text": "Gut. Brauchen Sie auch Hilfe beim Einpacken, oder machen Sie das selbst?"
+},
+{
+"voice": "m2",
+"text": "Nee, einpacken machen wir selbst. Aber die Küche, die müsste abgebaut und in Moers wieder aufgebaut werden."
+},
+{
+"voice": "f1",
+"text": "Das können wir machen. Am besten komme ich vorher einmal bei Ihnen vorbei und schaue mir alles an. Dann kann ich Ihnen einen genauen Preis sagen. Ginge es diese Woche Donnerstag?"
+},
+{
+"voice": "m2",
+"text": "Donnerstag bin ich bis fünf auf der Arbeit. Freitag wäre besser."
+},
+{
+"voice": "f1",
+"text": "Freitag um halb vier?"
+},
+{
+"voice": "m2",
+"text": "Ja, perfekt."
+},
+{
+"voice": "f1",
+"text": "Und die Kartons bringe ich Ihnen am Freitag gleich mit. Die ersten zwanzig sind kostenlos."
+},
+{
+"voice": "m2",
+"text": "Ah, prima, danke!"
+}
+],
+"text": "Umzüge Rhein-Ruhr, Schmitz am Apparat, guten Tag. – Guten Tag, Papadopoulos. Ich ziehe Ende November um, von Duisburg nach Moers, und ich bräuchte ein Angebot. – Gerne. Wie groß ist denn die Wohnung? – Drei Zimmer, so ungefähr siebzig Quadratmeter. Im dritten Stock, und, ähm, es gibt leider keinen Aufzug. – Okay, dritter Stock ohne Aufzug … Und die neue Wohnung? – Erdgeschoss, zum Glück. – Gut. Brauchen Sie auch Hilfe beim Einpacken, oder machen Sie das selbst? – Nee, einpacken machen wir selbst. Aber die Küche, die müsste abgebaut und in Moers wieder aufgebaut werden. – Das können wir machen. Am besten komme ich vorher einmal bei Ihnen vorbei und schaue mir alles an. Dann kann ich Ihnen einen genauen Preis sagen. Ginge es diese Woche Donnerstag? – Donnerstag bin ich bis fünf auf der Arbeit. Freitag wäre besser. – Freitag um halb vier? – Ja, perfekt. – Und die Kartons bringe ich Ihnen am Freitag gleich mit. Die ersten zwanzig sind kostenlos. – Ah, prima, danke!",
+"questions": [
+{
+"q": "Was soll die Firma beim Umzug machen?",
+"options": [
+"Alle Sachen einpacken.",
+"Die Küche ab- und wieder aufbauen.",
+"Einen Aufzug organisieren."
+],
+"answer": 1,
+"why": "Einpacken macht Herr Papadopoulos selbst. Aber: „Die Küche, die müsste abgebaut und in Moers wieder aufgebaut werden.“"
+},
+{
+"q": "Warum kommt Frau Schmitz vorher vorbei?",
+"options": [
+"Um Kartons zu verkaufen.",
+"Um einen genauen Preis berechnen zu können.",
+"Um den Vertrag zu unterschreiben."
+],
+"answer": 1,
+"why": "„Dann kann ich Ihnen einen genauen Preis sagen.“ Die Kartons bringt sie mit, die ersten zwanzig sind kostenlos."
+},
+{
+"q": "Wann kommt Frau Schmitz?",
+"options": [
+"Am Donnerstag.",
+"Am Freitag um halb vier.",
+"Am Freitag um fünf."
+],
+"answer": 1,
+"why": "Donnerstag arbeitet Herr Papadopoulos bis fünf. Sie einigen sich auf „Freitag um halb vier“."
+}
+]
+},
+{
+"id": "dtbb1-2-08",
+"teil": "Teil 4",
+"type": "Teambesprechung",
+"situation": "Teambesprechung im Kundenservice eines Energieversorgers in Bochum. Es sprechen Teamleiter Markus Schuster, Grace Okafor und Piotr Lewandowski.",
+"segments": [
+{
+"voice": "m2",
+"text": "Morgen, zusammen. Ich mach's kurz. Ihr habt es sicher gemerkt: Seit die Briefe mit den neuen Preisen raus sind, haben wir fast doppelt so viele Anrufe."
+},
+{
+"voice": "m3",
+"text": "Gemerkt? Gestern hatte ich über achtzig Gespräche. Meine Mittagspause war, na ja, zehn Minuten."
+},
+{
+"voice": "m2",
+"text": "Ja, ich weiß, so geht das nicht weiter. Deshalb ändern wir zwei Sachen. Erstens: Bis Ende des Monats öffnet die Hotline schon um sieben statt um acht. Schluss ist aber wie bisher um sechs."
+},
+{
+"voice": "f3",
+"text": "Und wer macht die Stunde am Morgen? Ich bring meine Tochter um halb acht in die Kita, das schaff ich nicht."
+},
+{
+"voice": "m2",
+"text": "Keine Sorge, Grace, das ist freiwillig. Ich mach eine Liste, und wer früh kann, trägt sich ein. Piotr, du hattest doch gesagt, du fängst gern früh an?"
+},
+{
+"voice": "m3",
+"text": "Ja, das passt mir eigentlich ganz gut. Dann bin ich nachmittags früher zu Hause."
+},
+{
+"voice": "m2",
+"text": "Super. Zweitens: Viele Kunden fragen immer dasselbe. Deshalb stellen wir bis Mittwoch die häufigsten Fragen mit Antworten auf die Internetseite. Bitte schickt mir bis morgen die drei Fragen, die ihr am häufigsten hört."
+},
+{
+"voice": "f3",
+"text": "Per Mail?"
+},
+{
+"voice": "m2",
+"text": "Per Mail, oder schreibt sie einfach hier an die Tafel, ist mir egal. Hauptsache bis morgen."
+},
+{
+"voice": "m3",
+"text": "Und die Pausen? Bleibt's bei zehn Minuten?"
+},
+{
+"voice": "m2",
+"text": "Nein, auf keinen Fall. Die Mittagspause ist Pflicht, dreißig Minuten, für alle. Wenn es zu voll ist, hören die Kunden eben eine Ansage, dass sie warten müssen. Gesundheit geht vor."
+}
+],
+"text": "Morgen, zusammen. Ich mach's kurz. Ihr habt es sicher gemerkt: Seit die Briefe mit den neuen Preisen raus sind, haben wir fast doppelt so viele Anrufe. – Gemerkt? Gestern hatte ich über achtzig Gespräche. Meine Mittagspause war, na ja, zehn Minuten. – Ja, ich weiß, so geht das nicht weiter. Deshalb ändern wir zwei Sachen. Erstens: Bis Ende des Monats öffnet die Hotline schon um sieben statt um acht. Schluss ist aber wie bisher um sechs. – Und wer macht die Stunde am Morgen? Ich bring meine Tochter um halb acht in die Kita, das schaff ich nicht. – Keine Sorge, Grace, das ist freiwillig. Ich mach eine Liste, und wer früh kann, trägt sich ein. Piotr, du hattest doch gesagt, du fängst gern früh an? – Ja, das passt mir eigentlich ganz gut. Dann bin ich nachmittags früher zu Hause. – Super. Zweitens: Viele Kunden fragen immer dasselbe. Deshalb stellen wir bis Mittwoch die häufigsten Fragen mit Antworten auf die Internetseite. Bitte schickt mir bis morgen die drei Fragen, die ihr am häufigsten hört. – Per Mail? – Per Mail, oder schreibt sie einfach hier an die Tafel, ist mir egal. Hauptsache bis morgen. – Und die Pausen? Bleibt's bei zehn Minuten? – Nein, auf keinen Fall. Die Mittagspause ist Pflicht, dreißig Minuten, für alle. Wenn es zu voll ist, hören die Kunden eben eine Ansage, dass sie warten müssen. Gesundheit geht vor.",
+"questions": [
+{
+"q": "Was ändert sich bei der Hotline?",
+"options": [
+"Sie öffnet eine Stunde früher.",
+"Sie schließt eine Stunde später.",
+"Sie ist jetzt den ganzen Tag und die ganze Nacht erreichbar."
+],
+"answer": 0,
+"why": "Die Hotline öffnet „schon um sieben statt um acht“. „Schluss ist aber wie bisher um sechs.“"
+},
+{
+"q": "Was sollen alle bis morgen tun?",
+"options": [
+"Sich in die Liste für den Frühdienst eintragen.",
+"Die häufigsten Kundenfragen schicken oder an die Tafel schreiben.",
+"Die Internetseite ändern."
+],
+"answer": 1,
+"why": "„Bitte schickt mir bis morgen die drei Fragen, die ihr am häufigsten hört.“ Der Frühdienst ist freiwillig."
+},
+{
+"q": "Was sagt Herr Schuster zur Mittagspause?",
+"options": [
+"Bei viel Arbeit darf man sie kürzer machen.",
+"Alle müssen dreißig Minuten Pause machen.",
+"Die Pause wird auf zehn Minuten verkürzt."
+],
+"answer": 1,
+"why": "„Die Mittagspause ist Pflicht, dreißig Minuten, für alle.“"
+}
+]
+}
+]
 }
 };

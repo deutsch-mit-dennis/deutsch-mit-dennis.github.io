@@ -335,8 +335,8 @@ DM.paths = {
    ],
    [
     "Hören im Beruf",
-    "#hoeren/beruf",
-    "Mailbox, Durchsagen, Gespräche unter Kollegen.",
+    "#hoeren/dtbb1-1",
+    "Mailbox, Durchsagen im Betrieb, Gespräche im Team – wie im DTB B1.",
     "Hören"
    ],
    [
@@ -511,8 +511,8 @@ DM.paths = {
    ],
    [
     "Hören üben",
-    "#hoeren/alltag",
-    "Radio, Durchsagen und Gespräche.",
+    "#hoeren/telcb1-1",
+    "Radiomeldungen, Interview und Durchsagen – wie in der telc-Prüfung.",
     "Hören"
    ],
    [
@@ -629,8 +629,8 @@ DM.paths = {
    ],
    [
     "Hören im Beruf",
-    "#hoeren/beruf",
-    "Mailbox, Durchsagen, Gespräche unter Kollegen.",
+    "#hoeren/dtbb1-1",
+    "Mailbox, Durchsagen im Betrieb, Gespräche im Team – wie im DTB B1.",
     "Hören"
    ],
    [
