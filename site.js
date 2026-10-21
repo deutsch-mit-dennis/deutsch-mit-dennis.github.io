@@ -183,7 +183,8 @@
       <div class="dm-pkg-teaser-copy"><p class="dm-kicker">Alles zum Üben bleibt kostenlos</p>
         <h2 id="pkgt-h">Du willst gezielt mehr üben?</h2>
         <p>Ausführliche PDF-Lernpakete mit Musterlösungen – für DTZ, B2 Beruf, „Leben in Deutschland“ und für Lehrkräfte${from ? ` · ab ${from}` : ''}.</p>
-        <a class="dm-btn" href="#lernpakete">Alle Lernpakete ansehen</a></div>
+        <a class="dm-btn" href="#lernpakete">Alle Lernpakete ansehen</a>
+        ${(DM.books || []).some(b => b.amazon) ? '<p class="dm-small dm-books-hint">Neu: meine Übungsbücher auch gedruckt – <a href="#lernpakete/buecher">bei Amazon ansehen</a></p>' : ''}</div>
       <ul class="dm-pkg-teaser-list">${pick.map(k => `<li><a href="#lernpakete/${k.id}"><img src="${k.img}" alt="" width="72" height="72" loading="lazy"><span><b>${x(k.title)}</b><small>${x(k.level)} · ${x(k.price)}</small></span></a></li>`).join('')}</ul>
     </section>`;
   }
@@ -1183,6 +1184,21 @@
   }
 
 
+  /* ---------- Bücher bei Amazon ---------- */
+  function booksBlock() {
+    const B = (DM.books || []).filter(b => b.amazon);
+    if (!B.length) return '';
+    const card = b => `<article class="dm-card dm-book">
+        <a class="dm-book-cover" href="${x(b.amazon)}" target="_blank" rel="noopener sponsored" tabindex="-1" aria-hidden="true"><img src="${b.img}" alt="" width="560" height="792" loading="lazy"></a>
+        <div class="dm-book-body"><p class="dm-pkg-meta">Taschenbuch · ${x(b.level)} · ${x(b.target)} · ${b.pages} Seiten</p>
+          <h3>${x(b.title)}</h3><p class="dm-small">${x(b.desc)}</p>
+          <p class="dm-book-buy"><span class="dm-pkg-price">${x(b.price)}</span><a class="dm-btn" href="${x(b.amazon)}" target="_blank" rel="noopener sponsored">Bei Amazon kaufen</a></p></div></article>`;
+    return `<section class="dm-section dm-books" id="buecher" aria-labelledby="books-h">
+      <h2 id="books-h">Lieber auf Papier? Meine Übungsbücher</h2>
+      <p class="dm-small">Für alle, die gern mit Stift und Papier üben: dieselbe Art von Prüfungstraining als gedrucktes Taschenbuch, mit Platz zum Schreiben und allen Lösungen. Kauf und Versand über Amazon. Alle Übungen auf dieser Website bleiben kostenlos.</p>
+      <div class="dm-books-grid">${B.map(card).join('')}</div></section>`;
+  }
+
   /* ---------- Lernpakete (Kauf später über Digistore24) ---------- */
   function packages() {
     const P = DM.packages || [];
@@ -1205,12 +1221,14 @@
       <section class="dm-pkg-sec" id="pk-lehrende"><h2>Für Lehrkräfte</h2><p class="dm-small">Fertige Unterrichtsstunden für Integrationskurs und DaZ – mit Lehrerblatt, Kahoot-Quiz und Kopiervorlagen.</p><div class="dm-pkg-grid">${P.filter(k => k.group === 'lehrende').map(card).join('')}</div></section>
       <section class="dm-card dm-pkg-info"><h2>So funktioniert der Kauf</h2>
         <ol><li>Du wählst ein Paket und klickst auf „Kaufen“.</li><li>Die Bezahlung läuft sicher über <b>Digistore24</b>.</li><li>Direkt nach dem Kauf bekommst du den Download-Link per E-Mail.</li></ol>
-        <p class="dm-small">Selbstlernmaterial und Unterrichtsmaterial ohne individuelle Betreuung oder Korrektur. Unabhängiges Lernangebot – kein Angebot von g.a.s.t., telc oder BAMF, keine offiziellen Prüfungsaufgaben. Fragen? <a href="mailto:${T.email}">${T.email}</a></p></section>`);
+        <p class="dm-small">Selbstlernmaterial und Unterrichtsmaterial ohne individuelle Betreuung oder Korrektur. Unabhängiges Lernangebot – kein Angebot von g.a.s.t., telc oder BAMF, keine offiziellen Prüfungsaufgaben. Fragen? <a href="mailto:${T.email}">${T.email}</a></p></section>
+      ${booksBlock()}`);
     $$('[data-jump]').forEach(a => a.onclick = e => { e.preventDefault(); document.getElementById(a.dataset.jump)?.scrollIntoView({ behavior: 'smooth', block: 'start' }); });
   }
 
   function packagePage(id) {
     const P = DM.packages || [], k = P.find(q => q.id === id);
+    if (id === 'buecher') { packages(); setTimeout(() => document.getElementById('buecher')?.scrollIntoView({ block: 'start' }), 60); return; }
     if (!k) return packages();
     const days = (DM.shop && DM.shop.refundDays) || 14, teach = k.group === 'lehrende';
     const buyBox = k.buy

@@ -900,3 +900,17 @@ DM.credentials = [
 
 /* Besucherstatistik (Cloudflare Web Analytics, ohne Cookies). Token aus dem Cloudflare-Dashboard eintragen – leer = aus. */
 DM.analytics = { cloudflareToken: '5baa2db512e542b7b389b4a14fd188aa' };
+
+/* Bücher bei Amazon (Taschenbücher über KDP).
+   Ein Buch erscheint auf der Website erst, wenn amazon = Link zur Amazon-Produktseite eingetragen ist.
+   price = Preis auf Amazon.de als Text. */
+DM.books = [
+  { id: 'dtz-schreiben', img: 'assets/buecher/dtz-schreiben.jpg', title: 'DTZ Schreiben A2–B1 – Das Übungsbuch', level: 'A2–B1', target: 'DTZ', pages: 78, price: '12,99 €', amazon: '',
+    desc: '30 Prüfungsaufgaben im Stil des Deutsch-Tests für Zuwanderer mit Schreiblinien direkt im Buch, 30 Musterbriefen, Redemitteln und einem 30-Tage-Lernplan.' },
+  { id: 'dtz-lesen', img: 'assets/buecher/dtz-lesen.jpg', title: 'DTZ Lesen A2–B1 – Das Übungsbuch', level: 'A2–B1', target: 'DTZ', pages: 50, price: '11,99 €', amazon: '',
+    desc: '4 komplette Lesetests im Prüfungsformat mit 100 Aufgaben, Strategien für jeden Teil, Lösungen mit Erklärungen und Prüfungswortschatz.' },
+  { id: 'dtb-b2-lesen', img: 'assets/buecher/dtb-b2-lesen.jpg', title: 'DTB B2 Lesen – Das Übungsbuch', level: 'B2', target: 'DTB B2', pages: 46, price: '12,99 €', amazon: '',
+    desc: '4 komplette Lesetests mit 72 Aufgaben aus Logistik, Pflege, Gastronomie und Büro – mit Strategien, Lösungen und Wortschatz Beruf.' },
+  { id: 'dtb-b2-schreiben', img: 'assets/buecher/dtb-b2-schreiben.jpg', title: 'DTB B2 Schreiben – Das Übungsbuch', level: 'B2', target: 'DTB B2', pages: 76, price: '14,99 €', amazon: '',
+    desc: 'Kundenbeschwerden beantworten, Forumsbeiträge, Telefonnotizen und Sprachbausteine – mit allen Musterlösungen, Redemitteln und Checklisten.' }
+];
