@@ -1,41 +1,185 @@
 {
-  "note": "Neu auf der Seite – neueste Einträge oben. Wird vom Redaktionsplan (geplante Aufgaben) ergänzt.",
-  "items": [
-    { "date": "2026-10-20", "type": "neu", "title": "Prüfungssimulationen: Schriftliche und mündliche Prüfung jetzt getrennt starten – eine Uhr für die ganze schriftliche bzw. mündliche Prüfung, danach das Gesamtergebnis", "link": "#simulation" },
-    { "date": "2026-10-19", "type": "neu", "title": "Lino läuft: Gekaufte Teile und Münzen bleiben jetzt sicher gespeichert – und mit dem Spielstand-Code kannst du deinen Stand auf ein anderes Gerät übertragen", "link": "#spiele/lino" },
-    { "date": "2026-10-19", "type": "neu", "title": "Neu: 6 Prüfungssimulationen mit echter Zeitvorgabe – DTZ, Leben in Deutschland, telc B1, DTB B1, telc B2 und DTB B2. Mit Punkten, Bestehensregel und allen Lösungen", "link": "#simulation" },
-    { "date": "2026-10-19", "type": "neu", "title": "Neu: Gezielte Vorbereitung auf telc B1, telc B2, DTB B1 und DTB B2 – Strategien für jeden Prüfungsteil, Mini-Übungen, Redemittel und Lernplan", "link": "#vorbereitung" },
-    { "date": "2026-10-19", "type": "neu", "title": "Lino läuft wird größer: 14 Welten (ICE, Supermarkt, Arztpraxis, Bürgeramt, Büro, Vorstellungsgespräch), Tageslauf, Shop, Abzeichen und neue Fragen zum Hören, Artikel und Satzbau", "link": "#spiele/lino" },
-    { "date": "2026-10-19", "type": "neu", "title": "Neu: Playlist – alle 40 Lieder am Stück hören, auch nach Niveau und in zufälliger Reihenfolge", "link": "#lieder/playlist/alle" },
-    { "date": "2026-10-19", "type": "neu", "title": "Neues Arbeitsblatt: Nomen-Verb-Verbindungen – Beruf und Behörden (B2)", "link": "#material" },
-    { "date": "2026-10-19", "type": "hoeren", "title": "Neuer DTZ-Hörtext: Durchsage in der Straßenbahn (Übungssatz 5)", "link": "#hoeren/dtz-5/1" },
-    { "date": "2026-10-19", "type": "hoeren", "title": "Neuer B2-Hörtext: Mailbox aus der Buchhaltung (Übungssatz 4)", "link": "#hoeren/b2-4/1" },
-    { "date": "2026-10-19", "type": "uebung", "title": "Sprechen A2: In der Kita – heute holt jemand anderes ab", "link": "#ueben/sprechen/A2/4" },
-    { "date": "2026-10-19", "type": "uebung", "title": "Schreiben A2: Schicht tauschen – Nachricht an einen Kollegen", "link": "#ueben/schreiben/A2/5" },
-    { "date": "2026-10-15", "type": "neu", "title": "Lino läuft: Am Ende jeder Welt wartet jetzt ein Fehlermonster – weiche den falschen Wörtern aus und besiege es mit richtigen Antworten", "link": "#spiele/lino" },
-    { "date": "2026-10-15", "type": "neu", "title": "Neu: Witz des Tages – jeden Tag ein deutscher Witz mit Erklärung und Übersetzung in 50 Sprachen", "link": "#witz" },
-    { "date": "2026-10-15", "type": "neu", "title": "2 neue Merkblätter Leben in Deutschland: Modul 6 – Teilung, Mauerbau und Wiedervereinigung und Modul 7 – Deutschland in Europa und die EU", "link": "#orientierungskurs" },
-    { "date": "2026-10-15", "type": "neu", "title": "Lino läuft: 3 neue Welten – mit dem Auto über die Autobahn (A2), mit dem Schlitten durch Winterberg (B1), mit dem Fahrrad an die Ostsee (B2)", "link": "#spiele/lino" },
-    { "date": "2026-10-14", "type": "uebung", "title": "Neuer Lesetext: Die Stadtbibliothek macht Pause (Aushang, A2–B1)", "link": "#lesen/alltag/5" },
-    { "date": "2026-10-14", "type": "uebung", "title": "Neuer Lesetext: Disponentin / Disponent gesucht (Stellenanzeige, B1–B2)", "link": "#lesen/beruf/4" },
-    { "date": "2026-10-14", "type": "uebung", "title": "Neu: Jump’n’Run „Lino läuft“ – 5 Welten von A1 bis C1, an jedem Tor eine Deutschfrage", "link": "#spiele/lino" },
-    { "date": "2026-10-14", "type": "uebung", "title": "Neu: 10 Lernspiele für DTB B2 Beruf, Alltag (Reisen, Einkaufen, Ämter) und den Test „Leben in Deutschland“", "link": "#spiele" },
-    { "date": "2026-10-14", "type": "lied", "title": "15 neue Lieder von A1 bis C1 – mit Aufgaben, Lösungen und PDF", "link": "#lieder" },
-    { "date": "2026-10-13", "type": "neu", "title": "Neues Arbeitsblatt: Nebensätze mit weil, dass, wenn, obwohl (B1)", "link": "#material" },
-    { "date": "2026-10-13", "type": "hoeren", "title": "Neuer DTZ-Hörtext: Die Apotheke ruft an (Übungssatz 5)", "link": "#hoeren/dtz-5/0" },
-    { "date": "2026-10-13", "type": "hoeren", "title": "Neuer B2-Hörtext: Mailbox vom Tagungshotel (Übungssatz 4)", "link": "#hoeren/b2-4/0" },
-    { "date": "2026-10-13", "type": "uebung", "title": "Sprechen A1: Im Bus eine Fahrkarte kaufen", "link": "#ueben/sprechen/A1/4" },
-    { "date": "2026-10-13", "type": "uebung", "title": "Schreiben A1: Ein Paket für mich – Nachricht an die Nachbarin", "link": "#ueben/schreiben/A1/5" },
-    { "date": "2026-10-13", "type": "uebung", "title": "Neuer Lesetext: Reparieren statt wegwerfen (Zeitungsartikel, A2–B1)", "link": "#lesen/alltag/4" },
-    { "date": "2026-10-13", "type": "uebung", "title": "Neuer Lesetext: Protokoll der Teambesprechung (B1–B2 Beruf)", "link": "#lesen/beruf/3" },
-    { "date": "2026-10-08", "type": "uebung", "title": "Neu: 7 Lernspiele – Zahlen-Ohr, Dialog-Simulator, Verb-Rennen, Memory, Artikel-Wisch, Wo oder wohin? und Brief-Baukasten", "link": "#spiele" },
-    { "date": "2026-10-08", "type": "sprechen", "title": "Neu: Bild beschreiben (DTZ) – Endungen und Relativsätze an 4 Bildern, mit Arbeitsblättern", "link": "#bild" },
-    { "date": "2026-10-08", "type": "neu", "title": "Neu: Tages-Challenge – jeden Tag 10 Aufgaben, mit Lernserie 🔥", "link": "#challenge" },
-    { "date": "2026-10-07", "type": "neu", "title": "Alle Arbeitsblätter jetzt mit Lösungen – 8 Blätter ganz neu, 18 mit zusätzlichen Übungen", "link": "#material" },
-    { "date": "2026-10-07", "type": "uebung", "title": "Neu: Leseverstehen – 7 Texte für DTZ und B2 Beruf", "link": "#lesen" },
-    { "date": "2026-10-07", "type": "neu", "title": "7 neue Merkblätter: Rechtsstaat, Sozialstaat und NS-Zeit (Orientierungskurs)", "link": "#orientierungskurs" },
-    { "date": "2026-10-07", "type": "neu", "title": "Rundgang mit Dennis: die Seite in 30 Sekunden", "link": "#" },
-    { "date": "2026-10-06", "type": "neu", "title": "Deine Meinung: Lob, Wünsche, Kritik und Fragen als Zettel", "link": "#pinnwand" },
-    { "date": "2026-10-06", "type": "sprechen", "title": "Sprech-Coach: einsprechen und automatisch korrigieren lassen", "link": "#ueben/sprechen/A1" }
-  ]
+ "note": "Neu auf der Seite – neueste Einträge oben. Wird vom Redaktionsplan (geplante Aufgaben) ergänzt.",
+ "items": [
+  {
+   "date": "2026-10-21",
+   "type": "lied",
+   "title": "Neues Lied (C1): „Sollte das Display leuchten“ – Ständige Erreichbarkeit: Homeoffice, Feierabend und das Recht auf Abschalten",
+   "link": "#lieder/c1-10-sollte-das-display-leuchten"
+  },
+  {
+   "date": "2026-10-21",
+   "type": "lied",
+   "title": "Neues Lied (C1): „Die Stadt steht nicht zum Verkauf“ – Wohnungsnot und Gentrifizierung: Mieterhöhung, Verdrängung, Nachbarschaft und Widerstand",
+   "link": "#lieder/c1-09-nicht-zum-verkauf"
+  },
+  {
+   "date": "2026-10-21",
+   "type": "lied",
+   "title": "Neues Lied (B2): „Das Fenster gegenüber“ – Neu in der Großstadt: Anonymität, Einsamkeit, neue Kontakte und Freundschaft",
+   "link": "#lieder/b2-10-das-fenster-gegenueber"
+  },
+  {
+   "date": "2026-10-21",
+   "type": "lied",
+   "title": "Neues Lied (B2): „Sobald der letzte Zug kommt“ – Pendeln: lange Arbeitswege, Nahverkehr bei Nacht, Verspätungen, Zeit für sich",
+   "link": "#lieder/b2-09-der-letzte-zug"
+  },
+  {
+   "date": "2026-10-21",
+   "type": "lied",
+   "title": "Neues Lied (B1): „Nicht nur ein Zimmer“ – Wohnungssuche: Anzeigen, Besichtigung, Unterlagen",
+   "link": "#lieder/b1-10-nicht-nur-ein-zimmer"
+  },
+  {
+   "date": "2026-10-21",
+   "type": "lied",
+   "title": "Neues Lied (B1): „Trotz des Regens“ – Führerschein in Deutschland: Fahrstunden, Theorieprüfung, praktische Prüfung",
+   "link": "#lieder/b1-09-fuehrerschein"
+  },
+  {
+   "date": "2026-10-21",
+   "type": "lied",
+   "title": "Neues Lied (A2): „Ein roter Schal“ – Menschen beschreiben: Aussehen, Kleidung und Charakter",
+   "link": "#lieder/a2-10-roter-schal"
+  },
+  {
+   "date": "2026-10-21",
+   "type": "lied",
+   "title": "Neues Lied (A2): „Wenn die Stadt schläft“ – Arbeit in der Nachtschicht: Arbeitsweg, Kollegen, Pause, freie Zeit",
+   "link": "#lieder/a2-09-nachtschicht"
+  },
+  {
+   "date": "2026-10-21",
+   "type": "lied",
+   "title": "Neues Lied (A1): „Ich rufe dich an“ – Familie in der Ferne: telefonieren, Videoanruf, Heimweh",
+   "link": "#lieder/a1-10-ich-rufe-dich-an"
+  },
+  {
+   "date": "2026-10-21",
+   "type": "lied",
+   "title": "Neues Lied (A1): „Ist es noch weit?“ – In der Stadt: nach dem Weg fragen, Orte und Wege (geradeaus, links, rechts)",
+   "link": "#lieder/a1-09-ist-es-noch-weit"
+  },
+  {
+   "date": "2026-10-20",
+   "type": "neu",
+   "title": "Prüfungssimulationen: Schriftliche und mündliche Prüfung jetzt getrennt starten – eine Uhr für die ganze schriftliche bzw. mündliche Prüfung, danach das Gesamtergebnis",
+   "link": "#simulation"
+  },
+  {
+   "date": "2026-10-19",
+   "type": "neu",
+   "title": "Lino läuft: Gekaufte Teile und Münzen bleiben jetzt sicher gespeichert – und mit dem Spielstand-Code kannst du deinen Stand auf ein anderes Gerät übertragen",
+   "link": "#spiele/lino"
+  },
+  {
+   "date": "2026-10-19",
+   "type": "neu",
+   "title": "Neu: 6 Prüfungssimulationen mit echter Zeitvorgabe – DTZ, Leben in Deutschland, telc B1, DTB B1, telc B2 und DTB B2. Mit Punkten, Bestehensregel und allen Lösungen",
+   "link": "#simulation"
+  },
+  {
+   "date": "2026-10-19",
+   "type": "neu",
+   "title": "Neu: Gezielte Vorbereitung auf telc B1, telc B2, DTB B1 und DTB B2 – Strategien für jeden Prüfungsteil, Mini-Übungen, Redemittel und Lernplan",
+   "link": "#vorbereitung"
+  },
+  {
+   "date": "2026-10-19",
+   "type": "neu",
+   "title": "Lino läuft wird größer: 14 Welten (ICE, Supermarkt, Arztpraxis, Bürgeramt, Büro, Vorstellungsgespräch), Tageslauf, Shop, Abzeichen und neue Fragen zum Hören, Artikel und Satzbau",
+   "link": "#spiele/lino"
+  },
+  {
+   "date": "2026-10-19",
+   "type": "neu",
+   "title": "Neu: Playlist – alle 40 Lieder am Stück hören, auch nach Niveau und in zufälliger Reihenfolge",
+   "link": "#lieder/playlist/alle"
+  },
+  {
+   "date": "2026-10-19",
+   "type": "neu",
+   "title": "Neues Arbeitsblatt: Nomen-Verb-Verbindungen – Beruf und Behörden (B2)",
+   "link": "#material"
+  },
+  {
+   "date": "2026-10-19",
+   "type": "hoeren",
+   "title": "Neuer DTZ-Hörtext: Durchsage in der Straßenbahn (Übungssatz 5)",
+   "link": "#hoeren/dtz-5/1"
+  },
+  {
+   "date": "2026-10-19",
+   "type": "hoeren",
+   "title": "Neuer B2-Hörtext: Mailbox aus der Buchhaltung (Übungssatz 4)",
+   "link": "#hoeren/b2-4/1"
+  },
+  {
+   "date": "2026-10-19",
+   "type": "uebung",
+   "title": "Sprechen A2: In der Kita – heute holt jemand anderes ab",
+   "link": "#ueben/sprechen/A2/4"
+  },
+  {
+   "date": "2026-10-19",
+   "type": "uebung",
+   "title": "Schreiben A2: Schicht tauschen – Nachricht an einen Kollegen",
+   "link": "#ueben/schreiben/A2/5"
+  },
+  {
+   "date": "2026-10-15",
+   "type": "neu",
+   "title": "Lino läuft: Am Ende jeder Welt wartet jetzt ein Fehlermonster – weiche den falschen Wörtern aus und besiege es mit richtigen Antworten",
+   "link": "#spiele/lino"
+  },
+  {
+   "date": "2026-10-15",
+   "type": "neu",
+   "title": "Neu: Witz des Tages – jeden Tag ein deutscher Witz mit Erklärung und Übersetzung in 50 Sprachen",
+   "link": "#witz"
+  },
+  {
+   "date": "2026-10-15",
+   "type": "neu",
+   "title": "2 neue Merkblätter Leben in Deutschland: Modul 6 – Teilung, Mauerbau und Wiedervereinigung und Modul 7 – Deutschland in Europa und die EU",
+   "link": "#orientierungskurs"
+  },
+  {
+   "date": "2026-10-15",
+   "type": "neu",
+   "title": "Lino läuft: 3 neue Welten – mit dem Auto über die Autobahn (A2), mit dem Schlitten durch Winterberg (B1), mit dem Fahrrad an die Ostsee (B2)",
+   "link": "#spiele/lino"
+  },
+  {
+   "date": "2026-10-14",
+   "type": "uebung",
+   "title": "Neuer Lesetext: Die Stadtbibliothek macht Pause (Aushang, A2–B1)",
+   "link": "#lesen/alltag/5"
+  },
+  {
+   "date": "2026-10-14",
+   "type": "uebung",
+   "title": "Neuer Lesetext: Disponentin / Disponent gesucht (Stellenanzeige, B1–B2)",
+   "link": "#lesen/beruf/4"
+  },
+  {
+   "date": "2026-10-14",
+   "type": "uebung",
+   "title": "Neu: Jump’n’Run „Lino läuft“ – 5 Welten von A1 bis C1, an jedem Tor eine Deutschfrage",
+   "link": "#spiele/lino"
+  },
+  {
+   "date": "2026-10-14",
+   "type": "uebung",
+   "title": "Neu: 10 Lernspiele für DTB B2 Beruf, Alltag (Reisen, Einkaufen, Ämter) und den Test „Leben in Deutschland“",
+   "link": "#spiele"
+  },
+  {
+   "date": "2026-10-14",
+   "type": "lied",
+   "title": "15 neue Lieder von A1 bis C1 – mit Aufgaben, Lösungen und PDF",
+   "link": "#lieder"
+  }
+ ]
 }

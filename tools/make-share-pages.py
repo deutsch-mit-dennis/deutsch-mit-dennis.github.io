@@ -76,7 +76,7 @@ O = 'assets/og'
 card('Deutsch lernen mit Dennis', 'Kostenlose Übungen von A1 bis B2 Beruf: Sprechen, Schreiben, Hören, DTZ- und B2-Training, Lieder. Ohne Anmeldung.', os.path.join(R, O, 'start.jpg'), kicker='DTZ-Prüfer · telc-Prüfer · BAMF-zugelassen')
 SECTIONS = [
     ('lernpakete', 'Lernpakete als PDF', 'Ausführliche PDF-Pakete mit Musterlösungen für DTZ, B2 Beruf, „Leben in Deutschland“ und für Lehrkräfte.'),
-    ('lieder', 'Deutsch mit Liedern', '40 eigene Lieder von A1 bis C1 – mit Text, Aufgaben und Lösungen. Hör zu, sing mit und lerne.'),
+    ('lieder', 'Deutsch mit Liedern', '50 eigene Lieder von A1 bis C1 – mit Text, Aufgaben und Lösungen. Hör zu, sing mit und lerne.'),
     ('pruefung', 'Prüfungstraining DTZ, telc und DTB', 'Schreiben, Sprechen, Hören und Lesen wie in der Prüfung – DTZ, Leben in Deutschland, telc B1/B2, DTB B1/B2. Von einem lizenzierten Prüfer.'),
     ('simulation', 'Prüfungssimulationen mit Zeitvorgabe', 'DTZ, Leben in Deutschland, telc B1, DTB B1, telc B2 und DTB B2 – komplette Prüfungen mit echter Zeit, Punkten, Bestehensregel und Lösungen. Kostenlos.'),
     ('vorbereitung', 'Gezielte Vorbereitung: telc B1, telc B2, DTB', 'Aufbau, Strategien und Fallen für jeden Prüfungsteil, Mini-Übungen, Redemittel und 4-Wochen-Lernplan – von einem lizenzierten Prüfer.'),

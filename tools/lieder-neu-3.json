@@ -1,0 +1,1172 @@
+[
+ {
+  "id": "a1-09-ist-es-noch-weit",
+  "level": "A1",
+  "title": "Ist es noch weit?",
+  "theme": "In der Stadt: nach dem Weg fragen, Orte und Wege (geradeaus, links, rechts)",
+  "grammar": "Ja-/Nein-Fragen mit dem Verb auf Position 1 (Ist es noch weit? Fährt hier ein Bus?) und Antworten mit ja, nein und nicht",
+  "intro": "Nachts allein in einer neuen Stadt – wo ist nur die Gartenstraße? Mit diesem Lied fragst du nach dem Weg und übst Ja-/Nein-Fragen und Antworten mit nicht.",
+  "lyrics": "[Verse 1]\nEs ist Nacht, die Stadt ist still,\nich bin neu hier, ich weiß nicht viel.\nDer Regen fällt, die Lichter sind an,\nich steige aus und frage einen Mann:\n„Entschuldigung, ist das die Gartenstraße?“\n„Nein, das ist sie nicht. Gehen Sie geradeaus,\ndann links, dann rechts – dann sind Sie zu Hause.“\n\n[Chorus]\nIst es noch weit? – Nein, nicht weit.\nIst es schon spät? – Ja, es ist spät.\nSiehst du das Licht? – Ja, ich sehe das Licht.\nIst es noch weit? – Nein, nicht weit, nicht weit.\n\n[Verse 2]\nDa ist ein Kiosk, da ist ein Park,\nder Park ist dunkel, der Wind ist stark.\n„Fährt hier ein Bus?“ – „Nein, nicht mehr.\nDie Straße ist leer, der Platz ist leer.“\n„Ist das ein Problem?“ – „Nein, gar nicht.\nSie gehen zehn Minuten – dann sehen Sie ein Licht.“\nIch gehe allein, Schritt für Schritt,\ndie Nacht ist kalt, der Mond geht mit.\n\n[Chorus]\nIst es noch weit? – Nein, nicht weit.\nIst es schon spät? – Ja, es ist spät.\nSiehst du das Licht? – Ja, ich sehe das Licht.\nIst es noch weit? – Nein, nicht weit, nicht weit.\n\n[Bridge]\nIch bin nicht müde, ich bin nicht allein,\ndie Stadt ist groß, mein Weg ist klein.\nEin Fenster ist hell, die Bahn fährt vorbei –\nGartenstraße, Nummer drei.\n\n[Chorus]\nIst es noch weit? – Nein, nicht weit.\nIst es schon spät? – Ja, es ist spät.\nSiehst du das Licht? – Ja, ich sehe das Licht.\nIst es noch weit? – Nein, nicht weit, nicht weit.\n\n[Outro]\nIst das mein Haus? – Ja, das ist dein Haus.\nIst es noch weit? – Nein. Nicht mehr weit.",
+  "vocab": [
+   [
+    "die Stadt, die Städte",
+    "Ort mit vielen Häusern und Menschen"
+   ],
+   [
+    "die Nacht, die Nächte",
+    "Zeit, wenn es dunkel ist und man schläft"
+   ],
+   [
+    "der Regen",
+    "Wasser fällt vom Himmel"
+   ],
+   [
+    "das Licht, die Lichter",
+    "Es macht hell, z. B. eine Lampe."
+   ],
+   [
+    "aussteigen",
+    "aus dem Bus oder aus der Bahn gehen"
+   ],
+   [
+    "die Straße, die Straßen",
+    "Hier fahren Autos, hier gehen Menschen."
+   ],
+   [
+    "geradeaus",
+    "nicht links, nicht rechts"
+   ],
+   [
+    "weit",
+    "nicht nah – man geht lange"
+   ],
+   [
+    "der Kiosk, die Kioske",
+    "kleiner Laden für Getränke, Zeitungen und Snacks"
+   ],
+   [
+    "das Fenster, die Fenster",
+    "Durch das Fenster sieht man nach draußen."
+   ]
+  ],
+  "gap": {
+   "type": "gap",
+   "title": "Aufgabe 2: Lückentext",
+   "instruction": "Hör das Lied und ergänze die fehlenden Wörter.",
+   "items": [
+    "ich bin neu hier, ich weiß nicht ___.",
+    "Der Regen fällt, die ___ sind an,",
+    "„Nein, das ist sie nicht. Gehen Sie ___,",
+    "der Park ist dunkel, der ___ ist stark.",
+    "Gartenstraße, ___ drei."
+   ],
+   "solutions": [
+    "viel",
+    "Lichter",
+    "geradeaus",
+    "Wind",
+    "Nummer"
+   ]
+  },
+  "tf": [
+   [
+    "Die Person ist neu in der Stadt.",
+    true,
+    ""
+   ],
+   [
+    "Es ist Morgen und die Sonne scheint.",
+    false,
+    "Es ist Nacht und es regnet."
+   ],
+   [
+    "Der Mann sagt: „Das ist die Gartenstraße.“",
+    false,
+    "Er sagt: „Nein, das ist sie nicht.“"
+   ],
+   [
+    "Hier fährt kein Bus mehr.",
+    true,
+    ""
+   ],
+   [
+    "Die Person geht mit einem Freund nach Hause.",
+    false,
+    "Die Person geht allein."
+   ]
+  ],
+  "gram": {
+   "title": "Grammatik – Ja-/Nein-Fragen",
+   "instruction": "Mach aus dem Satz eine Ja-/Nein-Frage. Das Verb steht auf Position 1.",
+   "items": [
+    "Das ist die Gartenstraße.",
+    "Es ist noch weit.",
+    "Hier fährt ein Bus.",
+    "Du siehst das Licht.",
+    "Sie wohnen in der Stadt.",
+    "Der Park ist dunkel."
+   ],
+   "solutions": [
+    "Ist das die Gartenstraße?",
+    "Ist es noch weit?",
+    "Fährt hier ein Bus?",
+    "Siehst du das Licht?",
+    "Wohnen Sie in der Stadt?",
+    "Ist der Park dunkel?"
+   ]
+  }
+ },
+ {
+  "id": "a1-10-ich-rufe-dich-an",
+  "level": "A1",
+  "title": "Ich rufe dich an",
+  "theme": "Familie in der Ferne: telefonieren, Videoanruf, Heimweh",
+  "grammar": "Personalpronomen im Akkusativ (mich, dich, ihn, sie, es, uns, euch: Hörst du mich? Ich sehe dich.)",
+  "intro": "Deine Familie ist weit weg, aber am Telefon ist sie ganz nah. Mit diesem Lied übst du die Pronomen mich, dich, ihn, sie, uns und euch.",
+  "lyrics": "[Verse 1]\nEs ist elf Uhr, die Stadt schläft schon,\nich sitze am Fenster mit meinem Telefon.\nDraußen fährt die letzte Bahn,\nich denke an dich und rufe dich an.\nDu bist so weit, in einem anderen Land,\nich habe dein Foto in meiner Hand.\n\n[Chorus]\nHörst du mich? Ich höre dich.\nSiehst du mich? Ich sehe dich.\nIch rufe dich an, ich rufe dich an –\ndie Nacht ist lang, ich rufe dich an.\n\n[Verse 2]\nDa bist du, Mama, du lachst und winkst,\nmein Bruder ist auch da, er singt.\nIch sehe dich, ich sehe ihn,\nund Papa fragt: „Wie ist Berlin?“\n„Besuchst du uns?“, fragt er leise.\n„Ja, ich besuche euch. Ich plane die Reise.“\n\n[Chorus]\nHörst du mich? Ich höre dich.\nSiehst du mich? Ich sehe dich.\nIch rufe dich an, ich rufe dich an –\ndie Nacht ist lang, ich rufe dich an.\n\n[Bridge]\nDas Bild ist weg, das Netz ist schwach,\nich warte im Dunkeln, ich bin noch wach.\n„Hallo? Hallo? Verstehst du mich?“\n„Ja, wir verstehen dich. Wir lieben dich.“\n\n[Chorus]\nHörst du mich? Ich höre dich.\nSiehst du mich? Ich sehe dich.\nIch rufe dich an, ich rufe dich an –\ndie Nacht ist lang, ich rufe dich an.\n\n[Outro]\n„Gute Nacht“, sage ich, „schlaft gut“ –\nmorgen rufe ich euch wieder an.",
+  "vocab": [
+   [
+    "anrufen",
+    "mit dem Telefon sprechen: Ich rufe dich an."
+   ],
+   [
+    "das Telefon, die Telefone",
+    "Damit spricht man mit anderen Menschen, hier: das Handy."
+   ],
+   [
+    "das Fenster, die Fenster",
+    "Durch das Fenster sieht man nach draußen."
+   ],
+   [
+    "das Land, die Länder",
+    "z. B. Deutschland, Syrien, die Ukraine"
+   ],
+   [
+    "das Foto, die Fotos",
+    "ein Bild von der Kamera oder vom Handy"
+   ],
+   [
+    "winken",
+    "die Hand bewegen und „Hallo!“ oder „Tschüss!“ sagen"
+   ],
+   [
+    "besuchen",
+    "zu einer Person fahren und dort Zeit haben"
+   ],
+   [
+    "die Reise, die Reisen",
+    "Man fährt in eine andere Stadt oder in ein anderes Land."
+   ],
+   [
+    "das Netz",
+    "die Verbindung für Handy und Internet"
+   ],
+   [
+    "wach",
+    "nicht schlafen"
+   ]
+  ],
+  "gap": {
+   "type": "gap",
+   "title": "Aufgabe 2: Lückentext",
+   "instruction": "Hör das Lied und ergänze die fehlenden Wörter.",
+   "items": [
+    "ich sitze am ___ mit meinem Telefon.",
+    "ich denke an dich und rufe dich ___.",
+    "ich habe dein ___ in meiner Hand.",
+    "Ich sehe dich, ich sehe ___,",
+    "Das Bild ist weg, das ___ ist schwach,"
+   ],
+   "solutions": [
+    "Fenster",
+    "an",
+    "Foto",
+    "ihn",
+    "Netz"
+   ]
+  },
+  "tf": [
+   [
+    "Es ist elf Uhr in der Nacht.",
+    true,
+    ""
+   ],
+   [
+    "Die Mama wohnt auch in Berlin.",
+    false,
+    "Sie wohnt weit weg, in einem anderen Land."
+   ],
+   [
+    "Der Bruder singt.",
+    true,
+    ""
+   ],
+   [
+    "Papa fragt: „Besuchst du uns?“",
+    true,
+    ""
+   ],
+   [
+    "Das Bild ist die ganze Zeit sehr gut.",
+    false,
+    "Das Bild ist weg, das Netz ist schwach."
+   ]
+  ],
+  "gram": {
+   "title": "Grammatik – Personalpronomen im Akkusativ",
+   "instruction": "Ergänze das Personalpronomen im Akkusativ. Das Wort in Klammern hilft dir.",
+   "items": [
+    "Hörst du ___? (ich)",
+    "Ich sehe ___, Mama. (du)",
+    "Mein Bruder singt. Ich höre ___. (er)",
+    "Besuchst du ___? (wir)",
+    "Ich besuche ___ bald. (ihr)",
+    "Das ist meine Mama. Ich liebe ___. (sie)"
+   ],
+   "solutions": [
+    "Hörst du mich?",
+    "Ich sehe dich, Mama.",
+    "Mein Bruder singt. Ich höre ihn.",
+    "Besuchst du uns?",
+    "Ich besuche euch bald.",
+    "Das ist meine Mama. Ich liebe sie."
+   ]
+  }
+ },
+ {
+  "id": "a2-09-nachtschicht",
+  "level": "A2",
+  "title": "Wenn die Stadt schläft",
+  "theme": "Arbeit in der Nachtschicht: Arbeitsweg, Kollegen, Pause, freie Zeit",
+  "grammar": "Nebensätze mit wenn (Zeit und Bedingung): Verb am Ende; nach dem wenn-Satz kommt das Verb zuerst (Wenn die Stadt schläft, bin ich wach.)",
+  "intro": "Andere schlafen, du arbeitest – dieses Lied erzählt von einer Nacht im Lager. Du übst Sätze mit wenn und siehst, wo das Verb steht.",
+  "lyrics": "[Verse 1]\nUm zehn Uhr am Abend ziehe ich die Jacke an,\ndie Straße ist nass vom Regen, ich warte auf die Bahn.\nIch habe Nachtschicht im Lager, ich packe Karton für Karton,\ndie Lampen in der Halle sind weiß – ich kenne sie schon.\n\n[Chorus]\nWenn die Stadt schläft, bin ich wach,\nwenn du träumst, denke ich an dich – die ganze Nacht.\nWenn der Morgen kommt, fahre ich nach Haus,\nund wenn du aufstehst, ruhe ich mich aus.\n\n[Verse 2]\nUm zwei Uhr machen wir Pause, wir trinken heißen Tee,\ndraußen fällt der Regen – oder ist es schon Schnee?\nMeine Kollegin Marta lacht: „Wenn du müde bist,\ndann trink noch einen Kaffee – du weißt, wie lang die Nacht ist.“\n\n[Chorus]\nWenn die Stadt schläft, bin ich wach,\nwenn du träumst, denke ich an dich – die ganze Nacht.\nWenn der Morgen kommt, fahre ich nach Haus,\nund wenn du aufstehst, ruhe ich mich aus.\n\n[Bridge]\nAm Wochenende habe ich frei,\ndann sind wir zusammen, nur wir zwei.\nWenn ich Zeit habe, gehen wir in den Park,\nund wenn du lachst, fühle ich mich stark.\n\n[Chorus]\nWenn die Stadt schläft, bin ich wach,\nwenn du träumst, denke ich an dich – die ganze Nacht.\nWenn der Morgen kommt, fahre ich nach Haus,\nund wenn du aufstehst, ruhe ich mich aus.\n\n[Outro]\nWenn die Stadt schläft, bin ich wach –\nbis morgen früh. Gute Nacht.",
+  "vocab": [
+   [
+    "die Nachtschicht, die Nachtschichten",
+    "Arbeit in der Nacht"
+   ],
+   [
+    "das Lager, die Lager",
+    "großer Raum oder Gebäude für Waren"
+   ],
+   [
+    "der Karton, die Kartons",
+    "eine Kiste aus Pappe"
+   ],
+   [
+    "die Halle, die Hallen",
+    "ein sehr großer Raum"
+   ],
+   [
+    "die Pause, die Pausen",
+    "kurze Zeit ohne Arbeit"
+   ],
+   [
+    "der Kollege, die Kollegen / die Kollegin, die Kolleginnen",
+    "Person, die mit mir zusammen arbeitet"
+   ],
+   [
+    "müde",
+    "Ich möchte schlafen."
+   ],
+   [
+    "aufstehen",
+    "aus dem Bett kommen"
+   ],
+   [
+    "sich ausruhen",
+    "nichts tun, sich erholen"
+   ],
+   [
+    "frei haben",
+    "nicht arbeiten müssen"
+   ]
+  ],
+  "gap": {
+   "type": "gap",
+   "title": "Aufgabe 2: Lückentext",
+   "instruction": "Hör das Lied und ergänze die fehlenden Wörter.",
+   "items": [
+    "die Straße ist nass vom ___, ich warte auf die Bahn.",
+    "Ich habe Nachtschicht im ___, ich packe Karton für Karton,",
+    "Um zwei Uhr machen wir ___, wir trinken heißen Tee,",
+    "Wenn der Morgen kommt, fahre ich nach ___,",
+    "Am Wochenende habe ich ___,"
+   ],
+   "solutions": [
+    "Regen",
+    "Lager",
+    "Pause",
+    "Haus",
+    "frei"
+   ]
+  },
+  "tf": [
+   [
+    "Die Person geht um zehn Uhr am Morgen zur Arbeit.",
+    false,
+    "Sie zieht um zehn Uhr am Abend die Jacke an."
+   ],
+   [
+    "Die Person arbeitet nachts in einem Lager.",
+    true,
+    ""
+   ],
+   [
+    "Um zwei Uhr machen die Kollegen Pause.",
+    true,
+    ""
+   ],
+   [
+    "Marta sagt: „Wenn du müde bist, geh nach Hause.“",
+    false,
+    "Sie sagt: „Trink noch einen Kaffee.“"
+   ],
+   [
+    "Am Wochenende muss die Person arbeiten.",
+    false,
+    "Am Wochenende hat sie frei."
+   ]
+  ],
+  "gram": {
+   "title": "Grammatik – Nebensätze mit wenn",
+   "instruction": "Verbinde die Sätze mit wenn. Der wenn-Satz steht vorne – achte auf die Position der Verben.",
+   "items": [
+    "Die Stadt schläft. Ich bin wach.",
+    "Der Morgen kommt. Ich fahre nach Hause.",
+    "Ich bin müde. Ich trinke einen Kaffee.",
+    "Du stehst auf. Ich ruhe mich aus.",
+    "Ich habe Zeit. Wir gehen in den Park.",
+    "Es regnet. Ich nehme die Bahn."
+   ],
+   "solutions": [
+    "Wenn die Stadt schläft, bin ich wach.",
+    "Wenn der Morgen kommt, fahre ich nach Hause.",
+    "Wenn ich müde bin, trinke ich einen Kaffee.",
+    "Wenn du aufstehst, ruhe ich mich aus.",
+    "Wenn ich Zeit habe, gehen wir in den Park.",
+    "Wenn es regnet, nehme ich die Bahn."
+   ]
+  }
+ },
+ {
+  "id": "a2-10-roter-schal",
+  "level": "A2",
+  "title": "Ein roter Schal",
+  "theme": "Menschen beschreiben: Aussehen, Kleidung und Charakter",
+  "grammar": "Adjektivdeklination nach dem unbestimmten Artikel im Nominativ und Akkusativ (ein dunkler Mantel, eine junge Frau, ein kleines Lächeln, einen warmen Blick)",
+  "intro": "Spät am Abend in der Bahn sieht ein Mann eine Frau – und vergisst sie nicht mehr. Du lernst, wie du Menschen beschreibst, und übst die Adjektivendungen nach ein, eine und einen.",
+  "lyrics": "[Verse 1]\nEs ist spät, die Bahn ist fast leer,\ndraußen fällt ein leiser Regen, die Stadt glänzt wie ein Meer.\nAm Fenster sitzt eine junge Frau, sie liest ein dickes Buch,\nich sehe sie nur kurz – und das ist schon genug.\n\n[Chorus]\nEin dunkler Mantel, ein roter Schal,\nein kleines Lächeln – nur ein einziges Mal.\nDu hast einen warmen Blick und ein freundliches Gesicht –\nwer bist du? Ich weiß es nicht.\n\n[Verse 2]\nSie hat lange, schwarze Haare und eine runde Brille,\nin der Bahn ist eine große Stille.\nIch bin ein schüchterner Mann, ich sage kein Wort,\nund an der nächsten Haltestelle steigt sie aus – sie ist fort.\n\n[Chorus]\nEin dunkler Mantel, ein roter Schal,\nein kleines Lächeln – nur ein einziges Mal.\nDu hast einen warmen Blick und ein freundliches Gesicht –\nwer bist du? Ich weiß es nicht.\n\n[Bridge]\nVielleicht sehe ich morgen ein bekanntes Gesicht,\nvielleicht sitzt sie wieder da im warmen Licht.\nDann bin ich ein mutiger Mann, dann sage ich: „Hallo!“ –\nund vielleicht hat sie ein Lächeln für mich – einfach so.\n\n[Chorus]\nEin dunkler Mantel, ein roter Schal,\nein kleines Lächeln – nur ein einziges Mal.\nDu hast einen warmen Blick und ein freundliches Gesicht –\nwer bist du? Ich weiß es nicht.\n\n[Outro]\nEin dunkler Mantel, ein roter Schal –\nbis morgen, vielleicht, noch einmal.",
+  "vocab": [
+   [
+    "der Mantel, die Mäntel",
+    "eine lange, warme Jacke"
+   ],
+   [
+    "der Schal, die Schals",
+    "Man trägt ihn im Winter um den Hals."
+   ],
+   [
+    "das Lächeln",
+    "ein freundliches Gesicht mit kleinem Lachen"
+   ],
+   [
+    "der Blick, die Blicke",
+    "wie man jemanden ansieht"
+   ],
+   [
+    "das Gesicht, die Gesichter",
+    "Augen, Nase und Mund sind im Gesicht."
+   ],
+   [
+    "die Brille, die Brillen",
+    "Damit sieht man besser."
+   ],
+   [
+    "schüchtern",
+    "Man spricht nicht gern mit fremden Menschen."
+   ],
+   [
+    "mutig",
+    "Man hat keine Angst."
+   ],
+   [
+    "aussteigen",
+    "aus der Bahn oder dem Bus gehen"
+   ],
+   [
+    "die Haltestelle, die Haltestellen",
+    "Hier hält der Bus oder die Bahn."
+   ]
+  ],
+  "gap": {
+   "type": "gap",
+   "title": "Aufgabe 2: Lückentext",
+   "instruction": "Hör das Lied und ergänze die fehlenden Wörter.",
+   "items": [
+    "draußen fällt ein leiser ___, die Stadt glänzt wie ein Meer.",
+    "Am Fenster sitzt eine junge Frau, sie liest ein dickes ___,",
+    "Sie hat lange, schwarze Haare und eine runde ___,",
+    "ein kleines ___ – nur ein einziges Mal.",
+    "Ich bin ein schüchterner Mann, ich sage kein ___,"
+   ],
+   "solutions": [
+    "Regen",
+    "Buch",
+    "Brille",
+    "Lächeln",
+    "Wort"
+   ]
+  },
+  "tf": [
+   [
+    "Die Bahn ist sehr voll.",
+    false,
+    "Die Bahn ist fast leer."
+   ],
+   [
+    "Die Frau liest ein dickes Buch.",
+    true,
+    ""
+   ],
+   [
+    "Die Frau hat kurze, blonde Haare.",
+    false,
+    "Sie hat lange, schwarze Haare."
+   ],
+   [
+    "Der Mann spricht in der Bahn mit der Frau.",
+    false,
+    "Er sagt kein Wort."
+   ],
+   [
+    "Der Mann hofft, dass er die Frau morgen wiedersieht.",
+    true,
+    ""
+   ]
+  ],
+  "gram": {
+   "title": "Grammatik – Adjektive nach ein, eine, einen",
+   "instruction": "Ergänze das Adjektiv in Klammern mit der richtigen Endung.",
+   "items": [
+    "Sie trägt einen ___ Mantel. (dunkel)",
+    "Das ist ein ___ Schal. (rot)",
+    "Sie hat ein ___ Gesicht. (freundlich)",
+    "Ich sehe eine ___ Frau. (jung)",
+    "Er ist ein ___ Mann. (schüchtern)",
+    "Sie liest ein ___ Buch. (dick)"
+   ],
+   "solutions": [
+    "dunklen",
+    "roter",
+    "freundliches",
+    "junge",
+    "schüchterner",
+    "dickes"
+   ]
+  }
+ },
+ {
+  "id": "b1-09-fuehrerschein",
+  "level": "B1",
+  "title": "Trotz des Regens",
+  "theme": "Führerschein in Deutschland: Fahrstunden, Theorieprüfung, praktische Prüfung",
+  "grammar": "Präpositionen mit Genitiv (während, trotz, wegen, statt, innerhalb, außerhalb)",
+  "intro": "Fahrstunden im Regen, die Theorie am Computer und dann die große Prüfung – dieses Lied erzählt vom Weg zum deutschen Führerschein. Du übst Präpositionen mit Genitiv wie während, trotz, wegen und statt.",
+  "lyrics": "[Verse 1]\nDienstagabend, halb acht, die Straßen glänzen nass,\nmein Fahrlehrer sagt ruhig: „Jetzt bitte etwas mehr Gas.“\nWährend der ersten Stunde war mein Herz so laut,\nich habe statt des Spiegels nur nach vorn geschaut.\n\n[Chorus]\nTrotz des Regens, trotz der Angst – ich fahre los,\nwährend der Fahrt durch die Lichter ist die Stadt so groß.\nWegen des Traums von Freiheit gebe ich nicht auf –\ntrotz des Regens, trotz der Angst: Ich fahre los.\n\n[Verse 2]\nInnerhalb eines Monats hatte ich die Theorie,\ndreißig Fragen am Computer – so nervös war ich noch nie.\nWegen eines Fehlers fiel ich beim ersten Mal durch,\nbeim zweiten Mal bestanden – und weg war meine Furcht.\n\n[Chorus]\nTrotz des Regens, trotz der Angst – ich fahre los,\nwährend der Fahrt durch die Lichter ist die Stadt so groß.\nWegen des Traums von Freiheit gebe ich nicht auf –\ntrotz des Regens, trotz der Angst: Ich fahre los.\n\n[Bridge]\nPrüfungstag im Februar, außerhalb der Stadt,\ndie Landstraße ist dunkel, der Asphalt ist glatt.\nDer Prüfer schreibt und schweigt – dann lächelt er mich an:\n„Herzlichen Glückwunsch, bestanden!“ – und mein neues Leben fängt an.\n\n[Chorus]\nTrotz des Regens, trotz der Angst – ich fahre los,\nwährend der Fahrt durch die Lichter ist die Stadt so groß.\nWegen des Traums von Freiheit gebe ich nicht auf –\ntrotz des Regens, trotz der Angst: Ich fahre los.\n\n[Outro]\nTrotz des Regens …\nich fahre los.",
+  "vocab": [
+   [
+    "der Führerschein, die Führerscheine",
+    "Dokument, mit dem man Auto fahren darf"
+   ],
+   [
+    "der Fahrlehrer, die Fahrlehrer",
+    "Person, die in der Fahrschule das Autofahren unterrichtet"
+   ],
+   [
+    "Gas geben",
+    "schneller fahren"
+   ],
+   [
+    "der Spiegel, die Spiegel",
+    "Glas, in dem man sieht, was hinter dem Auto ist"
+   ],
+   [
+    "die Theorie",
+    "hier: Prüfung mit Fragen zu Verkehrsregeln"
+   ],
+   [
+    "durchfallen",
+    "eine Prüfung nicht schaffen"
+   ],
+   [
+    "bestehen",
+    "eine Prüfung schaffen"
+   ],
+   [
+    "die Furcht",
+    "die Angst"
+   ],
+   [
+    "die Landstraße, die Landstraßen",
+    "Straße außerhalb der Stadt zwischen Orten"
+   ],
+   [
+    "glatt",
+    "so, dass man leicht rutscht, z. B. bei Eis oder Regen"
+   ]
+  ],
+  "gap": {
+   "type": "gap",
+   "title": "Aufgabe 2: Lückentext",
+   "instruction": "Hör das Lied und ergänze die fehlenden Wörter.",
+   "items": [
+    "ich habe statt des ___ nur nach vorn geschaut.",
+    "___ des Regens, trotz der Angst – ich fahre los,",
+    "Innerhalb eines ___ hatte ich die Theorie,",
+    "Wegen eines Fehlers fiel ich beim ersten Mal ___,",
+    "Prüfungstag im Februar, ___ der Stadt,"
+   ],
+   "solutions": [
+    "Spiegels",
+    "Trotz",
+    "Monats",
+    "durch",
+    "außerhalb"
+   ]
+  },
+  "tf": [
+   [
+    "Bei der Fahrstunde am Dienstag sind die Straßen nass.",
+    true,
+    ""
+   ],
+   [
+    "In der ersten Stunde war die Person ganz ruhig.",
+    false,
+    "Ihr Herz war sehr laut – sie war nervös."
+   ],
+   [
+    "Die Theorieprüfung hat dreißig Fragen am Computer.",
+    true,
+    ""
+   ],
+   [
+    "Die Person hat die Theorie beim ersten Mal bestanden.",
+    false,
+    "Wegen eines Fehlers ist sie beim ersten Mal durchgefallen."
+   ],
+   [
+    "Die praktische Prüfung ist im Sommer.",
+    false,
+    "Sie ist im Februar."
+   ]
+  ],
+  "gram": {
+   "title": "Grammatik – Präpositionen mit Genitiv",
+   "instruction": "Bilde Sätze mit der Präposition und dem Genitiv. Beginne mit der Präposition (Nr. 6: am Ende).",
+   "items": [
+    "Ich hatte Angst. (während / die erste Fahrstunde)",
+    "Wir fahren los. (trotz / der Regen)",
+    "Er ist durchgefallen. (wegen / ein Fehler)",
+    "Ich nehme den Bus. (statt / das Auto)",
+    "Ich habe die Theorie geschafft. (innerhalb / ein Monat)",
+    "Die Prüfung ist. (außerhalb / die Stadt)"
+   ],
+   "solutions": [
+    "Während der ersten Fahrstunde hatte ich Angst.",
+    "Trotz des Regens fahren wir los.",
+    "Wegen eines Fehlers ist er durchgefallen.",
+    "Statt des Autos nehme ich den Bus.",
+    "Innerhalb eines Monats habe ich die Theorie geschafft.",
+    "Die Prüfung ist außerhalb der Stadt."
+   ]
+  }
+ },
+ {
+  "id": "b1-10-nicht-nur-ein-zimmer",
+  "level": "B1",
+  "title": "Nicht nur ein Zimmer",
+  "theme": "Wohnungssuche: Anzeigen, Besichtigung, Unterlagen",
+  "grammar": "Zweiteilige Konnektoren (nicht nur … sondern auch, sowohl … als auch, weder … noch, entweder … oder)",
+  "intro": "Nachts Anzeigen lesen, samstags Besichtigung mit dreißig anderen Leuten – kennst du das auch? In diesem Lied suchst du mit nach einer Wohnung und übst zweiteilige Konnektoren wie weder … noch und sowohl … als auch.",
+  "lyrics": "[Verse 1]\nEs ist nach Mitternacht, mein Handy leuchtet blau,\nich lese Wohnungsanzeigen, draußen ist es nass und grau.\nDie eine ist weder hell noch ruhig – sie liegt direkt am Gleis,\ndie andere hat sowohl Balkon als auch Garten – doch zu welchem Preis?\n\n[Chorus]\nNicht nur ein Zimmer, sondern auch ein Zuhause –\nweder zu laut noch zu dunkel, und abends komm ich nach Hause.\nEntweder find ich es bald, oder ich suche weiter –\nirgendwo brennt ein Fenster für mich, hell und heiter.\n\n[Verse 2]\nAm Samstag ist Besichtigung: dreißig Leute auf der Treppe,\nich habe sowohl Gehaltsnachweise als auch die Schufa in der Mappe.\nDer Makler sagt: „Entweder Sie entscheiden sich sofort, oder Sie sind raus.“\nIch gehe in den Regen und atme langsam aus.\n\n[Chorus]\nNicht nur ein Zimmer, sondern auch ein Zuhause –\nweder zu laut noch zu dunkel, und abends komm ich nach Hause.\nEntweder find ich es bald, oder ich suche weiter –\nirgendwo brennt ein Fenster für mich, hell und heiter.\n\n[Bridge]\nAm Montag klingelt mein Telefon, eine ältere Dame spricht:\n„Die Wohnung ist weder neu noch groß – aber sie hat viel Licht.“\nIch sehe vom Fenster sowohl den Park als auch die Bahn,\nund in der ersten Nacht komme ich endlich bei mir an.\n\n[Chorus]\nNicht nur ein Zimmer, sondern auch ein Zuhause –\nweder zu laut noch zu dunkel, und abends komm ich nach Hause.\nEntweder find ich es bald, oder ich suche weiter –\nirgendwo brennt ein Fenster für mich, hell und heiter.\n\n[Outro]\nNicht nur ein Zimmer,\nsondern auch ein Zuhause.",
+  "vocab": [
+   [
+    "die Wohnungsanzeige, die Wohnungsanzeigen",
+    "Text im Internet oder in der Zeitung: Eine Wohnung ist frei."
+   ],
+   [
+    "leuchten",
+    "hell sein, Licht geben"
+   ],
+   [
+    "das Gleis, die Gleise",
+    "Schienen, auf denen Züge und Bahnen fahren"
+   ],
+   [
+    "die Besichtigung, die Besichtigungen",
+    "Termin, bei dem man sich eine Wohnung ansieht"
+   ],
+   [
+    "der Gehaltsnachweis, die Gehaltsnachweise",
+    "Dokument, das zeigt, wie viel Geld man verdient"
+   ],
+   [
+    "die Schufa",
+    "Auskunft, ob man seine Rechnungen immer bezahlt hat"
+   ],
+   [
+    "die Mappe, die Mappen",
+    "Hülle für Dokumente und Papiere"
+   ],
+   [
+    "der Makler, die Makler",
+    "Person, die Wohnungen vermittelt und dafür Geld bekommt"
+   ],
+   [
+    "sich entscheiden",
+    "eine Wahl treffen"
+   ],
+   [
+    "ankommen (bei sich)",
+    "hier: sich endlich wohl und zu Hause fühlen"
+   ]
+  ],
+  "gap": {
+   "type": "gap",
+   "title": "Aufgabe 2: Lückentext",
+   "instruction": "Hör das Lied und ergänze die fehlenden Wörter.",
+   "items": [
+    "ich lese ___, draußen ist es nass und grau.",
+    "Die eine ist weder hell ___ ruhig – sie liegt direkt am Gleis,",
+    "ich habe sowohl Gehaltsnachweise ___ die Schufa in der Mappe.",
+    "___ find ich es bald, oder ich suche weiter –",
+    "Ich sehe vom Fenster sowohl den Park als auch die ___,"
+   ],
+   "solutions": [
+    "Wohnungsanzeigen",
+    "noch",
+    "als auch",
+    "Entweder",
+    "Bahn"
+   ]
+  },
+  "tf": [
+   [
+    "Die Person sucht nachts auf dem Handy nach einer Wohnung.",
+    true,
+    ""
+   ],
+   [
+    "Die erste Wohnung ist hell und ruhig.",
+    false,
+    "Sie ist weder hell noch ruhig."
+   ],
+   [
+    "Zur Besichtigung kommen viele Leute.",
+    true,
+    ""
+   ],
+   [
+    "Der Makler gibt der Person viel Zeit für die Entscheidung.",
+    false,
+    "Sie soll sich sofort entscheiden."
+   ],
+   [
+    "Die Wohnung der älteren Dame ist neu und groß.",
+    false,
+    "Sie ist weder neu noch groß, aber sie hat viel Licht."
+   ]
+  ],
+  "gram": {
+   "title": "Grammatik – zweiteilige Konnektoren",
+   "instruction": "Verbinde die Sätze mit dem Konnektor in Klammern.",
+   "items": [
+    "Die Wohnung ist nicht hell. Sie ist nicht ruhig. (weder … noch)",
+    "Die Wohnung hat einen Balkon. Sie hat einen Garten. (sowohl … als auch)",
+    "Ich nehme die Wohnung heute. Oder ich suche weiter. (entweder … oder)",
+    "Ich suche ein Zimmer. Ich suche auch ein Zuhause. (nicht nur … sondern auch)",
+    "Ich habe keine Zeit. Ich habe kein Geld. (weder … noch)",
+    "Wir ziehen im Mai um. Oder wir ziehen im Juni um. (entweder … oder)"
+   ],
+   "solutions": [
+    "Die Wohnung ist weder hell noch ruhig.",
+    "Die Wohnung hat sowohl einen Balkon als auch einen Garten.",
+    "Entweder nehme ich die Wohnung heute, oder ich suche weiter.",
+    "Ich suche nicht nur ein Zimmer, sondern auch ein Zuhause.",
+    "Ich habe weder Zeit noch Geld.",
+    "Wir ziehen entweder im Mai oder im Juni um."
+   ]
+  }
+ },
+ {
+  "id": "b2-09-der-letzte-zug",
+  "level": "B2",
+  "title": "Sobald der letzte Zug kommt",
+  "theme": "Pendeln: lange Arbeitswege, Nahverkehr bei Nacht, Verspätungen, Zeit für sich",
+  "grammar": "Temporale Nebensätze auf B2-Niveau (seitdem, während, solange, sobald, bevor, bis)",
+  "intro": "Schicht vorbei, Bahnsteig im Regen, zehn Minuten Verspätung – dieser Song nimmt dich mit auf den langen Weg nach Hause. Du übst temporale Nebensätze mit seitdem, während, solange, sobald, bevor und bis.",
+  "lyrics": "[Verse 1]\nDie Schicht ist vorbei, der Bahnsteig glänzt nass im Licht,\ndie Anzeige blinkt: „Zehn Minuten später“ – mehr sagt sie nicht.\nSeitdem ich in Dortmund arbeite und in Essen wohne,\nkenne ich jede Station, jede Durchsage, jede Zone.\nWährend die Stadt schon schläft, stehe ich hier und warte,\nin der Hand einen Kaffee, in der Tasche die Monatskarte.\n\n[Chorus]\nSobald der letzte Zug kommt, fahr ich nach Haus,\nsolange die Lichter brennen, halte ich das aus.\nBevor der Tag beginnt, bin ich zurück bei dir –\nbis der letzte Zug kommt, wartet die Nacht mit mir.\n\n[Verse 2]\nWährend der Zug durch die Nacht nach Westen rollt,\nschreibe ich dir: „Bin bald da“ – mehr habe ich nie gewollt.\nSolange mein Akku hält, höre ich deine Sprachnachricht,\ndeine Stimme im Kopfhörer – wie ein kleines, warmes Licht.\nBevor ich aussteige, lege ich die Stirn an die Scheibe,\nich sehe unser Fenster – und weiß, warum ich bleibe.\n\n[Chorus]\nSobald der letzte Zug kommt, fahr ich nach Haus,\nsolange die Lichter brennen, halte ich das aus.\nBevor der Tag beginnt, bin ich zurück bei dir –\nbis der letzte Zug kommt, wartet die Nacht mit mir.\n\n[Bridge]\nBis ich näher an der Arbeit wohne, ist der Zug mein Zuhause,\nzwischen Abfahrt und Ankunft liegt meine kleine Pause.\nSeitdem ich das so sehe, ist der Weg nicht mehr so schwer –\ndie Nacht fährt mit mir mit, und allein bin ich nicht mehr.\n\n[Chorus]\nSobald der letzte Zug kommt, fahr ich nach Haus,\nsolange die Lichter brennen, halte ich das aus.\nBevor der Tag beginnt, bin ich zurück bei dir –\nbis der letzte Zug kommt, wartet die Nacht mit mir.\n\n[Outro]\nSobald der letzte Zug kommt …\nfahr ich nach Haus.\nBis dahin wartet die Nacht mit mir.",
+  "vocab": [
+   [
+    "pendeln",
+    "regelmäßig zwischen Wohnort und Arbeitsort hin- und herfahren"
+   ],
+   [
+    "die Schicht, die Schichten",
+    "feste Arbeitszeit, z. B. Früh-, Spät- oder Nachtschicht"
+   ],
+   [
+    "der Bahnsteig, die Bahnsteige",
+    "Ort am Gleis, an dem man ein- und aussteigt"
+   ],
+   [
+    "die Anzeige, die Anzeigen",
+    "Bildschirm mit Informationen, z. B. zu Abfahrt und Verspätung"
+   ],
+   [
+    "die Durchsage, die Durchsagen",
+    "Information über den Lautsprecher"
+   ],
+   [
+    "die Monatskarte, die Monatskarten",
+    "Fahrkarte, die einen Monat lang gilt"
+   ],
+   [
+    "etwas aushalten",
+    "etwas Schweres ertragen, nicht aufgeben"
+   ],
+   [
+    "der Akku, die Akkus",
+    "Batterie im Handy, die man aufladen kann"
+   ],
+   [
+    "die Sprachnachricht, die Sprachnachrichten",
+    "gesprochene Nachricht im Messenger"
+   ],
+   [
+    "die Ankunft, die Ankünfte",
+    "der Moment, in dem man an einem Ort ankommt"
+   ]
+  ],
+  "gap": {
+   "type": "gap",
+   "title": "Aufgabe 2: Lückentext",
+   "instruction": "Hör das Lied und ergänze die fehlenden Wörter.",
+   "items": [
+    "die ___ blinkt: „Zehn Minuten später“ – mehr sagt sie nicht.",
+    "___ ich in Dortmund arbeite und in Essen wohne,",
+    "in der Hand einen Kaffee, in der Tasche die ___.",
+    "___ mein Akku hält, höre ich deine Sprachnachricht,",
+    "Bis ich näher an der Arbeit wohne, ist der Zug mein ___,"
+   ],
+   "solutions": [
+    "Anzeige",
+    "Seitdem",
+    "Monatskarte",
+    "Solange",
+    "Zuhause"
+   ]
+  },
+  "tf": [
+   [
+    "Die Person arbeitet in Essen und wohnt in Dortmund.",
+    false,
+    "Sie arbeitet in Dortmund und wohnt in Essen."
+   ],
+   [
+    "Der Zug kommt zehn Minuten später.",
+    true,
+    ""
+   ],
+   [
+    "Die Person hat eine Monatskarte.",
+    true,
+    ""
+   ],
+   [
+    "Während der Fahrt telefoniert die Person.",
+    false,
+    "Sie schreibt eine Nachricht und hört eine Sprachnachricht."
+   ],
+   [
+    "Die Person sieht die Zeit im Zug als kleine Pause.",
+    true,
+    ""
+   ]
+  ],
+  "gram": {
+   "title": "Grammatik – temporale Nebensätze",
+   "instruction": "Verbinde die Sätze mit dem Konnektor in Klammern. Beginne mit dem Nebensatz.",
+   "items": [
+    "Der letzte Zug kommt. Ich fahre nach Hause. (sobald)",
+    "Ich arbeite in Dortmund. Seit dieser Zeit pendle ich jeden Tag. (seitdem)",
+    "Die Stadt schläft. Gleichzeitig warte ich am Bahnsteig. (während)",
+    "Mein Akku hält noch. So lange höre ich Musik. (solange)",
+    "Ich steige aus. Vorher schreibe ich dir. (bevor)",
+    "Ich finde eine Stelle in der Nähe. Bis dahin fahre ich mit dem Zug. (bis)"
+   ],
+   "solutions": [
+    "Sobald der letzte Zug kommt, fahre ich nach Hause.",
+    "Seitdem ich in Dortmund arbeite, pendle ich jeden Tag.",
+    "Während die Stadt schläft, warte ich am Bahnsteig.",
+    "Solange mein Akku hält, höre ich Musik.",
+    "Bevor ich aussteige, schreibe ich dir.",
+    "Bis ich eine Stelle in der Nähe finde, fahre ich mit dem Zug."
+   ]
+  }
+ },
+ {
+  "id": "b2-10-das-fenster-gegenueber",
+  "level": "B2",
+  "title": "Das Fenster gegenüber",
+  "theme": "Neu in der Großstadt: Anonymität, Einsamkeit, neue Kontakte und Freundschaft",
+  "grammar": "Relativsätze auf B2-Niveau: Relativpronomen im Genitiv (dessen, deren), was und wo(r)- nach alles/das Beste (alles, was / alles, wonach), Relativsätze mit wo und wer",
+  "intro": "Neue Stadt, viele Menschen – und trotzdem kennt niemand deinen Namen. Dieser nächtliche Song erzählt von einem Licht im Fenster gegenüber und trainiert Relativsätze mit deren, dessen, was, wo und wer.",
+  "lyrics": "[Verse 1]\nSeit März wohne ich im vierten Stock, im Hinterhaus,\ndie Nachbarn, deren Namen ich nicht kenne, sehen müde und eilig aus.\nDort, wo ich herkomme, grüßt man sich auf jeder Treppe –\nhier höre ich nur meine Schritte, wenn ich die Einkäufe schleppe.\nNur gegenüber, wo die alte Kastanie steht,\nbrennt jede Nacht ein Licht, das erst am Morgen ausgeht.\n\n[Chorus]\nIn der Stadt, in der niemand meinen Namen kennt,\nbist du das Fenster, in dem noch Licht brennt.\nDu bist alles, wonach ich suche, wenn es regnet –\ndas Beste, was mir hier begegnet.\n\n[Verse 2]\nEines Nachts im Kiosk, wo es noch warmen Kaffee gab,\nstand sie vor mir – die Frau, deren Fenster ich jeden Abend sah.\nSie lachte: „Du bist der vom vierten Stock, der nachts nie schlafen kann.“\nWir tranken Kaffee im Regen – und so fing alles an.\nSie erzählte von der Arbeit, für die sie hergezogen war,\nvon Sonntagen, an denen das Telefon schwieg – ein ganzes Jahr.\n\n[Chorus]\nIn der Stadt, in der niemand meinen Namen kennt,\nbist du das Fenster, in dem noch Licht brennt.\nDu bist alles, wonach ich suche, wenn es regnet –\ndas Beste, was mir hier begegnet.\n\n[Bridge]\nWer neu in einer Stadt ist, sucht nach einem kleinen Blick,\nnach einem Hallo im Treppenhaus, nach einem Stück Glück.\nWer nachts allein ist, ist selten der Einzige, der wacht –\nirgendwo ist ein Fenster, hinter dem noch jemand lacht.\n\n[Chorus]\nIn der Stadt, in der niemand meinen Namen kennt,\nbist du das Fenster, in dem noch Licht brennt.\nDu bist alles, wonach ich suche, wenn es regnet –\ndas Beste, was mir hier begegnet.\n\n[Outro]\nDas Fenster gegenüber,\nin dem noch Licht brennt –\ndas Beste, was mir hier begegnet.",
+  "vocab": [
+   [
+    "das Hinterhaus, die Hinterhäuser",
+    "Haus hinter einem anderen Haus, man geht durch den Hof"
+   ],
+   [
+    "grüßen",
+    "„Hallo“ oder „Guten Tag“ sagen"
+   ],
+   [
+    "schleppen",
+    "etwas Schweres mühsam tragen"
+   ],
+   [
+    "gegenüber",
+    "auf der anderen Seite, z. B. der Straße"
+   ],
+   [
+    "die Kastanie, die Kastanien",
+    "großer Baum mit braunen Früchten"
+   ],
+   [
+    "der Kiosk, die Kioske",
+    "kleiner Laden, oft bis spät in die Nacht geöffnet"
+   ],
+   [
+    "herziehen (ist hergezogen)",
+    "an diesen Ort umziehen"
+   ],
+   [
+    "schweigen",
+    "nichts sagen, still sein"
+   ],
+   [
+    "begegnen (+ Dativ)",
+    "jemanden zufällig treffen"
+   ],
+   [
+    "wachen",
+    "nicht schlafen, wach bleiben"
+   ]
+  ],
+  "gap": {
+   "type": "gap",
+   "title": "Aufgabe 2: Lückentext",
+   "instruction": "Hör das Lied und ergänze die fehlenden Wörter.",
+   "items": [
+    "die Nachbarn, ___ Namen ich nicht kenne, sehen müde und eilig aus.",
+    "Dort, wo ich herkomme, ___ man sich auf jeder Treppe –",
+    "bist du das Fenster, in dem noch Licht ___.",
+    "Sie erzählte von der Arbeit, für die sie ___ war,",
+    "irgendwo ist ein Fenster, hinter dem noch jemand ___."
+   ],
+   "solutions": [
+    "deren",
+    "grüßt",
+    "brennt",
+    "hergezogen",
+    "lacht"
+   ]
+  },
+  "tf": [
+   [
+    "Die Person wohnt im Erdgeschoss.",
+    false,
+    "Sie wohnt im vierten Stock im Hinterhaus."
+   ],
+   [
+    "Dort, wo die Person herkommt, grüßen sich die Menschen auf der Treppe.",
+    true,
+    ""
+   ],
+   [
+    "Im Fenster gegenüber brennt jede Nacht Licht.",
+    true,
+    ""
+   ],
+   [
+    "Die beiden lernen sich morgens in einem Café kennen.",
+    false,
+    "Sie treffen sich nachts im Kiosk."
+   ],
+   [
+    "Die Frau ist wegen ihrer Arbeit in die Stadt gezogen.",
+    true,
+    ""
+   ]
+  ],
+  "gram": {
+   "title": "Grammatik – Relativsätze auf B2-Niveau",
+   "instruction": "Verbinde die Sätze mit einem Relativsatz. Nutze das Wort in Klammern.",
+   "items": [
+    "Das ist die Nachbarin. Ihr Fenster ist nachts hell. (deren)",
+    "Ich kenne einen Kollegen. Sein Sohn wohnt auch in unserem Haus. (dessen)",
+    "Das ist alles. Ich brauche es. (was)",
+    "Sie hat alles gefunden. Sie hat danach gesucht. (wonach)",
+    "Ich komme aus einer Stadt. Dort grüßen sich die Menschen auf der Treppe. (wo)",
+    "Jemand ist neu in der Stadt. Er braucht Kontakte. (wer)"
+   ],
+   "solutions": [
+    "Das ist die Nachbarin, deren Fenster nachts hell ist.",
+    "Ich kenne einen Kollegen, dessen Sohn auch in unserem Haus wohnt.",
+    "Das ist alles, was ich brauche.",
+    "Sie hat alles gefunden, wonach sie gesucht hat.",
+    "Ich komme aus einer Stadt, wo sich die Menschen auf der Treppe grüßen.",
+    "Wer neu in der Stadt ist, braucht Kontakte."
+   ]
+  }
+ },
+ {
+  "id": "c1-09-nicht-zum-verkauf",
+  "level": "C1",
+  "title": "Die Stadt steht nicht zum Verkauf",
+  "theme": "Wohnungsnot und Gentrifizierung: Mieterhöhung, Verdrängung, Nachbarschaft und Widerstand",
+  "grammar": "Funktionsverbgefüge (zum Verkauf stehen, in Kauf nehmen, unter Druck setzen, zur Sprache bringen, in Frage stellen, Widerspruch einlegen, in Anspruch nehmen, eine Entscheidung treffen)",
+  "intro": "Neue Fassaden, leere Fenster, steigende Mieten – dieser Song erzählt von einer Nachbarschaft, die sich gegen Verdrängung wehrt. Du übst dabei Funktionsverbgefüge wie unter Druck setzen, in Kauf nehmen und zur Sprache bringen.",
+  "lyrics": "[Verse 1]\nIm Regen glänzt ein Bauschild: „Exklusives Wohnen am Kanal“,\nwo früher Frau Yilmaz ihren Kiosk hatte, ist es jetzt steril und kahl.\nDie Laternen fallen auf Fassaden, frisch gestrichen, kühl und weiß –\nund in jedem dritten Fenster brennt kein Licht, nur ein Preis.\n\n[Chorus]\nDie Stadt steht nicht zum Verkauf,\nwir nehmen es nicht in Kauf,\ndass man uns unter Druck setzt, Straße für Straße, Haus für Haus.\nWir bringen es zur Sprache, laut und klar:\nWir bleiben, denn wir sind schon da.\n\n[Verse 2]\nDann kam der Brief: „Modernisierung“, vierzig Prozent mehr Miete ab Januar,\nmeine Nachbarin, achtzig, stellt alles in Frage, was ihr einmal sicher war.\nWir legen Widerspruch ein, nehmen Beratung in Anspruch, treffen uns im Flur –\ndenn wer sein Zuhause verliert, verliert nicht nur vier Wände und eine Tür.\n\n[Chorus]\nDie Stadt steht nicht zum Verkauf,\nwir nehmen es nicht in Kauf,\ndass man uns unter Druck setzt, Straße für Straße, Haus für Haus.\nWir bringen es zur Sprache, laut und klar:\nWir bleiben, denn wir sind schon da.\n\n[Bridge]\nUm Mitternacht wird die Stadt zum Schaufenster,\ndie leeren Wohnungen starren dunkel wie Gespenster.\nDoch wir haben eine Entscheidung getroffen, leise, ohne Applaus:\nWir ziehen nicht aus.\n\n[Chorus]\nDie Stadt steht nicht zum Verkauf,\nwir nehmen es nicht in Kauf,\ndass man uns unter Druck setzt, Straße für Straße, Haus für Haus.\nWir bringen es zur Sprache, laut und klar:\nWir bleiben, denn wir sind schon da.\n\n[Outro]\nDie Stadt steht nicht zum Verkauf –\nwir ziehen nicht aus.",
+  "vocab": [
+   [
+    "das Bauschild, die Bauschilder",
+    "Schild an einer Baustelle, das zeigt, was gebaut wird"
+   ],
+   [
+    "steril",
+    "hier: sauber, aber ohne Leben und Gefühl"
+   ],
+   [
+    "die Fassade, die Fassaden",
+    "die Außenseite eines Hauses, die man von der Straße sieht"
+   ],
+   [
+    "die Modernisierung, die Modernisierungen",
+    "Umbau, der eine Wohnung moderner macht – und oft teurer"
+   ],
+   [
+    "zum Verkauf stehen",
+    "verkauft werden sollen; man kann es kaufen"
+   ],
+   [
+    "unter Druck setzen",
+    "jemanden stark drängen, etwas zu tun"
+   ],
+   [
+    "Widerspruch einlegen",
+    "offiziell sagen, dass man mit einer Entscheidung nicht einverstanden ist"
+   ],
+   [
+    "in Anspruch nehmen",
+    "ein Angebot oder eine Hilfe nutzen"
+   ],
+   [
+    "die Beratung, die Beratungen",
+    "Hilfe durch Fachleute, z. B. beim Mieterverein"
+   ],
+   [
+    "das Gespenst, die Gespenster",
+    "Geist, der (in Geschichten) nachts erscheint"
+   ]
+  ],
+  "gap": {
+   "type": "gap",
+   "title": "Aufgabe 2: Lückentext",
+   "instruction": "Hör das Lied und ergänze die fehlenden Wörter.",
+   "items": [
+    "wo früher Frau Yilmaz ihren ___ hatte, ist es jetzt steril und kahl.",
+    "dass man uns unter ___ setzt, Straße für Straße, Haus für Haus.",
+    "meine Nachbarin, achtzig, stellt alles in ___, was ihr einmal sicher war.",
+    "Wir legen ___ ein, nehmen Beratung in Anspruch, treffen uns im Flur –",
+    "Die Stadt steht nicht zum ___,"
+   ],
+   "solutions": [
+    "Kiosk",
+    "Druck",
+    "Frage",
+    "Widerspruch",
+    "Verkauf"
+   ]
+  },
+  "tf": [
+   [
+    "Den Kiosk von Frau Yilmaz gibt es noch.",
+    false,
+    "Wo früher ihr Kiosk war, ist es jetzt steril und kahl."
+   ],
+   [
+    "In vielen Fenstern der neuen Häuser brennt kein Licht.",
+    true,
+    ""
+   ],
+   [
+    "Die Miete soll ab Januar um vierzig Prozent steigen.",
+    true,
+    ""
+   ],
+   [
+    "Die Nachbarn akzeptieren die Mieterhöhung ohne Protest.",
+    false,
+    "Sie legen Widerspruch ein und nehmen Beratung in Anspruch."
+   ],
+   [
+    "Am Ende entscheiden die Bewohner, auszuziehen.",
+    false,
+    "Sie haben entschieden: „Wir ziehen nicht aus.“"
+   ]
+  ],
+  "gram": {
+   "title": "Grammatik – Funktionsverbgefüge",
+   "instruction": "Formuliere die Sätze mit einem Funktionsverbgefüge um. Das Nomen in Klammern hilft dir.",
+   "items": [
+    "Man kann das Haus am Kanal kaufen. (Verkauf)",
+    "Wir akzeptieren die hohe Miete nicht. (Kauf)",
+    "Der Vermieter bedrängt die Mieter. (Druck)",
+    "Wir sprechen das Problem in der Versammlung an. (Sprache)",
+    "Sie widerspricht der Mieterhöhung. (Widerspruch)",
+    "Die Nachbarn entscheiden gemeinsam. (Entscheidung)"
+   ],
+   "solutions": [
+    "Das Haus am Kanal steht zum Verkauf.",
+    "Wir nehmen die hohe Miete nicht in Kauf.",
+    "Der Vermieter setzt die Mieter unter Druck.",
+    "Wir bringen das Problem in der Versammlung zur Sprache.",
+    "Sie legt Widerspruch gegen die Mieterhöhung ein.",
+    "Die Nachbarn treffen gemeinsam eine Entscheidung."
+   ]
+  }
+ },
+ {
+  "id": "c1-10-sollte-das-display-leuchten",
+  "level": "C1",
+  "title": "Sollte das Display leuchten",
+  "theme": "Ständige Erreichbarkeit: Homeoffice, Feierabend und das Recht auf Abschalten",
+  "grammar": "Konditionalsätze ohne wenn (Verberststellung: Sollte …, Hätte …, Gäbe es …, Ist es …) sowie es sei denn und vorausgesetzt(, dass)",
+  "intro": "Eine Nachricht um Mitternacht – und schon ist das Büro wieder im Schlafzimmer. Mit diesem Song übst du Konditionalsätze ohne wenn („Sollte das Display leuchten, …“) sowie es sei denn und vorausgesetzt.",
+  "lyrics": "[Verse 1]\nKurz nach elf, die Straße glänzt wie schwarzer Lack im Regen,\nim Haus gegenüber leuchten Laptops, keiner kann sie weglegen.\nHätte ich mein Handy ausgeschaltet, wäre diese Nacht noch meine –\ndoch da steht: „Nur eine kurze Frage …“, und ich bin nicht mehr alleine.\n\n[Chorus]\nSollte das Display leuchten, lass es leuchten,\nsollte jemand schreiben, lass ihn warten bis um neun.\nIst es wirklich dringend, ist es morgen auch noch dringend –\nsollte die Nacht dich rufen, sag ihr nicht Nein.\n\n[Verse 2]\nDie Chefin schreibt um Mitternacht, drei Ausrufezeichen, kein Gruß.\nAntworte ich heute sofort, wird es morgen schon zum Muss.\nGäbe es ein Recht auf Feierabend, das auch wirklich gilt,\nwäre diese Stadt bei Nacht kein Großraumbüro, sondern ein Bild.\n\n[Chorus]\nSollte das Display leuchten, lass es leuchten,\nsollte jemand schreiben, lass ihn warten bis um neun.\nIst es wirklich dringend, ist es morgen auch noch dringend –\nsollte die Nacht dich rufen, sag ihr nicht Nein.\n\n[Bridge]\nIch bin erreichbar – es sei denn, es ist Nacht,\nich bin für alle da – vorausgesetzt, ich habe auch an mich gedacht.\nBrennt es wirklich, ruf mich an – doch nicht für jeden Satz,\nheute Nacht hat nur der Regen an meinem Fenster Platz.\n\n[Chorus]\nSollte das Display leuchten, lass es leuchten,\nsollte jemand schreiben, lass ihn warten bis um neun.\nIst es wirklich dringend, ist es morgen auch noch dringend –\nsollte die Nacht dich rufen, sag ihr nicht Nein.\n\n[Outro]\nSollte das Display leuchten –\nlass es leuchten.\nDie Nacht gehört uns.",
+  "vocab": [
+   [
+    "weglegen",
+    "etwas zur Seite legen und nicht mehr benutzen"
+   ],
+   [
+    "das Display, die Displays",
+    "der Bildschirm eines Handys oder Geräts"
+   ],
+   [
+    "dringend",
+    "sehr eilig; muss schnell erledigt werden"
+   ],
+   [
+    "das Ausrufezeichen, die Ausrufezeichen",
+    "das Satzzeichen „!“"
+   ],
+   [
+    "zum Muss werden",
+    "zu etwas werden, das man unbedingt tun muss"
+   ],
+   [
+    "der Feierabend, die Feierabende",
+    "die freie Zeit nach der Arbeit"
+   ],
+   [
+    "gelten",
+    "gültig sein, wirklich wirksam sein"
+   ],
+   [
+    "das Großraumbüro, die Großraumbüros",
+    "großes Büro, in dem viele Menschen zusammen arbeiten"
+   ],
+   [
+    "erreichbar",
+    "so, dass man jemanden per Telefon oder Mail kontaktieren kann"
+   ],
+   [
+    "es sei denn",
+    "außer wenn"
+   ]
+  ],
+  "gap": {
+   "type": "gap",
+   "title": "Aufgabe 2: Lückentext",
+   "instruction": "Hör das Lied und ergänze die fehlenden Wörter.",
+   "items": [
+    "Hätte ich mein Handy ___, wäre diese Nacht noch meine –",
+    "___ jemand schreiben, lass ihn warten bis um neun.",
+    "Antworte ich heute sofort, wird es morgen schon zum ___.",
+    "___ es ein Recht auf Feierabend, das auch wirklich gilt,",
+    "Ich bin erreichbar – es sei ___, es ist Nacht,"
+   ],
+   "solutions": [
+    "ausgeschaltet",
+    "sollte",
+    "Muss",
+    "Gäbe",
+    "denn"
+   ]
+  },
+  "tf": [
+   [
+    "Die Szene spielt an einem trockenen Abend.",
+    false,
+    "Die Straße glänzt im Regen."
+   ],
+   [
+    "Im Haus gegenüber sind noch Laptops an.",
+    true,
+    ""
+   ],
+   [
+    "Die Chefin schreibt eine höfliche Nachricht mit Gruß.",
+    false,
+    "Sie schreibt mit drei Ausrufezeichen und ohne Gruß."
+   ],
+   [
+    "Die Person befürchtet, dass eine sofortige Antwort bald erwartet wird.",
+    true,
+    ""
+   ],
+   [
+    "In einem echten Notfall darf man die Person anrufen.",
+    true,
+    ""
+   ]
+  ],
+  "gram": {
+   "title": "Grammatik – Konditionalsätze ohne wenn",
+   "instruction": "Formuliere die Sätze ohne wenn. Das Verb steht dann an Position 1.",
+   "items": [
+    "Wenn das Handy klingelt, ignoriere ich es.",
+    "Wenn die Chefin noch einmal schreibt, antworte ich morgen früh.",
+    "Wenn es einen Notfall geben sollte, ruf mich bitte an.",
+    "Wenn ich früher Feierabend gemacht hätte, wäre ich jetzt nicht so müde.",
+    "Wenn es ein Recht auf Abschalten gäbe, wäre vieles leichter.",
+    "Wenn die Mail wirklich dringend ist, ist sie es morgen auch noch."
+   ],
+   "solutions": [
+    "Klingelt das Handy, ignoriere ich es.",
+    "Schreibt die Chefin noch einmal, antworte ich morgen früh.",
+    "Sollte es einen Notfall geben, ruf mich bitte an.",
+    "Hätte ich früher Feierabend gemacht, wäre ich jetzt nicht so müde.",
+    "Gäbe es ein Recht auf Abschalten, wäre vieles leichter.",
+    "Ist die Mail wirklich dringend, ist sie es morgen auch noch."
+   ]
+  }
+ }
+]
