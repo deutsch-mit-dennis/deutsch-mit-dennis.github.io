@@ -1,0 +1,236 @@
+[
+ {
+  "id": "b2-09-der-letzte-zug",
+  "level": "B2",
+  "title": "Sobald der letzte Zug kommt",
+  "theme": "Pendeln: lange Arbeitswege, Nahverkehr bei Nacht, Verspätungen, Zeit für sich",
+  "grammar": "Temporale Nebensätze auf B2-Niveau (seitdem, während, solange, sobald, bevor, bis)",
+  "intro": "Schicht vorbei, Bahnsteig im Regen, zehn Minuten Verspätung – dieser Song nimmt dich mit auf den langen Weg nach Hause. Du übst temporale Nebensätze mit seitdem, während, solange, sobald, bevor und bis.",
+  "lyrics": "[Verse 1]\nDie Schicht ist vorbei, der Bahnsteig glänzt nass im Licht,\ndie Anzeige blinkt: „Zehn Minuten später“ – mehr sagt sie nicht.\nSeitdem ich in Dortmund arbeite und in Essen wohne,\nkenne ich jede Station, jede Durchsage, jede Zone.\nWährend die Stadt schon schläft, stehe ich hier und warte,\nin der Hand einen Kaffee, in der Tasche die Monatskarte.\n\n[Chorus]\nSobald der letzte Zug kommt, fahr ich nach Haus,\nsolange die Lichter brennen, halte ich das aus.\nBevor der Tag beginnt, bin ich zurück bei dir –\nbis der letzte Zug kommt, wartet die Nacht mit mir.\n\n[Verse 2]\nWährend der Zug durch die Nacht nach Westen rollt,\nschreibe ich dir: „Bin bald da“ – mehr habe ich nie gewollt.\nSolange mein Akku hält, höre ich deine Sprachnachricht,\ndeine Stimme im Kopfhörer – wie ein kleines, warmes Licht.\nBevor ich aussteige, lege ich die Stirn an die Scheibe,\nich sehe unser Fenster – und weiß, warum ich bleibe.\n\n[Chorus]\nSobald der letzte Zug kommt, fahr ich nach Haus,\nsolange die Lichter brennen, halte ich das aus.\nBevor der Tag beginnt, bin ich zurück bei dir –\nbis der letzte Zug kommt, wartet die Nacht mit mir.\n\n[Bridge]\nBis ich näher an der Arbeit wohne, ist der Zug mein Zuhause,\nzwischen Abfahrt und Ankunft liegt meine kleine Pause.\nSeitdem ich das so sehe, ist der Weg nicht mehr so schwer –\ndie Nacht fährt mit mir mit, und allein bin ich nicht mehr.\n\n[Chorus]\nSobald der letzte Zug kommt, fahr ich nach Haus,\nsolange die Lichter brennen, halte ich das aus.\nBevor der Tag beginnt, bin ich zurück bei dir –\nbis der letzte Zug kommt, wartet die Nacht mit mir.\n\n[Outro]\nSobald der letzte Zug kommt …\nfahr ich nach Haus.\nBis dahin wartet die Nacht mit mir.",
+  "vocab": [
+   [
+    "pendeln",
+    "regelmäßig zwischen Wohnort und Arbeitsort hin- und herfahren"
+   ],
+   [
+    "die Schicht, die Schichten",
+    "feste Arbeitszeit, z. B. Früh-, Spät- oder Nachtschicht"
+   ],
+   [
+    "der Bahnsteig, die Bahnsteige",
+    "Ort am Gleis, an dem man ein- und aussteigt"
+   ],
+   [
+    "die Anzeige, die Anzeigen",
+    "Bildschirm mit Informationen, z. B. zu Abfahrt und Verspätung"
+   ],
+   [
+    "die Durchsage, die Durchsagen",
+    "Information über den Lautsprecher"
+   ],
+   [
+    "die Monatskarte, die Monatskarten",
+    "Fahrkarte, die einen Monat lang gilt"
+   ],
+   [
+    "etwas aushalten",
+    "etwas Schweres ertragen, nicht aufgeben"
+   ],
+   [
+    "der Akku, die Akkus",
+    "Batterie im Handy, die man aufladen kann"
+   ],
+   [
+    "die Sprachnachricht, die Sprachnachrichten",
+    "gesprochene Nachricht im Messenger"
+   ],
+   [
+    "die Ankunft, die Ankünfte",
+    "der Moment, in dem man an einem Ort ankommt"
+   ]
+  ],
+  "gap": {
+   "type": "gap",
+   "title": "Aufgabe 2: Lückentext",
+   "instruction": "Hör das Lied und ergänze die fehlenden Wörter.",
+   "items": [
+    "die ___ blinkt: „Zehn Minuten später“ – mehr sagt sie nicht.",
+    "___ ich in Dortmund arbeite und in Essen wohne,",
+    "in der Hand einen Kaffee, in der Tasche die ___.",
+    "___ mein Akku hält, höre ich deine Sprachnachricht,",
+    "Bis ich näher an der Arbeit wohne, ist der Zug mein ___,"
+   ],
+   "solutions": [
+    "Anzeige",
+    "Seitdem",
+    "Monatskarte",
+    "Solange",
+    "Zuhause"
+   ]
+  },
+  "tf": [
+   [
+    "Die Person arbeitet in Essen und wohnt in Dortmund.",
+    false,
+    "Sie arbeitet in Dortmund und wohnt in Essen."
+   ],
+   [
+    "Der Zug kommt zehn Minuten später.",
+    true,
+    ""
+   ],
+   [
+    "Die Person hat eine Monatskarte.",
+    true,
+    ""
+   ],
+   [
+    "Während der Fahrt telefoniert die Person.",
+    false,
+    "Sie schreibt eine Nachricht und hört eine Sprachnachricht."
+   ],
+   [
+    "Die Person sieht die Zeit im Zug als kleine Pause.",
+    true,
+    ""
+   ]
+  ],
+  "gram": {
+   "title": "Grammatik – temporale Nebensätze",
+   "instruction": "Verbinde die Sätze mit dem Konnektor in Klammern. Beginne mit dem Nebensatz.",
+   "items": [
+    "Der letzte Zug kommt. Ich fahre nach Hause. (sobald)",
+    "Ich arbeite in Dortmund. Seit dieser Zeit pendle ich jeden Tag. (seitdem)",
+    "Die Stadt schläft. Gleichzeitig warte ich am Bahnsteig. (während)",
+    "Mein Akku hält noch. So lange höre ich Musik. (solange)",
+    "Ich steige aus. Vorher schreibe ich dir. (bevor)",
+    "Ich finde eine Stelle in der Nähe. Bis dahin fahre ich mit dem Zug. (bis)"
+   ],
+   "solutions": [
+    "Sobald der letzte Zug kommt, fahre ich nach Hause.",
+    "Seitdem ich in Dortmund arbeite, pendle ich jeden Tag.",
+    "Während die Stadt schläft, warte ich am Bahnsteig.",
+    "Solange mein Akku hält, höre ich Musik.",
+    "Bevor ich aussteige, schreibe ich dir.",
+    "Bis ich eine Stelle in der Nähe finde, fahre ich mit dem Zug."
+   ]
+  }
+ },
+ {
+  "id": "b2-10-das-fenster-gegenueber",
+  "level": "B2",
+  "title": "Das Fenster gegenüber",
+  "theme": "Neu in der Großstadt: Anonymität, Einsamkeit, neue Kontakte und Freundschaft",
+  "grammar": "Relativsätze auf B2-Niveau: Relativpronomen im Genitiv (dessen, deren), was und wo(r)- nach alles/das Beste (alles, was / alles, wonach), Relativsätze mit wo und wer",
+  "intro": "Neue Stadt, viele Menschen – und trotzdem kennt niemand deinen Namen. Dieser nächtliche Song erzählt von einem Licht im Fenster gegenüber und trainiert Relativsätze mit deren, dessen, was, wo und wer.",
+  "lyrics": "[Verse 1]\nSeit März wohne ich im vierten Stock, im Hinterhaus,\ndie Nachbarn, deren Namen ich nicht kenne, sehen müde und eilig aus.\nDort, wo ich herkomme, grüßt man sich auf jeder Treppe –\nhier höre ich nur meine Schritte, wenn ich die Einkäufe schleppe.\nNur gegenüber, wo die alte Kastanie steht,\nbrennt jede Nacht ein Licht, das erst am Morgen ausgeht.\n\n[Chorus]\nIn der Stadt, in der niemand meinen Namen kennt,\nbist du das Fenster, in dem noch Licht brennt.\nDu bist alles, wonach ich suche, wenn es regnet –\ndas Beste, was mir hier begegnet.\n\n[Verse 2]\nEines Nachts im Kiosk, wo es noch warmen Kaffee gab,\nstand sie vor mir – die Frau, deren Fenster ich jeden Abend sah.\nSie lachte: „Du bist der vom vierten Stock, der nachts nie schlafen kann.“\nWir tranken Kaffee im Regen – und so fing alles an.\nSie erzählte von der Arbeit, für die sie hergezogen war,\nvon Sonntagen, an denen das Telefon schwieg – ein ganzes Jahr.\n\n[Chorus]\nIn der Stadt, in der niemand meinen Namen kennt,\nbist du das Fenster, in dem noch Licht brennt.\nDu bist alles, wonach ich suche, wenn es regnet –\ndas Beste, was mir hier begegnet.\n\n[Bridge]\nWer neu in einer Stadt ist, sucht nach einem kleinen Blick,\nnach einem Hallo im Treppenhaus, nach einem Stück Glück.\nWer nachts allein ist, ist selten der Einzige, der wacht –\nirgendwo ist ein Fenster, hinter dem noch jemand lacht.\n\n[Chorus]\nIn der Stadt, in der niemand meinen Namen kennt,\nbist du das Fenster, in dem noch Licht brennt.\nDu bist alles, wonach ich suche, wenn es regnet –\ndas Beste, was mir hier begegnet.\n\n[Outro]\nDas Fenster gegenüber,\nin dem noch Licht brennt –\ndas Beste, was mir hier begegnet.",
+  "vocab": [
+   [
+    "das Hinterhaus, die Hinterhäuser",
+    "Haus hinter einem anderen Haus, man geht durch den Hof"
+   ],
+   [
+    "grüßen",
+    "„Hallo“ oder „Guten Tag“ sagen"
+   ],
+   [
+    "schleppen",
+    "etwas Schweres mühsam tragen"
+   ],
+   [
+    "gegenüber",
+    "auf der anderen Seite, z. B. der Straße"
+   ],
+   [
+    "die Kastanie, die Kastanien",
+    "großer Baum mit braunen Früchten"
+   ],
+   [
+    "der Kiosk, die Kioske",
+    "kleiner Laden, oft bis spät in die Nacht geöffnet"
+   ],
+   [
+    "herziehen (ist hergezogen)",
+    "an diesen Ort umziehen"
+   ],
+   [
+    "schweigen",
+    "nichts sagen, still sein"
+   ],
+   [
+    "begegnen (+ Dativ)",
+    "jemanden zufällig treffen"
+   ],
+   [
+    "wachen",
+    "nicht schlafen, wach bleiben"
+   ]
+  ],
+  "gap": {
+   "type": "gap",
+   "title": "Aufgabe 2: Lückentext",
+   "instruction": "Hör das Lied und ergänze die fehlenden Wörter.",
+   "items": [
+    "die Nachbarn, ___ Namen ich nicht kenne, sehen müde und eilig aus.",
+    "Dort, wo ich herkomme, ___ man sich auf jeder Treppe –",
+    "bist du das Fenster, in dem noch Licht ___.",
+    "Sie erzählte von der Arbeit, für die sie ___ war,",
+    "irgendwo ist ein Fenster, hinter dem noch jemand ___."
+   ],
+   "solutions": [
+    "deren",
+    "grüßt",
+    "brennt",
+    "hergezogen",
+    "lacht"
+   ]
+  },
+  "tf": [
+   [
+    "Die Person wohnt im Erdgeschoss.",
+    false,
+    "Sie wohnt im vierten Stock im Hinterhaus."
+   ],
+   [
+    "Dort, wo die Person herkommt, grüßen sich die Menschen auf der Treppe.",
+    true,
+    ""
+   ],
+   [
+    "Im Fenster gegenüber brennt jede Nacht Licht.",
+    true,
+    ""
+   ],
+   [
+    "Die beiden lernen sich morgens in einem Café kennen.",
+    false,
+    "Sie treffen sich nachts im Kiosk."
+   ],
+   [
+    "Die Frau ist wegen ihrer Arbeit in die Stadt gezogen.",
+    true,
+    ""
+   ]
+  ],
+  "gram": {
+   "title": "Grammatik – Relativsätze auf B2-Niveau",
+   "instruction": "Verbinde die Sätze mit einem Relativsatz. Nutze das Wort in Klammern.",
+   "items": [
+    "Das ist die Nachbarin. Ihr Fenster ist nachts hell. (deren)",
+    "Ich kenne einen Kollegen. Sein Sohn wohnt auch in unserem Haus. (dessen)",
+    "Das ist alles. Ich brauche es. (was)",
+    "Sie hat alles gefunden. Sie hat danach gesucht. (wonach)",
+    "Ich komme aus einer Stadt. Dort grüßen sich die Menschen auf der Treppe. (wo)",
+    "Jemand ist neu in der Stadt. Er braucht Kontakte. (wer)"
+   ],
+   "solutions": [
+    "Das ist die Nachbarin, deren Fenster nachts hell ist.",
+    "Ich kenne einen Kollegen, dessen Sohn auch in unserem Haus wohnt.",
+    "Das ist alles, was ich brauche.",
+    "Sie hat alles gefunden, wonach sie gesucht hat.",
+    "Ich komme aus einer Stadt, wo sich die Menschen auf der Treppe grüßen.",
+    "Wer neu in der Stadt ist, braucht Kontakte."
+   ]
+  }
+ }
+]
