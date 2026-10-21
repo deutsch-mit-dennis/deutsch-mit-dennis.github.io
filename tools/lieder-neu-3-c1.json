@@ -1,0 +1,236 @@
+[
+ {
+  "id": "c1-09-nicht-zum-verkauf",
+  "level": "C1",
+  "title": "Die Stadt steht nicht zum Verkauf",
+  "theme": "Wohnungsnot und Gentrifizierung: Mieterhöhung, Verdrängung, Nachbarschaft und Widerstand",
+  "grammar": "Funktionsverbgefüge (zum Verkauf stehen, in Kauf nehmen, unter Druck setzen, zur Sprache bringen, in Frage stellen, Widerspruch einlegen, in Anspruch nehmen, eine Entscheidung treffen)",
+  "intro": "Neue Fassaden, leere Fenster, steigende Mieten – dieser Song erzählt von einer Nachbarschaft, die sich gegen Verdrängung wehrt. Du übst dabei Funktionsverbgefüge wie unter Druck setzen, in Kauf nehmen und zur Sprache bringen.",
+  "lyrics": "[Verse 1]\nIm Regen glänzt ein Bauschild: „Exklusives Wohnen am Kanal“,\nwo früher Frau Yilmaz ihren Kiosk hatte, ist es jetzt steril und kahl.\nDie Laternen fallen auf Fassaden, frisch gestrichen, kühl und weiß –\nund in jedem dritten Fenster brennt kein Licht, nur ein Preis.\n\n[Chorus]\nDie Stadt steht nicht zum Verkauf,\nwir nehmen es nicht in Kauf,\ndass man uns unter Druck setzt, Straße für Straße, Haus für Haus.\nWir bringen es zur Sprache, laut und klar:\nWir bleiben, denn wir sind schon da.\n\n[Verse 2]\nDann kam der Brief: „Modernisierung“, vierzig Prozent mehr Miete ab Januar,\nmeine Nachbarin, achtzig, stellt alles in Frage, was ihr einmal sicher war.\nWir legen Widerspruch ein, nehmen Beratung in Anspruch, treffen uns im Flur –\ndenn wer sein Zuhause verliert, verliert nicht nur vier Wände und eine Tür.\n\n[Chorus]\nDie Stadt steht nicht zum Verkauf,\nwir nehmen es nicht in Kauf,\ndass man uns unter Druck setzt, Straße für Straße, Haus für Haus.\nWir bringen es zur Sprache, laut und klar:\nWir bleiben, denn wir sind schon da.\n\n[Bridge]\nUm Mitternacht wird die Stadt zum Schaufenster,\ndie leeren Wohnungen starren dunkel wie Gespenster.\nDoch wir haben eine Entscheidung getroffen, leise, ohne Applaus:\nWir ziehen nicht aus.\n\n[Chorus]\nDie Stadt steht nicht zum Verkauf,\nwir nehmen es nicht in Kauf,\ndass man uns unter Druck setzt, Straße für Straße, Haus für Haus.\nWir bringen es zur Sprache, laut und klar:\nWir bleiben, denn wir sind schon da.\n\n[Outro]\nDie Stadt steht nicht zum Verkauf –\nwir ziehen nicht aus.",
+  "vocab": [
+   [
+    "das Bauschild, die Bauschilder",
+    "Schild an einer Baustelle, das zeigt, was gebaut wird"
+   ],
+   [
+    "steril",
+    "hier: sauber, aber ohne Leben und Gefühl"
+   ],
+   [
+    "die Fassade, die Fassaden",
+    "die Außenseite eines Hauses, die man von der Straße sieht"
+   ],
+   [
+    "die Modernisierung, die Modernisierungen",
+    "Umbau, der eine Wohnung moderner macht – und oft teurer"
+   ],
+   [
+    "zum Verkauf stehen",
+    "verkauft werden sollen; man kann es kaufen"
+   ],
+   [
+    "unter Druck setzen",
+    "jemanden stark drängen, etwas zu tun"
+   ],
+   [
+    "Widerspruch einlegen",
+    "offiziell sagen, dass man mit einer Entscheidung nicht einverstanden ist"
+   ],
+   [
+    "in Anspruch nehmen",
+    "ein Angebot oder eine Hilfe nutzen"
+   ],
+   [
+    "die Beratung, die Beratungen",
+    "Hilfe durch Fachleute, z. B. beim Mieterverein"
+   ],
+   [
+    "das Gespenst, die Gespenster",
+    "Geist, der (in Geschichten) nachts erscheint"
+   ]
+  ],
+  "gap": {
+   "type": "gap",
+   "title": "Aufgabe 2: Lückentext",
+   "instruction": "Hör das Lied und ergänze die fehlenden Wörter.",
+   "items": [
+    "wo früher Frau Yilmaz ihren ___ hatte, ist es jetzt steril und kahl.",
+    "dass man uns unter ___ setzt, Straße für Straße, Haus für Haus.",
+    "meine Nachbarin, achtzig, stellt alles in ___, was ihr einmal sicher war.",
+    "Wir legen ___ ein, nehmen Beratung in Anspruch, treffen uns im Flur –",
+    "Die Stadt steht nicht zum ___,"
+   ],
+   "solutions": [
+    "Kiosk",
+    "Druck",
+    "Frage",
+    "Widerspruch",
+    "Verkauf"
+   ]
+  },
+  "tf": [
+   [
+    "Den Kiosk von Frau Yilmaz gibt es noch.",
+    false,
+    "Wo früher ihr Kiosk war, ist es jetzt steril und kahl."
+   ],
+   [
+    "In vielen Fenstern der neuen Häuser brennt kein Licht.",
+    true,
+    ""
+   ],
+   [
+    "Die Miete soll ab Januar um vierzig Prozent steigen.",
+    true,
+    ""
+   ],
+   [
+    "Die Nachbarn akzeptieren die Mieterhöhung ohne Protest.",
+    false,
+    "Sie legen Widerspruch ein und nehmen Beratung in Anspruch."
+   ],
+   [
+    "Am Ende entscheiden die Bewohner, auszuziehen.",
+    false,
+    "Sie haben entschieden: „Wir ziehen nicht aus.“"
+   ]
+  ],
+  "gram": {
+   "title": "Grammatik – Funktionsverbgefüge",
+   "instruction": "Formuliere die Sätze mit einem Funktionsverbgefüge um. Das Nomen in Klammern hilft dir.",
+   "items": [
+    "Man kann das Haus am Kanal kaufen. (Verkauf)",
+    "Wir akzeptieren die hohe Miete nicht. (Kauf)",
+    "Der Vermieter bedrängt die Mieter. (Druck)",
+    "Wir sprechen das Problem in der Versammlung an. (Sprache)",
+    "Sie widerspricht der Mieterhöhung. (Widerspruch)",
+    "Die Nachbarn entscheiden gemeinsam. (Entscheidung)"
+   ],
+   "solutions": [
+    "Das Haus am Kanal steht zum Verkauf.",
+    "Wir nehmen die hohe Miete nicht in Kauf.",
+    "Der Vermieter setzt die Mieter unter Druck.",
+    "Wir bringen das Problem in der Versammlung zur Sprache.",
+    "Sie legt Widerspruch gegen die Mieterhöhung ein.",
+    "Die Nachbarn treffen gemeinsam eine Entscheidung."
+   ]
+  }
+ },
+ {
+  "id": "c1-10-sollte-das-display-leuchten",
+  "level": "C1",
+  "title": "Sollte das Display leuchten",
+  "theme": "Ständige Erreichbarkeit: Homeoffice, Feierabend und das Recht auf Abschalten",
+  "grammar": "Konditionalsätze ohne wenn (Verberststellung: Sollte …, Hätte …, Gäbe es …, Ist es …) sowie es sei denn und vorausgesetzt(, dass)",
+  "intro": "Eine Nachricht um Mitternacht – und schon ist das Büro wieder im Schlafzimmer. Mit diesem Song übst du Konditionalsätze ohne wenn („Sollte das Display leuchten, …“) sowie es sei denn und vorausgesetzt.",
+  "lyrics": "[Verse 1]\nKurz nach elf, die Straße glänzt wie schwarzer Lack im Regen,\nim Haus gegenüber leuchten Laptops, keiner kann sie weglegen.\nHätte ich mein Handy ausgeschaltet, wäre diese Nacht noch meine –\ndoch da steht: „Nur eine kurze Frage …“, und ich bin nicht mehr alleine.\n\n[Chorus]\nSollte das Display leuchten, lass es leuchten,\nsollte jemand schreiben, lass ihn warten bis um neun.\nIst es wirklich dringend, ist es morgen auch noch dringend –\nsollte die Nacht dich rufen, sag ihr nicht Nein.\n\n[Verse 2]\nDie Chefin schreibt um Mitternacht, drei Ausrufezeichen, kein Gruß.\nAntworte ich heute sofort, wird es morgen schon zum Muss.\nGäbe es ein Recht auf Feierabend, das auch wirklich gilt,\nwäre diese Stadt bei Nacht kein Großraumbüro, sondern ein Bild.\n\n[Chorus]\nSollte das Display leuchten, lass es leuchten,\nsollte jemand schreiben, lass ihn warten bis um neun.\nIst es wirklich dringend, ist es morgen auch noch dringend –\nsollte die Nacht dich rufen, sag ihr nicht Nein.\n\n[Bridge]\nIch bin erreichbar – es sei denn, es ist Nacht,\nich bin für alle da – vorausgesetzt, ich habe auch an mich gedacht.\nBrennt es wirklich, ruf mich an – doch nicht für jeden Satz,\nheute Nacht hat nur der Regen an meinem Fenster Platz.\n\n[Chorus]\nSollte das Display leuchten, lass es leuchten,\nsollte jemand schreiben, lass ihn warten bis um neun.\nIst es wirklich dringend, ist es morgen auch noch dringend –\nsollte die Nacht dich rufen, sag ihr nicht Nein.\n\n[Outro]\nSollte das Display leuchten –\nlass es leuchten.\nDie Nacht gehört uns.",
+  "vocab": [
+   [
+    "weglegen",
+    "etwas zur Seite legen und nicht mehr benutzen"
+   ],
+   [
+    "das Display, die Displays",
+    "der Bildschirm eines Handys oder Geräts"
+   ],
+   [
+    "dringend",
+    "sehr eilig; muss schnell erledigt werden"
+   ],
+   [
+    "das Ausrufezeichen, die Ausrufezeichen",
+    "das Satzzeichen „!“"
+   ],
+   [
+    "zum Muss werden",
+    "zu etwas werden, das man unbedingt tun muss"
+   ],
+   [
+    "der Feierabend, die Feierabende",
+    "die freie Zeit nach der Arbeit"
+   ],
+   [
+    "gelten",
+    "gültig sein, wirklich wirksam sein"
+   ],
+   [
+    "das Großraumbüro, die Großraumbüros",
+    "großes Büro, in dem viele Menschen zusammen arbeiten"
+   ],
+   [
+    "erreichbar",
+    "so, dass man jemanden per Telefon oder Mail kontaktieren kann"
+   ],
+   [
+    "es sei denn",
+    "außer wenn"
+   ]
+  ],
+  "gap": {
+   "type": "gap",
+   "title": "Aufgabe 2: Lückentext",
+   "instruction": "Hör das Lied und ergänze die fehlenden Wörter.",
+   "items": [
+    "Hätte ich mein Handy ___, wäre diese Nacht noch meine –",
+    "___ jemand schreiben, lass ihn warten bis um neun.",
+    "Antworte ich heute sofort, wird es morgen schon zum ___.",
+    "___ es ein Recht auf Feierabend, das auch wirklich gilt,",
+    "Ich bin erreichbar – es sei ___, es ist Nacht,"
+   ],
+   "solutions": [
+    "ausgeschaltet",
+    "sollte",
+    "Muss",
+    "Gäbe",
+    "denn"
+   ]
+  },
+  "tf": [
+   [
+    "Die Szene spielt an einem trockenen Abend.",
+    false,
+    "Die Straße glänzt im Regen."
+   ],
+   [
+    "Im Haus gegenüber sind noch Laptops an.",
+    true,
+    ""
+   ],
+   [
+    "Die Chefin schreibt eine höfliche Nachricht mit Gruß.",
+    false,
+    "Sie schreibt mit drei Ausrufezeichen und ohne Gruß."
+   ],
+   [
+    "Die Person befürchtet, dass eine sofortige Antwort bald erwartet wird.",
+    true,
+    ""
+   ],
+   [
+    "In einem echten Notfall darf man die Person anrufen.",
+    true,
+    ""
+   ]
+  ],
+  "gram": {
+   "title": "Grammatik – Konditionalsätze ohne wenn",
+   "instruction": "Formuliere die Sätze ohne wenn. Das Verb steht dann an Position 1.",
+   "items": [
+    "Wenn das Handy klingelt, ignoriere ich es.",
+    "Wenn die Chefin noch einmal schreibt, antworte ich morgen früh.",
+    "Wenn es einen Notfall geben sollte, ruf mich bitte an.",
+    "Wenn ich früher Feierabend gemacht hätte, wäre ich jetzt nicht so müde.",
+    "Wenn es ein Recht auf Abschalten gäbe, wäre vieles leichter.",
+    "Wenn die Mail wirklich dringend ist, ist sie es morgen auch noch."
+   ],
+   "solutions": [
+    "Klingelt das Handy, ignoriere ich es.",
+    "Schreibt die Chefin noch einmal, antworte ich morgen früh.",
+    "Sollte es einen Notfall geben, ruf mich bitte an.",
+    "Hätte ich früher Feierabend gemacht, wäre ich jetzt nicht so müde.",
+    "Gäbe es ein Recht auf Abschalten, wäre vieles leichter.",
+    "Ist die Mail wirklich dringend, ist sie es morgen auch noch."
+   ]
+  }
+ }
+]
