@@ -258,7 +258,8 @@
 
     <section class="dm-section" aria-labelledby="wege-h">
       <div class="dm-section-head"><h2 id="wege-h">Wähle deinen Weg</h2><p>Du kannst jederzeit wechseln.</p></div>
-      <div class="dm-paths">${DM.pathOrder.map(id => pathCard(id)).join('')}</div>
+      <div class="dm-paths">${(DM.pathHome || DM.pathOrder).map(id => pathCard(id)).join('')}</div>
+      <p class="dm-center"><a class="dm-btn dm-btn-quiet" href="#lernweg">Alle ${DM.pathOrder.length} Lernwege ansehen →</a></p>
     </section>
 
     <section class="dm-section dm-tools" aria-labelledby="tools-h">
@@ -316,8 +317,8 @@
   function paths() {
     page(`${crumbs([['Mein Lernweg']])}
       <div class="dm-head"><h1>Mein Lernweg</h1><p class="dm-lead">Jeder Weg ist eine Reihenfolge von Übungen. Hake ab, was du geschafft hast – dein Fortschritt bleibt auf deinem Gerät gespeichert.</p></div>
-      <div class="dm-paths">${DM.pathOrder.map(pathCard).join('')}</div>
-      <p class="dm-center"><a class="dm-btn dm-btn-quiet" href="#wegweiser">Ich weiß nicht, welcher Weg passt</a></p>`);
+      ${['start', 'alltag', 'pruefung', 'beruf'].map(gk => { const ids = DM.pathOrder.filter(id => DM.paths[id].group === gk); return ids.length ? `<section class="dm-section" aria-label="${x(DM.groups[gk].label)}"><div class="dm-section-head"><h2>${{ start: 'Neu in Deutschland', alltag: 'Deutsch im Alltag', pruefung: 'Prüfungen: DTZ, Leben in Deutschland, telc', beruf: 'Beruf: DTB B1 und B2' }[gk]}</h2><p>${{ start: 'Für den Anfang', alltag: 'Ohne Prüfungsdruck', pruefung: 'Mit Probeprüfung und echter Zeit', beruf: 'Berufssprachkurs – mit Probeprüfung' }[gk]}</p></div><div class="dm-paths">${ids.map(pathCard).join('')}</div></section>` : ''; }).join('')}
+      <p class="dm-center"><a class="dm-btn" href="#simulation">Direkt zu den Prüfungssimulationen</a> <a class="dm-btn dm-btn-quiet" href="#wegweiser">Ich weiß nicht, welcher Weg passt</a></p>`);
   }
   async function pathPage(id) {
     const p = DM.paths[id]; if (!p) return paths();
@@ -344,10 +345,10 @@
           <section class="dm-card"><h2>Anderer Weg?</h2><p>Du kannst jederzeit wechseln.</p><a href="#lernweg">Alle Wege ansehen</a> · <a href="#wegweiser">Wegweiser</a></section>
         </aside>
       </div>
-      ${['bridge', 'repeat'].includes(id) ? '<p class="dm-small">B2 Beruf: Die Übungen orientieren sich am beruflichen Deutsch und am Deutsch-Test für den Beruf B2. Wenn du eine andere B2-Prüfung machst, prüfe das Format bei deinem Anbieter.</p>' : ''}
+      ${['bridge', 'repeat', 'dtbb2'].includes(id) ? '<p class="dm-small">B2 Beruf: Die Übungen orientieren sich am beruflichen Deutsch und am Deutsch-Test für den Beruf B2. Wenn du eine andere B2-Prüfung machst, prüfe das Format bei deinem Anbieter.</p>' : ''}
       <div id="dm-path-videos"></div>`);
       $$('[data-done]').forEach(c => c.onchange = () => { if (c.checked) mem.done[c.dataset.done] = Date.now(); else delete mem.done[c.dataset.done]; save(); render(); });
-      const cat = { dtz: 'pruefung', repeat: 'pruefung', bridge: 'deutsch', start: 'deutsch', sprechen: 'deutsch', schreiben: 'pruefung' }[id];
+      const cat = { dtz: 'pruefung', repeat: 'pruefung', bridge: 'deutsch', start: 'deutsch', sprechen: 'deutsch', schreiben: 'pruefung', lid: 'orientierung', telcb1: 'pruefung', telcb2: 'pruefung', dtbb1: 'pruefung', dtbb2: 'pruefung' }[id];
       videoSection(cat, 'Passende Videos').then(sec => sec && $('#dm-path-videos')?.replaceWith(sec));
     };
     render();
@@ -372,7 +373,7 @@
       if (lvl === 'A0' || lvl === 'A1') {
         pathId = 'start';
         extra = goal === 'start' ? '' : `Dein Ziel („${x(DM.paths[goal]?.title || '')}“) bleibt wichtig. Mit A1 legst du dafür das Fundament.`;
-      } else if ((goal === 'bridge' || goal === 'repeat') && lvl === 'A2') {
+      } else if (['bridge', 'repeat', 'telcb2', 'dtbb2'].includes(goal) && lvl === 'A2') {
         extra = 'Für B2 brauchst du zuerst B1. Übe parallel die B1-Lektionen.';
       }
       const lessonLevel = lvl === 'A0' ? 'A1' : lvl;

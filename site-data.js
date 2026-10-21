@@ -25,113 +25,697 @@ DM.groups = {
 
 /* Lernwege für die Zielgruppen der Gruppe. Jeder Schritt: [Titel, Link, Beschreibung, Art] */
 DM.paths = {
-  start: {
-    icon: '👋', group: 'start', level: 'A1',
-    title: 'Ich fange mit Deutsch an',
-    who: 'Du lernst gerade die ersten Wörter.',
-    intro: 'Kleine Schritte: hören, nachsprechen, einen Satz sagen. Jeden Tag 15 Minuten reichen.',
-    tip: 'Sprich jeden Satz laut. Auch wenn er noch nicht perfekt ist.',
-    plan: ['5 Minuten hören und nachsprechen', '5 Minuten Wörter mit Artikel lernen', '5 Minuten einen eigenen Satz sagen oder schreiben'],
-    steps: [
-      ['Hallo, das bin ich', '#lektion/ankommen', 'Die erste Lektion: sich vorstellen.', 'Lektion'],
-      ['Die ersten 20 Wörter', '#wortschatz/ankommen/0', 'Wortkarten mit Bild, Artikel und Beispiel.', 'Wörter'],
-      ['Hören und nachsprechen', '#lektion/ankommen/3', 'Ein Dialog zum Mitlesen und Nachsprechen.', 'Hören'],
-      ['Mich vorstellen', '#ueben/sprechen/A1/0', 'Name, Wohnort, Sprache – laut sprechen.', 'Sprechen'],
-      ['Meine ersten Sätze schreiben', '#ueben/schreiben/A1/0', 'Zwei, drei kurze Sätze über dich.', 'Schreiben'],
-      ['Einkaufen', '#lektion/einkaufen', 'Brot, Milch, Preise und Artikel.', 'Lektion'],
-      ['Einen Termin machen', '#lektion/termine', 'Uhrzeiten, Wochentage und höfliche Fragen.', 'Lektion'],
-      ['Meine Wohnung', '#lektion/wohnen', 'Zimmer beschreiben und „kein“ und „nicht“ benutzen.', 'Lektion']
-    ]
-  },
-  sprechen: {
-    icon: '💬', group: 'alltag', level: 'A1–B2',
-    title: 'Ich möchte mehr sprechen',
-    who: 'Du brauchst keine Prüfung. Du willst im Alltag sicherer reden.',
-    intro: 'Kurze Gespräche aus dem Alltag. Erst mit Hilfen, dann frei. Allein oder zu zweit.',
-    tip: 'Übe ein Gespräch zweimal: einmal mit Satzanfängen, einmal ohne.',
-    plan: ['3 Minuten Redemittel ansehen', '7 Minuten ein Gespräch sprechen (beide Rollen)', '5 Minuten Hören und eine Sache verändern'],
-    steps: [
-      ['Einen Termin verschieben', '#ueben/sprechen/A2/0', 'Am Telefon höflich um einen neuen Termin bitten.', 'Sprechen'],
-      ['Ein Treffen verabreden', '#ueben/sprechen/A2/1', 'Zeit und Treffpunkt vereinbaren.', 'Sprechen'],
-      ['Alltagsansagen verstehen', '#hoeren/alltag', 'Bahnhof, Arztpraxis, Supermarkt: hören und verstehen.', 'Hören'],
-      ['Meine Meinung sagen', '#lektion/meinung', 'weil, deshalb, obwohl – Meinung begründen.', 'Lektion'],
-      ['Gemeinsam etwas planen', '#ueben/sprechen/B1/0', 'Vorschläge machen und reagieren.', 'Sprechen'],
-      ['Etwas reklamieren', '#ueben/sprechen/B1/1', 'Ein Problem freundlich, aber klar ansprechen.', 'Sprechen'],
-      ['Umgangssprache im Video', '#videos/deutsch', 'Wie Muttersprachler wirklich reden.', 'Video']
-    ]
-  },
-  schreiben: {
-    icon: '✍️', group: 'alltag', level: 'A1–B2',
-    title: 'Ich möchte besser schreiben',
-    who: 'Nachrichten, E-Mails und Briefe sollen klarer werden.',
-    intro: 'Planen, schreiben, mit einem Muster vergleichen und verbessern. Dein Text bleibt auf deinem Gerät gespeichert.',
-    tip: 'Schreib zuerst Stichwörter zu jedem Punkt. Dann erst ganze Sätze.',
-    plan: ['5 Minuten Aufgabe lesen und Stichwörter planen', '15 Minuten schreiben', '5 Minuten mit Checkliste und Muster verbessern'],
-    steps: [
-      ['Schreib-Bausteine', '#schreiben/bausteine', 'Anrede, Gruß, Verbindungswörter und typische Sätze.', 'Werkzeug'],
-      ['Eine kurze Nachricht', '#ueben/schreiben/A1/2', 'Krank? Dem Kurs Bescheid sagen.', 'Schreiben'],
-      ['Einen Termin verschieben', '#ueben/schreiben/A2/0', 'Grund nennen und neuen Termin erfragen.', 'Schreiben'],
-      ['An den Vermieter schreiben', '#ueben/schreiben/A2/2', 'Etwas ist kaputt: höflich um Hilfe bitten.', 'Schreiben'],
-      ['Eine Beschwerde', '#ueben/schreiben/B1/2', 'Ein Problem beschreiben und eine Lösung fordern.', 'Schreiben'],
-      ['DTZ: einen Brief schreiben', '#training/dtz-schreiben', 'Alle vier Punkte bearbeiten – mit Mustertext.', 'Prüfung'],
-      ['B2: Kundenantwort', '#training/dtb-schreiben', 'Professionell auf eine Beschwerde reagieren.', 'Beruf']
-    ]
-  },
-  dtz: {
-    icon: '🎯', group: 'pruefung', level: 'A2–B1',
-    title: 'Ich bereite mich auf den DTZ vor',
-    who: 'Du bist im Integrationskurs oder hast die Prüfung bald.',
-    intro: 'Alle Teile des Deutsch-Tests für Zuwanderer: Sprechen, Schreiben, Lesen und Hören. Beginne mit dem Teil, der dir am schwersten fällt.',
-    tip: 'Im Sprechen zählt nicht Perfektion. Antworte vollständig und reagiere auf deinen Partner.',
-    plan: ['Montag: Sprechen Teil 1 und 2', 'Mittwoch: Brief schreiben', 'Freitag: Lesen und Hören', 'Wochenende: Sprechen Teil 3 zu zweit'],
-    steps: [
-      ['Sprechen 1: sich vorstellen', '#training/dtz-vorstellen', 'Mit eigenen Informationen antworten.', 'Sprechen'],
-      ['Sprechen 2: Bild beschreiben', '#training/dtz-bild', 'Beschreiben und von eigenen Erfahrungen erzählen.', 'Sprechen'],
-      ['Sprechen 3: gemeinsam planen', '#training/dtz-sprechen', 'Vorschlagen, reagieren, gemeinsam entscheiden.', 'Sprechen'],
-      ['Schreiben: einen Brief', '#training/dtz-schreiben', 'Alle Leitpunkte bearbeiten und den Text prüfen.', 'Schreiben'],
-      ['Schreib-Bausteine für Briefe', '#schreiben/bausteine', 'Anrede, Gruß und feste Formulierungen.', 'Werkzeug'],
-      ['Lesen: Mitteilungen verstehen', '#training/dtz-lesen', 'Wichtige Informationen finden.', 'Lesen'],
-      ['Hören: Ansagen und Nachrichten', '#hoeren/alltag', 'Durchsagen, Anrufbeantworter, Radio.', 'Hören'],
-      ['Leben in Deutschland', '#orientierungskurs', 'Für den Test „Leben in Deutschland“.', 'Orientierung'],
-      ['Videos zur Prüfung', '#videos/pruefung', 'Bildbeschreibung, Planen, Briefe – erklärt von Dennis.', 'Video']
-    ]
-  },
-  bridge: {
-    icon: '🌉', group: 'beruf', level: 'B1 → B2 Beruf',
-    title: 'Ich möchte in den B2-Kurs starten',
-    who: 'Du hast den Integrationskurs geschafft und willst weiter zu B2 Beruf.',
-    intro: 'Baue auf B1 auf: erst sicher begründen, dann genauer formulieren und im Beruf höflich reagieren.',
-    tip: 'Lerne Redemittel als ganze Sätze. Im Beruf wirken sie sofort professioneller.',
-    plan: ['10 Minuten eine B2-Lektion', '10 Minuten berufliche Nachricht schreiben', '5 Minuten Hören im Beruf'],
-    steps: [
-      ['B1 wiederholen: Meinung begründen', '#lektion/meinung/2', 'weil, deshalb und obwohl sicher benutzen.', 'Lektion'],
-      ['Über Berufserfahrung sprechen', '#lektion/arbeit/3', 'Einen Dialog lesen und eigene Erfahrungen ergänzen.', 'Lektion'],
-      ['Beruflich weiterkommen', '#lektion/bewerbung-b2', 'Die erste B2-Lektion.', 'Lektion'],
-      ['Ein Gespräch im Beruf', '#ueben/sprechen/B2/0', 'Nachfragen, erklären, einen Vorschlag machen.', 'Sprechen'],
-      ['Eine berufliche E-Mail', '#ueben/schreiben/B2/2', 'Eine Weiterbildung beantragen.', 'Schreiben'],
-      ['Hören im Beruf', '#hoeren/beruf', 'Mailbox, Durchsagen, Gespräche unter Kollegen.', 'Hören'],
-      ['Alle B2-Lektionen', '#lernen/B2', 'Ausgewählte Themen zur Vorbereitung auf den Kurs.', 'Lektion']
-    ]
-  },
-  repeat: {
-    icon: '🔄', group: 'beruf', level: 'B2 Beruf',
-    title: 'Ich möchte B2 gezielt wiederholen',
-    who: 'Du hast B2 nicht bestanden und willst es noch einmal versuchen.',
-    intro: 'Du musst nicht von vorne beginnen. Schau in dein Ergebnis und wähle den Teil, der dir gefehlt hat.',
-    tip: 'Übe den schwächsten Teil zuerst – jeden Tag ein bisschen, nicht einmal pro Woche viel.',
-    plan: ['Ergebnis ansehen: Welcher Teil hat gefehlt?', 'Jeden Tag 20 Minuten nur diesen Teil', 'Einmal pro Woche eine komplette Übung'],
-    steps: [
-      ['Sprechen 1: über ein Thema sprechen', '#training/dtb-thema', 'Strukturieren, Beispiele geben, Nachfragen beantworten.', 'Sprechen'],
-      ['Sprechen 2: mit Kollegen sprechen', '#training/dtb-kollegen', 'Auf das Gegenüber eingehen und nachfragen.', 'Sprechen'],
-      ['Sprechen 3: Lösungen diskutieren', '#training/dtb-sprechen', 'Vergleichen und sich einigen.', 'Sprechen'],
-      ['Schreiben: Kundenantwort', '#training/dtb-schreiben', 'Mit internen Informationen antworten.', 'Schreiben'],
-      ['Schreiben: Forumsbeitrag', '#ueben/schreiben/B2/3', 'Eine Position mit Argumenten vertreten.', 'Schreiben'],
-      ['Lesen: betriebliche Regelung', '#training/dtb-lesen', 'Auf Einschränkungen und Fristen achten.', 'Lesen'],
-      ['Hören im Beruf', '#hoeren/beruf', 'Mailbox, Durchsagen, Gespräche.', 'Hören']
-    ]
-  }
+ "start": {
+  "icon": "👋",
+  "group": "start",
+  "level": "A1",
+  "title": "Ich fange mit Deutsch an",
+  "who": "Du lernst gerade die ersten Wörter.",
+  "intro": "Kleine Schritte: hören, nachsprechen, einen Satz sagen. Jeden Tag 15 Minuten reichen.",
+  "tip": "Sprich jeden Satz laut. Auch wenn er noch nicht perfekt ist.",
+  "plan": [
+   "5 Minuten hören und nachsprechen",
+   "5 Minuten Wörter mit Artikel lernen",
+   "5 Minuten einen eigenen Satz sagen oder schreiben"
+  ],
+  "steps": [
+   [
+    "Hallo, das bin ich",
+    "#lektion/ankommen",
+    "Die erste Lektion: sich vorstellen.",
+    "Lektion"
+   ],
+   [
+    "Die ersten 20 Wörter",
+    "#wortschatz/ankommen/0",
+    "Wortkarten mit Bild, Artikel und Beispiel.",
+    "Wörter"
+   ],
+   [
+    "Hören und nachsprechen",
+    "#lektion/ankommen/3",
+    "Ein Dialog zum Mitlesen und Nachsprechen.",
+    "Hören"
+   ],
+   [
+    "Mich vorstellen",
+    "#ueben/sprechen/A1/0",
+    "Name, Wohnort, Sprache – laut sprechen.",
+    "Sprechen"
+   ],
+   [
+    "Meine ersten Sätze schreiben",
+    "#ueben/schreiben/A1/0",
+    "Zwei, drei kurze Sätze über dich.",
+    "Schreiben"
+   ],
+   [
+    "Einkaufen",
+    "#lektion/einkaufen",
+    "Brot, Milch, Preise und Artikel.",
+    "Lektion"
+   ],
+   [
+    "Einen Termin machen",
+    "#lektion/termine",
+    "Uhrzeiten, Wochentage und höfliche Fragen.",
+    "Lektion"
+   ],
+   [
+    "Meine Wohnung",
+    "#lektion/wohnen",
+    "Zimmer beschreiben und „kein“ und „nicht“ benutzen.",
+    "Lektion"
+   ]
+  ]
+ },
+ "sprechen": {
+  "icon": "💬",
+  "group": "alltag",
+  "level": "A1–B2",
+  "title": "Ich möchte mehr sprechen",
+  "who": "Du brauchst keine Prüfung. Du willst im Alltag sicherer reden.",
+  "intro": "Kurze Gespräche aus dem Alltag. Erst mit Hilfen, dann frei. Allein oder zu zweit.",
+  "tip": "Übe ein Gespräch zweimal: einmal mit Satzanfängen, einmal ohne.",
+  "plan": [
+   "3 Minuten Redemittel ansehen",
+   "7 Minuten ein Gespräch sprechen (beide Rollen)",
+   "5 Minuten Hören und eine Sache verändern"
+  ],
+  "steps": [
+   [
+    "Einen Termin verschieben",
+    "#ueben/sprechen/A2/0",
+    "Am Telefon höflich um einen neuen Termin bitten.",
+    "Sprechen"
+   ],
+   [
+    "Ein Treffen verabreden",
+    "#ueben/sprechen/A2/1",
+    "Zeit und Treffpunkt vereinbaren.",
+    "Sprechen"
+   ],
+   [
+    "Alltagsansagen verstehen",
+    "#hoeren/alltag",
+    "Bahnhof, Arztpraxis, Supermarkt: hören und verstehen.",
+    "Hören"
+   ],
+   [
+    "Meine Meinung sagen",
+    "#lektion/meinung",
+    "weil, deshalb, obwohl – Meinung begründen.",
+    "Lektion"
+   ],
+   [
+    "Gemeinsam etwas planen",
+    "#ueben/sprechen/B1/0",
+    "Vorschläge machen und reagieren.",
+    "Sprechen"
+   ],
+   [
+    "Etwas reklamieren",
+    "#ueben/sprechen/B1/1",
+    "Ein Problem freundlich, aber klar ansprechen.",
+    "Sprechen"
+   ],
+   [
+    "Umgangssprache im Video",
+    "#videos/deutsch",
+    "Wie Muttersprachler wirklich reden.",
+    "Video"
+   ]
+  ]
+ },
+ "schreiben": {
+  "icon": "✍️",
+  "group": "alltag",
+  "level": "A1–B2",
+  "title": "Ich möchte besser schreiben",
+  "who": "Nachrichten, E-Mails und Briefe sollen klarer werden.",
+  "intro": "Planen, schreiben, mit einem Muster vergleichen und verbessern. Dein Text bleibt auf deinem Gerät gespeichert.",
+  "tip": "Schreib zuerst Stichwörter zu jedem Punkt. Dann erst ganze Sätze.",
+  "plan": [
+   "5 Minuten Aufgabe lesen und Stichwörter planen",
+   "15 Minuten schreiben",
+   "5 Minuten mit Checkliste und Muster verbessern"
+  ],
+  "steps": [
+   [
+    "Schreib-Bausteine",
+    "#schreiben/bausteine",
+    "Anrede, Gruß, Verbindungswörter und typische Sätze.",
+    "Werkzeug"
+   ],
+   [
+    "Eine kurze Nachricht",
+    "#ueben/schreiben/A1/2",
+    "Krank? Dem Kurs Bescheid sagen.",
+    "Schreiben"
+   ],
+   [
+    "Einen Termin verschieben",
+    "#ueben/schreiben/A2/0",
+    "Grund nennen und neuen Termin erfragen.",
+    "Schreiben"
+   ],
+   [
+    "An den Vermieter schreiben",
+    "#ueben/schreiben/A2/2",
+    "Etwas ist kaputt: höflich um Hilfe bitten.",
+    "Schreiben"
+   ],
+   [
+    "Eine Beschwerde",
+    "#ueben/schreiben/B1/2",
+    "Ein Problem beschreiben und eine Lösung fordern.",
+    "Schreiben"
+   ],
+   [
+    "DTZ: einen Brief schreiben",
+    "#training/dtz-schreiben",
+    "Alle vier Punkte bearbeiten – mit Mustertext.",
+    "Prüfung"
+   ],
+   [
+    "B2: Kundenantwort",
+    "#training/dtb-schreiben",
+    "Professionell auf eine Beschwerde reagieren.",
+    "Beruf"
+   ]
+  ]
+ },
+ "dtz": {
+  "icon": "🎯",
+  "group": "pruefung",
+  "level": "A2–B1",
+  "title": "Ich bereite mich auf den DTZ vor",
+  "who": "Du bist im Integrationskurs oder hast die Prüfung bald.",
+  "intro": "Alle Teile des Deutsch-Tests für Zuwanderer: Sprechen, Schreiben, Lesen und Hören. Übe zuerst gezielt – dann machst du die Probeprüfung mit echter Zeit.",
+  "tip": "Im Sprechen zählt nicht Perfektion. Antworte vollständig und reagiere auf deinen Partner.",
+  "plan": [
+   "Montag: Sprechen Teil 1 und 2",
+   "Mittwoch: Brief schreiben",
+   "Freitag: Lesen und Hören",
+   "Wochenende: Sprechen Teil 3 zu zweit",
+   "Alle zwei Wochen: eine Probeprüfung mit Uhr"
+  ],
+  "steps": [
+   [
+    "Sprechen 1: sich vorstellen",
+    "#training/dtz-vorstellen",
+    "Mit eigenen Informationen antworten.",
+    "Sprechen"
+   ],
+   [
+    "Sprechen 2: Bild beschreiben",
+    "#training/dtz-bild",
+    "Beschreiben und von eigenen Erfahrungen erzählen.",
+    "Sprechen"
+   ],
+   [
+    "Sprechen 3: gemeinsam planen",
+    "#training/dtz-sprechen",
+    "Vorschlagen, reagieren, gemeinsam entscheiden.",
+    "Sprechen"
+   ],
+   [
+    "Schreiben: einen Brief",
+    "#training/dtz-schreiben",
+    "Alle Leitpunkte bearbeiten und den Text prüfen.",
+    "Schreiben"
+   ],
+   [
+    "Schreib-Bausteine für Briefe",
+    "#schreiben/bausteine",
+    "Anrede, Gruß und feste Formulierungen.",
+    "Werkzeug"
+   ],
+   [
+    "Lesen: Mitteilungen verstehen",
+    "#training/dtz-lesen",
+    "Wichtige Informationen finden.",
+    "Lesen"
+   ],
+   [
+    "Hören: Ansagen und Nachrichten",
+    "#hoeren/alltag",
+    "Durchsagen, Anrufbeantworter, Radio.",
+    "Hören"
+   ],
+   [
+    "Probeprüfung schriftlich",
+    "#simulation/dtz/schriftlich",
+    "Hören, Lesen und Schreiben am Stück – 100 Minuten mit einer Uhr, danach Punkte und Ergebnis A2/B1.",
+    "Simulation"
+   ],
+   [
+    "Probeprüfung mündlich",
+    "#simulation/dtz/muendlich",
+    "Alle drei Sprechteile – 16 Minuten, mit Musterantworten zum Vergleich.",
+    "Simulation"
+   ],
+   [
+    "Test „Leben in Deutschland“",
+    "#lernweg/lid",
+    "Gehört zum Integrationskurs: eigener Lernweg mit allen 310 Fragen.",
+    "Orientierung"
+   ],
+   [
+    "Videos zur Prüfung",
+    "#videos/pruefung",
+    "Bildbeschreibung, Planen, Briefe – erklärt von Dennis.",
+    "Video"
+   ]
+  ]
+ },
+ "bridge": {
+  "icon": "🌉",
+  "group": "beruf",
+  "level": "B1 → B2 Beruf",
+  "title": "Ich möchte in den B2-Kurs starten",
+  "who": "Du hast den Integrationskurs geschafft und willst weiter zu B2 Beruf.",
+  "intro": "Baue auf B1 auf: erst sicher begründen, dann genauer formulieren und im Beruf höflich reagieren.",
+  "tip": "Lerne Redemittel als ganze Sätze. Im Beruf wirken sie sofort professioneller.",
+  "plan": [
+   "10 Minuten eine B2-Lektion",
+   "10 Minuten berufliche Nachricht schreiben",
+   "5 Minuten Hören im Beruf"
+  ],
+  "steps": [
+   [
+    "B1 wiederholen: Meinung begründen",
+    "#lektion/meinung/2",
+    "weil, deshalb und obwohl sicher benutzen.",
+    "Lektion"
+   ],
+   [
+    "Über Berufserfahrung sprechen",
+    "#lektion/arbeit/3",
+    "Einen Dialog lesen und eigene Erfahrungen ergänzen.",
+    "Lektion"
+   ],
+   [
+    "Beruflich weiterkommen",
+    "#lektion/bewerbung-b2",
+    "Die erste B2-Lektion.",
+    "Lektion"
+   ],
+   [
+    "Ein Gespräch im Beruf",
+    "#ueben/sprechen/B2/0",
+    "Nachfragen, erklären, einen Vorschlag machen.",
+    "Sprechen"
+   ],
+   [
+    "Eine berufliche E-Mail",
+    "#ueben/schreiben/B2/2",
+    "Eine Weiterbildung beantragen.",
+    "Schreiben"
+   ],
+   [
+    "Hören im Beruf",
+    "#hoeren/beruf",
+    "Mailbox, Durchsagen, Gespräche unter Kollegen.",
+    "Hören"
+   ],
+   [
+    "Alle B2-Lektionen",
+    "#lernen/B2",
+    "Ausgewählte Themen zur Vorbereitung auf den Kurs.",
+    "Lektion"
+   ],
+   [
+    "Wie sieht die B2-Prüfung aus?",
+    "#vorbereitung/dtb-b2",
+    "Aufbau, Zeiten und Strategien des DTB B2 – damit du weißt, worauf der Kurs hinarbeitet.",
+    "Prüfung"
+   ]
+  ]
+ },
+ "repeat": {
+  "icon": "🔄",
+  "group": "beruf",
+  "level": "B2 Beruf",
+  "title": "Ich möchte B2 gezielt wiederholen",
+  "who": "Du hast B2 nicht bestanden und willst es noch einmal versuchen.",
+  "intro": "Du musst nicht von vorne beginnen. Schau in dein Ergebnis und wähle den Teil, der dir gefehlt hat.",
+  "tip": "Übe den schwächsten Teil zuerst – jeden Tag ein bisschen, nicht einmal pro Woche viel.",
+  "plan": [
+   "Ergebnis ansehen: Welcher Teil hat gefehlt?",
+   "Jeden Tag 20 Minuten nur diesen Teil",
+   "Einmal pro Woche den ganzen Teil in der Simulation",
+   "Vor der Prüfung: schriftlich und mündlich komplett mit Uhr"
+  ],
+  "steps": [
+   [
+    "Sprechen 1: über ein Thema sprechen",
+    "#training/dtb-thema",
+    "Strukturieren, Beispiele geben, Nachfragen beantworten.",
+    "Sprechen"
+   ],
+   [
+    "Sprechen 2: mit Kollegen sprechen",
+    "#training/dtb-kollegen",
+    "Auf das Gegenüber eingehen und nachfragen.",
+    "Sprechen"
+   ],
+   [
+    "Sprechen 3: Lösungen diskutieren",
+    "#training/dtb-sprechen",
+    "Vergleichen und sich einigen.",
+    "Sprechen"
+   ],
+   [
+    "Schreiben: Kundenantwort",
+    "#training/dtb-schreiben",
+    "Mit internen Informationen antworten.",
+    "Schreiben"
+   ],
+   [
+    "Schreiben: Forumsbeitrag",
+    "#ueben/schreiben/B2/3",
+    "Eine Position mit Argumenten vertreten.",
+    "Schreiben"
+   ],
+   [
+    "Lesen: betriebliche Regelung",
+    "#training/dtb-lesen",
+    "Auf Einschränkungen und Fristen achten.",
+    "Lesen"
+   ],
+   [
+    "Hören im Beruf",
+    "#hoeren/beruf",
+    "Mailbox, Durchsagen, Gespräche.",
+    "Hören"
+   ],
+   [
+    "Probeprüfung schriftlich",
+    "#simulation/dtb-b2/schriftlich",
+    "125 Minuten mit einer Uhr – zeigt dir, ob dein schwacher Teil jetzt reicht.",
+    "Simulation"
+   ],
+   [
+    "Probeprüfung mündlich",
+    "#simulation/dtb-b2/muendlich",
+    "16 Minuten Sprechen – mit Musterdialogen und Checkliste.",
+    "Simulation"
+   ]
+  ]
+ },
+ "lid": {
+  "icon": "🇩🇪",
+  "group": "pruefung",
+  "level": "Orientierungskurs",
+  "title": "Ich mache den Test „Leben in Deutschland“",
+  "who": "Für den Orientierungskurs oder die Einbürgerung – 33 Fragen in 60 Minuten.",
+  "intro": "Lerne die 300 allgemeinen Fragen und die 10 Fragen für NRW in kleinen Blöcken. Wiederhole deine Fehler und mach dann den Test mit echter Zeit.",
+  "tip": "Lerne jeden Tag einen Block mit 30 Fragen. Wenn du im Test dreimal über 28 Punkte hast, bist du gut vorbereitet.",
+  "plan": [
+   "10 Minuten einen Block lernen",
+   "5 Minuten Fehler wiederholen",
+   "Einmal pro Woche: Test mit 33 Fragen und Uhr"
+  ],
+  "steps": [
+   [
+    "Fragen 1–30 lernen",
+    "#lid/lernen/1",
+    "Mit Erklärung und Vorlesen – starte mit dem ersten Block.",
+    "Lernen"
+   ],
+   [
+    "Alle Blöcke und NRW-Fragen",
+    "#lid",
+    "Lerne Block für Block bis zu allen 310 Fragen.",
+    "Lernen"
+   ],
+   [
+    "Fehler wiederholen",
+    "#lid/fehler",
+    "Nur die Fragen, die du noch falsch beantwortest.",
+    "Wiederholen"
+   ],
+   [
+    "Deutschland verstehen",
+    "#orientierungskurs",
+    "Demokratie, Geschichte, Zusammenleben – einfach erklärt.",
+    "Orientierung"
+   ],
+   [
+    "LiD-Spiele",
+    "#spiele/lid",
+    "Zeitstrahl, Wer macht was im Staat? – spielerisch wiederholen.",
+    "Spiel"
+   ],
+   [
+    "Videos zum Test",
+    "#videos/orientierung",
+    "Wahlen, Grundrechte, Bundestag – erklärt von Dennis.",
+    "Video"
+   ],
+   [
+    "Probetest mit Uhr",
+    "#simulation/lid",
+    "33 Fragen, 60 Minuten – bestanden ab 15, Einbürgerung ab 17 richtigen Antworten.",
+    "Simulation"
+   ]
+  ]
+ },
+ "telcb1": {
+  "icon": "📘",
+  "group": "pruefung",
+  "level": "B1",
+  "title": "Ich mache die telc-Prüfung B1",
+  "who": "Zum Beispiel für die Einbürgerung, eine Ausbildung oder die Arbeit.",
+  "intro": "Das Zertifikat telc Deutsch B1: Leseverstehen, Sprachbausteine, Hören, ein Brief und eine mündliche Paarprüfung. Erst gezielt üben, dann mit Uhr testen.",
+  "tip": "Bestanden ist, wer schriftlich UND mündlich je 60 % hat. Übe deshalb nie nur einen Teil.",
+  "plan": [
+   "Montag: ein Lese- oder Hörteil",
+   "Mittwoch: Sprachbausteine und ein Brief",
+   "Freitag: Sprechen – Thema und gemeinsam planen",
+   "Alle zwei Wochen: Probeprüfung schriftlich oder mündlich"
+  ],
+  "steps": [
+   [
+    "Aufbau und Strategien",
+    "#vorbereitung/telc-b1",
+    "Alle Prüfungsteile mit Zeiten, typischen Fallen und Mini-Übungen.",
+    "Vorbereitung"
+   ],
+   [
+    "Lesen üben",
+    "#lesen/alltag",
+    "Mitteilungen, Anzeigen und Artikel verstehen.",
+    "Lesen"
+   ],
+   [
+    "Hören üben",
+    "#hoeren/alltag",
+    "Radio, Durchsagen und Gespräche.",
+    "Hören"
+   ],
+   [
+    "Einen Brief schreiben",
+    "#ueben/schreiben/B1/2",
+    "Leitpunkte bearbeiten, mit Mustertext vergleichen.",
+    "Schreiben"
+   ],
+   [
+    "Gemeinsam etwas planen",
+    "#ueben/sprechen/B1/0",
+    "Vorschläge machen, reagieren, sich einigen.",
+    "Sprechen"
+   ],
+   [
+    "Probeprüfung schriftlich",
+    "#simulation/telc-b1/schriftlich",
+    "150 Minuten mit einer Uhr – mit Punkten und allen Lösungen.",
+    "Simulation"
+   ],
+   [
+    "Probeprüfung mündlich",
+    "#simulation/telc-b1/muendlich",
+    "20 Minuten Vorbereitung und 15 Minuten Gespräch.",
+    "Simulation"
+   ]
+  ]
+ },
+ "telcb2": {
+  "icon": "📗",
+  "group": "pruefung",
+  "level": "B2",
+  "title": "Ich mache die telc-Prüfung B2",
+  "who": "Die allgemeine B2-Prüfung, zum Beispiel für Arbeit, Anerkennung oder Studium.",
+  "intro": "telc Deutsch B2: längere Texte, Sprachbausteine, ein Interview im Radio, eine formelle E-Mail und eine Diskussion. Strategien zuerst, dann die Probeprüfung.",
+  "tip": "In der Diskussion zählt, dass du auf dein Gegenüber eingehst – nicht nur deine eigene Meinung vorträgst.",
+  "plan": [
+   "Zweimal pro Woche: ein Leseteil oder Sprachbausteine",
+   "Einmal pro Woche: eine formelle E-Mail",
+   "Einmal pro Woche: Diskussion zu zweit",
+   "Alle zwei Wochen: Probeprüfung"
+  ],
+  "steps": [
+   [
+    "Aufbau und Strategien",
+    "#vorbereitung/telc-b2",
+    "Alle Prüfungsteile mit Zeiten, typischen Fallen und Mini-Übungen.",
+    "Vorbereitung"
+   ],
+   [
+    "Lesen auf B2",
+    "#lesen/beruf",
+    "Längere Texte, Regelungen und Artikel.",
+    "Lesen"
+   ],
+   [
+    "Wortschatz und Grammatik B2",
+    "#spiele/b2",
+    "Nomen-Verb-Verbindungen, Präpositionen, Konnektoren.",
+    "Spiel"
+   ],
+   [
+    "Eine formelle E-Mail",
+    "#ueben/schreiben/B2/2",
+    "Bitte um Information oder Beschwerde – mit Muster.",
+    "Schreiben"
+   ],
+   [
+    "Meinung vertreten",
+    "#ueben/schreiben/B2/3",
+    "Argumente sammeln und gewichten.",
+    "Schreiben"
+   ],
+   [
+    "Probeprüfung schriftlich",
+    "#simulation/telc-b2/schriftlich",
+    "140 Minuten mit einer Uhr – mit Punkten und allen Lösungen.",
+    "Simulation"
+   ],
+   [
+    "Probeprüfung mündlich",
+    "#simulation/telc-b2/muendlich",
+    "20 Minuten Vorbereitung und 15 Minuten Gespräch.",
+    "Simulation"
+   ]
+  ]
+ },
+ "dtbb1": {
+  "icon": "🧰",
+  "group": "beruf",
+  "level": "B1 Beruf",
+  "title": "Ich mache den DTB B1",
+  "who": "Du bist im Berufssprachkurs B1 und hast bald die Prüfung.",
+  "intro": "Der Deutsch-Test für den Beruf B1: Stellenanzeigen, Arbeitsanweisungen, Kunden-E-Mails, Telefonnotizen und Gespräche im Team.",
+  "tip": "Lies bei jeder Schreibaufgabe zuerst die Notiz der Chefin – dort steht, was in deine Antwort muss.",
+  "plan": [
+   "10 Minuten Lesen oder Hören im Beruf",
+   "10 Minuten eine kurze berufliche Nachricht",
+   "5 Minuten Sprechen: über die eigene Arbeit",
+   "Alle zwei Wochen: Probeprüfung"
+  ],
+  "steps": [
+   [
+    "Aufbau und Strategien",
+    "#vorbereitung/dtb-b1",
+    "Alle Prüfungsteile mit Zeiten, typischen Fallen und Mini-Übungen.",
+    "Vorbereitung"
+   ],
+   [
+    "Lesen im Beruf",
+    "#lesen/beruf",
+    "Regelungen, E-Mails und Anzeigen verstehen.",
+    "Lesen"
+   ],
+   [
+    "Hören im Beruf",
+    "#hoeren/beruf",
+    "Mailbox, Durchsagen, Gespräche unter Kollegen.",
+    "Hören"
+   ],
+   [
+    "Über die eigene Arbeit sprechen",
+    "#lektion/arbeit/3",
+    "Einen Dialog lesen und eigene Erfahrungen ergänzen.",
+    "Lektion"
+   ],
+   [
+    "Probeprüfung schriftlich",
+    "#simulation/dtb-b1/schriftlich",
+    "95 Minuten mit einer Uhr – mit Punkten und allen Lösungen.",
+    "Simulation"
+   ],
+   [
+    "Probeprüfung mündlich",
+    "#simulation/dtb-b1/muendlich",
+    "16 Minuten Sprechen – mit Musterdialogen und Checkliste.",
+    "Simulation"
+   ]
+  ]
+ },
+ "dtbb2": {
+  "icon": "💼",
+  "group": "beruf",
+  "level": "B2 Beruf",
+  "title": "Ich mache den DTB B2",
+  "who": "Du bist im Berufssprachkurs B2 und hast bald die Prüfung.",
+  "intro": "Der Deutsch-Test für den Beruf B2: Kundenantwort, Telefonnotiz, Forumsbeitrag, Gespräche mit Kollegen und Lösungen finden. Übe Teil für Teil, dann mit Uhr.",
+  "tip": "Beim DTB zählen alle vier Fertigkeiten. Eine schwache Fertigkeit kannst du ausgleichen – aber nur, wenn sie mindestens 40 % hat.",
+  "plan": [
+   "Montag: Lesen oder Hören im Beruf",
+   "Mittwoch: Kundenantwort oder Forumsbeitrag",
+   "Freitag: Sprechen Teil 3 – Lösungen finden",
+   "Alle zwei Wochen: Probeprüfung"
+  ],
+  "steps": [
+   [
+    "Aufbau und Strategien",
+    "#vorbereitung/dtb-b2",
+    "Alle Prüfungsteile mit Zeiten, typischen Fallen und Mini-Übungen.",
+    "Vorbereitung"
+   ],
+   [
+    "Schreiben: Kundenantwort",
+    "#training/dtb-schreiben",
+    "Mit internen Informationen antworten.",
+    "Schreiben"
+   ],
+   [
+    "Sprechen 1: über ein Thema sprechen",
+    "#training/dtb-thema",
+    "Strukturieren, Beispiele geben, Nachfragen beantworten.",
+    "Sprechen"
+   ],
+   [
+    "Sprechen 3: Lösungen diskutieren",
+    "#training/dtb-sprechen",
+    "Vergleichen und sich einigen.",
+    "Sprechen"
+   ],
+   [
+    "Wortschatz und Grammatik B2",
+    "#spiele/b2",
+    "Nomen-Verb-Verbindungen, Präpositionen, Konnektoren.",
+    "Spiel"
+   ],
+   [
+    "Probeprüfung schriftlich",
+    "#simulation/dtb-b2/schriftlich",
+    "125 Minuten mit einer Uhr – mit Punkten und allen Lösungen.",
+    "Simulation"
+   ],
+   [
+    "Probeprüfung mündlich",
+    "#simulation/dtb-b2/muendlich",
+    "16 Minuten Sprechen – mit Musterdialogen und Checkliste.",
+    "Simulation"
+   ]
+  ]
+ }
 };
-DM.pathOrder = ['start', 'sprechen', 'schreiben', 'dtz', 'bridge', 'repeat'];
+DM.pathOrder = ["start","sprechen","schreiben","dtz","lid","telcb1","telcb2","bridge","dtbb1","dtbb2","repeat"];
+/* Auf der Startseite gezeigte Wege (alle unter #lernweg) */
+DM.pathHome = ["start", "sprechen", "dtz", "lid", "telcb1", "dtbb2"];
 
 /* Zusätzliche Situationen für Sprechen & Schreiben. Die ersten zwei je Niveau stammen aus der bisherigen Website. */
 DM.extraScenes = {
@@ -228,6 +812,11 @@ DM.wegweiser = {
     q: 'Was ist dein Ziel?',
     options: [
       ['dtz', 'Ich mache bald den DTZ (Deutsch-Test für Zuwanderer).'],
+      ['lid', 'Ich mache den Test „Leben in Deutschland“ (Orientierungskurs oder Einbürgerung).'],
+      ['telcb1', 'Ich mache die telc-Prüfung B1 (z. B. für die Einbürgerung).'],
+      ['telcb2', 'Ich mache die telc-Prüfung B2 (allgemein).'],
+      ['dtbb1', 'Ich mache den DTB B1 (Berufssprachkurs).'],
+      ['dtbb2', 'Ich mache den DTB B2 (Berufssprachkurs).'],
       ['bridge', 'Ich möchte einen B2-Kurs (Beruf) beginnen.'],
       ['repeat', 'Ich habe B2 nicht bestanden und will es wiederholen.'],
       ['sprechen', 'Keine Prüfung – ich möchte mehr sprechen.'],
