@@ -2,6 +2,12 @@
  "note": "Neu auf der Seite – neueste Einträge oben. Wird vom Redaktionsplan (geplante Aufgaben) ergänzt.",
  "items": [
   {
+   "date": "2026-10-23",
+   "type": "neu",
+   "title": "Neues Arbeitsblatt: Am Telefon – einen Termin machen (A1, Sprechen)",
+   "link": "#material"
+  },
+  {
    "date": "2026-10-21",
    "type": "hoeren",
    "title": "Neues Hörtraining: je 2 Übungssätze für telc B1 und DTB B1",
