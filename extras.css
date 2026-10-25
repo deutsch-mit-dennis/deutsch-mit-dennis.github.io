@@ -841,3 +841,24 @@ header.dm-header nav{margin-left:auto}
 .dm-share-grid .s-wa{background:#1F8F4E}.dm-share-grid .s-tg{background:#1E7FB8}.dm-share-grid .s-fb{background:#1A5DC8}.dm-share-grid .s-mail{background:var(--dm-tinte,#172036)}
 .dm-share-ok{margin:10px 0 0;min-height:1.3em;font-weight:700;color:#1F8F4E}
 @media print{.dm-share-wrap,.dm-sharebtn,.dm-share-teaser{display:none}}
+.dm-hshare{order:5;display:inline-flex;align-items:center;justify-content:center;gap:6px;height:44px;padding:0 14px;border:1px solid var(--dm-line);border-radius:999px;background:var(--dm-surface,#fff);color:var(--dm-tinte);font:inherit;font-weight:700;font-size:15px;cursor:pointer;flex:none;line-height:1}
+.dm-hshare:hover{background:var(--dm-tinte-soft)}
+@media (max-width:1180px){.dm-hshare{order:1;margin-left:auto}header.dm-header .dm-hshare~.dm-bell{margin-left:0}}
+@media (max-width:640px){.dm-hshare{width:44px;padding:0}.dm-hshare span{display:none}}
+@media (max-width:480px){.dm-hshare{width:40px;height:40px}}
+@media print{.dm-hshare{display:none}}
+/* Kopfzeile Handy: Logo + Teilen + Glocke + Menü in einer Zeile */
+@media (max-width:480px){header.dm-header{column-gap:6px;flex-wrap:nowrap}header.dm-header .logo{font-size:18px;min-width:0}header.dm-header #pl-menu{padding:8px 11px;font-size:15px;white-space:nowrap}}
+@media (max-width:380px){header.dm-header .logo{font-size:15.5px}header.dm-header #pl-menu{padding:8px 9px}}
+@media (max-width:340px){header.dm-header .logo{font-size:14px}.dm-hshare,.dm-bell{width:36px!important;height:36px!important;flex-basis:36px!important}}
+/* Einheitlich auf allen Geräten: keine abgeschnittenen Abzeichen, keine zerbrochenen Wörter */
+.dm-trust li{white-space:normal;max-width:100%}
+.dm-hero-copy h1{overflow-wrap:normal;word-break:normal;hyphens:manual}
+@media (max-width:760px){.dm-hero-copy h1{font-size:clamp(25px,8.6vw,36px)}}
+@media (max-width:400px){.dm-hero{grid-template-columns:minmax(0,1fr) 104px}.dm-hero-photo img{height:180px}.dm-hero::before{width:108px}}
+@media (max-width:400px){header.dm-header .logo{font-size:15px;margin-right:4px}.dm-hshare,.dm-bell{width:38px!important;height:38px!important;flex-basis:38px!important}}
+@media (max-width:400px){header.dm-header .logo{font-size:14px;margin-right:14px}}
+@media (min-width:761px) and (max-width:1024px){.dm-hero{grid-template-columns:minmax(180px,250px) minmax(0,1fr)}.dm-hero-copy h1{font-size:clamp(40px,6.4vw,56px)}}
+@media (max-width:480px){header.dm-header .logo{flex-shrink:0;min-width:auto;margin-right:12px}}
+@media (max-width:400px){header.dm-header #pl-menu{font-size:0!important;width:40px;height:40px;padding:0!important;display:inline-grid;place-items:center}header.dm-header #pl-menu::after{content:'☰';font-size:20px;line-height:1}}
+@media (max-width:760px){.dm-home .dm-toolgrid{grid-template-columns:repeat(2,minmax(0,1fr))!important}.dm-home .dm-toolgrid a{min-width:0}.dm-home .dm-toolgrid b{overflow-wrap:anywhere;hyphens:auto}}

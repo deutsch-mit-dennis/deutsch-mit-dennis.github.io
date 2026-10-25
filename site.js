@@ -1499,7 +1499,7 @@
   function addBackBar(p) {
     backBar.hidden = p[0] === '';
     if (backBar.hidden) return;
-    backBar.innerHTML = `<div class="dm-backbar-in"><a class="dm-back" href="${x(parentOf(p))}"><span aria-hidden="true">←</span> Zurück</a><a class="dm-home" href="#"><span aria-hidden="true">⌂</span> Startseite</a><button type="button" class="dm-sharebtn" data-share aria-label="Diese Seite teilen"><span aria-hidden="true">↗</span> Teilen</button></div>`;
+    backBar.innerHTML = `<div class="dm-backbar-in"><a class="dm-back" href="${x(parentOf(p))}"><span aria-hidden="true">←</span> Zurück</a><a class="dm-home" href="#"><span aria-hidden="true">⌂</span> Startseite</a></div>`;
     backBar.querySelector('.dm-back').onclick = e => { if (navDepth > 0) { e.preventDefault(); navDepth -= 2; history.back(); } };
   }
 

@@ -122,5 +122,17 @@
     share({ whole: b.dataset.share === "site" });
   });
 
+  /* Knopf oben in der Kopfzeile (neben der Glocke) – auf jeder Seite sichtbar */
+  function headerButton() {
+    const head = document.querySelector('header.dm-header'); if (!head || head.querySelector('.dm-hshare')) return;
+    const b = document.createElement('button');
+    b.type = 'button'; b.className = 'dm-hshare'; b.setAttribute('data-share', ''); b.setAttribute('aria-label', 'Diese Seite teilen'); b.title = 'Teilen';
+    b.innerHTML = '<svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg><span>Teilen</span>';
+    const bell = head.querySelector('.dm-bell');
+    if (bell) bell.before(b); else head.querySelector('.logo')?.after(b);
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', headerButton); else headerButton();
+  setTimeout(headerButton, 1500);
+
   window.DMShare = { share, close };
 })();
