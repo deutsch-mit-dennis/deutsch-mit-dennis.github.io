@@ -179,13 +179,13 @@
     const prices = P.map(k => parseFloat(String(k.price).replace(',', '.'))).filter(n => !isNaN(n));
     const from = prices.length ? Math.min(...prices).toFixed(2).replace('.', ',') + ' €' : '';
     const pick = ['dtz-schreiben-20-briefe', 'lid-lernheft', 'b2-wiederholer'].map(id => P.find(k => k.id === id)).filter(Boolean);
+    const BK = (DM.books || []).filter(b => b.amazon);
     return `<section class="dm-section dm-pkg-teaser" aria-labelledby="pkgt-h">
       <div class="dm-pkg-teaser-copy"><p class="dm-kicker">Alles zum Üben bleibt kostenlos</p>
         <h2 id="pkgt-h">Du willst gezielt mehr üben?</h2>
-        <p>Ausführliche PDF-Lernpakete mit Musterlösungen – für DTZ, B2 Beruf, „Leben in Deutschland“ und für Lehrkräfte${from ? ` · ab ${from}` : ''}.</p>
-        <a class="dm-btn" href="#lernpakete">Alle Lernpakete ansehen</a>
-        ${(DM.books || []).some(b => b.amazon) ? '<p class="dm-small dm-books-hint">Neu: meine Übungsbücher auch gedruckt – <a href="#lernpakete/buecher">bei Amazon ansehen</a></p>' : ''}</div>
-      <ul class="dm-pkg-teaser-list">${pick.map(k => `<li><a href="#lernpakete/${k.id}"><img src="${k.img}" alt="" width="72" height="72" loading="lazy"><span><b>${x(k.title)}</b><small>${x(k.level)} · ${x(k.price)}</small></span></a></li>`).join('')}</ul>
+        <p>${BK.length ? 'Meine Übungsbücher gedruckt bei Amazon – und ausführliche PDF-Lernpakete' : 'Ausführliche PDF-Lernpakete'} mit Musterlösungen für DTZ, B2 Beruf, „Leben in Deutschland“ und für Lehrkräfte${from ? ` · PDF ab ${from}` : ''}.</p>
+        <div class="dm-row">${BK.length ? '<a class="dm-btn" href="#lernpakete/buecher">Übungsbücher bei Amazon</a><a class="dm-btn dm-btn-quiet" href="#lernpakete">PDF-Lernpakete</a>' : '<a class="dm-btn" href="#lernpakete">Alle Lernpakete ansehen</a>'}</div></div>
+      <ul class="dm-pkg-teaser-list">${BK.map(b => `<li><a href="#lernpakete/buecher"><img src="${b.img}" alt="" width="72" height="72" loading="lazy" style="object-fit:contain"><span><b>${x(b.title)}</b><small>Taschenbuch · ${x(b.price)}</small></span></a></li>`).join('')}${pick.slice(0, Math.max(1, 3 - BK.length)).map(k => `<li><a href="#lernpakete/${k.id}"><img src="${k.img}" alt="" width="72" height="72" loading="lazy"><span><b>${x(k.title)}</b><small>${x(k.level)} · ${x(k.price)}</small></span></a></li>`).join('')}</ul>
     </section>`;
   }
   /* Schnellstart: auf dem Handy direkt unter der Überschrift (Challenge, Probeprüfung, Lino, Lied des Tages) */
@@ -1217,14 +1217,15 @@
         </div>
       </div></article>`;
     page(`${crumbs([['Lernpakete']])}
-      <div class="dm-head"><h1>Lernpakete</h1><p class="dm-lead">Ausführliche PDF-Pakete zum Selbstlernen – mit Musterlösungen und Lösungsschlüssel. Alle Übungen auf dieser Website bleiben kostenlos. Die Pakete sind für alle, die gezielt mehr üben möchten – zum Ausdrucken, mit Lösungen.</p></div>
+      <div class="dm-head"><h1>Lernpakete</h1><p class="dm-lead">Gedruckte Übungsbücher bei Amazon und ausführliche PDF-Pakete zum Selbstlernen – alle mit Lösungen. Alle Übungen auf dieser Website bleiben kostenlos.</p></div>
+      ${booksBlock()}
+      <h2 class="dm-pkg-digi-h">Lernpakete als PDF</h2>
       <nav class="dm-tabs dm-tabs-small dm-pkg-jump" aria-label="Zielgruppe"><a href="#lernpakete" data-jump="pk-lernende"><b>Für Lernende</b><small>${P.filter(k => k.group !== 'lehrende').length} Pakete</small></a><a href="#lernpakete" data-jump="pk-lehrende"><b>Für Lehrkräfte</b><small>${P.filter(k => k.group === 'lehrende').length} Pakete</small></a></nav>
       <section class="dm-pkg-sec" id="pk-lernende"><h2>Für Lernende</h2><p class="dm-small">Selbstlernmaterial für DTZ, B2 Beruf und den Test „Leben in Deutschland“ – mit Musterlösungen.</p><div class="dm-pkg-grid">${P.filter(k => k.group !== 'lehrende').map(card).join('')}</div></section>
       <section class="dm-pkg-sec" id="pk-lehrende"><h2>Für Lehrkräfte</h2><p class="dm-small">Fertige Unterrichtsstunden für Integrationskurs und DaZ – mit Lehrerblatt, Kahoot-Quiz und Kopiervorlagen.</p><div class="dm-pkg-grid">${P.filter(k => k.group === 'lehrende').map(card).join('')}</div></section>
       <section class="dm-card dm-pkg-info"><h2>So funktioniert der Kauf</h2>
         <ol><li>Du wählst ein Paket und klickst auf „Kaufen“.</li><li>Die Bezahlung läuft sicher über <b>Digistore24</b>.</li><li>Direkt nach dem Kauf bekommst du den Download-Link per E-Mail.</li></ol>
-        <p class="dm-small">Selbstlernmaterial und Unterrichtsmaterial ohne individuelle Betreuung oder Korrektur. Unabhängiges Lernangebot – kein Angebot von g.a.s.t., telc oder BAMF, keine offiziellen Prüfungsaufgaben. Fragen? <a href="mailto:${T.email}">${T.email}</a></p></section>
-      ${booksBlock()}`);
+        <p class="dm-small">Selbstlernmaterial und Unterrichtsmaterial ohne individuelle Betreuung oder Korrektur. Unabhängiges Lernangebot – kein Angebot von g.a.s.t., telc oder BAMF, keine offiziellen Prüfungsaufgaben. Fragen? <a href="mailto:${T.email}">${T.email}</a></p></section>`);
     $$('[data-jump]').forEach(a => a.onclick = e => { e.preventDefault(); document.getElementById(a.dataset.jump)?.scrollIntoView({ behavior: 'smooth', block: 'start' }); });
   }
 
