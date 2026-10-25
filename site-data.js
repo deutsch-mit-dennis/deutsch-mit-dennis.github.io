@@ -912,5 +912,17 @@ DM.books = [
   { id: 'dtb-b2-lesen', img: 'assets/buecher/dtb-b2-lesen.jpg', title: 'DTB B2 Lesen – Das Übungsbuch', level: 'B2', target: 'DTB B2', pages: 46, price: '12,99 €', amazon: '',
     desc: '4 komplette Lesetests mit 72 Aufgaben aus Logistik, Pflege, Gastronomie und Büro – mit Strategien, Lösungen und Wortschatz Beruf.' },
   { id: 'dtb-b2-schreiben', img: 'assets/buecher/dtb-b2-schreiben.jpg', title: 'DTB B2 Schreiben – Das Übungsbuch', level: 'B2', target: 'DTB B2', pages: 76, price: '14,99 €', amazon: '',
-    desc: 'Kundenbeschwerden beantworten, Forumsbeiträge, Telefonnotizen und Sprachbausteine – mit allen Musterlösungen, Redemitteln und Checklisten.' }
+    desc: 'Kundenbeschwerden beantworten, Forumsbeiträge, Telefonnotizen und Sprachbausteine – mit allen Musterlösungen, Redemitteln und Checklisten.' },
+  { id: 'wortschatz-uk', img: 'assets/buecher/wortschatz-uk.jpg', title: 'Deutscher Wortschatz nach Themen – Deutsch–Ukrainisch', level: 'A1–B1', target: 'Alltag & Beruf', pages: 150, price: '16,99 €', amazon: '',
+    desc: 'Rund 700 wichtige Wörter in 24 Themen – von Wohnen und Einkaufen bis Amt, Arbeit und Gesundheit. Jedes Wort mit Artikel, Plural, Übersetzung ins Ukrainische und Beispielsatz, dazu Dialoge und Übungen.' },
+  { id: 'wortschatz-ru', img: 'assets/buecher/wortschatz-ru.jpg', title: 'Deutscher Wortschatz nach Themen – Deutsch–Russisch', level: 'A1–B1', target: 'Alltag & Beruf', pages: 150, price: '16,99 €', amazon: '',
+    desc: 'Rund 700 wichtige Wörter in 24 Themen – von Wohnen und Einkaufen bis Amt, Arbeit und Gesundheit. Jedes Wort mit Artikel, Plural, Übersetzung ins Russische und Beispielsatz, dazu Dialoge und Übungen.' },
+  { id: 'wortschatz-ar', img: 'assets/buecher/wortschatz-ar.jpg', title: 'Deutscher Wortschatz nach Themen – Deutsch–Arabisch', level: 'A1–B1', target: 'Alltag & Beruf', pages: 156, price: '16,99 €', amazon: '',
+    desc: 'Rund 700 wichtige Wörter in 24 Themen – von Wohnen und Einkaufen bis Amt, Arbeit und Gesundheit. Jedes Wort mit Artikel, Plural, Übersetzung ins Arabische und Beispielsatz, dazu Dialoge und Übungen.' },
+  { id: 'wortschatz-tr', img: 'assets/buecher/wortschatz-tr.jpg', title: 'Deutscher Wortschatz nach Themen – Deutsch–Türkisch', level: 'A1–B1', target: 'Alltag & Beruf', pages: 150, price: '16,99 €', amazon: '',
+    desc: 'Rund 700 wichtige Wörter in 24 Themen – von Wohnen und Einkaufen bis Amt, Arbeit und Gesundheit. Jedes Wort mit Artikel, Plural, Übersetzung ins Türkische und Beispielsatz, dazu Dialoge und Übungen.' },
+  { id: 'wortschatz-fa', img: 'assets/buecher/wortschatz-fa.jpg', title: 'Deutscher Wortschatz nach Themen – Deutsch–Persisch', level: 'A1–B1', target: 'Alltag & Beruf', pages: 156, price: '16,99 €', amazon: '',
+    desc: 'Rund 700 wichtige Wörter in 24 Themen – von Wohnen und Einkaufen bis Amt, Arbeit und Gesundheit. Jedes Wort mit Artikel, Plural, Übersetzung ins Persische und Beispielsatz, dazu Dialoge und Übungen.' },
+  { id: 'wortschatz-en', img: 'assets/buecher/wortschatz-en.jpg', title: 'Deutscher Wortschatz nach Themen – Deutsch–Englisch', level: 'A1–B1', target: 'Alltag & Beruf', pages: 150, price: '16,99 €', amazon: '',
+    desc: 'Rund 700 wichtige Wörter in 24 Themen – von Wohnen und Einkaufen bis Amt, Arbeit und Gesundheit. Jedes Wort mit Artikel, Plural, Übersetzung ins Englische und Beispielsatz, dazu Dialoge und Übungen.' }
 ];
