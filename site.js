@@ -291,8 +291,10 @@
     ${window.DMWitz ? DMWitz.card() : ''}
     <section class="dm-section dm-about-teaser">
       <img src="assets/dennis.webp" alt="" width="120" height="192" loading="lazy">
-      <div><h2>Wer ist Dennis?</h2><p>Seit 2017 im Deutschunterricht – DaF, Integrationskurse, DSH und TestDaF. Master in Germanistik, lizenzierter DTZ- und telc-Prüfer, vom BAMF zugelassen für Integrations- und Berufssprachkurse bis C2. Ich kenne die Prüfungen aus dem Unterricht und als Prüfer.</p><div class="dm-row"><a class="dm-btn dm-btn-quiet" href="#ueber-mich">Mehr über mich</a><a class="dm-btn dm-btn-quiet" href="#ueber-mich/nachweise">Meine Zulassungen ansehen</a></div></div>
+      <div><h2>Wer ist Dennis?</h2><p>Seit 2017 im Deutschunterricht – DaF, Integrationskurse, DSH und TestDaF. Master in Germanistik, lizenzierter DTZ- und telc-Prüfer, vom BAMF zugelassen für Integrations- und Berufssprachkurse bis C2. Ich kenne die Prüfungen aus dem Unterricht und als Prüfer.</p><div class="dm-row"><a class="dm-btn dm-btn-quiet" href="#ueber-mich">Mehr über mich</a><a class="dm-btn dm-btn-quiet" href="#ueber-mich/nachweise">Meine Zulassungen ansehen</a><a class="dm-btn dm-btn-quiet" href="#" data-tour-start><span aria-hidden="true">▶</span> Video: Dennis stellt sich vor</a></div></div>
     </section>
+
+    <section class="dm-section dm-share-teaser"><div><h2>Kennst du jemanden, der Deutsch lernt?</h2><p>Schick ihm oder ihr den Link – per WhatsApp, Telegram oder E-Mail. Alles ist kostenlos und ohne Anmeldung.</p></div><button type="button" class="dm-btn" data-share="site"><span aria-hidden="true">↗</span> Website teilen</button></section>
 
     ${pkgTeaser()}`, 'dm-home');
     (window.DMNews ? DMNews.items() : fetch('neu.json?v=' + Math.floor(Date.now() / 36e5), { cache: 'no-cache' }).then(r => r.json()).then(j => j.items || [])).then(items => {
@@ -1497,7 +1499,7 @@
   function addBackBar(p) {
     backBar.hidden = p[0] === '';
     if (backBar.hidden) return;
-    backBar.innerHTML = `<div class="dm-backbar-in"><a class="dm-back" href="${x(parentOf(p))}"><span aria-hidden="true">←</span> Zurück</a><a class="dm-home" href="#"><span aria-hidden="true">⌂</span> Startseite</a></div>`;
+    backBar.innerHTML = `<div class="dm-backbar-in"><a class="dm-back" href="${x(parentOf(p))}"><span aria-hidden="true">←</span> Zurück</a><a class="dm-home" href="#"><span aria-hidden="true">⌂</span> Startseite</a><button type="button" class="dm-sharebtn" data-share aria-label="Diese Seite teilen"><span aria-hidden="true">↗</span> Teilen</button></div>`;
     backBar.querySelector('.dm-back').onclick = e => { if (navDepth > 0) { e.preventDefault(); navDepth -= 2; history.back(); } };
   }
 
