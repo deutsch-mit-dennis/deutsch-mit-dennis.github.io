@@ -78,7 +78,7 @@
   function hideToast() { if (!toast) return; const t = toast; toast = null; t.classList.remove('dm-in'); setTimeout(() => t.remove(), 300); }
   function showToast(nw) {
     try { if (sessionStorage.getItem(TOAST)) return; sessionStorage.setItem(TOAST, '1'); } catch {}
-    if (document.getElementById('dm-tour')) return;
+    if (document.getElementById('dm-tour') || document.querySelector('header.menu-open')) return;
     toast = document.createElement('aside');
     toast.className = 'dm-news-toast'; toast.setAttribute('role', 'status');
     const top = nw.slice(0, 2), more = nw.length - top.length;
@@ -93,6 +93,9 @@
     toast.querySelectorAll('ul a').forEach(a => a.addEventListener('click', () => hideToast()));
     setTimeout(hideToast, 14000);
   }
+
+  // Menü oder Teilen geöffnet → Hinweis und Fenster schließen, damit nichts übereinander liegt
+  document.addEventListener('click', e => { if (e.target.closest('#pl-menu, [data-share]')) { hideToast(); closePanel(); } }, true);
 
   function start() {
     load().then(items => {
