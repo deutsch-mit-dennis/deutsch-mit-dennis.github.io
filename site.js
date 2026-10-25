@@ -615,7 +615,7 @@
           ${item.situation ? `<p class="dm-task">${x(item.situation)}</p>` : ''}
           ${canPlay ? `<div class="dm-player-audio">
             <button type="button" class="dm-play" id="dm-play" aria-describedby="dm-plays"><span aria-hidden="true">▶</span> Abspielen</button>
-            <label class="dm-rate">Tempo <select id="dm-rate"><option value="0.92">normal</option><option value="0.75">langsamer</option></select></label>
+            <label class="dm-tempo">Tempo <select id="dm-rate"><option value="0.92">normal</option><option value="0.75">langsamer</option></select></label>
             <span class="dm-eq" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
           </div><p class="dm-small" id="dm-plays">Lies zuerst die Fragen. Dann hör den Text – du kannst ihn zweimal hören.</p>` : '<p class="dm-warn">Dein Browser kann keine Texte vorlesen. Du kannst den Text unten lesen.</p>'}
           <details id="dm-transcript" ${canPlay ? '' : 'open'}><summary>Text zum Mitlesen</summary><div class="dm-transcript">${transcript}</div></details>

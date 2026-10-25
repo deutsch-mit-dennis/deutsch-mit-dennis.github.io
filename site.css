@@ -284,8 +284,8 @@ textarea#dm-draft:focus{border-color:var(--dm-tinte);outline:none}
 .dm-play{display:inline-flex;align-items:center;gap:10px;min-height:56px;padding:12px 26px;border-radius:999px;border:0;background:var(--dm-tinte);color:#fff;font:700 19px var(--dm-font);cursor:pointer}
 .dm-play:hover{background:var(--dm-tinte-dark)}
 .dm-play.is-playing{background:var(--dm-rot)}
-.dm-rate{display:flex;align-items:center;gap:8px;color:var(--dm-muted)}
-.dm-rate select{min-height:44px;border:1px solid var(--dm-line);border-radius:10px;padding:6px 10px;font-size:16px;background:#fff}
+.dm-tempo{display:flex;align-items:center;gap:8px;color:var(--dm-muted)}
+.dm-tempo select{min-height:44px;border:1px solid var(--dm-line);border-radius:10px;padding:6px 10px;font-size:16px;background:#fff}
 
 /* Prüfung */
 .dm-exam-block{position:relative;margin:0 0 28px;padding:24px 24px 24px 30px;background:var(--dm-surface);border:1px solid var(--dm-line);border-radius:18px;overflow:hidden}
