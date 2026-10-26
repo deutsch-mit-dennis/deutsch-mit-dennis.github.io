@@ -77,8 +77,9 @@
   let toast = null;
   function hideToast() { if (!toast) return; const t = toast; toast = null; t.classList.remove('dm-in'); setTimeout(() => t.remove(), 300); }
   function showToast(nw) {
+    // Begrüßung von Dennis hat Vorrang – dann kein zweites Fenster
+    if (window.DMTourPending || document.getElementById('dm-tour') || document.querySelector('header.menu-open')) return;
     try { if (sessionStorage.getItem(TOAST)) return; sessionStorage.setItem(TOAST, '1'); } catch {}
-    if (document.getElementById('dm-tour') || document.querySelector('header.menu-open')) return;
     toast = document.createElement('aside');
     toast.className = 'dm-news-toast'; toast.setAttribute('role', 'status');
     const top = nw.slice(0, 2), more = nw.length - top.length;
@@ -99,12 +100,14 @@
 
   function start() {
     load().then(items => {
-      if (get(SEEN) === null) { markSeen(items.filter(i => Date.now() - i.t > 3 * 864e5)); } // erster Besuch: nur Älteres gilt als bekannt
+      const first = get(SEEN) === null;
+      if (first) { markSeen(items.filter(i => Date.now() - i.t > 3 * 864e5)); } // erster Besuch: nur Älteres gilt als bekannt
       const nw = fresh(items);
       badge(nw.length);
-      if (nw.length) setTimeout(() => showToast(nw), 2500);
+      // „Neu seit deinem letzten Besuch“ nur für wiederkehrende Besucher; Neue sehen die Zahl an der Glocke
+      if (nw.length && !first) setTimeout(() => showToast(nw), 2500);
     });
   }
-  window.DMNews = { items: load };
+  window.DMNews = { items: load, hideToast: () => hideToast() };
   if (document.readyState === 'complete') start(); else window.addEventListener('load', start);
 })();

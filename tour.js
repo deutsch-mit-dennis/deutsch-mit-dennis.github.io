@@ -42,10 +42,11 @@
         <div class="dm-tour-btns"><button type="button" class="dm-btn dm-tour-play">▶ Rundgang starten</button><button type="button" class="dm-tour-later">Später</button></div></div></div>
       <div class="dm-tour-player" hidden><video playsinline controls preload="none" poster="${POSTER}"><source src="${VIDEO}" type="video/mp4"><track kind="captions" srclang="de" label="Deutsch" src="${SUBS}" default></video>
         <p class="dm-tour-hint" aria-live="polite"></p></div>`;
+    window.DMNews?.hideToast?.();
     document.body.appendChild(b);
     requestAnimationFrame(() => b.classList.add('dm-tour-in'));
     const v = b.querySelector('video'), hint = b.querySelector('.dm-tour-hint');
-    const hide = () => { v.pause(); clearMarks(); b.classList.remove('dm-tour-in'); setTimeout(() => b.remove(), 300); };
+    const hide = () => { window.DMTourPending = false; v.pause(); clearMarks(); b.classList.remove('dm-tour-in'); setTimeout(() => b.remove(), 300); };
     const close = () => { set(SEEN, '1'); hide(); };
     b.querySelector('.dm-tour-x').onclick = close;
     b.querySelector('.dm-tour-later').onclick = () => { try { sessionStorage.setItem(SEEN, '1'); } catch {} set(LATER, String((+get(LATER) || 0) + 1)); hide(); };
@@ -70,7 +71,8 @@
     const onHome = !location.hash || location.hash === '#';
     let later = false; try { later = !!sessionStorage.getItem(SEEN); } catch {}
     if (!onHome || get(SEEN) || later || (+get(LATER) || 0) >= 3 || document.getElementById('dm-tour')) return;
-    check().then(ok => { if (ok) setTimeout(() => { if (!location.hash || location.hash === '#') bubble(); }, 1800); });
+    window.DMTourPending = true; // Neuigkeiten-Hinweis wartet, damit nie zwei Fenster gleichzeitig offen sind
+    check().then(ok => { if (!ok) { window.DMTourPending = false; return; } setTimeout(() => { if (!location.hash || location.hash === '#') bubble(); else window.DMTourPending = false; }, 1800); });
   }
   document.addEventListener('click', e => { const a = e.target.closest('[data-tour-start]'); if (a) { e.preventDefault(); window.DMTour.start(); } });
   window.addEventListener('hashchange', () => {
