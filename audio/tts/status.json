@@ -1,11 +1,11 @@
 {
- "run": "2026-10-25T08:44:04Z",
+ "run": "2026-10-26T09:22:22Z",
  "runs": [
   {
    "engine": "gemini",
    "created": 0,
    "open": 527,
-   "chars_this_month": 89394,
+   "chars_this_month": 93114,
    "monthly_limit": 200000,
    "errors": [
     {
