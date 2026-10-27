@@ -566,9 +566,17 @@
   }
 
   /* ---------- Sprechen ---------- */
-  const recs = {};
-  let recorder = null, recKey = null, recChunks = [];
+  const recs = {}, recTexts = {};
+  let recorder = null, recKey = null, recChunks = [], recMit = null;
   function stopRec() { try { recorder?.state === 'recording' && recorder.stop(); } catch {} }
+  function mitBox(id, ended) {
+    const M = window.DMMitschrift, t = recTexts[id];
+    if (!M?.ok) return ended ? '' : '<p class="dm-small">Dein Browser kann leider nicht mitschreiben. In Chrome, Edge oder Safari erscheint hier dein Text.</p>';
+    if (!t) return '';
+    if (!ended) return `<b>Mitschrift</b><p aria-live="polite">${e(t.fin)} <i>${e(t.live || (t.fin ? '' : 'Sprich jetzt – hier erscheint, was du sagst …'))}</i></p>`;
+    return t.fin ? `<b>Das hast du gesagt</b><p>${e(M.nice(t.fin))}</p><p class="dm-small">💬 ${M.words(t.fin)} Wörter · Stimmt ein Wort nicht? Dann hast du es vielleicht undeutlich gesprochen.</p>`
+      : '<p class="dm-small">Ich habe leider nichts verstanden. Sprich lauter und näher am Mikrofon.</p>';
+  }
   async function toggleRec(btn) {
     const key = btn.dataset.rec;
     if (recorder && recorder.state === 'recording') { const same = recKey === key; stopRec(); if (same) return; }
@@ -577,9 +585,15 @@
     try { stream = await navigator.mediaDevices.getUserMedia({ audio: true }); } catch { toast('Kein Zugriff auf das Mikrofon.'); return; }
     recChunks = []; recKey = key;
     recorder = new MediaRecorder(stream);
+    const tid = (cur?.id || '') + key; recTexts[tid] = { fin: '', live: '' }; let recOn = true;
+    const showMit = () => { const b = $(`[data-mitbox="${key}"]`); if (b) b.innerHTML = mitBox(tid, !recOn); };
+    try { recMit?.stop(); } catch {}
+    recMit = window.DMMitschrift?.start((fin, live) => { recTexts[tid] = { fin, live: recOn ? live : '' }; showMit(); }) || null;
+    showMit();
     recorder.ondataavailable = ev => ev.data.size && recChunks.push(ev.data);
     recorder.onstop = () => {
       stream.getTracks().forEach(t => t.stop());
+      recOn = false; try { recMit?.stop(); } catch {} recMit = null; if (recTexts[tid]) recTexts[tid].live = ''; showMit();
       const url = URL.createObjectURL(new Blob(recChunks, { type: recorder.mimeType || 'audio/webm' }));
       recs[(cur?.id || '') + key] = url;
       const box = $(`[data-recbox="${key}"]`);
@@ -598,7 +612,8 @@
       ${isPrep ? `<label class="sim-wlabel" for="n-${key}">Deine Notizen (Stichpunkte)</label><textarea id="n-${key}" class="sim-textarea sim-notes" data-notes="${key}" rows="4">${e(st.notes[key] || '')}</textarea>`
         : `${st.notes[key] && !withNotes ? `<details class="sim-det"><summary>Deine Notizen</summary><p class="sim-pre">${e(st.notes[key])}</p></details>` : ''}
         ${total ? `<div class="sim-prompts"><button type="button" class="dm-btn dm-btn-quiet sim-ask" data-key="${key}" ${n >= total ? 'disabled' : ''}>${n === 0 ? '▶ Gespräch beginnen' : n >= total ? 'Alle Fragen gestellt' : `▶ Nächste Äußerung (${n + 1}/${total})`}</button><p class="sim-said" data-said="${key}">${n ? `<b>Gesprächspartner/in:</b> ${e(p.prompts[n - 1])}` : 'Die Prüferin oder deine Partnerin spricht. Antworte laut.'}</p></div>` : ''}
-        <div class="sim-recrow">${canRec ? `<button type="button" class="dm-btn dm-btn-quiet sim-recbtn" data-rec="${key}">${url ? '🎙 Neu aufnehmen' : '🎙 Mich aufnehmen'}</button>` : '<span class="dm-small">Aufnehmen ist in diesem Browser nicht möglich.</span>'}<span data-recbox="${key}">${url ? `<audio controls src="${url}"></audio>` : ''}</span></div>`}
+        <div class="sim-recrow">${canRec ? `<button type="button" class="dm-btn dm-btn-quiet sim-recbtn" data-rec="${key}">${url ? '🎙 Neu aufnehmen' : '🎙 Mich aufnehmen'}</button>` : '<span class="dm-small">Aufnehmen ist in diesem Browser nicht möglich.</span>'}<span data-recbox="${key}">${url ? `<audio controls src="${url}"></audio>` : ''}</span></div>
+        <div class="sim-mit" data-mitbox="${key}">${url ? mitBox((cur?.id || '') + key, true) : ''}</div>`}
       ${p.redemittel?.length ? `<details class="sim-det"><summary>Hilfe: Redemittel</summary><ul class="sim-chiplist">${p.redemittel.map(r => `<li>${e(r)}</li>`).join('')}</ul></details>` : ''}`;
   }
   function askNext(btn) {

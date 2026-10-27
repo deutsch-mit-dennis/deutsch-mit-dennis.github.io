@@ -236,3 +236,6 @@
 .sim-blocksec{margin:0 0 8px}
 .sim-sechead{font-size:24px;margin:26px 0 12px;padding:10px 14px;border-radius:12px;background:var(--dm-tinte-soft);scroll-margin-top:calc(var(--sim-top,0px) + 90px)}
 .sim-sechead small{font-size:14px;font-weight:400;color:var(--dm-muted)}
+
+.sim-mit:empty{display:none}.sim-mit{background:var(--dm-bg2,#F4F6FB);border-radius:10px;padding:10px 14px;margin-top:8px}
+.sim-mit p{margin:4px 0 0;line-height:1.5}.sim-mit i{color:var(--dm-muted)}

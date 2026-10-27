@@ -558,3 +558,11 @@ nav.dm-tabs a,nav.dm-scenes a{flex:0 0 auto}
 .dm-pkg-notify{font-size:14px;width:100%}
 .dm-pkg-info{margin-top:26px}.dm-pkg-info ol{padding-left:22px}
 .dm-pkg-sec{margin:26px 0}.dm-pkg-sec>h2{margin:0 0 4px}.dm-pkg-jump{margin-bottom:6px}
+
+.dm-et-mit{background:var(--dm-bg2,#F4F6FB);border-radius:10px;padding:10px 14px;display:grid;gap:6px}
+.dm-et-mit p{margin:0;font-size:17px;line-height:1.5}.dm-et-mit i{color:var(--dm-muted)}
+.dm-et-mit b{display:flex;align-items:center;gap:8px;font-size:14px}.dm-et-mit .dm-btn{justify-self:start}
+.dm-et-mitstats{font-size:14px!important;color:var(--dm-muted)}
+.dm-et-mitdot{width:9px;height:9px;border-radius:50%;background:var(--dm-rot,#E5484D);animation:dmMitBlink 1s ease-in-out infinite}
+@keyframes dmMitBlink{50%{opacity:.25}}@media (prefers-reduced-motion:reduce){.dm-et-mitdot{animation:none}}
+.dm-et-mit .dm-et-hint{font-size:14px;line-height:1.4}

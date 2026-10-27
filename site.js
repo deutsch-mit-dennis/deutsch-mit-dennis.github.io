@@ -1355,7 +1355,7 @@
   };
   const CHECK_WRITE = ['Habe ich alle Leitpunkte bearbeitet?', 'Passen Anrede und Gruß (Sie oder du)?', 'Habe ich Sätze verbunden (weil, deshalb, aber, dass)?', 'Steht das Verb an Position 2 bzw. am Ende im Nebensatz?', 'Nomen groß, Satzende mit Punkt, Text noch einmal gelesen?'];
   const CHECK_SPEAK = ['Habe ich die ganze Zeit gesprochen, ohne lange Pausen?', 'Habe ich Beispiele und Gründe genannt?', 'Habe ich auf meinen Partner reagiert und nachgefragt?', 'Habe ich laut und deutlich gesprochen?'];
-  let examT = { id: null, left: 0, total: 0, run: null, rec: null, chunks: [], url: null };
+  let examT = { id: null, left: 0, total: 0, run: null, rec: null, chunks: [], url: null, mit: null, text: '', live: '', t0: 0, secs: 0 };
   const examBox = document.createElement('section');
   examBox.className = 'dm-examtimer'; examBox.setAttribute('aria-label', 'Prüfungsmodus');
   const fmtT = s => `${String(Math.floor(s / 60)).padStart(2, '0')}:${String(s % 60).padStart(2, '0')}`;
@@ -1374,9 +1374,23 @@
         ${c.kind === 'schreiben' ? `<span class="dm-et-words">Wörter: <b id="dm-et-w">${words()}</b></span>` : ''}
         ${c.kind === 'sprechen' && navigator.mediaDevices?.getUserMedia && window.MediaRecorder ? `<button type="button" class="dm-btn dm-btn-quiet" data-et="rec">${examT.rec ? '■ Aufnahme stoppen' : '🎙 Mich aufnehmen'}</button>${examT.url ? `<audio controls src="${examT.url}"></audio>` : ''}` : ''}
       </div>
+      ${c.kind === 'sprechen' ? mitHTML() : ''}
       ${done ? `<div class="dm-et-done" role="status"><b>Die Zeit ist um.</b> ${c.kind === 'schreiben' ? `Du hast ${words()} Wörter geschrieben.` : ''} Prüfe dich selbst:<ul>${checks.map(t => `<li><label><input type="checkbox"> ${x(t)}</label></li>`).join('')}</ul></div>` : ''}
       ${c.kind === 'sprechen' && !done ? '<p class="dm-et-hint">Tipp: Nimm dich auf und hör dir die Aufnahme an. Sie bleibt nur in deinem Browser.</p>' : ''}`;
     $$('[data-et]', examBox).forEach(b => b.onclick = () => examAction(b.dataset.et));
+  }
+  function mitHTML() {
+    const M = window.DMMitschrift;
+    if (examT.rec) return M?.ok ? `<div class="dm-et-mit is-live"><b>Mitschrift <span class="dm-et-mitdot" aria-hidden="true"></span></b><p id="dm-et-mit" aria-live="polite">${x(examT.text) || ''}<i>${x(examT.live) || (examT.text ? '' : 'Sprich jetzt – hier erscheint, was du sagst …')}</i></p></div>`
+      : '<p class="dm-et-hint">Dein Browser kann leider nicht mitschreiben. In Chrome, Edge oder Safari erscheint hier dein Text.</p>';
+    if (!examT.url || !M?.ok) return '';
+    const w = M.words(examT.text), mins = examT.secs / 60;
+    return examT.text ? `<div class="dm-et-mit"><b>Das hast du gesagt</b><p>${x(M.nice(examT.text))}</p><p class="dm-et-mitstats">💬 ${w} Wörter${mins > 0.2 ? ` · 🚀 ${Math.round(w / mins)} Wörter pro Minute` : ''}</p><button type="button" class="dm-btn dm-btn-quiet" data-et="copy">Text kopieren</button><p class="dm-et-hint">Stimmt ein Wort nicht? Dann hast du es vielleicht undeutlich gesprochen.</p></div>`
+      : '<p class="dm-et-hint">Ich habe leider nichts verstanden. Sprich lauter und näher am Mikrofon.</p>';
+  }
+  function drawMit() {
+    const el = $('#dm-et-mit', examBox); if (!el) return;
+    el.innerHTML = `${x(examT.text)} <i>${x(examT.live)}</i>`;
   }
   function examTick() {
     examT.left--; 
@@ -1393,14 +1407,18 @@
       else { if (!examT.total || examT.left <= 0) { examT.total = examT.left = c.min * 60; } examT.run = setInterval(examTick, 1000); }
     }
     if (a === 'reset') { clearInterval(examT.run); examT.run = null; examT.total = examT.left = c.min * 60; examT.run = setInterval(examTick, 1000); }
+    if (a === 'copy') { const b = $('[data-et="copy"]', examBox); try { await navigator.clipboard.writeText(window.DMMitschrift.nice(examT.text)); if (b) b.textContent = '✓ Kopiert'; } catch { if (b) b.textContent = 'Kopieren ging nicht'; } return; }
     if (a === 'rec') {
       if (examT.rec) { examT.rec.stop(); return; }
       try {
         const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
         examT.chunks = []; const r = new MediaRecorder(stream); examT.rec = r;
         r.ondataavailable = e => examT.chunks.push(e.data);
-        r.onstop = () => { stream.getTracks().forEach(t => t.stop()); if (examT.url) URL.revokeObjectURL(examT.url); examT.url = URL.createObjectURL(new Blob(examT.chunks, { type: r.mimeType })); examT.rec = null; drawExamBox(); };
-        r.start(); if (!examT.run) examAction('go');
+        r.onstop = () => { stream.getTracks().forEach(t => t.stop()); try { examT.mit?.stop(); } catch {} examT.mit = null; examT.live = ''; examT.secs = Math.round((Date.now() - examT.t0) / 1000); if (examT.url) URL.revokeObjectURL(examT.url); examT.url = URL.createObjectURL(new Blob(examT.chunks, { type: r.mimeType })); examT.rec = null; drawExamBox(); };
+        examT.text = ''; examT.live = ''; examT.t0 = Date.now();
+        r.start();
+        examT.mit = window.DMMitschrift?.start((fin, live, ended) => { examT.text = fin; examT.live = ended ? '' : live; if (examT.rec) drawMit(); else drawExamBox(); }) || null;
+        if (!examT.run) examAction('go');
       } catch { examBox.insertAdjacentHTML('beforeend', '<p class="dm-et-hint">Das Mikrofon ist nicht erlaubt. Du kannst trotzdem mit der Uhr üben.</p>'); return; }
     }
     drawExamBox();
@@ -1414,7 +1432,7 @@
   new MutationObserver(placeExamBox).observe(mainEl, { childList: true });
   function setupExamBox(p) {
     const id = p[0] === 'training' ? p[1] : null;
-    if (id !== examT.id) { clearInterval(examT.run); try { examT.rec?.stop(); } catch {} examT = { id, left: 0, total: 0, run: null, rec: null, chunks: [], url: null }; }
+    if (id !== examT.id) { clearInterval(examT.run); try { examT.rec?.stop(); } catch {} try { examT.mit?.stop(); } catch {} examT = { id, left: 0, total: 0, run: null, rec: null, chunks: [], url: null, mit: null, text: '', live: '', t0: 0, secs: 0 }; }
     if (!EXAM_TIMES[id]) { examBox.remove(); examT.id = null; return; }
     drawExamBox(); placeExamBox();
   }
