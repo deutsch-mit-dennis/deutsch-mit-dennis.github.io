@@ -566,3 +566,4 @@ nav.dm-tabs a,nav.dm-scenes a{flex:0 0 auto}
 .dm-et-mitdot{width:9px;height:9px;border-radius:50%;background:var(--dm-rot,#E5484D);animation:dmMitBlink 1s ease-in-out infinite}
 @keyframes dmMitBlink{50%{opacity:.25}}@media (prefers-reduced-motion:reduce){.dm-et-mitdot{animation:none}}
 .dm-et-mit .dm-et-hint{font-size:14px;line-height:1.4}
+.dm-et-text{width:100%;box-sizing:border-box;font:inherit;font-size:17px;line-height:1.5;padding:10px 12px;border:1px solid var(--dm-line,#D8DCE6);border-radius:10px;background:#fff}

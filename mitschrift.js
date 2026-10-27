@@ -4,6 +4,7 @@
    onUpdate(fertigerText, vorlaeufigerText, beendet) */
 (function () {
   const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+  const ANDROID = /Android/i.test(navigator.userAgent);
   function start(onUpdate) {
     if (!SR) return null;
     let segs = [],
@@ -19,7 +20,7 @@
       // Android liefert manchmal den ganzen Satz noch einmal, nur länger → ersetzen statt doppeln
       if (
         last &&
-        last.split(" ").length >= 3 &&
+        (ANDROID || last.split(" ").length >= 3) &&
         (t.toLowerCase().startsWith(last.toLowerCase()) ||
           last.toLowerCase() === t.toLowerCase())
       )

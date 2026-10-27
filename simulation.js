@@ -569,12 +569,17 @@
   const recs = {}, recTexts = {};
   let recorder = null, recKey = null, recChunks = [], recMit = null;
   function stopRec() { try { recorder?.state === 'recording' && recorder.stop(); } catch {} }
+  function bindMit(box) {
+    const ta = box.querySelector('.sim-mittext'); if (!ta) return;
+    ta.oninput = () => { const t = recTexts[ta.dataset.mit]; if (t) t.edit = ta.value; };
+    window.DMSchreibcheck?.attach(ta);
+  }
   function mitBox(id, ended) {
     const M = window.DMMitschrift, t = recTexts[id];
     if (!M?.ok) return ended ? '' : '<p class="dm-small">Dein Browser kann leider nicht mitschreiben. In Chrome, Edge oder Safari erscheint hier dein Text.</p>';
     if (!t) return '';
     if (!ended) return `<b>Mitschrift</b><p aria-live="polite">${e(t.fin)} <i>${e(t.live || (t.fin ? '' : 'Sprich jetzt – hier erscheint, was du sagst …'))}</i></p>`;
-    return t.fin ? `<b>Das hast du gesagt</b><p>${e(M.nice(t.fin))}</p><p class="dm-small">💬 ${M.words(t.fin)} Wörter · Stimmt ein Wort nicht? Dann hast du es vielleicht undeutlich gesprochen.</p>`
+    return t.fin ? `<label for="mit-${id.replace(/[^\w-]/g, '_')}"><b>Das hast du gesagt</b></label><p class="dm-small">💬 ${M.words(t.fin)} Wörter · Stimmt ein Wort nicht? Dann hast du es vielleicht undeutlich gesprochen – du kannst es hier verbessern.</p><textarea id="mit-${id.replace(/[^\w-]/g, '_')}" class="sim-textarea sim-mittext" data-speech="1" data-mit="${e(id)}" rows="3">${e(t.edit ?? M.nice(t.fin))}</textarea>`
       : '<p class="dm-small">Ich habe leider nichts verstanden. Sprich lauter und näher am Mikrofon.</p>';
   }
   async function toggleRec(btn) {
@@ -586,7 +591,7 @@
     recChunks = []; recKey = key;
     recorder = new MediaRecorder(stream);
     const tid = (cur?.id || '') + key; recTexts[tid] = { fin: '', live: '' }; let recOn = true;
-    const showMit = () => { const b = $(`[data-mitbox="${key}"]`); if (b) b.innerHTML = mitBox(tid, !recOn); };
+    const showMit = () => { const b = $(`[data-mitbox="${key}"]`); if (b) { b.innerHTML = mitBox(tid, !recOn); bindMit(b); } };
     try { recMit?.stop(); } catch {}
     recMit = window.DMMitschrift?.start((fin, live) => { recTexts[tid] = { fin, live: recOn ? live : '' }; showMit(); }) || null;
     showMit();
