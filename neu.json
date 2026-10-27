@@ -3,6 +3,30 @@
  "items": [
   {
    "date": "2026-10-27",
+   "type": "hoeren",
+   "title": "Neuer DTZ-Hörtext: Durchsage im Baumarkt (Übungssatz 5)",
+   "link": "#hoeren/dtz-5/2"
+  },
+  {
+   "date": "2026-10-27",
+   "type": "hoeren",
+   "title": "Neuer B2-Hörtext: Teambesprechung beim Pflegedienst (Übungssatz 4)",
+   "link": "#hoeren/b2-4/2"
+  },
+  {
+   "date": "2026-10-27",
+   "type": "uebung",
+   "title": "Sprechen B1: Bei der Berufsberatung einen Praktikumsplatz finden",
+   "link": "#ueben/sprechen/B1/4"
+  },
+  {
+   "date": "2026-10-27",
+   "type": "uebung",
+   "title": "Schreiben B1: E-Mail an die Volkshochschule – den Kurs wechseln",
+   "link": "#ueben/schreiben/B1/5"
+  },
+  {
+   "date": "2026-10-27",
    "type": "neu",
    "title": "Neues Arbeitsblatt: Aushänge im Wohnhaus verstehen (A2, Lesen)",
    "link": "#material"
@@ -156,12 +180,6 @@
    "type": "uebung",
    "title": "Neuer Lesetext: Disponentin / Disponent gesucht (Stellenanzeige, B1–B2)",
    "link": "#lesen/beruf/4"
-  },
-  {
-   "date": "2026-10-14",
-   "type": "uebung",
-   "title": "Neu: Jump’n’Run „Lino läuft“ – 5 Welten von A1 bis C1, an jedem Tor eine Deutschfrage",
-   "link": "#spiele/lino"
   }
  ]
 }

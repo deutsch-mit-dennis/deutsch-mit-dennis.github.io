@@ -12275,6 +12275,67 @@
      "text": "Nein, auf keinen Fall. Die Mittagspause ist Pflicht, dreißig Minuten, für alle. Wenn es zu voll ist, hören die Kunden eben eine Ansage, dass sie warten müssen. Gesundheit geht vor."
     }
    ]
+  },
+  {
+   "key": "dtz-5-03",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Liebe Kundinnen und Kunden, eine Information aus unserer Gartenabteilung: Die Pflanzen im Außenbereich sind ab heute bis Samstag um 30 Prozent reduziert. Bitte beachten Sie: Die Kasse im Gartencenter ist heute schon ab 16 Uhr geschlossen. Bezahlen Sie Ihre Pflanzen dann bitte an den Hauptkassen am Eingang. Und noch ein Hinweis: Unser Transporter zum Ausleihen ist heute leider schon ausgebucht. Für morgen können Sie ihn an der Information reservieren. Vielen Dank für Ihren Einkauf!",
+     "say": "Liebe Kundinnen und Kunden, eine Information aus unserer Gartenabteilung: Die Pflanzen im Außenbereich sind ab heute bis Samstag um dreißig Prozent reduziert. Bitte beachten Sie: Die Kasse im Gartencenter ist heute schon ab sechzehn Uhr geschlossen. Bezahlen Sie Ihre Pflanzen dann bitte an den Hauptkassen am Eingang. Und noch ein Hinweis: Unser Transporter zum Ausleihen ist heute leider schon ausgebucht. Für morgen können Sie ihn an der Information reservieren. Vielen Dank für Ihren Einkauf!"
+    }
+   ]
+  },
+  {
+   "key": "b2-4-03",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Also, dann legen wir los. Hauptthema heute ist die neue Tourenplanung. Ab dem 1. Dezember planen wir die Touren nicht mehr auf Papier, sondern über die App auf euren Diensthandys.",
+     "say": "Also, dann legen wir los. Hauptthema heute ist die neue Tourenplanung. Ab dem ersten Dezember planen wir die Touren nicht mehr auf Papier, sondern über die App auf euren Diensthandys."
+    },
+    {
+     "voice": "m1",
+     "text": "Und was ist, wenn das Netz weg ist? In Wattenscheid am Stadtrand hab ich oft gar keinen Empfang."
+    },
+    {
+     "voice": "f1",
+     "text": "Gute Frage. Die App speichert die Tour morgens, solange ihr noch im Büro seid. Danach funktioniert sie auch ohne Netz. Die Daten werden geschickt, sobald ihr wieder Empfang habt."
+    },
+    {
+     "voice": "f3",
+     "text": "Und die Dokumentation beim Patienten? Machen wir die dann auch in der App, oder weiter in der Mappe?"
+    },
+    {
+     "voice": "f1",
+     "text": "Erst mal beides. Bis Ende Januar läuft die Mappe parallel weiter. Wenn alles stabil läuft, fällt die Papierdokumentation weg."
+    },
+    {
+     "voice": "m1",
+     "text": "Das heißt also doppelte Arbeit für zwei Monate."
+    },
+    {
+     "voice": "f1",
+     "text": "Ja, ich weiß, das ist nicht schön. Deshalb haben wir mit der Geschäftsführung vereinbart: Pro Tour gibt es in der Übergangszeit zehn Minuten mehr Zeit. Das ist schon im Plan drin."
+    },
+    {
+     "voice": "f3",
+     "text": "Okay, das hilft. Und wer zeigt uns, wie die App funktioniert?"
+    },
+    {
+     "voice": "f1",
+     "text": "Es gibt zwei Schulungen, jeweils eine Stunde: am 18. und am 25. November, immer um 14 Uhr hier im Besprechungsraum. Jeder muss an einem der beiden Termine teilnehmen. Tragt euch bitte bis Freitag in die Liste an meiner Tür ein.",
+     "say": "Es gibt zwei Schulungen, jeweils eine Stunde: am achtzehnten und am fünfundzwanzigsten November, immer um vierzehn Uhr hier im Besprechungsraum. Jeder muss an einem der beiden Termine teilnehmen. Tragt euch bitte bis Freitag in die Liste an meiner Tür ein."
+    },
+    {
+     "voice": "m1",
+     "text": "Und wenn man an beiden Tagen Spätdienst hat?"
+    },
+    {
+     "voice": "f1",
+     "text": "Dann sprich bitte direkt mit Frau Kowalczyk. Sie macht für solche Fälle einen Einzeltermin."
+    }
+   ]
   }
  ]
 }

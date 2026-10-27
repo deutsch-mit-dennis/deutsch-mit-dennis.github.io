@@ -959,6 +959,32 @@
 "why": "Die Linie 107 fährt nur bis zum Hauptbahnhof: „Bitte steigen Sie dort aus und nehmen Sie den Ersatzbus.“ Der Bus fährt nicht an der Straßenbahnhaltestelle ab, und die Fahrkarte gilt auch im Bus."
 }
 ]
+},
+{
+"id": "dtz-5-03",
+"teil": "Teil 2",
+"type": "Durchsage im Baumarkt",
+"situation": "Du kaufst im Baumarkt ein.",
+"segments": [
+{
+"voice": "f1",
+"text": "Liebe Kundinnen und Kunden, eine Information aus unserer Gartenabteilung: Die Pflanzen im Außenbereich sind ab heute bis Samstag um 30 Prozent reduziert. Bitte beachten Sie: Die Kasse im Gartencenter ist heute schon ab 16 Uhr geschlossen. Bezahlen Sie Ihre Pflanzen dann bitte an den Hauptkassen am Eingang. Und noch ein Hinweis: Unser Transporter zum Ausleihen ist heute leider schon ausgebucht. Für morgen können Sie ihn an der Information reservieren. Vielen Dank für Ihren Einkauf!",
+"say": "Liebe Kundinnen und Kunden, eine Information aus unserer Gartenabteilung: Die Pflanzen im Außenbereich sind ab heute bis Samstag um dreißig Prozent reduziert. Bitte beachten Sie: Die Kasse im Gartencenter ist heute schon ab sechzehn Uhr geschlossen. Bezahlen Sie Ihre Pflanzen dann bitte an den Hauptkassen am Eingang. Und noch ein Hinweis: Unser Transporter zum Ausleihen ist heute leider schon ausgebucht. Für morgen können Sie ihn an der Information reservieren. Vielen Dank für Ihren Einkauf!"
+}
+],
+"text": "Liebe Kundinnen und Kunden, eine Information aus unserer Gartenabteilung: Die Pflanzen im Außenbereich sind ab heute bis Samstag um 30 Prozent reduziert. Bitte beachten Sie: Die Kasse im Gartencenter ist heute schon ab 16 Uhr geschlossen. Bezahlen Sie Ihre Pflanzen dann bitte an den Hauptkassen am Eingang. Und noch ein Hinweis: Unser Transporter zum Ausleihen ist heute leider schon ausgebucht. Für morgen können Sie ihn an der Information reservieren. Vielen Dank für Ihren Einkauf!",
+"questions": [
+{
+"q": "Was kann man heute machen?",
+"options": [
+"Den Transporter für morgen reservieren.",
+"Den Transporter sofort ausleihen.",
+"Nach 16 Uhr im Gartencenter bezahlen."
+],
+"answer": 0,
+"why": "Der Transporter ist heute „schon ausgebucht“, aber „für morgen können Sie ihn an der Information reservieren“. Die Kasse im Gartencenter schließt schon um 16 Uhr."
+}
+]
 }
 ]
 },
@@ -2065,6 +2091,93 @@
 ],
 "answer": 1,
 "why": "Frau Kröger sagt: „einfach einscannen und per Mail an mich schicken, das reicht völlig.“ Das Original braucht sie nicht, und die Taxiquittungen sind schon da."
+}
+]
+},
+{
+"id": "b2-4-03",
+"teil": "Teil 2",
+"type": "Teambesprechung",
+"situation": "Besprechung bei einem ambulanten Pflegedienst in Bochum. Es sprechen Pflegedienstleiterin Frau Brandt, Herr Yıldız und Frau Lehmann.",
+"segments": [
+{
+"voice": "f1",
+"text": "Also, dann legen wir los. Hauptthema heute ist die neue Tourenplanung. Ab dem 1. Dezember planen wir die Touren nicht mehr auf Papier, sondern über die App auf euren Diensthandys.",
+"say": "Also, dann legen wir los. Hauptthema heute ist die neue Tourenplanung. Ab dem ersten Dezember planen wir die Touren nicht mehr auf Papier, sondern über die App auf euren Diensthandys."
+},
+{
+"voice": "m1",
+"text": "Und was ist, wenn das Netz weg ist? In Wattenscheid am Stadtrand hab ich oft gar keinen Empfang."
+},
+{
+"voice": "f1",
+"text": "Gute Frage. Die App speichert die Tour morgens, solange ihr noch im Büro seid. Danach funktioniert sie auch ohne Netz. Die Daten werden geschickt, sobald ihr wieder Empfang habt."
+},
+{
+"voice": "f3",
+"text": "Und die Dokumentation beim Patienten? Machen wir die dann auch in der App, oder weiter in der Mappe?"
+},
+{
+"voice": "f1",
+"text": "Erst mal beides. Bis Ende Januar läuft die Mappe parallel weiter. Wenn alles stabil läuft, fällt die Papierdokumentation weg."
+},
+{
+"voice": "m1",
+"text": "Das heißt also doppelte Arbeit für zwei Monate."
+},
+{
+"voice": "f1",
+"text": "Ja, ich weiß, das ist nicht schön. Deshalb haben wir mit der Geschäftsführung vereinbart: Pro Tour gibt es in der Übergangszeit zehn Minuten mehr Zeit. Das ist schon im Plan drin."
+},
+{
+"voice": "f3",
+"text": "Okay, das hilft. Und wer zeigt uns, wie die App funktioniert?"
+},
+{
+"voice": "f1",
+"text": "Es gibt zwei Schulungen, jeweils eine Stunde: am 18. und am 25. November, immer um 14 Uhr hier im Besprechungsraum. Jeder muss an einem der beiden Termine teilnehmen. Tragt euch bitte bis Freitag in die Liste an meiner Tür ein.",
+"say": "Es gibt zwei Schulungen, jeweils eine Stunde: am achtzehnten und am fünfundzwanzigsten November, immer um vierzehn Uhr hier im Besprechungsraum. Jeder muss an einem der beiden Termine teilnehmen. Tragt euch bitte bis Freitag in die Liste an meiner Tür ein."
+},
+{
+"voice": "m1",
+"text": "Und wenn man an beiden Tagen Spätdienst hat?"
+},
+{
+"voice": "f1",
+"text": "Dann sprich bitte direkt mit Frau Kowalczyk. Sie macht für solche Fälle einen Einzeltermin."
+}
+],
+"text": "Also, dann legen wir los. Hauptthema heute ist die neue Tourenplanung. Ab dem 1. Dezember planen wir die Touren nicht mehr auf Papier, sondern über die App auf euren Diensthandys. Und was ist, wenn das Netz weg ist? In Wattenscheid am Stadtrand hab ich oft gar keinen Empfang. Gute Frage. Die App speichert die Tour morgens, solange ihr noch im Büro seid. Danach funktioniert sie auch ohne Netz. Die Daten werden geschickt, sobald ihr wieder Empfang habt. Und die Dokumentation beim Patienten? Machen wir die dann auch in der App, oder weiter in der Mappe? Erst mal beides. Bis Ende Januar läuft die Mappe parallel weiter. Wenn alles stabil läuft, fällt die Papierdokumentation weg. Das heißt also doppelte Arbeit für zwei Monate. Ja, ich weiß, das ist nicht schön. Deshalb haben wir mit der Geschäftsführung vereinbart: Pro Tour gibt es in der Übergangszeit zehn Minuten mehr Zeit. Das ist schon im Plan drin. Okay, das hilft. Und wer zeigt uns, wie die App funktioniert? Es gibt zwei Schulungen, jeweils eine Stunde: am 18. und am 25. November, immer um 14 Uhr hier im Besprechungsraum. Jeder muss an einem der beiden Termine teilnehmen. Tragt euch bitte bis Freitag in die Liste an meiner Tür ein. Und wenn man an beiden Tagen Spätdienst hat? Dann sprich bitte direkt mit Frau Kowalczyk. Sie macht für solche Fälle einen Einzeltermin.",
+"questions": [
+{
+"q": "Was passiert, wenn unterwegs kein Netz da ist?",
+"options": [
+"Die Pflegekräfte müssen ins Büro zurückfahren.",
+"Die App funktioniert trotzdem, die Daten werden später geschickt.",
+"Die Pflegekräfte schreiben alles auf Papier und tippen es später ab."
+],
+"answer": 1,
+"why": "Frau Brandt sagt: „Danach funktioniert sie auch ohne Netz. Die Daten werden geschickt, sobald ihr wieder Empfang habt.“"
+},
+{
+"q": "Wie wird die doppelte Dokumentation ausgeglichen?",
+"options": [
+"Die Mitarbeitenden bekommen pro Tour zehn Minuten mehr Zeit.",
+"Die Mitarbeitenden bekommen Überstunden bezahlt.",
+"Die Mappe fällt schon im Dezember weg."
+],
+"answer": 0,
+"why": "„Pro Tour gibt es in der Übergangszeit zehn Minuten mehr Zeit.“ Die Mappe läuft bis Ende Januar parallel weiter."
+},
+{
+"q": "Was sollen Mitarbeitende tun, die an beiden Schulungsterminen Spätdienst haben?",
+"options": [
+"Sie lassen die Schulung ausfallen.",
+"Sie tragen sich trotzdem in die Liste ein.",
+"Sie sprechen mit Frau Kowalczyk über einen Einzeltermin."
+],
+"answer": 2,
+"why": "„Dann sprich bitte direkt mit Frau Kowalczyk. Sie macht für solche Fälle einen Einzeltermin.“"
 }
 ]
 }
