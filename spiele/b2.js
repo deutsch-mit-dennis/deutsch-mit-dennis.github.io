@@ -176,29 +176,29 @@
 
   DMGame.register({
     id: 'b2-nvv', cat: 'b2', title: 'Nomen-Verb-Profi', icon: '🧱', level: 'B2 Beruf',
-    desc: 'Antrag stellen, Entscheidung treffen, Kritik üben: Welches Verb passt?',
-    intro: 'Nomen-Verb-Verbindungen kommen im DTB B2 beim Lesen und Schreiben oft vor. Wähle das passende Verb. Du hast 3 Leben – nach jedem Fehler siehst du, was die Verbindung bedeutet.',
-    start(api) { DMKit.mc(api, { items: gapItems(NVV, 'Nomen + Verb'), rounds: 15, lives: 3, cols: 2 }); }
+    desc: 'Hau den Maulwurf: Antrag stellen, Entscheidung treffen – tippe das passende Verb, sobald es auftaucht.',
+    intro: 'Nomen-Verb-Verbindungen kommen im DTB B2 beim Lesen und Schreiben oft vor. Lies den Satz – in den Löchern tauchen Verben auf. Tippe schnell das passende, bevor es verschwindet. Falsche Verben kosten ein Leben. 75 Sekunden, 3 Leben.',
+    start(api) { DMArcade.whack(api, { items: gapItems(NVV, 'Nomen + Verb'), seconds: 75, lives: 3 }); }
   });
 
   DMGame.register({
     id: 'b2-praep', cat: 'b2', title: 'Präpositionen-Blitz', icon: '⚡', level: 'B1–B2 Beruf',
-    desc: '75 Sekunden: sich bewerben um, sich beschweren über … – so viele wie möglich!',
-    intro: 'Welche Präposition gehört zum Verb? Du hast 75 Sekunden. Drei richtige Antworten hintereinander geben doppelte Punkte. Am Ende siehst du alle Verben, die du noch üben solltest.',
-    start(api) { DMKit.mc(api, { items: gapItems(PRAEP, 'Verb + Präposition'), seconds: 75, cols: 2 }); }
+    desc: 'Fangspiel: Präpositionen fallen vom Himmel – fang die richtige, weich den falschen aus!',
+    intro: 'Welche Präposition gehört zum Verb? Drei Präpositionen fallen herunter – bewege den Korb und fang die richtige. Es wird immer schneller! Serien geben doppelte Punkte, am Ende siehst du alle Verben, die du noch üben solltest. 15 Sätze, 3 Leben.',
+    start(api) { DMArcade.catcher(api, { items: gapItems(PRAEP, 'Verb + Präposition'), rounds: 15, lives: 3, speed: 0.19 }); }
   });
 
   DMGame.register({
     id: 'b2-konnektor', cat: 'b2', title: 'Konnektoren-Kette', icon: '🔗', level: 'B1–B2 Beruf',
-    desc: 'obwohl, trotzdem, damit, indem, sodass … Verbinde die Sätze richtig.',
-    intro: 'Gute Texte brauchen Konnektoren. Wähle das Wort, das die Sätze logisch und grammatisch richtig verbindet. Achte auch auf die Position des Verbs. 15 Sätze, 3 Leben.',
-    start(api) { DMKit.mc(api, { items: gapItems(KON, 'Konnektor'), rounds: 15, lives: 3, cols: 2 }); }
+    desc: 'Fangspiel: obwohl, trotzdem, damit … Fang den Konnektor, der die Sätze richtig verbindet.',
+    intro: 'Gute Texte brauchen Konnektoren. Lies den Satz, dann fallen drei Konnektoren herunter – fang den, der logisch und grammatisch passt. Achte auf die Position des Verbs! 15 Sätze, 3 Leben.',
+    start(api) { DMArcade.catcher(api, { items: gapItems(KON, 'Konnektor'), rounds: 15, lives: 3, speed: 0.15 }); }
   });
 
   DMGame.register({
     id: 'b2-redemittel', cat: 'b2', title: 'Redemittel-Radar', icon: '🎯', level: 'B2 Beruf',
-    desc: 'Meinung, Widerspruch, Kompromiss, Beschwerde: Wofür benutzt man den Satz?',
-    intro: 'In der mündlichen Prüfung und in formellen E-Mails punktest du mit passenden Redemitteln. Lies den Satz und wähle seine Funktion. 15 Sätze, 3 Leben.',
+    desc: 'Sortierspiel: Redemittel fallen herunter – ab in den richtigen Korb: Meinung, Widerspruch, Kompromiss …',
+    intro: 'In der mündlichen Prüfung und in formellen E-Mails punktest du mit passenden Redemitteln. Ein Satz fällt herunter – tippe auf den Korb mit seiner Funktion, bevor er unten ankommt. 12 Sätze, 3 Leben.',
     optionsLabel: 'Bereich',
     options: [{ id: 's', label: 'Sprechen' }, { id: 'w', label: 'E-Mail schreiben' }, { id: 'all', label: 'Gemischt' }],
     start(api, opt) {
@@ -207,7 +207,7 @@
         const funcs = [...new Set(RM.filter(r => r[2] === area).map(r => r[1]))];
         return { q: q, a: f, opts: [f, ...DMKit.distract(api, funcs, f)], tag: area === 's' ? 'Sprechen' : 'E-Mail', sub: 'Wofür benutzt man diesen Satz?', tip: '', correct: `„${q}“ → ${f}` };
       });
-      DMKit.mc(api, { items, rounds: 15, lives: 3 });
+      DMArcade.sorter(api, { items: items.map(x => ({ ...x, sub: null, tag: null })), rounds: 12, lives: 3, title: 'Wofür benutzt man den Satz?', sub: 'Steuere die Karte in den richtigen Korb.' });
     }
   });
 })();

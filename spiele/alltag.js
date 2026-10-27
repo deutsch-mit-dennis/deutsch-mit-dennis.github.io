@@ -183,51 +183,49 @@
 
   DMGame.register({
     id: 'alltag-sprint', cat: 'alltag', title: 'Wort-Sprint Alltag', icon: '🏃', level: 'A2–B1',
-    desc: '75 Sekunden: Welches Wort passt zur Erklärung? Fünf Alltagsthemen.',
-    intro: 'Lies die Erklärung und tippe schnell auf das passende Wort. Du hast 75 Sekunden – drei richtige Antworten hintereinander geben doppelte Punkte. Wähle ein Thema.',
+    desc: 'Hau den Maulwurf: Das passende Wort taucht auf – schnell antippen! Fünf Alltagsthemen.',
+    intro: 'Lies die Erklärung. In den Löchern tauchen Wörter auf – tippe schnell auf das passende, bevor es wieder verschwindet. Falsche Wörter kosten ein Leben. 75 Sekunden, 3 Leben, Serien geben doppelte Punkte. Wähle ein Thema.',
     optionsLabel: 'Thema',
     options: Object.entries(SPRINT).map(([id, [label]]) => ({ id, label })),
     start(api, opt) {
       const [, rows] = SPRINT[opt] || SPRINT.reisen, words = rows.map(r => r[2]);
       const items = rows.map(([pic, q, a]) => ({ pic, q: q.replace('___', '…'), a, opts: [a, ...DMKit.distract(api, words, a)], correct: `${a} – ${q.replace('___', '…')}` }));
-      DMKit.mc(api, { items, seconds: 75 });
+      DMArcade.whack(api, { items, seconds: 75, lives: 3 });
     }
   });
 
   DMGame.register({
     id: 'alltag-wo', cat: 'alltag', title: 'Wo bin ich?', icon: '📍', level: 'A2–B1',
-    desc: 'Du hörst oder liest einen Satz. Wo sagt man das: Bahnhof, Amt, Apotheke …?',
-    intro: 'Im Alltag hörst du viele Sätze. Wo spricht man so? Im Hör-Modus wird der Satz vorgelesen – der Text erscheint erst nach deiner Antwort. 15 Sätze, 3 Leben.',
+    desc: 'Fangspiel: Du hörst oder liest einen Satz – fang den richtigen Ort mit dem Korb!',
+    intro: 'Wo spricht man so? Orte fallen vom Himmel – bewege den Korb und fang den richtigen Ort. Falsche Orte musst du ausweichen. Im Hör-Modus wird der Satz nur vorgelesen. 12 Sätze, 3 Leben.',
     optionsLabel: 'Modus',
     options: [{ id: 'lesen', label: '📖 Lesen' }, { id: 'hoeren', label: '🎧 Hören' }],
     start(api, opt) {
       const places = [...new Set(ORTE.map(o => o[0]))];
       const hear = opt === 'hoeren';
       const items = ORTE.map(([a, q]) => ({ q: `„${q}“`, say: hear ? q : null, a, opts: [a, ...DMKit.distract(api, places, a)], sub: 'Wo hörst du diesen Satz?', correct: `${a}: „${q}“` }));
-      DMKit.mc(api, { items, rounds: 15, lives: 3, autoSay: hear, cols: 2 });
+      DMArcade.catcher(api, { items: items.map(x => ({ ...x, sub: null })), rounds: 12, lives: 3, autoSay: hear });
     }
   });
 
   DMGame.register({
     id: 'alltag-formular', cat: 'alltag', title: 'Formular-Profi', icon: '📝', level: 'A2–B1',
-    desc: 'Familienstand, Staatsangehörigkeit, PLZ, z. Hd. – Formulare sicher verstehen.',
-    intro: 'Bei Ämtern, Ärzten und Vermietern musst du viele Formulare ausfüllen. Welche Angabe gehört in welches Feld? Und was bedeuten die Abkürzungen? 15 Aufgaben, 3 Leben.',
+    desc: 'Sortierspiel: Angaben und Abkürzungen in den richtigen Korb steuern – PLZ, Familienstand, z. Hd. …',
+    intro: 'Eine Karte fällt herunter – zum Beispiel „14.03.1991“ oder „PLZ“. Tippe auf den richtigen Korb, bevor sie unten ankommt: Welches Formularfeld? Was bedeutet die Abkürzung? Zweimal tippen lässt die Karte schneller fallen. 12 Karten, 3 Leben.',
     optionsLabel: 'Aufgaben',
     options: [{ id: 'felder', label: 'Formularfelder' }, { id: 'abk', label: 'Abkürzungen' }, { id: 'mix', label: 'Gemischt' }],
     start(api, opt) {
       const items = [];
       if (opt !== 'abk') PERSONEN.forEach(p => {
         const keys = Object.keys(p.f);
-        keys.forEach(k => {
-          const others = keys.filter(x => x !== k).map(x => p.f[x]);
-          items.push({ tag: `Formular für ${p.name}`, q: `Was schreibt ${p.name.split(' ')[0]} in das Feld „${k}“?`, a: p.f[k], opts: [p.f[k], ...DMKit.distract(api, others, p.f[k])], correct: `${k}: ${p.f[k]}` });
-        });
+        // Karte = Angabe, Körbe = Formularfelder
+        keys.forEach(k => items.push({ pic: '📝', q: p.f[k], a: k, opts: [k, ...DMKit.distract(api, keys.filter(x => p.f[x] !== p.f[k]), k)], tip: `${p.name}: ${k} = ${p.f[k]}`, correct: `${k}: ${p.f[k]}` }));
       });
       if (opt !== 'felder') {
         const means = ABK.map(x => x[1]);
-        ABK.forEach(([k, m]) => items.push({ tag: 'Abkürzung', q: k, sub: 'Was bedeutet die Abkürzung?', a: m, opts: [m, ...DMKit.distract(api, means, m)], correct: `${k} = ${m}` }));
+        ABK.forEach(([k, m]) => items.push({ q: k, a: m, opts: [m, ...DMKit.distract(api, means, m)], correct: `${k} = ${m}` }));
       }
-      DMKit.mc(api, { items, rounds: 15, lives: 3 });
+      DMArcade.sorter(api, { items, rounds: 12, lives: 3, title: opt === 'abk' ? 'Was bedeutet die Abkürzung?' : 'In welches Feld gehört die Angabe?', sub: 'Steuere die Karte in den richtigen Korb.' });
     }
   });
 })();
