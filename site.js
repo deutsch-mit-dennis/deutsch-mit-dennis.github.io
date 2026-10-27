@@ -796,6 +796,7 @@
     // Mini-Player (Document Picture-in-Picture, Chrome/Edge am Computer): kleines Fenster, das sichtbar bleibt.
     // In einem Hintergrund-Tab startet der Suno-Player das nächste Lied nicht – im Mini-Fenster schon.
     let pip = null, pipStage = null, pipNow = null;
+    const canPip = 'documentPictureInPicture' in window && matchMedia('(pointer: fine)').matches;
     const stage = () => pipStage || $('#dm-pl-stage');
     const W = () => pip || window;   // Timer im sichtbaren Fenster laufen ungebremst
     // Zurück im Tab: sofort prüfen, ob das nächste Lied dran ist
@@ -812,12 +813,12 @@
           <p class="dm-pl-now" id="pl-now" aria-live="polite"></p>
           <div class="dm-row dm-pl-ctrl">
             <button type="button" class="dm-btn dm-btn-quiet" id="dm-pl-prev" aria-label="Vorheriges Lied">⏮ Zurück</button>
-            <button type="button" class="dm-btn dm-btn-quiet" id="dm-pl-pause" aria-pressed="false">⏸ Automatisch weiter: an</button>
             <button type="button" class="dm-btn dm-btn-quiet" id="dm-pl-next" aria-label="Nächstes Lied">Weiter ⏭</button>
-            ${'documentPictureInPicture' in window ? '<button type="button" class="dm-btn dm-btn-quiet" id="dm-pl-mini">🗗 Mini-Player</button>' : ''}
+            <button type="button" class="dm-btn dm-btn-quiet" id="dm-pl-pause" aria-pressed="false">⏸ Automatisch weiter: an</button>
+            ${canPip ? '<button type="button" class="dm-btn dm-btn-quiet" id="dm-pl-mini">🗗 Mini-Player</button>' : ''}
             <label class="dm-pl-shuffle"><input type="checkbox" id="dm-pl-shuffle" ${mem.plShuffle ? 'checked' : ''}> Zufällige Reihenfolge</label>
           </div>
-          <p class="dm-small">Hältst du ein Lied im Player an, tippe auch hier auf „Automatisch weiter“, damit die Playlist wartet. Auf manchen Handys musst du jedes Lied einmal selbst starten.${'documentPictureInPicture' in window ? ' <b>Am Computer:</b> Willst du nebenbei in anderen Tabs arbeiten, starte den „Mini-Player“ – dann läuft die Playlist in einem kleinen Fenster weiter.' : ''}</p>
+          <p class="dm-small">${canPip ? '<b>Nebenbei in anderen Tabs arbeiten?</b> Starte den „Mini-Player“ – er läuft in einem kleinen Fenster weiter. ' : ''}Hältst du ein Lied im Player an, schalte auch „Automatisch weiter“ aus. Auf manchen Handys musst du jedes Lied selbst starten.</p>
         </section>
         <ol class="dm-pl-list" id="dm-pl-list">${list.map((sg, k) => `<li class="dm-lv-${sg.level.toLowerCase()}" data-k="${k}"><button type="button" class="dm-pl-item" data-k="${k}"><span class="dm-song-disc" aria-hidden="true"><i></i></span><span class="dm-pl-t"><span class="dm-pl-badge" aria-hidden="true"><i></i><i></i><i></i> Läuft gerade</span><b>${x(sg.title)}</b><small>${sg.level} · ${x(sg.theme)}</small></span><span class="dm-pl-len">${mmss(SONG_SEC[sg.suno] || 200)}</span></button><a class="dm-pl-open" href="#lieder/${sg.id}">Text &amp; Aufgaben</a></li>`).join('')}</ol>
       </div>
@@ -844,7 +845,8 @@
       fr.onload = () => { if (loadedAt) return; loadedAt = Date.now(); loading = false; endAt = loadedAt + len * 1000; show(); };   // nur das erste Laden zählt
       W().setTimeout(() => { if (fr.isConnected && loading) { loadedAt = Date.now(); loading = false; endAt = loadedAt + len * 1000; show(); } }, 15000);
       $$('#dm-pl-list li').forEach(li => { const on = +li.dataset.k === cur; li.classList.toggle('is-now', on); li.querySelector('.dm-pl-item').setAttribute('aria-current', on ? 'true' : 'false'); });
-      $(`#dm-pl-list li[data-k="${cur}"]`)?.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+      // Nur bei zwei Spalten: sonst schiebt das Scrollen den Player aus dem Bild
+      if (matchMedia('(min-width: 861px)').matches) $(`#dm-pl-list li[data-k="${cur}"]`)?.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
       show();
       plStop(); plTimerWin = W();
       plTimer = plTimerWin.setInterval(() => {
@@ -858,7 +860,7 @@
         if (left <= 0) play(cur + 1);
       }, 1000);
     };
-    $('#dm-pl-go').onclick = () => { mem.sunoConsent = true; save(); play(Math.max(0, cur)); };
+    $('#dm-pl-go').onclick = () => { mem.sunoConsent = true; save(); play(Math.max(0, cur)); $('.dm-pl-player').scrollIntoView({ block: 'nearest', behavior: 'smooth' }); };
     $('#dm-pl-next').onclick = () => { if (sunoConsent()) play(cur + 1); };
     $('#dm-pl-prev').onclick = () => { if (sunoConsent()) play(cur - 1); };
     btnP.onclick = () => { if (cur < 0) return; paused = !paused; btnP.textContent = paused ? '▶ Automatisch weiter: aus' : '⏸ Automatisch weiter: an'; btnP.setAttribute('aria-pressed', String(paused)); show(); };

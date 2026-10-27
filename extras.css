@@ -721,7 +721,7 @@ header.dm-header nav{margin-left:auto}
 
 /* Lieder-Playlist */
 .dm-pl{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:20px;align-items:start;margin-top:6px}
-.dm-pl-player{position:sticky;top:84px}
+.dm-pl-player{position:sticky;top:84px;scroll-margin-top:84px}
 .dm-pl-start{display:grid;place-items:center;min-height:200px;border-radius:14px;background:linear-gradient(135deg,#1B1446,#3A1F7A 60%,#7B2F8E);margin-bottom:6px}
 .dm-pl-now{min-height:1.5em;margin:10px 0 6px}
 .dm-pl-now span{color:var(--dm-muted)}
@@ -739,9 +739,9 @@ header.dm-header nav{margin-left:auto}
 .dm-pl-t b{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .dm-pl-t small{color:var(--dm-muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .dm-pl-len{color:var(--dm-muted);font-variant-numeric:tabular-nums}
-.dm-pl-open{font-size:14px;white-space:nowrap;padding:10px 4px}
+.dm-pl-open{font-size:14px;white-space:nowrap;padding:0 4px;min-height:44px;display:inline-flex;align-items:center}
 @media (max-width:860px){.dm-pl{grid-template-columns:1fr}.dm-pl-player{position:static}}
-@media (max-width:560px){.dm-pl-list li{flex-wrap:wrap;row-gap:0}.dm-pl-item{flex:1 1 100%}.dm-pl-t b,.dm-pl-t small{white-space:normal}.dm-pl-open{margin-left:60px;padding:2px 4px 8px}.dm-pl-ctrl .dm-btn{flex:1 1 auto}}
+@media (max-width:560px){.dm-pl-list li{flex-wrap:wrap;row-gap:0}.dm-pl-item{flex:1 1 100%}.dm-pl-t b,.dm-pl-t small{white-space:normal}.dm-pl-open{margin-left:60px;padding:0 4px}.dm-pl-ctrl .dm-btn{flex:1 1 40%}.dm-pl-ctrl #dm-pl-pause{flex-basis:100%}}
 @media (prefers-reduced-motion:reduce){.dm-pl-list li.is-now .dm-song-disc{animation:none}}
 
 /* Musik zum Lernen: Liste aus music-feed.json */
