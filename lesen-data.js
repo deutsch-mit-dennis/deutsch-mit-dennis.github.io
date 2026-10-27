@@ -80,6 +80,17 @@
             R('Bis wann muss Tomasz Zofia für Kurs C anmelden?', ['Bis zum 31. Oktober.', 'Bis zum 7. November.', 'Am ersten Kurstag.'], 0, '„Anmeldung bis zum 31. Oktober per E-Mail“. Der 7. November ist der Kursbeginn.'),
             R('Was bietet Anzeige D an?', ['Einen Schwimmkurs nur für Mädchen.', 'Gebrauchte Schwimmsachen.', 'Neue Schwimmbrillen im Geschäft.'], 1, 'Jemand verkauft einen Badeanzug und eine Schwimmbrille, „kaum benutzt“, zusammen für 10 €.')
           ]
+        },
+        {
+          id: 'alltag-vhs-kurs', type: 'E-Mail', title: 'Ihr Deutschkurs zieht um',
+          situation: 'Sie besuchen einen Deutschkurs an der Volkshochschule. Ihre Kursleiterin schickt eine E-Mail an alle Teilnehmenden.',
+          text: 'Betreff: Kurs B1 am Abend – wichtige Änderungen\nLiebe Teilnehmerinnen und Teilnehmer,\nab Montag, dem 9. November, findet unser Kurs nicht mehr in der Goetheschule statt, sondern im neuen Gebäude der Volkshochschule in der Bahnhofstraße 12, Raum 204. Die Kurszeiten bleiben gleich: montags und donnerstags von 18 bis 21 Uhr.\nAm Donnerstag, dem 19. November, fällt der Unterricht aus, weil ich auf einer Fortbildung bin. Diesen Termin holen wir am Samstag, dem 21. November, von 10 bis 13 Uhr nach.\nBitte denken Sie auch an die Anmeldung zur DTZ-Prüfung im Dezember. Das Formular bekommen Sie im Sekretariat im Erdgeschoss. Geben Sie es bitte bis spätestens 13. November auch dort ab. Bringen Sie dazu Ihren Ausweis und eine Kopie Ihrer Teilnahmeberechtigung mit.\nViele Grüße\nSabine Krämer',
+          questions: [
+            R('Was ändert sich ab dem 9. November?', ['Die Kurszeiten.', 'Der Kursort.', 'Die Kursleiterin.'], 1, 'Der Kurs ist ab dann „im neuen Gebäude der Volkshochschule in der Bahnhofstraße 12“. Die Kurszeiten „bleiben gleich“.'),
+            R('Warum fällt der Unterricht am 19. November aus?', ['Die Kursleiterin ist auf einer Fortbildung.', 'Der Raum ist an diesem Tag nicht frei.', 'An diesem Tag ist ein Feiertag.'], 0, '„… fällt der Unterricht aus, weil ich auf einer Fortbildung bin.“'),
+            R('Wann ist der Ersatztermin?', ['Am Montag, dem 23. November, um 18 Uhr.', 'Am Donnerstag, dem 19. November, am Vormittag.', 'Am Samstag, dem 21. November, von 10 bis 13 Uhr.'], 2, '„Diesen Termin holen wir am Samstag, dem 21. November, von 10 bis 13 Uhr nach.“'),
+            R('Was sollen die Teilnehmenden für die Prüfung tun?', ['Das Formular online ausfüllen und schicken.', 'Das Formular bis zum 13. November im Sekretariat abgeben.', 'Den Ausweis per E-Mail an Frau Krämer schicken.'], 1, 'Das Formular gibt es im Sekretariat; man soll es „bis spätestens 13. November auch dort“ abgeben.')
+          ]
         }
       ]
     },
@@ -148,6 +159,17 @@
             R('Was empfiehlt Marko als ersten Schritt?', ['Sich bei einer kostenlosen Beratungsstelle informieren.', 'Sofort einen Antrag bei der Handwerkskammer stellen.', 'Die Zeugnisse selbst übersetzen.'], 0, '„Zuerst habe ich mich bei einer kostenlosen Beratungsstelle informiert – das kann ich nur empfehlen“.'),
             R('Wie hat Markos Arbeitgeber geholfen?', ['Er hat die Zeugnisse übersetzen lassen.', 'Er hat alle Kosten übernommen.', 'Er hat die Hälfte der Kosten bezahlt.'], 2, '„Mein Arbeitgeber hat mir die Hälfte der Kosten erstattet“ – also nicht alle Kosten.'),
             R('Was stimmt?', ['Markos Abschluss wurde sofort vollständig anerkannt.', 'Marko musste einen zusätzlichen Lehrgang besuchen, bevor er die volle Anerkennung bekam.', 'Marko verdient heute genauso viel wie vorher.'], 1, 'Der Abschluss wurde „zuerst nur teilweise anerkannt“; Marko musste einen Lehrgang zu Sicherheitsvorschriften besuchen. Heute verdient er rund 600 Euro mehr.')
+          ]
+        },
+        {
+          id: 'beruf-urlaubsplanung', type: 'Interne Regelung', title: 'Neue Regeln für die Urlaubsplanung',
+          situation: 'Sie arbeiten in einem Großhandelsunternehmen. Im Intranet lesen Sie ein Rundschreiben der Geschäftsführung.',
+          text: 'Urlaubsplanung 2027 – neues Verfahren\nLiebe Kolleginnen und Kollegen,\ndamit alle Teams auch im nächsten Jahr ausreichend besetzt sind, gilt ab sofort ein neues Verfahren für die Urlaubsplanung.\nBitte tragen Sie Ihre Urlaubswünsche für 2027 bis zum 30. November in den digitalen Urlaubskalender im Mitarbeiterportal ein. Papieranträge werden nicht mehr angenommen. Ihre Teamleitung prüft die Wünsche und gibt Ihnen bis zum 15. Dezember eine Rückmeldung.\nIn jedem Team darf höchstens ein Drittel der Beschäftigten gleichzeitig im Urlaub sein. Überschneiden sich Wünsche in den Sommerferien, haben Beschäftigte mit schulpflichtigen Kindern Vorrang. Können sich Kolleginnen und Kollegen nicht einigen, entscheidet die Teamleitung; dabei berücksichtigt sie, wer im Vorjahr verzichten musste.\nVom 1. bis zum 10. Januar findet die jährliche Inventur statt. In dieser Zeit ist im Lager und in der Buchhaltung grundsätzlich kein Urlaub möglich.\nResturlaub aus 2026 muss bis zum 31. März 2027 genommen werden, sonst verfällt er. Ausnahmen gelten nur bei längerer Krankheit oder Elternzeit.\nEinzelne Urlaubstage, zum Beispiel für einen Behördentermin, beantragen Sie wie bisher mindestens drei Arbeitstage vorher.\nBei Fragen wenden Sie sich bitte an Herrn Özdemir aus der Personalabteilung (Durchwahl 214).\nMit freundlichen Grüßen\nKatrin Albers, Geschäftsführung',
+          questions: [
+            R('Wie sollen die Beschäftigten ihre Urlaubswünsche einreichen?', ['Mit einem Papierantrag bei der Teamleitung.', 'Im digitalen Urlaubskalender bis zum 30. November.', 'Per E-Mail an die Personalabteilung bis zum 15. Dezember.'], 1, '„Bitte tragen Sie Ihre Urlaubswünsche … bis zum 30. November in den digitalen Urlaubskalender … ein. Papieranträge werden nicht mehr angenommen.“ Der 15. Dezember ist die Frist für die Rückmeldung.'),
+            R('Was passiert, wenn sich Kolleginnen und Kollegen nicht einigen können?', ['Wer sich zuerst eingetragen hat, bekommt den Urlaub.', 'Die Geschäftsführung entscheidet.', 'Die Teamleitung entscheidet und achtet darauf, wer im Vorjahr verzichtet hat.'], 2, '„… entscheidet die Teamleitung; dabei berücksichtigt sie, wer im Vorjahr verzichten musste.“'),
+            R('Wer kann vom 1. bis 10. Januar normalerweise keinen Urlaub nehmen?', ['Beschäftigte im Lager und in der Buchhaltung.', 'Alle Beschäftigten des Unternehmens.', 'Nur die Teamleitungen.'], 0, '„In dieser Zeit ist im Lager und in der Buchhaltung grundsätzlich kein Urlaub möglich.“'),
+            R('Was gilt für Resturlaub aus 2026?', ['Er wird automatisch ins nächste Jahr übertragen.', 'Er muss bis Ende März 2027 genommen werden – außer zum Beispiel bei längerer Krankheit.', 'Er wird am Jahresende ausgezahlt.'], 1, '„Resturlaub aus 2026 muss bis zum 31. März 2027 genommen werden, sonst verfällt er. Ausnahmen gelten nur bei längerer Krankheit oder Elternzeit.“')
           ]
         }
       ]
