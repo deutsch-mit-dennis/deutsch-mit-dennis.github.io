@@ -63,59 +63,36 @@
   ];
 
   DMGame.register({
-    id: 'lid-pruefung', cat: 'lid', title: 'LiD: Prüfung & Überleben', icon: '❤️', level: 'A2–B1',
-    desc: 'Echte Fragen aus dem Katalog: Prüfungssimulation mit 33 Fragen oder Überleben mit 3 Leben.',
-    intro: 'Die Fragen kommen aus dem offiziellen Fragenkatalog (300 Fragen + Fragen für NRW). Prüfung: 33 Fragen wie im echten Test – ab 17 richtigen bestanden. Überleben: Wie weit kommst du mit 3 Leben?',
+    id: 'lid-pruefung', cat: 'lid', title: 'LiD-Quizshow: Die Fragen-Leiter', icon: '🪜', level: 'A2–B1',
+    desc: 'Echte Katalogfragen wie in einer Quizshow: Stufe für Stufe nach oben – mit Zeitlimit und drei Jokern.',
+    intro: 'Klettere die Leiter hoch: 12 Stufen, 30 Sekunden pro Frage, drei Joker (50:50, +15 Sekunden, andere Frage). Ein Fehler – und du fällst auf die letzte gelbe Sicherheitsstufe zurück. Im Marathon spielst du mit 3 Leben, so weit du kommst. Die Fragen kommen aus dem offiziellen Fragenkatalog. Eine echte Prüfung mit 33 Fragen findest du unter Prüfungssimulation.',
     optionsLabel: 'Modus',
-    options: [{ id: 'ueberleben', label: '❤️ Überleben' }, { id: 'pruefung', label: '📋 Prüfung (33 Fragen)' }],
+    options: [{ id: 'leiter', label: '🪜 Fragen-Leiter (12 Stufen)' }, { id: 'marathon', label: '❤️ Marathon (3 Leben)' }],
     start(api, opt) {
       const all = (window.LID_KATALOG || []).filter(q => q && (!q.img || !q.img.length) && Array.isArray(q.a) && q.a.length === 4);
       if (!all.length) { api.el.innerHTML = '<p>Die Fragen werden noch geladen. Bitte lade die Seite neu.</p>'; return; }
-      const toItem = q => ({ tag: q.id && q.id.startsWith('general') ? `Frage ${q.nr}` : `Nordrhein-Westfalen · Frage ${q.nr}`, q: q.q, a: q.a[q.s], opts: q.a, correct: `${q.q} → ${q.a[q.s]}` });
-      if (opt === 'pruefung') {
-        const gen = all.filter(q => String(q.id).startsWith('general')), land = all.filter(q => !String(q.id).startsWith('general'));
-        const items = [...api.pick(gen, 30), ...api.pick(land, 3)].map(toItem);
-        DMKit.mc(api, { items, rounds: 33, summary: r => `<div class="sp-kit-q"><div class="sp-kit-pic">${r.right >= 17 ? '🎉' : '📚'}</div><p class="sp-kit-prompt">${r.right} von ${r.total} richtig</p><p class="sp-kit-sub">${r.right >= 17 ? 'Bestanden! Im echten Test brauchst du mindestens 17 richtige Antworten von 33.' : 'Noch nicht bestanden – du brauchst mindestens 17 richtige Antworten. Übe weiter, du schaffst das!'}</p></div>` });
-      } else {
-        DMKit.mc(api, { items: all.map(toItem), lives: 3, endless: true });
-      }
+      const items = all.map(q => ({ tag: String(q.id).startsWith('general') ? `Frage ${q.nr}` : `Nordrhein-Westfalen · Frage ${q.nr}`, q: q.q, a: q.a[q.s], opts: q.a, correct: `${q.q} → ${q.a[q.s]}` }));
+      DMArcade.ladder(api, opt === 'marathon' ? { items, endless: true, lives: 3, seconds: 25 } : { items, steps: 12, safe: [4, 8], seconds: 30 });
     }
   });
 
   DMGame.register({
     id: 'lid-zeitstrahl', cat: 'lid', title: 'Zeitstrahl Deutschland', icon: '📜', level: 'A2–B1',
-    desc: 'Mauerbau, Grundgesetz, Wiedervereinigung: Wann war das – und was ist in welchem Jahr passiert?',
-    intro: 'Wichtige Jahre der deutschen Geschichte kommen oft im Test vor. Wähle das richtige Jahr zum Ereignis – oder umgekehrt das Ereignis zum Jahr. 15 Aufgaben, 3 Leben.',
-    optionsLabel: 'Aufgabe',
-    options: [{ id: 'jahr', label: 'Jahr wählen' }, { id: 'ereignis', label: 'Was ist passiert?' }],
+    desc: 'Bring Mauerbau, Grundgesetz und Wiedervereinigung in die richtige Reihenfolge – gegen die Uhr.',
+    intro: 'Bau deinen eigenen Zeitstrahl! Du bekommst Ereigniskarten und tippst sie von alt nach neu an. Jede Runde kommen mehr Karten dazu. Schnell sein bringt Bonuspunkte, ohne Fehler gibt es einen Extra-Bonus. 3 Leben.',
+    optionsLabel: 'Schwierigkeit',
+    options: [{ id: 'leicht', label: 'Leicht (3–4 Karten)' }, { id: 'schwer', label: 'Schwer (bis 7 Karten)' }],
     start(api, opt) {
-      let items;
-      if (opt === 'ereignis') {
-        // Jahr anzeigen, kurzes Ereignis wählen; Ablenker liegen mindestens 10 Jahre entfernt
-        items = EVENTS.map(([y, long, kurz]) => {
-          const words = t => new Set(t.toLowerCase().match(/[a-zäöüß]{5,}/g) || []);
-          const mine = words(kurz);
-          // keine ähnlich klingenden Ablenker (z. B. Erster/Zweiter Weltkrieg)
-          const far = EVENTS.filter(e => Math.abs(e[0] - y) >= 10 && ![...words(e[2])].some(w => mine.has(w))).map(e => e[2]);
-          return { q: String(y), sub: 'Was ist in diesem Jahr passiert?', a: kurz, opts: [kurz, ...api.pick(far, 2)], tip: long, correct: `${y}: ${long}` };
-        });
-      } else {
-        const years = EVENTS.map(e => e[0]);
-        items = EVENTS.map(([y, e]) => {
-          const near = [...years].filter(v => v !== y).sort((a, b) => Math.abs(a - y) - Math.abs(b - y)).slice(0, 5);
-          return { q: e, sub: 'In welchem Jahr war das?', a: String(y), opts: [String(y), ...api.pick(near, 3).map(String)].sort(), keep: true, correct: `${y}: ${e}` };
-        });
-      }
-      DMKit.mc(api, { items, rounds: 15, lives: 3, cols: opt === 'ereignis' ? 1 : 2, big: opt === 'ereignis' });
+      DMArcade.order(api, { events: EVENTS.map(([y, long, kurz]) => [y, kurz, long]), sizes: opt === 'schwer' ? [4, 5, 5, 6, 6, 7] : [3, 3, 4, 4, 4, 5], lives: 3 });
     }
   });
 
   DMGame.register({
     id: 'lid-staat', cat: 'lid', title: 'Wer macht was im Staat?', icon: '🏛️', level: 'A2–B1',
-    desc: 'Bundestag, Bundesrat, Bundespräsident – plus Bund, Land, Gemeinde und Landeshauptstädte.',
-    intro: 'Wer wählt die Kanzlerin? Wer ist für Schulen zuständig? Wie heißt die Hauptstadt von Hessen? Wähle ein Thema. 15 Aufgaben, 3 Leben.',
+    desc: 'Maulwurf, Sortierkörbe und Fangspiel: Staatsorgane, Bund/Land/Gemeinde und Landeshauptstädte.',
+    intro: 'Drei Spiele in einem: Hau den Maulwurf (Staatsorgane), Karten in den richtigen Korb sortieren (Bund, Land oder Gemeinde) und Hauptstädte mit dem Korb fangen. 3 Leben.',
     optionsLabel: 'Thema',
-    options: [{ id: 'organ', label: 'Verfassungsorgane' }, { id: 'ebene', label: 'Bund, Land oder Gemeinde?' }, { id: 'laender', label: 'Länder & Hauptstädte' }],
+    options: [{ id: 'organ', label: '🔨 Staatsorgane: Hau den Maulwurf' }, { id: 'ebene', label: '🧺 Bund, Land oder Gemeinde? Sortieren' }, { id: 'laender', label: '🍎 Hauptstädte fangen' }],
     start(api, opt) {
       let items;
       if (opt === 'laender') {
@@ -124,7 +101,7 @@
           ...LAENDER.map(([l, c]) => ({ q: `Wie heißt die Landeshauptstadt von ${l}?`, a: c, opts: [c, ...DMKit.distract(api, caps, c)], correct: `${l}: ${c}` })),
           ...LAENDER.map(([l, c]) => ({ q: `${c} ist die Hauptstadt von …`, a: l, opts: [l, ...DMKit.distract(api, lands, l)], correct: `${c}: ${l}` }))
         ];
-        DMKit.mc(api, { items, rounds: 15, lives: 3, cols: 2 });
+        DMArcade.catcher(api, { items, rounds: 14, lives: 3 });
         return;
       }
       const rows = STAAT.filter(r => r[2] === (opt || 'organ'));
@@ -132,7 +109,8 @@
       items = rows.map(([q, a, g]) => g === 'ebene'
         ? { q, sub: 'Wer ist dafür zuständig?', a, opts: answers, keep: true, correct: `${q} → ${a}` }
         : { q: `Wer ${q.replace(/\.$/, '?')}`, sub: 'Wähle das Staatsorgan.', a, opts: [a, ...DMKit.distract(api, answers, a)], correct: `${a}: ${q}` });
-      DMKit.mc(api, { items, rounds: 15, lives: 3 });
+      if (opt === 'ebene') DMArcade.sorter(api, { items: items.map(x => ({ ...x, q: x.q, sub: null })), bins: ['der Bund', 'das Bundesland', 'die Gemeinde / die Stadt'], rounds: 10, lives: 3, title: 'Wer ist zuständig?', sub: 'Steuere jede Karte in den richtigen Korb.' });
+      else DMArcade.whack(api, { items, seconds: 60, lives: 3 });
     }
   });
 })();
