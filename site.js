@@ -781,9 +781,10 @@
      und wechselt nach der Länge des Lieds (Sekunden, von suno.com/song/<id>). Neue Lieder ohne Länge: 200 s. */
   const SONG_SEC = {"795d6dc6-af02-4227-a663-e42c8cc50b32":203.08,"b2106848-a2b2-4e17-a449-ce6f045c74bd":193.4,"46870790-f2cd-4165-acb0-3d25c00fb43f":217.8,"5d96bd22-4cf6-484c-8555-f2197e78d4bb":211.32,"ba3fc9d7-a4e6-419d-8a69-3bcb243aa00c":211.2,"9a6bdd05-518c-4630-898d-ad2066c90791":187.56,"75117d8d-5353-4d91-b993-69c05f2f4412":238.4,"e361d340-c181-4481-97f9-b3d76e18e8fc":223.04,"b8f2e748-5ca1-414c-b82b-c99150f19dee":236.8,"2c9636d5-1ab1-4db5-baa9-44e7c44ff1b8":178.8,"3f963aaf-ac2a-4d88-bf10-06cdcd9fb59c":213.96,"018564e0-c83d-43a7-a116-c8b317d71c5f":182.72,"0f07ffdb-0a97-4ece-aa73-2c75dd32df2e":208.8,"0f889433-a74b-4cd6-88a1-a9da11d0de29":182.36,"1946ba08-31af-4d8e-abc5-201fd9fc48d2":186,"1aa82f83-35c2-4bcd-8f22-fb3f2b776ee0":177.2,"1aedc905-0a38-4d92-b06f-c1c020ad656f":168.44,"1c673ea8-5bca-4174-94e2-79b77a8987c1":131.1,"229490ca-7263-4a9d-a051-1ac6c514d775":204.44,"24cb7e9e-ba11-4dd1-8bf8-90b9e273f31f":164.4,"293f8eb2-e7e9-4b61-a91e-9b947a309743":207.16,"2f5f7692-f67a-4a0a-bef1-219e4e5191ef":122.4,"39346fc5-7cbb-448c-80e8-d6ba300fbf91":139.6,"39bbc327-f3fb-420d-a1f5-dc241fe946bd":194.5,"3c8c1d2b-830b-476e-a8db-80b9ab4af632":192.16,"3dd7269b-2bcd-410c-846e-a0f1da483ff5":222.84,"447c5516-e1c7-4cd5-8862-a8ca98f2b443":193.16,"4b7dd70f-7896-4953-a910-821437e1f6d7":90.6,"4f76df7f-b281-422d-b745-7e66c3b13c47":213.2,"50d78103-1bce-4995-9efb-41f17aa49674":163.16,"5a31ebb4-d8c5-4698-ade6-a374b3aa67a7":156.3,"5e0e1288-61e6-4c9d-bda3-3dfa96adfa36":201.2,"628f6d58-8504-459c-81c9-75510edc139c":151.28,"64f12bae-7c1d-4803-9b88-b715b163025d":168.4,"6c9d3ac3-84f9-4b25-988d-85ff256835f8":186.8,"7886b066-3b92-45da-a619-5dfd5efdb970":218.36,"794b6a6b-8b28-4223-b2a0-04b302fbe879":161.2,"869ec488-cc69-41dd-b5bf-41113a5687d7":212.8,"8d74b826-5bfd-440e-933b-976eec4dd73c":192.5,"8dd8c503-044e-4b08-9c83-d742288997e3":175.16,"8e461d53-a562-4696-8ed4-dcf271947b39":219.6,"935183d3-2d09-40ab-a86f-ecea73ea8f3c":177.6,"94b001e6-4ae1-41f2-a548-29fb787956cc":206.4,"967c84df-bfdc-455a-87db-c0676a2eaaa2":128.8,"99e30532-15e0-4f58-8144-fdba6c74f7a7":159.88,"9e3baa40-62d9-4b26-abd8-660b39d8ab83":201.8,"9f4bec0d-f888-4521-b306-049f3c77e96a":222.16,"a29b858c-53db-4642-8e0e-e4106da6fa98":154.64,"a7313861-3b9c-4bff-bec1-5162bce1fb3b":130.8,"ae3f2989-09b4-4168-87f5-8a90bebc2ecd":186.5,"af9c2420-6465-4fff-9afc-af5d8f413b0d":176.24,"b9010843-4f7c-451e-b9d7-34936d5a47d9":199.2,"bb891ec8-c67c-467a-ac03-f2dd19a5e58c":217.6,"bbd6bf59-6380-477f-ab90-64d6079e5d5e":212.44,"bef4dfe6-ff4b-438c-a9b5-af5ffef8d661":208.76,"c00763c1-034d-4f3f-85cc-f9518b66156b":242.56,"c05bebb0-328c-407b-b09b-a1bf387246b3":217.68,"c707abbf-7fc5-4b43-ae6f-4969d31d8fe0":212.2,"d3e270a5-1fa6-4e88-b01e-060542104ec6":157.2,"e4f74ce2-820a-4249-91ea-8de3a2a578cc":206.0,"f7bbd7d0-beeb-45d7-bea2-67a19e458265":219.6};
   const mmss = t => `${Math.floor(t / 60)}:${String(Math.floor(t % 60)).padStart(2, '0')}`;
-  let plTimer = null;
+  let plTimer = null, plTimerWin = window;
+  const plStop = () => { if (plTimer) plTimerWin.clearInterval(plTimer); plTimer = null; };
   function songPlaylist(sel) {
-    clearInterval(plTimer); plTimer = null;
+    plStop();
     const filt = ['alle', ...SONG_LEVELS].includes(sel) ? sel : (mem.plLevel || 'alle');
     mem.plLevel = filt; save();
     const base = (DM.songs || []).filter(sg => sg.suno && (filt === 'alle' || sg.level === filt));
@@ -792,6 +793,11 @@
     const list = order.map(i => base[i]);
     const total = list.reduce((a, sg) => a + (SONG_SEC[sg.suno] || 200), 0);
     let cur = -1, left = 0, endAt = 0, paused = false, loading = false, tapped = false;
+    // Mini-Player (Document Picture-in-Picture, Chrome/Edge am Computer): kleines Fenster, das sichtbar bleibt.
+    // In einem Hintergrund-Tab startet der Suno-Player das nächste Lied nicht – im Mini-Fenster schon.
+    let pip = null, pipStage = null, pipNow = null;
+    const stage = () => pipStage || $('#dm-pl-stage');
+    const W = () => pip || window;   // Timer im sichtbaren Fenster laufen ungebremst
     // Zurück im Tab: sofort prüfen, ob das nächste Lied dran ist
     const onVis = () => { if (!document.body.contains(now)) return document.removeEventListener('visibilitychange', onVis); if (!document.hidden && cur >= 0 && !paused && !loading && endAt && Date.now() >= endAt) play(cur + 1); };
     document.addEventListener('visibilitychange', onVis);
@@ -808,9 +814,10 @@
             <button type="button" class="dm-btn dm-btn-quiet" id="dm-pl-prev" aria-label="Vorheriges Lied">⏮ Zurück</button>
             <button type="button" class="dm-btn dm-btn-quiet" id="dm-pl-pause" aria-pressed="false">⏸ Automatisch weiter: an</button>
             <button type="button" class="dm-btn dm-btn-quiet" id="dm-pl-next" aria-label="Nächstes Lied">Weiter ⏭</button>
+            ${'documentPictureInPicture' in window ? '<button type="button" class="dm-btn dm-btn-quiet" id="dm-pl-mini">🗗 Mini-Player</button>' : ''}
             <label class="dm-pl-shuffle"><input type="checkbox" id="dm-pl-shuffle" ${mem.plShuffle ? 'checked' : ''}> Zufällige Reihenfolge</label>
           </div>
-          <p class="dm-small">Hältst du ein Lied im Player an, tippe auch hier auf „Automatisch weiter“, damit die Playlist wartet. Auf manchen Handys musst du jedes Lied einmal selbst starten.</p>
+          <p class="dm-small">Hältst du ein Lied im Player an, tippe auch hier auf „Automatisch weiter“, damit die Playlist wartet. Auf manchen Handys musst du jedes Lied einmal selbst starten.${'documentPictureInPicture' in window ? ' <b>Am Computer:</b> Willst du nebenbei in anderen Tabs arbeiten, starte den „Mini-Player“ – dann läuft die Playlist in einem kleinen Fenster weiter.' : ''}</p>
         </section>
         <ol class="dm-pl-list" id="dm-pl-list">${list.map((sg, k) => `<li class="dm-lv-${sg.level.toLowerCase()}" data-k="${k}"><button type="button" class="dm-pl-item" data-k="${k}"><span class="dm-song-disc" aria-hidden="true"><i></i></span><span class="dm-pl-t"><span class="dm-pl-badge" aria-hidden="true"><i></i><i></i><i></i> Läuft gerade</span><b>${x(sg.title)}</b><small>${sg.level} · ${x(sg.theme)}</small></span><span class="dm-pl-len">${mmss(SONG_SEC[sg.suno] || 200)}</span></button><a class="dm-pl-open" href="#lieder/${sg.id}">Text &amp; Aufgaben</a></li>`).join('')}</ol>
       </div>
@@ -819,7 +826,9 @@
     const show = () => {
       if (cur < 0) return;
       const sg = list[cur];
-      now.innerHTML = `<b>${cur + 1}/${list.length}: ${x(sg.title)}</b> <span>(${sg.level})</span>${paused ? ' · angehalten' : loading ? ' · wird geladen …' : ` · nächstes Lied in ${mmss(Math.max(0, left))}`}`;
+      const st = paused ? ' · angehalten' : loading ? ' · wird geladen …' : ` · nächstes Lied in ${mmss(Math.max(0, left))}`;
+      now.innerHTML = `<b>${cur + 1}/${list.length}: ${x(sg.title)}</b> <span>(${sg.level})</span>${st}`;
+      if (pipNow) pipNow.textContent = `${cur + 1}/${list.length}: ${sg.title}${st}`;
     };
     const play = k => {
       if (!list.length) return;
@@ -828,21 +837,21 @@
       const len = (SONG_SEC[sg.suno] || 200) + 2;
       left = len; endAt = 0; loading = true; tapped = false;   // Countdown startet erst, wenn der Player geladen ist
       paused = false; btnP.textContent = '⏸ Automatisch weiter: an'; btnP.setAttribute('aria-pressed', 'false');
-      $('#dm-pl-stage').innerHTML = `<div class="dm-suno"><iframe src="https://suno.com/embed/${x(sg.suno)}?autoplay=1" title="${x(sg.title)}" allow="autoplay; encrypted-media"></iframe></div>`;
-      const fr = $('#dm-pl-stage iframe');
+      stage().innerHTML = `<div class="dm-suno"><iframe src="https://suno.com/embed/${x(sg.suno)}?autoplay=1" title="${x(sg.title)}" allow="autoplay; encrypted-media"></iframe></div>`;
+      const fr = stage().querySelector('iframe');
       // Uhrzeit-basiert: bleibt genau, auch wenn der Browser Timer im Hintergrund-Tab bremst
       let loadedAt = 0;
       fr.onload = () => { if (loadedAt) return; loadedAt = Date.now(); loading = false; endAt = loadedAt + len * 1000; show(); };   // nur das erste Laden zählt
-      setTimeout(() => { if (fr.isConnected && loading) { loadedAt = Date.now(); loading = false; endAt = loadedAt + len * 1000; show(); } }, 15000);
+      W().setTimeout(() => { if (fr.isConnected && loading) { loadedAt = Date.now(); loading = false; endAt = loadedAt + len * 1000; show(); } }, 15000);
       $$('#dm-pl-list li').forEach(li => { const on = +li.dataset.k === cur; li.classList.toggle('is-now', on); li.querySelector('.dm-pl-item').setAttribute('aria-current', on ? 'true' : 'false'); });
       $(`#dm-pl-list li[data-k="${cur}"]`)?.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
       show();
-      clearInterval(plTimer);
-      plTimer = setInterval(() => {
-        if (!document.body.contains(now)) { clearInterval(plTimer); plTimer = null; return; }
+      plStop(); plTimerWin = W();
+      plTimer = plTimerWin.setInterval(() => {
+        if (!document.body.contains(now)) { plStop(); pip?.close(); return; }
         // Tippt jemand im Player auf ▶ (z. B. auf dem Handy, wenn Autoplay blockiert ist), beginnt das Lied erst jetzt
         // Nur in den ersten 30 s: Autoplay war blockiert und jemand startet das Lied selbst. Spätere Klicks (Pause, Spulen) ändern nichts.
-        if (!tapped && document.activeElement === fr) { tapped = true; if (loadedAt && Date.now() - loadedAt < 30000) endAt = Date.now() + len * 1000; }
+        if (!tapped && fr.ownerDocument.activeElement === fr) { tapped = true; if (loadedAt && Date.now() - loadedAt < 30000) endAt = Date.now() + len * 1000; }
         if (paused) { endAt += 1000; return; }
         if (loading) return;
         left = Math.ceil((endAt - Date.now()) / 1000); show();
@@ -854,6 +863,29 @@
     $('#dm-pl-prev').onclick = () => { if (sunoConsent()) play(cur - 1); };
     btnP.onclick = () => { if (cur < 0) return; paused = !paused; btnP.textContent = paused ? '▶ Automatisch weiter: aus' : '⏸ Automatisch weiter: an'; btnP.setAttribute('aria-pressed', String(paused)); show(); };
     $$('.dm-pl-item').forEach(b => b.onclick = () => { mem.sunoConsent = true; save(); play(+b.dataset.k); });
+    const btnM = $('#dm-pl-mini');
+    if (btnM) btnM.onclick = async () => {
+      if (pip) return pip.close();
+      try { pip = await documentPictureInPicture.requestWindow({ width: 440, height: 300 }); } catch (e) { return; }
+      mem.sunoConsent = true; save();
+      const d = pip.document, css = d.createElement('style');
+      d.title = 'Deutsch mit Liedern – Playlist';
+      css.textContent = 'body{margin:0;font:15px/1.4 system-ui,sans-serif;background:#1B1446;color:#fff}#s iframe{display:block;width:100%;height:240px;border:0}#b{display:flex;gap:6px;align-items:center;padding:6px 8px}#b button{min-height:36px;min-width:44px;border-radius:10px;border:1px solid rgba(255,255,255,.35);background:transparent;color:#fff;font:inherit;cursor:pointer}#n{flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:13px}';
+      d.head.append(css);
+      d.body.innerHTML = '<div id="s"></div><div id="b"><button type="button" id="p" aria-label="Vorheriges Lied">⏮</button><span id="n"></span><button type="button" id="w" aria-label="Nächstes Lied">⏭</button></div>';
+      pipStage = d.getElementById('s'); pipNow = d.getElementById('n');
+      d.getElementById('p').onclick = () => play(cur - 1);
+      d.getElementById('w').onclick = () => play(cur + 1);
+      $('#dm-pl-stage').innerHTML = '<div class="dm-pl-start"><p style="color:#fff;text-align:center;padding:0 16px;margin:0">Die Playlist läuft jetzt im Mini-Player.<br>Du kannst in anderen Tabs arbeiten.</p></div>';
+      btnM.textContent = '🗗 Mini-Player schließen';
+      pip.addEventListener('pagehide', () => {
+        pip = pipStage = pipNow = null; plStop();
+        if (!document.body.contains(now)) return;
+        btnM.textContent = '🗗 Mini-Player';
+        play(Math.max(0, cur));   // zurück in den Tab
+      });
+      play(Math.max(0, cur));
+    };
     $('#dm-pl-shuffle').onchange = e => { mem.plShuffle = e.target.checked; save(); songPlaylist(filt); };
   }
 
