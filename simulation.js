@@ -571,15 +571,16 @@
   function stopRec() { try { recorder?.state === 'recording' && recorder.stop(); } catch {} }
   function bindMit(box) {
     const ta = box.querySelector('.sim-mittext'); if (!ta) return;
-    ta.oninput = () => { const t = recTexts[ta.dataset.mit]; if (t) t.edit = ta.value; };
+    ta.oninput = () => { const t = recTexts[ta.dataset.mit]; if (t) { t.edit = ta.value; t.edited = true; } };
     window.DMSchreibcheck?.attach(ta);
   }
   function mitBox(id, ended) {
     const M = window.DMMitschrift, t = recTexts[id];
-    if (!M?.ok) return ended ? '' : '<p class="dm-small">Dein Browser kann leider nicht mitschreiben. In Chrome, Edge oder Safari erscheint hier dein Text.</p>';
     if (!t) return '';
+    if (!ended && !M?.ok) return '<p class="dm-small">Aufnahme läuft … Nach dem Stoppen erscheint hier dein Text.</p>';
+    if (ended && t.busy && !t.fin) return '<p class="dm-small" role="status">🔍 Dein Text wird erkannt …</p>';
     if (!ended) return `<b>Mitschrift</b><p aria-live="polite">${e(t.fin)} <i>${e(t.live || (t.fin ? '' : 'Sprich jetzt – hier erscheint, was du sagst …'))}</i></p>`;
-    return t.fin ? `<label for="mit-${id.replace(/[^\w-]/g, '_')}"><b>Das hast du gesagt</b></label><p class="dm-small">💬 ${M.words(t.fin)} Wörter · Stimmt ein Wort nicht? Dann hast du es vielleicht undeutlich gesprochen – du kannst es hier verbessern.</p><textarea id="mit-${id.replace(/[^\w-]/g, '_')}" class="sim-textarea sim-mittext" data-speech="1" data-mit="${e(id)}" rows="3">${e(t.edit ?? M.nice(t.fin))}</textarea>`
+    return t.fin ? `${t.busy ? '<p class="dm-small" role="status">🔍 Genauere Erkennung läuft …</p>' : ''}<label for="mit-${id.replace(/[^\w-]/g, '_')}"><b>Das hast du gesagt</b></label><p class="dm-small">💬 ${M.words(t.fin)} Wörter · Stimmt ein Wort nicht? Dann hast du es vielleicht undeutlich gesprochen – du kannst es hier verbessern.</p><textarea id="mit-${id.replace(/[^\w-]/g, '_')}" class="sim-textarea sim-mittext" data-speech="1" data-mit="${e(id)}" rows="3">${e(t.edit ?? M.nice(t.fin))}</textarea>`
       : '<p class="dm-small">Ich habe leider nichts verstanden. Sprich lauter und näher am Mikrofon.</p>';
   }
   async function toggleRec(btn) {
@@ -593,13 +594,17 @@
     const tid = (cur?.id || '') + key; recTexts[tid] = { fin: '', live: '' }; let recOn = true;
     const showMit = () => { const b = $(`[data-mitbox="${key}"]`); if (b) { b.innerHTML = mitBox(tid, !recOn); bindMit(b); } };
     try { recMit?.stop(); } catch {}
-    recMit = window.DMMitschrift?.start((fin, live) => { recTexts[tid] = { fin, live: recOn ? live : '' }; showMit(); }) || null;
+    recMit = window.DMMitschrift?.start((fin, live) => { const T = recTexts[tid]; if (T.busy || T.whisperDone) return; T.fin = fin; T.live = recOn ? live : ''; showMit(); }) || null;
     showMit();
     recorder.ondataavailable = ev => ev.data.size && recChunks.push(ev.data);
     recorder.onstop = () => {
       stream.getTracks().forEach(t => t.stop());
-      recOn = false; try { recMit?.stop(); } catch {} recMit = null; if (recTexts[tid]) recTexts[tid].live = ''; showMit();
-      const url = URL.createObjectURL(new Blob(recChunks, { type: recorder.mimeType || 'audio/webm' }));
+      recOn = false; try { recMit?.stop(); } catch {} recMit = null;
+      const blob = new Blob(recChunks, { type: recorder.mimeType || 'audio/webm' });
+      const T = recTexts[tid] || (recTexts[tid] = { fin: '', live: '' }); T.live = '';
+      if (window.DMMitschrift?.whisper) { T.busy = true; window.DMMitschrift.whisper(blob).then(w => { if (w && !T.edited) { T.fin = w; T.whisperDone = true; delete T.edit; } }).catch(() => {}).finally(() => { T.busy = false; showMit(); }); }
+      showMit();
+      const url = URL.createObjectURL(blob);
       recs[(cur?.id || '') + key] = url;
       const box = $(`[data-recbox="${key}"]`);
       if (box) box.innerHTML = `<audio controls src="${url}"></audio>`;

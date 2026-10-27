@@ -499,7 +499,7 @@
   const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
   const speechCoach = () => `<section class="dm-card dm-coach" id="dm-coach" aria-labelledby="coach-h">
       <div class="dm-coach-top"><img class="dm-coach-ico" src="assets/3d/studiomikro.webp" alt="" width="192" height="192" aria-hidden="true"><div><h2 id="coach-h">Einsprechen und korrigieren lassen</h2>
-      <p>Sprich deine Antwort laut ins Mikrofon. ${SR ? 'Die Seite schreibt mit, was sie verstanden hat, und zeigt dir danach Fehler in Grammatik und Wortformen.' : 'Danach hörst du dich selbst an.'}</p></div></div>
+      <p>Sprich deine Antwort laut ins Mikrofon. Die Seite schreibt mit, was sie verstanden hat, und zeigt dir danach Fehler in Grammatik und Wortformen.</p></div></div>
       <div class="dm-coach-stage">
         <button type="button" class="dm-coach-rec" id="dm-coach-rec" aria-pressed="false"><span class="dm-coach-dot" aria-hidden="true"></span><span class="dm-coach-label">Aufnahme starten</span></button>
         <div class="dm-coach-meter" aria-hidden="true">${'<i></i>'.repeat(24)}</div>
@@ -509,10 +509,10 @@
       <div id="dm-coach-result" hidden>
         <audio controls id="dm-coach-audio"></audio>
         <p class="dm-coach-stats" id="dm-coach-stats"></p>
-        <label for="dm-coach-text"><b>${SR ? 'Das hat das Mikrofon verstanden' : 'Schreib auf, was du gesagt hast'}</b> <small>(${SR ? 'stimmt ein Wort nicht? Dann hast du es vielleicht undeutlich gesprochen – du kannst es auch korrigieren' : 'dein Browser kann nicht mitschreiben'})</small></label>
+        <label for="dm-coach-text"><b>Das hat das Mikrofon verstanden</b> <small>(stimmt ein Wort nicht? Dann hast du es vielleicht undeutlich gesprochen – du kannst es auch korrigieren)</small></label>
         <textarea id="dm-coach-text" data-speech="1" rows="4"></textarea>
       </div>
-      <p class="dm-small dm-coach-privacy">Zuerst fragt dein Browser, ob die Seite das Mikrofon benutzen darf. Die Aufnahme bleibt auf deinem Gerät. ${SR ? 'Für das Mitschreiben nutzt dein Browser seine eigene Spracherkennung – in Chrome und Edge wird der Ton dafür an Google bzw. Microsoft übertragen. ' : ''}Die Korrektur nutzt LanguageTool und eigene Regeln für typische Lernerfehler. <a href="#datenschutz">Datenschutz</a></p>
+      <p class="dm-small dm-coach-privacy">Zuerst fragt dein Browser, ob die Seite das Mikrofon benutzen darf. ${SR ? 'Für das Live-Mitschreiben nutzt dein Browser seine eigene Spracherkennung – in Chrome und Edge wird der Ton dafür an Google bzw. Microsoft übertragen. ' : ''}Nach der Aufnahme wird sie für eine genauere Erkennung an die KI-Spracherkennung Whisper bei Cloudflare geschickt und dort nicht gespeichert. Die Korrektur nutzt LanguageTool und eigene Regeln für typische Lernerfehler. <a href="#datenschutz">Datenschutz</a></p>
     </section>`;
   function bindSpeechCoach() {
     const btn = $('#dm-coach-rec'); if (!btn) return;
@@ -529,15 +529,21 @@
     };
     let finished = true;
     const done = () => { if (finished || waitRec || waitSr) return; finished = true; clearTimeout(guard); finish(); };
-    const finish = () => {
+    let lastBlob = null;
+    const finish = async () => {
       $('#dm-coach-audio').hidden = !url;
+      const M = window.DMMitschrift;
+      if (lastBlob && M?.whisper) {
+        $('#dm-coach-result').hidden = true; live.textContent = '🔍 Ich höre mir deine Aufnahme noch einmal genau an …';
+        try { const w = await M.whisper(lastBlob); if (w) { finalText = w; live.dataset.interim = w; } } catch {}
+      }
       const secs = Math.max(1, Math.round((Date.now() - t0) / 1000));
       const text = (live.dataset.interim || finalText || '').replace(/\s+/g, ' ').trim();
       const ta = $('#dm-coach-text'); ta.value = text ? text.charAt(0).toUpperCase() + text.slice(1) + (/[.!?]$/.test(text) ? '' : '.') : '';
       const words = (text.match(/[\p{L}\p{N}]+/gu) || []).length;
       $('#dm-coach-result').hidden = false;
       $('#dm-coach-stats').innerHTML = `<span>⏱ ${fmt(secs)} gesprochen</span><span>💬 ${words} Wörter</span>${words ? `<span>🚀 ${Math.round(words / secs * 60)} Wörter pro Minute</span>` : ''}`;
-      live.textContent = SR ? (text ? '' : 'Ich habe leider nichts verstanden. Sprich lauter und näher am Mikrofon – oder schreib unten, was du gesagt hast.') : '';
+      live.textContent = text ? '' : 'Ich habe leider nichts verstanden. Sprich lauter und näher am Mikrofon – oder schreib unten, was du gesagt hast.';
       ta.dispatchEvent(new Event('input', { bubbles: true }));
       if (text) setTimeout(() => { const b = ta.parentNode.querySelector('.sc-btn'); if (b) b.click(); }, 150);
     };
@@ -546,7 +552,7 @@
       if (!navigator.mediaDevices?.getUserMedia) { live.textContent = 'Dein Browser erlaubt hier keine Aufnahme. Versuche es mit Chrome, Edge oder Safari.'; return; }
       try { stream = await navigator.mediaDevices.getUserMedia({ audio: true }); }
       catch { live.textContent = 'Das Mikrofon ist nicht freigegeben. Erlaube den Zugriff in der Adresszeile (Schloss-Symbol) und versuche es noch einmal.'; return; }
-      on = true; finished = false; finalText = ''; live.dataset.interim = ''; chunks = []; t0 = Date.now(); rec = null; recog = null;
+      on = true; finished = false; finalText = ''; live.dataset.interim = ''; chunks = []; lastBlob = null; t0 = Date.now(); rec = null; recog = null;
       btn.classList.add('is-on'); btn.setAttribute('aria-pressed', 'true'); btn.querySelector('.dm-coach-label').textContent = 'Aufnahme beenden';
       $('#dm-coach-result').hidden = true; live.textContent = SR ? 'Ich höre zu … Sprich jetzt.' : 'Aufnahme läuft … Sprich jetzt.';
       tick = setInterval(() => { timeEl.textContent = fmt(Math.round((Date.now() - t0) / 1000)); if (Date.now() - t0 > 180000) stop(); }, 250);
@@ -557,7 +563,7 @@
       } catch {}
       if (window.MediaRecorder) {
         rec = new MediaRecorder(stream); rec.ondataavailable = e => e.data.size && chunks.push(e.data);
-        rec.onstop = () => { if (url) URL.revokeObjectURL(url); url = URL.createObjectURL(new Blob(chunks, { type: rec.mimeType || 'audio/webm' })); $('#dm-coach-audio').src = url; waitRec = false; done(); };
+        rec.onstop = () => { if (url) URL.revokeObjectURL(url); lastBlob = new Blob(chunks, { type: rec.mimeType || 'audio/webm' }); url = URL.createObjectURL(lastBlob); $('#dm-coach-audio').src = url; waitRec = false; done(); };
         rec.start();
       }
       if (SR && window.DMMitschrift) {
@@ -1103,7 +1109,7 @@
       <h2>4c. Kauf von Lernpaketen (Digistore24)</h2>
       <p>Die Lernpakete werden über die Digistore24 GmbH, St.-Godehard-Straße 32, 31139 Hildesheim, verkauft. Digistore24 ist Verkäufer und Vertragspartner. Erst wenn du auf „Jetzt kaufen“ klickst, öffnet sich das Bestellformular von Digistore24; vorher werden keine Daten an Digistore24 übertragen. Bei der Bestellung verarbeitet Digistore24 deine Bestell- und Zahlungsdaten. Ich erhalte von Digistore24 die für die Abwicklung nötigen Angaben (zum Beispiel Name, E-Mail-Adresse und gekauftes Produkt), um dir bei Fragen helfen zu können. Rechtsgrundlage ist die Vertragsabwicklung (Art. 6 Abs. 1 lit. b DSGVO). Mehr: <a href="https://www.digistore24.com/page/privacy/1/de" target="_blank" rel="noopener noreferrer">Datenschutzerklärung von Digistore24</a>.</p>
       <h2>4d. Einsprechen und korrigieren lassen</h2>
-      <p>Bei den Sprechübungen kannst du dich aufnehmen. Erst nach deinem Klick auf „Aufnahme starten“ oder „Mich aufnehmen“ fragt dein Browser nach dem Mikrofon. Die Aufnahme bleibt auf deinem Gerät und wird nicht an mich übertragen. Für das automatische Mitschreiben nutzt dein Browser seine eingebaute Spracherkennung: In Chrome und Edge wird der Ton dafür an Google bzw. Microsoft übertragen (in Safari je nach Gerät an Apple) und dort in Text umgewandelt; dabei können Daten auch außerhalb der EU verarbeitet werden. Den erkannten Text prüft danach LanguageTool (siehe 4a). Rechtsgrundlage ist deine Einwilligung durch den Klick (Art. 6 Abs. 1 lit. a DSGVO).</p>
+      <p>Bei den Sprechübungen kannst du dich aufnehmen. Erst nach deinem Klick auf „Aufnahme starten“ oder „Mich aufnehmen“ fragt dein Browser nach dem Mikrofon. Die Aufnahme bleibt auf deinem Gerät und wird nicht an mich übertragen. Für das automatische Mitschreiben nutzt dein Browser seine eingebaute Spracherkennung: In Chrome und Edge wird der Ton dafür an Google bzw. Microsoft übertragen (in Safari je nach Gerät an Apple) und dort in Text umgewandelt; dabei können Daten auch außerhalb der EU verarbeitet werden. Nach dem Stoppen wird die Aufnahme zusätzlich an meinen Cloudflare-Worker geschickt und dort mit der KI-Spracherkennung Whisper (Cloudflare Workers AI) in Text umgewandelt, damit auch Wörter mit Akzent richtig erkannt werden. Die Aufnahme wird dabei nicht gespeichert und nicht zum Training verwendet; Anbieter ist die Cloudflare, Inc. (USA, EU-Standardvertragsklauseln). Den erkannten Text prüft danach LanguageTool (siehe 4a). Rechtsgrundlage ist deine Einwilligung durch den Klick (Art. 6 Abs. 1 lit. a DSGVO).</p>
       <h2>4e. Deine Meinung (Zettel)</h2>
       <p>Wenn du unter „Deine Meinung“ einen Zettel abschickst, werden deine Angaben (Art des Zettels, Text, freiwillig Vorname und E-Mail-Adresse) über den Dienst FormSubmit (formsubmit.co) per E-Mail an mich weitergeleitet. Dabei wird auch deine IP-Adresse übertragen; die Verarbeitung kann außerhalb der EU stattfinden. Ohne Klick auf „Zettel abschicken“ wird nichts übertragen. Ich veröffentliche einen Zettel nur, wenn du das erlaubt hast – mit Vorname oder anonym, nie mit E-Mail-Adresse. Rechtsgrundlage ist deine Einwilligung (Art. 6 Abs. 1 lit. a DSGVO). Wenn du möchtest, dass ich einen Zettel wieder entferne, schreib mir einfach.</p>
       <p>Nach einiger Nutzung fragt die Seite einmal kurz, ob sie dir hilft (1–5 Sterne). Ob und wann die Frage erscheint, wird nur in deinem Browser gespeichert. Erst wenn du Sterne anklickst, werden die Sternzahl, dein freiwilliger Kommentar und die aktuelle Unterseite über FormSubmit per E-Mail an mich gesendet; dabei wird auch deine IP-Adresse übertragen. Rechtsgrundlage ist deine Einwilligung (Art. 6 Abs. 1 lit. a DSGVO).</p>
@@ -1377,7 +1383,7 @@
       </div>
 
       ${done ? `<div class="dm-et-done" role="status"><b>Die Zeit ist um.</b> ${c.kind === 'schreiben' ? `Du hast ${words()} Wörter geschrieben.` : ''} Prüfe dich selbst:<ul>${checks.map(t => `<li><label><input type="checkbox"> ${x(t)}</label></li>`).join('')}</ul></div>` : ''}
-      ${c.kind === 'sprechen' && !done ? '<p class="dm-et-hint">Tipp: Nimm dich auf, lies die Mitschrift und lass sie auf Fehler prüfen. Die Aufnahme bleibt auf deinem Gerät; für die Mitschrift nutzt dein Browser seine Spracherkennung (in Chrome und Edge über Google bzw. Microsoft). <a href="#datenschutz">Datenschutz</a></p>' : ''}`;
+      ${c.kind === 'sprechen' && !done ? '<p class="dm-et-hint">Tipp: Nimm dich auf, lies die Mitschrift und lass sie auf Fehler prüfen. Für die Mitschrift nutzt dein Browser seine Spracherkennung (Chrome/Edge: Google bzw. Microsoft); nach dem Stoppen wird die Aufnahme für eine genauere Erkennung an Whisper bei Cloudflare geschickt und nicht gespeichert. <a href="#datenschutz">Datenschutz</a></p>' : ''}`;
     $$('[data-et]', examBox).forEach(b => b.onclick = () => examAction(b.dataset.et));
     const rows = $$('.dm-et-row', examBox);
     if (c.kind === 'sprechen') { rows[rows.length - 1].after(examMit); if (!examMit.dataset.state) drawMitBox(); } else examMit.remove();
@@ -1390,18 +1396,19 @@
     examMit.dataset.state = state;
     if (state === 'live') {
       examMit.innerHTML = M?.ok ? `<div class="dm-et-mit is-live"><b>Mitschrift <span class="dm-et-mitdot" aria-hidden="true"></span></b><p id="dm-et-mit" aria-live="polite"></p></div>`
-        : '<p class="dm-et-hint">Dein Browser kann leider nicht mitschreiben. In Chrome, Edge oder Safari erscheint hier dein Text.</p>';
+        : '<p class="dm-et-hint">Aufnahme läuft … Nach dem Stoppen erscheint hier dein Text.</p>';
       drawMit(); return;
     }
-    if (state === 'empty' || !M?.ok) { examMit.innerHTML = ''; return; }
+    if (state === 'empty') { examMit.innerHTML = ''; return; }
+    if (examT.wbusy && !examT.text) { examMit.innerHTML = '<p class="dm-et-hint" role="status">🔍 Dein Text wird erkannt …</p>'; return; }
     if (!examT.text) { examMit.innerHTML = '<p class="dm-et-hint">Ich habe leider nichts verstanden. Sprich lauter und näher am Mikrofon.</p>'; return; }
     const w = M.words(examT.text), mins = examT.secs / 60;
     examMit.innerHTML = `<div class="dm-et-mit"><label for="dm-et-text"><b>Das hast du gesagt</b></label>
-      <p class="dm-et-mitstats">💬 ${w} Wörter${mins > 0.2 ? ` · 🚀 ${Math.round(w / mins)} Wörter pro Minute` : ''} · Stimmt ein Wort nicht? Dann hast du es vielleicht undeutlich gesprochen – du kannst es hier verbessern.</p>
+      ${examT.wbusy ? '<p class="dm-et-mitstats" role="status">🔍 Genauere Erkennung läuft …</p>' : ''}<p class="dm-et-mitstats">💬 ${w} Wörter${mins > 0.2 ? ` · 🚀 ${Math.round(w / mins)} Wörter pro Minute` : ''} · Stimmt ein Wort nicht? Dann hast du es vielleicht undeutlich gesprochen – du kannst es hier verbessern.</p>
       <textarea id="dm-et-text" class="dm-et-text" data-speech="1" rows="4"></textarea>
       <button type="button" class="dm-btn dm-btn-quiet" id="dm-et-copy">Text kopieren</button></div>`;
     const ta = $('#dm-et-text', examMit); ta.value = M.nice(examT.text);
-    ta.oninput = () => { examT.text = ta.value; };
+    ta.oninput = () => { examT.text = ta.value; examT.edited = true; };
     $('#dm-et-copy', examMit).onclick = async e => { try { await navigator.clipboard.writeText(ta.value); e.target.textContent = '✓ Kopiert'; } catch { e.target.textContent = 'Kopieren ging nicht'; } };
     window.DMSchreibcheck?.attach(ta);
   }
@@ -1430,10 +1437,13 @@
         const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
         examT.chunks = []; const r = new MediaRecorder(stream); examT.rec = r;
         r.ondataavailable = e => examT.chunks.push(e.data);
-        r.onstop = () => { stream.getTracks().forEach(t => t.stop()); try { examT.mit?.stop(); } catch {} examT.mit = null; examT.live = ''; examT.secs = Math.round((Date.now() - examT.t0) / 1000); if (examT.url) URL.revokeObjectURL(examT.url); examT.url = URL.createObjectURL(new Blob(examT.chunks, { type: r.mimeType })); examT.rec = null; drawExamBox(); drawMitBox(); };
-        examT.text = ''; examT.live = ''; examT.t0 = Date.now();
+        r.onstop = () => { stream.getTracks().forEach(t => t.stop()); try { examT.mit?.stop(); } catch {} examT.mit = null; examT.live = ''; examT.secs = Math.round((Date.now() - examT.t0) / 1000); if (examT.url) URL.revokeObjectURL(examT.url); const blob = new Blob(examT.chunks, { type: r.mimeType }); examT.url = URL.createObjectURL(blob); examT.rec = null;
+          const id = examT.id, M = window.DMMitschrift;
+          if (M?.whisper) { examT.wbusy = true; M.whisper(blob).then(w => { if (examT.id === id && w && !examT.edited) { examT.text = w; examT.wdone = true; } }).catch(() => {}).finally(() => { if (examT.id !== id) return; examT.wbusy = false; drawMitBox(); }); }
+          drawExamBox(); drawMitBox(); };
+        examT.text = ''; examT.live = ''; examT.edited = false; examT.wbusy = false; examT.wdone = false; examT.t0 = Date.now();
         r.start();
-        examT.mit = window.DMMitschrift?.start((fin, live, ended) => { examT.text = fin; examT.live = ended ? '' : live; if (examT.rec) drawMit(); else drawMitBox(); }) || null;
+        examT.mit = window.DMMitschrift?.start((fin, live, ended) => { if (examT.wdone || (examT.wbusy && !examT.rec)) return; examT.text = fin; examT.live = ended ? '' : live; if (examT.rec) drawMit(); else drawMitBox(); }) || null;
         drawMitBox();
         if (!examT.run) examAction('go');
       } catch { examBox.insertAdjacentHTML('beforeend', '<p class="dm-et-hint">Das Mikrofon ist nicht erlaubt. Du kannst trotzdem mit der Uhr üben.</p>'); return; }

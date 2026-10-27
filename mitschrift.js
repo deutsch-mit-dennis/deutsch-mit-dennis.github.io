@@ -93,5 +93,21 @@
       ? t.charAt(0).toUpperCase() + t.slice(1) + (/[.!?]$/.test(t) ? "" : ".")
       : "";
   };
-  window.DMMitschrift = { ok: !!SR, start, words, nice };
+  // Genauere Erkennung nach der Aufnahme: Whisper (Cloudflare Workers AI, Worker „dmd-whisper“, Code in tools/whisper-worker)
+  const API = "https://dmd-whisper.dennis-prudnikau.workers.dev/";
+  // Whisper erfindet bei Stille manchmal Abspann-Sätze („Untertitel im Auftrag des ZDF“) → verwerfen
+  const FAKE = /untertitel|im auftrag des|zdf|amara\.org|vielen dank f(ü|ue)rs? zuschauen|copyright/i;
+  async function whisper(blob) {
+    if (!blob || blob.size < 1000) return "";
+    if (blob.size > 4 * 1024 * 1024) throw new Error("size");
+    const ctl = new AbortController(), to = setTimeout(() => ctl.abort(), 30000);
+    try {
+      const r = await fetch(API, { method: "POST", headers: { "Content-Type": (blob.type || "audio/webm").split(";")[0] }, body: blob, signal: ctl.signal });
+      const j = await r.json().catch(() => ({}));
+      if (!r.ok) throw new Error(j.error || "http");
+      const t = String(j.text || "").trim();
+      return FAKE.test(t) && words(t) < 12 ? "" : t;
+    } finally { clearTimeout(to); }
+  }
+  window.DMMitschrift = { ok: !!SR, start, words, nice, whisper, canWhisper: !!window.fetch };
 })();
