@@ -3,6 +3,12 @@
  "items": [
   {
    "date": "2026-10-27",
+   "type": "hoeren",
+   "title": "Lernspiele neu: Fangen, Sortieren, Hau den Maulwurf, Quiz-Leiter und Zeitstrahl – statt einfacher Auswahlfragen",
+   "link": "#spiele"
+  },
+  {
+   "date": "2026-10-27",
    "type": "lied",
    "title": "10 neue Lieder: je 2 für A1, A2, B1, B2 und C1 – mit Liedtext, PDF, Aufgaben und Lösungen",
    "link": "#lieder/A1"

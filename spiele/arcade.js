@@ -334,7 +334,7 @@
       binsEl.innerHTML = bins
         .map(
           (b, k) =>
-            `<button type="button" class="ar-bin" data-k="${k}" style="background:${COLORS[k % 4]}"><kbd hidden>${k + 1}</kbd>${api.esc(b)}</button>`,
+            `<button type="button" class="ar-bin" data-k="${k}" style="background:${COLORS[k % 4]}">${api.esc(b)}</button>`,
         )
         .join("");
       binsEl
