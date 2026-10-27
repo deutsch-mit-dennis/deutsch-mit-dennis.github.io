@@ -1,0 +1,1172 @@
+[
+ {
+  "id": "a1-12-was-hast-du-heute-gemacht",
+  "level": "A1",
+  "title": "Was hast du heute gemacht?",
+  "theme": "Abends erzählen: Arbeit, Einkaufen und Freizeit am Tag",
+  "grammar": "Perfekt mit haben (regelmäßige Verben: gemacht, gearbeitet, gekauft, gekocht, gehört, gewartet)",
+  "intro": "Zehn Uhr am Abend, Tee am Fenster – und eine Frage: Was hast du heute gemacht? Mit diesem Lied erzählst du von deinem Tag und übst das Perfekt mit haben.",
+  "lyrics": "[Verse 1]\nEs ist zehn Uhr, die Lampen sind an,\ndu sitzt am Fenster und fragst mich dann:\n„Was hast du heute gemacht? Erzähl es mir!“\nIch trinke Tee und sitze neben dir.\n\n[Verse 2]\nIch habe am Morgen im Büro gearbeitet,\nich habe viel telefoniert und lange gewartet.\nIch habe am Abend Brot und Käse gekauft\nund im Bus Musik gehört – der Regen war laut.\n\n[Chorus]\nWas hast du heute gemacht?\nWas hast du heute gemacht?\nIch habe gearbeitet, gekauft, gekocht –\nund ich habe an dich gedacht.\n\n[Verse 3]\nUnd du? Du sagst: „Ich habe gelernt,\nich habe Deutsch geübt und Wörter gehört.\nIch habe gekocht – Suppe mit Reis,\nich habe gewartet, die Suppe ist noch heiß.“\n\n[Chorus]\nWas hast du heute gemacht?\nWas hast du heute gemacht?\nIch habe gearbeitet, gekauft, gekocht –\nund ich habe an dich gedacht.\n\n[Bridge]\nDie Straße ist still, der Mond ist hier,\ndie Uhr sagt: elf. Ich bin bei dir.\nKein Handy, kein Stress, das Licht ist klein,\nnur du und ich, wir zwei allein.\n\n[Chorus]\nWas hast du heute gemacht?\nWas hast du heute gemacht?\nIch habe gearbeitet, gekauft, gekocht –\nund ich habe an dich gedacht.\n\n[Outro]\nWas hast du heute gemacht? – Ich habe an dich gedacht.\nGute Nacht. – Gute Nacht.",
+  "vocab": [
+   [
+    "arbeiten – hat gearbeitet",
+    "seinen Job machen, z. B. im Büro"
+   ],
+   [
+    "das Büro, die Büros",
+    "Hier arbeiten Menschen am Computer."
+   ],
+   [
+    "telefonieren – hat telefoniert",
+    "mit dem Handy oder Telefon sprechen"
+   ],
+   [
+    "warten – hat gewartet",
+    "bleiben, bis etwas kommt, z. B. der Bus"
+   ],
+   [
+    "kaufen – hat gekauft",
+    "Man bezahlt und bekommt etwas."
+   ],
+   [
+    "der Käse",
+    "Lebensmittel aus Milch"
+   ],
+   [
+    "hören – hat gehört",
+    "mit den Ohren, z. B. Musik"
+   ],
+   [
+    "kochen – hat gekocht",
+    "Essen warm machen, z. B. Suppe"
+   ],
+   [
+    "lernen – hat gelernt",
+    "neue Wörter und Sätze üben"
+   ],
+   [
+    "denken an – hat gedacht",
+    "Eine Person ist in meinem Kopf."
+   ]
+  ],
+  "gap": {
+   "type": "gap",
+   "title": "Aufgabe 2: Lückentext",
+   "instruction": "Hör das Lied und ergänze die fehlenden Wörter.",
+   "items": [
+    "du sitzt am ___ und fragst mich dann:",
+    "ich habe viel telefoniert und lange ___.",
+    "Ich habe am Abend Brot und ___ gekauft",
+    "ich habe gewartet, die Suppe ist noch ___.“",
+    "die Uhr sagt: ___. Ich bin bei dir."
+   ],
+   "solutions": [
+    "Fenster",
+    "gewartet",
+    "Käse",
+    "heiß",
+    "elf"
+   ]
+  },
+  "tf": [
+   [
+    "Es ist zehn Uhr am Abend.",
+    true,
+    ""
+   ],
+   [
+    "Die Person hat heute im Büro gearbeitet.",
+    true,
+    ""
+   ],
+   [
+    "Die Person hat Fleisch und Fisch gekauft.",
+    false,
+    "Sie hat Brot und Käse gekauft."
+   ],
+   [
+    "Die andere Person hat Pizza gekocht.",
+    false,
+    "Sie hat Suppe mit Reis gekocht."
+   ],
+   [
+    "Um elf Uhr sind die beiden zusammen.",
+    true,
+    ""
+   ]
+  ],
+  "gram": {
+   "title": "Grammatik – Perfekt mit haben",
+   "instruction": "Schreib die Sätze im Perfekt.",
+   "items": [
+    "Ich arbeite im Büro.",
+    "Du kaufst Brot.",
+    "Er kocht Suppe.",
+    "Wir hören Musik.",
+    "Ihr lernt Deutsch.",
+    "Sie wartet auf den Bus."
+   ],
+   "solutions": [
+    "Ich habe im Büro gearbeitet.",
+    "Du hast Brot gekauft.",
+    "Er hat Suppe gekocht.",
+    "Wir haben Musik gehört.",
+    "Ihr habt Deutsch gelernt.",
+    "Sie hat auf den Bus gewartet."
+   ]
+  }
+ },
+ {
+  "id": "a1-13-wie-gehts-dir-heute-nacht",
+  "level": "A1",
+  "title": "Wie geht's dir heute Nacht?",
+  "theme": "Gefühle und Befinden: Wie geht es dir? – müde, traurig, froh",
+  "grammar": "sein + Adjektiv (Ich bin müde.), Gegensätze (müde – wach, traurig – froh, kalt – warm) und die Konjunktionen und, aber, oder",
+  "intro": "Mitten in der Nacht schreiben sich zwei Menschen: Wie geht's dir? Mit diesem Lied sprichst du über Gefühle und übst Adjektive und ihre Gegenteile.",
+  "lyrics": "[Verse 1]\nDie Nacht ist dunkel, die Stadt ist still,\nich weiß nicht genau, was ich will.\nIch bin müde, aber ich bin wach,\nich liege im Bett und denke nach.\n\n[Chorus]\nWie geht's dir heute Nacht?\nBist du müde oder wach?\nBist du traurig oder froh?\nIch bin da – sowieso.\n\n[Verse 2]\nDu schreibst mir: „Mir ist kalt und ich bin allein,\ndie Wohnung ist groß, das Zimmer ist klein.“\nIch schreibe zurück: „Ich bin nicht weit,\nich habe Tee und ich habe Zeit.“\n\n[Chorus]\nWie geht's dir heute Nacht?\nBist du müde oder wach?\nBist du traurig oder froh?\nIch bin da – sowieso.\n\n[Bridge]\nKalt oder warm? – Jetzt ist es warm.\nLaut oder leise? – Ganz leise.\nTraurig oder froh? – Ein bisschen froh.\nAllein? – Nein. Wir sind zwei.\n\n[Verse 3]\nDer Regen ist leise, die Lampe ist gelb,\ndu lachst am Telefon – die Nacht ist hell.\nIch bin nicht traurig, ich bin nicht allein,\nich bin glücklich – so soll es sein.\n\n[Chorus]\nWie geht's dir heute Nacht?\nBist du müde oder wach?\nBist du traurig oder froh?\nIch bin da – sowieso.\n\n[Outro]\nWie geht's dir heute Nacht? – Gut. Und dir?\nAuch gut. Ich bin hier.",
+  "vocab": [
+   [
+    "müde",
+    "Man möchte schlafen."
+   ],
+   [
+    "wach",
+    "Man schläft nicht."
+   ],
+   [
+    "traurig",
+    "nicht froh, man möchte weinen"
+   ],
+   [
+    "froh",
+    "gut gelaunt, nicht traurig"
+   ],
+   [
+    "glücklich",
+    "sehr froh"
+   ],
+   [
+    "allein",
+    "ohne andere Menschen"
+   ],
+   [
+    "kalt",
+    "nicht warm, z. B. im Winter"
+   ],
+   [
+    "leise",
+    "nicht laut"
+   ],
+   [
+    "dunkel",
+    "nicht hell, ohne Licht"
+   ],
+   [
+    "die Zeit",
+    "Man hat Zeit: Man muss nichts anderes machen."
+   ]
+  ],
+  "gap": {
+   "type": "gap",
+   "title": "Aufgabe 2: Lückentext",
+   "instruction": "Hör das Lied und ergänze die fehlenden Wörter.",
+   "items": [
+    "ich weiß nicht genau, was ich ___.",
+    "ich liege im ___ und denke nach.",
+    "die Wohnung ist groß, das Zimmer ist ___.“",
+    "ich habe Tee und ich habe ___.“",
+    "Der Regen ist leise, die Lampe ist ___,"
+   ],
+   "solutions": [
+    "will",
+    "Bett",
+    "klein",
+    "Zeit",
+    "gelb"
+   ]
+  },
+  "tf": [
+   [
+    "Es ist Nacht und die Stadt ist laut.",
+    false,
+    "Die Stadt ist still."
+   ],
+   [
+    "Die Person ist müde, aber wach.",
+    true,
+    ""
+   ],
+   [
+    "Die andere Person schreibt: „Mir ist kalt.“",
+    true,
+    ""
+   ],
+   [
+    "Das Zimmer ist groß.",
+    false,
+    "Die Wohnung ist groß, das Zimmer ist klein."
+   ],
+   [
+    "Am Ende ist die Person glücklich.",
+    true,
+    ""
+   ]
+  ],
+  "gram": {
+   "title": "Grammatik – Adjektive und Gegenteile",
+   "instruction": "Schreib den Satz mit dem Gegenteil.",
+   "items": [
+    "Ich bin müde.",
+    "Das Zimmer ist klein.",
+    "Mir ist kalt.",
+    "Die Stadt ist laut.",
+    "Er ist traurig.",
+    "Die Nacht ist dunkel."
+   ],
+   "solutions": [
+    "Ich bin wach.",
+    "Das Zimmer ist groß.",
+    "Mir ist warm.",
+    "Die Stadt ist leise.",
+    "Er ist froh.",
+    "Die Nacht ist hell."
+   ]
+  }
+ },
+ {
+  "id": "a2-11-auf-dem-nachtmarkt",
+  "level": "A2",
+  "title": "Auf dem Nachtmarkt",
+  "theme": "Auf dem Nachtmarkt: einkaufen, Geschmack und Meinung zu Dingen",
+  "grammar": "Verben mit Dativ (gefallen, gehören, passen, stehen, schmecken, helfen, danken): Gefällt dir die Mütze? Die Jacke passt mir nicht.",
+  "intro": "Freitagabend am Fluss: Lichter, Musik, heiße Suppe. Mit diesem Lied bummelst du über den Nachtmarkt und übst Verben mit Dativ wie gefallen, passen und schmecken.",
+  "lyrics": "[Verse 1]\nFreitagabend am Fluss, die Lampen sind an,\nder Nachtmarkt ist offen, wir kommen spät an.\nEs riecht nach Zimt und nach heißem Brot,\nein Mann verkauft Mützen in Blau und in Rot.\n„Gefällt dir die Mütze?“ – „Ja, sie gefällt mir sehr.“\n„Sie steht dir gut!“, sagt er. „Gib sie mal her.“\n„Gehört der Schal dir?“ – „Nein, er gehört mir nicht.“\nDer Verkäufer lacht im gelben Licht.\n\n[Chorus]\nGefällt dir die Nacht? – Ja, sie gefällt mir.\nGefällt dir die Stadt? – Ja, hier mit dir.\nDie Lichter, die Musik – alles passt zu dir.\nGefällt dir die Nacht? Sie gefällt mir.\n\n[Verse 2]\nWir probieren Suppe, sie schmeckt mir gut,\ndir schmeckt sie zu scharf – du lachst, das tut gut.\nEine Frau hat Taschen, sie sind zu schwer,\nwir helfen ihr gern – sie dankt uns sehr.\n\n[Chorus]\nGefällt dir die Nacht? – Ja, sie gefällt mir.\nGefällt dir die Stadt? – Ja, hier mit dir.\nDie Lichter, die Musik – alles passt zu dir.\nGefällt dir die Nacht? Sie gefällt mir.\n\n[Bridge]\nDie Jacke passt mir nicht, sie ist zu weit,\ndoch der Abend passt uns – wir haben Zeit.\nWas gehört mir? Nicht viel, nur das hier:\nein Lied, eine Nacht – und ein Platz neben dir.\n\n[Chorus]\nGefällt dir die Nacht? – Ja, sie gefällt mir.\nGefällt dir die Stadt? – Ja, hier mit dir.\nDie Lichter, die Musik – alles passt zu dir.\nGefällt dir die Nacht? Sie gefällt mir.\n\n[Outro]\nGefällt dir die Nacht? – Ja … sie gefällt mir.",
+  "vocab": [
+   [
+    "der Markt, die Märkte",
+    "Platz, wo man draußen an Ständen einkauft"
+   ],
+   [
+    "gefallen + Dativ",
+    "Etwas ist schön für mich: Die Mütze gefällt mir."
+   ],
+   [
+    "gehören + Dativ",
+    "Es ist mein/dein …: Der Schal gehört mir."
+   ],
+   [
+    "passen + Dativ",
+    "die richtige Größe haben: Die Jacke passt mir."
+   ],
+   [
+    "stehen + Dativ",
+    "Kleidung sieht an einer Person gut aus: Die Mütze steht dir."
+   ],
+   [
+    "schmecken + Dativ",
+    "Essen ist lecker oder nicht lecker für mich."
+   ],
+   [
+    "scharf",
+    "mit viel Chili oder Pfeffer"
+   ],
+   [
+    "helfen + Dativ",
+    "etwas für eine Person tun, damit es leichter ist"
+   ],
+   [
+    "danken + Dativ",
+    "„Danke“ sagen"
+   ],
+   [
+    "die Mütze, die Mützen",
+    "Man trägt sie im Winter auf dem Kopf."
+   ]
+  ],
+  "gap": {
+   "type": "gap",
+   "title": "Aufgabe 2: Lückentext",
+   "instruction": "Hör das Lied und ergänze die fehlenden Wörter.",
+   "items": [
+    "der Nachtmarkt ist offen, wir kommen spät ___.",
+    "Es riecht nach Zimt und nach heißem ___,",
+    "ein Mann verkauft Mützen in Blau und in ___.",
+    "dir schmeckt sie zu ___ – du lachst, das tut gut.",
+    "Die Jacke passt mir nicht, sie ist zu ___,"
+   ],
+   "solutions": [
+    "an",
+    "Brot",
+    "Rot",
+    "scharf",
+    "weit"
+   ]
+  },
+  "tf": [
+   [
+    "Der Nachtmarkt ist am Freitagabend.",
+    true,
+    ""
+   ],
+   [
+    "Der Schal gehört der Person.",
+    false,
+    "Der Schal gehört ihr nicht."
+   ],
+   [
+    "Die Suppe schmeckt beiden gut.",
+    false,
+    "Einer Person schmeckt sie zu scharf."
+   ],
+   [
+    "Sie helfen einer Frau mit ihren Taschen.",
+    true,
+    ""
+   ],
+   [
+    "Die Jacke passt sehr gut.",
+    false,
+    "Die Jacke ist zu weit."
+   ]
+  ],
+  "gram": {
+   "title": "Grammatik – Verben mit Dativ",
+   "instruction": "Ergänze das Personalpronomen im Dativ.",
+   "items": [
+    "Gefällt ___ die Mütze? (du)",
+    "Die Jacke passt ___ nicht. (ich)",
+    "Der Schal gehört ___. (er)",
+    "Die Suppe schmeckt ___ gut. (wir)",
+    "Wir helfen ___ gern. (sie, Singular)",
+    "Ich danke ___ sehr. (Sie, höflich)"
+   ],
+   "solutions": [
+    "Gefällt dir die Mütze?",
+    "Die Jacke passt mir nicht.",
+    "Der Schal gehört ihm.",
+    "Die Suppe schmeckt uns gut.",
+    "Wir helfen ihr gern.",
+    "Ich danke Ihnen sehr."
+   ]
+  }
+ },
+ {
+  "id": "a2-12-zimmer-vierzehn",
+  "level": "A2",
+  "title": "Zimmer vierzehn",
+  "theme": "Im Hotel: spät ankommen, Zimmer, Probleme und höfliche Bitten",
+  "grammar": "Höfliche Bitten mit Konjunktiv II (Könnten Sie …? Würden Sie …? Ich hätte gern …; Hätten Sie …?)",
+  "intro": "Der Zug war zu spät, es ist Mitternacht – zum Glück hat das Hotel am Bahnhof noch ein Zimmer. Mit diesem Lied übst du höfliche Bitten: Könnten Sie …? Würden Sie …? Ich hätte gern …",
+  "lyrics": "[Verse 1]\nMitternacht – der Zug war zu spät,\nich stehe im Regen, der Wind, der weht.\nEin Hotel am Bahnhof, das Licht ist noch an,\nich klingle zweimal – dann kommt ein Mann.\n„Guten Abend! Ich hätte gern ein Zimmer, bitte.“\n„Wir haben noch eins: Zimmer vierzehn, oben, in der Mitte.“\n\n[Chorus]\nZimmer vierzehn, ganz oben im Licht –\nkönnten Sie mir helfen? Ich finde es nicht.\nZimmer vierzehn, die Nacht ist so still –\nich hätte gern Ruhe, nur das, was ich will.\n\n[Verse 2]\nDas Fenster ist offen, die Heizung ist kalt,\ndie Dusche ist laut, das Handtuch ist alt.\nIch rufe unten an: „Entschuldigung, Sie sind so nett –\nkönnten Sie die Heizung anmachen? Und hätten Sie ein Kissen fürs Bett?“\n\n[Chorus]\nZimmer vierzehn, ganz oben im Licht –\nkönnten Sie mir helfen? Ich finde es nicht.\nZimmer vierzehn, die Nacht ist so still –\nich hätte gern Ruhe, nur das, was ich will.\n\n[Bridge]\nDer Mann bringt Tee und ein Kissen dazu,\ner sagt: „Schlafen Sie gut – und finden Sie Ruh.“\nDraußen fährt leise der erste Bus,\nich mache das Licht aus. Jetzt ist Schluss.\n\n[Chorus]\nZimmer vierzehn, ganz oben im Licht –\nkönnten Sie mir helfen? Ich finde es nicht.\nZimmer vierzehn, die Nacht ist so still –\nich hätte gern Ruhe, nur das, was ich will.\n\n[Outro]\nWürden Sie mich um sieben wecken? … Danke. Gute Nacht.",
+  "vocab": [
+   [
+    "das Hotel, die Hotels",
+    "Hier schläft man auf einer Reise und bezahlt pro Nacht."
+   ],
+   [
+    "das Zimmer, die Zimmer",
+    "ein Raum, z. B. im Hotel oder in der Wohnung"
+   ],
+   [
+    "klingeln",
+    "auf die Klingel an der Tür drücken"
+   ],
+   [
+    "die Heizung, die Heizungen",
+    "Sie macht das Zimmer warm."
+   ],
+   [
+    "anmachen",
+    "einschalten, z. B. das Licht oder die Heizung"
+   ],
+   [
+    "die Dusche, die Duschen",
+    "Hier wäscht man sich mit Wasser von oben."
+   ],
+   [
+    "das Handtuch, die Handtücher",
+    "Damit macht man sich nach dem Duschen trocken."
+   ],
+   [
+    "das Kissen, die Kissen",
+    "Darauf liegt der Kopf im Bett."
+   ],
+   [
+    "wecken",
+    "eine Person aus dem Schlaf holen"
+   ],
+   [
+    "die Ruhe",
+    "Es ist still, niemand stört."
+   ]
+  ],
+  "gap": {
+   "type": "gap",
+   "title": "Aufgabe 2: Lückentext",
+   "instruction": "Hör das Lied und ergänze die fehlenden Wörter.",
+   "items": [
+    "ich stehe im Regen, der ___, der weht.",
+    "ich klingle ___ – dann kommt ein Mann.",
+    "die Dusche ist laut, das ___ ist alt.",
+    "Der Mann bringt ___ und ein Kissen dazu,",
+    "Draußen fährt leise der erste ___,"
+   ],
+   "solutions": [
+    "Wind",
+    "zweimal",
+    "Handtuch",
+    "Tee",
+    "Bus"
+   ]
+  },
+  "tf": [
+   [
+    "Der Zug war pünktlich.",
+    false,
+    "Der Zug war zu spät."
+   ],
+   [
+    "Die Person bekommt Zimmer vierzehn.",
+    true,
+    ""
+   ],
+   [
+    "Die Heizung im Zimmer ist warm.",
+    false,
+    "Die Heizung ist kalt."
+   ],
+   [
+    "Die Person möchte noch ein Kissen.",
+    true,
+    ""
+   ],
+   [
+    "Der Mann bringt Kaffee.",
+    false,
+    "Er bringt Tee."
+   ]
+  ],
+  "gram": {
+   "title": "Grammatik – Höfliche Bitten",
+   "instruction": "Mach die Bitte höflich. Benutze das Wort in Klammern.",
+   "items": [
+    "Helfen Sie mir! (könnten)",
+    "Machen Sie die Heizung an! (könnten)",
+    "Zeigen Sie mir das Zimmer! (würden)",
+    "Ich will ein Zimmer. (hätte gern)",
+    "Wecken Sie mich um sieben! (würden)",
+    "Haben Sie noch ein Kissen? (hätten)"
+   ],
+   "solutions": [
+    "Könnten Sie mir helfen?",
+    "Könnten Sie die Heizung anmachen?",
+    "Würden Sie mir das Zimmer zeigen?",
+    "Ich hätte gern ein Zimmer.",
+    "Würden Sie mich um sieben wecken?",
+    "Hätten Sie noch ein Kissen?"
+   ]
+  }
+ },
+ {
+  "id": "b1-11-um-drei-wurde-es-still",
+  "level": "B1",
+  "title": "Um drei wurde es still",
+  "theme": "Gesundheit: eine Nacht in der Notaufnahme – Unfall, Untersuchung, Warten und Hilfe",
+  "grammar": "Passiv Präteritum (wurde gebracht, wurde untersucht, wurde angerufen) – mit von + Dativ für die handelnde Person",
+  "intro": "Ein Fahrrad, ein Auto, eine nasse Straße – und dann eine lange Nacht in der Notaufnahme. Mit diesem Lied erzählst du, was mit dir gemacht wurde, und übst das Passiv im Präteritum.",
+  "lyrics": "[Verse 1]\nEs war kurz nach eins, die Straße war nass,\nein Fahrrad, ein Auto – ich weiß nur noch das.\nIch wurde von fremden Händen gehalten,\ndie Sirene war laut, die Nacht war kalt.\nIch wurde vorsichtig in einen Wagen gehoben,\ndas Blaulicht tanzte an den Wänden nach oben.\n\n[Verse 2]\nIn der Notaufnahme wurde ich gefragt:\n„Wie heißen Sie? Was ist passiert?“ – Ich hab' kaum was gesagt.\nMein Arm wurde geröntgt, mein Kopf wurde untersucht,\nein Formular wurde geschrieben, ein Name wurde gesucht.\nDann wurde es ruhig, nur Schritte im Flur,\ndie Uhr an der Wand – und ich wartete nur.\n\n[Chorus]\nUm drei wurde es still,\nnur ein Piepen und ein Licht.\nIch wurde nicht vergessen –\ndu warst da. Ich vergesse es nicht.\n\n[Verse 3]\nGegen vier wurde meine Schwester angerufen,\nsie kam durch den Regen, ganz schnell gelaufen.\nMein Arm wurde gegipst, die Wunde wurde genäht,\n„Sie haben Glück gehabt“, hat der Pfleger erklärt.\n\n[Chorus]\nUm drei wurde es still,\nnur ein Piepen und ein Licht.\nIch wurde nicht vergessen –\ndu warst da. Ich vergesse es nicht.\n\n[Bridge]\nDanke an die Hände, die man selten sieht,\nan alle, die wach sind, wenn die Nacht weiterzieht.\n\n[Chorus]\nUm drei wurde es still,\nnur ein Piepen und ein Licht.\nIch wurde nicht vergessen –\ndu warst da. Ich vergesse es nicht.\n\n[Outro]\nUm sechs wurde ich entlassen, der Himmel war grau –\nund um drei wurde es still. Ich weiß es genau.",
+  "vocab": [
+   [
+    "die Notaufnahme",
+    "Abteilung im Krankenhaus für Notfälle, Tag und Nacht offen"
+   ],
+   [
+    "die Sirene, die Sirenen",
+    "sehr lautes Signal, z. B. am Krankenwagen"
+   ],
+   [
+    "das Blaulicht",
+    "blaues Licht auf Polizei-, Feuerwehr- und Krankenwagen"
+   ],
+   [
+    "röntgen",
+    "mit Strahlen ein Bild von den Knochen machen"
+   ],
+   [
+    "untersuchen",
+    "genau prüfen, was jemand hat (Ärztin, Arzt)"
+   ],
+   [
+    "der Flur, die Flure",
+    "langer Gang im Haus oder im Krankenhaus"
+   ],
+   [
+    "gipsen",
+    "einen gebrochenen Arm oder ein Bein mit Gips fest machen"
+   ],
+   [
+    "die Wunde, die Wunden",
+    "verletzte Stelle an der Haut"
+   ],
+   [
+    "nähen",
+    "eine Wunde mit Faden schließen"
+   ],
+   [
+    "entlassen werden",
+    "das Krankenhaus verlassen dürfen"
+   ]
+  ],
+  "gap": {
+   "type": "gap",
+   "title": "Aufgabe 2: Lückentext",
+   "instruction": "Hör das Lied und ergänze die fehlenden Wörter.",
+   "items": [
+    "Es war kurz nach eins, die Straße war ___,",
+    "die Sirene war laut, die Nacht war ___.",
+    "Dann wurde es ruhig, nur Schritte im ___,",
+    "sie kam durch den Regen, ganz schnell ___.",
+    "Um sechs wurde ich entlassen, der Himmel war ___ –"
+   ],
+   "solutions": [
+    "nass",
+    "kalt",
+    "Flur",
+    "gelaufen",
+    "grau"
+   ]
+  },
+  "tf": [
+   [
+    "Es gab einen Unfall mit einem Fahrrad und einem Auto.",
+    true,
+    ""
+   ],
+   [
+    "Die Person ist selbst ins Krankenhaus gefahren.",
+    false,
+    "Sie wurde in einen Wagen gehoben und gebracht."
+   ],
+   [
+    "Der Arm wurde geröntgt.",
+    true,
+    ""
+   ],
+   [
+    "Die Mutter wurde angerufen.",
+    false,
+    "Die Schwester wurde angerufen."
+   ],
+   [
+    "Um sechs Uhr wurde die Person entlassen.",
+    true,
+    ""
+   ]
+  ],
+  "gram": {
+   "title": "Grammatik – Passiv Präteritum",
+   "instruction": "Schreib die Sätze im Passiv Präteritum.",
+   "items": [
+    "Die Ärztin untersuchte meinen Kopf.",
+    "Man röntgte meinen Arm.",
+    "Ein Pfleger nähte die Wunde.",
+    "Man rief meine Schwester an.",
+    "Der Arzt entließ mich um sechs.",
+    "Man fragte mich nach meinem Namen."
+   ],
+   "solutions": [
+    "Mein Kopf wurde von der Ärztin untersucht.",
+    "Mein Arm wurde geröntgt.",
+    "Die Wunde wurde von einem Pfleger genäht.",
+    "Meine Schwester wurde angerufen.",
+    "Ich wurde um sechs vom Arzt entlassen.",
+    "Ich wurde nach meinem Namen gefragt."
+   ]
+  }
+ },
+ {
+  "id": "b1-12-deshalb-fahre-ich-zu-dir",
+  "level": "B1",
+  "title": "Deshalb fahre ich zu dir",
+  "theme": "Liebe auf Distanz: Fernbeziehung, Nachtzug, Sehnsucht und gemeinsame Pläne",
+  "grammar": "Konjunktionaladverbien mit dem Verb auf Position 2 (deshalb, deswegen, trotzdem, sonst, außerdem, dann): Du fehlst mir, deshalb fahre ich zu dir.",
+  "intro": "Sechshundert Kilometer, ein Nachtzug und zwei Becher Kaffee am Gleis. Mit diesem Lied übst du deshalb, trotzdem, sonst und außerdem – und das Verb auf Position 2.",
+  "lyrics": "[Verse 1]\nDein Gesicht auf dem Display, das Licht ist blau,\ndu sagst: „Ich vermisse dich“ – ich weiß es genau.\nSechshundert Kilometer zwischen dir und mir,\ntrotzdem bist du jede Nacht ein bisschen hier.\n\n[Verse 2]\nDer Nachtzug fährt um elf, das Ticket war teuer,\ntrotzdem kauf' ich es sofort – mein Herz ist wie Feuer.\nIch packe nur wenig, sonst wird der Rucksack zu schwer,\naußerdem brauch' ich nur dich – sonst nichts mehr.\n\n[Chorus]\nDu fehlst mir, deshalb fahre ich zu dir,\ndurch die Nacht, durch den Regen, von hier bis zu dir.\nDie Stadt schläft, trotzdem bin ich wach –\ndeshalb fahre ich zu dir, heute Nacht.\n\n[Verse 3]\nIm Abteil ist es dunkel, die Dörfer schlafen ein,\nich höre unser Lied, dann bin ich nicht allein.\nUm sechs kommt der Zug an, du wartest am Gleis,\nmit zwei Bechern Kaffee – der Kaffee ist noch heiß.\n\n[Chorus]\nDu fehlst mir, deshalb fahre ich zu dir,\ndurch die Nacht, durch den Regen, von hier bis zu dir.\nDie Stadt schläft, trotzdem bin ich wach –\ndeshalb fahre ich zu dir, heute Nacht.\n\n[Bridge]\n„Wir brauchen einen Plan, sonst bleibt es nur ein Traum.“\n„Dann ziehe ich zu dir.“ – „Oder ich zu dir. Wer weiß das schon genau?“\nWir lachen am Gleis, der Himmel wird hell,\ndie Zeit ohne dich vergeht nie so schnell.\n\n[Chorus]\nDu fehlst mir, deshalb fahre ich zu dir,\ndurch die Nacht, durch den Regen, von hier bis zu dir.\nDie Stadt schläft, trotzdem bin ich wach –\ndeshalb fahre ich zu dir, heute Nacht.\n\n[Outro]\nDu fehlst mir – deshalb bin ich jetzt hier.",
+  "vocab": [
+   [
+    "vermissen",
+    "traurig sein, weil eine Person nicht da ist"
+   ],
+   [
+    "jemandem fehlen",
+    "Du fehlst mir = Ich vermisse dich."
+   ],
+   [
+    "der Nachtzug, die Nachtzüge",
+    "Zug, der in der Nacht fährt, oft mit Betten"
+   ],
+   [
+    "teuer",
+    "kostet viel Geld"
+   ],
+   [
+    "der Rucksack, die Rucksäcke",
+    "Tasche, die man auf dem Rücken trägt"
+   ],
+   [
+    "das Abteil, die Abteile",
+    "kleiner Raum im Zug"
+   ],
+   [
+    "das Gleis, die Gleise",
+    "Hier hält der Zug am Bahnhof."
+   ],
+   [
+    "der Becher, die Becher",
+    "Tasse ohne Henkel, z. B. für Kaffee zum Mitnehmen"
+   ],
+   [
+    "einen Plan machen",
+    "überlegen, was man wann und wie tut"
+   ],
+   [
+    "der Traum, die Träume",
+    "ein großer Wunsch – oder Bilder im Schlaf"
+   ]
+  ],
+  "gap": {
+   "type": "gap",
+   "title": "Aufgabe 2: Lückentext",
+   "instruction": "Hör das Lied und ergänze die fehlenden Wörter.",
+   "items": [
+    "Sechshundert ___ zwischen dir und mir,",
+    "Ich packe nur wenig, sonst wird der ___ zu schwer,",
+    "Die Stadt schläft, ___ bin ich wach –",
+    "Im Abteil ist es dunkel, die Dörfer schlafen ___,",
+    "mit zwei Bechern Kaffee – der Kaffee ist noch ___."
+   ],
+   "solutions": [
+    "Kilometer",
+    "Rucksack",
+    "trotzdem",
+    "ein",
+    "heiß"
+   ]
+  },
+  "tf": [
+   [
+    "Die beiden wohnen 600 Kilometer voneinander entfernt.",
+    true,
+    ""
+   ],
+   [
+    "Das Ticket war sehr billig.",
+    false,
+    "Das Ticket war teuer."
+   ],
+   [
+    "Die Person nimmt einen großen Koffer mit.",
+    false,
+    "Sie packt nur wenig in einen Rucksack."
+   ],
+   [
+    "Der Zug kommt um sechs Uhr an.",
+    true,
+    ""
+   ],
+   [
+    "Die beiden haben schon eine gemeinsame Wohnung.",
+    false,
+    "Sie brauchen noch einen Plan."
+   ]
+  ],
+  "gram": {
+   "title": "Grammatik – deshalb, trotzdem, sonst …",
+   "instruction": "Verbinde die Sätze mit dem Wort in Klammern. Achte auf das Verb auf Position 2.",
+   "items": [
+    "Du fehlst mir. Ich fahre zu dir. (deshalb)",
+    "Das Ticket ist teuer. Ich kaufe es. (trotzdem)",
+    "Ich packe wenig. Der Rucksack wird zu schwer. (sonst)",
+    "Der Zug ist billig. Er ist schnell. (außerdem)",
+    "Es regnet. Wir bleiben zu Hause. (deswegen)",
+    "Ich höre unser Lied. Ich bin nicht allein. (dann)"
+   ],
+   "solutions": [
+    "Du fehlst mir, deshalb fahre ich zu dir.",
+    "Das Ticket ist teuer, trotzdem kaufe ich es.",
+    "Ich packe wenig, sonst wird der Rucksack zu schwer.",
+    "Der Zug ist billig, außerdem ist er schnell.",
+    "Es regnet, deswegen bleiben wir zu Hause.",
+    "Ich höre unser Lied, dann bin ich nicht allein."
+   ]
+  }
+ },
+ {
+  "id": "b2-11-die-schlafende-stadt",
+  "level": "B2",
+  "title": "Die schlafende Stadt",
+  "theme": "Schlaflosigkeit: Grübeln, Schlafgewohnheiten, Hilfe suchen und zur Ruhe kommen",
+  "grammar": "Partizip I und Partizip II als Adjektiv (die schlafende Stadt, das leuchtende Display, die ungelesenen Nachrichten, der vergessene Tee)",
+  "intro": "Alle schlafen – nur du nicht. Mit diesem Lied geht es um Grübeln, Bildschirme und Wege zur Ruhe, und du übst Partizip I und II als Adjektiv.",
+  "lyrics": "[Verse 1]\nDie schlafende Stadt atmet langsam und schwer,\ndas leuchtende Display, ungelesene Nachrichten – immer mehr.\nIch zähle die tropfenden Sekunden im Bad,\nder vergessene Tee ist längst kalt, mein Kopf dreht sich wie ein Rad.\n\n[Verse 2]\nGedanken wie rasende Züge ohne Halt:\ndie unbeantwortete Mail, die verpasste Frist,\ndas gestrige Gespräch, sein Ton so kalt.\nIch liege mit geschlossenen Augen und bin trotzdem wach,\ndie tickende Uhr zählt jede Stunde der Nacht.\n\n[Chorus]\nIn der schlafenden Stadt bin ich die Einzige, die wacht,\nzwischen brennenden Fenstern und der schweigenden Nacht.\nHalt mich fest, bis die Gedanken leise sind –\nin der schlafenden Stadt, wie ein verlorenes Kind.\n\n[Verse 3]\nDie Ärztin hat gesagt: Kein Bildschirm nach zehn,\nein abgedunkeltes Zimmer, ein ruhiger Spaziergang – du wirst schon sehen.\nEin aufgeschriebener Gedanke wiegt nur halb so schwer,\ndas ausgeschaltete Handy liegt im Flur – ich vermisse es nicht mehr.\n\n[Chorus]\nIn der schlafenden Stadt bin ich die Einzige, die wacht,\nzwischen brennenden Fenstern und der schweigenden Nacht.\nHalt mich fest, bis die Gedanken leise sind –\nin der schlafenden Stadt, wie ein verlorenes Kind.\n\n[Bridge]\nAtme ein – die wachsende Stille.\nAtme aus – der gelöste Knoten im Bauch.\nDie beruhigende Stimme sagt: Es reicht für heute,\nund die müden Gedanken – sie schlafen jetzt auch.\n\n[Chorus]\nIn der schlafenden Stadt bin ich die Einzige, die wacht,\nzwischen brennenden Fenstern und der schweigenden Nacht.\nHalt mich fest, bis die Gedanken leise sind –\nin der schlafenden Stadt, wie ein verlorenes Kind.\n\n[Outro]\nDie schlafende Stadt … und endlich ich auch.",
+  "vocab": [
+   [
+    "atmen",
+    "Luft holen und wieder ausstoßen"
+   ],
+   [
+    "leuchten",
+    "Licht geben: das leuchtende Display"
+   ],
+   [
+    "rasen",
+    "sehr schnell fahren oder sich bewegen"
+   ],
+   [
+    "die Frist, die Fristen",
+    "Zeitpunkt, bis zu dem etwas erledigt sein muss"
+   ],
+   [
+    "unbeantwortet",
+    "Niemand hat darauf geantwortet."
+   ],
+   [
+    "der Bildschirm, die Bildschirme",
+    "Display von Handy, Laptop oder Fernseher"
+   ],
+   [
+    "abdunkeln",
+    "einen Raum dunkel machen, z. B. mit Rollläden"
+   ],
+   [
+    "aufschreiben",
+    "notieren, auf Papier schreiben"
+   ],
+   [
+    "der Knoten im Bauch",
+    "Gefühl von Anspannung oder Angst"
+   ],
+   [
+    "beruhigend",
+    "macht ruhig, nimmt Stress"
+   ]
+  ],
+  "gap": {
+   "type": "gap",
+   "title": "Aufgabe 2: Lückentext",
+   "instruction": "Hör das Lied und ergänze die fehlenden Wörter.",
+   "items": [
+    "der vergessene Tee ist längst kalt, mein Kopf dreht sich wie ein ___.",
+    "das gestrige Gespräch, sein ___ so kalt.",
+    "die tickende ___ zählt jede Stunde der Nacht.",
+    "Die Ärztin hat gesagt: Kein ___ nach zehn,",
+    "das ausgeschaltete Handy liegt im ___ – ich vermisse es nicht mehr."
+   ],
+   "solutions": [
+    "Rad",
+    "Ton",
+    "Uhr",
+    "Bildschirm",
+    "Flur"
+   ]
+  },
+  "tf": [
+   [
+    "Die Person trinkt ihren Tee heiß.",
+    false,
+    "Der Tee ist vergessen und längst kalt."
+   ],
+   [
+    "Die Person hat eine Mail noch nicht beantwortet.",
+    true,
+    ""
+   ],
+   [
+    "Die Ärztin rät, nach zehn Uhr keinen Bildschirm mehr zu benutzen.",
+    true,
+    ""
+   ],
+   [
+    "Das Handy liegt neben dem Bett.",
+    false,
+    "Es liegt ausgeschaltet im Flur."
+   ],
+   [
+    "Am Ende schläft die Person ein.",
+    true,
+    ""
+   ]
+  ],
+  "gram": {
+   "title": "Grammatik – Partizip als Adjektiv",
+   "instruction": "Forme die Beschreibung in ein Partizip als Adjektiv um.",
+   "items": [
+    "die Stadt, die schläft",
+    "das Display, das leuchtet",
+    "die Nachrichten, die nicht gelesen wurden",
+    "der Tee, den man vergessen hat",
+    "die Uhr, die tickt",
+    "das Handy, das ausgeschaltet ist"
+   ],
+   "solutions": [
+    "die schlafende Stadt",
+    "das leuchtende Display",
+    "die ungelesenen Nachrichten",
+    "der vergessene Tee",
+    "die tickende Uhr",
+    "das ausgeschaltete Handy"
+   ]
+  }
+ },
+ {
+  "id": "b2-12-lass-es-los",
+  "level": "B2",
+  "title": "Lass es los",
+  "theme": "Trennung und Neuanfang: Gefühle verarbeiten, Erinnerungen, Freundschaft und Loslassen",
+  "grammar": "Das Verb lassen in verschiedenen Bedeutungen: erlauben (Lass mich gehen), veranlassen (Ich lasse das Schloss austauschen), liegen/stehen lassen und sich lassen + Infinitiv (Das lässt sich nicht ändern)",
+  "intro": "Eine Jacke am Haken, eine Nachricht um drei – und die Frage, wie man loslässt. Mit diesem Lied übst du das Verb lassen in seinen vielen Bedeutungen.",
+  "lyrics": "[Verse 1]\nDeine Jacke hängt noch am Haken im Flur,\ndu hast sie hier liegen lassen – wie eine Spur.\nIch lasse das Licht in der Küche an,\nweil ich im Dunkeln nicht mehr schlafen kann.\n\n[Verse 2]\nMeine Freundin sagt: „Lass dich nicht hängen,\nkomm, lass uns gehen, die Stadt ist wach – du musst sie sehen.“\nIch lasse mir die Haare schneiden, kurz und neu,\nich lasse das Schloss austauschen – und bleibe mir treu.\n\n[Chorus]\nLass es los, lass es gehen,\nmanche Dinge lassen sich nicht mehr verstehen.\nLass es los, in der Nacht, im Regen –\nich lasse dich gehen und ich lasse mich leben.\n\n[Verse 3]\nDeine Nachricht um drei – ich lasse sie stehen,\nungelesen, ich muss nicht mehr alles sehen.\nWas passiert ist, lässt sich nicht ändern,\naber ich lasse mich nicht mehr von dir verändern.\n\n[Chorus]\nLass es los, lass es gehen,\nmanche Dinge lassen sich nicht mehr verstehen.\nLass es los, in der Nacht, im Regen –\nich lasse dich gehen und ich lasse mich leben.\n\n[Bridge]\nIch lasse die Fenster offen, die kalte Luft herein,\nich lasse die Tränen zu – und das darf so sein.\nMorgen lasse ich die Jacke zu dir bringen,\nund heute lasse ich die Stadt für mich singen.\n\n[Chorus]\nLass es los, lass es gehen,\nmanche Dinge lassen sich nicht mehr verstehen.\nLass es los, in der Nacht, im Regen –\nich lasse dich gehen und ich lasse mich leben.\n\n[Outro]\nLass es los … lass es gehen.",
+  "vocab": [
+   [
+    "der Haken, die Haken",
+    "Daran hängt man Jacken oder Handtücher auf."
+   ],
+   [
+    "etwas liegen lassen",
+    "etwas vergessen und nicht mitnehmen"
+   ],
+   [
+    "die Spur, die Spuren",
+    "Zeichen, dass jemand da war"
+   ],
+   [
+    "sich hängen lassen",
+    "(ugs.) keine Energie und keinen Mut mehr haben"
+   ],
+   [
+    "austauschen",
+    "etwas Altes durch etwas Neues ersetzen"
+   ],
+   [
+    "das Schloss, die Schlösser",
+    "Teil der Tür, in den der Schlüssel passt"
+   ],
+   [
+    "sich treu bleiben",
+    "so bleiben, wie man ist; seine Werte nicht aufgeben"
+   ],
+   [
+    "etwas zulassen",
+    "etwas erlauben, geschehen lassen (z. B. Gefühle)"
+   ],
+   [
+    "die Träne, die Tränen",
+    "Wasser aus den Augen, wenn man weint"
+   ],
+   [
+    "verändern",
+    "anders machen"
+   ]
+  ],
+  "gap": {
+   "type": "gap",
+   "title": "Aufgabe 2: Lückentext",
+   "instruction": "Hör das Lied und ergänze die fehlenden Wörter.",
+   "items": [
+    "Deine Jacke hängt noch am ___ im Flur,",
+    "Ich lasse das Licht in der ___ an,",
+    "ich lasse das ___ austauschen – und bleibe mir treu.",
+    "Deine Nachricht um ___ – ich lasse sie stehen,",
+    "ich lasse die ___ zu – und das darf so sein."
+   ],
+   "solutions": [
+    "Haken",
+    "Küche",
+    "Schloss",
+    "drei",
+    "Tränen"
+   ]
+  },
+  "tf": [
+   [
+    "Die Jacke der Ex-Partnerin oder des Ex-Partners hängt noch im Flur.",
+    true,
+    ""
+   ],
+   [
+    "Die Person schläft gern im Dunkeln.",
+    false,
+    "Sie kann im Dunkeln nicht mehr schlafen und lässt das Licht an."
+   ],
+   [
+    "Die Freundin rät, zu Hause zu bleiben.",
+    false,
+    "Sie will mit ihr rausgehen."
+   ],
+   [
+    "Die Person lässt das Schloss austauschen.",
+    true,
+    ""
+   ],
+   [
+    "Die Nachricht um drei wird sofort beantwortet.",
+    false,
+    "Die Person lässt sie ungelesen stehen."
+   ]
+  ],
+  "gram": {
+   "title": "Grammatik – lassen",
+   "instruction": "Formuliere die Sätze mit lassen.",
+   "items": [
+    "Ein Friseur schneidet mir die Haare. (Ich …)",
+    "Ein Handwerker tauscht das Schloss aus. (Ich …)",
+    "Das kann man nicht ändern.",
+    "Erlaub mir zu gehen!",
+    "Ich beantworte die Nachricht nicht, sie bleibt liegen. (Ich …)",
+    "Das kann man leicht erklären."
+   ],
+   "solutions": [
+    "Ich lasse mir die Haare schneiden.",
+    "Ich lasse das Schloss austauschen.",
+    "Das lässt sich nicht ändern.",
+    "Lass mich gehen!",
+    "Ich lasse die Nachricht liegen.",
+    "Das lässt sich leicht erklären."
+   ]
+  }
+ },
+ {
+  "id": "c1-11-am-fenster-sitzend",
+  "level": "C1",
+  "title": "Am Fenster sitzend",
+  "theme": "Kreativität und Selbstzweifel: nachts schreiben, Inspiration suchen, Scheitern und Weitermachen",
+  "grammar": "Partizipialsätze als verkürzte Nebensätze (Am Fenster sitzend, schreibe ich …; Vom Regen geweckt, …; Kaum begonnen, …) und ihre Umformung in Nebensätze",
+  "intro": "Nachts am Fenster, das Blatt fast leer, die Zweifel laut. Ein Lied über das Schreiben, Scheitern und Weitermachen – und über Partizipialsätze, die Nebensätze elegant verkürzen.",
+  "lyrics": "[Verse 1]\nAm Fenster sitzend, die Stirn ans kalte Glas gelehnt,\nschreib ich Sätze, nach denen sich niemand gesehnt.\nVom Regen geweckt, von Zweifeln umringt,\nsuch ich das eine Wort, das nach Wahrheit klingt.\n\n[Verse 2]\nDie Seiten zerknüllt, den Kaffee kaum berührt,\nhab ich hundert Anfänge ins Nichts geführt.\nVon der Nacht ermutigt, vom Mond kaum bewacht,\nschreib ich weiter – ganz gleich, wer darüber lacht.\n\n[Chorus]\nAm Fenster sitzend, warte ich aufs Licht,\ndie Stadt verschlafen, nur mein Herz noch nicht.\nAm Fenster sitzend, Zeile um Zeile, Satz um Satz –\nbis aus dem Schweigen ein Lied wird. Das ist mein Platz.\n\n[Verse 3]\nKaum begonnen, schon wieder verworfen,\nvon alten Stimmen in mir getroffen.\nDoch einmal gescheitert heißt nicht für immer verloren –\nim Dunkeln geschrieben, am Morgen geboren.\n\n[Chorus]\nAm Fenster sitzend, warte ich aufs Licht,\ndie Stadt verschlafen, nur mein Herz noch nicht.\nAm Fenster sitzend, Zeile um Zeile, Satz um Satz –\nbis aus dem Schweigen ein Lied wird. Das ist mein Platz.\n\n[Bridge]\nAus Angst geboren, aus Trotz gewagt,\nin Stille geschrieben, laut gesagt.\nDas, was übrig bleibt, wenn man alles riskiert:\nein Satz, der im Dunkeln nicht erfriert.\n\n[Chorus]\nAm Fenster sitzend, warte ich aufs Licht,\ndie Stadt verschlafen, nur mein Herz noch nicht.\nAm Fenster sitzend, Zeile um Zeile, Satz um Satz –\nbis aus dem Schweigen ein Lied wird. Das ist mein Platz.\n\n[Outro]\nAm Fenster sitzend … sieh nur: Es wird hell.",
+  "vocab": [
+   [
+    "etwas an etwas lehnen",
+    "etwas schräg gegen etwas stützen"
+   ],
+   [
+    "sich sehnen nach",
+    "sich etwas sehr stark wünschen"
+   ],
+   [
+    "umringt sein von",
+    "von allen Seiten umgeben sein"
+   ],
+   [
+    "zerknüllen",
+    "Papier zu einer Kugel zusammendrücken"
+   ],
+   [
+    "ermutigen",
+    "jemandem Mut machen"
+   ],
+   [
+    "ganz gleich",
+    "egal, unabhängig davon"
+   ],
+   [
+    "verwerfen",
+    "eine Idee oder einen Entwurf aufgeben"
+   ],
+   [
+    "scheitern",
+    "ein Ziel nicht erreichen, keinen Erfolg haben"
+   ],
+   [
+    "der Trotz",
+    "Widerstand: etwas jetzt erst recht tun"
+   ],
+   [
+    "etwas wagen",
+    "etwas Riskantes mutig tun"
+   ]
+  ],
+  "gap": {
+   "type": "gap",
+   "title": "Aufgabe 2: Lückentext",
+   "instruction": "Hör das Lied und ergänze die fehlenden Wörter.",
+   "items": [
+    "Vom ___ geweckt, von Zweifeln umringt,",
+    "such ich das eine Wort, das nach ___ klingt.",
+    "Die Seiten zerknüllt, den ___ kaum berührt,",
+    "Kaum begonnen, schon wieder ___,",
+    "Aus Angst geboren, aus ___ gewagt,"
+   ],
+   "solutions": [
+    "Regen",
+    "Wahrheit",
+    "Kaffee",
+    "verworfen",
+    "Trotz"
+   ]
+  },
+  "tf": [
+   [
+    "Die Person schreibt tagsüber im Café.",
+    false,
+    "Sie schreibt nachts am Fenster."
+   ],
+   [
+    "Sie wurde vom Regen geweckt.",
+    true,
+    ""
+   ],
+   [
+    "Sie hat viele Anfänge geschrieben und wieder verworfen.",
+    true,
+    ""
+   ],
+   [
+    "Die Person hört auf zu schreiben, weil andere lachen.",
+    false,
+    "Sie schreibt weiter, ganz gleich, wer lacht."
+   ],
+   [
+    "Einmal zu scheitern bedeutet für die Person nicht, für immer verloren zu sein.",
+    true,
+    ""
+   ]
+  ],
+  "gram": {
+   "title": "Grammatik – Partizipialsätze",
+   "instruction": "Forme die Partizipialkonstruktion in einen Nebensatz um.",
+   "items": [
+    "Am Fenster sitzend, schreibe ich.",
+    "Vom Regen geweckt, stand sie auf.",
+    "Von der Nacht ermutigt, schreibt er weiter.",
+    "Kaum angekommen, begann sie zu schreiben.",
+    "Einmal gescheitert, gibt man nicht sofort auf.",
+    "In Stille geschrieben, wurde das Lied laut gesungen."
+   ],
+   "solutions": [
+    "Während ich am Fenster sitze, schreibe ich.",
+    "Nachdem sie vom Regen geweckt worden war, stand sie auf.",
+    "Weil er von der Nacht ermutigt wird, schreibt er weiter.",
+    "Sobald sie angekommen war, begann sie zu schreiben.",
+    "Auch wenn man einmal gescheitert ist, gibt man nicht sofort auf.",
+    "Obwohl das Lied in Stille geschrieben worden war, wurde es laut gesungen."
+   ]
+  }
+ },
+ {
+  "id": "c1-12-du-weisst-doch",
+  "level": "C1",
+  "title": "Du weißt doch",
+  "theme": "Ehrlichkeit in Beziehungen: Ungesagtes, Missverständnisse und ein nächtliches Gespräch",
+  "grammar": "Modalpartikeln (doch, ja, eben, halt, mal, wohl, etwa, schon, eigentlich) und ihre Wirkung: Vorwurf, Vergewisserung, Resignation, Abschwächung",
+  "intro": "Ein halbleeres Glas, zwei Handys, viel Ungesagtes – und dann doch ein Gespräch. Mit diesem Lied hörst du, wie kleine Wörter wie doch, ja, eben und halt die Bedeutung eines Satzes verändern.",
+  "lyrics": "[Verse 1]\nEs ist halt so spät, das Glas ist halb leer,\nwir reden ja eigentlich gar nicht mehr.\nDu schaust mal aufs Handy, ich schau auf die Wand –\nwir waren doch früher so nah, Hand in Hand.\n\n[Verse 2]\n„Hast du etwa geglaubt, ich merk' das nicht?“\n„Das ist eben so“, sagst du und meidest mein Gesicht.\n„Du hättest ja reden können, einfach mal fragen.“\n„Ich wollte schon – ich konnte es halt nicht sagen.“\n\n[Chorus]\nDu weißt doch, was ich meine,\ndu weißt doch, wer ich bin.\nSag's doch einfach, sag's mal ehrlich –\nvielleicht hat's ja noch Sinn.\n\n[Verse 3]\nDer Regen klopft wohl noch die ganze Nacht,\ndu lachst dann doch kurz – hast an früher gedacht.\n„Das war schon schön“, sagst du – und dein Blick wird weich,\n„vielleicht reden wir halt mal. Nicht morgen. Gleich.“\n\n[Chorus]\nDu weißt doch, was ich meine,\ndu weißt doch, wer ich bin.\nSag's doch einfach, sag's mal ehrlich –\nvielleicht hat's ja noch Sinn.\n\n[Bridge]\nDoch, ja, eben, halt –\nkleine Wörter, die so viel sagen.\nMal, wohl, etwa, schon –\nkleine Wörter, große Fragen.\n\n[Chorus]\nDu weißt doch, was ich meine,\ndu weißt doch, wer ich bin.\nSag's doch einfach, sag's mal ehrlich –\nvielleicht hat's ja noch Sinn.\n\n[Outro]\nDu weißt doch … – Ja. Ich weiß.",
+  "vocab": [
+   [
+    "halt (Partikel)",
+    "(ugs.) Es ist so, man kann es nicht ändern."
+   ],
+   [
+    "eben (Partikel)",
+    "ähnlich wie halt: Feststellung oder Resignation"
+   ],
+   [
+    "etwa (Partikel in Fragen)",
+    "Überraschung oder Vorwurf: Hast du etwa …? (erwartet: Nein)"
+   ],
+   [
+    "doch (Partikel)",
+    "erinnert an Bekanntes oder verstärkt eine Aufforderung"
+   ],
+   [
+    "ja (Partikel)",
+    "Das ist bekannt oder selbstverständlich."
+   ],
+   [
+    "mal (Partikel)",
+    "macht eine Aufforderung beiläufiger und freundlicher"
+   ],
+   [
+    "merken",
+    "etwas bemerken, wahrnehmen"
+   ],
+   [
+    "meiden",
+    "etwas bewusst nicht tun oder nicht ansehen"
+   ],
+   [
+    "der Blick wird weich",
+    "jemand schaut freundlicher und verständnisvoller"
+   ],
+   [
+    "Hand in Hand",
+    "eng zusammen, gemeinsam"
+   ]
+  ],
+  "gap": {
+   "type": "gap",
+   "title": "Aufgabe 2: Lückentext",
+   "instruction": "Hör das Lied und ergänze die fehlenden Wörter.",
+   "items": [
+    "Es ist halt so spät, das Glas ist halb ___,",
+    "Du schaust mal aufs Handy, ich schau auf die ___ –",
+    "„Hast du etwa ___, ich merk' das nicht?“",
+    "Der Regen ___ wohl noch die ganze Nacht,",
+    "„Das war schon schön“, sagst du – und dein Blick wird ___,"
+   ],
+   "solutions": [
+    "leer",
+    "Wand",
+    "geglaubt",
+    "klopft",
+    "weich"
+   ]
+  },
+  "tf": [
+   [
+    "Das Paar redet in letzter Zeit sehr viel miteinander.",
+    false,
+    "Sie reden kaum noch miteinander."
+   ],
+   [
+    "Früher waren sich die beiden sehr nah.",
+    true,
+    ""
+   ],
+   [
+    "Die andere Person wollte reden, konnte es aber nicht sagen.",
+    true,
+    ""
+   ],
+   [
+    "Die beiden erinnern sich an nichts Schönes.",
+    false,
+    "„Das war schon schön“, sagt die andere Person."
+   ],
+   [
+    "Am Ende wollen sie sofort miteinander reden.",
+    true,
+    ""
+   ]
+  ],
+  "gram": {
+   "title": "Grammatik – Modalpartikeln",
+   "instruction": "Welche Wirkung hat die Modalpartikel? Erkläre kurz.",
+   "items": [
+    "Hast du etwa geglaubt, ich merke das nicht?",
+    "Das ist eben so.",
+    "Sag's doch einfach!",
+    "Wir reden ja kaum noch.",
+    "Du hättest einfach mal fragen können.",
+    "Der Regen klopft wohl noch die ganze Nacht."
+   ],
+   "solutions": [
+    "etwa: Überraschung und Vorwurf – die Antwort „Nein“ wird erwartet.",
+    "eben: Resignation – man kann es nicht ändern.",
+    "doch: verstärkte, etwas ungeduldige Aufforderung.",
+    "ja: bekannte Tatsache – beide wissen es schon.",
+    "mal: macht den Vorschlag beiläufiger und weniger direkt.",
+    "wohl: Vermutung – wahrscheinlich."
+   ]
+  }
+ }
+]
