@@ -4,7 +4,7 @@
 Läuft auf GitHub Actions (.github/workflows/audio.yml). Eingabe: tools/tts/manifest.json
 Ausgabe:  audio/tts/<key>.mp3  +  audio/tts/index.json (welche Dateien es gibt)
 
-Anbieter-Kette: zuerst Gemini, bei leerem Guthaben ElevenLabs (siehe engines()). Stimmen-Anbieter:
+Anbieter-Kette: zuerst Gemini, bei leerem Guthaben ElevenLabs, danach Google Cloud (siehe engines()). Stimmen-Anbieter:
   1. ElevenLabs   – Repository-Secret ELEVENLABS_API_KEY  (sehr natürlich)
   2. Google Cloud Text-to-Speech (Chirp 3 HD) – Secret GOOGLE_TTS_API_KEY (sehr natürlich, 1 Mio. Zeichen/Monat frei)
   3. Google Gemini – Repository-Secret GEMINI_API_KEY      (AI Studio, sehr natürlich)
@@ -207,8 +207,9 @@ def build(entry, eng, target):
 
 def engines():
     """Anbieter-Kette (Wunsch von Dennis, 19.10.2026): zuerst Gemini; ist dort das Guthaben aufgebraucht,
-    übernimmt ElevenLabs (bezahlter Starter-Tarif). Reihenfolge änderbar über TTS_ORDER, z. B. "elevenlabs,gemini"."""
-    order = [x.strip() for x in os.environ.get('TTS_ORDER', 'gemini,elevenlabs').split(',') if x.strip()]
+    übernimmt ElevenLabs (bezahlter Starter-Tarif). Sind beide leer, vertont Google Cloud (Chirp 3 HD, 1 Mio. Zeichen/Monat frei),
+    damit neue Hörtexte nie mit der Gerätestimme laufen. Reihenfolge änderbar über TTS_ORDER, z. B. "elevenlabs,gemini"."""
+    order = [x.strip() for x in os.environ.get('TTS_ORDER', 'gemini,elevenlabs,google').split(',') if x.strip()]
     env = {'gemini': 'GEMINI_API_KEY', 'elevenlabs': 'ELEVENLABS_API_KEY', 'google': 'GOOGLE_TTS_API_KEY'}
     chain = [k for k in order if os.environ.get(env.get(k, ''))]
     if not chain: chain = [engine()]
