@@ -172,6 +172,57 @@
     ['Mit freundlichen Grüßen', 'Schluss', 'w']
   ];
 
+
+  /* 5) Arbeitsabläufe: jeder Ablauf in der richtigen Reihenfolge */
+  const ABLAEUFE = [
+    { title: 'Sich bewerben', steps: ['Eine passende Stellenanzeige finden', 'Lebenslauf und Anschreiben vorbereiten', 'Die Bewerbung abschicken', 'Eine Einladung zum Vorstellungsgespräch bekommen', 'Am Vorstellungsgespräch teilnehmen', 'Den Arbeitsvertrag unterschreiben', 'Am ersten Arbeitstag pünktlich erscheinen'] },
+    { title: 'Sich krankmelden', steps: ['Morgens merken: Ich habe Fieber.', 'Vor Arbeitsbeginn die Vorgesetzte anrufen', 'Zum Arzt gehen', 'Die Krankschreibung bekommen (der Arzt meldet sie elektronisch an die Krankenkasse)', 'Zu Hause bleiben und sich erholen', 'Sich nach der Genesung bei der Arbeit zurückmelden'] },
+    { title: 'Urlaub beantragen', steps: ['Im Teamkalender freie Tage prüfen', 'Mit den Kollegen die Vertretung absprechen', 'Den Urlaubsantrag ausfüllen', 'Den Antrag bei der Vorgesetzten einreichen', 'Die Genehmigung bekommen', 'Vor dem Urlaub die Abwesenheitsnotiz einrichten'] },
+    { title: 'Eine Besprechung organisieren', steps: ['Das Ziel der Besprechung festlegen', 'Einen Termin mit allen abstimmen', 'Einen Raum buchen', 'Die Einladung mit Tagesordnung verschicken', 'Die Besprechung leiten', 'Das Protokoll schreiben und verschicken', 'Die vereinbarten Aufgaben kontrollieren'] },
+    { title: 'Eine Kundenbeschwerde bearbeiten', steps: ['Die Beschwerde des Kunden lesen', 'Den Eingang der Beschwerde bestätigen', 'Den Fall intern prüfen', 'Eine Lösung mit der Chefin abstimmen', 'Dem Kunden eine Antwort mit Lösung schreiben', 'Nachfragen, ob der Kunde zufrieden ist'] },
+    { title: 'Material bestellen', steps: ['Feststellen, dass das Material knapp wird', 'Angebote von mehreren Lieferanten einholen', 'Die Angebote vergleichen', 'Die Bestellung aufgeben', 'Die Lieferung annehmen und auf Schäden prüfen', 'Die Rechnung zur Zahlung weitergeben'] },
+    { title: 'Wareneingang im Lager', steps: ['Der Lkw kommt an der Rampe an', 'Den Lieferschein entgegennehmen', 'Die Paletten abladen', 'Menge und Zustand mit dem Lieferschein vergleichen', 'Den Wareneingang im System buchen', 'Die Ware am Lagerplatz einräumen'] },
+    { title: 'Eine neue Kollegin einarbeiten', steps: ['Den Arbeitsplatz und die Zugänge vorbereiten', 'Die Kollegin am ersten Tag begrüßen', 'Am ersten Tag: das Team und die Räume zeigen', 'In der ersten Woche: die wichtigsten Aufgaben erklären', 'Danach: die ersten Aufgaben gemeinsam erledigen', 'Nach einigen Wochen ein Feedbackgespräch führen'] },
+    { title: 'Einen Arbeitsunfall melden', steps: ['Erste Hilfe leisten', 'Die Vorgesetzte informieren', 'Zum Durchgangsarzt (D-Arzt) gehen', 'Der Betrieb füllt die Unfallanzeige aus', 'Der Betrieb schickt die Unfallanzeige an die Berufsgenossenschaft'] },
+    { title: 'Schichtwechsel in der Pflege', steps: ['Die Pflegedokumentation aktualisieren', 'Sich mit der nächsten Schicht treffen', 'Bei der Übergabe jeden Bewohner kurz besprechen', 'Offene Aufgaben weitergeben', 'Die Schicht beenden und sich abmelden'] },
+    { title: 'Kündigen (Arbeitnehmer)', steps: ['Die Kündigungsfrist im Arbeitsvertrag nachlesen', 'Die Kündigung schriftlich formulieren und unterschreiben', 'Die Kündigung rechtzeitig übergeben', 'Die Arbeit an die Nachfolge übergeben', 'Das Arbeitszeugnis bekommen'] },
+    { title: 'Eine Präsentation halten', steps: ['Das Thema und die Zielgruppe klären', 'Informationen sammeln', 'Die Folien erstellen', 'Den Vortrag üben', 'Die Präsentation halten', 'Fragen aus dem Publikum beantworten'] }
+  ];
+
+  /* 6) Quiz-Leiter Arbeitsrecht & Arbeitswelt (Stand: deutsches Recht 2026) */
+  const RECHT = [
+    ['Wie muss eine Kündigung in Deutschland sein, damit sie gültig ist?', 'schriftlich mit Unterschrift auf Papier', ['per E-Mail', 'per WhatsApp', 'mündlich reicht'], 'Kündigung nur schriftlich mit eigenhändiger Unterschrift (§ 623 BGB).'],
+    ['Wie lang darf die Probezeit höchstens sein?', 'sechs Monate', ['drei Monate', 'ein Jahr', 'zwei Jahre'], 'Probezeit: höchstens 6 Monate.'],
+    ['Welche Kündigungsfrist gilt in der Probezeit (wenn im Vertrag nichts anderes steht)?', 'zwei Wochen', ['ein Tag', 'drei Monate', 'sechs Wochen'], 'In der Probezeit: 2 Wochen Kündigungsfrist.'],
+    ['Wie lang ist die gesetzliche Grundkündigungsfrist nach der Probezeit?', 'vier Wochen zum 15. oder zum Monatsende', ['eine Woche', 'drei Monate zum Jahresende', 'sechs Monate'], 'Grundfrist: 4 Wochen zum 15. oder Monatsende; für den Arbeitgeber wird sie mit der Dauer der Beschäftigung länger.'],
+    ['Wie viele Urlaubstage gibt es gesetzlich mindestens bei einer 5-Tage-Woche?', '20 Arbeitstage', ['10 Arbeitstage', '30 Arbeitstage', '14 Arbeitstage'], 'Mindesturlaub: 24 Werktage bei 6 Tagen = 20 Tage bei 5 Tagen pro Woche.'],
+    ['Ab wann brauchen Sie normalerweise eine ärztliche Krankschreibung?', 'wenn Sie länger als drei Tage krank sind', ['schon ab dem ersten Tag immer', 'erst nach zwei Wochen', 'nie'], 'Ab dem 4. Krankheitstag – der Arbeitgeber darf sie aber auch früher verlangen.'],
+    ['Wie lange zahlt der Arbeitgeber bei Krankheit den Lohn weiter?', 'bis zu sechs Wochen', ['drei Tage', 'ein Jahr', 'gar nicht'], 'Entgeltfortzahlung 6 Wochen, danach Krankengeld von der Krankenkasse.'],
+    ['Wer zahlt nach sechs Wochen Krankheit Geld?', 'die Krankenkasse (Krankengeld)', ['der Arbeitgeber weiter den vollen Lohn', 'das Finanzamt', 'die Rentenversicherung'], 'Krankengeld kommt von der Krankenkasse.'],
+    ['Wie viel Pause steht Ihnen bei mehr als 6 Stunden Arbeit zu?', 'mindestens 30 Minuten', ['10 Minuten', 'eine Stunde', 'keine'], 'Über 6 Stunden: 30 Minuten, über 9 Stunden: 45 Minuten Pause.'],
+    ['Wie lange muss die Ruhezeit zwischen zwei Arbeitstagen mindestens sein?', 'elf Stunden', ['sechs Stunden', 'acht Stunden', '24 Stunden'], 'Ruhezeit: mindestens 11 Stunden ohne Unterbrechung.'],
+    ['Wie viele Stunden darf man pro Werktag normalerweise höchstens arbeiten?', 'acht – kurzzeitig bis zu zehn', ['zwölf', 'sechs', 'so viele, wie der Chef will'], 'Arbeitszeitgesetz: 8 Stunden, bis 10, wenn es im Durchschnitt wieder ausgeglichen wird.'],
+    ['Innerhalb welcher Frist muss man gegen eine Kündigung klagen?', 'innerhalb von drei Wochen', ['innerhalb von drei Monaten', 'innerhalb eines Jahres', 'es gibt keine Frist'], 'Kündigungsschutzklage beim Arbeitsgericht: 3 Wochen nach Zugang der Kündigung.'],
+    ['Was bekommen Sie, wenn ein Arbeitsverhältnis endet?', 'ein Arbeitszeugnis', ['einen Aufenthaltstitel', 'eine Abmahnung', 'einen Mietvertrag'], 'Sie haben Anspruch auf ein (qualifiziertes) Arbeitszeugnis.'],
+    ['Was ist eine Abmahnung?', 'eine Warnung des Arbeitgebers wegen eines Fehlverhaltens', ['eine Gehaltserhöhung', 'ein Urlaubsantrag', 'eine Kündigung durch den Arbeitnehmer'], 'Vor einer verhaltensbedingten Kündigung kommt meist eine Abmahnung.'],
+    ['Ab wie vielen Beschäftigten kann ein Betriebsrat gewählt werden?', 'ab fünf', ['ab 50', 'ab 500', 'ab zwei'], 'Betriebsrat: ab 5 ständigen wahlberechtigten Arbeitnehmern.'],
+    ['Wie lange darf ein befristeter Vertrag ohne sachlichen Grund höchstens dauern?', 'zwei Jahre', ['fünf Jahre', 'sechs Monate', 'unbegrenzt'], 'Sachgrundlose Befristung: höchstens 2 Jahre, bis zu dreimal verlängert.'],
+    ['Wie lange gilt der Mutterschutz nach der Geburt normalerweise?', 'acht Wochen', ['zwei Wochen', 'ein Jahr', 'drei Jahre'], 'Mutterschutz: 6 Wochen vor und 8 Wochen nach der Geburt.'],
+    ['Wie lange können Eltern pro Kind höchstens Elternzeit nehmen?', 'bis zu drei Jahre', ['sechs Monate', 'zehn Jahre', 'vier Wochen'], 'Elternzeit: bis zu 3 Jahre pro Kind.'],
+    ['Wer ist nach einem Arbeitsunfall zuständig?', 'die Berufsgenossenschaft (Unfallversicherung)', ['die Haftpflichtversicherung des Kollegen', 'das Jobcenter', 'das Ordnungsamt'], 'Arbeitsunfälle: gesetzliche Unfallversicherung, also Berufsgenossenschaft.'],
+    ['Wer bezahlt die gesetzliche Unfallversicherung?', 'nur der Arbeitgeber', ['nur der Arbeitnehmer', 'beide je zur Hälfte', 'die Stadt'], 'Die Unfallversicherung zahlt allein der Arbeitgeber.'],
+    ['Was bedeutet „brutto“ auf der Gehaltsabrechnung?', 'der Lohn vor Steuern und Sozialabgaben', ['der Lohn, der auf das Konto kommt', 'das Urlaubsgeld', 'die Überstunden'], 'Brutto = vor Abzügen, netto = was ausgezahlt wird.'],
+    ['Was ist ein Tarifvertrag?', 'ein Vertrag zwischen Gewerkschaft und Arbeitgebern über Lohn und Arbeitszeit', ['ein Handyvertrag', 'ein Mietvertrag für die Firma', 'ein Vertrag mit dem Jobcenter'], 'Tarifverträge regeln Löhne, Arbeitszeit und Urlaub für eine Branche.'],
+    ['Was macht ein Betriebsrat?', 'Er vertritt die Interessen der Beschäftigten im Betrieb.', ['Er stellt die Gehaltsabrechnungen aus.', 'Er führt den Betrieb.', 'Er kontrolliert die Steuern.'], 'Der Betriebsrat redet z. B. bei Arbeitszeiten und Kündigungen mit.'],
+    ['Was gehört NICHT zur Sozialversicherung?', 'die Kfz-Versicherung', ['die Rentenversicherung', 'die Krankenversicherung', 'die Arbeitslosenversicherung'], 'Fünf Zweige: Kranken-, Pflege-, Renten-, Arbeitslosen- und Unfallversicherung.'],
+    ['Was darf im Vorstellungsgespräch normalerweise NICHT gefragt werden?', 'ob Sie schwanger sind', ['welche Erfahrungen Sie haben', 'wann Sie anfangen können', 'warum Sie die Stelle wollen'], 'Fragen nach Schwangerschaft sind unzulässig – Sie müssen nicht wahrheitsgemäß antworten.'],
+    ['Ab welcher Betriebsgröße gilt das Kündigungsschutzgesetz?', 'ab mehr als zehn Beschäftigten', ['ab einem Beschäftigten', 'ab 100 Beschäftigten', 'nur im öffentlichen Dienst'], 'Kündigungsschutz: mehr als 10 Beschäftigte und länger als 6 Monate im Betrieb.'],
+    ['Was bedeutet „Teilzeit“?', 'Man arbeitet weniger Stunden als in Vollzeit.', ['Man arbeitet nur im Sommer.', 'Man arbeitet ohne Vertrag.', 'Man arbeitet in zwei Firmen gleichzeitig Vollzeit.'], 'Teilzeit = weniger Stunden als die übliche Vollzeit im Betrieb.'],
+    ['Wer zieht die Lohnsteuer vom Gehalt ab und zahlt sie ans Finanzamt?', 'der Arbeitgeber', ['der Arbeitnehmer selbst jeden Monat', 'die Bank', 'die Krankenkasse'], 'Der Arbeitgeber behält die Lohnsteuer ein und überweist sie.'],
+    ['Was ist ein „Arbeitszeugnis“?', 'eine schriftliche Beurteilung der Arbeit durch den Arbeitgeber', ['ein Ausweis für den Betrieb', 'eine Lohnabrechnung', 'ein Diplom der Berufsschule'], 'Ein qualifiziertes Zeugnis bewertet Leistung und Verhalten.'],
+    ['Was ist ein „Aufhebungsvertrag“?', 'Arbeitgeber und Arbeitnehmer beenden das Arbeitsverhältnis gemeinsam.', ['ein Vertrag für eine Gehaltserhöhung', 'ein neuer Arbeitsvertrag nach der Probezeit', 'eine Krankmeldung'], 'Achtung: Beim Aufhebungsvertrag kann es eine Sperrzeit beim Arbeitslosengeld geben.']
+  ];
+
   const gapItems = (rows, tag) => rows.map(([q, a, d, tip]) => ({ q, gap: true, a, opts: [a, ...d], tip, tag, correct: q.replace(/_{3,}/, a) }));
 
   DMGame.register({
@@ -208,6 +259,27 @@
         return { q: q, a: f, opts: [f, ...DMKit.distract(api, funcs, f)], tag: area === 's' ? 'Sprechen' : 'E-Mail', sub: 'Wofür benutzt man diesen Satz?', tip: '', correct: `„${q}“ → ${f}` };
       });
       DMArcade.sorter(api, { items: items.map(x => ({ ...x, sub: null, tag: null })), rounds: 12, lives: 3, title: 'Wofür benutzt man den Satz?', sub: 'Steuere die Karte in den richtigen Korb.' });
+    }
+  });
+
+  DMGame.register({
+    id: 'b2-ablauf', cat: 'b2', title: 'Arbeitsabläufe ordnen', icon: '🔢', level: 'B1–B2 Beruf',
+    desc: 'Bewerbung, Krankmeldung, Wareneingang, Übergabe: Bring die Schritte in die richtige Reihenfolge – gegen die Uhr.',
+    intro: 'Im Beruf musst du Abläufe beschreiben können – auch in der mündlichen Prüfung. Du bekommst die Schritte eines Ablaufs durcheinander und tippst sie in der richtigen Reihenfolge an. Jede Runde ein neuer Ablauf mit mehr Karten. Schnell sein bringt Bonuspunkte. 3 Leben.',
+    optionsLabel: 'Schwierigkeit',
+    options: [{ id: 'leicht', label: 'Leicht (3–5 Schritte)' }, { id: 'schwer', label: 'Schwer (bis 7 Schritte)' }],
+    start(api, opt) { DMArcade.order(api, { sets: ABLAEUFE, sizes: opt === 'schwer' ? [4, 5, 5, 6, 6, 7] : [3, 3, 4, 4, 5, 5], lives: 3 }); }
+  });
+
+  DMGame.register({
+    id: 'b2-recht', cat: 'b2', title: 'Quiz-Leiter Arbeitsrecht', icon: '🪜', level: 'B1–B2 Beruf',
+    desc: 'Kündigung, Urlaub, Krankmeldung, Probezeit: Klettere mit Jokern die Leiter hoch.',
+    intro: 'Was steht dir im Job zu? 12 Stufen, 30 Sekunden pro Frage und drei Joker (50:50, +15 Sekunden, andere Frage). Bei einem Fehler fällst du auf die letzte gelbe Sicherheitsstufe zurück. Nach jeder Antwort siehst du die Regel. Stand: deutsches Arbeitsrecht 2026 – keine Rechtsberatung.',
+    optionsLabel: 'Modus',
+    options: [{ id: 'leiter', label: '🪜 Leiter (12 Stufen)' }, { id: 'marathon', label: '❤️ Marathon (3 Leben)' }],
+    start(api, opt) {
+      const items = RECHT.map(([q, a, d, tip]) => ({ q, a, opts: [a, ...d], tip, correct: `${q} → ${a}` }));
+      DMArcade.ladder(api, opt === 'marathon' ? { items, endless: true, lives: 3, seconds: 25 } : { items, steps: 12, safe: [4, 8], seconds: 30 });
     }
   });
 })();

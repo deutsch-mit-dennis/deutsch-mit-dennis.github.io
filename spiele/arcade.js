@@ -722,7 +722,9 @@
 
   /* ---------- 5) Zeitstrahl ---------- */
   function order(api, cfg) {
-    const events = cfg.events; // [[jahr, kurz, lang]]
+    const events = cfg.events; // [[jahr, kurz, lang]] – oder cfg.sets: [{ title, steps: [...] }] für Arbeitsabläufe
+    const proc = !!cfg.sets;
+    let title = "";
     const sizes = cfg.sizes || [3, 3, 4, 4, 5, 5, 6, 6];
     const S = session(api, cfg, sizes.length);
     S.hud();
@@ -731,19 +733,27 @@
       if (!S.alive()) return;
       if (r >= sizes.length || S.lives <= 0) return S.end();
       // Ereignisse mit verschiedenen Jahren
-      const set = [];
-      for (const e of api.shuffle(events)) {
-        if (!set.some((x) => x[0] === e[0])) set.push(e);
-        if (set.length === sizes[r]) break;
-      }
+      let set = [];
+      if (proc) {
+        // ein Ablauf pro Runde; k Schritte in der richtigen Reihenfolge auswählen
+        const fit = cfg.sets.filter((x) => x.steps.length >= sizes[r]);
+        const pick = api.shuffle(fit.length ? fit : cfg.sets)[0];
+        title = pick.title;
+        const idx = api.shuffle([...pick.steps.keys()]).slice(0, Math.min(sizes[r], pick.steps.length)).sort((a, b) => a - b);
+        set = idx.map((i, n) => [n + 1, pick.steps[i], pick.steps[i]]);
+      } else
+        for (const e of api.shuffle(events)) {
+          if (!set.some((x) => x[0] === e[0])) set.push(e);
+          if (set.length === sizes[r]) break;
+        }
       const sorted = [...set].sort((a, b) => a[0] - b[0]);
       let pos = 0,
         mistakes = 0;
       const t0 = Date.now();
       api.clearFeedback();
       S.hud();
-      api.el.innerHTML = `<div class="ar-prompt"><span class="ar-q">Was war zuerst?</span><span class="ar-sub">Tippe die Ereignisse von alt nach neu an. Runde ${r + 1}: ${set.length} Karten</span></div>
-        <div class="ar-line" aria-live="polite"><span class="ar-line-empty">Hier entsteht dein Zeitstrahl …</span></div>
+      api.el.innerHTML = `<div class="ar-prompt">${proc ? `<span class="ar-tag">${api.esc(title)}</span><span class="ar-q">Was kommt zuerst?</span><span class="ar-sub">Tippe die Schritte in der richtigen Reihenfolge an. Runde ${r + 1}: ${set.length} Karten</span>` : `<span class="ar-q">Was war zuerst?</span><span class="ar-sub">Tippe die Ereignisse von alt nach neu an. Runde ${r + 1}: ${set.length} Karten</span>`}</div>
+        <div class="ar-line" aria-live="polite"><span class="ar-line-empty">${proc ? "Hier entsteht dein Ablauf …" : "Hier entsteht dein Zeitstrahl …"}</span></div>
         <div class="ar-cards">${api
           .shuffle(set)
           .map(
@@ -762,7 +772,7 @@
               const e = sorted[pos];
               line.insertAdjacentHTML(
                 "beforeend",
-                `<div class="ar-placed"><b>${e[0]}</b>${api.esc(e[1])}</div>`,
+                `<div class="ar-placed"><b>${proc ? e[0] + "." : e[0]}</b>${api.esc(e[1])}</div>`,
               );
               b.remove();
               pos++;
@@ -789,10 +799,10 @@
               shake(b);
               api.hud({ lives: S.lives, maxLives: S.maxLives });
               const e = set.find((x) => x[0] === y);
-              S.wrong.push({ correct: `${e[0]}: ${e[2] || e[1]}`, tip: "" });
+              S.wrong.push(proc ? { correct: `${title}: „${e[1]}“ ist Schritt ${e[0]} von ${set.length}`, tip: "" } : { correct: `${e[0]}: ${e[2] || e[1]}`, tip: "" });
               api.feedback(
                 false,
-                `<b>Noch nicht!</b><span>„${api.esc(e[1])}“ war erst ${e[0]}. Es gibt ein früheres Ereignis.</span>`,
+                proc ? `<b>Noch nicht!</b><span>„${api.esc(e[1])}“ kommt später. Es gibt einen früheren Schritt.</span>` : `<b>Noch nicht!</b><span>„${api.esc(e[1])}“ war erst ${e[0]}. Es gibt ein früheres Ereignis.</span>`,
               );
               if (S.lives <= 0) {
                 api.el
