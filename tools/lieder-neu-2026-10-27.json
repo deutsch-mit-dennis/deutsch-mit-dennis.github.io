@@ -1,0 +1,119 @@
+[
+ {
+  "id": "a1-11-wo-ist-mein-schluessel",
+  "level": "A1",
+  "title": "Wo ist mein Schlüssel?",
+  "theme": "Zu Hause: Dinge suchen und finden – Möbel und Gegenstände in der Wohnung",
+  "grammar": "Lokale Präpositionen mit Dativ auf die Frage Wo? (in, an, auf, unter, neben, hinter, vor, über, zwischen: auf dem Tisch, unter dem Bett, in der Tasche, im Regal)",
+  "intro": "Mitternacht, Regen – und der Schlüssel ist weg! Mit diesem Lied suchst du in der ganzen Wohnung und übst: Wo ist …? Auf dem Tisch, unter dem Bett, neben der Lampe.",
+  "lyrics": "[Verse 1]\nEs ist Mitternacht, die Straße ist leer,\nder Regen ist kalt, die Tasche ist schwer.\nIch stehe vor der Tür, das Licht ist aus –\nund mein Schlüssel? Ich komme nicht ins Haus.\n\n[Chorus]\nWo ist mein Schlüssel? Wo, wo, wo?\nNicht in der Tasche, nicht im Auto.\nWo ist mein Schlüssel? Sag es mir –\ndie Nacht ist lang, und ich bin hier.\n\n[Verse 2]\nIch rufe dich an: „Hallo, bist du noch wach?“\nDu sagst leise: „Ja. Was ist los heute Nacht?“\n„Mein Schlüssel ist weg!“ – „Okay, ich suche für dich:\nAuf dem Tisch? Nein. Unter dem Bett? Da ist er nicht.\nHinter dem Sofa? Neben der Lampe? Nein.\nIm Regal, zwischen den Büchern? Kein Schlüssel, oh nein.“\n\n[Chorus]\nWo ist mein Schlüssel? Wo, wo, wo?\nNicht in der Tasche, nicht im Auto.\nWo ist mein Schlüssel? Sag es mir –\ndie Nacht ist lang, und ich bin hier.\n\n[Bridge]\nDer Mond steht über dem Dach,\ndie Katze sitzt neben mir.\nDann geht oben ein Fenster auf –\ndu lachst: „Schau mal, ich bin hier!“\n\n[Verse 3]\nDu öffnest die Tür, du hast ihn in der Hand:\n„Er war in deiner Jacke, an der Wand!“\nIch lache, du lachst, der Regen ist vorbei,\nmein Schlüssel ist da – und wir sind zwei.\n\n[Chorus]\nDa ist mein Schlüssel! Da, da, da!\nNicht in der Tasche – in deiner Hand, ganz nah.\nDa ist mein Schlüssel, hier bei dir –\ndie Nacht ist lang, und du bist hier.\n\n[Outro]\nWo ist mein Schlüssel? – In deiner Hand.\nUnd wo ist mein Herz? – Auch in deiner Hand.",
+  "vocab": [
+   [
+    "der Schlüssel, die Schlüssel",
+    "Damit öffnet man die Tür."
+   ],
+   [
+    "die Tasche, die Taschen",
+    "Darin trägt man Sachen, z. B. Handy und Geld."
+   ],
+   [
+    "die Tür, die Türen",
+    "Hier geht man in das Haus oder in das Zimmer."
+   ],
+   [
+    "der Tisch, die Tische",
+    "Möbel: Hier isst man oder arbeitet man."
+   ],
+   [
+    "das Bett, die Betten",
+    "Möbel: Hier schläft man."
+   ],
+   [
+    "das Sofa, die Sofas",
+    "Möbel: Hier sitzt man bequem, z. B. vor dem Fernseher."
+   ],
+   [
+    "die Lampe, die Lampen",
+    "Sie macht Licht."
+   ],
+   [
+    "das Regal, die Regale",
+    "Möbel für Bücher und andere Sachen"
+   ],
+   [
+    "die Jacke, die Jacken",
+    "Kleidung: Man trägt sie draußen, wenn es kalt ist."
+   ],
+   [
+    "wach",
+    "nicht müde, man schläft nicht"
+   ]
+  ],
+  "gap": {
+   "type": "gap",
+   "title": "Aufgabe 2: Lückentext",
+   "instruction": "Hör das Lied und ergänze die fehlenden Wörter.",
+   "items": [
+    "der Regen ist kalt, die ___ ist schwer.",
+    "Ich stehe vor der ___, das Licht ist aus –",
+    "Hinter dem ___? Neben der Lampe? Nein.",
+    "Der Mond steht über dem ___,",
+    "„Er war in deiner Jacke, an der ___!“"
+   ],
+   "solutions": [
+    "Tasche",
+    "Tür",
+    "Sofa",
+    "Dach",
+    "Wand"
+   ]
+  },
+  "tf": [
+   [
+    "Es ist Mitternacht und es regnet.",
+    true,
+    ""
+   ],
+   [
+    "Der Schlüssel ist im Auto.",
+    false,
+    "Er ist in der Jacke an der Wand."
+   ],
+   [
+    "Die Person am Telefon schläft schon.",
+    false,
+    "Sie ist noch wach."
+   ],
+   [
+    "Eine Katze sitzt neben der Person.",
+    true,
+    ""
+   ],
+   [
+    "Am Ende ist die Person traurig und allein.",
+    false,
+    "Sie lacht und ist nicht allein."
+   ]
+  ],
+  "gram": {
+   "title": "Grammatik – Wo? Präposition + Dativ",
+   "instruction": "Wo ist das? Ergänze die Präposition in Klammern und den Artikel im Dativ.",
+   "items": [
+    "Der Schlüssel liegt ___ Tisch. (auf)",
+    "Die Katze schläft ___ Bett. (unter)",
+    "Das Buch steht ___ Regal. (in)",
+    "Die Jacke hängt ___ Wand. (an)",
+    "Die Lampe steht ___ Sofa. (neben)",
+    "Ich warte ___ Tür. (vor)"
+   ],
+   "solutions": [
+    "Der Schlüssel liegt auf dem Tisch.",
+    "Die Katze schläft unter dem Bett.",
+    "Das Buch steht im Regal.",
+    "Die Jacke hängt an der Wand.",
+    "Die Lampe steht neben dem Sofa.",
+    "Ich warte vor der Tür."
+   ]
+  }
+ }
+]
