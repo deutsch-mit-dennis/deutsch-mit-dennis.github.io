@@ -3,6 +3,12 @@
  "items": [
   {
    "date": "2026-10-27",
+   "type": "neu",
+   "title": "Neues Arbeitsblatt: Aushänge im Wohnhaus verstehen (A2, Lesen)",
+   "link": "#material"
+  },
+  {
+   "date": "2026-10-27",
    "type": "uebung",
    "title": "Neuer Lesetext: Ihr Deutschkurs zieht um (E-Mail, A2–B1)",
    "link": "#lesen/alltag/7"
