@@ -3,7 +3,7 @@
    LiD-Simulation: Fragen aus window.LID_KATALOG (BAMF-Gesamtfragenkatalog).
    Fortschritt und Antworten bleiben nur im Browser (DM.store.sim). */
 (() => {
-  const V = '20261028e';
+  const V = '20261028f';
   const $ = (s, r = document) => r.querySelector(s);
   const $$ = (s, r = document) => [...r.querySelectorAll(s)];
   const e = s => DM.esc(s);
@@ -24,6 +24,10 @@
     'dtb-b2': { short: 'DTB B2', title: 'DTB B2 – Deutsch-Test für den Beruf', who: 'telc · B2 Beruf', g: 'ink', total: 'ca. 2,5 Std.', secs: [['Lesen', 45], ['Lesen + Schreiben', 20], ['Hören', 20], ['Hören + Schreiben', 5], ['Sprachbausteine + Schreiben', 35], ['Sprechen', 16]] }
   };
   const ORDER = ['dtz', 'lid', 'telc-b1', 'dtb-b1', 'telc-b2', 'dtb-b2'];
+  /* Second model test: sim/<id>-2.js, own route and saved state, shares META and prep page with <id> */
+  const base = id => id.replace(/-2$/, '');
+  ORDER.filter(id => id !== 'lid').forEach(id => { META[id + '-2'] = { ...META[id], short: `${META[id].short} · Test 2` }; });
+  const testTabs = id => id === 'lid' ? '' : `<nav class="dm-tabs dm-tabs-small" aria-label="Modelltest">${[base(id), base(id) + '-2'].map((v, i) => `<a href="#simulation/${v}"${v === id ? ' aria-current="page"' : ''}><b>Modelltest ${i + 1}</b></a>`).join('')}</nav>`;
   const PREP = ['telc-b1', 'telc-b2', 'dtb-b1', 'dtb-b2'];
   /* Paper practice: PDFs + listening MP3 (built by tools/pdf/build_sim_pdf.py and tools/sim/build_listening_mp3.py) */
   const DL = 'material/simulation/';
@@ -31,6 +35,8 @@
     ? [[`${DL}lid-test-1.pdf`, '📄 Probetest 1 (PDF)'], [`${DL}lid-test-2.pdf`, '📄 Probetest 2 (PDF)']]
     : [[`${DL}${id}-schriftlich.pdf`, '📄 Schriftliche Prüfung (PDF)'], [`${DL}${id}-hoeren.pdf`, '📄 Nur Hörverstehen (PDF)'], [`${DL}${id}-hoeren.mp3`, '🎧 Hörverstehen als MP3', 'mp3']];
   const MP3_MIN = { dtz: 17, 'telc-b1': 18, 'dtb-b1': 20, 'telc-b2': 18, 'dtb-b2': 25 };
+  // shortcut: model test 2 has no PDF/MP3 yet; add its MP3_MIN entry once build_sim_pdf.py has made the files
+  const hasPaper = id => id === 'lid' || id in MP3_MIN;
   const dlLink = ([href, label, kind]) => `<a class="dm-btn dm-btn-quiet" href="${href}?v=${V}" download${kind === 'mp3' ? '' : ' target="_blank" rel="noopener"'}>${label}</a>`;
   /* compact row (running exam) */
   const pdfLinks = id => `<div class="sim-pdf">${downloads(id).map(dlLink).join('')}<a class="dm-btn dm-btn-quiet" href="#simulation/${id}/pruefen">✓ Papier-Antworten prüfen</a></div>`;
@@ -245,7 +251,7 @@
       return `<a class="sim-card dm-g-${m.g}" href="#simulation/${id}"><span class="dm-tag">${e(m.who)}</span><b>${e(m.title)}</b><span class="sim-dur">${blockTimes(m)}</span><span class="sim-secs">${m.secs.map(([t, min, prep]) => `<i>${e(t)} · ${min} Min.${prep ? ` (+${prep} Vorb.)` : ''}</i>`).join('')}</span>${status}</a>`;
     };
     DM.page(`${DM.crumbs([['Prüfungstraining', '#pruefung'], ['Prüfungssimulationen']])}
-      <div class="dm-head"><h1>Prüfungssimulationen</h1><p class="dm-lead">Sechs komplette Prüfungen zum Üben – mit der echten Zeit für jeden Prüfungsteil. Am Ende siehst du deine Punkte, ob du bestanden hättest und alle Lösungen mit Erklärung.</p></div>
+      <div class="dm-head"><h1>Prüfungssimulationen</h1><p class="dm-lead">Sechs komplette Prüfungen zum Üben, DTZ, telc und DTB mit je zwei Modelltests – mit der echten Zeit für jeden Prüfungsteil. Am Ende siehst du deine Punkte, ob du bestanden hättest und alle Lösungen mit Erklärung.</p></div>
       <div class="sim-grid">${ORDER.map(card).join('')}</div>
       <section class="dm-card sim-how"><h2>So läuft eine Simulation</h2>
         <ul class="sim-list">
@@ -300,19 +306,20 @@
     const combo = combined(id, ex);
     DM.page(`${DM.crumbs([['Prüfungstraining', '#pruefung'], ['Simulationen', '#simulation'], [m.short]])}
       <div class="dm-head"><span class="dm-tag">${e(m.who)}</span><h1>Simulation: ${e(ex.title)}</h1><p class="dm-lead">${e(ex.intro)}</p></div>
+      ${testTabs(id)}
       ${running ? `<aside class="dm-card sim-resume"><b>Du bist mitten in der Simulation.</b> <span>${e(runTitle)} – noch ${mmss(st.left)} Min.${st.phase === 'break' ? ' (Pause vor dem nächsten Teil)' : ''}</span><div class="dm-row"><a class="dm-btn" href="#simulation/${id}/run">▶ Fortsetzen</a><button type="button" class="dm-btn dm-btn-quiet" id="sim-new">Neu beginnen</button></div></aside>` : ''}
       <h2 class="sim-h2">Prüfung starten</h2>
       <p class="sim-startlead">${hasOral ? 'Starte die schriftliche und die mündliche Prüfung getrennt – wie am Prüfungstag. Sobald du startest, läuft <b>eine Uhr für die gesamte schriftliche bzw. mündliche Prüfung</b>. Die Zeit teilst du dir selbst ein; ist sie um, wird automatisch abgegeben.' : 'Sobald du startest, läuft die Uhr für den gesamten Test. Ist sie um, wird automatisch abgegeben.'}</p>
       <div class="sim-startgrid">${startCard('written')}${hasOral ? startCard('oral') : ''}</div>
       ${combo ? `<aside class="dm-card sim-combo ${combo.verdict.pass ? 'ok' : 'no'}"><b>Gesamtergebnis (schriftlich + mündlich): ${e(combo.verdict.head)}</b>${combo.verdict.lines.map(l => `<span>${e(l)}</span>`).join('')}<small>Aus deiner letzten schriftlichen (${combo.wDate}) und mündlichen Prüfung (${combo.oDate}).</small></aside>` : ''}
-      ${paperCard(id)}
+      ${hasPaper(id) ? paperCard(id) : ''}
       ${ruleBox(ex)}
       ${id === 'lid' ? `<p class="dm-small">Für die drei Bundesland-Fragen nimmt die Simulation die Fragen für Nordrhein-Westfalen.</p>` : ''}
       ${ex.sections.length > 1 ? `<details class="sim-more dm-card"><summary>Andere Möglichkeiten: Teil für Teil oder nur einen Teil üben</summary>
         <p>Bei <b>Teil für Teil</b> hat jeder Prüfungsteil seine eigene Uhr, mit Pause dazwischen. Du kannst auch nur einen einzelnen Teil üben.</p>
         <button type="button" class="dm-btn dm-btn-quiet" id="sim-go">▶ Ganze Prüfung Teil für Teil (${e(m.total)})</button>
         <ol class="sim-steps">${rows}</ol></details>` : ''}
-      ${PREP.includes(id) ? `<div class="dm-row sim-start"><a class="dm-btn dm-btn-quiet" href="#vorbereitung/${id}">Gezielte Vorbereitung</a></div>` : ''}
+      ${PREP.includes(base(id)) ? `<div class="dm-row sim-start"><a class="dm-btn dm-btn-quiet" href="#vorbereitung/${base(id)}">Gezielte Vorbereitung</a></div>` : ''}
       ${hist.length ? `<section class="dm-card"><h2>Deine Ergebnisse</h2><ul class="sim-hist">${hist.slice(-6).reverse().map(h => `<li><span>${new Date(h.date).toLocaleDateString('de-DE')}</span><span class="sim-hmode">${e(modeLabel(h.mode || (h.single ? 'single' : 'full')))}</span><b>${h.pct} %</b><span>${h.pass === true ? '✓ bestanden' : h.pass === false && (h.mode === 'full' || !h.mode) && !h.single ? '✗ noch nicht bestanden' : ''}</span></li>`).join('')}</ul></section>` : ''}
       <p class="dm-small">Eigene Übungsaufgaben im Stil der Prüfung – keine offiziellen Aufgaben.</p>
       ${id === 'lid' ? window.LID_QUELLE_HTML || '' : ''}`, 'sim-page');
@@ -438,7 +445,7 @@
         <button type="button" class="dm-btn sim-submit" id="sim-submit">Abgeben</button>
       </div>
       <div class="sim-progress" aria-hidden="true"><i id="sim-prog"></i></div>
-      ${st.mode === 'written' ? pdfLinks(id) : ''}
+      ${st.mode === 'written' && hasPaper(id) ? pdfLinks(id) : ''}
       ${chips && st.secs.reduce((a, si) => a + ex.sections[si].parts.length, 0) > 1 ? `<nav class="sim-chips" aria-label="Teile">${chips}</nav>` : ''}
       ${plan}${prepBox}
       <div class="sim-parts" data-nocheck>${body}</div>
@@ -862,7 +869,7 @@
       <section class="dm-card sim-sum" id="sim-sum" aria-live="polite"></section>
       <div id="sim-combo"></div>
       <div class="dm-row sim-tools" id="sim-nextblock" hidden><button type="button" class="dm-btn" id="sim-other">${GROUP[other].ic} ${GROUP[other].name} starten (${groupMin(ex, other)} Min.)</button></div>
-      <div class="dm-row sim-tools"><label class="sim-toggle"><input type="checkbox" id="sim-only"> Nur Fehler zeigen</label><button type="button" class="dm-btn dm-btn-quiet" id="sim-again">${paper ? '✎ Antworten ändern' : 'Neue Simulation'}</button><a class="dm-btn dm-btn-quiet" href="#simulation">Alle Simulationen</a>${PREP.includes(id) ? `<a class="dm-btn dm-btn-quiet" href="#vorbereitung/${id}">Gezielt üben</a>` : ''}</div>
+      <div class="dm-row sim-tools"><label class="sim-toggle"><input type="checkbox" id="sim-only"> Nur Fehler zeigen</label><button type="button" class="dm-btn dm-btn-quiet" id="sim-again">${paper ? '✎ Antworten ändern' : 'Neue Simulation'}</button><a class="dm-btn dm-btn-quiet" href="#simulation">Alle Simulationen</a>${PREP.includes(base(id)) ? `<a class="dm-btn dm-btn-quiet" href="#vorbereitung/${base(id)}">Gezielt üben</a>` : ''}</div>
       <div class="sim-review">${sections}</div>
       ${id === 'lid' ? window.LID_QUELLE_HTML || '' : '<p class="dm-small">Eigene Übungsaufgaben im Stil der Prüfung – keine offiziellen Aufgaben. Die Bewertung ist eine Schätzung.</p>'}`, 'sim-page');
     paint();

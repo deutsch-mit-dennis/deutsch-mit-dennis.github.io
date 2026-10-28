@@ -765,7 +765,7 @@
       api.el.querySelectorAll(".ar-card").forEach(
         (b) =>
           (b.onclick = () => {
-            if (!S.alive()) return;
+            if (!S.alive() || pos >= sorted.length) return; // double tap on the last card
             const y = +b.dataset.y;
             if (y === sorted[pos][0]) {
               line.querySelector(".ar-line-empty")?.remove();

@@ -4,8 +4,9 @@
 import { readFileSync, writeFileSync, readdirSync } from 'node:fs';
 import vm from 'node:vm';
 import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 
-const R = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..', '..');
+const R = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..', '..');
 const norm = s => String(s ?? '').replace(/\s+/g, ' ').trim();
 const fnv = s => { let h = 0x811c9dc5; for (const b of Buffer.from(norm(s), 'utf8')) { h ^= b; h = Math.imul(h, 0x01000193) >>> 0; } return 't' + h.toString(16).padStart(8, '0'); };
 const VOICE = { n: 'f1', f: 'f2', f2: 'f3', m: 'm1', m2: 'm2' };

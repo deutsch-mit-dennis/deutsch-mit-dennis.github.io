@@ -9604,7 +9604,7 @@
     }
    ],
    "prio": 0,
-   "ord": 59
+   "ord": 189
   },
   {
    "key": "t25a9e69d",
@@ -12335,6 +12335,2094 @@
     {
      "voice": "f1",
      "text": "Dann sprich bitte direkt mit Frau Kowalczyk. Sie macht für solche Fälle einen Einzeltermin."
+    }
+   ]
+  },
+  {
+   "key": "t02a5a1bc",
+   "prio": 0,
+   "ord": 162,
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Sag mal, Jannik, hast du die Bestellung für den Großmarkt schon rausgeschickt?"
+    },
+    {
+     "voice": "m1",
+     "text": "Nee, noch nicht. Ich wollte erst noch im Kühlhaus nachschauen, was wir noch haben."
+    },
+    {
+     "voice": "f2",
+     "text": "Mach das bitte schnell, die Bestellung muss bis elf raus, sonst kommt die Lieferung erst übermorgen. Und denk an die Sahne, die war letzte Woche schon knapp."
+    },
+    {
+     "voice": "m1",
+     "text": "Okay. Wie viel Sahne soll ich bestellen? Wieder zehn Liter?"
+    },
+    {
+     "voice": "f2",
+     "text": "Lieber fünfzehn. Am Wochenende haben wir die zwei Geburtstagsfeiern."
+    },
+    {
+     "voice": "m1",
+     "text": "Fünfzehn Liter, alles klar. Ich schick dir die Liste, bevor ich bestelle, ja?"
+    },
+    {
+     "voice": "f2",
+     "text": "Ja, gute Idee, dann schau ich noch mal drüber."
+    }
+   ]
+  },
+  {
+   "key": "tcc39fd0c",
+   "prio": 0,
+   "ord": 163,
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Frau Ivanova, haben Sie kurz Zeit? Die Kundin von gestern, Frau Hellwig, hat angerufen."
+    },
+    {
+     "voice": "f2",
+     "text": "Oh, die mit der Küche? Ist was nicht in Ordnung?"
+    },
+    {
+     "voice": "m1",
+     "text": "Doch, eigentlich ist sie sehr zufrieden. Aber die Spülmaschine ist noch nicht angeschlossen. Sie dachte, wir machen das auch."
+    },
+    {
+     "voice": "f2",
+     "text": "Hm, das steht aber nicht im Auftrag. Dafür muss ein Elektriker kommen."
+    },
+    {
+     "voice": "m1",
+     "text": "Ja, das weiß ich. Aber sie ist eine gute Kundin. Können wir nicht Herrn Kaya fragen? Der arbeitet doch öfter mit uns zusammen."
+    },
+    {
+     "voice": "f2",
+     "text": "Gute Idee. Rufen Sie ihn an und fragen Sie, ob er diese Woche Zeit hat. Und sagen Sie Frau Hellwig, dass das extra kostet. Nicht, dass sie sich später über die Rechnung ärgert."
+    },
+    {
+     "voice": "m1",
+     "text": "Mach ich. Ich ruf erst Herrn Kaya an und dann sie."
+    }
+   ]
+  },
+  {
+   "key": "tc0cdc0ac",
+   "prio": 0,
+   "ord": 164,
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Herr Bauer, ich habe ein Problem mit meinem Dienstplan für Dezember."
+    },
+    {
+     "voice": "m1",
+     "text": "Ja? Was ist denn los?"
+    },
+    {
+     "voice": "f2",
+     "text": "Ich bin am vierundzwanzigsten und am fünfundzwanzigsten eingeteilt. Aber ich habe doch schon im Sommer gesagt, dass ich an Weihnachten zu meiner Familie nach Polen fahre."
+    },
+    {
+     "voice": "m1",
+     "text": "Oh, das tut mir leid, das habe ich wohl übersehen. Haben Sie es in die Urlaubsliste eingetragen?"
+    },
+    {
+     "voice": "f2",
+     "text": "Nein, ich hab es Ihnen nur gesagt."
+    },
+    {
+     "voice": "m1",
+     "text": "Okay. Dann tragen Sie es bitte heute noch in die Liste ein. Ich frage Herrn Osei, ob er tauschen kann. Er wollte sowieso lieber an Silvester frei haben."
+    },
+    {
+     "voice": "f2",
+     "text": "Dann arbeite ich gern an Silvester. Danke!"
+    }
+   ]
+  },
+  {
+   "key": "tdc4cdcb1",
+   "prio": 0,
+   "ord": 165,
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Hallo, Frau Schulz. Sie wollten mich sprechen?"
+    },
+    {
+     "voice": "f2",
+     "text": "Ja, Herr Nowak. Es geht um die neue Kaffeemaschine in der Teeküche. Die ist seit gestern kaputt, sie zeigt immer nur „Entkalken“ an."
+    },
+    {
+     "voice": "m1",
+     "text": "Ah, das kenn ich. Die muss man einfach entkalken, das dauert zwanzig Minuten. Das Mittel steht im Schrank unter der Spüle."
+    },
+    {
+     "voice": "f2",
+     "text": "Ach so, gut. Und wer macht das normalerweise?"
+    },
+    {
+     "voice": "m1",
+     "text": "Eigentlich sollte das reihum gehen, jede Woche jemand anders. Aber es macht keiner. Vielleicht hängen wir einen Plan an die Tür?"
+    },
+    {
+     "voice": "f2",
+     "text": "Gute Idee. Ich schreibe den Plan und hänge ihn heute Nachmittag auf."
+    }
+   ]
+  },
+  {
+   "key": "tcce33ce6",
+   "prio": 0,
+   "ord": 166,
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "So, letzter Punkt: Die Leitung möchte, dass wir ab Februar die Pflegedokumentation auf Tablets schreiben. Nicht mehr auf Papier im Dienstzimmer, sondern direkt beim Bewohner im Zimmer. Was sagt ihr dazu?"
+    },
+    {
+     "voice": "m1",
+     "text": "Also, ich finde das gut. Jetzt schreiben wir am Ende der Schicht alles auf einmal auf, und dann vergisst man die Hälfte. Wenn ich es gleich im Zimmer eintrage, ist es genauer."
+    },
+    {
+     "voice": "f2",
+     "text": "Danke, Herr Petrović. Frau Akın?"
+    },
+    {
+     "voice": "f3",
+     "text": "Grundsätzlich ist das okay. Aber ich mache mir Sorgen, dass wir dann im Zimmer mehr aufs Tablet schauen als auf die Bewohner. Die alten Menschen wollen mit uns reden. Ich finde, wir sollten erst nach der Pflege schreiben, draußen auf dem Flur."
+    },
+    {
+     "voice": "f2",
+     "text": "Das ist ein wichtiger Punkt. Und die Schulung machen wir übrigens im Januar, während der Arbeitszeit."
+    }
+   ]
+  },
+  {
+   "key": "t9102d190",
+   "prio": 0,
+   "ord": 167,
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Frau Demir, ich zeige Ihnen noch kurz die neue Spülmaschine. Die ist anders als die alte."
+    },
+    {
+     "voice": "f2",
+     "text": "Ja, gern. Die sieht kompliziert aus."
+    },
+    {
+     "voice": "m1",
+     "text": "Ist sie gar nicht. Sie drücken einfach auf den grünen Knopf. Dann läuft das normale Programm, das dauert nur drei Minuten. Für Töpfe und Bleche nehmen Sie bitte den blauen Knopf, das dauert länger, ungefähr acht Minuten."
+    },
+    {
+     "voice": "f2",
+     "text": "Grün für Geschirr, blau für Töpfe. Okay. Und das Spülmittel?"
+    },
+    {
+     "voice": "m1",
+     "text": "Das kommt automatisch aus dem Kanister unten. Wenn die rote Lampe leuchtet, ist er leer. Dann holen Sie einen neuen aus dem Keller, aber bitte mit Handschuhen, das Zeug ist sehr scharf."
+    },
+    {
+     "voice": "f2",
+     "text": "Mit Handschuhen, verstanden."
+    }
+   ]
+  },
+  {
+   "key": "tf9e0f97f",
+   "prio": 0,
+   "ord": 168,
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Herr Lindner, Sie wollten wissen, wie das mit der Firmenkarte für das Tanken funktioniert?"
+    },
+    {
+     "voice": "m1",
+     "text": "Ja, genau. Ich fahre ab nächster Woche den Transporter."
+    },
+    {
+     "voice": "f2",
+     "text": "Also, Sie können damit an allen Tankstellen von Aral und Shell tanken. Die Geheimzahl bekommen Sie in einem Brief, nicht zusammen mit der Karte. Und ganz wichtig: Sie müssen jedes Mal den Kilometerstand eingeben, wenn Sie bezahlen."
+    },
+    {
+     "voice": "m1",
+     "text": "Okay. Und wenn ich mal privat tanke? Also für mein eigenes Auto?"
+    },
+    {
+     "voice": "f2",
+     "text": "Nein, das geht auf keinen Fall. Die Karte ist nur für den Firmenwagen. Und die Quittungen geben Sie bitte am Ende vom Monat bei mir im Büro ab."
+    },
+    {
+     "voice": "m1",
+     "text": "Alles klar. Danke!"
+    }
+   ]
+  },
+  {
+   "key": "tdbb6e2c7",
+   "prio": 0,
+   "ord": 169,
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Guten Morgen, Herr Ahmadi, hier ist Petra Sommer, Personalabteilung. Ihre Lohnabrechnung für Oktober war leider falsch, die Nachtzuschläge fehlen. Das korrigieren wir mit der Novemberabrechnung, Sie müssen nichts tun. Sie bekommen das Geld also Ende November. Bei Fragen erreichen Sie mich unter Durchwahl zwei vier sieben. Schönen Tag noch!"
+    }
+   ]
+  },
+  {
+   "key": "t67eab9dd",
+   "prio": 0,
+   "ord": 170,
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Hallo Frau Okoye, hier ist Ralf von der Spätschicht. Du, kannst du morgen für mich die Spätschicht übernehmen? Meine Frau bekommt ihr Baby, wahrscheinlich morgen, und ich möchte dabei sein. Ich übernehme dafür gern deine Schicht am Samstag. Ruf mich bitte bis heute Abend zurück, dann sag ich dem Chef Bescheid. Danke!"
+    }
+   ]
+  },
+  {
+   "key": "t3aedbf4a",
+   "prio": 0,
+   "ord": 171,
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Ja, hallo, hier ist Familie Peters aus der Lindenallee fünf. Ihr Pflegedienst kommt doch jeden Morgen zu meiner Mutter. Nächste Woche ist sie bei uns im Urlaub, von Montag bis Freitag. Sie müssen also in dieser Zeit nicht kommen. Am Samstag ist sie wieder zu Hause. Danke schön!"
+    }
+   ]
+  },
+  {
+   "key": "ta1471315",
+   "prio": 0,
+   "ord": 172,
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Guten Tag, hier spricht Berger von der Firma Kälte-Service. Sie haben uns wegen Ihres Kühlraums angerufen. Unser Techniker kommt morgen zwischen acht und zehn Uhr. Bitte sorgen Sie dafür, dass jemand da ist, der ihm den Raum zeigen kann. Und räumen Sie bitte die Regale vor der Rückwand frei, damit er an das Gerät kommt."
+    }
+   ]
+  },
+  {
+   "key": "ta0f8842b",
+   "prio": 0,
+   "ord": 173,
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Hallo, hier ist Sandra vom Empfang. Ich wollte nur kurz sagen: Das Paket mit Ihren neuen Arbeitsschuhen ist angekommen. Es liegt bei mir am Empfang. Sie können es heute bis siebzehn Uhr abholen, morgen bin ich nicht da, dann ist es bei Herrn Wolf im Lager."
+    }
+   ]
+  },
+  {
+   "key": "t9232a13f",
+   "prio": 0,
+   "ord": 175,
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Autohaus Becker, Werkstatt, guten Tag, Sie sprechen mit Novak."
+    },
+    {
+     "voice": "m1",
+     "text": "Ja, guten Tag, hier ist Lehmann, von der Firma Grünwerk Gartenbau in Hattingen. Ich hätte gern Herrn Schröder gesprochen, wegen unserer Firmenwagen."
+    },
+    {
+     "voice": "f2",
+     "text": "Herr Schröder ist gerade in einer Besprechung. Kann ich ihm etwas ausrichten?"
+    },
+    {
+     "voice": "m1",
+     "text": "Ja, bitte. Also, bei uns müssen drei Transporter zur Inspektion, und bei einem davon geht auch die Klimaanlage nicht. Wir würden die Wagen gern am Montag, den achtzehnten, bringen, ganz früh, so um sieben Uhr."
+    },
+    {
+     "voice": "f2",
+     "text": "Drei Transporter, Montag, achtzehnter, sieben Uhr … Und bei einem die Klimaanlage. Welcher ist das?"
+    },
+    {
+     "voice": "m1",
+     "text": "Das ist der weiße, mit dem Kennzeichen E N, G W, vier zwei eins. Ach nee, Moment, Entschuldigung: vier zwei sieben. E N, G W, vier zwei sieben."
+    },
+    {
+     "voice": "f2",
+     "text": "Vier zwei sieben, okay. Brauchen Sie für die Zeit Ersatzfahrzeuge?"
+    },
+    {
+     "voice": "m1",
+     "text": "Ja, das wäre wichtig, mindestens zwei. Wir haben in der Woche viele Aufträge. Ein Ersatzwagen sollte eine Anhängerkupplung haben."
+    },
+    {
+     "voice": "f2",
+     "text": "Gut, ich notiere: zwei Ersatzwagen, einer mit Anhängerkupplung. Soll Herr Schröder Sie zurückrufen?"
+    },
+    {
+     "voice": "m1",
+     "text": "Ja, bitte heute noch, wenn das geht, bis sechzehn Uhr. Meine Handynummer ist null eins sieben null, drei vier, fünf sechs, neun null. Ich wiederhole: null eins sieben null, drei vier, fünf sechs, neun null."
+    },
+    {
+     "voice": "f2",
+     "text": "Alles klar, Herr Lehmann. Ich gebe das gleich weiter."
+    },
+    {
+     "voice": "m1",
+     "text": "Vielen Dank. Auf Wiederhören!"
+    }
+   ]
+  },
+  {
+   "key": "taaa3d3c3",
+   "prio": 0,
+   "ord": 176,
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Bitte erzählen Sie etwas zum Thema Weiterbildung im Beruf. Sie haben ungefähr eine Minute."
+    }
+   ]
+  },
+  {
+   "key": "ted28330e",
+   "prio": 0,
+   "ord": 177,
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Lernen Sie lieber in einem Kurs mit anderen oder allein am Computer? Warum?"
+    }
+   ]
+  },
+  {
+   "key": "tc307c06f",
+   "prio": 0,
+   "ord": 178,
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Wer sollte eine Weiterbildung bezahlen – der Arbeitgeber oder die Mitarbeiter selbst?"
+    }
+   ]
+  },
+  {
+   "key": "te4be5392",
+   "prio": 0,
+   "ord": 179,
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Wie ist das mit Weiterbildungen in Ihrem Heimatland?"
+    }
+   ]
+  },
+  {
+   "key": "tc1963123",
+   "prio": 0,
+   "ord": 180,
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Was würden Sie einem Kollegen raten, der keine Zeit für eine Weiterbildung hat?"
+    }
+   ]
+  },
+  {
+   "key": "t8909e549",
+   "prio": 0,
+   "ord": 181,
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Sie sind Kollegen und sitzen in der Pause zusammen. Erzählen Sie doch mal: Wann haben Sie bei der Arbeit Stress?"
+    }
+   ]
+  },
+  {
+   "key": "t0f6ee1f3",
+   "prio": 0,
+   "ord": 182,
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Und jetzt fragen Sie bitte Ihre Partnerin oder Ihren Partner: Wie ist das bei ihr oder bei ihm?"
+    }
+   ]
+  },
+  {
+   "key": "t405aa8bd",
+   "prio": 0,
+   "ord": 183,
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Was hilft Ihnen nach der Arbeit, um sich zu erholen?"
+    }
+   ]
+  },
+  {
+   "key": "t710d9cd5",
+   "prio": 0,
+   "ord": 184,
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Zum Schluss: Was könnte die Firma tun, damit es weniger Stress gibt?"
+    }
+   ]
+  },
+  {
+   "key": "ta0543b1b",
+   "prio": 0,
+   "ord": 185,
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Beginnen Sie bitte. Was möchten Sie den Besuchern an Ihrem Stand zeigen?"
+    }
+   ]
+  },
+  {
+   "key": "t99f3b272",
+   "prio": 0,
+   "ord": 186,
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Es kommen bestimmt auch viele Familien. Was machen wir für die Kinder?"
+    }
+   ]
+  },
+  {
+   "key": "t59920532",
+   "prio": 0,
+   "ord": 187,
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Und was bieten wir zum Essen und Trinken an?"
+    }
+   ]
+  },
+  {
+   "key": "ta7f79a83",
+   "prio": 0,
+   "ord": 188,
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Der Tag dauert von zehn bis sechzehn Uhr. Wie teilen wir die Zeit am Stand auf?"
+    }
+   ]
+  },
+  {
+   "key": "teda3be0b",
+   "prio": 0,
+   "ord": 190,
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Du, Selin, das Kartenlesegerät an der Anmeldung funktioniert schon wieder nicht. Die Patienten stehen schon Schlange."
+    },
+    {
+     "voice": "f3",
+     "text": "Echt jetzt? Hast du das Kabel überprüft? Letztes Mal war es einfach locker."
+    },
+    {
+     "voice": "f2",
+     "text": "Ja, hab ich. Das Kabel ist in Ordnung, das Gerät zeigt einfach nichts an."
+    },
+    {
+     "voice": "f3",
+     "text": "Okay. Dann nimm erst mal das Ersatzgerät, das liegt im Schrank im Labor, unterste Schublade. Und ich ruf gleich den Techniker an, die Firma ist ja ab acht erreichbar."
+    },
+    {
+     "voice": "f2",
+     "text": "Und was mach ich mit den Patienten, die schon da sind?"
+    },
+    {
+     "voice": "f3",
+     "text": "Die Karten von denen kannst du später einlesen. Schreib dir die Namen auf eine Liste."
+    }
+   ]
+  },
+  {
+   "key": "te887a1d6",
+   "prio": 0,
+   "ord": 191,
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Chef, ich hab ein Problem mit dem Auftrag für Familie Schäfer. Die Küchenplatte ist zwei Zentimeter zu kurz."
+    },
+    {
+     "voice": "m2",
+     "text": "Wie bitte? Wer hat denn gemessen?"
+    },
+    {
+     "voice": "m1",
+     "text": "Das war ich, vor drei Wochen. Ich hab die Zahlen wohl falsch notiert. Tut mir echt leid."
+    },
+    {
+     "voice": "m2",
+     "text": "Na ja, das passiert. Aber wir müssen das schnell lösen, die Schäfers wollen am Freitag einziehen. Bestell bitte heute noch eine neue Platte, und diesmal misst du zusammen mit Lukas noch mal nach. Zwei Leute, vier Augen."
+    },
+    {
+     "voice": "m1",
+     "text": "Mach ich. Soll ich die Schäfers informieren?"
+    },
+    {
+     "voice": "m2",
+     "text": "Nein, das übernehme ich selbst. Das ist Chefsache."
+    }
+   ]
+  },
+  {
+   "key": "t1bb08246",
+   "prio": 0,
+   "ord": 192,
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Frau Kowalczyk, haben Sie die Präsentation für die Kundenkonferenz morgen schon fertig?"
+    },
+    {
+     "voice": "f2",
+     "text": "Fast. Mir fehlen nur noch die Verkaufszahlen vom dritten Quartal. Die sollte Herr Engel schicken, aber er ist seit heute krank."
+    },
+    {
+     "voice": "m1",
+     "text": "Hm. Haben Sie Zugriff auf seinen Ordner im Netzwerk?"
+    },
+    {
+     "voice": "f2",
+     "text": "Nein, leider nicht."
+    },
+    {
+     "voice": "m1",
+     "text": "Dann frag ich Frau Wagner aus der Buchhaltung, die hat die Zahlen auch. Ich schick sie Ihnen in einer Stunde. Und bitte machen Sie die Folien nicht zu voll. Lieber weniger Text und mehr Grafiken."
+    },
+    {
+     "voice": "f2",
+     "text": "In Ordnung, mach ich."
+    }
+   ]
+  },
+  {
+   "key": "t04498385",
+   "prio": 0,
+   "ord": 193,
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "So, kommen wir zum nächsten Punkt. Die Klinikleitung überlegt, auf dem Gelände eine eigene Kita einzurichten, mit Öffnungszeiten von halb sechs bis zweiundzwanzig Uhr, passend zu unseren Schichten. Ich möchte gern Ihre Meinung hören. Frau Novak, Sie zuerst."
+    },
+    {
+     "voice": "f2",
+     "text": "Also, für mich wäre das ein Traum. Ich habe zwei kleine Kinder, und unsere städtische Kita macht erst um sieben auf. Mein Frühdienst beginnt aber um sechs. Im Moment muss jeden Morgen meine Nachbarin einspringen. Viele Kolleginnen arbeiten genau deswegen nur Teilzeit. Mit einer Kita hier könnten sie mehr Stunden arbeiten, und das würde unseren Personalmangel verringern."
+    },
+    {
+     "voice": "m2",
+     "text": "Danke. Herr Weber?"
+    },
+    {
+     "voice": "m1",
+     "text": "Ich finde die Idee grundsätzlich gut, aber ich habe Bedenken bei den Kosten. Eine Kita mit so langen Öffnungszeiten braucht viele Erzieherinnen, und die sind genauso schwer zu finden wie Pflegekräfte. Ich würde vorschlagen, erst einmal mit einer bestehenden Kita in der Nähe zusammenzuarbeiten und dort Plätze für unsere Mitarbeiter zu reservieren. Das ist billiger und geht schneller."
+    },
+    {
+     "voice": "m2",
+     "text": "Frau Ahmadi, Sie haben auch Kinder, oder?"
+    },
+    {
+     "voice": "f3",
+     "text": "Ja, aber die sind schon in der Schule. Für mich ist eher wichtig: Wenn wir eine Kita bekommen, dann muss das fair sein. Nicht nur Ärztinnen und Ärzte, sondern auch das Reinigungspersonal und die Küche müssen Plätze bekommen. Ich fände es gut, wenn es dafür klare Regeln gibt, zum Beispiel nach Schichtdiensten und nicht nach Position."
+    }
+   ]
+  },
+  {
+   "key": "t7f8498a2",
+   "prio": 0,
+   "ord": 194,
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Guten Morgen und herzlich willkommen bei Solartechnik Emscher! Mein Name ist Rainer Holtkamp, ich bin einer der beiden Geschäftsführer. Schön, dass Sie da sind – acht neue Kolleginnen und Kollegen auf einmal, das zeigt, wie sehr wir wachsen. Kurz zu unserer Geschichte: Die Firma hat mein Vater zweitausendvier als ganz normalen Elektrobetrieb gegründet. Damals waren wir zu viert und haben vor allem Leitungen in Neubauten verlegt. Die erste Solaranlage haben wir zweitausendneun gebaut, eher aus Neugier. Heute machen Solaranlagen und Wärmepumpen fast neunzig Prozent unseres Umsatzes aus, und wir haben vierundsechzig Beschäftigte. Ein paar praktische Dinge für Ihre erste Woche: Ihre Arbeitskleidung bekommen Sie heute Nachmittag im Lager bei Herrn Szymański. Bitte probieren Sie alles an, Umtauschen geht nur diese Woche. Die Montageteams starten jeden Morgen um sieben auf dem Hof. Wer im Büro arbeitet, hat Gleitzeit zwischen sieben und neun Uhr. Was uns besonders wichtig ist: Sicherheit auf dem Dach. In den ersten zwei Wochen darf niemand von Ihnen allein auf ein Dach steigen, auch nicht, wenn Sie schon Erfahrung haben. Sie machen zuerst unsere interne Sicherheitsschulung, die ist am Donnerstag. Und noch etwas Schönes zum Schluss: Jedes Jahr im Juni machen wir ein Sommerfest mit allen Familien. Und wer einen neuen Kollegen oder eine Kollegin für uns gewinnt, bekommt nach der Probezeit fünfhundert Euro Prämie. Also: Erzählen Sie ruhig, wie es Ihnen bei uns gefällt!"
+    }
+   ]
+  },
+  {
+   "key": "td884ce34",
+   "prio": 0,
+   "ord": 195,
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Guten Tag, hier spricht Henrik Vogel vom Großhandel Vogel und Söhne. Es geht um Ihre Bestellung von letzter Woche, die Kühlregale. Leider können wir nur drei statt fünf Regale liefern, die anderen zwei kommen erst Ende des Monats. Sie können natürlich auch die ganze Bestellung zusammen Ende des Monats bekommen, dann sparen Sie die zweite Lieferpauschale. Bitte teilen Sie mir bis Mittwoch mit, was Ihnen lieber ist."
+    }
+   ]
+  },
+  {
+   "key": "t1345a933",
+   "prio": 0,
+   "ord": 196,
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Hallo, hier ist Doris Wendt aus der Personalabteilung. Ihr Antrag auf Bildungsurlaub für das Seminar im Februar ist genehmigt. Bitte reichen Sie nach dem Seminar die Teilnahmebescheinigung bei uns ein, sonst wird der Bildungsurlaub als normaler Urlaub gerechnet. Viel Spaß beim Seminar!"
+    }
+   ]
+  },
+  {
+   "key": "t9323b1fa",
+   "prio": 0,
+   "ord": 197,
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Hallo Frau Yıldırım, hier ist Tobias Kern, ich bin der neue Fahrer für die Tour Nord. Ich stehe hier vor der Firma Brandt, aber die Laderampe ist zu. Am Tor steht, dass Anlieferungen heute nur bis zwölf Uhr möglich sind, und es ist jetzt halb eins. Soll ich die Ware wieder mitbringen, oder können Sie bei Brandt anrufen, ob jemand aufmacht? Rufen Sie mich bitte schnell zurück."
+    }
+   ]
+  },
+  {
+   "key": "t2c4d2878",
+   "prio": 0,
+   "ord": 198,
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Guten Morgen, hier spricht Praxis Doktor Lorenz, Betriebsärztin. Für Ihre Vorsorgeuntersuchung am Dienstag um neun Uhr müssen Sie bitte nüchtern kommen, also vorher nichts essen. Wasser trinken ist erlaubt. Bringen Sie bitte auch Ihren Impfpass mit. Falls Sie den Termin nicht wahrnehmen können, sagen Sie bitte spätestens am Freitag ab."
+    }
+   ]
+  },
+  {
+   "key": "t9043c280",
+   "prio": 0,
+   "ord": 199,
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Hi, hier ist Marco aus der IT. Du hattest ja ein Problem mit deinem Laptop. Ich hab jetzt einen neuen für dich vorbereitet, den kannst du morgen ab zehn bei mir im Raum drei null fünf abholen. Bring bitte den alten mit und dein Ladekabel. Deine Dateien hab ich schon übertragen, du musst also nichts mehr sichern."
+    }
+   ]
+  },
+  {
+   "key": "t48680d6b",
+   "prio": 0,
+   "ord": 201,
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Guten Tag, hier spricht Claudia Reinhardt von der Kita Sonnenschein in Gelsenkirchen-Buer. Ich hätte gern Herrn Demir gesprochen, aber ich erreiche ihn leider nicht, deshalb spreche ich Ihnen das jetzt auf. Es geht um unseren Auftrag, die Malerarbeiten in den Gruppenräumen. Die sollten ja eigentlich in den Herbstferien stattfinden, also ab dem zwanzigsten Oktober. Jetzt haben wir aber erfahren, dass in dieser Zeit die Notbetreuung in genau diesen Räumen stattfinden muss. Wir müssten die Arbeiten also verschieben, am liebsten auf die Weihnachtsferien, vom dreiundzwanzigsten Dezember bis zum dritten Januar. Da ist die Kita komplett geschlossen. Wichtig ist noch: Wir brauchen unbedingt Farbe ohne Lösungsmittel, wegen der Kinder, das hatten wir ja schon besprochen. Und den Schlüssel bekommt Ihr Team dann beim Hausmeister, Herrn Pohl, unter null zwei null neun, vier vier, sieben eins, null drei. Ich wiederhole: null zwei null neun, vier vier, sieben eins, null drei. Bitte rufen Sie mich bis Freitag zurück, ob das klappt, sonst müssten wir uns leider eine andere Firma suchen. Meine Nummer ist null zwei null neun, vier vier, sieben eins, null null. Vielen Dank und auf Wiederhören."
+    }
+   ],
+   "fx": "telefon"
+  },
+  {
+   "key": "tc03a544b",
+   "prio": 0,
+   "ord": 202,
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Bitte wählen Sie ein Thema und erzählen Sie. Sie haben ungefähr zwei Minuten."
+    }
+   ]
+  },
+  {
+   "key": "t181a4ea0",
+   "prio": 0,
+   "ord": 203,
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Sie haben gesagt, ältere Menschen kommen oft nicht mit. Wer sollte ihnen Ihrer Meinung nach helfen?"
+    }
+   ]
+  },
+  {
+   "key": "tdc5ac08c",
+   "prio": 0,
+   "ord": 204,
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Glauben Sie, dass durch die Digitalisierung Arbeitsplätze verloren gehen?"
+    }
+   ]
+  },
+  {
+   "key": "te3c0accc",
+   "prio": 0,
+   "ord": 205,
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Wie sollten Firmen ihre Mitarbeitenden auf neue Technik vorbereiten?"
+    }
+   ]
+  },
+  {
+   "key": "tf4e538e2",
+   "prio": 0,
+   "ord": 206,
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Gibt es in Ihrem Beruf etwas, das man nie digitalisieren sollte?"
+    }
+   ]
+  },
+  {
+   "key": "t2c12e92c",
+   "prio": 0,
+   "ord": 207,
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Du, ich bin echt nervös. Ab nächsten Monat leite ich das Team im Wareneingang. Wie war das bei dir am Anfang?"
+    }
+   ]
+  },
+  {
+   "key": "t6978a63a",
+   "prio": 0,
+   "ord": 208,
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Und wie bist du mit den Kollegen umgegangen, die früher auf deiner Ebene waren? Das ist ja jetzt bei mir genauso."
+    }
+   ]
+  },
+  {
+   "key": "ta8dc36ce",
+   "prio": 0,
+   "ord": 209,
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Was machst du, wenn es im Team Streit gibt?"
+    }
+   ]
+  },
+  {
+   "key": "tdae81046",
+   "prio": 0,
+   "ord": 210,
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Ich hab Angst, dass ich jetzt immer erreichbar sein muss, auch nach Feierabend. Wie machst du das?"
+    }
+   ]
+  },
+  {
+   "key": "t0c71bf60",
+   "prio": 0,
+   "ord": 211,
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Danke dir! Hast du noch einen letzten Tipp für meine erste Woche?"
+    }
+   ]
+  },
+  {
+   "key": "tfcf71be2",
+   "prio": 0,
+   "ord": 212,
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Also, die Wartezeiten sind wirklich ein großes Problem. Was würden Sie vorschlagen?"
+    }
+   ]
+  },
+  {
+   "key": "tf538a61b",
+   "prio": 0,
+   "ord": 213,
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Ein Rückrufservice klingt gut. Aber schaffen wir die Rückrufe überhaupt mit so wenig Personal?"
+    }
+   ]
+  },
+  {
+   "key": "tb0847f7c",
+   "prio": 0,
+   "ord": 214,
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Was halten Sie davon, Kolleginnen aus dem Vertrieb zur Unterstützung zu holen?"
+    }
+   ]
+  },
+  {
+   "key": "t585c7cfc",
+   "prio": 0,
+   "ord": 215,
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Und die Website? Viele Fragen sind ja immer dieselben."
+    }
+   ]
+  },
+  {
+   "key": "t1ce84433",
+   "prio": 0,
+   "ord": 216,
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Gut, dann einigen wir uns. Was schlagen wir der Teamleitung konkret vor?"
+    }
+   ]
+  },
+  {
+   "key": "t69d5a0c8",
+   "prio": 0,
+   "ord": 217,
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Guten Tag, Frau Petrović, hier ist Autohaus Brandt, Werkstatt, Müller mein Name. Es geht um Ihr Auto. Also, die Bremsen sind fertig, aber wir mussten noch ein Ersatzteil bestellen, für das Licht hinten. Das kommt leider erst morgen. Deshalb ist Ihr Wagen nicht am Donnerstag fertig, sondern erst am Freitag. Sie können ihn am Freitag ab zehn Uhr abholen. Wir haben bis achtzehn Uhr geöffnet. Samstags ist die Werkstatt geschlossen. Bei Fragen erreichen Sie mich unter null zwei drei vier, fünfundfünfzig, zwölf, null acht. Auf Wiederhören!"
+    }
+   ]
+  },
+  {
+   "key": "t62377b8a",
+   "prio": 0,
+   "ord": 218,
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Hallo, Herr Osei, hier ist Frau Lange von der Kita Sonnenblume. Ich rufe wegen unseres Herbstfestes am Samstag an. Sie haben sich ja für das Buffet eingetragen und wollten einen Kuchen mitbringen. Wir haben aber schon sehr viele Kuchen, ungefähr fünfzehn Stück. Was uns noch fehlt, sind Getränke. Könnten Sie vielleicht stattdessen zwei Flaschen Apfelsaft mitbringen? Das wäre super. Die Becher und Teller haben wir schon. Falls das nicht geht, sagen Sie mir bitte morgen früh beim Bringen kurz Bescheid. Danke und bis dann!"
+    }
+   ]
+  },
+  {
+   "key": "ta42bb4fa",
+   "prio": 0,
+   "ord": 219,
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Guten Tag, hier spricht Frau Schulte vom Jobcenter Bochum, Team Arbeitsvermittlung. Diese Nachricht ist für Herrn Aziz. Herr Aziz, Sie haben am Mittwoch um zehn Uhr einen Termin bei mir. Bitte bringen Sie zu dem Termin Ihren Lebenslauf und Ihre Zeugnisse mit, wir wollen zusammen Bewerbungen schreiben. Ihren Personalausweis brauchen Sie dieses Mal nicht, den haben wir schon kopiert. Und denken Sie bitte daran: Sie müssen in den zweiten Stock, Zimmer zwei null sieben, nicht mehr ins Erdgeschoss. Vielen Dank."
+    }
+   ]
+  },
+  {
+   "key": "t8916197d",
+   "prio": 0,
+   "ord": 220,
+   "segments": [
+    {
+     "voice": "f3",
+     "text": "Hi Marco, ich bin’s, Svetlana. Du, wir wollten uns doch heute um fünf im Café Lindgren treffen. Das hat aber heute leider zu, da ist eine private Feier. Lass uns doch einfach direkt am Bahnhof treffen, vor der Buchhandlung, und dann gehen wir zusammen ins Kino. Der Film fängt um halb sechs an, das passt also gut. Wenn du später kommst, schreib mir einfach. Bis dann!"
+    }
+   ]
+  },
+  {
+   "key": "t036811a8",
+   "prio": 0,
+   "ord": 221,
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Und nun das Wetter für morgen, Dienstag. Am Vormittag ist es im ganzen Land noch trocken, teilweise sogar sonnig. Ab dem Mittag kommen von Westen dichte Wolken und dann gibt es kräftigen Regen, im Bergland auch Gewitter. Die Temperaturen: zwölf bis fünfzehn Grad. Am Mittwoch wird es dann wieder freundlicher."
+    }
+   ]
+  },
+  {
+   "key": "t7c013746",
+   "prio": 0,
+   "ord": 222,
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Achtung, Pendler in Köln: Wegen Bauarbeiten fährt die S-Bahn-Linie S zwölf am kommenden Wochenende nicht zwischen Köln-Deutz und Troisdorf. Zwischen diesen Bahnhöfen fahren Ersatzbusse. Bitte planen Sie etwa zwanzig Minuten mehr ein. Ab Montag früh fährt die S-Bahn wieder normal."
+    }
+   ]
+  },
+  {
+   "key": "ta926a7b6",
+   "prio": 0,
+   "ord": 223,
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Und hier noch ein Tipp für Familien: Am Sonntag ist im Stadtpark Gelsenkirchen wieder Kinderflohmarkt. Von zehn bis fünfzehn Uhr können Kinder dort Spielsachen, Bücher und Kleidung verkaufen oder tauschen. Ein Stand ist kostenlos, Sie müssen ihn aber vorher bis Freitag beim Bürgerbüro anmelden. Für Essen und Getränke sorgt der Förderverein der Grundschule."
+    }
+   ]
+  },
+  {
+   "key": "ta4bcfa8f",
+   "prio": 0,
+   "ord": 224,
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Eine Information der Stadtwerke Hamm: Das Hallenbad Süd bleibt ab heute für drei Wochen geschlossen. Grund ist ein Schaden an der Heizung. Die Schwimmkurse für Kinder finden in dieser Zeit im Hallenbad Nord statt, zur gleichen Uhrzeit. Saunabesucher können ihre Zehnerkarte auch im Hallenbad Nord benutzen."
+    }
+   ]
+  },
+  {
+   "key": "ta5c3cbf9",
+   "prio": 0,
+   "ord": 225,
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Und jetzt unser Gewinnspiel! Heute verlosen wir zwei Karten für das Konzert von „Die Lokalhelden“ am Samstag in der Westfalenhalle. Rufen Sie jetzt an unter null acht null null, fünfzig, fünfzig, zehn. Der Anruf ist kostenlos. Der zehnte Anrufer gewinnt. Viel Glück!"
+    }
+   ]
+  },
+  {
+   "key": "t70a90268",
+   "prio": 0,
+   "ord": 226,
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Entschuldigung, können Sie mir helfen? Ich suche eine Winterjacke für meinen Sohn."
+    },
+    {
+     "voice": "f2",
+     "text": "Ja, gern. Wie alt ist Ihr Sohn denn?"
+    },
+    {
+     "voice": "m1",
+     "text": "Er ist zehn. Er trägt Größe hundertvierzig, glaube ich, aber er wächst so schnell …"
+    },
+    {
+     "voice": "f2",
+     "text": "Dann nehmen Sie lieber gleich hundertsechsundvierzig. Hier, diese blaue Jacke ist sehr warm und wasserdicht. Die kostet neunundfünfzig Euro."
+    },
+    {
+     "voice": "m1",
+     "text": "Hm, das ist ein bisschen viel. Haben Sie auch etwas Günstigeres?"
+    },
+    {
+     "voice": "f2",
+     "text": "Ja, die grüne da drüben ist im Angebot, statt fünfundvierzig nur noch neunundzwanzig Euro. Die ist auch warm, aber nicht ganz so wasserdicht."
+    },
+    {
+     "voice": "m1",
+     "text": "Ach, die ist doch gut. Kann ich die umtauschen, wenn sie nicht passt? Mein Sohn ist ja nicht dabei."
+    },
+    {
+     "voice": "f2",
+     "text": "Natürlich, innerhalb von vierzehn Tagen mit Kassenbon. Nur Sachen im Angebot können Sie nicht zurückgeben, aber umtauschen geht."
+    },
+    {
+     "voice": "m1",
+     "text": "Okay, dann nehme ich die grüne."
+    }
+   ]
+  },
+  {
+   "key": "t27a589af",
+   "prio": 0,
+   "ord": 227,
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Hallo Herr Kaya, gut, dass ich Sie treffe! Ich wohne über Ihnen, Frau Berger."
+    },
+    {
+     "voice": "m1",
+     "text": "Ach, hallo Frau Berger. Ist etwas passiert?"
+    },
+    {
+     "voice": "f2",
+     "text": "Ja, in meinem Bad tropft es von der Decke, das Wasser kommt vom Dach, glaube ich. Ich habe schon die Hausverwaltung angerufen, aber da geht keiner ran."
+    },
+    {
+     "voice": "m1",
+     "text": "Oh je. Haben Sie es schon beim Hausmeister versucht? Herr Wolf wohnt doch im Haus nebenan."
+    },
+    {
+     "voice": "f2",
+     "text": "Nein, ich habe seine Nummer nicht."
+    },
+    {
+     "voice": "m1",
+     "text": "Die steht unten im Flur an der Tafel, neben den Briefkästen. Oder warten Sie, ich habe sie im Handy. Ich rufe ihn gleich für Sie an."
+    },
+    {
+     "voice": "f2",
+     "text": "Das wäre wirklich nett, danke!"
+    }
+   ]
+  },
+  {
+   "key": "t3361caeb",
+   "prio": 0,
+   "ord": 228,
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Guten Tag. Ich möchte meine Tochter für den Schwimmkurs anmelden."
+    },
+    {
+     "voice": "m1",
+     "text": "Gern. Wie alt ist Ihre Tochter?"
+    },
+    {
+     "voice": "f2",
+     "text": "Sie ist sechs Jahre alt und kann noch gar nicht schwimmen."
+    },
+    {
+     "voice": "m1",
+     "text": "Dann passt der Anfängerkurs. Der ist immer dienstags um sechzehn Uhr, zehnmal. Der Kurs am Donnerstag ist leider schon voll."
+    },
+    {
+     "voice": "f2",
+     "text": "Dienstag ist gut. Was kostet das?"
+    },
+    {
+     "voice": "m1",
+     "text": "Achtzig Euro für alle zehn Termine, der Eintritt ist schon dabei. Wenn Sie den Familienpass der Stadt haben, zahlen Sie nur die Hälfte."
+    },
+    {
+     "voice": "f2",
+     "text": "Den habe ich, hier."
+    },
+    {
+     "voice": "m1",
+     "text": "Wunderbar. Dann brauche ich nur noch dieses Formular hier, bitte unterschreiben."
+    }
+   ]
+  },
+  {
+   "key": "t7424c52e",
+   "prio": 0,
+   "ord": 229,
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Du, Aylin, hast du am Samstag Zeit? Wir ziehen doch um und brauchen noch Hilfe."
+    },
+    {
+     "voice": "f2",
+     "text": "Samstag? Hm, vormittags muss ich arbeiten, bis eins. Aber am Nachmittag kann ich kommen."
+    },
+    {
+     "voice": "m1",
+     "text": "Super! Die Möbel tragen wir schon am Vormittag, mein Bruder hilft mir. Am Nachmittag wollen wir die Küche einräumen und die Lampen aufhängen."
+    },
+    {
+     "voice": "f2",
+     "text": "Das kann ich gut. Soll ich etwas mitbringen?"
+    },
+    {
+     "voice": "m1",
+     "text": "Nein, nein, Essen gibt’s bei uns, wir bestellen Pizza. Bring einfach gute Laune mit."
+    },
+    {
+     "voice": "f2",
+     "text": "Alles klar. Dann bin ich so um zwei da."
+    }
+   ]
+  },
+  {
+   "key": "t428c4e7e",
+   "prio": 0,
+   "ord": 230,
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Guten Abend und willkommen bei „Stadtgespräch“. Heute fragen wir: Sollen Supermärkte auch am Sonntag öffnen? Unser erster Anrufer ist Herr Lukić."
+    },
+    {
+     "voice": "m1",
+     "text": "Ja, hallo. Also, ich arbeite im Schichtdienst, im Krankenhaus. Unter der Woche schaffe ich es oft nicht vor acht Uhr abends in den Supermarkt, und dann ist der Kühlschrank leer. Für Leute wie mich wäre es eine große Hilfe, wenn man auch sonntags einkaufen könnte. Andere Länder machen das ja auch, und da funktioniert es."
+    }
+   ]
+  },
+  {
+   "key": "t8e96c9fd",
+   "prio": 0,
+   "ord": 231,
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Danke, Herr Lukić. Jetzt ist Frau Nguyen am Telefon."
+    },
+    {
+     "voice": "f2",
+     "text": "Guten Abend. Ich arbeite selbst als Kassiererin. Und ich sage ganz klar: Nein! Der Sonntag ist der einzige Tag, an dem meine ganze Familie zusammen ist. Wenn die Geschäfte aufmachen, müssen wir Verkäuferinnen arbeiten, und dann sehe ich meine Kinder noch weniger. Man kann doch am Samstag einkaufen, das reicht."
+    }
+   ]
+  },
+  {
+   "key": "t1f85df30",
+   "prio": 0,
+   "ord": 232,
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Und unser letzter Anrufer heute: Herr Brandt."
+    },
+    {
+     "voice": "m2",
+     "text": "Ja, guten Abend. Ich finde, man muss da einen Kompromiss finden. Jeden Sonntag – das ist mir zu viel. Aber vielleicht vier Sonntage im Jahr, zum Beispiel vor Weihnachten, das finde ich in Ordnung. Dann gibt es auch Feste in der Innenstadt, die Leute kommen gern. Wichtig ist nur, dass die Mitarbeiter dafür mehr Geld bekommen."
+    }
+   ]
+  },
+  {
+   "key": "t8678a1b8",
+   "prio": 0,
+   "ord": 233,
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Woher kommen Sie genau? Können Sie den Namen der Stadt buchstabieren?"
+    }
+   ]
+  },
+  {
+   "key": "t69f2fb4b",
+   "prio": 0,
+   "ord": 234,
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Wie sind Sie nach Deutschland gekommen und seit wann sind Sie hier?"
+    }
+   ]
+  },
+  {
+   "key": "t1b761729",
+   "prio": 0,
+   "ord": 235,
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Was machen Sie gern in Ihrer Freizeit?"
+    }
+   ]
+  },
+  {
+   "key": "t5f843b1c",
+   "prio": 0,
+   "ord": 236,
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Wie haben Sie Deutsch gelernt – nur im Kurs oder auch anders?"
+    }
+   ]
+  },
+  {
+   "key": "tb7f372d3",
+   "prio": 0,
+   "ord": 237,
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Und was möchten Sie in fünf Jahren machen?"
+    }
+   ]
+  },
+  {
+   "key": "t5c7c9dc4",
+   "prio": 0,
+   "ord": 238,
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Sie haben gesagt, Sie kaufen im Supermarkt ein. Warum nicht auf dem Markt?"
+    }
+   ]
+  },
+  {
+   "key": "t3ee00050",
+   "prio": 0,
+   "ord": 239,
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Achten Sie beim Einkaufen auf den Preis oder mehr auf die Qualität?"
+    }
+   ]
+  },
+  {
+   "key": "t20ac9602",
+   "prio": 0,
+   "ord": 240,
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Gibt es Lebensmittel aus Ihrem Heimatland, die Sie in Deutschland vermissen?"
+    }
+   ]
+  },
+  {
+   "key": "t22070191",
+   "prio": 0,
+   "ord": 241,
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Kaufen Sie manchmal auch im Internet ein? Warum oder warum nicht?"
+    }
+   ]
+  },
+  {
+   "key": "t59d32fca",
+   "prio": 0,
+   "ord": 242,
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Also, ich finde, wir machen das am Samstag, am Vormittag um neun. Was meinst du?"
+    }
+   ]
+  },
+  {
+   "key": "t35dd9b57",
+   "prio": 0,
+   "ord": 243,
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Und wie sagen wir den anderen Bescheid? Ich könnte einen Zettel im Flur aufhängen."
+    }
+   ]
+  },
+  {
+   "key": "tea88b857",
+   "prio": 0,
+   "ord": 244,
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Ich hätte gern ein paar Blumen im Hof. Sollen wir zusammen Pflanzen kaufen?"
+    }
+   ]
+  },
+  {
+   "key": "td417a3e3",
+   "prio": 0,
+   "ord": 245,
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Wer kauft die Müllsäcke und Handschuhe? Ich habe am Freitag leider keine Zeit."
+    }
+   ]
+  },
+  {
+   "key": "tf72cd440",
+   "prio": 0,
+   "ord": 246,
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Und nach der Arbeit? Wir könnten zusammen grillen. Was hältst du davon?"
+    }
+   ]
+  },
+  {
+   "key": "t79834ea7",
+   "prio": 0,
+   "ord": 247,
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Gut, dann fragen wir noch den Vermieter, ob er die Pflanzen bezahlt. Machst du das oder soll ich?"
+    }
+   ]
+  },
+  {
+   "key": "tc08ab54d",
+   "prio": 0,
+   "ord": 248,
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Und nun zum Wetter. Heute Nacht wird es im Süden Bayerns sehr kalt, bis minus acht Grad, und auf den Straßen kann es glatt werden. Bitte fahren Sie morgen früh vorsichtig. Im Norden bleibt es dagegen mild bei plus vier Grad, dort regnet es aber immer wieder. Am Wochenende kommt dann von Westen trockene und sonnige Luft."
+    }
+   ]
+  },
+  {
+   "key": "td63a81d6",
+   "prio": 0,
+   "ord": 249,
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Gute Nachricht für alle, die in Frankfurt mit dem Rad unterwegs sind: Ab Montag können Sie Leihräder der Stadt die ersten dreißig Minuten kostenlos nutzen. Danach kostet jede halbe Stunde einen Euro. Sie brauchen nur die App der Verkehrsbetriebe und ein Konto. Mit einer Monatskarte für Bus und Bahn ist sogar die erste Stunde gratis."
+    }
+   ]
+  },
+  {
+   "key": "tb202848c",
+   "prio": 0,
+   "ord": 250,
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Achtung, Eltern in Bremen: Wegen eines Streiks bleiben morgen, am Donnerstag, viele städtische Kitas geschlossen. Eine Notbetreuung gibt es nur für Kinder, deren Eltern im Krankenhaus, bei der Polizei oder der Feuerwehr arbeiten. Kitas von Kirchen und anderen freien Trägern sind nicht betroffen. Welche Kitas genau geschlossen sind, sehen Sie auf der Internetseite der Stadt."
+    }
+   ]
+  },
+  {
+   "key": "tdeccc507",
+   "prio": 0,
+   "ord": 251,
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Und hier unser Veranstaltungstipp: Am Samstag ist wieder „Lange Nacht der Museen“ in Stuttgart. Mit einem Ticket für zwölf Euro können Sie von neunzehn Uhr bis zwei Uhr nachts über vierzig Museen besuchen. Zwischen den Museen fahren kostenlose Shuttlebusse. Kinder unter zwölf Jahren haben freien Eintritt. Tickets gibt es online und an allen Museumskassen."
+    }
+   ]
+  },
+  {
+   "key": "td2925e17",
+   "prio": 0,
+   "ord": 252,
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Eine Meldung aus der Wirtschaft: Immer mehr Betriebe in Sachsen finden keine Auszubildenden. Nach Angaben der Handwerkskammer sind zurzeit über dreitausend Ausbildungsplätze frei, vor allem bei Bäckereien, im Hotel und in Restaurants. Wer noch eine Stelle sucht, kann sich auch jetzt noch bewerben – viele Ausbildungen beginnen auch im Herbst oder Winter."
+    }
+   ]
+  },
+  {
+   "key": "tefcd7819",
+   "prio": 0,
+   "ord": 253,
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Hallo und herzlich willkommen bei Mittendrin! Heute ist bei mir im Studio Olena Kravets. Frau Kravets, Sie sind vor drei Jahren aus der Ukraine nach Deutschland gekommen und haben jetzt ein eigenes kleines Café in Erfurt. Herzlichen Glückwunsch erst mal!"
+    },
+    {
+     "voice": "f2",
+     "text": "Danke schön! Ja, das Café gibt es jetzt seit acht Monaten. Es heißt „Varenyky“, das sind gefüllte Teigtaschen, so ähnlich wie Maultaschen."
+    },
+    {
+     "voice": "m1",
+     "text": "Und das haben Sie auch in der Ukraine schon gemacht? Ein Café geführt?"
+    },
+    {
+     "voice": "f2",
+     "text": "Nein, gar nicht. In Charkiw war ich Buchhalterin in einer großen Firma, fünfzehn Jahre lang. Kochen war nur mein Hobby. Aber hier in Deutschland wird mein Abschluss nicht so einfach anerkannt. Ich hätte noch zwei Jahre eine Weiterbildung machen müssen."
+    },
+    {
+     "voice": "m1",
+     "text": "Und dann dachten Sie: Ich mache lieber etwas ganz Neues?"
+    },
+    {
+     "voice": "f2",
+     "text": "Ja, so ungefähr. Im Integrationskurs haben wir zum Schluss ein Fest gemacht, und jeder hat etwas gekocht. Ich habe Varenyky mitgebracht, und alle waren total begeistert. Meine Kursleiterin hat gesagt: Olena, damit musst du etwas machen! Am Anfang habe ich gelacht."
+    },
+    {
+     "voice": "m1",
+     "text": "Aber dann haben Sie es wirklich gemacht."
+    },
+    {
+     "voice": "f2",
+     "text": "Ja. Zuerst habe ich nur auf dem Wochenmarkt verkauft, jeden Samstag, ein ganzes Jahr. So habe ich gesehen, ob die Leute das wirklich mögen. Und sie mögen es! Viele Stammkunden kommen jetzt ins Café."
+    },
+    {
+     "voice": "m1",
+     "text": "Ein eigenes Geschäft in Deutschland zu eröffnen, ist ja nicht so einfach. Da braucht man viele Papiere, Genehmigungen …"
+    },
+    {
+     "voice": "f2",
+     "text": "Oh ja! Das war das Schwierigste. Gesundheitsamt, Gewerbeamt, Finanzamt … Aber ich hatte Hilfe von einer Beratungsstelle für Gründerinnen. Die Beratung war kostenlos, und die Beraterin hat sogar Russisch gesprochen. Ohne sie hätte ich das nicht geschafft."
+    },
+    {
+     "voice": "m1",
+     "text": "Und wie haben Sie das Café finanziert?"
+    },
+    {
+     "voice": "f2",
+     "text": "Ich habe einen kleinen Kredit von der Bank bekommen, und mein Bruder hat mir auch etwas Geld geliehen. Die Möbel habe ich fast alle gebraucht gekauft, im Internet. Das hat viel Geld gespart."
+    },
+    {
+     "voice": "m1",
+     "text": "Arbeiten Sie allein im Café?"
+    },
+    {
+     "voice": "f2",
+     "text": "Nein, zum Glück nicht. Ich habe eine Mitarbeiterin, Anna, sie ist Studentin und arbeitet am Wochenende. Und meine Tochter hilft nachmittags nach der Schule, wenn sie Zeit hat. Unter der Woche mache ich aber das meiste allein. Ich stehe jeden Tag um fünf Uhr auf, weil ich alles frisch mache."
+    },
+    {
+     "voice": "m1",
+     "text": "Das klingt anstrengend. Haben Sie auch mal frei?"
+    },
+    {
+     "voice": "f2",
+     "text": "Montags ist das Café geschlossen. Das ist mein freier Tag. Dann schlafe ich lange und gehe mit meiner Tochter spazieren."
+    },
+    {
+     "voice": "m1",
+     "text": "Und was planen Sie für die Zukunft?"
+    },
+    {
+     "voice": "f2",
+     "text": "Ich möchte nächstes Jahr Kochkurse anbieten, an zwei Abenden pro Monat. Viele Gäste fragen mich nach den Rezepten. Und vielleicht, irgendwann, ein zweites Café, in Weimar. Aber eins nach dem anderen."
+    },
+    {
+     "voice": "m1",
+     "text": "Frau Kravets, vielen Dank und weiterhin viel Erfolg!"
+    }
+   ]
+  },
+  {
+   "key": "tafa0de48",
+   "prio": 0,
+   "ord": 254,
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Liebe Kundinnen und Kunden, nur heute: In unserer Haushaltsabteilung im dritten Stock bekommen Sie auf alle Töpfe und Pfannen dreißig Prozent Rabatt. Außerdem gibt es beim Kauf einer Kaffeemaschine ein Paket Kaffee gratis dazu. Das Angebot gilt nur, solange der Vorrat reicht."
+    }
+   ]
+  },
+  {
+   "key": "tdbb79d77",
+   "prio": 0,
+   "ord": 255,
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Hallo Frau Weber, hier ist Klaus Richter vom Elternbeirat. Es geht um den Ausflug der Klasse vier b am Freitag. Wir fahren nicht mit dem Bus, sondern mit dem Zug. Treffpunkt ist deshalb nicht mehr vor der Schule, sondern um acht Uhr am Hauptbahnhof, vor dem Reisezentrum. Bitte geben Sie Ihrer Tochter ein Lunchpaket mit. Danke!"
+    }
+   ],
+   "fx": "telefon"
+  },
+  {
+   "key": "te117443d",
+   "prio": 0,
+   "ord": 256,
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Information für Passagiere des Fluges LH zwei null zwei nach Wien: Wegen eines technischen Problems verzögert sich der Abflug um etwa eine Stunde. Neue Abflugzeit ist fünfzehn Uhr vierzig. Das Gate bleibt unverändert, A siebzehn. Sie erhalten am Schalter einen Gutschein für ein Getränk."
+    }
+   ]
+  },
+  {
+   "key": "t30b83ab8",
+   "prio": 0,
+   "ord": 257,
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Guten Tag, hier ist die Praxis Doktor Engel. Wir haben vom zweiten bis zum sechzehnten August Urlaub. In dringenden Fällen wenden Sie sich bitte an die Praxis Doktor Yılmaz in der Goethestraße zwölf. Rezepte für Dauermedikamente können Sie aber auch während unseres Urlaubs per E-Mail bestellen und in der Apotheke am Markt abholen."
+    }
+   ],
+   "fx": "telefon"
+  },
+  {
+   "key": "t5b502a80",
+   "prio": 0,
+   "ord": 258,
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Sehr geehrte Fahrgäste, in wenigen Minuten erreichen wir Hannover Hauptbahnhof. Wegen einer Störung endet dieser Zug heute leider in Hannover. Reisende nach Hamburg nutzen bitte den Intercity auf Gleis elf, Abfahrt in zwanzig Minuten. Ihre Fahrkarten gelten auch in diesem Zug."
+    }
+   ]
+  },
+  {
+   "key": "t26943fc3",
+   "prio": 0,
+   "ord": 259,
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Hallo, ich heiße Tobias. Und Sie? Wie ist Ihr Name?"
+    }
+   ]
+  },
+  {
+   "key": "t1304662a",
+   "prio": 0,
+   "ord": 260,
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Schön, Sie kennenzulernen. Woher kommen Sie denn ursprünglich?"
+    }
+   ]
+  },
+  {
+   "key": "t54e22efb",
+   "prio": 0,
+   "ord": 261,
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Und wo wohnen Sie jetzt? In einer Wohnung oder in einem Haus?"
+    }
+   ]
+  },
+  {
+   "key": "ted378aeb",
+   "prio": 0,
+   "ord": 262,
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Wohnen Sie dort allein oder mit Familie?"
+    }
+   ]
+  },
+  {
+   "key": "td21a0505",
+   "prio": 0,
+   "ord": 263,
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Was machen Sie beruflich – oder was möchten Sie gern machen?"
+    }
+   ]
+  },
+  {
+   "key": "t626c5926",
+   "prio": 0,
+   "ord": 264,
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Wie lange lernen Sie schon Deutsch?"
+    }
+   ]
+  },
+  {
+   "key": "tdbe81522",
+   "prio": 0,
+   "ord": 265,
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Was machen Sie am Wochenende am liebsten?"
+    }
+   ]
+  },
+  {
+   "key": "t16509be7",
+   "prio": 0,
+   "ord": 266,
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Fahren Sie manchmal in Ihr Heimatland?"
+    }
+   ]
+  },
+  {
+   "key": "t64b49d18",
+   "prio": 0,
+   "ord": 267,
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Worum geht es denn in Ihrem Text?"
+    }
+   ]
+  },
+  {
+   "key": "t8db3802d",
+   "prio": 0,
+   "ord": 268,
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Aha. Und warum kommen so viele Tiere ins Tierheim? Steht dazu etwas in Ihrem Text?"
+    }
+   ]
+  },
+  {
+   "key": "ta97673ec",
+   "prio": 0,
+   "ord": 269,
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Haben Sie selbst ein Haustier – oder hatten Sie mal eins?"
+    }
+   ]
+  },
+  {
+   "key": "ta54b6102",
+   "prio": 0,
+   "ord": 270,
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Und wie ist das in Ihrem Heimatland? Haben dort viele Leute Hunde oder Katzen in der Wohnung?"
+    }
+   ]
+  },
+  {
+   "key": "t7ba2e02e",
+   "prio": 0,
+   "ord": 271,
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Ich finde ja, Kinder sollten mit Tieren aufwachsen. Sehen Sie das auch so?"
+    }
+   ]
+  },
+  {
+   "key": "tbc2fa2d3",
+   "prio": 0,
+   "ord": 272,
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Aber ein Hund in einer kleinen Wohnung – ist das nicht schlecht für das Tier?"
+    }
+   ]
+  },
+  {
+   "key": "tb98fd735",
+   "prio": 0,
+   "ord": 273,
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Was würden Sie jemandem raten, der sich ein Haustier kaufen möchte?"
+    }
+   ]
+  },
+  {
+   "key": "tc7284b25",
+   "prio": 0,
+   "ord": 274,
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Also, wann wollen wir Natalia im Krankenhaus besuchen? Ich könnte morgen Abend."
+    }
+   ]
+  },
+  {
+   "key": "t35b61670",
+   "prio": 0,
+   "ord": 275,
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Was bringen wir ihr mit? Ich dachte an Blumen."
+    }
+   ]
+  },
+  {
+   "key": "t5dc76332",
+   "prio": 0,
+   "ord": 276,
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Und ihre Wohnung? Jemand muss ja die Post holen und die Pflanzen gießen."
+    }
+   ]
+  },
+  {
+   "key": "ta8c796fd",
+   "prio": 0,
+   "ord": 277,
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Das größte Problem sind die Kinder. Ihr Mann arbeitet bis sechs. Wer holt die Kinder von der Schule ab?"
+    }
+   ]
+  },
+  {
+   "key": "ta39fe1c3",
+   "prio": 0,
+   "ord": 278,
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Ich kann das nur am Dienstag und Donnerstag. Kannst du die anderen Tage übernehmen?"
+    }
+   ]
+  },
+  {
+   "key": "t73f4e6ba",
+   "prio": 0,
+   "ord": 279,
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Und wenn sie nach Hause kommt? Sie kann ja eine Weile nicht richtig laufen."
+    }
+   ]
+  },
+  {
+   "key": "t4f1959cc",
+   "prio": 0,
+   "ord": 280,
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Gut, dann fassen wir mal zusammen. Wer macht jetzt was?"
+    }
+   ]
+  },
+  {
+   "key": "t067aa5cb",
+   "prio": 0,
+   "ord": 281,
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Also für mich ist Homeoffice ein Segen. Ich hab zwei kleine Kinder, und früher bin ich jeden Tag anderthalb Stunden gependelt. Jetzt kann ich die Kinder morgens in die Kita bringen und bin trotzdem um halb neun am Schreibtisch. Ich arbeite sogar mehr als früher, ehrlich gesagt, weil ich nicht mehr im Stau steh."
+    }
+   ]
+  },
+  {
+   "key": "tf4c0817e",
+   "prio": 0,
+   "ord": 282,
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Ich bin ja eher skeptisch. Ich hab das zwei Jahre gemacht, während Corona, und irgendwann ist mir die Decke auf den Kopf gefallen. Mir fehlt einfach der Kontakt, der Kaffee mit den Kollegen, das kurze Gespräch auf dem Flur. Jetzt geh ich wieder jeden Tag ins Büro, und ich bin viel zufriedener."
+    }
+   ]
+  },
+  {
+   "key": "t9ded992f",
+   "prio": 0,
+   "ord": 283,
+   "segments": [
+    {
+     "voice": "f3",
+     "text": "Bei uns in der Firma ist das ganz klar geregelt: zwei Tage zu Hause, drei Tage im Büro. Und das finde ich eigentlich ideal. Die Tage im Büro nutz ich für Besprechungen, und zu Hause mach ich die Sachen, für die ich Ruhe brauche, Berichte schreiben zum Beispiel. Das Einzige, was mich stört: Wir haben keine festen Schreibtische mehr."
+    }
+   ]
+  },
+  {
+   "key": "t9d4ed346",
+   "prio": 0,
+   "ord": 284,
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Für meinen Job ist Homeoffice leider gar keine Option, ich bin Elektriker. Aber meine Frau arbeitet im Büro einer Versicherung, und sie ist fast nur zu Hause. Was ich sehe: Sie kann schlechter abschalten. Oft sitzt sie abends noch am Laptop und liest E-Mails. Da muss man echt aufpassen."
+    }
+   ]
+  },
+  {
+   "key": "tf3b3896e",
+   "prio": 0,
+   "ord": 285,
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Ich bin Teamleiterin, und ich muss sagen: Für mich als Chefin ist es schwieriger geworden. Man merkt am Bildschirm nicht so schnell, wenn es jemandem nicht gut geht. Deshalb mach ich jetzt mit jedem im Team einmal im Monat ein persönliches Gespräch, und zwar wirklich vor Ort, nicht per Video."
+    }
+   ]
+  },
+  {
+   "key": "t8cc7c64f",
+   "prio": 0,
+   "ord": 286,
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Willkommen bei Arbeitswelten. Mein Gast heute ist Dr. Leyla Şahin. Sie hat vor drei Jahren eine Hausarztpraxis in einem kleinen Dorf in Mecklenburg übernommen – obwohl sie vorher in Berlin gelebt hat. Frau Şahin, wie kam es dazu?"
+    },
+    {
+     "voice": "f2",
+     "text": "Ja, das fragen mich viele. Ich habe nach dem Studium sechs Jahre in einem großen Berliner Krankenhaus gearbeitet, in der inneren Medizin. Die Arbeit war spannend, aber die Nachtdienste und die vielen Überstunden … Irgendwann wollte ich meine Patienten nicht nur ein paar Tage, sondern über Jahre begleiten. Das geht eigentlich nur als Hausärztin."
+    },
+    {
+     "voice": "m1",
+     "text": "Aber warum gerade auf dem Land?"
+    },
+    {
+     "voice": "f2",
+     "text": "Ganz ehrlich: Am Anfang war das gar nicht der Plan. Ich hatte eine Anzeige gelesen, dass der alte Hausarzt in Groß Lassow einen Nachfolger sucht, schon seit zwei Jahren. Ich bin dann einfach mal hingefahren, nur um es mir anzuschauen. Und dann hab ich mit Doktor Möller gesprochen, der war damals schon einundsiebzig, und er hat gesagt: Wenn niemand kommt, müssen die Leute hier dreißig Kilometer zum nächsten Arzt fahren. Das hat mich nicht mehr losgelassen."
+    },
+    {
+     "voice": "m1",
+     "text": "Hatten Sie keine Angst vor dem Leben im Dorf?"
+    },
+    {
+     "voice": "f2",
+     "text": "Doch, natürlich. Ich bin ja ein Stadtmensch. Ich dachte, ich bin da die Fremde, auch wegen meines Namens. Aber das Gegenteil war der Fall. Die Leute haben mich unglaublich herzlich aufgenommen. In der ersten Woche standen ständig Kuchen und Marmelade vor der Tür."
+    },
+    {
+     "voice": "m1",
+     "text": "Wie sieht denn ein normaler Arbeitstag bei Ihnen aus?"
+    },
+    {
+     "voice": "f2",
+     "text": "Die Sprechstunde geht von acht bis zwölf, da kommen oft fünfzig, sechzig Patienten. Nachmittags mache ich Hausbesuche, weil viele meiner Patienten sehr alt sind und nicht mehr Auto fahren können. Da bin ich manchmal hundert Kilometer am Tag unterwegs."
+    },
+    {
+     "voice": "m1",
+     "text": "Das klingt nach sehr viel Arbeit."
+    },
+    {
+     "voice": "f2",
+     "text": "Ist es auch. Aber ich habe ein tolles Team, zwei medizinische Fachangestellte und seit letztem Jahr auch eine Kollegin, die zwei Tage pro Woche mitarbeitet. Und das Schöne ist: Ich bin meine eigene Chefin. Ich kann selbst entscheiden, wann ich Urlaub mache."
+    },
+    {
+     "voice": "m1",
+     "text": "Die Politik versucht ja, junge Ärztinnen und Ärzte aufs Land zu holen. Hilft das?"
+    },
+    {
+     "voice": "f2",
+     "text": "Teilweise. Ich habe zum Beispiel einen Zuschuss von fünfzigtausend Euro für die Praxis bekommen. Das hilft. Aber das Wichtigste ist eigentlich etwas anderes: Junge Ärzte haben oft Familie, und die Partner brauchen auch einen Job, die Kinder brauchen Schulen. Da muss die Region mehr tun."
+    },
+    {
+     "voice": "m1",
+     "text": "Würden Sie es noch einmal machen?"
+    },
+    {
+     "voice": "f2",
+     "text": "Sofort. Ich vermisse Berlin manchmal, die Kinos, die Restaurants. Aber ich fahr ja ab und zu hin, das sind nur zwei Stunden. Hier habe ich das Gefühl, dass meine Arbeit wirklich gebraucht wird."
+    }
+   ]
+  },
+  {
+   "key": "t7bff5be7",
+   "prio": 0,
+   "ord": 287,
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Liebe Besucherinnen und Besucher, das Museum schließt heute aufgrund einer Veranstaltung bereits um sechzehn Uhr. Die Sonderausstellung „Farben des Nordens“ im zweiten Stock ist ab fünfzehn Uhr nicht mehr zugänglich. Ihre Eintrittskarte gilt auch morgen noch einmal. Vielen Dank für Ihr Verständnis."
+    }
+   ]
+  },
+  {
+   "key": "tce01f80e",
+   "prio": 0,
+   "ord": 288,
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Sie sind verbunden mit dem Bürgeramt der Stadt Kassel. Leider rufen Sie außerhalb unserer Servicezeiten an. Termine für Personalausweis und Reisepass können Sie rund um die Uhr online buchen. Für eine Ummeldung brauchen Sie keinen Termin mehr – kommen Sie einfach montags bis freitags zwischen acht und zwölf Uhr vorbei."
+    }
+   ]
+  },
+  {
+   "key": "tb84ec43f",
+   "prio": 0,
+   "ord": 289,
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Und hier ein Hinweis für alle Autofahrer: Ab dem ersten Januar gilt in der Innenstadt von Freiburg auf allen Straßen Tempo dreißig. Ausgenommen sind nur die großen Hauptstraßen, dort bleibt es bei fünfzig. Die Stadt will damit Lärm reduzieren und die Sicherheit für Radfahrer verbessern."
+    }
+   ]
+  },
+  {
+   "key": "t7be0eb30",
+   "prio": 0,
+   "ord": 290,
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Achtung, Passagiere des Fluges nach Istanbul: Wegen starken Nebels in Istanbul kann Ihr Flug heute nicht starten. Sie werden auf den morgigen Flug um sieben Uhr fünfzehn umgebucht. Die Fluggesellschaft stellt Ihnen ein Hotelzimmer zur Verfügung. Bitte melden Sie sich dafür am Schalter fünfzehn."
+    }
+   ]
+  },
+  {
+   "key": "t50040482",
+   "prio": 0,
+   "ord": 291,
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Gesundheitstipp der Woche: Im Winter trinken viele Menschen zu wenig, weil sie weniger Durst haben als im Sommer. Die Heizungsluft trocknet aber die Schleimhäute aus. Ärzte empfehlen deshalb auch in der kalten Jahreszeit mindestens anderthalb Liter am Tag – am besten Wasser oder ungesüßten Tee."
+    }
+   ]
+  },
+  {
+   "key": "t7233f490",
+   "prio": 0,
+   "ord": 292,
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Danke, das war sehr persönlich. Haben Sie heute noch Kontakt – bzw. wie oft sind Sie dort?"
+    }
+   ]
+  },
+  {
+   "key": "t5831cd5b",
+   "prio": 0,
+   "ord": 293,
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Was glauben Sie, wäre Ihr Leben ohne diese Person oder diesen Ort anders verlaufen?"
+    }
+   ]
+  },
+  {
+   "key": "t54ccba3f",
+   "prio": 0,
+   "ord": 294,
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Gibt es in Deutschland etwas Ähnliches für Sie?"
+    }
+   ]
+  },
+  {
+   "key": "tc5520133",
+   "prio": 0,
+   "ord": 295,
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Und würden Sie sagen, man kann so etwas bewusst suchen, oder passiert das einfach?"
+    }
+   ]
+  },
+  {
+   "key": "t23050c1d",
+   "prio": 0,
+   "ord": 296,
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Ich finde, so ein Verbot ist längst überfällig. Kinder sind ja kaum noch ohne Handy zu sehen. Wie sehen Sie das?"
+    }
+   ]
+  },
+  {
+   "key": "t0d2c6686",
+   "prio": 0,
+   "ord": 297,
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Aber die Eltern schaffen es doch offensichtlich nicht allein. Braucht es da nicht ein Gesetz?"
+    }
+   ]
+  },
+  {
+   "key": "t86e150a5",
+   "prio": 0,
+   "ord": 298,
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Was halten Sie von dem Argument, dass Jugendliche das Verbot sowieso umgehen?"
+    }
+   ]
+  },
+  {
+   "key": "tf8fba62b",
+   "prio": 0,
+   "ord": 299,
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Und wie ist das in Ihrem Heimatland? Wird da auch darüber gesprochen?"
+    }
+   ]
+  },
+  {
+   "key": "t6798d1bc",
+   "prio": 0,
+   "ord": 300,
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Was könnte die Schule Ihrer Meinung nach konkret tun?"
+    }
+   ]
+  },
+  {
+   "key": "t047a5623",
+   "prio": 0,
+   "ord": 301,
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Gut, versuchen wir mal, zusammenzufassen: Wo sind wir uns einig und wo nicht?"
+    }
+   ]
+  },
+  {
+   "key": "tad78b155",
+   "prio": 0,
+   "ord": 302,
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Also, ich würde vorschlagen, wir fahren gleich nächsten Monat, solange das Wetter noch gut ist. Was meinen Sie?"
+    }
+   ]
+  },
+  {
+   "key": "t0e86a781",
+   "prio": 0,
+   "ord": 303,
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Mit dem Zug ist es ziemlich teuer. Wie wäre es mit einem Fernbus?"
+    }
+   ]
+  },
+  {
+   "key": "t4f67cde2",
+   "prio": 0,
+   "ord": 304,
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Und wo übernachten wir? Ich dachte an eine Jugendherberge."
+    }
+   ]
+  },
+  {
+   "key": "tf98315ec",
+   "prio": 0,
+   "ord": 305,
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Für das Programm: Ich möchte unbedingt in den Bundestag. Was wäre Ihnen wichtig?"
+    }
+   ]
+  },
+  {
+   "key": "t3c6c3019",
+   "prio": 0,
+   "ord": 306,
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Manche im Kurs haben wenig Geld. Wie lösen wir das?"
+    }
+   ]
+  },
+  {
+   "key": "t3e873086",
+   "prio": 0,
+   "ord": 307,
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Gut, dann teilen wir mal die Aufgaben auf. Was übernehmen Sie?"
     }
    ]
   }
