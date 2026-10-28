@@ -1,40 +1,30 @@
 {
  "hinweis": "Zusammengefasste Besucherzahlen (Cloudflare Web Analytics, ohne Cookies). Automatisch erzeugt.",
- "stand": "2026-10-27T09:44:11.251Z",
- "tag": "2026-10-26",
+ "stand": "2026-10-28T10:29:23.136Z",
+ "tag": "2026-10-27",
  "gestern": {
-  "besuche": 23,
-  "seitenaufrufe": 77
+  "besuche": 13,
+  "seitenaufrufe": 37
  },
  "letzte7Tage": {
-  "besuche": 143,
-  "seitenaufrufe": 556
+  "besuche": 128,
+  "seitenaufrufe": 543
  },
  "herkunft": [
   {
    "name": "deutsch-mit-dennis.de",
    "besuche": 0,
-   "aufrufe": 413
+   "aufrufe": 415
   },
   {
    "name": "(direkt)",
-   "besuche": 129,
-   "aufrufe": 129
+   "besuche": 120,
+   "aufrufe": 120
   },
   {
    "name": "www.google.com",
    "besuche": 6,
    "aufrufe": 6
-  },
-  {
-   "name": "www.facebook.com",
-   "besuche": 4,
-   "aufrufe": 4
-  },
-  {
-   "name": "m.facebook.com",
-   "besuche": 2,
-   "aufrufe": 2
   },
   {
    "name": "www.youtube.com",
@@ -50,13 +40,13 @@
  "laender": [
   {
    "name": "DE",
-   "besuche": 129,
-   "aufrufe": 542
+   "besuche": 123,
+   "aufrufe": 538
   },
   {
    "name": "US",
-   "besuche": 11,
-   "aufrufe": 11
+   "besuche": 2,
+   "aufrufe": 2
   },
   {
    "name": "TW",
@@ -77,25 +67,25 @@
  "geraete": [
   {
    "name": "mobile",
-   "besuche": 107,
-   "aufrufe": 412
-  },
-  {
-   "name": "desktop",
-   "besuche": 30,
-   "aufrufe": 74
+   "besuche": 101,
+   "aufrufe": 408
   },
   {
    "name": "tablet",
-   "besuche": 6,
-   "aufrufe": 70
+   "besuche": 4,
+   "aufrufe": 68
+  },
+  {
+   "name": "desktop",
+   "besuche": 23,
+   "aufrufe": 67
   }
  ],
  "seiten": [
   {
    "name": "/",
-   "besuche": 143,
-   "aufrufe": 556
+   "besuche": 128,
+   "aufrufe": 543
   }
  ],
  "verlauf": {
@@ -178,6 +168,10 @@
   "2026-10-26": {
    "besuche": 23,
    "seitenaufrufe": 77
+  },
+  "2026-10-27": {
+   "besuche": 13,
+   "seitenaufrufe": 37
   }
  }
 }
