@@ -239,3 +239,10 @@
 
 .sim-mit:empty{display:none}.sim-mit{background:var(--dm-bg2,#F4F6FB);border-radius:10px;padding:10px 14px;margin-top:8px}
 .sim-mit p{margin:4px 0 0;line-height:1.5}.sim-mit i{color:var(--dm-muted)}
+
+/* PDF download of the written part */
+.sim-pdf { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; margin-top: 12px; }
+.sim-pdf .dm-btn { min-height: 44px; }
+.sim-pdf small { color: var(--muted, #566078); font-size: .85rem; flex-basis: 100%; }
+.sim-run > .sim-pdf { margin: 10px 0 4px; }
+@media (max-width: 480px) { .sim-pdf .dm-btn { width: 100%; justify-content: center; text-align: center; } }

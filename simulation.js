@@ -3,7 +3,7 @@
    LiD-Simulation: Fragen aus window.LID_KATALOG (BAMF-Gesamtfragenkatalog).
    Fortschritt und Antworten bleiben nur im Browser (DM.store.sim). */
 (() => {
-  const V = '20261021f';
+  const V = '20261028a';
   const $ = (s, r = document) => r.querySelector(s);
   const $$ = (s, r = document) => [...r.querySelectorAll(s)];
   const e = s => DM.esc(s);
@@ -25,6 +25,11 @@
   };
   const ORDER = ['dtz', 'lid', 'telc-b1', 'dtb-b1', 'telc-b2', 'dtb-b2'];
   const PREP = ['telc-b1', 'telc-b2', 'dtb-b1', 'dtb-b2'];
+  /* Printable PDFs of the written part (built by tools/pdf/build_sim_pdf.py) */
+  const PDFS = id => id === 'lid'
+    ? [['material/simulation/lid-test-1.pdf', 'Probetest 1'], ['material/simulation/lid-test-2.pdf', 'Probetest 2']]
+    : [[`material/simulation/${id}-schriftlich.pdf`, 'Übungsheft']];
+  const pdfLinks = (id, quiet = true) => `<div class="sim-pdf">${PDFS(id).map(([href, label]) => `<a class="dm-btn${quiet ? ' dm-btn-quiet' : ''}" href="${href}?v=${V}" download target="_blank" rel="noopener">📄 ${id === 'lid' ? label : 'Als PDF herunterladen'}</a>`).join('')}<small>${id === 'lid' ? 'Zum Ausdrucken, mit Lösungen' : 'Zum Ausdrucken · mit Antwortbogen, Lösungen und Hörtexten'}</small></div>`;
 
   /* ---------- Daten laden ---------- */
   const loading = {};
@@ -275,7 +280,8 @@
         <p class="sim-startmin">⏱ <b>${mins} Minuten</b>${prep ? ` <span>(davon ${prep} Min. Vorbereitung)</span>` : ''}</p>
         <ul>${idx.map(i => `<li>${e(ex.sections[i].title)} <span>· ${ex.sections[i].minutes}${ex.sections[i].prepMinutes ? ` + ${ex.sections[i].prepMinutes}` : ''} Min.</span></li>`).join('')}</ul>
         ${last ? `<p class="dm-small">Zuletzt: <b>${last.pct} %</b> am ${new Date(last.date).toLocaleDateString('de-DE')}</p>` : ''}
-        <button type="button" class="dm-btn" data-start="${g}" ${running ? 'disabled' : ''}>▶ ${id === 'lid' ? 'Test' : GROUP[g].name} starten</button></div>`;
+        <button type="button" class="dm-btn" data-start="${g}" ${running ? 'disabled' : ''}>▶ ${id === 'lid' ? 'Test' : GROUP[g].name} starten</button>
+        ${g === 'written' ? pdfLinks(id) : ''}</div>`;
     };
     const combo = combined(id, ex);
     DM.page(`${DM.crumbs([['Prüfungstraining', '#pruefung'], ['Simulationen', '#simulation'], [m.short]])}
@@ -391,6 +397,7 @@
         <button type="button" class="dm-btn sim-submit" id="sim-submit">Abgeben</button>
       </div>
       <div class="sim-progress" aria-hidden="true"><i id="sim-prog"></i></div>
+      ${st.mode === 'written' ? pdfLinks(id) : ''}
       ${chips && st.secs.reduce((a, si) => a + ex.sections[si].parts.length, 0) > 1 ? `<nav class="sim-chips" aria-label="Teile">${chips}</nav>` : ''}
       ${plan}${prepBox}
       <div class="sim-parts" data-nocheck>${body}</div>

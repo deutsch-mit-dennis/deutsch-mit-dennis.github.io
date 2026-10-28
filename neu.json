@@ -3,6 +3,12 @@
  "items": [
   {
    "date": "2026-10-28",
+   "type": "neu",
+   "title": "Prüfungssimulationen als PDF: schriftliche Prüfung (DTZ, telc B1/B2, DTB B1/B2) und 2 LiD-Probetests zum Ausdrucken",
+   "link": "#simulation"
+  },
+  {
+   "date": "2026-10-28",
    "type": "uebung",
    "title": "Neuer Lesetext: Informationen aus der Hausarztpraxis (Alltag, A2–B1)",
    "link": "#lesen/alltag/8"
