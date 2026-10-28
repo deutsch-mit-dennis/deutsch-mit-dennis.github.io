@@ -262,6 +262,7 @@
           first.focus({ preventScroll: true });
           box.scrollIntoView({ block: 'nearest', behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
           box.querySelectorAll('.ch-opt').forEach(b => b.onclick = () => {
+            if (!box.querySelector('.ch-opts')) return; // ignore double taps
             const s = b.dataset.s, kind = new Map(opts).get(s), good = s === right || kind === 'long';
             if (!good) { perfect = false; api.vibrate(); }
             const gap = box.querySelector('.ch-gap');

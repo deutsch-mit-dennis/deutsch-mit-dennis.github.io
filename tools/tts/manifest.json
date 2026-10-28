@@ -3388,7 +3388,8 @@
    "segments": [
     {
      "voice": "m2",
-     "text": "Meine Nummer ist null eins fünf sieben, achtundneunzig, sechsundvierzig, dreiunddreißig."
+     "text": "Meine Nummer ist null eins fünf sieben, achtundneunzig, sechsundvierzig, dreiunddreißig.",
+     "say": "Meine Nummer ist: null, eins, fünf, sieben – achtundneunzig – sechsundvierzig – dreiunddreißig."
     }
    ]
   },

@@ -1569,6 +1569,9 @@
     if (legacy) return legacy;
     const links = $$('main .dm-crumbs a[href]').map(a => a.getAttribute('href'));
     if (links.length > 1) return links[links.length - 1];
+    // word cards and vocab pages have no index page of their own
+    if (p[0] === 'wort' && p[1]) return '#wortschatz/' + p[1] + '/0';
+    if (p[0] === 'wortschatz' && p[1]) return '#lektion/' + p[1];
     if (p.length > 2) return '#' + p.slice(0, -1).join('/');
     if (p.length === 2) return '#' + p[0];
     return '#';

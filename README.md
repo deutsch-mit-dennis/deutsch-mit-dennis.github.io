@@ -2,7 +2,9 @@
 
 Kostenlose Lernwebsite von Dennis (Dzianis Prudnikau): Lektionen von A1 bis B2 Beruf, Sprechen, Schreiben, Hören, DTZ- und B2-Prüfungstraining, Leben in Deutschland und Erklärvideos.
 
-Online: https://deutsch-mit-dennis.github.io
+Online: https://deutsch-mit-dennis.de
+
+Arbeitsanleitung für Claude Code und Wartung: siehe `CLAUDE.md`. Qualitätsprüfung: `tools/qa/`.
 
 - `index.html`, `site.css`, `site.js`, `site-data.js` – Rahmen, Design, Navigation und neue Seiten
 - übrige `.js`/`.css` – Lektionen, Wortschatz, Prüfungstraining, Leben in Deutschland, Kahoot, Hilfe
