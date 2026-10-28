@@ -905,7 +905,7 @@
 "title": "DTZ Hören · Übungssatz 5",
 "level": "A2–B1",
 "exam": "DTZ",
-"intro": "Dieser Übungssatz wächst: Jeden Montag kommt ein neuer Hörtext dazu, bis alle vier Teile komplett sind. Hör genau auf Zeiten und Tage – oft wird etwas geändert.",
+"intro": "Dieser Übungssatz wächst: Nach und nach kommen neue Hörtexte dazu, bis alle vier Teile komplett sind. Hör genau auf Zeiten und Tage – oft wird etwas geändert.",
 "group": "dtz",
 "items": [
 {
@@ -2021,7 +2021,7 @@
 "title": "DTB B2 Hören · Übungssatz 4",
 "level": "B2",
 "exam": "DTB",
-"intro": "Dieser Übungssatz wächst: Jeden Montag kommt ein neuer Hörtext aus dem Berufsalltag dazu. Achte darauf, was sich ändert und was von dir erwartet wird.",
+"intro": "Dieser Übungssatz wächst: Nach und nach kommen neue Hörtexte aus dem Berufsalltag dazu. Achte darauf, was sich ändert und was von dir erwartet wird.",
 "group": "b2",
 "items": [
 {
