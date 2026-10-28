@@ -3,7 +3,7 @@
    LiD-Simulation: Fragen aus window.LID_KATALOG (BAMF-Gesamtfragenkatalog).
    Fortschritt und Antworten bleiben nur im Browser (DM.store.sim). */
 (() => {
-  const V = '20261028g';
+  const V = '20261028h';
   const $ = (s, r = document) => r.querySelector(s);
   const $$ = (s, r = document) => [...r.querySelectorAll(s)];
   const e = s => DM.esc(s);
@@ -709,7 +709,8 @@
     const canRec = !!(navigator.mediaDevices?.getUserMedia && window.MediaRecorder);
     const url = recs[(cur?.id || '') + key];
     const notes = `<label class="sim-wlabel" for="n-${key}">Deine Notizen (Stichpunkte)</label><textarea id="n-${key}" class="sim-textarea sim-notes" data-notes="${key}" rows="4">${e(st.notes[key] || '')}</textarea>`;
-    return `<div class="sim-taskcard">${para(p.task)}</div>${materialHTML(p)}${withNotes && !isPrep ? notes : ''}
+    const photo = p.img ? `<figure class="sim-photo"><img src="${e(p.img.src)}?v=${V}" alt="${e(p.img.alt)}" width="1536" height="1024"><figcaption>KI-erstelltes Übungsbild</figcaption></figure>` : '';
+    return `${photo}<div class="sim-taskcard">${para(p.task)}</div>${materialHTML(p)}${withNotes && !isPrep ? notes : ''}
       ${isPrep ? `<label class="sim-wlabel" for="n-${key}">Deine Notizen (Stichpunkte)</label><textarea id="n-${key}" class="sim-textarea sim-notes" data-notes="${key}" rows="4">${e(st.notes[key] || '')}</textarea>`
         : `${st.notes[key] && !withNotes ? `<details class="sim-det"><summary>Deine Notizen</summary><p class="sim-pre">${e(st.notes[key])}</p></details>` : ''}
         ${total ? `<div class="sim-prompts"><button type="button" class="dm-btn dm-btn-quiet sim-ask" data-key="${key}" ${n >= total ? 'disabled' : ''}>${n === 0 ? '▶ Gespräch beginnen' : n >= total ? 'Alle Fragen gestellt' : `▶ Nächste Äußerung (${n + 1}/${total})`}</button><p class="sim-said" data-said="${key}">${n ? `<b>Gesprächspartner/in:</b> ${e(p.prompts[n - 1])}` : 'Die Prüferin oder deine Partnerin spricht. Antworte laut.'}</p></div>` : ''}

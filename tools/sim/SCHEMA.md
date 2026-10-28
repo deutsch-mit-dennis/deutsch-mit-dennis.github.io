@@ -76,6 +76,7 @@ Eine Option, wenn es in der Prüfung keine Wahl gibt.
 ```js
 { kind:'speak', title:'Teil 2: Über ein Thema sprechen', skill:'muendlich', pts:25, minutes:5,
   instr:'…', task:'Aufgabenkarte als Text', material:[…],
+  img:{ src:'assets/sim/<datei>.webp', alt:'Foto: genaue Bildbeschreibung' },   // optional, für Bildaufgaben (KI-Bild 3:2, 1536×1024)
   prompts:['Fragen/Impulse des Prüfers oder der Partnerin, werden nacheinander vorgelesen', …],
   redemittel:['…'], muster:'Musterantwort bzw. Musterdialog (für Partneraufgaben als Dialog mit A:/B:)',
   check:['…'] }
