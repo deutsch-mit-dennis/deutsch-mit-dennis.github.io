@@ -1,11 +1,11 @@
 {
- "run": "2026-10-28T10:02:22Z",
+ "run": "2026-10-28T13:00:13Z",
  "runs": [
   {
    "engine": "gemini",
    "created": 0,
-   "open": 529,
-   "chars_this_month": 98322,
+   "open": 530,
+   "chars_this_month": 98818,
    "monthly_limit": 200000,
    "errors": [
     {
@@ -17,16 +17,16 @@
   {
    "engine": "elevenlabs",
    "created": 0,
-   "open": 529,
+   "open": 530,
    "chars_this_month": 40411,
    "monthly_limit": 40555,
    "errors": []
   },
   {
    "engine": "google",
-   "created": 0,
+   "created": 1,
    "open": 0,
-   "chars_this_month": 120748,
+   "chars_this_month": 120843,
    "monthly_limit": 600000,
    "errors": []
   }

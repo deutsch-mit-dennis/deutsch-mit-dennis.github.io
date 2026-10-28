@@ -1,5 +1,5 @@
 {
-"updated": "2026-10-28T10:02:22Z",
+"updated": "2026-10-28T13:00:13Z",
 "engines": [
 "elevenlabs",
 "gemini",
@@ -2911,10 +2911,10 @@
 "text": "a56a412d9a"
 },
 "t6434922f": {
-"v": "e1d09aed57",
-"engine": "gemini",
-"sig": "e1d09aed57",
-"text": "ef1e4c049b"
+"v": "66d3d7f236",
+"engine": "google",
+"sig": "66d3d7f236",
+"text": "69822b5836"
 },
 "t65af3ecd": {
 "v": "3d145f7cf6",
