@@ -3,6 +3,12 @@
  "items": [
   {
    "date": "2026-10-28",
+   "type": "kahoot",
+   "title": "3 neue Kahoot-Quiz zum Test „Leben in Deutschland“: Grundgesetz & Grundrechte, Staat & Wahlen, Mensch & Gesellschaft – je 18 Übungsfragen",
+   "link": "#kahoot"
+  },
+  {
+   "date": "2026-10-28",
    "type": "neu",
    "title": "Prüfungssimulationen: Modelltest 2 für DTZ, telc B1, telc B2, DTB B1 und DTB B2 – komplett neue Aufgaben",
    "link": "#simulation"

@@ -934,7 +934,8 @@
           card('#lid', 'Lernen', 'LiD-Trainer: alle 310 Fragen', 'Block für Block lernen, Fehler wiederholen') +
           card('#orientierungskurs', 'Verstehen', 'Deutschland verstehen', 'Demokratie, Geschichte, Zusammenleben – mit Missionen') +
           card('#spiele/lid', 'Lernspiele', 'LiD-Spiele', 'Zeitstrahl, Wer macht was im Staat?') +
-          card('#videos/orientierung', 'Videos', 'LiD einfach erklärt', 'Wahlen, Grundrechte, Bundestag') },
+          card('#videos/orientierung', 'Videos', 'LiD einfach erklärt', 'Wahlen, Grundrechte, Bundestag') +
+          card('#kahoot', 'Kahoot', 'LiD-Kahoot-Quiz', '3 Quiz · 54 Übungsfragen im Stil des Tests') },
       telcb1: { label: 'telc B1', h: 'telc Deutsch B1 (Zertifikat Deutsch)', p: 'B1 allgemein · zum Beispiel für Einbürgerung, Ausbildung oder Arbeit', path: 'telcb1', color: 'sky',
         cards: () => simCards('telc-b1', 'Lesen, Sprachbausteine, Hören, Brief · 150 Min.', 'Paarprüfung · 15 Min. + 20 Min. Vorbereitung') +
           card('#vorbereitung/telc-b1', 'Vorbereitung', 'Aufbau und Strategien', 'Jeder Teil mit Fallen, Mini-Übung und Lernplan') +
