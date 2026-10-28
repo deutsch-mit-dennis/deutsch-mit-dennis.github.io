@@ -3,6 +3,12 @@
  "items": [
   {
    "date": "2026-10-28",
+   "type": "neu",
+   "title": "Der Lesewurm ist da! Tippe auf den kleinen Wurm mit Brille und entdecke Dennis' Bücherregal",
+   "link": "#lernpakete/buecher"
+  },
+  {
+   "date": "2026-10-28",
    "type": "kahoot",
    "title": "3 neue Kahoot-Quiz zum Test „Leben in Deutschland“: Grundgesetz & Grundrechte, Staat & Wahlen, Mensch & Gesellschaft – je 18 Übungsfragen",
    "link": "#kahoot"

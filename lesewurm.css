@@ -1,0 +1,33 @@
+/* Lesewurm: kriecht ab und zu über den unteren Rand und öffnet das Bücherregal (lesewurm.js) */
+.lw{position:fixed;left:0;bottom:max(10px,env(safe-area-inset-bottom));z-index:900;display:flex;align-items:flex-end;pointer-events:none;will-change:transform}
+.lw-btn{pointer-events:auto;display:block;width:132px;height:66px;padding:0;border:0;background:none;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.lw-btn:focus-visible{outline:3px solid var(--dm-tinte);outline-offset:2px;border-radius:12px}
+.lw-btn svg{display:block;width:100%;height:100%;overflow:visible;filter:drop-shadow(0 3px 4px rgba(23,32,54,.25))}
+.lw-x{pointer-events:auto;width:44px;height:44px;margin:0 0 30px -10px;border:0;border-radius:50%;background:transparent;color:var(--dm-muted);font:700 18px/1 var(--dm-font);cursor:pointer}
+.lw-x span{display:inline-grid;place-items:center;width:24px;height:24px;border-radius:50%;background:var(--dm-surface);border:1px solid var(--dm-line);box-shadow:0 1px 3px rgba(0,0,0,.15)}
+.lw-x:focus-visible{outline:3px solid var(--dm-tinte);outline-offset:-4px}
+.lw-tip{position:absolute;left:24px;bottom:66px;white-space:nowrap;background:var(--dm-ink);color:#fff;font:700 13px/1.2 var(--dm-font);padding:6px 10px;border-radius:10px;pointer-events:none}
+.lw-tip::after{content:'';position:absolute;left:28px;bottom:-5px;border:6px solid transparent;border-bottom:0;border-top-color:var(--dm-ink)}
+/* Kriechen: die Segmente heben sich nacheinander (Welle) */
+.lw-seg{animation:lw-hump .9s ease-in-out infinite;transform-box:fill-box;transform-origin:center bottom}
+.lw-seg:nth-child(2){animation-delay:-.15s}.lw-seg:nth-child(3){animation-delay:-.3s}.lw-seg:nth-child(4){animation-delay:-.45s}.lw-head{animation:lw-nod .9s ease-in-out infinite;transform-box:fill-box;transform-origin:30% 90%}
+@keyframes lw-hump{0%,100%{transform:translateY(0) scaleY(1)}50%{transform:translateY(-5px) scaleY(1.08)}}
+@keyframes lw-nod{0%,100%{transform:rotate(0)}50%{transform:rotate(-4deg)}}
+.lw-still .lw-seg,.lw-still .lw-head{animation:none}
+@media (max-width:600px){.lw-btn{width:110px;height:55px}.lw-tip{bottom:55px;font-size:12px}}
+/* Bücherregal */
+.lw-dlg{width:min(720px,calc(100vw - 24px));max-height:calc(100dvh - 32px);padding:0;border:0;border-radius:18px;background:var(--dm-paper);color:var(--dm-ink);box-shadow:0 20px 60px rgba(23,32,54,.35);overflow:auto}
+.lw-dlg::backdrop{background:rgba(23,32,54,.55)}
+.lw-head-row{display:flex;align-items:center;gap:12px;padding:16px 16px 4px 20px}
+.lw-head-row h2{margin:0;flex:1;font:700 clamp(20px,5vw,26px)/1.2 var(--dm-font)}
+.lw-close{width:44px;height:44px;border:1px solid var(--dm-line);border-radius:50%;background:var(--dm-surface);font:700 20px/1 var(--dm-font);color:var(--dm-ink);cursor:pointer}
+.lw-lead{margin:0 20px 12px;color:var(--dm-muted);font-size:15px}
+.lw-shelf{display:grid;grid-template-columns:repeat(auto-fill,minmax(112px,150px));justify-content:center;gap:22px 0;margin:0 16px;padding:8px 0 0}
+.lw-book{display:flex;flex-direction:column;align-items:center;justify-content:flex-start;gap:6px;padding:0 8px;text-decoration:none;color:var(--dm-ink);border-bottom:12px solid #8a5a34;box-shadow:0 5px 0 #6d4425}
+.lw-book img{display:block;width:100%;max-width:120px;height:auto;aspect-ratio:560/792;object-fit:cover;border-radius:3px 6px 6px 3px;box-shadow:-3px 0 0 rgba(0,0,0,.18) inset,0 6px 10px rgba(23,32,54,.3);transition:transform .2s}
+.lw-book:hover img,.lw-book:focus-visible img{transform:translateY(-6px) rotate(-2deg)}
+.lw-book:focus-visible{outline:3px solid var(--dm-tinte);outline-offset:3px}
+.lw-book span{font:700 12px/1.25 var(--dm-font);text-align:center;padding-bottom:6px;min-height:calc(3.75em + 6px)}
+.lw-foot{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;padding:16px 20px 20px}
+.lw-foot small{color:var(--dm-muted)}
+@media (prefers-reduced-motion:reduce){.lw-book img{transition:none}}
