@@ -47,7 +47,7 @@ async def run_variant(b, gid, opt, vw):
 async def main():
     async with async_playwright() as p:
         b=await p.chromium.launch()
-        ctx=await b.new_context(); pg=await ctx.new_page(); await pg.goto(BASE+"#spiele"); await pg.wait_for_timeout(2000)
+        ctx=await b.new_context(); pg=await ctx.new_page(); await pg.goto(BASE+"#spiele",wait_until="networkidle"); await pg.wait_for_timeout(1000)  # fixed 2 s missed games under load
         games=await pg.evaluate("DMGame.list().map(g=>({id:g.id,opts:(g.options||[]).map(o=>o.id)}))")
         await ctx.close()
         only=sys.argv[1:]
