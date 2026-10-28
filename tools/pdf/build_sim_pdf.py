@@ -95,6 +95,30 @@ BOX = L.sym("☐")
 SPK = {"n": "Ansage", "f": "Frau", "m": "Mann", "f2": "Frau 2", "m2": "Mann 2"}
 
 
+MARKS = {}
+LID_SETS = {}
+
+
+def load_marks(id):
+    MARKS.clear()
+    f = os.path.join(OUT, f"{id}-hoeren.json")
+    if os.path.exists(f):
+        for m in json.load(open(f))["marks"]:
+            MARKS[(m["part"], m["clip"])] = m["start"]
+
+
+def clip_head(p, ai, a, extra=""):
+    plays = p.get("plays", 1)
+    t = MARKS.get((p["title"], ai))
+    mp3 = f' <font color="#566078">· MP3 ab {t // 60}:{t % 60:02d}</font>' if t is not None else ""
+    name = a.get("h") or f"Hörtext {ai + 1}"
+    return box(
+        [R(f"{L.sym('♪')} {esc(name)} – Sie hören den Text {'zweimal' if plays == 2 else 'einmal'}.{extra}{mp3}", "math")],
+        bg=NOTE,
+        border=TINTE,
+    )
+
+
 def load(id):
     if id == "lid":
         js = "global.window={};require('./lid-katalog.js');process.stdout.write(JSON.stringify({K:window.LID_KATALOG,h:window.LID_HINWEIS_TEXT}))"
@@ -201,19 +225,7 @@ def part_flow(p, sid):
         fl += [opt_list(p), Spacer(1, 4)]
     done = set()
     for ai, a in enumerate(p.get("audio") or []):
-        plays = p.get("plays", 1)
-        fl.append(
-            box(
-                [
-                    R(
-                        f"{L.sym('♪')} {esc(a.get('h') or f'Hörtext {ai + 1}')} – Sie hören den Text {'zweimal' if plays == 2 else 'einmal'}.",
-                        "math",
-                    )
-                ],
-                bg=NOTE,
-                border=TINTE,
-            )
-        )
+        fl.append(clip_head(p, ai, a))
         for it in items:
             if it.get("au") == ai:
                 fl.append(item_flow(p, it, it["_n"], has_gaps))
@@ -232,18 +244,7 @@ def write_flow(p):
     ]
     fl += material(p)
     for ai, a in enumerate(p.get("audio") or []):
-        fl.append(
-            box(
-                [
-                    R(
-                        f"{L.sym('♪')} {esc(a.get('h') or 'Hörtext')} – Sie hören den Text {'zweimal' if p.get('plays') == 2 else 'einmal'}. Machen Sie Notizen.",
-                        "math",
-                    )
-                ],
-                bg=NOTE,
-                border=TINTE,
-            )
-        )
+        fl.append(clip_head(p, ai, a, " Machen Sie Notizen."))
         fl.append(Spacer(1, 4))
     opts = p["options"]
     for i, o in enumerate(opts):
@@ -404,7 +405,7 @@ def transcripts(secs):
 
 
 # ---------------------------------------------------------------- cover
-def cover(ex, id, secs, total, has_audio):
+def cover(ex, id, secs, total, has_audio, sub="Schriftliche Prüfung – Übungsheft zum Ausdrucken"):
     url = BASE + id
     rows = (
         [["Prüfungsteil", "Zeit (Empfehlung)"]]
@@ -418,10 +419,10 @@ def cover(ex, id, secs, total, has_audio):
     ]
     if has_audio:
         hints.append(
-            "<b>Hören:</b> Die Hörtexte spielen Sie online ab – QR-Code scannen, „Schriftliche Prüfung starten“ und dort die Hörtexte abspielen. Ohne Internet kann jemand die Texte aus dem Anhang vorlesen."
+            f"<b>Hören:</b> Laden Sie die MP3 „Hörverstehen“ herunter (QR-Code scannen, dann in der Simulation auf „Hörverstehen als MP3“ tippen). Sie läuft wie in der Prüfung: Signalton, Zeit zum Lesen, Hörtext, bei Bedarf Wiederholung. Bei jedem Hörtext steht im Heft, ab welcher Minute er in der MP3 beginnt. Ohne Internet kann jemand die Texte aus dem Anhang vorlesen."
         )
     hints.append(
-        "Am Ende des Heftes: Antwortbogen, Lösungen mit Erklärung, Mustertexte und Checkliste für das Schreiben."
+        "Am Ende des Heftes: Antwortbogen, Lösungen mit Erklärung, Mustertexte und Checkliste für das Schreiben. Schneller geht es online: Antworten unter „Papier-Antworten prüfen“ eintragen – die Seite rechnet Punkte und Ergebnis aus."
     )
     qrt = Table(
         [
@@ -466,7 +467,7 @@ def cover(ex, id, secs, total, has_audio):
         [
             R(f"PRÜFUNGSSIMULATION · {esc(ex.get('level', ''))}", "kick"),
             R(esc(ex["title"]), "h1"),
-            R("Schriftliche Prüfung – Übungsheft zum Ausdrucken", "lead"),
+            R(sub, "lead"),
             Spacer(1, 6),
             name,
             Spacer(1, 10),
@@ -534,7 +535,8 @@ def render(path, title, level, story):
     )
 
 
-def build_exam(id):
+def build_exam(id, only=None):
+    load_marks(id)
     ex = load(id)
     n = 0
     for s in ex["sections"]:
@@ -547,9 +549,13 @@ def build_exam(id):
         for s in ex["sections"]
         if not any(p.get("kind") == "speak" for p in s["parts"])
     ]
+    if only == "hoeren":
+        secs = [s for s in secs if any(p.get("audio") for p in s["parts"])]
+        if not secs:
+            return
     total = sum(s["minutes"] for s in secs)
     has_audio = any(p.get("audio") for s in secs for p in s["parts"])
-    story = cover(ex, id, secs, total, has_audio)
+    story = cover(ex, id, secs, total, has_audio, *(["Hörverstehen – Übungsheft zum Ausdrucken (mit MP3)"] if only else []))
     for s in secs:
         story += [
             PageBreak(),
@@ -566,8 +572,8 @@ def build_exam(id):
             )
     story += answer_sheet(ex, secs) + solutions(ex, secs) + transcripts(secs)
     render(
-        os.path.join(OUT, f"{id}-schriftlich.pdf"),
-        f"{ex['short']} – Schriftliche Prüfung",
+        os.path.join(OUT, f"{id}-{only or 'schriftlich'}.pdf"),
+        f"{ex['short']} – {'Hörverstehen' if only else 'Schriftliche Prüfung'}",
         ex.get("level", ""),
         story,
     )
@@ -592,6 +598,7 @@ def build_lid(nr):
         q for q in K if not isinstance(q["nr"], int) and str(q["nr"]).startswith("NRW")
     ]
     qs = rnd.sample(gen, 30) + rnd.sample(land, 3)
+    LID_SETS[str(nr)] = [q["id"] for q in qs]
     url = BASE + "lid"
     story = [
         R("TEST „LEBEN IN DEUTSCHLAND“ · ÜBUNGSBOGEN", "kick"),
@@ -619,13 +626,13 @@ def build_lid(nr):
         if pic:
             cells = [
                 [lid_img(f, 36 * mm) for f in q["img"]],
-                [R(f"{BOX} {esc(a)}", "cell") for a in q["a"]],
+                [R(f"{BOX} {'abcd'[j]}) {esc(a)}", "cell") for j, a in enumerate(q["a"])],
             ]
             t = Table(cells, colWidths=[42 * mm] * 4, hAlign="LEFT")
             t.setStyle(TableStyle([("VALIGN", (0, 0), (-1, -1), "MIDDLE")]))
             fl.append(t)
         else:
-            fl += [R(f"{BOX} {esc(a)}", "opt") for a in q["a"]]
+            fl += [R(f"{BOX} {'abcd'[j]}) {esc(a)}", "opt") for j, a in enumerate(q["a"])]
         story.append(KeepTogether(fl))
     story += [
         PageBreak(),
@@ -635,7 +642,7 @@ def build_lid(nr):
             + [
                 [
                     f"<b>{i}</b>",
-                    esc(q["a"][q["s"]]),
+                    "abcd"[q["s"]] + ") " + esc(q["a"][q["s"]]),
                     esc(
                         q["nr"] if not isinstance(q["nr"], int) else f"Frage {q['nr']}"
                     ),
@@ -671,5 +678,8 @@ if __name__ == "__main__":
         if id == "lid":
             build_lid(1)
             build_lid(2)
+            json.dump(LID_SETS, open(os.path.join(OUT, "lid-sets.json"), "w"))
+            continue
         else:
             build_exam(id)
+            build_exam(id, "hoeren")

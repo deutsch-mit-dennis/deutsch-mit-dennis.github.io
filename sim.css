@@ -246,3 +246,32 @@
 .sim-pdf small { color: var(--muted, #566078); font-size: .85rem; flex-basis: 100%; }
 .sim-run > .sim-pdf { margin: 10px 0 4px; }
 @media (max-width: 480px) { .sim-pdf .dm-btn { width: 100%; justify-content: center; text-align: center; } }
+
+/* Paper practice card */
+.sim-paper h2{margin-top:0}
+.sim-paper > .dm-btn{margin-top:12px}
+
+/* Pause */
+.sim-pausebtn{flex:0 0 auto;min-width:44px;min-height:44px;border-radius:10px;border:1px solid rgba(255,255,255,.35);background:rgba(255,255,255,.1);color:#fff;font-size:18px;line-height:1;cursor:pointer}
+.sim-pausebtn:hover,.sim-pausebtn:focus-visible{background:rgba(255,255,255,.22)}
+.sim-pausebox{position:fixed;inset:0;z-index:2147483000;display:flex;align-items:center;justify-content:center;padding:16px;background:rgba(23,32,54,.55);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+.sim-pausecard{max-width:440px;width:100%;text-align:center;background:var(--dm-surface,#fff);margin:0}
+.sim-pausecard h2{margin:.2em 0}
+.sim-pausecard .dm-btn{min-height:48px;min-width:180px;margin-top:8px}
+.sim-pausenote{display:block;margin-top:6px;font-size:.9em}
+@media (max-width:560px){.sim-pausebtn{min-width:40px;min-height:40px;font-size:16px;padding:0}}
+
+/* Paper answer check */
+.pc-scope .sim-wchoose{margin:0 0 8px}
+.pc-sec h2{margin-top:0}
+.pc-part{margin-top:14px}
+.pc-part h3{font-size:1rem;margin:0 0 8px}
+.pc-grid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:8px 16px}
+.pc-grid li{display:flex;align-items:center;gap:8px;min-width:0}
+.pc-n{flex:0 0 auto;min-width:30px;height:30px;border-radius:8px;background:#E8ECFA;display:inline-flex;align-items:center;justify-content:center;font-weight:700;font-size:.9rem}
+.pc-opts{display:flex;flex-wrap:wrap;gap:6px}
+.pc-opt{min-width:44px;min-height:44px;padding:0 10px;border-radius:10px;border:1.5px solid var(--dm-line,#DADFEA);background:var(--dm-surface,#fff);color:inherit;font:inherit;font-weight:700;cursor:pointer}
+.pc-opt.is-on{background:var(--dm-ink,#172036);border-color:var(--dm-ink,#172036);color:#fff}
+.pc-sel{min-height:44px;max-width:100%;flex:1 1 auto;min-width:0}
+.pc-count{font-weight:600}
+@media (max-width:480px){.pc-grid{grid-template-columns:1fr}}

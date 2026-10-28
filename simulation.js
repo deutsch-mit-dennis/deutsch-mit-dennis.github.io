@@ -3,7 +3,7 @@
    LiD-Simulation: Fragen aus window.LID_KATALOG (BAMF-Gesamtfragenkatalog).
    Fortschritt und Antworten bleiben nur im Browser (DM.store.sim). */
 (() => {
-  const V = '20261028a';
+  const V = '20261028b';
   const $ = (s, r = document) => r.querySelector(s);
   const $$ = (s, r = document) => [...r.querySelectorAll(s)];
   const e = s => DM.esc(s);
@@ -25,11 +25,21 @@
   };
   const ORDER = ['dtz', 'lid', 'telc-b1', 'dtb-b1', 'telc-b2', 'dtb-b2'];
   const PREP = ['telc-b1', 'telc-b2', 'dtb-b1', 'dtb-b2'];
-  /* Printable PDFs of the written part (built by tools/pdf/build_sim_pdf.py) */
-  const PDFS = id => id === 'lid'
-    ? [['material/simulation/lid-test-1.pdf', 'Probetest 1'], ['material/simulation/lid-test-2.pdf', 'Probetest 2']]
-    : [[`material/simulation/${id}-schriftlich.pdf`, 'Übungsheft']];
-  const pdfLinks = (id, quiet = true) => `<div class="sim-pdf">${PDFS(id).map(([href, label]) => `<a class="dm-btn${quiet ? ' dm-btn-quiet' : ''}" href="${href}?v=${V}" download target="_blank" rel="noopener">📄 ${id === 'lid' ? label : 'Als PDF herunterladen'}</a>`).join('')}<small>${id === 'lid' ? 'Zum Ausdrucken, mit Lösungen' : 'Zum Ausdrucken · mit Antwortbogen, Lösungen und Hörtexten'}</small></div>`;
+  /* Paper practice: PDFs + listening MP3 (built by tools/pdf/build_sim_pdf.py and tools/sim/build_listening_mp3.py) */
+  const DL = 'material/simulation/';
+  const downloads = id => id === 'lid'
+    ? [[`${DL}lid-test-1.pdf`, '📄 Probetest 1 (PDF)'], [`${DL}lid-test-2.pdf`, '📄 Probetest 2 (PDF)']]
+    : [[`${DL}${id}-schriftlich.pdf`, '📄 Schriftliche Prüfung (PDF)'], [`${DL}${id}-hoeren.pdf`, '📄 Nur Hörverstehen (PDF)'], [`${DL}${id}-hoeren.mp3`, '🎧 Hörverstehen als MP3', 'mp3']];
+  const MP3_MIN = { dtz: 17, 'telc-b1': 18, 'dtb-b1': 20, 'telc-b2': 18, 'dtb-b2': 25 };
+  const dlLink = ([href, label, kind]) => `<a class="dm-btn dm-btn-quiet" href="${href}?v=${V}" download${kind === 'mp3' ? '' : ' target="_blank" rel="noopener"'}>${label}</a>`;
+  /* compact row (running exam) */
+  const pdfLinks = id => `<div class="sim-pdf">${downloads(id).map(dlLink).join('')}<a class="dm-btn dm-btn-quiet" href="#simulation/${id}/pruefen">✓ Papier-Antworten prüfen</a></div>`;
+  /* full card (start page) */
+  const paperCard = id => `<section class="dm-card sim-paper" id="sim-paper"><h2>📄 Auf Papier üben</h2>
+      <p>${id === 'lid' ? 'Zwei feste Probetests zum Ausdrucken. Danach trägst du deine Kreuze hier ein und bekommst sofort dein Ergebnis.' : 'Drucke das Heft aus und übe ohne Bildschirm. Das Hörverstehen gibt es als eine MP3 – sie läuft wie in der Prüfung: Signalton, Zeit zum Lesen, Hörtext (bei Bedarf zweimal). Im Heft steht bei jedem Hörtext, ab welcher Minute er beginnt.'}</p>
+      <div class="sim-pdf">${downloads(id).map(dlLink).join('')}</div>
+      ${id === 'lid' ? '' : `<p class="dm-small">MP3: ca. ${MP3_MIN[id]} Minuten, ca. ${Math.round(MP3_MIN[id] * 0.47)} MB – am besten im WLAN laden.</p>`}
+      <a class="dm-btn" href="#simulation/${id}/pruefen">✓ Papier-Antworten eintragen und prüfen lassen</a></section>`;
 
   /* ---------- Daten laden ---------- */
   const loading = {};
@@ -256,7 +266,7 @@
   const groupMin = (ex, g) => groupIdx(ex, g).reduce((a, i) => a + ex.sections[i].minutes + (ex.sections[i].prepMinutes || 0), 0);
   const GROUP = { written: { ic: '📝', name: 'Schriftliche Prüfung' }, oral: { ic: '🗣', name: 'Mündliche Prüfung' } };
   const isBlock = st => st.mode === 'written' || st.mode === 'oral';
-  const modeLabel = m => ({ full: 'Teil für Teil', written: 'schriftlich', oral: 'mündlich', single: 'einzelner Teil' }[m] || '');
+  const modeLabel = m => ({ full: 'Teil für Teil', written: 'schriftlich', oral: 'mündlich', single: 'einzelner Teil', paper: 'auf Papier', 'paper-hoeren': 'Hören auf Papier' }[m] || '');
 
   /* ---------- Startseite einer Simulation ---------- */
   async function intro(id) {
@@ -281,7 +291,7 @@
         <ul>${idx.map(i => `<li>${e(ex.sections[i].title)} <span>· ${ex.sections[i].minutes}${ex.sections[i].prepMinutes ? ` + ${ex.sections[i].prepMinutes}` : ''} Min.</span></li>`).join('')}</ul>
         ${last ? `<p class="dm-small">Zuletzt: <b>${last.pct} %</b> am ${new Date(last.date).toLocaleDateString('de-DE')}</p>` : ''}
         <button type="button" class="dm-btn" data-start="${g}" ${running ? 'disabled' : ''}>▶ ${id === 'lid' ? 'Test' : GROUP[g].name} starten</button>
-        ${g === 'written' ? pdfLinks(id) : ''}</div>`;
+</div>`;
     };
     const combo = combined(id, ex);
     DM.page(`${DM.crumbs([['Prüfungstraining', '#pruefung'], ['Simulationen', '#simulation'], [m.short]])}
@@ -291,6 +301,7 @@
       <p class="sim-startlead">${hasOral ? 'Starte die schriftliche und die mündliche Prüfung getrennt – wie am Prüfungstag. Sobald du startest, läuft <b>eine Uhr für die gesamte schriftliche bzw. mündliche Prüfung</b>. Die Zeit teilst du dir selbst ein; ist sie um, wird automatisch abgegeben.' : 'Sobald du startest, läuft die Uhr für den gesamten Test. Ist sie um, wird automatisch abgegeben.'}</p>
       <div class="sim-startgrid">${startCard('written')}${hasOral ? startCard('oral') : ''}</div>
       ${combo ? `<aside class="dm-card sim-combo ${combo.verdict.pass ? 'ok' : 'no'}"><b>Gesamtergebnis (schriftlich + mündlich): ${e(combo.verdict.head)}</b>${combo.verdict.lines.map(l => `<span>${e(l)}</span>`).join('')}<small>Aus deiner letzten schriftlichen (${combo.wDate}) und mündlichen Prüfung (${combo.oDate}).</small></aside>` : ''}
+      ${paperCard(id)}
       ${ruleBox(ex)}
       ${id === 'lid' ? `<p class="dm-small">Für die drei Bundesland-Fragen nimmt die Simulation die Fragen für Nordrhein-Westfalen.</p>` : ''}
       ${ex.sections.length > 1 ? `<details class="sim-more dm-card"><summary>Andere Möglichkeiten: Teil für Teil oder nur einen Teil üben</summary>
@@ -336,7 +347,7 @@
     else { st.phase = 'work'; st.left = s.minutes * 60; }
   }
   let timer = null, lastTick = 0, cur = null;
-  function stopAll() { clearInterval(timer); timer = null; stopAudio(); stopRec(); cur = null; }
+  function stopAll() { clearInterval(timer); timer = null; stopAudio(); stopRec(); cur = null; $('#sim-pausebox')?.remove(); main()?.removeAttribute('inert'); }
   window.addEventListener('hashchange', () => {
     if (cur && !/^#simulation\/[^/]+\/run/.test(location.hash)) { save(); stopAll(); }
     stopAudio();
@@ -365,6 +376,7 @@
     const chips = parts.map((p, pi) => `<a href="#" data-goto="sim-p${pi}" class="sim-chip">${e(shortTitle(p.title))}<small data-count="${pi}"></small></a>`).join('');
     DM.page(`<div class="sim-bar" role="region" aria-label="Prüfungsuhr">
         <div class="sim-bar-t"><small>${e(META[id].short)} · ${total > 1 ? `Teil ${st.k + 1} von ${total}` : 'einzelner Teil'}</small><b>${isPrep ? 'Vorbereitung: ' : ''}${e(s.title)}</b></div>
+        <button type="button" class="sim-pausebtn" id="sim-pause" aria-label="Pause – Uhr anhalten" title="Pause">⏸</button>
         <div class="sim-clock" id="sim-clock" aria-live="off">${mmss(st.left)}</div>
         <button type="button" class="dm-btn sim-submit" id="sim-submit">${isPrep ? 'Vorbereitung beenden' : 'Abgeben'}</button>
       </div>
@@ -393,6 +405,7 @@
     }).join('');
     DM.page(`<div class="sim-bar" role="region" aria-label="Prüfungsuhr">
         <div class="sim-bar-t"><small>${e(META[id].short)} · ${g.ic} Gesamtzeit ${Math.round(st.total / 60)} Min.</small><b>${e(name)}</b></div>
+        <button type="button" class="sim-pausebtn" id="sim-pause" aria-label="Pause – Uhr anhalten" title="Pause">⏸</button>
         <div class="sim-clock" id="sim-clock" aria-live="off">${mmss(st.left)}</div>
         <button type="button" class="dm-btn sim-submit" id="sim-submit">Abgeben</button>
       </div>
@@ -431,8 +444,44 @@
       <button type="button" class="dm-btn" id="sim-next">Weiter: ${e(next.title)}</button></div>`, 'sim-page');
     $('#sim-next').onclick = () => { startSection(ex, st); save(); draw(); };
   }
+  /* ---------- Pause ---------- */
+  function pauseRun() {
+    if (!cur || cur.st.paused) return;
+    const { st } = cur;
+    clearInterval(timer); timer = null;
+    const playingBtn = $('.sim-play.is-playing');
+    if (playingBtn) { // interrupted listening text does not count as heard
+      const key = playingBtn.closest('.sim-clip')?.dataset.clip;
+      if (key && st.plays[key]) st.plays[key]--;
+    }
+    stopAudio(); stopRec();
+    st.paused = true; st.pauses = (st.pauses || 0) + 1; st.pauseAt = Date.now();
+    save(); showPause();
+  }
+  function showPause() {
+    $('#sim-pausebox')?.remove();
+    const { st } = cur;
+    const box = document.createElement('div');
+    box.id = 'sim-pausebox'; box.className = 'sim-pausebox'; box.setAttribute('role', 'dialog'); box.setAttribute('aria-modal', 'true'); box.setAttribute('aria-labelledby', 'sim-pause-h');
+    box.innerHTML = `<div class="sim-pausecard dm-card"><p class="sim-big" aria-hidden="true">⏸</p><h2 id="sim-pause-h">Pause</h2>
+      <p>Die Uhr ist angehalten bei <b>${mmss(st.left)}</b>. Deine Antworten sind gespeichert – du kannst die Seite auch schließen und später weitermachen.</p>
+      <p class="dm-small">Ein unterbrochener Hörtext zählt nicht als gehört. In der echten Prüfung gibt es keine Pause – im Ergebnis steht, wie oft du pausiert hast.</p>
+      <button type="button" class="dm-btn" id="sim-resume">▶ Weiter</button></div>`;
+    document.body.append(box);
+    main()?.setAttribute('inert', '');
+    const r = $('#sim-resume'); r.onclick = resumeRun; r.focus();
+  }
+  function resumeRun() {
+    if (!cur) return;
+    const { st } = cur;
+    st.paused = false; delete st.pauseAt; save();
+    $('#sim-pausebox')?.remove(); main()?.removeAttribute('inert');
+    const y = scrollY; draw(); scrollTo(0, y);
+  }
   function tickStart() {
-    clearInterval(timer); lastTick = Date.now(); let n = 0;
+    clearInterval(timer);
+    if (cur?.st.paused) { paintClock(); showPause(); return; }
+    lastTick = Date.now(); let n = 0;
     timer = setInterval(() => {
       if (!cur) return;
       const now = Date.now(), d = Math.floor((now - lastTick) / 1000);
@@ -473,7 +522,7 @@
       st.done = true; st.finished = Date.now();
       const r = score(ex, st);
       const hist = store()[id + '_hist'] ||= [];
-      hist.push({ date: Date.now(), mode: st.mode, pct: r.pct, pass: r.verdict ? (r.verdict.pass ?? null) : null, single: st.mode === 'single', sk: skMap(r.sk) });
+      hist.push({ date: Date.now(), mode: st.mode, pauses: st.pauses || 0, pct: r.pct, pass: r.verdict ? (r.verdict.pass ?? null) : null, single: st.mode === 'single', sk: skMap(r.sk) });
       if (hist.length > 20) hist.splice(0, hist.length - 20);
       save(); clearInterval(timer); cur = null;
       location.hash = `#simulation/${id}/ergebnis`;
@@ -507,6 +556,7 @@
       }
       finishSection();
     };
+    $('#sim-pause').onclick = pauseRun;
     $('#sim-submit').onclick = ev => submit(ev.currentTarget);
     $('#sim-submit2').onclick = ev => submit(ev.currentTarget);
     m.onclick = ev => {
@@ -655,7 +705,7 @@
       if (!r) return { got: 0, max: p.pts, rated: false };
       const ok = r.filter(Boolean).length;
       let got = p.pts * ok / p.check.length;
-      if (p.kind === 'write' && p.minWords && words(st.write[p._key]?.text) < p.minWords * 0.5) got = Math.min(got, p.pts * 0.25);
+      if (p.kind === 'write' && p.minWords && !(st.paper && !st.write[p._key]?.text) && words(st.write[p._key]?.text) < p.minWords * 0.5) got = Math.min(got, p.pts * 0.25);
       return { got, max: p.pts, rated: true };
     }
     const its = p.items || [];
@@ -747,11 +797,11 @@
     return { verdict: judge(ex.rule, sk), wDate: d(w), oDate: d(o) };
   }
 
-  async function result(id) {
+  async function result(id, paper = false) {
     let ex;
     try { ex = await load(id); } catch { return failPage(); }
-    const st = store()[id];
-    if (!st) { location.replace(`#simulation/${id}`); return; }
+    const st = store()[paper ? id + '_paper' : id];
+    if (!st) { location.replace(paper ? `#simulation/${id}/pruefen` : `#simulation/${id}`); return; }
     if (!st.done) { location.replace(`#simulation/${id}/run`); return; }
     if (id === 'lid') ex = lidExam(st); else prepare(ex);
     stopAll();
@@ -762,11 +812,11 @@
       $('#sim-sum').innerHTML = `${r.verdict ? `<div class="sim-verdict ${r.verdict.pass === true ? 'ok' : r.verdict.pass === false ? 'no' : ''}"><b>${e(r.verdict.head)}</b>${r.verdict.lines.map(l => `<span>${e(l)}</span>`).join('')}</div>` : `<div class="sim-verdict"><b>${r.pct} % richtig</b><span>Einzelner Prüfungsteil – für ein Gesamtergebnis mach die schriftliche und die mündliche Prüfung.</span></div>`}
         <ul class="sim-bars">${bars}</ul>
         ${r.unrated ? `<p class="sim-hint">✍️ Noch ${r.unrated} Schreib- bzw. Sprechaufgabe${r.unrated === 1 ? '' : 'n'} ohne Bewertung (zählt bis dahin mit 0 Punkten). Bewerte dich unten mit der Checkliste.</p>` : '<p class="dm-small">Schreiben und Sprechen hast du selbst bewertet – das ist eine Schätzung. Sei ehrlich streng, dann ist das Ergebnis realistisch.</p>'}`;
-      const hist = store()[id + '_hist']; if (hist?.length) { const h = hist[hist.length - 1]; h.pct = r.pct; h.pass = r.verdict ? (r.verdict.pass ?? null) : null; h.sk = skMap(r.sk); h.mode ||= st.mode; }
-      const combo = isBlock(st) && ex.rule !== 'lid' ? combined(id, ex) : null;
+      const hist = store()[id + '_hist']; if (hist?.length && !paper) { const h = hist[hist.length - 1]; h.pct = r.pct; h.pass = r.verdict ? (r.verdict.pass ?? null) : null; h.sk = skMap(r.sk); h.mode ||= st.mode; }
+      const combo = !paper && isBlock(st) && ex.rule !== 'lid' ? combined(id, ex) : null;
       const other = st.mode === 'written' ? 'oral' : 'written';
       $('#sim-combo').innerHTML = combo ? `<div class="sim-verdict ${combo.verdict.pass ? 'ok' : 'no'}"><b>Gesamtergebnis: ${e(combo.verdict.head)}</b>${combo.verdict.lines.map(l => `<span>${e(l)}</span>`).join('')}<span class="dm-small">Aus deiner letzten schriftlichen (${combo.wDate}) und mündlichen Prüfung (${combo.oDate}).</span></div>` : '';
-      const nb = $('#sim-nextblock'); if (nb) nb.hidden = !(isBlock(st) && groupIdx(ex, other).length && ex.rule !== 'lid');
+      const nb = $('#sim-nextblock'); if (nb) nb.hidden = paper || !(isBlock(st) && groupIdx(ex, other).length && ex.rule !== 'lid');
     };
     const sections = st.secs.map(si => {
       const s = ex.sections[si];
@@ -779,16 +829,16 @@
       }).join('')}</details>`;
     }).join('');
     DM.page(`${DM.crumbs([['Prüfungstraining', '#pruefung'], ['Simulationen', '#simulation'], [META[id].short, `#simulation/${id}`], ['Ergebnis']])}
-      <div class="dm-head"><h1>Dein Ergebnis: ${e(META[id].short)}</h1><p class="dm-lead">${st.mode === 'full' ? 'Simulation vollständig.' : isBlock(st) ? (id === 'lid' ? 'Test vollständig.' : `${GROUP[st.mode].name} vollständig.`) : 'Einzelner Prüfungsteil.'} Unten findest du alle Lösungen mit Erklärung.</p></div>
+      <div class="dm-head"><h1>Dein Ergebnis: ${e(META[id].short)}</h1><p class="dm-lead">${paper ? `Auswertung deiner Antworten aus dem PDF${st.lidSet ? ` (Probetest ${st.lidSet})` : ''}. ` : ''}${paper ? '' : st.mode === 'full' ? 'Simulation vollständig.' : isBlock(st) ? (id === 'lid' ? 'Test vollständig.' : `${GROUP[st.mode].name} vollständig.`) : 'Einzelner Prüfungsteil.'} Unten findest du alle Lösungen mit Erklärung.${st.pauses ? ` <span class="sim-pausenote">⏸ ${st.pauses}× pausiert – in der echten Prüfung läuft die Uhr ohne Pause.</span>` : ''}</p></div>
       <section class="dm-card sim-sum" id="sim-sum" aria-live="polite"></section>
       <div id="sim-combo"></div>
       <div class="dm-row sim-tools" id="sim-nextblock" hidden><button type="button" class="dm-btn" id="sim-other">${GROUP[other].ic} ${GROUP[other].name} starten (${groupMin(ex, other)} Min.)</button></div>
-      <div class="dm-row sim-tools"><label class="sim-toggle"><input type="checkbox" id="sim-only"> Nur Fehler zeigen</label><button type="button" class="dm-btn dm-btn-quiet" id="sim-again">Neue Simulation</button><a class="dm-btn dm-btn-quiet" href="#simulation">Alle Simulationen</a>${PREP.includes(id) ? `<a class="dm-btn dm-btn-quiet" href="#vorbereitung/${id}">Gezielt üben</a>` : ''}</div>
+      <div class="dm-row sim-tools"><label class="sim-toggle"><input type="checkbox" id="sim-only"> Nur Fehler zeigen</label><button type="button" class="dm-btn dm-btn-quiet" id="sim-again">${paper ? '✎ Antworten ändern' : 'Neue Simulation'}</button><a class="dm-btn dm-btn-quiet" href="#simulation">Alle Simulationen</a>${PREP.includes(id) ? `<a class="dm-btn dm-btn-quiet" href="#vorbereitung/${id}">Gezielt üben</a>` : ''}</div>
       <div class="sim-review">${sections}</div>
       ${id === 'lid' ? window.LID_QUELLE_HTML || '' : '<p class="dm-small">Eigene Übungsaufgaben im Stil der Prüfung – keine offiziellen Aufgaben. Die Bewertung ist eine Schätzung.</p>'}`, 'sim-page');
     paint();
     $('#sim-only').onchange = ev => main().classList.toggle('sim-only-wrong', ev.target.checked);
-    $('#sim-again').onclick = () => begin(id, ex, st.mode, st.secs[0]);
+    $('#sim-again').onclick = () => paper ? (location.hash = `#simulation/${id}/pruefen`) : begin(id, ex, st.mode, st.secs[0]);
     $('#sim-other').onclick = () => begin(id, ex, other);
     main().onclick = ev => {
       const play = ev.target.closest('.sim-play');
@@ -814,7 +864,7 @@
     const w = st.write[p._key] || {}, o = p.options[w.opt ?? 0], n = words(w.text);
     return `${p.options.length > 1 ? `<p class="dm-small">Gewählt: ${e(o.h || '')}</p>` : ''}
       ${p.audio?.length ? `<details class="sim-det"><summary>Transkript</summary>${p.audio.map(transcript).join('')}</details>` : ''}
-      <div class="sim-yours"><b>Dein Text (${n} Wörter${p.minWords && n < p.minWords ? ` – zu kurz, mindestens ${p.minWords}` : ''})</b><p class="sim-pre">${w.text ? e(w.text) : '<i>Kein Text geschrieben.</i>'}</p></div>
+      <div class="sim-yours"><b>Dein Text (${n} Wörter${p.minWords && n < p.minWords ? ` – zu kurz, mindestens ${p.minWords}` : ''})</b><p class="sim-pre">${w.text ? e(w.text) : st.paper ? '<i>Dein Text steht in deinem Heft. Vergleiche ihn mit dem Mustertext und bewerte dich mit der Checkliste.</i>' : '<i>Kein Text geschrieben.</i>'}</p></div>
       <details class="sim-det" open><summary>Mustertext</summary><div class="sim-muster">${para(o.muster)}</div></details>
       ${checklist(p, st)}`;
   }
@@ -910,6 +960,96 @@
     clearTimeout(t._h); t._h = setTimeout(() => t.classList.remove('on'), 3500);
   }
 
+  /* ---------- Papier-Antworten prüfen #simulation/<id>/pruefen ---------- */
+  // Labels match the PDFs: "a)"-prefixed options keep their letter, others get a, b, c …
+  const optLabel = (o, i, n) => { const m = /^([a-z0-9]{1,2})\)/i.exec(o); return m ? m[1] : n === 2 ? String(o).split(/\s/)[0] : 'abcdefghijklmno'[i]; };
+  let lidSets = null;
+  const loadLidSets = () => lidSets ? Promise.resolve(lidSets) : fetch(`${DL}lid-sets.json?v=${V}`).then(r => r.json()).then(j => (lidSets = j));
+  async function paperCheck(id) {
+    let ex;
+    try { ex = await load(id); } catch { return failPage(); }
+    const draft = store()[id + '_paperdraft'] ||= { ans: {}, write: {}, scope: 'written', lidSet: '1' };
+    if (id === 'lid') {
+      try { await loadLidSets(); } catch { return failPage(); }
+      ex = lidExam({ lidQs: lidSets[draft.lidSet] || lidSets['1'] });
+    } else prepare(ex);
+    const written = groupIdx(ex, 'written');
+    const hoerIdx = written.filter(i => ex.sections[i].parts.some(p => p.audio?.length));
+    const secs = draft.scope === 'hoeren' && id !== 'lid' ? hoerIdx : written;
+    const ctl = (p, it) => {
+      const opts = optsOf(p, it), n = it._n, v = draft.ans[n];
+      if (!it.opts && opts.length > 4) {
+        return `<select class="sim-sel pc-sel" data-pn="${n}" aria-label="Antwort zu Aufgabe ${n}"><option value="">–</option>${opts.map((o, i) => `<option value="${i}" ${v === i ? 'selected' : ''}>${e(o)}</option>`).join('')}</select>`;
+      }
+      return `<div class="pc-opts" role="group" aria-label="Antwort zu Aufgabe ${n}">${opts.map((o, i) => `<button type="button" class="pc-opt${v === i ? ' is-on' : ''}" data-pn="${n}" data-i="${i}" aria-pressed="${v === i}" title="${e(o)}">${e(optLabel(o, i, opts.length))}</button>`).join('')}</div>`;
+    };
+    const body = secs.map(si => {
+      const s = ex.sections[si];
+      return `<section class="dm-card pc-sec"><h2>${e(s.title)}</h2>${s.parts.map(p => {
+        if (p.kind === 'write') {
+          const w = draft.write[p._key] || {};
+          return `<div class="pc-part"><h3>${e(p.title)}</h3>
+            ${p.options.length > 1 ? `<fieldset class="sim-wchoose"><legend>Welche Aufgabe hast du gewählt?</legend>${p.options.map((o, i) => `<label><input type="radio" name="pw-${p._key}" value="${i}" data-pwopt="${p._key}" ${(w.opt ?? 0) === i ? 'checked' : ''}> ${e(o.h || `Aufgabe ${'AB'[i]}`)}</label>`).join('')}</fieldset>` : ''}
+            <label class="sim-wlabel" for="pw-${p._key}">Deinen Text abtippen (freiwillig) – du bekommst Mustertext und Checkliste</label>
+            <textarea id="pw-${p._key}" class="sim-textarea" data-pw="${p._key}" rows="5" spellcheck="false">${e(w.text || '')}</textarea></div>`;
+        }
+        const its = p.items || [];
+        return `<div class="pc-part"><h3>${e(p.title)}</h3><ol class="pc-grid">${its.map(it => `<li><span class="pc-n">${id === 'lid' ? it._n : it._n}</span>${ctl(p, it)}</li>`).join('')}</ol></div>`;
+      }).join('')}</section>`;
+    }).join('');
+    const total = secs.reduce((a, si) => a + ex.sections[si].parts.reduce((b, p) => b + (p.items || []).length, 0), 0);
+    DM.page(`${DM.crumbs([['Prüfungstraining', '#pruefung'], ['Simulationen', '#simulation'], [META[id].short, `#simulation/${id}`], ['Papier-Antworten prüfen']])}
+      <div class="dm-head"><h1>Papier-Antworten prüfen: ${e(META[id].short)}</h1>
+      <p class="dm-lead">Du hast ${id === 'lid' ? 'einen Probetest' : 'das Heft'} auf Papier gemacht? Tippe hier deine Antworten an – die Seite zählt die Punkte, sagt dir, ob du bestanden hättest, und zeigt alle Lösungen mit Erklärung.</p></div>
+      <section class="dm-card pc-scope">
+        ${id === 'lid' ? `<fieldset class="sim-wchoose"><legend>Welchen Probetest hast du gemacht?</legend>${['1', '2'].map(k => `<label><input type="radio" name="pc-set" value="${k}" ${draft.lidSet === k ? 'checked' : ''}> Probetest ${k}</label>`).join('')}</fieldset>`
+        : `<fieldset class="sim-wchoose"><legend>Was hast du gemacht?</legend><label><input type="radio" name="pc-scope" value="written" ${draft.scope !== 'hoeren' ? 'checked' : ''}> Ganze schriftliche Prüfung</label><label><input type="radio" name="pc-scope" value="hoeren" ${draft.scope === 'hoeren' ? 'checked' : ''}> Nur Hörverstehen</label></fieldset>`}
+        <p class="dm-small">Die Nummern sind dieselben wie im PDF. Deine Eingaben bleiben gespeichert, bis du sie löschst.</p>
+        <div class="sim-pdf">${downloads(id).map(dlLink).join('')}</div>
+      </section>
+      ${body}
+      <div class="sim-end"><p class="pc-count" id="pc-count"></p><div class="dm-row"><button type="button" class="dm-btn" id="pc-go">✓ Auswerten</button><button type="button" class="dm-btn dm-btn-quiet" id="pc-clear">Eingaben löschen</button></div></div>
+      ${id === 'lid' ? window.LID_QUELLE_HTML || '' : '<p class="dm-small">Eigene Übungsaufgaben im Stil der Prüfung – keine offiziellen Aufgaben. Die Bewertung ist eine Schätzung.</p>'}`, 'sim-page');
+    const m = main();
+    const count = () => {
+      const filled = secs.reduce((a, si) => a + ex.sections[si].parts.reduce((b, p) => b + (p.items || []).filter(it => draft.ans[it._n] != null).length, 0), 0);
+      $('#pc-count').textContent = `${filled} von ${total} Antworten eingetragen.`;
+    };
+    count();
+    m.onclick = ev => {
+      const b = ev.target.closest('.pc-opt');
+      if (b) {
+        const n = +b.dataset.pn, i = +b.dataset.i, off = draft.ans[n] === i;
+        if (off) delete draft.ans[n]; else draft.ans[n] = i;
+        $$(`.pc-opt[data-pn="${n}"]`).forEach(x => { const on = !off && +x.dataset.i === i; x.classList.toggle('is-on', on); x.setAttribute('aria-pressed', on); });
+        throttleSave(); count();
+      }
+    };
+    m.onchange = ev => {
+      const t = ev.target;
+      if (t.matches('.pc-sel')) { const n = +t.dataset.pn; if (t.value === '') delete draft.ans[n]; else draft.ans[n] = +t.value; save(); count(); }
+      if (t.matches('[data-pwopt]')) { (draft.write[t.dataset.pwopt] ||= {}).opt = +t.value; save(); }
+      if (t.name === 'pc-scope') { draft.scope = t.value; save(); paperCheck(id); }
+      if (t.name === 'pc-set') { draft.lidSet = t.value; draft.ans = {}; save(); paperCheck(id); }
+    };
+    m.oninput = ev => { const t = ev.target; if (t.matches('[data-pw]')) { (draft.write[t.dataset.pw] ||= {}).text = t.value; throttleSave(); } };
+    $('#pc-clear').onclick = ev => {
+      const b = ev.currentTarget; if (!b.dataset.sure) { b.dataset.sure = 1; b.textContent = 'Wirklich alle Eingaben löschen?'; return; }
+      store()[id + '_paperdraft'] = { ans: {}, write: {}, scope: draft.scope, lidSet: draft.lidSet }; save(); paperCheck(id);
+    };
+    $('#pc-go').onclick = () => {
+      const hoer = draft.scope === 'hoeren' && id !== 'lid';
+      const st = { v: 1, paper: true, mode: hoer ? 'single' : 'written', secs, k: secs.length, left: 0, phase: '', ans: { ...draft.ans }, write: JSON.parse(JSON.stringify(draft.write)), rate: {}, plays: {}, prompt: {}, notes: {}, started: Date.now(), done: true, finished: Date.now() };
+      if (id === 'lid') { st.lidQs = lidSets[draft.lidSet]; st.lidSet = draft.lidSet; }
+      const r = score(ex, st);
+      const hist = store()[id + '_hist'] ||= [];
+      hist.push({ date: Date.now(), mode: hoer ? 'paper-hoeren' : 'paper', pct: r.pct, pass: r.verdict ? (r.verdict.pass ?? null) : null, sk: skMap(r.sk) });
+      if (hist.length > 20) hist.splice(0, hist.length - 20);
+      store()[id + '_paper'] = st; save();
+      location.hash = `#simulation/${id}/ergebnis-papier`;
+    };
+  }
+
   /* ---------- Routen ---------- */
   DM.routes ||= {};
   DM.routes.simulation = p => {
@@ -917,6 +1057,8 @@
     if (!id || !META[id]) { stopAll(); return hub(); }
     if (p[2] === 'run') return run(id);
     if (p[2] === 'ergebnis') return result(id);
+    if (p[2] === 'ergebnis-papier') { stopAll(); return result(id, true); }
+    if (p[2] === 'pruefen') { stopAll(); return paperCheck(id); }
     stopAll(); return intro(id);
   };
   DM.routes.vorbereitung = p => { stopAll(); return p[1] ? prepPage(p[1]) : prepHub(); };

@@ -15,3 +15,8 @@ gehören NICHT ins öffentliche Repository (siehe `.gitignore`). Ins Repository 
   Inhalt: Deckblatt mit QR-Code zur Online-Simulation (Hörtexte), Aufgaben, Schreiblinien, Antwortbogen, Lösungen mit
   Erklärung, Checklisten/Mustertexte, Transkripte. Aus dem Repo-Stamm: `python3 tools/pdf/build_sim_pdf.py [id …]` –
   nach jeder Änderung an `sim/*.js` oder `lid-katalog.js` neu ausführen. Die Knöpfe stehen in `simulation.js` (`PDFS`).
+- **Hörverstehen als MP3:** `python3 tools/sim/build_listening_mp3.py [id …]` baut `material/simulation/<id>-hoeren.mp3`
+  (Gong vor jedem Teil, Signalton + 8 s Lesezeit, Hörtext 1× oder 2× wie in der Prüfung) und `<id>-hoeren.json`
+  mit den Startzeiten. **Danach** `build_sim_pdf.py` laufen lassen – dann stehen die Zeitmarken („MP3 ab 3:04“) im Heft.
+  `build_sim_pdf.py` baut zusätzlich `<id>-hoeren.pdf` (nur Hören) und `lid-sets.json` (Fragen der LiD-Probetests für
+  die Seite „Papier-Antworten prüfen“ `#simulation/<id>/pruefen`).

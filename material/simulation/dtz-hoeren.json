@@ -1,0 +1,101 @@
+{
+ "total": 995,
+ "marks": [
+  {
+   "part": "Hören Teil 1: Ansagen am Telefon und Durchsagen",
+   "clip": 0,
+   "h": "Text 1",
+   "start": 4
+  },
+  {
+   "part": "Hören Teil 1: Ansagen am Telefon und Durchsagen",
+   "clip": 1,
+   "h": "Text 2",
+   "start": 108
+  },
+  {
+   "part": "Hören Teil 1: Ansagen am Telefon und Durchsagen",
+   "clip": 2,
+   "h": "Text 3",
+   "start": 184
+  },
+  {
+   "part": "Hören Teil 1: Ansagen am Telefon und Durchsagen",
+   "clip": 3,
+   "h": "Text 4",
+   "start": 290
+  },
+  {
+   "part": "Hören Teil 2: Informationen im Radio",
+   "clip": 0,
+   "h": "Text 1",
+   "start": 385
+  },
+  {
+   "part": "Hören Teil 2: Informationen im Radio",
+   "clip": 1,
+   "h": "Text 2",
+   "start": 425
+  },
+  {
+   "part": "Hören Teil 2: Informationen im Radio",
+   "clip": 2,
+   "h": "Text 3",
+   "start": 461
+  },
+  {
+   "part": "Hören Teil 2: Informationen im Radio",
+   "clip": 3,
+   "h": "Text 4",
+   "start": 498
+  },
+  {
+   "part": "Hören Teil 2: Informationen im Radio",
+   "clip": 4,
+   "h": "Text 5",
+   "start": 542
+  },
+  {
+   "part": "Hören Teil 3: Gespräche im Alltag",
+   "clip": 0,
+   "h": "Gespräch 1",
+   "start": 583
+  },
+  {
+   "part": "Hören Teil 3: Gespräche im Alltag",
+   "clip": 1,
+   "h": "Gespräch 2",
+   "start": 649
+  },
+  {
+   "part": "Hören Teil 3: Gespräche im Alltag",
+   "clip": 2,
+   "h": "Gespräch 3",
+   "start": 718
+  },
+  {
+   "part": "Hören Teil 3: Gespräche im Alltag",
+   "clip": 3,
+   "h": "Gespräch 4",
+   "start": 776
+  },
+  {
+   "part": "Hören Teil 4: Meinungen im Radio",
+   "clip": 0,
+   "h": "Person 1: Frau Jansen",
+   "start": 837
+  },
+  {
+   "part": "Hören Teil 4: Meinungen im Radio",
+   "clip": 1,
+   "h": "Person 2: Herr Brandt",
+   "start": 891
+  },
+  {
+   "part": "Hören Teil 4: Meinungen im Radio",
+   "clip": 2,
+   "h": "Person 3: Herr Schäfer",
+   "start": 945
+  }
+ ]
+}
