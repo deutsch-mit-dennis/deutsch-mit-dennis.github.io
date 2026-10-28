@@ -23,7 +23,10 @@ pdfmetrics.registerFont(TTFont('Atk-B', os.path.join(F, 'Atk-B.ttf')))
 pdfmetrics.registerFont(TTFont('Atk-I', os.path.join(F, 'Atk-I.ttf')))
 pdfmetrics.registerFont(TTFont('Cav', os.path.join(F, 'Cav.ttf')))
 SYM = '/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf'
-pdfmetrics.registerFont(TTFont('Sym', SYM if os.path.exists(SYM) else os.path.join(F, 'Atk-R.ttf')))
+_font = lambda *p: next((x for x in p if os.path.exists(x)), os.path.join(F, 'Atk-R.ttf'))
+# Linux: DejaVu has symbols and letters; Windows needs Segoe UI Symbol (☐ ♪) and Arial (ć ğ ś …)
+pdfmetrics.registerFont(TTFont('Sym', _font(SYM, 'C:/Windows/Fonts/seguisym.ttf')))
+pdfmetrics.registerFont(TTFont('Ext', _font(SYM, 'C:/Windows/Fonts/arial.ttf')))
 registerFontFamily('Atk', normal='Atk', bold='Atk-B', italic='Atk-I', boldItalic='Atk-B')
 
 MARK = 'created by D.Prudnikau'
@@ -47,6 +50,11 @@ st = {
 
 def R(html, s='p'): return Paragraph(html, st[s])
 def sym(ch): return f'<font name="Sym">{ch}</font>'
+_HAS = {n: pdfmetrics.getFont(n).face.charToGlyph for n in ('Atk', 'Sym', 'Ext')}
+def fallback(text):
+    """Wraps characters the Atkinson font lacks (ć, ś, →, ≠ …) in a font that has them."""
+    return ''.join(c if ord(c) < 128 or ord(c) in _HAS['Atk'] else
+                   f'<font name="{"Ext" if ord(c) in _HAS["Ext"] else "Sym"}">{c}</font>' for c in text)
 ARROW = sym('→')
 GAP = '<font color="#8A93A8">__________</font>'
 

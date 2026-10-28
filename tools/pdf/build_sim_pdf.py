@@ -90,7 +90,7 @@ st["tr"] = ParagraphStyle(
     spaceAfter=1,
 )
 
-esc = lambda s: escape(str(s or ""))
+esc = lambda s: L.fallback(escape(str(s or "")))
 BOX = L.sym("☐")
 SPK = {"n": "Ansage", "f": "Frau", "m": "Mann", "f2": "Frau 2", "m2": "Mann 2"}
 

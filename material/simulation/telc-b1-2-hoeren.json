@@ -1,0 +1,71 @@
+{
+ "total": 859,
+ "marks": [
+  {
+   "part": "Hörverstehen Teil 1",
+   "clip": 0,
+   "h": "Text 1",
+   "start": 4
+  },
+  {
+   "part": "Hörverstehen Teil 1",
+   "clip": 1,
+   "h": "Text 2",
+   "start": 38
+  },
+  {
+   "part": "Hörverstehen Teil 1",
+   "clip": 2,
+   "h": "Text 3",
+   "start": 73
+  },
+  {
+   "part": "Hörverstehen Teil 1",
+   "clip": 3,
+   "h": "Text 4",
+   "start": 112
+  },
+  {
+   "part": "Hörverstehen Teil 1",
+   "clip": 4,
+   "h": "Text 5",
+   "start": 148
+  },
+  {
+   "part": "Hörverstehen Teil 2",
+   "clip": 0,
+   "h": "Radiosendung „Mittendrin“",
+   "start": 188
+  },
+  {
+   "part": "Hörverstehen Teil 3",
+   "clip": 0,
+   "h": "Text 1 – Im Kaufhaus",
+   "start": 568
+  },
+  {
+   "part": "Hörverstehen Teil 3",
+   "clip": 1,
+   "h": "Text 2 – Anrufbeantworter",
+   "start": 622
+  },
+  {
+   "part": "Hörverstehen Teil 3",
+   "clip": 2,
+   "h": "Text 3 – Am Flughafen",
+   "start": 683
+  },
+  {
+   "part": "Hörverstehen Teil 3",
+   "clip": 3,
+   "h": "Text 4 – Anrufbeantworter",
+   "start": 741
+  },
+  {
+   "part": "Hörverstehen Teil 3",
+   "clip": 4,
+   "h": "Text 5 – Im Zug",
+   "start": 802
+  }
+ ]
+}

@@ -1,0 +1,71 @@
+{
+ "total": 794,
+ "marks": [
+  {
+   "part": "Hörverstehen Teil 1",
+   "clip": 0,
+   "h": "Beitrag 1",
+   "start": 4
+  },
+  {
+   "part": "Hörverstehen Teil 1",
+   "clip": 1,
+   "h": "Beitrag 2",
+   "start": 35
+  },
+  {
+   "part": "Hörverstehen Teil 1",
+   "clip": 2,
+   "h": "Beitrag 3",
+   "start": 67
+  },
+  {
+   "part": "Hörverstehen Teil 1",
+   "clip": 3,
+   "h": "Beitrag 4",
+   "start": 101
+  },
+  {
+   "part": "Hörverstehen Teil 1",
+   "clip": 4,
+   "h": "Beitrag 5",
+   "start": 132
+  },
+  {
+   "part": "Hörverstehen Teil 2",
+   "clip": 0,
+   "h": "Interview: Ärztin auf dem Land",
+   "start": 167
+  },
+  {
+   "part": "Hörverstehen Teil 3",
+   "clip": 0,
+   "h": "Text 1",
+   "start": 513
+  },
+  {
+   "part": "Hörverstehen Teil 3",
+   "clip": 1,
+   "h": "Text 2",
+   "start": 567
+  },
+  {
+   "part": "Hörverstehen Teil 3",
+   "clip": 2,
+   "h": "Text 3",
+   "start": 624
+  },
+  {
+   "part": "Hörverstehen Teil 3",
+   "clip": 3,
+   "h": "Text 4",
+   "start": 680
+  },
+  {
+   "part": "Hörverstehen Teil 3",
+   "clip": 4,
+   "h": "Text 5",
+   "start": 737
+  }
+ ]
+}

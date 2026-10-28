@@ -1,0 +1,101 @@
+{
+ "total": 855,
+ "marks": [
+  {
+   "part": "Hören Teil 1: Ansagen am Telefon und Durchsagen",
+   "clip": 0,
+   "h": "Text 1",
+   "start": 4
+  },
+  {
+   "part": "Hören Teil 1: Ansagen am Telefon und Durchsagen",
+   "clip": 1,
+   "h": "Text 2",
+   "start": 89
+  },
+  {
+   "part": "Hören Teil 1: Ansagen am Telefon und Durchsagen",
+   "clip": 2,
+   "h": "Text 3",
+   "start": 170
+  },
+  {
+   "part": "Hören Teil 1: Ansagen am Telefon und Durchsagen",
+   "clip": 3,
+   "h": "Text 4",
+   "start": 252
+  },
+  {
+   "part": "Hören Teil 2: Informationen im Radio",
+   "clip": 0,
+   "h": "Text 1",
+   "start": 320
+  },
+  {
+   "part": "Hören Teil 2: Informationen im Radio",
+   "clip": 1,
+   "h": "Text 2",
+   "start": 356
+  },
+  {
+   "part": "Hören Teil 2: Informationen im Radio",
+   "clip": 2,
+   "h": "Text 3",
+   "start": 388
+  },
+  {
+   "part": "Hören Teil 2: Informationen im Radio",
+   "clip": 3,
+   "h": "Text 4",
+   "start": 425
+  },
+  {
+   "part": "Hören Teil 2: Informationen im Radio",
+   "clip": 4,
+   "h": "Text 5",
+   "start": 457
+  },
+  {
+   "part": "Hören Teil 3: Gespräche im Alltag",
+   "clip": 0,
+   "h": "Gespräch 1",
+   "start": 495
+  },
+  {
+   "part": "Hören Teil 3: Gespräche im Alltag",
+   "clip": 1,
+   "h": "Gespräch 2",
+   "start": 567
+  },
+  {
+   "part": "Hören Teil 3: Gespräche im Alltag",
+   "clip": 2,
+   "h": "Gespräch 3",
+   "start": 624
+  },
+  {
+   "part": "Hören Teil 3: Gespräche im Alltag",
+   "clip": 3,
+   "h": "Gespräch 4",
+   "start": 680
+  },
+  {
+   "part": "Hören Teil 4: Meinungen im Radio",
+   "clip": 0,
+   "h": "Person 1: Herr Lukić",
+   "start": 736
+  },
+  {
+   "part": "Hören Teil 4: Meinungen im Radio",
+   "clip": 1,
+   "h": "Person 2: Frau Nguyen",
+   "start": 778
+  },
+  {
+   "part": "Hören Teil 4: Meinungen im Radio",
+   "clip": 2,
+   "h": "Person 3: Herr Brandt",
+   "start": 817
+  }
+ ]
+}
