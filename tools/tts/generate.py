@@ -25,7 +25,9 @@ USAGE = os.path.join(OUT, 'usage.json')
 # Google Cloud Chirp 3 HD: 1.000.000 Zeichen/Monat frei – wir bleiben mit 600.000 weit darunter.
 # ElevenLabs: Starter-Tarif (30.000 Credits/Monat, 1 Credit pro Zeichen). Das echte Restguthaben wird vor jedem
 # Lauf über die API abgefragt (eleven_remaining); dieser Wert gilt nur, wenn die Abfrage nicht klappt.
-MONTHLY_LIMIT = {'google': 600000, 'elevenlabs': 30000, 'gemini': 200000}
+# Gemini: hard cap agreed with Dennis on 2026-10-28 – about 60,000 chars (~2.50 EUR) on top of the 98,818 already
+# used in October. From November this allows ~160,000 chars/month; the prepaid balance is the real limit.
+MONTHLY_LIMIT = {'google': 600000, 'elevenlabs': 30000, 'gemini': 160000}
 
 # Stimmen je Rolle (f = Frau, m = Mann). Anpassbar über die Umgebungsvariable TTS_VOICES (JSON).
 VOICES = {
