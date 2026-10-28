@@ -2,6 +2,18 @@
  "note": "Neu auf der Seite – neueste Einträge oben. Wird vom Redaktionsplan (geplante Aufgaben) ergänzt.",
  "items": [
   {
+   "date": "2026-10-28",
+   "type": "uebung",
+   "title": "Neuer Lesetext: Informationen aus der Hausarztpraxis (Alltag, A2–B1)",
+   "link": "#lesen/alltag/8"
+  },
+  {
+   "date": "2026-10-28",
+   "type": "uebung",
+   "title": "Neuer Lesetext: Auftrag mit Änderungen – Kunden-E-Mail (Beruf, B1–B2)",
+   "link": "#lesen/beruf/7"
+  },
+  {
    "date": "2026-10-27",
    "type": "neu",
    "title": "Neu für B2 Beruf: „Arbeitsabläufe ordnen“ und „Quiz-Leiter Arbeitsrecht“",
@@ -168,30 +180,6 @@
    "type": "uebung",
    "title": "Schreiben A2: Schicht tauschen – Nachricht an einen Kollegen",
    "link": "#ueben/schreiben/A2/5"
-  },
-  {
-   "date": "2026-10-15",
-   "type": "neu",
-   "title": "Lino läuft: Am Ende jeder Welt wartet jetzt ein Fehlermonster – weiche den falschen Wörtern aus und besiege es mit richtigen Antworten",
-   "link": "#spiele/lino"
-  },
-  {
-   "date": "2026-10-15",
-   "type": "neu",
-   "title": "Neu: Witz des Tages – jeden Tag ein deutscher Witz mit Erklärung und Übersetzung in 50 Sprachen",
-   "link": "#witz"
-  },
-  {
-   "date": "2026-10-15",
-   "type": "neu",
-   "title": "2 neue Merkblätter Leben in Deutschland: Modul 6 – Teilung, Mauerbau und Wiedervereinigung und Modul 7 – Deutschland in Europa und die EU",
-   "link": "#orientierungskurs"
-  },
-  {
-   "date": "2026-10-15",
-   "type": "neu",
-   "title": "Lino läuft: 3 neue Welten – mit dem Auto über die Autobahn (A2), mit dem Schlitten durch Winterberg (B1), mit dem Fahrrad an die Ostsee (B2)",
-   "link": "#spiele/lino"
   }
  ]
 }
