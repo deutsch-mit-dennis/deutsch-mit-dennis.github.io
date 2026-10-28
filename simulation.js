@@ -3,7 +3,7 @@
    LiD-Simulation: Fragen aus window.LID_KATALOG (BAMF-Gesamtfragenkatalog).
    Fortschritt und Antworten bleiben nur im Browser (DM.store.sim). */
 (() => {
-  const V = '20261028b';
+  const V = '20261028e';
   const $ = (s, r = document) => r.querySelector(s);
   const $$ = (s, r = document) => [...r.querySelectorAll(s)];
   const e = s => DM.esc(s);
@@ -279,8 +279,9 @@
       return `<li class="sim-step"><span class="sim-stepno">${si + 1}</span><div><b>${e(s.title)}</b> <span class="sim-min">⏱ ${s.minutes} Min.${s.prepMinutes ? ` + ${s.prepMinutes} Min. Vorbereitung` : ''}</span><ul>${parts.map(t => `<li>${e(t)}</li>`).join('')}</ul>${ex.id === 'lid' || ex.sections.length < 2 ? '' : `<button type="button" class="dm-btn dm-btn-quiet sim-single" data-single="${si}">Nur diesen Teil üben</button>`}</div></li>`;
     }).join('');
     const running = st && !st.done;
+    const parked = store()[id + '_park'];
     const curSec = running ? ex.sections[st.secs[Math.min(st.k, st.secs.length - 1)]] : null;
-    const runTitle = running ? (isBlock(st) ? GROUP[st.mode].name : curSec.title) : '';
+    const runTitle = running ? (isBlock(st) ? GROUP[st.mode].name : st.only != null ? curSec.parts[st.only].title : curSec.title) : '';
     const hist = store()[id + '_hist'] || [];
     const hasOral = groupIdx(ex, 'oral').length > 0;
     const startCard = g => {
@@ -290,7 +291,10 @@
         <p class="sim-startmin">⏱ <b>${mins} Minuten</b>${prep ? ` <span>(davon ${prep} Min. Vorbereitung)</span>` : ''}</p>
         <ul>${idx.map(i => `<li>${e(ex.sections[i].title)} <span>· ${ex.sections[i].minutes}${ex.sections[i].prepMinutes ? ` + ${ex.sections[i].prepMinutes}` : ''} Min.</span></li>`).join('')}</ul>
         ${last ? `<p class="dm-small">Zuletzt: <b>${last.pct} %</b> am ${new Date(last.date).toLocaleDateString('de-DE')}</p>` : ''}
-        <button type="button" class="dm-btn" data-start="${g}" ${running ? 'disabled' : ''}>▶ ${id === 'lid' ? 'Test' : GROUP[g].name} starten</button>
+        ${running && st.mode === g ? `<a class="dm-btn" href="#simulation/${id}/run">▶ Fortsetzen · noch ${mmss(st.left)} Min.</a><p class="dm-small sim-startnote">Angefangen – deine Antworten sind gespeichert.</p>`
+        : parked && parked.mode === g ? `<button type="button" class="dm-btn" data-unpark>▶ Fortsetzen · noch ${mmss(parked.left)} Min.</button><p class="dm-small sim-startnote">Angefangen und pausiert – deine Antworten sind gespeichert.</p>`
+        : `<button type="button" class="dm-btn" data-start="${g}">▶ ${id === 'lid' ? 'Test' : GROUP[g].name} starten</button>${running ? `<p class="dm-small sim-startnote">Angefangen: ${e(runTitle)} (noch ${mmss(st.left)} Min.). Sie wird pausiert und bleibt gespeichert – du kannst sie danach fortsetzen.</p>` : ''}`}
+        ${g === 'oral' ? `<details class="sim-partpick"${parked?.only != null || st?.only != null ? ' open' : ''}><summary>Nur einen Teil üben</summary><div class="sim-partbtns">${idx.flatMap(si => ex.sections[si].parts.map((p, pi) => p.kind !== 'speak' ? '' : running && st.only === pi && st.secs[0] === si ? `<a class="dm-btn" href="#simulation/${id}/run">▶ ${e(p.title)} fortsetzen <small>· noch ${mmss(st.left)} Min.</small></a>` : parked?.only === pi && parked.secs[0] === si ? `<button type="button" class="dm-btn" data-unpark>▶ ${e(p.title)} fortsetzen <small>· noch ${mmss(parked.left)} Min.</small></button>` : `<button type="button" class="dm-btn dm-btn-quiet" data-part="${si}.${pi}">${e(p.title)}${p.minutes ? ` <small>· ${p.minutes} Min.</small>` : ''}</button>`)).join('')}</div>${ex.sections[idx[0]]?.prepMinutes ? `<p class="dm-small">Mit ${prepMin(ex.sections[idx[0]], { only: 0 })} Minuten Vorbereitung vorher.</p>` : ''}</details>` : ''}
 </div>`;
     };
     const combo = combined(id, ex);
@@ -306,7 +310,7 @@
       ${id === 'lid' ? `<p class="dm-small">Für die drei Bundesland-Fragen nimmt die Simulation die Fragen für Nordrhein-Westfalen.</p>` : ''}
       ${ex.sections.length > 1 ? `<details class="sim-more dm-card"><summary>Andere Möglichkeiten: Teil für Teil oder nur einen Teil üben</summary>
         <p>Bei <b>Teil für Teil</b> hat jeder Prüfungsteil seine eigene Uhr, mit Pause dazwischen. Du kannst auch nur einen einzelnen Teil üben.</p>
-        <button type="button" class="dm-btn dm-btn-quiet" id="sim-go" ${running ? 'disabled' : ''}>▶ Ganze Prüfung Teil für Teil (${e(m.total)})</button>
+        <button type="button" class="dm-btn dm-btn-quiet" id="sim-go">▶ Ganze Prüfung Teil für Teil (${e(m.total)})</button>
         <ol class="sim-steps">${rows}</ol></details>` : ''}
       ${PREP.includes(id) ? `<div class="dm-row sim-start"><a class="dm-btn dm-btn-quiet" href="#vorbereitung/${id}">Gezielte Vorbereitung</a></div>` : ''}
       ${hist.length ? `<section class="dm-card"><h2>Deine Ergebnisse</h2><ul class="sim-hist">${hist.slice(-6).reverse().map(h => `<li><span>${new Date(h.date).toLocaleDateString('de-DE')}</span><span class="sim-hmode">${e(modeLabel(h.mode || (h.single ? 'single' : 'full')))}</span><b>${h.pct} %</b><span>${h.pass === true ? '✓ bestanden' : h.pass === false && (h.mode === 'full' || !h.mode) && !h.single ? '✗ noch nicht bestanden' : ''}</span></li>`).join('')}</ul></section>` : ''}
@@ -315,7 +319,9 @@
     $('#sim-go')?.addEventListener('click', () => begin(id, ex, 'full'));
     $$('[data-start]').forEach(b => b.addEventListener('click', () => begin(id, ex, b.dataset.start)));
     $('#sim-new')?.addEventListener('click', ev => { const b = ev.currentTarget; if (!b.dataset.sure) { b.dataset.sure = 1; b.textContent = 'Wirklich? Dein Stand wird gelöscht.'; return; } delete store()[id]; save(); intro(id); });
-    $$('[data-single]').forEach(b => { b.disabled = running; b.addEventListener('click', () => begin(id, ex, 'single', +b.dataset.single)); });
+    $$('[data-unpark]').forEach(b => b.addEventListener('click', () => unpark(id)));
+    $$('[data-part]').forEach(b => b.addEventListener('click', () => { const [si, pi] = b.dataset.part.split('.').map(Number); begin(id, ex, 'single', si, pi); }));
+    $$('[data-single]').forEach(b => { b.addEventListener('click', () => begin(id, ex, 'single', +b.dataset.single)); });
   }
   function ruleBox(ex) {
     const R = {
@@ -331,20 +337,42 @@
   }
 
   /* ---------- Ablauf ---------- */
-  function begin(id, ex, mode, si) {
+  /* A running exam is parked (paused, kept) when another one is started, so the written
+     and the oral part can be done in any order without losing answers. One parking slot. */
+  function park(id) {
+    const st = store()[id];
+    if (st && !st.done) { st.paused = true; store()[id + '_park'] = st; }
+    delete store()[id];
+  }
+  function unpark(id) {
+    const p = store()[id + '_park']; if (!p) return;
+    const st = store()[id];
+    delete store()[id + '_park'];
+    if (st && !st.done) { st.paused = true; store()[id + '_park'] = st; }
+    store()[id] = p; save();
+    location.hash = `#simulation/${id}/run`;
+  }
+  function begin(id, ex, mode, si, only) {
     stopAll();
+    park(id);
     const secs = mode === 'full' ? ex.sections.map((_, i) => i) : mode === 'written' || mode === 'oral' ? groupIdx(ex, mode) : [si];
     const st = { v: 1, mode, secs, k: 0, left: 0, phase: '', ans: {}, write: {}, rate: {}, plays: {}, prompt: {}, notes: {}, started: Date.now(), done: false };
+    if (only != null) st.only = only;
     if (id === 'lid') { st.lidQs = lidPick(); }
     if (isBlock(st)) { st.phase = 'work'; st.left = groupMin(ex, mode) * 60; st.total = st.left; }
     else startSection(ex, st);
     store()[id] = st; save();
     location.hash = `#simulation/${id}/run`;
   }
+  /* single speaking/writing part (st.only = part index within the one section) */
+  const onlyOK = (st, pi) => st.only == null || pi === st.only;
+  const secParts = (s, st) => s.parts.filter((p, pi) => onlyOK(st, pi));
+  const workMin = (s, st) => st.only != null && s.parts[st.only]?.minutes ? s.parts[st.only].minutes : s.minutes;
+  const prepMin = (s, st) => !s.prepMinutes ? 0 : st.only != null ? Math.max(5, Math.round(s.prepMinutes / s.parts.length)) : s.prepMinutes;
   function startSection(ex, st) {
     const s = ex.sections[st.secs[st.k]];
-    if (s.prepMinutes) { st.phase = 'prep'; st.left = s.prepMinutes * 60; }
-    else { st.phase = 'work'; st.left = s.minutes * 60; }
+    if (prepMin(s, st)) { st.phase = 'prep'; st.left = prepMin(s, st) * 60; }
+    else { st.phase = 'work'; st.left = workMin(s, st) * 60; }
   }
   let timer = null, lastTick = 0, cur = null;
   function stopAll() { clearInterval(timer); timer = null; stopAudio(); stopRec(); cur = null; $('#sim-pausebox')?.remove(); main()?.removeAttribute('inert'); }
@@ -372,17 +400,17 @@
     const total = st.secs.length;
     if (st.phase === 'break') return drawBreak();
     const isPrep = st.phase === 'prep';
-    const parts = s.parts;
+    const parts = secParts(s, st);
     const chips = parts.map((p, pi) => `<a href="#" data-goto="sim-p${pi}" class="sim-chip">${e(shortTitle(p.title))}<small data-count="${pi}"></small></a>`).join('');
     DM.page(`<div class="sim-bar" role="region" aria-label="Prüfungsuhr">
-        <div class="sim-bar-t"><small>${e(META[id].short)} · ${total > 1 ? `Teil ${st.k + 1} von ${total}` : 'einzelner Teil'}</small><b>${isPrep ? 'Vorbereitung: ' : ''}${e(s.title)}</b></div>
+        <div class="sim-bar-t"><small>${e(META[id].short)} · ${total > 1 ? `Teil ${st.k + 1} von ${total}` : 'einzelner Teil'}</small><b>${isPrep ? 'Vorbereitung: ' : ''}${e(st.only != null ? parts[0].title : s.title)}</b></div>
         <button type="button" class="sim-pausebtn" id="sim-pause" aria-label="Pause – Uhr anhalten" title="Pause">⏸</button>
         <div class="sim-clock" id="sim-clock" aria-live="off">${mmss(st.left)}</div>
         <button type="button" class="dm-btn sim-submit" id="sim-submit">${isPrep ? 'Vorbereitung beenden' : 'Abgeben'}</button>
       </div>
       ${parts.length > 1 && !isPrep ? `<nav class="sim-chips" aria-label="Teile">${chips}</nav>` : ''}
       ${s.note && !isPrep ? `<p class="sim-note">${e(s.note)}</p>` : ''}${isPrep ? '' : voiceNote(s)}
-      ${isPrep ? `<aside class="dm-card sim-rule"><b>Vorbereitungszeit (${s.prepMinutes} Min.)</b><p>Lies alle Aufgaben und mach dir Notizen. In der Prüfung darfst du die Notizen benutzen – aber keine ganzen Sätze vorlesen. Danach beginnt das Gespräch.</p></aside>` : ''}
+      ${isPrep ? `<aside class="dm-card sim-rule"><b>Vorbereitungszeit (${prepMin(s, st)} Min.)</b><p>Lies alle Aufgaben und mach dir Notizen. In der Prüfung darfst du die Notizen benutzen – aber keine ganzen Sätze vorlesen. Danach beginnt das Gespräch.</p></aside>` : ''}
       <div class="sim-parts" data-nocheck>${parts.map((p, pi) => `<section class="sim-part" id="sim-p${pi}" data-key="${p._key}"><h2>${e(p.title)}${p.kind === 'speak' ? ` <small>ca. ${p.minutes} Min.</small>` : ''}</h2><p class="sim-instr">${e(instrOf(p))}</p>${p.kind === 'write' ? writeHTML(p, st) : p.kind === 'speak' ? speakHTML(p, st, isPrep) : partHTML(p, st, 'run')}</section>`).join('')}</div>
       <div class="sim-end"><button type="button" class="dm-btn" id="sim-submit2">${isPrep ? 'Vorbereitung beenden – Gespräch beginnen' : `${e(s.title)} abgeben`}</button><p class="dm-small" id="sim-open"></p></div>`, 'sim-page sim-run');
     bindRun();
@@ -512,7 +540,7 @@
   }
   function endPrep() {
     const { ex, st } = cur; const s = ex.sections[st.secs[st.k]];
-    st.phase = 'work'; st.left = s.minutes * 60; save(); draw();
+    st.phase = 'work'; st.left = workMin(s, st) * 60; save(); draw();
   }
   function finishSection() {
     const { id, ex, st } = cur;
@@ -533,7 +561,7 @@
   function counts() {
     if (!cur) return;
     const { ex, st } = cur;
-    const list = isBlock(st) ? st.secs.flatMap(si => ex.sections[si].parts.map((p, pi) => [p, `${si}-${pi}`])) : ex.sections[st.secs[st.k]].parts.map((p, pi) => [p, String(pi)]);
+    const list = isBlock(st) ? st.secs.flatMap(si => ex.sections[si].parts.map((p, pi) => [p, `${si}-${pi}`])) : secParts(ex.sections[st.secs[st.k]], st).map((p, pi) => [p, String(pi)]);
     let open = 0;
     list.forEach(([p, k]) => {
       const its = p.items || []; const done = its.filter(it => st.ans[it._n] != null).length; open += its.length - done;
@@ -715,7 +743,8 @@
   function score(ex, st) {
     const sk = {}, raw = {};
     let unrated = 0;
-    st.secs.forEach(si => ex.sections[si].parts.forEach(p => {
+    st.secs.forEach(si => ex.sections[si].parts.forEach((p, pi) => {
+      if (!onlyOK(st, pi)) return;
       const r = partScore(p, st);
       if (!r.rated) unrated++;
       raw[p.skill] ||= { got: 0, max: 0 };
@@ -820,7 +849,7 @@
     };
     const sections = st.secs.map(si => {
       const s = ex.sections[si];
-      return `<details class="sim-rsec" open><summary><h2>${e(s.title)}</h2></summary>${s.parts.map(p => {
+      return `<details class="sim-rsec" open><summary><h2>${e(s.title)}</h2></summary>${secParts(s, st).map(p => {
         const ps = partScore(p, st);
         const head = `<h3>${e(p.title)} ${ps.n != null ? `<small>${ps.ok} von ${ps.n} richtig</small>` : ''}</h3>${p.kind ? '' : `<p class="sim-instr">${e(instrOf(p))}</p>`}`;
         if (p.kind === 'write') return `<section class="sim-part">${head}${reviewWrite(p, st)}</section>`;
@@ -838,7 +867,7 @@
       ${id === 'lid' ? window.LID_QUELLE_HTML || '' : '<p class="dm-small">Eigene Übungsaufgaben im Stil der Prüfung – keine offiziellen Aufgaben. Die Bewertung ist eine Schätzung.</p>'}`, 'sim-page');
     paint();
     $('#sim-only').onchange = ev => main().classList.toggle('sim-only-wrong', ev.target.checked);
-    $('#sim-again').onclick = () => paper ? (location.hash = `#simulation/${id}/pruefen`) : begin(id, ex, st.mode, st.secs[0]);
+    $('#sim-again').onclick = () => paper ? (location.hash = `#simulation/${id}/pruefen`) : begin(id, ex, st.mode, st.secs[0], st.only);
     $('#sim-other').onclick = () => begin(id, ex, other);
     main().onclick = ev => {
       const play = ev.target.closest('.sim-play');

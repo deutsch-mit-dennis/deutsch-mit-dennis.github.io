@@ -275,3 +275,9 @@
 .pc-sel{min-height:44px;max-width:100%;flex:1 1 auto;min-width:0}
 .pc-count{font-weight:600}
 @media (max-width:480px){.pc-grid{grid-template-columns:1fr}}
+.sim-startnote{margin:8px 0 0}
+.sim-partpick{margin:12px 0 4px}
+.sim-partpick summary{cursor:pointer;font-weight:700;color:var(--dm-tinte,#2341B5);min-height:44px;display:flex;align-items:center}
+.sim-partbtns{display:flex;flex-direction:column;gap:8px;margin-top:6px}
+.sim-partbtns .dm-btn{display:block;text-align:left;min-height:44px;white-space:normal;height:auto;line-height:1.35}
+.sim-partbtns small{font-weight:400;opacity:.8}
