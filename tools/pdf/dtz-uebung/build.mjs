@@ -167,12 +167,13 @@ function cover(chip = 'Lernpaket · A2–B1 · DTZ', lic = LIC) {
   const themes = ALL.map((x, i) => `<li><b>Variante ${i + 1}:</b> ${esc(x.teil2.thema)}</li>`).join('');
   return `<section class="page right cover">
   <div class="cv-top"><span class="chip">${chip}</span></div>
-  <h1>DTZ Prüfungstraining:<br>Sprechen Teil 2 + 3 und Schreiben</h1>
-  <p class="cv-lead">${ALL.length} komplette Übungsvarianten im bekannten Prüfungsformat – mit Fotos, Prüferfragen A2 und B1, Planungsaufgaben, Schreibaufgaben, Redemitteln und Musterlösungen.</p>
+  <h1>DTZ Prüfungstraining:<br>Sprechen Teil 1–3 und Schreiben</h1>
+  <p class="cv-lead">Die ganze mündliche Prüfung und das Schreiben: Sich vorstellen mit Mustervorstellungen und ${ALL.length} komplette Übungsvarianten im bekannten Prüfungsformat – mit Fotos, Prüferfragen A2 und B1, Planungsaufgaben, Schreibaufgaben, Redemitteln und Musterlösungen.</p>
   <div class="cv-box"><p class="pt">Inhalt</p><ol>
     <li>So nutzt du dieses Heft · Redemittel (S. 2–3)</li>
-    <li>${ALL.length} Übungsvarianten: je Teil 2 A, Teil 2 B, Teil 3 und Schreiben (S. 4–${3 + ALL.length * 4})</li>
-    <li>Musterlösungen: Bildbeschreibung, Planungsdialog, Musterbriefe (S. ${4 + ALL.length * 4}–${3 + ALL.length * 6})</li></ol>
+    <li>Sprechen Teil 1 – Sich vorstellen: Aufgabe, Redemittel, Mustervorstellungen (S. 4–6)</li>
+    <li>${ALL.length} Übungsvarianten: je Teil 2 A, Teil 2 B, Teil 3 und Schreiben (S. 7–${6 + ALL.length * 4})</li>
+    <li>Musterlösungen: Bildbeschreibung, Planungsdialog, Musterbriefe (S. ${7 + ALL.length * 4}–${6 + ALL.length * 6})</li></ol>
     <ul class="cv-themes">${themes}</ul></div>
   <p class="cv-hand">Viel Erfolg in der Prüfung! – Dennis</p>
   <p class="cv-lic">${lic}</p>
@@ -191,6 +192,35 @@ function redemittel() {
     <div class="check"><p class="pt">Checkliste Schreiben</p><ul class="box">
       <li>Anrede passt (formell / informell)?</li><li>Zu allen vier Punkten etwas geschrieben?</li>
       <li>Einleitung, Schluss und Gruß da?</li><li>Ungefähr 80 Wörter?</li><li>Verb an Position 2, im Nebensatz am Ende?</li></ul></div>`, 0, 'Sprechen und Schreiben');
+}
+
+function teil1() {
+  const T = P.teil1;
+  const task = frame('Sprechen', `
+  <h2>Teil 1</h2>
+  <p class="who">Teilnehmer*in <b>A</b> und <b>B</b></p>
+  <p class="sub">Sich vorstellen</p>
+  <div class="pruefer">
+    <p class="ph">Das sagt der/die Prüfer*in:</p>
+    <p class="it">Guten Tag. Bitte stellen Sie sich vor. Erzählen Sie uns etwas über sich. Hier haben Sie einige Stichpunkte:</p>
+  </div>
+  <div class="notewrap n1"><div class="pin"></div><div class="note"><ul>${li(T.notes)}</ul></div></div>
+  <div class="pruefer" style="margin-top:7mm">
+    <p class="ph">Danach stellt der/die Prüfer*in noch ein paar Fragen:</p>
+    <div class="cols">
+      <div><p class="pt">Fragen Stufe A2</p><ul class="dash it">${li(T.a2)}</ul></div>
+      <div><p class="pt">Fragen Stufe B1</p><ul class="dash it">${li(T.b1)}</ul></div>
+    </div>
+    <p class="pt">Fragen an die Partnerin / den Partner (Beispiele)</p><ul class="dash it">${li(T.partner)}</ul>
+  </div>`, 0, 'ca. 16 Minuten');
+  const red = frame('Redemittel', `<h2>Sprechen Teil 1 – Sich vorstellen</h2>
+    <ol class="tips">${li(T.tipps)}</ol>
+    <div class="rmgrid">${rm(T.redemittel)}</div>`, 0, 'Sprechen Teil 1', ICON.Sprechen);
+  const mus = frame('Lösungen', `<h2>Mustervorstellungen</h2>
+    ${T.muster.map(([h, t]) => `<p class="pt">${esc(h)}</p><p class="ml">${esc(t)}</p>`).join('')}
+    <p class="pt">Antworten auf Fragen des Prüfers (Beispiele)</p>
+    <div class="dlg">${T.antworten.map(([q, a]) => `<p class="dl"><b>${esc(q)}</b><br>${esc(a)}</p>`).join('')}</div>`, 0, 'Sprechen Teil 1', ICON.Sprechen);
+  return task + red + mus;
 }
 
 const letter = (t) => `<div class="letter">${t.split('\n').map((l) => l ? esc(l) : '&nbsp;').join('<br>')}</div>`;
@@ -236,6 +266,7 @@ ul{margin:0;padding:0;list-style:none}
 .notewrap{position:relative;width:118mm;margin:22mm auto 0}
 .note{background:#e2e2e2;padding:16mm 10mm 14mm 13mm;box-shadow:3mm 4mm 5mm rgba(0,0,0,.28);
   clip-path:polygon(0 0,100% 0,100% 88%,93% 100%,0 100%)}
+.n1{margin-top:10mm;width:108mm}.n1 .note{padding:11mm 9mm 6mm 12mm}.n1 .note li{font-size:14pt;margin-bottom:1.8mm}
 .note li{font-style:italic;font-size:17pt;line-height:1.25;margin-bottom:5mm;position:relative;padding-left:9mm}
 .note li:before{content:"";position:absolute;left:0;top:3.3mm;width:3.2mm;height:3.2mm;border-radius:50%;background:#222}
 .pin{position:absolute;left:50%;top:-4mm;width:10mm;height:10mm;margin-left:-5mm;border-radius:50%;z-index:2;
@@ -282,7 +313,7 @@ if (!PAKET) {
 } else {
   mkdirSync(resolve(REPO, 'tools/pdf/pakete-out'), { recursive: true });
   side = SIDE.paket; foot = 'Lernpaket';
-  const full = cover() + redemittel() + ALL.map(variante).join('') + ALL.map((x, i) => loesung(i + 1, P.loesungen[i], x)).join('');
+  const full = cover() + redemittel() + teil1() + ALL.map(variante).join('') + ALL.map((x, i) => loesung(i + 1, P.loesungen[i], x)).join('');
   const total = page;
   const outP = resolve(REPO, `tools/pdf/pakete-out/${PID}.pdf`);
   const pg = await render(browser, full, outP);
@@ -295,7 +326,7 @@ if (!PAKET) {
   // Leseprobe: cover, Redemittel, one variant (5), its model answers
   page = 0; side = SIDE.probe;
   const v = 4, x = ALL[v];
-  const probe = cover() + redemittel() + variante(x, v) + loesung(v + 1, P.loesungen[v], x);
+  const probe = cover() + redemittel() + teil1() + variante(x, v) + loesung(v + 1, P.loesungen[v], x);
   const outL = resolve(REPO, `material/leseproben/${PID}.pdf`);
   await render(browser, probe, outL);
   console.log('wrote', outL, page, 'pages');
@@ -303,7 +334,7 @@ if (!PAKET) {
   // gift for Dennis' own course (unlisted page geschenk/dtz-kurs/): full content, watermarked
   page = 0; side = SIDE.gift; foot = 'Geschenk';
   const gift = cover('🎁 Geschenk für den IK 202 · A2–B1', '© Dzianis Prudnikau · Deutsch mit Dennis · deutsch-mit-dennis.de<br>Ein Geschenk für die Teilnehmerinnen und Teilnehmer des IK 202 – nur für deine eigene Prüfungsvorbereitung, bitte nicht weitergeben. Unabhängiges Lernmaterial im Stil des DTZ: kein Angebot von g.a.s.t., telc oder BAMF, keine offiziellen Prüfungsaufgaben.')
-    + redemittel() + ALL.map(variante).join('') + ALL.map((x, i) => loesung(i + 1, P.loesungen[i], x)).join('');
+    + redemittel() + teil1() + ALL.map(variante).join('') + ALL.map((x, i) => loesung(i + 1, P.loesungen[i], x)).join('');
   mkdirSync(resolve(REPO, 'geschenk/dtz-kurs'), { recursive: true });
   await render(browser, gift, resolve(REPO, 'geschenk/dtz-kurs/dtz-pruefungstraining-geschenk.pdf'));
   console.log('wrote gift pdf', page, 'pages');
@@ -321,7 +352,7 @@ if (!PAKET) {
   .d1{left:395px;top:300px;transform:rotate(-3deg)} .d2{left:250px;top:330px;transform:rotate(4deg);width:300px}
   .brand{position:absolute;left:48px;bottom:56px;font-family:Cav;font-size:40px}.url{position:absolute;left:48px;bottom:26px;font-size:18px;opacity:.9}</style>
   <div class="c1"></div><div class="c2"></div><span class="chip">LERNPAKET · A2–B1</span>
-  <h1>DTZ Prüfungstraining:<br>Sprechen Teil 2 + 3 und Schreiben</h1>
+  <h1>DTZ Prüfungstraining:<br>Sprechen Teil 1–3 und Schreiben</h1>
   <p class="sub">${total} Seiten PDF · ${ALL.length} Varianten · mit Musterlösungen</p>
   <img class="doc d2" src="${img(ALL[3].teil2.a)}" style="height:220px;object-fit:cover;border:10px solid #fff">
   <img class="doc d1" src="file://${shot}">
