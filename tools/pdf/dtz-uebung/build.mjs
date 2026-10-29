@@ -90,7 +90,7 @@ const SIDE = {
   free: 'Übungsmaterial im Stil des DTZ · keine Originalprüfung · created by D.Prudnikau',
   paket: 'Deutsch mit Dennis · Lernpaket DTZ Prüfungstraining · im Stil des DTZ, keine Originalprüfung',
   probe: 'Leseprobe · Lernpaket DTZ Prüfungstraining · created by D.Prudnikau',
-  gift: 'Geschenk für meinen DTZ-Kurs · nicht weitergeben · created by D.Prudnikau',
+  gift: 'Geschenk für den IK 202 · nicht weitergeben · created by D.Prudnikau',
 };
 let side = SIDE.free, foot = 'Übung';
 
@@ -302,7 +302,7 @@ if (!PAKET) {
 
   // gift for Dennis' own course (unlisted page geschenk/dtz-kurs/): full content, watermarked
   page = 0; side = SIDE.gift; foot = 'Geschenk';
-  const gift = cover('🎁 Geschenk für deinen DTZ-Kurs · A2–B1', '© Dzianis Prudnikau · Deutsch mit Dennis · deutsch-mit-dennis.de<br>Ein Geschenk für die Teilnehmerinnen und Teilnehmer meines Kurses – nur für deine eigene Prüfungsvorbereitung, bitte nicht weitergeben. Unabhängiges Lernmaterial im Stil des DTZ: kein Angebot von g.a.s.t., telc oder BAMF, keine offiziellen Prüfungsaufgaben.')
+  const gift = cover('🎁 Geschenk für den IK 202 · A2–B1', '© Dzianis Prudnikau · Deutsch mit Dennis · deutsch-mit-dennis.de<br>Ein Geschenk für die Teilnehmerinnen und Teilnehmer des IK 202 – nur für deine eigene Prüfungsvorbereitung, bitte nicht weitergeben. Unabhängiges Lernmaterial im Stil des DTZ: kein Angebot von g.a.s.t., telc oder BAMF, keine offiziellen Prüfungsaufgaben.')
     + redemittel() + ALL.map(variante).join('') + ALL.map((x, i) => loesung(i + 1, P.loesungen[i], x)).join('');
   mkdirSync(resolve(REPO, 'geschenk/dtz-kurs'), { recursive: true });
   await render(browser, gift, resolve(REPO, 'geschenk/dtz-kurs/dtz-pruefungstraining-geschenk.pdf'));

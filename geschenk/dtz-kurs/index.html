@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="robots" content="noindex, nofollow">
-<title>Ein Geschenk für deine DTZ-Prüfung 🎁</title>
+<title>IK 202 – ein Geschenk für eure DTZ-Prüfung 🎁</title>
 <meta name="description" content="Von Dennis für meinen Kurs: 8 Übungsvarianten Sprechen und Schreiben mit Musterlösungen. Viel Erfolg am 6. November!">
-<meta property="og:title" content="🎁 Ein Geschenk für deine DTZ-Prüfung">
+<meta property="og:title" content="🎁 IK 202 – ein Geschenk für eure DTZ-Prüfung">
 <meta property="og:description" content="Von Dennis für meinen Kurs: 8 Übungsvarianten Sprechen und Schreiben mit Musterlösungen. Viel Erfolg am 6. November!">
 <meta property="og:image" content="https://deutsch-mit-dennis.de/geschenk/dtz-kurs/og.jpg">
 <meta property="og:image:width" content="1200">
@@ -29,6 +29,14 @@ a{color:var(--blue)}
 .hero>*{position:relative;z-index:1}
 .from{font-family:Cav,cursive;font-size:30px;margin:0 0 6px}
 .hero h1{font-size:26px;line-height:1.2;margin:0 0 22px;max-width:520px}
+.hero h1.ik{font-size:64px;line-height:1;margin:0 0 8px;letter-spacing:1px;text-shadow:0 4px 0 rgba(0,0,0,.18)}
+.lead{font-size:20px;margin:0 0 26px;max-width:420px}
+.polaroid{background:#fff;padding:8px 8px 4px;margin:0 auto 22px;max-width:420px;transform:rotate(-2.5deg);box-shadow:0 12px 30px rgba(0,0,0,.35);animation:drop .9s cubic-bezier(.3,1.4,.5,1) both}
+.polaroid img{display:block;width:100%;height:auto}
+.polaroid figcaption{font-family:Cav,cursive;color:var(--ink);font-size:24px;padding:4px 0 2px}
+.done .gift{display:none}
+.opened:not(.done) .reveal{display:none}
+@keyframes drop{from{opacity:0;transform:translateY(-80px) rotate(8deg) scale(.6)}to{opacity:1;transform:rotate(-2.5deg)}}
 .gift{width:190px;height:190px;border:0;background:none;padding:0;cursor:pointer;position:relative;-webkit-tap-highlight-color:transparent;animation:wiggle 2.4s ease-in-out infinite}
 .gift:focus-visible{outline:4px solid var(--yellow);outline-offset:8px;border-radius:12px}
 .box{position:absolute;left:18px;right:18px;bottom:0;height:118px;background:var(--red);border-radius:8px;box-shadow:0 10px 24px rgba(0,0,0,.3)}
@@ -78,19 +86,21 @@ main{max-width:640px;margin:0 auto;padding:24px 16px 48px}
 @keyframes pulse{50%{transform:scale(1.06)}}
 @keyframes pop{from{opacity:0;transform:scale(.85)}to{opacity:1;transform:none}}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.card{opacity:1;transform:none}}
-@media (min-width:600px){.hero h1{font-size:32px}.dl{flex-direction:row;flex-wrap:wrap}.dl .btn{width:auto;flex:1}}
+@media (min-width:600px){.hero h1.ik{font-size:84px}.dl{flex-direction:row;flex-wrap:wrap}.dl .btn{width:auto;flex:1}}
 </style>
 </head>
 <body>
 <canvas id="confetti" aria-hidden="true"></canvas>
 <header class="hero" id="hero">
-  <p class="from">Von Dennis für dich</p>
-  <h1>Ein kleines Geschenk für deine DTZ-Prüfung</h1>
+  <p class="from">Von Dennis für den</p>
+  <h1 class="ik">IK 202</h1>
+  <p class="lead">Ein kleines Geschenk für eure DTZ-Prüfung</p>
   <button class="gift" id="gift" type="button" aria-label="Geschenk öffnen">
     <span class="box"></span><span class="lid"><span class="bow"><i></i><i></i></span></span>
   </button>
   <p class="tap" aria-hidden="true">👆 Tippe auf das Geschenk</p>
   <div class="reveal" id="reveal">
+    <figure class="polaroid"><img src="kurs.jpg" alt="Gruppenfoto IK 202 am letzten Kurstag" width="1200" height="800"><figcaption>IK 202 · 29. Oktober 2026</figcaption></figure>
     <p><b>8 Übungsvarianten</b> für Sprechen Teil 2 und 3 und Schreiben – im Format der Prüfung, mit Musterlösungen. Damit bist du am 6. November gut vorbereitet!</p>
     <a class="btn btn-y" href="dtz-pruefungstraining-geschenk.pdf" download>📥 Übungsheft herunterladen</a>
     <p class="small">PDF · 51 Seiten · 1,8 MB</p>
@@ -144,7 +154,8 @@ main{max-width:640px;margin:0 auto;padding:24px 16px 48px}
   </section>
 
   <section class="card">
-    <p>Ihr habt im Kurs so viel gelernt – ich bin stolz auf euch. Jetzt noch ein paar Tage üben, dann schafft ihr das!</p>
+    <img src="kurs.jpg" alt="" width="1200" height="800" style="width:100%;height:auto;border-radius:12px;margin-bottom:12px" loading="lazy">
+    <p>Liebe IK 202, ihr habt im Kurs so viel gelernt – ich bin stolz auf euch. Jetzt noch ein paar Tage üben, dann schafft ihr das!</p>
     <p class="sign">Viel Erfolg! Euer Dennis</p>
     <p class="note">Dieses Heft ist ein Geschenk für meinen Kurs – bitte nicht weitergeben. Übungsmaterial im Stil des DTZ, keine Originalprüfung.</p>
   </section>
@@ -228,7 +239,7 @@ main{max-width:640px;margin:0 auto;padding:24px 16px 48px}
     hero.classList.add('opened');
     this.setAttribute('aria-label', 'Geschenk geöffnet');
     confetti(220);
-    document.getElementById('reveal').querySelector('a').focus({ preventScroll: true });
+    setTimeout(function () { hero.classList.add('done'); document.getElementById('reveal').querySelector('a').focus({ preventScroll: true }); }, reduce ? 0 : 650);
   });
 
   var cards = document.querySelectorAll('.card');
