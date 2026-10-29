@@ -1,47 +1,47 @@
 {
  "hinweis": "Zusammengefasste Besucherzahlen (Cloudflare Web Analytics, ohne Cookies). Automatisch erzeugt.",
- "stand": "2026-10-28T10:29:23.136Z",
- "tag": "2026-10-27",
+ "stand": "2026-10-29T10:51:17.288Z",
+ "tag": "2026-10-28",
  "gestern": {
-  "besuche": 13,
-  "seitenaufrufe": 37
+  "besuche": 114,
+  "seitenaufrufe": 563
  },
  "letzte7Tage": {
-  "besuche": 128,
-  "seitenaufrufe": 543
+  "besuche": 219,
+  "seitenaufrufe": 1034
  },
  "herkunft": [
   {
    "name": "deutsch-mit-dennis.de",
    "besuche": 0,
-   "aufrufe": 415
+   "aufrufe": 815
   },
   {
    "name": "(direkt)",
-   "besuche": 120,
-   "aufrufe": 120
+   "besuche": 208,
+   "aufrufe": 208
   },
   {
    "name": "www.google.com",
-   "besuche": 6,
-   "aufrufe": 6
-  },
-  {
-   "name": "www.youtube.com",
-   "besuche": 1,
-   "aufrufe": 1
+   "besuche": 7,
+   "aufrufe": 7
   },
   {
    "name": "l.instagram.com",
-   "besuche": 1,
-   "aufrufe": 1
+   "besuche": 4,
+   "aufrufe": 4
   }
  ],
  "laender": [
   {
    "name": "DE",
-   "besuche": 123,
-   "aufrufe": 538
+   "besuche": 213,
+   "aufrufe": 1027
+  },
+  {
+   "name": "KG",
+   "besuche": 1,
+   "aufrufe": 2
   },
   {
    "name": "US",
@@ -49,12 +49,12 @@
    "aufrufe": 2
   },
   {
-   "name": "TW",
+   "name": "SG",
    "besuche": 1,
    "aufrufe": 1
   },
   {
-   "name": "JP",
+   "name": "TW",
    "besuche": 1,
    "aufrufe": 1
   },
@@ -67,25 +67,25 @@
  "geraete": [
   {
    "name": "mobile",
-   "besuche": 101,
-   "aufrufe": 408
+   "besuche": 166,
+   "aufrufe": 761
+  },
+  {
+   "name": "desktop",
+   "besuche": 49,
+   "aufrufe": 205
   },
   {
    "name": "tablet",
    "besuche": 4,
    "aufrufe": 68
-  },
-  {
-   "name": "desktop",
-   "besuche": 23,
-   "aufrufe": 67
   }
  ],
  "seiten": [
   {
    "name": "/",
-   "besuche": 128,
-   "aufrufe": 543
+   "besuche": 219,
+   "aufrufe": 1034
   }
  ],
  "verlauf": {
@@ -172,6 +172,10 @@
   "2026-10-27": {
    "besuche": 13,
    "seitenaufrufe": 37
+  },
+  "2026-10-28": {
+   "besuche": 114,
+   "seitenaufrufe": 563
   }
  }
 }
