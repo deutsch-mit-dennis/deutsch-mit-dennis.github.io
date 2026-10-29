@@ -863,7 +863,7 @@ DM.materials = [{"file":"material/arbeitsblaetter/aushaenge-im-wohnhaus-verstehe
 DM.shop = { refundDays: 14 };
 DM.packages = [
   { id: 'dtz-komplettpaket', pages: 122, img: 'assets/pakete/dtz-komplettpaket.jpg', preview: 'material/leseproben/dtz-sprechen-schreiben-8.pdf', group: 'lernende', icon: '📦', title: 'DTZ-Komplettpaket: Sprechen, Schreiben und Bild beschreiben', level: 'A2–B1', target: 'DTZ', price: '19,90 €', buy: 'https://www.checkout-ds24.com/product/756912',
-    desc: 'Alles für die mündliche Prüfung und das Schreiben im DTZ in einem Paket – drei Lernpakete zum Sparpreis: das Prüfungstraining Sprechen Teil 1–3 und Schreiben, 20 Briefe mit Musterlösung und 20 Bilder mit Redemitteln. Einzeln kosten sie zusammen 38,70 €.',
+    desc: 'Alles für die mündliche Prüfung und das Schreiben im DTZ in einem Paket – drei Lernpakete zusammen: das Prüfungstraining Sprechen Teil 1–3 und Schreiben, 20 Briefe mit Musterlösung und 20 Bilder mit Redemitteln.',
     contents: ['Prüfungstraining: Sprechen Teil 1–3 und Schreiben (54 Seiten, 8 Varianten)', 'DTZ Schreiben: 20 Briefe mit Musterlösung (35 Seiten)', 'Bild beschreiben: 20 Bilder mit Redemitteln (33 Seiten)', 'Alle Musterlösungen, Redemittel und Checklisten'],
     note: 'Du bekommst drei PDF-Dateien. Die Leseprobe zeigt Seiten aus dem Prüfungstraining; Leseproben der anderen beiden Pakete findest du auf deren Seiten.' },
   { id: 'dtz-sprechen-schreiben-8', pages: 54, img: 'assets/pakete/dtz-sprechen-schreiben-8.jpg', preview: 'material/leseproben/dtz-sprechen-schreiben-8.pdf', group: 'lernende', icon: '🗣️', title: 'DTZ Prüfungstraining: Sprechen Teil 1–3 und Schreiben', level: 'A2–B1', target: 'DTZ', price: '12,90 €', buy: 'https://www.checkout-ds24.com/product/756910',
