@@ -339,6 +339,15 @@ def run_engine(eng, entries, files, usage, month, start):
     return {'engine': eng, 'created': done, 'open': len(todo) - done, 'chars_this_month': used,
             'monthly_limit': limit, 'errors': errors[:20]}
 
+def write_index(files):
+    used_engines = sorted({v.get('engine') for v in files.values()})
+    # 'whole' must survive: without it, restitched exam dialogues would be voiced again on every run
+    json.dump({'updated': time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime()), 'engines': used_engines,
+               'files': {k: {'v': v['sig'], 'engine': v.get('engine'), 'sig': v['sig'], 'text': v.get('text'),
+                             **({'fx': v['fx']} if v.get('fx') else {}), **({'whole': True} if v.get('whole') else {})}
+                         for k, v in sorted(files.items())}},
+              open(INDEX, 'w', encoding='utf-8'), ensure_ascii=False, indent=0)
+
 def main():
     os.makedirs(OUT, exist_ok=True)
     entries = json.load(open(MANIFEST, encoding='utf-8'))['entries']
@@ -359,10 +368,7 @@ def main():
         runs.append(run_engine(eng, entries, files, usage, month, start))
         if time.time() - start > MAX_SECONDS: break
     json.dump(usage, open(USAGE, 'w', encoding='utf-8'), indent=1)
-    used_engines = sorted({v.get('engine') for v in files.values()})
-    json.dump({'updated': time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime()), 'engines': used_engines,
-               'files': {k: {'v': v['sig'], 'engine': v.get('engine'), 'sig': v['sig'], 'text': v.get('text'), **({'fx': v['fx']} if v.get('fx') else {})} for k, v in sorted(files.items())}},
-              open(INDEX, 'w', encoding='utf-8'), ensure_ascii=False, indent=0)
+    write_index(files)
     json.dump({'run': time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime()), 'runs': runs},
               open(STATUS, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
     print('Fertig: ' + ' · '.join(f"{r['engine']} {r['created']} erzeugt, {r['open']} offen" for r in runs))
