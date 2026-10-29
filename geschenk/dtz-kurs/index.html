@@ -93,7 +93,7 @@ main{max-width:640px;margin:0 auto;padding:24px 16px 48px}
 </head>
 <body>
 <canvas id="confetti" aria-hidden="true"></canvas>
-<button id="mute" type="button" aria-label="Musik ausschalten" hidden>🔊</button>
+<button id="mute" type="button" aria-label="Musik einschalten" hidden>🔇</button>
 <header class="hero" id="hero">
   <p class="from">Von Dennis für den</p>
   <h1 class="ik">IK 202</h1>
@@ -241,11 +241,14 @@ main{max-width:640px;margin:0 auto;padding:24px 16px 48px}
   // Music starts on the tap itself, because browsers block autoplay without a user gesture.
   var music = new Audio('musik.mp3'), mute = document.getElementById('mute');
   music.loop = true; music.volume = 0.5;
+  // The button mirrors the real player state, so a blocked start shows 🔇 and one tap retries.
+  function sync() {
+    mute.textContent = music.paused ? '🔇' : '🔊';
+    mute.setAttribute('aria-label', music.paused ? 'Musik einschalten' : 'Musik ausschalten');
+  }
+  music.addEventListener('play', sync); music.addEventListener('pause', sync);
   mute.addEventListener('click', function () {
-    var off = !music.paused;
-    if (off) music.pause(); else music.play().catch(function () {});
-    mute.textContent = off ? '🔇' : '🔊';
-    mute.setAttribute('aria-label', off ? 'Musik einschalten' : 'Musik ausschalten');
+    if (music.paused) music.play().catch(function () {}); else music.pause();
   });
 
   var hero = document.getElementById('hero');
@@ -253,7 +256,8 @@ main{max-width:640px;margin:0 auto;padding:24px 16px 48px}
     if (hero.classList.contains('opened')) return;
     hero.classList.add('opened');
     this.setAttribute('aria-label', 'Geschenk geöffnet');
-    music.play().then(function () { mute.hidden = false; }).catch(function () {});
+    mute.hidden = false; sync();
+    music.play().catch(sync);
     confetti(220);
     setTimeout(function () { hero.classList.add('done'); document.getElementById('reveal').querySelector('a').focus({ preventScroll: true }); }, reduce ? 0 : 650);
   });
