@@ -862,6 +862,9 @@ DM.materials = [{"file":"material/arbeitsblaetter/aushaenge-im-wohnhaus-verstehe
 /* Verkauf über Digistore24: price = Preis als Text (z. B. '12,90 €'), buy = Link zum Digistore24-Bestellformular. */
 DM.shop = { refundDays: 14 };
 DM.packages = [
+  { id: 'dtz-sprechen-schreiben-8', pages: 51, img: 'assets/pakete/dtz-sprechen-schreiben-8.jpg', preview: 'material/leseproben/dtz-sprechen-schreiben-8.pdf', group: 'lernende', icon: '🗣️', title: 'DTZ Prüfungstraining: Sprechen Teil 2 + 3 und Schreiben', level: 'A2–B1', target: 'DTZ', price: '9,90 €',
+    desc: '8 komplette Übungsvarianten im bekannten Prüfungsformat – Foto mit Prüferfragen A2 und B1, Planungsaufgabe mit Notizzettel und zwei Schreibaufgaben. Dazu Redemittel und zu jeder Variante Musterlösungen: Bildbeschreibung, Planungsdialog und Musterbriefe.',
+    contents: ['8 Varianten: Sprechen Teil 2 A und B, Teil 3, Schreiben A oder B', '16 Fotos zu Prüfungsthemen mit A2- und B1-Fragen', 'Redemittel und Checkliste für Sprechen und Schreiben', 'Musterlösungen: 16 Bildbeschreibungen, 8 Dialoge, 16 Musterbriefe'] },
   { id: 'dtz-schreiben-20-briefe', pages: 35, img: 'assets/pakete/dtz-schreiben-20-briefe.jpg', preview: 'material/leseproben/dtz-schreiben-20-briefe.pdf', group: 'lernende', icon: '✉️', title: 'DTZ Schreiben: 20 Briefe mit Musterlösung', level: 'A2–B1', target: 'DTZ', price: '12,90 €', buy: 'https://www.checkout-ds24.com/product/742155',
     desc: '20 Aufgaben wie im Deutsch-Test für Zuwanderer – vom Brief an den Vermieter bis zur Entschuldigung beim Kurs. Zu jeder Aufgabe eine Musterlösung, die wichtigsten Redemittel und eine Checkliste zum Selbstkontrollieren.',
     contents: ['20 Schreibaufgaben mit vier Leitpunkten', '20 Musterbriefe (formell und informell)', 'Baukasten: Anrede, Einleitung, Bitte, Entschuldigung, Gruß', 'Checkliste und typische Fehler'] },
