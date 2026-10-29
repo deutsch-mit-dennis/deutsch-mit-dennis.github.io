@@ -3,7 +3,7 @@
    LiD-Simulation: Fragen aus window.LID_KATALOG (BAMF-Gesamtfragenkatalog).
    Fortschritt und Antworten bleiben nur im Browser (DM.store.sim). */
 (() => {
-  const V = '20261028h';
+  const V = '20261029b';
   const $ = (s, r = document) => r.querySelector(s);
   const $$ = (s, r = document) => [...r.querySelectorAll(s)];
   const e = s => DM.esc(s);
@@ -24,10 +24,12 @@
     'dtb-b2': { short: 'DTB B2', title: 'DTB B2 – Deutsch-Test für den Beruf', who: 'telc · B2 Beruf', g: 'ink', total: 'ca. 2,5 Std.', secs: [['Lesen', 45], ['Lesen + Schreiben', 20], ['Hören', 20], ['Hören + Schreiben', 5], ['Sprachbausteine + Schreiben', 35], ['Sprechen', 16]] }
   };
   const ORDER = ['dtz', 'lid', 'telc-b1', 'dtb-b1', 'telc-b2', 'dtb-b2'];
-  /* Second model test: sim/<id>-2.js, own route and saved state, shares META and prep page with <id> */
-  const base = id => id.replace(/-2$/, '');
-  ORDER.filter(id => id !== 'lid').forEach(id => { META[id + '-2'] = { ...META[id], short: `${META[id].short} · Test 2` }; });
-  const testTabs = id => id === 'lid' ? '' : `<nav class="dm-tabs dm-tabs-small" aria-label="Modelltest">${[base(id), base(id) + '-2'].map((v, i) => `<a href="#simulation/${v}"${v === id ? ' aria-current="page"' : ''}><b>Modelltest ${i + 1}</b></a>`).join('')}</nav>`;
+  /* More model tests: sim/<id>-<n>.js, own route and saved state, share META and prep page with <id> */
+  const TESTS = { dtz: 3 };   // number of model tests per exam, default 2
+  const count = id => TESTS[id] || 2;
+  const base = id => id.replace(/-[2-9]$/, '');
+  ORDER.filter(id => id !== 'lid').forEach(id => { for (let n = 2; n <= count(id); n++) META[`${id}-${n}`] = { ...META[id], short: `${META[id].short} · Test ${n}` }; });
+  const testTabs = id => id === 'lid' ? '' : `<nav class="dm-tabs dm-tabs-small" aria-label="Modelltest">${Array.from({ length: count(base(id)) }, (_, i) => i ? `${base(id)}-${i + 1}` : base(id)).map((v, i) => `<a href="#simulation/${v}"${v === id ? ' aria-current="page"' : ''}><b><span class="sim-tab-long">Modelltest</span><span class="sim-tab-short">Test</span> ${i + 1}</b></a>`).join('')}</nav>`;
   const PREP = ['telc-b1', 'telc-b2', 'dtb-b1', 'dtb-b2'];
   /* Paper practice: PDFs + listening MP3 (built by tools/pdf/build_sim_pdf.py and tools/sim/build_listening_mp3.py) */
   const DL = 'material/simulation/';
@@ -250,7 +252,7 @@
       return `<a class="sim-card dm-g-${m.g}" href="#simulation/${id}"><span class="dm-tag">${e(m.who)}</span><b>${e(m.title)}</b><span class="sim-dur">${blockTimes(m)}</span><span class="sim-secs">${m.secs.map(([t, min, prep]) => `<i>${e(t)} · ${min} Min.${prep ? ` (+${prep} Vorb.)` : ''}</i>`).join('')}</span>${status}</a>`;
     };
     DM.page(`${DM.crumbs([['Prüfungstraining', '#pruefung'], ['Prüfungssimulationen']])}
-      <div class="dm-head"><h1>Prüfungssimulationen</h1><p class="dm-lead">Sechs komplette Prüfungen zum Üben, DTZ, telc und DTB mit je zwei Modelltests – mit der echten Zeit für jeden Prüfungsteil. Am Ende siehst du deine Punkte, ob du bestanden hättest und alle Lösungen mit Erklärung.</p></div>
+      <div class="dm-head"><h1>Prüfungssimulationen</h1><p class="dm-lead">Sechs komplette Prüfungen zum Üben, der DTZ mit drei, telc und DTB mit je zwei Modelltests – mit der echten Zeit für jeden Prüfungsteil. Am Ende siehst du deine Punkte, ob du bestanden hättest und alle Lösungen mit Erklärung.</p></div>
       <div class="sim-grid">${ORDER.map(card).join('')}</div>
       <section class="dm-card sim-how"><h2>So läuft eine Simulation</h2>
         <ul class="sim-list">

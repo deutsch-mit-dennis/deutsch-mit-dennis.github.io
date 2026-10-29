@@ -211,6 +211,8 @@
 .sim-step ul{margin:6px 0 0;padding-left:18px;color:var(--dm-muted);font-size:15px;line-height:1.5}
 .sim-single{margin-top:10px;min-height:44px;padding:8px 14px;font-size:15px}
 .sim-page .dm-tabs a{min-height:44px;align-content:center}
+.sim-tab-short{display:none}
+@media (max-width:480px){.sim-tab-long{display:none}.sim-tab-short{display:inline}}
 @media (max-width:560px){.sim-table thead{display:none}.sim-table,.sim-table tbody,.sim-table tr,.sim-table th,.sim-table td{display:block;width:100%;box-sizing:border-box}.sim-table tr{border-bottom:2px solid var(--dm-line)}.sim-table td,.sim-table th{border:0;padding:4px 12px}.sim-table tbody th{padding-top:12px}.sim-table td:last-child{padding-bottom:12px}}
 .sim-opt{min-width:0;max-width:100%}
 .sim-opt span{min-width:0;overflow-wrap:anywhere}

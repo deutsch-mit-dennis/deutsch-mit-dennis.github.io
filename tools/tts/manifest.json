@@ -13643,7 +13643,7 @@
   {
    "key": "tc08ab54d",
    "prio": 0,
-   "ord": 248,
+   "ord": 279,
    "segments": [
     {
      "voice": "f1",
@@ -13654,7 +13654,7 @@
   {
    "key": "td63a81d6",
    "prio": 0,
-   "ord": 249,
+   "ord": 280,
    "segments": [
     {
      "voice": "f1",
@@ -13665,7 +13665,7 @@
   {
    "key": "tb202848c",
    "prio": 0,
-   "ord": 250,
+   "ord": 281,
    "segments": [
     {
      "voice": "f1",
@@ -13676,7 +13676,7 @@
   {
    "key": "tdeccc507",
    "prio": 0,
-   "ord": 251,
+   "ord": 282,
    "segments": [
     {
      "voice": "f1",
@@ -13687,7 +13687,7 @@
   {
    "key": "td2925e17",
    "prio": 0,
-   "ord": 252,
+   "ord": 283,
    "segments": [
     {
      "voice": "f1",
@@ -13698,7 +13698,7 @@
   {
    "key": "tefcd7819",
    "prio": 0,
-   "ord": 253,
+   "ord": 284,
    "segments": [
     {
      "voice": "m1",
@@ -13781,7 +13781,7 @@
   {
    "key": "tafa0de48",
    "prio": 0,
-   "ord": 254,
+   "ord": 285,
    "segments": [
     {
      "voice": "f1",
@@ -13792,7 +13792,7 @@
   {
    "key": "tdbb79d77",
    "prio": 0,
-   "ord": 255,
+   "ord": 286,
    "segments": [
     {
      "voice": "m1",
@@ -13804,7 +13804,7 @@
   {
    "key": "te117443d",
    "prio": 0,
-   "ord": 256,
+   "ord": 287,
    "segments": [
     {
      "voice": "f1",
@@ -13815,7 +13815,7 @@
   {
    "key": "t30b83ab8",
    "prio": 0,
-   "ord": 257,
+   "ord": 288,
    "segments": [
     {
      "voice": "f2",
@@ -13827,7 +13827,7 @@
   {
    "key": "t5b502a80",
    "prio": 0,
-   "ord": 258,
+   "ord": 289,
    "segments": [
     {
      "voice": "f1",
@@ -13838,7 +13838,7 @@
   {
    "key": "t26943fc3",
    "prio": 0,
-   "ord": 259,
+   "ord": 290,
    "segments": [
     {
      "voice": "f2",
@@ -13849,7 +13849,7 @@
   {
    "key": "t1304662a",
    "prio": 0,
-   "ord": 260,
+   "ord": 291,
    "segments": [
     {
      "voice": "f2",
@@ -13860,7 +13860,7 @@
   {
    "key": "t54e22efb",
    "prio": 0,
-   "ord": 261,
+   "ord": 292,
    "segments": [
     {
      "voice": "f2",
@@ -13871,7 +13871,7 @@
   {
    "key": "ted378aeb",
    "prio": 0,
-   "ord": 262,
+   "ord": 293,
    "segments": [
     {
      "voice": "f2",
@@ -13882,7 +13882,7 @@
   {
    "key": "td21a0505",
    "prio": 0,
-   "ord": 263,
+   "ord": 294,
    "segments": [
     {
      "voice": "f2",
@@ -13893,7 +13893,7 @@
   {
    "key": "t626c5926",
    "prio": 0,
-   "ord": 264,
+   "ord": 295,
    "segments": [
     {
      "voice": "f2",
@@ -13904,7 +13904,7 @@
   {
    "key": "tdbe81522",
    "prio": 0,
-   "ord": 265,
+   "ord": 296,
    "segments": [
     {
      "voice": "f2",
@@ -13915,7 +13915,7 @@
   {
    "key": "t16509be7",
    "prio": 0,
-   "ord": 266,
+   "ord": 297,
    "segments": [
     {
      "voice": "f2",
@@ -13926,7 +13926,7 @@
   {
    "key": "t64b49d18",
    "prio": 0,
-   "ord": 267,
+   "ord": 298,
    "segments": [
     {
      "voice": "f2",
@@ -13937,7 +13937,7 @@
   {
    "key": "t8db3802d",
    "prio": 0,
-   "ord": 268,
+   "ord": 299,
    "segments": [
     {
      "voice": "f2",
@@ -13948,7 +13948,7 @@
   {
    "key": "ta97673ec",
    "prio": 0,
-   "ord": 269,
+   "ord": 300,
    "segments": [
     {
      "voice": "f2",
@@ -13959,7 +13959,7 @@
   {
    "key": "ta54b6102",
    "prio": 0,
-   "ord": 270,
+   "ord": 301,
    "segments": [
     {
      "voice": "f2",
@@ -13970,7 +13970,7 @@
   {
    "key": "t7ba2e02e",
    "prio": 0,
-   "ord": 271,
+   "ord": 302,
    "segments": [
     {
      "voice": "f2",
@@ -13981,7 +13981,7 @@
   {
    "key": "tbc2fa2d3",
    "prio": 0,
-   "ord": 272,
+   "ord": 303,
    "segments": [
     {
      "voice": "f2",
@@ -13992,7 +13992,7 @@
   {
    "key": "tb98fd735",
    "prio": 0,
-   "ord": 273,
+   "ord": 304,
    "segments": [
     {
      "voice": "f2",
@@ -14003,7 +14003,7 @@
   {
    "key": "tc7284b25",
    "prio": 0,
-   "ord": 274,
+   "ord": 305,
    "segments": [
     {
      "voice": "f2",
@@ -14014,7 +14014,7 @@
   {
    "key": "t35b61670",
    "prio": 0,
-   "ord": 275,
+   "ord": 306,
    "segments": [
     {
      "voice": "f2",
@@ -14025,7 +14025,7 @@
   {
    "key": "t5dc76332",
    "prio": 0,
-   "ord": 276,
+   "ord": 307,
    "segments": [
     {
      "voice": "f2",
@@ -14036,7 +14036,7 @@
   {
    "key": "ta8c796fd",
    "prio": 0,
-   "ord": 277,
+   "ord": 308,
    "segments": [
     {
      "voice": "f2",
@@ -14047,7 +14047,7 @@
   {
    "key": "ta39fe1c3",
    "prio": 0,
-   "ord": 278,
+   "ord": 309,
    "segments": [
     {
      "voice": "f2",
@@ -14058,7 +14058,7 @@
   {
    "key": "t73f4e6ba",
    "prio": 0,
-   "ord": 279,
+   "ord": 310,
    "segments": [
     {
      "voice": "f2",
@@ -14069,7 +14069,7 @@
   {
    "key": "t4f1959cc",
    "prio": 0,
-   "ord": 280,
+   "ord": 311,
    "segments": [
     {
      "voice": "f2",
@@ -14080,7 +14080,7 @@
   {
    "key": "t067aa5cb",
    "prio": 0,
-   "ord": 281,
+   "ord": 312,
    "segments": [
     {
      "voice": "f2",
@@ -14091,7 +14091,7 @@
   {
    "key": "tf4c0817e",
    "prio": 0,
-   "ord": 282,
+   "ord": 313,
    "segments": [
     {
      "voice": "m1",
@@ -14102,7 +14102,7 @@
   {
    "key": "t9ded992f",
    "prio": 0,
-   "ord": 283,
+   "ord": 314,
    "segments": [
     {
      "voice": "f3",
@@ -14113,7 +14113,7 @@
   {
    "key": "t9d4ed346",
    "prio": 0,
-   "ord": 284,
+   "ord": 315,
    "segments": [
     {
      "voice": "m2",
@@ -14124,7 +14124,7 @@
   {
    "key": "tf3b3896e",
    "prio": 0,
-   "ord": 285,
+   "ord": 316,
    "segments": [
     {
      "voice": "f2",
@@ -14135,7 +14135,7 @@
   {
    "key": "t8cc7c64f",
    "prio": 0,
-   "ord": 286,
+   "ord": 317,
    "segments": [
     {
      "voice": "m1",
@@ -14198,7 +14198,7 @@
   {
    "key": "t7bff5be7",
    "prio": 0,
-   "ord": 287,
+   "ord": 318,
    "segments": [
     {
      "voice": "f1",
@@ -14209,7 +14209,7 @@
   {
    "key": "tce01f80e",
    "prio": 0,
-   "ord": 288,
+   "ord": 319,
    "segments": [
     {
      "voice": "f1",
@@ -14220,7 +14220,7 @@
   {
    "key": "tb84ec43f",
    "prio": 0,
-   "ord": 289,
+   "ord": 320,
    "segments": [
     {
      "voice": "f1",
@@ -14231,7 +14231,7 @@
   {
    "key": "t7be0eb30",
    "prio": 0,
-   "ord": 290,
+   "ord": 321,
    "segments": [
     {
      "voice": "f1",
@@ -14242,7 +14242,7 @@
   {
    "key": "t50040482",
    "prio": 0,
-   "ord": 291,
+   "ord": 322,
    "segments": [
     {
      "voice": "f1",
@@ -14253,7 +14253,7 @@
   {
    "key": "t7233f490",
    "prio": 0,
-   "ord": 292,
+   "ord": 323,
    "segments": [
     {
      "voice": "f2",
@@ -14264,7 +14264,7 @@
   {
    "key": "t5831cd5b",
    "prio": 0,
-   "ord": 293,
+   "ord": 324,
    "segments": [
     {
      "voice": "f2",
@@ -14275,7 +14275,7 @@
   {
    "key": "t54ccba3f",
    "prio": 0,
-   "ord": 294,
+   "ord": 325,
    "segments": [
     {
      "voice": "f2",
@@ -14286,7 +14286,7 @@
   {
    "key": "tc5520133",
    "prio": 0,
-   "ord": 295,
+   "ord": 326,
    "segments": [
     {
      "voice": "f2",
@@ -14297,7 +14297,7 @@
   {
    "key": "t23050c1d",
    "prio": 0,
-   "ord": 296,
+   "ord": 327,
    "segments": [
     {
      "voice": "f2",
@@ -14308,7 +14308,7 @@
   {
    "key": "t0d2c6686",
    "prio": 0,
-   "ord": 297,
+   "ord": 328,
    "segments": [
     {
      "voice": "f2",
@@ -14319,7 +14319,7 @@
   {
    "key": "t86e150a5",
    "prio": 0,
-   "ord": 298,
+   "ord": 329,
    "segments": [
     {
      "voice": "f2",
@@ -14330,7 +14330,7 @@
   {
    "key": "tf8fba62b",
    "prio": 0,
-   "ord": 299,
+   "ord": 330,
    "segments": [
     {
      "voice": "f2",
@@ -14341,7 +14341,7 @@
   {
    "key": "t6798d1bc",
    "prio": 0,
-   "ord": 300,
+   "ord": 331,
    "segments": [
     {
      "voice": "f2",
@@ -14352,7 +14352,7 @@
   {
    "key": "t047a5623",
    "prio": 0,
-   "ord": 301,
+   "ord": 332,
    "segments": [
     {
      "voice": "f2",
@@ -14363,7 +14363,7 @@
   {
    "key": "tad78b155",
    "prio": 0,
-   "ord": 302,
+   "ord": 333,
    "segments": [
     {
      "voice": "f2",
@@ -14374,7 +14374,7 @@
   {
    "key": "t0e86a781",
    "prio": 0,
-   "ord": 303,
+   "ord": 334,
    "segments": [
     {
      "voice": "f2",
@@ -14385,7 +14385,7 @@
   {
    "key": "t4f67cde2",
    "prio": 0,
-   "ord": 304,
+   "ord": 335,
    "segments": [
     {
      "voice": "f2",
@@ -14396,7 +14396,7 @@
   {
    "key": "tf98315ec",
    "prio": 0,
-   "ord": 305,
+   "ord": 336,
    "segments": [
     {
      "voice": "f2",
@@ -14407,7 +14407,7 @@
   {
    "key": "t3c6c3019",
    "prio": 0,
-   "ord": 306,
+   "ord": 337,
    "segments": [
     {
      "voice": "f2",
@@ -14418,11 +14418,448 @@
   {
    "key": "t3e873086",
    "prio": 0,
-   "ord": 307,
+   "ord": 338,
    "segments": [
     {
      "voice": "f2",
      "text": "Gut, dann teilen wir mal die Aufgaben auf. Was übernehmen Sie?"
+    }
+   ]
+  },
+  {
+   "key": "t4bb29357",
+   "prio": 0,
+   "ord": 248,
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Guten Tag, hier ist das Bürgeramt Duisburg-Mitte, Frau Krämer. Die Nachricht ist für Herrn Popescu. Herr Popescu, Ihr neuer Personalausweis ist fertig. Sie können ihn ab Montag bei uns abholen, ähm, aber nur mit Termin. Den Termin machen Sie bitte online oder Sie rufen uns an. Bringen Sie bitte Ihren alten Ausweis mit, der wird dann ungültig gemacht. Ein Foto brauchen Sie nicht mehr, das haben wir ja schon. Danke und einen schönen Tag noch."
+    }
+   ]
+  },
+  {
+   "key": "ta93ce450",
+   "prio": 0,
+   "ord": 249,
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Ja, hallo Frau Ibrahim, hier ist die Praxis Doktor Wendt. Ihre Blutwerte sind jetzt da. Also, keine Sorge, es ist alles in Ordnung, nur Ihr Eisenwert ist ein bisschen niedrig. Der Doktor möchte das gern kurz mit Ihnen besprechen. Sie müssen aber nicht extra kommen, er ruft Sie morgen zwischen zwölf und eins an. Wenn das nicht passt, melden Sie sich bitte kurz bei uns. Tschüss!"
+    }
+   ]
+  },
+  {
+   "key": "td14110c6",
+   "prio": 0,
+   "ord": 250,
+   "segments": [
+    {
+     "voice": "f3",
+     "text": "Hallo, liebe Teilnehmerinnen und Teilnehmer, hier ist Anja von der Sprachschule Wort und Welt. Nur eine kurze Info: Unser Kurs morgen findet statt, aber nicht in Raum zwölf, sondern unten im Erdgeschoss, in Raum drei. Oben wird nämlich gestrichen. Die Uhrzeit bleibt gleich, neun Uhr. Und bitte denkt an eure Hausaufgaben, wir sprechen morgen darüber. Bis morgen!"
+    }
+   ]
+  },
+  {
+   "key": "t61b64f1f",
+   "prio": 0,
+   "ord": 251,
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Hallo Ali, hier ist Monika von nebenan, aus dem zweiten Stock. Du, ich hab heute ein Paket für dich angenommen. Der Paketbote hat bei dir geklingelt, aber du warst nicht da. Ich bin heute Abend leider nicht zu Hause, ich hab Spätschicht. Ich stell dir das Paket einfach vor deine Wohnungstür, okay? Ist nicht so groß. Wenn du das nicht willst, schreib mir schnell eine Nachricht. Ciao!"
+    }
+   ]
+  },
+  {
+   "key": "t13394218",
+   "prio": 0,
+   "ord": 252,
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Achtung, Autofahrer: Heute Nacht wird es im ganzen Sauerland frostig, bis minus fünf Grad. Morgen früh sind viele Straßen glatt, besonders auf Brücken. Fahren Sie bitte langsam oder nehmen Sie, wenn möglich, Bus und Bahn. Am Nachmittag wird es dann wärmer, und das Eis taut."
+    }
+   ]
+  },
+  {
+   "key": "t35d9bc69",
+   "prio": 0,
+   "ord": 253,
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Eine Information der Abfallwirtschaft Bochum: Wegen des Feiertags am Freitag wird der Müll in dieser Woche einen Tag später abgeholt. Wenn Ihre Tonne normalerweise am Freitag geleert wird, stellen Sie sie bitte am Samstag raus. Die Biotonne wird wie immer am Mittwoch geleert."
+    }
+   ]
+  },
+  {
+   "key": "td4752b4a",
+   "prio": 0,
+   "ord": 254,
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Und jetzt ein Tipp für alle, die gern lesen: Die Stadtbibliothek Herne lädt am Donnerstagabend zu einer Lesung ein. Die Autorin Yasemin Kaya liest aus ihrem neuen Roman über eine Familie, die aus Izmir ins Ruhrgebiet kommt. Beginn ist um neunzehn Uhr, der Eintritt ist frei. Wegen der begrenzten Plätze bitte vorher in der Bibliothek anmelden."
+    }
+   ]
+  },
+  {
+   "key": "tf676cdcb",
+   "prio": 0,
+   "ord": 255,
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Gute Nachricht für Familien in Essen: Ab nächsten Montag fahren die Buslinien hundertvierzig und hundertfünfundvierzig auch am Abend alle fünfzehn Minuten, bis dreiundzwanzig Uhr. Bisher fuhren die Busse abends nur alle dreißig Minuten. Am Wochenende bleibt der Fahrplan wie bisher."
+    }
+   ]
+  },
+  {
+   "key": "t51f7133c",
+   "prio": 0,
+   "ord": 256,
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Und hier noch eine Meldung aus Ihrer Region: Am Samstag gibt es im Gesundheitsamt Gelsenkirchen eine Impfaktion gegen Grippe. Von zehn bis vierzehn Uhr kann sich jeder ab sechzig Jahren ohne Termin impfen lassen. Bringen Sie bitte Ihre Versichertenkarte und, wenn Sie haben, Ihren Impfpass mit."
+    }
+   ]
+  },
+  {
+   "key": "t94727b01",
+   "prio": 0,
+   "ord": 257,
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Guten Tag. Ich möchte gern ein Konto eröffnen. Geht das bei Ihnen?"
+    },
+    {
+     "voice": "f2",
+     "text": "Ja, natürlich. Haben Sie einen Termin?"
+    },
+    {
+     "voice": "m1",
+     "text": "Äh, nein. Ich dachte, das geht einfach so."
+    },
+    {
+     "voice": "f2",
+     "text": "Hm, heute ist es leider schwierig, meine Kollegin ist krank. Aber Sie können das Konto auch online eröffnen, das geht ganz schnell. Oder Sie kommen morgen um zehn, da hab ich noch einen Termin frei."
+    },
+    {
+     "voice": "m1",
+     "text": "Online … ich weiß nicht, mein Deutsch ist noch nicht so gut für so was. Ich komme lieber morgen."
+    },
+    {
+     "voice": "f2",
+     "text": "Gut, dann morgen um zehn. Bringen Sie bitte Ihren Pass und Ihre Meldebescheinigung mit. Und wenn Sie schon einen Arbeitsvertrag haben, auch den."
+    },
+    {
+     "voice": "m1",
+     "text": "Pass, Meldebescheinigung, Arbeitsvertrag. Alles klar, danke!"
+    }
+   ]
+  },
+  {
+   "key": "t4079a8f9",
+   "prio": 0,
+   "ord": 258,
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Guten Abend, Frau Nowak. Schön, dass Sie zum Elternsprechtag gekommen sind. Setzen Sie sich doch."
+    },
+    {
+     "voice": "f3",
+     "text": "Danke. Wie geht es denn Mateusz in der Schule? Er erzählt zu Hause nicht so viel."
+    },
+    {
+     "voice": "f2",
+     "text": "Also, ich bin wirklich zufrieden. In Mathe ist er einer der Besten in der Klasse. Nur beim Lesen braucht er noch etwas Hilfe. Er liest sehr langsam."
+    },
+    {
+     "voice": "f3",
+     "text": "Ja, das merke ich auch. Was kann ich denn zu Hause machen?"
+    },
+    {
+     "voice": "f2",
+     "text": "Lesen Sie jeden Abend zehn Minuten zusammen mit ihm. Gern auch Comics, das macht ihm bestimmt Spaß. Und mittwochs gibt es bei uns eine Lese-AG nach dem Unterricht. Da kann er kostenlos mitmachen."
+    },
+    {
+     "voice": "f3",
+     "text": "Oh, das ist gut. Ich melde ihn an."
+    }
+   ]
+  },
+  {
+   "key": "t8c6d42a0",
+   "prio": 0,
+   "ord": 259,
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Entschuldigung, können Sie mir kurz helfen? Ich verstehe den Automaten nicht."
+    },
+    {
+     "voice": "m2",
+     "text": "Klar. Wo wollen Sie denn hin?"
+    },
+    {
+     "voice": "m1",
+     "text": "Nach Bochum, Hauptbahnhof. Und zurück, heute Abend."
+    },
+    {
+     "voice": "m2",
+     "text": "Dann nehmen Sie am besten das Tagesticket. Das ist billiger als zwei Einzelfahrkarten. Hier, drücken Sie auf „Tickets“, dann „Tagesticket“, Preisstufe B."
+    },
+    {
+     "voice": "m1",
+     "text": "Ah, okay. Und kann ich mit Karte bezahlen? Ich hab kein Kleingeld."
+    },
+    {
+     "voice": "m2",
+     "text": "Ja, mit Karte geht, nur Scheine nimmt der hier nicht. Und denken Sie dran: Das Ticket gilt bis morgen früh um drei Uhr."
+    },
+    {
+     "voice": "m1",
+     "text": "Super, vielen Dank!"
+    }
+   ]
+  },
+  {
+   "key": "t38cdd8ea",
+   "prio": 0,
+   "ord": 260,
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Du, Daniel, kannst du am Samstag meine Frühschicht übernehmen? Meine Schwester heiratet."
+    },
+    {
+     "voice": "m1",
+     "text": "Samstag früh … hm. Eigentlich wollte ich mit meinen Kindern ins Schwimmbad. Aber okay, das können wir auch am Sonntag machen."
+    },
+    {
+     "voice": "f2",
+     "text": "Danke, du bist ein Schatz! Ich übernehme dafür deine Spätschicht am Dienstag, ja?"
+    },
+    {
+     "voice": "m1",
+     "text": "Das wäre super. Aber wir müssen das noch dem Chef sagen."
+    },
+    {
+     "voice": "f2",
+     "text": "Ja, ich schreib Herrn Schulz gleich eine E-Mail und setz dich in Kopie."
+    }
+   ]
+  },
+  {
+   "key": "tbd7fff11",
+   "prio": 0,
+   "ord": 261,
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Guten Abend bei „Hallo Nachbarn“! Heute fragen wir: Wohnen Sie lieber in der Stadt oder auf dem Land? Bei mir ist Frau Okafor."
+    },
+    {
+     "voice": "f2",
+     "text": "Hallo. Also, wir sind vor zwei Jahren aus Köln aufs Land gezogen, in ein kleines Dorf in der Eifel. Und ehrlich gesagt: Die Kinder sind so glücklich! Die spielen den ganzen Tag draußen, im Garten, im Wald. In Köln hatten wir nur einen kleinen Balkon. Ja, man braucht ein Auto, das stimmt. Aber für die Kinder ist das Land einfach besser."
+    }
+   ]
+  },
+  {
+   "key": "t4812fc37",
+   "prio": 0,
+   "ord": 262,
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Danke! Und jetzt Herr Dimitrov."
+    },
+    {
+     "voice": "m1",
+     "text": "Guten Abend. Ich wohne mitten in Frankfurt, und ich will nicht weg. Ich habe kein Auto und brauche auch keins. Zur Arbeit fahre ich mit der U-Bahn, zehn Minuten. Ärzte, Geschäfte, alles ist um die Ecke. Auf dem Land müsste ich für jeden Einkauf ins Auto steigen. Das wäre für mich nichts."
+    }
+   ]
+  },
+  {
+   "key": "tb2852d33",
+   "prio": 0,
+   "ord": 263,
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Und unsere letzte Anruferin: Frau Brenner."
+    },
+    {
+     "voice": "f3",
+     "text": "Ja, hallo. Für mich ist das vor allem eine Frage des Geldes. Wir wollten eigentlich in München bleiben, aber die Mieten dort … unmöglich. Für eine Dreizimmerwohnung zahlt man da fast zweitausend Euro. Jetzt wohnen wir in einer Kleinstadt, vierzig Kilometer weg, und zahlen die Hälfte. Mein Mann pendelt jeden Tag, das ist anstrengend, aber anders geht es nicht."
+    }
+   ]
+  },
+  {
+   "key": "t8ed6f0c2",
+   "prio": 0,
+   "ord": 264,
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Wie schreibt man Ihren Vornamen? Können Sie ihn bitte buchstabieren?"
+    }
+   ]
+  },
+  {
+   "key": "t6b6ded05",
+   "prio": 0,
+   "ord": 265,
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Und wie wohnen Sie? In einer Wohnung oder in einem Haus?"
+    }
+   ]
+  },
+  {
+   "key": "t36a1666b",
+   "prio": 0,
+   "ord": 266,
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Was haben Sie in Ihrem Heimatland gemacht, bevor Sie nach Deutschland gekommen sind?"
+    }
+   ]
+  },
+  {
+   "key": "t633a0eee",
+   "prio": 0,
+   "ord": 267,
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Was war am Anfang in Deutschland besonders schwierig für Sie?"
+    }
+   ]
+  },
+  {
+   "key": "t178467d3",
+   "prio": 0,
+   "ord": 268,
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Und was machen Sie am Wochenende am liebsten?"
+    }
+   ]
+  },
+  {
+   "key": "tffabe82e",
+   "prio": 0,
+   "ord": 269,
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Sie fahren mit dem Bus. Wie lange brauchen Sie denn bis zum Kurs?"
+    }
+   ]
+  },
+  {
+   "key": "tabc83c96",
+   "prio": 0,
+   "ord": 270,
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Was finden Sie gut an Bus und Bahn in Deutschland – und was nicht so gut?"
+    }
+   ]
+  },
+  {
+   "key": "t26a71641",
+   "prio": 0,
+   "ord": 271,
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Haben Sie einen Führerschein? Möchten Sie in Deutschland Auto fahren?"
+    }
+   ]
+  },
+  {
+   "key": "t7b833ced",
+   "prio": 0,
+   "ord": 272,
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Und wie fahren die Kinder in Ihrem Heimatland zur Schule?"
+    }
+   ]
+  },
+  {
+   "key": "t3693a68b",
+   "prio": 0,
+   "ord": 273,
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Also, ich hätte Lust auf den Zoo. Da können auch die Kinder mitkommen. Was meinst du?"
+    }
+   ]
+  },
+  {
+   "key": "t73fb5963",
+   "prio": 0,
+   "ord": 274,
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Hm, okay. Und wann? Ich würde sagen, an einem Samstag, dann haben alle frei."
+    }
+   ]
+  },
+  {
+   "key": "t58283174",
+   "prio": 0,
+   "ord": 275,
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Wie fahren wir hin? Ich finde, mit dem Zug ist es am einfachsten."
+    }
+   ]
+  },
+  {
+   "key": "t654022bb",
+   "prio": 0,
+   "ord": 276,
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Und das Essen? Im Restaurant ist es ziemlich teuer, oder?"
+    }
+   ]
+  },
+  {
+   "key": "t283c80dc",
+   "prio": 0,
+   "ord": 277,
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Wer kümmert sich um die Fahrkarten? Ich kenne mich da nicht so gut aus."
+    }
+   ]
+  },
+  {
+   "key": "t47dcbe0e",
+   "prio": 0,
+   "ord": 278,
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Super. Und wer sagt der Kursleiterin Bescheid?"
     }
    ]
   }
