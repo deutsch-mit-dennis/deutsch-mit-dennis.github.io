@@ -168,10 +168,51 @@ def signature(entry, eng):
     if entry.get('fx') and eng != 'text': payload += '|fx=' + entry['fx']  # Klangeffekt gehört zur Aufnahme
     return hashlib.sha1((eng + '|' + payload).encode()).hexdigest()[:10]
 
+SPEAKER_NAMES = {'f1': 'Anna', 'f2': 'Lena', 'f3': 'Maria', 'm1': 'Tom', 'm2': 'Paul', 'm3': 'Jonas'}
+
+def gemini_whole(entry, wav):
+    """Ganzer Hörtext in EINEM Gemini-Aufruf: Dialoge mit zwei Stimmen als echtes Gespräch (Multi-Speaker),
+    einstimmige Texte am Stück. Klingt natürlicher als zusammengeklebte Einzelsätze und braucht nur eine Anfrage.
+    Gibt False zurück, wenn das nicht passt (3+ Stimmen) – dann wird Satz für Satz vertont."""
+    segs = [(s.get('voice', 'f1'), (s.get('say') or s['text']).strip()) for s in entry['segments'] if (s.get('say') or s['text']).strip()]
+    voices = list(dict.fromkeys(v for v, _ in segs))
+    if len(voices) > 2 or not segs: return False
+    if len(voices) == 1:
+        synth_gemini(' '.join(t for _, t in segs), voices[0], wav)
+        return True
+    names = {v: SPEAKER_NAMES.get(v, v) for v in voices}
+    dialog = '\n'.join(f'{names[v]}: {t}' for v, t in segs)
+    prompt = ('Lies dieses deutsche Alltagsgespräch wie zwei echte Menschen: natürlich, locker, mit lebendiger Betonung, '
+              'kleinen Pausen beim Sprecherwechsel und ruhigem, gut verständlichem Tempo für Deutschlernende. '
+              'Lies genau diesen Text, ohne etwas hinzuzufügen:\n\n' + dialog)
+    cfg = [{'speaker': names[v], 'voiceConfig': {'prebuiltVoiceConfig': {'voiceName': voice_for('gemini', v)}}} for v in voices]
+    body = {'contents': [{'parts': [{'text': prompt}]}],
+            'generationConfig': {'responseModalities': ['AUDIO'], 'speechConfig': {'multiSpeakerVoiceConfig': {'speakerVoiceConfigs': cfg}}}}
+    model = os.environ.get('GEMINI_TTS_MODEL') or 'gemini-2.5-flash-preview-tts'
+    raw = http(f'https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent', body,
+               {'x-goog-api-key': os.environ['GEMINI_API_KEY']})
+    pcm = base64.b64decode(json.loads(raw)['candidates'][0]['content']['parts'][0]['inlineData']['data'])
+    with wave.open(wav, 'wb') as w:
+        w.setnchannels(1); w.setsampwidth(2); w.setframerate(24000); w.writeframes(pcm)
+    time.sleep(float(os.environ.get('GEMINI_PAUSE', '2')))
+    return True
+
 def build(entry, eng, target):
     with tempfile.TemporaryDirectory() as td:
         parts = []
-        for i, seg in enumerate(entry['segments']):
+        if eng == 'gemini':
+            w = os.path.join(td, 'whole.wav')
+            try:
+                if gemini_whole(entry, w):
+                    norm = os.path.join(td, 'whole_n.wav')
+                    run(['ffmpeg', '-y', '-loglevel', 'error', '-i', w, '-ar', '24000', '-ac', '1', norm])
+                    parts.append(norm)
+            except Exception as ex:
+                msg = str(ex)
+                if 'HTTP 402' in msg or 'HTTP 429' in msg or 'RESOURCE_EXHAUSTED' in msg: raise  # quota: do not retry sentence by sentence
+                print(f'    (am Stück nicht möglich, vertone Satz für Satz: {msg[:120]})', flush=True)
+                parts = []
+        for i, seg in enumerate([] if parts else entry['segments']):
             text = (seg.get('say') or seg['text']).strip()
             if not text: continue
             w = os.path.join(td, f'{i:03d}.wav')
@@ -180,6 +221,7 @@ def build(entry, eng, target):
             run(['ffmpeg', '-y', '-loglevel', 'error', '-i', w, '-ar', '24000', '-ac', '1', norm])
             parts.append(norm)
         if not parts: raise RuntimeError('leer')
+        whole = eng == 'gemini' and len(parts) == 1 and parts[0].endswith('whole_n.wav')
         pause = float(entry.get('pause', 0.55))
         sil = os.path.join(td, 'sil.wav')
         run(['ffmpeg', '-y', '-loglevel', 'error', '-f', 'lavfi', '-i', f'anullsrc=r=24000:cl=mono', '-t', str(pause), sil])
@@ -203,9 +245,10 @@ def build(entry, eng, target):
                  '[2]highpass=f=300,lowpass=f=3000[n];[v][n]amix=inputs=2:duration=first:normalize=0[vn];'
                  '[0][vn]concat=n=2:v=0:a=1,loudnorm=I=-17:TP=-1.5:LRA=11',
                  '-ar', '44100', '-ac', '1', '-codec:a', 'libmp3lame', '-b:a', '96k', target])
-            return
+            return whole
         run(['ffmpeg', '-y', '-loglevel', 'error', '-f', 'concat', '-safe', '0', '-i', lst,
              '-af', 'loudnorm=I=-17:TP=-1.5:LRA=11', '-ar', '44100', '-ac', '1', '-codec:a', 'libmp3lame', '-b:a', '96k', target])
+        return whole
 
 def engines():
     """Anbieter-Kette (Wunsch von Dennis, 19.10.2026): zuerst Gemini; ist dort das Guthaben aufgebraucht,
@@ -251,7 +294,10 @@ def run_engine(eng, entries, files, usage, month, start):
         if not FORCE and have and cur:
             if cur.get('sig') == sig: continue
             same_text = cur.get('text') == signature(e, 'text')
-            if same_text and cur.get('fx') == e.get('fx') and RANK.get(cur.get('engine'), 0) >= RANK[eng]: continue
+            # exam dialogues with two voices that Gemini stitched sentence by sentence get one natural re-take (Dennis, 29.10.2026)
+            restitch = eng == 'gemini' and cur.get('engine') == 'gemini' and not cur.get('whole') and e.get('prio') == 0 \
+                and len({s.get('voice') for s in e['segments']}) == 2
+            if same_text and cur.get('fx') == e.get('fx') and RANK.get(cur.get('engine'), 0) >= RANK[eng] and not restitch: continue
         todo.append((e, sig))
     todo.sort(key=prio)
     used = usage.get(month, {}).get(eng, 0)
@@ -269,8 +315,8 @@ def run_engine(eng, entries, files, usage, month, start):
             print(f'Monatsgrenze erreicht ({used} von {limit} Zeichen).'); break
         try:
             if eng != 'piper': used += chars  # auch fehlgeschlagene Versuche zählen vorsichtshalber mit
-            build(e, eng, os.path.join(OUT, e['key'] + '.mp3'))
-            files[e['key']] = {'sig': sig, 'engine': eng, 'text': signature(e, 'text'), **({'fx': e['fx']} if e.get('fx') else {})}
+            whole = build(e, eng, os.path.join(OUT, e['key'] + '.mp3'))
+            files[e['key']] = {'sig': sig, 'engine': eng, 'text': signature(e, 'text'), **({'fx': e['fx']} if e.get('fx') else {}), **({'whole': True} if whole else {})}
             done += 1
             print(f'  ✓ {e["key"]}', flush=True)
         except Exception as ex:
