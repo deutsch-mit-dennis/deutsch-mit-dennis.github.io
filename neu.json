@@ -3,6 +3,12 @@
  "items": [
   {
    "date": "2026-10-29",
+   "type": "lied",
+   "title": "Neues Lied (A2): „I-K zwei-null-zwei – Ihr schafft das!“ – Mutmach-Lied für die DTZ-Prüfung",
+   "link": "#lieder/a2-13-ihr-schafft-das"
+  },
+  {
+   "date": "2026-10-29",
    "type": "neu",
    "title": "DTZ Modelltest 3 jetzt auch zum Ausdrucken: schriftliche Prüfung als PDF und Hörverstehen als MP3",
    "link": "#simulation/dtz-3"

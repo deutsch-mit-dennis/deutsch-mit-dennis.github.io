@@ -1,0 +1,63 @@
+[
+ {
+  "id": "a2-13-ihr-schafft-das",
+  "level": "A2",
+  "title": "I-K zwei-null-zwei – Ihr schafft das!",
+  "theme": "Vor der DTZ-Prüfung: Mut machen, gemeinsam lernen, ruhig bleiben",
+  "grammar": "Imperativ (Sprich weiter! Bleib ruhig!), Perfekt (Wir haben gelernt), Ordinalzahlen (am sechsten November)",
+  "intro": "Ein Mutmach-Lied für die DTZ-Prüfung – geschrieben für meinen Integrationskurs IK 202. Hör zu, sing mit und denk daran: Ein Fehler ist okay. Viel Erfolg in deiner Prüfung!",
+  "lyrics": "[Verse 1]\nWir haben gelernt, Tag für Tag,\nWörter und Sätze, Frage für Frage.\nAus vielen Ländern in einem Raum,\njetzt ist die Prüfung kein böser Traum.\n\n[Chorus]\nI-K zwei-null-zwei, ihr schafft das!\nSprechen, Schreiben, Hören – das macht Spaß!\nAm sechsten November, Kopf hoch und los,\nihr seid bereit – und ich bin so stolz!\n\n[Verse 2]\nEin Kaffee, ein Lachen, ein „Wie bitte?“,\nwir üben zusammen, Schritt für Schritt.\nEin Fehler ist okay, das ist kein Problem,\nsprich einfach weiter, man wird dich verstehn.\n\n[Chorus]\nI-K zwei-null-zwei, ihr schafft das!\nSprechen, Schreiben, Hören – das macht Spaß!\nAm sechsten November, Kopf hoch und los,\nihr seid bereit – und ich bin so stolz!\n\n[Bridge]\nTief einatmen, ruhig bleiben,\nlesen, hören, sprechen, schreiben.\n\n[Chorus]\nI-K zwei-null-zwei, ihr schafft das!\nSprechen, Schreiben, Hören – das macht Spaß!\nAm sechsten November, Kopf hoch und los,\nihr seid bereit – und ich bin so stolz!\n\n[Outro]\nViel Erfolg, I-K zwei-null-zwei!",
+  "vocab": [
+   ["die Prüfung, die Prüfungen", "Hier zeigt man, was man gelernt hat, z. B. beim DTZ."],
+   ["der Satz, die Sätze", "mehrere Wörter zusammen, z. B. „Ich lerne Deutsch.“"],
+   ["das Land, die Länder", "z. B. Syrien, die Ukraine oder Deutschland"],
+   ["der Traum, die Träume", "Bilder im Kopf in der Nacht – oder ein großer Wunsch"],
+   ["schaffen", "etwas Schweres gut machen, z. B. die Prüfung"],
+   ["Kopf hoch!", "Sei nicht traurig, hab Mut!"],
+   ["bereit sein", "fertig und gut vorbereitet sein"],
+   ["stolz sein (auf)", "sich freuen, weil jemand etwas gut gemacht hat"],
+   ["der Fehler, die Fehler", "Etwas ist falsch, z. B. ein Wort oder eine Endung."],
+   ["einatmen", "Luft in den Körper holen – tief und ruhig"]
+  ],
+  "gap": {
+   "type": "gap",
+   "title": "Aufgabe 2: Lückentext",
+   "instruction": "Hör das Lied und ergänze die fehlenden Wörter.",
+   "items": [
+    "Wörter und ___, Frage für Frage.",
+    "Aus vielen ___ in einem Raum,",
+    "Am sechsten November, Kopf ___ und los,",
+    "Ein ___ ist okay, das ist kein Problem,",
+    "Tief ___, ruhig bleiben,"
+   ],
+   "solutions": ["Sätze", "Ländern", "hoch", "Fehler", "einatmen"]
+  },
+  "tf": [
+   ["Die Personen im Kurs kommen alle aus einem Land.", false, "Sie kommen aus vielen Ländern."],
+   ["Die Prüfung ist am sechsten November.", true, ""],
+   ["Im Kurs gibt es auch Kaffee und Lachen.", true, ""],
+   ["Bei einem Fehler soll man aufhören zu sprechen.", false, "Man soll einfach weitersprechen."],
+   ["Der Sänger ist stolz auf den Kurs.", true, ""]
+  ],
+  "gram": {
+   "title": "Grammatik – Imperativ (du-Form)",
+   "instruction": "Bilde den Imperativ für „du“.",
+   "items": [
+    "___ einfach weiter! (sprechen)",
+    "___ tief ein! (atmen)",
+    "___ ruhig! (bleiben)",
+    "___ den Text laut! (lesen)",
+    "___ gut zu! (hören)",
+    "___ zu allen Punkten etwas! (schreiben)"
+   ],
+   "solutions": [
+    "Sprich einfach weiter!",
+    "Atme tief ein!",
+    "Bleib ruhig!",
+    "Lies den Text laut!",
+    "Hör gut zu!",
+    "Schreib zu allen Punkten etwas!"
+   ]
+  }
+ }
+]
