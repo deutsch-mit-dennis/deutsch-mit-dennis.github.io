@@ -33,7 +33,7 @@
   const DL = 'material/simulation/';
   const downloads = id => id === 'lid'
     ? [[`${DL}lid-test-1.pdf`, '📄 Probetest 1 (PDF)'], [`${DL}lid-test-2.pdf`, '📄 Probetest 2 (PDF)']]
-    : [[`${DL}${id}-schriftlich.pdf`, '📄 Schriftliche Prüfung (PDF)'], [`${DL}${id}-hoeren.pdf`, '📄 Nur Hörverstehen (PDF)'], [`${DL}${id}-hoeren.mp3`, '🎧 Hörverstehen als MP3', 'mp3']];
+    : [[`${DL}${id}-schriftlich.pdf`, '📄 Schriftliche Prüfung (PDF)'], [`${DL}${id}-hoeren.pdf`, '📄 Nur Hörverstehen (PDF)'], [`${DL}${id}-hoeren.mp3`, '🎧 Hörverstehen als MP3', 'mp3'], ...(base(id) === 'dtz' ? [['material/dtz-uebung-sprechen-schreiben.pdf', '📄 Übungsheft Sprechen Teil 2 + 3 und Schreiben (PDF)']] : [])];
   const MP3_MIN = { dtz: 17, 'telc-b1': 18, 'dtb-b1': 20, 'telc-b2': 18, 'dtb-b2': 25, 'dtz-2': 14, 'telc-b1-2': 14, 'dtb-b1-2': 19, 'telc-b2-2': 13, 'dtb-b2-2': 17 };
   const hasPaper = id => id === 'lid' || id in MP3_MIN;
   const dlLink = ([href, label, kind]) => `<a class="dm-btn dm-btn-quiet" href="${href}?v=${V}" download${kind === 'mp3' ? '' : ' target="_blank" rel="noopener"'}>${label}</a>`;
