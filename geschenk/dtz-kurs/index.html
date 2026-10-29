@@ -82,6 +82,8 @@ main{max-width:640px;margin:0 auto;padding:24px 16px 48px}
 .sign{font-family:Cav,cursive;font-size:30px;color:var(--blue);margin:8px 0 0}
 .note{font-size:14px;color:var(--muted)}
 #confetti{position:fixed;inset:0;pointer-events:none;z-index:9}
+#mute{position:fixed;right:14px;bottom:14px;z-index:10;width:52px;height:52px;border-radius:50%;border:0;background:var(--yellow);color:#1f2f7a;font-size:24px;cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,.3)}
+#mute[hidden]{display:none}
 @keyframes wiggle{0%,70%,100%{transform:rotate(0)}75%{transform:rotate(-7deg)}80%{transform:rotate(7deg)}85%{transform:rotate(-5deg)}90%{transform:rotate(4deg)}}
 @keyframes pulse{50%{transform:scale(1.06)}}
 @keyframes pop{from{opacity:0;transform:scale(.85)}to{opacity:1;transform:none}}
@@ -91,6 +93,7 @@ main{max-width:640px;margin:0 auto;padding:24px 16px 48px}
 </head>
 <body>
 <canvas id="confetti" aria-hidden="true"></canvas>
+<button id="mute" type="button" aria-label="Musik ausschalten" hidden>🔊</button>
 <header class="hero" id="hero">
   <p class="from">Von Dennis für den</p>
   <h1 class="ik">IK 202</h1>
@@ -235,11 +238,22 @@ main{max-width:640px;margin:0 auto;padding:24px 16px 48px}
     if (parts.length) requestAnimationFrame(step); else { running = false; ctx.clearRect(0, 0, cv.width, cv.height); }
   }
 
+  // Music starts on the tap itself, because browsers block autoplay without a user gesture.
+  var music = new Audio('musik.mp3'), mute = document.getElementById('mute');
+  music.loop = true; music.volume = 0.5;
+  mute.addEventListener('click', function () {
+    var off = !music.paused;
+    if (off) music.pause(); else music.play().catch(function () {});
+    mute.textContent = off ? '🔇' : '🔊';
+    mute.setAttribute('aria-label', off ? 'Musik einschalten' : 'Musik ausschalten');
+  });
+
   var hero = document.getElementById('hero');
   document.getElementById('gift').addEventListener('click', function () {
     if (hero.classList.contains('opened')) return;
     hero.classList.add('opened');
     this.setAttribute('aria-label', 'Geschenk geöffnet');
+    music.play().then(function () { mute.hidden = false; }).catch(function () {});
     confetti(220);
     setTimeout(function () { hero.classList.add('done'); document.getElementById('reveal').querySelector('a').focus({ preventScroll: true }); }, reduce ? 0 : 650);
   });
