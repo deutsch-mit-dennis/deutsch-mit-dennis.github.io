@@ -2,6 +2,12 @@
  "note": "Neu auf der Seite – neueste Einträge oben. Wird vom Redaktionsplan (geplante Aufgaben) ergänzt.",
  "items": [
   {
+   "date": "2026-10-30",
+   "type": "neu",
+   "title": "Neues Arbeitsblatt: DTZ Lesen Teil 1 – Wegweiser verstehen (B1, mit Lösungen)",
+   "link": "#material"
+  },
+  {
    "date": "2026-10-29",
    "type": "lied",
    "title": "Neues Lied (A2): „I-K zwei-null-zwei – Ihr schafft das!“ – Mutmach-Lied für die DTZ-Prüfung",
@@ -174,72 +180,6 @@
    "type": "lied",
    "title": "10 neue Lieder: je 2 für A1, A2, B1, B2 und C1 – mit Liedtext, PDF, Aufgaben und Lösungen",
    "link": "#lieder/A1"
-  },
-  {
-   "date": "2026-10-20",
-   "type": "neu",
-   "title": "Prüfungssimulationen: Schriftliche und mündliche Prüfung jetzt getrennt starten – eine Uhr für die ganze schriftliche bzw. mündliche Prüfung, danach das Gesamtergebnis",
-   "link": "#simulation"
-  },
-  {
-   "date": "2026-10-19",
-   "type": "neu",
-   "title": "Lino läuft: Gekaufte Teile und Münzen bleiben jetzt sicher gespeichert – und mit dem Spielstand-Code kannst du deinen Stand auf ein anderes Gerät übertragen",
-   "link": "#spiele/lino"
-  },
-  {
-   "date": "2026-10-19",
-   "type": "neu",
-   "title": "Neu: 6 Prüfungssimulationen mit echter Zeitvorgabe – DTZ, Leben in Deutschland, telc B1, DTB B1, telc B2 und DTB B2. Mit Punkten, Bestehensregel und allen Lösungen",
-   "link": "#simulation"
-  },
-  {
-   "date": "2026-10-19",
-   "type": "neu",
-   "title": "Neu: Gezielte Vorbereitung auf telc B1, telc B2, DTB B1 und DTB B2 – Strategien für jeden Prüfungsteil, Mini-Übungen, Redemittel und Lernplan",
-   "link": "#vorbereitung"
-  },
-  {
-   "date": "2026-10-19",
-   "type": "neu",
-   "title": "Lino läuft wird größer: 14 Welten (ICE, Supermarkt, Arztpraxis, Bürgeramt, Büro, Vorstellungsgespräch), Tageslauf, Shop, Abzeichen und neue Fragen zum Hören, Artikel und Satzbau",
-   "link": "#spiele/lino"
-  },
-  {
-   "date": "2026-10-19",
-   "type": "neu",
-   "title": "Neu: Playlist – alle 40 Lieder am Stück hören, auch nach Niveau und in zufälliger Reihenfolge",
-   "link": "#lieder/playlist/alle"
-  },
-  {
-   "date": "2026-10-19",
-   "type": "neu",
-   "title": "Neues Arbeitsblatt: Nomen-Verb-Verbindungen – Beruf und Behörden (B2)",
-   "link": "#material"
-  },
-  {
-   "date": "2026-10-19",
-   "type": "hoeren",
-   "title": "Neuer DTZ-Hörtext: Durchsage in der Straßenbahn (Übungssatz 5)",
-   "link": "#hoeren/dtz-5/1"
-  },
-  {
-   "date": "2026-10-19",
-   "type": "hoeren",
-   "title": "Neuer B2-Hörtext: Mailbox aus der Buchhaltung (Übungssatz 4)",
-   "link": "#hoeren/b2-4/1"
-  },
-  {
-   "date": "2026-10-19",
-   "type": "uebung",
-   "title": "Sprechen A2: In der Kita – heute holt jemand anderes ab",
-   "link": "#ueben/sprechen/A2/4"
-  },
-  {
-   "date": "2026-10-19",
-   "type": "uebung",
-   "title": "Schreiben A2: Schicht tauschen – Nachricht an einen Kollegen",
-   "link": "#ueben/schreiben/A2/5"
   }
  ]
 }
