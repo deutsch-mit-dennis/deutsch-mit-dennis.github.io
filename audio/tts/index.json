@@ -1,5 +1,5 @@
 {
-"updated": "2026-10-29T15:23:17Z",
+"updated": "2026-10-30T10:34:17Z",
 "engines": [
 "elevenlabs",
 "gemini",
@@ -958,10 +958,11 @@
 "text": "a340b5c627"
 },
 "t13394218": {
-"v": "6ff91ac6a4",
-"engine": "google",
-"sig": "6ff91ac6a4",
-"text": "c820c4a2ae"
+"v": "5c44ada2b0",
+"engine": "gemini",
+"sig": "5c44ada2b0",
+"text": "c820c4a2ae",
+"whole": true
 },
 "t1345a933": {
 "v": "d2a11ef6b5",
@@ -1199,10 +1200,11 @@
 "text": "6c7655d4b3"
 },
 "t1b761729": {
-"v": "ecb51f8502",
-"engine": "google",
-"sig": "ecb51f8502",
-"text": "a08fe2d4ae"
+"v": "6efcf22d90",
+"engine": "gemini",
+"sig": "6efcf22d90",
+"text": "a08fe2d4ae",
+"whole": true
 },
 "t1ba9709e": {
 "v": "25c90c3376",
@@ -1319,10 +1321,11 @@
 "text": "6db39b093e"
 },
 "t1f85df30": {
-"v": "ef33dd81e5",
-"engine": "google",
-"sig": "ef33dd81e5",
-"text": "724ac4b2ca"
+"v": "c71c85581f",
+"engine": "gemini",
+"sig": "c71c85581f",
+"text": "724ac4b2ca",
+"whole": true
 },
 "t1f909d21": {
 "v": "e028bfd102",
@@ -1355,10 +1358,11 @@
 "text": "3f57af2010"
 },
 "t20ac9602": {
-"v": "ae51120f0b",
-"engine": "google",
-"sig": "ae51120f0b",
-"text": "0da3159db6"
+"v": "efcddd8d3e",
+"engine": "gemini",
+"sig": "efcddd8d3e",
+"text": "0da3159db6",
+"whole": true
 },
 "t21073100": {
 "v": "39ab4015c9",
@@ -1385,10 +1389,11 @@
 "text": "fc8fc51ccf"
 },
 "t22070191": {
-"v": "13feac07fe",
-"engine": "google",
-"sig": "13feac07fe",
-"text": "d161a68875"
+"v": "c767af6636",
+"engine": "gemini",
+"sig": "c767af6636",
+"text": "d161a68875",
+"whole": true
 },
 "t2220fc0b": {
 "v": "a5a22e276b",
@@ -1932,10 +1937,11 @@
 "text": "7a08cfefd6"
 },
 "t35d9bc69": {
-"v": "e81ec3a582",
-"engine": "google",
-"sig": "e81ec3a582",
-"text": "4bc5a71a8d"
+"v": "cfb00821a7",
+"engine": "gemini",
+"sig": "cfb00821a7",
+"text": "4bc5a71a8d",
+"whole": true
 },
 "t35da07d1": {
 "v": "4d7365d8b6",
@@ -1944,10 +1950,11 @@
 "text": "a9af66e1a1"
 },
 "t35dd9b57": {
-"v": "09f7c53840",
-"engine": "google",
-"sig": "09f7c53840",
-"text": "b5d1ffb72a"
+"v": "cc2893b501",
+"engine": "gemini",
+"sig": "cc2893b501",
+"text": "b5d1ffb72a",
+"whole": true
 },
 "t35e40cfe": {
 "v": "99fcc72fe8",
@@ -2244,10 +2251,11 @@
 "text": "a58af879e4"
 },
 "t3ee00050": {
-"v": "ac88446808",
-"engine": "google",
-"sig": "ac88446808",
-"text": "f6dbe15e2e"
+"v": "cd204ed9bd",
+"engine": "gemini",
+"sig": "cd204ed9bd",
+"text": "f6dbe15e2e",
+"whole": true
 },
 "t3f30ecd7": {
 "v": "98c71da8cd",
@@ -2292,10 +2300,11 @@
 "text": "55c302ec1b"
 },
 "t4079a8f9": {
-"v": "bf637c7eb7",
-"engine": "google",
-"sig": "bf637c7eb7",
-"text": "e7076e511e"
+"v": "5abc4b8356",
+"engine": "gemini",
+"sig": "5abc4b8356",
+"text": "e7076e511e",
+"whole": true
 },
 "t408d39b3": {
 "v": "d268a25d27",
@@ -2352,10 +2361,11 @@
 "text": "7879608a0e"
 },
 "t428c4e7e": {
-"v": "b6756ea275",
-"engine": "google",
-"sig": "b6756ea275",
-"text": "30bb0f5958"
+"v": "a886f562dc",
+"engine": "gemini",
+"sig": "a886f562dc",
+"text": "30bb0f5958",
+"whole": true
 },
 "t429ac5a3": {
 "v": "fe72395bdc",
@@ -2546,10 +2556,11 @@
 "text": "ce8c12866d"
 },
 "t4bb29357": {
-"v": "3fa5bec907",
-"engine": "google",
-"sig": "3fa5bec907",
-"text": "2fd1daac0e"
+"v": "b65d26ff7c",
+"engine": "gemini",
+"sig": "b65d26ff7c",
+"text": "2fd1daac0e",
+"whole": true
 },
 "t4bd4c8fb": {
 "v": "701a9e116a",
@@ -2727,10 +2738,11 @@
 "text": "6d6eb49175"
 },
 "t51f7133c": {
-"v": "cd41bcdc61",
-"engine": "google",
-"sig": "cd41bcdc61",
-"text": "ab8f476626"
+"v": "79ea361bdc",
+"engine": "gemini",
+"sig": "79ea361bdc",
+"text": "ab8f476626",
+"whole": true
 },
 "t520efdca": {
 "v": "9fe6ed79b7",
@@ -2985,10 +2997,11 @@
 "text": "d03d4083a2"
 },
 "t59d32fca": {
-"v": "7a8c7e4521",
-"engine": "google",
-"sig": "7a8c7e4521",
-"text": "1c94cab60b"
+"v": "4c5f71b5b0",
+"engine": "gemini",
+"sig": "4c5f71b5b0",
+"text": "1c94cab60b",
+"whole": true
 },
 "t5ab9aa48": {
 "v": "f6ccaa3899",
@@ -3057,10 +3070,11 @@
 "text": "f27453f93f"
 },
 "t5c7c9dc4": {
-"v": "aeb9f8e234",
-"engine": "google",
-"sig": "aeb9f8e234",
-"text": "271ae5e17e"
+"v": "1a7a93b61f",
+"engine": "gemini",
+"sig": "1a7a93b61f",
+"text": "271ae5e17e",
+"whole": true
 },
 "t5c873c46": {
 "v": "d72284454b",
@@ -3189,10 +3203,11 @@
 "text": "5503bf0edd"
 },
 "t5f843b1c": {
-"v": "93bb635755",
-"engine": "google",
-"sig": "93bb635755",
-"text": "278460d956"
+"v": "ed45fea79a",
+"engine": "gemini",
+"sig": "ed45fea79a",
+"text": "278460d956",
+"whole": true
 },
 "t600f9a23": {
 "v": "bc4ee70e46",
@@ -3237,10 +3252,11 @@
 "text": "f6aca9cbc4"
 },
 "t61b64f1f": {
-"v": "5461bd6d3e",
-"engine": "google",
-"sig": "5461bd6d3e",
-"text": "b4d719ec2b"
+"v": "3b4d4edbad",
+"engine": "gemini",
+"sig": "3b4d4edbad",
+"text": "b4d719ec2b",
+"whole": true
 },
 "t61b6aa7b": {
 "v": "3d2c0d85fe",
@@ -3453,10 +3469,11 @@
 "text": "5cb68b0108"
 },
 "t69f2fb4b": {
-"v": "bb4af8ddec",
-"engine": "google",
-"sig": "bb4af8ddec",
-"text": "aec484623c"
+"v": "fff1b197da",
+"engine": "gemini",
+"sig": "fff1b197da",
+"text": "aec484623c",
+"whole": true
 },
 "t69f8a92f": {
 "v": "0c32399cee",
@@ -3705,10 +3722,11 @@
 "text": "8dfcd8d3ac"
 },
 "t7424c52e": {
-"v": "cfb34e5c03",
-"engine": "google",
-"sig": "cfb34e5c03",
-"text": "6dad323f92"
+"v": "703fabed38",
+"engine": "gemini",
+"sig": "703fabed38",
+"text": "6dad323f92",
+"whole": true
 },
 "t743591b5": {
 "v": "40ebc0be59",
@@ -3861,10 +3879,11 @@
 "text": "fa6d18e4e0"
 },
 "t79834ea7": {
-"v": "0c91774566",
-"engine": "google",
-"sig": "0c91774566",
-"text": "6a3c810be1"
+"v": "c4c51397e5",
+"engine": "gemini",
+"sig": "c4c51397e5",
+"text": "6a3c810be1",
+"whole": true
 },
 "t7a08d03a": {
 "v": "9a7aad1c4c",
@@ -4215,10 +4234,11 @@
 "text": "15445cdf24"
 },
 "t8678a1b8": {
-"v": "4412d2b333",
-"engine": "google",
-"sig": "4412d2b333",
-"text": "000f3b9c07"
+"v": "033618e985",
+"engine": "gemini",
+"sig": "033618e985",
+"text": "000f3b9c07",
+"whole": true
 },
 "t86e150a5": {
 "v": "11ea7430ef",
@@ -4365,10 +4385,11 @@
 "text": "852be1d93e"
 },
 "t8c6d42a0": {
-"v": "0ac72d6432",
-"engine": "google",
-"sig": "0ac72d6432",
-"text": "97bab7e23f"
+"v": "d58278a7ba",
+"engine": "gemini",
+"sig": "d58278a7ba",
+"text": "97bab7e23f",
+"whole": true
 },
 "t8ca20a46": {
 "v": "411e6ea500",
@@ -4473,10 +4494,11 @@
 "text": "d1219d6cae"
 },
 "t8e96c9fd": {
-"v": "013e6761c3",
-"engine": "google",
-"sig": "013e6761c3",
-"text": "2c17353648"
+"v": "3d10a5b23f",
+"engine": "gemini",
+"sig": "3d10a5b23f",
+"text": "2c17353648",
+"whole": true
 },
 "t8eae2d45": {
 "v": "26cbf7d123",
@@ -4671,10 +4693,11 @@
 "text": "14c5fc8b30"
 },
 "t94727b01": {
-"v": "69ce62c822",
-"engine": "google",
-"sig": "69ce62c822",
-"text": "447dfc6d8c"
+"v": "20ec1b4622",
+"engine": "gemini",
+"sig": "20ec1b4622",
+"text": "447dfc6d8c",
+"whole": true
 },
 "t94a165c0": {
 "v": "57cedbdefd",
@@ -5307,10 +5330,11 @@
 "text": "b5d2d68106"
 },
 "ta93ce450": {
-"v": "8369109b37",
-"engine": "google",
-"sig": "8369109b37",
-"text": "fc09a381ee"
+"v": "dba5347635",
+"engine": "gemini",
+"sig": "dba5347635",
+"text": "fc09a381ee",
+"whole": true
 },
 "ta95892d6": {
 "v": "183cf45db2",
@@ -5703,10 +5727,11 @@
 "text": "1cc2cc3011"
 },
 "tb7f372d3": {
-"v": "3b72c3dc89",
-"engine": "google",
-"sig": "3b72c3dc89",
-"text": "a1f0f25436"
+"v": "93f65bc699",
+"engine": "gemini",
+"sig": "93f65bc699",
+"text": "a1f0f25436",
+"whole": true
 },
 "tb805e948": {
 "v": "1dc1da4d96",
@@ -6435,10 +6460,11 @@
 "text": "e8c255bdbf"
 },
 "td14110c6": {
-"v": "13fce0bd42",
-"engine": "google",
-"sig": "13fce0bd42",
-"text": "1b80714976"
+"v": "8a671618fa",
+"engine": "gemini",
+"sig": "8a671618fa",
+"text": "1b80714976",
+"whole": true
 },
 "td153aa92": {
 "v": "5f8188fa06",
@@ -6519,10 +6545,11 @@
 "text": "1398ac8a28"
 },
 "td417a3e3": {
-"v": "064b106277",
-"engine": "google",
-"sig": "064b106277",
-"text": "6f2fb6c8aa"
+"v": "a59b6fbedb",
+"engine": "gemini",
+"sig": "a59b6fbedb",
+"text": "6f2fb6c8aa",
+"whole": true
 },
 "td434eaf2": {
 "v": "f905a39bc4",
@@ -6531,10 +6558,11 @@
 "text": "da58c2590a"
 },
 "td4752b4a": {
-"v": "0903728c3b",
-"engine": "google",
-"sig": "0903728c3b",
-"text": "16085277c1"
+"v": "ad89012eb2",
+"engine": "gemini",
+"sig": "ad89012eb2",
+"text": "16085277c1",
+"whole": true
 },
 "td4808391": {
 "v": "caef5d4cd1",
@@ -7157,10 +7185,11 @@
 "text": "bc88077668"
 },
 "tea88b857": {
-"v": "7da3cffb78",
-"engine": "google",
-"sig": "7da3cffb78",
-"text": "1d97da7acc"
+"v": "e96f33458f",
+"engine": "gemini",
+"sig": "e96f33458f",
+"text": "1d97da7acc",
+"whole": true
 },
 "tea8d045a": {
 "v": "cb89338e76",
@@ -7612,10 +7641,11 @@
 "text": "3799bb52b4"
 },
 "tf676cdcb": {
-"v": "640362e0b0",
-"engine": "google",
-"sig": "640362e0b0",
-"text": "b34a74c788"
+"v": "0a7ba5226e",
+"engine": "gemini",
+"sig": "0a7ba5226e",
+"text": "b34a74c788",
+"whole": true
 },
 "tf67bb88d": {
 "v": "48fe774988",
@@ -7630,10 +7660,11 @@
 "text": "191be1b549"
 },
 "tf72cd440": {
-"v": "95e2890880",
-"engine": "google",
-"sig": "95e2890880",
-"text": "c96a71fd3e"
+"v": "f4c0c5fe5b",
+"engine": "gemini",
+"sig": "f4c0c5fe5b",
+"text": "c96a71fd3e",
+"whole": true
 },
 "tf74fed0f": {
 "v": "15ea98fe66",
