@@ -1,6 +1,6 @@
 // KDP paperback wrap cover (back + spine + front) for "DTZ Schreiben A2–B1 – Das Übungsbuch".
-// Run from the repo root:  node tools/pdf/kdp/dtz-schreiben-cover.mjs [pages] [out.pdf]
-// Trim A4 (210 x 297 mm), 3.175 mm bleed, white paper (0.0572 mm per page).
+// Run from the repo root:  node tools/pdf/kdp/dtz-schreiben-cover.mjs [pages] [out.pdf] [white|cream]
+// Trim A4 (210 x 297 mm), 3.175 mm bleed; spine per page: white 0.0572 mm, cream 0.0635 mm.
 // Below 79 pages KDP allows no spine text, so the spine stays plain.
 // The barcode area (bottom right of the back cover) is left empty: KDP prints the ISBN barcode there.
 import { createRequire } from 'module';
@@ -13,7 +13,8 @@ const PAGES = Number(process.argv[2] || 78);
 const OUT = resolve(process.argv[3] || resolve(REPO, 'qa-out/kdp-dtz-schreiben-cover.pdf'));
 mkdirSync(resolve(OUT, '..'), { recursive: true });
 const BLEED = 3.175, TW = 210, TH = 297;
-const SPINE = +(PAGES * 0.0572).toFixed(2);
+const PAPER = process.argv[4] === 'cream' ? 0.0635 : 0.0572;
+const SPINE = +(PAGES * PAPER).toFixed(2);
 const W = +(2 * BLEED + 2 * TW + SPINE).toFixed(2), H = +(2 * BLEED + TH).toFixed(2);
 const f = (p) => 'file://' + resolve(REPO, p);
 
