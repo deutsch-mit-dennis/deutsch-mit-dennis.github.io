@@ -2,6 +2,12 @@
  "note": "Neu auf der Seite – neueste Einträge oben. Wird vom Redaktionsplan (geplante Aufgaben) ergänzt.",
  "items": [
   {
+   "date": "2026-10-31",
+   "type": "neu",
+   "title": "Neues Lernspiel: „Neu in Deutschland“ – eine Geschichte in 8 Kapiteln von A1 bis C1 (Wohnung, Amt, Arzt, Job, Widerspruch)",
+   "link": "#spiele/nid"
+  },
+  {
    "date": "2026-10-30",
    "type": "neu",
    "title": "Neues Arbeitsblatt: DTZ Lesen Teil 1 – Wegweiser verstehen (B1, mit Lösungen)",

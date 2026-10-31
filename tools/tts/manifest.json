@@ -14862,6 +14862,807 @@
      "text": "Super. Und wer sagt der Kursleiterin Bescheid?"
     }
    ]
+  },
+  {
+   "key": "t6297c360",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Wagner, guten Tag."
+    }
+   ]
+  },
+  {
+   "key": "t43ef420e",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Welche Wohnung meinen Sie denn? Ich habe zwei Wohnungen in der Zeitung."
+    }
+   ]
+  },
+  {
+   "key": "tf96ba264",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Kaufen? Nein, die Wohnung ist nur zu vermieten. Warum rufen Sie an?"
+    }
+   ]
+  },
+  {
+   "key": "t72be08ea",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Ah, die Zweizimmerwohnung. Die ist noch frei. Möchten Sie sie ansehen?"
+    }
+   ]
+  },
+  {
+   "key": "ta73ddf85",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Wir kennen uns ja noch gar nicht … Also, wann möchten Sie kommen?"
+    }
+   ]
+  },
+  {
+   "key": "tc1f48222",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Ohne Besichtigung? Sehen Sie sich die Wohnung lieber zuerst an."
+    }
+   ]
+  },
+  {
+   "key": "td59c512e",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Passt es Ihnen morgen um 17 Uhr? Die Adresse ist Gartenstraße 12."
+    }
+   ]
+  },
+  {
+   "key": "t83b49d56",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Tschüss? Also kommen Sie morgen um 17 Uhr oder nicht?"
+    }
+   ]
+  },
+  {
+   "key": "t86781ebd",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Hm. Und wann haben Sie Zeit?"
+    }
+   ]
+  },
+  {
+   "key": "taf1a1ecb",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Na, wie gefällt Ihnen die Wohnung?"
+    }
+   ]
+  },
+  {
+   "key": "td188282b",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Kaputt? Was genau meinen Sie denn?"
+    }
+   ]
+  },
+  {
+   "key": "t5db46d65",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Ich? Ähm … danke. Und die Wohnung?"
+    }
+   ]
+  },
+  {
+   "key": "t524962ae",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Das repariere ich bis zum Einzug. Ich brauche noch eine Kopie von Ihrem Ausweis und einen Nachweis über Ihr Einkommen."
+    }
+   ]
+  },
+  {
+   "key": "t82a4dab4",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Ohne Unterlagen kann ich Ihnen die Wohnung leider nicht geben."
+    }
+   ]
+  },
+  {
+   "key": "t0735d91c",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Gestern? Gestern ist doch schon vorbei."
+    }
+   ]
+  },
+  {
+   "key": "t3d45134d",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Hallo! Ich bin Frau Petrović, ich wohne nebenan. Sie sind neu hier, oder?"
+    }
+   ]
+  },
+  {
+   "key": "t7d1a18da",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Oh … ich wollte nur kurz Hallo sagen."
+    }
+   ]
+  },
+  {
+   "key": "t27b18646",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Wirklich? Ich habe Sie hier noch nie gesehen!"
+    }
+   ]
+  },
+  {
+   "key": "t5cdeff88",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Haben Sie sich schon beim Bürgeramt angemeldet? Das muss man innerhalb von zwei Wochen machen."
+    }
+   ]
+  },
+  {
+   "key": "t140e5bb0",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Nächstes Jahr? Dann kann es ein Bußgeld geben!"
+    }
+   ]
+  },
+  {
+   "key": "t51a23b88",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Nein! Dort meldet man die Wohnung an und bekommt Ausweise und Pässe."
+    }
+   ]
+  },
+  {
+   "key": "tbed6764f",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Guten Morgen. Was kann ich für Sie tun?"
+    }
+   ]
+  },
+  {
+   "key": "td95f1c49",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Einen Pass aus Ihrem Heimatland bekommen Sie bei Ihrer Botschaft. Was möchten Sie hier erledigen?"
+    }
+   ]
+  },
+  {
+   "key": "t473173e5",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Ähm … Sie möchten Ihre Wohnung anmelden?"
+    }
+   ]
+  },
+  {
+   "key": "t578c77fc",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Gut. Ich brauche Ihren Pass, das Formular und die Wohnungsgeberbestätigung."
+    }
+   ]
+  },
+  {
+   "key": "tacf5a4a2",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Danke. Und die anderen Unterlagen?"
+    }
+   ]
+  },
+  {
+   "key": "t4d95d3ba",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Ohne die Bestätigung geht es leider nicht. Schauen Sie doch noch einmal in Ihre Tasche."
+    }
+   ]
+  },
+  {
+   "key": "t73d3e1a7",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Danke. Wohnen Sie allein in der Wohnung, oder zieht noch jemand mit ein?"
+    }
+   ]
+  },
+  {
+   "key": "t9831ee45",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Ja, das sehe ich. Aber wohnen Sie allein?"
+    }
+   ]
+  },
+  {
+   "key": "t5d083920",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Sie meinen: Sie wohnen allein?"
+    }
+   ]
+  },
+  {
+   "key": "t784709a8",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "So, fertig. Hier ist Ihre Meldebescheinigung. Bitte gut aufbewahren, die brauchen Sie oft."
+    }
+   ]
+  },
+  {
+   "key": "tc7c3a409",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Doch, doch! Die brauchen Sie für die Bank, die Krankenkasse und den Sprachkurs."
+    }
+   ]
+  },
+  {
+   "key": "t0606642e",
+   "segments": [
+    {
+     "voice": "f3",
+     "text": "Hausarztpraxis Dr. Neumann, Haas am Apparat."
+    }
+   ]
+  },
+  {
+   "key": "tcbf45956",
+   "segments": [
+    {
+     "voice": "f3",
+     "text": "Hier ist eine Arztpraxis! Was kann ich für Sie tun?"
+    }
+   ]
+  },
+  {
+   "key": "t27a70530",
+   "segments": [
+    {
+     "voice": "f3",
+     "text": "Bitte etwas freundlicher. Möchten Sie einen Termin?"
+    }
+   ]
+  },
+  {
+   "key": "t8e6d731c",
+   "segments": [
+    {
+     "voice": "f3",
+     "text": "Welche Beschwerden haben Sie denn?"
+    }
+   ]
+  },
+  {
+   "key": "t964ae453",
+   "segments": [
+    {
+     "voice": "f3",
+     "text": "Sie meinen, Sie haben Fieber?"
+    }
+   ]
+  },
+  {
+   "key": "tbf4f86fe",
+   "segments": [
+    {
+     "voice": "f3",
+     "text": "Warum brauchen Sie dann einen Termin?"
+    }
+   ]
+  },
+  {
+   "key": "tdcce723b",
+   "segments": [
+    {
+     "voice": "f3",
+     "text": "Kommen Sie bitte um 11 Uhr. Und bringen Sie Ihre Gesundheitskarte mit."
+    }
+   ]
+  },
+  {
+   "key": "tca8b4cbe",
+   "segments": [
+    {
+     "voice": "f3",
+     "text": "Nein, die Karte von Ihrer Krankenkasse."
+    }
+   ]
+  },
+  {
+   "key": "t28ab68fe",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Guten Tag. Was fehlt Ihnen denn?"
+    }
+   ]
+  },
+  {
+   "key": "tbf7a6e78",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "„Was fehlt Ihnen?“ heißt: Welche Beschwerden haben Sie?"
+    }
+   ]
+  },
+  {
+   "key": "tdfc6c28f",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Seit gestern haben Sie Fieber, verstehe. Und was noch?"
+    }
+   ]
+  },
+  {
+   "key": "t4490de08",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Sie haben eine starke Erkältung. Nehmen Sie dreimal täglich eine Tablette, immer nach dem Essen."
+    }
+   ]
+  },
+  {
+   "key": "t0f78743b",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Nein, nein: dreimal täglich, nach dem Essen."
+    }
+   ]
+  },
+  {
+   "key": "t5a0ebc64",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Bleiben Sie ein paar Tage zu Hause und trinken Sie viel Tee. Gute Besserung!"
+    }
+   ]
+  },
+  {
+   "key": "t8bb6618a",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Ha, danke! Aber ich bin doch nicht krank."
+    }
+   ]
+  },
+  {
+   "key": "t9fc4d626",
+   "segments": [
+    {
+     "voice": "m3",
+     "text": "Sprachschule Wort für Wort, Brandt. Guten Tag!"
+    }
+   ]
+  },
+  {
+   "key": "t9ef8deb0",
+   "segments": [
+    {
+     "voice": "m3",
+     "text": "Englisch? Wir haben nur Deutschkurse. Was möchten Sie denn?"
+    }
+   ]
+  },
+  {
+   "key": "tb668487f",
+   "segments": [
+    {
+     "voice": "m3",
+     "text": "Einen Kurs? Was für einen Kurs möchten Sie denn?"
+    }
+   ]
+  },
+  {
+   "key": "t856751ed",
+   "segments": [
+    {
+     "voice": "m3",
+     "text": "Sehr gern. Zuerst machen Sie bei uns einen Einstufungstest. Dann wissen wir, welcher Kurs für Sie passt."
+    }
+   ]
+  },
+  {
+   "key": "t30d1bf58",
+   "segments": [
+    {
+     "voice": "m3",
+     "text": "Der Test ist für alle. Er ist ganz kurz. Wann haben Sie Zeit?"
+    }
+   ]
+  },
+  {
+   "key": "tf008f51b",
+   "segments": [
+    {
+     "voice": "m3",
+     "text": "Möchten Sie lieber einen Kurs am Vormittag oder am Abend?"
+    }
+   ]
+  },
+  {
+   "key": "ta6ee16f4",
+   "segments": [
+    {
+     "voice": "m3",
+     "text": "Am Vormittag, gut. Und warum? Das habe ich nicht ganz verstanden."
+    }
+   ]
+  },
+  {
+   "key": "t9e9b3535",
+   "segments": [
+    {
+     "voice": "m3",
+     "text": "Ja … was denn? Vormittag oder Abend?"
+    }
+   ]
+  },
+  {
+   "key": "tce82315c",
+   "segments": [
+    {
+     "voice": "f3",
+     "text": "Guten Tag! Kann ich Ihnen helfen?"
+    }
+   ]
+  },
+  {
+   "key": "t7c8aa1bc",
+   "segments": [
+    {
+     "voice": "f3",
+     "text": "Ich heiße Becker. Aber was suchen Sie denn?"
+    }
+   ]
+  },
+  {
+   "key": "t01ba0b60",
+   "segments": [
+    {
+     "voice": "f3",
+     "text": "Tschüss? Sie sind doch gerade erst gekommen!"
+    }
+   ]
+  },
+  {
+   "key": "t1615693a",
+   "segments": [
+    {
+     "voice": "f3",
+     "text": "Der Ausgang ist dort links, neben dem Café."
+    }
+   ]
+  },
+  {
+   "key": "t9c4ad73a",
+   "segments": [
+    {
+     "voice": "f3",
+     "text": "Nein, links! Dort, neben dem Café."
+    }
+   ]
+  },
+  {
+   "key": "t3add0bb8",
+   "segments": [
+    {
+     "voice": "f3",
+     "text": "Ähm … gern geschehen?"
+    }
+   ]
+  },
+  {
+   "key": "tef8ffea7",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Hallo! Herzlich willkommen in Lindenfeld! Wie war die Reise?"
+    }
+   ]
+  },
+  {
+   "key": "t6de49a00",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Haha! Du heißt doch nicht „gut“! Wie war die Reise?"
+    }
+   ]
+  },
+  {
+   "key": "t36e1cd95",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Frau Mira? Wir sind doch Freunde! Sag einfach Mira."
+    }
+   ]
+  },
+  {
+   "key": "t95a0de58",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "So, hier ist meine Wohnung. Möchtest du einen Tee oder einen Kaffee?"
+    }
+   ]
+  },
+  {
+   "key": "t8e9e608c",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Einen Tee? Klar, gern!"
+    }
+   ]
+  },
+  {
+   "key": "td7107442",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Ja … was denn? Tee oder Kaffee?"
+    }
+   ]
+  },
+  {
+   "key": "t8d53f917",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Guten Tag, schön, dass Sie da sind. Erzählen Sie doch bitte kurz etwas über sich."
+    }
+   ]
+  },
+  {
+   "key": "teef43c46",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Verstehe. Und was qualifiziert Sie für diese Stelle?"
+    }
+   ]
+  },
+  {
+   "key": "t180ac34a",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Das stimmt, aber ich möchte es gern von Ihnen hören."
+    }
+   ]
+  },
+  {
+   "key": "t0ab0c351",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Was sind Ihre Stärken?"
+    }
+   ]
+  },
+  {
+   "key": "t1c4f9ab5",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Interessant. Können Sie ein konkretes Beispiel nennen?"
+    }
+   ]
+  },
+  {
+   "key": "t2e3db341",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Sie arbeiten gern im Team, verstehe."
+    }
+   ]
+  },
+  {
+   "key": "tf287f614",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Und warum möchten Sie gerade bei uns arbeiten?"
+    }
+   ]
+  },
+  {
+   "key": "t92571b86",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Das ist ehrlich. Aber was interessiert Sie an unserer Firma?"
+    }
+   ]
+  },
+  {
+   "key": "tcc59cb0d",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Das entscheiden wir noch."
+    }
+   ]
+  },
+  {
+   "key": "tb29987a5",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Gut, dann melden wir uns bei Ihnen."
+    }
+   ]
+  },
+  {
+   "key": "td6bec4f9",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Darüber sprechen wir später beim Vertrag."
+    }
+   ]
+  },
+  {
+   "key": "t9363e216",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Wagner hier. Ich habe Ihren Brief bekommen. Aber die Gartenpflege zahlen doch alle Mieter, das war schon immer so."
+    }
+   ]
+  },
+  {
+   "key": "t4d6d75fe",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Na, so geht das aber nicht. Haben Sie denn einen Grund?"
+    }
+   ]
+  },
+  {
+   "key": "t9b4e9cfa",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Ach so? Dann ist ja alles in Ordnung … oder?"
+    }
+   ]
+  },
+  {
+   "key": "t36d8b882",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Hm, da haben Sie recht. Ich korrigiere die Abrechnung. Dann zahlen Sie nur noch zweihundertfünfzig Euro nach."
+    }
+   ]
+  },
+  {
+   "key": "tab66d425",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Doch, die anderen Kosten sind ja korrekt."
+    }
+   ]
+  },
+  {
+   "key": "t0858aaef",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Kraus, Wohngeldstelle. Ich rufe wegen Ihres Widerspruchs an. Ihre Unterlagen wurden tatsächlich falsch zugeordnet. Das bedauern wir."
+    }
+   ]
+  },
+  {
+   "key": "t0fef8d0f",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Ich verstehe Ihren Ärger. Wir kümmern uns jetzt darum."
+    }
+   ]
+  },
+  {
+   "key": "t77697d10",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Moment, das ist gar nicht nötig. Wir möchten Ihrem Widerspruch abhelfen."
+    }
+   ]
+  },
+  {
+   "key": "t79e022b9",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Ja. Wir helfen Ihrem Widerspruch ab und bewilligen das Wohngeld rückwirkend ab April."
+    }
+   ]
+  },
+  {
+   "key": "t76d8c720",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Nein, im Gegenteil: Wir geben Ihnen recht."
+    }
+   ]
+  },
+  {
+   "key": "t446e19bb",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Nein, rückwirkend heißt: auch für die Monate seit April."
+    }
+   ]
   }
  ]
 }

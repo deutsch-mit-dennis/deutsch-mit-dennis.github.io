@@ -1,0 +1,362 @@
+[
+ {
+  "text": "Guten Tag! Kann ich Ihnen helfen?",
+  "voice": "f3"
+ },
+ {
+  "text": "Ich heiße Becker. Aber was suchen Sie denn?",
+  "voice": "f3"
+ },
+ {
+  "text": "Tschüss? Sie sind doch gerade erst gekommen!",
+  "voice": "f3"
+ },
+ {
+  "text": "Der Ausgang ist dort links, neben dem Café.",
+  "voice": "f3"
+ },
+ {
+  "text": "Nein, links! Dort, neben dem Café.",
+  "voice": "f3"
+ },
+ {
+  "text": "Ähm … gern geschehen?",
+  "voice": "f3"
+ },
+ {
+  "text": "Hallo! Herzlich willkommen in Lindenfeld! Wie war die Reise?",
+  "voice": "f2"
+ },
+ {
+  "text": "Haha! Du heißt doch nicht „gut“! Wie war die Reise?",
+  "voice": "f2"
+ },
+ {
+  "text": "Frau Mira? Wir sind doch Freunde! Sag einfach Mira.",
+  "voice": "f2"
+ },
+ {
+  "text": "So, hier ist meine Wohnung. Möchtest du einen Tee oder einen Kaffee?",
+  "voice": "f2"
+ },
+ {
+  "text": "Einen Tee? Klar, gern!",
+  "voice": "f2"
+ },
+ {
+  "text": "Ja … was denn? Tee oder Kaffee?",
+  "voice": "f2"
+ },
+ {
+  "text": "Wagner, guten Tag.",
+  "voice": "m1"
+ },
+ {
+  "text": "Welche Wohnung meinen Sie denn? Ich habe zwei Wohnungen in der Zeitung.",
+  "voice": "m1"
+ },
+ {
+  "text": "Kaufen? Nein, die Wohnung ist nur zu vermieten. Warum rufen Sie an?",
+  "voice": "m1"
+ },
+ {
+  "text": "Ah, die Zweizimmerwohnung. Die ist noch frei. Möchten Sie sie ansehen?",
+  "voice": "m1"
+ },
+ {
+  "text": "Wir kennen uns ja noch gar nicht … Also, wann möchten Sie kommen?",
+  "voice": "m1"
+ },
+ {
+  "text": "Ohne Besichtigung? Sehen Sie sich die Wohnung lieber zuerst an.",
+  "voice": "m1"
+ },
+ {
+  "text": "Passt es Ihnen morgen um 17 Uhr? Die Adresse ist Gartenstraße 12.",
+  "voice": "m1"
+ },
+ {
+  "text": "Tschüss? Also kommen Sie morgen um 17 Uhr oder nicht?",
+  "voice": "m1"
+ },
+ {
+  "text": "Hm. Und wann haben Sie Zeit?",
+  "voice": "m1"
+ },
+ {
+  "text": "Na, wie gefällt Ihnen die Wohnung?",
+  "voice": "m1"
+ },
+ {
+  "text": "Kaputt? Was genau meinen Sie denn?",
+  "voice": "m1"
+ },
+ {
+  "text": "Ich? Ähm … danke. Und die Wohnung?",
+  "voice": "m1"
+ },
+ {
+  "text": "Das repariere ich bis zum Einzug. Ich brauche noch eine Kopie von Ihrem Ausweis und einen Nachweis über Ihr Einkommen.",
+  "voice": "m1"
+ },
+ {
+  "text": "Ohne Unterlagen kann ich Ihnen die Wohnung leider nicht geben.",
+  "voice": "m1"
+ },
+ {
+  "text": "Gestern? Gestern ist doch schon vorbei.",
+  "voice": "m1"
+ },
+ {
+  "text": "Hallo! Ich bin Frau Petrović, ich wohne nebenan. Sie sind neu hier, oder?",
+  "voice": "f2"
+ },
+ {
+  "text": "Oh … ich wollte nur kurz Hallo sagen.",
+  "voice": "f2"
+ },
+ {
+  "text": "Wirklich? Ich habe Sie hier noch nie gesehen!",
+  "voice": "f2"
+ },
+ {
+  "text": "Haben Sie sich schon beim Bürgeramt angemeldet? Das muss man innerhalb von zwei Wochen machen.",
+  "voice": "f2"
+ },
+ {
+  "text": "Nächstes Jahr? Dann kann es ein Bußgeld geben!",
+  "voice": "f2"
+ },
+ {
+  "text": "Nein! Dort meldet man die Wohnung an und bekommt Ausweise und Pässe.",
+  "voice": "f2"
+ },
+ {
+  "text": "Guten Morgen. Was kann ich für Sie tun?",
+  "voice": "f1"
+ },
+ {
+  "text": "Einen Pass aus Ihrem Heimatland bekommen Sie bei Ihrer Botschaft. Was möchten Sie hier erledigen?",
+  "voice": "f1"
+ },
+ {
+  "text": "Ähm … Sie möchten Ihre Wohnung anmelden?",
+  "voice": "f1"
+ },
+ {
+  "text": "Gut. Ich brauche Ihren Pass, das Formular und die Wohnungsgeberbestätigung.",
+  "voice": "f1"
+ },
+ {
+  "text": "Danke. Und die anderen Unterlagen?",
+  "voice": "f1"
+ },
+ {
+  "text": "Ohne die Bestätigung geht es leider nicht. Schauen Sie doch noch einmal in Ihre Tasche.",
+  "voice": "f1"
+ },
+ {
+  "text": "Danke. Wohnen Sie allein in der Wohnung, oder zieht noch jemand mit ein?",
+  "voice": "f1"
+ },
+ {
+  "text": "Ja, das sehe ich. Aber wohnen Sie allein?",
+  "voice": "f1"
+ },
+ {
+  "text": "Sie meinen: Sie wohnen allein?",
+  "voice": "f1"
+ },
+ {
+  "text": "So, fertig. Hier ist Ihre Meldebescheinigung. Bitte gut aufbewahren, die brauchen Sie oft.",
+  "voice": "f1"
+ },
+ {
+  "text": "Doch, doch! Die brauchen Sie für die Bank, die Krankenkasse und den Sprachkurs.",
+  "voice": "f1"
+ },
+ {
+  "text": "Hausarztpraxis Dr. Neumann, Haas am Apparat.",
+  "voice": "f3"
+ },
+ {
+  "text": "Hier ist eine Arztpraxis! Was kann ich für Sie tun?",
+  "voice": "f3"
+ },
+ {
+  "text": "Bitte etwas freundlicher. Möchten Sie einen Termin?",
+  "voice": "f3"
+ },
+ {
+  "text": "Welche Beschwerden haben Sie denn?",
+  "voice": "f3"
+ },
+ {
+  "text": "Sie meinen, Sie haben Fieber?",
+  "voice": "f3"
+ },
+ {
+  "text": "Warum brauchen Sie dann einen Termin?",
+  "voice": "f3"
+ },
+ {
+  "text": "Kommen Sie bitte um 11 Uhr. Und bringen Sie Ihre Gesundheitskarte mit.",
+  "voice": "f3"
+ },
+ {
+  "text": "Nein, die Karte von Ihrer Krankenkasse.",
+  "voice": "f3"
+ },
+ {
+  "text": "Guten Tag. Was fehlt Ihnen denn?",
+  "voice": "m2"
+ },
+ {
+  "text": "„Was fehlt Ihnen?“ heißt: Welche Beschwerden haben Sie?",
+  "voice": "m2"
+ },
+ {
+  "text": "Seit gestern haben Sie Fieber, verstehe. Und was noch?",
+  "voice": "m2"
+ },
+ {
+  "text": "Sie haben eine starke Erkältung. Nehmen Sie dreimal täglich eine Tablette, immer nach dem Essen.",
+  "voice": "m2"
+ },
+ {
+  "text": "Nein, nein: dreimal täglich, nach dem Essen.",
+  "voice": "m2"
+ },
+ {
+  "text": "Bleiben Sie ein paar Tage zu Hause und trinken Sie viel Tee. Gute Besserung!",
+  "voice": "m2"
+ },
+ {
+  "text": "Ha, danke! Aber ich bin doch nicht krank.",
+  "voice": "m2"
+ },
+ {
+  "text": "Sprachschule Wort für Wort, Brandt. Guten Tag!",
+  "voice": "m3"
+ },
+ {
+  "text": "Englisch? Wir haben nur Deutschkurse. Was möchten Sie denn?",
+  "voice": "m3"
+ },
+ {
+  "text": "Einen Kurs? Was für einen Kurs möchten Sie denn?",
+  "voice": "m3"
+ },
+ {
+  "text": "Sehr gern. Zuerst machen Sie bei uns einen Einstufungstest. Dann wissen wir, welcher Kurs für Sie passt.",
+  "voice": "m3"
+ },
+ {
+  "text": "Der Test ist für alle. Er ist ganz kurz. Wann haben Sie Zeit?",
+  "voice": "m3"
+ },
+ {
+  "text": "Möchten Sie lieber einen Kurs am Vormittag oder am Abend?",
+  "voice": "m3"
+ },
+ {
+  "text": "Am Vormittag, gut. Und warum? Das habe ich nicht ganz verstanden.",
+  "voice": "m3"
+ },
+ {
+  "text": "Ja … was denn? Vormittag oder Abend?",
+  "voice": "m3"
+ },
+ {
+  "text": "Guten Tag, schön, dass Sie da sind. Erzählen Sie doch bitte kurz etwas über sich.",
+  "voice": "f1"
+ },
+ {
+  "text": "Verstehe. Und was qualifiziert Sie für diese Stelle?",
+  "voice": "f1"
+ },
+ {
+  "text": "Das stimmt, aber ich möchte es gern von Ihnen hören.",
+  "voice": "f1"
+ },
+ {
+  "text": "Was sind Ihre Stärken?",
+  "voice": "f1"
+ },
+ {
+  "text": "Interessant. Können Sie ein konkretes Beispiel nennen?",
+  "voice": "f1"
+ },
+ {
+  "text": "Sie arbeiten gern im Team, verstehe.",
+  "voice": "f1"
+ },
+ {
+  "text": "Und warum möchten Sie gerade bei uns arbeiten?",
+  "voice": "f1"
+ },
+ {
+  "text": "Das ist ehrlich. Aber was interessiert Sie an unserer Firma?",
+  "voice": "f1"
+ },
+ {
+  "text": "Das entscheiden wir noch.",
+  "voice": "f1"
+ },
+ {
+  "text": "Haben Sie noch Fragen an uns?",
+  "voice": "f1"
+ },
+ {
+  "text": "Gut, dann melden wir uns bei Ihnen.",
+  "voice": "f1"
+ },
+ {
+  "text": "Darüber sprechen wir später beim Vertrag.",
+  "voice": "f1"
+ },
+ {
+  "text": "Wagner hier. Ich habe Ihren Brief bekommen. Aber die Gartenpflege zahlen doch alle Mieter, das war schon immer so.",
+  "voice": "m1"
+ },
+ {
+  "text": "Na, so geht das aber nicht. Haben Sie denn einen Grund?",
+  "voice": "m1"
+ },
+ {
+  "text": "Ach so? Dann ist ja alles in Ordnung … oder?",
+  "voice": "m1"
+ },
+ {
+  "text": "Hm, da haben Sie recht. Ich korrigiere die Abrechnung. Dann zahlen Sie nur noch zweihundertfünfzig Euro nach.",
+  "voice": "m1"
+ },
+ {
+  "text": "Doch, die anderen Kosten sind ja korrekt.",
+  "voice": "m1"
+ },
+ {
+  "text": "Kraus, Wohngeldstelle. Ich rufe wegen Ihres Widerspruchs an. Ihre Unterlagen wurden tatsächlich falsch zugeordnet. Das bedauern wir.",
+  "voice": "m2"
+ },
+ {
+  "text": "Ich verstehe Ihren Ärger. Wir kümmern uns jetzt darum.",
+  "voice": "m2"
+ },
+ {
+  "text": "Moment, das ist gar nicht nötig. Wir möchten Ihrem Widerspruch abhelfen.",
+  "voice": "m2"
+ },
+ {
+  "text": "Ja. Wir helfen Ihrem Widerspruch ab und bewilligen das Wohngeld rückwirkend ab April.",
+  "voice": "m2"
+ },
+ {
+  "text": "Nein, im Gegenteil: Wir geben Ihnen recht.",
+  "voice": "m2"
+ },
+ {
+  "text": "Nein, rückwirkend heißt: auch für die Monate seit April.",
+  "voice": "m2"
+ }
+]

@@ -52,3 +52,10 @@ await write('wowohin', uniq(ww.TASKS.map(task => { const [vk, ok] = task; return
 // Lino läuft: Satz mit der richtigen Lösung (Lücken, Artikel, Satzbau) und die Hörsätze – inkl. spiele/lino-extra.js
 const lino = await load('spiele/lino.js', ['WORLDS', 'itFull'], ['spiele/lino-extra.js']);
 await write('lino', uniq(lino.WORLDS.flatMap(w => [...w.all.map(lino.itFull), ...w.hear.map(h => h.say)])), 'm2');
+
+// Neu in Deutschland: Sätze der Gesprächspartner (mit ihrer Stimme)
+const nid = await load('spiele/nid.js', ['CH', 'P']);
+const nidSeen = new Set(), nidItems = [];
+for (const c of nid.CH) for (const s of c.steps) if (s.t === 'talk') for (const text of [s.s, ...s.w.map(w => w[1])]) if (!nidSeen.has(text)) { nidSeen.add(text); nidItems.push({ text, voice: nid.P[s.p].voice }); }
+await writeFile(new URL('spiele/tts-nid.json', R), JSON.stringify(nidItems, null, 1) + '\n');
+console.log(`spiele/tts-nid.json: ${nidItems.length} Sätze`);
