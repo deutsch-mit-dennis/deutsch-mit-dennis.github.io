@@ -49,7 +49,7 @@
 .sp-nid-q{font-weight:700;font-size:17px;margin:4px 2px 10px}
 .sp-nid-form{margin:0;display:grid;grid-template-columns:minmax(0,40%) 1fr;gap:0;border-top:1px solid #eef1f8}
 .sp-nid-form dt,.sp-nid-form dd{margin:0;padding:8px 4px;border-bottom:1px solid #eef1f8;font-size:15px;line-height:1.35;overflow-wrap:anywhere}
-.sp-nid-form dt{color:#55607a}
+.sp-nid-form dt{color:#55607a;overflow-wrap:normal;hyphens:auto;-webkit-hyphens:auto}
 .sp-nid-form dd{font-weight:700;color:#8a93a8}
 .sp-nid-form dd.is-cur{background:#fff8e6;color:#b45309}
 .sp-nid-form dd.is-ok{color:#1f6f43}.sp-nid-form dd.is-bad{color:#b42318}
