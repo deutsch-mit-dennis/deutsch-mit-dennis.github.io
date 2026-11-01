@@ -70,7 +70,7 @@ def main():
     if '--model' in args: cfg['model_id'] = args[args.index('--model') + 1]
     if '--voice' in args: cfg['voice_id'] = args[args.index('--voice') + 1]
     if '--similarity' in args: cfg['voice_settings']['similarity_boost'] = float(args[args.index('--similarity') + 1])
-    text = open(src, encoding='utf-8').read() if os.path.isfile(src) else src
+    text = open(src, encoding='utf-8-sig').read() if os.path.isfile(src) else src  # utf-8-sig: Notepad files may start with a BOM
     text = clean(text)
     parts, key = chunks(text), api_key()
     print(f'{len(text)} Zeichen in {len(parts)} Abschnitt(en), ca. {len(text)} ElevenLabs-Credits', flush=True)

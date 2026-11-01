@@ -22,6 +22,7 @@ Arbeitsanleitung für Claude Code. Wird bei jeder Sitzung in diesem Repository a
 - Vertonung macht der GitHub-Workflow „Hörtexte vertonen“ (`audio.yml`, nachts automatisch). Reihenfolge: Gemini → ElevenLabs → Google Chirp 3 HD. Gemini/ElevenLabs gelten als „menschlich“, Google-Aufnahmen werden automatisch ersetzt, sobald wieder Guthaben da ist. Stand in `audio/tts/status.json`.
 - Nie zwei Vertonungsläufe gleichzeitig starten. Neu starten mit `gh api -X POST repos/deutsch-mit-dennis/deutsch-mit-dennis.github.io/actions/workflows/audio.yml/dispatches -f ref=main`.
 - Lieder: nur als Suno-Einbettung, keine eigenen MP3s. Neue Lieder: Länge in `SONG_SEC` (site.js) nachtragen.
+- **Dennis' eigene Stimme** (ElevenLabs-Klon, nur für Dennis selbst: Begrüßungsvideo `assets/avatar/`, YouTube-Texte – nicht für Dialog-Figuren): Einstellung nur in `tools/voice/dennis.json`, Vertonen mit `tools/voice/speak.py` bzw. Drag & Drop auf `tools/voice/vertonen.bat`, Anleitung `tools/voice/README.md`. Key lokal in `.env` (`ELEVENLABS_API_KEY`, gitignored). Auf dem PC ist `gh` nicht installiert – Workflows über die GitHub-Seite starten.
 
 ## Prüfen vor jedem Push (Pflicht)
 ```bash
