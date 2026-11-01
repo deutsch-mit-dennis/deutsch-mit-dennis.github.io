@@ -1,5 +1,5 @@
 {
- "total": 1148,
+ "total": 1143,
  "marks": [
   {
    "part": "Hören Teil 1: Arbeitsabläufe, Probleme, Vorschläge",
@@ -11,79 +11,79 @@
    "part": "Hören Teil 1: Arbeitsabläufe, Probleme, Vorschläge",
    "clip": 1,
    "h": "Gespräch 2",
-   "start": 57
+   "start": 58
   },
   {
    "part": "Hören Teil 1: Arbeitsabläufe, Probleme, Vorschläge",
    "clip": 2,
    "h": "Gespräch 3",
-   "start": 124
+   "start": 119
   },
   {
    "part": "Hören Teil 1: Arbeitsabläufe, Probleme, Vorschläge",
    "clip": 3,
    "h": "Gespräch 4",
-   "start": 180
+   "start": 175
   },
   {
    "part": "Hören Teil 2: Meinungen",
    "clip": 0,
    "h": "Teambesprechung",
-   "start": 236
+   "start": 232
   },
   {
    "part": "Hören Teil 3: Gespräche über Produkte und Abläufe",
    "clip": 0,
    "h": "Gespräch 1",
-   "start": 299
+   "start": 298
   },
   {
    "part": "Hören Teil 3: Gespräche über Produkte und Abläufe",
    "clip": 1,
    "h": "Gespräch 2",
-   "start": 357
+   "start": 358
   },
   {
    "part": "Hören Teil 4: Anliegen",
    "clip": 0,
    "h": "Nachricht 1",
-   "start": 416
+   "start": 420
   },
   {
    "part": "Hören Teil 4: Anliegen",
    "clip": 1,
    "h": "Nachricht 2",
-   "start": 480
+   "start": 479
   },
   {
    "part": "Hören Teil 4: Anliegen",
    "clip": 2,
    "h": "Nachricht 3",
-   "start": 542
+   "start": 534
   },
   {
    "part": "Hören Teil 4: Anliegen",
    "clip": 3,
    "h": "Nachricht 4",
-   "start": 600
+   "start": 592
   },
   {
    "part": "Hören Teil 4: Anliegen",
    "clip": 4,
    "h": "Nachricht 5",
-   "start": 656
+   "start": 650
   },
   {
    "part": "Hören und Schreiben Teil 1: Ein Telefonat verstehen",
    "clip": 0,
    "h": "Telefongespräch",
-   "start": 711
+   "start": 706
   },
   {
    "part": "Hören und Schreiben Teil 2: Eine Gesprächsnotiz schreiben",
    "clip": 0,
    "h": "Telefongespräch (noch einmal)",
-   "start": 931
+   "start": 927
   }
  ]
 }

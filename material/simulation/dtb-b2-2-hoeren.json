@@ -1,5 +1,5 @@
 {
- "total": 1026,
+ "total": 1095,
  "marks": [
   {
    "part": "Hören Teil 1: Arbeitsabläufe, Probleme, Vorschläge",
@@ -11,31 +11,31 @@
    "part": "Hören Teil 1: Arbeitsabläufe, Probleme, Vorschläge",
    "clip": 1,
    "h": "Gespräch 2 – in der Schreinerei",
-   "start": 59
+   "start": 58
   },
   {
    "part": "Hören Teil 1: Arbeitsabläufe, Probleme, Vorschläge",
    "clip": 2,
    "h": "Gespräch 3 – im Büro",
-   "start": 113
+   "start": 110
   },
   {
    "part": "Hören Teil 2: Argumente",
    "clip": 0,
    "h": "Teamsitzung – Vorschlag Betriebskita",
-   "start": 169
+   "start": 164
   },
   {
    "part": "Hören Teil 3: Unternehmensinformationen",
    "clip": 0,
    "h": "Begrüßung bei Solartechnik Emscher",
-   "start": 278
+   "start": 279
   },
   {
    "part": "Hören Teil 4: Anliegen am Telefon",
    "clip": 0,
    "h": "Nachricht 1",
-   "start": 386
+   "start": 385
   },
   {
    "part": "Hören Teil 4: Anliegen am Telefon",
@@ -47,31 +47,31 @@
    "part": "Hören Teil 4: Anliegen am Telefon",
    "clip": 2,
    "h": "Nachricht 3",
-   "start": 507
+   "start": 509
   },
   {
    "part": "Hören Teil 4: Anliegen am Telefon",
    "clip": 3,
    "h": "Nachricht 4",
-   "start": 567
+   "start": 580
   },
   {
    "part": "Hören Teil 4: Anliegen am Telefon",
    "clip": 4,
    "h": "Nachricht 5",
-   "start": 628
+   "start": 645
   },
   {
    "part": "Hören und Schreiben Teil 1: Anruf einer Kundin",
    "clip": 0,
    "h": "Mailbox – Demir & Kollegen",
-   "start": 689
+   "start": 706
   },
   {
    "part": "Hören und Schreiben Teil 2: Telefonnotiz",
    "clip": 0,
    "h": "Mailbox – Demir & Kollegen (Wiederholung)",
-   "start": 860
+   "start": 903
   }
  ]
 }

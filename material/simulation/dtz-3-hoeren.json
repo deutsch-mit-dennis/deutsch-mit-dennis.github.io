@@ -1,5 +1,5 @@
 {
- "total": 790,
+ "total": 761,
  "marks": [
   {
    "part": "Hören Teil 1: Ansagen am Telefon und Durchsagen",
@@ -11,7 +11,7 @@
    "part": "Hören Teil 1: Ansagen am Telefon und Durchsagen",
    "clip": 1,
    "h": "Text 2",
-   "start": 78
+   "start": 76
   },
   {
    "part": "Hören Teil 1: Ansagen am Telefon und Durchsagen",
@@ -23,25 +23,25 @@
    "part": "Hören Teil 1: Ansagen am Telefon und Durchsagen",
    "clip": 3,
    "h": "Text 4",
-   "start": 203
+   "start": 201
   },
   {
    "part": "Hören Teil 2: Informationen im Radio",
    "clip": 0,
    "h": "Text 1",
-   "start": 274
+   "start": 269
   },
   {
    "part": "Hören Teil 2: Informationen im Radio",
    "clip": 1,
    "h": "Text 2",
-   "start": 306
+   "start": 304
   },
   {
    "part": "Hören Teil 2: Informationen im Radio",
    "clip": 2,
    "h": "Text 3",
-   "start": 338
+   "start": 337
   },
   {
    "part": "Hören Teil 2: Informationen im Radio",
@@ -53,49 +53,49 @@
    "part": "Hören Teil 2: Informationen im Radio",
    "clip": 4,
    "h": "Text 5",
-   "start": 406
+   "start": 407
   },
   {
    "part": "Hören Teil 3: Gespräche im Alltag",
    "clip": 0,
    "h": "Gespräch 1",
-   "start": 442
+   "start": 447
   },
   {
    "part": "Hören Teil 3: Gespräche im Alltag",
    "clip": 1,
    "h": "Gespräch 2",
-   "start": 504
+   "start": 500
   },
   {
    "part": "Hören Teil 3: Gespräche im Alltag",
    "clip": 2,
    "h": "Gespräch 3",
-   "start": 562
+   "start": 552
   },
   {
    "part": "Hören Teil 3: Gespräche im Alltag",
    "clip": 3,
    "h": "Gespräch 4",
-   "start": 616
+   "start": 598
   },
   {
    "part": "Hören Teil 4: Meinungen im Radio",
    "clip": 0,
    "h": "Person 1: Frau Okafor",
-   "start": 667
+   "start": 642
   },
   {
    "part": "Hören Teil 4: Meinungen im Radio",
    "clip": 1,
    "h": "Person 2: Herr Dimitrov",
-   "start": 712
+   "start": 686
   },
   {
    "part": "Hören Teil 4: Meinungen im Radio",
    "clip": 2,
    "h": "Person 3: Frau Brenner",
-   "start": 750
+   "start": 722
   }
  ]
 }
