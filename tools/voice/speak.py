@@ -1,13 +1,14 @@
 """Text -> MP3 in Dennis' cloned voice (ElevenLabs). Settings: tools/voice/dennis.json, key: ELEVENLABS_API_KEY in .env.
 Usage:
   python tools/voice/speak.py "Ein Satz." out.mp3 [--speed 0.85] [--model eleven_v3] [--voice <voice_id>] [--similarity 0.95]
-  python tools/voice/speak.py text.txt out.mp3          # .txt/.md file; long texts are voiced in paragraphs and joined
+  python tools/voice/speak.py skript.md                # .txt/.md file -> skript.mp3 next to it; long texts are voiced in parts and joined
+Existing MP3s are never overwritten (a free name like skript-2.mp3 is used).
 """
 import json, os, re, subprocess, sys, tempfile, urllib.request
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(os.path.dirname(HERE))
-CHUNK = 2500  # characters per request – keeps intonation stable and stays below API limits
+CHUNK = int(os.environ.get('VOICE_CHUNK', 2500))  # characters per request – keeps intonation stable and stays below API limits
 
 
 def api_key():
@@ -22,8 +23,22 @@ def api_key():
     return key
 
 
+def clean(text):
+    """Markdown/script markup -> plain spoken text."""
+    text = re.sub(r'\[pause\]', '\n\n', text, flags=re.I)
+    text = re.sub(r'^\s{0,3}(#+|[-*+]|\d+\.)\s+', '', text, flags=re.M)  # headings, list bullets
+    text = re.sub(r'^\s*(-{3,}|\*{3,}|_{3,})\s*$', '', text, flags=re.M)  # horizontal rules
+    text = re.sub(r'\[([^\]]+)\]\([^)]*\)', r'\1', text)                # [text](link) -> text
+    return re.sub(r'(\*\*|__|\*|`)', '', text)                          # bold, italics, code marks
+
+
 def chunks(text):
-    paras = [p.strip() for p in re.split(r'\n\s*\n', text) if p.strip()]
+    paras = []
+    for p in (p.strip() for p in re.split(r'\n\s*\n', text)):
+        while len(p) > CHUNK:  # very long paragraph: cut after the last sentence end before the limit
+            cut = max(p.rfind(c, 0, CHUNK) for c in '.!?') + 1 or CHUNK
+            paras.append(p[:cut].strip()); p = p[cut:].strip()
+        if p: paras.append(p)
     out, cur = [], ''
     for p in paras:
         if cur and len(cur) + len(p) > CHUNK:
@@ -43,16 +58,22 @@ def tts(text, path, cfg, key):
 
 def main():
     args = sys.argv[1:]
-    if len(args) < 2: sys.exit(__doc__)
-    src, out = args[0], args[1]
+    if not args: sys.exit(__doc__)
+    src = args[0]
+    if len(args) > 1 and not args[1].startswith('--'): out = args[1]
+    elif os.path.isfile(src): out = os.path.splitext(src)[0] + '.mp3'
+    else: sys.exit('Bitte eine Ausgabe-Datei angeben, z. B.: speak.py "Ein Satz." satz.mp3')
+    base, n = os.path.splitext(out)[0], 2
+    while os.path.exists(out): out = f'{base}-{n}.mp3'; n += 1
     cfg = json.load(open(os.path.join(HERE, 'dennis.json'), encoding='utf-8'))
     if '--speed' in args: cfg['voice_settings']['speed'] = float(args[args.index('--speed') + 1])
     if '--model' in args: cfg['model_id'] = args[args.index('--model') + 1]
     if '--voice' in args: cfg['voice_id'] = args[args.index('--voice') + 1]
     if '--similarity' in args: cfg['voice_settings']['similarity_boost'] = float(args[args.index('--similarity') + 1])
     text = open(src, encoding='utf-8').read() if os.path.isfile(src) else src
-    text = re.sub(r'^#+\s*', '', text, flags=re.M)  # markdown headings -> plain text
+    text = clean(text)
     parts, key = chunks(text), api_key()
+    print(f'{len(text)} Zeichen in {len(parts)} Abschnitt(en), ca. {len(text)} ElevenLabs-Credits', flush=True)
     if len(parts) == 1:
         tts(parts[0], out, cfg, key)
     else:
@@ -63,7 +84,7 @@ def main():
                 print(f'Abschnitt {i + 1}/{len(parts)} fertig', flush=True)
             lst = os.path.join(tmp, 'list.txt')
             open(lst, 'w', encoding='utf-8').write(''.join(f"file '{f}'\n" for f in files))
-            subprocess.run(['ffmpeg', '-v', 'error', '-y', '-f', 'concat', '-safe', '0', '-i', lst, '-c', 'copy', out], check=True)
+            subprocess.run(['ffmpeg', '-v', 'error', '-y', '-f', 'concat', '-safe', '0', '-i', lst, '-c:a', 'libmp3lame', '-b:a', '192k', out], check=True)
     print(f'{out} ({len(text)} Zeichen)')
 
 

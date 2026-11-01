@@ -18,9 +18,18 @@ Alles, was mit **Dennis' eigener Stimme** vertont wird (Begrüßungsvideo der We
 
 ## Vertonen
 
+**Am einfachsten (YouTube-Skripte):** Text als `.txt` oder `.md` speichern und mit der Maus auf
+`tools\voice\vertonen.bat` ziehen. Die MP3 entsteht **neben der Text-Datei** (`skript.md` → `skript.mp3`).
+Eine vorhandene MP3 wird nie überschrieben – dann heißt die neue z. B. `skript-2.mp3`.
+
+Im Text darf stehen: Überschriften (`#`), Aufzählungen, **fett**, Links, `[pause]` – das wird vor dem Vorlesen entfernt
+bzw. als Absatz-Pause gelesen. Jeder Absatz (Leerzeile) ist eine natürliche Pause.
+
+Im Terminal:
+
 ```bash
 python tools/voice/speak.py "Hallo und herzlich willkommen!" hallo.mp3
-python tools/voice/speak.py text.txt ausgabe.mp3              # .txt oder .md, lange Texte in Abschnitten
+python tools/voice/speak.py skript.md                         # -> skript.mp3, lange Texte in Abschnitten
 python tools/voice/speak.py text.txt a1.mp3 --speed 0.85      # langsamer (A1)
 python tools/voice/speak.py text.txt test.mp3 --model eleven_v4   # anderes Modell testen
 ```
