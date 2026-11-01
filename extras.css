@@ -51,7 +51,7 @@ main a.back{display:none!important}
 .dm-cat-pruefung .dm-vthumb.is-empty .dm-vthumb-ph{background:linear-gradient(135deg,#B86E00,#E8A800 60%,#FFD66B)}
 .dm-vthumb.is-empty .dm-vthumb-ph b{display:block;font-size:clamp(15px,1.6vw,19px);line-height:1.25;max-width:24ch;text-shadow:0 1px 2px rgba(0,0,0,.25)}
 .dm-vthumb.is-empty .dm-vthumb-ph::after{display:none}
-.dm-vplay{position:absolute;left:50%;top:50%;width:56px;height:56px;margin:-28px 0 0 -28px;border-radius:50%;display:grid;place-items:center;background:rgba(23,32,54,.72);color:#fff;font-size:20px;padding-left:4px;box-sizing:border-box;transition:transform .2s,background .2s;pointer-events:none}
+.dm-vplay{position:absolute;right:10px;top:50%;width:46px;height:46px;margin:-23px 0 0;border-radius:50%;display:grid;place-items:center;background:rgba(23,32,54,.72);color:#fff;font-size:20px;padding-left:4px;box-sizing:border-box;transition:transform .2s,background .2s;pointer-events:none}
 .dm-vthumb.is-empty .dm-vplay{top:auto;bottom:12px;left:auto;right:12px;margin:0;width:40px;height:40px;font-size:15px}
 .dm-vcard .dm-vthumb img{transition:transform .5s ease}
 .dm-vcard:hover .dm-vthumb img{transform:scale(1.05)}
@@ -768,7 +768,7 @@ header.dm-header nav{margin-left:auto}
 @media (max-width:1180px){#main-navigation a[data-nav="pruefung"]::after{position:static;display:inline-block;margin-left:8px;vertical-align:middle}}
 /* Einheitlichkeit 21.10.: Nummer in LiD-Karten mit Abstand, Hilfe-Knopf am Handy kleiner und weiter am Rand */
 .lid-card .lid-number{margin:0 10px 6px 0;vertical-align:middle}
-@media (max-width:600px){#site-helper{right:10px!important;bottom:10px!important}#site-helper .help-launch{width:46px!important;height:46px!important;min-width:46px!important;min-height:46px!important;padding:0!important;opacity:.94}}
+@media (max-width:600px){#site-helper{right:10px!important;bottom:10px!important;transition:transform .25s,opacity .25s}#site-helper.is-tucked{transform:translateY(80px);opacity:0;pointer-events:none}#site-helper .help-launch{width:46px!important;height:46px!important;min-width:46px!important;min-height:46px!important;padding:0!important;opacity:.94}}
 /* Startseite am Handy: „Direkt üben“ als kompakte Kacheln (2 Spalten, ohne Beschreibung) */
 @media (max-width:520px){
   .dm-home .dm-toolgrid{grid-template-columns:1fr 1fr;gap:10px;border-top:0}

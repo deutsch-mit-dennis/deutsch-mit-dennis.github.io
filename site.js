@@ -243,7 +243,7 @@
       </div>
     </section>
 
-    ${window.DMChallenge ? `<section class="dm-section ch-home" aria-label="Tages-Challenge und Lernspiele">${DMChallenge.teaser()}<a class="sp-home" href="#spiele"><span aria-hidden="true">🎮</span><span><b>Lernspiele</b><small>18 Spiele: Jump’n’Run · Artikel · Verben · Alltag · DTB B2 · Leben in Deutschland</small></span><span class="sp-home-go">Spielen →</span></a></section>` : ''}
+    ${window.DMChallenge ? `<section class="dm-section ch-home" aria-label="Tages-Challenge und Lernspiele">${DMChallenge.teaser()}<a class="sp-home" href="#spiele"><span aria-hidden="true">🎮</span><span><b>Lernspiele</b><small>22 Spiele: Jump’n’Run · Story-Abenteuer · Artikel · Verben · Alltag · DTB B2 · Leben in Deutschland</small></span><span class="sp-home-go">Spielen →</span></a></section>` : ''}
 
     <section class="dm-section lino-home" aria-labelledby="lino-h">
       <a class="lino-home-card" href="#spiele/lino">
@@ -431,7 +431,7 @@
         <section class="dm-card dm-hub-card"><h2>✍️ Schreiben</h2><p>Plane deinen Text, schreib ihn und vergleiche mit einem Muster. Dein Entwurf bleibt auf deinem Gerät gespeichert.</p>${levelLinks('ueben/schreiben')}<a class="dm-inline-link" href="#schreiben/bausteine">Schreib-Bausteine: Anrede, Gruß, Verbindungswörter</a></section>
         <section class="dm-card dm-hub-card"><h2>🎧 Hören</h2><p>Hörtraining für DTZ und DTB B2 mit natürlichen Stimmen – plus kurze Texte zum Einstieg.</p><div class="dm-pills"><a href="#hoeren/dtz-1"><b>DTZ</b><small>5 Übungssätze</small></a><a href="#hoeren/b2-1"><b>DTB B2</b><small>4 Übungssätze</small></a><a href="#hoeren"><b>Alle</b><small>Übersicht</small></a></div></section>
         <section class="dm-card dm-hub-card"><h2>📖 Lesen</h2><p>Mitteilungen, Anzeigen, E-Mails und Artikel verstehen – mit Fragen und Erklärungen.</p><div class="dm-pills"><a href="#lesen/alltag"><b>Alltag</b><small>A2–B1 · DTZ</small></a><a href="#lesen/beruf"><b>Beruf</b><small>B1–B2 · DTB</small></a></div></section>
-        <section class="dm-card dm-hub-card"><h2>🎮 Lernspiele</h2><p>18 Spiele, neu: das Jump’n’Run „Lino läuft“ von A1 bis C1. Dazu Grammatik, Alltag, DTB B2 Beruf und „Leben in Deutschland“.</p><a class="dm-btn dm-btn-quiet" href="#spiele">Zu den Lernspielen</a></section>
+        <section class="dm-card dm-hub-card"><h2>🎮 Lernspiele</h2><p>22 Spiele, neu: das Story-Abenteuer „Neu in Deutschland“ in 8 Kapiteln und das Jump’n’Run „Lino läuft“ – beide von A1 bis C1. Dazu Grammatik, Alltag, DTB B2 Beruf und „Leben in Deutschland“.</p><a class="dm-btn dm-btn-quiet" href="#spiele">Zu den Lernspielen</a></section>
         <section class="dm-card dm-hub-card"><h2>🖼 Bild beschreiben</h2><p>Adjektivendungen und Relativsätze an Bildern üben – wie im DTZ, Teil Sprechen 2.</p><a class="dm-btn dm-btn-quiet" href="#bild">Zum Bild-Trainer</a></section>
         <section class="dm-card dm-hub-card"><h2>🎲 Gemeinsam spielen</h2><p>Kahoot-Quiz für den Kurs oder zu Hause. Wörter und Redemittel festigen.</p><a class="dm-btn dm-btn-quiet" href="#kahoot">Zu den Kahoot-Quiz</a></section>
       </div>`);

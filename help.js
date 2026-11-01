@@ -31,4 +31,6 @@
  function setOpen(value){opened=value;root.querySelector('#help-panel').hidden=!value;const launcher=root.querySelector('#help-launch');launcher.setAttribute('aria-expanded',String(value));if(value){renderChat();root.querySelector('#help-input').focus();}else launcher.focus();}
  const launcher=node('button','Hilfe / Help','help-launch');launcher.type='button';launcher.id='help-launch';launcher.setAttribute('aria-controls','help-panel');launcher.setAttribute('aria-expanded','false');launcher.onclick=()=>setOpen(!opened);const panel=node('section');panel.id='help-panel';panel.hidden=true;panel.setAttribute('role','dialog');panel.setAttribute('aria-label','Website-Hilfe / Website help');panel.addEventListener('keydown',e=>{if(e.key==='Escape'){e.preventDefault();setOpen(false);}});root.append(panel,launcher);
  document.querySelectorAll('[data-open-help]').forEach(b=>b.onclick=()=>setOpen(true));
+ // phones: tuck the launcher away while scrolling down so it does not cover content; scrolling up brings it back
+ let lastY=scrollY;addEventListener('scroll',()=>{const y=scrollY;if(Math.abs(y-lastY)<6)return;root.classList.toggle('is-tucked',y>lastY&&y>200&&!opened&&innerWidth<=600);lastY=y;},{passive:true});
 })();
