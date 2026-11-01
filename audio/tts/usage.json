@@ -3,5 +3,10 @@
   "google": 172055,
   "elevenlabs": 40411,
   "gemini": 159813
+ },
+ "2026-11": {
+  "gemini": 21768,
+  "elevenlabs": 109,
+  "google": 0
  }
 }
