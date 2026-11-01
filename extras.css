@@ -210,9 +210,10 @@ li.sc-sp .sc-cat{background:#FDE3DC;color:#A3281E}li.sc-gr .sc-cat{background:#D
 .dm-song-soon p{margin:0;color:rgba(255,255,255,.9)}
 .dm-suno{border-radius:14px;overflow:hidden;background:#111;margin-bottom:6px}
 .dm-suno iframe{display:block;width:100%;height:240px;border:0}
-.dm-vocab{display:grid;grid-template-columns:minmax(120px,38%) 1fr;gap:6px 14px;margin:0 0 20px}
+.dm-vocab{display:grid;grid-template-columns:minmax(120px,38%) minmax(0,1fr);gap:6px 14px;margin:0 0 20px}
 .dm-vocab dt{font-weight:700}
-.dm-vocab dd{margin:0;color:var(--dm-muted)}
+.dm-vocab dd{margin:0;color:var(--dm-muted);min-width:0;overflow-wrap:break-word;hyphens:auto}
+@media (max-width:400px){.dm-vocab{grid-template-columns:minmax(0,1fr);gap:2px}.dm-vocab dd{margin-bottom:10px}}
 .dm-gap p{line-height:2.1;margin:0 0 4px}
 .dm-gap input{display:inline-block!important;height:auto!important;min-height:0!important;width:9em!important;max-width:60%;padding:2px 8px;margin:0 4px;border:0;border-bottom:2px solid var(--dm-tinte);background:var(--dm-tinte-soft);border-radius:6px 6px 0 0;font:inherit}
 .dm-gap input.is-good{border-color:var(--dm-gruen);background:#DDF4EA}
@@ -778,6 +779,12 @@ header.dm-header nav{margin-left:auto}
   .dm-home .dm-toolgrid b{font-size:15.5px;line-height:1.25}
   .dm-home .dm-toolgrid span{display:none}
   .dm-home .dm-tool-3d{left:8px;top:50%;width:38px;height:38px;margin-top:-19px}
+}
+/* very small phones: icon above the label so long words (Probeprüfungen, Deutschland) are not hyphenated */
+@media (max-width:360px){
+  .dm-home .dm-toolgrid a[data-img],.dm-home .dm-toolgrid a:nth-child(n){padding:10px 8px!important;text-align:center;justify-items:center}
+  .dm-home .dm-toolgrid b{font-size:14.5px;hyphens:manual}
+  .dm-home .dm-tool-3d{position:static;display:block;margin:0 auto 4px;width:34px;height:34px}
 }
 /* Lernspiele: Filterleiste zeigt, dass man wischen kann */
 .sp-filter-wrap{position:relative}
