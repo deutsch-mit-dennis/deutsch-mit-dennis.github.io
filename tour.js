@@ -7,11 +7,11 @@
   // [Startsekunde, CSS-Selektor auf der Startseite, kurzer Hinweis]
   const STEPS = [
     [0, null, 'Willkommen!'],
-    [9.2, '.dm-paths', 'Hier wählst du deinen Lernweg'],
-    [13.5, '.dm-tools', 'Direkt üben: Sprechen, Schreiben, Hören'],
-    [19.2, '.dm-paths a[href="#lernweg/dtz"], .dm-tools a[href="#lid"]', 'Prüfungstraining: DTZ, B2, Leben in Deutschland'],
-    [26.1, '.dm-stage', 'Deutsch mit Liedern'],
-    [30.4, null, 'Viel Erfolg!']
+    [11.3, '.dm-paths', 'Hier wählst du deinen Lernweg'],
+    [18.3, '.dm-tools', 'Direkt üben: Sprechen, Schreiben, Hören'],
+    [25.2, '.dm-paths a[href="#lernweg/dtz"], .dm-tools a[href="#lid"]', 'Prüfungstraining: DTZ, B2, Leben in Deutschland'],
+    [33.4, '.dm-stage', 'Deutsch mit Liedern'],
+    [39.2, null, 'Viel Erfolg!']
   ];
   const get = k => { try { return localStorage.getItem(k); } catch { return null; } };
   const set = (k, v) => { try { localStorage.setItem(k, v); } catch {} };
@@ -38,7 +38,7 @@
     b.id = 'dm-tour'; b.className = 'dm-tour'; b.setAttribute('aria-label', 'Begrüßung von Dennis');
     b.innerHTML = `<button type="button" class="dm-tour-x" aria-label="Schließen">×</button>
       <div class="dm-tour-intro"><img src="${POSTER}" alt="" width="64" height="80">
-        <div><p><b>Hallo, ich bin Dennis!</b><br>Soll ich dir die Seite zeigen? (30 Sek.)</p>
+        <div><p><b>Hallo, ich bin Dennis!</b><br>Soll ich dir die Seite zeigen? (40 Sek.)</p>
         <div class="dm-tour-btns"><button type="button" class="dm-btn dm-tour-play">▶ Rundgang starten</button><button type="button" class="dm-tour-later">Später</button></div></div></div>
       <div class="dm-tour-player" hidden><video playsinline controls preload="none" poster="${POSTER}"><source src="${VIDEO}" type="video/mp4"><track kind="captions" srclang="de" label="Deutsch" src="${SUBS}" default></video>
         <p class="dm-tour-hint" aria-live="polite"></p></div>`;

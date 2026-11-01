@@ -2,3 +2,6 @@ __pycache__/
 .claude/
 m/
 qa-out/
+
+# local secrets (API keys) – never commit
+.env
