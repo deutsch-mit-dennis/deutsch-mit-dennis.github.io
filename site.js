@@ -245,6 +245,36 @@
 
     ${window.DMChallenge ? `<section class="dm-section ch-home" aria-label="Tages-Challenge und Lernspiele">${DMChallenge.teaser()}<a class="sp-home" href="#spiele"><span aria-hidden="true">🎮</span><span><b>Lernspiele</b><small>22 Spiele: Jump’n’Run · Story-Abenteuer · Artikel · Verben · Alltag · DTB B2 · Leben in Deutschland</small></span><span class="sp-home-go">Spielen →</span></a></section>` : ''}
 
+    <section class="dm-section lino-home" aria-labelledby="nid-h">
+      <a class="lino-home-card nid-home-card" href="#spiele/nid">
+        <svg class="lino-home-art" viewBox="0 0 320 180" aria-hidden="true" focusable="false">
+          <defs><linearGradient id="nhSky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffd9a8"/><stop offset="1" stop-color="#fff3e2"/></linearGradient></defs>
+          <rect width="320" height="180" fill="url(#nhSky)"/>
+          <circle cx="262" cy="38" r="18" fill="#ffc928" opacity=".85"/>
+          <g fill="#7aa6c9"><rect x="18" y="62" width="44" height="88"/><rect x="250" y="70" width="52" height="80"/></g>
+          <g><rect x="70" y="78" width="58" height="72" fill="#e85d4a"/><path d="M64 80 L99 52 L134 80Z" fill="#9c3426"/><rect x="134" y="66" width="62" height="84" fill="#f2b33d"/><path d="M128 68 L165 40 L202 68Z" fill="#b67415"/><rect x="196" y="84" width="50" height="66" fill="#4f9d8a"/><path d="M190 86 L221 62 L252 86Z" fill="#2f6e5f"/></g>
+          <g fill="#fff8ec"><rect x="80" y="90" width="12" height="14" rx="2"/><rect x="106" y="90" width="12" height="14" rx="2"/><rect x="146" y="80" width="12" height="14" rx="2"/><rect x="172" y="80" width="12" height="14" rx="2"/><rect x="146" y="108" width="12" height="14" rx="2"/><rect x="206" y="98" width="12" height="14" rx="2"/><rect x="226" y="98" width="12" height="14" rx="2"/></g>
+          <rect x="158" y="126" width="16" height="24" rx="2" fill="#7a4a1c"/>
+          <rect x="0" y="150" width="320" height="30" fill="#9aa3b5"/><rect x="0" y="150" width="320" height="4" fill="#c7ccd8"/>
+          <g transform="translate(232 104)"><rect x="0" y="0" width="64" height="18" rx="4" fill="#0f5c4f"/><text x="32" y="13" font-size="10" font-weight="800" fill="#fff" text-anchor="middle" font-family="system-ui,sans-serif">Lindenfeld</text><rect x="30" y="18" width="4" height="32" fill="#5d6577"/></g>
+          <g class="lino-home-hero" transform="translate(52 112)">
+            <rect x="-26" y="18" width="20" height="16" rx="3" fill="#2341B5"/><rect x="-20" y="14" width="8" height="5" rx="2" fill="none" stroke="#2341B5" stroke-width="2"/>
+            <path d="M-2 30 L-6 40 M8 30 L12 40" stroke="#2b2f45" stroke-width="5" stroke-linecap="round"/>
+            <rect x="-8" y="6" width="22" height="26" rx="7" fill="#0f766e"/>
+            <circle cx="3" cy="-4" r="9" fill="#c98e62"/><path d="M-6 -6 A9 9 0 0 1 12 -7 Q4 -15 -6 -6Z" fill="#2b1d14"/>
+          </g>
+          <g transform="translate(70 66)"><rect x="0" y="0" width="74" height="26" rx="10" fill="#fff" stroke="#0f766e" stroke-width="2"/><path d="M10 26 L6 36 L20 26Z" fill="#fff" stroke="#0f766e" stroke-width="2"/><text x="37" y="17" font-size="11" font-weight="800" fill="#0f766e" text-anchor="middle" font-family="system-ui,sans-serif">Guten Tag!</text></g>
+        </svg>
+        <span class="lino-home-copy">
+          <span class="lino-home-kicker">Neu: Story-Abenteuer in 8 Kapiteln</span>
+          <b id="nid-h">Neu in Deutschland – deine Geschichte</b>
+          <span class="lino-home-text">Du ziehst nach Lindenfeld: Wohnung finden, beim Amt anmelden, zum Arzt, Sprachkurs, Vorstellungsgespräch – bis zum Widerspruch beim Amt. Du entscheidest, was du sagst, und sammelst Dokumente in deinem Ordner. Mit echten Stimmen.</span>
+          <span class="lino-home-levels" aria-label="8 Kapitel von A1 bis C1"><i>A1</i><i>A2</i><i>B1</i><i>B2</i><i>C1</i><i>🏠</i><i>🏛️</i><i>🩺</i><i>📚</i><i>💼</i><i>⚖️</i></span>
+          <span class="lino-home-go">▶ Geschichte starten</span>
+        </span>
+      </a>
+    </section>
+
     <section class="dm-section lino-home" aria-labelledby="lino-h">
       <a class="lino-home-card" href="#spiele/lino">
         <svg class="lino-home-art" viewBox="0 0 320 180" aria-hidden="true" focusable="false">
