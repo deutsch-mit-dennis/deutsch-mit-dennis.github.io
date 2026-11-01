@@ -771,7 +771,7 @@ header.dm-header nav{margin-left:auto}
 @media (max-width:1180px){#main-navigation a[data-nav="pruefung"]::after{position:static;display:inline-block;margin-left:8px;vertical-align:middle}}
 /* Einheitlichkeit 21.10.: Nummer in LiD-Karten mit Abstand, Hilfe-Knopf am Handy kleiner und weiter am Rand */
 .lid-card .lid-number{margin:0 10px 6px 0;vertical-align:middle}
-@media (max-width:600px){#site-helper{right:10px!important;bottom:10px!important;transition:transform .25s,opacity .25s}#site-helper.is-tucked{transform:translateY(80px);opacity:0;pointer-events:none}#site-helper .help-launch{width:46px!important;height:46px!important;min-width:46px!important;min-height:46px!important;padding:0!important;opacity:.94}}
+@media (max-width:600px){#site-helper{right:10px!important;bottom:10px!important;transition:transform .25s,opacity .25s}body.dm-tuck #site-helper{transform:translateY(80px);opacity:0;pointer-events:none}body.dm-tuck .lw{opacity:0;visibility:hidden}.lw{transition:opacity .25s,visibility .25s}#site-helper .help-launch{width:46px!important;height:46px!important;min-width:46px!important;min-height:46px!important;padding:0!important;opacity:.94}}
 /* Startseite am Handy: „Direkt üben“ als kompakte Kacheln (2 Spalten, ohne Beschreibung) */
 @media (max-width:520px){
   .dm-home .dm-toolgrid{grid-template-columns:1fr 1fr;gap:10px;border-top:0}

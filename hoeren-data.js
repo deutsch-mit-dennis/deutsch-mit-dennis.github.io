@@ -2,7 +2,7 @@
    Die Tonaufnahmen erzeugt .github/workflows/audio.yml (audio/tts/<id>.mp3). */
 (window.DM || (window.DM = {})).listeningExam = {
 "dtz-1": {
-"title": "DTZ Hören · Übungssatz 1",
+"title": "DTZ Hören · Übungssatz 1",
 "level": "A2–B1",
 "exam": "DTZ",
 "intro": "Ein kompletter Durchgang mit allen vier Teilen: Ansagen, Durchsagen, ein Alltagsgespräch und Meinungen. Hör jeden Text einmal (Teil 1 und 3 darfst du zweimal hören) und entscheide dich schnell.",
@@ -223,7 +223,7 @@
 ]
 },
 "dtz-2": {
-"title": "DTZ Hören · Übungssatz 2",
+"title": "DTZ Hören · Übungssatz 2",
 "level": "A2–B1",
 "exam": "DTZ",
 "intro": "Diesmal mit Verkehrsfunk und einer Durchsage im Supermarkt. Achte besonders auf Zahlen: Oft kommen mehrere Zahlen vor, aber nur eine ist die richtige Antwort.",
@@ -452,7 +452,7 @@
 ]
 },
 "dtz-3": {
-"title": "DTZ Hören · Übungssatz 3",
+"title": "DTZ Hören · Übungssatz 3",
 "level": "A2–B1",
 "exam": "DTZ",
 "intro": "Werkstatt, Verabredung, Stadtfest und Jobsuche: Hier geht es um typische Situationen aus dem Alltag. Lies die Frage immer zuerst, dann weißt du, worauf du achten musst.",
@@ -673,7 +673,7 @@
 ]
 },
 "dtz-4": {
-"title": "DTZ Hören · Übungssatz 4",
+"title": "DTZ Hören · Übungssatz 4",
 "level": "A2–B1",
 "exam": "DTZ",
 "intro": "Stadtwerke, Schwimmbad, Streik und Wohnungssuche: Der letzte Übungssatz ist etwas schneller gesprochen. Wenn du ein Wort nicht verstehst, hör einfach weiter.",
@@ -902,7 +902,7 @@
 ]
 },
 "dtz-5": {
-"title": "DTZ Hören · Übungssatz 5",
+"title": "DTZ Hören · Übungssatz 5",
 "level": "A2–B1",
 "exam": "DTZ",
 "intro": "Dieser Übungssatz wächst: Nach und nach kommen neue Hörtexte dazu, bis alle vier Teile komplett sind. Hör genau auf Zeiten und Tage – oft wird etwas geändert.",
@@ -989,7 +989,7 @@
 ]
 },
 "b2-1": {
-"title": "DTB B2 Hören · Übungssatz 1",
+"title": "DTB B2 Hören · Übungssatz 1",
 "level": "B2",
 "exam": "DTB",
 "intro": "Berufsalltag in Logistik, Verwaltung und Handwerk: Mailbox-Nachrichten, eine Teambesprechung, Gespräche mit Kunden und Kollegen und ein Radiobeitrag. Achte auf Änderungen, Bedingungen und darauf, wer welche Aufgabe übernimmt.",
@@ -1336,7 +1336,7 @@
 ]
 },
 "b2-2": {
-"title": "DTB B2 Hören · Übungssatz 2",
+"title": "DTB B2 Hören · Übungssatz 2",
 "level": "B2",
 "exam": "DTB",
 "intro": "IT-Support, Montage, Hotel, Spedition, Pflege und Handwerk: Hier musst du oft rechnen und Alternativen vergleichen. Notiere dir beim Hören Zahlen und Bedingungen.",
@@ -1683,7 +1683,7 @@
 ]
 },
 "b2-3": {
-"title": "DTB B2 Hören · Übungssatz 3",
+"title": "DTB B2 Hören · Übungssatz 3",
 "level": "B2",
 "exam": "DTB",
 "intro": "Arbeitsschutz, Vertretung, Büroumzug, Preisverhandlung, Feedbackgespräch und ein Vortrag über KI im Büro. Achte darauf, was nur vorgeschlagen und was wirklich entschieden wird.",
@@ -2018,7 +2018,7 @@
 ]
 },
 "b2-4": {
-"title": "DTB B2 Hören · Übungssatz 4",
+"title": "DTB B2 Hören · Übungssatz 4",
 "level": "B2",
 "exam": "DTB",
 "intro": "Dieser Übungssatz wächst: Nach und nach kommen neue Hörtexte aus dem Berufsalltag dazu. Achte darauf, was sich ändert und was von dir erwartet wird.",
@@ -2184,7 +2184,7 @@
 ]
 },
 "telcb1-1": {
-"title": "telc B1 Hören · Übungssatz 1",
+"title": "telc B1 Hören · Übungssatz 1",
 "level": "B1",
 "exam": "telc B1",
 "intro": "Aufgebaut wie die telc-Prüfung Deutsch B1: Radionachrichten (Teil 1), ein Interview im Radio (Teil 2) und kurze Durchsagen und Nachrichten auf dem Anrufbeantworter (Teil 3). Entscheide bei jeder Aussage: richtig oder falsch? In der Prüfung hörst du Teil 1 nur einmal, Teil 2 und Teil 3 zweimal.",
@@ -2565,7 +2565,7 @@
 ]
 },
 "telcb1-2": {
-"title": "telc B1 Hören · Übungssatz 2",
+"title": "telc B1 Hören · Übungssatz 2",
 "level": "B1",
 "exam": "telc B1",
 "intro": "Der zweite Durchgang im telc-Format: Nachrichten aus dem Ruhrgebiet, ein Gespräch mit einer Straßenbahnfahrerin und fünf kurze Ansagen. Lies vor dem Hören immer zuerst die Aussagen. Achte darauf, ob etwas geändert oder verneint wird.",
@@ -2946,7 +2946,7 @@
 ]
 },
 "dtbb1-1": {
-"title": "DTB B1 Hören · Übungssatz 1",
+"title": "DTB B1 Hören · Übungssatz 1",
 "level": "B1 Beruf",
 "exam": "DTB B1",
 "intro": "Berufsalltag in Pflege, Handwerk, Hotel und Lager: Mailbox-Nachrichten von Kollegen und Kunden, Durchsagen im Betrieb, eine Übergabe an der Rezeption, ein Gespräch mit einer Kundin und eine Teambesprechung. Achte darauf, wer was tun soll und was sich geändert hat.",
@@ -3375,7 +3375,7 @@
 ]
 },
 "dtbb1-2": {
-"title": "DTB B1 Hören · Übungssatz 2",
+"title": "DTB B1 Hören · Übungssatz 2",
 "level": "B1 Beruf",
 "exam": "DTB B1",
 "intro": "Diesmal im Büro, im Supermarkt, auf dem Bau, im Kundenservice und bei einer Umzugsfirma. Hör genau auf Uhrzeiten und Bedingungen: Oft wird ein Plan im Text noch geändert.",
