@@ -458,7 +458,7 @@
       ${window.DMChallenge ? DMChallenge.teaser() : ''}
       <div class="dm-hub">
         <section class="dm-card dm-hub-card"><h2>💬 Sprechen</h2><p>Kurze Situationen aus dem Alltag und Beruf. Mit Satzanfängen, Rückfrage und Beispiel zum Anhören.</p>${levelLinks('ueben/sprechen')}</section>
-        <section class="dm-card dm-hub-card"><h2>✍️ Schreiben</h2><p>Plane deinen Text, schreib ihn und vergleiche mit einem Muster. Dein Entwurf bleibt auf deinem Gerät gespeichert.</p>${levelLinks('ueben/schreiben')}<a class="dm-inline-link" href="#schreiben/bausteine">Schreib-Bausteine: Anrede, Gruß, Verbindungswörter</a></section>
+        <section class="dm-card dm-hub-card"><h2>✍️ Schreiben</h2><p>Plane deinen Text, schreib ihn und vergleiche mit einem Muster. Dein Entwurf bleibt auf deinem Gerät gespeichert.</p>${levelLinks('ueben/schreiben')}<a class="dm-inline-link" href="#schreiben/bausteine">Schreib-Bausteine: Anrede, Gruß, Verbindungswörter</a><a class="dm-inline-link" href="/dtz-schreiben/">DTZ Schreiben: Vorbereitungspaket zur neuen A2-Regel</a></section>
         <section class="dm-card dm-hub-card"><h2>🎧 Hören</h2><p>Hörtraining für DTZ und DTB B2 mit natürlichen Stimmen – plus kurze Texte zum Einstieg.</p><div class="dm-pills"><a href="#hoeren/dtz-1"><b>DTZ</b><small>5 Übungssätze</small></a><a href="#hoeren/b2-1"><b>DTB B2</b><small>4 Übungssätze</small></a><a href="#hoeren"><b>Alle</b><small>Übersicht</small></a></div></section>
         <section class="dm-card dm-hub-card"><h2>📖 Lesen</h2><p>Mitteilungen, Anzeigen, E-Mails und Artikel verstehen – mit Fragen und Erklärungen.</p><div class="dm-pills"><a href="#lesen/alltag"><b>Alltag</b><small>A2–B1 · DTZ</small></a><a href="#lesen/beruf"><b>Beruf</b><small>B1–B2 · DTB</small></a></div></section>
         <section class="dm-card dm-hub-card"><h2>🎮 Lernspiele</h2><p>22 Spiele, neu: das Story-Abenteuer „Neu in Deutschland“ in 8 Kapiteln und das Jump’n’Run „Lino läuft“ – beide von A1 bis C1. Dazu Grammatik, Alltag, DTB B2 Beruf und „Leben in Deutschland“.</p><a class="dm-btn dm-btn-quiet" href="#spiele">Zu den Lernspielen</a></section>
@@ -613,7 +613,7 @@
     page(`${crumbs([['Üben', '#ueben'], ['Schreib-Bausteine']])}
       <div class="dm-head"><h1>Schreib-Bausteine</h1><p class="dm-lead">Feste Formulierungen für Nachrichten, Briefe und E-Mails. Lerne sie als ganze Sätze.</p></div>
       <div class="dm-toolkit">${DM.toolkit.map(b => `<section class="dm-card"><p class="dm-path-meta">${b.level}</p><h2>${x(b.title)}</h2>${b.groups.map(([h, items]) => `<h3>${x(h)}</h3><ul class="dm-phrases">${items.map(i => `<li>${x(i)}</li>`).join('')}</ul>`).join('')}<p class="dm-tipline">${x(b.note)}</p></section>`).join('')}</div>
-      <div class="dm-row dm-next"><a class="dm-btn" href="#ueben/schreiben/A2">Jetzt schreiben üben</a><a class="dm-btn dm-btn-quiet" href="#training/dtz-schreiben">DTZ-Brief üben</a><a class="dm-btn dm-btn-quiet" href="#training/dtb-schreiben">B2-Kundenantwort üben</a></div>`);
+      <div class="dm-row dm-next"><a class="dm-btn" href="#ueben/schreiben/A2">Jetzt schreiben üben</a><a class="dm-btn dm-btn-quiet" href="#training/dtz-schreiben">DTZ-Brief üben</a><a class="dm-btn dm-btn-quiet" href="/dtz-schreiben/">DTZ-Vorbereitungspaket</a><a class="dm-btn dm-btn-quiet" href="#training/dtb-schreiben">B2-Kundenantwort üben</a></div>`);
   }
 
   /* ---------- Hören ---------- */
@@ -957,6 +957,7 @@
           card('#bild', 'Sprechen 2 · Trainer', 'Bild-Trainer', '4 Bilder Schritt für Schritt – mit Musterbeschreibung') +
           card('#training/dtz-sprechen', 'Sprechen 3', 'Gemeinsam planen', 'Vorschlagen und einigen') +
           card('#training/dtz-schreiben', 'Schreiben', 'Einen Brief schreiben', 'Vier Leitpunkte, mit Muster') +
+          card('/dtz-schreiben/', 'Schreiben · neu', 'Vorbereitungspaket Schreiben', 'Neue A2-Regel: Übungen, Muster, Timer') +
           card('#lesen/alltag', 'Lesen', 'Mitteilungen verstehen', `${(readSets()[0] || { items: [] }).items.length} Lesetexte mit Fragen`) +
           card('#hoeren/dtz-1', 'Hören', 'DTZ-Hörtraining', 'Übungssätze mit allen vier Teilen') },
       lid: { label: 'Leben in D.', h: 'Test „Leben in Deutschland“', p: 'Orientierungskurs und Einbürgerung · 33 Fragen in 60 Minuten', path: 'lid', color: 'mint',
