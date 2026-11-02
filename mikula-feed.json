@@ -47,6 +47,54 @@
       "cover": "assets/mikula/folge-04-seit.jpg",
       "ig": "",
       "tt": ""
+    },
+    {
+      "id": "folge-05-kalt",
+      "n": 5,
+      "date": "2026-11-18T18:00",
+      "wrong": "Ich bin kalt.",
+      "right": "Mir ist kalt.",
+      "rule": "Mir ist kalt / warm / schlecht",
+      "explain": "„Ich bin kalt“ heißt: Ich bin ein kalter Mensch. Für das Gefühl sagt man: Mir ist kalt.",
+      "cover": "assets/mikula/folge-05-kalt.jpg",
+      "ig": "",
+      "tt": ""
+    },
+    {
+      "id": "folge-06-gegangen",
+      "n": 6,
+      "date": "2026-11-21T18:00",
+      "wrong": "Ich habe gegeht.",
+      "right": "Ich bin gegangen.",
+      "rule": "gehen → ich bin gegangen",
+      "explain": "Gehen bildet das Perfekt mit „sein“, und das Partizip ist unregelmäßig: Ich bin gegangen.",
+      "cover": "assets/mikula/folge-06-gegangen.jpg",
+      "ig": "",
+      "tt": ""
+    },
+    {
+      "id": "folge-07-bus",
+      "n": 7,
+      "date": "2026-11-25T18:00",
+      "wrong": "Ich fahre mit Bus.",
+      "right": "Ich fahre mit dem Bus.",
+      "rule": "mit + Dativ: mit dem Bus",
+      "explain": "Nach „mit“ kommt der Dativ, mit Artikel: mit dem Bus, mit der Bahn, mit dem Auto.",
+      "cover": "assets/mikula/folge-07-bus.jpg",
+      "ig": "",
+      "tt": ""
+    },
+    {
+      "id": "folge-08-karte",
+      "n": 8,
+      "date": "2026-11-28T18:00",
+      "wrong": "Kann ich bezahlen mit Karte?",
+      "right": "Kann ich mit Karte bezahlen?",
+      "rule": "Modalverb: Verb ans Ende!",
+      "explain": "Mit einem Modalverb (kann, muss, will) steht das zweite Verb ganz am Ende: Kann ich mit Karte bezahlen?",
+      "cover": "assets/mikula/folge-08-karte.jpg",
+      "ig": "",
+      "tt": ""
     }
   ]
 }
