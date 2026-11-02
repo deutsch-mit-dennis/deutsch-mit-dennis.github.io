@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>DTZ Schreiben: Vorbereitungspaket – neue Regel ab 1.11.2026 | Deutsch mit Dennis</title>
-<meta name="description" content="Ab 1. November 2026 braucht ihr im DTZ beim Schreiben mindestens A2. Briefgerüst, Redemittel, 8 Übungsaufgaben, Mustertexte A2 und B1, Checkliste und 2-Wochen-Plan – kostenlos.">
+<meta name="description" content="Ab 1. November 2026 braucht ihr im DTZ beim Schreiben mindestens A2. Briefgerüst mit Übungen, Redemittel, 8 Übungsaufgaben, Mustertexte A2 und B1, Checkliste und 2-Wochen-Plan – kostenlos.">
 <link rel="canonical" href="https://deutsch-mit-dennis.de/dtz-schreiben/">
 <meta property="og:type" content="website"><meta property="og:site_name" content="Deutsch mit Dennis"><meta property="og:locale" content="de_DE">
 <meta property="og:title" content="DTZ Schreiben: Vorbereitungspaket (neue Regel ab 1.11.2026)">
@@ -51,11 +51,40 @@ main{max-width:720px;margin:0 auto;padding:18px 16px 48px}
 .lv span{font-size:14px;font-weight:700;border-radius:8px;padding:3px 8px;background:#fff}
 .lv .a2{background:var(--yellow);color:#1f2f7a}
 .ok{color:var(--green);font-weight:700}.no{color:var(--red);font-weight:700}
+.rules .fall{flex-basis:100%;font-size:15px}
 .rules li.bad{background:#fdecea}
 .msg{background:var(--soft);border-left:5px solid var(--blue);border-radius:10px;padding:12px 14px}
 .msg p{margin:0 0 10px}.msg p:last-child{margin:0}
 ol.steps{margin:0;padding-left:24px}ol.steps li{margin-bottom:10px}
 .ex{display:block;color:var(--muted);font-size:15px}
+.ue{border:1px solid #dde2f2;border-radius:14px;padding:14px;margin:14px 0 0}
+.ue h4{margin:0 0 4px;font-size:17px}
+.ue>p{margin:0 0 10px}
+.ue-list{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.ue-list li{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:8px 10px;border-radius:12px;background:var(--soft);flex-wrap:wrap}
+.ue-stack li{flex-direction:column;align-items:stretch;min-width:0}
+.ue-stack select{width:100%;min-width:0}
+.ue-write li label{min-height:44px;padding-top:12px}
+.ue-order li{justify-content:flex-start;flex-wrap:nowrap}
+.ue-gap li{display:block;line-height:2.6}
+.ue select{min-height:44px;font:inherit;font-size:16px;padding:6px 8px;border:2px solid #b9c2e4;border-radius:10px;background:#fff;color:var(--ink);max-width:100%}
+.ue-order select{flex:none;width:64px}
+.ue select.r{border-color:var(--green);background:#e8f6ee}
+.ue select.w{border-color:var(--red);background:#fdecea}
+.ue .fix{display:block;font-size:14px;color:var(--red);font-weight:700;line-height:1.4}
+.rg{display:grid;gap:6px}
+.rad{display:flex;align-items:center;gap:10px;min-height:44px;padding:6px 10px;border:2px solid #b9c2e4;border-radius:10px;background:#fff;cursor:pointer}
+.rad input{width:22px;height:22px;flex:none;margin:0;accent-color:var(--blue)}
+.rg.r .rad:has(input:checked){border-color:var(--green);background:#e8f6ee}
+.rg.w .rad:has(input:checked){border-color:var(--red);background:#fdecea}
+.ue .fix{flex-basis:100%}
+.ue-stack .fix{flex-basis:auto}
+.ue-act{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+.ue-res{margin:8px 0 0;font-weight:700}
+.ue-write{margin:0;padding-left:0;list-style:none;display:grid;gap:12px}
+.ue-write label{display:block;margin-bottom:4px}
+.ue-write textarea{width:100%;min-height:64px;font:inherit;font-size:16px;padding:10px;border:2px solid #b9c2e4;border-radius:10px;resize:vertical}
+.ue-sol{margin:6px 0 0;padding:8px 10px;border-radius:10px;background:#e8f6ee;font-size:15.5px}
 pre.tpl{white-space:pre-wrap;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:14px;line-height:1.6;background:var(--soft);border-radius:12px;padding:14px;margin:12px 0 0;overflow-x:auto}
 .rm{display:grid;gap:10px;margin:0;padding:0;list-style:none}
 .rm li{border:1px solid #dde2f2;border-radius:12px;padding:10px 12px}
@@ -101,6 +130,7 @@ footer a{display:inline-flex;align-items:center;min-height:44px;padding:0 6px}
   details{border:0}details>summary:before{display:none}
   details:not([open])>.task{display:block}
   .check input{accent-color:#000}
+  .ue{break-inside:avoid-page}.ue-sol[hidden]{display:block!important}
   main::after{content:"created by D.Prudnikau · deutsch-mit-dennis.de";display:block;text-align:center;font-size:9pt;color:#777;margin-top:12px}
 }
 </style>
@@ -134,12 +164,12 @@ footer a{display:inline-flex;align-items:center;min-height:44px;padding:0 6px}
 <main>
   <section class="card" id="regel">
     <h2>1 · Neu ab 1.11.2026: Schreiben zählt mit</h2>
-    <p class="lead">Für das B1-Zertifikat braucht ihr B1 in zwei Prüfungsteilen – Sprechen immer B1 – und mindestens A2 im dritten Teil.</p>
+    <p class="lead">Wann bekommt man das B1-Zertifikat? Grundregel: In „Sprechen“ immer B1, in einem weiteren Teil B1 und im dritten Teil mindestens A2. Es gibt genau diese 3 Möglichkeiten:</p>
     <ul class="rules">
-      <li><span class="lv"><span>Hören/Lesen B1</span><span>Schreiben B1</span><span>Sprechen B1</span></span><span class="ok">✔ B1-Zertifikat</span></li>
-      <li><span class="lv"><span>Hören/Lesen B1</span><span class="a2">Schreiben A2</span><span>Sprechen B1</span></span><span class="ok">✔ B1-Zertifikat</span></li>
-      <li><span class="lv"><span class="a2">Hören/Lesen A2</span><span>Schreiben B1</span><span>Sprechen B1</span></span><span class="ok">✔ B1-Zertifikat</span></li>
-      <li class="bad"><span class="lv"><span>Hören/Lesen B1</span><span>Schreiben leer / unter A2</span><span>Sprechen B1</span></span><span class="no">✘ kein B1</span></li>
+      <li><b class="fall">Fall 1 · alles B1</b><span class="lv"><span>Hören/Lesen B1</span><span>Schreiben B1</span><span>Sprechen B1</span></span><span class="ok">✔ B1-Zertifikat</span></li>
+      <li><b class="fall">Fall 2 · Schreiben schwächer, aber mindestens A2</b><span class="lv"><span>Hören/Lesen B1</span><span class="a2">Schreiben A2</span><span>Sprechen B1</span></span><span class="ok">✔ B1-Zertifikat</span></li>
+      <li><b class="fall">Fall 3 · Hören/Lesen schwächer, aber mindestens A2</b><span class="lv"><span class="a2">Hören/Lesen A2</span><span>Schreiben B1</span><span>Sprechen B1</span></span><span class="ok">✔ B1-Zertifikat</span></li>
+      <li class="bad"><b class="fall">Achtung: leeres Blatt beim Schreiben</b><span class="lv"><span>Hören/Lesen B1</span><span>Schreiben leer / unter A2</span><span>Sprechen B1</span></span><span class="no">✘ kein B1</span></li>
     </ul>
     <div class="msg">
       <p>Mein früherer Tipp – beim Schreiben ein leeres Blatt abgeben und nur auf Hören/Lesen und Sprechen setzen – gilt ab dem 1. November leider nicht mehr.</p>
@@ -178,24 +208,43 @@ footer a{display:inline-flex;align-items:center;min-height:44px;padding:0 6px}
       <li><b>Schluss (1 Satz)</b><span class="ex">Vielen Dank für Ihre Hilfe. Ich freue mich auf Ihre/deine Antwort.</span></li>
       <li><b>Gruß + Name</b><span class="ex">Sie: Mit freundlichen Grüßen · du: Viele Grüße / Liebe Grüße</span></li>
     </ol>
-    <h3>Vorlage zum Abschreiben</h3>
-<pre class="tpl">[Ort], [Datum]
+    <h3>Vorbereitungsübungen zum Briefgerüst</h3>
+    <p>Fünf kurze Übungen. Wähle die Antworten und tippe auf <b>Prüfen</b>. Am Handy oder auf Papier.</p>
 
-____________________ ,          (Anrede)
+    <div class="ue" id="ue1">
+      <h4>Übung 1 · Sie oder du?</h4>
+      <p>An wen schreibst du? Wähle die richtige Form.</p>
+      <ul class="ue-list"><li><span>E-Mail an Ihre Vermieterin</span><select data-a="Sie" aria-label="Antwort wählen"><option value="">…</option><option>Sie</option><option>du</option></select></li><li><span>Nachricht an Ihre Schwester</span><select data-a="du" aria-label="Antwort wählen"><option value="">…</option><option>Sie</option><option>du</option></select></li><li><span>Brief an die Leitung der Kita</span><select data-a="Sie" aria-label="Antwort wählen"><option value="">…</option><option>Sie</option><option>du</option></select></li><li><span>E-Mail an Ihren Kollegen Tom – Sie duzen sich</span><select data-a="du" aria-label="Antwort wählen"><option value="">…</option><option>Sie</option><option>du</option></select></li><li><span>Brief an das Jobcenter</span><select data-a="Sie" aria-label="Antwort wählen"><option value="">…</option><option>Sie</option><option>du</option></select></li><li><span>Nachricht an Ihren Freund Ali</span><select data-a="du" aria-label="Antwort wählen"><option value="">…</option><option>Sie</option><option>du</option></select></li></ul>
+      <div class="ue-act noprint"><button class="btn btn-b" type="button" data-check>✔ Prüfen</button><button class="btn btn-o" type="button" data-reset>↺ Neu</button></div><p class="ue-res" aria-live="polite"></p>
+    </div>
 
-ich schreibe Ihnen/dir, weil ______________ .
+    <div class="ue" id="ue2">
+      <h4>Übung 2 · Anrede und Gruß</h4>
+      <p>Wähle die richtige Anrede oder den richtigen Gruß.</p>
+      <ul class="ue-list ue-stack"><li><span>An Ihre Vermieterin Frau Schulz</span><div class="rg" data-a="Sehr geehrte Frau Schulz," role="radiogroup" aria-label="An Ihre Vermieterin Frau Schulz"><label class="rad"><input type="radio" name="u2-0" value="Liebe Schulz,"><span>Liebe Schulz,</span></label><label class="rad"><input type="radio" name="u2-0" value="Sehr geehrte Frau Schulz,"><span>Sehr geehrte Frau Schulz,</span></label><label class="rad"><input type="radio" name="u2-0" value="Hallo Frau Schulz,"><span>Hallo Frau Schulz,</span></label></div></li><li><span>An Herrn Becker vom Amt</span><div class="rg" data-a="Sehr geehrter Herr Becker," role="radiogroup" aria-label="An Herrn Becker vom Amt"><label class="rad"><input type="radio" name="u2-1" value="Sehr geehrte Herr Becker,"><span>Sehr geehrte Herr Becker,</span></label><label class="rad"><input type="radio" name="u2-1" value="Sehr geehrter Herr Becker,"><span>Sehr geehrter Herr Becker,</span></label><label class="rad"><input type="radio" name="u2-1" value="Lieber Becker,"><span>Lieber Becker,</span></label></div></li><li><span>An die Sprachschule – Sie kennen keinen Namen</span><div class="rg" data-a="Sehr geehrte Damen und Herren," role="radiogroup" aria-label="An die Sprachschule – Sie kennen keinen Namen"><label class="rad"><input type="radio" name="u2-2" value="Sehr geehrte Damen und Herren,"><span>Sehr geehrte Damen und Herren,</span></label><label class="rad"><input type="radio" name="u2-2" value="Hallo zusammen,"><span>Hallo zusammen,</span></label><label class="rad"><input type="radio" name="u2-2" value="Liebe Sprachschule,"><span>Liebe Sprachschule,</span></label></div></li><li><span>An Ihren Freund Ali</span><div class="rg" data-a="Lieber Ali," role="radiogroup" aria-label="An Ihren Freund Ali"><label class="rad"><input type="radio" name="u2-3" value="Liebe Ali,"><span>Liebe Ali,</span></label><label class="rad"><input type="radio" name="u2-3" value="Lieber Ali,"><span>Lieber Ali,</span></label><label class="rad"><input type="radio" name="u2-3" value="Sehr geehrter Ali,"><span>Sehr geehrter Ali,</span></label></div></li><li><span>Gruß an Frau Schulz</span><div class="rg" data-a="Mit freundlichen Grüßen" role="radiogroup" aria-label="Gruß an Frau Schulz"><label class="rad"><input type="radio" name="u2-4" value="Liebe Grüße"><span>Liebe Grüße</span></label><label class="rad"><input type="radio" name="u2-4" value="Mit freundlichen Grüßen"><span>Mit freundlichen Grüßen</span></label><label class="rad"><input type="radio" name="u2-4" value="Tschüss"><span>Tschüss</span></label></div></li><li><span>Gruß an Ali</span><div class="rg" data-a="Viele Grüße" role="radiogroup" aria-label="Gruß an Ali"><label class="rad"><input type="radio" name="u2-5" value="Mit freundlichen Grüßen"><span>Mit freundlichen Grüßen</span></label><label class="rad"><input type="radio" name="u2-5" value="Hochachtungsvoll"><span>Hochachtungsvoll</span></label><label class="rad"><input type="radio" name="u2-5" value="Viele Grüße"><span>Viele Grüße</span></label></div></li></ul>
+      <div class="ue-act noprint"><button class="btn btn-b" type="button" data-check>✔ Prüfen</button><button class="btn btn-o" type="button" data-reset>↺ Neu</button></div><p class="ue-res" aria-live="polite"></p>
+    </div>
 
-Leitpunkt 1: ______________________________ .
-Leitpunkt 2: ______________________________ .
-Leitpunkt 3: ______________________________ .
-Leitpunkt 4: ______________________________ .
+    <div class="ue" id="ue3">
+      <h4>Übung 3 · Bring den Brief in die richtige Reihenfolge</h4>
+      <p>Die Teile einer E-Mail an die Kita sind durcheinander. Gib jedem Teil eine Zahl von 1 bis 7.</p>
+      <ul class="ue-list ue-order"><li><select data-a="3" aria-label="Antwort wählen"><option value="">…</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option></select><span>Sie hat Fieber und kann morgen nicht in die Kita kommen.</span></li><li><select data-a="7" aria-label="Antwort wählen"><option value="">…</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option></select><span>Mit freundlichen Grüßen<br>Leyla Demir</span></li><li><select data-a="5" aria-label="Antwort wählen"><option value="">…</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option></select><span>Können Sie mir bitte sagen, ob es diese Woche wichtige Informationen gibt?</span></li><li><select data-a="1" aria-label="Antwort wählen"><option value="">…</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option></select><span>Sehr geehrte Frau Becker,</span></li><li><select data-a="4" aria-label="Antwort wählen"><option value="">…</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option></select><span>Der Arzt sagt, sie muss bis Freitag zu Hause bleiben.</span></li><li><select data-a="6" aria-label="Antwort wählen"><option value="">…</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option></select><span>Vielen Dank! Ich freue mich auf Ihre Antwort.</span></li><li><select data-a="2" aria-label="Antwort wählen"><option value="">…</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option></select><span>ich schreibe Ihnen, weil meine Tochter Mila krank ist.</span></li></ul>
+      <div class="ue-act noprint"><button class="btn btn-b" type="button" data-check>✔ Prüfen</button><button class="btn btn-o" type="button" data-reset>↺ Neu</button></div><p class="ue-res" aria-live="polite"></p>
+    </div>
 
-Können Sie / Kannst du mir bitte ________ ?
+    <div class="ue" id="ue4">
+      <h4>Übung 4 · Lückentext: Einleitung, Bitte, Schluss</h4>
+      <p>Ergänze das richtige Wort.</p>
+      <ul class="ue-list ue-gap"><li>Sehr geehrte Damen und Herren, ich schreibe Ihnen, <select data-a="weil" aria-label="Antwort wählen"><option value="">…</option><option>weil</option><option>dass</option><option>denn</option></select> ich den Kurs wechseln möchte.</li><li>Leider <select data-a="habe" aria-label="Antwort wählen"><option value="">…</option><option>habe</option><option>hat</option><option>haben</option></select> ich am Vormittag keine Zeit.</li><li>Können Sie mir bitte sagen, was der Kurs <select data-a="kostet" aria-label="Antwort wählen"><option value="">…</option><option>kosten</option><option>kostet</option><option>kostest</option></select>?</li><li>Vielen Dank für Ihre <select data-a="Hilfe" aria-label="Antwort wählen"><option value="">…</option><option>helfen</option><option>hilft</option><option>Hilfe</option></select>.</li><li>Ich freue mich auf <select data-a="Ihre" aria-label="Antwort wählen"><option value="">…</option><option>deine</option><option>Ihre</option><option>Sie</option></select> Antwort.</li><li>Mit freundlichen <select data-a="Grüßen" aria-label="Antwort wählen"><option value="">…</option><option>Gruß</option><option>grüßen</option><option>Grüßen</option></select></li></ul>
+      <div class="ue-act noprint"><button class="btn btn-b" type="button" data-check>✔ Prüfen</button><button class="btn btn-o" type="button" data-reset>↺ Neu</button></div><p class="ue-res" aria-live="polite"></p>
+    </div>
 
-Vielen Dank! Ich freue mich auf Ihre/deine Antwort.
-
-Mit freundlichen Grüßen / Viele Grüße
-[Vorname Nachname]</pre>
+    <div class="ue" id="ue5">
+      <h4>Übung 5 · Aus Leitpunkten werden Sätze</h4>
+      <p>Aufgabe: Deine Freundin Maria hat dich zum Geburtstag eingeladen, du kannst nicht kommen. Schreib zu jedem Leitpunkt 1–2 Sätze. Dann vergleiche mit dem Beispiel.</p>
+      <ol class="ue-write"><li><label for="w0"><b>Leitpunkt 1:</b> für die Einladung danken</label><textarea id="w0" rows="2" data-store="dm-dtz-w0" placeholder="Dein Satz …"></textarea><p class="ue-sol" hidden>Beispiel: Danke für deine Einladung! Ich habe mich sehr gefreut.</p></li><li><label for="w1"><b>Leitpunkt 2:</b> absagen und Grund nennen</label><textarea id="w1" rows="2" data-store="dm-dtz-w1" placeholder="Dein Satz …"></textarea><p class="ue-sol" hidden>Beispiel: Leider kann ich nicht kommen, weil ich am Samstag arbeiten muss.</p></li><li><label for="w2"><b>Leitpunkt 3:</b> Geschenk ansprechen</label><textarea id="w2" rows="2" data-store="dm-dtz-w2" placeholder="Dein Satz …"></textarea><p class="ue-sol" hidden>Beispiel: Ich habe schon ein kleines Geschenk für dich gekauft. Ich bringe es dir nächste Woche.</p></li><li><label for="w3"><b>Leitpunkt 4:</b> neues Treffen vorschlagen</label><textarea id="w3" rows="2" data-store="dm-dtz-w3" placeholder="Dein Satz …"></textarea><p class="ue-sol" hidden>Beispiel: Hast du am Sonntag Zeit? Dann können wir zusammen Kaffee trinken.</p></li></ol>
+      <div class="ue-act noprint"><button class="btn btn-b" type="button" data-solve>👀 Beispiele zeigen</button></div>
+    </div>
   </section>
 
   <section class="card" id="redemittel">
@@ -372,6 +421,48 @@ Mit freundlichen Grüßen / Viele Grüße
       b.addEventListener('change', function () { state[i] = b.checked; save(key, state); bar(); });
     });
     bar();
+  });
+
+
+  // Self-check exercises: each <select data-a> holds its correct answer.
+  Array.prototype.forEach.call(document.querySelectorAll('.ue'), function (ue) {
+    var sels = ue.querySelectorAll('select[data-a], .rg[data-a]'), res = ue.querySelector('.ue-res');
+    function val(el) { if (el.tagName === 'SELECT') return el.value; var c = el.querySelector('input:checked'); return c ? c.value : ''; }
+    function clear() { Array.prototype.forEach.call(ue.querySelectorAll('.fix'), function (f) { f.remove(); }); }
+    var chk = ue.querySelector('[data-check]');
+    if (chk) chk.addEventListener('click', function () {
+      clear(); var ok = 0, empty = 0;
+      Array.prototype.forEach.call(sels, function (s) {
+        s.classList.remove('r', 'w');
+        var v = val(s);
+        if (!v) { empty++; return; }
+        if (v === s.getAttribute('data-a')) { ok++; s.classList.add('r'); }
+        else {
+          s.classList.add('w');
+          var f = document.createElement('span'); f.className = 'fix';
+          f.textContent = 'Richtig: ' + s.getAttribute('data-a');
+          s.closest('li').appendChild(f);
+        }
+      });
+      res.textContent = ok + ' von ' + sels.length + ' richtig' + (ok === sels.length ? ' – super! 🎉' : (empty ? ' · ' + empty + ' noch offen' : ''));
+    });
+    var rst = ue.querySelector('[data-reset]');
+    if (rst) rst.addEventListener('click', function () {
+      clear(); res.textContent = '';
+      Array.prototype.forEach.call(sels, function (s) { if (s.tagName === 'SELECT') s.value = ''; else Array.prototype.forEach.call(s.querySelectorAll('input'), function (i) { i.checked = false; }); s.classList.remove('r', 'w'); });
+    });
+    var sol = ue.querySelector('[data-solve]');
+    if (sol) sol.addEventListener('click', function () {
+      var hid = ue.querySelector('.ue-sol[hidden]');
+      Array.prototype.forEach.call(ue.querySelectorAll('.ue-sol'), function (p) { p.hidden = !hid; });
+      sol.textContent = hid ? '🙈 Beispiele verstecken' : '👀 Beispiele zeigen';
+    });
+  });
+  // Learner drafts stay on this device only.
+  Array.prototype.forEach.call(document.querySelectorAll('textarea[data-store]'), function (t) {
+    var k = t.getAttribute('data-store');
+    try { t.value = localStorage.getItem(k) || ''; } catch (e) {}
+    t.addEventListener('input', function () { try { localStorage.setItem(k, t.value); } catch (e) {} });
   });
 
   // 30-minute exam timer. Uses wall-clock time so it stays correct when the phone locks or the tab sleeps.
