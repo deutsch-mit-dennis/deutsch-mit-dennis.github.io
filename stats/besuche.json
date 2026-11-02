@@ -1,25 +1,25 @@
 {
  "hinweis": "Zusammengefasste Besucherzahlen (Cloudflare Web Analytics, ohne Cookies). Automatisch erzeugt.",
- "stand": "2026-11-01T11:11:40.630Z",
- "tag": "2026-10-31",
+ "stand": "2026-11-02T12:14:17.057Z",
+ "tag": "2026-11-01",
  "gestern": {
-  "besuche": 38,
-  "seitenaufrufe": 73
+  "besuche": 81,
+  "seitenaufrufe": 4666
  },
  "letzte7Tage": {
-  "besuche": 289,
-  "seitenaufrufe": 1122
+  "besuche": 353,
+  "seitenaufrufe": 5725
  },
  "herkunft": [
   {
    "name": "deutsch-mit-dennis.de",
    "besuche": 0,
-   "aufrufe": 833
+   "aufrufe": 5372
   },
   {
    "name": "(direkt)",
-   "besuche": 279,
-   "aufrufe": 279
+   "besuche": 344,
+   "aufrufe": 344
   },
   {
    "name": "l.instagram.com",
@@ -28,15 +28,15 @@
   },
   {
    "name": "www.google.com",
-   "besuche": 2,
-   "aufrufe": 2
+   "besuche": 1,
+   "aufrufe": 1
   }
  ],
  "laender": [
   {
    "name": "DE",
-   "besuche": 272,
-   "aufrufe": 1099
+   "besuche": 336,
+   "aufrufe": 5702
   },
   {
    "name": "US",
@@ -66,21 +66,21 @@
  ],
  "geraete": [
   {
-   "name": "mobile",
-   "besuche": 190,
-   "aufrufe": 850
+   "name": "desktop",
+   "besuche": 174,
+   "aufrufe": 4841
   },
   {
-   "name": "desktop",
-   "besuche": 99,
-   "aufrufe": 272
+   "name": "mobile",
+   "besuche": 179,
+   "aufrufe": 884
   }
  ],
  "seiten": [
   {
    "name": "/",
-   "besuche": 289,
-   "aufrufe": 1122
+   "besuche": 353,
+   "aufrufe": 5725
   }
  ],
  "verlauf": {
@@ -183,6 +183,10 @@
   "2026-10-31": {
    "besuche": 38,
    "seitenaufrufe": 73
+  },
+  "2026-11-01": {
+   "besuche": 81,
+   "seitenaufrufe": 4666
   }
  }
 }
