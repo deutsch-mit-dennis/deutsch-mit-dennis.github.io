@@ -319,6 +319,7 @@
     </section>
 
     ${window.DMWitz ? DMWitz.card() : ''}
+    ${window.DMMikula ? DMMikula.card() : ''}
     <section class="dm-section dm-about-teaser">
       <img src="assets/dennis.webp" alt="" width="120" height="192" loading="lazy">
       <div><h2>Wer ist Dennis?</h2><p>Seit 2017 im Deutschunterricht – DaF, Integrationskurse, DSH und TestDaF. Master in Germanistik, lizenzierter DTZ- und telc-Prüfer, vom BAMF zugelassen für Integrations- und Berufssprachkurse bis C2. Ich kenne die Prüfungen aus dem Unterricht und als Prüfer.</p><div class="dm-row"><a class="dm-btn dm-btn-quiet" href="#ueber-mich">Mehr über mich</a><a class="dm-btn dm-btn-quiet" href="#ueber-mich/nachweise">Meine Zulassungen ansehen</a><a class="dm-btn dm-btn-quiet" href="#" data-tour-start><span aria-hidden="true">▶</span> Video: Dennis stellt sich vor</a></div></div>
@@ -1549,6 +1550,7 @@
   /* Einheitlicher Seitenkopf: ältere Seiten bekommen die gleiche Brotkrumen-Zeile wie alle anderen */
   const CRUMB_FOR = {
     witz: [['Witz des Tages']],
+    mikula: [['Mikula lernt Deutsch']],
     quellen: [['Prüfungstraining', '#pruefung'], ['Prüfungsinfos & Quellen']],
     orientierungskurs: [['Prüfungstraining', '#pruefung'], ['Leben in Deutschland']],
     training: [['Prüfungstraining', '#pruefung'], ['Training']],

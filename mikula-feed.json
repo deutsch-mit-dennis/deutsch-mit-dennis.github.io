@@ -1,0 +1,52 @@
+{
+  "items": [
+    {
+      "id": "folge-01-hunger",
+      "n": 1,
+      "date": "2026-11-02T20:45",
+      "wrong": "Ich bin Hunger.",
+      "right": "Ich habe Hunger.",
+      "rule": "Hunger hat man!",
+      "explain": "„Hunger“ hat man auf Deutsch. Also: Ich habe Hunger.",
+      "cover": "assets/mikula/folge-01-hunger.jpg",
+      "ig": "https://www.instagram.com/deutsch_mit_dennis/reel/DfQGfA-RQHk/",
+      "tt": "https://www.tiktok.com/@deutsch_mit_dennis/video/7703665468485209366"
+    },
+    {
+      "id": "folge-02-arzt",
+      "n": 2,
+      "date": "2026-11-07T18:00",
+      "wrong": "Ich gehe nach Arzt.",
+      "right": "Ich gehe zum Arzt.",
+      "rule": "zum Arzt · nach Berlin",
+      "explain": "Zum Arzt, nicht nach Arzt. „Nach“ sagt man bei Städten, zum Beispiel: nach Berlin.",
+      "cover": "assets/mikula/folge-02-arzt.jpg",
+      "ig": "",
+      "tt": ""
+    },
+    {
+      "id": "folge-03-kennen",
+      "n": 3,
+      "date": "2026-11-11T18:00",
+      "wrong": "Ich weiß ihn.",
+      "right": "Ich kenne ihn.",
+      "rule": "Menschen kennt man!",
+      "explain": "Menschen kennt man. „Wissen“ sagt man bei Informationen. Also: Ich kenne ihn.",
+      "cover": "assets/mikula/folge-03-kennen.jpg",
+      "ig": "",
+      "tt": ""
+    },
+    {
+      "id": "folge-04-seit",
+      "n": 4,
+      "date": "2026-11-14T18:00",
+      "wrong": "seit tausend Jahre",
+      "right": "seit tausend Jahren",
+      "rule": "seit + Dativ: Jahren!",
+      "explain": "Nach „seit“ kommt der Dativ. Also: seit tausend Jahren.",
+      "cover": "assets/mikula/folge-04-seit.jpg",
+      "ig": "",
+      "tt": ""
+    }
+  ]
+}
