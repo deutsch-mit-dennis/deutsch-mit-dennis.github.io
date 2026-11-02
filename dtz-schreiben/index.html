@@ -35,6 +35,8 @@ a{color:var(--blue)}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:10px 18px;border-radius:14px;font-weight:700;font-size:17px;text-decoration:none;border:0;cursor:pointer;font-family:inherit;text-align:center}
 .btn-y{background:var(--yellow);color:#1f2f7a;box-shadow:0 5px 0 #c9a920}
 .btn-b{background:var(--blue);color:#fff}
+.btn-w{background:#fff;color:var(--blue)}
+.hero .small{font-size:14px;opacity:.9;margin:10px 0 0}
 .btn-o{background:#fff;color:var(--blue);border:2px solid var(--blue)}
 .row{display:flex;flex-wrap:wrap;gap:10px}
 nav.toc{max-width:720px;margin:-18px auto 0;padding:0 16px;position:relative}
@@ -144,7 +146,8 @@ footer a{display:inline-flex;align-items:center;min-height:44px;padding:0 6px}
     <span class="badge">Neu ab 1. November 2026</span>
     <h1>DTZ Schreiben: dein Vorbereitungspaket</h1>
     <p>Beim Schreiben braucht ihr jetzt <b>mindestens A2</b>. Ein leeres Blatt reicht nicht mehr. Mit diesem Paket schafft ihr das sicher – Schritt für Schritt.</p>
-    <a class="btn btn-y" href="#gerust">✍️ Gleich mit dem Briefgerüst starten</a>
+    <div class="row"><a class="btn btn-y" href="#gerust">✍️ Gleich mit dem Briefgerüst starten</a><a class="btn btn-w" href="/material/dtz-schreiben-vorbereitung.pdf" download>📥 Alles als PDF mit Lösungen</a></div>
+    <p class="small noprint">PDF · 9 Seiten · Übungen, Aufgaben, Mustertexte und Lösungen zum Ausdrucken</p>
   </div>
 </header>
 
@@ -209,7 +212,7 @@ footer a{display:inline-flex;align-items:center;min-height:44px;padding:0 6px}
       <li><b>Gruß + Name</b><span class="ex">Sie: Mit freundlichen Grüßen · du: Viele Grüße / Liebe Grüße</span></li>
     </ol>
     <h3>Vorbereitungsübungen zum Briefgerüst</h3>
-    <p>Fünf kurze Übungen. Wähle die Antworten und tippe auf <b>Prüfen</b>. Am Handy oder auf Papier.</p>
+    <p>Fünf kurze Übungen. Wähle die Antworten und tippe auf <b>Prüfen</b>. Lieber auf Papier? <a href="/material/dtz-schreiben-vorbereitung.pdf" download>PDF mit Lösungen herunterladen</a>.</p>
 
     <div class="ue" id="ue1">
       <h4>Übung 1 · Sie oder du?</h4>
@@ -385,7 +388,8 @@ footer a{display:inline-flex;align-items:center;min-height:44px;padding:0 6px}
   <section class="card noprint">
     <h2>📚 Weiter üben auf der Website</h2>
     <div class="row">
-      <a class="btn btn-b" href="/#training/dtz-schreiben">✍️ DTZ-Schreibtraining online</a>
+      <a class="btn btn-b" href="/material/dtz-schreiben-vorbereitung.pdf" download>📥 PDF mit Lösungen</a>
+      <a class="btn btn-o" href="/#training/dtz-schreiben">✍️ DTZ-Schreibtraining online</a>
       <a class="btn btn-o" href="/#schreiben/bausteine">🧱 Schreib-Bausteine</a>
       <a class="btn btn-o" href="/#simulation/dtz-3">🎧 DTZ Modelltest online</a>
     </div>
