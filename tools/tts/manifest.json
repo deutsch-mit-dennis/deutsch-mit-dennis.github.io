@@ -15663,6 +15663,2526 @@
      "text": "Nein, rückwirkend heißt: auch für die Monate seit April."
     }
    ]
+  },
+  {
+   "key": "t3cb40c62",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "der Name. Mein Name ist Amir."
+    }
+   ]
+  },
+  {
+   "key": "td08a0c9a",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "der Vorname. Mein Vorname ist Sara."
+    }
+   ]
+  },
+  {
+   "key": "t852bd60d",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "der Familienname. Mein Familienname ist Yilmaz."
+    }
+   ]
+  },
+  {
+   "key": "t14b2bcff",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "das Land. Deutschland ist ein Land in Europa."
+    }
+   ]
+  },
+  {
+   "key": "t8a577a9e",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "die Stadt. Ich wohne in einer kleinen Stadt."
+    }
+   ]
+  },
+  {
+   "key": "t91d4d432",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "die Sprache. Ich lerne die deutsche Sprache."
+    }
+   ]
+  },
+  {
+   "key": "t14314cc7",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "die Adresse. Meine Adresse ist neu."
+    }
+   ]
+  },
+  {
+   "key": "t8a18b61e",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "der Beruf. Mein Beruf ist Koch."
+    }
+   ]
+  },
+  {
+   "key": "t39b6a885",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "das Brot. Ich kaufe ein Brot."
+    }
+   ]
+  },
+  {
+   "key": "tab6a554b",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "die Milch. Die Milch steht im Kühlschrank."
+    }
+   ]
+  },
+  {
+   "key": "t538364bd",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "der Apfel. Ich esse einen Apfel."
+    }
+   ]
+  },
+  {
+   "key": "t005e7181",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "der Preis. Der Preis ist niedrig."
+    }
+   ]
+  },
+  {
+   "key": "t35e285d1",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "das Geld. Ich habe genug Geld."
+    }
+   ]
+  },
+  {
+   "key": "t5ab08838",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "die Kasse. Ich bezahle an der Kasse."
+    }
+   ]
+  },
+  {
+   "key": "t1007b00a",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "die Tüte. Ich brauche eine Tüte."
+    }
+   ]
+  },
+  {
+   "key": "tdcad4544",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "das Gemüse. Das Gemüse ist frisch."
+    }
+   ]
+  },
+  {
+   "key": "t692e0401",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "der Termin. Ich habe morgen einen Termin."
+    }
+   ]
+  },
+  {
+   "key": "t2398a0d9",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "der Tag. Heute ist ein schöner Tag."
+    }
+   ]
+  },
+  {
+   "key": "t85842a94",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "die Woche. Eine Woche hat sieben Tage."
+    }
+   ]
+  },
+  {
+   "key": "tdaa51971",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "die Uhr. Die Uhr hängt an der Wand."
+    }
+   ]
+  },
+  {
+   "key": "t1c419c33",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "die Minute. Ich warte eine Minute."
+    }
+   ]
+  },
+  {
+   "key": "tf4f9eb61",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "die Stunde. Der Kurs dauert eine Stunde."
+    }
+   ]
+  },
+  {
+   "key": "t36c62478",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "der Kalender. Der Termin steht im Kalender."
+    }
+   ]
+  },
+  {
+   "key": "t8c1d0068",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "die Pause. Wir machen eine Pause."
+    }
+   ]
+  },
+  {
+   "key": "t6aee75da",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "die Wohnung. Unsere Wohnung hat drei Zimmer."
+    }
+   ]
+  },
+  {
+   "key": "t533b9c3d",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "das Zimmer. Mein Zimmer ist hell."
+    }
+   ]
+  },
+  {
+   "key": "ta5ebb3fb",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "die Küche. Wir essen in der Küche."
+    }
+   ]
+  },
+  {
+   "key": "t2d751dea",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "das Bad. Das Bad ist klein."
+    }
+   ]
+  },
+  {
+   "key": "t458b3ea7",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "der Tisch. Das Buch liegt auf dem Tisch."
+    }
+   ]
+  },
+  {
+   "key": "t24040202",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "der Stuhl. Der Stuhl steht am Tisch."
+    }
+   ]
+  },
+  {
+   "key": "tb5a88317",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "die Miete. Die Miete ist hoch."
+    }
+   ]
+  },
+  {
+   "key": "t22efa175",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "der Schlüssel. Mein Schlüssel liegt auf dem Tisch."
+    }
+   ]
+  },
+  {
+   "key": "t55416e93",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "der Morgen. Am Morgen trinke ich Tee."
+    }
+   ]
+  },
+  {
+   "key": "td585d8d7",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "der Abend. Am Abend lese ich ein Buch."
+    }
+   ]
+  },
+  {
+   "key": "t4c0e2b56",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "das Frühstück. Das Frühstück ist fertig."
+    }
+   ]
+  },
+  {
+   "key": "tadf5c891",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "die Arbeit. Meine Arbeit beginnt um acht Uhr."
+    }
+   ]
+  },
+  {
+   "key": "t42874655",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "die Familie. Meine Familie wohnt hier."
+    }
+   ]
+  },
+  {
+   "key": "tecdf171c",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "der Einkauf. Ich erledige den Einkauf."
+    }
+   ]
+  },
+  {
+   "key": "te37db082",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "der Bus. Der Bus kommt um neun Uhr."
+    }
+   ]
+  },
+  {
+   "key": "t745fc4b4",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "der Arzt. Der Arzt untersucht meinen Arm."
+    }
+   ]
+  },
+  {
+   "key": "t499c94c6",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "die Ärztin. Die Ärztin hilft mir."
+    }
+   ]
+  },
+  {
+   "key": "t35e61a7f",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "der Schmerz. Ich habe Schmerzen im Rücken."
+    }
+   ]
+  },
+  {
+   "key": "t32438a34",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "die Apotheke. Ich hole die Tabletten in der Apotheke."
+    }
+   ]
+  },
+  {
+   "key": "t3918ff89",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "die Tablette. Ich nehme eine Tablette."
+    }
+   ]
+  },
+  {
+   "key": "tbb29daaa",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "der Kopf. Mein Kopf tut weh."
+    }
+   ]
+  },
+  {
+   "key": "tbd4742b8",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "der Rücken. Mein Rücken tut weh."
+    }
+   ]
+  },
+  {
+   "key": "tf9fefa68",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "die Haltestelle. Wir warten an der Haltestelle."
+    }
+   ]
+  },
+  {
+   "key": "t96bcecbf",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "der Bahnhof. Der Bahnhof liegt im Zentrum."
+    }
+   ]
+  },
+  {
+   "key": "t266b4230",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "die Fahrkarte. Ich kaufe eine Fahrkarte."
+    }
+   ]
+  },
+  {
+   "key": "t1a6a85a9",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "der Weg. Der Weg ist kurz."
+    }
+   ]
+  },
+  {
+   "key": "t07015b67",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "die Straße. Die Straße ist breit."
+    }
+   ]
+  },
+  {
+   "key": "t4269620a",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "die Kreuzung. An der Kreuzung gehen Sie rechts."
+    }
+   ]
+  },
+  {
+   "key": "tab3e58fa",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "die Ampel. Die Ampel ist rot."
+    }
+   ]
+  },
+  {
+   "key": "ta0f73c17",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "die Schule. Die Schule beginnt um acht Uhr."
+    }
+   ]
+  },
+  {
+   "key": "tdd994cdf",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "das Kind. Mein Kind geht in die Schule."
+    }
+   ]
+  },
+  {
+   "key": "tb7384adf",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "die Lehrerin. Die Lehrerin erklärt die Aufgabe."
+    }
+   ]
+  },
+  {
+   "key": "t4e219a23",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "die Nachricht. Ich schreibe eine Nachricht."
+    }
+   ]
+  },
+  {
+   "key": "taa01fd85",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "die Entschuldigung. Ich schreibe eine Entschuldigung für mein Kind."
+    }
+   ]
+  },
+  {
+   "key": "t17968a96",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "die Aufgabe. Die Aufgabe ist wichtig."
+    }
+   ]
+  },
+  {
+   "key": "t6c01ffe1",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "das Heft. Ich schreibe den Satz ins Heft."
+    }
+   ]
+  },
+  {
+   "key": "tc96c7c7c",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "die Frage. Ich habe eine Frage."
+    }
+   ]
+  },
+  {
+   "key": "t793a93e5",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "die Rechnung. Ich prüfe die Rechnung."
+    }
+   ]
+  },
+  {
+   "key": "t6767a445",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "der Mangel. Der Mangel war schon bei der Lieferung vorhanden."
+    }
+   ]
+  },
+  {
+   "key": "t90aa2cd5",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "die Ware. Die Ware ist beschädigt."
+    }
+   ]
+  },
+  {
+   "key": "t1686f826",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "der Ersatz. Wir liefern kostenlosen Ersatz."
+    }
+   ]
+  },
+  {
+   "key": "t618c4e58",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "die Lieferung. Die Lieferung kommt morgen an."
+    }
+   ]
+  },
+  {
+   "key": "t317d7e15",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "die Frist. Die Frist endet am Freitag."
+    }
+   ]
+  },
+  {
+   "key": "tff29dba7",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "die Lösung. Wir suchen eine gemeinsame Lösung."
+    }
+   ]
+  },
+  {
+   "key": "tba5d9991",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "die Meinung. Ich möchte meine Meinung erklären."
+    }
+   ]
+  },
+  {
+   "key": "t4f012fe9",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "der Vorteil. Ein Vorteil ist der kurze Arbeitsweg."
+    }
+   ]
+  },
+  {
+   "key": "t6ef48842",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "der Nachteil. Ein Nachteil sind die hohen Kosten."
+    }
+   ]
+  },
+  {
+   "key": "t7ef57409",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "der Grund. Ich nenne einen Grund für meine Entscheidung."
+    }
+   ]
+  },
+  {
+   "key": "t6d2d8644",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "das Beispiel. Dieses Beispiel erklärt die Regel."
+    }
+   ]
+  },
+  {
+   "key": "t4980fc3b",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "die Erfahrung. Ich habe Erfahrung im Verkauf."
+    }
+   ]
+  },
+  {
+   "key": "tdbf62547",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "die Entscheidung. Wir treffen die Entscheidung gemeinsam."
+    }
+   ]
+  },
+  {
+   "key": "tbc559951",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "der Vorschlag. Dein Vorschlag klingt gut."
+    }
+   ]
+  },
+  {
+   "key": "tc960a920",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "die Stelle. Ich suche eine Stelle im Büro."
+    }
+   ]
+  },
+  {
+   "key": "t59b3c477",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "die Bewerbung. Ich schicke meine Bewerbung heute ab."
+    }
+   ]
+  },
+  {
+   "key": "tbea46a8d",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "der Lebenslauf. Mein Lebenslauf ist aktuell."
+    }
+   ]
+  },
+  {
+   "key": "tac008c50",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "das Gespräch. Das Gespräch beginnt um zehn Uhr."
+    }
+   ]
+  },
+  {
+   "key": "t92ec5eb8",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "die Ausbildung. Ich habe meine Ausbildung abgeschlossen."
+    }
+   ]
+  },
+  {
+   "key": "t5ce91de4",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "das Team. Unser Team plant das Projekt."
+    }
+   ]
+  },
+  {
+   "key": "ta459a98f",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "der Ausflug. Wir planen einen Ausflug in den Park."
+    }
+   ]
+  },
+  {
+   "key": "t80381ec1",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "das Treffen. Das Treffen findet am Montag statt."
+    }
+   ]
+  },
+  {
+   "key": "t79339b2c",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "die Liste. Ich schreibe eine Liste für den Einkauf."
+    }
+   ]
+  },
+  {
+   "key": "t5f4e52ec",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "die Hilfe. Vielen Dank für deine Hilfe."
+    }
+   ]
+  },
+  {
+   "key": "tf4a5c483",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "die Jacke. Die Frau trägt eine schwarze Jacke."
+    }
+   ]
+  },
+  {
+   "key": "t05674155",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "die Hose. Die Hose ist blau."
+    }
+   ]
+  },
+  {
+   "key": "t72f1a35e",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "der Pullover. Der Mann trägt einen roten Pullover."
+    }
+   ]
+  },
+  {
+   "key": "t16692445",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "das Hemd. Er trägt ein weißes Hemd."
+    }
+   ]
+  },
+  {
+   "key": "t29eb0d0e",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "der Schuh. Der Schuh passt gut."
+    }
+   ]
+  },
+  {
+   "key": "tdaed92bf",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "die Größe. Welche Größe brauchen Sie?"
+    }
+   ]
+  },
+  {
+   "key": "t0451678e",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "die Farbe. Meine Lieblingsfarbe ist Blau."
+    }
+   ]
+  },
+  {
+   "key": "t065f08b3",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "das Kleid. Das Kleid ist elegant."
+    }
+   ]
+  },
+  {
+   "key": "t880e0568",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "die Qualifikation. Diese Qualifikation ist für die Stelle erforderlich."
+    }
+   ]
+  },
+  {
+   "key": "t093c0118",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "die Verantwortung. Ich übernehme Verantwortung für das Projekt."
+    }
+   ]
+  },
+  {
+   "key": "t47c7c124",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "die Fähigkeit. Kommunikation ist eine wichtige Fähigkeit."
+    }
+   ]
+  },
+  {
+   "key": "t8559e9d4",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "die Weiterbildung. Ich nehme an einer Weiterbildung teil."
+    }
+   ]
+  },
+  {
+   "key": "t24da0db9",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "die Abteilung. Unsere Abteilung betreut die Kunden."
+    }
+   ]
+  },
+  {
+   "key": "t6059966d",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "die Beschwerde. Wir reagieren auf Ihre Beschwerde."
+    }
+   ]
+  },
+  {
+   "key": "t783e3380",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "der Kunde. Wir beraten den Kunden ausführlich."
+    }
+   ]
+  },
+  {
+   "key": "t3ba11ac8",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "die Kundin. Die Kundin bittet um einen Rückruf."
+    }
+   ]
+  },
+  {
+   "key": "tfa1d8dab",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "die Rückmeldung. Vielen Dank für Ihre Rückmeldung."
+    }
+   ]
+  },
+  {
+   "key": "ta2121341",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "die Erstattung. Die Erstattung erfolgt in dieser Woche."
+    }
+   ]
+  },
+  {
+   "key": "t24806c39",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "die Maßnahme. Die Maßnahme verbessert die Qualität."
+    }
+   ]
+  },
+  {
+   "key": "tfcc1da26",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "die Vereinbarung. Wir halten die Vereinbarung schriftlich fest."
+    }
+   ]
+  },
+  {
+   "key": "t32ddac73",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "der Betrieb. Unser Betrieb bietet flexible Arbeitszeiten an."
+    }
+   ]
+  },
+  {
+   "key": "t412b60e5",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "die Arbeitszeit. Wir möchten die Arbeitszeit flexibler gestalten."
+    }
+   ]
+  },
+  {
+   "key": "t7be57771",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "die Regelung. Die neue Regelung gilt ab Oktober."
+    }
+   ]
+  },
+  {
+   "key": "te7d181dd",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "die Belastung. Die hohe Belastung führt zu Fehlern."
+    }
+   ]
+  },
+  {
+   "key": "tecf86b46",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "der Kompromiss. Wir haben einen fairen Kompromiss gefunden."
+    }
+   ]
+  },
+  {
+   "key": "t34408165",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "die Zustimmung. Der Vorschlag findet meine Zustimmung."
+    }
+   ]
+  },
+  {
+   "key": "t6545af72",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "die Umsetzung. Die Umsetzung beginnt nächste Woche."
+    }
+   ]
+  },
+  {
+   "key": "tf613faf7",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "das Ziel. Unser Ziel ist eine pünktliche Lieferung."
+    }
+   ]
+  },
+  {
+   "key": "t22a13d94",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "die Ursache. Wir untersuchen die Ursache des Fehlers."
+    }
+   ]
+  },
+  {
+   "key": "t09b6e2a0",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "die Zuständigkeit. Die Zuständigkeit muss klar sein."
+    }
+   ]
+  },
+  {
+   "key": "tbff42302",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "der Ablauf. Wir verbessern den Ablauf."
+    }
+   ]
+  },
+  {
+   "key": "t0465fb2a",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "die Qualität. Wir überprüfen die Qualität regelmäßig."
+    }
+   ]
+  },
+  {
+   "key": "t4354db64",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "heißen. Ich heiße Sara."
+    }
+   ]
+  },
+  {
+   "key": "tb16a46a1",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "kommen. Ich komme aus der Türkei."
+    }
+   ]
+  },
+  {
+   "key": "t96fe7b77",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "wohnen. Ich wohne in der Stadt."
+    }
+   ]
+  },
+  {
+   "key": "ta91c0ba0",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "sprechen. Ich spreche mit meiner Lehrerin."
+    }
+   ]
+  },
+  {
+   "key": "te6fd8193",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "lernen. Ich lerne jeden Tag Deutsch."
+    }
+   ]
+  },
+  {
+   "key": "t54e8a486",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "sein. Ich bin neu im Kurs."
+    }
+   ]
+  },
+  {
+   "key": "t3e190eee",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "kaufen. Ich kaufe einen Apfel."
+    }
+   ]
+  },
+  {
+   "key": "t7595975f",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "bezahlen. Ich bezahle die Rechnung."
+    }
+   ]
+  },
+  {
+   "key": "te500d62c",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "brauchen. Ich brauche eine Tüte."
+    }
+   ]
+  },
+  {
+   "key": "t4e2939f7",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "kosten. Das Brot kostet drei Euro."
+    }
+   ]
+  },
+  {
+   "key": "t0fd0b3a2",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "essen. Ich esse einen Apfel."
+    }
+   ]
+  },
+  {
+   "key": "td215b325",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "nehmen. Ich nehme eine Tablette."
+    }
+   ]
+  },
+  {
+   "key": "t39428e00",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "haben. Ich habe heute einen Termin."
+    }
+   ]
+  },
+  {
+   "key": "t7148c445",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "beginnen. Der Kurs beginnt um neun Uhr."
+    }
+   ]
+  },
+  {
+   "key": "t138d9699",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "dauern. Der Kurs dauert eine Stunde."
+    }
+   ]
+  },
+  {
+   "key": "t96f87aac",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "warten. Ich warte auf den Bus."
+    }
+   ]
+  },
+  {
+   "key": "t0f77df97",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "fragen. Ich frage die Lehrerin nach dem Termin."
+    }
+   ]
+  },
+  {
+   "key": "t9e54e1d6",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "vereinbaren. Ich vereinbare einen Termin mit der Ärztin."
+    }
+   ]
+  },
+  {
+   "key": "t5949cffc",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "suchen. Ich suche eine Wohnung."
+    }
+   ]
+  },
+  {
+   "key": "t1c269390",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "finden. Ich finde den Schlüssel."
+    }
+   ]
+  },
+  {
+   "key": "t96811e1c",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "öffnen. Ich öffne das Fenster."
+    }
+   ]
+  },
+  {
+   "key": "t07c068ba",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "schließen. Ich schließe die Tür."
+    }
+   ]
+  },
+  {
+   "key": "tc5667102",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "putzen. Ich putze das Bad."
+    }
+   ]
+  },
+  {
+   "key": "t31818058",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "aufstehen. Ich stehe um sieben Uhr auf."
+    }
+   ]
+  },
+  {
+   "key": "t8c619f28",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "arbeiten. Ich arbeite als Koch."
+    }
+   ]
+  },
+  {
+   "key": "t897c52c9",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "kochen. Ich koche eine Suppe."
+    }
+   ]
+  },
+  {
+   "key": "t24667849",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "fahren. Ich fahre mit dem Bus."
+    }
+   ]
+  },
+  {
+   "key": "t64379821",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "einkaufen. Ich kaufe am Samstag ein."
+    }
+   ]
+  },
+  {
+   "key": "tf93e884e",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "helfen. Die Ärztin hilft mir."
+    }
+   ]
+  },
+  {
+   "key": "t76d5eb0a",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "sollen. Ich soll mehr Wasser trinken."
+    }
+   ]
+  },
+  {
+   "key": "t47c96b85",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "müssen. Ich muss heute zum Arzt gehen."
+    }
+   ]
+  },
+  {
+   "key": "t3bfbf842",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "trinken. Ich trinke viel Wasser."
+    }
+   ]
+  },
+  {
+   "key": "t73719d54",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "fehlen. Mein Kind fehlt heute in der Schule."
+    }
+   ]
+  },
+  {
+   "key": "tececad34",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "aussteigen. Ich steige aus dem Bus aus."
+    }
+   ]
+  },
+  {
+   "key": "td1a9be2f",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "umsteigen. Ich steige in den Zug um."
+    }
+   ]
+  },
+  {
+   "key": "t6d75a5d4",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "gehen. Ich gehe zur Schule."
+    }
+   ]
+  },
+  {
+   "key": "t5fdafb7f",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "zeigen. Ich zeige Ihnen den Weg."
+    }
+   ]
+  },
+  {
+   "key": "tcb3de5e8",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "schreiben. Ich schreibe der Lehrerin eine Nachricht."
+    }
+   ]
+  },
+  {
+   "key": "t7eba8062",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "erklären. Die Lehrerin erklärt mir die Aufgabe."
+    }
+   ]
+  },
+  {
+   "key": "t1dcaa112",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "entschuldigen. Ich entschuldige mein Kind für heute."
+    }
+   ]
+  },
+  {
+   "key": "tbdcb60f2",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "bitten. Ich bitte die Lehrerin um Hilfe."
+    }
+   ]
+  },
+  {
+   "key": "tbe87ec05",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "reklamieren. Ich reklamiere die beschädigte Ware."
+    }
+   ]
+  },
+  {
+   "key": "t8d37012c",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "umtauschen. Ich tausche die Jacke gegen eine größere Jacke um."
+    }
+   ]
+  },
+  {
+   "key": "tf972ee11",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "prüfen. Wir prüfen die Rechnung auf Fehler."
+    }
+   ]
+  },
+  {
+   "key": "t75a33782",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "liefern. Wir liefern Ihnen die Ware am Freitag."
+    }
+   ]
+  },
+  {
+   "key": "t10298110",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "erwarten. Ich erwarte eine schnelle Lösung."
+    }
+   ]
+  },
+  {
+   "key": "tcb04fc37",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "meinen. Ich meine, dass der Vorschlag sinnvoll ist."
+    }
+   ]
+  },
+  {
+   "key": "tdeff8def",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "begründen. Ich begründe meine Meinung mit einem Beispiel."
+    }
+   ]
+  },
+  {
+   "key": "tae629379",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "zustimmen. Ich stimme Ihrem Vorschlag zu."
+    }
+   ]
+  },
+  {
+   "key": "t842ee0b3",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "ablehnen. Ich lehne den Vorschlag ab."
+    }
+   ]
+  },
+  {
+   "key": "t48f95155",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "diskutieren. Wir diskutieren über die Arbeitszeit."
+    }
+   ]
+  },
+  {
+   "key": "td1e6b959",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "vergleichen. Wir vergleichen den Vorschlag mit einer Alternative."
+    }
+   ]
+  },
+  {
+   "key": "tc7569bb1",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "sich bewerben. Ich bewerbe mich um eine Stelle im Büro."
+    }
+   ]
+  },
+  {
+   "key": "t3cce4542",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "vorbereiten. Ich bereite das Gespräch vor."
+    }
+   ]
+  },
+  {
+   "key": "t8d4d9abe",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "verdienen. Ich verdiene mein Geld im Verkauf."
+    }
+   ]
+  },
+  {
+   "key": "tc86ee7e7",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "planen. Wir planen einen Ausflug."
+    }
+   ]
+  },
+  {
+   "key": "t573c67ad",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "vorschlagen. Ich schlage einen Ausflug in den Park vor."
+    }
+   ]
+  },
+  {
+   "key": "t437b9986",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "mitbringen. Ich bringe einen Kuchen mit."
+    }
+   ]
+  },
+  {
+   "key": "t37af2a2b",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "organisieren. Wir organisieren das Treffen gemeinsam."
+    }
+   ]
+  },
+  {
+   "key": "t0564364d",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "tragen. Der Mann trägt einen roten Pullover."
+    }
+   ]
+  },
+  {
+   "key": "t5e9cdede",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "passen. Die Jacke passt mir gut."
+    }
+   ]
+  },
+  {
+   "key": "ta446116f",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "anprobieren. Ich probiere die blaue Hose an."
+    }
+   ]
+  },
+  {
+   "key": "tb538cb5d",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "aussehen. Die Jacke sieht elegant aus."
+    }
+   ]
+  },
+  {
+   "key": "t37fd26f5",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "beschreiben. Ich beschreibe die Kleidung der Frau."
+    }
+   ]
+  },
+  {
+   "key": "tb3896343",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "übernehmen. Ich übernehme die Verantwortung für das Projekt."
+    }
+   ]
+  },
+  {
+   "key": "ta6485309",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "verfügen. Ich verfüge über Erfahrung im Verkauf."
+    }
+   ]
+  },
+  {
+   "key": "t16908c76",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "teilnehmen. Ich nehme an einer Weiterbildung teil."
+    }
+   ]
+  },
+  {
+   "key": "tda44cfdb",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "überzeugen. Ich überzeuge das Team von meinem Vorschlag."
+    }
+   ]
+  },
+  {
+   "key": "t9fd4610c",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "reagieren. Wir reagieren sofort auf Ihre Beschwerde."
+    }
+   ]
+  },
+  {
+   "key": "t861ef711",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "erstatten. Wir erstatten Ihnen die Kosten."
+    }
+   ]
+  },
+  {
+   "key": "td1bc2610",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "bearbeiten. Wir bearbeiten Ihre Beschwerde heute."
+    }
+   ]
+  },
+  {
+   "key": "t18574612",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "vermeiden. Wir vermeiden unnötige Fehler."
+    }
+   ]
+  },
+  {
+   "key": "t58ba5634",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "berücksichtigen. Wir berücksichtigen Ihre Wünsche bei der Planung."
+    }
+   ]
+  },
+  {
+   "key": "t6ffee9d9",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "ermöglichen. Die Regelung ermöglicht uns flexible Arbeitszeiten."
+    }
+   ]
+  },
+  {
+   "key": "tc868849b",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "verbessern. Wir verbessern die Qualität unserer Arbeit."
+    }
+   ]
+  },
+  {
+   "key": "t50b5247b",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "umsetzen. Wir setzen die Maßnahme sofort um."
+    }
+   ]
+  },
+  {
+   "key": "t435d72ff",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "festlegen. Wir legen die Frist gemeinsam fest."
+    }
+   ]
+  },
+  {
+   "key": "tc0a2b430",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "lösen. Wir lösen das Problem gemeinsam."
+    }
+   ]
+  },
+  {
+   "key": "t539a4b96",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "kontrollieren. Wir kontrollieren den Ablauf regelmäßig."
+    }
+   ]
+  },
+  {
+   "key": "t2be7bb4f",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "neu. Ich bin neu im Kurs."
+    }
+   ]
+  },
+  {
+   "key": "tfc694090",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "alt. Das Haus ist alt."
+    }
+   ]
+  },
+  {
+   "key": "td7a7107e",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "jung. Mein Bruder ist jung."
+    }
+   ]
+  },
+  {
+   "key": "t3a04c22e",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "freundlich. Die Lehrerin ist freundlich."
+    }
+   ]
+  },
+  {
+   "key": "t1e384052",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "gut. Mein Deutsch ist gut."
+    }
+   ]
+  },
+  {
+   "key": "t12a397c7",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "international. Unser Kurs ist international."
+    }
+   ]
+  },
+  {
+   "key": "t5262cabf",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "frisch. Das Gemüse ist frisch."
+    }
+   ]
+  },
+  {
+   "key": "t53b05d78",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "teuer. Die Milch ist teuer."
+    }
+   ]
+  },
+  {
+   "key": "t11dd6ed8",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "günstig. Das Brot ist günstig."
+    }
+   ]
+  },
+  {
+   "key": "t337e369e",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "süß. Der Apfel ist süß."
+    }
+   ]
+  },
+  {
+   "key": "t4ce64aa6",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "lecker. Das Brot ist lecker."
+    }
+   ]
+  },
+  {
+   "key": "t3d8464b9",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "billig. Die Tüte ist billig."
+    }
+   ]
+  },
+  {
+   "key": "tb90ab160",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "pünktlich. Ich bin immer pünktlich."
+    }
+   ]
+  },
+  {
+   "key": "tce83c79b",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "früh. Der Termin ist früh am Morgen."
+    }
+   ]
+  },
+  {
+   "key": "t0d4143fc",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "spät. Es ist schon spät."
+    }
+   ]
+  },
+  {
+   "key": "tcbd44947",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "frei. Der Termin ist noch frei."
+    }
+   ]
+  },
+  {
+   "key": "t1652b223",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "kurz. Die Pause ist kurz."
+    }
+   ]
+  },
+  {
+   "key": "t1c25a96c",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "lang. Der Tag ist lang."
+    }
+   ]
+  },
+  {
+   "key": "t5f3efd21",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "groß. Die Wohnung ist groß."
+    }
+   ]
+  },
+  {
+   "key": "t9a7d41b4",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "klein. Das Bad ist klein."
+    }
+   ]
+  },
+  {
+   "key": "t688fd277",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "hell. Das Zimmer ist hell."
+    }
+   ]
+  },
+  {
+   "key": "t356e4189",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "dunkel. Die Küche ist dunkel."
+    }
+   ]
+  },
+  {
+   "key": "t62c66dd7",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "ruhig. Die Wohnung ist ruhig."
+    }
+   ]
+  },
+  {
+   "key": "t97a81690",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "sauber. Das Bad ist sauber."
+    }
+   ]
+  },
+  {
+   "key": "tf4affa96",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "müde. Ich bin am Abend müde."
+    }
+   ]
+  },
+  {
+   "key": "t87de6435",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "wach. Ich bin schon wach."
+    }
+   ]
+  },
+  {
+   "key": "t92b25d4c",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "fertig. Das Frühstück ist fertig."
+    }
+   ]
+  },
+  {
+   "key": "t837fd26b",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "beschäftigt. Ich bin heute beschäftigt."
+    }
+   ]
+  },
+  {
+   "key": "t3fcabb95",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "zufrieden. Ich bin mit meiner Arbeit zufrieden."
+    }
+   ]
+  },
+  {
+   "key": "t3e01d506",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "krank. Mein Kind ist krank."
+    }
+   ]
+  },
+  {
+   "key": "t686064e0",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "gesund. Ich bin wieder gesund."
+    }
+   ]
+  },
+  {
+   "key": "t182285f6",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "stark. Die Schmerzen sind stark."
+    }
+   ]
+  },
+  {
+   "key": "td95e808e",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "schwach. Ich fühle mich schwach."
+    }
+   ]
+  },
+  {
+   "key": "tc15ad765",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "wichtig. Der Termin ist wichtig."
+    }
+   ]
+  },
+  {
+   "key": "t87398d14",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "nah. Der Bahnhof ist nah."
+    }
+   ]
+  },
+  {
+   "key": "t4dcc763b",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "weit. Die Hose ist zu weit."
+    }
+   ]
+  },
+  {
+   "key": "tbb9db633",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "richtig. Das ist die richtige Haltestelle."
+    }
+   ]
+  },
+  {
+   "key": "t53fd3067",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "falsch. Das ist die falsche Straße."
+    }
+   ]
+  },
+  {
+   "key": "t39a2c37a",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "voll. Der Bus ist voll."
+    }
+   ]
+  },
+  {
+   "key": "t1dc184e2",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "leer. Der Bus ist leer."
+    }
+   ]
+  },
+  {
+   "key": "taf16e319",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "höflich. Die Nachricht ist höflich."
+    }
+   ]
+  },
+  {
+   "key": "t92c39b78",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "schwierig. Die Aufgabe ist schwierig."
+    }
+   ]
+  },
+  {
+   "key": "t3d9d32f0",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "leicht. Die Aufgabe ist leicht."
+    }
+   ]
+  },
+  {
+   "key": "t83d65448",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "verständlich. Die Erklärung ist verständlich."
+    }
+   ]
+  },
+  {
+   "key": "tf3a51cb4",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "beschädigt. Die Ware ist beschädigt."
+    }
+   ]
+  },
+  {
+   "key": "tdd4d51c8",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "defekt. Das Gerät ist defekt."
+    }
+   ]
+  },
+  {
+   "key": "ta42fa6d2",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "unzufrieden. Ich bin mit der Lieferung unzufrieden."
+    }
+   ]
+  },
+  {
+   "key": "tb11f4e29",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "kostenlos. Der Ersatz ist kostenlos."
+    }
+   ]
+  },
+  {
+   "key": "tc1fe4a55",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "möglich. Ein Umtausch ist möglich."
+    }
+   ]
+  },
+  {
+   "key": "t0dcb8882",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "notwendig. Eine Reparatur ist notwendig."
+    }
+   ]
+  },
+  {
+   "key": "t6b0c5405",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "sinnvoll. Der Vorschlag ist sinnvoll."
+    }
+   ]
+  },
+  {
+   "key": "tda756ecd",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "überzeugend. Ihr Argument ist überzeugend."
+    }
+   ]
+  },
+  {
+   "key": "tb2ed964b",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "unterschiedlich. Unsere Meinungen sind unterschiedlich."
+    }
+   ]
+  },
+  {
+   "key": "t0e9d288b",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "gemeinsam. Wir haben ein gemeinsames Ziel."
+    }
+   ]
+  },
+  {
+   "key": "td94bc843",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "persönlich. Das ist meine persönliche Meinung."
+    }
+   ]
+  },
+  {
+   "key": "t959aacde",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "zuverlässig. Meine Kollegin ist zuverlässig."
+    }
+   ]
+  },
+  {
+   "key": "t5f3c7764",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "flexibel. Ich bin zeitlich flexibel."
+    }
+   ]
+  },
+  {
+   "key": "t40427c55",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "erfahren. Sie ist eine erfahrene Mitarbeiterin."
+    }
+   ]
+  },
+  {
+   "key": "t96427ef5",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "selbstständig. Ich arbeite selbstständig."
+    }
+   ]
+  },
+  {
+   "key": "t7f87add0",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "verantwortlich. Ich bin für die Planung verantwortlich."
+    }
+   ]
+  },
+  {
+   "key": "t958eed6f",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "praktisch. Deine Idee ist praktisch."
+    }
+   ]
+  },
+  {
+   "key": "t75fe0cef",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "gemütlich. Der Raum ist gemütlich."
+    }
+   ]
+  },
+  {
+   "key": "t6a040b10",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "bequem. Die Hose ist bequem."
+    }
+   ]
+  },
+  {
+   "key": "t1d761b7a",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "eng. Die Jacke ist zu eng."
+    }
+   ]
+  },
+  {
+   "key": "t6afce85e",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "elegant. Das Kleid ist elegant."
+    }
+   ]
+  },
+  {
+   "key": "t49fa8117",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "bunt. Der Pullover ist bunt."
+    }
+   ]
+  },
+  {
+   "key": "t3b875c8f",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "schwarz. Die Jacke ist schwarz."
+    }
+   ]
+  },
+  {
+   "key": "ta045e6c0",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "qualifiziert. Sie ist für die Stelle qualifiziert."
+    }
+   ]
+  },
+  {
+   "key": "tf998f89c",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "belastbar. Ich bin belastbar und zuverlässig."
+    }
+   ]
+  },
+  {
+   "key": "t420d10c5",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "teamfähig. Die neue Kollegin ist teamfähig."
+    }
+   ]
+  },
+  {
+   "key": "t6cd7fcd7",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "lösungsorientiert. Wir arbeiten lösungsorientiert."
+    }
+   ]
+  },
+  {
+   "key": "tcf29a985",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "verbindlich. Der Termin ist verbindlich."
+    }
+   ]
+  },
+  {
+   "key": "t7c3db579",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "angemessen. Wir suchen eine angemessene Lösung."
+    }
+   ]
+  },
+  {
+   "key": "t4ec91c85",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "zeitnah. Wir antworten zeitnah."
+    }
+   ]
+  },
+  {
+   "key": "ta89c182f",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "transparent. Der Ablauf ist transparent."
+    }
+   ]
+  },
+  {
+   "key": "t6fa50c63",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "wirtschaftlich. Diese Lösung ist wirtschaftlich."
+    }
+   ]
+  },
+  {
+   "key": "td78030ec",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "fair. Der Kompromiss ist fair."
+    }
+   ]
+  },
+  {
+   "key": "tac73c581",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "langfristig. Wir brauchen eine langfristige Lösung."
+    }
+   ]
+  },
+  {
+   "key": "t91811314",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "effizient. Der neue Ablauf ist effizient."
+    }
+   ]
+  },
+  {
+   "key": "t4ea9bea0",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "umsetzbar. Die Maßnahme ist umsetzbar."
+    }
+   ]
+  },
+  {
+   "key": "t224e2fc0",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "dringend. Das Problem ist dringend."
+    }
+   ]
+  },
+  {
+   "key": "t45ac087a",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "zuständig. Unsere Abteilung ist dafür zuständig."
+    }
+   ]
+  },
+  {
+   "key": "tcc523003",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "realistisch. Die Frist ist realistisch."
+    }
+   ]
   }
  ]
 }

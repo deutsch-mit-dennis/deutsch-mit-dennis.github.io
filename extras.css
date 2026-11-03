@@ -877,3 +877,19 @@ header.dm-header nav{margin-left:auto}
 @media (max-width:1180px){header.dm-header .dm-hshare,header.dm-header .dm-bell,header.dm-header #pl-menu{flex-shrink:0}header.dm-header nav{flex-basis:100%}}
 main#main{overflow-x:clip} /* schwebende 3D-Bilder dürfen die Seite nicht seitlich verschiebbar machen */
 .dm-pkg-digi-h{margin:40px 0 12px;font-size:clamp(26px,4vw,34px)}
+/* Wortkarten mit Bild, Beispielsatz und Vorlese-Knopf (vocab.js vcard) */
+.v-card.v-pic{position:relative;display:flex;flex-direction:column;padding:0!important;min-height:0!important;overflow:hidden;border-left:4px solid #8fa3d8!important}
+.v-card.v-pic.v-verb{border-left-color:#e0913d!important}.v-card.v-pic.v-adj{border-left-color:#3aa37a!important}
+.v-pic-link{display:flex;flex-direction:column;gap:4px;padding:12px 14px 14px;color:inherit;text-decoration:none;height:100%}
+.v-pic-link:focus-visible{outline:3px solid var(--dm-tinte);outline-offset:-3px}
+.v-pic-img{display:block;width:100%;max-width:150px;aspect-ratio:1;height:auto;margin:0 auto 6px;border-radius:12px;object-fit:cover;background:#f3f5fb}
+.v-card.v-pic strong{font-size:20px;line-height:1.25;padding-right:40px}
+.v-card.v-pic span{font-size:14px;color:var(--dm-muted,#526078);line-height:1.35}
+.v-card.v-pic em{font-style:italic;font-size:14px;line-height:1.4;color:#3b4560;margin-top:2px}
+.v-say{position:absolute;right:6px;bottom:6px;width:44px;height:44px;border:0;border-radius:50%;background:#eef1f8;font-size:18px;cursor:pointer;line-height:1}
+.v-say:hover,.v-say:focus-visible{background:var(--dm-tinte-soft,#e3e9fb)}
+.v-pic-img+strong{padding-right:0}
+.v-pic-link em{padding-right:44px}
+@media (max-width:420px){.v-pic-img{max-width:110px}.v-card.v-pic strong{font-size:18px}}
+/* Lektion am Handy: ab Lernschritt 2 schmaler Kopf, damit der Inhalt sofort sichtbar ist */
+@media (max-width:600px){.pl-lesson-head.is-compact{margin:4px 0 6px!important}.pl-lesson-head.is-compact h1{font-size:22px!important;line-height:1.2!important;margin:2px 0!important}.pl-lesson-head.is-compact p{display:none}.pl-lesson-head.is-compact .pl-step-count{font-size:16px!important}.pl-lesson-head.is-compact .pl-step-count small{display:none}.pl-mobile-step.is-compact{margin:4px 0 14px!important;font-size:0}.pl-mobile-step.is-compact select{font-size:16px!important;margin-top:0!important}}

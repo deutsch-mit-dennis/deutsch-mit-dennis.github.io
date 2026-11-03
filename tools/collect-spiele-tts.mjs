@@ -59,3 +59,8 @@ const nidSeen = new Set(), nidItems = [];
 for (const c of nid.CH) for (const s of c.steps) if (s.t === 'talk') for (const text of [s.s, ...s.w.map(w => w[1])]) if (!nidSeen.has(text)) { nidSeen.add(text); nidItems.push({ text, voice: nid.P[s.p].voice }); }
 await writeFile(new URL('spiele/tts-nid.json', R), JSON.stringify(nidItems, null, 1) + '\n');
 console.log(`spiele/tts-nid.json: ${nidItems.length} Sätze`);
+
+// Lektionen, Wortkarten: „<Wort>. <Beispielsatz>“ (Vorlese-Knopf in vocab.js vcard)
+const vsrc = await readFile(new URL('vocab-data.js', R), 'utf8');
+const { wordLibrary } = new Function(vsrc + ';return { wordLibrary }')();
+await write('wortschatz', uniq(Object.values(wordLibrary).map(w => `${w.word}. ${w.example || ''}`)), 'f2');
