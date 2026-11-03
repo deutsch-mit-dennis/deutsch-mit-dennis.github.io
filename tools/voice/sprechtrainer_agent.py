@@ -63,6 +63,11 @@ CONFIG = {
         "call_limits": {"agent_concurrency_limit": 3, "daily_limit": 60, "bursting_enabled": False},
         # only the own website may start talks (others cannot spend the credits)
         "auth": {"enable_auth": False, "allowlist": [{"hostname": "deutsch-mit-dennis.de"}]},
+        "widget": {"action_text": "Mit Dennis üben", "start_call_text": "Gespräch starten", "end_call_text": "Beenden",
+                   "expand_text": "Öffnen", "listening_text": "Ich höre zu …", "speaking_text": "Dennis spricht",
+                   "text_contents": {"main_label": "Mit Dennis üben", "start_call": "Gespräch starten", "end_call": "Beenden",
+                                     "listening_status": "Ich höre zu …", "speaking_status": "Dennis spricht",
+                                     "connecting_status": "Verbinde …"}},
     },
 }
 
