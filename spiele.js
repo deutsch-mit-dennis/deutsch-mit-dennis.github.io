@@ -39,7 +39,7 @@
     { id: 'abenteuer', icon: '🏃', t: 'Abenteuer', d: 'Spiele mit Geschichte: laufen und springen mit Lino oder neu in einer deutschen Stadt ankommen – Deutsch lernen nebenbei.' },
     { id: 'basis', icon: '🧩', t: 'Wörter und Grammatik', d: 'Zahlen, Artikel, Verben, Memory und Briefe – für A1 bis B1.' },
     { id: 'alltag', icon: '🛒', t: 'Alltag: Reisen, Einkaufen, Ämter', d: 'Wortschatz für Bahnhof, Supermarkt, Arzt, Wohnung und Behörden – ganz ohne Prüfungsdruck.' },
-    { id: 'b2', icon: '💼', t: 'Prüfung DTB B2 Beruf', d: 'Redemittel, Nomen-Verb-Verbindungen, Präpositionen und Konnektoren für den Beruf.' },
+    { id: 'b2', icon: '💼', t: 'Prüfung DTB B1 und B2 Beruf', d: 'Telefonieren, Berufswortschatz, formelle E-Mails, Nominalstil, Redemittel, Präpositionen und Konnektoren für den Beruf.' },
     { id: 'lid', icon: '🇩🇪', t: 'Test „Leben in Deutschland“', d: 'Prüfungsfragen, Geschichte und Staat – spielerisch wiederholen.' }
   ];
   const catOf = g => g.cat || 'basis';
