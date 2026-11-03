@@ -308,6 +308,8 @@
 
     ${songStage(false)}
 
+    ${window.DMMikula ? DMMikula.card() : ''}
+
     <section class="dm-section dm-news" aria-labelledby="news-h">
       <div class="dm-section-head"><h2 id="news-h">Neu auf der Seite</h2><p>Jede Woche kommt etwas dazu.</p></div>
       <ol class="dm-newslist" id="dm-newslist" aria-busy="true"></ol>
@@ -319,7 +321,6 @@
     </section>
 
     ${window.DMWitz ? DMWitz.card() : ''}
-    ${window.DMMikula ? DMMikula.card() : ''}
     <section class="dm-section dm-about-teaser">
       <img src="assets/dennis.webp" alt="" width="120" height="192" loading="lazy">
       <div><h2>Wer ist Dennis?</h2><p>Seit 2017 im Deutschunterricht – DaF, Integrationskurse, DSH und TestDaF. Master in Germanistik, lizenzierter DTZ- und telc-Prüfer, vom BAMF zugelassen für Integrations- und Berufssprachkurse bis C2. Ich kenne die Prüfungen aus dem Unterricht und als Prüfer.</p><div class="dm-row"><a class="dm-btn dm-btn-quiet" href="#ueber-mich">Mehr über mich</a><a class="dm-btn dm-btn-quiet" href="#ueber-mich/nachweise">Meine Zulassungen ansehen</a><a class="dm-btn dm-btn-quiet" href="#" data-tour-start><span aria-hidden="true">▶</span> Video: Dennis stellt sich vor</a></div></div>
