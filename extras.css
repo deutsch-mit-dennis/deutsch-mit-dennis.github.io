@@ -7,7 +7,7 @@
 .dm-backbar[hidden]{display:none}
 .dm-backbar{display:block!important;text-align:left;padding:0!important;margin:0!important;width:auto!important}
 .dm-backbar-in{max-width:1180px;margin:0 auto;padding:6px clamp(16px,3vw,32px);display:flex!important;gap:8px;align-items:center;justify-content:flex-start!important}
-.dm-backbar a{display:inline-flex;align-items:center;gap:8px;min-height:40px;padding:4px 14px 4px 10px;border-radius:999px;text-decoration:none;font-weight:700;font-size:16px;color:var(--dm-tinte);border:1.5px solid transparent;transition:background .15s,border-color .15s,transform .15s}
+.dm-backbar a{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:4px 14px 4px 10px;border-radius:999px;text-decoration:none;font-weight:700;font-size:16px;color:var(--dm-tinte);border:1.5px solid transparent;transition:background .15s,border-color .15s,transform .15s}
 .dm-backbar a span{font-size:20px;line-height:1}
 .dm-backbar .dm-back{background:var(--dm-tinte-soft)}
 .dm-backbar a:hover{border-color:var(--dm-tinte);transform:translateX(-2px)}
@@ -264,6 +264,8 @@ li.sc-sp .sc-cat{background:#FDE3DC;color:#A3281E}li.sc-gr .sc-cat{background:#D
 .dm-toolgrid a[data-img]:hover .dm-tool-3d,.dm-toolgrid a[data-img]:focus-visible .dm-tool-3d{transform:scale(1.18) rotate(-10deg) translateY(-3px)}
 @media (max-width:860px){.dm-toolgrid a[data-img]:nth-child(n){padding-left:70px!important}}
 @media (max-width:620px){.dm-3d{width:64px}.dm-head-art{gap:12px}}
+/* Small phones: long one-word titles (e.g. "Prüfungstraining") pushed the 3D icon off screen */
+@media (max-width:400px){.dm-head-art .dm-3d{width:52px}.dm-head-art h1{font-size:clamp(26px,8.6vw,34px)}}
 @media (prefers-reduced-motion:reduce){.dm-3d,.dm-3d-float,.dm-3d-swing,.dm-3d-bounce,.dm-3d-glow{animation:none!important}.dm-tool-3d{transition:none}}
 .dm-music-list{list-style:none;padding:0;margin:14px 0 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:10px}
 .dm-music-list a{display:grid;gap:2px;padding:12px 14px;border-radius:12px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);color:#fff;text-decoration:none;transition:background .2s,transform .2s}
@@ -477,7 +479,7 @@ body.dm-tour-dim .dm-header{z-index:1}
 .dm-read-text p:last-child{margin:0}
 .dm-tour-start{margin:-6px 0 16px}
 .dm-tour-start a{display:inline-flex;align-items:center;gap:8px;font-weight:700;color:var(--dm-tinte);text-decoration:none;border-bottom:2px solid var(--dm-marker)}
-.dm-tour-start a span{display:inline-grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--dm-tinte);color:#fff;font-size:12px}
+.dm-tour-start a span{flex:none;display:inline-grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--dm-tinte);color:#fff;font-size:12px}
 .dm-mat-loes{color:#1c7c3a;font-weight:600}
 /* Benachrichtigung über Neues (notify.js) */
 header.dm-header nav{margin-left:auto}
@@ -713,7 +715,7 @@ header.dm-header nav{margin-left:auto}
   .dm-quick .dm-q-song small{color:#e3defc}
   /* Handy-Start kompakter: Lino steckt jetzt im Schnellstart */
   .dm-home .lino-hero-chip,.dm-home .dm-hero .dm-trust{display:none}
-  .dm-home .dm-hero .dm-tour-start{margin:4px 0 12px;font-size:15.5px}
+  .dm-home .dm-hero .dm-tour-start{grid-column:1/-1;margin:4px 0 12px;font-size:15.5px}
 }
 .dm-boot{min-height:60vh;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#55607a;text-align:center;padding:24px}
 
