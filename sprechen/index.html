@@ -111,6 +111,9 @@ footer{text-align:center;font-size:14px;color:var(--muted);padding:0 16px 30px}
     this.hidden = true;
     var el = document.createElement('elevenlabs-convai');
     el.setAttribute('agent-id', AGENT_ID);
+    var texts = { 'action-text': 'Mit Dennis üben', 'start-call-text': 'Gespräch starten', 'end-call-text': 'Beenden',
+      'listening-text': 'Ich höre zu …', 'speaking-text': 'Dennis spricht', 'expand-text': 'Öffnen' };
+    Object.keys(texts).forEach(function (a) { el.setAttribute(a, texts[a]); });
     el.setAttribute('dynamic-variables', JSON.stringify({ kapitel: ch.title, niveau: 'B2–C1', woerter: ch.words.join(', ') }));
     $('talk').appendChild(el);
     var s = document.createElement('script');
