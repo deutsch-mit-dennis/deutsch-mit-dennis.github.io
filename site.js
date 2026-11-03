@@ -796,7 +796,7 @@
             <div class="dm-row"><button class="dm-btn">Prüfen</button><button type="button" class="dm-btn dm-btn-quiet" id="dm-gap-show">Lösungen zeigen</button></div><p id="dm-gap-res" role="status"></p></form>` : ''}
         </section>
       </div>
-      <div class="dm-row dm-next">${next ? `<a class="dm-btn" href="#lieder/${next.id}">Nächstes Lied: ${x(next.title)}</a>` : ''}${prev ? `<a class="dm-btn dm-btn-quiet" href="#lieder/${prev.id}">Vorheriges Lied</a>` : ''}<a class="dm-btn dm-btn-quiet" href="#lieder/${sg.level}">Alle Lieder ${sg.level}</a></div>`);
+      <div class="dm-row dm-next">${next ? `<a class="dm-btn" href="#lieder/${next.id}">Nächstes Lied: „${x(next.title)}“</a>` : ''}${prev ? `<a class="dm-btn dm-btn-quiet" href="#lieder/${prev.id}">Vorheriges Lied</a>` : ''}<a class="dm-btn dm-btn-quiet" href="#lieder/${sg.level}">Alle Lieder ${sg.level}</a></div>`);
     $('#dm-suno-ok') && ($('#dm-suno-ok').onclick = () => { mem.sunoConsent = true; save(); songPage(id); });
     const f = $('#dm-gap');
     if (f && gap) {
