@@ -138,11 +138,11 @@
       box.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
   }
-  async function videoSection(cat, heading) {
+  async function videoSection(cat, heading, keep = () => true) {
     const box = document.createElement('section');
     box.className = 'dm-section dm-related-videos';
     box.innerHTML = `<div class="dm-section-head"><h2>${heading}</h2><a href="#videos/${cat}">Alle ansehen</a></div><div class="dm-vgrid" aria-busy="true"></div>`;
-    const list = (await loadVideos()).filter(v => v.category === cat).slice(0, 3);
+    const list = (await loadVideos()).filter(v => v.category === cat && keep(v)).slice(0, 3);
     if (!list.length) { box.remove(); return null; }
     $('.dm-vgrid', box).innerHTML = list.map(v => `<a class="dm-vcard dm-cat-${v.category}" href="#videos/${cat}/${v.id}"><span class="dm-vthumb">${vthumb(v)}</span><span class="dm-vmeta"><span class="dm-tag">${DM.videoCategories[v.category]}${isRussian(v.title) ? ' · auf Russisch' : ''}</span><strong>${x(v.title)}</strong></span></a>`).join('');
     $('.dm-vgrid', box).removeAttribute('aria-busy');
@@ -988,7 +988,12 @@
           card('#vorbereitung/dtb-b1', 'Vorbereitung', 'Aufbau und Strategien', 'Jeder Teil mit Fallen, Mini-Übung und Lernplan') +
           card('#lesen/beruf', 'Lesen', 'Lesen im Beruf', 'Regelungen, E-Mails, Anzeigen') +
           card(hs('dtbb1-1', 'beruf'), 'Hören', 'Hören im Beruf', 'Mailbox, Durchsagen, Gespräche im Team') +
-          card('#lektion/arbeit/3', 'Sprechen', 'Über die eigene Arbeit sprechen', 'Dialog lesen, eigene Erfahrungen ergänzen') },
+          card('#training/dtb-thema', 'Sprechen 1', 'Über ein Thema sprechen', 'Strukturieren und Beispiele geben') +
+          card('#training/dtb-kollegen', 'Sprechen 2', 'Mit Kollegen sprechen', 'Eingehen und nachfragen') +
+          card('#training/dtb-sprechen', 'Sprechen 3', 'Lösungen diskutieren', 'Abwägen und vereinbaren') +
+          card('#training/dtb-schreiben', 'Schreiben', 'Antwort an Kunden', 'Mit internen Informationen') +
+          card('#lektion/arbeit/3', 'Sprechen', 'Über die eigene Arbeit sprechen', 'Dialog lesen, eigene Erfahrungen ergänzen') +
+          card('#spiele/b2', 'Lernspiele', 'Spiele für den Beruf', 'Telefonieren, Arbeitsbereiche, formell oder informell') },
       dtbb2: { label: 'DTB B2', h: 'DTB B2 – Deutsch-Test für den Beruf', p: 'Berufssprachkurs B2 · Vorbereitung und Wiederholung', path: 'dtbb2', color: 'ink',
         cards: () => simCards('dtb-b2', 'Lesen, Hören, Schreiben · 125 Min.', 'Drei Sprechteile · 16 Min.') +
           card('#vorbereitung/dtb-b2', 'Vorbereitung', 'Aufbau und Strategien', 'Jeder Teil mit Fallen, Mini-Übung und Lernplan') +
@@ -1003,6 +1008,8 @@
     if (!T[tab]) tab = T[mem.examTab] ? mem.examTab : 'dtz';
     if (mem.examTab !== tab) { mem.examTab = tab; save(); }
     const t = T[tab], P = DM.paths[t.path];
+    // materials and videos only exist for some exams; match them by the exam name in the title
+    const mine = m => ({ dtz: /DTZ/, lid: /Leben in Deutschland|LiD/, telcb1: /telc.*B1/i, telcb2: /telc.*B2/i, dtbb1: /DTB/, dtbb2: /DTB/ })[tab].test(m.title);
     page(`${crumbs([['Prüfungstraining']])}
       <div class="dm-head"><h1>Prüfungstraining</h1><p class="dm-lead">Wähle deine Prüfung: Probeprüfung mit echter Zeit, gezieltes Training und dein Lernweg.</p></div>
       <div class="sp-filter-wrap"><nav class="sp-tabs dm-examtabs" aria-label="Prüfung wählen">${Object.entries(T).map(([k, v]) => `<a href="#pruefung/${k}"${k === tab ? ' aria-current="page"' : ''}>${x(v.label)}</a>`).join('')}</nav></div>
@@ -1012,7 +1019,7 @@
       </section>
       <p class="dm-center"><a class="dm-btn dm-btn-quiet" href="#simulation">Alle 6 Probeprüfungen im Überblick</a></p>
       <section class="dm-card dm-official"><h2>Offizielle Informationen und Modelltests</h2><p>Prüfungsaufbau, Bewertung und offizielle Übungssätze findest du bei den Prüfungsanbietern. Die Links haben wir für dich gesammelt.</p><a class="dm-btn dm-btn-quiet" href="#quellen">Prüfungsinfos und Quellen</a></section>
-      ${materialLinks('pruefung', 'Arbeitsblätter zur Prüfung')}
+      ${materialLinks('pruefung', 'Arbeitsblätter zur Prüfung', mine)}
       <div id="dm-exam-videos"></div>`);
     const tabs = $('.dm-examtabs'), wrap = tabs && tabs.parentElement;
     if (tabs) {
@@ -1021,7 +1028,7 @@
       const cur = tabs.querySelector('[aria-current]'); if (cur && cur.offsetLeft + cur.offsetWidth > tabs.clientWidth) tabs.scrollLeft = cur.offsetLeft - 16;
       upd();
     }
-    videoSection('pruefung', 'Videos zur Prüfung').then(sec => sec && $('#dm-exam-videos')?.replaceWith(sec));
+    videoSection('pruefung', 'Videos zur Prüfung', mine).then(sec => sec && $('#dm-exam-videos')?.replaceWith(sec));
   }
 
   /* ---------- Videos ---------- */
@@ -1246,8 +1253,8 @@
     };
     $('#dm-mq').oninput = draw; draw();
   }
-  function materialLinks(cat, heading) {
-    const items = (DM.materials || []).filter(m => m.cat === cat).slice(0, 6);
+  function materialLinks(cat, heading, keep = () => true) {
+    const items = (DM.materials || []).filter(m => m.cat === cat && keep(m)).slice(0, 6);
     if (!items.length) return '';
     return `<section class="dm-section"><div class="dm-section-head"><h2>${heading}</h2><a href="#material/${cat}">Alle ansehen</a></div><ul class="dm-mat-list dm-mat-compact">${items.map(m => `<li><a class="dm-mat" href="${m.file}" download target="_blank" rel="noopener"><span class="dm-mat-icon" aria-hidden="true">PDF</span><span class="dm-mat-text"><b>${x(m.title)}</b><small>${m.level} · ${m.pages} ${m.pages === 1 ? 'Seite' : 'Seiten'}${m.loes ? ' · ✓ mit Lösungen' : ''}</small></span></a></li>`).join('')}</ul></section>`;
   }
