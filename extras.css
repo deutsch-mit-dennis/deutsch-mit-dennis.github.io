@@ -895,3 +895,16 @@ main#main{overflow-x:clip} /* schwebende 3D-Bilder dürfen die Seite nicht seitl
 @media (max-width:420px){.v-pic-img{max-width:110px}.v-card.v-pic strong{font-size:18px}}
 /* Lektion am Handy: ab Lernschritt 2 schmaler Kopf, damit der Inhalt sofort sichtbar ist */
 @media (max-width:600px){.pl-lesson-head.is-compact{margin:4px 0 6px!important}.pl-lesson-head.is-compact h1{font-size:22px!important;line-height:1.2!important;margin:2px 0!important}.pl-lesson-head.is-compact p{display:none}.pl-lesson-head.is-compact .pl-step-count{font-size:16px!important}.pl-lesson-head.is-compact .pl-step-count small{display:none}.pl-mobile-step.is-compact{margin:4px 0 14px!important;font-size:0}.pl-mobile-step.is-compact select{font-size:16px!important;margin-top:0!important}}
+
+/* audit 03.11.: tap targets >= 44 px, no rotated certificates overflowing on phones, speaker button clear of the example text */
+.dm-footer ul{gap:0}
+.dm-footer li a,.dm-footer-bottom a{display:inline-flex;align-items:center;min-height:44px}
+.dm-hshare,.dm-bell{flex:0 0 44px!important;min-width:44px}
+@media(max-width:600px){
+  .dm-cert,.dm-cert:hover,.dm-cert:focus-visible{transform:none}
+  .dm-wall-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+  .dm-cert{min-width:0}.dm-cert-label{hyphens:auto}
+  main{padding-bottom:88px}
+  .v-say{top:6px;bottom:auto;background:rgba(238,241,248,.94)}
+}
+@media(max-width:400px){.dm-wall-grid{grid-template-columns:1fr!important}}
