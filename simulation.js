@@ -3,7 +3,7 @@
    LiD-Simulation: Fragen aus window.LID_KATALOG (BAMF-Gesamtfragenkatalog).
    Fortschritt und Antworten bleiben nur im Browser (DM.store.sim). */
 (() => {
-  const V = '20261101a';
+  const V = '20261103a';
   const $ = (s, r = document) => r.querySelector(s);
   const $$ = (s, r = document) => [...r.querySelectorAll(s)];
   const e = s => DM.esc(s);
@@ -25,7 +25,7 @@
   };
   const ORDER = ['dtz', 'lid', 'telc-b1', 'dtb-b1', 'telc-b2', 'dtb-b2'];
   /* More model tests: sim/<id>-<n>.js, own route and saved state, share META and prep page with <id> */
-  const TESTS = { dtz: 3 };   // number of model tests per exam, default 2
+  const TESTS = { dtz: 3, 'dtb-b1': 3, 'dtb-b2': 3 };   // number of model tests per exam, default 2
   const count = id => TESTS[id] || 2;
   const base = id => id.replace(/-[2-9]$/, '');
   ORDER.filter(id => id !== 'lid').forEach(id => { for (let n = 2; n <= count(id); n++) META[`${id}-${n}`] = { ...META[id], short: `${META[id].short} · Test ${n}` }; });
@@ -252,7 +252,7 @@
       return `<a class="sim-card dm-g-${m.g}" href="#simulation/${id}"><span class="dm-tag">${e(m.who)}</span><b>${e(m.title)}</b><span class="sim-dur">${blockTimes(m)}</span><span class="sim-secs">${m.secs.map(([t, min, prep]) => `<i>${e(t)} · ${min} Min.${prep ? ` (+${prep} Vorb.)` : ''}</i>`).join('')}</span>${status}</a>`;
     };
     DM.page(`${DM.crumbs([['Prüfungstraining', '#pruefung'], ['Prüfungssimulationen']])}
-      <div class="dm-head"><h1>Prüfungssimulationen</h1><p class="dm-lead">Sechs komplette Prüfungen zum Üben, der DTZ mit drei, telc und DTB mit je zwei Modelltests – mit der echten Zeit für jeden Prüfungsteil. Am Ende siehst du deine Punkte, ob du bestanden hättest und alle Lösungen mit Erklärung.</p></div>
+      <div class="dm-head"><h1>Prüfungssimulationen</h1><p class="dm-lead">Sechs komplette Prüfungen zum Üben, DTZ, DTB B1 und DTB B2 mit je drei, telc B1 und B2 mit je zwei Modelltests – mit der echten Zeit für jeden Prüfungsteil. Am Ende siehst du deine Punkte, ob du bestanden hättest und alle Lösungen mit Erklärung.</p></div>
       <div class="sim-grid">${ORDER.map(card).join('')}</div>
       <section class="dm-card sim-how"><h2>So läuft eine Simulation</h2>
         <ul class="sim-list">
