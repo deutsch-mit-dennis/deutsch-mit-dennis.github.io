@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sprich mit Dennis – KI-Sprechtrainer zum Wortschatz-Buch | Deutsch mit Dennis</title>
+<meta name="description" content="Übe die Wörter aus deinem Wortschatz-Buch im Gespräch: Der KI-Sprechtrainer spricht mit der Stimme von Dennis und nutzt genau den Wortschatz deines Kapitels.">
+<link rel="canonical" href="https://deutsch-mit-dennis.de/sprechen/">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#2a44b8">
+<link rel="icon" href="/favicon.svg">
+<style>
+@font-face{font-family:Atk;font-weight:400;font-display:swap;src:url(../assets/fonts/atkinson-hyperlegible-latin-400-normal.woff2) format("woff2")}
+@font-face{font-family:Atk;font-weight:700;font-display:swap;src:url(../assets/fonts/atkinson-hyperlegible-latin-700-normal.woff2) format("woff2")}
+@font-face{font-family:Cav;font-weight:600;font-display:swap;src:url(../assets/fonts/caveat-latin-600-normal.woff2) format("woff2")}
+:root{--blue:#2a44b8;--blue2:#3552cc;--ink:#1d2433;--soft:#eef1fb;--yellow:#f6d64a;--green:#1f9d55;--card:#fff;--bg:#f5f6fb;--muted:#5b6478}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+body{margin:0;font-family:Atk,system-ui,sans-serif;font-size:17px;line-height:1.55;color:var(--ink);background:var(--bg);overflow-x:hidden;overflow-wrap:break-word}
+a{color:var(--blue)}
+.top{max-width:720px;margin:0 auto;padding:10px 16px}
+.top a{display:inline-flex;align-items:center;min-height:44px;font-weight:700;text-decoration:none}
+.hero{background:var(--blue);color:#fff;padding:24px 16px 30px;position:relative;overflow:hidden}
+.hero:before{content:"";position:absolute;width:300px;height:300px;right:-120px;top:-130px;border-radius:50%;background:var(--blue2)}
+.hero>div{position:relative;max-width:688px;margin:0 auto}
+.from{font-family:Cav,cursive;font-size:26px;margin:0}
+.hero h1{font-size:28px;line-height:1.2;margin:4px 0 10px}
+.hero p{margin:0;font-size:18px}
+.badge{display:inline-block;background:var(--yellow);color:#1f2f7a;font-weight:700;border-radius:20px;padding:4px 12px;font-size:15px;margin-bottom:10px}
+main{max-width:720px;margin:0 auto;padding:18px 16px 40px}
+.card{background:var(--card);border-radius:18px;padding:18px;margin:0 0 16px;box-shadow:0 2px 10px rgba(30,40,80,.07)}
+.card h2{font-size:21px;margin:0 0 8px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:10px 18px;border-radius:14px;font-weight:700;font-size:17px;text-decoration:none;border:0;cursor:pointer;font-family:inherit}
+.btn-y{background:var(--yellow);color:#1f2f7a;box-shadow:0 5px 0 #c9a920}
+.btn:disabled{opacity:.5;cursor:not-allowed}
+.words{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 0;padding:0;list-style:none}
+.words li{background:var(--soft);border-radius:10px;padding:3px 10px;font-size:15px}
+.small{font-size:14px;color:var(--muted)}
+.consent{display:flex;gap:10px;align-items:flex-start;margin:12px 0}
+.consent input{width:22px;height:22px;flex:none;margin-top:3px}
+.chapters{columns:2;column-gap:18px;padding-left:20px;margin:6px 0 0}
+.chapters li{margin:0 0 6px;break-inside:avoid}
+@media (max-width:420px){.chapters{columns:1}}
+#talk{margin-top:14px;min-height:10px}
+footer{text-align:center;font-size:14px;color:var(--muted);padding:0 16px 30px}
+</style>
+</head>
+<body>
+<div class="top"><a href="/">← Deutsch mit Dennis</a></div>
+<header class="hero"><div>
+  <p class="from">Sprich mit Dennis</p>
+  <span class="badge" id="tag">KI-Sprechtrainer · Wortschatz B2–C1</span>
+  <h1 id="h">Übe die Wörter aus deinem Buch im Gespräch</h1>
+  <p id="lead">Scanne den QR-Code in deinem Kapitel oder wähle unten ein Kapitel.</p>
+</div></header>
+<main>
+  <section class="card" id="pick" hidden>
+    <h2>Kapitel wählen</h2>
+    <p class="small">Deutscher Wortschatz nach Themen – Band 2 (B2–C1)</p>
+    <ol class="chapters" id="list"></ol>
+  </section>
+
+  <section class="card" id="chapter" hidden>
+    <h2>So funktioniert es</h2>
+    <p>Du sprichst etwa 5 Minuten mit einer KI, die mit der Stimme von Dennis spricht. Sie stellt dir Fragen zum Thema und hilft dir, die Wörter unten selbst zu benutzen. Fehler sind erlaubt – sie verbessert dich freundlich.</p>
+    <label class="consent"><input type="checkbox" id="ok"><span>Ich bin einverstanden, dass meine Sprache für dieses Gespräch an ElevenLabs (USA) übertragen wird. Mehr in der <a href="/#datenschutz">Datenschutzerklärung</a>.</span></label>
+    <button class="btn btn-y" id="start" disabled>🎙 Gespräch starten</button>
+    <p class="small" id="note"></p>
+    <div id="talk"></div>
+  </section>
+
+  <section class="card" id="vocab" hidden>
+    <h2>Deine Wörter in diesem Kapitel</h2>
+    <p class="small">Versuche, möglichst viele davon im Gespräch zu benutzen.</p>
+    <ul class="words" id="words"></ul>
+  </section>
+</main>
+<footer><a href="/">deutsch-mit-dennis.de</a> · <a href="/#impressum">Impressum</a> · <a href="/#datenschutz">Datenschutz</a></footer>
+<script src="band2.js?v=20261103a"></script>
+<script>
+(function () {
+  // Agent "Sprich mit Dennis – Wortschatz-Trainer" (ElevenLabs). Empty = trainer not live yet, word list still works.
+  var AGENT_ID = '';
+  var B = window.SPRECHEN_BAND2 || {};
+  var q = new URLSearchParams(location.search);
+  var k = ('0' + (q.get('k') || '')).slice(-2);
+  var ch = B[k];
+  var $ = function (id) { return document.getElementById(id); };
+
+  if (!ch) {
+    $('pick').hidden = false;
+    // keys "10".."24" are integer-like, so JS lists them before "01".."09": sort explicitly
+    $('list').innerHTML = Object.keys(B).sort().map(function (n) {
+      return '<li><a href="?b=2&k=' + n + '">' + B[n].title + '</a></li>';
+    }).join('');
+    return;
+  }
+  $('h').textContent = 'Kapitel ' + Number(k) + ': ' + ch.title;
+  $('lead').textContent = 'Übe die Wörter dieses Kapitels im Gespräch mit der KI-Stimme von Dennis.';
+  document.title = 'Sprich mit Dennis – ' + ch.title + ' | Deutsch mit Dennis';
+  $('chapter').hidden = $('vocab').hidden = false;
+  $('words').innerHTML = ch.words.map(function (w) { return '<li>' + w + '</li>'; }).join('');
+
+  if (!AGENT_ID) {
+    $('start').hidden = $('ok').parentNode.hidden = true;
+    $('note').textContent = 'Der Sprechtrainer wird gerade eingerichtet und ist in wenigen Tagen da. Übe bis dahin mit der Wortliste: Bilde zu jedem Wort einen eigenen Satz und sprich ihn laut.';
+    return;
+  }
+  $('ok').addEventListener('change', function () { $('start').disabled = !this.checked; });
+  $('start').addEventListener('click', function () {
+    this.hidden = true;
+    var el = document.createElement('elevenlabs-convai');
+    el.setAttribute('agent-id', AGENT_ID);
+    el.setAttribute('dynamic-variables', JSON.stringify({ kapitel: ch.title, niveau: 'B2–C1', woerter: ch.words.join(', ') }));
+    $('talk').appendChild(el);
+    var s = document.createElement('script');
+    s.src = 'https://unpkg.com/@elevenlabs/convai-widget-embed';
+    s.async = true;
+    document.body.appendChild(s);
+    $('note').textContent = 'Klicke unten rechts auf den Knopf, um zu sprechen. Das Gespräch endet nach höchstens 5 Minuten.';
+  });
+})();
+</script>
+</body>
+</html>
