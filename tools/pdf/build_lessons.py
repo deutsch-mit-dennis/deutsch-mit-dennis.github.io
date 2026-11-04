@@ -26,7 +26,7 @@ pdfmetrics.registerFont(TTFont('Atk', os.path.join(F, 'Atk-R.ttf')))
 pdfmetrics.registerFont(TTFont('Atk-B', os.path.join(F, 'Atk-B.ttf')))
 pdfmetrics.registerFont(TTFont('Atk-I', os.path.join(F, 'Atk-I.ttf')))
 pdfmetrics.registerFont(TTFont('Cav', os.path.join(F, 'Cav.ttf')))
-pdfmetrics.registerFont(TTFont('Sym', '/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf'))
+pdfmetrics.registerFont(TTFont('Sym', next((x for x in ('/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf', 'C:/Windows/Fonts/seguisym.ttf') if os.path.exists(x)), os.path.join(F, 'Atk-R.ttf'))))
 from reportlab.pdfbase.pdfmetrics import registerFontFamily
 registerFontFamily('Atk', normal='Atk', bold='Atk-B', italic='Atk-I', boldItalic='Atk-B')
 

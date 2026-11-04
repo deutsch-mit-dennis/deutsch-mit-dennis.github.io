@@ -141,8 +141,9 @@ def render(d):
                 if b.get('source'): head += [Spacer(1, 2), box(R(fmt(b['source']), 'cell'), HexColor('#F4F6FB'), TINTE), Spacer(1, 6)]
                 if b.get('items_title'): head.append(R('<b>' + fmt(b['items_title']) + '</b>'))
                 its = [R(f"{k}. {fmt(i)}") for k, i in enumerate(b['items'], 1)] if len(b['items']) > 1 else [R(fmt(b['items'][0]))]
-                story.append(KeepTogether(head + its)); story.append(Spacer(1, 4))
-                if b.get('write'): story.append(lines(b['write']))
+                # write lines stay with their task, otherwise they can slip to the next page
+                story.append(KeepTogether(head + its + ([Spacer(1, 4), lines(b['write'])] if b.get('write') else [])))
+                if not b.get('write'): story.append(Spacer(1, 4))
                 sols.append((b.get('sol_title', title), b.get('solutions', [])))
     if sols:
         story += [PageBreak(), P(d.get('solutions_title', 'Lösungen'), 'h2t')]
