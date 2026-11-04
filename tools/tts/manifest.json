@@ -19096,7 +19096,7 @@
     },
     {
      "voice": "f2",
-     "text": "Guten Tag, Ivanova. Ich brauche ein neues Rezept für meine Blutdrucktabletten."
+     "text": "Guten Tag, hier ist Ivanova. Ich brauche ein neues Rezept für meine Blutdrucktabletten."
     },
     {
      "voice": "f3",
@@ -19167,7 +19167,8 @@
    "segments": [
     {
      "voice": "f1",
-     "text": "Die Radwege in unserer Stadt sind schmal und gefährlich. Solange sich daran nichts ändert, steige ich nicht aufs Fahrrad."
+     "text": "Die Radwege in unserer Stadt sind schmal und gefährlich. Solange sich daran nichts ändert, steige ich nicht aufs Fahrrad.",
+     "say": "Die Radwege in unserer Stadt sind schmal und gefährlich! Solange sich daran nichts ändert, steige ich nicht aufs Fahrrad."
     }
    ]
   }
