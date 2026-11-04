@@ -1,7 +1,14 @@
 {
   "channel": "UCMacEMD2p8zCKY2UrGiMUrA",
-  "updated": "2026-11-04T06:51:22.736Z",
+  "updated": "2026-11-04T13:02:05.729Z",
   "videos": [
+    {
+      "id": "Tj4oFJvzqQU",
+      "title": "1000 wichtige deutsche Sätze für den Alltag – Teil 1 (Sätze 1–100) | Hören & Nachsprechen",
+      "published": "2026-11-03T16:00:20+00:00",
+      "category": "deutsch",
+      "thumb": "assets/yt/Tj4oFJvzqQU.jpg"
+    },
     {
       "id": "mjqphgMo4nk",
       "title": "Satz-Puzzle: Schaffst du alle 3 Sätze? 🧩 Deutsch A2 #Shorts",
@@ -323,13 +330,6 @@
       "published": "",
       "category": "pruefung",
       "thumb": "assets/yt/tATeIVkdtMw.jpg"
-    },
-    {
-      "id": "Tj4oFJvzqQU",
-      "title": "1000 wichtige deutsche Sätze für den Alltag – Teil 1 (Sätze 1–100) | Hören & Nachsprechen",
-      "published": "",
-      "category": "deutsch",
-      "thumb": "assets/yt/Tj4oFJvzqQU.jpg"
     }
   ]
 }
