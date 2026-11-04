@@ -1183,6 +1183,8 @@
       <p>Wenn du bei einem Schreibfeld auf „Text prüfen“ klickst, wird der Text aus diesem Feld zur Rechtschreib- und Grammatikprüfung an LanguageTool übertragen (LanguageTooler GmbH, Boschstraße 23a, 22761 Hamburg, Deutschland). Dabei wird auch deine IP-Adresse übermittelt. Ohne Klick wird nichts übertragen. Für die Verarbeitung beim Anbieter gelten dessen Datenschutzbestimmungen. Rechtsgrundlage ist deine Einwilligung durch den Klick (Art. 6 Abs. 1 lit. a DSGVO). Schreib bitte keine sensiblen persönlichen Daten in die Übungsfelder. Mehr: <a href="https://languagetool.org/legal/privacy" target="_blank" rel="noopener noreferrer">Datenschutzerklärung von LanguageTool</a>.</p>
       <h2>4c. Kauf von Lernpaketen (Digistore24)</h2>
       <p>Die Lernpakete werden über die Digistore24 GmbH, St.-Godehard-Straße 32, 31139 Hildesheim, verkauft. Digistore24 ist Verkäufer und Vertragspartner. Erst wenn du auf „Jetzt kaufen“ klickst, öffnet sich das Bestellformular von Digistore24; vorher werden keine Daten an Digistore24 übertragen. Bei der Bestellung verarbeitet Digistore24 deine Bestell- und Zahlungsdaten. Ich erhalte von Digistore24 die für die Abwicklung nötigen Angaben (zum Beispiel Name, E-Mail-Adresse und gekauftes Produkt), um dir bei Fragen helfen zu können. Rechtsgrundlage ist die Vertragsabwicklung (Art. 6 Abs. 1 lit. b DSGVO). Mehr: <a href="https://www.digistore24.com/page/privacy/1/de" target="_blank" rel="noopener noreferrer">Datenschutzerklärung von Digistore24</a>.</p>
+      ${DM.amazonTag ? `<h2>4c-2. Amazon-Partnerprogramm</h2>
+      <p>Ich nehme am Partnerprogramm von Amazon EU teil (Amazon Europe Core S.à r.l., 38 avenue John F. Kennedy, L-1855 Luxemburg). Links zu Büchern bei Amazon sind Werbelinks und mit einem Sternchen (*) gekennzeichnet. Kaufst du über einen solchen Link, bekomme ich eine kleine Provision; für dich ändert sich der Preis nicht. Als Amazon-Partner verdiene ich an qualifizierten Verkäufen. Beim bloßen Besuch dieser Website werden keine Daten an Amazon übertragen und keine Amazon-Cookies gesetzt. Erst wenn du auf einen Amazon-Link klickst, öffnet sich die Website von Amazon. Amazon kann dann Cookies setzen, um zu erkennen, dass du über meine Website gekommen bist, und um die Provision abzurechnen. Ich erhalte dabei keine personenbezogenen Daten, sondern nur zusammengefasste Verkaufszahlen. Rechtsgrundlage ist mein berechtigtes Interesse an der Finanzierung meines kostenlosen Angebots (Art. 6 Abs. 1 lit. f DSGVO); für die Cookies auf der Amazon-Website ist Amazon verantwortlich. Mehr: <a href="https://www.amazon.de/gp/help/customer/display.html?nodeId=201909010" target="_blank" rel="noopener noreferrer">Datenschutzerklärung von Amazon</a>.</p>` : ''}
       <h2>4d. Einsprechen und korrigieren lassen</h2>
       <p>Bei den Sprechübungen kannst du dich aufnehmen. Erst nach deinem Klick auf „Aufnahme starten“ oder „Mich aufnehmen“ fragt dein Browser nach dem Mikrofon. Die Aufnahme bleibt auf deinem Gerät und wird nicht an mich übertragen. Für das automatische Mitschreiben nutzt dein Browser seine eingebaute Spracherkennung: In Chrome und Edge wird der Ton dafür an Google bzw. Microsoft übertragen (in Safari je nach Gerät an Apple) und dort in Text umgewandelt; dabei können Daten auch außerhalb der EU verarbeitet werden. Nach dem Stoppen wird die Aufnahme zusätzlich an meinen Cloudflare-Worker geschickt und dort mit der KI-Spracherkennung Whisper (Cloudflare Workers AI) in Text umgewandelt, damit auch Wörter mit Akzent richtig erkannt werden. Die Aufnahme wird dabei nicht gespeichert und nicht zum Training verwendet; Anbieter ist die Cloudflare, Inc. (USA, EU-Standardvertragsklauseln). Den erkannten Text prüft danach LanguageTool (siehe 4a). Rechtsgrundlage ist deine Einwilligung durch den Klick (Art. 6 Abs. 1 lit. a DSGVO).</p>
       <h2>4e. Deine Meinung (Zettel)</h2>
@@ -1272,15 +1274,24 @@
   function booksBlock() {
     const B = (DM.books || []).filter(b => b.amazon);
     if (!B.length) return '';
+    const az = u => (DM.amazonUrl ? DM.amazonUrl(u) : u);   // adds the partner tag (affiliate.js)
+    const star = DM.amazonTag ? '*' : '';                    // asterisk marks paid links only once a tag is set
+    const tips = DM.bookTips || [];
+    const cats = [...new Set(tips.map(t => t.cat))];
+    const tipsHtml = cats.length ? `<h3 class="dm-books-tips-h">Bücher anderer Verlage, die ich empfehle</h3>${cats.map(c => `<h4>${x(c)}</h4>
+      <div class="dm-books-grid">${tips.filter(t => t.cat === c).map(t => `<article class="dm-card"><p class="dm-pkg-meta">${x(t.publisher)}</p><h3>${x(t.title)}</h3><p class="dm-small">${x(t.why)}</p>
+        <p><a class="dm-btn dm-btn-quiet" href="${x(az(t.amazon))}" target="_blank" rel="sponsored nofollow noopener">Bei Amazon ansehen${star}</a></p></article>`).join('')}</div>`).join('')}` : '';
     const card = b => `<article class="dm-card dm-book">
-        <a class="dm-book-cover" href="${x(b.amazon)}" target="_blank" rel="noopener sponsored" tabindex="-1" aria-hidden="true"><img src="${b.img}" alt="" width="560" height="792" loading="lazy"></a>
+        <a class="dm-book-cover" href="${x(az(b.amazon))}" target="_blank" rel="sponsored nofollow noopener" tabindex="-1" aria-hidden="true"><img src="${b.img}" alt="" width="560" height="792" loading="lazy"></a>
         <div class="dm-book-body"><p class="dm-pkg-meta">Taschenbuch · ${x(b.level)} · ${x(b.target)} · ${b.pages} Seiten</p>
           <h3>${x(b.title)}</h3><p class="dm-small">${x(b.desc)}</p>
-          <p class="dm-book-buy"><span class="dm-pkg-price">${x(b.price)}</span><a class="dm-btn" href="${x(b.amazon)}" target="_blank" rel="noopener sponsored">Bei Amazon kaufen</a></p></div></article>`;
+          <p class="dm-book-buy"><span class="dm-pkg-price">${x(b.price)}</span><a class="dm-btn" href="${x(az(b.amazon))}" target="_blank" rel="sponsored nofollow noopener">Bei Amazon kaufen${star}</a></p></div></article>`;
     return `<section class="dm-section dm-books" id="buecher" aria-labelledby="books-h">
       <h2 id="books-h">Lieber auf Papier? Meine Übungsbücher</h2>
       <p class="dm-small">Für alle, die gern mit Stift und Papier üben: dieselbe Art von Prüfungstraining als gedrucktes Taschenbuch, mit Platz zum Schreiben und allen Lösungen. Kauf und Versand über Amazon. Alle Übungen auf dieser Website bleiben kostenlos.</p>
-      <div class="dm-books-grid">${B.map(card).join('')}</div></section>`;
+      <div class="dm-books-grid">${B.map(card).join('')}</div>
+      ${tipsHtml}
+      ${DM.amazonNote ? `<p class="dm-small">${x(DM.amazonNote)}</p>` : ''}</section>`;
   }
 
   /* ---------- Lernpakete (Kauf später über Digistore24) ---------- */

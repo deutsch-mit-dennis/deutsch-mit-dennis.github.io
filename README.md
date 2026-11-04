@@ -10,3 +10,10 @@ Arbeitsanleitung für Claude Code und Wartung: siehe `CLAUDE.md`. Qualitätsprü
 - übrige `.js`/`.css` – Lektionen, Wortschatz, Prüfungstraining, Leben in Deutschland, Kahoot, Hilfe
 - `youtube-feed.json` – Videoliste, wird täglich von `.github/workflows/youtube-feed.yml` aktualisiert
 - `assets/`, `audio/`, `material/` – Bilder, Aufnahmen und PDFs
+
+## Affiliate links
+
+- The Amazon PartnerNet tracking ID lives in one place only: `TAG` at the top of `affiliate.js`.
+- Add a book: put the plain product link (`https://www.amazon.de/dp/ASIN`) into `DM.books` in `site-data.js`. `DM.amazonUrl()` turns it into `https://www.amazon.de/dp/ASIN?tag=…` when the page is rendered.
+- Any other Amazon link (also links added later by JavaScript) gets the tag, `rel="sponsored nofollow noopener"` and `target="_blank"` on click.
+- Required notices: `DM.amazonNote` (asterisk text next to book links), the footer sentence in `index.html` and section 4c-2 in the privacy policy (`site.js`).

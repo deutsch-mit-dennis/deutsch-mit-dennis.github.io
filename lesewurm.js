@@ -72,9 +72,10 @@
     d.className = 'lw-dlg';
     d.setAttribute('aria-labelledby', 'lw-title');
     d.innerHTML = `<div class="lw-head-row"><h2 id="lw-title">📚 Dennis' Bücherregal</h2><button type="button" class="lw-close" aria-label="Schließen">×</button></div>
-      <p class="lw-lead">Meine Übungsbücher als Taschenbuch bei Amazon. Tippe auf ein Buch.</p>
-      <div class="lw-shelf">${B.map(b => `<a class="lw-book" href="${esc(b.amazon)}" target="_blank" rel="noopener sponsored"><img src="${esc(b.img)}" alt="" width="560" height="792" loading="lazy"><span>${esc(b.title.replace(/ – Das Übungsbuch$/, '').replace('Deutscher Wortschatz nach Themen', 'Wortschatz'))}</span></a>`).join('')}</div>
-      <div class="lw-foot"><a class="dm-btn dm-btn-quiet" href="#lernpakete/buecher">Alle Bücher mit Beschreibung</a><small>Weitere Bücher folgen.</small></div>`;
+      <p class="lw-lead">Meine Übungsbücher als Taschenbuch bei Amazon${DM.amazonTag ? '*' : ''}. Tippe auf ein Buch.</p>
+      <div class="lw-shelf">${B.map(b => `<a class="lw-book" href="${esc(DM.amazonUrl ? DM.amazonUrl(b.amazon) : b.amazon)}" target="_blank" rel="sponsored nofollow noopener"><img src="${esc(b.img)}" alt="" width="560" height="792" loading="lazy"><span>${esc(b.title.replace(/ – Das Übungsbuch$/, '').replace('Deutscher Wortschatz nach Themen', 'Wortschatz'))}</span></a>`).join('')}</div>
+      <div class="lw-foot"><a class="dm-btn dm-btn-quiet" href="#lernpakete/buecher">Alle Bücher mit Beschreibung</a><small>Weitere Bücher folgen.</small></div>${DM.amazonNote ? `
+      <p class="lw-lead"><small>${esc(DM.amazonNote)}</small></p>` : ''}`;
     document.body.append(d);
     const close = () => d.close();
     d.querySelector('.lw-close').onclick = close;

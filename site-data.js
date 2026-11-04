@@ -938,3 +938,16 @@ DM.books = [
   { id: 'wortschatz-en', img: 'assets/buecher/wortschatz-en.jpg?v=2', title: 'Deutscher Wortschatz nach Themen – Deutsch–Englisch', level: 'A1–B1', target: 'Alltag & Beruf', pages: 150, price: '16,99 €', amazon: '',
     desc: 'Rund 700 wichtige Wörter in 24 Themen – von Wohnen und Einkaufen bis Amt, Arbeit und Gesundheit. Jedes Wort mit Artikel, Plural, Übersetzung ins Englische und Beispielsatz, dazu Dialoge und Übungen.' }
 ];
+
+/* Buch-Empfehlungen anderer Verlage (unter „Meine Übungsbücher“, nach Kategorie gruppiert).
+   amazon = schlichter Produktlink amazon.de/dp/ASIN – den Partner-Tag ergänzt affiliate.js. Keine Amazon-Bilder (Partnerbedingungen). */
+DM.bookTips = [
+  { cat: 'DTZ', title: 'Mit Erfolg zum Deutsch-Test für Zuwanderer A2–B1', publisher: 'Klett', amazon: 'https://www.amazon.de/dp/3126768636', why: 'Übungs- und Testbuch mit kompletten Modelltests – der Klassiker im Integrationskurs.' },
+  { cat: 'DTZ', title: 'Fit für den Deutsch-Test für Zuwanderer A2–B1', publisher: 'Hueber', amazon: 'https://www.amazon.de/dp/3191516891', why: 'Strategien und Training für jeden Prüfungsteil, gut zum Selbstlernen.' },
+  { cat: 'telc / DTB B2', title: 'Mit Erfolg zum Deutsch-Test für den Beruf B2 – Testbuch', publisher: 'Klett', amazon: 'https://www.amazon.de/dp/3126768326', why: 'Modelltests im echten DTB-Format mit Audios.' },
+  { cat: 'telc / DTB B2', title: 'Prüfungstraining DaF B2 – Deutsch-Test für den Beruf', publisher: 'Cornelsen', amazon: 'https://www.amazon.de/dp/3061212744', why: 'Übungsbuch mit Lösungen und Audios, ideal für Berufssprachkurse.' },
+  { cat: 'Grammatik', title: 'Grammatik aktiv A1–B1', publisher: 'Cornelsen', amazon: 'https://www.amazon.de/dp/3061229647', why: 'Kurze Erklärungen, viele Übungen – passt genau zu A1 bis B1.' },
+  { cat: 'Grammatik', title: 'Lehr- und Übungsbuch der deutschen Grammatik – aktuell', publisher: 'Hueber', amazon: 'https://www.amazon.de/dp/3193072559', why: 'Das Standardwerk für B1 bis C1 zum Nachschlagen und Üben.' },
+  { cat: 'Wortschatz', title: 'Großer Lernwortschatz Deutsch als Fremdsprache', publisher: 'Hueber', amazon: 'https://www.amazon.de/dp/3190074720', why: 'Rund 15.000 Wörter nach Themen, mit Beispielsätzen.' },
+  { cat: 'Wortschatz', title: 'Langenscheidt Grundwortschatz Deutsch als Fremdsprache', publisher: 'Langenscheidt', amazon: 'https://www.amazon.de/dp/312563184X', why: 'Die wichtigsten Wörter für den Anfang, mit Audio-Download.' }
+];
