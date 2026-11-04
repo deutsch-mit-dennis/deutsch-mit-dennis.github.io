@@ -5,7 +5,7 @@
    - beim Anzeigen macht DM.amazonUrl() daraus https://www.amazon.de/dp/ASIN?tag=TAG
    - beim Klick bekommt zusätzlich JEDER Amazon-Link auf der Seite den Tag (auch später per JavaScript eingefügte). */
 (() => {
-  const TAG = ''; // Amazon PartnerNet tracking ID, format xxxxx-21 (empty = affiliate links off)
+  const TAG = 'deutschmitden-21'; // Amazon PartnerNet tracking ID, format xxxxx-21 (empty = affiliate links off)
   const HOST = /(^|\.)amazon\.(de|com|at|co\.uk)$/;
 
   // Clean product URL: amazon.de/dp/ASIN?tag=TAG (drops ref=, psc= and other tracking parameters).
