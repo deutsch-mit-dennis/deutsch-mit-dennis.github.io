@@ -287,3 +287,17 @@
 .sim-partbtns{display:flex;flex-direction:column;gap:8px;margin-top:6px}
 .sim-partbtns .dm-btn{display:block;text-align:left;min-height:44px;white-space:normal;height:auto;line-height:1.35}
 .sim-partbtns small{font-weight:400;opacity:.8}
+
+/* exam part list: compact numbered rows with a chevron instead of tag + big title + floating time */
+.sim-prep>summary{display:grid;grid-template-columns:36px minmax(0,1fr) 20px;gap:12px;align-items:center;padding:12px 14px;list-style:none}
+.sim-prep>summary::-webkit-details-marker{display:none}
+.sim-prep>summary::after{content:"";width:9px;height:9px;border-right:2.5px solid var(--dm-tinte,#2458db);border-bottom:2.5px solid var(--dm-tinte,#2458db);transform:rotate(-45deg);justify-self:center;transition:transform .2s}
+.sim-prep[open]>summary::after{transform:rotate(45deg)}
+.sim-prep-n{display:grid;place-items:center;width:36px;height:36px;border-radius:50%;background:var(--dm-tinte-soft,#e3e9fb);color:var(--dm-tinte,#2458db);font-weight:800;font-size:16px}
+.sim-prep-t{display:grid;gap:2px;min-width:0}
+.sim-prep-t b{font-size:17px;line-height:1.25;color:var(--dm-ink,#14233b)}
+.sim-prep-t small{font-size:14px;color:var(--dm-muted,#526078);margin:0;white-space:normal}
+#v-teile .sim-prep{margin:0 0 8px;border:1px solid var(--dm-line,#d9dfea);border-radius:14px;background:#fff;box-shadow:none}
+.sim-prep>summary::before{display:none}
+.sim-prep>summary .sim-prep-t small{margin:0;text-align:left;justify-self:start}
+.sim-prep-g{margin:22px 0 8px;font-size:15px;letter-spacing:.06em;text-transform:uppercase;color:var(--dm-muted,#526078)}

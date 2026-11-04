@@ -946,7 +946,8 @@
         miniHTML = `<div class="sim-mini"><h4>Mini-Übung</h4><p class="sim-instr">${e(mp.instr)}</p><div data-mini="${qi}">${partHTML(mp, st, 'mini')}</div></div>`;
         q._mp = mp;
       }
-      return `<details class="sim-prep dm-card" id="teil-${qi}"><summary><span class="dm-tag">${e(q.skill || '')}</span><b>${e(q.name)}</b>${q.time ? `<small>${e(q.time)}</small>` : ''}</summary>
+      const group = q.skill && q.skill !== P.parts[qi - 1]?.skill ? `<h3 class="sim-prep-g">${e(q.skill)}</h3>` : '';
+      return `${group}<details class="sim-prep dm-card" id="teil-${qi}"><summary><span class="sim-prep-n" aria-hidden="true">${qi + 1}</span><span class="sim-prep-t"><b>${e(q.name)}</b>${q.time ? `<small>${e(q.time)}</small>` : ''}</span></summary>
         <p>${e(q.what)}</p>
         <div class="sim-cols"><div><h4>So gehst du vor</h4><ol>${q.steps.map(s => `<li>${e(s)}</li>`).join('')}</ol></div><div><h4>Achtung, Falle!</h4><ul class="sim-traps">${q.traps.map(s => `<li>${e(s)}</li>`).join('')}</ul></div></div>
         ${DM.note(q.tip)}${miniHTML}</details>`;
