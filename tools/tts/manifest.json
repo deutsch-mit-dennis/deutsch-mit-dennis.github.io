@@ -18968,6 +18968,208 @@
      "text": "Worauf können Sie sich einigen?"
     }
    ]
+  },
+  {
+   "key": "lhl-a01",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Praxis Dr. Yilmaz, guten Tag. Unsere Praxis ist vom 22. bis zum 26. Dezember geschlossen. In dringenden Fällen gehen Sie bitte zur Praxis Dr. Becker in der Bahnhofstraße 14. Ab dem 29. Dezember sind wir wieder für Sie da.",
+     "say": "Praxis Doktor Yilmaz, guten Tag. Unsere Praxis ist vom zweiundzwanzigsten bis zum sechsundzwanzigsten Dezember geschlossen. In dringenden Fällen gehen Sie bitte zur Praxis Doktor Becker in der Bahnhofstraße vierzehn. Ab dem neunundzwanzigsten Dezember sind wir wieder für Sie da."
+    }
+   ]
+  },
+  {
+   "key": "lhl-a02",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Achtung an Gleis 3: Der Regionalexpress nach Hagen, planmäßige Abfahrt 8 Uhr 12, fährt heute von Gleis 5. Ich wiederhole: Der Regionalexpress nach Hagen fährt heute von Gleis 5.",
+     "say": "Achtung an Gleis drei: Der Regionalexpress nach Hagen, planmäßige Abfahrt acht Uhr zwölf, fährt heute von Gleis fünf. Ich wiederhole: Der Regionalexpress nach Hagen fährt heute von Gleis fünf."
+    }
+   ]
+  },
+  {
+   "key": "lhl-a03",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Hallo Frau Osman, hier ist Petra Klein von der Kita Sonnenblume. Morgen machen wir einen Ausflug in den Wald. Bitte geben Sie Mila Gummistiefel und eine Regenjacke mit. Essen bekommen die Kinder bei uns. Wir sind um 15 Uhr zurück, Sie können Mila wie immer abholen.",
+     "say": "Hallo Frau Osman, hier ist Petra Klein von der Kita Sonnenblume. Morgen machen wir einen Ausflug in den Wald. Bitte geben Sie Mila Gummistiefel und eine Regenjacke mit. Essen bekommen die Kinder bei uns. Wir sind um fünfzehn Uhr zurück, Sie können Mila wie immer abholen."
+    }
+   ]
+  },
+  {
+   "key": "lhl-a04",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Liebe Kundinnen und Kunden, nur heute bis 20 Uhr: Alle Äpfel aus der Region für 1 Euro 49 das Kilo. Außerdem öffnen wir jetzt Kasse 4 für Sie.",
+     "say": "Liebe Kundinnen und Kunden, nur heute bis zwanzig Uhr: Alle Äpfel aus der Region für einen Euro neunundvierzig das Kilo. Außerdem öffnen wir jetzt Kasse vier für Sie."
+    }
+   ]
+  },
+  {
+   "key": "lhl-a05",
+   "segments": [
+    {
+     "voice": "f3",
+     "text": "Guten Tag, Herr Rahimi, hier spricht Frau Wolf vom Jobcenter. Ihr Termin am Donnerstag um 10 Uhr muss leider ausfallen. Ich kann Ihnen stattdessen Freitag um 9 Uhr anbieten. Bitte rufen Sie mich kurz zurück, damit ich den Termin eintragen kann.",
+     "say": "Guten Tag, Herr Rahimi, hier spricht Frau Wolf vom Jobcenter. Ihr Termin am Donnerstag um zehn Uhr muss leider ausfallen. Ich kann Ihnen stattdessen Freitag um neun Uhr anbieten. Bitte rufen Sie mich kurz zurück, damit ich den Termin eintragen kann."
+    }
+   ]
+  },
+  {
+   "key": "lhl-a06",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Und jetzt der Verkehr: Auf der A1 zwischen Wuppertal und Hagen gibt es nach einem Unfall acht Kilometer Stau. Wenn Sie in Richtung Hagen unterwegs sind, fahren Sie besser über die B7.",
+     "say": "Und jetzt der Verkehr: Auf der A eins zwischen Wuppertal und Hagen gibt es nach einem Unfall acht Kilometer Stau. Wenn Sie in Richtung Hagen unterwegs sind, fahren Sie besser über die B sieben."
+    }
+   ]
+  },
+  {
+   "key": "lhl-a07",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Das Wetter für heute: Am Vormittag bleibt es noch trocken, ab Mittag kommt Regen. Die Temperaturen liegen bei neun Grad. Am Wochenende wird es dann sonnig und etwas wärmer."
+    }
+   ]
+  },
+  {
+   "key": "lhl-a08",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Liebe Besucherinnen und Besucher, die Stadtbücherei schließt in 15 Minuten. Bitte bringen Sie Ihre Bücher zur Ausleihe im Erdgeschoss. Und noch ein Hinweis: Ab Montag haben wir neue Öffnungszeiten – dienstags sind wir dann bis 19 Uhr für Sie da.",
+     "say": "Liebe Besucherinnen und Besucher, die Stadtbücherei schließt in fünfzehn Minuten. Bitte bringen Sie Ihre Bücher zur Ausleihe im Erdgeschoss. Und noch ein Hinweis: Ab Montag haben wir neue Öffnungszeiten – dienstags sind wir dann bis neunzehn Uhr für Sie da."
+    }
+   ]
+  },
+  {
+   "key": "lhl-g01",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Hallo Frau Becker, haben Sie vielleicht ein Paket für mich angenommen?"
+    },
+    {
+     "voice": "f2",
+     "text": "Ja, gestern Nachmittag. Es ist ziemlich schwer. Mein Mann kann es Ihnen heute Abend um sieben bringen."
+    },
+    {
+     "voice": "m1",
+     "text": "Das ist nett, aber ich bin erst um acht zu Hause."
+    },
+    {
+     "voice": "f2",
+     "text": "Kein Problem, dann bringt er es um acht."
+    }
+   ]
+  },
+  {
+   "key": "lhl-g02",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Malik, kannst du am Samstag meine Frühschicht übernehmen? Meine Schwester heiratet."
+    },
+    {
+     "voice": "m2",
+     "text": "Am Samstag? Da habe ich eigentlich frei … Aber gut, wenn du dafür am Mittwoch meine Spätschicht machst."
+    },
+    {
+     "voice": "f1",
+     "text": "Mittwoch passt. Danke! Ich sage es gleich der Chefin."
+    }
+   ]
+  },
+  {
+   "key": "lhl-g03",
+   "segments": [
+    {
+     "voice": "f3",
+     "text": "Praxis Dr. Lang, guten Tag.",
+     "say": "Praxis Doktor Lang, guten Tag."
+    },
+    {
+     "voice": "f2",
+     "text": "Guten Tag, Ivanova. Ich brauche ein neues Rezept für meine Blutdrucktabletten."
+    },
+    {
+     "voice": "f3",
+     "text": "Waren Sie in diesem Quartal schon bei uns?"
+    },
+    {
+     "voice": "f2",
+     "text": "Ja, im Oktober."
+    },
+    {
+     "voice": "f3",
+     "text": "Gut, dann müssen Sie nicht zum Arzt. Sie können das Rezept morgen ab 10 Uhr abholen. Bringen Sie bitte Ihre Versichertenkarte mit.",
+     "say": "Gut, dann müssen Sie nicht zum Arzt. Sie können das Rezept morgen ab zehn Uhr abholen. Bringen Sie bitte Ihre Versichertenkarte mit."
+    }
+   ]
+  },
+  {
+   "key": "lhl-g04",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Gehst du heute zum Elternabend?"
+    },
+    {
+     "voice": "m1",
+     "text": "Ich kann leider nicht. Ich habe Kurs bis 19 Uhr, und der Elternabend beginnt schon um halb sieben.",
+     "say": "Ich kann leider nicht. Ich habe Kurs bis neunzehn Uhr, und der Elternabend beginnt schon um halb sieben."
+    },
+    {
+     "voice": "f1",
+     "text": "Soll ich dir morgen erzählen, was besprochen wurde?"
+    },
+    {
+     "voice": "m1",
+     "text": "Ja, gern. Besonders wegen der Klassenfahrt im Mai."
+    }
+   ]
+  },
+  {
+   "key": "lhl-m01",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Ich fahre jeden Tag mit dem Rad zur Arbeit. Das ist gesund, und ich muss nie einen Parkplatz suchen. Für mich gibt es nichts Besseres."
+    }
+   ]
+  },
+  {
+   "key": "lhl-m02",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Mit drei Kindern und dem Einkauf für die ganze Woche geht das bei mir einfach nicht. Ohne Auto schaffe ich meinen Alltag nicht."
+    }
+   ]
+  },
+  {
+   "key": "lhl-m03",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Im Sommer finde ich das super. Aber im Winter, wenn es früh dunkel und glatt ist, nehme ich lieber den Bus oder das Auto."
+    }
+   ]
+  },
+  {
+   "key": "lhl-m04",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Die Radwege in unserer Stadt sind schmal und gefährlich. Solange sich daran nichts ändert, steige ich nicht aufs Fahrrad."
+    }
+   ]
   }
  ]
 }

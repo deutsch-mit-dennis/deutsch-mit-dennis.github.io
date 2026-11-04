@@ -24,6 +24,13 @@ from reportlab.lib.units import mm
 from reportlab.lib.colors import HexColor
 from reportlab.lib.styles import ParagraphStyle
 from PIL import Image as PILImage
+from reportlab.graphics.barcode import qr
+from reportlab.graphics.shapes import Drawing
+
+def qrcode(url, size=26 * mm):
+    w = qr.QrCodeWidget(url); b = w.getBounds()
+    d = Drawing(size, size, transform=[size / (b[2] - b[0]), 0, 0, size / (b[3] - b[1]), 0, 0]); d.add(w)
+    return d
 st['cover'] = ParagraphStyle('cover', parent=st['h1'], fontSize=30, leading=35, spaceAfter=10)
 st['coverkick'] = ParagraphStyle('coverkick', parent=st['kick'], fontSize=13, leading=17, spaceAfter=8)
 st['lic'] = ParagraphStyle('lic', parent=st['small'], fontSize=9, leading=12.5)
@@ -134,6 +141,11 @@ def render(d):
                 story += [tt, Spacer(1, 4)]
             elif ty == 'image': story.append(image(b['src'], b.get('caption', '')))
             elif ty == 'pagebreak': story.append(PageBreak())
+            elif ty == 'qr':
+                tq = Table([[qrcode(b['url']), [R(f"<b>{fmt(b['title'])}</b>"), R(fmt(b['text']) + f"<br/><b>{fmt(b['url'].replace('https://', ''))}</b>", 'cell')]]],
+                           colWidths=[32 * mm, W - 32 * mm])
+                tq.setStyle(TableStyle([('VALIGN', (0, 0), (-1, -1), 'MIDDLE'), ('BACKGROUND', (0, 0), (-1, -1), SOFT), ('LEFTPADDING', (0, 0), (-1, -1), 8)]))
+                story += [Spacer(1, 3), tq, Spacer(1, 6)]
             elif ty == 'lidq': story.append(lidq(b['q']))
             elif ty == 'exercise':
                 title = b['title']; head = [P(title, 'h3')]
