@@ -2,6 +2,18 @@
  "note": "Neu auf der Seite – neueste Einträge oben. Wird vom Redaktionsplan (geplante Aufgaben) ergänzt.",
  "items": [
   {
+   "date": "2026-11-04",
+   "type": "uebung",
+   "title": "Neuer Lesetext: Ein Bus, den man bestellen kann – Zeitungsartikel (Alltag, A2–B1)",
+   "link": "#lesen/alltag/9"
+  },
+  {
+   "date": "2026-11-04",
+   "type": "uebung",
+   "title": "Neuer Lesetext: Telefonnotiz: Lieferung verspätet – Gesprächsnotiz (Beruf, B1–B2)",
+   "link": "#lesen/beruf/8"
+  },
+  {
    "date": "2026-11-02",
    "type": "neu",
    "title": "DTZ Schreiben: Vorbereitungspaket zur neuen Regel ab 1.11.2026 (mindestens A2) – Briefgerüst, Redemittel, 8 Aufgaben, Mustertexte, Timer",
@@ -168,30 +180,6 @@
    "type": "hoeren",
    "title": "Neues Hörtraining: je 2 Übungssätze für telc B1 und DTB B1",
    "link": "#hoeren"
-  },
-  {
-   "date": "2026-10-21",
-   "type": "neu",
-   "title": "Mein Lernweg: neue Wege für LiD, telc B1/B2 und DTB B1/B2 – mit Probeprüfungen",
-   "link": "#lernweg"
-  },
-  {
-   "date": "2026-10-21",
-   "type": "uebung",
-   "title": "Neuer Lesetext: Ein Schwimmkurs für Zofia (Anzeigen, A2–B1)",
-   "link": "#lesen/alltag/6"
-  },
-  {
-   "date": "2026-10-21",
-   "type": "uebung",
-   "title": "Neuer Lesetext: Anerkennung des Berufsabschlusses – lohnt sich das? (Forumsbeitrag, B1–B2)",
-   "link": "#lesen/beruf/5"
-  },
-  {
-   "date": "2026-10-21",
-   "type": "lied",
-   "title": "10 neue Lieder: je 2 für A1, A2, B1, B2 und C1 – mit Liedtext, PDF, Aufgaben und Lösungen",
-   "link": "#lieder/A1"
   }
  ]
 }
