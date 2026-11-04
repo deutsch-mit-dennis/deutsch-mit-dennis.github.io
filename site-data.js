@@ -893,7 +893,10 @@ DM.packages = [
     contents: ['5 Unterrichtseinheiten mit Ablaufplan', '18 Kopiervorlagen: Redemittel-Karten, Lückentexte, Fehlertexte', '20 Schreibaufgaben mit Musterlösung', 'Korrekturraster, Korrekturzeichen, Peer-Feedback-Bogen'] },
   { id: 'lehrer-briefe-dtb-b2', pages: 54, img: 'assets/pakete/lehrer-briefe-dtb-b2.jpg', preview: 'material/leseproben/lehrer-briefe-dtb-b2.pdf', group: 'lehrende', icon: '💼', title: 'Lehrerpaket: E-Mails im Beruf – DTB B2', level: 'B1–B2', target: 'für Lehrkräfte', price: '19,90 €', buy: 'https://www.checkout-ds24.com/product/742188',
     desc: 'Schreiben im Berufssprachkurs: Beschwerden beantworten, interne E-Mails, Stellungnahmen. 5 Unterrichtseinheiten, Kopiervorlagen und 16 Aufgaben mit Musterlösung – von einem DTB-Prüfenden entwickelt.',
-    contents: ['5 Unterrichtseinheiten à 90 Minuten', 'Register-Training und Auftrag-Analyse', '16 Aufgaben (E-Mail und Forumsbeitrag) mit Musterlösung', 'Korrekturraster und Peer-Feedback'] }
+    contents: ['5 Unterrichtseinheiten à 90 Minuten', 'Register-Training und Auftrag-Analyse', '16 Aufgaben (E-Mail und Forumsbeitrag) mit Musterlösung', 'Korrekturraster und Peer-Feedback'] },
+  { id: 'lehrer-sprechen-dtz', pages: 24, img: 'assets/pakete/lehrer-sprechen-dtz.jpg', preview: 'material/leseproben/lehrer-sprechen-dtz.pdf', group: 'lehrende', icon: '🗣️', title: 'Lehrerpaket: Sprechen DTZ – Kärtchen und Rollenspiele', level: 'A2–B1', target: 'für Lehrkräfte', price: '24,90 €', buy: null,
+    desc: 'Freies Sprechen für die mündliche DTZ-Prüfung trainieren: 5 fertige Unterrichtseinheiten à 90 Minuten und Kopiervorlagen zum Ausschneiden – Redemittel-Karten, Fragekarten, Erfahrungs- und Planungskarten, Rollenspiele mit Karte A und B, Sprechspiele und ein Beobachtungsbogen. Mit Musterlösungen und Musterdialogen – von einem lizenzierten DTZ-Prüfer.',
+    contents: ['5 Unterrichtseinheiten mit Ablaufplan (Sich vorstellen, Erfahrungen, Planen, Rollenspiele, Simulation)', '24 Redemittel-Karten und 30 Fragekarten „Sich vorstellen“', '12 Erfahrungskarten (A2/B1-Fragen) und 12 Planungskarten', '10 Alltagsrollenspiele mit Karte A und B', 'Sprechspiele, Beobachtungsbogen, Selbsteinschätzung', 'Musterlösungen, Mustervorstellungen A2/B1 und Musterdialoge'] }
 ];
 
 /* Zulassungen und Nachweise (Bilder in assets/nachweise, persönliche Daten geschwärzt) */
