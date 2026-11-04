@@ -908,3 +908,6 @@ main#main{overflow-x:clip} /* schwebende 3D-Bilder dürfen die Seite nicht seitl
   .v-say{top:6px;bottom:auto;background:rgba(238,241,248,.94)}
 }
 @media(max-width:400px){.dm-wall-grid{grid-template-columns:1fr!important}}
+/* audit 2: remaining small tap targets in content */
+.sp-page .dm-small a,.dm-section-head a,.dm-exam-head a,.dm-pkg-probe{display:inline-flex;align-items:center;min-height:44px}
+.sim-pausebtn{min-width:44px;min-height:44px}

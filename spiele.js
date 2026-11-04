@@ -124,19 +124,21 @@
   }
 
   function result(g, opt, { score = 0, max = 0, wrong = [] } = {}) {
-    const all = get(), s = all[g.id] || {}, isBest = s.best == null || score > s.best;
+    const all = get(), s = all[g.id] || {};
     all[g.id] = { ...s, best: Math.max(score, s.best ?? 0), plays: (s.plays || 0) + 1, last: Date.now(), opt }; put(all);
     const pct = max ? score / max : 0;
+    // a record only counts as one when it beats an earlier round and is a decent score (no confetti for 1 of 10)
+    const isBest = s.best == null || score > s.best, isRecord = s.best != null && score > s.best && (!max || pct >= 0.5);
     DM.page(`${crumbs(g)}
       <section class="ch-card ch-result sp-result"><p class="ch-kicker">${esc(g.title)}</p>
-        <h1>${isBest && score > 0 ? 'Neuer Rekord! 🏆' : pct >= 0.9 ? 'Ausgezeichnet!' : pct >= 0.6 ? 'Gut gemacht!' : 'Weiter üben – du schaffst das!'}</h1>
+        <h1>${isRecord ? 'Neuer Rekord! 🏆' : pct >= 0.9 ? 'Ausgezeichnet!' : pct >= 0.6 ? 'Gut gemacht!' : 'Weiter üben – du schaffst das!'}</h1>
         <p class="ch-big">${score}${max ? ` <small>von ${max}</small>` : ' <small>Punkte</small>'}</p>
         ${!isBest ? `<p class="sp-best">Dein Rekord: <b>${s.best}</b></p>` : ''}
-        ${wrong.length ? `<details class="ch-review" open><summary>Das solltest du dir merken (${wrong.length})</summary><ul>${wrong.slice(0, 15).map(w => `<li><b>${esc(w.correct)}</b>${w.tip ? ` – ${esc(w.tip)}` : ''}</li>`).join('')}</ul></details>` : ''}
         <div class="ch-actions"><button type="button" class="dm-btn ch-go" id="sp-again">${esc(g.againLabel || 'Nochmal spielen')}</button><a class="dm-btn dm-btn-quiet" href="#spiele/${catOf(g)}">Andere Spiele</a></div>
+        ${wrong.length ? `<details class="ch-review" open><summary>Das solltest du dir merken (${wrong.length})</summary><ul>${wrong.slice(0, 15).map(w => `<li><b>${esc(w.correct)}</b>${w.tip ? ` – ${esc(w.tip)}` : ''}</li>`).join('')}</ul></details>` : ''}
       </section>`, 'sp-page');
     window.scrollTo({ top: 0, behavior: 'instant' });
-    if ((isBest && score > 0) || pct >= 0.9) DM.celebrate?.($('.sp-result'));
+    if (isRecord || pct >= 0.9) DM.celebrate?.($('.sp-result'));
     $('#sp-again').onclick = () => play(g, opt);
   }
 
