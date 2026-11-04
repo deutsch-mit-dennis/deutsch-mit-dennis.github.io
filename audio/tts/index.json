@@ -1,5 +1,5 @@
 {
-"updated": "2026-11-04T20:14:24Z",
+"updated": "2026-11-04T20:21:17Z",
 "engines": [
 "elevenlabs",
 "gemini"
@@ -608,10 +608,10 @@
 "whole": true
 },
 "lhl-g03": {
-"v": "2f032e8c95",
+"v": "c9e890a074",
 "engine": "gemini",
-"sig": "2f032e8c95",
-"text": "e2cb1472f2",
+"sig": "c9e890a074",
+"text": "4ed7fed09f",
 "whole": true
 },
 "lhl-g04": {
@@ -643,10 +643,10 @@
 "whole": true
 },
 "lhl-m04": {
-"v": "43d720a1e0",
+"v": "7e808411c8",
 "engine": "gemini",
-"sig": "43d720a1e0",
-"text": "6244082338",
+"sig": "7e808411c8",
+"text": "c63952b1da",
 "whole": true
 },
 "t0000d304": {
