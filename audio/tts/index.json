@@ -1,5 +1,5 @@
 {
-"updated": "2026-11-04T11:44:48Z",
+"updated": "2026-11-04T20:14:24Z",
 "engines": [
 "elevenlabs",
 "gemini"
@@ -536,6 +536,118 @@
 "engine": "gemini",
 "sig": "b74ddcfa68",
 "text": "02c379e480"
+},
+"lhl-a01": {
+"v": "e3ef1187d3",
+"engine": "gemini",
+"sig": "e3ef1187d3",
+"text": "39d8b387b5",
+"whole": true
+},
+"lhl-a02": {
+"v": "01778e2cfe",
+"engine": "gemini",
+"sig": "01778e2cfe",
+"text": "cd38ba75c1",
+"whole": true
+},
+"lhl-a03": {
+"v": "20cb987d8c",
+"engine": "gemini",
+"sig": "20cb987d8c",
+"text": "816cfec1c4",
+"whole": true
+},
+"lhl-a04": {
+"v": "c305f32090",
+"engine": "gemini",
+"sig": "c305f32090",
+"text": "776aaf8a28",
+"whole": true
+},
+"lhl-a05": {
+"v": "38492d9129",
+"engine": "gemini",
+"sig": "38492d9129",
+"text": "5abd8f81ee",
+"whole": true
+},
+"lhl-a06": {
+"v": "6042976cd9",
+"engine": "gemini",
+"sig": "6042976cd9",
+"text": "3ec40eec31",
+"whole": true
+},
+"lhl-a07": {
+"v": "ec1c597f7d",
+"engine": "gemini",
+"sig": "ec1c597f7d",
+"text": "e7a60bcd67",
+"whole": true
+},
+"lhl-a08": {
+"v": "9980c693d8",
+"engine": "gemini",
+"sig": "9980c693d8",
+"text": "181b4c1689",
+"whole": true
+},
+"lhl-g01": {
+"v": "ac648a7020",
+"engine": "gemini",
+"sig": "ac648a7020",
+"text": "a04aa93f7e",
+"whole": true
+},
+"lhl-g02": {
+"v": "e380f939a5",
+"engine": "gemini",
+"sig": "e380f939a5",
+"text": "e685e0af5c",
+"whole": true
+},
+"lhl-g03": {
+"v": "2f032e8c95",
+"engine": "gemini",
+"sig": "2f032e8c95",
+"text": "e2cb1472f2",
+"whole": true
+},
+"lhl-g04": {
+"v": "3a357ad764",
+"engine": "gemini",
+"sig": "3a357ad764",
+"text": "dd438a550a",
+"whole": true
+},
+"lhl-m01": {
+"v": "7d8d67b370",
+"engine": "gemini",
+"sig": "7d8d67b370",
+"text": "5ec12e4517",
+"whole": true
+},
+"lhl-m02": {
+"v": "60fe9eb6f0",
+"engine": "gemini",
+"sig": "60fe9eb6f0",
+"text": "5d1d7e568a",
+"whole": true
+},
+"lhl-m03": {
+"v": "19554aa32f",
+"engine": "gemini",
+"sig": "19554aa32f",
+"text": "f92712bc9f",
+"whole": true
+},
+"lhl-m04": {
+"v": "43d720a1e0",
+"engine": "gemini",
+"sig": "43d720a1e0",
+"text": "6244082338",
+"whole": true
 },
 "t0000d304": {
 "v": "e343d40c2b",
