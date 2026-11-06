@@ -1,33 +1,43 @@
 {
  "hinweis": "Zusammengefasste Besucherzahlen (Cloudflare Web Analytics, ohne Cookies). Automatisch erzeugt.",
- "stand": "2026-11-05T12:07:17.248Z",
- "tag": "2026-11-04",
+ "stand": "2026-11-06T11:58:32.194Z",
+ "tag": "2026-11-05",
  "gestern": {
-  "besuche": 40,
-  "seitenaufrufe": 93
+  "besuche": 14,
+  "seitenaufrufe": 98
  },
  "letzte7Tage": {
-  "besuche": 355,
-  "seitenaufrufe": 7750
+  "besuche": 295,
+  "seitenaufrufe": 7593
  },
  "herkunft": [
   {
    "name": "deutsch-mit-dennis.de",
    "besuche": 0,
-   "aufrufe": 7395
+   "aufrufe": 7298
   },
   {
    "name": "(direkt)",
-   "besuche": 348,
-   "aufrufe": 348
+   "besuche": 286,
+   "aufrufe": 286
   },
   {
    "name": "l.instagram.com",
-   "besuche": 6,
-   "aufrufe": 6
+   "besuche": 4,
+   "aufrufe": 4
   },
   {
    "name": "m.facebook.com",
+   "besuche": 2,
+   "aufrufe": 2
+  },
+  {
+   "name": "www.facebook.com",
+   "besuche": 2,
+   "aufrufe": 2
+  },
+  {
+   "name": "www.google.com",
    "besuche": 1,
    "aufrufe": 1
   }
@@ -35,18 +45,28 @@
  "laender": [
   {
    "name": "DE",
-   "besuche": 327,
-   "aufrufe": 7717
+   "besuche": 269,
+   "aufrufe": 7561
   },
   {
    "name": "US",
-   "besuche": 25,
-   "aufrufe": 25
+   "besuche": 20,
+   "aufrufe": 20
   },
   {
    "name": "UA",
    "besuche": 1,
    "aufrufe": 6
+  },
+  {
+   "name": "SE",
+   "besuche": 2,
+   "aufrufe": 2
+  },
+  {
+   "name": "PT",
+   "besuche": 1,
+   "aufrufe": 2
   },
   {
    "name": "EG",
@@ -62,20 +82,20 @@
  "geraete": [
   {
    "name": "desktop",
-   "besuche": 251,
-   "aufrufe": 7159
+   "besuche": 235,
+   "aufrufe": 7118
   },
   {
    "name": "mobile",
-   "besuche": 104,
-   "aufrufe": 591
+   "besuche": 60,
+   "aufrufe": 475
   }
  ],
  "seiten": [
   {
    "name": "/",
-   "besuche": 355,
-   "aufrufe": 7750
+   "besuche": 295,
+   "aufrufe": 7593
   }
  ],
  "verlauf": {
@@ -194,6 +214,10 @@
   "2026-11-04": {
    "besuche": 40,
    "seitenaufrufe": 93
+  },
+  "2026-11-05": {
+   "besuche": 14,
+   "seitenaufrufe": 98
   }
  }
 }
