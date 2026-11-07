@@ -1,0 +1,2854 @@
+[
+ {
+  "text": "Mikula ist Bauer. Er lebt im Jahr tausendvierundzwanzig.",
+  "voice": "f1"
+ },
+ {
+  "text": "Im Wald findet er eine Zeitmaschine. Plötzlich ist er in Deutschland – im Jahr zweitausendsechsundzwanzig!",
+  "voice": "f1"
+ },
+ {
+  "text": "Jetzt ist die Maschine kaputt. Mikula braucht zehn Zeitkristalle, dann kann er nach Hause.",
+  "voice": "f1"
+ },
+ {
+  "text": "Hilfst du mir? Hier ist alles so neu!",
+  "voice": "mk"
+ },
+ {
+  "text": "Danke für deine Hilfe! Sechs Kristalle habe ich schon. Aber ich brauche noch mehr.",
+  "voice": "mk"
+ },
+ {
+  "text": "Bald gibt es neue Stationen. Folge Mikula, dann verpasst du nichts!",
+  "voice": "f1"
+ },
+ {
+  "text": "Mikula sagt es höflich und richtig.",
+  "voice": "f1"
+ },
+ {
+  "text": "Der Anfang ist schon richtig. Diese Wörter bleiben stehen.",
+  "voice": "f1"
+ },
+ {
+  "text": "Tipp: Wo steht das Verb?",
+  "voice": "f1"
+ },
+ {
+  "text": "Mikula steht am Bahnhof. Alles ist laut. Da steht ein großer Kasten mit Licht.",
+  "voice": "f1"
+ },
+ {
+  "text": "Was ist das? Ist das ein Zauberkasten?",
+  "voice": "mk"
+ },
+ {
+  "text": "Mikula grüßt den Kasten freundlich. Der Kasten sagt nichts.",
+  "voice": "f1"
+ },
+ {
+  "text": "Ich bin da! Und schau: ein Zeitkristall!",
+  "voice": "mk"
+ },
+ {
+  "text": "Mit diesem Papier fahre ich im Zug. Wie heißt es?",
+  "voice": "mk"
+ },
+ {
+  "text": "Hm, das klingt komisch. Mein Pferd versteht das auch nicht!",
+  "voice": "mk"
+ },
+ {
+  "text": "Welcher Artikel ist richtig?",
+  "voice": "f1"
+ },
+ {
+  "text": "Tipp: Das letzte Wort zählt: Fahr + Karte.",
+  "voice": "f1"
+ },
+ {
+  "text": "Wir sagen: die Fahrkarte. Plural: die Fahrkarten.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „die Fahrkarte“. Wir sagen: die Fahrkarte. Plural: die Fahrkarten.",
+  "voice": "f1"
+ },
+ {
+  "text": "Zwei lange Eisenstangen auf dem Boden! Was ist das?",
+  "voice": "mk"
+ },
+ {
+  "text": "Oh nein, das war falsch. Ich schaue noch einmal auf den Boden.",
+  "voice": "mk"
+ },
+ {
+  "text": "Was ist das?",
+  "voice": "f1"
+ },
+ {
+  "text": "Tipp: Der Zug fährt darauf.",
+  "voice": "f1"
+ },
+ {
+  "text": "Das ist das Gleis. Der Zug fährt auf dem Gleis.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „das Gleis“. Das ist das Gleis. Der Zug fährt auf dem Gleis.",
+  "voice": "f1"
+ },
+ {
+  "text": "Eine Stimme spricht aus dem Himmel! Wie heißt das?",
+  "voice": "mk"
+ },
+ {
+  "text": "Oje, die Stimme im Himmel sagt etwas anderes!",
+  "voice": "mk"
+ },
+ {
+  "text": "Tipp: Wörter auf -e haben oft denselben Artikel wie Lampe oder Tasche.",
+  "voice": "f1"
+ },
+ {
+  "text": "Wir sagen: die Durchsage. Plural: die Durchsagen.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „die Durchsage“. Wir sagen: die Durchsage. Plural: die Durchsagen.",
+  "voice": "f1"
+ },
+ {
+  "text": "Dort kommt ein langes, lautes Tier! Was ist das?",
+  "voice": "mk"
+ },
+ {
+  "text": "Nein! Mein Pferd hat keine Räder und ist viel leiser.",
+  "voice": "mk"
+ },
+ {
+  "text": "Tipp: Es hat Räder und fährt auf dem Gleis.",
+  "voice": "f1"
+ },
+ {
+  "text": "Das ist der Zug. Er fährt auf dem Gleis.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „der Zug“. Das ist der Zug. Er fährt auf dem Gleis.",
+  "voice": "f1"
+ },
+ {
+  "text": "Ich bin müde. Ich möchte im Zug sitzen!",
+  "voice": "mk"
+ },
+ {
+  "text": "Oh nein, dann muss ich wohl stehen!",
+  "voice": "mk"
+ },
+ {
+  "text": "Tipp: Platz hat denselben Artikel wie Stuhl.",
+  "voice": "f1"
+ },
+ {
+  "text": "Wir sagen: der Platz. Plural: die Plätze.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „der Platz“. Wir sagen: der Platz. Plural: die Plätze.",
+  "voice": "f1"
+ },
+ {
+  "text": "Wir sind da! Wie heißt dieser große Ort mit den vielen Gleisen?",
+  "voice": "mk"
+ },
+ {
+  "text": "Hm, nein. Hier steigen alle ein und aus. Wie heißt dieser Ort?",
+  "voice": "mk"
+ },
+ {
+  "text": "Tipp: Gesucht ist kein Ding und kein Fahrzeug, sondern ein Ort.",
+  "voice": "f1"
+ },
+ {
+  "text": "Das ist der Bahnhof. Hier halten die Züge.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „der Bahnhof“. Das ist der Bahnhof. Hier halten die Züge.",
+  "voice": "f1"
+ },
+ {
+  "text": "Mikula steht in der Bahnhofshalle. Vor ihm ist ein großer Kasten mit Licht und Knöpfen.",
+  "voice": "f1"
+ },
+ {
+  "text": "Ein Kasten mit Licht! Ich sage freundlich „Guten Tag“. Aber er antwortet nicht.",
+  "voice": "mk"
+ },
+ {
+  "text": "Das ist ein Fahrkartenautomat. Hier kaufen Sie Ihre Fahrkarte.",
+  "voice": "f2"
+ },
+ {
+  "text": "Geschafft! Ich bin mit dem Zug gefahren, und ich habe einen Zeitkristall gefunden!",
+  "voice": "mk"
+ },
+ {
+  "text": "Ich suche den Automaten mit den vielen Knöpfen. Ich frage eine Frau.",
+  "voice": "mk"
+ },
+ {
+  "text": "Hm, so versteht mich die Frau nicht. Ich probiere es noch einmal.",
+  "voice": "mk"
+ },
+ {
+  "text": "Bau den Satz für Mikula.",
+  "voice": "f1"
+ },
+ {
+  "text": "In einer W-Frage steht das Verb auf Position 2: „Wo ist der …?“",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „Entschuldigung, wo ist der Fahrkartenautomat?“. In einer W-Frage steht das Verb auf Position 2: „Wo ist der …?“",
+  "voice": "f1"
+ },
+ {
+  "text": "Jetzt bin ich am Schalter. Ich möchte nach Köln fahren. Was sage ich?",
+  "voice": "mk"
+ },
+ {
+  "text": "Oje, die Mitarbeiterin schaut mich fragend an.",
+  "voice": "mk"
+ },
+ {
+  "text": "Mit „möchte“ sagen wir höflich, was wir wollen. Das Verb steht auf Position 2.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „Ich möchte eine Fahrkarte nach Köln.“. Mit „möchte“ sagen wir höflich, was wir wollen. Das Verb steht auf Position 2.",
+  "voice": "f1"
+ },
+ {
+  "text": "Ich habe die Fahrkarte. Aber wo steht mein Zug?",
+  "voice": "mk"
+ },
+ {
+  "text": "Hm, so stimmt der Satz noch nicht. Ich versuche es noch einmal.",
+  "voice": "mk"
+ },
+ {
+  "text": "„abfahren“ trennt sich: Der Zug fährt … ab. Das „ab“ steht am Ende.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „Von welchem Gleis fährt der Zug ab?“. „abfahren“ trennt sich: Der Zug fährt … ab. Das „ab“ steht am Ende.",
+  "voice": "f1"
+ },
+ {
+  "text": "Eine Stimme sagt: „Der Zug hat Verspätung.“ Was bedeutet das?",
+  "voice": "mk"
+ },
+ {
+  "text": "Oje, dann komme ich zur falschen Zeit. Ich frage noch einmal.",
+  "voice": "mk"
+ },
+ {
+  "text": "Welcher Satz passt?",
+  "voice": "f1"
+ },
+ {
+  "text": "Tipp: „Verspätung“ hat mit der Uhrzeit zu tun. Kommt der Zug pünktlich?",
+  "voice": "f1"
+ },
+ {
+  "text": "Verspätung heißt: Der Zug kommt später als geplant.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „Der Zug kommt später.“. Verspätung heißt: Der Zug kommt später als geplant.",
+  "voice": "f1"
+ },
+ {
+  "text": "Im Zug sind viele Leute. Ich sehe einen leeren Sitz. Was frage ich?",
+  "voice": "mk"
+ },
+ {
+  "text": "Hm, der Mann neben mir versteht die Frage nicht.",
+  "voice": "mk"
+ },
+ {
+  "text": "Bei einer Ja/Nein-Frage steht das Verb auf Position 1: „Ist dieser Platz …?“",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „Ist dieser Platz noch frei?“. Bei einer Ja/Nein-Frage steht das Verb auf Position 1: „Ist dieser Platz …?“",
+  "voice": "f1"
+ },
+ {
+  "text": "Der Zug hält in Köln. Ich bin am Ziel. Was sage ich?",
+  "voice": "mk"
+ },
+ {
+  "text": "Hm, dann bleibe ich noch im Zug sitzen!",
+  "voice": "mk"
+ },
+ {
+  "text": "Tipp: Mikula bleibt nicht im Zug, er geht auf den Bahnsteig.",
+  "voice": "f1"
+ },
+ {
+  "text": "Am Ziel steigen wir aus: Ich steige hier aus.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „Ich steige hier aus.“. Am Ziel steigen wir aus: Ich steige hier aus.",
+  "voice": "f1"
+ },
+ {
+  "text": "Mikula steht in der Bahnhofshalle vor einem großen Kasten. Er leuchtet und hat viele Knöpfe.",
+  "voice": "f1"
+ },
+ {
+  "text": "Verzeihung, ist das ein Zauberkasten? Ich habe schon dreimal gegrüßt, aber er antwortet nicht.",
+  "voice": "mk"
+ },
+ {
+  "text": "Ich bin nur ein Bauer und möchte nach Hause. Könnte mir bitte jemand helfen?",
+  "voice": "mk"
+ },
+ {
+  "text": "Das war ein Abenteuer! Der Zug war schneller als mein Pferd, und jetzt habe ich einen Zeitkristall. Danke für deine Hilfe!",
+  "voice": "mk"
+ },
+ {
+  "text": "Brauchen Sie Hilfe? Der Automat ist heute manchmal langsam.",
+  "voice": "f2"
+ },
+ {
+  "text": "Oje, der Kasten spricht nicht mit mir, und die Frau jetzt auch nicht!",
+  "voice": "mk"
+ },
+ {
+  "text": "Was sagt Mikula am besten?",
+  "voice": "f1"
+ },
+ {
+  "text": "Mikula steht vor dem Fahrkartenautomaten. Der Bildschirm ist dunkel geworden.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „Ja, gern. Könnten Sie mir zeigen, wie der Automat funktioniert?“.",
+  "voice": "f1"
+ },
+ {
+  "text": "Grammatisch richtig, aber „Ich will …“ klingt fordernd. Besser: „Könnten Sie mir zeigen …?“",
+  "voice": "f1"
+ },
+ {
+  "text": "Im Nebensatz steht das Verb am Ende: „… wie der Automat funktioniert“.",
+  "voice": "f1"
+ },
+ {
+  "text": "Möchten Sie nur eine einfache Fahrt oder hin und zurück?",
+  "voice": "m1"
+ },
+ {
+  "text": "Auf dem Markt zu Hause konnte ich mit einem Huhn bezahlen. Hier ist das anders!",
+  "voice": "mk"
+ },
+ {
+  "text": "Mikula steht am Schalter im Reisezentrum.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „Hin und zurück, bitte. Gibt es eine Ermäßigung?“.",
+  "voice": "f1"
+ },
+ {
+  "text": "Grammatisch richtig, aber am Schalter sagen wir „Sie“: „Können Sie …?“",
+  "voice": "f1"
+ },
+ {
+  "text": "Es heißt „die Ermäßigung“. Darum sagen wir: „eine Ermäßigung“.",
+  "voice": "f1"
+ },
+ {
+  "text": "Sie müssen in Düsseldorf umsteigen. Möchten Sie einen Platz reservieren?",
+  "voice": "m1"
+ },
+ {
+  "text": "Umsteigen? Bei meinem Pferd steige ich nur auf und ab!",
+  "voice": "mk"
+ },
+ {
+  "text": "Mikula bekommt seine Fahrkarte am Schalter.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „Ja, bitte einen Fensterplatz. Wie viel Zeit habe ich zum Umsteigen?“.",
+  "voice": "f1"
+ },
+ {
+  "text": "In einer W-Frage steht das Verb auf Position 2: „Wie viel Zeit habe ich …?“",
+  "voice": "f1"
+ },
+ {
+  "text": "Nur ein Wort: Das ist zu kurz und klingt unfreundlich. Besser: „Ja, bitte einen Fensterplatz.“",
+  "voice": "f1"
+ },
+ {
+  "text": "Haben Sie die Durchsage gehört? Der Zug nach Köln fällt heute aus. Der nächste fährt in einer Stunde.",
+  "voice": "f2"
+ },
+ {
+  "text": "Ich dachte, der Lautsprecher spricht mit mir. Ich habe ihm sogar geantwortet!",
+  "voice": "mk"
+ },
+ {
+  "text": "Mikula wartet auf dem Bahnsteig. Eine Frau spricht ihn an.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „Nein, leider nicht. Vielen Dank für die Information!“.",
+  "voice": "f1"
+ },
+ {
+  "text": "Im Perfekt steht das Partizip am Ende: „… die Durchsage nicht gehört“.",
+  "voice": "f1"
+ },
+ {
+  "text": "Grammatisch richtig, aber „Sie müssen …“ klingt wie eine Forderung. Die Frau hilft freiwillig.",
+  "voice": "f1"
+ },
+ {
+  "text": "Guten Tag! Ihre Fahrkarte, bitte. Wir haben leider zehn Minuten Verspätung.",
+  "voice": "f2"
+ },
+ {
+  "text": "Zehn Minuten zu spät? Mein Pferd kommt auch manchmal zu spät!",
+  "voice": "mk"
+ },
+ {
+  "text": "Mikula sitzt im Zug. Die Zugbegleiterin kommt.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „Bitte schön, hier ist meine Fahrkarte. Das ist nicht schlimm.“.",
+  "voice": "f1"
+ },
+ {
+  "text": "Es heißt „die Fahrkarte“. Darum sagen wir: „meine Fahrkarte“.",
+  "voice": "f1"
+ },
+ {
+  "text": "Grammatisch richtig, aber das ist ein Vorwurf. Die Zugbegleiterin kann nichts für die Verspätung.",
+  "voice": "f1"
+ },
+ {
+  "text": "Willkommen in Köln! Suchen Sie etwas?",
+  "voice": "m1"
+ },
+ {
+  "text": "Hier sind so viele Türen. Bei mir zu Hause gibt es nur eine!",
+  "voice": "mk"
+ },
+ {
+  "text": "Mikula ist in Köln angekommen und sieht sich um.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „Ja, bitte. Könnten Sie mir sagen, wo der Ausgang ist?“.",
+  "voice": "f1"
+ },
+ {
+  "text": "Im Nebensatz steht das Verb am Ende: „… wo der Ausgang ist“.",
+  "voice": "f1"
+ },
+ {
+  "text": "Grammatisch richtig, aber „Das sehen Sie doch“ klingt genervt. Der Mitarbeiter will nur helfen.",
+  "voice": "f1"
+ },
+ {
+  "text": "die Fahrkarte. Ich kaufe eine Fahrkarte am Automaten.",
+  "voice": "f1"
+ },
+ {
+  "text": "der Zug. Der Zug nach Köln ist sehr schnell.",
+  "voice": "f1"
+ },
+ {
+  "text": "das Gleis. Der Zug fährt von Gleis drei ab.",
+  "voice": "f1"
+ },
+ {
+  "text": "der Bahnhof. Wir treffen uns am Bahnhof.",
+  "voice": "f1"
+ },
+ {
+  "text": "der Platz. Ist dieser Platz noch frei?",
+  "voice": "f1"
+ },
+ {
+  "text": "die Durchsage. Hören Sie die Durchsage?",
+  "voice": "f1"
+ },
+ {
+  "text": "die Verspätung. Der Zug hat zehn Minuten Verspätung.",
+  "voice": "f1"
+ },
+ {
+  "text": "der Fahrkartenautomat. Der Fahrkartenautomat nimmt Münzen und Scheine.",
+  "voice": "f1"
+ },
+ {
+  "text": "der Schalter. Am Schalter bekomme ich Hilfe.",
+  "voice": "f1"
+ },
+ {
+  "text": "die Ermäßigung. Gibt es eine Ermäßigung für Kinder?",
+  "voice": "f1"
+ },
+ {
+  "text": "Mikula steht vor dem Supermarkt.",
+  "voice": "f1"
+ },
+ {
+  "text": "Oh! Die Tür geht auf. Ganz von allein!",
+  "voice": "mk"
+ },
+ {
+  "text": "Zauberei! Ich gehe hinein. Ich brauche Brot.",
+  "voice": "mk"
+ },
+ {
+  "text": "Super! Ich habe alles. Und da ist ein Zeitkristall! Danke!",
+  "voice": "mk"
+ },
+ {
+  "text": "Hier geht etwas von allein auf! Wie heißt das?",
+  "voice": "mk"
+ },
+ {
+  "text": "Ups! Nichts passiert. Das war nicht richtig!",
+  "voice": "mk"
+ },
+ {
+  "text": "Tipp: Tür hat denselben Artikel wie Uhr.",
+  "voice": "f1"
+ },
+ {
+  "text": "Wir sagen: die Tür. Plural: die Türen.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „die Tür“. Wir sagen: die Tür. Plural: die Türen.",
+  "voice": "f1"
+ },
+ {
+  "text": "Ein Wagen mit Gitter! Was ist das?",
+  "voice": "mk"
+ },
+ {
+  "text": "Oje, mein Pferd schüttelt den Kopf!",
+  "voice": "mk"
+ },
+ {
+  "text": "Tipp: Man schiebt es und legt die Sachen hinein.",
+  "voice": "f1"
+ },
+ {
+  "text": "Das ist ein Einkaufswagen. Wir sagen: der Einkaufswagen.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „der Einkaufswagen“. Das ist ein Einkaufswagen. Wir sagen: der Einkaufswagen.",
+  "voice": "f1"
+ },
+ {
+  "text": "So viele Äpfel! Rot und grün!",
+  "voice": "mk"
+ },
+ {
+  "text": "Iiih, sauer! Das war falsch.",
+  "voice": "mk"
+ },
+ {
+  "text": "Tipp: Apfel hat denselben Artikel wie Tisch.",
+  "voice": "f1"
+ },
+ {
+  "text": "Wir sagen: der Apfel. Plural: die Äpfel.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „der Apfel“. Wir sagen: der Apfel. Plural: die Äpfel.",
+  "voice": "f1"
+ },
+ {
+  "text": "Weiß und kalt! Ich kann es trinken. Was ist das?",
+  "voice": "mk"
+ },
+ {
+  "text": "Muh? Meine Kuh schüttelt den Kopf!",
+  "voice": "mk"
+ },
+ {
+  "text": "Tipp: Käse kann man nicht trinken, ein Ei auch nicht.",
+  "voice": "f1"
+ },
+ {
+  "text": "Das ist Milch. Wir sagen: die Milch.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „die Milch“. Das ist Milch. Wir sagen: die Milch.",
+  "voice": "f1"
+ },
+ {
+  "text": "Süß und lecker! Das trinke ich gern. Wie heißt das?",
+  "voice": "mk"
+ },
+ {
+  "text": "Oje, das klingt sauer! Das war falsch.",
+  "voice": "mk"
+ },
+ {
+  "text": "Tipp: Saft hat denselben Artikel wie Kaffee.",
+  "voice": "f1"
+ },
+ {
+  "text": "Wir sagen: der Saft. Plural: die Säfte.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „der Saft“. Wir sagen: der Saft. Plural: die Säfte.",
+  "voice": "f1"
+ },
+ {
+  "text": "Ein langes Papier! Was ist das?",
+  "voice": "mk"
+ },
+ {
+  "text": "Oje! Das Papier schmeckt gar nicht.",
+  "voice": "mk"
+ },
+ {
+  "text": "Tipp: Dieses Papier bekommst du an der Kasse.",
+  "voice": "f1"
+ },
+ {
+  "text": "Das ist der Kassenbon. Darauf stehen die Preise.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „der Kassenbon“. Das ist der Kassenbon. Darauf stehen die Preise.",
+  "voice": "f1"
+ },
+ {
+  "text": "Mikula steht vor einem großen Supermarkt. Die Tür öffnet sich ganz von allein.",
+  "voice": "f1"
+ },
+ {
+  "text": "Das ist Zauberei! In meinem Dorf muss ich jede Tür selbst aufmachen.",
+  "voice": "mk"
+ },
+ {
+  "text": "Ich möchte Brot, Äpfel und Milch kaufen. Aber wie funktioniert das hier?",
+  "voice": "mk"
+ },
+ {
+  "text": "Juhu! Zwischen den Äpfeln glänzt ein Zeitkristall! Danke, du hast mir sehr geholfen.",
+  "voice": "mk"
+ },
+ {
+  "text": "Der Einkaufswagen hängt an einer Kette fest! Ich brauche eine Münze. Was frage ich?",
+  "voice": "mk"
+ },
+ {
+  "text": "Der Wagen bleibt fest – mein Pferd ist einfacher, es braucht nur Heu!",
+  "voice": "mk"
+ },
+ {
+  "text": "Nach „Wo“ steht das Verb: Wo bekomme ich …?",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „Wo bekomme ich eine Münze?“. Nach „Wo“ steht das Verb: Wo bekomme ich …?",
+  "voice": "f1"
+ },
+ {
+  "text": "So viele rote Tomaten! Ich möchte ein Kilo. Was sage ich?",
+  "voice": "mk"
+ },
+ {
+  "text": "Oje, der Satz ist durcheinander – wie mein Gemüsekorb!",
+  "voice": "mk"
+ },
+ {
+  "text": "Tipp: Achte auf zwei Dinge: Wo steht das zweite Verb, und welche Form hat es?",
+  "voice": "f1"
+ },
+ {
+  "text": "Nach „möchte“ steht das zweite Verb am Ende: kaufen.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „Ich möchte ein Kilo Tomaten kaufen.“. Nach „möchte“ steht das zweite Verb am Ende: kaufen.",
+  "voice": "f1"
+ },
+ {
+  "text": "Ich suche Milch, aber hier gibt es so viele Regale! Ich frage jemanden.",
+  "voice": "mk"
+ },
+ {
+  "text": "Oje, ich laufe schon zum dritten Mal um dasselbe Regal!",
+  "voice": "mk"
+ },
+ {
+  "text": "Das Fragewort „Wo“ steht vorn. Dann kommt das Verb: finde.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „Wo finde ich die Milch?“. Das Fragewort „Wo“ steht vorn. Dann kommt das Verb: finde.",
+  "voice": "f1"
+ },
+ {
+  "text": "Ein Kasten für leere Flaschen! Guten Tag, Herr Pfandautomat! Was sage ich?",
+  "voice": "mk"
+ },
+ {
+  "text": "Der Automat sagt nichts. Er ist wohl beleidigt!",
+  "voice": "mk"
+ },
+ {
+  "text": "Tipp: Prüfe zwei Stellen: „leer…“ und „zu…“.",
+  "voice": "f1"
+ },
+ {
+  "text": "Plural: die leeren Flaschen. Und: der Pfandautomat → zum (= zu dem) Pfandautomaten.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „Ich bringe die leeren Flaschen zum Pfandautomaten.“. Plural: die leeren Flaschen. Und: der Pfandautomat → zum (= zu dem) Pfandautomaten.",
+  "voice": "f1"
+ },
+ {
+  "text": "Ein schwarzer Fluss an der Kasse! Er trägt Brot und Käse. Ich lege meine Sachen darauf.",
+  "voice": "mk"
+ },
+ {
+  "text": "Oje, mein Brot fährt davon! Das ist kein Fluss, das ist ein Band.",
+  "voice": "mk"
+ },
+ {
+  "text": "Das Verb steht an Position 2: Ich lege … Dann kommt der Ort: auf das Kassenband.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „Ich lege die Sachen auf das Kassenband.“. Das Verb steht an Position 2: Ich lege … Dann kommt der Ort: auf das Kassenband.",
+  "voice": "f1"
+ },
+ {
+  "text": "Die Kassiererin lächelt. Ich habe nur eine Karte. Ich möchte fragen, ob das hier geht.",
+  "voice": "mk"
+ },
+ {
+  "text": "Die Kassiererin wartet freundlich. Ich baue den Satz noch einmal!",
+  "voice": "mk"
+ },
+ {
+  "text": "Bei einer Ja/Nein-Frage steht das Verb vorn: Kann ich …? Das zweite Verb steht am Ende: bezahlen.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „Kann ich mit Karte bezahlen?“. Bei einer Ja/Nein-Frage steht das Verb vorn: Kann ich …? Das zweite Verb steht am Ende: bezahlen.",
+  "voice": "f1"
+ },
+ {
+  "text": "Mikula steht vor dem Supermarkt. Plötzlich öffnet sich die Tür, ohne dass jemand sie berührt.",
+  "voice": "f1"
+ },
+ {
+  "text": "Unglaublich! Die Tür weiß, dass ich komme. In meinem Dorf öffnet mir nur mein Nachbar die Tür – und nur, wenn er gute Laune hat.",
+  "voice": "mk"
+ },
+ {
+  "text": "Ich sollte vorsichtig sein. Hier funktioniert vieles ganz anders als bei mir zu Hause.",
+  "voice": "mk"
+ },
+ {
+  "text": "Wunderbar! Das Einkaufen hat geklappt, und an der Kasse liegt ein Zeitkristall. Vielen Dank für deine Hilfe!",
+  "voice": "mk"
+ },
+ {
+  "text": "Guten Tag! Der Wagen funktioniert mit einer Münze oder einem Chip. Brauchen Sie Hilfe?",
+  "voice": "m1"
+ },
+ {
+  "text": "Der Wagen frisst keine Hühner – ein schwieriges Tier!",
+  "voice": "mk"
+ },
+ {
+  "text": "Mikula möchte einen Einkaufswagen nehmen. Der Wagen hängt an einer Kette fest.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „Ja, bitte. Könnten Sie mir zeigen, wie der Wagen funktioniert?“.",
+  "voice": "f1"
+ },
+ {
+  "text": "Grammatisch richtig, aber du duzt den Mitarbeiter. Besser: „Können Sie …?“",
+  "voice": "f1"
+ },
+ {
+  "text": "Der Wagen braucht eine Münze oder einen Chip, kein Huhn.",
+  "voice": "f1"
+ },
+ {
+  "text": "Guten Tag! Der Gouda ist heute im Angebot. Möchten Sie ein Stück?",
+  "voice": "f2"
+ },
+ {
+  "text": "In meinem Dorf verstehen mich alle – hier muss ich noch üben!",
+  "voice": "mk"
+ },
+ {
+  "text": "Mikula steht an der Käsetheke.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „Ja, gern. Ich hätte gern ein Stück, bitte.“.",
+  "voice": "f1"
+ },
+ {
+  "text": "Das Verb steht an Position 2: „Ich hätte gern …“.",
+  "voice": "f1"
+ },
+ {
+  "text": "Grammatisch richtig, aber „Ich will …“ klingt fordernd. Besser: „Ich hätte gern …“.",
+  "voice": "f1"
+ },
+ {
+  "text": "Kann ich Ihnen helfen? Suchen Sie etwas?",
+  "voice": "f2"
+ },
+ {
+  "text": "Mein Mehl mahle ich selbst – hier finde ich es nicht einmal!",
+  "voice": "mk"
+ },
+ {
+  "text": "Mikula sucht Mehl und findet es nicht.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „Ja, gern. Könnten Sie mir sagen, wo ich das Mehl finde?“.",
+  "voice": "f1"
+ },
+ {
+  "text": "Grammatisch richtig, aber „Sie müssen …“ klingt wie ein Befehl. Besser: „Könnten Sie …?“",
+  "voice": "f1"
+ },
+ {
+  "text": "Nach „wo“ steht das Verb am Ende: „… wo ich das Mehl finde“.",
+  "voice": "f1"
+ },
+ {
+  "text": "Der Automat gibt Ihnen am Ende einen Pfandbon. Den geben Sie dann an der Kasse ab.",
+  "voice": "m1"
+ },
+ {
+  "text": "Der Automat spuckt den Bon wieder aus – er ist wohl satt!",
+  "voice": "mk"
+ },
+ {
+  "text": "Mikula bringt leere Flaschen zum Pfandautomaten.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „Danke für den Tipp! Dann gebe ich den Bon an der Kasse ab.“.",
+  "voice": "f1"
+ },
+ {
+  "text": "Grammatisch richtig, aber „Ja, ja“ klingt genervt. Der Kunde will nur helfen.",
+  "voice": "f1"
+ },
+ {
+  "text": "„abgeben“ ist trennbar: „Dann gebe ich den Bon an der Kasse ab.“",
+  "voice": "f1"
+ },
+ {
+  "text": "Das macht dreizehn Euro fünfzig. Zahlen Sie bar oder mit Karte?",
+  "voice": "f2"
+ },
+ {
+  "text": "Zu Hause bezahle ich mit Eiern. Hier ist alles anders!",
+  "voice": "mk"
+ },
+ {
+  "text": "Mikula steht an der Kasse.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „Mit Karte, bitte. Könnte ich auch den Kassenbon haben?“.",
+  "voice": "f1"
+ },
+ {
+  "text": "„haben“ braucht den Akkusativ: „Könnte ich auch den Kassenbon haben?“",
+  "voice": "f1"
+ },
+ {
+  "text": "Grammatisch nicht falsch, aber sehr kurz und ohne „bitte“. Das klingt unfreundlich.",
+  "voice": "f1"
+ },
+ {
+  "text": "Guten Tag! Wie kann ich Ihnen helfen?",
+  "voice": "m1"
+ },
+ {
+  "text": "Oje, ein Fehler im Satz – bei meinem selbst gebackenen Brot passiert mir das nie!",
+  "voice": "mk"
+ },
+ {
+  "text": "Mikula hat Nudeln gekauft. Zu Hause sieht er: Das Mindesthaltbarkeitsdatum ist abgelaufen. Er geht zum Kundenservice.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „Guten Tag! Diese Nudeln sind abgelaufen. Könnte ich sie umtauschen?“.",
+  "voice": "f1"
+ },
+ {
+  "text": "„Nudeln“ ist Plural. Also: „Diese Nudeln sind abgelaufen.“",
+  "voice": "f1"
+ },
+ {
+  "text": "Grammatisch richtig, aber die Begrüßung fehlt. Der Mitarbeiter sagt „Guten Tag!“ – grüß zurück.",
+  "voice": "f1"
+ },
+ {
+  "text": "die Tür. Die Tür geht von allein auf.",
+  "voice": "f1"
+ },
+ {
+  "text": "der Einkaufswagen. Ich brauche einen Einkaufswagen.",
+  "voice": "f1"
+ },
+ {
+  "text": "der Apfel. Der Apfel ist rot.",
+  "voice": "f1"
+ },
+ {
+  "text": "die Milch. Ich kaufe einen Liter Milch.",
+  "voice": "f1"
+ },
+ {
+  "text": "der Saft. Ich trinke gern Saft.",
+  "voice": "f1"
+ },
+ {
+  "text": "der Kassenbon. Ich nehme den Kassenbon mit.",
+  "voice": "f1"
+ },
+ {
+  "text": "die Münze. Für den Einkaufswagen brauche ich eine Münze.",
+  "voice": "f1"
+ },
+ {
+  "text": "die Kasse. Ich bezahle an der Kasse.",
+  "voice": "f1"
+ },
+ {
+  "text": "das Regal. Das Mehl steht im Regal.",
+  "voice": "f1"
+ },
+ {
+  "text": "der Pfandautomat. Der Pfandautomat nimmt leere Flaschen.",
+  "voice": "f1"
+ },
+ {
+  "text": "das Angebot. Die Tomaten sind im Angebot.",
+  "voice": "f1"
+ },
+ {
+  "text": "das Mindesthaltbarkeitsdatum. Das Mindesthaltbarkeitsdatum ist abgelaufen.",
+  "voice": "f1"
+ },
+ {
+  "text": "Mikula ist im Jobcenter. Hier warten viele Menschen.",
+  "voice": "f1"
+ },
+ {
+  "text": "Ein großes Haus mit vielen Türen! Wohnt hier der Fürst?",
+  "voice": "mk"
+ },
+ {
+  "text": "Ein Automat gibt Mikula ein kleines Papier mit einer Nummer.",
+  "voice": "f1"
+ },
+ {
+  "text": "Mein Termin war gut! Und schau: ein Zeitkristall!",
+  "voice": "mk"
+ },
+ {
+  "text": "Ein kleines Papier mit einer Zahl! Bin ich jetzt ein Ritter des Fürsten?",
+  "voice": "mk"
+ },
+ {
+  "text": "Hm, das klingt komisch. Sogar mein Pferd schüttelt den Kopf!",
+  "voice": "mk"
+ },
+ {
+  "text": "Tipp: Das letzte Wort zählt: Warte + Nummer.",
+  "voice": "f1"
+ },
+ {
+  "text": "Wir sagen: die Wartenummer. Plural: die Wartenummern.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „die Wartenummer“. Wir sagen: die Wartenummer. Plural: die Wartenummern.",
+  "voice": "f1"
+ },
+ {
+  "text": "Die Frau sagt: „Kommen Sie am Montag um zehn Uhr.“ Wie heißt das?",
+  "voice": "mk"
+ },
+ {
+  "text": "Oh nein! Dann komme ich vielleicht am falschen Tag.",
+  "voice": "mk"
+ },
+ {
+  "text": "Tipp: Gesucht ist ein Tag mit einer Uhrzeit.",
+  "voice": "f1"
+ },
+ {
+  "text": "Das ist der Termin. Plural: die Termine. Ein Termin hat einen Tag und eine Uhrzeit.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „der Termin“. Das ist der Termin. Plural: die Termine. Ein Termin hat einen Tag und eine Uhrzeit.",
+  "voice": "f1"
+ },
+ {
+  "text": "Ein Papier mit vielen leeren Kästchen! Hier soll ich schreiben.",
+  "voice": "mk"
+ },
+ {
+  "text": "Oje, das Papier bleibt leer und ich auch!",
+  "voice": "mk"
+ },
+ {
+  "text": "Tipp: Formular hat denselben Artikel wie Papier.",
+  "voice": "f1"
+ },
+ {
+  "text": "Wir sagen: das Formular. Plural: die Formulare.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „das Formular“. Wir sagen: das Formular. Plural: die Formulare.",
+  "voice": "f1"
+ },
+ {
+  "text": "Auf dieser kleinen Karte ist mein Gesicht! Wie heißt das?",
+  "voice": "mk"
+ },
+ {
+  "text": "Hm, nein. Bei mir zu Hause malt man nur den Fürsten!",
+  "voice": "mk"
+ },
+ {
+  "text": "Tipp: Auf der Karte stehen Name und Foto.",
+  "voice": "f1"
+ },
+ {
+  "text": "Das ist der Ausweis. Plural: die Ausweise. Auf dem Ausweis stehen Ihr Name und Ihr Foto.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „der Ausweis“. Das ist der Ausweis. Plural: die Ausweise. Auf dem Ausweis stehen Ihr Name und Ihr Foto.",
+  "voice": "f1"
+ },
+ {
+  "text": "Ich brauche Hilfe vom Amt. Die Frau gibt mir ein Papier. Oben steht: „Antrag“.",
+  "voice": "mk"
+ },
+ {
+  "text": "Oh, das war falsch. Im Amt schaut man sicher genau hin!",
+  "voice": "mk"
+ },
+ {
+  "text": "Tipp: Antrag hat denselben Artikel wie Tag.",
+  "voice": "f1"
+ },
+ {
+  "text": "Wir sagen: der Antrag. Plural: die Anträge.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „der Antrag“. Wir sagen: der Antrag. Plural: die Anträge.",
+  "voice": "f1"
+ },
+ {
+  "text": "Ich möchte Geld verdienen. Was suche ich hier?",
+  "voice": "mk"
+ },
+ {
+  "text": "Nein, nein! Das habe ich schon. Ich suche etwas anderes.",
+  "voice": "mk"
+ },
+ {
+  "text": "Tipp: Ein Bauer macht das jeden Tag auf dem Feld.",
+  "voice": "f1"
+ },
+ {
+  "text": "Das ist die Arbeit. Ich suche eine Arbeit.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „die Arbeit“. Das ist die Arbeit. Ich suche eine Arbeit.",
+  "voice": "f1"
+ },
+ {
+  "text": "Mikula steht im Jobcenter. Am Eingang ist ein Automat für Wartenummern.",
+  "voice": "f1"
+ },
+ {
+  "text": "Ich habe die Nummer zweiundvierzig! Bin ich jetzt Gast am Hof des Fürsten?",
+  "voice": "mk"
+ },
+ {
+  "text": "Das ist Ihre Wartenummer. Bitte warten Sie. Wir rufen Ihre Nummer auf.",
+  "voice": "m1"
+ },
+ {
+  "text": "Ich habe das Formular ausgefüllt und alle Unterlagen mitgebracht. Und hier liegt ein Zeitkristall!",
+  "voice": "mk"
+ },
+ {
+  "text": "Die Frau sagt: „Dienstag, neun Uhr.“ Ich sage es noch einmal in einem ganzen Satz.",
+  "voice": "mk"
+ },
+ {
+  "text": "Hm, jetzt weiß ich nicht mehr, wann ich kommen soll!",
+  "voice": "mk"
+ },
+ {
+  "text": "Beim Tag sagen wir „am“, bei der Uhrzeit „um“: am Dienstag um neun Uhr.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „Mein Termin ist am Dienstag um neun Uhr.“. Beim Tag sagen wir „am“, bei der Uhrzeit „um“: am Dienstag um neun Uhr.",
+  "voice": "f1"
+ },
+ {
+  "text": "Die Frau sagt: „Ihr Termin ist um halb zehn.“ Halb? Ist die Zeit kaputt?",
+  "voice": "mk"
+ },
+ {
+  "text": "Oje, dann komme ich zur falschen Zeit. Der Fürst wartet nicht gern!",
+  "voice": "mk"
+ },
+ {
+  "text": "Welche Uhrzeit ist das?",
+  "voice": "f1"
+ },
+ {
+  "text": "Tipp: Bei „halb“ schauen wir auf die nächste volle Stunde.",
+  "voice": "f1"
+ },
+ {
+  "text": "Halb zehn ist eine halbe Stunde vor zehn Uhr. Das ist neun Uhr dreißig.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „neun Uhr dreißig“. Halb zehn ist eine halbe Stunde vor zehn Uhr. Das ist neun Uhr dreißig.",
+  "voice": "f1"
+ },
+ {
+  "text": "Ich habe eine Frage zum Formular. Morgen telefoniere ich. Was sage ich?",
+  "voice": "mk"
+ },
+ {
+  "text": "Hm, so geht das nicht. Zu Hause rufe ich einfach laut über das Feld!",
+  "voice": "mk"
+ },
+ {
+  "text": "„anrufen“ trennt sich: Ich rufe … an. Das „an“ steht am Ende.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „Ich rufe morgen im Jobcenter an.“. „anrufen“ trennt sich: Ich rufe … an. Das „an“ steht am Ende.",
+  "voice": "f1"
+ },
+ {
+  "text": "Die Frau sagt: „Beim nächsten Termin brauchen wir Papiere von Ihnen.“ Ich frage nach.",
+  "voice": "mk"
+ },
+ {
+  "text": "Oje, soll ich vielleicht mein Pferd mitbringen?",
+  "voice": "mk"
+ },
+ {
+  "text": "Mit „muss“ bleibt „mitbringen“ zusammen und steht am Ende.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „Was muss ich zum Termin mitbringen?“. Mit „muss“ bleibt „mitbringen“ zusammen und steht am Ende.",
+  "voice": "f1"
+ },
+ {
+  "text": "Die Frau sagt: „Bringen Sie bitte Ihre Unterlagen mit.“ Unterlagen? Soll ich mein Bett mitbringen?",
+  "voice": "mk"
+ },
+ {
+  "text": "Oh, dann trage ich mein Bett umsonst durch die Stadt!",
+  "voice": "mk"
+ },
+ {
+  "text": "Was bedeutet „Unterlagen“ hier?",
+  "voice": "f1"
+ },
+ {
+  "text": "Tipp: Was liegt im Amt immer auf dem Tisch?",
+  "voice": "f1"
+ },
+ {
+  "text": "Unterlagen sind wichtige Papiere, zum Beispiel der Ausweis oder ein Formular.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „wichtige Papiere und Dokumente“. Unterlagen sind wichtige Papiere, zum Beispiel der Ausweis oder ein Formular.",
+  "voice": "f1"
+ },
+ {
+  "text": "Ich habe einen Stift und ein Formular. Was mache ich jetzt?",
+  "voice": "mk"
+ },
+ {
+  "text": "Hm, das Formular bleibt leer. Der Stift schreibt nicht von allein!",
+  "voice": "mk"
+ },
+ {
+  "text": "„ausfüllen“ trennt sich: Ich fülle … aus. Das „aus“ steht am Ende.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „Ich fülle das Formular jetzt aus.“. „ausfüllen“ trennt sich: Ich fülle … aus. Das „aus“ steht am Ende.",
+  "voice": "f1"
+ },
+ {
+  "text": "Mikula sitzt im Wartebereich des Jobcenters. Auf einem Bildschirm erscheinen Nummern.",
+  "voice": "f1"
+ },
+ {
+  "text": "Am Hof des Fürsten ruft man die Gäste mit Namen. Hier ruft man sie mit Zahlen – wie spannend!",
+  "voice": "mk"
+ },
+ {
+  "text": "Ich bin nur ein Bauer. Ich brauche Hilfe, damit ich hier leben kann, bis ich den Weg nach Hause finde.",
+  "voice": "mk"
+ },
+ {
+  "text": "Das war kein Hof des Fürsten, aber alle waren sehr freundlich. Bald mache ich einen Integrationskurs – und ich habe einen Zeitkristall! Danke für deine Hilfe!",
+  "voice": "mk"
+ },
+ {
+  "text": "Guten Morgen! Haben Sie heute einen Termin?",
+  "voice": "m1"
+ },
+ {
+  "text": "Oje! Am Hof des Fürsten muss man doch schön sprechen!",
+  "voice": "mk"
+ },
+ {
+  "text": "Mikula kommt am Morgen zum Empfang im Jobcenter.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „Guten Morgen! Ja, ich habe um zehn Uhr einen Termin. Wo kann ich warten?“.",
+  "voice": "f1"
+ },
+ {
+  "text": "Bei der Uhrzeit sagen wir „um“: um zehn Uhr. Bei Tagen sagen wir „am“: am Montag.",
+  "voice": "f1"
+ },
+ {
+  "text": "Kein Gruß und nur halbe Sätze. Das klingt unfreundlich. Besser: „Guten Morgen! Ja, ich habe …“",
+  "voice": "f1"
+ },
+ {
+  "text": "Entschuldigung, welche Nummer haben Sie? Ich warte schon lange.",
+  "voice": "m1"
+ },
+ {
+  "text": "Ich dachte, die Nummer zeigt meinen Platz am Tisch des Fürsten!",
+  "voice": "mk"
+ },
+ {
+  "text": "Mikula wartet mit seiner Wartenummer. Ein Mann neben ihm spricht ihn an.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „Ich habe die Nummer zweiundvierzig. Es dauert bestimmt nicht mehr lange.“.",
+  "voice": "f1"
+ },
+ {
+  "text": "Es heißt „die Nummer“. Nach „haben“ steht der Akkusativ, und „die“ bleibt „die“: Ich habe die Nummer zweiundvierzig.",
+  "voice": "f1"
+ },
+ {
+  "text": "Grammatisch richtig, aber fremde Erwachsene sprechen wir mit „Sie“ an: „Und welche Nummer haben Sie?“",
+  "voice": "f1"
+ },
+ {
+  "text": "Für die Grundsicherung füllen Sie bitte diesen Antrag aus. Haben Sie noch Fragen?",
+  "voice": "m1"
+ },
+ {
+  "text": "So viele Felder auf einem Papier! Mein ganzes Dorf hat weniger Felder.",
+  "voice": "mk"
+ },
+ {
+  "text": "Mikula sitzt bei einem Mitarbeiter im Büro.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „Ja, eine Frage: Darf ich den Antrag zu Hause ausfüllen und morgen mitbringen?“.",
+  "voice": "f1"
+ },
+ {
+  "text": "Grammatisch richtig, aber „Ich will …“ klingt fordernd. Besser: „Könnten Sie mir beim Ausfüllen helfen?“",
+  "voice": "f1"
+ },
+ {
+  "text": "„ausfüllen“ trennt sich: Ich fülle den Antrag zu Hause aus.",
+  "voice": "f1"
+ },
+ {
+  "text": "Bitte bringen Sie beim nächsten Termin Ihren Ausweis und Ihren Mietvertrag mit.",
+  "voice": "m1"
+ },
+ {
+  "text": "Mietvertrag? Mein Haus hat mein Großvater gebaut. Dafür gab es kein Papier!",
+  "voice": "mk"
+ },
+ {
+  "text": "Der Mitarbeiter schaut in Mikulas Unterlagen.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „Gut, das mache ich. Den Ausweis habe ich heute schon mitgebracht.“.",
+  "voice": "f1"
+ },
+ {
+  "text": "Das Partizip von „mitbringen“ ist unregelmäßig: mitgebracht.",
+  "voice": "f1"
+ },
+ {
+  "text": "Grammatisch richtig, aber ohne „bitte“ klingt das wie ein Befehl. Besser: „Könnten Sie mich vorher anrufen?“",
+  "voice": "f1"
+ },
+ {
+  "text": "Was für eine Arbeit suchen Sie? Haben Sie schon einen Lebenslauf für Ihre Bewerbung?",
+  "voice": "m1"
+ },
+ {
+  "text": "Mein Lebenslauf? Ich laufe jeden Tag zum Feld und wieder zurück!",
+  "voice": "mk"
+ },
+ {
+  "text": "Jetzt geht es um Arbeit. Der Mitarbeiter ist sehr freundlich.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „Ich arbeite gern draußen, weil ich Bauer bin. Einen Lebenslauf habe ich leider noch nicht.“.",
+  "voice": "f1"
+ },
+ {
+  "text": "Grammatisch richtig, aber das klingt, als wäre Mikula die Arbeit egal. Besser: Sagen Sie, was Sie gern und gut machen.",
+  "voice": "f1"
+ },
+ {
+  "text": "Nach „weil“ steht das Verb am Ende: „… weil ich Bauer bin“.",
+  "voice": "f1"
+ },
+ {
+  "text": "Möchten Sie auch einen Integrationskurs machen? Dort lernen Sie Deutsch und viel über das Leben hier.",
+  "voice": "m1"
+ },
+ {
+  "text": "Ein Kurs nur für Deutsch? Zu Hause hat mir nur meine Großmutter etwas beigebracht!",
+  "voice": "mk"
+ },
+ {
+  "text": "Am Ende des Termins hat die Mitarbeiterin noch eine Idee.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „Ja, sehr gern! Ich möchte besser Deutsch lernen. Wann fängt der nächste Kurs an?“.",
+  "voice": "f1"
+ },
+ {
+  "text": "Grammatisch richtig, aber das klingt wie eine Bedingung. Besser: „Wäre ein Kurs am Vormittag möglich?“",
+  "voice": "f1"
+ },
+ {
+  "text": "Nach „möchte“ steht der Infinitiv ohne „zu“: Ich möchte Deutsch lernen.",
+  "voice": "f1"
+ },
+ {
+  "text": "der Termin. Ich habe am Montag einen Termin.",
+  "voice": "f1"
+ },
+ {
+  "text": "die Wartenummer. Ziehen Sie bitte eine Wartenummer.",
+  "voice": "f1"
+ },
+ {
+  "text": "das Formular. Ich fülle das Formular aus.",
+  "voice": "f1"
+ },
+ {
+  "text": "der Ausweis. Bitte bringen Sie Ihren Ausweis mit.",
+  "voice": "f1"
+ },
+ {
+  "text": "der Antrag. Ich stelle einen Antrag im Jobcenter.",
+  "voice": "f1"
+ },
+ {
+  "text": "die Arbeit. Ich suche eine Arbeit.",
+  "voice": "f1"
+ },
+ {
+  "text": "die Uhrzeit. Um welche Uhrzeit ist mein Termin?",
+  "voice": "f1"
+ },
+ {
+  "text": "die Unterlage. Bringen Sie bitte alle Unterlagen mit.",
+  "voice": "f1"
+ },
+ {
+  "text": "die Bewerbung. Ich schreibe eine Bewerbung.",
+  "voice": "f1"
+ },
+ {
+  "text": "der Lebenslauf. Mein Lebenslauf ist zwei Seiten lang.",
+  "voice": "f1"
+ },
+ {
+  "text": "der Integrationskurs. Im Integrationskurs lerne ich Deutsch.",
+  "voice": "f1"
+ },
+ {
+  "text": "Mikula ist bei der Post. Hier sind viele Briefe und Pakete.",
+  "voice": "f1"
+ },
+ {
+  "text": "So viele Kästen aus Papier! Sind da Schätze drin?",
+  "voice": "mk"
+ },
+ {
+  "text": "Eine Frau am Schalter lächelt. Sie hilft Mikula gern.",
+  "voice": "f1"
+ },
+ {
+  "text": "Juhu! Mein Paket ist weg. Und schau: ein Zeitkristall!",
+  "voice": "mk"
+ },
+ {
+  "text": "Ein Papier in einer Tasche aus Papier! Wie heißt das?",
+  "voice": "mk"
+ },
+ {
+  "text": "Hm, das klingt komisch. Meine Ziege schaut mich fragend an!",
+  "voice": "mk"
+ },
+ {
+  "text": "Tipp: Brief hat denselben Artikel wie Tisch.",
+  "voice": "f1"
+ },
+ {
+  "text": "Wir sagen: der Brief. Plural: die Briefe.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „der Brief“. Wir sagen: der Brief. Plural: die Briefe.",
+  "voice": "f1"
+ },
+ {
+  "text": "Ein kleines Bild zum Kleben! Der Brief braucht es. Was ist das?",
+  "voice": "mk"
+ },
+ {
+  "text": "Oje, ich habe das Bild auf meine Stirn geklebt. Das war falsch!",
+  "voice": "mk"
+ },
+ {
+  "text": "Tipp: Ohne dieses kleine Bild reist der Brief nicht. Es kostet Geld.",
+  "voice": "f1"
+ },
+ {
+  "text": "Das ist die Briefmarke. Plural: die Briefmarken.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „die Briefmarke“. Das ist die Briefmarke. Plural: die Briefmarken.",
+  "voice": "f1"
+ },
+ {
+  "text": "Ein großer Kasten aus Pappe! Ist da ein Schatz drin?",
+  "voice": "mk"
+ },
+ {
+  "text": "Hm, der Kasten bleibt still. Er mag dieses Wort nicht!",
+  "voice": "mk"
+ },
+ {
+  "text": "Tipp: Paket hat denselben Artikel wie Buch.",
+  "voice": "f1"
+ },
+ {
+  "text": "Wir sagen: das Paket. Plural: die Pakete.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „das Paket“. Wir sagen: das Paket. Plural: die Pakete.",
+  "voice": "f1"
+ },
+ {
+  "text": "Und hier ist ein ganz kleiner Kasten. Das ist ein kleines Paket!",
+  "voice": "mk"
+ },
+ {
+  "text": "Oje, das kleine Paket ist beleidigt. Ich probiere es noch einmal!",
+  "voice": "mk"
+ },
+ {
+  "text": "Tipp: Wörter auf -chen haben immer denselben Artikel wie Mädchen.",
+  "voice": "f1"
+ },
+ {
+  "text": "Wir sagen: das Päckchen. Plural: die Päckchen. Ein Päckchen ist ein kleines Paket.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „das Päckchen“. Wir sagen: das Päckchen. Plural: die Päckchen. Ein Päckchen ist ein kleines Paket.",
+  "voice": "f1"
+ },
+ {
+  "text": "Ein Kasten mit einem Mund! Er frisst Briefe! Wie heißt er?",
+  "voice": "mk"
+ },
+ {
+  "text": "Nein! Ich habe ihm ein Stück Brot gegeben, aber er frisst nur Papier.",
+  "voice": "mk"
+ },
+ {
+  "text": "Tipp: Hier wirfst du deinen Brief hinein.",
+  "voice": "f1"
+ },
+ {
+  "text": "Das ist der Briefkasten. Dort wirfst du Briefe ein. Plural: die Briefkästen.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „der Briefkasten“. Das ist der Briefkasten. Dort wirfst du Briefe ein. Plural: die Briefkästen.",
+  "voice": "f1"
+ },
+ {
+  "text": "Auf dem Brief stehen Name, Straße und Stadt. Wie heißt das?",
+  "voice": "mk"
+ },
+ {
+  "text": "Oje, so findet der Brief nie mein Dorf!",
+  "voice": "mk"
+ },
+ {
+  "text": "Wir sagen: die Adresse. Plural: die Adressen.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „die Adresse“. Wir sagen: die Adresse. Plural: die Adressen.",
+  "voice": "f1"
+ },
+ {
+  "text": "Mikula steht in der Post. Viele Leute warten mit Briefen und Paketen in der Schlange.",
+  "voice": "f1"
+ },
+ {
+  "text": "Bei mir zu Hause bringt ein Reiter die Nachrichten. Hier gibt es dafür ein ganzes Haus!",
+  "voice": "mk"
+ },
+ {
+  "text": "Ich möchte meiner Familie etwas schicken. Aber wie geht das hier?",
+  "voice": "mk"
+ },
+ {
+  "text": "Geschafft! Das Paket ist unterwegs, und in der Packstation glänzt ein Zeitkristall! Danke für deine Hilfe.",
+  "voice": "mk"
+ },
+ {
+  "text": "Meine Mutter wohnt sehr weit weg. Ich möchte ihr ein Paket schicken. Was sage ich am Schalter?",
+  "voice": "mk"
+ },
+ {
+  "text": "Oje, so kommt das Paket nie an. Meine Mutter wohnt ja schon tausend Jahre weit weg!",
+  "voice": "mk"
+ },
+ {
+  "text": "Wem schicke ich das Paket? Meiner Mutter. Das ist Dativ: die Mutter → meiner Mutter.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „Ich schicke meiner Mutter ein Paket.“. Wem schicke ich das Paket? Meiner Mutter. Das ist Dativ: die Mutter → meiner Mutter.",
+  "voice": "f1"
+ },
+ {
+  "text": "Der Mann am Schalter fragt: „Wem schicken Sie das Päckchen?“ Mein Bruder bekommt es. Was sage ich?",
+  "voice": "mk"
+ },
+ {
+  "text": "Hm, jetzt denkt der Mann, ich will meinen Bruder mit der Post schicken!",
+  "voice": "mk"
+ },
+ {
+  "text": "Tipp: Die Frage ist „Wem?“. Achte genau auf die Endung von „mein…“.",
+  "voice": "f1"
+ },
+ {
+  "text": "„Wem?“ fragt nach dem Dativ. der Bruder → meinem Bruder. die Mutter → meiner Mutter.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „Ich schicke meinem Bruder das Päckchen.“. „Wem?“ fragt nach dem Dativ. der Bruder → meinem Bruder. die Mutter → meiner Mutter.",
+  "voice": "f1"
+ },
+ {
+  "text": "Auf dem Päckchen stehen zwei Adressen. Mein Bruder bekommt das Päckchen. Was ist er?",
+  "voice": "mk"
+ },
+ {
+  "text": "Oje, jetzt reist das Päckchen im Kreis – wie mein Pferd, wenn es Hunger hat!",
+  "voice": "mk"
+ },
+ {
+  "text": "Was passt?",
+  "voice": "f1"
+ },
+ {
+  "text": "Tipp: „Absender“ kommt von „absenden“ = wegschicken. Schickt der Bruder das Päckchen weg?",
+  "voice": "f1"
+ },
+ {
+  "text": "Der Empfänger bekommt das Paket. Der Absender schickt es. Plural: die Empfänger, die Absender.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „der Empfänger“. Der Empfänger bekommt das Paket. Der Absender schickt es. Plural: die Empfänger, die Absender.",
+  "voice": "f1"
+ },
+ {
+  "text": "Ich schreibe die Adresse auf das Päckchen. Aber vor „Köln“ fehlt eine Zahl. Ich frage die Frau am Schalter.",
+  "voice": "mk"
+ },
+ {
+  "text": "Hm, die Frau schaut mich fragend an. Bei mir zu Hause hat kein Dorf eine Zahl!",
+  "voice": "mk"
+ },
+ {
+  "text": "In einer W-Frage steht das Verb auf Position 2: „Wie ist die …?“",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „Wie ist die Postleitzahl von Köln?“. In einer W-Frage steht das Verb auf Position 2: „Wie ist die …?“",
+  "voice": "f1"
+ },
+ {
+  "text": "Im Briefkasten liegt eine Karte. Der Briefträger war da, aber ich war nicht zu Hause! Jetzt hole ich mein Paket.",
+  "voice": "mk"
+ },
+ {
+  "text": "Oje, so ein langes Wort! Das ist länger als mein Acker.",
+  "voice": "mk"
+ },
+ {
+  "text": "Nach „mit“ steht immer der Dativ: die Karte → mit der Karte. „abholen“ trennt sich: Ich hole … ab.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „Ich hole das Paket mit der Benachrichtigungskarte ab.“. Nach „mit“ steht immer der Dativ: die Karte → mit der Karte. „abholen“ trennt sich: Ich hole … ab.",
+  "voice": "f1"
+ },
+ {
+  "text": "Eine gelbe Wand mit vielen kleinen Türen! Ist das eine Schatztruhe? Nein, das ist eine Packstation. Und mein Paket ist darin!",
+  "voice": "mk"
+ },
+ {
+  "text": "Hm, ich klopfe an alle Türen, aber keine Tür antwortet mir.",
+  "voice": "mk"
+ },
+ {
+  "text": "Wo liegt das Paket? Nach „in“ steht bei „Wo?“ der Dativ: die Packstation → in der Packstation.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „Mein Paket liegt in der Packstation.“. Wo liegt das Paket? Nach „in“ steht bei „Wo?“ der Dativ: die Packstation → in der Packstation.",
+  "voice": "f1"
+ },
+ {
+  "text": "Mikula steht in der Postfiliale. Neben der Tür steht eine gelbe Wand mit vielen kleinen Türen.",
+  "voice": "f1"
+ },
+ {
+  "text": "Was für eine prächtige Schatztruhe! Aber sie hat kein Schloss, nur einen leuchtenden Bildschirm.",
+  "voice": "mk"
+ },
+ {
+  "text": "Heute möchte ich ein Paket verschicken und einen wichtigen Brief aufgeben. Hoffentlich finde ich die richtigen Worte.",
+  "voice": "mk"
+ },
+ {
+  "text": "Wunderbar! Der Brief ist als Einschreiben unterwegs, und hinter einer kleinen Tür der Packstation liegt ein Zeitkristall. Es war also doch eine Schatztruhe! Vielen Dank für deine Hilfe!",
+  "voice": "mk"
+ },
+ {
+  "text": "Guten Tag! Was kann ich für Sie tun?",
+  "voice": "m1"
+ },
+ {
+  "text": "Oje, bei mir zu Hause sage ich das meinem Pferd, und es läuft los!",
+  "voice": "mk"
+ },
+ {
+  "text": "Mikula steht mit einem Paket am Schalter. Er möchte es seiner Schwester nach Hamburg schicken.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „Guten Tag! Ich möchte meiner Schwester dieses Paket nach Hamburg schicken.“.",
+  "voice": "f1"
+ },
+ {
+  "text": "Wem schicke ich das Paket? Das ist Dativ: die Schwester → meiner Schwester.",
+  "voice": "f1"
+ },
+ {
+  "text": "Grammatisch richtig, aber die Begrüßung fehlt. Die Mitarbeiterin sagt „Guten Tag!“ – Mikula sollte zurückgrüßen.",
+  "voice": "f1"
+ },
+ {
+  "text": "Das Päckchen wiegt ein Kilo und kostet fünf Euro neunzehn. Brauchen Sie sonst noch etwas?",
+  "voice": "m1"
+ },
+ {
+  "text": "Ein Kilo kostet so viel? Für ein Kilo Rüben bekomme ich zu Hause ein Huhn!",
+  "voice": "mk"
+ },
+ {
+  "text": "Die Mitarbeiterin legt das Päckchen auf die Waage.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „Ja, ich hätte gern noch fünf Briefmarken, bitte.“.",
+  "voice": "f1"
+ },
+ {
+  "text": "Nach „fünf“ steht der Plural: fünf Briefmarken.",
+  "voice": "f1"
+ },
+ {
+  "text": "Soll der Brief als Einschreiben gehen? Dann bekommen Sie einen Beleg.",
+  "voice": "m1"
+ },
+ {
+  "text": "Zu Hause bringt mein Nachbar wichtige Briefe – auf seinem Esel und ganz ohne Beleg!",
+  "voice": "mk"
+ },
+ {
+  "text": "Mikula hat einen wichtigen Brief für eine Behörde. Der Brief muss sicher ankommen.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „Ja, bitte als Einschreiben. Der Brief ist sehr wichtig für mich.“.",
+  "voice": "f1"
+ },
+ {
+  "text": "Grammatisch richtig, aber am Schalter sagen wir „Sie“: „Können Sie mir …?“",
+  "voice": "f1"
+ },
+ {
+  "text": "Nach „für“ steht der Akkusativ: für mich.",
+  "voice": "f1"
+ },
+ {
+  "text": "Guten Tag! Haben Sie die Karte und Ihren Ausweis dabei?",
+  "voice": "m1"
+ },
+ {
+  "text": "Ausweis? Zu Hause kennt mich jeder an meinem Bart!",
+  "voice": "mk"
+ },
+ {
+  "text": "Mikula hat eine Benachrichtigungskarte im Briefkasten gefunden. Er geht zur Postfiliale.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „Guten Tag! Ja, hier sind die Karte und mein Ausweis. Ich möchte das Paket abholen.“.",
+  "voice": "f1"
+ },
+ {
+  "text": "Grammatisch richtig, aber das klingt wie ein Befehl. Besser: „Könnten Sie mir bitte mein Paket geben?“",
+  "voice": "f1"
+ },
+ {
+  "text": "Nach „möchte“ steht das zweite Verb am Ende: „Ich möchte das Paket abholen.“",
+  "voice": "f1"
+ },
+ {
+  "text": "Haben Sie Probleme mit der Packstation? Ich kann Ihnen gern helfen.",
+  "voice": "f2"
+ },
+ {
+  "text": "Ich dachte, die Schatztruhe geht auf, wenn ich freundlich klopfe!",
+  "voice": "mk"
+ },
+ {
+  "text": "Mikula steht vor der Packstation. Er versteht den Bildschirm nicht.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „Ja, gern! Könnten Sie mir bitte helfen? Ich finde den Code nicht.“.",
+  "voice": "f1"
+ },
+ {
+  "text": "„helfen“ braucht den Dativ: „Könnten Sie mir helfen?“",
+  "voice": "f1"
+ },
+ {
+  "text": "Sie haben den Absender vergessen. Schreiben Sie bitte Ihre Adresse oben links hin.",
+  "voice": "m1"
+ },
+ {
+  "text": "Oje, jetzt weiß das Paket nicht, wohin es zurück soll – und ich auch nicht!",
+  "voice": "mk"
+ },
+ {
+  "text": "Mikula gibt sein Paket ab. Der Mitarbeiter schaut auf den Paketschein.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „Oh, Entschuldigung! Danke für den Hinweis. Ich schreibe sie sofort hin.“.",
+  "voice": "f1"
+ },
+ {
+  "text": "Die Schwester ist die Empfängerin. Oben links steht der Absender – das ist Mikula selbst.",
+  "voice": "f1"
+ },
+ {
+  "text": "Grammatisch richtig, aber das klingt, als wäre der Hinweis egal. Der Mitarbeiter will helfen.",
+  "voice": "f1"
+ },
+ {
+  "text": "der Brief. Ich schreibe meiner Oma einen Brief.",
+  "voice": "f1"
+ },
+ {
+  "text": "die Briefmarke. Ich klebe eine Briefmarke auf den Brief.",
+  "voice": "f1"
+ },
+ {
+  "text": "das Paket. Ich schicke meiner Mutter ein Paket.",
+  "voice": "f1"
+ },
+ {
+  "text": "das Päckchen. Das Päckchen ist klein und leicht.",
+  "voice": "f1"
+ },
+ {
+  "text": "der Briefkasten. Ich werfe den Brief in den Briefkasten.",
+  "voice": "f1"
+ },
+ {
+  "text": "die Adresse. Wie ist Ihre Adresse?",
+  "voice": "f1"
+ },
+ {
+  "text": "die Postleitzahl. Die Postleitzahl steht vor der Stadt.",
+  "voice": "f1"
+ },
+ {
+  "text": "der Absender. Der Absender steht oben links.",
+  "voice": "f1"
+ },
+ {
+  "text": "der Empfänger. Der Empfänger bekommt das Paket.",
+  "voice": "f1"
+ },
+ {
+  "text": "die Packstation. Mein Paket liegt in der Packstation.",
+  "voice": "f1"
+ },
+ {
+  "text": "die Benachrichtigungskarte. Mit der Benachrichtigungskarte hole ich das Paket ab.",
+  "voice": "f1"
+ },
+ {
+  "text": "das Einschreiben. Ich schicke den Brief als Einschreiben.",
+  "voice": "f1"
+ },
+ {
+  "text": "Mikula steht vor einer Bäckerei. Es riecht gut.",
+  "voice": "f1"
+ },
+ {
+  "text": "Mmh! Hier riecht es wie bei mir zu Hause!",
+  "voice": "mk"
+ },
+ {
+  "text": "Ich backe Brot im Ofen. Aber hier gibt es so viel Brot!",
+  "voice": "mk"
+ },
+ {
+  "text": "Lecker! Und da ist ein Zeitkristall! Danke!",
+  "voice": "mk"
+ },
+ {
+  "text": "So groß und so braun! Wie heißt das?",
+  "voice": "mk"
+ },
+ {
+  "text": "Oje! Mein Brot ist beleidigt. Das war falsch!",
+  "voice": "mk"
+ },
+ {
+  "text": "Tipp: Brot hat denselben Artikel wie Haus.",
+  "voice": "f1"
+ },
+ {
+  "text": "Wir sagen: das Brot. Plural: die Brote.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „das Brot“. Wir sagen: das Brot. Plural: die Brote.",
+  "voice": "f1"
+ },
+ {
+  "text": "Klein und rund! Viele Menschen essen das am Morgen. Was ist das?",
+  "voice": "mk"
+ },
+ {
+  "text": "Oje, mein Bauch knurrt – aber das war falsch!",
+  "voice": "mk"
+ },
+ {
+  "text": "Tipp: Es ist ein kleines Brot.",
+  "voice": "f1"
+ },
+ {
+  "text": "Das ist ein Brötchen. Wir sagen: das Brötchen. Plural: die Brötchen.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „das Brötchen“. Das ist ein Brötchen. Wir sagen: das Brötchen. Plural: die Brötchen.",
+  "voice": "f1"
+ },
+ {
+  "text": "Dieses Brot hat einen Knoten! Wie heißt das?",
+  "voice": "mk"
+ },
+ {
+  "text": "Die Brezel hat einen Knoten – und ich jetzt auch im Kopf!",
+  "voice": "mk"
+ },
+ {
+  "text": "Tipp: Brezel hat denselben Artikel wie Milch.",
+  "voice": "f1"
+ },
+ {
+  "text": "Wir sagen: die Brezel. Plural: die Brezeln.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „die Brezel“. Wir sagen: die Brezel. Plural: die Brezeln.",
+  "voice": "f1"
+ },
+ {
+  "text": "Das ist süß und weich! Was ist das?",
+  "voice": "mk"
+ },
+ {
+  "text": "Süß, aber falsch! Mein Pferd lacht.",
+  "voice": "mk"
+ },
+ {
+  "text": "Tipp: Viele Menschen essen das am Nachmittag mit Kaffee.",
+  "voice": "f1"
+ },
+ {
+  "text": "Das ist ein Kuchen. Wir sagen: der Kuchen. Plural: die Kuchen.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „der Kuchen“. Das ist ein Kuchen. Wir sagen: der Kuchen. Plural: die Kuchen.",
+  "voice": "f1"
+ },
+ {
+  "text": "Zu Hause backe ich mein Brot selbst. Da drin ist es sehr heiß! Wie heißt das?",
+  "voice": "mk"
+ },
+ {
+  "text": "Autsch, heiß! Das war nicht richtig.",
+  "voice": "mk"
+ },
+ {
+  "text": "Tipp: Ofen hat denselben Artikel wie Apfel.",
+  "voice": "f1"
+ },
+ {
+  "text": "Wir sagen: der Ofen. Plural: die Öfen.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „der Ofen“. Wir sagen: der Ofen. Plural: die Öfen.",
+  "voice": "f1"
+ },
+ {
+  "text": "Ich habe großen Hunger! Ein Brötchen ist zu wenig. Ich möchte zwei. Was sage ich?",
+  "voice": "mk"
+ },
+ {
+  "text": "Ups! Die Verkäuferin schaut komisch. Noch einmal!",
+  "voice": "mk"
+ },
+ {
+  "text": "Was ist richtig?",
+  "voice": "f1"
+ },
+ {
+  "text": "Tipp: Denk an das Mädchen: ein Mädchen, zwei Mädchen.",
+  "voice": "f1"
+ },
+ {
+  "text": "Ein Brötchen, zwei Brötchen. Das Wort bleibt im Plural gleich.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „Zwei Brötchen, bitte.“. Ein Brötchen, zwei Brötchen. Das Wort bleibt im Plural gleich.",
+  "voice": "f1"
+ },
+ {
+  "text": "Mikula kommt in eine Bäckerei. In den Regalen liegen viele Brote, Brötchen und Kuchen.",
+  "voice": "f1"
+ },
+ {
+  "text": "So viele Brotsorten! Zu Hause backe ich jede Woche ein Brot in meinem Ofen. Immer dasselbe.",
+  "voice": "mk"
+ },
+ {
+  "text": "Ich möchte etwas kaufen. Aber wie bestelle ich hier höflich?",
+  "voice": "mk"
+ },
+ {
+  "text": "Juhu! Neben den Brezeln glänzt ein Zeitkristall! Danke, du hast mir sehr geholfen.",
+  "voice": "mk"
+ },
+ {
+  "text": "Jetzt bin ich dran! Ich möchte vier Brötchen. Ich bestelle höflich.",
+  "voice": "mk"
+ },
+ {
+  "text": "Die Verkäuferin lächelt und wartet. Mein Satz ist noch nicht fertig gebacken!",
+  "voice": "mk"
+ },
+ {
+  "text": "Höflich bestellen: Ich hätte gern … Das Verb „hätte“ steht an Position 2.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „Ich hätte gern vier Brötchen, bitte.“. Höflich bestellen: Ich hätte gern … Das Verb „hätte“ steht an Position 2.",
+  "voice": "f1"
+ },
+ {
+  "text": "Die vier Brötchen kosten zusammen drei Euro zwanzig.",
+  "voice": "f2"
+ },
+ {
+  "text": "Oje! Zu Hause zähle ich Brote, keine Cent!",
+  "voice": "mk"
+ },
+ {
+  "text": "Wie hoch ist der Preis?",
+  "voice": "f1"
+ },
+ {
+  "text": "Tipp: Zuerst hörst du die Euro, dann die Cent.",
+  "voice": "f1"
+ },
+ {
+  "text": "Der Preis ist drei Euro zwanzig. Man schreibt: 3,20 €.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „3,20 €“. Der Preis ist drei Euro zwanzig. Man schreibt: 3,20 €.",
+  "voice": "f1"
+ },
+ {
+  "text": "Dieses Brot ist riesig! Zu Hause schneide ich Brot mit meiner Axt. Hier frage ich lieber.",
+  "voice": "mk"
+ },
+ {
+  "text": "Soll ich doch meine Axt holen? Nein, ich baue den Satz noch einmal!",
+  "voice": "mk"
+ },
+ {
+  "text": "Bei einer höflichen Bitte steht „Könnten“ vorn. Das zweite Verb steht am Ende: schneiden.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „Könnten Sie das Brot schneiden?“. Bei einer höflichen Bitte steht „Könnten“ vorn. Das zweite Verb steht am Ende: schneiden.",
+  "voice": "f1"
+ },
+ {
+  "text": "Die Verkäuferin fragt: „Sonst noch etwas?“ Ja! Der Kuchen sieht so lecker aus. Was sage ich?",
+  "voice": "mk"
+ },
+ {
+  "text": "Oje, jetzt bekomme ich vielleicht den ganzen Kuchen – oder gar nichts!",
+  "voice": "mk"
+ },
+ {
+  "text": "Tipp: Prüfe zwei Stellen: das Verb und das Wort vor „Stück“.",
+  "voice": "f1"
+ },
+ {
+  "text": "Höflich bestellen: Ich hätte gern … Und: das Stück → ein Stück Kuchen.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „Ja, ich hätte gern ein Stück Kuchen.“. Höflich bestellen: Ich hätte gern … Und: das Stück → ein Stück Kuchen.",
+  "voice": "f1"
+ },
+ {
+  "text": "Die Verkäuferin fragt: „Zum Mitnehmen?“ Ja! Aber ich habe keinen Korb dabei. Ich brauche eine Tüte.",
+  "voice": "mk"
+ },
+ {
+  "text": "Ohne Tüte trage ich alles in meinem Hut – das geht nicht gut!",
+  "voice": "mk"
+ },
+ {
+  "text": "Höfliche Bitte: Könnten Sie mir … geben? Das zweite Verb steht am Ende.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „Könnten Sie mir eine Tüte geben?“. Höfliche Bitte: Könnten Sie mir … geben? Das zweite Verb steht am Ende.",
+  "voice": "f1"
+ },
+ {
+  "text": "Hier gibt es ein Brot mit vielen Körnern. Das ist gesund! Ich bestelle es.",
+  "voice": "mk"
+ },
+ {
+  "text": "So viele Körner und so viele Wörter – ich bin ganz durcheinander!",
+  "voice": "mk"
+ },
+ {
+  "text": "Tipp: Prüfe zwei Stellen: das Wort vor „Vollkornbrot“ und die Position vom Verb.",
+  "voice": "f1"
+ },
+ {
+  "text": "das Vollkornbrot → ein Vollkornbrot. Das Verb steht an Position 2: Ich hätte gern …",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „Ich hätte gern ein Vollkornbrot, bitte.“. das Vollkornbrot → ein Vollkornbrot. Das Verb steht an Position 2: Ich hätte gern …",
+  "voice": "f1"
+ },
+ {
+  "text": "Mikula betritt eine Bäckerei. Vor der Theke wartet schon eine lange Schlange.",
+  "voice": "f1"
+ },
+ {
+  "text": "Unglaublich! So viele Sorten Brot – und alle sind schon fertig gebacken. Bei mir dauert ein Brot einen halben Tag.",
+  "voice": "mk"
+ },
+ {
+  "text": "Ich stelle mich an und höre gut zu. Hier spricht man sehr höflich miteinander.",
+  "voice": "mk"
+ },
+ {
+  "text": "Wunderbar! Ich habe höflich bestellt, und in meiner Tüte liegt ein Zeitkristall. Vielen Dank für deine Hilfe!",
+  "voice": "mk"
+ },
+ {
+  "text": "Guten Morgen! Was darf es sein?",
+  "voice": "f2"
+ },
+ {
+  "text": "Sechs Brötchen! In meinem Dorf ist das schon ein Fest für die ganze Familie.",
+  "voice": "mk"
+ },
+ {
+  "text": "Mikula ist an der Reihe. Er möchte sechs Brötchen kaufen.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „Guten Morgen! Ich hätte gern sechs Brötchen, bitte.“.",
+  "voice": "f1"
+ },
+ {
+  "text": "Der Plural von „Brötchen“ ist „Brötchen“ – ohne -s.",
+  "voice": "f1"
+ },
+ {
+  "text": "Welche Sorte möchten Sie? Wir haben Roggenbrot, Dinkelbrot und Vollkornbrot.",
+  "voice": "m1"
+ },
+ {
+  "text": "So viele Sorten! Zu Hause backe ich nur eine – und die ist meistens etwas schwarz.",
+  "voice": "mk"
+ },
+ {
+  "text": "Mikula steht an der Theke. Er sieht viele Brotsorten und weiß nicht, welches Brot er nehmen soll.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „Könnten Sie mir ein Brot empfehlen? Ich esse gern dunkles Brot.“.",
+  "voice": "f1"
+ },
+ {
+  "text": "Grammatisch richtig, aber Mikula duzt den Verkäufer. Besser: „Könnten Sie …?“",
+  "voice": "f1"
+ },
+ {
+  "text": "„das Brot“ ohne Artikel: Das Adjektiv bekommt -es. Also: „Ich esse gern dunkles Brot.“",
+  "voice": "f1"
+ },
+ {
+  "text": "Möchten Sie das Brot geschnitten haben?",
+  "voice": "f2"
+ },
+ {
+  "text": "Eine Maschine schneidet das Brot? Mein Messer zu Hause ist jetzt bestimmt beleidigt.",
+  "voice": "mk"
+ },
+ {
+  "text": "Mikula kauft ein ganzes Vollkornbrot. Es ist sehr groß.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „Ja, gern. Könnten Sie es bitte in Scheiben schneiden?“.",
+  "voice": "f1"
+ },
+ {
+  "text": "Nach „Könnten Sie“ steht der Infinitiv am Ende: schneiden.",
+  "voice": "f1"
+ },
+ {
+  "text": "Grammatisch richtig, aber das klingt wie ein Befehl, und „bitte“ fehlt.",
+  "voice": "f1"
+ },
+ {
+  "text": "Sonst noch etwas?",
+  "voice": "f2"
+ },
+ {
+  "text": "In meinem Dorf gibt es Kuchen nur bei einer Hochzeit – hier jeden Tag!",
+  "voice": "mk"
+ },
+ {
+  "text": "Mikula hat schon Brot und Brötchen. Er möchte noch Kuchen, aber er kennt den Preis nicht.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „Ja, ein Stück Apfelkuchen, bitte. Was kostet das Stück?“.",
+  "voice": "f1"
+ },
+ {
+  "text": "Es heißt „das Stück“. Also: „Was kostet das Stück?“",
+  "voice": "f1"
+ },
+ {
+  "text": "Das klingt ungeduldig, und „bitte“ fehlt. Die Verkäuferin bedient Mikula doch schon.",
+  "voice": "f1"
+ },
+ {
+  "text": "Für hier oder zum Mitnehmen?",
+  "voice": "m1"
+ },
+ {
+  "text": "Mitnehmen? Mein Pferd trägt den Kuchen gern – aber vielleicht frisst es ihn unterwegs!",
+  "voice": "mk"
+ },
+ {
+  "text": "Mikula möchte den Kuchen im Park essen.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „Zum Mitnehmen, bitte. Ich esse den Kuchen im Park.“.",
+  "voice": "f1"
+ },
+ {
+  "text": "Grammatisch richtig, aber „Das ist doch egal“ klingt unfreundlich. Der Verkäufer möchte nur wissen, wie er den Kuchen einpackt.",
+  "voice": "f1"
+ },
+ {
+  "text": "Man sagt: „zum Mitnehmen“ (zum = zu dem).",
+  "voice": "f1"
+ },
+ {
+  "text": "Das macht sieben Euro vierzig. Und zwei Euro sechzig zurück. Schönen Tag noch!",
+  "voice": "f2"
+ },
+ {
+  "text": "Zu Hause zähle ich Hühner, keine Münzen. Das ist schwierig!",
+  "voice": "mk"
+ },
+ {
+  "text": "Mikula bezahlt mit einem Schein von zwanzig Euro. Er zählt das Wechselgeld: Es fehlen zehn Euro.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „Entschuldigung, ich glaube, das stimmt nicht. Ich habe Ihnen zwanzig Euro gegeben.“.",
+  "voice": "f1"
+ },
+ {
+  "text": "„geben“ braucht hier den Dativ: „Ich habe Ihnen zwanzig Euro gegeben.“",
+  "voice": "f1"
+ },
+ {
+  "text": "Das klingt wie ein Vorwurf. Vielleicht ist es nur ein Fehler. Besser: „Entschuldigung, ich glaube …“",
+  "voice": "f1"
+ },
+ {
+  "text": "das Brot. Ich kaufe ein Brot.",
+  "voice": "f1"
+ },
+ {
+  "text": "das Brötchen. Am Morgen esse ich ein Brötchen.",
+  "voice": "f1"
+ },
+ {
+  "text": "die Brezel. Die Brezel ist salzig.",
+  "voice": "f1"
+ },
+ {
+  "text": "der Kuchen. Der Kuchen ist süß.",
+  "voice": "f1"
+ },
+ {
+  "text": "der Ofen. Das Brot ist im Ofen.",
+  "voice": "f1"
+ },
+ {
+  "text": "das Stück. Ich hätte gern ein Stück Kuchen.",
+  "voice": "f1"
+ },
+ {
+  "text": "das Vollkornbrot. Vollkornbrot ist gesund.",
+  "voice": "f1"
+ },
+ {
+  "text": "die Sorte. Die Bäckerei hat viele Sorten Brot.",
+  "voice": "f1"
+ },
+ {
+  "text": "der Preis. Der Preis steht auf dem Schild.",
+  "voice": "f1"
+ },
+ {
+  "text": "die Tüte. Könnten Sie mir eine Tüte geben?",
+  "voice": "f1"
+ },
+ {
+  "text": "die Theke. Ich warte an der Theke.",
+  "voice": "f1"
+ },
+ {
+  "text": "das Wechselgeld. Bitte zählen Sie das Wechselgeld nach.",
+  "voice": "f1"
+ },
+ {
+  "text": "Mikula steht im Hof. Da sind viele Tonnen.",
+  "voice": "f1"
+ },
+ {
+  "text": "Oh! Gelb, blau, braun, grau! So viele Farben!",
+  "voice": "mk"
+ },
+ {
+  "text": "Ich habe eine leere Flasche. Wohin damit?",
+  "voice": "mk"
+ },
+ {
+  "text": "Super! Der Müll ist in den Tonnen. Und da ist ein Zeitkristall! Danke!",
+  "voice": "mk"
+ },
+ {
+  "text": "So viele bunte Kisten mit Deckel! Wie heißt das?",
+  "voice": "mk"
+ },
+ {
+  "text": "Oje, die Tonne bleibt ganz still. Das war falsch!",
+  "voice": "mk"
+ },
+ {
+  "text": "Tipp: Tonne hat denselben Artikel wie Lampe.",
+  "voice": "f1"
+ },
+ {
+  "text": "Wir sagen: die Tonne. Plural: die Tonnen.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „die Tonne“. Wir sagen: die Tonne. Plural: die Tonnen.",
+  "voice": "f1"
+ },
+ {
+  "text": "Das ist aus Glas, und oben ist ein Loch. In meinem Dorf ist so etwas ein Schatz! Was ist das?",
+  "voice": "mk"
+ },
+ {
+  "text": "Hm, das passt nicht. Ich schaue noch einmal genau hin!",
+  "voice": "mk"
+ },
+ {
+  "text": "Tipp: Achte auf das Material. Eine Dose ist aus Metall.",
+  "voice": "f1"
+ },
+ {
+  "text": "Das ist eine Flasche. Wir sagen: die Flasche. Plural: die Flaschen.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „die Flasche“. Das ist eine Flasche. Wir sagen: die Flasche. Plural: die Flaschen.",
+  "voice": "f1"
+ },
+ {
+  "text": "So viel Papier mit Buchstaben! Die Nachbarin sagt: „Zeitung“.",
+  "voice": "mk"
+ },
+ {
+  "text": "Oje, die Buchstaben tanzen vor meinen Augen!",
+  "voice": "mk"
+ },
+ {
+  "text": "Tipp: Wörter mit -ung haben immer denselben Artikel. Denk an: Wohnung.",
+  "voice": "f1"
+ },
+ {
+  "text": "Wir sagen: die Zeitung. Plural: die Zeitungen. Alte Zeitungen kommen in die Papiertonne.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „die Zeitung“. Wir sagen: die Zeitung. Plural: die Zeitungen. Alte Zeitungen kommen in die Papiertonne.",
+  "voice": "f1"
+ },
+ {
+  "text": "Ein kleiner Topf aus Metall! Er ist leer. Was ist das?",
+  "voice": "mk"
+ },
+ {
+  "text": "Klong! Mein Pferd erschrickt. Das war falsch!",
+  "voice": "mk"
+ },
+ {
+  "text": "Tipp: Darin sind oft Bohnen oder Suppe.",
+  "voice": "f1"
+ },
+ {
+  "text": "Das ist eine Dose. Plural: die Dosen. Leere Dosen kommen in die gelbe Tonne.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „die Dose“. Das ist eine Dose. Plural: die Dosen. Leere Dosen kommen in die gelbe Tonne.",
+  "voice": "f1"
+ },
+ {
+  "text": "Ein Glas für Marmelade! Es ist leer. Schade!",
+  "voice": "mk"
+ },
+ {
+  "text": "Klirr! Zum Glück ist nichts kaputt. Das war falsch.",
+  "voice": "mk"
+ },
+ {
+  "text": "Tipp: Glas hat denselben Artikel wie Brot.",
+  "voice": "f1"
+ },
+ {
+  "text": "Wir sagen: das Glas. Plural: die Gläser. Leere Gläser kommen in den Glascontainer.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „das Glas“. Wir sagen: das Glas. Plural: die Gläser. Leere Gläser kommen in den Glascontainer.",
+  "voice": "f1"
+ },
+ {
+  "text": "Hier sagen alle: Müll, Müll, Müll! In meinem Dorf gibt es fast nichts davon.",
+  "voice": "mk"
+ },
+ {
+  "text": "Oje! Das Wort fliegt in die falsche Tonne!",
+  "voice": "mk"
+ },
+ {
+  "text": "Tipp: Müll hat denselben Artikel wie Tisch.",
+  "voice": "f1"
+ },
+ {
+  "text": "Wir sagen: der Müll. Müll hat keinen Plural.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „der Müll“. Wir sagen: der Müll. Müll hat keinen Plural.",
+  "voice": "f1"
+ },
+ {
+  "text": "Mikula steht in einem Hinterhof. Dort stehen viele bunte Mülltonnen. Eine Nachbarin bringt gerade den Müll hinaus.",
+  "voice": "f1"
+ },
+ {
+  "text": "Hier sortiert man den Müll nach Farben? Wie die Wolle beim Färben!",
+  "voice": "mk"
+ },
+ {
+  "text": "In meinem Dorf verwenden wir alles wieder. Hier muss ich wohl viel lernen.",
+  "voice": "mk"
+ },
+ {
+  "text": "Juhu! Neben dem Glascontainer glänzt ein Zeitkristall! Danke, jetzt kann ich Müll trennen.",
+  "voice": "mk"
+ },
+ {
+  "text": "Die Nachbarin zeigt ihrem Sohn die braune Tonne. Er hat eine Bananenschale in der Hand. Was sagt sie zu ihm?",
+  "voice": "mk"
+ },
+ {
+  "text": "Oje, die Bananenschale weiß nicht, wohin sie fliegen soll!",
+  "voice": "mk"
+ },
+ {
+  "text": "Bau den Satz für die Nachbarin.",
+  "voice": "f1"
+ },
+ {
+  "text": "Imperativ mit du: Das Verb steht vorn: Wirf …! Wohin? → in + Akkusativ: in die Biotonne.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „Wirf die Schale in die Biotonne!“. Imperativ mit du: Das Verb steht vorn: Wirf …! Wohin? → in + Akkusativ: in die Biotonne.",
+  "voice": "f1"
+ },
+ {
+  "text": "Ich habe eine alte Zeitung. Mein Pferd soll sie zur blauen Tonne bringen. Was sage ich zu ihm?",
+  "voice": "mk"
+ },
+ {
+  "text": "Mein Pferd frisst die Zeitung lieber auf. Das war falsch!",
+  "voice": "mk"
+ },
+ {
+  "text": "Tipp: Frag zuerst: Wo oder wohin? Und welchen Artikel hat Tonne?",
+  "voice": "f1"
+ },
+ {
+  "text": "Wohin? → Akkusativ. die Tonne → in die Papiertonne.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „Bring die Zeitung in die Papiertonne!“. Wohin? → Akkusativ. die Tonne → in die Papiertonne.",
+  "voice": "f1"
+ },
+ {
+  "text": "Ich habe eine grüne Flasche. Die Nachbarin ist sehr höflich. Sie zeigt mir den großen Container an der Straße.",
+  "voice": "mk"
+ },
+ {
+  "text": "Oje, die Flasche wackelt in meiner Hand – sie wartet auf den richtigen Satz!",
+  "voice": "mk"
+ },
+ {
+  "text": "Was sagt die Nachbarin? Bau den Satz.",
+  "voice": "f1"
+ },
+ {
+  "text": "Imperativ mit Sie: Werfen Sie …! der Container → Wohin? → in den Glascontainer (Akkusativ). Grüne Flaschen kommen zum Grünglas.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „Werfen Sie die Flasche in den Glascontainer!“. Imperativ mit Sie: Werfen Sie …! der Container → Wohin? → in den Glascontainer (Akkusativ). Grüne Flaschen kommen zum Grünglas.",
+  "voice": "f1"
+ },
+ {
+  "text": "Die Nachbarin sagt: Nimm zuerst den Deckel vom Glas ab! Aber wohin kommt der Deckel aus Metall?",
+  "voice": "mk"
+ },
+ {
+  "text": "Der Deckel klappert beleidigt. Das war falsch!",
+  "voice": "mk"
+ },
+ {
+  "text": "Wohin kommt der Deckel?",
+  "voice": "f1"
+ },
+ {
+  "text": "Tipp: Denk an die Dose. Sie ist auch aus Metall.",
+  "voice": "f1"
+ },
+ {
+  "text": "Deckel aus Metall oder Plastik kommen in die gelbe Tonne. Das Glas kommt in den Glascontainer.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „in die gelbe Tonne“. Deckel aus Metall oder Plastik kommen in die gelbe Tonne. Das Glas kommt in den Glascontainer.",
+  "voice": "f1"
+ },
+ {
+  "text": "Der Sohn der Nachbarin steht mit einer vollen Tüte da. Darin ist nur Restmüll. Die Mutter ruft:",
+  "voice": "mk"
+ },
+ {
+  "text": "Der Junge schaut verwirrt. So geht der Satz noch nicht!",
+  "voice": "mk"
+ },
+ {
+  "text": "Imperativ mit du: Bring …! Wohin? → in + Akkusativ: in die graue Tonne.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „Bring den Restmüll in die graue Tonne!“. Imperativ mit du: Bring …! Wohin? → in + Akkusativ: in die graue Tonne.",
+  "voice": "f1"
+ },
+ {
+  "text": "Ein leerer Becher aus Plastik – eine Verpackung! Ich erkläre es meinem Pferd. Was sage ich?",
+  "voice": "mk"
+ },
+ {
+  "text": "Mein Pferd setzt sich den Becher auf den Kopf. Das war falsch!",
+  "voice": "mk"
+ },
+ {
+  "text": "Tipp: Prüfe zwei Stellen: die Form vom Verb und den Artikel nach „in“.",
+  "voice": "f1"
+ },
+ {
+  "text": "Imperativ mit du: Wirf! (nicht: Wirft). Wohin? → in den gelben Sack (Akkusativ).",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „Wirf den Becher in den gelben Sack!“. Imperativ mit du: Wirf! (nicht: Wirft). Wohin? → in den gelben Sack (Akkusativ).",
+  "voice": "f1"
+ },
+ {
+  "text": "Mikula hat in einer neuen Wohnung übernachtet. Am Morgen will er den Müll hinausbringen, doch im Hof wartet eine Überraschung.",
+  "voice": "f1"
+ },
+ {
+  "text": "Für jede Sache gibt es eine eigene Tonne! Bei uns bekommt das Schwein die Reste, der Ofen das Holz – und alles andere flicke ich.",
+  "voice": "mk"
+ },
+ {
+  "text": "Ich möchte hier ein guter Nachbar sein. Also frage ich lieber höflich nach, bevor ich etwas falsch mache.",
+  "voice": "mk"
+ },
+ {
+  "text": "Wunderbar! Jetzt weiß ich, welcher Müll in welche Tonne gehört. Und unter einer alten Zeitung lag ein Zeitkristall. Vielen Dank für deine Hilfe!",
+  "voice": "mk"
+ },
+ {
+  "text": "Guten Morgen! Sie sind neu hier, oder? Soll ich Ihnen die Mülltonnen erklären?",
+  "voice": "f2"
+ },
+ {
+  "text": "Oje, die Nachbarin zieht die Augenbrauen hoch!",
+  "voice": "mk"
+ },
+ {
+  "text": "Mikula steht ratlos vor den Mülltonnen. Eine Nachbarin kommt in den Hof.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „Guten Morgen! Ja, sehr gern. Das wäre sehr nett von Ihnen.“.",
+  "voice": "f1"
+ },
+ {
+  "text": "Grammatisch richtig, aber Mikula duzt die Nachbarin. Sie sagt „Sie“ zu ihm. Besser: „Das wäre sehr nett von Ihnen.“",
+  "voice": "f1"
+ },
+ {
+  "text": "Nach „von“ steht der Dativ: „von Ihnen“.",
+  "voice": "f1"
+ },
+ {
+  "text": "Für große Möbel gibt es den Sperrmüll. Den müssen Sie bei der Stadt anmelden.",
+  "voice": "m1"
+ },
+ {
+  "text": "Zu Hause mache ich aus einem alten Schrank einen Hühnerstall!",
+  "voice": "mk"
+ },
+ {
+  "text": "Mikula hat einen alten Schrank. Der Schrank ist viel zu groß für die Tonne. Er fragt den Hausmeister.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „Danke für die Information! Dann melde ich den Sperrmüll morgen an.“.",
+  "voice": "f1"
+ },
+ {
+  "text": "Nach „Dann“ kommt sofort das Verb: „Dann melde ich …“.",
+  "voice": "f1"
+ },
+ {
+  "text": "Grammatisch richtig, aber „Ich will …“ klingt fordernd. Besser: „Könnten Sie mir helfen?“",
+  "voice": "f1"
+ },
+ {
+  "text": "Moment! Auf diesen Flaschen ist Pfand. Die können Sie im Supermarkt zurückgeben.",
+  "voice": "m1"
+ },
+ {
+  "text": "Flaschen, die Geld bringen? Das ist ja fast Zauberei!",
+  "voice": "mk"
+ },
+ {
+  "text": "Mikula will leere Pfandflaschen in den Glascontainer werfen. Ein Nachbar sieht das.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „Oh, das habe ich nicht gewusst. Vielen Dank für den Hinweis!“.",
+  "voice": "f1"
+ },
+ {
+  "text": "Grammatisch nicht falsch, aber „Hey, Mann“ ist zu locker für einen fremden Nachbarn. Er will helfen – besser ist ein Dank.",
+  "voice": "f1"
+ },
+ {
+  "text": "Das Partizip von „wissen“ ist unregelmäßig: „gewusst“.",
+  "voice": "f1"
+ },
+ {
+  "text": "Hausverwaltung, guten Tag. Was kann ich für Sie tun?",
+  "voice": "f2"
+ },
+ {
+  "text": "Ein Kasten, in dem eine Frau spricht – und ich mache gleich einen Fehler!",
+  "voice": "mk"
+ },
+ {
+  "text": "Die Biotonne im Haus ist immer zu voll. Mikula ruft bei der Hausverwaltung an.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „Guten Tag, mein Name ist Mikula. Unsere Biotonne ist immer zu voll. Könnten wir eine zweite Tonne bekommen?“.",
+  "voice": "f1"
+ },
+ {
+  "text": "„Tonne“ ist feminin (die Tonne). Also: „unsere Biotonne“.",
+  "voice": "f1"
+ },
+ {
+  "text": "Grammatisch richtig, aber Begrüßung und Name fehlen. Am Telefon sagt man zuerst: „Guten Tag, mein Name ist …“",
+  "voice": "f1"
+ },
+ {
+  "text": "Entschuldigung, die gelben Säcke werden erst am Donnerstag abgeholt.",
+  "voice": "m1"
+ },
+ {
+  "text": "Die gelben Säcke sitzen an der Straße und warten – genau wie ich!",
+  "voice": "mk"
+ },
+ {
+  "text": "Mikula stellt die gelben Säcke an die Straße. Aber heute holt sie niemand ab. Ein Nachbar spricht ihn an.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „Oh, danke! Dann stelle ich sie am Mittwochabend an die Straße.“.",
+  "voice": "f1"
+ },
+ {
+  "text": "Wohin stelle ich die Säcke? → Akkusativ: „an die Straße“.",
+  "voice": "f1"
+ },
+ {
+  "text": "Grammatisch richtig, aber das klingt wie ein Vorwurf. Der Nachbar will nur helfen. Besser ist ein Dank.",
+  "voice": "f1"
+ },
+ {
+  "text": "Fettige Pizzakartons kommen in den Restmüll, nicht in die Papiertonne.",
+  "voice": "f2"
+ },
+ {
+  "text": "Mein Pferd würde den Karton vielleicht essen – ich lieber nicht!",
+  "voice": "mk"
+ },
+ {
+  "text": "Mikula hält einen fettigen Pizzakarton in der Hand. Die Nachbarin erklärt ihm etwas.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „Ah, gut zu wissen! Könnten Sie mir auch sagen, wohin die Eierschalen kommen?“.",
+  "voice": "f1"
+ },
+ {
+  "text": "Nach „sagen, wohin …“ steht das Verb am Ende: „…, wohin die Eierschalen kommen?“",
+  "voice": "f1"
+ },
+ {
+  "text": "Grammatisch richtig, aber das klingt wie ein Befehl. Besser als Frage: „Könnten Sie mir sagen …?“",
+  "voice": "f1"
+ },
+ {
+  "text": "der Müll. Ich bringe den Müll hinaus.",
+  "voice": "f1"
+ },
+ {
+  "text": "die Tonne. Im Hof stehen viele Tonnen.",
+  "voice": "f1"
+ },
+ {
+  "text": "die Flasche. Die Flasche ist leer.",
+  "voice": "f1"
+ },
+ {
+  "text": "die Zeitung. Die alte Zeitung kommt in die Papiertonne.",
+  "voice": "f1"
+ },
+ {
+  "text": "die Dose. Die Dose ist aus Metall.",
+  "voice": "f1"
+ },
+ {
+  "text": "das Glas. Das Glas ist leer.",
+  "voice": "f1"
+ },
+ {
+  "text": "die Biotonne. Die Bananenschale kommt in die Biotonne.",
+  "voice": "f1"
+ },
+ {
+  "text": "der Glascontainer. Wirf die Flasche in den Glascontainer!",
+  "voice": "f1"
+ },
+ {
+  "text": "der Deckel. Der Deckel kommt in die gelbe Tonne.",
+  "voice": "f1"
+ },
+ {
+  "text": "der Restmüll. Bring den Restmüll in die graue Tonne!",
+  "voice": "f1"
+ },
+ {
+  "text": "der Sperrmüll. Ich melde den Sperrmüll bei der Stadt an.",
+  "voice": "f1"
+ },
+ {
+  "text": "das Pfand. Auf dieser Flasche ist Pfand.",
+  "voice": "f1"
+ }
+]

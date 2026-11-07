@@ -1,0 +1,709 @@
+{
+  "id": "supermarkt",
+  "title": "Im Supermarkt",
+  "icon": "🛒",
+  "img": "spiele/mikula/img/station-supermarkt.webp",
+  "imgAlt": "Die Tür vom Supermarkt geht von allein auf. Mikula staunt und freut sich.",
+  "intro": {
+    "A1": [
+      {
+        "who": "erzaehler",
+        "text": "Mikula steht vor dem Supermarkt.",
+        "audio": ""
+      },
+      {
+        "who": "mikula",
+        "mood": "staunen",
+        "text": "Oh! Die Tür geht auf. Ganz von allein!",
+        "audio": ""
+      },
+      {
+        "who": "mikula",
+        "mood": "neutral",
+        "text": "Zauberei! Ich gehe hinein. Ich brauche Brot.",
+        "audio": ""
+      }
+    ],
+    "A2": [
+      {
+        "who": "erzaehler",
+        "text": "Mikula steht vor einem großen Supermarkt. Die Tür öffnet sich ganz von allein.",
+        "audio": ""
+      },
+      {
+        "who": "mikula",
+        "mood": "staunen",
+        "text": "Das ist Zauberei! In meinem Dorf muss ich jede Tür selbst aufmachen.",
+        "audio": ""
+      },
+      {
+        "who": "mikula",
+        "mood": "neutral",
+        "text": "Ich möchte Brot, Äpfel und Milch kaufen. Aber wie funktioniert das hier?",
+        "audio": ""
+      }
+    ],
+    "B1": [
+      {
+        "who": "erzaehler",
+        "text": "Mikula steht vor dem Supermarkt. Plötzlich öffnet sich die Tür, ohne dass jemand sie berührt.",
+        "audio": ""
+      },
+      {
+        "who": "mikula",
+        "mood": "staunen",
+        "text": "Unglaublich! Die Tür weiß, dass ich komme. In meinem Dorf öffnet mir nur mein Nachbar die Tür – und nur, wenn er gute Laune hat.",
+        "audio": ""
+      },
+      {
+        "who": "mikula",
+        "mood": "neutral",
+        "text": "Ich sollte vorsichtig sein. Hier funktioniert vieles ganz anders als bei mir zu Hause.",
+        "audio": ""
+      }
+    ]
+  },
+  "tasks": {
+    "A1": [
+      {
+        "type": "choice",
+        "emoji": "🚪",
+        "emojiAlt": "Tür aus Holz",
+        "say": {
+          "who": "mikula",
+          "mood": "staunen",
+          "text": "Hier geht etwas von allein auf! Wie heißt das?",
+          "audio": ""
+        },
+        "question": "Welcher Artikel ist richtig?",
+        "options": [
+          "die Tür",
+          "der Tür",
+          "das Tür"
+        ],
+        "answer": 0,
+        "wrong": {
+          "who": "mikula",
+          "mood": "staunen",
+          "text": "Ups! Nichts passiert. Das war nicht richtig!",
+          "audio": ""
+        },
+        "hint": "Tipp: Tür hat denselben Artikel wie Uhr.",
+        "explain": "Wir sagen: die Tür. Plural: die Türen."
+      },
+      {
+        "type": "choice",
+        "emoji": "🛒",
+        "emojiAlt": "Wagen zum Schieben",
+        "say": {
+          "who": "mikula",
+          "mood": "staunen",
+          "text": "Ein Wagen mit Gitter! Was ist das?",
+          "audio": ""
+        },
+        "question": "Was ist das?",
+        "options": [
+          "das Brot",
+          "der Einkaufswagen",
+          "die Tasche"
+        ],
+        "answer": 1,
+        "wrong": {
+          "who": "mikula",
+          "mood": "staunen",
+          "text": "Oje, mein Pferd schüttelt den Kopf!",
+          "audio": ""
+        },
+        "hint": "Tipp: Man schiebt es und legt die Sachen hinein.",
+        "explain": "Das ist ein Einkaufswagen. Wir sagen: der Einkaufswagen."
+      },
+      {
+        "type": "choice",
+        "emoji": "🍎",
+        "emojiAlt": "rote Frucht",
+        "say": {
+          "who": "mikula",
+          "mood": "staunen",
+          "text": "So viele Äpfel! Rot und grün!",
+          "audio": ""
+        },
+        "question": "Welcher Artikel ist richtig?",
+        "options": [
+          "das Apfel",
+          "die Apfel",
+          "der Apfel"
+        ],
+        "answer": 2,
+        "wrong": {
+          "who": "mikula",
+          "mood": "staunen",
+          "text": "Iiih, sauer! Das war falsch.",
+          "audio": ""
+        },
+        "hint": "Tipp: Apfel hat denselben Artikel wie Tisch.",
+        "explain": "Wir sagen: der Apfel. Plural: die Äpfel."
+      },
+      {
+        "type": "choice",
+        "emoji": "🥛",
+        "emojiAlt": "Glas mit Getränk",
+        "say": {
+          "who": "mikula",
+          "mood": "staunen",
+          "text": "Weiß und kalt! Ich kann es trinken. Was ist das?",
+          "audio": ""
+        },
+        "question": "Was ist das?",
+        "options": [
+          "die Milch",
+          "der Käse",
+          "das Ei"
+        ],
+        "answer": 0,
+        "wrong": {
+          "who": "mikula",
+          "mood": "staunen",
+          "text": "Muh? Meine Kuh schüttelt den Kopf!",
+          "audio": ""
+        },
+        "hint": "Tipp: Käse kann man nicht trinken, ein Ei auch nicht.",
+        "explain": "Das ist Milch. Wir sagen: die Milch."
+      },
+      {
+        "type": "choice",
+        "emoji": "🧃",
+        "emojiAlt": "Getränk im Päckchen",
+        "say": {
+          "who": "mikula",
+          "mood": "staunen",
+          "text": "Süß und lecker! Das trinke ich gern. Wie heißt das?",
+          "audio": ""
+        },
+        "question": "Welcher Artikel ist richtig?",
+        "options": [
+          "das Saft",
+          "der Saft",
+          "die Saft"
+        ],
+        "answer": 1,
+        "wrong": {
+          "who": "mikula",
+          "mood": "staunen",
+          "text": "Oje, das klingt sauer! Das war falsch.",
+          "audio": ""
+        },
+        "hint": "Tipp: Saft hat denselben Artikel wie Kaffee.",
+        "explain": "Wir sagen: der Saft. Plural: die Säfte."
+      },
+      {
+        "type": "choice",
+        "emoji": "🧾",
+        "emojiAlt": "Zettel mit Zahlen",
+        "say": {
+          "who": "mikula",
+          "mood": "staunen",
+          "text": "Ein langes Papier! Was ist das?",
+          "audio": ""
+        },
+        "question": "Was ist das?",
+        "options": [
+          "die Tüte",
+          "das Obst",
+          "der Kassenbon"
+        ],
+        "answer": 2,
+        "wrong": {
+          "who": "mikula",
+          "mood": "staunen",
+          "text": "Oje! Das Papier schmeckt gar nicht.",
+          "audio": ""
+        },
+        "hint": "Tipp: Dieses Papier bekommst du an der Kasse.",
+        "explain": "Das ist der Kassenbon. Darauf stehen die Preise."
+      }
+    ],
+    "A2": [
+      {
+        "type": "order",
+        "say": {
+          "who": "mikula",
+          "mood": "staunen",
+          "text": "Der Einkaufswagen hängt an einer Kette fest! Ich brauche eine Münze. Was frage ich?",
+          "audio": ""
+        },
+        "question": "Bau den Satz für Mikula.",
+        "words": [
+          "Wo",
+          "bekomme",
+          "ich",
+          "eine",
+          "Münze?"
+        ],
+        "alt": [],
+        "wrong": {
+          "who": "mikula",
+          "mood": "staunen",
+          "text": "Der Wagen bleibt fest – mein Pferd ist einfacher, es braucht nur Heu!",
+          "audio": ""
+        },
+        "explain": "Nach „Wo“ steht das Verb: Wo bekomme ich …?"
+      },
+      {
+        "type": "choice",
+        "say": {
+          "who": "mikula",
+          "mood": "staunen",
+          "text": "So viele rote Tomaten! Ich möchte ein Kilo. Was sage ich?",
+          "audio": ""
+        },
+        "question": "Welcher Satz passt?",
+        "options": [
+          "Ich möchte kaufen ein Kilo Tomaten.",
+          "Ich möchte ein Kilo Tomaten kaufen.",
+          "Ich möchte ein Kilo Tomaten kaufe."
+        ],
+        "answer": 1,
+        "wrong": {
+          "who": "mikula",
+          "mood": "staunen",
+          "text": "Oje, der Satz ist durcheinander – wie mein Gemüsekorb!",
+          "audio": ""
+        },
+        "hint": "Tipp: Achte auf zwei Dinge: Wo steht das zweite Verb, und welche Form hat es?",
+        "explain": "Nach „möchte“ steht das zweite Verb am Ende: kaufen."
+      },
+      {
+        "type": "order",
+        "say": {
+          "who": "mikula",
+          "mood": "staunen",
+          "text": "Ich suche Milch, aber hier gibt es so viele Regale! Ich frage jemanden.",
+          "audio": ""
+        },
+        "question": "Bau den Satz für Mikula.",
+        "words": [
+          "Wo",
+          "finde",
+          "ich",
+          "die",
+          "Milch?"
+        ],
+        "alt": [],
+        "wrong": {
+          "who": "mikula",
+          "mood": "staunen",
+          "text": "Oje, ich laufe schon zum dritten Mal um dasselbe Regal!",
+          "audio": ""
+        },
+        "explain": "Das Fragewort „Wo“ steht vorn. Dann kommt das Verb: finde."
+      },
+      {
+        "type": "choice",
+        "say": {
+          "who": "mikula",
+          "mood": "staunen",
+          "text": "Ein Kasten für leere Flaschen! Guten Tag, Herr Pfandautomat! Was sage ich?",
+          "audio": ""
+        },
+        "question": "Welcher Satz passt?",
+        "options": [
+          "Ich bringe die leere Flaschen zum Pfandautomaten.",
+          "Ich bringe die leeren Flaschen zur Pfandautomaten.",
+          "Ich bringe die leeren Flaschen zum Pfandautomaten."
+        ],
+        "answer": 2,
+        "wrong": {
+          "who": "mikula",
+          "mood": "staunen",
+          "text": "Der Automat sagt nichts. Er ist wohl beleidigt!",
+          "audio": ""
+        },
+        "hint": "Tipp: Prüfe zwei Stellen: „leer…“ und „zu…“.",
+        "explain": "Plural: die leeren Flaschen. Und: der Pfandautomat → zum (= zu dem) Pfandautomaten."
+      },
+      {
+        "type": "order",
+        "say": {
+          "who": "mikula",
+          "mood": "staunen",
+          "text": "Ein schwarzer Fluss an der Kasse! Er trägt Brot und Käse. Ich lege meine Sachen darauf.",
+          "audio": ""
+        },
+        "question": "Bau den Satz für Mikula.",
+        "words": [
+          "Ich",
+          "lege",
+          "die",
+          "Sachen",
+          "auf",
+          "das",
+          "Kassenband."
+        ],
+        "alt": [],
+        "wrong": {
+          "who": "mikula",
+          "mood": "staunen",
+          "text": "Oje, mein Brot fährt davon! Das ist kein Fluss, das ist ein Band.",
+          "audio": ""
+        },
+        "explain": "Das Verb steht an Position 2: Ich lege … Dann kommt der Ort: auf das Kassenband."
+      },
+      {
+        "type": "order",
+        "say": {
+          "who": "mikula",
+          "mood": "staunen",
+          "text": "Die Kassiererin lächelt. Ich habe nur eine Karte. Ich möchte fragen, ob das hier geht.",
+          "audio": ""
+        },
+        "question": "Bau den Satz für Mikula.",
+        "words": [
+          "Kann",
+          "ich",
+          "mit",
+          "Karte",
+          "bezahlen?"
+        ],
+        "alt": [],
+        "wrong": {
+          "who": "mikula",
+          "mood": "staunen",
+          "text": "Die Kassiererin wartet freundlich. Ich baue den Satz noch einmal!",
+          "audio": ""
+        },
+        "explain": "Bei einer Ja/Nein-Frage steht das Verb vorn: Kann ich …? Das zweite Verb steht am Ende: bezahlen."
+      }
+    ],
+    "B1": [
+      {
+        "type": "rate",
+        "situation": "Mikula möchte einen Einkaufswagen nehmen. Der Wagen hängt an einer Kette fest.",
+        "line": {
+          "who": "Mitarbeiter",
+          "text": "Guten Tag! Der Wagen funktioniert mit einer Münze oder einem Chip. Brauchen Sie Hilfe?",
+          "audio": ""
+        },
+        "question": "Was sagt Mikula am besten?",
+        "options": [
+          {
+            "text": "Ja, bitte. Könnten Sie mir zeigen, wie der Wagen funktioniert?",
+            "verdict": "passend",
+            "explain": "Sehr höflich: „Könnten Sie mir …?“ ist eine gute Bitte."
+          },
+          {
+            "text": "Ja, bitte. Kannst du mir zeigen, wie der Wagen funktioniert?",
+            "verdict": "unhöflich",
+            "explain": "Grammatisch richtig, aber du duzt den Mitarbeiter. Besser: „Können Sie …?“"
+          },
+          {
+            "text": "Ja, danke. Ich bezahle den Wagen mit einem Huhn.",
+            "verdict": "falsch",
+            "explain": "Der Wagen braucht eine Münze oder einen Chip, kein Huhn."
+          }
+        ],
+        "wrong": {
+          "who": "mikula",
+          "mood": "staunen",
+          "text": "Der Wagen frisst keine Hühner – ein schwieriges Tier!",
+          "audio": ""
+        }
+      },
+      {
+        "type": "rate",
+        "situation": "Mikula steht an der Käsetheke.",
+        "line": {
+          "who": "Verkäuferin",
+          "text": "Guten Tag! Der Gouda ist heute im Angebot. Möchten Sie ein Stück?",
+          "audio": ""
+        },
+        "question": "Was sagt Mikula am besten?",
+        "options": [
+          {
+            "text": "Ja, gern. Ich ein Stück hätte gern, bitte.",
+            "verdict": "falsch",
+            "explain": "Das Verb steht an Position 2: „Ich hätte gern …“."
+          },
+          {
+            "text": "Ja, gern. Ich hätte gern ein Stück, bitte.",
+            "verdict": "passend",
+            "explain": "Höflich und richtig: „Ich hätte gern …, bitte.“"
+          },
+          {
+            "text": "Ja. Ich will ein Stück.",
+            "verdict": "unhöflich",
+            "explain": "Grammatisch richtig, aber „Ich will …“ klingt fordernd. Besser: „Ich hätte gern …“."
+          }
+        ],
+        "wrong": {
+          "who": "mikula",
+          "mood": "staunen",
+          "text": "In meinem Dorf verstehen mich alle – hier muss ich noch üben!",
+          "audio": ""
+        }
+      },
+      {
+        "type": "rate",
+        "situation": "Mikula sucht Mehl und findet es nicht.",
+        "line": {
+          "who": "Mitarbeiterin",
+          "text": "Kann ich Ihnen helfen? Suchen Sie etwas?",
+          "audio": ""
+        },
+        "question": "Was sagt Mikula am besten?",
+        "options": [
+          {
+            "text": "Ja. Sie müssen mir das Mehl zeigen.",
+            "verdict": "unhöflich",
+            "explain": "Grammatisch richtig, aber „Sie müssen …“ klingt wie ein Befehl. Besser: „Könnten Sie …?“"
+          },
+          {
+            "text": "Ja, gern. Könnten Sie mir sagen, wo finde ich das Mehl?",
+            "verdict": "falsch",
+            "explain": "Nach „wo“ steht das Verb am Ende: „… wo ich das Mehl finde“."
+          },
+          {
+            "text": "Ja, gern. Könnten Sie mir sagen, wo ich das Mehl finde?",
+            "verdict": "passend",
+            "explain": "Richtig und höflich. Im Nebensatz steht das Verb am Ende."
+          }
+        ],
+        "wrong": {
+          "who": "mikula",
+          "mood": "staunen",
+          "text": "Mein Mehl mahle ich selbst – hier finde ich es nicht einmal!",
+          "audio": ""
+        }
+      },
+      {
+        "type": "rate",
+        "situation": "Mikula bringt leere Flaschen zum Pfandautomaten.",
+        "line": {
+          "who": "Kunde",
+          "text": "Der Automat gibt Ihnen am Ende einen Pfandbon. Den geben Sie dann an der Kasse ab.",
+          "audio": ""
+        },
+        "question": "Was sagt Mikula am besten?",
+        "options": [
+          {
+            "text": "Ja, ja, das weiß ich doch schon.",
+            "verdict": "unhöflich",
+            "explain": "Grammatisch richtig, aber „Ja, ja“ klingt genervt. Der Kunde will nur helfen."
+          },
+          {
+            "text": "Danke für den Tipp! Dann gebe ich den Bon an der Kasse ab.",
+            "verdict": "passend",
+            "explain": "Freundlich: Man bedankt sich und sagt, was man macht."
+          },
+          {
+            "text": "Danke für den Tipp! Dann abgebe ich den Bon an der Kasse.",
+            "verdict": "falsch",
+            "explain": "„abgeben“ ist trennbar: „Dann gebe ich den Bon an der Kasse ab.“"
+          }
+        ],
+        "wrong": {
+          "who": "mikula",
+          "mood": "staunen",
+          "text": "Der Automat spuckt den Bon wieder aus – er ist wohl satt!",
+          "audio": ""
+        }
+      },
+      {
+        "type": "rate",
+        "situation": "Mikula steht an der Kasse.",
+        "line": {
+          "who": "Kassiererin",
+          "text": "Das macht 13,50 €. Zahlen Sie bar oder mit Karte?",
+          "say": "Das macht dreizehn Euro fünfzig. Zahlen Sie bar oder mit Karte?",
+          "audio": ""
+        },
+        "question": "Was sagt Mikula am besten?",
+        "options": [
+          {
+            "text": "Mit Karte, bitte. Könnte ich auch den Kassenbon haben?",
+            "verdict": "passend",
+            "explain": "Sehr gut: kurz, höflich und mit „bitte“."
+          },
+          {
+            "text": "Mit Karte, bitte. Könnte ich auch der Kassenbon haben?",
+            "verdict": "falsch",
+            "explain": "„haben“ braucht den Akkusativ: „Könnte ich auch den Kassenbon haben?“"
+          },
+          {
+            "text": "Karte. Und den Bon.",
+            "verdict": "unhöflich",
+            "explain": "Grammatisch nicht falsch, aber sehr kurz und ohne „bitte“. Das klingt unfreundlich."
+          }
+        ],
+        "wrong": {
+          "who": "mikula",
+          "mood": "staunen",
+          "text": "Zu Hause bezahle ich mit Eiern. Hier ist alles anders!",
+          "audio": ""
+        }
+      },
+      {
+        "type": "rate",
+        "situation": "Mikula hat Nudeln gekauft. Zu Hause sieht er: Das Mindesthaltbarkeitsdatum ist abgelaufen. Er geht zum Kundenservice.",
+        "line": {
+          "who": "Mitarbeiter",
+          "text": "Guten Tag! Wie kann ich Ihnen helfen?",
+          "audio": ""
+        },
+        "question": "Was sagt Mikula am besten?",
+        "options": [
+          {
+            "text": "Guten Tag! Diese Nudeln ist abgelaufen. Könnte ich sie umtauschen?",
+            "verdict": "falsch",
+            "explain": "„Nudeln“ ist Plural. Also: „Diese Nudeln sind abgelaufen.“"
+          },
+          {
+            "text": "Diese Nudeln sind abgelaufen. Könnte ich sie umtauschen?",
+            "verdict": "unhöflich",
+            "explain": "Grammatisch richtig, aber die Begrüßung fehlt. Der Mitarbeiter sagt „Guten Tag!“ – grüß zurück."
+          },
+          {
+            "text": "Guten Tag! Diese Nudeln sind abgelaufen. Könnte ich sie umtauschen?",
+            "verdict": "passend",
+            "explain": "Höflich: Man sagt das Problem und bittet mit „Könnte ich …?“."
+          }
+        ],
+        "wrong": {
+          "who": "mikula",
+          "mood": "staunen",
+          "text": "Oje, ein Fehler im Satz – bei meinem selbst gebackenen Brot passiert mir das nie!",
+          "audio": ""
+        }
+      }
+    ]
+  },
+  "outro": {
+    "A1": {
+      "who": "mikula",
+      "mood": "freude",
+      "text": "Super! Ich habe alles. Und da ist ein Zeitkristall! Danke!",
+      "audio": ""
+    },
+    "A2": {
+      "who": "mikula",
+      "mood": "freude",
+      "text": "Juhu! Zwischen den Äpfeln glänzt ein Zeitkristall! Danke, du hast mir sehr geholfen.",
+      "audio": ""
+    },
+    "B1": {
+      "who": "mikula",
+      "mood": "freude",
+      "text": "Wunderbar! Das Einkaufen hat geklappt, und an der Kasse liegt ein Zeitkristall. Vielen Dank für deine Hilfe!",
+      "audio": ""
+    }
+  },
+  "words": [
+    {
+      "word": "Tür",
+      "article": "die",
+      "plural": "die Türen",
+      "example": "Die Tür geht von allein auf.",
+      "emoji": "🚪",
+      "level": "A1",
+      "audio": ""
+    },
+    {
+      "word": "Einkaufswagen",
+      "article": "der",
+      "plural": "die Einkaufswagen",
+      "example": "Ich brauche einen Einkaufswagen.",
+      "emoji": "🛒",
+      "level": "A1",
+      "audio": ""
+    },
+    {
+      "word": "Apfel",
+      "article": "der",
+      "plural": "die Äpfel",
+      "example": "Der Apfel ist rot.",
+      "emoji": "🍎",
+      "level": "A1",
+      "audio": ""
+    },
+    {
+      "word": "Milch",
+      "article": "die",
+      "plural": "nur Singular",
+      "example": "Ich kaufe einen Liter Milch.",
+      "emoji": "🥛",
+      "level": "A1",
+      "audio": ""
+    },
+    {
+      "word": "Saft",
+      "article": "der",
+      "plural": "die Säfte",
+      "example": "Ich trinke gern Saft.",
+      "emoji": "🧃",
+      "level": "A1",
+      "audio": ""
+    },
+    {
+      "word": "Kassenbon",
+      "article": "der",
+      "plural": "die Kassenbons",
+      "example": "Ich nehme den Kassenbon mit.",
+      "emoji": "🧾",
+      "level": "A1",
+      "audio": ""
+    },
+    {
+      "word": "Münze",
+      "article": "die",
+      "plural": "die Münzen",
+      "example": "Für den Einkaufswagen brauche ich eine Münze.",
+      "emoji": "🪙",
+      "level": "A2",
+      "audio": ""
+    },
+    {
+      "word": "Kasse",
+      "article": "die",
+      "plural": "die Kassen",
+      "example": "Ich bezahle an der Kasse.",
+      "emoji": "💶",
+      "level": "A2",
+      "audio": ""
+    },
+    {
+      "word": "Regal",
+      "article": "das",
+      "plural": "die Regale",
+      "example": "Das Mehl steht im Regal.",
+      "emoji": "🗄️",
+      "level": "A2",
+      "audio": ""
+    },
+    {
+      "word": "Pfandautomat",
+      "article": "der",
+      "plural": "die Pfandautomaten",
+      "example": "Der Pfandautomat nimmt leere Flaschen.",
+      "emoji": "♻️",
+      "level": "A2",
+      "audio": ""
+    },
+    {
+      "word": "Angebot",
+      "article": "das",
+      "plural": "die Angebote",
+      "example": "Die Tomaten sind im Angebot.",
+      "emoji": "🏷️",
+      "level": "B1",
+      "audio": ""
+    },
+    {
+      "word": "Mindesthaltbarkeitsdatum",
+      "article": "das",
+      "plural": "die Mindesthaltbarkeitsdaten",
+      "example": "Das Mindesthaltbarkeitsdatum ist abgelaufen.",
+      "emoji": "📅",
+      "level": "B1",
+      "audio": ""
+    }
+  ]
+}

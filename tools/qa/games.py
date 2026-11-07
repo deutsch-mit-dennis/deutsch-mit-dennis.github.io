@@ -27,7 +27,7 @@ async def run_variant(b, gid, opt, vw):
     await pg.click("#sp-start")
     done=False; steps=0; over=0
     for steps in range(2500):
-        if await pg.evaluate("!!document.querySelector('.sp-result')"): done=True; break
+        if await pg.evaluate("!!document.querySelector('.sp-result,.sp-done')"): done=True; break
         act=await pg.evaluate("""()=>{const root=document.querySelector('.sp-play');if(!root)return 'noroot';
           if(document.documentElement.scrollWidth>innerWidth+1) window.__over=(window.__over||0)+1;
           const n=document.getElementById('sp-next'); if(n&&!n.hidden){n.click();return 'next'}

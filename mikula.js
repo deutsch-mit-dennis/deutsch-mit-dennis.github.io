@@ -62,6 +62,7 @@
       <h1>Mikula lernt Deutsch</h1>
       <p class="mk-intro">Mikula ist ein Bauer aus dem Jahr 1024. Seine Zeitmaschine ist kaputt, jetzt lernt er Deutsch. Dabei macht er die Fehler, die viele Lernende machen. Lies den Satz, finde den Fehler und klick dann auf „Lösung zeigen“. Neue Folgen kommen mittwochs und samstags.</p>
       ${follow}
+      <a class="mk-game" href="#spiele/mikula"><span aria-hidden="true">💎</span><span><b>Neu: Lernspiel „Mikula sucht den Weg nach Hause“</b><small>Hilf Mikula am Bahnhof und im Supermarkt – A1, A2 oder B1.</small></span><span aria-hidden="true">→</span></a>
       <div class="mk-list" aria-busy="true"><p class="dm-hint">Folgen werden geladen …</p></div>
       <p class="mk-note">Mikula ist eine KI-Figur. Bild und Stimme von Mikula sind KI-generiert, die Erklärungen spricht Dennis.</p>
     </section>`;
@@ -105,6 +106,7 @@
 .mk-follow span{font-weight:500;color:#5b6680}
 .mk-list{display:grid;gap:14px;margin-top:16px}
 .mk-page .mk-ep{border:2px solid #d6e9d8}
+.mk-game{display:flex;align-items:center;gap:12px;margin:14px 0;padding:12px 16px;min-height:56px;border-radius:16px;background:#E8ECFA;border:2px solid #c5cdf0;color:#172036;text-decoration:none}.mk-game b{display:block;color:#182E86}.mk-game small{display:block;color:#3b4258}.mk-game>span:first-child{font-size:28px}.mk-game>span:nth-child(2){flex:1}.mk-game:focus-visible{outline:3px solid #2341B5;outline-offset:2px}
 .mk-note{color:#5b6680;font-size:15px;margin:16px 0 0}
 @media (max-width:480px){.mk-card{padding:14px}.mk-ep{gap:10px;padding:10px}.mk-cover,.mk-ep.is-big .mk-cover{width:88px}.mk-wrong,.mk-right{font-size:17px}.mk-links>*{flex:1 1 auto}}
 `;

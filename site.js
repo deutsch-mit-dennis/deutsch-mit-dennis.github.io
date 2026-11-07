@@ -243,7 +243,7 @@
       </div>
     </section>
 
-    ${window.DMChallenge ? `<section class="dm-section ch-home" aria-label="Tages-Challenge und Lernspiele">${DMChallenge.teaser()}<a class="sp-home" href="#spiele"><span aria-hidden="true">🎮</span><span><b>Lernspiele</b><small>22 Spiele: Jump’n’Run · Story-Abenteuer · Artikel · Verben · Alltag · DTB B2 · Leben in Deutschland</small></span><span class="sp-home-go">Spielen →</span></a></section>` : ''}
+    ${window.DMChallenge ? `<section class="dm-section ch-home" aria-label="Tages-Challenge und Lernspiele">${DMChallenge.teaser()}<a class="sp-home" href="#spiele"><span aria-hidden="true">🎮</span><span><b>Lernspiele</b><small>23 Spiele: Jump’n’Run · Story-Abenteuer · Mikula · Artikel · Verben · Alltag · DTB B2 · Leben in Deutschland</small></span><span class="sp-home-go">Spielen →</span></a></section>` : ''}
 
     <section class="dm-section lino-home" aria-labelledby="nid-h">
       <a class="lino-home-card nid-home-card" href="#spiele/nid">
@@ -463,7 +463,7 @@
         <section class="dm-card dm-hub-card"><h2>✍️ Schreiben</h2><p>Plane deinen Text, schreib ihn und vergleiche mit einem Muster. Dein Entwurf bleibt auf deinem Gerät gespeichert.</p>${levelLinks('ueben/schreiben')}<a class="dm-inline-link" href="#schreiben/bausteine">Schreib-Bausteine: Anrede, Gruß, Verbindungswörter</a><a class="dm-inline-link" href="/dtz-schreiben/">DTZ Schreiben: Vorbereitungspaket zur neuen A2-Regel</a></section>
         <section class="dm-card dm-hub-card"><h2>🎧 Hören</h2><p>Hörtraining für DTZ und DTB B2 mit natürlichen Stimmen – plus kurze Texte zum Einstieg.</p><div class="dm-pills"><a href="#hoeren/dtz-1"><b>DTZ</b><small>5 Übungssätze</small></a><a href="#hoeren/b2-1"><b>DTB B2</b><small>4 Übungssätze</small></a><a href="#hoeren"><b>Alle</b><small>Übersicht</small></a></div></section>
         <section class="dm-card dm-hub-card"><h2>📖 Lesen</h2><p>Mitteilungen, Anzeigen, E-Mails und Artikel verstehen – mit Fragen und Erklärungen.</p><div class="dm-pills"><a href="#lesen/alltag"><b>Alltag</b><small>A2–B1 · DTZ</small></a><a href="#lesen/beruf"><b>Beruf</b><small>B1–B2 · DTB</small></a></div></section>
-        <section class="dm-card dm-hub-card"><h2>🎮 Lernspiele</h2><p>22 Spiele, neu: das Story-Abenteuer „Neu in Deutschland“ in 8 Kapiteln und das Jump’n’Run „Lino läuft“ – beide von A1 bis C1. Dazu Grammatik, Alltag, DTB B2 Beruf und „Leben in Deutschland“.</p><a class="dm-btn dm-btn-quiet" href="#spiele">Zu den Lernspielen</a></section>
+        <section class="dm-card dm-hub-card"><h2>🎮 Lernspiele</h2><p>23 Spiele, neu: „Mikula sucht den Weg nach Hause“ (A1–B1), das Story-Abenteuer „Neu in Deutschland“ in 8 Kapiteln und das Jump’n’Run „Lino läuft“ – beide von A1 bis C1. Dazu Grammatik, Alltag, DTB B2 Beruf und „Leben in Deutschland“.</p><a class="dm-btn dm-btn-quiet" href="#spiele">Zu den Lernspielen</a></section>
         <section class="dm-card dm-hub-card"><h2>🖼 Bild beschreiben</h2><p>Adjektivendungen und Relativsätze an Bildern üben – wie im DTZ, Teil Sprechen 2.</p><a class="dm-btn dm-btn-quiet" href="#bild">Zum Bild-Trainer</a></section>
         <section class="dm-card dm-hub-card"><h2>🎲 Gemeinsam spielen</h2><p>Kahoot-Quiz für den Kurs oder zu Hause. Wörter und Redemittel festigen.</p><a class="dm-btn dm-btn-quiet" href="#kahoot">Zu den Kahoot-Quiz</a></section>
       </div>`);
@@ -1172,7 +1172,7 @@
       <p>Beim Aufruf der Website verarbeitet der Hosting-Anbieter technisch notwendige Daten (zum Beispiel IP-Adresse, Datum und Uhrzeit, aufgerufene Seite, Browsertyp), um die Seite auszuliefern und die Sicherheit zu gewährleisten. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO.</p>
       <p>Diese Website wird bei GitHub Pages gehostet, einem Dienst der GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA. Dabei können Daten auch in den USA verarbeitet werden. Mehr: <a href="https://docs.github.com/de/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener noreferrer">Datenschutzerklärung von GitHub</a>.</p>
       <h2>3. Lernstand auf deinem Gerät</h2>
-      <p>Dein Lernfortschritt, abgehakte Schritte, deine Übungstexte und welche Neuigkeiten (🔔) du schon gesehen hast, werden im Speicher deines Browsers (localStorage) gespeichert. Diese Daten werden nicht an mich oder Dritte übertragen. Du kannst sie jederzeit löschen.</p>
+      <p>Dein Lernfortschritt, abgehakte Schritte, deine Übungstexte, dein Spielstand in den Lernspielen (zum Beispiel Mikulas Zeitkristalle und dein Niveau) und welche Neuigkeiten (🔔) du schon gesehen hast, werden im Speicher deines Browsers (localStorage) gespeichert. Diese Daten werden nicht an mich oder Dritte übertragen. Du kannst sie jederzeit löschen.</p>
       <p><button type="button" class="dm-btn dm-btn-quiet" id="dm-wipe">Meinen gespeicherten Lernstand löschen</button> <span id="dm-wipe-status" role="status"></span></p>
       <h2>4. YouTube-Videos</h2>
       <p>Videos werden erst geladen, wenn du auf „Videos hier anzeigen“ klickst. Erst dann werden Daten (zum Beispiel deine IP-Adresse) an YouTube (Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland) übertragen. Ich nutze den erweiterten Datenschutzmodus (youtube-nocookie.com). Deine Zustimmung wird auf deinem Gerät gespeichert; du kannst sie oben mit „Lernstand löschen“ zurücknehmen. Rechtsgrundlage ist deine Einwilligung (Art. 6 Abs. 1 lit. a DSGVO). Mehr: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Datenschutzerklärung von Google</a>.</p>
@@ -1204,7 +1204,7 @@
       <p>Du hast das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerspruch. Eine Einwilligung kannst du jederzeit widerrufen. Du kannst dich außerdem bei einer Datenschutz-Aufsichtsbehörde beschweren, zum Beispiel bei der Landesbeauftragten für Datenschutz und Informationsfreiheit Nordrhein-Westfalen.</p>
       <p class="dm-small">Stand: Oktober 2026</p>
       </article>`);
-    $('#dm-wipe').onclick = () => { try { localStorage.removeItem(KEY); } catch {} mem = { visited: {}, done: {}, drafts: {} }; DM.store = mem; $('#dm-wipe-status').textContent = 'Erledigt. Dein Lernstand wurde gelöscht.'; };
+    $('#dm-wipe').onclick = () => { try { localStorage.removeItem(KEY); localStorage.removeItem('dm-mikula'); } catch {} mem = { visited: {}, done: {}, drafts: {} }; DM.store = mem; $('#dm-wipe-status').textContent = 'Erledigt. Dein Lernstand wurde gelöscht.'; };
   }
 
   /* ---------- Hilfe-Texte an die neue Navigation anpassen (Deutsch, Englisch) ---------- */

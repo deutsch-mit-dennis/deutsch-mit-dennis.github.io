@@ -37,15 +37,17 @@ VOICES = {
                    'f3': 'fBs1tCpaSMsPcbMkLQlk',   # Yvonne – mittleres Alter
                    'm1': 'z1EhmmPwF0ENGYE8dBE6',   # Christian – Gesprächston
                    'm2': 'f64OyGck4gc2zk7QOs55',   # Leo – ruhig, natürlich
-                   'm3': 'aTTiK3YzK3dXETpuDE2h'},  # Ben – jung
+                   'm3': 'aTTiK3YzK3dXETpuDE2h',   # Ben – jung
+                   'mk': 'vv3bG6FrcGtmeOdRSriS'},  # Mikula (game) – Thomas, warm German explainer
     'google': {'f1': 'de-DE-Chirp3-HD-Aoede', 'f2': 'de-DE-Chirp3-HD-Kore', 'f3': 'de-DE-Chirp3-HD-Leda',
-               'm1': 'de-DE-Chirp3-HD-Charon', 'm2': 'de-DE-Chirp3-HD-Puck', 'm3': 'de-DE-Chirp3-HD-Orus'},
-    'gemini': {'f1': 'Kore', 'f2': 'Aoede', 'f3': 'Leda', 'm1': 'Charon', 'm2': 'Puck', 'm3': 'Orus'},
+               'm1': 'de-DE-Chirp3-HD-Charon', 'm2': 'de-DE-Chirp3-HD-Puck', 'm3': 'de-DE-Chirp3-HD-Orus',
+               'mk': 'de-DE-Chirp3-HD-Algenib'},
+    'gemini': {'f1': 'Kore', 'f2': 'Aoede', 'f3': 'Leda', 'm1': 'Charon', 'm2': 'Puck', 'm3': 'Orus', 'mk': 'Algenib'},  # mk = Mikula (same base voice as the reels, no accent prompt)
     'piper': {'f1': 'de_DE-kerstin-low', 'f2': 'de_DE-ramona-low', 'f3': 'de_DE-eva_k-x_low',
-              'm1': 'de_DE-thorsten-high', 'm2': 'de_DE-karlsson-low', 'm3': 'de_DE-pavoque-low'},
+              'm1': 'de_DE-thorsten-high', 'm2': 'de_DE-karlsson-low', 'm3': 'de_DE-pavoque-low', 'mk': 'de_DE-thorsten-high'},
 }
 ELEVEN_FALLBACK = {'f1': 'EXAVITQu4vr4xnSDxMaL', 'f2': 'FGY2WhTYpPnrIDTdsKH5', 'f3': 'XrExE9yKIg1WjnnlVkGX',
-                   'm1': 'JBFqnCBsd6RMkjVDRZzb', 'm2': 'onwK4e9ZLuTAKqWW03F9', 'm3': 'TX3LPaxmHKxFdv7VOQHJ'}
+                   'm1': 'JBFqnCBsd6RMkjVDRZzb', 'm2': 'onwK4e9ZLuTAKqWW03F9', 'm3': 'TX3LPaxmHKxFdv7VOQHJ', 'mk': 'onwK4e9ZLuTAKqWW03F9'}
 PIPER_PATH = {
     'de_DE-thorsten-high': 'de/de_DE/thorsten/high', 'de_DE-karlsson-low': 'de/de_DE/karlsson/low',
     'de_DE-pavoque-low': 'de/de_DE/pavoque/low', 'de_DE-kerstin-low': 'de/de_DE/kerstin/low',
@@ -168,7 +170,7 @@ def signature(entry, eng):
     if entry.get('fx') and eng != 'text': payload += '|fx=' + entry['fx']  # Klangeffekt gehört zur Aufnahme
     return hashlib.sha1((eng + '|' + payload).encode()).hexdigest()[:10]
 
-SPEAKER_NAMES = {'f1': 'Anna', 'f2': 'Lena', 'f3': 'Maria', 'm1': 'Tom', 'm2': 'Paul', 'm3': 'Jonas'}
+SPEAKER_NAMES = {'f1': 'Anna', 'f2': 'Lena', 'f3': 'Maria', 'm1': 'Tom', 'm2': 'Paul', 'm3': 'Jonas', 'mk': 'Mikula'}
 
 def gemini_whole(entry, wav):
     """Ganzer Hörtext in EINEM Gemini-Aufruf: Dialoge mit zwei Stimmen als echtes Gespräch (Multi-Speaker),
