@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 320" role="img" aria-label="Bahnhof – Platzhalter">
+<title>Station Bahnhof – Platzhalter</title>
+<rect width="640" height="320" fill="#dfe8f7"/>
+<rect y="236" width="640" height="84" fill="#9aa3b5"/><rect y="250" width="640" height="8" fill="#5b6478"/><rect y="282" width="640" height="8" fill="#5b6478"/>
+<rect x="60" y="120" width="380" height="120" rx="26" fill="#2341B5"/><rect x="430" y="150" width="70" height="90" rx="20" fill="#2341B5"/>
+<g fill="#cfe0ff"><rect x="90" y="145" width="60" height="45" rx="8"/><rect x="170" y="145" width="60" height="45" rx="8"/><rect x="250" y="145" width="60" height="45" rx="8"/><rect x="330" y="145" width="60" height="45" rx="8"/></g>
+<rect x="60" y="208" width="440" height="10" fill="#FFE45C"/>
+<rect x="540" y="60" width="70" height="170" rx="10" fill="#566078"/><rect x="552" y="76" width="46" height="40" rx="4" fill="#9fe3c3"/><rect x="560" y="132" width="30" height="8" rx="3" fill="#cfd5e3"/>
+<rect x="200" y="30" width="200" height="56" rx="8" fill="#172036"/><text x="300" y="66" font-family="Arial,sans-serif" font-size="24" fill="#FFE45C" text-anchor="middle">Gleis 3 · 14:10</text>
+</svg>

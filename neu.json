@@ -2,6 +2,12 @@
  "note": "Neu auf der Seite – neueste Einträge oben. Wird vom Redaktionsplan (geplante Aufgaben) ergänzt.",
  "items": [
   {
+   "date": "2026-11-07",
+   "type": "neu",
+   "title": "Neues Lernspiel: Mikula sucht den Weg nach Hause – hilf Mikula am Bahnhof und im Supermarkt (A1–B1)",
+   "link": "#spiele/mikula"
+  },
+  {
    "date": "2026-11-04",
    "type": "neu",
    "title": "Jetzt erhältlich: Lehrerpaket Hören und Lesen DTZ – Strategien, Hörtexte und Lesetexte",

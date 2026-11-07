@@ -1,0 +1,38 @@
+{
+  "title": "Mikula sucht den Weg nach Hause",
+  "crystalsNeeded": 10,
+  "images": {
+    "neutral": "spiele/mikula/img/mikula-neutral.svg",
+    "staunen": "spiele/mikula/img/mikula-staunen.svg",
+    "freude": "spiele/mikula/img/mikula-freude.svg"
+  },
+  "story": [
+    { "who": "erzaehler", "text": "Mikula ist Bauer. Er lebt im Jahr 1024.", "say": "Mikula ist Bauer. Er lebt im Jahr tausendvierundzwanzig.", "audio": "" },
+    { "who": "erzaehler", "text": "Im Wald findet er eine Zeitmaschine. Plötzlich ist er in Deutschland – im Jahr 2026!", "say": "Im Wald findet er eine Zeitmaschine. Plötzlich ist er in Deutschland – im Jahr zweitausendsechsundzwanzig!", "audio": "" },
+    { "who": "erzaehler", "text": "Jetzt ist die Maschine kaputt. Mikula braucht 10 Zeitkristalle, dann kann er nach Hause.", "say": "Jetzt ist die Maschine kaputt. Mikula braucht zehn Zeitkristalle, dann kann er nach Hause.", "audio": "" },
+    { "who": "mikula", "mood": "staunen", "text": "Hilfst du mir? Hier ist alles so neu!", "audio": "" }
+  ],
+  "stations": [
+    { "id": "bahnhof", "title": "Am Bahnhof", "icon": "🚉", "file": "bahnhof.json", "status": "active" },
+    { "id": "supermarkt", "title": "Im Supermarkt", "icon": "🛒", "file": "supermarkt.json", "status": "active" },
+    { "id": "jobcenter", "title": "Im Jobcenter", "icon": "🏢", "status": "soon" },
+    { "id": "post", "title": "Bei der Post", "icon": "📮", "status": "soon" },
+    { "id": "baeckerei", "title": "In der Bäckerei", "icon": "🥨", "status": "soon" },
+    { "id": "muell", "title": "Müll trennen", "icon": "♻️", "status": "soon" },
+    { "id": "geheim-1", "status": "secret" },
+    { "id": "geheim-2", "status": "secret" },
+    { "id": "geheim-3", "status": "secret" },
+    { "id": "geheim-4", "status": "secret" }
+  ],
+  "end": {
+    "title": "Fortsetzung folgt …",
+    "lines": [
+      { "who": "mikula", "mood": "freude", "text": "Danke! Zwei Kristalle habe ich schon. Aber ich brauche noch mehr.", "audio": "" },
+      { "who": "erzaehler", "text": "Bald gibt es neue Stationen. Folge Mikula, dann verpasst du nichts!", "audio": "" }
+    ],
+    "links": [
+      { "label": "Mikula auf Instagram", "sub": "@mikula.timetraveler", "url": "https://www.instagram.com/mikula.timetraveler/" },
+      { "label": "Deutsch mit Dennis auf YouTube", "sub": "@deutsch-mit-Dennis", "url": "https://www.youtube.com/@deutsch-mit-Dennis" }
+    ]
+  }
+}

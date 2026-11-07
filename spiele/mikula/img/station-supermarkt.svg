@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 320" role="img" aria-label="Supermarkt – Platzhalter">
+<title>Station Supermarkt – Platzhalter</title>
+<rect width="640" height="320" fill="#f6efe0"/>
+<rect y="250" width="640" height="70" fill="#d9d2c2"/>
+<g><rect x="30" y="60" width="200" height="190" fill="#fff" stroke="#c9b892" stroke-width="4"/><path d="M30 120h200M30 180h200" stroke="#c9b892" stroke-width="4"/>
+<g font-size="34" font-family="Segoe UI Emoji,Apple Color Emoji,sans-serif"><text x="44" y="110">🍎🍌🥕</text><text x="44" y="170">🥛🧀🍞</text><text x="44" y="232">🥚🍅🥒</text></g></g>
+<rect x="300" y="170" width="300" height="80" rx="10" fill="#566078"/><rect x="310" y="180" width="200" height="22" rx="6" fill="#172036"/><rect x="530" y="120" width="56" height="50" rx="6" fill="#172036"/><rect x="538" y="128" width="40" height="22" rx="3" fill="#9fe3c3"/>
+<g fill="none" stroke="#2341B5" stroke-width="6" stroke-linejoin="round"><path d="M250 190h20l18 50h70l14-40h-96"/></g><circle cx="300" cy="252" r="9" fill="#2341B5"/><circle cx="350" cy="252" r="9" fill="#2341B5"/>
+<rect x="250" y="20" width="300" height="54" rx="10" fill="#2341B5"/><text x="400" y="56" font-family="Arial,sans-serif" font-size="26" fill="#fff" text-anchor="middle">SUPERMARKT</text>
+</svg>

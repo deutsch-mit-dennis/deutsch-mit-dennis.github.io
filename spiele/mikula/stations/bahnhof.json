@@ -1,0 +1,234 @@
+{
+  "id": "bahnhof",
+  "title": "Am Bahnhof",
+  "icon": "🚉",
+  "img": "spiele/mikula/img/station-bahnhof.svg",
+  "intro": {
+    "A1": [
+      { "who": "erzaehler", "text": "Mikula steht am Bahnhof. Alles ist laut. Da steht ein großer Kasten mit Licht.", "audio": "" },
+      { "who": "mikula", "mood": "staunen", "text": "Was ist das? Ist das ein Gott?", "audio": "" },
+      { "who": "erzaehler", "text": "Mikula verbeugt sich vor dem Kasten. Der Kasten sagt nichts.", "audio": "" }
+    ],
+    "A2": [
+      { "who": "erzaehler", "text": "Mikula steht in der Bahnhofshalle. Vor ihm ist ein großer Kasten mit Licht und Knöpfen.", "audio": "" },
+      { "who": "mikula", "mood": "staunen", "text": "Das ist bestimmt ein kleiner Schrein! Ich verbeuge mich und lege Getreide hin.", "audio": "" },
+      { "who": "Frau am Automaten", "text": "Das ist ein Fahrkartenautomat. Hier kaufen Sie Ihre Fahrkarte.", "audio": "" }
+    ],
+    "B1": [
+      { "who": "erzaehler", "text": "Mikula steht in der Bahnhofshalle vor einem großen Kasten. Er leuchtet und hat viele Knöpfe.", "audio": "" },
+      { "who": "mikula", "mood": "staunen", "text": "Verzeihung, ist das ein Götzenbild? Ich habe schon dreimal gegrüßt, aber es antwortet nicht.", "audio": "" },
+      { "who": "mikula", "mood": "neutral", "text": "Ich bin nur ein Bauer und möchte nach Hause. Könnte mir bitte jemand helfen?", "audio": "" }
+    ]
+  },
+  "tasks": {
+    "A1": [
+      {
+        "type": "choice",
+        "emoji": "🎫",
+        "say": { "who": "mikula", "mood": "staunen", "text": "Mit diesem Papier fahre ich im Zug. Wie heißt es?", "audio": "" },
+        "question": "Welcher Artikel ist richtig?",
+        "options": ["das Fahrkarte", "die Fahrkarte", "der Fahrkarte"],
+        "answer": 1,
+        "wrong": { "who": "mikula", "mood": "staunen", "text": "Hm, das klingt komisch. Mein Pferd versteht das auch nicht!", "audio": "" },
+        "explain": "Wir sagen: die Fahrkarte. Mehrzahl: die Fahrkarten."
+      },
+      {
+        "type": "choice",
+        "emoji": "🛤️",
+        "say": { "who": "mikula", "mood": "staunen", "text": "Zwei lange Eisenstangen auf dem Boden! Was ist das?", "audio": "" },
+        "question": "Was ist das?",
+        "options": ["der Zug", "die Uhr", "das Gleis"],
+        "answer": 2,
+        "wrong": { "who": "mikula", "mood": "staunen", "text": "Oh nein, das war falsch. Ich schaue noch einmal auf den Boden.", "audio": "" },
+        "explain": "Das ist das Gleis. Der Zug fährt auf dem Gleis."
+      },
+      {
+        "type": "choice",
+        "emoji": "📢",
+        "say": { "who": "mikula", "mood": "staunen", "text": "Eine Stimme spricht aus dem Himmel! Wie heißt das?", "audio": "" },
+        "question": "Welcher Artikel ist richtig?",
+        "options": ["die Durchsage", "der Durchsage", "das Durchsage"],
+        "answer": 0,
+        "wrong": { "who": "mikula", "mood": "staunen", "text": "Oje, die Stimme im Himmel sagt etwas anderes!", "audio": "" },
+        "explain": "Wir sagen: die Durchsage. Mehrzahl: die Durchsagen."
+      },
+      {
+        "type": "choice",
+        "emoji": "🚆",
+        "say": { "who": "mikula", "mood": "staunen", "text": "Dort kommt ein langes, lautes Tier! Was ist das?", "audio": "" },
+        "question": "Was ist das?",
+        "options": ["der Bahnhof", "der Zug", "das Pferd"],
+        "answer": 1,
+        "wrong": { "who": "mikula", "mood": "staunen", "text": "Nein! Mein Pferd hat keine Räder und ist viel leiser.", "audio": "" },
+        "explain": "Das ist der Zug. Er fährt auf dem Gleis."
+      },
+      {
+        "type": "choice",
+        "emoji": "💺",
+        "say": { "who": "mikula", "mood": "staunen", "text": "Ich bin müde. Ich möchte im Zug sitzen!", "audio": "" },
+        "question": "Welcher Artikel ist richtig?",
+        "options": ["die Platz", "der Platz", "das Platz"],
+        "answer": 1,
+        "wrong": { "who": "mikula", "mood": "staunen", "text": "Oh nein, dann muss ich wohl stehen!", "audio": "" },
+        "explain": "Wir sagen: der Platz. Mehrzahl: die Plätze."
+      },
+      {
+        "type": "choice",
+        "emoji": "🚉",
+        "say": { "who": "mikula", "mood": "staunen", "text": "Wir sind da! Wie heißt dieser große Ort mit den vielen Gleisen?", "audio": "" },
+        "question": "Was ist das?",
+        "options": ["die Fahrkarte", "der Zug", "der Bahnhof"],
+        "answer": 2,
+        "wrong": { "who": "mikula", "mood": "staunen", "text": "Hm, nein. Hier steigen alle ein und aus. Wie heißt dieser Ort?", "audio": "" },
+        "explain": "Das ist der Bahnhof. Hier halten die Züge."
+      }
+    ],
+    "A2": [
+      {
+        "type": "order",
+        "say": { "who": "mikula", "mood": "neutral", "text": "Ich suche den Automaten mit den vielen Knöpfen. Ich frage eine Frau.", "audio": "" },
+        "question": "Bau den Satz für Mikula.",
+        "words": ["Entschuldigung,", "wo", "ist", "der", "Fahrkartenautomat?"],
+        "alt": [],
+        "wrong": { "who": "mikula", "mood": "staunen", "text": "Hm, so versteht mich die Frau nicht. Ich probiere es noch einmal.", "audio": "" },
+        "explain": "In einer W-Frage steht das Verb auf Position 2: „Wo ist der …?“"
+      },
+      {
+        "type": "order",
+        "say": { "who": "mikula", "mood": "neutral", "text": "Jetzt bin ich am Schalter. Ich möchte nach Köln fahren. Was sage ich?", "audio": "" },
+        "question": "Bau den Satz für Mikula.",
+        "words": ["Ich", "möchte", "eine", "Fahrkarte", "nach", "Köln."],
+        "alt": [],
+        "wrong": { "who": "mikula", "mood": "staunen", "text": "Oje, die Mitarbeiterin schaut mich fragend an.", "audio": "" },
+        "explain": "Mit „möchte“ sagen wir höflich, was wir wollen. Das Verb steht auf Position 2."
+      },
+      {
+        "type": "order",
+        "say": { "who": "mikula", "mood": "neutral", "text": "Ich habe die Fahrkarte. Aber wo steht mein Zug?", "audio": "" },
+        "question": "Bau den Satz für Mikula.",
+        "words": ["Von", "welchem", "Gleis", "fährt", "der", "Zug", "ab?"],
+        "alt": [],
+        "wrong": { "who": "mikula", "mood": "staunen", "text": "Hm, so stimmt der Satz noch nicht. Ich versuche es noch einmal.", "audio": "" },
+        "explain": "„abfahren“ trennt sich: Der Zug fährt … ab. Das „ab“ steht am Ende."
+      },
+      {
+        "type": "choice",
+        "say": { "who": "mikula", "mood": "staunen", "text": "Eine Stimme sagt: „Der Zug hat Verspätung.“ Was bedeutet das?", "audio": "" },
+        "question": "Welcher Satz passt?",
+        "options": ["Der Zug kommt früher.", "Der Zug kommt später.", "Der Zug fährt nicht."],
+        "answer": 1,
+        "wrong": { "who": "mikula", "mood": "staunen", "text": "Oje, dann komme ich zur falschen Zeit. Ich frage noch einmal.", "audio": "" },
+        "explain": "Verspätung heißt: Der Zug kommt später als geplant."
+      },
+      {
+        "type": "order",
+        "say": { "who": "mikula", "mood": "neutral", "text": "Im Zug sind viele Leute. Ich sehe einen leeren Sitz. Was frage ich?", "audio": "" },
+        "question": "Bau den Satz für Mikula.",
+        "words": ["Ist", "dieser", "Platz", "noch", "frei?"],
+        "alt": [],
+        "wrong": { "who": "mikula", "mood": "staunen", "text": "Hm, der Mann neben mir versteht die Frage nicht.", "audio": "" },
+        "explain": "Bei einer Ja/Nein-Frage steht das Verb auf Position 1: „Ist dieser Platz …?“"
+      },
+      {
+        "type": "choice",
+        "say": { "who": "mikula", "mood": "freude", "text": "Der Zug hält in Köln. Ich bin am Ziel. Was sage ich?", "audio": "" },
+        "question": "Welcher Satz passt?",
+        "options": ["Ich steige hier ein.", "Ich steige hier um.", "Ich steige hier aus."],
+        "answer": 2,
+        "wrong": { "who": "mikula", "mood": "staunen", "text": "Hm, dann bleibe ich noch im Zug sitzen!", "audio": "" },
+        "explain": "Am Ziel steigen wir aus: Ich steige hier aus."
+      }
+    ],
+    "B1": [
+      {
+        "type": "rate",
+        "situation": "Mikula steht vor dem Fahrkartenautomaten. Der Bildschirm ist dunkel geworden.",
+        "line": { "who": "Frau am Automaten", "text": "Brauchen Sie Hilfe? Der Automat ist heute manchmal langsam.", "audio": "" },
+        "question": "Was sagt Mikula am besten?",
+        "options": [
+          { "text": "Ja, gern. Könnten Sie mir zeigen, wie der Automat funktioniert?", "verdict": "passend", "explain": "Sehr höflich mit „Könnten Sie …?“. Auch der Nebensatz ist richtig." },
+          { "text": "Zeig mir sofort, wie das geht!", "verdict": "unhöflich", "explain": "Das ist ein Befehl, und du duzt eine fremde Person." },
+          { "text": "Ja, gern. Können Sie mir zeigen, wie funktioniert der Automat?", "verdict": "falsch", "explain": "Im Nebensatz steht das Verb am Ende: „… wie der Automat funktioniert“." }
+        ],
+        "wrong": { "who": "mikula", "mood": "staunen", "text": "Oje, der Kasten spricht nicht mit mir, und die Frau jetzt auch nicht!", "audio": "" }
+      },
+      {
+        "type": "rate",
+        "situation": "Mikula steht am Schalter im Reisezentrum.",
+        "line": { "who": "Mitarbeiterin am Schalter", "text": "Möchten Sie nur eine einfache Fahrt oder hin und zurück?", "audio": "" },
+        "question": "Was sagt Mikula am besten?",
+        "options": [
+          { "text": "Hin und zurück! Und mach den Preis kleiner!", "verdict": "unhöflich", "explain": "Das ist ein Befehl ohne „bitte“, und du duzt die Mitarbeiterin." },
+          { "text": "Hin und zurück, bitte. Gibt es einen Ermäßigung?", "verdict": "falsch", "explain": "Es heißt „die Ermäßigung“. Darum sagen wir: „eine Ermäßigung“." },
+          { "text": "Hin und zurück, bitte. Gibt es eine Ermäßigung?", "verdict": "passend", "explain": "Höflich und klar. Die Frage nach dem Preis passt gut." }
+        ],
+        "wrong": { "who": "mikula", "mood": "staunen", "text": "Auf dem Markt zu Hause konnte ich mit einem Huhn bezahlen. Hier ist das anders!", "audio": "" }
+      },
+      {
+        "type": "rate",
+        "situation": "Mikula bekommt seine Fahrkarte am Schalter.",
+        "line": { "who": "Mitarbeiterin am Schalter", "text": "Sie müssen in Düsseldorf umsteigen. Möchten Sie einen Platz reservieren?", "audio": "" },
+        "question": "Was sagt Mikula am besten?",
+        "options": [
+          { "text": "Ja, bitte einen Fensterplatz. Wie viel Zeit habe ich zum Umsteigen?", "verdict": "passend", "explain": "Höflich, und die Frage zum Umsteigen passt zur Information." },
+          { "text": "Ja, bitte einen Fensterplatz. Wie viel Zeit ich habe zum Umsteigen?", "verdict": "falsch", "explain": "In einer W-Frage steht das Verb auf Position 2: „Wie viel Zeit habe ich …?“" },
+          { "text": "Ja. Reservieren Sie einen Fensterplatz, aber schnell!", "verdict": "unhöflich", "explain": "Das ist ein Befehl ohne „bitte“. Das klingt unfreundlich." }
+        ],
+        "wrong": { "who": "mikula", "mood": "staunen", "text": "Umsteigen? Bei meinem Pferd steige ich nur auf und ab!", "audio": "" }
+      },
+      {
+        "type": "rate",
+        "situation": "Mikula wartet auf dem Bahnsteig. Eine Frau spricht ihn an.",
+        "line": { "who": "Frau am Gleis", "text": "Haben Sie die Durchsage gehört? Der Zug nach Köln fällt heute aus. Der nächste fährt in einer Stunde.", "audio": "" },
+        "question": "Was sagt Mikula am besten?",
+        "options": [
+          { "text": "Nein, ich habe nicht gehört die Durchsage.", "verdict": "falsch", "explain": "Im Perfekt steht das Partizip am Ende: „… die Durchsage nicht gehört“." },
+          { "text": "Nein. Sagen Sie mir sofort, wie ich nach Köln komme!", "verdict": "unhöflich", "explain": "Das ist ein Befehl ohne „bitte“ an eine fremde Person." },
+          { "text": "Nein, leider nicht. Vielen Dank für die Information!", "verdict": "passend", "explain": "Freundlich und klar. Mit „Danke“ zeigst du Respekt." }
+        ],
+        "wrong": { "who": "mikula", "mood": "staunen", "text": "Ich dachte, der Lautsprecher spricht mit mir. Ich habe ihm sogar geantwortet!", "audio": "" }
+      },
+      {
+        "type": "rate",
+        "situation": "Mikula sitzt im Zug. Die Zugbegleiterin kommt.",
+        "line": { "who": "Zugbegleiterin", "text": "Guten Tag! Ihre Fahrkarte, bitte. Wir haben leider zehn Minuten Verspätung.", "audio": "" },
+        "question": "Was sagt Mikula am besten?",
+        "options": [
+          { "text": "Bitte schön, hier ist mein Fahrkarte. Das ist nicht schlimm.", "verdict": "falsch", "explain": "Es heißt „die Fahrkarte“. Darum sagen wir: „meine Fahrkarte“." },
+          { "text": "Bitte schön, hier ist meine Fahrkarte. Das ist nicht schlimm.", "verdict": "passend", "explain": "Höflich und freundlich. Du reagierst auch auf die Verspätung." },
+          { "text": "Hier! Ihr Zug ist immer zu spät. Das nervt!", "verdict": "unhöflich", "explain": "Grammatisch richtig, aber unfreundlich. Die Zugbegleiterin kann nichts dafür." }
+        ],
+        "wrong": { "who": "mikula", "mood": "staunen", "text": "Mein Pferd war nie so pünktlich, aber es hat auch nie eine Karte verlangt!", "audio": "" }
+      },
+      {
+        "type": "rate",
+        "situation": "Mikula ist in Köln angekommen und sieht sich um.",
+        "line": { "who": "Mitarbeiter am Bahnsteig", "text": "Willkommen in Köln! Suchen Sie etwas?", "audio": "" },
+        "question": "Was sagt Mikula am besten?",
+        "options": [
+          { "text": "Ja, bitte. Könnten Sie mir sagen, wo ist der Ausgang?", "verdict": "falsch", "explain": "Im Nebensatz steht das Verb am Ende: „… wo der Ausgang ist“." },
+          { "text": "Ja. Zeig mir sofort den Ausgang!", "verdict": "unhöflich", "explain": "Das ist ein Befehl, und du duzt eine fremde Person." },
+          { "text": "Ja, bitte. Könnten Sie mir sagen, wo der Ausgang ist?", "verdict": "passend", "explain": "Sehr höflich, und der Nebensatz ist richtig." }
+        ],
+        "wrong": { "who": "mikula", "mood": "staunen", "text": "Hier sind so viele Türen. Bei mir zu Hause gibt es nur eine!", "audio": "" }
+      }
+    ]
+  },
+  "outro": {
+    "A1": { "who": "mikula", "mood": "freude", "text": "Ich bin da! Und schau: ein Zeitkristall!", "audio": "" },
+    "A2": { "who": "mikula", "mood": "freude", "text": "Geschafft! Ich bin mit dem Zug gefahren, und ich habe einen Zeitkristall gefunden!", "audio": "" },
+    "B1": { "who": "mikula", "mood": "freude", "text": "Das war ein Abenteuer! Der Zug war schneller als mein Pferd, und jetzt habe ich einen Zeitkristall. Danke für deine Hilfe!", "audio": "" }
+  },
+  "words": [
+    { "word": "Fahrkarte", "article": "die", "plural": "die Fahrkarten", "example": "Ich kaufe eine Fahrkarte am Automaten.", "emoji": "🎫", "level": "A1", "audio": "" },
+    { "word": "Zug", "article": "der", "plural": "die Züge", "example": "Der Zug nach Köln ist sehr schnell.", "emoji": "🚆", "level": "A1", "audio": "" },
+    { "word": "Gleis", "article": "das", "plural": "die Gleise", "example": "Der Zug fährt von Gleis drei ab.", "emoji": "🛤️", "level": "A1", "audio": "" },
+    { "word": "Bahnhof", "article": "der", "plural": "die Bahnhöfe", "example": "Wir treffen uns am Bahnhof.", "emoji": "🚉", "level": "A1", "audio": "" },
+    { "word": "Platz", "article": "der", "plural": "die Plätze", "example": "Ist dieser Platz noch frei?", "emoji": "💺", "level": "A1", "audio": "" },
+    { "word": "Durchsage", "article": "die", "plural": "die Durchsagen", "example": "Hören Sie die Durchsage?", "emoji": "📢", "level": "A2", "audio": "" },
+    { "word": "Verspätung", "article": "die", "plural": "die Verspätungen", "example": "Der Zug hat zehn Minuten Verspätung.", "emoji": "⏰", "level": "A2", "audio": "" },
+    { "word": "Fahrkartenautomat", "article": "der", "plural": "die Fahrkartenautomaten", "example": "Der Fahrkartenautomat nimmt Münzen und Scheine.", "emoji": "🖥️", "level": "A2", "audio": "" },
+    { "word": "Schalter", "article": "der", "plural": "die Schalter", "example": "Am Schalter bekomme ich Hilfe.", "emoji": "🙋", "level": "A2", "audio": "" },
+    { "word": "Ermäßigung", "article": "die", "plural": "die Ermäßigungen", "example": "Gibt es eine Ermäßigung für Kinder?", "emoji": "🏷️", "level": "B1", "audio": "" }
+  ]
+}
