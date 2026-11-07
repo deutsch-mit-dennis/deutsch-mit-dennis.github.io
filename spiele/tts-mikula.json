@@ -16,7 +16,7 @@
   "voice": "mk"
  },
  {
-  "text": "Danke! Zwei Kristalle habe ich schon. Aber ich brauche noch mehr.",
+  "text": "Danke für deine Hilfe! Ein paar Kristalle habe ich schon. Aber ich brauche noch mehr.",
   "voice": "mk"
  },
  {
@@ -24,15 +24,27 @@
   "voice": "f1"
  },
  {
+  "text": "Mikula sagt es höflich und richtig.",
+  "voice": "f1"
+ },
+ {
+  "text": "Der Anfang ist schon richtig. Diese Wörter bleiben stehen.",
+  "voice": "f1"
+ },
+ {
+  "text": "Tipp: Wo steht das Verb?",
+  "voice": "f1"
+ },
+ {
   "text": "Mikula steht am Bahnhof. Alles ist laut. Da steht ein großer Kasten mit Licht.",
   "voice": "f1"
  },
  {
-  "text": "Was ist das? Ist das ein Gott?",
+  "text": "Was ist das? Ist das ein Zauberkasten?",
   "voice": "mk"
  },
  {
-  "text": "Mikula verbeugt sich vor dem Kasten. Der Kasten sagt nichts.",
+  "text": "Mikula grüßt den Kasten freundlich. Der Kasten sagt nichts.",
   "voice": "f1"
  },
  {
@@ -48,12 +60,44 @@
   "voice": "mk"
  },
  {
+  "text": "Welcher Artikel ist richtig?",
+  "voice": "f1"
+ },
+ {
+  "text": "Tipp: Das letzte Wort zählt: Fahr + Karte.",
+  "voice": "f1"
+ },
+ {
+  "text": "Wir sagen: die Fahrkarte. Plural: die Fahrkarten.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „die Fahrkarte“. Wir sagen: die Fahrkarte. Plural: die Fahrkarten.",
+  "voice": "f1"
+ },
+ {
   "text": "Zwei lange Eisenstangen auf dem Boden! Was ist das?",
   "voice": "mk"
  },
  {
   "text": "Oh nein, das war falsch. Ich schaue noch einmal auf den Boden.",
   "voice": "mk"
+ },
+ {
+  "text": "Was ist das?",
+  "voice": "f1"
+ },
+ {
+  "text": "Tipp: Der Zug fährt darauf.",
+  "voice": "f1"
+ },
+ {
+  "text": "Das ist das Gleis. Der Zug fährt auf dem Gleis.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „das Gleis“. Das ist das Gleis. Der Zug fährt auf dem Gleis.",
+  "voice": "f1"
  },
  {
   "text": "Eine Stimme spricht aus dem Himmel! Wie heißt das?",
@@ -64,12 +108,36 @@
   "voice": "mk"
  },
  {
+  "text": "Tipp: Wörter auf -e haben oft denselben Artikel wie Lampe oder Tasche.",
+  "voice": "f1"
+ },
+ {
+  "text": "Wir sagen: die Durchsage. Plural: die Durchsagen.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „die Durchsage“. Wir sagen: die Durchsage. Plural: die Durchsagen.",
+  "voice": "f1"
+ },
+ {
   "text": "Dort kommt ein langes, lautes Tier! Was ist das?",
   "voice": "mk"
  },
  {
   "text": "Nein! Mein Pferd hat keine Räder und ist viel leiser.",
   "voice": "mk"
+ },
+ {
+  "text": "Tipp: Es hat Räder und fährt auf dem Gleis.",
+  "voice": "f1"
+ },
+ {
+  "text": "Das ist der Zug. Er fährt auf dem Gleis.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „der Zug“. Das ist der Zug. Er fährt auf dem Gleis.",
+  "voice": "f1"
  },
  {
   "text": "Ich bin müde. Ich möchte im Zug sitzen!",
@@ -80,6 +148,18 @@
   "voice": "mk"
  },
  {
+  "text": "Tipp: Platz hat denselben Artikel wie Stuhl.",
+  "voice": "f1"
+ },
+ {
+  "text": "Wir sagen: der Platz. Plural: die Plätze.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „der Platz“. Wir sagen: der Platz. Plural: die Plätze.",
+  "voice": "f1"
+ },
+ {
   "text": "Wir sind da! Wie heißt dieser große Ort mit den vielen Gleisen?",
   "voice": "mk"
  },
@@ -88,11 +168,23 @@
   "voice": "mk"
  },
  {
+  "text": "Tipp: Gesucht ist kein Ding und kein Fahrzeug, sondern ein Ort.",
+  "voice": "f1"
+ },
+ {
+  "text": "Das ist der Bahnhof. Hier halten die Züge.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „der Bahnhof“. Das ist der Bahnhof. Hier halten die Züge.",
+  "voice": "f1"
+ },
+ {
   "text": "Mikula steht in der Bahnhofshalle. Vor ihm ist ein großer Kasten mit Licht und Knöpfen.",
   "voice": "f1"
  },
  {
-  "text": "Das ist bestimmt ein kleiner Schrein! Ich verbeuge mich und lege Getreide hin.",
+  "text": "Ein Kasten mit Licht! Ich sage freundlich „Guten Tag“. Aber er antwortet nicht.",
   "voice": "mk"
  },
  {
@@ -112,12 +204,32 @@
   "voice": "mk"
  },
  {
+  "text": "Bau den Satz für Mikula.",
+  "voice": "f1"
+ },
+ {
+  "text": "In einer W-Frage steht das Verb auf Position 2: „Wo ist der …?“",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „Entschuldigung, wo ist der Fahrkartenautomat?“. In einer W-Frage steht das Verb auf Position 2: „Wo ist der …?“",
+  "voice": "f1"
+ },
+ {
   "text": "Jetzt bin ich am Schalter. Ich möchte nach Köln fahren. Was sage ich?",
   "voice": "mk"
  },
  {
   "text": "Oje, die Mitarbeiterin schaut mich fragend an.",
   "voice": "mk"
+ },
+ {
+  "text": "Mit „möchte“ sagen wir höflich, was wir wollen. Das Verb steht auf Position 2.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „Ich möchte eine Fahrkarte nach Köln.“. Mit „möchte“ sagen wir höflich, was wir wollen. Das Verb steht auf Position 2.",
+  "voice": "f1"
  },
  {
   "text": "Ich habe die Fahrkarte. Aber wo steht mein Zug?",
@@ -128,12 +240,36 @@
   "voice": "mk"
  },
  {
+  "text": "„abfahren“ trennt sich: Der Zug fährt … ab. Das „ab“ steht am Ende.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „Von welchem Gleis fährt der Zug ab?“. „abfahren“ trennt sich: Der Zug fährt … ab. Das „ab“ steht am Ende.",
+  "voice": "f1"
+ },
+ {
   "text": "Eine Stimme sagt: „Der Zug hat Verspätung.“ Was bedeutet das?",
   "voice": "mk"
  },
  {
   "text": "Oje, dann komme ich zur falschen Zeit. Ich frage noch einmal.",
   "voice": "mk"
+ },
+ {
+  "text": "Welcher Satz passt?",
+  "voice": "f1"
+ },
+ {
+  "text": "Tipp: „Verspätung“ hat mit der Uhrzeit zu tun. Kommt der Zug pünktlich?",
+  "voice": "f1"
+ },
+ {
+  "text": "Verspätung heißt: Der Zug kommt später als geplant.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „Der Zug kommt später.“. Verspätung heißt: Der Zug kommt später als geplant.",
+  "voice": "f1"
  },
  {
   "text": "Im Zug sind viele Leute. Ich sehe einen leeren Sitz. Was frage ich?",
@@ -144,6 +280,14 @@
   "voice": "mk"
  },
  {
+  "text": "Bei einer Ja/Nein-Frage steht das Verb auf Position 1: „Ist dieser Platz …?“",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „Ist dieser Platz noch frei?“. Bei einer Ja/Nein-Frage steht das Verb auf Position 1: „Ist dieser Platz …?“",
+  "voice": "f1"
+ },
+ {
   "text": "Der Zug hält in Köln. Ich bin am Ziel. Was sage ich?",
   "voice": "mk"
  },
@@ -152,11 +296,23 @@
   "voice": "mk"
  },
  {
+  "text": "Tipp: Mikula bleibt nicht im Zug, er geht auf den Bahnsteig.",
+  "voice": "f1"
+ },
+ {
+  "text": "Am Ziel steigen wir aus: Ich steige hier aus.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „Ich steige hier aus.“. Am Ziel steigen wir aus: Ich steige hier aus.",
+  "voice": "f1"
+ },
+ {
   "text": "Mikula steht in der Bahnhofshalle vor einem großen Kasten. Er leuchtet und hat viele Knöpfe.",
   "voice": "f1"
  },
  {
-  "text": "Verzeihung, ist das ein Götzenbild? Ich habe schon dreimal gegrüßt, aber es antwortet nicht.",
+  "text": "Verzeihung, ist das ein Zauberkasten? Ich habe schon dreimal gegrüßt, aber er antwortet nicht.",
   "voice": "mk"
  },
  {
@@ -176,12 +332,48 @@
   "voice": "mk"
  },
  {
+  "text": "Was sagt Mikula am besten?",
+  "voice": "f1"
+ },
+ {
+  "text": "Mikula steht vor dem Fahrkartenautomaten. Der Bildschirm ist dunkel geworden.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „Ja, gern. Könnten Sie mir zeigen, wie der Automat funktioniert?“.",
+  "voice": "f1"
+ },
+ {
+  "text": "Grammatisch richtig, aber „Ich will …“ klingt fordernd. Besser: „Könnten Sie mir zeigen …?“",
+  "voice": "f1"
+ },
+ {
+  "text": "Im Nebensatz steht das Verb am Ende: „… wie der Automat funktioniert“.",
+  "voice": "f1"
+ },
+ {
   "text": "Möchten Sie nur eine einfache Fahrt oder hin und zurück?",
   "voice": "m1"
  },
  {
   "text": "Auf dem Markt zu Hause konnte ich mit einem Huhn bezahlen. Hier ist das anders!",
   "voice": "mk"
+ },
+ {
+  "text": "Mikula steht am Schalter im Reisezentrum.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „Hin und zurück, bitte. Gibt es eine Ermäßigung?“.",
+  "voice": "f1"
+ },
+ {
+  "text": "Grammatisch richtig, aber am Schalter sagen wir „Sie“: „Können Sie …?“",
+  "voice": "f1"
+ },
+ {
+  "text": "Es heißt „die Ermäßigung“. Darum sagen wir: „eine Ermäßigung“.",
+  "voice": "f1"
  },
  {
   "text": "Sie müssen in Düsseldorf umsteigen. Möchten Sie einen Platz reservieren?",
@@ -192,6 +384,22 @@
   "voice": "mk"
  },
  {
+  "text": "Mikula bekommt seine Fahrkarte am Schalter.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „Ja, bitte einen Fensterplatz. Wie viel Zeit habe ich zum Umsteigen?“.",
+  "voice": "f1"
+ },
+ {
+  "text": "In einer W-Frage steht das Verb auf Position 2: „Wie viel Zeit habe ich …?“",
+  "voice": "f1"
+ },
+ {
+  "text": "Nur ein Wort: Das ist zu kurz und klingt unfreundlich. Besser: „Ja, bitte einen Fensterplatz.“",
+  "voice": "f1"
+ },
+ {
   "text": "Haben Sie die Durchsage gehört? Der Zug nach Köln fällt heute aus. Der nächste fährt in einer Stunde.",
   "voice": "f2"
  },
@@ -200,12 +408,44 @@
   "voice": "mk"
  },
  {
+  "text": "Mikula wartet auf dem Bahnsteig. Eine Frau spricht ihn an.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „Nein, leider nicht. Vielen Dank für die Information!“.",
+  "voice": "f1"
+ },
+ {
+  "text": "Im Perfekt steht das Partizip am Ende: „… die Durchsage nicht gehört“.",
+  "voice": "f1"
+ },
+ {
+  "text": "Grammatisch richtig, aber „Sie müssen …“ klingt wie eine Forderung. Die Frau hilft freiwillig.",
+  "voice": "f1"
+ },
+ {
   "text": "Guten Tag! Ihre Fahrkarte, bitte. Wir haben leider zehn Minuten Verspätung.",
   "voice": "f2"
  },
  {
-  "text": "Mein Pferd war nie so pünktlich, aber es hat auch nie eine Karte verlangt!",
+  "text": "Zehn Minuten zu spät? Mein Pferd kommt auch manchmal zu spät!",
   "voice": "mk"
+ },
+ {
+  "text": "Mikula sitzt im Zug. Die Zugbegleiterin kommt.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „Bitte schön, hier ist meine Fahrkarte. Das ist nicht schlimm.“.",
+  "voice": "f1"
+ },
+ {
+  "text": "Es heißt „die Fahrkarte“. Darum sagen wir: „meine Fahrkarte“.",
+  "voice": "f1"
+ },
+ {
+  "text": "Grammatisch richtig, aber das ist ein Vorwurf. Die Zugbegleiterin kann nichts für die Verspätung.",
+  "voice": "f1"
  },
  {
   "text": "Willkommen in Köln! Suchen Sie etwas?",
@@ -214,6 +454,22 @@
  {
   "text": "Hier sind so viele Türen. Bei mir zu Hause gibt es nur eine!",
   "voice": "mk"
+ },
+ {
+  "text": "Mikula ist in Köln angekommen und sieht sich um.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „Ja, bitte. Könnten Sie mir sagen, wo der Ausgang ist?“.",
+  "voice": "f1"
+ },
+ {
+  "text": "Im Nebensatz steht das Verb am Ende: „… wo der Ausgang ist“.",
+  "voice": "f1"
+ },
+ {
+  "text": "Grammatisch richtig, aber „Das sehen Sie doch“ klingt genervt. Der Mitarbeiter will nur helfen.",
+  "voice": "f1"
  },
  {
   "text": "die Fahrkarte. Ich kaufe eine Fahrkarte am Automaten.",
@@ -280,12 +536,36 @@
   "voice": "mk"
  },
  {
+  "text": "Tipp: Tür hat denselben Artikel wie Uhr.",
+  "voice": "f1"
+ },
+ {
+  "text": "Wir sagen: die Tür. Plural: die Türen.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „die Tür“. Wir sagen: die Tür. Plural: die Türen.",
+  "voice": "f1"
+ },
+ {
   "text": "Ein Wagen mit Gitter! Was ist das?",
   "voice": "mk"
  },
  {
   "text": "Oje, mein Pferd schüttelt den Kopf!",
   "voice": "mk"
+ },
+ {
+  "text": "Tipp: Man schiebt es und legt die Sachen hinein.",
+  "voice": "f1"
+ },
+ {
+  "text": "Das ist ein Einkaufswagen. Wir sagen: der Einkaufswagen.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „der Einkaufswagen“. Das ist ein Einkaufswagen. Wir sagen: der Einkaufswagen.",
+  "voice": "f1"
  },
  {
   "text": "So viele Äpfel! Rot und grün!",
@@ -296,12 +576,36 @@
   "voice": "mk"
  },
  {
+  "text": "Tipp: Apfel hat denselben Artikel wie Tisch.",
+  "voice": "f1"
+ },
+ {
+  "text": "Wir sagen: der Apfel. Plural: die Äpfel.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „der Apfel“. Wir sagen: der Apfel. Plural: die Äpfel.",
+  "voice": "f1"
+ },
+ {
   "text": "Weiß und kalt! Ich kann es trinken. Was ist das?",
   "voice": "mk"
  },
  {
   "text": "Muh? Meine Kuh schüttelt den Kopf!",
   "voice": "mk"
+ },
+ {
+  "text": "Tipp: Käse kann man nicht trinken, ein Ei auch nicht.",
+  "voice": "f1"
+ },
+ {
+  "text": "Das ist Milch. Wir sagen: die Milch.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „die Milch“. Das ist Milch. Wir sagen: die Milch.",
+  "voice": "f1"
  },
  {
   "text": "Süß und lecker! Das trinke ich gern. Wie heißt das?",
@@ -312,12 +616,36 @@
   "voice": "mk"
  },
  {
+  "text": "Tipp: Saft hat denselben Artikel wie Kaffee.",
+  "voice": "f1"
+ },
+ {
+  "text": "Wir sagen: der Saft. Plural: die Säfte.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „der Saft“. Wir sagen: der Saft. Plural: die Säfte.",
+  "voice": "f1"
+ },
+ {
   "text": "Ein langes Papier! Was ist das?",
   "voice": "mk"
  },
  {
   "text": "Oje! Das Papier schmeckt gar nicht.",
   "voice": "mk"
+ },
+ {
+  "text": "Tipp: Dieses Papier bekommst du an der Kasse.",
+  "voice": "f1"
+ },
+ {
+  "text": "Das ist der Kassenbon. Darauf stehen die Preise.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „der Kassenbon“. Das ist der Kassenbon. Darauf stehen die Preise.",
+  "voice": "f1"
  },
  {
   "text": "Mikula steht vor einem großen Supermarkt. Die Tür öffnet sich ganz von allein.",
@@ -336,7 +664,7 @@
   "voice": "mk"
  },
  {
-  "text": "Der Einkaufswagen hängt an einer Kette fest! Ich möchte fragen, wo ich eine Münze bekomme.",
+  "text": "Der Einkaufswagen hängt an einer Kette fest! Ich brauche eine Münze. Was frage ich?",
   "voice": "mk"
  },
  {
@@ -344,12 +672,32 @@
   "voice": "mk"
  },
  {
+  "text": "Nach „Wo“ steht das Verb: Wo bekomme ich …?",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „Wo bekomme ich eine Münze?“. Nach „Wo“ steht das Verb: Wo bekomme ich …?",
+  "voice": "f1"
+ },
+ {
   "text": "So viele rote Tomaten! Ich möchte ein Kilo. Was sage ich?",
   "voice": "mk"
  },
  {
-  "text": "Die Tomaten sind rot, aber mein Satz ist noch grün!",
+  "text": "Oje, der Satz ist durcheinander – wie mein Gemüsekorb!",
   "voice": "mk"
+ },
+ {
+  "text": "Tipp: Achte auf zwei Dinge: Wo steht das zweite Verb, und welche Form hat es?",
+  "voice": "f1"
+ },
+ {
+  "text": "Nach „möchte“ steht das zweite Verb am Ende: kaufen.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „Ich möchte ein Kilo Tomaten kaufen.“. Nach „möchte“ steht das zweite Verb am Ende: kaufen.",
+  "voice": "f1"
  },
  {
   "text": "Ich suche Milch, aber hier gibt es so viele Regale! Ich frage jemanden.",
@@ -360,12 +708,32 @@
   "voice": "mk"
  },
  {
+  "text": "Das Fragewort „Wo“ steht vorn. Dann kommt das Verb: finde.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „Wo finde ich die Milch?“. Das Fragewort „Wo“ steht vorn. Dann kommt das Verb: finde.",
+  "voice": "f1"
+ },
+ {
   "text": "Ein Kasten für leere Flaschen! Guten Tag, Herr Pfandautomat! Was sage ich?",
   "voice": "mk"
  },
  {
   "text": "Der Automat sagt nichts. Er ist wohl beleidigt!",
   "voice": "mk"
+ },
+ {
+  "text": "Tipp: Prüfe zwei Stellen: „leer…“ und „zu…“.",
+  "voice": "f1"
+ },
+ {
+  "text": "Plural: die leeren Flaschen. Und: der Pfandautomat → zum (= zu dem) Pfandautomaten.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „Ich bringe die leeren Flaschen zum Pfandautomaten.“. Plural: die leeren Flaschen. Und: der Pfandautomat → zum (= zu dem) Pfandautomaten.",
+  "voice": "f1"
  },
  {
   "text": "Ein schwarzer Fluss an der Kasse! Er trägt Brot und Käse. Ich lege meine Sachen darauf.",
@@ -376,6 +744,14 @@
   "voice": "mk"
  },
  {
+  "text": "Das Verb steht an Position 2: Ich lege … Dann kommt der Ort: auf das Kassenband.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „Ich lege die Sachen auf das Kassenband.“. Das Verb steht an Position 2: Ich lege … Dann kommt der Ort: auf das Kassenband.",
+  "voice": "f1"
+ },
+ {
   "text": "Die Kassiererin lächelt. Ich habe nur eine Karte. Ich möchte fragen, ob das hier geht.",
   "voice": "mk"
  },
@@ -384,11 +760,19 @@
   "voice": "mk"
  },
  {
+  "text": "Bei einer Ja/Nein-Frage steht das Verb vorn: Kann ich …? Das zweite Verb steht am Ende: bezahlen.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „Kann ich mit Karte bezahlen?“. Bei einer Ja/Nein-Frage steht das Verb vorn: Kann ich …? Das zweite Verb steht am Ende: bezahlen.",
+  "voice": "f1"
+ },
+ {
   "text": "Mikula steht vor dem Supermarkt. Plötzlich öffnet sich die Tür, ohne dass jemand sie berührt.",
   "voice": "f1"
  },
  {
-  "text": "Unglaublich! Die Tür weiß, dass ich komme. In meinem Dorf braucht man dafür einen Knecht.",
+  "text": "Unglaublich! Die Tür weiß, dass ich komme. In meinem Dorf öffnet mir nur mein Nachbar die Tür – und nur, wenn er gute Laune hat.",
   "voice": "mk"
  },
  {
@@ -408,12 +792,44 @@
   "voice": "mk"
  },
  {
+  "text": "Mikula möchte einen Einkaufswagen nehmen. Der Wagen hängt an einer Kette fest.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „Ja, bitte. Könnten Sie mir zeigen, wie der Wagen funktioniert?“.",
+  "voice": "f1"
+ },
+ {
+  "text": "Grammatisch richtig, aber du duzt den Mitarbeiter. Besser: „Können Sie …?“",
+  "voice": "f1"
+ },
+ {
+  "text": "Der Wagen braucht eine Münze oder einen Chip, kein Huhn.",
+  "voice": "f1"
+ },
+ {
   "text": "Guten Tag! Der Gouda ist heute im Angebot. Möchten Sie ein Stück?",
   "voice": "f2"
  },
  {
   "text": "In meinem Dorf verstehen mich alle – hier muss ich noch üben!",
   "voice": "mk"
+ },
+ {
+  "text": "Mikula steht an der Käsetheke.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „Ja, gern. Ich hätte gern ein Stück, bitte.“.",
+  "voice": "f1"
+ },
+ {
+  "text": "Das Verb steht an Position 2: „Ich hätte gern …“.",
+  "voice": "f1"
+ },
+ {
+  "text": "Grammatisch richtig, aber „Ich will …“ klingt fordernd. Besser: „Ich hätte gern …“.",
+  "voice": "f1"
  },
  {
   "text": "Kann ich Ihnen helfen? Suchen Sie etwas?",
@@ -424,6 +840,22 @@
   "voice": "mk"
  },
  {
+  "text": "Mikula sucht Mehl und findet es nicht.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „Ja, gern. Könnten Sie mir sagen, wo ich das Mehl finde?“.",
+  "voice": "f1"
+ },
+ {
+  "text": "Grammatisch richtig, aber „Sie müssen …“ klingt wie ein Befehl. Besser: „Könnten Sie …?“",
+  "voice": "f1"
+ },
+ {
+  "text": "Nach „wo“ steht das Verb am Ende: „… wo ich das Mehl finde“.",
+  "voice": "f1"
+ },
+ {
   "text": "Der Automat gibt Ihnen am Ende einen Pfandbon. Den geben Sie dann an der Kasse ab.",
   "voice": "m1"
  },
@@ -432,12 +864,44 @@
   "voice": "mk"
  },
  {
+  "text": "Mikula bringt leere Flaschen zum Pfandautomaten.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „Danke für den Tipp! Dann gebe ich den Bon an der Kasse ab.“.",
+  "voice": "f1"
+ },
+ {
+  "text": "Grammatisch richtig, aber „Ja, ja“ klingt genervt. Der Kunde will nur helfen.",
+  "voice": "f1"
+ },
+ {
+  "text": "„abgeben“ ist trennbar: „Dann gebe ich den Bon an der Kasse ab.“",
+  "voice": "f1"
+ },
+ {
   "text": "Das macht dreizehn Euro fünfzig. Zahlen Sie bar oder mit Karte?",
   "voice": "f2"
  },
  {
-  "text": "Die Kassiererin lächelt, aber mein Getreide nimmt sie nicht.",
+  "text": "Zu Hause bezahle ich mit Eiern. Hier ist alles anders!",
   "voice": "mk"
+ },
+ {
+  "text": "Mikula steht an der Kasse.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „Mit Karte, bitte. Könnte ich auch den Kassenbon haben?“.",
+  "voice": "f1"
+ },
+ {
+  "text": "„haben“ braucht den Akkusativ: „Könnte ich auch den Kassenbon haben?“",
+  "voice": "f1"
+ },
+ {
+  "text": "Grammatisch nicht falsch, aber sehr kurz und ohne „bitte“. Das klingt unfreundlich.",
+  "voice": "f1"
  },
  {
   "text": "Guten Tag! Wie kann ich Ihnen helfen?",
@@ -448,6 +912,26 @@
   "voice": "mk"
  },
  {
+  "text": "Mikula hat Nudeln gekauft. Zu Hause sieht er: Das Mindesthaltbarkeitsdatum ist abgelaufen. Er geht zum Kundenservice.",
+  "voice": "f1"
+ },
+ {
+  "text": "Richtig ist: „Guten Tag! Diese Nudeln sind abgelaufen. Könnte ich sie umtauschen?“.",
+  "voice": "f1"
+ },
+ {
+  "text": "„Nudeln“ ist Plural. Also: „Diese Nudeln sind abgelaufen.“",
+  "voice": "f1"
+ },
+ {
+  "text": "Grammatisch richtig, aber die Begrüßung fehlt. Der Mitarbeiter sagt „Guten Tag!“ – grüß zurück.",
+  "voice": "f1"
+ },
+ {
+  "text": "die Tür. Die Tür geht von allein auf.",
+  "voice": "f1"
+ },
+ {
   "text": "der Einkaufswagen. Ich brauche einen Einkaufswagen.",
   "voice": "f1"
  },
@@ -456,19 +940,11 @@
   "voice": "f1"
  },
  {
+  "text": "die Milch. Ich kaufe einen Liter Milch.",
+  "voice": "f1"
+ },
+ {
   "text": "der Saft. Ich trinke gern Saft.",
-  "voice": "f1"
- },
- {
-  "text": "die Kasse. Ich bezahle an der Kasse.",
-  "voice": "f1"
- },
- {
-  "text": "die Tüte. Ich brauche eine Tüte.",
-  "voice": "f1"
- },
- {
-  "text": "der Pfandautomat. Der Pfandautomat nimmt leere Flaschen.",
   "voice": "f1"
  },
  {
@@ -476,11 +952,23 @@
   "voice": "f1"
  },
  {
-  "text": "das Angebot. Die Tomaten sind im Angebot.",
+  "text": "die Münze. Für den Einkaufswagen brauche ich eine Münze.",
+  "voice": "f1"
+ },
+ {
+  "text": "die Kasse. Ich bezahle an der Kasse.",
   "voice": "f1"
  },
  {
   "text": "das Regal. Das Mehl steht im Regal.",
+  "voice": "f1"
+ },
+ {
+  "text": "der Pfandautomat. Der Pfandautomat nimmt leere Flaschen.",
+  "voice": "f1"
+ },
+ {
+  "text": "das Angebot. Die Tomaten sind im Angebot.",
   "voice": "f1"
  },
  {

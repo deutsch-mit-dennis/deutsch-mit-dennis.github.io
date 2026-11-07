@@ -67,11 +67,22 @@ console.log(`spiele/tts-nid.json: ${nidItems.length} Sätze`);
   const voiceOf = w => w === 'mikula' ? 'mk' : w === 'erzaehler' || !w ? 'f1' : /(in|frau)$/i.test(w.trim()) || /^Frau /.test(w) ? 'f2' : 'm1';
   const add = l => { if (!l || !l.text || l.audio) return; const text = (l.say || l.text).replace(/\s+/g, ' ').trim(); if (seen.has(text)) return; seen.add(text); items.push({ text, voice: voiceOf(l.who) }); };
   (idx.story || []).forEach(add); (idx.end?.lines || []).forEach(add);
+  // fixed sentences from spiele/mikula.js
+  ['Mikula sagt es höflich und richtig.', 'Der Anfang ist schon richtig. Diese Wörter bleiben stehen.', 'Tipp: Wo steht das Verb?'].forEach(text => add({ who: 'erzaehler', text }));
   for (const st of idx.stations.filter(x => x.status === 'active' && x.file)) {
     const d = await J('stations/' + st.file);
     for (const lv of Object.keys(d.tasks || {})) {
       (d.intro?.[lv] || []).forEach(add); add(d.outro?.[lv]);
-      for (const t of d.tasks[lv]) { add(t.say); add(t.line); add(t.wrong); }
+      for (const t of d.tasks[lv]) {
+        add(t.say); add(t.line); add(t.wrong);
+        // narrator: question, situation, tips and explanations (low literacy: everything important can be heard)
+        const n = text => text && add({ who: 'erzaehler', text });
+        n(t.question || { choice: 'Was ist richtig?', order: 'Bau den Satz für Mikula.', rate: 'Was sagt Mikula am besten?' }[t.type]);
+        n(t.situation); n(t.hint); n(t.explain);
+        const sol = t.type === 'order' ? t.words.join(' ') : t.type === 'rate' ? t.options.find(o => o.verdict === 'passend').text : t.options[t.answer];
+        n(`Richtig ist: „${sol}“. ${t.explain || ''}`.trim());
+        if (t.type === 'rate') for (const o of t.options) if (o.verdict !== 'passend') n(o.explain);
+      }
     }
     for (const w of d.words || []) add({ who: 'erzaehler', text: `${w.article} ${w.word}. ${w.example}`, audio: w.audio });
   }

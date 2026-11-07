@@ -52,7 +52,7 @@
       {
         "who": "mikula",
         "mood": "staunen",
-        "text": "Unglaublich! Die Tür weiß, dass ich komme. In meinem Dorf braucht man dafür einen Knecht.",
+        "text": "Unglaublich! Die Tür weiß, dass ich komme. In meinem Dorf öffnet mir nur mein Nachbar die Tür – und nur, wenn er gute Laune hat.",
         "audio": ""
       },
       {
@@ -68,6 +68,7 @@
       {
         "type": "choice",
         "emoji": "🚪",
+        "emojiAlt": "Tür aus Holz",
         "say": {
           "who": "mikula",
           "mood": "staunen",
@@ -87,11 +88,13 @@
           "text": "Ups! Nichts passiert. Das war nicht richtig!",
           "audio": ""
         },
-        "explain": "Wir sagen: die Tür. Viele Türen: die Türen."
+        "hint": "Tipp: Tür hat denselben Artikel wie Uhr.",
+        "explain": "Wir sagen: die Tür. Plural: die Türen."
       },
       {
         "type": "choice",
         "emoji": "🛒",
+        "emojiAlt": "Wagen zum Schieben",
         "say": {
           "who": "mikula",
           "mood": "staunen",
@@ -111,11 +114,13 @@
           "text": "Oje, mein Pferd schüttelt den Kopf!",
           "audio": ""
         },
+        "hint": "Tipp: Man schiebt es und legt die Sachen hinein.",
         "explain": "Das ist ein Einkaufswagen. Wir sagen: der Einkaufswagen."
       },
       {
         "type": "choice",
         "emoji": "🍎",
+        "emojiAlt": "rote Frucht",
         "say": {
           "who": "mikula",
           "mood": "staunen",
@@ -135,11 +140,13 @@
           "text": "Iiih, sauer! Das war falsch.",
           "audio": ""
         },
-        "explain": "Wir sagen: der Apfel. Viele Äpfel: die Äpfel."
+        "hint": "Tipp: Apfel hat denselben Artikel wie Tisch.",
+        "explain": "Wir sagen: der Apfel. Plural: die Äpfel."
       },
       {
         "type": "choice",
         "emoji": "🥛",
+        "emojiAlt": "Glas mit Getränk",
         "say": {
           "who": "mikula",
           "mood": "staunen",
@@ -159,11 +166,13 @@
           "text": "Muh? Meine Kuh schüttelt den Kopf!",
           "audio": ""
         },
+        "hint": "Tipp: Käse kann man nicht trinken, ein Ei auch nicht.",
         "explain": "Das ist Milch. Wir sagen: die Milch."
       },
       {
         "type": "choice",
         "emoji": "🧃",
+        "emojiAlt": "Getränk im Päckchen",
         "say": {
           "who": "mikula",
           "mood": "staunen",
@@ -183,11 +192,13 @@
           "text": "Oje, das klingt sauer! Das war falsch.",
           "audio": ""
         },
-        "explain": "Wir sagen: der Saft. Viele Säfte: die Säfte."
+        "hint": "Tipp: Saft hat denselben Artikel wie Kaffee.",
+        "explain": "Wir sagen: der Saft. Plural: die Säfte."
       },
       {
         "type": "choice",
         "emoji": "🧾",
+        "emojiAlt": "Zettel mit Zahlen",
         "say": {
           "who": "mikula",
           "mood": "staunen",
@@ -207,6 +218,7 @@
           "text": "Oje! Das Papier schmeckt gar nicht.",
           "audio": ""
         },
+        "hint": "Tipp: Dieses Papier bekommst du an der Kasse.",
         "explain": "Das ist der Kassenbon. Darauf stehen die Preise."
       }
     ],
@@ -216,7 +228,7 @@
         "say": {
           "who": "mikula",
           "mood": "staunen",
-          "text": "Der Einkaufswagen hängt an einer Kette fest! Ich möchte fragen, wo ich eine Münze bekomme.",
+          "text": "Der Einkaufswagen hängt an einer Kette fest! Ich brauche eine Münze. Was frage ich?",
           "audio": ""
         },
         "question": "Bau den Satz für Mikula.",
@@ -254,9 +266,10 @@
         "wrong": {
           "who": "mikula",
           "mood": "staunen",
-          "text": "Die Tomaten sind rot, aber mein Satz ist noch grün!",
+          "text": "Oje, der Satz ist durcheinander – wie mein Gemüsekorb!",
           "audio": ""
         },
+        "hint": "Tipp: Achte auf zwei Dinge: Wo steht das zweite Verb, und welche Form hat es?",
         "explain": "Nach „möchte“ steht das zweite Verb am Ende: kaufen."
       },
       {
@@ -294,7 +307,7 @@
         },
         "question": "Welcher Satz passt?",
         "options": [
-          "Ich bringe die leere Flaschen zu Pfandautomaten.",
+          "Ich bringe die leere Flaschen zum Pfandautomaten.",
           "Ich bringe die leeren Flaschen zur Pfandautomaten.",
           "Ich bringe die leeren Flaschen zum Pfandautomaten."
         ],
@@ -305,7 +318,8 @@
           "text": "Der Automat sagt nichts. Er ist wohl beleidigt!",
           "audio": ""
         },
-        "explain": "der Pfandautomat → zum (= zu dem) Pfandautomaten. Und: die leeren Flaschen."
+        "hint": "Tipp: Prüfe zwei Stellen: „leer…“ und „zu…“.",
+        "explain": "Plural: die leeren Flaschen. Und: der Pfandautomat → zum (= zu dem) Pfandautomaten."
       },
       {
         "type": "order",
@@ -377,9 +391,9 @@
             "explain": "Sehr höflich: „Könnten Sie mir …?“ ist eine gute Bitte."
           },
           {
-            "text": "Zeig mir, wie das geht! Ich will den Wagen.",
+            "text": "Ja, bitte. Kannst du mir zeigen, wie der Wagen funktioniert?",
             "verdict": "unhöflich",
-            "explain": "Das klingt wie ein Befehl, und „du“ passt nicht. Sag lieber „Sie“ und „bitte“."
+            "explain": "Grammatisch richtig, aber du duzt den Mitarbeiter. Besser: „Können Sie …?“"
           },
           {
             "text": "Ja, danke. Ich bezahle den Wagen mit einem Huhn.",
@@ -415,9 +429,9 @@
             "explain": "Höflich und richtig: „Ich hätte gern …, bitte.“"
           },
           {
-            "text": "Gib mir ein Stück, aber schnell!",
+            "text": "Ja. Ich will ein Stück.",
             "verdict": "unhöflich",
-            "explain": "Das ist ein Befehl, und „bitte“ fehlt. Besser: „Ich hätte gern …“."
+            "explain": "Grammatisch richtig, aber „Ich will …“ klingt fordernd. Besser: „Ich hätte gern …“."
           }
         ],
         "wrong": {
@@ -438,9 +452,9 @@
         "question": "Was sagt Mikula am besten?",
         "options": [
           {
-            "text": "Wo ist das Mehl? Du musst es mir zeigen!",
+            "text": "Ja. Sie müssen mir das Mehl zeigen.",
             "verdict": "unhöflich",
-            "explain": "Das klingt wie ein Befehl, und „du“ passt nicht. Sag lieber „Sie“."
+            "explain": "Grammatisch richtig, aber „Sie müssen …“ klingt wie ein Befehl. Besser: „Könnten Sie …?“"
           },
           {
             "text": "Ja, gern. Könnten Sie mir sagen, wo finde ich das Mehl?",
@@ -471,9 +485,9 @@
         "question": "Was sagt Mikula am besten?",
         "options": [
           {
-            "text": "Ich weiß das schon. Lass mich in Ruhe!",
+            "text": "Ja, ja, das weiß ich doch schon.",
             "verdict": "unhöflich",
-            "explain": "Das ist unfreundlich. Der Kunde will nur helfen."
+            "explain": "Grammatisch richtig, aber „Ja, ja“ klingt genervt. Der Kunde will nur helfen."
           },
           {
             "text": "Danke für den Tipp! Dann gebe ich den Bon an der Kasse ab.",
@@ -481,9 +495,9 @@
             "explain": "Freundlich: Man bedankt sich und sagt, was man macht."
           },
           {
-            "text": "Danke! Dann werfe ich den Bon wieder in den Automaten.",
+            "text": "Danke für den Tipp! Dann abgebe ich den Bon an der Kasse.",
             "verdict": "falsch",
-            "explain": "Den Pfandbon gibt man an der Kasse ab. Man wirft ihn nicht in den Automaten."
+            "explain": "„abgeben“ ist trennbar: „Dann gebe ich den Bon an der Kasse ab.“"
           }
         ],
         "wrong": {
@@ -510,20 +524,20 @@
             "explain": "Sehr gut: kurz, höflich und mit „bitte“."
           },
           {
-            "text": "Ich bezahle mit einem Sack Getreide, bitte.",
+            "text": "Mit Karte, bitte. Könnte ich auch der Kassenbon haben?",
             "verdict": "falsch",
-            "explain": "Im Supermarkt zahlt man mit Euro oder Karte, nicht mit Getreide."
+            "explain": "„haben“ braucht den Akkusativ: „Könnte ich auch den Kassenbon haben?“"
           },
           {
-            "text": "Karte. Mach schnell, ich habe keine Zeit!",
+            "text": "Karte. Und den Bon.",
             "verdict": "unhöflich",
-            "explain": "Zu direkt: ein Befehl und „du“. Besser: „Mit Karte, bitte.“"
+            "explain": "Grammatisch nicht falsch, aber sehr kurz und ohne „bitte“. Das klingt unfreundlich."
           }
         ],
         "wrong": {
           "who": "mikula",
           "mood": "staunen",
-          "text": "Die Kassiererin lächelt, aber mein Getreide nimmt sie nicht.",
+          "text": "Zu Hause bezahle ich mit Eiern. Hier ist alles anders!",
           "audio": ""
         }
       },
@@ -543,9 +557,9 @@
             "explain": "„Nudeln“ ist Plural. Also: „Diese Nudeln sind abgelaufen.“"
           },
           {
-            "text": "Die Nudeln sind schlecht! Ich will sofort mein Geld zurück!",
+            "text": "Diese Nudeln sind abgelaufen. Könnte ich sie umtauschen?",
             "verdict": "unhöflich",
-            "explain": "Zu laut und zu fordernd. Besser: „Könnte ich sie umtauschen?“"
+            "explain": "Grammatisch richtig, aber die Begrüßung fehlt. Der Mitarbeiter sagt „Guten Tag!“ – grüß zurück."
           },
           {
             "text": "Guten Tag! Diese Nudeln sind abgelaufen. Könnte ich sie umtauschen?",
@@ -584,6 +598,15 @@
   },
   "words": [
     {
+      "word": "Tür",
+      "article": "die",
+      "plural": "die Türen",
+      "example": "Die Tür geht von allein auf.",
+      "emoji": "🚪",
+      "level": "A1",
+      "audio": ""
+    },
+    {
       "word": "Einkaufswagen",
       "article": "der",
       "plural": "die Einkaufswagen",
@@ -602,6 +625,15 @@
       "audio": ""
     },
     {
+      "word": "Milch",
+      "article": "die",
+      "plural": "nur Singular",
+      "example": "Ich kaufe einen Liter Milch.",
+      "emoji": "🥛",
+      "level": "A1",
+      "audio": ""
+    },
+    {
       "word": "Saft",
       "article": "der",
       "plural": "die Säfte",
@@ -611,21 +643,39 @@
       "audio": ""
     },
     {
+      "word": "Kassenbon",
+      "article": "der",
+      "plural": "die Kassenbons",
+      "example": "Ich nehme den Kassenbon mit.",
+      "emoji": "🧾",
+      "level": "A1",
+      "audio": ""
+    },
+    {
+      "word": "Münze",
+      "article": "die",
+      "plural": "die Münzen",
+      "example": "Für den Einkaufswagen brauche ich eine Münze.",
+      "emoji": "🪙",
+      "level": "A2",
+      "audio": ""
+    },
+    {
       "word": "Kasse",
       "article": "die",
       "plural": "die Kassen",
       "example": "Ich bezahle an der Kasse.",
       "emoji": "💶",
-      "level": "A1",
+      "level": "A2",
       "audio": ""
     },
     {
-      "word": "Tüte",
-      "article": "die",
-      "plural": "die Tüten",
-      "example": "Ich brauche eine Tüte.",
-      "emoji": "🛍️",
-      "level": "A1",
+      "word": "Regal",
+      "article": "das",
+      "plural": "die Regale",
+      "example": "Das Mehl steht im Regal.",
+      "emoji": "🗄️",
+      "level": "A2",
       "audio": ""
     },
     {
@@ -638,30 +688,12 @@
       "audio": ""
     },
     {
-      "word": "Kassenbon",
-      "article": "der",
-      "plural": "die Kassenbons",
-      "example": "Ich nehme den Kassenbon mit.",
-      "emoji": "🧾",
-      "level": "A2",
-      "audio": ""
-    },
-    {
       "word": "Angebot",
       "article": "das",
       "plural": "die Angebote",
       "example": "Die Tomaten sind im Angebot.",
       "emoji": "🏷️",
-      "level": "A2",
-      "audio": ""
-    },
-    {
-      "word": "Regal",
-      "article": "das",
-      "plural": "die Regale",
-      "example": "Das Mehl steht im Regal.",
-      "emoji": "🗄️",
-      "level": "A2",
+      "level": "B1",
       "audio": ""
     },
     {

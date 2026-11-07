@@ -17,6 +17,8 @@
      api.clearFeedback()
      api.next(label, fn)          – zeigt den „Weiter“-Knopf (Enter löst ihn aus); fn wird beim Klick aufgerufen
      api.finish({ score, max, wrong: [{ correct, tip }] })   – Ergebnisseite, speichert Highscore
+     api.save({ score })          – speichert Highscore/Spielanzahl ohne Ergebnisseite (für Spiele mit eigenem Schlussbildschirm)
+   Optional im Spiel: autoStart() → true = Startbildschirm überspringen (z. B. wenn schon einmal gespielt)
      api.speak(text, onend)       – liest vor (natürliche Aufnahme, falls vorhanden, sonst Gerätestimme)
      api.esc(str), api.shuffle(arr), api.pick(arr, n)
      api.timer(seconds, onTick(rest), onEnd) → { stop() }   – Countdown
@@ -72,6 +74,7 @@
 
   function intro(g) {
     stopAll();
+    try { if (g.autoStart?.()) return play(g); } catch {}
     const s = get()[g.id] || {};
     DM.page(`${crumbs(g)}
       <section class="ch-card sp-intro"><span class="sp-ic sp-ic-big" aria-hidden="true">${g.icon}</span><h1>${esc(g.title)}</h1><p class="sp-lead">${esc(g.intro || g.desc)}</p>
@@ -118,7 +121,8 @@
         const t = { stop() { clearInterval(id); } }; activeTimer = t; return t;
       },
       vibrate() { try { navigator.vibrate?.(60); } catch {} },
-      finish(r) { stopAll(); result(g, opt, r); }
+      finish(r) { stopAll(); result(g, opt, r); },
+      save({ score = 0 } = {}) { const all = get(), s = all[g.id] || {}; all[g.id] = { ...s, best: Math.max(score, s.best ?? 0), plays: (s.plays || 0) + 1, last: Date.now(), opt }; put(all); }
     };
     try { g.start(api, opt); } catch (e) { console.error(e); area.innerHTML = '<p>Das Spiel konnte nicht starten. Bitte lade die Seite neu.</p>'; }
   }

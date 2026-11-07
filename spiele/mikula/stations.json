@@ -28,7 +28,7 @@
   "end": {
     "title": "Fortsetzung folgt …",
     "lines": [
-      { "who": "mikula", "mood": "freude", "text": "Danke! Zwei Kristalle habe ich schon. Aber ich brauche noch mehr.", "audio": "" },
+      { "who": "mikula", "mood": "freude", "text": "Danke für deine Hilfe! Ein paar Kristalle habe ich schon. Aber ich brauche noch mehr.", "audio": "" },
       { "who": "erzaehler", "text": "Bald gibt es neue Stationen. Folge Mikula, dann verpasst du nichts!", "audio": "" }
     ],
     "links": [

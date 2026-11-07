@@ -33,8 +33,8 @@ spiele/mikula/
    ```
    - `active` = spielbar · `soon` = sichtbar mit Schloss „bald“ · `secret` = „???“
    - Die Reihenfolge in der Liste ist die Reihenfolge auf der Karte.
-5. **Ende-Text anpassen:** In `stations.json` unter `"end"` steht „Zwei Kristalle habe ich schon“. Passe die Zahl an, wenn es mehr Stationen gibt.
-6. **Prüfen** (siehe Abschnitt 5), dann erst veröffentlichen.
+5. **Cache-Nummer erhöhen:** In `spiele/mikula.js` oben `VER = '…'` hochzählen (z. B. `20261107c` → `20261107d`), sonst sehen Besucher die alten Inhalte.
+6. **Vertonen** (Abschnitt 3) und **prüfen** (siehe Abschnitt 5), dann erst veröffentlichen.
 
 > Tipp: Lass Claude die neue Station schreiben: „Schreib die Station Post für das Mikula-Spiel im Format von bahnhof.json und prüf sie mit dem Validator.“
 
@@ -103,13 +103,17 @@ Jeder Satz hat ein Feld `"audio": ""`.
 
 | Art | Niveau | Was die Lernenden tun | Wichtige Felder |
 |---|---|---|---|
-| `choice` | A1 (auch A2) | 1 von 3 Antworten antippen (z. B. „die Fahrkarte“) | `emoji`, `question`, `options` (genau 3), `answer` (0, 1 oder 2 = Position der richtigen Antwort), `wrong`, `explain` |
+| `choice` | A1 (auch A2) | 1 von 3 Antworten antippen (z. B. „die Fahrkarte“) | `emoji`, `emojiAlt` (Bildbeschreibung ohne Artikel), `question`, `options` (genau 3), `answer` (0, 1 oder 2 = Position der richtigen Antwort), `hint`, `wrong`, `explain` |
 | `order` | A2 | Wörter in die richtige Reihenfolge tippen | `words` (in **richtiger** Reihenfolge – das Spiel mischt sie), `alt` (weitere richtige Reihenfolgen, sonst `[]`) |
 | `rate` | B1 | Die beste Antwort in einem Gespräch wählen | `situation`, `line` (wer spricht), `options` mit je `verdict`: genau einmal `passend`, `unhöflich`, `falsch` + `explain` |
 
 - `wrong` = Mikulas lustige Reaktion bei einem Fehler (ein Satz).
 - `explain` = kurze Erklärung in einfachem Deutsch.
-- Bei einem Fehler kann man es nochmal versuchen. Beim Satzbauen zeigt das Spiel nach dem zweiten Fehler die Lösung.
+- `hint` = Tipp nach dem **ersten** Fehler. Er darf die Lösung nicht verraten (Strategie, Vergleichswort).
+- Ablauf bei Fehlern: 1. Fehler → Mikula reagiert + Tipp, nochmal versuchen. 2. Fehler → Lösung + Erklärung, weiter. Beim Satzbauen bleibt ein richtiger Anfang stehen.
+- Die Antworten werden jedes Mal neu gemischt. `answer` meint die Position in der JSON-Datei.
+- Wortliste: Das Spiel zeigt nur Wörter mit `level` ≤ gewähltem Niveau (A1 sieht nur A1-Wörter). Jedes Wort sollte in einer Aufgabe vorkommen.
+- Das Niveau wählt man auf der Karte. Pro Station und Niveau gibt es einen Stern (A1 ★ · A2 ☆ · B1 ☆), den Kristall gibt es beim ersten geschafften Niveau.
 
 ## 5. Prüfen vor dem Veröffentlichen
 

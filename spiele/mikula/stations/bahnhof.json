@@ -14,12 +14,12 @@
       {
         "who": "mikula",
         "mood": "staunen",
-        "text": "Was ist das? Ist das ein Gott?",
+        "text": "Was ist das? Ist das ein Zauberkasten?",
         "audio": ""
       },
       {
         "who": "erzaehler",
-        "text": "Mikula verbeugt sich vor dem Kasten. Der Kasten sagt nichts.",
+        "text": "Mikula grüßt den Kasten freundlich. Der Kasten sagt nichts.",
         "audio": ""
       }
     ],
@@ -32,7 +32,7 @@
       {
         "who": "mikula",
         "mood": "staunen",
-        "text": "Das ist bestimmt ein kleiner Schrein! Ich verbeuge mich und lege Getreide hin.",
+        "text": "Ein Kasten mit Licht! Ich sage freundlich „Guten Tag“. Aber er antwortet nicht.",
         "audio": ""
       },
       {
@@ -50,7 +50,7 @@
       {
         "who": "mikula",
         "mood": "staunen",
-        "text": "Verzeihung, ist das ein Götzenbild? Ich habe schon dreimal gegrüßt, aber es antwortet nicht.",
+        "text": "Verzeihung, ist das ein Zauberkasten? Ich habe schon dreimal gegrüßt, aber er antwortet nicht.",
         "audio": ""
       },
       {
@@ -66,6 +66,7 @@
       {
         "type": "choice",
         "emoji": "🎫",
+        "emojiAlt": "Ticket aus Papier",
         "say": {
           "who": "mikula",
           "mood": "staunen",
@@ -85,11 +86,13 @@
           "text": "Hm, das klingt komisch. Mein Pferd versteht das auch nicht!",
           "audio": ""
         },
-        "explain": "Wir sagen: die Fahrkarte. Mehrzahl: die Fahrkarten."
+        "hint": "Tipp: Das letzte Wort zählt: Fahr + Karte.",
+        "explain": "Wir sagen: die Fahrkarte. Plural: die Fahrkarten."
       },
       {
         "type": "choice",
         "emoji": "🛤️",
+        "emojiAlt": "Schienen am Boden",
         "say": {
           "who": "mikula",
           "mood": "staunen",
@@ -109,11 +112,13 @@
           "text": "Oh nein, das war falsch. Ich schaue noch einmal auf den Boden.",
           "audio": ""
         },
+        "hint": "Tipp: Der Zug fährt darauf.",
         "explain": "Das ist das Gleis. Der Zug fährt auf dem Gleis."
       },
       {
         "type": "choice",
         "emoji": "📢",
+        "emojiAlt": "Lautsprecher",
         "say": {
           "who": "mikula",
           "mood": "staunen",
@@ -133,11 +138,13 @@
           "text": "Oje, die Stimme im Himmel sagt etwas anderes!",
           "audio": ""
         },
-        "explain": "Wir sagen: die Durchsage. Mehrzahl: die Durchsagen."
+        "hint": "Tipp: Wörter auf -e haben oft denselben Artikel wie Lampe oder Tasche.",
+        "explain": "Wir sagen: die Durchsage. Plural: die Durchsagen."
       },
       {
         "type": "choice",
         "emoji": "🚆",
+        "emojiAlt": "Bahn mit Wagen",
         "say": {
           "who": "mikula",
           "mood": "staunen",
@@ -157,11 +164,13 @@
           "text": "Nein! Mein Pferd hat keine Räder und ist viel leiser.",
           "audio": ""
         },
+        "hint": "Tipp: Es hat Räder und fährt auf dem Gleis.",
         "explain": "Das ist der Zug. Er fährt auf dem Gleis."
       },
       {
         "type": "choice",
         "emoji": "💺",
+        "emojiAlt": "Sitz im Zug",
         "say": {
           "who": "mikula",
           "mood": "staunen",
@@ -181,11 +190,13 @@
           "text": "Oh nein, dann muss ich wohl stehen!",
           "audio": ""
         },
-        "explain": "Wir sagen: der Platz. Mehrzahl: die Plätze."
+        "hint": "Tipp: Platz hat denselben Artikel wie Stuhl.",
+        "explain": "Wir sagen: der Platz. Plural: die Plätze."
       },
       {
         "type": "choice",
         "emoji": "🚉",
+        "emojiAlt": "Halle mit Gleisen",
         "say": {
           "who": "mikula",
           "mood": "staunen",
@@ -205,6 +216,7 @@
           "text": "Hm, nein. Hier steigen alle ein und aus. Wie heißt dieser Ort?",
           "audio": ""
         },
+        "hint": "Tipp: Gesucht ist kein Ding und kein Fahrzeug, sondern ein Ort.",
         "explain": "Das ist der Bahnhof. Hier halten die Züge."
       }
     ],
@@ -308,6 +320,7 @@
           "text": "Oje, dann komme ich zur falschen Zeit. Ich frage noch einmal.",
           "audio": ""
         },
+        "hint": "Tipp: „Verspätung“ hat mit der Uhrzeit zu tun. Kommt der Zug pünktlich?",
         "explain": "Verspätung heißt: Der Zug kommt später als geplant."
       },
       {
@@ -356,6 +369,7 @@
           "text": "Hm, dann bleibe ich noch im Zug sitzen!",
           "audio": ""
         },
+        "hint": "Tipp: Mikula bleibt nicht im Zug, er geht auf den Bahnsteig.",
         "explain": "Am Ziel steigen wir aus: Ich steige hier aus."
       }
     ],
@@ -376,9 +390,9 @@
             "explain": "Sehr höflich mit „Könnten Sie …?“. Auch der Nebensatz ist richtig."
           },
           {
-            "text": "Zeig mir sofort, wie das geht!",
+            "text": "Ja. Ich will wissen, wie der Automat funktioniert.",
             "verdict": "unhöflich",
-            "explain": "Das ist ein Befehl, und du duzt eine fremde Person."
+            "explain": "Grammatisch richtig, aber „Ich will …“ klingt fordernd. Besser: „Könnten Sie mir zeigen …?“"
           },
           {
             "text": "Ja, gern. Können Sie mir zeigen, wie funktioniert der Automat?",
@@ -404,9 +418,9 @@
         "question": "Was sagt Mikula am besten?",
         "options": [
           {
-            "text": "Hin und zurück! Und mach den Preis kleiner!",
+            "text": "Hin und zurück, bitte. Kannst du mir eine Ermäßigung geben?",
             "verdict": "unhöflich",
-            "explain": "Das ist ein Befehl ohne „bitte“, und du duzt die Mitarbeiterin."
+            "explain": "Grammatisch richtig, aber am Schalter sagen wir „Sie“: „Können Sie …?“"
           },
           {
             "text": "Hin und zurück, bitte. Gibt es einen Ermäßigung?",
@@ -447,9 +461,9 @@
             "explain": "In einer W-Frage steht das Verb auf Position 2: „Wie viel Zeit habe ich …?“"
           },
           {
-            "text": "Ja. Reservieren Sie einen Fensterplatz, aber schnell!",
+            "text": "Fensterplatz.",
             "verdict": "unhöflich",
-            "explain": "Das ist ein Befehl ohne „bitte“. Das klingt unfreundlich."
+            "explain": "Nur ein Wort: Das ist zu kurz und klingt unfreundlich. Besser: „Ja, bitte einen Fensterplatz.“"
           }
         ],
         "wrong": {
@@ -475,9 +489,9 @@
             "explain": "Im Perfekt steht das Partizip am Ende: „… die Durchsage nicht gehört“."
           },
           {
-            "text": "Nein. Sagen Sie mir sofort, wie ich nach Köln komme!",
+            "text": "Nein. Dann müssen Sie mir jetzt den nächsten Zug zeigen.",
             "verdict": "unhöflich",
-            "explain": "Das ist ein Befehl ohne „bitte“ an eine fremde Person."
+            "explain": "Grammatisch richtig, aber „Sie müssen …“ klingt wie eine Forderung. Die Frau hilft freiwillig."
           },
           {
             "text": "Nein, leider nicht. Vielen Dank für die Information!",
@@ -513,15 +527,15 @@
             "explain": "Höflich und freundlich. Du reagierst auch auf die Verspätung."
           },
           {
-            "text": "Hier! Ihr Zug ist immer zu spät. Das nervt!",
+            "text": "Bitte schön. Ihr Zug ist schon wieder zu spät.",
             "verdict": "unhöflich",
-            "explain": "Grammatisch richtig, aber unfreundlich. Die Zugbegleiterin kann nichts dafür."
+            "explain": "Grammatisch richtig, aber das ist ein Vorwurf. Die Zugbegleiterin kann nichts für die Verspätung."
           }
         ],
         "wrong": {
           "who": "mikula",
           "mood": "staunen",
-          "text": "Mein Pferd war nie so pünktlich, aber es hat auch nie eine Karte verlangt!",
+          "text": "Zehn Minuten zu spät? Mein Pferd kommt auch manchmal zu spät!",
           "audio": ""
         }
       },
@@ -541,9 +555,9 @@
             "explain": "Im Nebensatz steht das Verb am Ende: „… wo der Ausgang ist“."
           },
           {
-            "text": "Ja. Zeig mir sofort den Ausgang!",
+            "text": "Das sehen Sie doch. Ich suche den Ausgang.",
             "verdict": "unhöflich",
-            "explain": "Das ist ein Befehl, und du duzt eine fremde Person."
+            "explain": "Grammatisch richtig, aber „Das sehen Sie doch“ klingt genervt. Der Mitarbeiter will nur helfen."
           },
           {
             "text": "Ja, bitte. Könnten Sie mir sagen, wo der Ausgang ist?",
@@ -632,7 +646,7 @@
       "plural": "die Durchsagen",
       "example": "Hören Sie die Durchsage?",
       "emoji": "📢",
-      "level": "A2",
+      "level": "A1",
       "audio": ""
     },
     {
