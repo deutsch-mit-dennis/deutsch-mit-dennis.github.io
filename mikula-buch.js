@@ -66,7 +66,13 @@
       const target = p && p[1] && document.getElementById('mb-' + p[1]);
       document.title = 'Hörtexte zum Buch „Mikula sucht den Weg nach Hause“ – Deutsch mit Dennis';
       // the router scrolls to the top after rendering – jump to the station (from the QR code) afterwards
-      if (target) { target.classList.add('is-target'); const jump = () => window.scrollTo({ top: target.getBoundingClientRect().top + scrollY - 80, behavior: 'instant' }); setTimeout(() => { jump(); target.querySelector('.mb-play')?.focus({ preventScroll: true }); setTimeout(jump, 300); }, 400); }
+      if (target) { target.classList.add('is-target'); const jump = () => window.scrollTo({ top: target.getBoundingClientRect().top + scrollY - 80, behavior: 'instant' });
+        // late layout shifts / smooth scrolls of the site can move the page again: keep the station pinned for a few
+        // seconds, but stop at once when the visitor scrolls, taps or types
+        let touched = false; const stopPin = () => { touched = true; };
+        ['wheel', 'touchstart', 'keydown', 'pointerdown'].forEach(ev => addEventListener(ev, stopPin, { once: true, passive: true }));
+        setTimeout(() => { jump(); target.querySelector('.mb-play')?.focus({ preventScroll: true }); }, 400);
+        let n = 0; const pin = setInterval(() => { if (touched || ++n > 32 || !document.body.contains(target)) return clearInterval(pin); if (Math.abs(target.getBoundingClientRect().top - 80) > 30) jump(); }, 250); }
     }).catch(() => { main.innerHTML = '<section class="dm-section mb-page"><p>Die Hörtexte konnten nicht geladen werden. Bitte lade die Seite neu.</p></section>'; });
   }
   window.addEventListener('hashchange', () => { if (!location.hash.startsWith('#mikula-buch')) stop(); });
