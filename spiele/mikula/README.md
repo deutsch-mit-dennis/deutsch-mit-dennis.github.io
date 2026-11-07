@@ -40,14 +40,16 @@ spiele/mikula/
 
 ## 2. Bilder tauschen
 
-Die Platzhalter liegen in `img/`:
+Die Bilder liegen in `img/` (KI-Bilder aus Google Flow, Nano Banana Pro, Quelle siehe `CLIPS-UND-LIZENZEN.md`):
 
 | Datei | Wo sie erscheint |
 |---|---|
-| `mikula-neutral.svg` | Mikula erklärt oder bittet um Hilfe |
-| `mikula-staunen.svg` | Mikula sieht etwas Neues oder reagiert auf einen Fehler |
-| `mikula-freude.svg` | Station geschafft, Ende |
-| `station-bahnhof.svg`, `station-supermarkt.svg` | großes Bild oben in der Station |
+| `mikula-neutral.webp` | Mikula erklärt oder bittet um Hilfe |
+| `mikula-staunen.webp` | Mikula sieht etwas Neues oder reagiert auf einen Fehler |
+| `mikula-freude.webp` | Station geschafft, Ende |
+| `station-bahnhof.webp`, `station-supermarkt.webp` | großes Bild oben in der Station (Format 3:2) |
+
+**Neue Bilder in Flow:** Flow-Projekt „Nov 02 - 20:19“ (Outlook-Konto) → Bild-Modus, Nano Banana Pro (0 Credits) → mit `@` das Bild „Man posing for portrait photograph“ als Referenz anhängen, damit Mikula gleich aussieht. Neue Stations-Bilder bekommen in der Station-Datei auch ein `"imgAlt"` (kurze Bildbeschreibung für Screenreader).
 
 **So tauschst du ein Bild:**
 1. Neues Bild in `img/` legen, z. B. `mikula-staunen.png` (quadratisch, mind. 300 × 300 px; Stationsbilder 2:1, z. B. 1280 × 640 px). Am besten als `.webp` oder kleines `.png` (unter 200 KB).
@@ -57,7 +59,22 @@ Die Platzhalter liegen in `img/`:
    ```
 3. Bei KI-Bildern: Prompt vorher über den Agenten `vielfalt-bildpruefer` prüfen. Im Spiel steht dann ein Hinweis wie auf der Seite „Mikula lernt Deutsch“ („Bild ist KI-generiert“).
 
-## 3. Eigene Audio-Aufnahmen (deine Stimme)
+## 3. Vertonung (natürliche Stimmen)
+
+Alle Sätze sind mit ElevenLabs vertont (Mikula = Stimme „Thomas“, Erzähler = Laura). Wer welche Stimme hat und die Lizenzen: `CLIPS-UND-LIZENZEN.md`.
+
+**Nach neuen oder geänderten Sätzen** (neue Station, Text korrigiert) drei Befehle im Website-Ordner:
+```bash
+node tools/collect-spiele-tts.mjs
+py -X utf8 tools/sync-spiele-audio.py
+py -X utf8 tools/tts/voice_local.py mikula --dry
+```
+Der letzte Befehl zeigt nur, wie viele Zeichen (= ElevenLabs-Credits) nötig sind, und kostet nichts. Wenn das passt, denselben Befehl ohne `--dry` starten. Er nutzt deinen Schlüssel aus `.env`.
+(Ohne diesen Schritt vertont der nächtliche GitHub-Workflow die neuen Sätze nach dem Veröffentlichen mit Gemini.)
+
+Hinweis: `collect-spiele-tts.mjs` schreibt auch die Dateien der anderen Spiele neu. Ändern sich dort nur die Zeilenenden, mit `git checkout -- spiele/tts-*.json` zurücksetzen und nur `spiele/tts-mikula.json` behalten.
+
+### Eigene Aufnahmen (deine Stimme)
 
 Jeder Satz hat ein Feld `"audio": ""`.
 - **Leer** → das Spiel liest den Text mit der Vorlese-Technik der Website (natürliche Aufnahme, falls schon vertont, sonst Gerätestimme).

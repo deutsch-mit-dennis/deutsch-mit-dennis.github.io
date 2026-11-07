@@ -9,7 +9,7 @@
    Format and how-to: spiele/mikula/README.md */
 (() => {
   if (!window.DMGame) return;
-  const ID = 'mikula', KEY = 'dm-mikula', VER = '20261107a', BASE = 'spiele/mikula/';
+  const ID = 'mikula', KEY = 'dm-mikula', VER = '20261107b', BASE = 'spiele/mikula/';
   const LEVELS = [{ id: 'A1', label: 'A1 – Wörter', d: 'Wörter mit Artikel' }, { id: 'A2', label: 'A2 – Sätze', d: 'Sätze bauen' }, { id: 'B1', label: 'B1 – Gespräche', d: 'Höflich antworten' }];
   const VERDICT = { passend: '✅ passend', 'unhöflich': '😬 zu unhöflich', falsch: '❌ falsch' };
 
@@ -18,7 +18,7 @@
 .sp-mk-scene{display:flex;align-items:flex-end;gap:10px}
 .sp-mk-scene .sp-mk-bubble{flex:1;min-width:0}
 .sp-mk-face{flex:0 0 72px;width:72px;height:72px;border-radius:50%;background:#f3f5fb;overflow:hidden}
-.sp-mk-face img{display:block;width:100%;height:100%}
+.sp-mk-face img{display:block;width:100%;height:100%;object-fit:cover}
 .sp-mk-lines{display:grid;gap:10px;margin:0 0 12px;min-width:0}
 .ch-feedback .sp-mk-scene{margin:0 0 6px}
 .ch-feedback .sp-mk-bubble{color:var(--dm-ink)}
@@ -54,7 +54,7 @@
 .sp-mk-lv button{min-height:44px;padding:6px 14px;border:2px solid var(--dm-line);border-radius:12px;background:#fff;font:600 16px var(--dm-font);color:var(--dm-ink);cursor:pointer}
 .sp-mk-lv button[aria-pressed=true]{border-color:var(--dm-tinte);background:var(--dm-tinte-soft);color:var(--dm-tinte-dark)}
 .sp-mk-lv button:focus-visible{outline:3px solid var(--dm-tinte);outline-offset:2px}
-.sp-mk-stimg{display:block;width:100%;height:auto;max-height:200px;object-fit:cover;border-radius:16px;margin:0 0 12px;background:#eef1f8}
+.sp-mk-stimg{display:block;width:100%;height:auto;aspect-ratio:3/2;max-height:260px;object-fit:cover;object-position:center 30%;border-radius:16px;margin:0 0 12px;background:#eef1f8}
 .sp-mk-win{text-align:center}
 .sp-mk-win .sp-mk-big{width:96px;height:96px;margin:4px auto 6px}
 .sp-mk-words{display:grid;gap:8px;margin:12px 0;text-align:left;padding:0;list-style:none}
@@ -74,6 +74,7 @@
 .sp-mk-tools{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
 .sp-mk-tools button{min-height:44px;padding:6px 14px;border:0;border-radius:12px;background:#eef1f8;font:600 15px var(--dm-font);color:var(--dm-ink);cursor:pointer}
 .sp-mk-tools button:focus-visible{outline:3px solid var(--dm-tinte);outline-offset:2px}
+.sp-mk-ai{margin:14px 2px 0;font-size:14px;color:var(--dm-muted)}
 .sp-mk-tools .is-danger{background:#fdecea;color:#8c1d16}
 @media (prefers-reduced-motion:no-preference){
  .sp-mk-win .sp-mk-big{animation:sp-mk-pop .6s ease-out}
@@ -109,10 +110,13 @@
       const img = mood => (cfg.images || {})[mood] || (cfg.images || {}).neutral || '';
       const spoken = l => l.say || l.text;
       const play = (l, onend) => {
-        stopAudio();
+        stopAudio(); if (!onend) seqNow = null;
         if (l.audio) { try { player = new Audio(l.audio); player.onended = () => onend?.(); player.play().catch(() => api.speak(spoken(l), onend)); return; } catch {} }
         api.speak(spoken(l), onend);
       };
+      const playAll = (ls, k = 0) => { if (k < ls.length) play(ls[k], () => { if (ls === seqNow) playAll(ls, k + 1); }); };
+      let seqNow = null;
+      const playSeq = ls => { seqNow = ls; playAll(ls); };
       const who = l => l.who === 'mikula' ? 'Mikula' : l.who === 'erzaehler' ? '' : l.who;
       const bubble = (l, i) => `<div class="sp-mk-bubble is-${l.who === 'mikula' ? 'mikula' : l.who === 'erzaehler' ? 'erzaehler' : 'other'}"><p>${who(l) ? `<b>${e(who(l))}</b>` : ''}${e(l.text)}</p><button type="button" class="sp-mk-say" data-l="${i}" aria-label="Vorlesen: ${e(l.text)}">🔊</button></div>`;
       // scene = Mikula's face + speech bubbles; returns HTML and binds 🔊 after insertion via bindSay
@@ -135,7 +139,7 @@
         lines = []; api.clearFeedback(); api.hud({ progress: 0, step: 'Geschichte' });
         el.innerHTML = `<h2 class="sp-mk-q">So beginnt die Geschichte</h2>${scene(cfg.story || [], 'staunen')}`;
         bindSay(el); focusQ();
-        play({ text: (cfg.story || []).map(spoken).join(' ') });
+        playSeq(cfg.story || []);
         api.next('Zur Karte', () => { st.story = 1; put(st); map(); });
       }
 
@@ -153,7 +157,8 @@
             return `<button type="button" class="sp-mk-st" disabled aria-label="Geheime Station, bald"><span class="sp-mk-ic" aria-hidden="true">❔</span><b>???</b><small>🔒 geheim</small></button>`;
           }).join('')}</div>
           ${allActiveDone() ? endBlock() : ''}
-          <div class="sp-mk-tools"><button type="button" data-act="story">📖 Geschichte nochmal</button><button type="button" class="is-danger" data-act="reset">↺ Spiel neu starten</button></div>`;
+          <div class="sp-mk-tools"><button type="button" data-act="story">📖 Geschichte nochmal</button><button type="button" class="is-danger" data-act="reset">↺ Spiel neu starten</button></div>
+          ${cfg.aiNote ? `<p class="sp-mk-ai">${e(cfg.aiNote)}</p>` : ''}`;
         bindSay(el);
         el.querySelectorAll('[data-lv]').forEach(b => { b.onclick = () => { st.level = b.dataset.lv; put(st); map(); el.querySelector(`[data-lv="${st.level}"]`)?.focus(); }; });
         el.querySelectorAll('[data-st]').forEach(b => { b.onclick = () => station(cfg.stations.find(s => s.id === b.dataset.st)); });
@@ -178,9 +183,9 @@
           // intro
           const intro = (data.intro || {})[lv] || [];
           api.hud({ progress: 0, step: data.title, score: 0 });
-          el.innerHTML = `${data.img ? `<img class="sp-mk-stimg" src="${e(data.img)}" alt="" width="640" height="320">` : ''}<h2 class="sp-mk-q">${e(data.icon || '')} ${e(data.title)}</h2>${scene(intro, moodOf(intro))}`;
+          el.innerHTML = `${data.img ? `<img class="sp-mk-stimg" src="${e(data.img)}" alt="${e(data.imgAlt || '')}" width="960" height="640">` : ''}<h2 class="sp-mk-q">${e(data.icon || '')} ${e(data.title)}</h2>${scene(intro, moodOf(intro))}`;
           bindSay(el); focusQ();
-          if (intro[0]) play({ text: intro.map(spoken).join(' ') });
+          playSeq(intro);
           api.next('Los geht’s', step);
 
           function step() {

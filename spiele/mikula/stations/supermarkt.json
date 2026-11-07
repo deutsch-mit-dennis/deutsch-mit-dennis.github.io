@@ -2,7 +2,8 @@
   "id": "supermarkt",
   "title": "Im Supermarkt",
   "icon": "🛒",
-  "img": "spiele/mikula/img/station-supermarkt.svg",
+  "img": "spiele/mikula/img/station-supermarkt.webp",
+  "imgAlt": "Die Tür vom Supermarkt geht von allein auf. Mikula staunt und freut sich.",
   "intro": {
     "A1": [
       {

@@ -60,6 +60,25 @@ for (const c of nid.CH) for (const s of c.steps) if (s.t === 'talk') for (const 
 await writeFile(new URL('spiele/tts-nid.json', R), JSON.stringify(nidItems, null, 1) + '\n');
 console.log(`spiele/tts-nid.json: ${nidItems.length} Sätze`);
 
+// Mikula sucht den Weg nach Hause: alle gesprochenen Sätze aus spiele/mikula/*.json (Mikula = eigene Stimme 'mk')
+{
+  const J = async f => JSON.parse(await readFile(new URL('spiele/mikula/' + f, R), 'utf8'));
+  const idx = await J('stations.json'), seen = new Set(), items = [];
+  const voiceOf = w => w === 'mikula' ? 'mk' : w === 'erzaehler' || !w ? 'f1' : /(in|frau)$/i.test(w.trim()) || /^Frau /.test(w) ? 'f2' : 'm1';
+  const add = l => { if (!l || !l.text || l.audio) return; const text = (l.say || l.text).replace(/\s+/g, ' ').trim(); if (seen.has(text)) return; seen.add(text); items.push({ text, voice: voiceOf(l.who) }); };
+  (idx.story || []).forEach(add); (idx.end?.lines || []).forEach(add);
+  for (const st of idx.stations.filter(x => x.status === 'active' && x.file)) {
+    const d = await J('stations/' + st.file);
+    for (const lv of Object.keys(d.tasks || {})) {
+      (d.intro?.[lv] || []).forEach(add); add(d.outro?.[lv]);
+      for (const t of d.tasks[lv]) { add(t.say); add(t.line); add(t.wrong); }
+    }
+    for (const w of d.words || []) add({ who: 'erzaehler', text: `${w.article} ${w.word}. ${w.example}`, audio: w.audio });
+  }
+  await writeFile(new URL('spiele/tts-mikula.json', R), JSON.stringify(items, null, 1) + '\n');
+  console.log(`spiele/tts-mikula.json: ${items.length} Sätze, ${items.reduce((n, x) => n + x.text.length, 0)} Zeichen`);
+}
+
 // Lektionen, Wortkarten: „<Wort>. <Beispielsatz>“ (Vorlese-Knopf in vocab.js vcard)
 const vsrc = await readFile(new URL('vocab-data.js', R), 'utf8');
 const { wordLibrary } = new Function(vsrc + ';return { wordLibrary }')();

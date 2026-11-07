@@ -1,10 +1,11 @@
 {
   "title": "Mikula sucht den Weg nach Hause",
   "crystalsNeeded": 10,
+  "aiNote": "Mikula ist eine KI-Figur: Bilder und Stimmen sind KI-generiert.",
   "images": {
-    "neutral": "spiele/mikula/img/mikula-neutral.svg",
-    "staunen": "spiele/mikula/img/mikula-staunen.svg",
-    "freude": "spiele/mikula/img/mikula-freude.svg"
+    "neutral": "spiele/mikula/img/mikula-neutral.webp",
+    "staunen": "spiele/mikula/img/mikula-staunen.webp",
+    "freude": "spiele/mikula/img/mikula-freude.webp"
   },
   "story": [
     { "who": "erzaehler", "text": "Mikula ist Bauer. Er lebt im Jahr 1024.", "say": "Mikula ist Bauer. Er lebt im Jahr tausendvierundzwanzig.", "audio": "" },
