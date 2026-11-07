@@ -1,0 +1,708 @@
+{
+  "id": "baeckerei",
+  "title": "In der Bäckerei",
+  "icon": "🥨",
+  "img": "spiele/mikula/img/station-baeckerei.webp",
+  "imgAlt": "Mikula steht in einer Bäckerei vor vielen Broten und Brezeln. Er staunt und lächelt.",
+  "intro": {
+    "A1": [
+      {
+        "who": "erzaehler",
+        "text": "Mikula steht vor einer Bäckerei. Es riecht gut.",
+        "audio": ""
+      },
+      {
+        "who": "mikula",
+        "mood": "staunen",
+        "text": "Mmh! Hier riecht es wie bei mir zu Hause!",
+        "audio": ""
+      },
+      {
+        "who": "mikula",
+        "mood": "neutral",
+        "text": "Ich backe Brot im Ofen. Aber hier gibt es so viel Brot!",
+        "audio": ""
+      }
+    ],
+    "A2": [
+      {
+        "who": "erzaehler",
+        "text": "Mikula kommt in eine Bäckerei. In den Regalen liegen viele Brote, Brötchen und Kuchen.",
+        "audio": ""
+      },
+      {
+        "who": "mikula",
+        "mood": "staunen",
+        "text": "So viele Brotsorten! Zu Hause backe ich jede Woche ein Brot in meinem Ofen. Immer dasselbe.",
+        "audio": ""
+      },
+      {
+        "who": "mikula",
+        "mood": "neutral",
+        "text": "Ich möchte etwas kaufen. Aber wie bestelle ich hier höflich?",
+        "audio": ""
+      }
+    ],
+    "B1": [
+      {
+        "who": "erzaehler",
+        "text": "Mikula betritt eine Bäckerei. Vor der Theke wartet schon eine lange Schlange.",
+        "audio": ""
+      },
+      {
+        "who": "mikula",
+        "mood": "staunen",
+        "text": "Unglaublich! So viele Sorten Brot – und alle sind schon fertig gebacken. Bei mir dauert ein Brot einen halben Tag.",
+        "audio": ""
+      },
+      {
+        "who": "mikula",
+        "mood": "neutral",
+        "text": "Ich stelle mich an und höre gut zu. Hier spricht man sehr höflich miteinander.",
+        "audio": ""
+      }
+    ]
+  },
+  "tasks": {
+    "A1": [
+      {
+        "type": "choice",
+        "emoji": "🍞",
+        "emojiAlt": "großes Brot",
+        "say": {
+          "who": "mikula",
+          "mood": "staunen",
+          "text": "So groß und so braun! Wie heißt das?",
+          "audio": ""
+        },
+        "question": "Welcher Artikel ist richtig?",
+        "options": [
+          "der Brot",
+          "das Brot",
+          "die Brot"
+        ],
+        "answer": 1,
+        "wrong": {
+          "who": "mikula",
+          "mood": "staunen",
+          "text": "Oje! Mein Brot ist beleidigt. Das war falsch!",
+          "audio": ""
+        },
+        "hint": "Tipp: Brot hat denselben Artikel wie Haus.",
+        "explain": "Wir sagen: das Brot. Plural: die Brote."
+      },
+      {
+        "type": "choice",
+        "emoji": "🥯",
+        "emojiAlt": "kleines rundes Gebäck",
+        "say": {
+          "who": "mikula",
+          "mood": "staunen",
+          "text": "Klein und rund! Viele Menschen essen das am Morgen. Was ist das?",
+          "audio": ""
+        },
+        "question": "Was ist das?",
+        "options": [
+          "das Brötchen",
+          "die Brezel",
+          "der Kuchen"
+        ],
+        "answer": 0,
+        "wrong": {
+          "who": "mikula",
+          "mood": "staunen",
+          "text": "Oje, mein Bauch knurrt – aber das war falsch!",
+          "audio": ""
+        },
+        "hint": "Tipp: Es ist ein kleines Brot.",
+        "explain": "Das ist ein Brötchen. Wir sagen: das Brötchen. Plural: die Brötchen."
+      },
+      {
+        "type": "choice",
+        "emoji": "🥨",
+        "emojiAlt": "Gebäck mit Knoten",
+        "say": {
+          "who": "mikula",
+          "mood": "staunen",
+          "text": "Dieses Brot hat einen Knoten! Wie heißt das?",
+          "audio": ""
+        },
+        "question": "Welcher Artikel ist richtig?",
+        "options": [
+          "der Brezel",
+          "das Brezel",
+          "die Brezel"
+        ],
+        "answer": 2,
+        "wrong": {
+          "who": "mikula",
+          "mood": "staunen",
+          "text": "Die Brezel hat einen Knoten – und ich jetzt auch im Kopf!",
+          "audio": ""
+        },
+        "hint": "Tipp: Brezel hat denselben Artikel wie Milch.",
+        "explain": "Wir sagen: die Brezel. Plural: die Brezeln."
+      },
+      {
+        "type": "choice",
+        "emoji": "🍰",
+        "emojiAlt": "süßes Stück mit Sahne",
+        "say": {
+          "who": "mikula",
+          "mood": "staunen",
+          "text": "Das ist süß und weich! Was ist das?",
+          "audio": ""
+        },
+        "question": "Was ist das?",
+        "options": [
+          "die Brezel",
+          "der Kuchen",
+          "das Brot"
+        ],
+        "answer": 1,
+        "wrong": {
+          "who": "mikula",
+          "mood": "staunen",
+          "text": "Süß, aber falsch! Mein Pferd lacht.",
+          "audio": ""
+        },
+        "hint": "Tipp: Viele Menschen essen das am Nachmittag mit Kaffee.",
+        "explain": "Das ist ein Kuchen. Wir sagen: der Kuchen. Plural: die Kuchen."
+      },
+      {
+        "type": "choice",
+        "emoji": "🔥",
+        "emojiAlt": "heißes Feuer",
+        "say": {
+          "who": "mikula",
+          "mood": "neutral",
+          "text": "Zu Hause backe ich mein Brot selbst. Da drin ist es sehr heiß! Wie heißt das?",
+          "audio": ""
+        },
+        "question": "Welcher Artikel ist richtig?",
+        "options": [
+          "der Ofen",
+          "die Ofen",
+          "das Ofen"
+        ],
+        "answer": 0,
+        "wrong": {
+          "who": "mikula",
+          "mood": "staunen",
+          "text": "Autsch, heiß! Das war nicht richtig.",
+          "audio": ""
+        },
+        "hint": "Tipp: Ofen hat denselben Artikel wie Apfel.",
+        "explain": "Wir sagen: der Ofen. Plural: die Öfen."
+      },
+      {
+        "type": "choice",
+        "emoji": "✌️",
+        "emojiAlt": "Hand zeigt zwei Finger",
+        "say": {
+          "who": "mikula",
+          "mood": "neutral",
+          "text": "Ich habe großen Hunger! Ein Brötchen ist zu wenig. Ich möchte zwei. Was sage ich?",
+          "audio": ""
+        },
+        "question": "Was ist richtig?",
+        "options": [
+          "Zwei Brötchens, bitte.",
+          "Zwei Brötchene, bitte.",
+          "Zwei Brötchen, bitte."
+        ],
+        "answer": 2,
+        "wrong": {
+          "who": "mikula",
+          "mood": "staunen",
+          "text": "Ups! Die Verkäuferin schaut komisch. Noch einmal!",
+          "audio": ""
+        },
+        "hint": "Tipp: Denk an das Mädchen: ein Mädchen, zwei Mädchen.",
+        "explain": "Ein Brötchen, zwei Brötchen. Das Wort bleibt im Plural gleich."
+      }
+    ],
+    "A2": [
+      {
+        "type": "order",
+        "say": {
+          "who": "mikula",
+          "mood": "neutral",
+          "text": "Jetzt bin ich dran! Ich möchte vier Brötchen. Ich bestelle höflich.",
+          "audio": ""
+        },
+        "question": "Bau den Satz für Mikula.",
+        "words": [
+          "Ich",
+          "hätte",
+          "gern",
+          "vier",
+          "Brötchen,",
+          "bitte."
+        ],
+        "alt": [],
+        "wrong": {
+          "who": "mikula",
+          "mood": "staunen",
+          "text": "Die Verkäuferin lächelt und wartet. Mein Satz ist noch nicht fertig gebacken!",
+          "audio": ""
+        },
+        "explain": "Höflich bestellen: Ich hätte gern … Das Verb „hätte“ steht an Position 2."
+      },
+      {
+        "type": "choice",
+        "say": {
+          "who": "Verkäuferin",
+          "mood": "neutral",
+          "text": "Die vier Brötchen kosten zusammen drei Euro zwanzig.",
+          "audio": ""
+        },
+        "question": "Wie hoch ist der Preis?",
+        "options": [
+          "2,30 €",
+          "3,20 €",
+          "3,02 €"
+        ],
+        "answer": 1,
+        "wrong": {
+          "who": "mikula",
+          "mood": "staunen",
+          "text": "Oje! Zu Hause zähle ich Brote, keine Cent!",
+          "audio": ""
+        },
+        "hint": "Tipp: Zuerst hörst du die Euro, dann die Cent.",
+        "explain": "Der Preis ist drei Euro zwanzig. Man schreibt: 3,20 €."
+      },
+      {
+        "type": "order",
+        "say": {
+          "who": "mikula",
+          "mood": "staunen",
+          "text": "Dieses Brot ist riesig! Zu Hause schneide ich Brot mit meiner Axt. Hier frage ich lieber.",
+          "audio": ""
+        },
+        "question": "Bau den Satz für Mikula.",
+        "words": [
+          "Könnten",
+          "Sie",
+          "das",
+          "Brot",
+          "schneiden?"
+        ],
+        "alt": [],
+        "wrong": {
+          "who": "mikula",
+          "mood": "staunen",
+          "text": "Soll ich doch meine Axt holen? Nein, ich baue den Satz noch einmal!",
+          "audio": ""
+        },
+        "explain": "Bei einer höflichen Bitte steht „Könnten“ vorn. Das zweite Verb steht am Ende: schneiden."
+      },
+      {
+        "type": "choice",
+        "say": {
+          "who": "mikula",
+          "mood": "staunen",
+          "text": "Die Verkäuferin fragt: „Sonst noch etwas?“ Ja! Der Kuchen sieht so lecker aus. Was sage ich?",
+          "audio": ""
+        },
+        "question": "Welcher Satz passt?",
+        "options": [
+          "Ja, ich hätte gern ein Stück Kuchen.",
+          "Ja, ich hätte gern einen Stück Kuchen.",
+          "Ja, ich habe gern ein Stück Kuchen."
+        ],
+        "answer": 0,
+        "wrong": {
+          "who": "mikula",
+          "mood": "staunen",
+          "text": "Oje, jetzt bekomme ich vielleicht den ganzen Kuchen – oder gar nichts!",
+          "audio": ""
+        },
+        "hint": "Tipp: Prüfe zwei Stellen: das Verb und das Wort vor „Stück“.",
+        "explain": "Höflich bestellen: Ich hätte gern … Und: das Stück → ein Stück Kuchen."
+      },
+      {
+        "type": "order",
+        "say": {
+          "who": "mikula",
+          "mood": "neutral",
+          "text": "Die Verkäuferin fragt: „Zum Mitnehmen?“ Ja! Aber ich habe keinen Korb dabei. Ich brauche eine Tüte.",
+          "audio": ""
+        },
+        "question": "Bau den Satz für Mikula.",
+        "words": [
+          "Könnten",
+          "Sie",
+          "mir",
+          "eine",
+          "Tüte",
+          "geben?"
+        ],
+        "alt": [],
+        "wrong": {
+          "who": "mikula",
+          "mood": "staunen",
+          "text": "Ohne Tüte trage ich alles in meinem Hut – das geht nicht gut!",
+          "audio": ""
+        },
+        "explain": "Höfliche Bitte: Könnten Sie mir … geben? Das zweite Verb steht am Ende."
+      },
+      {
+        "type": "choice",
+        "say": {
+          "who": "mikula",
+          "mood": "staunen",
+          "text": "Hier gibt es ein Brot mit vielen Körnern. Das ist gesund! Ich bestelle es.",
+          "audio": ""
+        },
+        "question": "Welcher Satz passt?",
+        "options": [
+          "Ich hätte gern eine Vollkornbrot, bitte.",
+          "Ich gern hätte ein Vollkornbrot, bitte.",
+          "Ich hätte gern ein Vollkornbrot, bitte."
+        ],
+        "answer": 2,
+        "wrong": {
+          "who": "mikula",
+          "mood": "staunen",
+          "text": "So viele Körner und so viele Wörter – ich bin ganz durcheinander!",
+          "audio": ""
+        },
+        "hint": "Tipp: Prüfe zwei Stellen: das Wort vor „Vollkornbrot“ und die Position vom Verb.",
+        "explain": "das Vollkornbrot → ein Vollkornbrot. Das Verb steht an Position 2: Ich hätte gern …"
+      }
+    ],
+    "B1": [
+      {
+        "type": "rate",
+        "situation": "Mikula ist an der Reihe. Er möchte sechs Brötchen kaufen.",
+        "line": {
+          "who": "Verkäuferin",
+          "text": "Guten Morgen! Was darf es sein?",
+          "audio": ""
+        },
+        "question": "Was sagt Mikula am besten?",
+        "options": [
+          {
+            "text": "Guten Morgen! Ich will sechs Brötchen.",
+            "verdict": "unhöflich",
+            "explain": "Grammatisch richtig, aber „Ich will …“ klingt fordernd. Besser: „Ich hätte gern …“."
+          },
+          {
+            "text": "Guten Morgen! Ich hätte gern sechs Brötchen, bitte.",
+            "verdict": "passend",
+            "explain": "Höflich und richtig: Man grüßt und bestellt mit „Ich hätte gern …, bitte.“"
+          },
+          {
+            "text": "Guten Morgen! Ich hätte gern sechs Brötchens, bitte.",
+            "verdict": "falsch",
+            "explain": "Der Plural von „Brötchen“ ist „Brötchen“ – ohne -s."
+          }
+        ],
+        "wrong": {
+          "who": "mikula",
+          "mood": "staunen",
+          "text": "Sechs Brötchen! In meinem Dorf ist das schon ein Fest für die ganze Familie.",
+          "audio": ""
+        }
+      },
+      {
+        "type": "rate",
+        "situation": "Mikula steht an der Theke. Er sieht viele Brotsorten und weiß nicht, welches Brot er nehmen soll.",
+        "line": {
+          "who": "Verkäufer",
+          "text": "Welche Sorte möchten Sie? Wir haben Roggenbrot, Dinkelbrot und Vollkornbrot.",
+          "audio": ""
+        },
+        "question": "Was sagt Mikula am besten?",
+        "options": [
+          {
+            "text": "Kannst du mir ein Brot empfehlen? Ich esse gern dunkles Brot.",
+            "verdict": "unhöflich",
+            "explain": "Grammatisch richtig, aber Mikula duzt den Verkäufer. Besser: „Könnten Sie …?“"
+          },
+          {
+            "text": "Könnten Sie mir ein Brot empfehlen? Ich esse gern dunkle Brot.",
+            "verdict": "falsch",
+            "explain": "„das Brot“ ohne Artikel: Das Adjektiv bekommt -es. Also: „Ich esse gern dunkles Brot.“"
+          },
+          {
+            "text": "Könnten Sie mir ein Brot empfehlen? Ich esse gern dunkles Brot.",
+            "verdict": "passend",
+            "explain": "Sehr höflich: „Könnten Sie mir …?“ Und Mikula sagt, was er gern mag."
+          }
+        ],
+        "wrong": {
+          "who": "mikula",
+          "mood": "staunen",
+          "text": "So viele Sorten! Zu Hause backe ich nur eine – und die ist meistens etwas schwarz.",
+          "audio": ""
+        }
+      },
+      {
+        "type": "rate",
+        "situation": "Mikula kauft ein ganzes Vollkornbrot. Es ist sehr groß.",
+        "line": {
+          "who": "Verkäuferin",
+          "text": "Möchten Sie das Brot geschnitten haben?",
+          "audio": ""
+        },
+        "question": "Was sagt Mikula am besten?",
+        "options": [
+          {
+            "text": "Ja, gern. Könnten Sie es bitte in Scheiben schneiden?",
+            "verdict": "passend",
+            "explain": "Höflich und richtig: „Könnten Sie …?“ und das Verb am Ende."
+          },
+          {
+            "text": "Ja, gern. Könnten Sie es bitte in Scheiben geschnitten?",
+            "verdict": "falsch",
+            "explain": "Nach „Könnten Sie“ steht der Infinitiv am Ende: schneiden."
+          },
+          {
+            "text": "Ja. Schneiden Sie es!",
+            "verdict": "unhöflich",
+            "explain": "Grammatisch richtig, aber das klingt wie ein Befehl, und „bitte“ fehlt."
+          }
+        ],
+        "wrong": {
+          "who": "mikula",
+          "mood": "staunen",
+          "text": "Eine Maschine schneidet das Brot? Mein Messer zu Hause ist jetzt bestimmt beleidigt.",
+          "audio": ""
+        }
+      },
+      {
+        "type": "rate",
+        "situation": "Mikula hat schon Brot und Brötchen. Er möchte noch Kuchen, aber er kennt den Preis nicht.",
+        "line": {
+          "who": "Verkäuferin",
+          "text": "Sonst noch etwas?",
+          "audio": ""
+        },
+        "question": "Was sagt Mikula am besten?",
+        "options": [
+          {
+            "text": "Ja, ein Stück Apfelkuchen, bitte. Was kostet die Stück?",
+            "verdict": "falsch",
+            "explain": "Es heißt „das Stück“. Also: „Was kostet das Stück?“"
+          },
+          {
+            "text": "Ja. Und jetzt schnell ein Stück Apfelkuchen!",
+            "verdict": "unhöflich",
+            "explain": "Das klingt ungeduldig, und „bitte“ fehlt. Die Verkäuferin bedient Mikula doch schon."
+          },
+          {
+            "text": "Ja, ein Stück Apfelkuchen, bitte. Was kostet das Stück?",
+            "verdict": "passend",
+            "explain": "Freundlich: Mikula bestellt mit „bitte“ und fragt höflich nach dem Preis."
+          }
+        ],
+        "wrong": {
+          "who": "mikula",
+          "mood": "staunen",
+          "text": "In meinem Dorf gibt es Kuchen nur bei einer Hochzeit – hier jeden Tag!",
+          "audio": ""
+        }
+      },
+      {
+        "type": "rate",
+        "situation": "Mikula möchte den Kuchen im Park essen.",
+        "line": {
+          "who": "Verkäufer",
+          "text": "Für hier oder zum Mitnehmen?",
+          "audio": ""
+        },
+        "question": "Was sagt Mikula am besten?",
+        "options": [
+          {
+            "text": "Das ist doch egal. Geben Sie mir einfach den Kuchen.",
+            "verdict": "unhöflich",
+            "explain": "Grammatisch richtig, aber „Das ist doch egal“ klingt unfreundlich. Der Verkäufer möchte nur wissen, wie er den Kuchen einpackt."
+          },
+          {
+            "text": "Zum Mitnehmen, bitte. Ich esse den Kuchen im Park.",
+            "verdict": "passend",
+            "explain": "Kurz, klar und höflich: „Zum Mitnehmen, bitte.“"
+          },
+          {
+            "text": "Für Mitnehmen, bitte. Ich esse den Kuchen im Park.",
+            "verdict": "falsch",
+            "explain": "Man sagt: „zum Mitnehmen“ (zum = zu dem)."
+          }
+        ],
+        "wrong": {
+          "who": "mikula",
+          "mood": "staunen",
+          "text": "Mitnehmen? Mein Pferd trägt den Kuchen gern – aber vielleicht frisst es ihn unterwegs!",
+          "audio": ""
+        }
+      },
+      {
+        "type": "rate",
+        "situation": "Mikula bezahlt mit einem Schein von zwanzig Euro. Er zählt das Wechselgeld: Es fehlen zehn Euro.",
+        "line": {
+          "who": "Verkäuferin",
+          "text": "Das macht 7,40 €. Und 2,60 € zurück. Schönen Tag noch!",
+          "say": "Das macht sieben Euro vierzig. Und zwei Euro sechzig zurück. Schönen Tag noch!",
+          "audio": ""
+        },
+        "question": "Was sagt Mikula am besten?",
+        "options": [
+          {
+            "text": "Entschuldigung, ich glaube, das stimmt nicht. Ich habe Sie zwanzig Euro gegeben.",
+            "verdict": "falsch",
+            "explain": "„geben“ braucht hier den Dativ: „Ich habe Ihnen zwanzig Euro gegeben.“"
+          },
+          {
+            "text": "Entschuldigung, ich glaube, das stimmt nicht. Ich habe Ihnen zwanzig Euro gegeben.",
+            "verdict": "passend",
+            "explain": "Höflich: Mikula sagt „Entschuldigung“ und erklärt das Problem ruhig."
+          },
+          {
+            "text": "Hey, das ist falsch! Sie wollen mich betrügen!",
+            "verdict": "unhöflich",
+            "explain": "Das klingt wie ein Vorwurf. Vielleicht ist es nur ein Fehler. Besser: „Entschuldigung, ich glaube …“"
+          }
+        ],
+        "wrong": {
+          "who": "mikula",
+          "mood": "staunen",
+          "text": "Zu Hause zähle ich Hühner, keine Münzen. Das ist schwierig!",
+          "audio": ""
+        }
+      }
+    ]
+  },
+  "outro": {
+    "A1": {
+      "who": "mikula",
+      "mood": "freude",
+      "text": "Lecker! Und da ist ein Zeitkristall! Danke!",
+      "audio": ""
+    },
+    "A2": {
+      "who": "mikula",
+      "mood": "freude",
+      "text": "Juhu! Neben den Brezeln glänzt ein Zeitkristall! Danke, du hast mir sehr geholfen.",
+      "audio": ""
+    },
+    "B1": {
+      "who": "mikula",
+      "mood": "freude",
+      "text": "Wunderbar! Ich habe höflich bestellt, und in meiner Tüte liegt ein Zeitkristall. Vielen Dank für deine Hilfe!",
+      "audio": ""
+    }
+  },
+  "words": [
+    {
+      "word": "Brot",
+      "article": "das",
+      "plural": "die Brote",
+      "example": "Ich kaufe ein Brot.",
+      "emoji": "🍞",
+      "level": "A1",
+      "audio": ""
+    },
+    {
+      "word": "Brötchen",
+      "article": "das",
+      "plural": "die Brötchen",
+      "example": "Am Morgen esse ich ein Brötchen.",
+      "emoji": "🥯",
+      "level": "A1",
+      "audio": ""
+    },
+    {
+      "word": "Brezel",
+      "article": "die",
+      "plural": "die Brezeln",
+      "example": "Die Brezel ist salzig.",
+      "emoji": "🥨",
+      "level": "A1",
+      "audio": ""
+    },
+    {
+      "word": "Kuchen",
+      "article": "der",
+      "plural": "die Kuchen",
+      "example": "Der Kuchen ist süß.",
+      "emoji": "🍰",
+      "level": "A1",
+      "audio": ""
+    },
+    {
+      "word": "Ofen",
+      "article": "der",
+      "plural": "die Öfen",
+      "example": "Das Brot ist im Ofen.",
+      "emoji": "🔥",
+      "level": "A1",
+      "audio": ""
+    },
+    {
+      "word": "Stück",
+      "article": "das",
+      "plural": "die Stücke",
+      "example": "Ich hätte gern ein Stück Kuchen.",
+      "emoji": "🍰",
+      "level": "A2",
+      "audio": ""
+    },
+    {
+      "word": "Vollkornbrot",
+      "article": "das",
+      "plural": "die Vollkornbrote",
+      "example": "Vollkornbrot ist gesund.",
+      "emoji": "🌾",
+      "level": "A2",
+      "audio": ""
+    },
+    {
+      "word": "Sorte",
+      "article": "die",
+      "plural": "die Sorten",
+      "example": "Die Bäckerei hat viele Sorten Brot.",
+      "emoji": "🧺",
+      "level": "B1",
+      "audio": ""
+    },
+    {
+      "word": "Preis",
+      "article": "der",
+      "plural": "die Preise",
+      "example": "Der Preis steht auf dem Schild.",
+      "emoji": "🏷️",
+      "level": "A2",
+      "audio": ""
+    },
+    {
+      "word": "Tüte",
+      "article": "die",
+      "plural": "die Tüten",
+      "example": "Könnten Sie mir eine Tüte geben?",
+      "emoji": "🛍️",
+      "level": "A2",
+      "audio": ""
+    },
+    {
+      "word": "Theke",
+      "article": "die",
+      "plural": "die Theken",
+      "example": "Ich warte an der Theke.",
+      "emoji": "🧁",
+      "level": "B1",
+      "audio": ""
+    },
+    {
+      "word": "Wechselgeld",
+      "article": "das",
+      "plural": "nur Singular",
+      "example": "Bitte zählen Sie das Wechselgeld nach.",
+      "emoji": "🪙",
+      "level": "B1",
+      "audio": ""
+    }
+  ]
+}

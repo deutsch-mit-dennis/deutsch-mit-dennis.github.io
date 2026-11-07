@@ -1,0 +1,309 @@
+{
+ "title": "Mikula sucht den Weg nach Hause – Band 1",
+ "stations": [
+  {
+   "id": "bahnhof",
+   "no": 1,
+   "title": "Am Bahnhof",
+   "story": {
+    "A1": [
+     "Mikula ist Bauer. Er kommt aus dem Jahr 1024. Jetzt steht er in Essen am Bahnhof. Alles ist neu und laut. Seine Zeitmaschine ist kaputt. Sie braucht zehn Zeitkristalle.",
+     "Da steht ein großer Kasten mit Licht. Mikula sagt: „Guten Tag!“ Der Kasten sagt nichts. Eine Frau lacht freundlich. „Das ist ein Fahrkartenautomat“, sagt sie. „Wohin möchten Sie fahren?“ – „Ich möchte nach Köln“, sagt Mikula.",
+     "Die Fahrkarte kostet 20,90 Euro. Mikula hat 30 Euro. Das Geld ist vom Bäcker. Mikula hat für ihn Holz gehackt. Mikula fragt: „Wo ist der Zug?“ – „Auf Gleis 7“, sagt die Frau.",
+     "Dann kommt eine Durchsage: „Der Zug hat zehn Minuten Verspätung.“ Mikula wartet. Endlich kommt der Zug. Er ist lang und laut. Mikula findet einen Platz am Fenster. In Köln steigt er aus. Am Gleis liegt etwas. Es glänzt. Mikula lacht: „Ein Zeitkristall! Einer ist da. Noch neun!“"
+    ],
+    "A2": [
+     "Mikula ist ein Bauer aus dem Jahr 1024. Seine Zeitmaschine hat ihn ins Jahr 2026 gebracht – direkt in den Hauptbahnhof von Essen. Jetzt funktioniert die Maschine nicht mehr. Sie braucht zehn Zeitkristalle. Mikula möchte nach Hause, zu seinem Dorf und zu seinem Pferd.",
+     "In der Bahnhofshalle steht ein großer Kasten mit Licht und einem Bildschirm. Mikula grüßt ihn höflich, aber der Kasten antwortet nicht. Eine junge Frau lacht freundlich: „Das ist ein Fahrkartenautomat. Hier können Sie eine Fahrkarte kaufen. Wohin möchten Sie fahren?“ Plötzlich leuchtet der kleine Stein an Mikulas Kette. Auf dem Bildschirm steht: Köln. „Nach Köln, bitte!“, sagt Mikula.",
+     "Die Fahrkarte kostet 20,90 Euro. Zum Glück hat Mikula am Morgen für einen Bäcker Holz gehackt und 30 Euro bekommen. Dann hört er eine Durchsage: „Der Zug nach Köln hat heute 40 Minuten Verspätung.“ Mikula versteht nicht alles. Er geht ins Reisezentrum. Ein Mitarbeiter am Schalter erklärt: „Nehmen Sie den nächsten Zug nach Düsseldorf. Dort müssen Sie umsteigen.“",
+     "In Düsseldorf findet Mikula seinen Anschluss auf Gleis 16. Im Zug sucht er einen freien Platz am Fenster. Er schaut hinaus und staunt: „So schnell! Mein Pferd ist viel langsamer.“ In Köln steigt er aus. Auf dem Bahnsteig, unter einer Bank, glänzt etwas Blaues: der erste Zeitkristall!"
+    ],
+    "B1": [
+     "Als Mikula die Augen öffnet, steht er nicht mehr auf seinem Feld, sondern mitten im Hauptbahnhof von Essen. Seine Zeitmaschine, die eher wie ein alter Holzschrank aussieht, steht in einer ruhigen Ecke und rührt sich nicht. Mikula weiß: Ohne zehn Zeitkristalle kommt er nie zurück ins Jahr 1024.",
+     "Zuerst grüßt er den Fahrkartenautomaten dreimal sehr höflich, denn er hält ihn für einen Zauberkasten. Eine Frau namens Lena erklärt ihm lächelnd, wie das Gerät funktioniert. Als Mikula auf dem Bildschirm das Wort „Köln“ sieht, leuchtet der Stein an seiner Kette hell auf. Er kauft eine Fahrkarte – mit dem Geld, das er am Morgen beim Holzhacken für einen Bäcker verdient hat.",
+     "Doch dann kommt eine Durchsage: Der Zug nach Köln fällt heute aus. Mikula versteht nur „fällt aus“ und schaut besorgt auf die Gleise. Er geht ins Reisezentrum und wartet geduldig, bis er an der Reihe ist.",
+     "„Guten Tag. Könnten Sie mir bitte helfen? Mein Zug nach Köln fällt aus. Wie komme ich jetzt nach Köln?“ – „Kein Problem. Nehmen Sie den nächsten Regionalexpress und steigen Sie in Düsseldorf um. Ihre Fahrkarte gilt auch für diesen Zug.“ – „Und wie viel Zeit habe ich zum Umsteigen?“ – „Acht Minuten. Der Anschluss fährt von Gleis 16 ab.“ – „Vielen Dank! Mit meinem Pferd wäre ich zwei Tage unterwegs.“ Die Mitarbeiterin lacht: „Dann sind Sie heute sehr schnell.“",
+     "In Düsseldorf findet Mikula den Anschluss sofort und setzt sich auf einen Fensterplatz. Die Zugbegleiterin kontrolliert seine Fahrkarte und entschuldigt sich für fünf Minuten Verspätung. „Das ist nicht schlimm“, sagt Mikula. „Mein Pferd kommt auch manchmal zu spät.“ Als er in Köln aussteigt, sieht er unter einer Bank auf dem Bahnsteig etwas Blaues glänzen. Es ist ein Zeitkristall – der erste von zehn."
+    ]
+   },
+   "words": [
+    "die Fahrkarte. Ich kaufe eine Fahrkarte am Automaten.",
+    "der Zug. Der Zug nach Köln ist sehr schnell.",
+    "das Gleis. Der Zug fährt von Gleis 7 ab.",
+    "der Bahnhof. Wir treffen uns am Bahnhof.",
+    "der Platz. Ist dieser Platz noch frei?",
+    "der Koffer. Mein Koffer ist sehr schwer.",
+    "der Ausgang. Wo ist der Ausgang, bitte?",
+    "die Durchsage. Hören Sie die Durchsage?",
+    "der Fahrplan. Im Fahrplan steht: Abfahrt um 10:12 Uhr.",
+    "der Bahnsteig. Ich warte auf dem Bahnsteig.",
+    "der Wagen. Mein Platz ist in Wagen 5.",
+    "die Verspätung. Der Zug hat zehn Minuten Verspätung.",
+    "der Fahrkartenautomat. Der Fahrkartenautomat nimmt Münzen und Scheine.",
+    "der Schalter. Am Schalter bekomme ich Hilfe.",
+    "der Bildschirm. Auf dem Bildschirm steht das Gleis.",
+    "die Abfahrt. Die Abfahrt ist um 10:12 Uhr.",
+    "die Ankunft. Die Ankunft in Köln ist um 11:05 Uhr.",
+    "das Reisezentrum. Im Reisezentrum kann man Fragen stellen.",
+    "die Zugbegleiterin. Die Zugbegleiterin kontrolliert die Fahrkarten.",
+    "der Anschluss. In Düsseldorf habe ich Anschluss an den RE 1.",
+    "die Ermäßigung. Gibt es eine Ermäßigung für Kinder?"
+   ]
+  },
+  {
+   "id": "supermarkt",
+   "no": 2,
+   "title": "Im Supermarkt",
+   "story": {
+    "A1": [
+     "Mikula steht vor einem Supermarkt. Die Tür geht auf. Ganz von allein! „Zauberei!“, ruft Mikula. Er geht hinein.",
+     "Da steht ein Einkaufswagen. Aber der Wagen hängt fest. Eine Frau sagt: „Sie brauchen eine Münze. Einen Euro.“ Mikula hat Geld in der Tasche: einen Euro und einen Zehn-Euro-Schein. Er steckt den Euro in den Wagen. Jetzt ist der Wagen frei.",
+     "Mikula braucht Brot, Milch und Äpfel. Er nimmt ein Brot und einen Liter Milch. Die Äpfel sind rot und grün. Er kauft ein Kilo Äpfel. Und er nimmt eine Flasche Saft.",
+     "An der Kasse legt Mikula alles auf das Band. Das Band fährt! Die Kassiererin lächelt. „Das macht 7,61 Euro.“ Mikula bezahlt bar. Er bekommt einen Kassenbon.",
+     "Mikula schaut noch einmal zu den Äpfeln. Da glänzt etwas. Ein Zeitkristall! „Danke, Supermarkt!“, lacht Mikula. Jetzt hat er zwei Kristalle."
+    ],
+    "A2": [
+     "Mikula steht vor einem großen Supermarkt. Die Tür öffnet sich ganz von allein. „Das ist Zauberei!“, sagt Mikula. „In meinem Dorf muss ich jede Tür selbst aufmachen.“",
+     "Neben der Tür stehen viele Einkaufswagen. Mikula zieht an einem Wagen, aber der Wagen hängt an einer Kette fest. Ein älterer Mann hilft ihm: „Sie brauchen eine Münze. Stecken Sie einen Euro hinein.“ Klick – der Wagen ist frei! Den Euro bekommt Mikula später zurück.",
+     "Mikula hat eine Liste: Brot, Milch, Eier und Obst. In der Obst- und Gemüseabteilung liegen Berge von Äpfeln und Tomaten. Die Tomaten sind im Angebot: Ein Kilo kostet nur 1,99 Euro. Mikula nimmt ein Kilo Tomaten und ein Kilo Äpfel. Dann sucht er die Milch. So viele Regale! Er fragt eine Mitarbeiterin: „Entschuldigung, wo finde ich die Milch?“ – „Im Kühlregal, ganz hinten.“",
+     "Am Eingang sieht Mikula einen Pfandautomaten. Ein Junge steckt leere Plastikflaschen hinein, und der Automat druckt einen Bon. „Für jede Flasche bekomme ich 25 Cent zurück“, erklärt der Junge.",
+     "An der Kasse legt Mikula alles auf das Kassenband. Die Kassiererin fragt: „Brauchen Sie eine Tüte?“ – „Ja, bitte.“ Mikula bezahlt 10,85 Euro und bekommt den Kassenbon.",
+     "Dann geht er noch einmal zu den Äpfeln. Zwischen den roten Äpfeln glänzt etwas: ein Zeitkristall! Mikula lacht. „Der zweite Kristall! Mein Einkauf war heute besonders gut.“"
+    ],
+    "B1": [
+     "Gestern war Mikula zum ersten Mal im Supermarkt. Heute kommt er wieder. Die Tür öffnet sich, ohne dass jemand sie berührt, und Mikula grüßt sie höflich. Inzwischen weiß er, wie der Einkaufswagen funktioniert. Stolz steckt er einen Euro in das kleine Schloss.",
+     "Gestern hat er eine Packung Nudeln und einen Karton Eier gekauft. Am Abend hat er alles genau angesehen: Auf der Packung war das Mindesthaltbarkeitsdatum schon abgelaufen, und zwei Eier waren kaputt. Zum Glück hat Mikula den Kassenbon nicht weggeworfen. Also geht er zum Kundenservice.",
+     "„Guten Morgen! Wie kann ich Ihnen helfen?“, fragt die Mitarbeiterin. „Guten Morgen! Ich habe gestern diese Nudeln und diese Eier gekauft. Leider ist das Datum auf den Nudeln abgelaufen, und zwei Eier sind kaputt.“ – „Oh, das tut mir leid. Haben Sie den Kassenbon dabei?“ – „Ja, hier ist er.“ – „Danke. Möchten Sie die Sachen umtauschen, oder möchten Sie Ihr Geld zurück?“ – „Ich nehme lieber neue Nudeln und neue Eier, bitte.“ – „Natürlich. Entschuldigen Sie bitte den Ärger.“",
+     "Mikula ist beeindruckt. „In meinem Dorf gibt es keinen Kassenbon“, erzählt er. „Wenn dort ein Ei kaputt ist, schimpft die Händlerin mit dem Huhn.“ Die Mitarbeiterin lacht laut.",
+     "Danach bringt Mikula drei leere Plastikflaschen zum Pfandautomaten. Der Automat piept und druckt einen Pfandbon über 75 Cent. An der Kasse löst Mikula den Bon ein. „Die Maschine gibt mir Geld, weil ich Flaschen zurückbringe? Was für ein kluges Land!“, sagt er.",
+     "Als er den Einkaufswagen zurückbringt, sieht er bei den Äpfeln etwas Helles. Zwischen zwei grünen Äpfeln liegt ein glänzender Stein – der zweite Zeitkristall! Vorsichtig steckt Mikula ihn in seine Tasche. Jetzt fehlen ihm nur noch acht."
+    ]
+   },
+   "words": [
+    "die Tür. Die Tür geht von allein auf.",
+    "der Einkaufswagen. Ich brauche einen Einkaufswagen.",
+    "der Apfel. Ich kaufe ein Kilo Äpfel.",
+    "die Milch. Ich kaufe einen Liter Milch.",
+    "der Saft. Ich trinke gern Saft.",
+    "das Brot. Mikula nimmt ein Brot.",
+    "das Ei. Ich brauche zehn Eier.",
+    "die Tomate. Die Tomaten sind rot.",
+    "die Kartoffel. Wir kaufen zwei Kilo Kartoffeln.",
+    "die Flasche. Ich kaufe eine Flasche Wasser.",
+    "der Kassenbon. Ich nehme den Kassenbon mit.",
+    "die Tüte. Brauchen Sie eine Tüte?",
+    "die Münze. Für den Einkaufswagen brauche ich eine Münze.",
+    "die Kasse. Ich bezahle an der Kasse.",
+    "das Regal. Das Mehl steht im Regal.",
+    "die Packung. Ich kaufe eine Packung Nudeln.",
+    "der Pfandautomat. Der Pfandautomat nimmt leere Flaschen.",
+    "die Kassiererin. Die Kassiererin ist sehr freundlich.",
+    "das Angebot. Die Tomaten sind im Angebot.",
+    "die Reklamation. Für eine Reklamation brauchen Sie den Kassenbon.",
+    "das Mindesthaltbarkeitsdatum. Das Mindesthaltbarkeitsdatum ist abgelaufen."
+   ]
+  },
+  {
+   "id": "jobcenter",
+   "no": 3,
+   "title": "Im Jobcenter",
+   "story": {
+    "A1": [
+     "Mikula ist in einer großen Stadt. Er hat kein Geld und keine Arbeit. Eine Nachbarin sagt: „Gehen Sie zum Jobcenter. Dort hilft man Ihnen.“",
+     "Das Jobcenter ist ein großes Haus mit vielen Türen. Mikula staunt: „Wohnt hier der Fürst?“ Am Eingang steht ein Automat. Er gibt Mikula ein kleines Papier. Das ist eine Wartenummer. Mikula hat die Nummer 42.",
+     "Mikula wartet im Wartebereich. Auf einem Bildschirm sieht er Nummern. Dann kommt die 42. Mikula geht zum Empfang. Der Mitarbeiter ist freundlich. Er sagt: „Ihr Termin ist am Dienstag um halb zehn. Bringen Sie bitte Ihren Ausweis mit.“",
+     "Am Dienstag sitzt Mikula im Büro. Er füllt ein Formular aus. Das ist sein Antrag. Am Ende schreibt er seine Unterschrift. Unter dem Stuhl glänzt etwas. Ein Zeitkristall! Mikula lacht: „Das ist Kristall Nummer drei!“"
+    ],
+    "A2": [
+     "Mikula hat schon zwei Zeitkristalle. Aber er braucht zehn. Erst dann fährt seine Zeitmaschine zurück ins Jahr 1024. Bis dahin muss er hier leben. Er wohnt in einem kleinen Zimmer und braucht Geld für die Miete und für das Essen. Seine Nachbarin sagt: „Geh zum Jobcenter. Dort bekommst du Hilfe.“",
+     "Am Montag um acht Uhr steht Mikula vor dem Jobcenter. Am Eingang ist ein Automat für Wartenummern. Mikula drückt auf einen Knopf und bekommt einen Zettel mit der Nummer 42. „So ein großes Haus! Wohnt hier ein Fürst?“, fragt er laut. Ein Mann neben ihm lächelt.",
+     "Im Wartebereich sitzen viele Menschen. Auf einem Bildschirm erscheinen Nummern. Nach zwanzig Minuten ist die 42 dran. Am Empfang sagt ein Mitarbeiter: „Sie möchten Grundsicherung beantragen? Dann bekommen Sie einen Termin. Er ist am Dienstag, dem 17. November, um halb zehn. Bringen Sie bitte Ihre Unterlagen mit: den Ausweis, den Mietvertrag und dieses Formular.“ Mikula erschrickt: „Halb zehn? Ist die Zeit kaputt?“ Der Mitarbeiter erklärt: „Halb zehn ist neun Uhr dreißig.“",
+     "Am 17. November kommt Mikula pünktlich ins Jobcenter. Er gibt das Formular ab und beantwortet viele Fragen. Dann sieht er unter dem Tisch etwas Blaues. Es glänzt. Ein Zeitkristall! „Drei von zehn“, flüstert Mikula glücklich."
+    ],
+    "B1": [
+     "Am Dienstag um halb zehn sitzt Mikula im Büro von Frau Weber. Sie ist Integrationsfachkraft im Jobcenter, ruhig und sehr freundlich. Auf dem Tisch liegen Mikulas Unterlagen: der Ausweis, der Mietvertrag für sein kleines Zimmer und der Antrag auf Grundsicherung. Mikula hat ihn am Abend vorher zu Hause ausgefüllt.",
+     "„Ihre Unterlagen sind vollständig“, sagt Frau Weber. „Nur hier unten fehlt noch Ihre Unterschrift.“ Mikula nimmt den Stift und schreibt langsam seinen Namen. „Am Hof des Fürsten ruft man die Gäste mit Namen“, erzählt er. „Hier ruft man sie mit Zahlen. Das finde ich spannend!“ Frau Weber lacht. „Mit der Wartenummer geht es schneller. So muss niemand lange suchen.“",
+     "Dann sprechen sie über Arbeit. „Was für eine Arbeit suchen Sie?“, fragt Frau Weber. „Ich arbeite gern draußen, weil ich Bauer bin“, antwortet Mikula. „Ich kann pflügen, säen und Holz hacken.“ – „Dann passt vielleicht eine Stelle in einer Gärtnerei. Für eine Bewerbung brauchen Sie aber einen Lebenslauf.“ Mikula staunt: „Einen Lebenslauf? Ich laufe jeden Tag zum Feld und wieder zurück!“ Beide lachen. Dann erklärt Frau Weber, dass im Lebenslauf die Schule, die Arbeit und die Sprachen stehen.",
+     "Zum Schluss hat sie noch eine Idee: „Möchten Sie einen Integrationskurs machen? Dort lernen Sie Deutsch und viel über das Leben in Deutschland.“ – „Sehr gern! Wann fängt der nächste Kurs an?“ – „Am 1. Dezember. Ich rufe die Sprachschule an und melde Sie an.“",
+     "Als Mikula aufsteht, sieht er etwas auf dem Fensterbrett: einen kleinen blauen Stein, der im Licht glänzt. Nur er kann ihn sehen. Der dritte Zeitkristall! Mikula verbeugt sich. „Das war kein Hof des Fürsten, aber Sie waren so freundlich wie eine gute Fürstin.“"
+    ]
+   },
+   "words": [
+    "der Termin. Ich habe am Montag einen Termin.",
+    "die Wartenummer. Ziehen Sie bitte eine Wartenummer.",
+    "das Formular. Ich fülle das Formular aus.",
+    "der Ausweis. Bitte bringen Sie Ihren Ausweis mit.",
+    "der Antrag. Ich stelle einen Antrag im Jobcenter.",
+    "die Arbeit. Ich suche eine Arbeit.",
+    "das Büro. Das Büro ist in der zweiten Etage.",
+    "der Stift. Haben Sie einen Stift für mich?",
+    "der Brief. Im Brief steht mein Termin.",
+    "die Uhrzeit. Um welche Uhrzeit ist mein Termin?",
+    "die Unterlage. Bringen Sie bitte alle Unterlagen mit.",
+    "der Empfang. Melden Sie sich bitte zuerst am Empfang.",
+    "der Wartebereich. Im Wartebereich sitzen viele Menschen.",
+    "der Bildschirm. Auf dem Bildschirm steht die Nummer 42.",
+    "die Mitarbeiterin. Die Mitarbeiterin erklärt mir das Formular.",
+    "die Unterschrift. Unten fehlt noch Ihre Unterschrift.",
+    "der Mietvertrag. Ich bringe meinen Mietvertrag mit.",
+    "die Bewerbung. Ich schreibe eine Bewerbung.",
+    "der Lebenslauf. Mein Lebenslauf ist zwei Seiten lang.",
+    "der Integrationskurs. Im Integrationskurs lerne ich Deutsch.",
+    "die Stelle. Ich suche eine Stelle in einer Gärtnerei."
+   ]
+  },
+  {
+   "id": "post",
+   "no": 4,
+   "title": "Bei der Post",
+   "story": {
+    "A1": [
+     "Mikula wohnt jetzt in einer kleinen Wohnung. Seine Nachbarin heißt Frau Berger. Sie ist alt und hat ein krankes Bein. Mikula hilft ihr gern.",
+     "Heute gibt Frau Berger ihm ein Päckchen. „Das ist für meine Tochter in Hamburg“, sagt sie. Mikula geht zur Post.",
+     "In der Post sind viele Leute. Sie haben Briefe und Pakete. Mikula staunt: „So viele Kästen aus Papier! Sind da Schätze drin?“",
+     "Am Schalter sagt Mikula: „Guten Tag! Ich schicke der Tochter von Frau Berger dieses Päckchen.“ Die Frau am Schalter lächelt. Sie hilft ihm gern. Mikula kauft auch zwei Briefmarken.",
+     "Vor der Post steht eine gelbe Wand mit vielen kleinen Türen. Das ist eine Packstation. Mikula klopft an eine Tür: „Hallo? Ist da ein Schatz drin?“",
+     "Ein junger Mann lacht. Er öffnet mit seinem Handy eine kleine Tür. Im Fach liegt sein Paket – und ein Zeitkristall! Der Mann gibt Mikula den Kristall. „Danke!“, ruft Mikula. Jetzt hat er vier Zeitkristalle."
+    ],
+    "A2": [
+     "Mikula wohnt seit ein paar Wochen in einer kleinen Wohnung. Seine Nachbarin, Frau Berger, ist 82 Jahre alt. Sie kann im Moment nicht gut laufen. Deshalb hilft Mikula ihr beim Einkaufen und bei der Post.",
+     "Am Morgen gibt Frau Berger ihm zwei Sachen: ein Päckchen für ihre Tochter in Hamburg und eine Benachrichtigungskarte. „Der Briefträger war gestern da, aber ich habe die Klingel nicht gehört“, erklärt sie. „Mein Paket liegt jetzt in der Postfiliale.“ Sie unterschreibt hinten auf der Karte. So darf Mikula das Paket für sie abholen.",
+     "In der Postfiliale stehen viele Menschen in der Schlange. Mikula staunt: „Bei mir zu Hause bringt ein Reiter die Nachrichten. Hier gibt es dafür ein ganzes Haus!“",
+     "Am Schalter legt die Mitarbeiterin das Päckchen auf die Waage. „Wem schicken Sie das Päckchen?“, fragt sie. „Der Tochter von meiner Nachbarin“, antwortet Mikula. Die Mitarbeiterin zeigt auf die Adresse: „Hier fehlt die Postleitzahl. Und oben links steht noch kein Absender.“ Mikula schreibt beides auf das Päckchen. Dann gibt er ihr die Karte und seinen Ausweis. Sie bringt ihm das Paket von Frau Berger.",
+     "Vor der Tür steht eine gelbe Packstation. „Eine Schatztruhe!“, ruft Mikula. Eine Frau holt gerade ein Paket aus einem Fach. Hinter der kleinen Tür glänzt etwas: ein Zeitkristall! Die Frau gibt ihn Mikula. Jetzt fehlen ihm nur noch sechs Kristalle."
+    ],
+    "B1": [
+     "Seit ein paar Wochen lebt Mikula in einer kleinen Wohnung, und er hat sich mit seiner Nachbarin, Frau Berger, angefreundet. Die 82-jährige Dame kann nach einer Knieoperation gerade nicht gut laufen, deshalb übernimmt Mikula ihre Wege. An diesem Morgen hat sie drei Aufgaben für ihn: ein Päckchen für ihre Tochter in Hamburg, einen wichtigen Brief an die Hausverwaltung und eine Benachrichtigungskarte. Die Heizung ist nämlich seit zwei Wochen kaputt, und der Brief soll unbedingt ankommen.",
+     "Vor der Postfiliale bleibt Mikula stehen. Neben dem Eingang steht eine gelbe Wand mit vielen kleinen Türen. „Was für eine prächtige Schatztruhe!“, denkt er. „Aber sie hat kein Schloss, nur einen leuchtenden Bildschirm.“ Er klopft höflich an eine Tür, doch keine Tür antwortet ihm.",
+     "Drinnen ist er bald an der Reihe. „Guten Tag! Ich möchte der Tochter meiner Nachbarin dieses Päckchen schicken“, sagt Mikula. „Gern. Haben Sie auch an den Absender gedacht?“, fragt der Mitarbeiter. „Oh, Entschuldigung! Den schreibe ich sofort oben links hin.“ – „Und der Brief?“ – „Der ist sehr wichtig für meine Nachbarin. Er muss sicher ankommen.“ – „Dann empfehle ich Ihnen ein Einschreiben. Sie bekommen einen Beleg mit einer Sendungsnummer. Damit können Sie im Internet sehen, wann der Brief ankommt.“",
+     "Zum Schluss legt Mikula die Benachrichtigungskarte und seinen Ausweis auf den Tresen. Frau Berger hat auf der Rückseite unterschrieben, deshalb darf er das Paket für sie abholen. Der Mitarbeiter bringt ihm einen schweren Karton.",
+     "Draußen erklärt ihm eine Frau die Packstation: Man bekommt einen Code aufs Handy und kann sein Paket rund um die Uhr abholen. Als sie ihr Fach öffnet, glänzt hinter ihrem Paket etwas Blaues: ein Zeitkristall! Sie reicht ihn Mikula mit einem Lächeln. „Es war also doch eine Schatztruhe“, lacht er. Vier Kristalle hat er jetzt – sechs fehlen noch."
+    ]
+   },
+   "words": [
+    "der Brief. Ich schreibe meiner Oma einen Brief.",
+    "die Briefmarke. Ich klebe eine Briefmarke auf den Brief.",
+    "das Paket. Ich schicke meiner Mutter ein Paket.",
+    "das Päckchen. Das Päckchen ist klein und leicht.",
+    "der Briefkasten. Ich werfe den Brief in den Briefkasten.",
+    "die Adresse. Wie ist Ihre Adresse?",
+    "die Postkarte. Ich schreibe meinem Freund eine Postkarte.",
+    "der Umschlag. Der Brief steckt im Umschlag.",
+    "der Schalter. Die Frau am Schalter hilft mir.",
+    "die Postfiliale. Die Postfiliale ist im Kiosk an der Ecke.",
+    "die Waage. Das Paket liegt auf der Waage.",
+    "der Briefträger. Der Briefträger bringt mir die Post.",
+    "der Ausweis. Zeigen Sie mir bitte Ihren Ausweis.",
+    "die Postleitzahl. Die Postleitzahl steht vor der Stadt.",
+    "der Absender. Der Absender steht oben links.",
+    "der Empfänger. Der Empfänger bekommt das Paket.",
+    "die Packstation. Mein Paket liegt in der Packstation.",
+    "die Benachrichtigungskarte. Mit der Benachrichtigungskarte hole ich das Paket ab.",
+    "das Einschreiben. Ich schicke den Brief als Einschreiben.",
+    "die Sendungsnummer. Mit der Sendungsnummer sehe ich, wo mein Paket ist."
+   ]
+  },
+  {
+   "id": "baeckerei",
+   "no": 5,
+   "title": "In der Bäckerei",
+   "story": {
+    "A1": [
+     "Mikula ist in einer Stadt in Deutschland. Er kommt aus dem Jahr 1024. Er ist Bauer. Seine Zeitmaschine braucht zehn Zeitkristalle. Mikula hat schon vier.",
+     "Heute steht Mikula vor einer Bäckerei. Es riecht gut. „Mmh! Hier riecht es wie bei mir zu Hause!“, sagt er. Zu Hause backt Mikula Brot im Ofen. Aber hier gibt es so viel Brot! Es gibt Brötchen, Brezeln, Vollkornbrot und Kuchen.",
+     "Mikula geht an die Theke. Die Verkäuferin lächelt. „Guten Morgen! Was möchten Sie?“ Mikula sagt: „Ich hätte gern zwei Brötchen und eine Brezel, bitte.“ „Gern. Sonst noch etwas?“ „Nein, danke. Was kostet das?“ „Das macht 2,20 Euro.“",
+     "Mikula bezahlt. Die Verkäuferin gibt ihm eine Tüte. In der Tüte liegt etwas. Es glänzt. Ein Zeitkristall! Jetzt hat Mikula fünf Zeitkristalle. Er lacht: „Danke! Das ist die beste Bäckerei der Welt!“"
+    ],
+    "A2": [
+     "Mikula ist schon lange in Deutschland. Er sucht immer noch den Weg nach Hause, ins Jahr 1024. Seine Zeitmaschine braucht zehn Zeitkristalle. Vier hat er schon gefunden. Heute hat er großen Hunger.",
+     "An einer Ecke sieht er eine Bäckerei. In den Regalen liegen viele Brote, Brötchen und Kuchen. Mikula staunt: „So viele Brotsorten! Zu Hause backe ich jede Woche ein Brot in meinem Ofen. Immer dasselbe – aus Roggen, Wasser und Salz.“",
+     "Vor der Theke warten schon drei Kunden. Mikula hört gut zu. Eine Frau sagt: „Ich hätte gern ein Vollkornbrot.“ Ein Mann fragt: „Könnten Sie mir das Brot schneiden?“ Mikula denkt: „Aha! So bestellt man hier höflich.“",
+     "Dann ist Mikula an der Reihe. „Guten Morgen! Ich hätte gern vier Brötchen und ein Stück Apfelkuchen, bitte.“ Die Verkäuferin fragt: „Zum Mitnehmen oder für hier?“ „Zum Mitnehmen, bitte. Was kostet das?“ „Das macht 5,40 Euro.“",
+     "Mikula bezahlt mit einem Zehn-Euro-Schein. Er bekommt 4,60 Euro Wechselgeld zurück. Da sieht er etwas im Regal: Neben den Brezeln glänzt ein Zeitkristall! Die Verkäuferin lächelt und legt ihn in die Tüte. „Der gehört bestimmt Ihnen.“ Fünf Kristalle! Noch fünf fehlen."
+    ],
+    "B1": [
+     "Es ist Samstagmorgen, kurz nach sieben. Mikula betritt eine kleine Bäckerei in der Innenstadt. Vor der Theke wartet schon eine lange Schlange. Es riecht nach frischem Brot, nach Zimt und nach Kaffee. Mikula schließt die Augen. Für einen Moment ist er wieder zu Hause in seinem Dorf, im Jahr 1024, vor seinem alten Ofen aus Lehm.",
+     "Dann öffnet er die Augen und staunt. Roggenbrot, Dinkelbrot, Vollkornbrot, Brot mit Sonnenblumenkernen – und alles ist schon fertig gebacken. „Bei mir dauert ein Brot einen halben Tag“, flüstert er. „Erst der Teig, dann das Feuer, dann das Warten.“",
+     "Mikula stellt sich an und hört genau zu. Niemand sagt hier „Gib mir Brot!“. Alle sprechen sehr höflich miteinander. Endlich ist er an der Reihe.",
+     "„Guten Morgen! Was darf es sein?“, fragt der Verkäufer. „Guten Morgen! Ich hätte gern ein Brot. Könnten Sie mir eine Sorte empfehlen? Ich esse gern dunkles Brot.“ „Dann nehmen Sie doch unser Roggenvollkornbrot. Das ist heute ganz frisch. Soll ich es in Scheiben schneiden?“ „Ja, gern. Und dazu sechs Brötchen, bitte.“ „Sonst noch etwas?“ „Was kostet ein Stück von dem Mohnkuchen?“ „2,90 Euro.“ „Dann nehme ich ein Stück, bitte – zum Mitnehmen.“ „Das macht zusammen 11,40 Euro.“",
+     "Mikula gibt ihm einen Zwanzig-Euro-Schein und zählt das Wechselgeld genau nach: 8,60 Euro. Es stimmt. Zu Hause zählt er Hühner, keine Münzen – aber er lernt schnell. Als er die Tüte öffnet, liegt zwischen den Brötchen ein kleiner, glänzender Stein. Ein Zeitkristall! Mikula lächelt. „Ich habe höflich bestellt“, denkt er, „und die Zeit hat mir ein Geschenk gemacht.“ Fünf Kristalle hat er jetzt. Die Hälfte ist geschafft."
+    ]
+   },
+   "words": [
+    "die Bäckerei. Die Bäckerei öffnet um 6:30 Uhr.",
+    "das Brot. Ich kaufe ein Brot.",
+    "das Brötchen. Am Morgen esse ich ein Brötchen.",
+    "die Brezel. Die Brezel ist salzig.",
+    "der Kuchen. Der Kuchen ist süß.",
+    "der Ofen. Das Brot ist im Ofen.",
+    "die Tüte. Könnten Sie mir eine Tüte geben?",
+    "der Preis. Der Preis steht auf dem Schild.",
+    "die Verkäuferin. Die Verkäuferin fragt: „Sonst noch etwas?“",
+    "der Bäcker. Der Bäcker beginnt schon um drei Uhr nachts.",
+    "das Stück. Ich hätte gern ein Stück Kuchen.",
+    "das Vollkornbrot. Vollkornbrot ist gesund.",
+    "das Roggenbrot. Mikula isst gern dunkles Roggenbrot.",
+    "die Sorte. Die Bäckerei hat viele Sorten Brot.",
+    "die Scheibe. Könnten Sie das Brot in Scheiben schneiden?",
+    "die Kasse. Bitte bezahlen Sie an der Kasse.",
+    "die Münze. Ich habe nur noch Münzen im Portemonnaie.",
+    "der Schein. Ich bezahle mit einem Zehn-Euro-Schein.",
+    "die Theke. Ich warte an der Theke.",
+    "das Wechselgeld. Bitte zählen Sie das Wechselgeld nach.",
+    "der Teig. Der Teig ist aus Mehl, Wasser und Salz."
+   ]
+  },
+  {
+   "id": "muell",
+   "no": 6,
+   "title": "Müll trennen",
+   "story": {
+    "A1": [
+     "Mikula ist umgezogen. Heute wacht er in seiner neuen Wohnung auf. Er hat eine Tüte mit Müll. In der Tüte sind eine Flasche, eine Dose, eine alte Zeitung und eine Bananenschale.",
+     "Mikula geht in den Hof. Dort stehen viele Tonnen: gelb, blau, braun und grau. Mikula staunt: „Oh! So viele Farben! Wohin mit dem Müll?“",
+     "Eine Nachbarin kommt. Sie heißt Frau Sommer. Sie ist sehr nett. Sie sagt: „Die Zeitung kommt in die blaue Tonne. Die Dose kommt in die gelbe Tonne. Und die Schale kommt in die Biotonne. Die Biotonne ist braun.“",
+     "„Und die Flasche?“, fragt Mikula. Frau Sommer zeigt auf die Straße. „Bringen Sie die Flasche in den Glascontainer. Er steht an der Ecke.“",
+     "Mikula geht zum Glascontainer. Da liegt eine alte Zeitung. Unter der Zeitung glänzt etwas. Ein Zeitkristall! Mikula lacht: „Danke, Frau Sommer! Jetzt habe ich sechs Kristalle.“"
+    ],
+    "A2": [
+     "Mikula ist umgezogen. Er hat zum ersten Mal in seiner neuen Wohnung übernachtet. Am Morgen will er den Müll hinausbringen. In seiner Tüte sind eine leere Flasche, eine Dose, ein Glas mit Deckel, eine alte Zeitung und eine Bananenschale.",
+     "Im Hinterhof stehen viele bunte Mülltonnen. Mikula staunt: „Hier sortiert man den Müll nach Farben? Wie die Wolle beim Färben! In meinem Dorf verwenden wir alles wieder. Die Reste bekommt das Schwein, und eine Flasche ist ein Schatz.“",
+     "Da kommt die Nachbarin, Frau Sommer. Sie bringt gerade ihren Müll hinaus. Sie lächelt und erklärt: „Die Bananenschale werfen Sie in die Biotonne. Die ist braun. Papier kommt in die blaue Tonne. Verpackungen aus Plastik und Metall kommen in die gelbe Tonne oder in den gelben Sack.“",
+     "Mikula hält das Glas hoch. „Und das hier?“ – „Nehmen Sie zuerst den Deckel ab. Der Deckel kommt in die gelbe Tonne. Das Glas bringen Sie in den Glascontainer an der Ecke. Aber Achtung: Weißes, grünes und braunes Glas kommen in verschiedene Container.“",
+     "Am Glascontainer liegt eine alte Zeitung. Darunter glänzt etwas: ein Zeitkristall! Mikula ist sehr froh. „Danke, Frau Sommer! Jetzt kann ich Müll trennen.“"
+    ],
+    "B1": [
+     "Mikula ist umgezogen und hat zum ersten Mal in seiner neuen Wohnung übernachtet. Am Morgen will er den Müll hinausbringen, doch im Hof wartet eine Überraschung: Dort stehen Tonnen in vier Farben, daneben liegen gelbe Säcke, und an der Straße stehen drei große Glascontainer.",
+     "„Für jede Sache gibt es eine eigene Tonne!“, staunt Mikula. „Bei uns bekommt das Schwein die Reste, der Ofen das Holz – und alles andere flicke ich.“ Er möchte hier ein guter Nachbar sein. Deshalb fragt er lieber höflich nach, bevor er etwas falsch macht.",
+     "„Guten Morgen! Entschuldigung, könnten Sie mir helfen? Ich weiß nicht, wohin der Müll gehört.“ Frau Sommer, die Nachbarin, lächelt. „Aber gern! Werfen Sie Obst- und Gemüsereste in die Biotonne. Zeitungen und Kartons kommen in die Papiertonne.“ – „Und dieser Pizzakarton?“ – „Der ist ziemlich fettig. Ein fettiger Pizzakarton gehört in den Restmüll.“ – „Und meine Flaschen? Ich wollte sie in den Glascontainer werfen.“ – „Moment! Auf diesen Plastikflaschen ist Pfand. Bringen Sie sie in den Supermarkt. Dort bekommen Sie für jede Flasche 25 Cent zurück.“",
+     "Mikula lacht. „Flaschen, die Geld bringen? Das ist ja fast Zauberei!“ Dann zeigt er auf einen alten Schrank im Flur. „Und der?“ – „Das ist Sperrmüll. Den müssen Sie bei der Stadt anmelden.“ Mikula nickt und schreibt sich alles auf einen Zettel.",
+     "Er bedankt sich herzlich. Zum Schluss bringt Mikula die Gläser zum Container. Unter einer alten Zeitung neben dem Glascontainer glänzt etwas: ein Zeitkristall! „Wunderbar! Jetzt habe ich sechs Kristalle“, sagt Mikula. „Noch vier, dann kann ich nach Hause. Und in meinem Dorf erzähle ich allen von den bunten Tonnen.“"
+    ]
+   },
+   "words": [
+    "der Müll. Ich bringe den Müll hinaus.",
+    "die Tonne. Im Hof stehen viele Tonnen.",
+    "die Flasche. Die Flasche ist leer.",
+    "die Zeitung. Die alte Zeitung kommt in die Papiertonne.",
+    "die Dose. Die Dose ist aus Metall.",
+    "das Glas. Das Glas ist leer.",
+    "der Hof. Die Tonnen stehen im Hof.",
+    "die Nachbarin. Meine Nachbarin heißt Frau Sommer.",
+    "der Karton. Der Karton kommt in die Papiertonne.",
+    "die Schale. Die Schale von der Banane kommt in die Biotonne.",
+    "die Biotonne. Die Bananenschale kommt in die Biotonne.",
+    "die Papiertonne. Wirf die Zeitung in die Papiertonne!",
+    "der Glascontainer. Wirf die Flasche in den Glascontainer!",
+    "der Deckel. Der Deckel kommt in die gelbe Tonne.",
+    "der Restmüll. Bring den Restmüll in die graue Tonne!",
+    "der Sack. Die Verpackungen kommen in den gelben Sack.",
+    "die Verpackung. Die Verpackung ist aus Plastik.",
+    "das Plastik. Der Becher ist aus Plastik.",
+    "die Batterie. Alte Batterien bringe ich in den Supermarkt.",
+    "der Sperrmüll. Ich melde den Sperrmüll bei der Stadt an.",
+    "das Pfand. Auf dieser Flasche ist Pfand.",
+    "die Pfandflasche. Ich bringe die Pfandflaschen in den Supermarkt."
+   ]
+  }
+ ]
+}

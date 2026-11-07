@@ -1,0 +1,250 @@
+{
+  "id": "jobcenter",
+  "title": "Im Jobcenter",
+  "icon": "🏢",
+  "img": "spiele/mikula/img/station-jobcenter.webp",
+  "imgAlt": "Mikula hält im Wartebereich des Jobcenters staunend eine kleine Wartenummer in der Hand und verbeugt sich freundlich.",
+  "intro": {
+    "A1": [
+      { "who": "erzaehler", "text": "Mikula ist im Jobcenter. Hier warten viele Menschen.", "audio": "" },
+      { "who": "mikula", "mood": "staunen", "text": "Ein großes Haus mit vielen Türen! Wohnt hier der Fürst?", "audio": "" },
+      { "who": "erzaehler", "text": "Ein Automat gibt Mikula ein kleines Papier mit einer Nummer.", "audio": "" }
+    ],
+    "A2": [
+      { "who": "erzaehler", "text": "Mikula steht im Jobcenter. Am Eingang ist ein Automat für Wartenummern.", "audio": "" },
+      { "who": "mikula", "mood": "staunen", "text": "Ich habe die Nummer zweiundvierzig! Bin ich jetzt Gast am Hof des Fürsten?", "audio": "" },
+      { "who": "Mitarbeiterin am Empfang", "text": "Das ist Ihre Wartenummer. Bitte warten Sie. Wir rufen Ihre Nummer auf.", "audio": "" }
+    ],
+    "B1": [
+      { "who": "erzaehler", "text": "Mikula sitzt im Wartebereich des Jobcenters. Auf einem Bildschirm erscheinen Nummern.", "audio": "" },
+      { "who": "mikula", "mood": "staunen", "text": "Am Hof des Fürsten ruft man die Gäste mit Namen. Hier ruft man sie mit Zahlen – wie spannend!", "audio": "" },
+      { "who": "mikula", "mood": "neutral", "text": "Ich bin nur ein Bauer. Ich brauche Hilfe, damit ich hier leben kann, bis ich den Weg nach Hause finde.", "audio": "" }
+    ]
+  },
+  "tasks": {
+    "A1": [
+      {
+        "type": "choice",
+        "emoji": "🎟️",
+        "emojiAlt": "kleiner Zettel mit einer Nummer",
+        "say": { "who": "mikula", "mood": "staunen", "text": "Ein kleines Papier mit einer Zahl! Bin ich jetzt ein Ritter des Fürsten?", "audio": "" },
+        "question": "Welcher Artikel ist richtig?",
+        "options": ["das Wartenummer", "der Wartenummer", "die Wartenummer"],
+        "answer": 2,
+        "wrong": { "who": "mikula", "mood": "staunen", "text": "Hm, das klingt komisch. Sogar mein Pferd schüttelt den Kopf!", "audio": "" },
+        "hint": "Tipp: Das letzte Wort zählt: Warte + Nummer.",
+        "explain": "Wir sagen: die Wartenummer. Plural: die Wartenummern."
+      },
+      {
+        "type": "choice",
+        "emoji": "📅",
+        "emojiAlt": "Kalender",
+        "say": { "who": "mikula", "mood": "staunen", "text": "Die Frau sagt: „Kommen Sie am Montag um zehn Uhr.“ Wie heißt das?", "audio": "" },
+        "question": "Was ist das?",
+        "options": ["der Termin", "das Formular", "die Arbeit"],
+        "answer": 0,
+        "wrong": { "who": "mikula", "mood": "staunen", "text": "Oh nein! Dann komme ich vielleicht am falschen Tag.", "audio": "" },
+        "hint": "Tipp: Gesucht ist ein Tag mit einer Uhrzeit.",
+        "explain": "Das ist der Termin. Plural: die Termine. Ein Termin hat einen Tag und eine Uhrzeit."
+      },
+      {
+        "type": "choice",
+        "emoji": "📄",
+        "emojiAlt": "Blatt Papier mit Feldern zum Schreiben",
+        "say": { "who": "mikula", "mood": "staunen", "text": "Ein Papier mit vielen leeren Kästchen! Hier soll ich schreiben.", "audio": "" },
+        "question": "Welcher Artikel ist richtig?",
+        "options": ["der Formular", "das Formular", "die Formular"],
+        "answer": 1,
+        "wrong": { "who": "mikula", "mood": "staunen", "text": "Oje, das Papier bleibt leer und ich auch!", "audio": "" },
+        "hint": "Tipp: Formular hat denselben Artikel wie Papier.",
+        "explain": "Wir sagen: das Formular. Plural: die Formulare."
+      },
+      {
+        "type": "choice",
+        "emoji": "🪪",
+        "emojiAlt": "Karte mit Foto und Namen",
+        "say": { "who": "mikula", "mood": "staunen", "text": "Auf dieser kleinen Karte ist mein Gesicht! Wie heißt das?", "audio": "" },
+        "question": "Was ist das?",
+        "options": ["der Termin", "die Wartenummer", "der Ausweis"],
+        "answer": 2,
+        "wrong": { "who": "mikula", "mood": "staunen", "text": "Hm, nein. Bei mir zu Hause malt man nur den Fürsten!", "audio": "" },
+        "hint": "Tipp: Auf der Karte stehen Name und Foto.",
+        "explain": "Das ist der Ausweis. Plural: die Ausweise. Auf dem Ausweis stehen Ihr Name und Ihr Foto."
+      },
+      {
+        "type": "choice",
+        "emoji": "📝",
+        "emojiAlt": "Papier und Stift",
+        "say": { "who": "mikula", "mood": "neutral", "text": "Ich brauche Hilfe vom Amt. Die Frau gibt mir ein Papier. Oben steht: „Antrag“.", "audio": "" },
+        "question": "Welcher Artikel ist richtig?",
+        "options": ["der Antrag", "die Antrag", "das Antrag"],
+        "answer": 0,
+        "wrong": { "who": "mikula", "mood": "staunen", "text": "Oh, das war falsch. Im Amt schaut man sicher genau hin!", "audio": "" },
+        "hint": "Tipp: Antrag hat denselben Artikel wie Tag.",
+        "explain": "Wir sagen: der Antrag. Plural: die Anträge."
+      },
+      {
+        "type": "choice",
+        "emoji": "💼",
+        "emojiAlt": "Aktentasche",
+        "say": { "who": "mikula", "mood": "neutral", "text": "Ich möchte Geld verdienen. Was suche ich hier?", "audio": "" },
+        "question": "Was ist das?",
+        "options": ["der Ausweis", "die Arbeit", "das Formular"],
+        "answer": 1,
+        "wrong": { "who": "mikula", "mood": "staunen", "text": "Nein, nein! Das habe ich schon. Ich suche etwas anderes.", "audio": "" },
+        "hint": "Tipp: Ein Bauer macht das jeden Tag auf dem Feld.",
+        "explain": "Das ist die Arbeit. Ich suche eine Arbeit."
+      }
+    ],
+    "A2": [
+      {
+        "type": "order",
+        "say": { "who": "mikula", "mood": "neutral", "text": "Die Frau sagt: „Dienstag, neun Uhr.“ Ich sage es noch einmal in einem ganzen Satz.", "audio": "" },
+        "question": "Bau den Satz für Mikula.",
+        "words": ["Mein", "Termin", "ist", "am", "Dienstag", "um", "neun", "Uhr."],
+        "alt": [],
+        "wrong": { "who": "mikula", "mood": "staunen", "text": "Hm, jetzt weiß ich nicht mehr, wann ich kommen soll!", "audio": "" },
+        "explain": "Beim Tag sagen wir „am“, bei der Uhrzeit „um“: am Dienstag um neun Uhr."
+      },
+      {
+        "type": "choice",
+        "say": { "who": "mikula", "mood": "staunen", "text": "Die Frau sagt: „Ihr Termin ist um halb zehn.“ Halb? Ist die Zeit kaputt?", "audio": "" },
+        "question": "Welche Uhrzeit ist das?",
+        "options": ["neun Uhr dreißig", "zehn Uhr dreißig", "neun Uhr fünfzehn"],
+        "answer": 0,
+        "wrong": { "who": "mikula", "mood": "staunen", "text": "Oje, dann komme ich zur falschen Zeit. Der Fürst wartet nicht gern!", "audio": "" },
+        "hint": "Tipp: Bei „halb“ schauen wir auf die nächste volle Stunde.",
+        "explain": "Halb zehn ist eine halbe Stunde vor zehn Uhr. Das ist neun Uhr dreißig."
+      },
+      {
+        "type": "order",
+        "say": { "who": "mikula", "mood": "neutral", "text": "Ich habe eine Frage zum Formular. Morgen telefoniere ich. Was sage ich?", "audio": "" },
+        "question": "Bau den Satz für Mikula.",
+        "words": ["Ich", "rufe", "morgen", "im", "Jobcenter", "an."],
+        "alt": [],
+        "wrong": { "who": "mikula", "mood": "staunen", "text": "Hm, so geht das nicht. Zu Hause rufe ich einfach laut über das Feld!", "audio": "" },
+        "explain": "„anrufen“ trennt sich: Ich rufe … an. Das „an“ steht am Ende."
+      },
+      {
+        "type": "order",
+        "say": { "who": "mikula", "mood": "neutral", "text": "Die Frau sagt: „Beim nächsten Termin brauchen wir Papiere von Ihnen.“ Ich frage nach.", "audio": "" },
+        "question": "Bau den Satz für Mikula.",
+        "words": ["Was", "muss", "ich", "zum", "Termin", "mitbringen?"],
+        "alt": [],
+        "wrong": { "who": "mikula", "mood": "staunen", "text": "Oje, soll ich vielleicht mein Pferd mitbringen?", "audio": "" },
+        "explain": "Mit „muss“ bleibt „mitbringen“ zusammen und steht am Ende."
+      },
+      {
+        "type": "choice",
+        "say": { "who": "mikula", "mood": "staunen", "text": "Die Frau sagt: „Bringen Sie bitte Ihre Unterlagen mit.“ Unterlagen? Soll ich mein Bett mitbringen?", "audio": "" },
+        "question": "Was bedeutet „Unterlagen“ hier?",
+        "options": ["Decken für das Bett", "wichtige Papiere und Dokumente", "Essen für die Pause"],
+        "answer": 1,
+        "wrong": { "who": "mikula", "mood": "staunen", "text": "Oh, dann trage ich mein Bett umsonst durch die Stadt!", "audio": "" },
+        "hint": "Tipp: Was liegt im Amt immer auf dem Tisch?",
+        "explain": "Unterlagen sind wichtige Papiere, zum Beispiel der Ausweis oder ein Formular."
+      },
+      {
+        "type": "order",
+        "say": { "who": "mikula", "mood": "neutral", "text": "Ich habe einen Stift und ein Formular. Was mache ich jetzt?", "audio": "" },
+        "question": "Bau den Satz für Mikula.",
+        "words": ["Ich", "fülle", "das", "Formular", "jetzt", "aus."],
+        "alt": [["Ich", "fülle", "jetzt", "das", "Formular", "aus."]],
+        "wrong": { "who": "mikula", "mood": "staunen", "text": "Hm, das Formular bleibt leer. Der Stift schreibt nicht von allein!", "audio": "" },
+        "explain": "„ausfüllen“ trennt sich: Ich fülle … aus. Das „aus“ steht am Ende."
+      }
+    ],
+    "B1": [
+      {
+        "type": "rate",
+        "situation": "Mikula kommt am Morgen zum Empfang im Jobcenter.",
+        "line": { "who": "Mitarbeiterin am Empfang", "text": "Guten Morgen! Haben Sie heute einen Termin?", "audio": "" },
+        "question": "Was sagt Mikula am besten?",
+        "options": [
+          { "text": "Guten Morgen! Ja, ich habe um zehn Uhr einen Termin. Wo kann ich warten?", "verdict": "passend", "explain": "Freundlich mit Gruß, und die Uhrzeit ist richtig: „um zehn Uhr“." },
+          { "text": "Guten Morgen! Ja, ich habe an zehn Uhr einen Termin. Wo kann ich warten?", "verdict": "falsch", "explain": "Bei der Uhrzeit sagen wir „um“: um zehn Uhr. Bei Tagen sagen wir „am“: am Montag." },
+          { "text": "Termin um zehn. Wo ist das Wartezimmer?", "verdict": "unhöflich", "explain": "Kein Gruß und nur halbe Sätze. Das klingt unfreundlich. Besser: „Guten Morgen! Ja, ich habe …“" }
+        ],
+        "wrong": { "who": "mikula", "mood": "staunen", "text": "Oje! Am Hof des Fürsten muss man doch schön sprechen!", "audio": "" }
+      },
+      {
+        "type": "rate",
+        "situation": "Mikula wartet mit seiner Wartenummer. Ein Mann neben ihm spricht ihn an.",
+        "line": { "who": "Mann im Wartebereich", "text": "Entschuldigung, welche Nummer haben Sie? Ich warte schon lange.", "audio": "" },
+        "question": "Was sagt Mikula am besten?",
+        "options": [
+          { "text": "Ich habe der Nummer zweiundvierzig. Es dauert bestimmt nicht mehr lange.", "verdict": "falsch", "explain": "Es heißt „die Nummer“. Nach „haben“ steht der Akkusativ, und „die“ bleibt „die“: Ich habe die Nummer zweiundvierzig." },
+          { "text": "Ich habe die Nummer zweiundvierzig. Und welche Nummer hast du?", "verdict": "unhöflich", "explain": "Grammatisch richtig, aber fremde Erwachsene sprechen wir mit „Sie“ an: „Und welche Nummer haben Sie?“" },
+          { "text": "Ich habe die Nummer zweiundvierzig. Es dauert bestimmt nicht mehr lange.", "verdict": "passend", "explain": "Freundlich und richtig. Mikula macht dem Mann auch Mut." }
+        ],
+        "wrong": { "who": "mikula", "mood": "staunen", "text": "Ich dachte, die Nummer zeigt meinen Platz am Tisch des Fürsten!", "audio": "" }
+      },
+      {
+        "type": "rate",
+        "situation": "Mikula sitzt bei einem Mitarbeiter im Büro.",
+        "line": { "who": "Mitarbeiter im Jobcenter", "text": "Für die Grundsicherung füllen Sie bitte diesen Antrag aus. Haben Sie noch Fragen?", "audio": "" },
+        "question": "Was sagt Mikula am besten?",
+        "options": [
+          { "text": "Ja, eine Frage: Darf ich den Antrag zu Hause ausfüllen und morgen mitbringen?", "verdict": "passend", "explain": "Höflich mit „Darf ich …?“. Mit „darf“ stehen „ausfüllen“ und „mitbringen“ ganz am Ende." },
+          { "text": "Ja. Ich will, dass Sie den Antrag für mich ausfüllen.", "verdict": "unhöflich", "explain": "Grammatisch richtig, aber „Ich will …“ klingt fordernd. Besser: „Könnten Sie mir beim Ausfüllen helfen?“" },
+          { "text": "Ja, eine Frage: Ich ausfülle den Antrag zu Hause. Ist das in Ordnung?", "verdict": "falsch", "explain": "„ausfüllen“ trennt sich: Ich fülle den Antrag zu Hause aus." }
+        ],
+        "wrong": { "who": "mikula", "mood": "staunen", "text": "So viele Felder auf einem Papier! Mein ganzes Dorf hat weniger Felder.", "audio": "" }
+      },
+      {
+        "type": "rate",
+        "situation": "Der Mitarbeiter schaut in Mikulas Unterlagen.",
+        "line": { "who": "Mitarbeiter im Jobcenter", "text": "Bitte bringen Sie beim nächsten Termin Ihren Ausweis und Ihren Mietvertrag mit.", "audio": "" },
+        "question": "Was sagt Mikula am besten?",
+        "options": [
+          { "text": "Gut, das mache ich. Den Ausweis habe ich heute schon mitgebringt.", "verdict": "falsch", "explain": "Das Partizip von „mitbringen“ ist unregelmäßig: mitgebracht." },
+          { "text": "Gut, das mache ich. Den Ausweis habe ich heute schon mitgebracht.", "verdict": "passend", "explain": "Freundlich, und das Perfekt ist richtig: „habe … mitgebracht“." },
+          { "text": "Dann rufen Sie mich vorher an. Sonst vergesse ich das.", "verdict": "unhöflich", "explain": "Grammatisch richtig, aber ohne „bitte“ klingt das wie ein Befehl. Besser: „Könnten Sie mich vorher anrufen?“" }
+        ],
+        "wrong": { "who": "mikula", "mood": "staunen", "text": "Mietvertrag? Mein Haus hat mein Großvater gebaut. Dafür gab es kein Papier!", "audio": "" }
+      },
+      {
+        "type": "rate",
+        "situation": "Jetzt geht es um Arbeit. Der Mitarbeiter ist sehr freundlich.",
+        "line": { "who": "Mitarbeiter im Jobcenter", "text": "Was für eine Arbeit suchen Sie? Haben Sie schon einen Lebenslauf für Ihre Bewerbung?", "audio": "" },
+        "question": "Was sagt Mikula am besten?",
+        "options": [
+          { "text": "Das ist mir egal. Hauptsache, ich bekomme Geld.", "verdict": "unhöflich", "explain": "Grammatisch richtig, aber das klingt, als wäre Mikula die Arbeit egal. Besser: Sagen Sie, was Sie gern und gut machen." },
+          { "text": "Ich arbeite gern draußen, weil ich bin Bauer. Einen Lebenslauf habe ich leider noch nicht.", "verdict": "falsch", "explain": "Nach „weil“ steht das Verb am Ende: „… weil ich Bauer bin“." },
+          { "text": "Ich arbeite gern draußen, weil ich Bauer bin. Einen Lebenslauf habe ich leider noch nicht.", "verdict": "passend", "explain": "Klar und höflich. Mikula sagt, was er kann, und antwortet auf beide Fragen." }
+        ],
+        "wrong": { "who": "mikula", "mood": "staunen", "text": "Mein Lebenslauf? Ich laufe jeden Tag zum Feld und wieder zurück!", "audio": "" }
+      },
+      {
+        "type": "rate",
+        "situation": "Am Ende des Termins hat die Mitarbeiterin noch eine Idee.",
+        "line": { "who": "Mitarbeiterin im Jobcenter", "text": "Möchten Sie auch einen Integrationskurs machen? Dort lernen Sie Deutsch und viel über das Leben hier.", "audio": "" },
+        "question": "Was sagt Mikula am besten?",
+        "options": [
+          { "text": "Ja, sehr gern! Ich möchte besser Deutsch lernen. Wann fängt der nächste Kurs an?", "verdict": "passend", "explain": "Freundlich und richtig. „anfangen“ trennt sich: Wann fängt der Kurs an?" },
+          { "text": "Ja. Aber der Kurs muss am Vormittag sein, sonst komme ich nicht.", "verdict": "unhöflich", "explain": "Grammatisch richtig, aber das klingt wie eine Bedingung. Besser: „Wäre ein Kurs am Vormittag möglich?“" },
+          { "text": "Ja, sehr gern! Ich möchte besser Deutsch zu lernen. Wann fängt der nächste Kurs an?", "verdict": "falsch", "explain": "Nach „möchte“ steht der Infinitiv ohne „zu“: Ich möchte Deutsch lernen." }
+        ],
+        "wrong": { "who": "mikula", "mood": "staunen", "text": "Ein Kurs nur für Deutsch? Zu Hause hat mir nur meine Großmutter etwas beigebracht!", "audio": "" }
+      }
+    ]
+  },
+  "outro": {
+    "A1": { "who": "mikula", "mood": "freude", "text": "Mein Termin war gut! Und schau: ein Zeitkristall!", "audio": "" },
+    "A2": { "who": "mikula", "mood": "freude", "text": "Ich habe das Formular ausgefüllt und alle Unterlagen mitgebracht. Und hier liegt ein Zeitkristall!", "audio": "" },
+    "B1": { "who": "mikula", "mood": "freude", "text": "Das war kein Hof des Fürsten, aber alle waren sehr freundlich. Bald mache ich einen Integrationskurs – und ich habe einen Zeitkristall! Danke für deine Hilfe!", "audio": "" }
+  },
+  "words": [
+    { "word": "Termin", "article": "der", "plural": "die Termine", "example": "Ich habe am Montag einen Termin.", "emoji": "📅", "level": "A1", "audio": "" },
+    { "word": "Wartenummer", "article": "die", "plural": "die Wartenummern", "example": "Ziehen Sie bitte eine Wartenummer.", "emoji": "🎟️", "level": "A1", "audio": "" },
+    { "word": "Formular", "article": "das", "plural": "die Formulare", "example": "Ich fülle das Formular aus.", "emoji": "📄", "level": "A1", "audio": "" },
+    { "word": "Ausweis", "article": "der", "plural": "die Ausweise", "example": "Bitte bringen Sie Ihren Ausweis mit.", "emoji": "🪪", "level": "A1", "audio": "" },
+    { "word": "Antrag", "article": "der", "plural": "die Anträge", "example": "Ich stelle einen Antrag im Jobcenter.", "emoji": "📝", "level": "A1", "audio": "" },
+    { "word": "Arbeit", "article": "die", "plural": "die Arbeiten", "example": "Ich suche eine Arbeit.", "emoji": "💼", "level": "A1", "audio": "" },
+    { "word": "Uhrzeit", "article": "die", "plural": "die Uhrzeiten", "example": "Um welche Uhrzeit ist mein Termin?", "emoji": "🕘", "level": "A2", "audio": "" },
+    { "word": "Unterlage", "article": "die", "plural": "die Unterlagen", "example": "Bringen Sie bitte alle Unterlagen mit.", "emoji": "📂", "level": "A2", "audio": "" },
+    { "word": "Bewerbung", "article": "die", "plural": "die Bewerbungen", "example": "Ich schreibe eine Bewerbung.", "emoji": "✉️", "level": "B1", "audio": "" },
+    { "word": "Lebenslauf", "article": "der", "plural": "die Lebensläufe", "example": "Mein Lebenslauf ist zwei Seiten lang.", "emoji": "📃", "level": "B1", "audio": "" },
+    { "word": "Integrationskurs", "article": "der", "plural": "die Integrationskurse", "example": "Im Integrationskurs lerne ich Deutsch.", "emoji": "🧑‍🏫", "level": "B1", "audio": "" }
+  ]
+}

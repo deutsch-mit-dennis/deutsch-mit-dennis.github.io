@@ -11,7 +11,7 @@
    After changing JSON files: raise VER below (cache) and see README (voices).  Format and how-to: spiele/mikula/README.md */
 (() => {
   if (!window.DMGame) return;
-  const ID = 'mikula', KEY = 'dm-mikula', VER = '20261107c', BASE = 'spiele/mikula/';
+  const ID = 'mikula', KEY = 'dm-mikula', VER = '20261107d', BASE = 'spiele/mikula/';
   const LEVELS = [{ id: 'A1', label: 'A1 – Wörter' }, { id: 'A2', label: 'A2 – Sätze' }, { id: 'B1', label: 'B1 – Gespräche' }];
   const LV_RANK = { A1: 1, A2: 2, B1: 3 };
   const VERDICT = { passend: '✅ passend', 'unhöflich': '😬 zu unhöflich', falsch: '❌ falsch' };

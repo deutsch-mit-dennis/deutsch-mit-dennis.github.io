@@ -1,0 +1,723 @@
+{
+  "id": "post",
+  "title": "Bei der Post",
+  "icon": "🏤",
+  "img": "spiele/mikula/img/station-post.webp",
+  "imgAlt": "Mikula steht staunend vor einer gelben Packstation und klopft freundlich an eine kleine Tür.",
+  "intro": {
+    "A1": [
+      {
+        "who": "erzaehler",
+        "text": "Mikula ist bei der Post. Hier sind viele Briefe und Pakete.",
+        "audio": ""
+      },
+      {
+        "who": "mikula",
+        "mood": "staunen",
+        "text": "So viele Kästen aus Papier! Sind da Schätze drin?",
+        "audio": ""
+      },
+      {
+        "who": "erzaehler",
+        "text": "Eine Frau am Schalter lächelt. Sie hilft Mikula gern.",
+        "audio": ""
+      }
+    ],
+    "A2": [
+      {
+        "who": "erzaehler",
+        "text": "Mikula steht in der Post. Viele Leute warten mit Briefen und Paketen in der Schlange.",
+        "audio": ""
+      },
+      {
+        "who": "mikula",
+        "mood": "staunen",
+        "text": "Bei mir zu Hause bringt ein Reiter die Nachrichten. Hier gibt es dafür ein ganzes Haus!",
+        "audio": ""
+      },
+      {
+        "who": "mikula",
+        "mood": "neutral",
+        "text": "Ich möchte meiner Familie etwas schicken. Aber wie geht das hier?",
+        "audio": ""
+      }
+    ],
+    "B1": [
+      {
+        "who": "erzaehler",
+        "text": "Mikula steht in der Postfiliale. Neben der Tür steht eine gelbe Wand mit vielen kleinen Türen.",
+        "audio": ""
+      },
+      {
+        "who": "mikula",
+        "mood": "staunen",
+        "text": "Was für eine prächtige Schatztruhe! Aber sie hat kein Schloss, nur einen leuchtenden Bildschirm.",
+        "audio": ""
+      },
+      {
+        "who": "mikula",
+        "mood": "neutral",
+        "text": "Heute möchte ich ein Paket verschicken und einen wichtigen Brief aufgeben. Hoffentlich finde ich die richtigen Worte.",
+        "audio": ""
+      }
+    ]
+  },
+  "tasks": {
+    "A1": [
+      {
+        "type": "choice",
+        "emoji": "✉️",
+        "emojiAlt": "Umschlag aus Papier",
+        "say": {
+          "who": "mikula",
+          "mood": "staunen",
+          "text": "Ein Papier in einer Tasche aus Papier! Wie heißt das?",
+          "audio": ""
+        },
+        "question": "Welcher Artikel ist richtig?",
+        "options": [
+          "die Brief",
+          "der Brief",
+          "das Brief"
+        ],
+        "answer": 1,
+        "wrong": {
+          "who": "mikula",
+          "mood": "staunen",
+          "text": "Hm, das klingt komisch. Meine Ziege schaut mich fragend an!",
+          "audio": ""
+        },
+        "hint": "Tipp: Brief hat denselben Artikel wie Tisch.",
+        "explain": "Wir sagen: der Brief. Plural: die Briefe."
+      },
+      {
+        "type": "choice",
+        "emoji": "🏷️",
+        "emojiAlt": "kleines Bild zum Kleben",
+        "say": {
+          "who": "mikula",
+          "mood": "staunen",
+          "text": "Ein kleines Bild zum Kleben! Der Brief braucht es. Was ist das?",
+          "audio": ""
+        },
+        "question": "Was ist das?",
+        "options": [
+          "die Briefmarke",
+          "die Adresse",
+          "das Paket"
+        ],
+        "answer": 0,
+        "wrong": {
+          "who": "mikula",
+          "mood": "staunen",
+          "text": "Oje, ich habe das Bild auf meine Stirn geklebt. Das war falsch!",
+          "audio": ""
+        },
+        "hint": "Tipp: Ohne dieses kleine Bild reist der Brief nicht. Es kostet Geld.",
+        "explain": "Das ist die Briefmarke. Plural: die Briefmarken."
+      },
+      {
+        "type": "choice",
+        "emoji": "📦",
+        "emojiAlt": "großer Kasten aus Pappe",
+        "say": {
+          "who": "mikula",
+          "mood": "staunen",
+          "text": "Ein großer Kasten aus Pappe! Ist da ein Schatz drin?",
+          "audio": ""
+        },
+        "question": "Welcher Artikel ist richtig?",
+        "options": [
+          "der Paket",
+          "die Paket",
+          "das Paket"
+        ],
+        "answer": 2,
+        "wrong": {
+          "who": "mikula",
+          "mood": "staunen",
+          "text": "Hm, der Kasten bleibt still. Er mag dieses Wort nicht!",
+          "audio": ""
+        },
+        "hint": "Tipp: Paket hat denselben Artikel wie Buch.",
+        "explain": "Wir sagen: das Paket. Plural: die Pakete."
+      },
+      {
+        "type": "choice",
+        "emoji": "🎁",
+        "emojiAlt": "kleine Schachtel mit Schleife",
+        "say": {
+          "who": "mikula",
+          "mood": "staunen",
+          "text": "Und hier ist ein ganz kleiner Kasten. Das ist ein kleines Paket!",
+          "audio": ""
+        },
+        "question": "Welcher Artikel ist richtig?",
+        "options": [
+          "die Päckchen",
+          "das Päckchen",
+          "der Päckchen"
+        ],
+        "answer": 1,
+        "wrong": {
+          "who": "mikula",
+          "mood": "staunen",
+          "text": "Oje, das kleine Paket ist beleidigt. Ich probiere es noch einmal!",
+          "audio": ""
+        },
+        "hint": "Tipp: Wörter auf -chen haben immer denselben Artikel wie Mädchen.",
+        "explain": "Wir sagen: das Päckchen. Plural: die Päckchen. Ein Päckchen ist ein kleines Paket."
+      },
+      {
+        "type": "choice",
+        "emoji": "📮",
+        "emojiAlt": "Kasten an der Straße",
+        "say": {
+          "who": "mikula",
+          "mood": "staunen",
+          "text": "Ein Kasten mit einem Mund! Er frisst Briefe! Wie heißt er?",
+          "audio": ""
+        },
+        "question": "Was ist das?",
+        "options": [
+          "die Briefmarke",
+          "das Päckchen",
+          "der Briefkasten"
+        ],
+        "answer": 2,
+        "wrong": {
+          "who": "mikula",
+          "mood": "staunen",
+          "text": "Nein! Ich habe ihm ein Stück Brot gegeben, aber er frisst nur Papier.",
+          "audio": ""
+        },
+        "hint": "Tipp: Hier wirfst du deinen Brief hinein.",
+        "explain": "Das ist der Briefkasten. Dort wirfst du Briefe ein. Plural: die Briefkästen."
+      },
+      {
+        "type": "choice",
+        "emoji": "🏠",
+        "emojiAlt": "Haus mit Dach",
+        "say": {
+          "who": "mikula",
+          "mood": "staunen",
+          "text": "Auf dem Brief stehen Name, Straße und Stadt. Wie heißt das?",
+          "audio": ""
+        },
+        "question": "Welcher Artikel ist richtig?",
+        "options": [
+          "die Adresse",
+          "der Adresse",
+          "das Adresse"
+        ],
+        "answer": 0,
+        "wrong": {
+          "who": "mikula",
+          "mood": "staunen",
+          "text": "Oje, so findet der Brief nie mein Dorf!",
+          "audio": ""
+        },
+        "hint": "Tipp: Wörter auf -e haben oft denselben Artikel wie Lampe oder Tasche.",
+        "explain": "Wir sagen: die Adresse. Plural: die Adressen."
+      }
+    ],
+    "A2": [
+      {
+        "type": "order",
+        "say": {
+          "who": "mikula",
+          "mood": "neutral",
+          "text": "Meine Mutter wohnt sehr weit weg. Ich möchte ihr ein Paket schicken. Was sage ich am Schalter?",
+          "audio": ""
+        },
+        "question": "Bau den Satz für Mikula.",
+        "words": [
+          "Ich",
+          "schicke",
+          "meiner",
+          "Mutter",
+          "ein",
+          "Paket."
+        ],
+        "alt": [],
+        "wrong": {
+          "who": "mikula",
+          "mood": "staunen",
+          "text": "Oje, so kommt das Paket nie an. Meine Mutter wohnt ja schon tausend Jahre weit weg!",
+          "audio": ""
+        },
+        "explain": "Wem schicke ich das Paket? Meiner Mutter. Das ist Dativ: die Mutter → meiner Mutter."
+      },
+      {
+        "type": "choice",
+        "say": {
+          "who": "mikula",
+          "mood": "neutral",
+          "text": "Der Mann am Schalter fragt: „Wem schicken Sie das Päckchen?“ Mein Bruder bekommt es. Was sage ich?",
+          "audio": ""
+        },
+        "question": "Welcher Satz passt?",
+        "options": [
+          "Ich schicke meinen Bruder das Päckchen.",
+          "Ich schicke meinem Bruder das Päckchen.",
+          "Ich schicke mein Bruder das Päckchen."
+        ],
+        "answer": 1,
+        "wrong": {
+          "who": "mikula",
+          "mood": "staunen",
+          "text": "Hm, jetzt denkt der Mann, ich will meinen Bruder mit der Post schicken!",
+          "audio": ""
+        },
+        "hint": "Tipp: Die Frage ist „Wem?“. Achte genau auf die Endung von „mein…“.",
+        "explain": "„Wem?“ fragt nach dem Dativ. der Bruder → meinem Bruder. die Mutter → meiner Mutter."
+      },
+      {
+        "type": "choice",
+        "say": {
+          "who": "mikula",
+          "mood": "staunen",
+          "text": "Auf dem Päckchen stehen zwei Adressen. Mein Bruder bekommt das Päckchen. Was ist er?",
+          "audio": ""
+        },
+        "question": "Was passt?",
+        "options": [
+          "der Absender",
+          "der Empfänger",
+          "der Briefträger"
+        ],
+        "answer": 1,
+        "wrong": {
+          "who": "mikula",
+          "mood": "staunen",
+          "text": "Oje, jetzt reist das Päckchen im Kreis – wie mein Pferd, wenn es Hunger hat!",
+          "audio": ""
+        },
+        "hint": "Tipp: „Absender“ kommt von „absenden“ = wegschicken. Schickt der Bruder das Päckchen weg?",
+        "explain": "Der Empfänger bekommt das Paket. Der Absender schickt es. Plural: die Empfänger, die Absender."
+      },
+      {
+        "type": "order",
+        "say": {
+          "who": "mikula",
+          "mood": "neutral",
+          "text": "Ich schreibe die Adresse auf das Päckchen. Aber vor „Köln“ fehlt eine Zahl. Ich frage die Frau am Schalter.",
+          "audio": ""
+        },
+        "question": "Bau den Satz für Mikula.",
+        "words": [
+          "Wie",
+          "ist",
+          "die",
+          "Postleitzahl",
+          "von",
+          "Köln?"
+        ],
+        "alt": [],
+        "wrong": {
+          "who": "mikula",
+          "mood": "staunen",
+          "text": "Hm, die Frau schaut mich fragend an. Bei mir zu Hause hat kein Dorf eine Zahl!",
+          "audio": ""
+        },
+        "explain": "In einer W-Frage steht das Verb auf Position 2: „Wie ist die …?“"
+      },
+      {
+        "type": "order",
+        "say": {
+          "who": "mikula",
+          "mood": "staunen",
+          "text": "Im Briefkasten liegt eine Karte. Der Briefträger war da, aber ich war nicht zu Hause! Jetzt hole ich mein Paket.",
+          "audio": ""
+        },
+        "question": "Bau den Satz für Mikula.",
+        "words": [
+          "Ich",
+          "hole",
+          "das",
+          "Paket",
+          "mit",
+          "der",
+          "Benachrichtigungskarte",
+          "ab."
+        ],
+        "alt": [
+          [
+            "Ich",
+            "hole",
+            "mit",
+            "der",
+            "Benachrichtigungskarte",
+            "das",
+            "Paket",
+            "ab."
+          ]
+        ],
+        "wrong": {
+          "who": "mikula",
+          "mood": "staunen",
+          "text": "Oje, so ein langes Wort! Das ist länger als mein Acker.",
+          "audio": ""
+        },
+        "explain": "Nach „mit“ steht immer der Dativ: die Karte → mit der Karte. „abholen“ trennt sich: Ich hole … ab."
+      },
+      {
+        "type": "order",
+        "say": {
+          "who": "mikula",
+          "mood": "staunen",
+          "text": "Eine gelbe Wand mit vielen kleinen Türen! Ist das eine Schatztruhe? Nein, das ist eine Packstation. Und mein Paket ist darin!",
+          "audio": ""
+        },
+        "question": "Bau den Satz für Mikula.",
+        "words": [
+          "Mein",
+          "Paket",
+          "liegt",
+          "in",
+          "der",
+          "Packstation."
+        ],
+        "alt": [],
+        "wrong": {
+          "who": "mikula",
+          "mood": "staunen",
+          "text": "Hm, ich klopfe an alle Türen, aber keine Tür antwortet mir.",
+          "audio": ""
+        },
+        "explain": "Wo liegt das Paket? Nach „in“ steht bei „Wo?“ der Dativ: die Packstation → in der Packstation."
+      }
+    ],
+    "B1": [
+      {
+        "type": "rate",
+        "situation": "Mikula steht mit einem Paket am Schalter. Er möchte es seiner Schwester nach Hamburg schicken.",
+        "line": {
+          "who": "Mitarbeiterin am Schalter",
+          "text": "Guten Tag! Was kann ich für Sie tun?",
+          "audio": ""
+        },
+        "question": "Was sagt Mikula am besten?",
+        "options": [
+          {
+            "text": "Guten Tag! Ich möchte meine Schwester dieses Paket nach Hamburg schicken.",
+            "verdict": "falsch",
+            "explain": "Wem schicke ich das Paket? Das ist Dativ: die Schwester → meiner Schwester."
+          },
+          {
+            "text": "Ich möchte meiner Schwester dieses Paket nach Hamburg schicken.",
+            "verdict": "unhöflich",
+            "explain": "Grammatisch richtig, aber die Begrüßung fehlt. Die Mitarbeiterin sagt „Guten Tag!“ – Mikula sollte zurückgrüßen."
+          },
+          {
+            "text": "Guten Tag! Ich möchte meiner Schwester dieses Paket nach Hamburg schicken.",
+            "verdict": "passend",
+            "explain": "Höflich und richtig: zuerst grüßen, dann sagen, was man möchte. „meiner Schwester“ ist Dativ."
+          }
+        ],
+        "wrong": {
+          "who": "mikula",
+          "mood": "staunen",
+          "text": "Oje, bei mir zu Hause sage ich das meinem Pferd, und es läuft los!",
+          "audio": ""
+        }
+      },
+      {
+        "type": "rate",
+        "situation": "Die Mitarbeiterin legt das Päckchen auf die Waage.",
+        "line": {
+          "who": "Mitarbeiterin am Schalter",
+          "text": "Das Päckchen wiegt ein Kilo und kostet 5,19 €. Brauchen Sie sonst noch etwas?",
+          "say": "Das Päckchen wiegt ein Kilo und kostet fünf Euro neunzehn. Brauchen Sie sonst noch etwas?",
+          "audio": ""
+        },
+        "question": "Was sagt Mikula am besten?",
+        "options": [
+          {
+            "text": "Ja, ich hätte gern noch fünf Briefmarken, bitte.",
+            "verdict": "passend",
+            "explain": "Höflich mit „Ich hätte gern …, bitte“. Nach „fünf“ steht richtig der Plural."
+          },
+          {
+            "text": "Ja. Ich will noch fünf Briefmarken.",
+            "verdict": "unhöflich",
+            "explain": "Grammatisch richtig, aber „Ich will …“ klingt fordernd. Besser: „Ich hätte gern …“."
+          },
+          {
+            "text": "Ja, ich hätte gern noch fünf Briefmarke, bitte.",
+            "verdict": "falsch",
+            "explain": "Nach „fünf“ steht der Plural: fünf Briefmarken."
+          }
+        ],
+        "wrong": {
+          "who": "mikula",
+          "mood": "staunen",
+          "text": "Ein Kilo kostet so viel? Für ein Kilo Rüben bekomme ich zu Hause ein Huhn!",
+          "audio": ""
+        }
+      },
+      {
+        "type": "rate",
+        "situation": "Mikula hat einen wichtigen Brief für eine Behörde. Der Brief muss sicher ankommen.",
+        "line": {
+          "who": "Mitarbeiter am Schalter",
+          "text": "Soll der Brief als Einschreiben gehen? Dann bekommen Sie einen Beleg.",
+          "audio": ""
+        },
+        "question": "Was sagt Mikula am besten?",
+        "options": [
+          {
+            "text": "Ja, bitte als Einschreiben. Kannst du mir den Beleg gleich mitgeben?",
+            "verdict": "unhöflich",
+            "explain": "Grammatisch richtig, aber am Schalter sagen wir „Sie“: „Können Sie mir …?“"
+          },
+          {
+            "text": "Ja, bitte als Einschreiben. Der Brief ist sehr wichtig für mir.",
+            "verdict": "falsch",
+            "explain": "Nach „für“ steht der Akkusativ: für mich."
+          },
+          {
+            "text": "Ja, bitte als Einschreiben. Der Brief ist sehr wichtig für mich.",
+            "verdict": "passend",
+            "explain": "Höflich und klar. Mit einem Einschreiben kommt der Brief sicher an."
+          }
+        ],
+        "wrong": {
+          "who": "mikula",
+          "mood": "staunen",
+          "text": "Zu Hause bringt mein Nachbar wichtige Briefe – auf seinem Esel und ganz ohne Beleg!",
+          "audio": ""
+        }
+      },
+      {
+        "type": "rate",
+        "situation": "Mikula hat eine Benachrichtigungskarte im Briefkasten gefunden. Er geht zur Postfiliale.",
+        "line": {
+          "who": "Mitarbeiterin am Schalter",
+          "text": "Guten Tag! Haben Sie die Karte und Ihren Ausweis dabei?",
+          "audio": ""
+        },
+        "question": "Was sagt Mikula am besten?",
+        "options": [
+          {
+            "text": "Natürlich. Geben Sie mir jetzt mein Paket.",
+            "verdict": "unhöflich",
+            "explain": "Grammatisch richtig, aber das klingt wie ein Befehl. Besser: „Könnten Sie mir bitte mein Paket geben?“"
+          },
+          {
+            "text": "Guten Tag! Ja, hier sind die Karte und mein Ausweis. Ich möchte das Paket abholen.",
+            "verdict": "passend",
+            "explain": "Freundlich: Man grüßt, gibt die Sachen und sagt, was man möchte."
+          },
+          {
+            "text": "Guten Tag! Ja, hier sind die Karte und mein Ausweis. Ich möchte abholen das Paket.",
+            "verdict": "falsch",
+            "explain": "Nach „möchte“ steht das zweite Verb am Ende: „Ich möchte das Paket abholen.“"
+          }
+        ],
+        "wrong": {
+          "who": "mikula",
+          "mood": "staunen",
+          "text": "Ausweis? Zu Hause kennt mich jeder an meinem Bart!",
+          "audio": ""
+        }
+      },
+      {
+        "type": "rate",
+        "situation": "Mikula steht vor der Packstation. Er versteht den Bildschirm nicht.",
+        "line": {
+          "who": "Frau an der Packstation",
+          "text": "Haben Sie Probleme mit der Packstation? Ich kann Ihnen gern helfen.",
+          "audio": ""
+        },
+        "question": "Was sagt Mikula am besten?",
+        "options": [
+          {
+            "text": "Ja, gern! Könnten Sie mich bitte helfen? Ich finde den Code nicht.",
+            "verdict": "falsch",
+            "explain": "„helfen“ braucht den Dativ: „Könnten Sie mir helfen?“"
+          },
+          {
+            "text": "Ja. Sie müssen mir das jetzt erklären.",
+            "verdict": "unhöflich",
+            "explain": "Grammatisch richtig, aber „Sie müssen …“ klingt wie eine Forderung. Die Frau hilft freiwillig."
+          },
+          {
+            "text": "Ja, gern! Könnten Sie mir bitte helfen? Ich finde den Code nicht.",
+            "verdict": "passend",
+            "explain": "Sehr höflich mit „Könnten Sie …?“. Und richtig: „helfen“ mit Dativ – mir."
+          }
+        ],
+        "wrong": {
+          "who": "mikula",
+          "mood": "staunen",
+          "text": "Ich dachte, die Schatztruhe geht auf, wenn ich freundlich klopfe!",
+          "audio": ""
+        }
+      },
+      {
+        "type": "rate",
+        "situation": "Mikula gibt sein Paket ab. Der Mitarbeiter schaut auf den Paketschein.",
+        "line": {
+          "who": "Mitarbeiter am Schalter",
+          "text": "Sie haben den Absender vergessen. Schreiben Sie bitte Ihre Adresse oben links hin.",
+          "audio": ""
+        },
+        "question": "Was sagt Mikula am besten?",
+        "options": [
+          {
+            "text": "Oh, Entschuldigung! Danke für den Hinweis. Ich schreibe sie sofort hin.",
+            "verdict": "passend",
+            "explain": "Freundlich: Man entschuldigt sich, bedankt sich und macht es gleich."
+          },
+          {
+            "text": "Oh, danke! Dann schreibe ich die Adresse von meiner Schwester oben links hin.",
+            "verdict": "falsch",
+            "explain": "Die Schwester ist die Empfängerin. Oben links steht der Absender – das ist Mikula selbst."
+          },
+          {
+            "text": "Ach, das ist doch egal. Das Paket kommt auch so an.",
+            "verdict": "unhöflich",
+            "explain": "Grammatisch richtig, aber das klingt, als wäre der Hinweis egal. Der Mitarbeiter will helfen."
+          }
+        ],
+        "wrong": {
+          "who": "mikula",
+          "mood": "staunen",
+          "text": "Oje, jetzt weiß das Paket nicht, wohin es zurück soll – und ich auch nicht!",
+          "audio": ""
+        }
+      }
+    ]
+  },
+  "outro": {
+    "A1": {
+      "who": "mikula",
+      "mood": "freude",
+      "text": "Juhu! Mein Paket ist weg. Und schau: ein Zeitkristall!",
+      "audio": ""
+    },
+    "A2": {
+      "who": "mikula",
+      "mood": "freude",
+      "text": "Geschafft! Das Paket ist unterwegs, und in der Packstation glänzt ein Zeitkristall! Danke für deine Hilfe.",
+      "audio": ""
+    },
+    "B1": {
+      "who": "mikula",
+      "mood": "freude",
+      "text": "Wunderbar! Der Brief ist als Einschreiben unterwegs, und hinter einer kleinen Tür der Packstation liegt ein Zeitkristall. Es war also doch eine Schatztruhe! Vielen Dank für deine Hilfe!",
+      "audio": ""
+    }
+  },
+  "words": [
+    {
+      "word": "Brief",
+      "article": "der",
+      "plural": "die Briefe",
+      "example": "Ich schreibe meiner Oma einen Brief.",
+      "emoji": "✉️",
+      "level": "A1",
+      "audio": ""
+    },
+    {
+      "word": "Briefmarke",
+      "article": "die",
+      "plural": "die Briefmarken",
+      "example": "Ich klebe eine Briefmarke auf den Brief.",
+      "emoji": "🏷️",
+      "level": "A1",
+      "audio": ""
+    },
+    {
+      "word": "Paket",
+      "article": "das",
+      "plural": "die Pakete",
+      "example": "Ich schicke meiner Mutter ein Paket.",
+      "emoji": "📦",
+      "level": "A1",
+      "audio": ""
+    },
+    {
+      "word": "Päckchen",
+      "article": "das",
+      "plural": "die Päckchen",
+      "example": "Das Päckchen ist klein und leicht.",
+      "emoji": "🎁",
+      "level": "A1",
+      "audio": ""
+    },
+    {
+      "word": "Briefkasten",
+      "article": "der",
+      "plural": "die Briefkästen",
+      "example": "Ich werfe den Brief in den Briefkasten.",
+      "emoji": "📮",
+      "level": "A1",
+      "audio": ""
+    },
+    {
+      "word": "Adresse",
+      "article": "die",
+      "plural": "die Adressen",
+      "example": "Wie ist Ihre Adresse?",
+      "emoji": "🏠",
+      "level": "A1",
+      "audio": ""
+    },
+    {
+      "word": "Postleitzahl",
+      "article": "die",
+      "plural": "die Postleitzahlen",
+      "example": "Die Postleitzahl steht vor der Stadt.",
+      "emoji": "🔢",
+      "level": "A2",
+      "audio": ""
+    },
+    {
+      "word": "Absender",
+      "article": "der",
+      "plural": "die Absender",
+      "example": "Der Absender steht oben links.",
+      "emoji": "📤",
+      "level": "A2",
+      "audio": ""
+    },
+    {
+      "word": "Empfänger",
+      "article": "der",
+      "plural": "die Empfänger",
+      "example": "Der Empfänger bekommt das Paket.",
+      "emoji": "📥",
+      "level": "A2",
+      "audio": ""
+    },
+    {
+      "word": "Packstation",
+      "article": "die",
+      "plural": "die Packstationen",
+      "example": "Mein Paket liegt in der Packstation.",
+      "emoji": "🗄️",
+      "level": "A2",
+      "audio": ""
+    },
+    {
+      "word": "Benachrichtigungskarte",
+      "article": "die",
+      "plural": "die Benachrichtigungskarten",
+      "example": "Mit der Benachrichtigungskarte hole ich das Paket ab.",
+      "emoji": "🗒️",
+      "level": "A2",
+      "audio": ""
+    },
+    {
+      "word": "Einschreiben",
+      "article": "das",
+      "plural": "die Einschreiben",
+      "example": "Ich schicke den Brief als Einschreiben.",
+      "emoji": "📨",
+      "level": "B1",
+      "audio": ""
+    }
+  ]
+}

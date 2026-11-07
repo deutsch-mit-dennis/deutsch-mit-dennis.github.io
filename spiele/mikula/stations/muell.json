@@ -1,0 +1,710 @@
+{
+  "id": "muell",
+  "title": "Müll trennen",
+  "icon": "♻️",
+  "img": "spiele/mikula/img/station-muell.webp",
+  "imgAlt": "Mikula steht im Hinterhof vor vielen bunten Mülltonnen und staunt. Eine Nachbarin zeigt ihm freundlich die Tonnen.",
+  "intro": {
+    "A1": [
+      {
+        "who": "erzaehler",
+        "text": "Mikula steht im Hof. Da sind viele Tonnen.",
+        "audio": ""
+      },
+      {
+        "who": "mikula",
+        "mood": "staunen",
+        "text": "Oh! Gelb, blau, braun, grau! So viele Farben!",
+        "audio": ""
+      },
+      {
+        "who": "mikula",
+        "mood": "neutral",
+        "text": "Ich habe eine leere Flasche. Wohin damit?",
+        "audio": ""
+      }
+    ],
+    "A2": [
+      {
+        "who": "erzaehler",
+        "text": "Mikula steht in einem Hinterhof. Dort stehen viele bunte Mülltonnen. Eine Nachbarin bringt gerade den Müll hinaus.",
+        "audio": ""
+      },
+      {
+        "who": "mikula",
+        "mood": "staunen",
+        "text": "Hier sortiert man den Müll nach Farben? Wie die Wolle beim Färben!",
+        "audio": ""
+      },
+      {
+        "who": "mikula",
+        "mood": "neutral",
+        "text": "In meinem Dorf verwenden wir alles wieder. Hier muss ich wohl viel lernen.",
+        "audio": ""
+      }
+    ],
+    "B1": [
+      {
+        "who": "erzaehler",
+        "text": "Mikula hat in einer neuen Wohnung übernachtet. Am Morgen will er den Müll hinausbringen, doch im Hof wartet eine Überraschung.",
+        "audio": ""
+      },
+      {
+        "who": "mikula",
+        "mood": "staunen",
+        "text": "Für jede Sache gibt es eine eigene Tonne! Bei uns bekommt das Schwein die Reste, der Ofen das Holz – und alles andere flicke ich.",
+        "audio": ""
+      },
+      {
+        "who": "mikula",
+        "mood": "neutral",
+        "text": "Ich möchte hier ein guter Nachbar sein. Also frage ich lieber höflich nach, bevor ich etwas falsch mache.",
+        "audio": ""
+      }
+    ]
+  },
+  "tasks": {
+    "A1": [
+      {
+        "type": "choice",
+        "emoji": "🗑️",
+        "emojiAlt": "Behälter mit Deckel",
+        "say": {
+          "who": "mikula",
+          "mood": "staunen",
+          "text": "So viele bunte Kisten mit Deckel! Wie heißt das?",
+          "audio": ""
+        },
+        "question": "Welcher Artikel ist richtig?",
+        "options": [
+          "der Tonne",
+          "die Tonne",
+          "das Tonne"
+        ],
+        "answer": 1,
+        "wrong": {
+          "who": "mikula",
+          "mood": "staunen",
+          "text": "Oje, die Tonne bleibt ganz still. Das war falsch!",
+          "audio": ""
+        },
+        "hint": "Tipp: Tonne hat denselben Artikel wie Lampe.",
+        "explain": "Wir sagen: die Tonne. Plural: die Tonnen."
+      },
+      {
+        "type": "choice",
+        "emoji": "🍾",
+        "emojiAlt": "Gefäß aus Glas",
+        "say": {
+          "who": "mikula",
+          "mood": "staunen",
+          "text": "Das ist aus Glas, und oben ist ein Loch. In meinem Dorf ist so etwas ein Schatz! Was ist das?",
+          "audio": ""
+        },
+        "question": "Was ist das?",
+        "options": [
+          "die Dose",
+          "die Flasche",
+          "die Zeitung"
+        ],
+        "answer": 1,
+        "wrong": {
+          "who": "mikula",
+          "mood": "staunen",
+          "text": "Hm, das passt nicht. Ich schaue noch einmal genau hin!",
+          "audio": ""
+        },
+        "hint": "Tipp: Achte auf das Material. Eine Dose ist aus Metall.",
+        "explain": "Das ist eine Flasche. Wir sagen: die Flasche. Plural: die Flaschen."
+      },
+      {
+        "type": "choice",
+        "emoji": "📰",
+        "emojiAlt": "Papier mit Buchstaben",
+        "say": {
+          "who": "mikula",
+          "mood": "staunen",
+          "text": "So viel Papier mit Buchstaben! Die Nachbarin sagt: „Zeitung“.",
+          "audio": ""
+        },
+        "question": "Welcher Artikel ist richtig?",
+        "options": [
+          "das Zeitung",
+          "der Zeitung",
+          "die Zeitung"
+        ],
+        "answer": 2,
+        "wrong": {
+          "who": "mikula",
+          "mood": "staunen",
+          "text": "Oje, die Buchstaben tanzen vor meinen Augen!",
+          "audio": ""
+        },
+        "hint": "Tipp: Wörter mit -ung haben immer denselben Artikel. Denk an: Wohnung.",
+        "explain": "Wir sagen: die Zeitung. Plural: die Zeitungen. Alte Zeitungen kommen in die Papiertonne."
+      },
+      {
+        "type": "choice",
+        "emoji": "🥫",
+        "emojiAlt": "kleiner Behälter aus Metall",
+        "say": {
+          "who": "mikula",
+          "mood": "staunen",
+          "text": "Ein kleiner Topf aus Metall! Er ist leer. Was ist das?",
+          "audio": ""
+        },
+        "question": "Was ist das?",
+        "options": [
+          "die Dose",
+          "das Glas",
+          "der Müll"
+        ],
+        "answer": 0,
+        "wrong": {
+          "who": "mikula",
+          "mood": "staunen",
+          "text": "Klong! Mein Pferd erschrickt. Das war falsch!",
+          "audio": ""
+        },
+        "hint": "Tipp: Darin sind oft Bohnen oder Suppe.",
+        "explain": "Das ist eine Dose. Plural: die Dosen. Leere Dosen kommen in die gelbe Tonne."
+      },
+      {
+        "type": "choice",
+        "emoji": "🫙",
+        "emojiAlt": "leerer Behälter für Marmelade",
+        "say": {
+          "who": "mikula",
+          "mood": "staunen",
+          "text": "Ein Glas für Marmelade! Es ist leer. Schade!",
+          "audio": ""
+        },
+        "question": "Welcher Artikel ist richtig?",
+        "options": [
+          "die Glas",
+          "das Glas",
+          "der Glas"
+        ],
+        "answer": 1,
+        "wrong": {
+          "who": "mikula",
+          "mood": "staunen",
+          "text": "Klirr! Zum Glück ist nichts kaputt. Das war falsch.",
+          "audio": ""
+        },
+        "hint": "Tipp: Glas hat denselben Artikel wie Brot.",
+        "explain": "Wir sagen: das Glas. Plural: die Gläser. Leere Gläser kommen in den Glascontainer."
+      },
+      {
+        "type": "choice",
+        "emoji": "🚮",
+        "emojiAlt": "Zeichen: Abfall in den Eimer",
+        "say": {
+          "who": "mikula",
+          "mood": "staunen",
+          "text": "Hier sagen alle: Müll, Müll, Müll! In meinem Dorf gibt es fast nichts davon.",
+          "audio": ""
+        },
+        "question": "Welcher Artikel ist richtig?",
+        "options": [
+          "der Müll",
+          "die Müll",
+          "das Müll"
+        ],
+        "answer": 0,
+        "wrong": {
+          "who": "mikula",
+          "mood": "staunen",
+          "text": "Oje! Das Wort fliegt in die falsche Tonne!",
+          "audio": ""
+        },
+        "hint": "Tipp: Müll hat denselben Artikel wie Tisch.",
+        "explain": "Wir sagen: der Müll. Müll hat keinen Plural."
+      }
+    ],
+    "A2": [
+      {
+        "type": "order",
+        "say": {
+          "who": "mikula",
+          "mood": "staunen",
+          "text": "Die Nachbarin zeigt ihrem Sohn die braune Tonne. Er hat eine Bananenschale in der Hand. Was sagt sie zu ihm?",
+          "audio": ""
+        },
+        "question": "Bau den Satz für die Nachbarin.",
+        "words": [
+          "Wirf",
+          "die",
+          "Schale",
+          "in",
+          "die",
+          "Biotonne!"
+        ],
+        "alt": [],
+        "wrong": {
+          "who": "mikula",
+          "mood": "staunen",
+          "text": "Oje, die Bananenschale weiß nicht, wohin sie fliegen soll!",
+          "audio": ""
+        },
+        "explain": "Imperativ mit du: Das Verb steht vorn: Wirf …! Wohin? → in + Akkusativ: in die Biotonne."
+      },
+      {
+        "type": "choice",
+        "say": {
+          "who": "mikula",
+          "mood": "staunen",
+          "text": "Ich habe eine alte Zeitung. Mein Pferd soll sie zur blauen Tonne bringen. Was sage ich zu ihm?",
+          "audio": ""
+        },
+        "question": "Welcher Satz passt?",
+        "options": [
+          "Bring die Zeitung in der Papiertonne!",
+          "Bring die Zeitung in die Papiertonne!",
+          "Bring die Zeitung in den Papiertonne!"
+        ],
+        "answer": 1,
+        "wrong": {
+          "who": "mikula",
+          "mood": "staunen",
+          "text": "Mein Pferd frisst die Zeitung lieber auf. Das war falsch!",
+          "audio": ""
+        },
+        "hint": "Tipp: Frag zuerst: Wo oder wohin? Und welchen Artikel hat Tonne?",
+        "explain": "Wohin? → Akkusativ. die Tonne → in die Papiertonne."
+      },
+      {
+        "type": "order",
+        "say": {
+          "who": "mikula",
+          "mood": "staunen",
+          "text": "Ich habe eine grüne Flasche. Die Nachbarin ist sehr höflich. Sie zeigt mir den großen Container an der Straße.",
+          "audio": ""
+        },
+        "question": "Was sagt die Nachbarin? Bau den Satz.",
+        "words": [
+          "Werfen",
+          "Sie",
+          "die",
+          "Flasche",
+          "in",
+          "den",
+          "Glascontainer!"
+        ],
+        "alt": [],
+        "wrong": {
+          "who": "mikula",
+          "mood": "staunen",
+          "text": "Oje, die Flasche wackelt in meiner Hand – sie wartet auf den richtigen Satz!",
+          "audio": ""
+        },
+        "explain": "Imperativ mit Sie: Werfen Sie …! der Container → Wohin? → in den Glascontainer (Akkusativ). Grüne Flaschen kommen zum Grünglas."
+      },
+      {
+        "type": "choice",
+        "say": {
+          "who": "mikula",
+          "mood": "staunen",
+          "text": "Die Nachbarin sagt: Nimm zuerst den Deckel vom Glas ab! Aber wohin kommt der Deckel aus Metall?",
+          "audio": ""
+        },
+        "question": "Wohin kommt der Deckel?",
+        "options": [
+          "in den Glascontainer",
+          "in die gelbe Tonne",
+          "in die Papiertonne"
+        ],
+        "answer": 1,
+        "wrong": {
+          "who": "mikula",
+          "mood": "staunen",
+          "text": "Der Deckel klappert beleidigt. Das war falsch!",
+          "audio": ""
+        },
+        "hint": "Tipp: Denk an die Dose. Sie ist auch aus Metall.",
+        "explain": "Deckel aus Metall oder Plastik kommen in die gelbe Tonne. Das Glas kommt in den Glascontainer."
+      },
+      {
+        "type": "order",
+        "say": {
+          "who": "mikula",
+          "mood": "staunen",
+          "text": "Der Sohn der Nachbarin steht mit einer vollen Tüte da. Darin ist nur Restmüll. Die Mutter ruft:",
+          "audio": ""
+        },
+        "question": "Bau den Satz für die Nachbarin.",
+        "words": [
+          "Bring",
+          "den",
+          "Restmüll",
+          "in",
+          "die",
+          "graue",
+          "Tonne!"
+        ],
+        "alt": [],
+        "wrong": {
+          "who": "mikula",
+          "mood": "staunen",
+          "text": "Der Junge schaut verwirrt. So geht der Satz noch nicht!",
+          "audio": ""
+        },
+        "explain": "Imperativ mit du: Bring …! Wohin? → in + Akkusativ: in die graue Tonne."
+      },
+      {
+        "type": "choice",
+        "say": {
+          "who": "mikula",
+          "mood": "staunen",
+          "text": "Ein leerer Becher aus Plastik – eine Verpackung! Ich erkläre es meinem Pferd. Was sage ich?",
+          "audio": ""
+        },
+        "question": "Welcher Satz passt?",
+        "options": [
+          "Wirft den Becher in den gelben Sack!",
+          "Wirf den Becher in dem gelben Sack!",
+          "Wirf den Becher in den gelben Sack!"
+        ],
+        "answer": 2,
+        "wrong": {
+          "who": "mikula",
+          "mood": "staunen",
+          "text": "Mein Pferd setzt sich den Becher auf den Kopf. Das war falsch!",
+          "audio": ""
+        },
+        "hint": "Tipp: Prüfe zwei Stellen: die Form vom Verb und den Artikel nach „in“.",
+        "explain": "Imperativ mit du: Wirf! (nicht: Wirft). Wohin? → in den gelben Sack (Akkusativ)."
+      }
+    ],
+    "B1": [
+      {
+        "type": "rate",
+        "situation": "Mikula steht ratlos vor den Mülltonnen. Eine Nachbarin kommt in den Hof.",
+        "line": {
+          "who": "Nachbarin",
+          "text": "Guten Morgen! Sie sind neu hier, oder? Soll ich Ihnen die Mülltonnen erklären?",
+          "audio": ""
+        },
+        "question": "Was sagt Mikula am besten?",
+        "options": [
+          {
+            "text": "Guten Morgen! Ja, sehr gern. Das wäre sehr nett von Ihnen.",
+            "verdict": "passend",
+            "explain": "Freundlich und richtig: Man grüßt zurück und bedankt sich."
+          },
+          {
+            "text": "Ja, erklär mal. Ich habe keine Ahnung.",
+            "verdict": "unhöflich",
+            "explain": "Grammatisch richtig, aber Mikula duzt die Nachbarin. Sie sagt „Sie“ zu ihm. Besser: „Das wäre sehr nett von Ihnen.“"
+          },
+          {
+            "text": "Guten Morgen! Ja, sehr gern. Das wäre sehr nett von Sie.",
+            "verdict": "falsch",
+            "explain": "Nach „von“ steht der Dativ: „von Ihnen“."
+          }
+        ],
+        "wrong": {
+          "who": "mikula",
+          "mood": "staunen",
+          "text": "Oje, die Nachbarin zieht die Augenbrauen hoch!",
+          "audio": ""
+        }
+      },
+      {
+        "type": "rate",
+        "situation": "Mikula hat einen alten Schrank. Der Schrank ist viel zu groß für die Tonne. Er fragt den Hausmeister.",
+        "line": {
+          "who": "Hausmeister",
+          "text": "Für große Möbel gibt es den Sperrmüll. Den müssen Sie bei der Stadt anmelden.",
+          "audio": ""
+        },
+        "question": "Was sagt Mikula am besten?",
+        "options": [
+          {
+            "text": "Danke für die Information! Dann ich melde den Sperrmüll morgen an.",
+            "verdict": "falsch",
+            "explain": "Nach „Dann“ kommt sofort das Verb: „Dann melde ich …“."
+          },
+          {
+            "text": "Ich will, dass Sie das für mich anmelden.",
+            "verdict": "unhöflich",
+            "explain": "Grammatisch richtig, aber „Ich will …“ klingt fordernd. Besser: „Könnten Sie mir helfen?“"
+          },
+          {
+            "text": "Danke für die Information! Dann melde ich den Sperrmüll morgen an.",
+            "verdict": "passend",
+            "explain": "Höflich und richtig: Man bedankt sich und sagt, was man macht."
+          }
+        ],
+        "wrong": {
+          "who": "mikula",
+          "mood": "staunen",
+          "text": "Zu Hause mache ich aus einem alten Schrank einen Hühnerstall!",
+          "audio": ""
+        }
+      },
+      {
+        "type": "rate",
+        "situation": "Mikula will leere Pfandflaschen in den Glascontainer werfen. Ein Nachbar sieht das.",
+        "line": {
+          "who": "Nachbar",
+          "text": "Moment! Auf diesen Flaschen ist Pfand. Die können Sie im Supermarkt zurückgeben.",
+          "audio": ""
+        },
+        "question": "Was sagt Mikula am besten?",
+        "options": [
+          {
+            "text": "Hey, Mann, kein Stress!",
+            "verdict": "unhöflich",
+            "explain": "Grammatisch nicht falsch, aber „Hey, Mann“ ist zu locker für einen fremden Nachbarn. Er will helfen – besser ist ein Dank."
+          },
+          {
+            "text": "Oh, das habe ich nicht gewusst. Vielen Dank für den Hinweis!",
+            "verdict": "passend",
+            "explain": "Freundlich: Man sagt, dass man es nicht wusste, und bedankt sich."
+          },
+          {
+            "text": "Oh, das habe ich nicht gewisst. Vielen Dank für den Hinweis!",
+            "verdict": "falsch",
+            "explain": "Das Partizip von „wissen“ ist unregelmäßig: „gewusst“."
+          }
+        ],
+        "wrong": {
+          "who": "mikula",
+          "mood": "staunen",
+          "text": "Flaschen, die Geld bringen? Das ist ja fast Zauberei!",
+          "audio": ""
+        }
+      },
+      {
+        "type": "rate",
+        "situation": "Die Biotonne im Haus ist immer zu voll. Mikula ruft bei der Hausverwaltung an.",
+        "line": {
+          "who": "Mitarbeiterin",
+          "text": "Hausverwaltung, guten Tag. Was kann ich für Sie tun?",
+          "audio": ""
+        },
+        "question": "Was sagt Mikula am besten?",
+        "options": [
+          {
+            "text": "Guten Tag, mein Name ist Mikula. Unsere Biotonne ist immer zu voll. Könnten wir eine zweite Tonne bekommen?",
+            "verdict": "passend",
+            "explain": "Sehr gut: Begrüßung, Name, Problem und eine höfliche Bitte."
+          },
+          {
+            "text": "Guten Tag, mein Name ist Mikula. Unser Biotonne ist immer zu voll. Könnten wir eine zweite Tonne bekommen?",
+            "verdict": "falsch",
+            "explain": "„Tonne“ ist feminin (die Tonne). Also: „unsere Biotonne“."
+          },
+          {
+            "text": "Unsere Biotonne ist immer zu voll. Könnten wir eine zweite Tonne bekommen?",
+            "verdict": "unhöflich",
+            "explain": "Grammatisch richtig, aber Begrüßung und Name fehlen. Am Telefon sagt man zuerst: „Guten Tag, mein Name ist …“"
+          }
+        ],
+        "wrong": {
+          "who": "mikula",
+          "mood": "staunen",
+          "text": "Ein Kasten, in dem eine Frau spricht – und ich mache gleich einen Fehler!",
+          "audio": ""
+        }
+      },
+      {
+        "type": "rate",
+        "situation": "Mikula stellt die gelben Säcke an die Straße. Aber heute holt sie niemand ab. Ein Nachbar spricht ihn an.",
+        "line": {
+          "who": "Nachbar",
+          "text": "Entschuldigung, die gelben Säcke werden erst am Donnerstag abgeholt.",
+          "audio": ""
+        },
+        "question": "Was sagt Mikula am besten?",
+        "options": [
+          {
+            "text": "Oh, danke! Dann stelle ich sie am Mittwochabend an der Straße.",
+            "verdict": "falsch",
+            "explain": "Wohin stelle ich die Säcke? → Akkusativ: „an die Straße“."
+          },
+          {
+            "text": "Das hätten Sie mir auch früher sagen können.",
+            "verdict": "unhöflich",
+            "explain": "Grammatisch richtig, aber das klingt wie ein Vorwurf. Der Nachbar will nur helfen. Besser ist ein Dank."
+          },
+          {
+            "text": "Oh, danke! Dann stelle ich sie am Mittwochabend an die Straße.",
+            "verdict": "passend",
+            "explain": "Richtig und freundlich. Wohin? → an + Akkusativ: an die Straße."
+          }
+        ],
+        "wrong": {
+          "who": "mikula",
+          "mood": "staunen",
+          "text": "Die gelben Säcke sitzen an der Straße und warten – genau wie ich!",
+          "audio": ""
+        }
+      },
+      {
+        "type": "rate",
+        "situation": "Mikula hält einen fettigen Pizzakarton in der Hand. Die Nachbarin erklärt ihm etwas.",
+        "line": {
+          "who": "Nachbarin",
+          "text": "Fettige Pizzakartons kommen in den Restmüll, nicht in die Papiertonne.",
+          "audio": ""
+        },
+        "question": "Was sagt Mikula am besten?",
+        "options": [
+          {
+            "text": "Ah, gut zu wissen! Könnten Sie mir auch sagen, wohin kommen die Eierschalen?",
+            "verdict": "falsch",
+            "explain": "Nach „sagen, wohin …“ steht das Verb am Ende: „…, wohin die Eierschalen kommen?“"
+          },
+          {
+            "text": "Ah, gut zu wissen! Könnten Sie mir auch sagen, wohin die Eierschalen kommen?",
+            "verdict": "passend",
+            "explain": "Höflich: Man bedankt sich und fragt mit „Könnten Sie …?“ weiter."
+          },
+          {
+            "text": "Ah. Jetzt sagen Sie mir noch, wohin die Eierschalen kommen.",
+            "verdict": "unhöflich",
+            "explain": "Grammatisch richtig, aber das klingt wie ein Befehl. Besser als Frage: „Könnten Sie mir sagen …?“"
+          }
+        ],
+        "wrong": {
+          "who": "mikula",
+          "mood": "staunen",
+          "text": "Mein Pferd würde den Karton vielleicht essen – ich lieber nicht!",
+          "audio": ""
+        }
+      }
+    ]
+  },
+  "outro": {
+    "A1": {
+      "who": "mikula",
+      "mood": "freude",
+      "text": "Super! Der Müll ist in den Tonnen. Und da ist ein Zeitkristall! Danke!",
+      "audio": ""
+    },
+    "A2": {
+      "who": "mikula",
+      "mood": "freude",
+      "text": "Juhu! Neben dem Glascontainer glänzt ein Zeitkristall! Danke, jetzt kann ich Müll trennen.",
+      "audio": ""
+    },
+    "B1": {
+      "who": "mikula",
+      "mood": "freude",
+      "text": "Wunderbar! Jetzt weiß ich, welcher Müll in welche Tonne gehört. Und unter einer alten Zeitung lag ein Zeitkristall. Vielen Dank für deine Hilfe!",
+      "audio": ""
+    }
+  },
+  "words": [
+    {
+      "word": "Müll",
+      "article": "der",
+      "plural": "nur Singular",
+      "example": "Ich bringe den Müll hinaus.",
+      "emoji": "🚮",
+      "level": "A1",
+      "audio": ""
+    },
+    {
+      "word": "Tonne",
+      "article": "die",
+      "plural": "die Tonnen",
+      "example": "Im Hof stehen viele Tonnen.",
+      "emoji": "🗑️",
+      "level": "A1",
+      "audio": ""
+    },
+    {
+      "word": "Flasche",
+      "article": "die",
+      "plural": "die Flaschen",
+      "example": "Die Flasche ist leer.",
+      "emoji": "🍾",
+      "level": "A1",
+      "audio": ""
+    },
+    {
+      "word": "Zeitung",
+      "article": "die",
+      "plural": "die Zeitungen",
+      "example": "Die alte Zeitung kommt in die Papiertonne.",
+      "emoji": "📰",
+      "level": "A1",
+      "audio": ""
+    },
+    {
+      "word": "Dose",
+      "article": "die",
+      "plural": "die Dosen",
+      "example": "Die Dose ist aus Metall.",
+      "emoji": "🥫",
+      "level": "A1",
+      "audio": ""
+    },
+    {
+      "word": "Glas",
+      "article": "das",
+      "plural": "die Gläser",
+      "example": "Das Glas ist leer.",
+      "emoji": "🫙",
+      "level": "A1",
+      "audio": ""
+    },
+    {
+      "word": "Biotonne",
+      "article": "die",
+      "plural": "die Biotonnen",
+      "example": "Die Bananenschale kommt in die Biotonne.",
+      "emoji": "🍌",
+      "level": "A2",
+      "audio": ""
+    },
+    {
+      "word": "Glascontainer",
+      "article": "der",
+      "plural": "die Glascontainer",
+      "example": "Wirf die Flasche in den Glascontainer!",
+      "emoji": "🟢",
+      "level": "A2",
+      "audio": ""
+    },
+    {
+      "word": "Deckel",
+      "article": "der",
+      "plural": "die Deckel",
+      "example": "Der Deckel kommt in die gelbe Tonne.",
+      "emoji": "🔩",
+      "level": "A2",
+      "audio": ""
+    },
+    {
+      "word": "Restmüll",
+      "article": "der",
+      "plural": "nur Singular",
+      "example": "Bring den Restmüll in die graue Tonne!",
+      "emoji": "⬛",
+      "level": "A2",
+      "audio": ""
+    },
+    {
+      "word": "Sperrmüll",
+      "article": "der",
+      "plural": "nur Singular",
+      "example": "Ich melde den Sperrmüll bei der Stadt an.",
+      "emoji": "🛋️",
+      "level": "B1",
+      "audio": ""
+    },
+    {
+      "word": "Pfand",
+      "article": "das",
+      "plural": "nur Singular",
+      "example": "Auf dieser Flasche ist Pfand.",
+      "emoji": "🪙",
+      "level": "B1",
+      "audio": ""
+    }
+  ]
+}
