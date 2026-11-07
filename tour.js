@@ -38,10 +38,10 @@
     b.id = 'dm-tour'; b.className = 'dm-tour'; b.setAttribute('aria-label', 'Begrüßung von Dennis');
     b.innerHTML = `<button type="button" class="dm-tour-x" aria-label="Schließen">×</button>
       <div class="dm-tour-intro"><img src="${POSTER}" alt="" width="64" height="80">
-        <div><p><b>Hallo, ich bin Dennis!</b><br>Soll ich dir die Seite zeigen? (40 Sek.)</p>
+        <div><p><b>Hallo, ich bin Dennis!</b><br>Soll ich dir die Seite zeigen? (40 Sek.)<br><small class="dm-tour-ai">Video mit KI erstellt (Avatar und Stimme nach meinem Vorbild)</small></p>
         <div class="dm-tour-btns"><button type="button" class="dm-btn dm-tour-play">▶ Rundgang starten</button><button type="button" class="dm-tour-later">Später</button></div></div></div>
       <div class="dm-tour-player" hidden><video playsinline controls preload="none" poster="${POSTER}"><source src="${VIDEO}" type="video/mp4"><track kind="captions" srclang="de" label="Deutsch" src="${SUBS}" default></video>
-        <p class="dm-tour-hint" aria-live="polite"></p></div>`;
+        <p class="dm-small dm-tour-ai">🤖 KI-Video: Avatar und Stimme nach Dennis’ Vorbild</p><p class="dm-tour-hint" aria-live="polite"></p></div>`;
     window.DMNews?.hideToast?.();
     document.body.appendChild(b);
     requestAnimationFrame(() => b.classList.add('dm-tour-in'));

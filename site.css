@@ -567,3 +567,24 @@ nav.dm-tabs a,nav.dm-scenes a{flex:0 0 auto}
 @keyframes dmMitBlink{50%{opacity:.25}}@media (prefers-reduced-motion:reduce){.dm-et-mitdot{animation:none}}
 .dm-et-mit .dm-et-hint{font-size:14px;line-height:1.4}
 .dm-et-text{width:100%;box-sizing:border-box;font:inherit;font-size:17px;line-height:1.5;padding:10px 12px;border:1px solid var(--dm-line,#D8DCE6);border-radius:10px;background:#fff}
+
+/* ---------- Mobile fixes (review 2026-11-07) ---------- */
+@media (max-width:1180px){
+  /* open menu must stay reachable in landscape and on small phones */
+  header.dm-header.menu-open nav{max-height:calc(100dvh - 80px);overflow-y:auto;overscroll-behavior:contain}
+}
+@media (max-width:374px){
+  /* keep logo, share, bell and menu button in one row at 320 px */
+  header.dm-header{gap:6px;padding:8px 10px}
+  header.dm-header .logo{font-size:19px}
+  header.dm-header #pl-menu{padding:10px 12px;min-width:44px}
+}
+@media (max-width:560px),(max-height:500px){
+  /* running exam simulation: do not stack the sticky header on top of the timer bar */
+  body:has(.sim-bar) header.dm-header{position:relative}
+  body:has(.sim-bar) main{--sim-top:0px!important}
+}
+/* screen-reader-only status line for games */
+.sp-sr{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+/* keep the footer below the fold until the first page is rendered (avoids layout shift) */
+main:empty,main:has(> .dm-boot){min-height:100vh!important}

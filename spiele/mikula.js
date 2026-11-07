@@ -129,7 +129,7 @@
       if (!document.getElementById('sp-mk-css')) document.head.insertAdjacentHTML('beforeend', `<style id="sp-mk-css">${CSS}</style>`);
       const el = api.el, e = api.esc, root = el.closest('.sp-play');
       // screen readers: announce only the feedback box, not every re-render of the whole card
-      if (root) { root.removeAttribute('aria-live'); const fb = root.querySelector('.ch-feedback'); if (fb) { fb.setAttribute('role', 'status'); fb.setAttribute('tabindex', '-1'); } }
+      if (root) { root.removeAttribute('aria-live'); root.querySelector('.sp-sr')?.remove(); const fb = root.querySelector('.ch-feedback'); if (fb) { fb.setAttribute('role', 'status'); fb.setAttribute('tabindex', '-1'); } }
       let st = migrate(get()), cfg;
       st.level = LEVELS.some(l => l.id === st.level) ? st.level : 'A1';
       put(st);

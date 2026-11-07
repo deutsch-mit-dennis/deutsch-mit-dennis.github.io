@@ -94,10 +94,11 @@
   function play(g, opt) {
     stopAll();
     DM.page(`${crumbs(g)}
-      <section class="ch-card sp-play sp-${g.id}" aria-live="polite">
+      <section class="ch-card sp-play sp-${g.id}">
         <div class="ch-top sp-hud"><span class="sp-prog-n"></span><div class="ch-bar"><i style="width:0%"></i></div><span class="sp-time" hidden></span><span class="sp-lives" hidden></span><span class="ch-score">⭐ 0</span></div>
         <div class="sp-area"></div>
         <div class="ch-feedback" hidden></div>
+        <p class="sp-sr" role="status" aria-live="polite"></p>
         <div class="ch-actions"><button type="button" class="dm-btn" id="sp-next" hidden>Weiter</button></div>
       </section>`, 'sp-page');
     window.scrollTo({ top: 0, behavior: 'instant' });
@@ -111,8 +112,8 @@
         if (o.lives != null) { const l = $('.sp-lives', root); l.hidden = false; l.textContent = '❤️'.repeat(Math.max(0, o.lives)) + '🤍'.repeat(Math.max(0, (o.maxLives || 3) - o.lives)); l.setAttribute('aria-label', o.lives + ' Leben'); }
         if (o.time != null) { const t = $('.sp-time', root); t.hidden = false; t.textContent = '⏱ ' + o.time; t.classList.toggle('is-low', o.time <= 5); }
       },
-      feedback(ok, html) { const f = $('.ch-feedback', root); f.hidden = false; f.className = 'ch-feedback ' + (ok ? 'is-ok' : 'is-bad'); f.innerHTML = html; if (!ok) api.vibrate(); },
-      clearFeedback() { const f = $('.ch-feedback', root); f.hidden = true; f.innerHTML = ''; $('#sp-next').hidden = true; },
+      feedback(ok, html) { const f = $('.ch-feedback', root); f.hidden = false; f.className = 'ch-feedback ' + (ok ? 'is-ok' : 'is-bad'); f.innerHTML = html; const sr = $('.sp-sr', root); if (sr) sr.textContent = f.textContent.replace(/\s+/g, ' ').trim(); if (!ok) api.vibrate(); },
+      clearFeedback() { const f = $('.ch-feedback', root); f.hidden = true; f.innerHTML = ''; const sr = $('.sp-sr', root); if (sr) sr.textContent = ''; $('#sp-next').hidden = true; },
       next(label, fn) { const b = $('#sp-next'); b.textContent = label || 'Weiter'; b.hidden = false; b.onclick = () => { b.hidden = true; fn(); }; b.focus({ preventScroll: true }); },
       speak(text, onend) { if (DM.speak) return DM.speak(text, { onend }); onend?.(false); return false; },
       timer(sec, onTick, onEnd) {

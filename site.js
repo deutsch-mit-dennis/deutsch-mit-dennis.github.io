@@ -268,7 +268,7 @@
         <span class="lino-home-copy">
           <span class="lino-home-kicker">Neu: Story-Abenteuer in 8 Kapiteln</span>
           <b id="nid-h">Neu in Deutschland – deine Geschichte</b>
-          <span class="lino-home-text">Du ziehst nach Lindenfeld: Wohnung finden, beim Amt anmelden, zum Arzt, Sprachkurs, Vorstellungsgespräch – bis zum Widerspruch beim Amt. Du entscheidest, was du sagst, und sammelst Dokumente in deinem Ordner. Mit echten Stimmen.</span>
+          <span class="lino-home-text">Du ziehst nach Lindenfeld: Wohnung finden, beim Amt anmelden, zum Arzt, Sprachkurs, Vorstellungsgespräch – bis zum Widerspruch beim Amt. Du entscheidest, was du sagst, und sammelst Dokumente in deinem Ordner. Mit natürlich klingenden KI-Stimmen.</span>
           <span class="lino-home-levels" aria-label="8 Kapitel von A1 bis C1"><i>A1</i><i>A2</i><i>B1</i><i>B2</i><i>C1</i><i>🏠</i><i>🏛️</i><i>🩺</i><i>📚</i><i>💼</i><i>⚖️</i></span>
           <span class="lino-home-go">▶ Geschichte starten</span>
         </span>
@@ -626,7 +626,7 @@
     const ex = DM.listeningExam || {};
     const group = g => Object.entries(ex).filter(([, s]) => s.group === g);
     page(`${crumbs([['Üben', '#ueben'], ['Hören']])}
-      <div class="dm-head dm-head-art"><div><h1>Hören</h1><p class="dm-lead">Ansagen, Mailbox-Nachrichten, Gespräche und Radiobeiträge – mit Fragen und Lösungen. Die Texte sind mit natürlichen Stimmen aufgenommen, verschiedene Personen sprechen.</p></div><span class="dm-wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span></div>
+      <div class="dm-head dm-head-art"><div><h1>Hören</h1><p class="dm-lead">Ansagen, Mailbox-Nachrichten, Gespräche und Radiobeiträge – mit Fragen und Lösungen. Die Texte sind mit natürlich klingenden KI-Stimmen vertont, verschiedene Figuren sprechen.</p></div><span class="dm-wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span></div>
       <section class="dm-section"><div class="dm-section-head"><h2>DTZ Hören – Übungssätze</h2><p>A2–B1 · alle vier Teile wie in der Prüfung</p></div>
         <div class="dm-paths">${group('dtz').map(([id, s]) => setCard(id, s, 'sun')).join('')}</div></section>
       ${group('telcb1').length ? `<section class="dm-section"><div class="dm-section-head"><h2>telc B1 Hören – allgemein</h2><p>B1 · Radiomeldungen, Interview, Durchsagen – richtig oder falsch</p></div>
@@ -750,7 +750,7 @@
       <div class="dm-stage-copy">
         <p class="dm-stage-kicker">${isHub ? 'Einzigartig: eigene Lieder zum Deutschlernen' : 'Neu · nur hier'}</p>
         ${isHub ? '<h1 id="stage-h">Deutsch mit Liedern</h1>' : '<h2 id="stage-h">Deutsch mit Liedern</h2>'}
-        <p class="dm-stage-lead">${all.length} eigene Lieder von A1 bis C1 – über Wohnung, Arzt, Arbeit, Gefühle und Grammatik. Hör zu, sing mit und lerne die Wörter mit Aufgaben und Lösungen.</p>
+        <p class="dm-stage-lead">${all.length} eigene Lieder von A1 bis C1 – über Wohnung, Arzt, Arbeit, Gefühle und Grammatik. Hör zu, sing mit und lerne die Wörter mit Aufgaben und Lösungen.</p><p class="dm-small">🤖 Texte von mir, Musik und Gesang mit KI erstellt (Suno).</p>
         <ul class="dm-stage-chips">${SONG_LEVELS.map(k => `<li><a href="#lieder/${k}">${k}</a></li>`).join('')}</ul>
         <div class="dm-row">${sod ? `<a class="dm-btn dm-btn-sun" href="#lieder/${sod.id}">▶ Lied des Tages: „${x(sod.title)}“</a>` : ''}<a class="dm-btn dm-btn-ghost" href="#lieder/playlist">♫ Playlist</a>${isHub ? '' : '<a class="dm-btn dm-btn-ghost" href="#lieder">Alle Lieder ansehen</a>'}</div>
       </div>
@@ -786,7 +786,7 @@
     page(`${crumbs([['Deutsch mit Liedern', '#lieder/' + sg.level], [sg.title]])}
       <div class="dm-head"><p class="dm-path-meta">Niveau ${sg.level} · ${x(sg.theme)}</p><h1>${x(sg.title)}</h1><p class="dm-lead">${x(sg.intro)}</p><p class="dm-small"><b>Grammatik:</b> ${x(sg.grammar)}</p></div>
       <div class="dm-practice">
-        <section class="dm-card dm-song-player">${player}
+        <section class="dm-card dm-song-player">${player}<p class="dm-small">🤖 Text: Dennis Prudnikau · Musik und Gesang mit KI erstellt (Suno)</p>
           <h2>Liedtext</h2><details><summary>Text zum Mitlesen (erst nach der Lückenaufgabe öffnen)</summary><div class="dm-lyrics">${lyr}</div></details>
           <div class="dm-row"><a class="dm-btn dm-btn-quiet" href="material/lieder/${sg.id}.pdf" download>PDF: Text, Aufgaben, Lösungen</a></div>
         </section>
@@ -1186,7 +1186,7 @@
       ${DM.amazonTag ? `<h2>4c-2. Amazon-Partnerprogramm</h2>
       <p>Ich nehme am Partnerprogramm von Amazon EU teil (Amazon Europe Core S.à r.l., 38 avenue John F. Kennedy, L-1855 Luxemburg). Links zu Büchern bei Amazon sind Werbelinks und mit einem Sternchen (*) gekennzeichnet. Kaufst du über einen solchen Link, bekomme ich eine kleine Provision; für dich ändert sich der Preis nicht. Als Amazon-Partner verdiene ich an qualifizierten Verkäufen. Beim bloßen Besuch dieser Website werden keine Daten an Amazon übertragen und keine Amazon-Cookies gesetzt. Erst wenn du auf einen Amazon-Link klickst, öffnet sich die Website von Amazon. Amazon kann dann Cookies setzen, um zu erkennen, dass du über meine Website gekommen bist, und um die Provision abzurechnen. Ich erhalte dabei keine personenbezogenen Daten, sondern nur zusammengefasste Verkaufszahlen. Rechtsgrundlage ist mein berechtigtes Interesse an der Finanzierung meines kostenlosen Angebots (Art. 6 Abs. 1 lit. f DSGVO); für die Cookies auf der Amazon-Website ist Amazon verantwortlich. Mehr: <a href="https://www.amazon.de/gp/help/customer/display.html?nodeId=201909010" target="_blank" rel="noopener noreferrer">Datenschutzerklärung von Amazon</a>.</p>` : ''}
       <h2>4d. Einsprechen und korrigieren lassen</h2>
-      <p>Bei den Sprechübungen kannst du dich aufnehmen. Erst nach deinem Klick auf „Aufnahme starten“ oder „Mich aufnehmen“ fragt dein Browser nach dem Mikrofon. Die Aufnahme bleibt auf deinem Gerät und wird nicht an mich übertragen. Für das automatische Mitschreiben nutzt dein Browser seine eingebaute Spracherkennung: In Chrome und Edge wird der Ton dafür an Google bzw. Microsoft übertragen (in Safari je nach Gerät an Apple) und dort in Text umgewandelt; dabei können Daten auch außerhalb der EU verarbeitet werden. Nach dem Stoppen wird die Aufnahme zusätzlich an meinen Cloudflare-Worker geschickt und dort mit der KI-Spracherkennung Whisper (Cloudflare Workers AI) in Text umgewandelt, damit auch Wörter mit Akzent richtig erkannt werden. Die Aufnahme wird dabei nicht gespeichert und nicht zum Training verwendet; Anbieter ist die Cloudflare, Inc. (USA, EU-Standardvertragsklauseln). Den erkannten Text prüft danach LanguageTool (siehe 4a). Rechtsgrundlage ist deine Einwilligung durch den Klick (Art. 6 Abs. 1 lit. a DSGVO).</p>
+      <p>Bei den Sprechübungen kannst du dich aufnehmen. Erst nach deinem Klick auf „Aufnahme starten“ oder „Mich aufnehmen“ fragt dein Browser nach dem Mikrofon. Das gilt für die Sprechübungen und für die Prüfungssimulationen. Ich speichere die Aufnahme nicht. Für das automatische Mitschreiben nutzt dein Browser seine eingebaute Spracherkennung: In Chrome und Edge wird der Ton dafür an Google bzw. Microsoft übertragen (in Safari je nach Gerät an Apple) und dort in Text umgewandelt; dabei können Daten auch außerhalb der EU verarbeitet werden. Nach dem Stoppen wird die Aufnahme zur Texterkennung an meinen Cloudflare-Worker (dmd-whisper.dennis-prudnikau.workers.dev) geschickt und dort mit der KI-Spracherkennung Whisper (Cloudflare Workers AI) in Text umgewandelt, damit auch Wörter mit Akzent richtig erkannt werden. Die Aufnahme wird dabei nicht gespeichert und nicht zum Training verwendet; Anbieter ist die Cloudflare, Inc. (USA, EU-Standardvertragsklauseln). Den erkannten Text prüft danach LanguageTool (siehe 4a). Rechtsgrundlage ist deine Einwilligung durch den Klick (Art. 6 Abs. 1 lit. a DSGVO).</p>
       <h2>4e. Deine Meinung (Zettel)</h2>
       <p>Wenn du unter „Deine Meinung“ einen Zettel abschickst, werden deine Angaben (Art des Zettels, Text, freiwillig Vorname und E-Mail-Adresse) über den Dienst FormSubmit (formsubmit.co) per E-Mail an mich weitergeleitet. Dabei wird auch deine IP-Adresse übertragen; die Verarbeitung kann außerhalb der EU stattfinden. Ohne Klick auf „Zettel abschicken“ wird nichts übertragen. Ich veröffentliche einen Zettel nur, wenn du das erlaubt hast – mit Vorname oder anonym, nie mit E-Mail-Adresse. Rechtsgrundlage ist deine Einwilligung (Art. 6 Abs. 1 lit. a DSGVO). Wenn du möchtest, dass ich einen Zettel wieder entferne, schreib mir einfach.</p>
       <p>Nach einiger Nutzung fragt die Seite einmal kurz, ob sie dir hilft (1–5 Sterne). Ob und wann die Frage erscheint, wird nur in deinem Browser gespeichert. Erst wenn du Sterne anklickst, werden die Sternzahl, dein freiwilliger Kommentar und die aktuelle Unterseite über FormSubmit per E-Mail an mich gesendet; dabei wird auch deine IP-Adresse übertragen. Rechtsgrundlage ist deine Einwilligung (Art. 6 Abs. 1 lit. a DSGVO).</p>
@@ -1204,7 +1204,7 @@
       <p>Du hast das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerspruch. Eine Einwilligung kannst du jederzeit widerrufen. Du kannst dich außerdem bei einer Datenschutz-Aufsichtsbehörde beschweren, zum Beispiel bei der Landesbeauftragten für Datenschutz und Informationsfreiheit Nordrhein-Westfalen.</p>
       <p class="dm-small">Stand: Oktober 2026</p>
       </article>`);
-    $('#dm-wipe').onclick = () => { try { localStorage.removeItem(KEY); localStorage.removeItem('dm-mikula'); } catch {} mem = { visited: {}, done: {}, drafts: {} }; DM.store = mem; $('#dm-wipe-status').textContent = 'Erledigt. Dein Lernstand wurde gelöscht.'; };
+    $('#dm-wipe').onclick = () => { try { for (const S of [localStorage, sessionStorage]) Object.keys(S).filter(k => k === KEY || /^(dmd?|da)[-._]/.test(k)).forEach(k => S.removeItem(k)); } catch {} mem = { visited: {}, done: {}, drafts: {} }; DM.store = mem; $('#dm-wipe-status').textContent = 'Erledigt. Dein Lernstand wurde gelöscht.'; };
   }
 
   /* ---------- Hilfe-Texte an die neue Navigation anpassen (Deutsch, Englisch) ---------- */
@@ -1291,7 +1291,7 @@
       <p class="dm-small">Für alle, die gern mit Stift und Papier üben: dieselbe Art von Prüfungstraining als gedrucktes Taschenbuch, mit Platz zum Schreiben und allen Lösungen. Kauf und Versand über Amazon. Alle Übungen auf dieser Website bleiben kostenlos.</p>
       <div class="dm-books-grid">${B.map(card).join('')}</div>
       ${tipsHtml}
-      ${DM.amazonNote ? `<p class="dm-small">${x(DM.amazonNote)}</p>` : ''}</section>`;
+      ${DM.amazonNote ? `<p class="dm-small">${x(DM.amazonNote)} Bei meinen eigenen Büchern verdiene ich außerdem am Verkauf (Tantieme von Amazon).</p>` : ''}</section>`;
   }
 
   /* ---------- Lernpakete (Kauf später über Digistore24) ---------- */
@@ -1639,9 +1639,16 @@
     backBar.querySelector('.dm-back').onclick = e => { if (navDepth > 0) { e.preventDefault(); navDepth -= 2; history.back(); } };
   }
 
+  /* unknown or outdated address: clear page instead of an endless loading placeholder */
+  function notFound() {
+    page(`<div class="dm-head"><h1>Diese Seite gibt es nicht (mehr)</h1><p class="dm-lead">Vielleicht ist der Link alt oder falsch geschrieben. Hier geht es weiter:</p></div>
+      <p class="dm-actions"><a class="dm-btn" href="#">🏠 Startseite</a> <a class="dm-btn dm-btn-quiet" href="#lernweg">🧭 Mein Lernweg</a> <a class="dm-btn dm-btn-quiet" href="#pruefung">📝 Prüfung</a> <a class="dm-btn dm-btn-quiet" href="#spiele">🎮 Spiele</a></p>`);
+  }
+
   window.route = function () {
     let raw = decodeURIComponent(location.hash.slice(1)).replace(/^\/+/, '');
     let p = raw.split('/');
+    p[0] = p[0].toLowerCase();
     if (p[0] in ALIAS) { p[0] = ALIAS[p[0]]; if (p[0] === '') p = ['']; if (p[0] === 'lernen' && p[1] === 'beruf') p[1] = 'B2'; }
     if (p[0] === 'lektion' && !p[1]) p = ['lernen'];
     if (p[0] === 'lernweg' && p[1] === 'everyday') p[1] = 'sprechen';
@@ -1652,6 +1659,7 @@
     const own = OWN[p[0]] || DM.routes[p[0]];
     if (own) { own(p); setupExamBox(p); }
     else { try { legacyRoute(); } catch (e) { console.error(e); home(); } afterLegacy(p); }
+    if (p[0] !== '' && $('main .dm-boot')) notFound();
     hideMissingDownloads();
     unifyHead(p);
     addBackBar(p);

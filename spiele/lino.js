@@ -18,7 +18,7 @@
 /* Handy quer: Kopfzeile scrollt mit, damit das Spielfeld groß bleibt */
 @media (max-height:520px) and (orientation:landscape){body:has(.sp-lino-wrap) header.dm-header,body:has(.sp-lino-wrap) .dm-backbar{position:static}.sp-play.sp-lino{scroll-margin-top:6px!important}.sp-lino-wrap canvas{scroll-margin-top:6px}.sp-lino-wrap canvas{max-height:calc(100vh - 128px)!important}.sp-lino-banner{top:50px;font-size:12.5px;padding:4px 10px}}
 .sp-lino-panel{margin-top:12px}
-.sp-lino-jump{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;min-height:64px;border:0;border-radius:18px;background:linear-gradient(180deg,#ff9a3c,#e5622b);color:#fff;font:800 20px var(--dm-font);box-shadow:0 5px 0 #b8461c;cursor:pointer;touch-action:manipulation;-webkit-user-select:none;user-select:none;-webkit-touch-callout:none;-webkit-tap-highlight-color:transparent}
+.sp-lino-jump{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;min-height:64px;border:0;border-radius:18px;background:linear-gradient(180deg,#c2410c,#9a3412);color:#fff;font:800 20px var(--dm-font);box-shadow:0 5px 0 #b8461c;cursor:pointer;touch-action:manipulation;-webkit-user-select:none;user-select:none;-webkit-touch-callout:none;-webkit-tap-highlight-color:transparent}
 .sp-lino-jump:active{transform:translateY(3px);box-shadow:0 2px 0 #b8461c}
 .sp-lino-jump.is-q{background:linear-gradient(180deg,#ffd84a,#f5a800);color:#3d2a06;box-shadow:0 6px 0 #b77d00}
 .sp-lino-jump.is-now{animation:linoQ .5s ease-in-out infinite alternate}
@@ -75,7 +75,7 @@
 /* Erweiterung: Statistik, Tageslauf, Shop, Abzeichen, neue Fragetypen */
 .sp-lino-stats{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 10px}
 .sp-lino-stats span{background:#fff;border:2px solid var(--dm-line,#d5dbea);border-radius:99px;padding:5px 12px;font-size:15px}
-.sp-lino-daily{display:flex;gap:12px;align-items:center;width:100%;text-align:left;padding:12px 14px;border:0;border-radius:18px;background:linear-gradient(135deg,#ff9a3c,#e5622b);color:#fff;font:inherit;cursor:pointer;box-shadow:0 5px 0 #b8461c;margin:0 0 12px}
+.sp-lino-daily{display:flex;gap:12px;align-items:center;width:100%;text-align:left;padding:12px 14px;border:0;border-radius:18px;background:linear-gradient(135deg,#c2410c,#9a3412);color:#fff;font:inherit;cursor:pointer;box-shadow:0 5px 0 #b8461c;margin:0 0 12px}
 .sp-lino-daily:active{transform:translateY(3px);box-shadow:0 2px 0 #b8461c}
 .sp-lino-daily b{font-size:20px}.sp-lino-daily small{display:block;font-size:13.5px;opacity:.95;margin-top:2px}
 .sp-lino-daily.is-done{background:linear-gradient(135deg,#2e9e6b,#1f7a52);box-shadow:0 5px 0 #145c3c}

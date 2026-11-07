@@ -3,7 +3,7 @@
    LiD-Simulation: Fragen aus window.LID_KATALOG (BAMF-Gesamtfragenkatalog).
    Fortschritt und Antworten bleiben nur im Browser (DM.store.sim). */
 (() => {
-  const V = '20261104a';
+  const V = '20261107e';
   const $ = (s, r = document) => r.querySelector(s);
   const $$ = (s, r = document) => [...r.querySelectorAll(s)];
   const e = s => DM.esc(s);
@@ -333,7 +333,7 @@
   }
   function ruleBox(ex) {
     const R = {
-      dtz: 'Bewertet werden Hören und Lesen zusammen (45 Punkte), Schreiben (20) und Sprechen (100). Für B1: ab 33 Punkten in Hören/Lesen, ab 15 im Schreiben, ab 75 im Sprechen. Für das Zertifikat B1 brauchst du B1 im Sprechen und B1 in Hören/Lesen oder Schreiben (für A2 entsprechend).',
+      dtz: 'Bewertet werden Hören und Lesen zusammen (45 Punkte), Schreiben (20) und Sprechen (100). Für B1: ab 33 Punkten in Hören/Lesen, ab 15 im Schreiben, ab 75 im Sprechen. Seit 1.11.2026 gilt für B1: Sprechen B1, ein weiterer Teil B1 und der dritte Teil mindestens A2. Ein leeres Blatt beim Schreiben reicht also nicht mehr.',
       telc: 'Insgesamt 300 Punkte. Bestanden hast du mit mindestens 60 % in der schriftlichen Prüfung (135 von 225 Punkten) und mindestens 60 % in der mündlichen Prüfung (45 von 75 Punkten).',
       dtb: 'Insgesamt 240 Punkte, je 60 für Lesen, Hören, Schreiben und Sprechen. Bestanden: mindestens 144 Punkte (60 %), dabei in drei Fertigkeiten mindestens 60 % und in der schwächsten mindestens 40 %.',
       lid: '33 Fragen, 60 Minuten. Mit mindestens 15 richtigen Antworten ist der Test bestanden (Orientierungskurs). Für die Einbürgerung brauchst du mindestens 17 richtige Antworten.'
@@ -716,7 +716,7 @@
       ${isPrep ? `<label class="sim-wlabel" for="n-${key}">Deine Notizen (Stichpunkte)</label><textarea id="n-${key}" class="sim-textarea sim-notes" data-notes="${key}" rows="4">${e(st.notes[key] || '')}</textarea>`
         : `${st.notes[key] && !withNotes ? `<details class="sim-det"><summary>Deine Notizen</summary><p class="sim-pre">${e(st.notes[key])}</p></details>` : ''}
         ${total ? `<div class="sim-prompts"><button type="button" class="dm-btn dm-btn-quiet sim-ask" data-key="${key}" ${n >= total ? 'disabled' : ''}>${n === 0 ? '▶ Gespräch beginnen' : n >= total ? 'Alle Fragen gestellt' : `▶ Nächste Äußerung (${n + 1}/${total})`}</button><p class="sim-said" data-said="${key}">${n ? `<b>Gesprächspartner/in:</b> ${e(p.prompts[n - 1])}` : 'Die Prüferin oder deine Partnerin spricht. Antworte laut.'}</p></div>` : ''}
-        <div class="sim-recrow">${canRec ? `<button type="button" class="dm-btn dm-btn-quiet sim-recbtn" data-rec="${key}">${url ? '🎙 Neu aufnehmen' : '🎙 Mich aufnehmen'}</button>` : '<span class="dm-small">Aufnehmen ist in diesem Browser nicht möglich.</span>'}<span data-recbox="${key}">${url ? `<audio controls src="${url}"></audio>` : ''}</span></div>
+        <div class="sim-recrow">${canRec ? `<button type="button" class="dm-btn dm-btn-quiet sim-recbtn" data-rec="${key}">${url ? '🎙 Neu aufnehmen' : '🎙 Mich aufnehmen'}</button>` : '<span class="dm-small">Aufnehmen ist in diesem Browser nicht möglich.</span>'}<span data-recbox="${key}">${url ? `<audio controls src="${url}"></audio>` : ''}</span></div>${canRec && !url ? '<p class="dm-small sim-recnote">🔒 Beim Aufnehmen wandelt dein Browser die Sprache in Text um (Chrome/Edge: über Google bzw. Microsoft). Danach geht die Aufnahme zur genaueren Erkennung an meinen Server und wird nicht gespeichert. <a href="#datenschutz">Mehr im Datenschutz</a></p>' : ''}
         <div class="sim-mit" data-mitbox="${key}">${url ? mitBox((cur?.id || '') + key, true) : ''}</div>`}
       ${p.redemittel?.length ? `<details class="sim-det"><summary>Hilfe: Redemittel</summary><ul class="sim-chiplist">${p.redemittel.map(r => `<li>${e(r)}</li>`).join('')}</ul></details>` : ''}`;
   }
@@ -793,10 +793,11 @@
       const lv = (v, b1, a2) => v >= b1 ? 'B1' : v >= a2 ? 'A2' : 'unter A2';
       const hl = lv(g('hl'), 33, 20), s = lv(g('s'), 15, 7), m = lv(g('m'), 75, 35);
       const rank = { B1: 2, A2: 1, 'unter A2': 0 };
-      const best = Math.max(rank[hl], rank[s]);
-      const total = Math.min(rank[m], best);
+      // rule since 1 Nov 2026: B1 = speaking B1 + one more part B1 + the third part at least A2
+      const b1 = rank[m] === 2 && ((rank[hl] === 2 && rank[s] >= 1) || (rank[s] === 2 && rank[hl] >= 1));
+      const total = b1 ? 2 : (rank[m] >= 1 && Math.max(rank[hl], rank[s]) >= 1) ? 1 : 0;
       const res = ['unter A2', 'A2', 'B1'][total];
-      return { pass: total >= 1, head: total === 2 ? 'Ergebnis: B1' : total === 1 ? 'Ergebnis: A2' : 'Noch kein Zertifikat', lines: [`Hören und Lesen: ${fmt(g('hl'))} von 45 → ${hl}`, `Schreiben: ${fmt(g('s'))} von 20 → ${s}`, `Sprechen: ${fmt(g('m'))} von 100 → ${m}`, `Gesamtergebnis: ${res} (Sprechen zählt immer, dazu das bessere Ergebnis aus Hören/Lesen oder Schreiben).`] };
+      return { pass: total >= 1, head: total === 2 ? 'Ergebnis: B1' : total === 1 ? 'Ergebnis: A2' : 'Noch kein Zertifikat', lines: [`Hören und Lesen: ${fmt(g('hl'))} von 45 → ${hl}`, `Schreiben: ${fmt(g('s'))} von 20 → ${s}`, `Sprechen: ${fmt(g('m'))} von 100 → ${m}`, `Gesamtergebnis: ${res} (für B1: Sprechen B1, ein weiterer Teil B1, der dritte mindestens A2 – Regel seit 1.11.2026).`] };
     }
     return null;
   }
@@ -818,7 +819,7 @@
     }
     if (rule === 'dtz') {
       const lv = (v, b1, a2) => v >= b1 ? 'B1' : v >= a2 ? 'A2' : 'unter A2';
-      if (mode === 'written') { const hl = lv(g('hl'), 33, 20), s = lv(g('s'), 15, 7); return { pass: null, head: `Schriftlich: Hören/Lesen ${hl}, Schreiben ${s}`, lines: [`Hören und Lesen: ${fmt(g('hl'))} von 45 → ${hl}`, `Schreiben: ${fmt(g('s'))} von 20 → ${s}`, 'Das Zertifikat hängt vom Sprechen ab (Sprechen + das bessere Ergebnis aus Hören/Lesen oder Schreiben). ' + tail] }; }
+      if (mode === 'written') { const hl = lv(g('hl'), 33, 20), s = lv(g('s'), 15, 7); return { pass: null, head: `Schriftlich: Hören/Lesen ${hl}, Schreiben ${s}`, lines: [`Hören und Lesen: ${fmt(g('hl'))} von 45 → ${hl}`, `Schreiben: ${fmt(g('s'))} von 20 → ${s}`, 'Für B1 brauchst du Sprechen B1, einen weiteren Teil B1 und im dritten Teil mindestens A2 (seit 1.11.2026). ' + tail] }; }
       const m = lv(g('m'), 75, 35); return { pass: null, head: `Sprechen: ${m}`, lines: [`Sprechen: ${fmt(g('m'))} von 100 → ${m}`, tail] };
     }
     return null;

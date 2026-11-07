@@ -532,7 +532,7 @@
 .wz-why summary{cursor:pointer;font-weight:700;color:#7a5600;min-height:32px;display:inline-flex;align-items:center}
 .wz-why p{margin:4px 0 0;background:rgba(255,255,255,.7);border-radius:12px;padding:8px 12px;color:#3b4258}
 .wz-tools{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
-.wz-lang select{min-height:44px;max-width:100%;border-radius:12px;border:2px solid #e8b931;background:#fff;padding:6px 10px;font:600 15px var(--dm-font);color:#172036}
+.wz-lang select{min-height:44px;max-width:100%;border-radius:12px;border:2px solid #e8b931;background:#fff;padding:6px 10px;font:600 16px var(--dm-font);color:#172036}
 .wz-btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;min-height:44px;padding:8px 16px;border-radius:99px;border:2px solid #2341B5;background:#2341B5;color:#fff;font:800 15px var(--dm-font);text-decoration:none;cursor:pointer}
 .wz-btn.wz-quiet{background:#fff;color:#2341B5}
 .wz-btn:focus-visible,.wz-lang select:focus-visible{outline:3px solid #2341B5;outline-offset:2px}
