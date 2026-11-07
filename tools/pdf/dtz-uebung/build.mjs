@@ -331,13 +331,14 @@ if (!PAKET) {
   await render(browser, probe, outL);
   console.log('wrote', outL, page, 'pages');
 
-  // gift for Dennis' own course (unlisted page geschenk/dtz-kurs/): full content, watermarked
+  // gift for Dennis' own course: only with --gift (taken offline 2026-11-07, must not land on the website again)
+  if (process.argv.includes('--gift')) {
   page = 0; side = SIDE.gift; foot = 'Geschenk';
   const gift = cover('🎁 Geschenk für den IK 202 · A2–B1', '© Dzianis Prudnikau · Deutsch mit Dennis · deutsch-mit-dennis.de<br>Ein Geschenk für die Teilnehmerinnen und Teilnehmer des IK 202 – nur für deine eigene Prüfungsvorbereitung, bitte nicht weitergeben. Unabhängiges Lernmaterial im Stil des DTZ: kein Angebot von g.a.s.t., telc oder BAMF, keine offiziellen Prüfungsaufgaben.')
     + redemittel() + teil1() + ALL.map(variante).join('') + ALL.map((x, i) => loesung(i + 1, P.loesungen[i], x)).join('');
-  mkdirSync(resolve(REPO, 'geschenk/dtz-kurs'), { recursive: true });
-  await render(browser, gift, resolve(REPO, 'geschenk/dtz-kurs/dtz-pruefungstraining-geschenk.pdf'));
+  await render(browser, gift, resolve(REPO, '..', 'deutsch-mit-dennis-archiv', 'dtz-pruefungstraining-geschenk.pdf'));
   console.log('wrote gift pdf', page, 'pages');
+  }
 
   const card = await browser.newPage({ viewport: { width: 800, height: 800 } });
   const cardHtml = resolve(REPO, 'tools/pdf/dtz-uebung/.card.html');
