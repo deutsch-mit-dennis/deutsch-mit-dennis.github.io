@@ -200,7 +200,8 @@
       ['#spiele/lino', 'dm-q-lino', '🏃', 'Lino läuft', '14 Welten · Tageslauf & Shop'],
       [sod ? '#lieder/' + sod.id : '#lieder', 'dm-q-song', '🎵', sod ? 'Lied des Tages' : 'Lieder', sod ? sod.title : '62 Lieder A1–C1']
     ];
-    return `<nav class="dm-quick" aria-label="Schnellstart">${tiles.map(([u, c, i, t, s]) => `<a class="${c}" href="${x(u)}"><span class="dm-q-ico" aria-hidden="true">${i}</span><b>${x(t)}</b><small>${x(s)}</small></a>`).join('')}</nav>`;
+    const mk = `<a class="dm-q-mk" href="#spiele/mikula"><img src="spiele/mikula/img/mikula-freude.webp" alt="" width="64" height="64" aria-hidden="true"><span><em>Neu · Lernspiel A1–B1</em><b>Mikula sucht den Weg nach Hause</b><small>Hilf Mikula aus dem Jahr 1024 im Deutschland von heute</small></span><span class="dm-q-mk-go" aria-hidden="true">▶</span></a>`;
+    return `<nav class="dm-quick" aria-label="Schnellstart">${mk}${tiles.map(([u, c, i, t, s]) => `<a class="${c}" href="${x(u)}"><span class="dm-q-ico" aria-hidden="true">${i}</span><b>${x(t)}</b><small>${x(s)}</small></a>`).join('')}</nav>`;
   }
   function home() {
     const last = mem.last && mem.last.route !== '' ? mem.last : null;
@@ -208,7 +209,7 @@
     <section class="dm-hero">
       <figure class="dm-hero-photo"><img src="assets/dennis.webp" alt="Dennis, dein Deutschlehrer" width="626" height="1004" fetchpriority="high"></figure>
       <div class="dm-hero-copy">
-        <a class="lino-hero-chip" href="#simulation"><span aria-hidden="true">⏱</span><span><b>Neu:</b> 6 Probeprüfungen mit echter Zeit – DTZ, LiD, telc und DTB</span><span class="lino-hero-go" aria-hidden="true">▶</span></a>
+        <a class="lino-hero-chip mk-hero-chip" href="#spiele/mikula"><span aria-hidden="true">💎</span><span><b>Neu:</b> Lernspiel „Mikula sucht den Weg nach Hause“ – A1, A2, B1</span><span class="lino-hero-go" aria-hidden="true">▶</span></a>
         <h1>Deutsch lernen mit Dennis</h1>
         ${quickStart()}
         <p class="dm-lead">Kostenlose Übungen von A1 bis B2 Beruf – für deinen Alltag, deine Prüfung und deinen Job. Ohne Anmeldung.</p>
@@ -219,6 +220,19 @@
           ${last ? `<a class="dm-btn" href="#${x(last.route)}">Weitermachen: ${x(last.title)}</a><a class="dm-btn dm-btn-quiet" href="#wegweiser">Welcher Weg passt zu mir?</a>` : `<a class="dm-btn" href="#wegweiser">Welcher Weg passt zu mir?</a><a class="dm-btn dm-btn-quiet" href="#lernen/A1">Mit A1 beginnen</a>`}
         </div>
       </div>
+    </section>
+
+    <section class="dm-section lino-home mk-home" aria-labelledby="mkh-h">
+      <a class="lino-home-card mk-home-card" href="#spiele/mikula">
+        <img class="lino-home-art mk-home-art" src="spiele/mikula/img/station-bahnhof.webp" alt="Mikula, ein Bauer aus dem Jahr 1024, steht staunend an einem deutschen Bahnhof vor einem Fahrkartenautomaten" width="960" height="640" decoding="async">
+        <span class="lino-home-copy">
+          <span class="lino-home-kicker">Neu: Lernspiel mit Geschichte</span>
+          <b id="mkh-h">Mikula sucht den Weg nach Hause</b>
+          <span class="lino-home-text">Mikula ist Bauer im Jahr 1024 – und landet plötzlich im Deutschland von heute. Hilf ihm am Bahnhof, im Supermarkt, beim Bäcker und im Jobcenter. Für jede Station bekommt er einen Zeitkristall.</span>
+          <span class="lino-home-levels" aria-label="Niveau A1, A2 und B1, sechs Stationen"><i>A1</i><i>A2</i><i>B1</i><i>🚉</i><i>🛒</i><i>🥨</i><i>📮</i><i>🏛️</i><i>♻️</i></span>
+          <span class="lino-home-go">▶ Mikula helfen</span>
+        </span>
+      </a>
     </section>
 
     <section class="dm-section" aria-labelledby="wege-h">
