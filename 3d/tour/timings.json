@@ -1,75 +1,82 @@
 {
- "duration": 56.925,
+ "duration": 54.955,
  "steps": [
   {
    "i": 0,
    "step": "desk",
-   "text": "Hallo und herzlich willkommen! Ich bin Dennis – Deutschlehrer und Prüfer für den DTZ und für telc.",
+   "text": "Hallo und herzlich willkommen! Ich bin Dennis – Deutschlehrer und Prüfer.",
    "start": 0.15,
-   "end": 8.633
+   "end": 5.265
   },
   {
    "i": 1,
    "step": "desk",
-   "text": "Das ist mein Lernschreibtisch. Alles ist kostenlos und ohne Anmeldung.",
-   "start": 8.913,
-   "end": 14.57
+   "text": "Das ist mein Lernschreibtisch – kostenlos und ohne Anmeldung.",
+   "start": 5.565,
+   "end": 9.903
   },
   {
    "i": 2,
    "step": "laptop",
    "text": "Im Laptop findest du die Lektionen – von A1 bis B2 Beruf.",
-   "start": 14.85,
-   "end": 19.74
+   "start": 10.203,
+   "end": 16.462
   },
   {
    "i": 3,
    "step": "heft",
-   "text": "In meinem Heft blätterst du durch alle Bereiche.",
-   "start": 20.02,
-   "end": 23.928
+   "text": "In meinem Heft blätterst du durch alle Bereiche – tippe einfach auf ein Thema.",
+   "start": 16.762,
+   "end": 21.773
   },
   {
    "i": 4,
    "step": "kopfhoerer",
    "text": "Mit den Kopfhörern übst du Hören, mit den Büchern Lesen.",
-   "start": 24.208,
-   "end": 28.645
+   "start": 22.073,
+   "end": 27.018
   },
   {
    "i": 5,
    "step": "mikrofon",
    "text": "Am Mikrofon trainierst du Sprechen.",
-   "start": 28.925,
-   "end": 31.496
+   "start": 27.318,
+   "end": 29.997
   },
   {
    "i": 6,
    "step": "gamepad",
    "text": "Mit dem Gamepad lernst du spielerisch.",
-   "start": 31.776,
-   "end": 34.808
+   "start": 30.297,
+   "end": 32.976
   },
   {
    "i": 7,
    "step": "pruefung",
-   "text": "Bald eine Prüfung? Der Prüfungsbogen bringt dich zu den Probeprüfungen: DTZ, telc und DTB.",
-   "start": 35.088,
-   "end": 43.267
+   "text": "Bald eine Prüfung? Der Prüfungsbogen bringt dich zu den Probeprüfungen.",
+   "start": 33.276,
+   "end": 38.627
   },
   {
    "i": 8,
    "step": "globus",
    "text": "Der Globus führt dich zu „Leben in Deutschland“, und im Radio laufen meine Lieder.",
-   "start": 43.547,
-   "end": 50.054
+   "start": 38.927,
+   "end": 44.937
   },
   {
    "i": 9,
+   "step": "shop",
+   "text": "Am Buchständer findest du meine Bücher und Lernpakete.",
+   "start": 45.237,
+   "end": 48.68
+  },
+  {
+   "i": 10,
    "step": "desk",
    "text": "Tippe einfach auf einen Gegenstand. Viel Erfolg – ich freue mich, dass du da bist!",
-   "start": 50.334,
-   "end": 56.525
+   "start": 48.98,
+   "end": 54.555
   }
  ]
 }

@@ -301,3 +301,33 @@ body.touring .info{opacity:0;pointer-events:none}
 @media (max-width:560px){.sp-books{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}}
 @media (max-width:520px){.to-classic{font-size:.72rem;padding:6px 9px}.top{gap:6px}}
 @media (max-width:400px){.top .all:not(.to-classic){display:none}}
+.hf-hint{display:block;font-size:.78rem;color:var(--muted);margin:-2px 0 6px}
+.hf-host.hf-hot{cursor:pointer;outline:3px solid rgba(255,228,92,.0)}
+
+/* tour bubble while Dennis speaks (photo + pulse) */
+.tour-bubble{position:relative}
+.tour-bubble video{object-position:50% 20%}
+.tour-bubble.talking{animation:talkPulse 1.4s ease-in-out infinite}
+.tour-bubble.talking::after{content:"";position:absolute;left:50%;bottom:10px;width:46px;height:14px;margin-left:-23px;border-radius:8px;
+  background:repeating-linear-gradient(90deg,#FFE45C 0 5px,transparent 5px 9px);animation:talkBars .5s steps(3) infinite;opacity:.95}
+@keyframes talkPulse{0%,100%{box-shadow:0 20px 40px -14px rgba(0,0,0,.5),0 0 0 4px #fff}50%{box-shadow:0 20px 40px -14px rgba(0,0,0,.5),0 0 0 4px #fff,0 0 0 10px rgba(255,228,92,.45)}}
+@keyframes talkBars{0%{clip-path:inset(40% 0 0 0)}33%{clip-path:inset(0 0 0 0)}66%{clip-path:inset(60% 0 0 0)}}
+@media (prefers-reduced-motion:reduce){.tour-bubble.talking,.tour-bubble.talking::after{animation:none}}
+
+/* notebook bar: all topics of the open spread; one swipeable row on phones */
+@media (max-width:760px){.hf-links{flex-wrap:nowrap;justify-content:flex-start;overflow-x:auto;scrollbar-width:none;padding-bottom:2px;-webkit-mask-image:linear-gradient(90deg,#000 85%,transparent);mask-image:linear-gradient(90deg,#000 85%,transparent)}.hf-links a{flex:none;min-height:40px;display:inline-flex;align-items:center}.hf-bar>button{width:46px;height:46px}}
+
+/* "Weitermachen" sticky note */
+.resume{display:flex;align-items:center;gap:8px;width:100%;margin:0 0 12px;padding:10px 14px;min-height:48px;border:0;border-radius:3px;cursor:pointer;text-align:left;font:inherit;
+  background:#FFE45C;color:var(--ink);box-shadow:0 8px 14px -8px rgba(0,0,0,.45);transform:rotate(-1.2deg);transition:transform .2s}
+.resume:hover,.resume:focus-visible{transform:rotate(0) translateY(-2px)}
+.resume .r-k{font-family:var(--hand);font-size:1.15rem;color:var(--rot);flex:none}
+.resume b{flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+/* tour invitation bubble */
+.tour-hint{position:relative;display:flex;align-items:center;gap:8px;margin:0 0 10px;padding:10px 12px;border-radius:14px;background:var(--ink);color:#fff;font-size:.9rem;font-weight:700;animation:hintIn .5s cubic-bezier(.2,.9,.3,1.4)}
+.tour-hint::after{content:"";position:absolute;left:28px;bottom:-7px;border:7px solid transparent;border-bottom:0;border-top-color:var(--ink)}
+.th-x{margin-left:auto;flex:none;width:32px;height:32px;border-radius:50%;border:0;background:rgba(255,255,255,.15);color:#fff;font-size:1.1rem;cursor:pointer}
+@keyframes hintIn{from{transform:translateY(8px) scale(.9);opacity:0}}
+@media (prefers-reduced-motion:reduce){.tour-hint{animation:none}.resume{transition:none}}
+@media (max-width:900px),(orientation:portrait){.info:has(.resume:not([hidden]))>p:not(.kicker){display:none}.resume{margin-bottom:10px}.tour-hint{font-size:.85rem;padding:8px 10px}}
+.v-laptop{padding:0 2%}.lt-base{margin:0 -1.5%}

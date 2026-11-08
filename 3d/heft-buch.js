@@ -26,6 +26,8 @@ const rim = new THREE.DirectionalLight(0x9fb2ff, 1.2); rim.position.set(5, -2, -
 
 // ---------- helpers ----------
 const loadImg = src => new Promise(res => { const i = new Image(); i.onload = () => res(i); i.onerror = () => res(null); i.src = src; });
+const SPOTS = new Map();
+const spots = (t, list) => { SPOTS.set(t, list); return t; };
 const tex = c => { const t = new THREE.CanvasTexture(c); t.colorSpace = THREE.SRGBColorSpace; t.anisotropy = maxAniso; return t; };
 const clamp = (v, a, b) => Math.min(b, Math.max(a, v));
 const smooth = (a, b, v) => { const t = clamp((v - a) / (b - a), 0, 1); return t * t * (3 - 2 * t); };
@@ -53,6 +55,7 @@ function marker(g, t, x, y, s) {
   g.save(); g.fillStyle = C.marker; g.globalAlpha = .9; g.beginPath();
   g.moveTo(x - 10, y - s * .38); g.lineTo(x + w + 12, y - s * .46); g.lineTo(x + w + 8, y + s * .14); g.lineTo(x - 12, y + s * .2); g.fill(); g.restore();
   sans(g, t, x, y, s);
+  hand(g, '→', x + w + 26, y, s * .7, C.tinte);
 }
 function check(g, x, y, s = 60, col = C.rot) {
   g.save(); g.strokeStyle = col; g.lineWidth = 10; g.lineCap = 'round'; g.lineJoin = 'round';
@@ -94,7 +97,7 @@ async function build() {
   sans(g, 'Ich bin Dennis.', p.x0, 360, 58);
   bullets(g, ['DaZ-Lehrer', 'Prüfer: DTZ, telc', 'Kostenlos lernen'], p.x0, 700, 48);
   hand(g, 'Viel Spaß beim Lernen!', p.x0, 1180, 80, C.rot, -0.03);
-  const insideCover = tex(p.c);
+  const insideCover = spots(tex(p.c), [[40, 40, 944, 1286, 'ueber-mich']]);
 
   // Page 1 front (right, stage 1): Lektionen
   p = page('R'); g = p.g;
@@ -107,7 +110,7 @@ async function build() {
   });
   hand(g, 'Schritt für Schritt nach oben!', p.x0, 1040, 72, C.tinte, -0.03);
   icon(g, I.buecher, 700, 1120, 190, -.1);
-  const p1f = tex(p.c);
+  const p1f = spots(tex(p.c), [[60, 960, 960, 110, 'lernweg'], [0, 0, 1024, 1366, 'lernen']]);
 
   // Page 1 back (left, stage 2): Hören & Lesen
   p = page('L'); g = p.g;
@@ -118,7 +121,7 @@ async function build() {
   marker(g, 'Lesen', p.x0, 820, 110);
   icon(g, I.buecher, 640, 720, 210, -.1);
   bullets(g, ['Texte nach Niveau', 'mit Aufgaben'], p.x0, 980);
-  const p1b = tex(p.c);
+  const p1b = spots(tex(p.c), [[0, 0, 1024, 700, 'hoeren'], [0, 700, 1024, 666, 'lesen']]);
 
   // Page 2 front (right, stage 2): Sprechen & Schreiben
   p = page('R'); g = p.g;
@@ -135,7 +138,7 @@ async function build() {
   sans(g, 'geschrieben.', p.x0 + 220, 900, 50, C.ink, 400);
   check(g, p.x0 + 560, 900, 70);
   hand(g, 'Schreib-Check hilft dir!', p.x0, 1120, 72, C.rot, -0.03);
-  const p2f = tex(p.c);
+  const p2f = spots(tex(p.c), [[0, 0, 1024, 520, 'ueben/sprechen'], [0, 520, 1024, 846, 'ueben/schreiben']]);
 
   // Page 2 back (left, stage 3): Spiele
   p = page('L'); g = p.g;
@@ -150,7 +153,8 @@ async function build() {
   sans(g, '? Tisch', p.x0, 780, 66);
   hand(g, 'der Tisch', p.x0 + 320, 780, 80, C.gruen, -0.04); check(g, p.x0 + 640, 770, 60, C.gruen);
   bullets(g, ['Artikel & Verben', 'Zahlen & Uhrzeit', 'Jump’n’Run mit Lino'], p.x0, 960);
-  const p2b = tex(p.c);
+  const p2b = spots(tex(p.c), [[140, 500, 760, 160, 'spiele/artikel'], [140, 700, 860, 110, 'spiele/artikel'], [140, 900, 860, 72, 'spiele/verben'],
+    [140, 984, 860, 72, 'spiele/zahlen'], [140, 1068, 860, 80, 'spiele/lino'], [0, 0, 1024, 1366, 'spiele']]);
 
   // Page 3 front (right, stage 3): Lieder
   p = page('R'); g = p.g;
@@ -165,7 +169,7 @@ async function build() {
   });
   hand(g, 'Singen, verstehen, behalten.', p.x0, 760, 72, C.tinte, -0.03);
   bullets(g, ['Liedtext zum Mitlesen', 'zum Mitsingen', 'bis C1'], p.x0, 900);
-  const p3f = tex(p.c);
+  const p3f = spots(tex(p.c), [[0, 0, 1024, 1366, 'lieder']]);
 
   // Page 3 back (left, stage 4): Prüfung
   p = page('L'); g = p.g;
@@ -178,7 +182,8 @@ async function build() {
   });
   hand(g, 'bestanden!', p.x0 + 250, 1020, 130, C.rot, -0.12);
   g.strokeStyle = C.rot; g.lineWidth = 6; g.beginPath(); g.ellipse(p.x0 + 520, 980, 330, 110, -0.12, 0, 7); g.stroke();
-  const p3b = tex(p.c);
+  const p3b = spots(tex(p.c), [[140, 395, 860, 100, 'simulation/dtz'], [140, 535, 860, 100, 'simulation/telc-b1'], [140, 675, 860, 100, 'simulation/dtb-b1'],
+    [140, 860, 880, 260, 'pruefung'], [0, 0, 1024, 1366, 'simulation']]);
 
   // Back cover inside (right, stage 4): Leben in Deutschland
   p = page('R'); g = p.g;
@@ -189,7 +194,7 @@ async function build() {
   bullets(g, ['Fragen üben', 'Test mit 33 Fragen'], p.x0, 560);
   hand(g, 'Los geht’s!', p.x0, 1080, 150, C.tinte, -0.06);
   check(g, p.x0 + 600, 1060, 110);
-  const backInside = tex(p.c);
+  const backInside = spots(tex(p.c), [[60, 508, 900, 72, 'lid'], [60, 592, 900, 72, 'simulation/lid'], [60, 940, 940, 180, 'lernweg'], [40, 40, 944, 1286, 'lid']]);
 
   // ---------- meshes ----------
   const book = new THREE.Group(); scene.add(book);
@@ -217,7 +222,7 @@ async function build() {
       pivot.add(mesh);
     } else {
       geo = new THREE.PlaneGeometry(W - .03, H - .04, 28, 1); geo.translate((W - .03) / 2, 0, 0);
-      const bm = backMap.clone(); bm.wrapS = THREE.RepeatWrapping; bm.repeat.x = -1; bm.offset.x = 1; bm.needsUpdate = true;
+      const bm = backMap.clone(); bm.wrapS = THREE.RepeatWrapping; bm.repeat.x = -1; bm.offset.x = 1; bm.needsUpdate = true; if (SPOTS.has(backMap)) SPOTS.set(bm, SPOTS.get(backMap));
       pivot.add(new THREE.Mesh(geo, paperMat(front, THREE.FrontSide)));
       pivot.add(new THREE.Mesh(geo, paperMat(bm, THREE.BackSide)));
       geo.userData.base = Float32Array.from(geo.attributes.position.array);
@@ -300,6 +305,21 @@ const tick = () => {
 if (!shared) renderer.setAnimationLoop(tick);
 return {
   tick,
+  pick(clientX, clientY) {
+    const ray = new THREE.Raycaster(), ndc = new THREE.Vector2(clientX / innerWidth * 2 - 1, -clientY / innerHeight * 2 + 1);
+    camera.updateMatrixWorld(); ray.setFromCamera(ndc, camera);
+    for (const hit of ray.intersectObject(book, true)) {
+      const m = Array.isArray(hit.object.material) ? hit.object.material[hit.face.materialIndex] : hit.object.material;
+      if (!m || !m.visible) continue;
+      const map = m.map, list = map && SPOTS.get(map);
+      if (!list || !hit.uv) return null; // first visible surface without areas (edge, spine)
+      const uv = hit.uv.clone(); map.updateMatrix(); map.transformUv(uv);
+      const x = uv.x * 1024, y = uv.y * 1366;
+      const s = list.find(([sx, sy, sw, sh]) => x >= sx && x <= sx + sw && y >= sy && y <= sy + sh);
+      return s ? s[4] : null;
+    }
+    return null;
+  },
   goTo(n) { stageTarget = clamp(Math.round(n), 0, maxStage); onStage && onStage(stageTarget); return stageTarget; },
   get stage() { return stageTarget; },
   dispose() {

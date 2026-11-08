@@ -1,12 +1,13 @@
 [
-  { "step": "desk",       "text": "Hallo und herzlich willkommen! Ich bin Dennis – Deutschlehrer und Prüfer für den DTZ und für telc.", "say": "Hallo und herzlich willkommen! Ich bin Dennis – Deutschlehrer und Prüfer für den De-Te-Zett und für Telk." },
-  { "step": "desk",       "text": "Das ist mein Lernschreibtisch. Alles ist kostenlos und ohne Anmeldung." },
+  { "step": "desk",       "text": "Hallo und herzlich willkommen! Ich bin Dennis – Deutschlehrer und Prüfer." },
+  { "step": "desk",       "text": "Das ist mein Lernschreibtisch – kostenlos und ohne Anmeldung." },
   { "step": "laptop",     "text": "Im Laptop findest du die Lektionen – von A1 bis B2 Beruf.", "say": "Im Laptop findest du die Lektionen – von A eins bis B zwei Beruf." },
-  { "step": "heft",       "text": "In meinem Heft blätterst du durch alle Bereiche." },
+  { "step": "heft",       "text": "In meinem Heft blätterst du durch alle Bereiche – tippe einfach auf ein Thema." },
   { "step": "kopfhoerer", "text": "Mit den Kopfhörern übst du Hören, mit den Büchern Lesen." },
   { "step": "mikrofon",   "text": "Am Mikrofon trainierst du Sprechen." },
   { "step": "gamepad",    "text": "Mit dem Gamepad lernst du spielerisch." },
-  { "step": "pruefung",   "text": "Bald eine Prüfung? Der Prüfungsbogen bringt dich zu den Probeprüfungen: DTZ, telc und DTB.", "say": "Bald eine Prüfung? Der Prüfungsbogen bringt dich zu den Probeprüfungen: De-Te-Zett, Telk und De-Te-Be." },
+  { "step": "pruefung",   "text": "Bald eine Prüfung? Der Prüfungsbogen bringt dich zu den Probeprüfungen.", "say": "Bald eine Prüfung? Der Prüfungsbogen bringt dich zu den Probeprüfungen." },
   { "step": "globus",     "text": "Der Globus führt dich zu „Leben in Deutschland“, und im Radio laufen meine Lieder." },
+  { "step": "shop",       "text": "Am Buchständer findest du meine Bücher und Lernpakete." },
   { "step": "desk",       "text": "Tippe einfach auf einen Gegenstand. Viel Erfolg – ich freue mich, dass du da bist!" }
 ]

@@ -1,5 +1,5 @@
 // Full-page "inside" views for each desk object (test build). Every link points to the real site, nothing is changed there.
-import { openHeft } from './heft-buch.js?v=20261108b';
+import { openHeft } from './heft-buch.js?v=20261108f';
 
 const SITE = 'https://deutsch-mit-dennis.de/';
 const L = (h) => SITE + h;
@@ -148,12 +148,12 @@ const SPREADS = [
   { t: 'Schlag das Heft auf', links: [] },
   { t: 'Seite 1 · Lektionen', links: [['Lektionen', '#lernen'], ['Mein Lernweg', '#lernweg'], ['Über mich', '#ueber-mich']] },
   { t: 'Seite 2–3 · Hören, Lesen, Sprechen, Schreiben', links: [['Hören', '#hoeren'], ['Lesen', '#lesen'], ['Sprechen', '#ueben/sprechen'], ['Schreiben', '#ueben/schreiben']] },
-  { t: 'Seite 4–5 · Spiele & Lieder', links: [['Lernspiele', '#spiele'], ['Lieder', '#lieder']] },
-  { t: 'Seite 6–7 · Prüfung & LiD', links: [['Probeprüfungen', '#simulation'], ['Leben in Deutschland', '#lid'], ['Materialien', '#material'], ['Lernpakete', '#lernpakete']] },
+  { t: 'Seite 4–5 · Spiele & Lieder', links: [['Lernspiele', '#spiele'], ['der · die · das', '#spiele/artikel'], ['Verben', '#spiele/verben'], ['Zahlen', '#spiele/zahlen'], ['Lino', '#spiele/lino'], ['Lieder', '#lieder']] },
+  { t: 'Seite 6–7 · Prüfung & LiD', links: [['Probeprüfungen', '#simulation'], ['DTZ', '#simulation/dtz'], ['telc B1', '#simulation/telc-b1'], ['DTB B1', '#simulation/dtb-b1'], ['Leben in Deutschland', '#lid'], ['LiD-Test', '#simulation/lid'], ['Materialien', '#material'], ['Lernpakete', '#lernpakete']] },
 ];
 function heftView(ctx = {}) {
   const v = el(`<div class="v-heft"><div class="hf-host"></div><div class="hf-bar"><button type="button" class="hf-prev" aria-label="Zurückblättern">←</button>
-    <div class="hf-mid"><b class="hf-t" aria-live="polite"></b><div class="hf-links"></div></div><button type="button" class="hf-next" aria-label="Weiterblättern">→</button></div></div>`);
+    <div class="hf-mid"><b class="hf-t" aria-live="polite"></b><small class="hf-hint">Tippe auf ein Thema im Heft – oder blättere weiter.</small><div class="hf-links"></div></div><button type="button" class="hf-next" aria-label="Weiterblättern">→</button></div></div>`);
   let ctl = null, x0 = null;
   const paint = n => { const s = SPREADS[n]; v.querySelector('.hf-t').textContent = s.t;
     v.querySelector('.hf-links').innerHTML = s.links.map(([a, h]) => `<a href="${L(h)}">${esc(a)}</a>`).join('');
@@ -162,12 +162,18 @@ function heftView(ctx = {}) {
   v.querySelector('.hf-prev').onclick = () => step(-1); v.querySelector('.hf-next').onclick = () => step(1);
   const host = v.querySelector('.hf-host');
   host.addEventListener('pointerdown', e => { x0 = e.clientX; });
-  host.addEventListener('pointerup', e => { if (x0 == null) return; const dx = e.clientX - x0; x0 = null; if (Math.abs(dx) > 40) step(dx < 0 ? 1 : -1); else step(1); });
+  host.addEventListener('pointerup', e => {
+    if (x0 == null) return; const dx = e.clientX - x0; x0 = null;
+    if (Math.abs(dx) > 40) { step(dx < 0 ? 1 : -1); return; }
+    const r = ctl && ctl.stage > 0 && ctl.pick(e.clientX, e.clientY);
+    if (r && window.dmOpenRoute) window.dmOpenRoute(r, { stay: true }); else step(1);
+  });
+  host.addEventListener('pointermove', e => { if (e.pointerType !== 'mouse' || !ctl) return; host.classList.toggle('hf-hot', !!(ctl.stage > 0 && ctl.pick(e.clientX, e.clientY))); });
   const key = e => { if (e.key === 'ArrowRight') step(1); if (e.key === 'ArrowLeft') step(-1); };
   addEventListener('keydown', key); paint(0);
   return {
     node: v,
-    async onOpen() { ctl = await openHeft(host, { maxStage: SPREADS.length - 1, onStage: paint, renderer: ctx.renderer }); setTimeout(() => ctl && ctl.stage === 0 && ctl.goTo(1), 700); },
+    async onOpen() { ctl = await openHeft(host, { maxStage: SPREADS.length - 1, onStage: paint, renderer: ctx.renderer }); window.dmHeft = ctl; setTimeout(() => ctl && ctl.stage === 0 && ctl.goTo(1), 700); },
     tick() { ctl && ctl.tick(); },
     dispose() { removeEventListener('keydown', key); ctl && ctl.dispose(); ctl = null; },
   };

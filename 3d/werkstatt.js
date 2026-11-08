@@ -1,6 +1,6 @@
 // Idea 6 'Heft + Schreibtisch': click an object -> camera flies in, object opens, full-page themed view (test build).
 import * as THREE from 'three';
-import { VIEWS } from './werkstatt-views.js?v=20261108b';
+import { VIEWS } from './werkstatt-views.js?v=20261108f';
 
 const SITE = 'https://deutsch-mit-dennis.de/';
 const C = { tinte: '#2341B5', tinteDark: '#182E86', paper: '#FBFBF8', ink: '#172036', marker: '#FFE45C', rot: '#C2362B', gruen: '#1D7A45', sun: '#E8A800', sky: '#2C86CF', mint: '#2B9A78' };
@@ -329,8 +329,10 @@ addEventListener('resize', resize);
 const tag = $('tag'), v = new THREE.Vector3(), clock = new THREE.Clock();
 const outBounce = t => { const n = 7.5625, d = 2.75; if (t < 1 / d) return n * t * t; if (t < 2 / d) return n * (t -= 1.5 / d) * t + .75; if (t < 2.5 / d) return n * (t -= 2.25 / d) * t + .9375; return n * (t -= 2.625 / d) * t + .984375; };
 let started = 0;
-let laptopOpen = 0, heftOpen = 0;
+let laptopOpen = 0, heftOpen = 0, lastActive = performance.now(), skip = 0;
+['pointermove', 'pointerdown', 'keydown', 'wheel', 'resize', 'touchstart'].forEach(ev => addEventListener(ev, () => { lastActive = performance.now(); }, { passive: true }));
 function frame() {
+  if (!touring && !view && !focusKey && focusF < .001 && performance.now() - lastActive > 10000 && (skip++ % 3)) return; // idle: ~20 fps
   const time = clock.getElapsedTime(), t0 = time - started;
   if (view && focusF > .995) { if (view.inst.tick) view.inst.tick(); return; } // full-page view covers the desk (the notebook draws itself here)
   focusF += ((focusKey ? 1 : 0) - focusF) * (reduced ? 1 : .07);
@@ -385,24 +387,24 @@ const objectForRoute = r => (ROUTES.find(([p]) => r === p || r.startsWith(p + '/
 let content = null; // { el, frame, key }
 const HIDE_CSS = '.dm-header,.dm-footer,.skip,#dm-tour,.dm-tour,.dm-news-toast,.dm-3d-switch{display:none!important}body{padding-top:0!important}.dm-tour-dim::before{display:none!important}main{padding-top:12px!important}';
 
-function openRoute(route) {
+function openRoute(route, opts = {}) {
   route = route.replace(/^#/, ''); const key = objectForRoute(route);
-  if (view && view.key === key) { showContent(route); return; }
+  if (view && (view.key === key || opts.stay)) { showContent(route, !!opts.stay); return; }
   if (view) { closeView(() => openObject(key, route)); return; }
   openObject(key, route);
 }
 window.dmOpenRoute = openRoute;
 
-function showContent(route) {
+function showContent(route, stay = false) {
   if (!view) return;
   const key = view.key;
-  if (content && content.key === key) { turnTo(route); return; }
+  if (content && content.key === key) { content.stay = content.stay || stay; turnTo(route); return; }
   const el = document.createElement('div'); el.className = `cf cf-${key}`;
   el.innerHTML = `<div class="cf-card"><div class="cf-bar"><button type="button" class="cf-back">\u2190 ${AREAS[key].title}</button><span class="cf-title">Lädt …</span></div>
     <div class="cf-page"><iframe class="cf-frame" title="Inhalt" src="../index.html#${route}"></iframe></div></div>`;
   view.wrap.append(el);
   const frame = el.querySelector('iframe');
-  content = { el, frame, key, route };
+  content = { el, frame, key, route, stay };
   el.querySelector('.cf-back').addEventListener('click', hideContent);
   frame.addEventListener('load', () => wireFrame(frame));
   requestAnimationFrame(() => requestAnimationFrame(() => el.classList.add('in')));
@@ -416,7 +418,7 @@ function wireFrame(frame) {
   w.addEventListener('hashchange', () => {
     const r = w.location.hash.slice(1); if (!content) return;
     const k = objectForRoute(r);
-    if (k !== content.key) { openRoute(r); return; } // another object: fly over on the desk
+    if (k !== content.key && !content.stay) { openRoute(r); return; } // another object: fly over on the desk (not in notebook mode)
     content.route = r; pageTurn(); setTimeout(title, 300);
   });
 }
@@ -435,7 +437,7 @@ function hideContent() {
 // links in the object views that point to the real site open inside the 3D desk instead
 document.addEventListener('click', e => {
   const a = e.target.closest('a[href^="https://deutsch-mit-dennis.de/#"]'); if (!a || !a.closest('.view')) return;
-  e.preventDefault(); openRoute(a.getAttribute('href').split('#')[1]);
+  e.preventDefault(); openRoute(a.getAttribute('href').split('#')[1], { stay: !!a.closest('.hf-links') });
 }, true);
 
 // ---------- guided tour with Dennis' avatar (audio/video drive the camera) ----------
@@ -462,6 +464,8 @@ async function startTour() {
     }
     requestAnimationFrame(tick);
   };
+  const bubble = box.querySelector('.tour-bubble');
+  media.onplay = () => bubble.classList.add('talking'); media.onpause = () => bubble.classList.remove('talking');
   media.currentTime = 0; media.play().catch(() => {}); requestAnimationFrame(tick);
   media.onended = stopTour;
 }
@@ -484,3 +488,26 @@ function currentRoute() { try { return content ? content.frame.contentWindow.loc
 if (classic) classic.addEventListener('click', e => { e.preventDefault(); location.href = '../index.html' + (currentRoute() ? '#' + currentRoute() : ''); });
 // deep link: werkstatt.html#lernen opens that page inside the matching object
 if (location.hash.length > 1) { const r = decodeURIComponent(location.hash.slice(1)); setTimeout(() => openRoute(r), 1200); }
+
+// ---------- "Weitermachen": last learning page from the website's own memory (localStorage dmd.v1, same origin) ----------
+function lastPage() { try { const m = JSON.parse(localStorage.getItem('dmd.v1') || '{}'); return m.last && m.last.route ? m.last : null; } catch { return null; } }
+function renderResume() {
+  const box = document.getElementById('resume'); if (!box) return;
+  const l = lastPage(); box.hidden = !l; if (!l) return;
+  box.querySelector('b').textContent = l.title || l.route;
+  box.onclick = () => openRoute(l.route);
+}
+renderResume();
+addEventListener('focus', renderResume);
+// refresh the note whenever the user comes back to the desk
+document.addEventListener('click', e => { if (e.target.closest('.view-back')) setTimeout(renderResume, 600); });
+
+// ---------- one-time invitation to the tour ----------
+(() => {
+  const KEY = 'dmd.3d.tourHint'; let seen = false; try { seen = !!localStorage.getItem(KEY); } catch {}
+  const hint = document.getElementById('tour-hint'); if (!hint || seen) return;
+  const done = () => { hint.hidden = true; try { localStorage.setItem(KEY, '1'); } catch {} };
+  setTimeout(() => { if (!touring && !view) hint.hidden = false; }, 2500);
+  hint.querySelector('.th-x').addEventListener('click', done);
+  document.getElementById('tour-start')?.addEventListener('click', done);
+})();
