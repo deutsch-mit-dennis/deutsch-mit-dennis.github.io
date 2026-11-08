@@ -7,6 +7,8 @@ Die 3D-Seite lädt **die echte Website** im Rahmen (`../index.html#route`) – I
 - `werkstatt.js` – 3D-Schreibtisch (three.js), Kamerafahrten, Zuordnung Unterseite → Gegenstand (`ROUTES`), Tour
 - `werkstatt-views.js` – Innenansichten der Gegenstände (Laptop, Heft, Player, Regal, Studio, Konsole, Prüfungsbogen, Globus, Radio, Tasse, Buchständer)
 - `heft-buch.js` – 3D-Heft zum Blättern
+- `werkstatt-sticker.js` – Fortschritts-Sticker auf den Gegenständen (Zahl = geübte Seiten aus `dmd.v1`, gleiche Zählung wie im Heft); neue Fortschritte ploppen beim Zurückkehren auf
+- `werkstatt-ton.js` – optionale Klänge (im Browser erzeugt, keine Audiodateien), Knopf „Ton“ oben, Standard aus
 - `werkstatt-leben.js` – kleine Dauer-Animationen auf dem Tisch (Dampf, Noten, LEDs, Pokal-Funkeln, Staub im Lampenlicht) und der „Teaser“: ohne Mausbewegung zeigt nach 5 s ein Gegenstand nach dem anderen, was er kann (mit Namensschild). Bei „Bewegung reduzieren“ aus.
 - `basis.css`, `werkstatt.css` – Aussehen
 - `vendor/three.module.min.js` – three.js 0.160.0, selbst gehostet (Datenschutz: keine fremden Server)

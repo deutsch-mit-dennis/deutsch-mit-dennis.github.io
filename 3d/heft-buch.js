@@ -10,6 +10,15 @@ const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
 // With opts.renderer the notebook reuses an existing WebGL renderer (no second GPU context) and the caller calls tick() every frame.
 let CACHE = null; // built notebook kept between openings (same renderer, same progress)
 const K = Math.min(innerWidth, innerHeight) < 700 ? .75 : 1; // page texture scale on small screens
+export function progress() { // counts from the website's own memory (localStorage dmd.v1, same origin)
+  let m = {}; try { m = JSON.parse(localStorage.getItem('dmd.v1') || '{}') || {}; } catch {}
+  const v = Object.keys(m.visited || {}), dn = Object.keys(m.done || {});
+  const sub = (pre, depth = 2, exact = false) => new Set(v.filter(r => (exact && r === pre) || r.startsWith(pre + '/')).map(r => r.split('/').slice(0, depth).join('/'))).size;
+  const done = p => dn.filter(k => k.startsWith(p)).length;
+  return { lernen: Math.max(sub('lektion'), done('lektion:')), hoeren: sub('hoeren'), lesen: Math.max(sub('lesen'), done('lesen:')),
+    sprechen: sub('ueben/sprechen', 3, true), schreiben: sub('ueben/schreiben', 3, true), spiele: sub('spiele'),
+    lieder: Math.max(sub('lieder'), done('lied:')), pruefung: sub('simulation'), lid: sub('lid') + (v.includes('simulation/lid') ? 1 : 0) };
+}
 export async function openHeft(host, { onStage, maxStage = 4, renderer: shared = null } = {}) {
 let canvas = null, renderer = shared;
 if (!shared) {
@@ -58,15 +67,6 @@ function marker(g, t, x, y, s) {
   g.moveTo(x - 10, y - s * .38); g.lineTo(x + w + 12, y - s * .46); g.lineTo(x + w + 8, y + s * .14); g.lineTo(x - 12, y + s * .2); g.fill(); g.restore();
   sans(g, t, x, y, s);
   hand(g, '→', x + w + 26, y, s * .7, C.tinte);
-}
-function progress() { // counts from the website's own memory (localStorage dmd.v1, same origin)
-  let m = {}; try { m = JSON.parse(localStorage.getItem('dmd.v1') || '{}') || {}; } catch {}
-  const v = Object.keys(m.visited || {}), dn = Object.keys(m.done || {});
-  const sub = (pre, depth = 2, exact = false) => new Set(v.filter(r => (exact && r === pre) || r.startsWith(pre + '/')).map(r => r.split('/').slice(0, depth).join('/'))).size;
-  const done = p => dn.filter(k => k.startsWith(p)).length;
-  return { lernen: Math.max(sub('lektion'), done('lektion:')), hoeren: sub('hoeren'), lesen: Math.max(sub('lesen'), done('lesen:')),
-    sprechen: sub('ueben/sprechen', 3, true), schreiben: sub('ueben/schreiben', 3, true), spiele: sub('spiele'),
-    lieder: Math.max(sub('lieder'), done('lied:')), pruefung: sub('simulation'), lid: sub('lid') + (v.includes('simulation/lid') ? 1 : 0) };
 }
 function stick(g, n, x, y) { if (!n) return; check(g, x, y, 44, C.gruen); hand(g, `${n} geübt`, x + 56, y + 12, 56, C.gruen, -0.02); }
 function check(g, x, y, s = 60, col = C.rot) {

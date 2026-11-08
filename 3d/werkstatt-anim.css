@@ -150,3 +150,17 @@
 @keyframes loaderBob{50%{translate:0 -6px}}
 .loader.off{animation:none}
 @media (prefers-reduced-motion:reduce){.info,.chips button,.tag.pop,.loader{animation:none!important;transition:none!important}}
+
+/* progress count on the chips (matches the stickers on the desk) */
+.chips button{position:relative}
+.chip-n{position:absolute;top:-7px;right:-5px;display:grid;place-items:center;min-width:20px;height:20px;padding:0 5px;border-radius:999px;border:2px solid #fff;background:var(--gruen,#1D7A45);color:#fff;font-size:.7rem;font-weight:700;line-height:1;pointer-events:none;animation:chipNIn .5s 1.2s cubic-bezier(.2,.9,.3,1.6) backwards}
+@keyframes chipNIn{from{transform:scale(0)}}
+@media (prefers-reduced-motion:reduce){.chip-n{animation:none}}
+
+/* sound switch in the header (off by default) */
+.snd{gap:6px;font:inherit;font-size:.85rem;cursor:pointer}
+.snd+.to-classic{margin-left:8px}
+.snd .snd-w{display:none}.snd[aria-pressed=true] .snd-w{display:inline}.snd[aria-pressed=true] .snd-x{display:none}
+.snd[aria-pressed=true]{background:var(--marker);border-color:#E8C500;color:var(--ink)}
+@media (max-width:420px){.snd .snd-t{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}.snd{padding:7px 10px}}
+@media (max-width:400px){.top .all.snd{display:inline-flex}}

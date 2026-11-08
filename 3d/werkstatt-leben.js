@@ -24,7 +24,7 @@ export function addLife({ scene, objs, reduced }) {
 
   // ---------- textures ----------
   const puff = spriteTex(64, (g, s) => { const r = g.createRadialGradient(s / 2, s / 2, 0, s / 2, s / 2, s / 2); r.addColorStop(0, 'rgba(255,255,255,1)'); r.addColorStop(.5, 'rgba(255,255,255,.45)'); r.addColorStop(1, 'rgba(255,255,255,0)'); g.fillStyle = r; g.fillRect(0, 0, s, s); });
-  const note = (glyph, col) => spriteTex(96, (g, s) => { g.font = `700 ${s * .8}px "Segoe UI Symbol","Noto Music","DejaVu Sans",serif`; g.textAlign = 'center'; g.textBaseline = 'middle'; g.lineWidth = 8; g.strokeStyle = '#fff'; g.strokeText(glyph, s / 2, s / 2); g.fillStyle = col; g.fillText(glyph, s / 2, s / 2); });
+  const note = (glyph, col, edge = '#fff') => spriteTex(96, (g, s) => { g.font = `700 ${s * .8}px "Segoe UI Symbol","Noto Music","DejaVu Sans",serif`; g.textAlign = 'center'; g.textBaseline = 'middle'; g.lineWidth = 8; g.strokeStyle = edge; g.strokeText(glyph, s / 2, s / 2); g.fillStyle = col; g.fillText(glyph, s / 2, s / 2); });
   const star = spriteTex(64, (g, s) => {
     const c = s / 2; g.fillStyle = '#fff'; g.beginPath();
     for (let i = 0; i < 8; i++) { const a = i * Math.PI / 4, r = i % 2 ? s * .09 : s * .48; g.lineTo(c + Math.cos(a) * r, c + Math.sin(a) * r); }
@@ -65,11 +65,14 @@ export function addLife({ scene, objs, reduced }) {
     // radio: notes float out of the speaker, cone pulses with the beat
     const radio = by('radio'), cone = radio && radio.obj.getObjectByName('cone');
     if (radio && cone) {
-      const from = localIn(radio.holder, cone), cols = ['#2341B5', '#C2362B', '#1D7A45'];
-      const notes = [0, 1, 2].map(i => { const s = sprite(note(i === 1 ? '♫' : '♪', cols[i])); radio.holder.add(s); return s; });
+      const from = localIn(radio.holder, cone), cols = ['#2341B5', '#C2362B', '#1D7A45'], nightCols = ['#9DB4FF', '#FF8A7E', '#6FE3A0'];
+      const glyph = i => i === 1 ? '♫' : '♪';
+      const dayTex = cols.map((c, i) => note(glyph(i), c)), nightTex = nightCols.map((c, i) => note(glyph(i), c, '#172036'));
+      const notes = [0, 1, 2].map(i => { const s = sprite(dayTex[i]); radio.holder.add(s); return s; });
       parts.push((time, st) => {
         const fast = st.hovered === 'radio' || st.tease === 'radio' ? 1.8 : 1;
         notes.forEach((s, i) => {
+          const want = st.night ? nightTex[i] : dayTex[i]; if (s.material.map !== want) { s.material.map = want; s.material.needsUpdate = true; }
           const p = ((time * fast / 3.3) + i / notes.length) % 1;
           s.position.set(from.x + p * .7 + Math.sin(p * 9 + i) * .1, from.y + .55 + p * 1.3, from.z + .1 + p * .3);
           s.scale.setScalar(.4 + p * .12); s.material.opacity = Math.min(1, p * 5) * (1 - smooth(Math.max(0, p - .55) / .45)); s.material.rotation = Math.sin(time * 3 + i) * .3;

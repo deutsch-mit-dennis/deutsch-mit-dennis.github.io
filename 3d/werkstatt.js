@@ -1,7 +1,10 @@
 // Idea 6 'Heft + Schreibtisch': click an object -> camera flies in, object opens, full-page themed view (test build).
 import * as THREE from 'three';
-import { VIEWS, prewarmHeft } from './werkstatt-views.js?v=20261108j';
-import { addLife } from './werkstatt-leben.js?v=20261108l';
+import { VIEWS, prewarmHeft } from './werkstatt-views.js?v=20261108m';
+import { addLife } from './werkstatt-leben.js?v=20261108m';
+import { progress } from './heft-buch.js?v=20261108m';
+import { addStickers } from './werkstatt-sticker.js?v=20261108m';
+import { sound, soundButton } from './werkstatt-ton.js?v=20261108m';
 
 const SITE = 'https://deutsch-mit-dennis.de/';
 const C = { tinte: '#2341B5', tinteDark: '#182E86', paper: '#FBFBF8', ink: '#172036', marker: '#FFE45C', rot: '#C2362B', gruen: '#1D7A45', sun: '#E8A800', sky: '#2C86CF', mint: '#2B9A78' };
@@ -291,7 +294,7 @@ Object.entries(AREAS).forEach(([key, a]) => {
   const on = () => { if (!focusKey && !touring) { hovered = key; chipHover = key; } }, off = () => { if (chipHover === key) { chipHover = null; if (hovered === key) hovered = null; } };
   b.addEventListener('pointerenter', on); b.addEventListener('focus', on); b.addEventListener('pointerleave', off); b.addEventListener('blur', off);
 });
-let chipHover = null, life = null, hotChip = null;
+let chipHover = null, life = null, hotChip = null, stickers = null;
 let hovered = null, focusKey = null, focusObj = null, view = null, focusF = 0, zoomGoal = 1;
 const fp = new THREE.Vector3(), center = new THREE.Vector3(), camOff = new THREE.Vector3(10, 9.5, 10);
 const mouse = { x: 0, y: 0 }, par = { x: 0, y: 0 };
@@ -301,9 +304,10 @@ let lastFocus = null;
 const setInert = on => document.querySelectorAll('.info, .top').forEach(e => { e.inert = on; });
 function openObject(key, route) {
   lastFocus = document.activeElement;
-  if (key === 'lampe') { setNight(!night, true); return; }
+  if (key === 'lampe') { sound.play('click'); setNight(!night, true); return; }
   if (focusKey || view) return;
   if (life) { life.stopTease(); life.poke(key); }
+  sound.play('open');
   focusKey = key; focusObj = objs.find(o => o.key === key); hovered = null; canvas.style.cursor = '';
   const size = new THREE.Box3().setFromObject(focusObj.obj).getSize(new THREE.Vector3()), r = Math.max(size.x, size.y, size.z, .8);
   zoomGoal = Math.min(7, (camera.top - camera.bottom) / (r * 2.6));
@@ -329,8 +333,9 @@ function showView(key, route) {
 function closeView(then) {
   if (!view) return; content = null; const { wrap, inst } = view; view = null;
   wrap.classList.remove('in'); wrap.classList.add('out'); inst.dispose && inst.dispose();
-  setTimeout(() => wrap.remove(), 380);
+  setTimeout(() => wrap.remove(), 380); sound.play('close');
   focusKey = null; document.body.classList.remove('focused'); setInert(false);
+  setTimeout(() => { try { stickers && stickers.refresh(.5); } catch {} }, 300); // practised inside? the new sticker pops on the desk
   try { if (!then && lastFocus && document.contains(lastFocus)) lastFocus.focus({ preventScroll: true }); } catch {}
   if (then) setTimeout(then, reduced ? 0 : 1100);
 }
@@ -346,13 +351,25 @@ canvas.addEventListener('pointermove', e => { if (e.pointerType !== 'mouse' || f
 canvas.addEventListener('pointerleave', () => { hovered = null; });
 canvas.addEventListener('click', e => { if (touring) stopTour(); if (focusKey) return; const k = pick(e); if (k) openObject(k); });
 
+soundButton($('snd'));
+
+// progress count on the chips (same numbers as the stickers on the desk)
+function chipCounts(counts) {
+  chips.querySelectorAll('button').forEach(b => {
+    const n = counts[b.dataset.key] || 0; let s = b.querySelector('.chip-n');
+    if (!n) { s && s.remove(); return; }
+    if (!s) { s = document.createElement('span'); s.className = 'chip-n'; b.append(s); }
+    if (s.textContent !== String(n)) { s.textContent = n; s.setAttribute('aria-label', `${n}× geübt`); }
+  });
+}
+
 // ---------- layout / resize ----------
 let phone = false, base = { w: 1, h: 1, offX: 0, offY: 0 };
 function resize() {
   const w = innerWidth, h = innerHeight; renderer.setSize(w, h, false);
   phone = w <= 900 || h > w;
   const info = document.querySelector('.info').getBoundingClientRect();
-  const aspect = w / h, needW = w < 600 ? 11.4 : 13.4, needH = 9;
+  const aspect = w / h, needW = w < 600 ? 11.4 : (phone ? 13.4 : 12.5), needH = phone ? 9 : 8.5;
   let fitW, fitH, offX = 0, offY = 0;
   if (phone) { fitW = .98; fitH = Math.max(.3, (info.top - 60) / h); offY = (h - (info.top + 50)) / 2; }
   else { const free = (w - info.right - 30) / w; fitW = Math.max(.4, free); fitH = .9; offX = -(info.right + 10) / 2; }
@@ -384,6 +401,7 @@ function frame() {
   camera.setViewOffset(base.w, base.h, base.offX * (1 - focusF), base.offY * (1 - focusF), base.w, base.h); camera.updateProjectionMatrix();
   laptopOpen += ((focusKey === 'laptop' ? 1 : 0) - laptopOpen) * .08; heftOpen += ((focusKey === 'heft' ? 1 : 0) - heftOpen) * .08;
   const lap = objs.find(o => o.key === 'laptop'), hf = objs.find(o => o.key === 'heft');
+  if (stickers) stickers.tick(time);
   if (life) life.tick(time, { hovered, focusKey, busy: touring || !!view, idleMs: performance.now() - lastActive, night });
   if (lap) lap.obj.userData.hinge.rotation.x = 1.5 + (-.22 - 1.5) * Math.max(laptopOpen, life ? life.open.laptop : 0);
   if (hf) hf.obj.userData.cover.rotation.z = 3.05 * Math.max(heftOpen, life ? life.open.heft : 0);
@@ -402,7 +420,8 @@ function frame() {
   if (show) {
     const o = objs.find(x => x.key === show); v.set(o.holder.position.x, o.height + o.lift + .35, o.holder.position.z).project(camera);
     tag.style.left = ((v.x + 1) / 2 * innerWidth) + 'px'; tag.style.top = ((1 - v.y) / 2 * innerHeight) + 'px';
-    if (tag.textContent !== AREAS[show].title) { tag.textContent = AREAS[show].title; tag.classList.remove('pop'); void tag.offsetWidth; tag.classList.add('pop'); } tag.hidden = false;
+    const n = stickers ? stickers.count(show) : 0, label = AREAS[show].title + (n ? ` · ${n}× geübt` : '');
+    if (tag.textContent !== label) { tag.textContent = label; tag.classList.remove('pop'); void tag.offsetWidth; tag.classList.add('pop'); } tag.hidden = false;
   } else tag.hidden = true;
   renderer.render(scene, camera);
 }
@@ -413,6 +432,7 @@ function frame() {
   setNight(night);
   resize(); started = clock.getElapsedTime();
   try { life = addLife({ scene, objs, reduced }); } catch (err) { console.error(err); } // decoration only: never block the desk
+  try { stickers = addStickers({ objs, progress, reduced, onCounts: chipCounts, onPop: () => sound.play('pop') }); stickers.refresh(1.6); } catch (err) { console.error(err); }
   $('loader').classList.add('off');
   renderer.setAnimationLoop(frame);
   deskReady = true; if (pendingRoute) setTimeout(() => openRoute(pendingRoute), 300);
@@ -498,7 +518,7 @@ const TOURS = {
 };
 const TOUR_SPLIT = { kopfhoerer: 'buecher', globus: 'radio' }; // second object mentioned in the same sentence
 let touring = false, tourLang = 'de';
-try { const l = localStorage.getItem('dmd.3d.tourLang'); if (TOURS[l]) tourLang = l; } catch {}
+try { const l = localStorage.getItem('dmd.3d.tourLang'); if (TOURS[l]) tourLang = l; else { const b = (navigator.languages || [navigator.language]).map(x => String(x).slice(0, 2)).find(x => TOURS[x]); if (b) tourLang = b; } } catch {}
 function previewObject(key) { // camera flies in, object opens a little, no full-page view
   if (!key) { focusKey = null; return; }
   focusKey = key; focusObj = objs.find(o => o.key === key);

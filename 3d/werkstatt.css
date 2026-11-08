@@ -337,7 +337,7 @@ body.touring .info{opacity:0;pointer-events:none}
 .tour-btn.used{background:#fff;color:var(--tinte);box-shadow:0 4px 0 var(--line);border:2px solid var(--line);min-height:44px;font-size:.92rem}
 .tour-btn.used .tour-face{width:24px;height:24px}
 /* tour language buttons */
-.tour-langs{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 2px}
+.tour-langs{display:flex;flex-wrap:wrap;gap:5px;margin:8px 0 4px}
 .tour-langs button{font:inherit;font-size:.82rem;font-weight:700;min-height:36px;padding:0 10px;border-radius:999px;border:1px solid var(--line);background:#fff;color:var(--ink);cursor:pointer}
 .tour-langs button[aria-pressed=true]{border-color:var(--tinte);color:var(--tinte)}
 @media (max-width:900px),(orientation:portrait){.tour-langs{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none}.tour-langs button{flex:none}}
