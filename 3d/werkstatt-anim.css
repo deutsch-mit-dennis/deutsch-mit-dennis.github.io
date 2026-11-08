@@ -135,3 +135,18 @@
 
 @media (prefers-reduced-motion:reduce){
   .view.in,.view.out,.cf.in .cf-card,.cf.out .cf-card,.cf-page.turn,.view.in *{animation:none!important}}
+
+/* ---------- desk page: panel + chips come in, chips and desk objects light each other up ---------- */
+.info{animation:infoIn .7s .25s cubic-bezier(.2,.9,.25,1.05) backwards}
+@keyframes infoIn{from{opacity:0;translate:-28px 0}}
+@media (max-width:900px),(orientation:portrait){@keyframes infoIn{from{opacity:0;translate:0 30px}}}
+.chips button{animation:chipIn .45s calc(.7s + var(--i,0) * 45ms) cubic-bezier(.2,.9,.3,1.4) backwards;transition:transform .18s,border-color .18s,background-color .18s,box-shadow .18s}
+@keyframes chipIn{from{opacity:0;transform:translateY(10px) scale(.85)}}
+.chips button:hover,.chips button.hot{transform:translateY(-2px);border-color:var(--tinte);box-shadow:0 4px 0 var(--line)}
+.chips button.hot{background:var(--marker);border-color:#E8C500}
+.tag.pop{animation:tagPop .28s cubic-bezier(.2,.9,.3,1.5)}
+@keyframes tagPop{from{opacity:0;scale:.7}}
+.loader{animation:loaderBob 1.6s ease-in-out infinite}
+@keyframes loaderBob{50%{translate:0 -6px}}
+.loader.off{animation:none}
+@media (prefers-reduced-motion:reduce){.info,.chips button,.tag.pop,.loader{animation:none!important;transition:none!important}}

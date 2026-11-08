@@ -1,6 +1,7 @@
 // Idea 6 'Heft + Schreibtisch': click an object -> camera flies in, object opens, full-page themed view (test build).
 import * as THREE from 'three';
 import { VIEWS, prewarmHeft } from './werkstatt-views.js?v=20261108j';
+import { addLife } from './werkstatt-leben.js?v=20261108l';
 
 const SITE = 'https://deutsch-mit-dennis.de/';
 const C = { tinte: '#2341B5', tinteDark: '#182E86', paper: '#FBFBF8', ink: '#172036', marker: '#FFE45C', rot: '#C2362B', gruen: '#1D7A45', sun: '#E8A800', sky: '#2C86CF', mint: '#2B9A78' };
@@ -108,7 +109,7 @@ function makeMic() {
   const g = new THREE.Group(), metal = std('#3A4158', { metalness: .6, roughness: .35 }), grille = std('#8C93A8', { metalness: .7, roughness: .3 });
   g.add(mesh(new THREE.CylinderGeometry(.42, .48, .1, 32), metal, 0, .05, 0));
   g.add(mesh(new THREE.CylinderGeometry(.05, .05, 1.2, 12), metal, 0, .7, 0));
-  const head = new THREE.Group(); head.position.y = 1.35; head.rotation.x = .35; g.add(head);
+  const head = new THREE.Group(); head.position.y = 1.35; head.rotation.x = .35; head.name = 'micHead'; g.add(head);
   head.add(mesh(new THREE.CylinderGeometry(.2, .2, .45, 24), grille, 0, 0, 0));
   head.add(mesh(new THREE.SphereGeometry(.2, 24, 12, 0, Math.PI * 2, 0, Math.PI / 2), grille, 0, .225, 0));
   head.add(mesh(new THREE.CylinderGeometry(.215, .215, .08, 24), std(C.tinte), 0, -.12, 0));
@@ -130,7 +131,7 @@ function makeHeft() {
   pivot.add(mesh(cg, [blueM, blueM, new THREE.MeshStandardMaterial({ map: cover, roughness: .6 }), karoM, blueM, blueM]));
   g.userData.cover = pivot;
   // pen
-  const pen = new THREE.Group(); pen.position.set(.95, .05, .1); pen.rotation.set(0, .9, Math.PI / 2); g.add(pen);
+  const pen = new THREE.Group(); pen.name = 'pen'; pen.position.set(.95, .05, .1); pen.rotation.set(0, .9, Math.PI / 2); g.add(pen);
   pen.add(mesh(new THREE.CylinderGeometry(.045, .045, 1.1, 14), std(C.tinteDark, { metalness: .3 })));
   pen.add(mesh(new THREE.ConeGeometry(.045, .16, 14), std('#C9CFDD', { metalness: .8, roughness: .2 }), 0, -.63, 0)).rotation.x = Math.PI;
   pen.add(mesh(new THREE.BoxGeometry(.02, .35, .03), std('#C9CFDD', { metalness: .8 }), .05, .35, 0));
@@ -141,8 +142,8 @@ function makeGamepad() {
   g.add(mesh(rbox(1.3, .2, .62, .2), shell, 0, .06, 0));
   [-1, 1].forEach(s => { const grip = mesh(new THREE.SphereGeometry(.3, 24, 16), shell, s * .55, .16, .2); grip.scale.set(1, .55, 1.15); g.add(grip); });
   g.add(mesh(new THREE.BoxGeometry(.32, .06, .1), dark, -.38, .3, -.02)); g.add(mesh(new THREE.BoxGeometry(.1, .06, .32), dark, -.38, .3, -.02));
-  [[C.rot, .5, -.02], [C.gruen, .38, .1], [C.sun, .38, -.14], [C.sky, .26, -.02]].forEach(([col, x, z]) =>
-    g.add(mesh(new THREE.CylinderGeometry(.055, .055, .08, 16), std(col, { roughness: .3 }), x, .3, z)));
+  g.userData.buttons = [[C.rot, .5, -.02], [C.gruen, .38, .1], [C.sun, .38, -.14], [C.sky, .26, -.02]].map(([col, x, z]) => {
+    const b = mesh(new THREE.CylinderGeometry(.055, .055, .08, 16), std(col, { roughness: .3 }), x, .3, z); g.add(b); return b; });
   [-1, 1].forEach(s => g.add(mesh(new THREE.CylinderGeometry(.09, .1, .08, 18), dark, s * .14, .3, .16)));
   return g;
 }
@@ -164,7 +165,7 @@ function makeExam() {
   const under = mesh(new THREE.BoxGeometry(1.3, .02, 1.78), std('#EFEDE6'), .08, .0, -.06); under.rotation.y = .12; g.add(under);
   // trophy
   const gold = std('#E8B400', { metalness: .8, roughness: .25 });
-  const t = new THREE.Group(); t.position.set(.95, 0, -.6); g.add(t);
+  const t = new THREE.Group(); t.position.set(.95, 0, -.6); t.name = 'trophy'; g.add(t);
   t.add(mesh(new THREE.BoxGeometry(.4, .14, .4), std('#2A3042'), 0, .07, 0));
   t.add(mesh(new THREE.CylinderGeometry(.05, .08, .3, 12), gold, 0, .29, 0));
   t.add(mesh(new THREE.CylinderGeometry(.26, .1, .38, 24, 1, true), gold, 0, .62, 0));
@@ -192,7 +193,7 @@ function makeRadio() {
   const g = new THREE.Group(), body = std(C.mint, { roughness: .45 }), dark = std('#2A3042'), cream = std('#F3F0E6');
   g.add(mesh(rbox(1.3, .78, .5, .12), body));
   const sp = mesh(new THREE.CylinderGeometry(.26, .26, .04, 32), dark, -.28, .4, .27); sp.rotation.x = Math.PI / 2; g.add(sp);
-  const cone = mesh(new THREE.CylinderGeometry(.1, .1, .05, 24), std('#5A6178'), -.28, .4, .29); cone.rotation.x = Math.PI / 2; g.add(cone);
+  const cone = mesh(new THREE.CylinderGeometry(.1, .1, .05, 24), std('#5A6178'), -.28, .4, .29); cone.rotation.x = Math.PI / 2; cone.name = 'cone'; g.add(cone);
   g.add(mesh(new THREE.BoxGeometry(.42, .16, .04), cream, .3, .5, .27));
   [.18, .42].forEach(x => { const k = mesh(new THREE.CylinderGeometry(.07, .07, .08, 20), cream, x, .22, .29); k.rotation.x = Math.PI / 2; g.add(k); });
   const ant = mesh(new THREE.CylinderGeometry(.015, .015, .9, 8), std('#C9CFDD', { metalness: .8 }), .45, 1.15, -.1); ant.rotation.z = -.5; g.add(ant);
@@ -224,7 +225,7 @@ function makeLamp() { // desk lamp: off by day, on at night (click toggles)
   const head = new THREE.Group(); head.position.set(.88, 1.2, 0); head.rotation.z = -.55; g.add(head);
   const shade = mesh(new THREE.ConeGeometry(.26, .34, 28, 1, true), shadeM, 0, -.12, 0); head.add(shade);
   const bulbM = new THREE.MeshStandardMaterial({ color: '#FFF3C4', emissive: '#FFD27A', emissiveIntensity: 0, roughness: .3 });
-  const bulb = new THREE.Mesh(new THREE.SphereGeometry(.09, 16, 12), bulbM); bulb.position.y = -.22; head.add(bulb);
+  const bulb = new THREE.Mesh(new THREE.SphereGeometry(.09, 16, 12), bulbM); bulb.position.y = -.22; bulb.name = 'bulb'; head.add(bulb);
   const spot = new THREE.SpotLight(0xFFD9A0, 0, 9, .85, .7, 1.2); spot.position.set(0, -.2, 0); head.add(spot);
   const target = new THREE.Object3D(); target.position.set(.9, -3, 0); head.add(target); spot.target = target;
   g.userData.lamp = { bulbM, spot };
@@ -285,17 +286,24 @@ LAYOUT.forEach(([key, make, x, z, ry, r], i) => {
 const chips = $('chips');
 Object.entries(AREAS).forEach(([key, a]) => {
   if (a.noChip) return;
-  const b = document.createElement('button'); b.type = 'button'; b.textContent = a.title; b.dataset.key = key;
+  const b = document.createElement('button'); b.type = 'button'; b.textContent = a.title; b.dataset.key = key; b.style.setProperty('--i', chips.children.length);
   b.addEventListener('click', () => openObject(key)); chips.appendChild(b);
+  const on = () => { if (!focusKey && !touring) { hovered = key; chipHover = key; } }, off = () => { if (chipHover === key) { chipHover = null; if (hovered === key) hovered = null; } };
+  b.addEventListener('pointerenter', on); b.addEventListener('focus', on); b.addEventListener('pointerleave', off); b.addEventListener('blur', off);
 });
+let chipHover = null, life = null, hotChip = null;
 let hovered = null, focusKey = null, focusObj = null, view = null, focusF = 0, zoomGoal = 1;
 const fp = new THREE.Vector3(), center = new THREE.Vector3(), camOff = new THREE.Vector3(10, 9.5, 10);
+const mouse = { x: 0, y: 0 }, par = { x: 0, y: 0 };
+addEventListener('pointermove', e => { if (e.pointerType !== 'mouse') return; mouse.x = e.clientX / innerWidth * 2 - 1; mouse.y = e.clientY / innerHeight * 2 - 1; }, { passive: true });
+document.addEventListener('pointerleave', () => { mouse.x = mouse.y = 0; });
 let lastFocus = null;
 const setInert = on => document.querySelectorAll('.info, .top').forEach(e => { e.inert = on; });
 function openObject(key, route) {
   lastFocus = document.activeElement;
   if (key === 'lampe') { setNight(!night, true); return; }
   if (focusKey || view) return;
+  if (life) { life.stopTease(); life.poke(key); }
   focusKey = key; focusObj = objs.find(o => o.key === key); hovered = null; canvas.style.cursor = '';
   const size = new THREE.Box3().setFromObject(focusObj.obj).getSize(new THREE.Vector3()), r = Math.max(size.x, size.y, size.z, .8);
   zoomGoal = Math.min(7, (camera.top - camera.bottom) / (r * 2.6));
@@ -361,34 +369,40 @@ let started = 0;
 let laptopOpen = 0, heftOpen = 0, lastActive = performance.now(), skip = 0;
 ['pointermove', 'pointerdown', 'keydown', 'wheel', 'resize', 'touchstart'].forEach(ev => addEventListener(ev, () => { lastActive = performance.now(); }, { passive: true }));
 function frame() {
-  if (!touring && !view && !focusKey && focusF < .001 && performance.now() - lastActive > 10000 && (skip++ % 3)) return; // idle: ~20 fps
+  if (!touring && !view && !focusKey && focusF < .001 && performance.now() - lastActive > 10000 && (skip++ % 2)) return; // idle: ~30 fps
   const time = clock.getElapsedTime(), t0 = time - started;
   if (view && focusF > .995) { if (view.inst.tick) view.inst.tick(); return; } // full-page view covers the desk (the notebook draws itself here)
   focusF += ((focusKey ? 1 : 0) - focusF) * (reduced ? 1 : .07);
   if (!focusKey && focusF < .002) { focusF = 0; focusObj = null; }
   if (focusObj) { focusObj.holder.getWorldPosition(fp); fp.y = focusObj.height * .45; }
   center.copy(fp).multiplyScalar(focusF);
-  camera.position.copy(center).add(camOff); camera.lookAt(center);
+  // gentle parallax: the desk turns a little with the mouse (not while zoomed in)
+  const pf = (1 - focusF) * (reduced || !canHover ? 0 : 1);
+  par.x += (mouse.x * pf - par.x) * .05; par.y += (mouse.y * pf - par.y) * .05;
+  camera.position.copy(center).add(camOff); camera.position.x += par.x * .9; camera.position.z -= par.x * .9; camera.position.y += par.y * .8; camera.lookAt(center);
   camera.zoom = 1 + (zoomGoal - 1) * focusF;
   camera.setViewOffset(base.w, base.h, base.offX * (1 - focusF), base.offY * (1 - focusF), base.w, base.h); camera.updateProjectionMatrix();
   laptopOpen += ((focusKey === 'laptop' ? 1 : 0) - laptopOpen) * .08; heftOpen += ((focusKey === 'heft' ? 1 : 0) - heftOpen) * .08;
   const lap = objs.find(o => o.key === 'laptop'), hf = objs.find(o => o.key === 'heft');
-  if (lap) lap.obj.userData.hinge.rotation.x = 1.5 + (-.22 - 1.5) * laptopOpen;
-  if (hf) hf.obj.userData.cover.rotation.z = 3.05 * heftOpen;
+  if (life) life.tick(time, { hovered, focusKey, busy: touring || !!view, idleMs: performance.now() - lastActive, night });
+  if (lap) lap.obj.userData.hinge.rotation.x = 1.5 + (-.22 - 1.5) * Math.max(laptopOpen, life ? life.open.laptop : 0);
+  if (hf) hf.obj.userData.cover.rotation.z = 3.05 * Math.max(heftOpen, life ? life.open.heft : 0);
   objs.forEach(o => {
     const drop = reduced ? 1 : outBounce(Math.min(1, Math.max(0, (t0 - o.delay) / .8)));
     const active = o.key && (o.key === hovered || o.key === focusKey);
     o.lift += ((active ? .32 : 0) - o.lift) * .15;
-    o.holder.position.y = (1 - drop) * 7 + o.lift;
+    o.holder.position.y = (1 - drop) * 7 + o.lift + (o.hop || 0);
     o.obj.rotation.z = active && !reduced ? Math.sin(time * 3) * .03 : o.obj.rotation.z * .9;
     if (o.ring) { const s = o.ring.scale.x + ((active ? 1 : .001) - o.ring.scale.x) * .18; o.ring.scale.setScalar(s); o.ring.position.y = .025 - o.lift; }
     if (!reduced) o.obj.getObjectByName('spin')?.rotateY(.006);
   });
-  const show = touring ? focusKey : (focusKey ? null : hovered);
+  const show = touring ? focusKey : (focusKey ? null : hovered || (life && life.teasing));
+  const hot = focusKey ? null : hovered; // desk -> chip: the matching button lights up
+  if (hot !== hotChip) { hotChip = hot; chips.querySelectorAll('button').forEach(b => b.classList.toggle('hot', b.dataset.key === hot)); }
   if (show) {
     const o = objs.find(x => x.key === show); v.set(o.holder.position.x, o.height + o.lift + .35, o.holder.position.z).project(camera);
     tag.style.left = ((v.x + 1) / 2 * innerWidth) + 'px'; tag.style.top = ((1 - v.y) / 2 * innerHeight) + 'px';
-    tag.textContent = AREAS[show].title; tag.hidden = false;
+    if (tag.textContent !== AREAS[show].title) { tag.textContent = AREAS[show].title; tag.classList.remove('pop'); void tag.offsetWidth; tag.classList.add('pop'); } tag.hidden = false;
   } else tag.hidden = true;
   renderer.render(scene, camera);
 }
@@ -398,6 +412,7 @@ function frame() {
   buildDesk();
   setNight(night);
   resize(); started = clock.getElapsedTime();
+  try { life = addLife({ scene, objs, reduced }); } catch (err) { console.error(err); } // decoration only: never block the desk
   $('loader').classList.add('off');
   renderer.setAnimationLoop(frame);
   deskReady = true; if (pendingRoute) setTimeout(() => openRoute(pendingRoute), 300);
