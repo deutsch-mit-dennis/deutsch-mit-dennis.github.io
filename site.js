@@ -1671,7 +1671,8 @@
     $$('audio').forEach(a => a.pause());
     document.body.dataset.learningLevel = '';
     const own = OWN[p[0]] || DM.routes[p[0]];
-    if (own) { own(p); setupExamBox(p); }
+    let built;
+    if (own) { built = own(p); setupExamBox(p); }
     else { try { legacyRoute(); } catch (e) { console.error(e); home(); } afterLegacy(p); }
     if (p[0] !== '' && $('main .dm-boot')) notFound();
     hideMissingDownloads();
@@ -1679,8 +1680,11 @@
     addBackBar(p);
     const nav = NAV[p[0]] ?? '';
     $$('#main-navigation a[data-nav]').forEach(a => { const on = a.dataset.nav === nav; a.classList.toggle('active', on); if (on) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current'); });
-    const h1 = $('main h1')?.textContent.trim();
-    document.title = (p[0] === '' ? 'Deutsch mit Dennis – kostenlos Deutsch lernen von A1 bis B2' : `${h1 && h1.length < 60 ? h1 : TITLES[p[0]] || 'Deutsch lernen'} – Deutsch mit Dennis`);
+    const setTitle = () => { const h1 = $('main h1')?.textContent.trim();
+      document.title = (p[0] === '' ? 'Deutsch mit Dennis – kostenlos Deutsch lernen von A1 bis B2' : `${h1 && h1.length < 60 ? h1 : TITLES[p[0]] || 'Deutsch lernen'} – Deutsch mit Dennis`); };
+    setTitle();
+    // pages that build asynchronously (e.g. videos load the feed first): set the title again once they are ready
+    if (built && typeof built.then === 'function') { const h = location.hash; built.then(() => { if (location.hash === h) setTitle(); }).catch(() => {}); }
     $('header')?.classList.remove('menu-open');
     $('#pl-menu')?.setAttribute('aria-expanded', 'false');
     window.scrollTo({ top: 0, behavior: 'instant' });
@@ -1689,7 +1693,7 @@
     const routeStr = p.filter(Boolean).join('/');
     if (['lektion', 'wortschatz', 'ueben', 'hoeren', 'training', 'lernweg', 'orientierungskurs', 'lid', 'lieder', 'challenge', 'bild', 'spiele', 'vorbereitung', 'simulation'].includes(p[0]) && routeStr && p[2] !== 'run' && p[2] !== 'ergebnis') {
       mem.visited[routeStr] = Date.now();
-      mem.last = { route: routeStr, title: (h1 || TITLES[p[0]] || '').replace(/\.$/, '').slice(0, 48), ts: Date.now() };
+      mem.last = { route: routeStr, title: ($("main h1")?.textContent.trim() || TITLES[p[0]] || '').replace(/\.$/, '').slice(0, 48), ts: Date.now() };
       save();
     }
   };

@@ -615,3 +615,11 @@ header.dm-header .dm-3d-switch:hover{animation:dm3dIn 1.1s cubic-bezier(.2,.9,.2
 /* after 20.12.2026 or once the 3D view was visited: no "NEU" badge, no pulse – only the entrance spin */
 header.dm-header .dm-3d-switch.dm-3d-seen{animation:dm3dIn 1.1s cubic-bezier(.2,.9,.25,1.2) .6s both}
 header.dm-header .dm-3d-switch.dm-3d-seen::after{display:none}
+
+/* touch screens: small text links get a full-size tap area (44px) */
+@media (pointer:coarse){.mk-more,.wz-more,.dm-row>a{min-height:44px;display:inline-flex;align-items:center}}
+/* phones: keep logo, 3D, share, bell and menu on ONE line (was ~9px too wide at 360-400px) */
+@media (max-width:400px){header.dm-header .logo{margin-right:4px!important}header.dm-header .dm-hshare,header.dm-header .dm-bell{flex:0 0 40px!important;width:40px!important;min-width:40px;height:40px!important}}
+/* tour invitation: text never runs under the close button; hide the invitation while the phone menu is open */
+.dm-tour .dm-tour-intro p{padding-right:30px}
+body:has(header.dm-header.menu-open) .dm-tour:not(.dm-tour-open){visibility:hidden}
