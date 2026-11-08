@@ -1667,6 +1667,12 @@
     if (p[0] === 'lektion' && !p[1]) p = ['lernen'];
     if (p[0] === 'lernweg' && p[1] === 'everyday') p[1] = 'sprechen';
     if (p[0] === 'lernweg' && p[1] === 'writing') p[1] = 'schreiben';
+    // games, listening/reading data etc. load only when needed (lazy.js); build the page once they are there
+    if (window.DMLazy && !DMLazy.ready(p[0])) {
+      mainEl.setAttribute('aria-busy', 'true');
+      DMLazy.load(p[0]).then(() => { mainEl.removeAttribute('aria-busy'); window.route(); });
+      return;
+    }
     stopSpeaking();
     $$('audio').forEach(a => a.pause());
     document.body.dataset.learningLevel = '';

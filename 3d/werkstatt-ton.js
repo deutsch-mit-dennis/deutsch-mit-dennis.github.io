@@ -31,7 +31,7 @@ const SOUNDS = {
 export const sound = {
   get on() { return on; },
   set(v) { on = !!v; try { localStorage.setItem(KEY, on ? '1' : '0'); } catch {} if (on) { const c = ac(); c && SOUNDS.click(c); } },
-  play(name) { if (!on || !SOUNDS[name]) return; try { const c = ac(); if (c && c.state === 'running') SOUNDS[name](c); } catch {} },
+  play(name) { if (!on || !SOUNDS[name]) return; if (!ctx && navigator.userActivation && !navigator.userActivation.hasBeenActive) return; try { const c = ac(); if (c && c.state === 'running') SOUNDS[name](c); } catch {} },
 };
 
 // header button
