@@ -1,0 +1,94 @@
+{
+ "duration": 57.246,
+ "lang": "uk",
+ "steps": [
+  {
+   "i": 0,
+   "step": "desk",
+   "text": "Привіт і ласкаво просимо! Я Денніс – викладач німецької мови та екзаменатор.",
+   "de": "Hallo und herzlich willkommen! Ich bin Dennis – Deutschlehrer und Prüfer.",
+   "start": 0.15,
+   "end": 6.182
+  },
+  {
+   "i": 1,
+   "step": "desk",
+   "text": "Це мій навчальний письмовий стіл – безкоштовно і без реєстрації.",
+   "de": "Das ist mein Lernschreibtisch – kostenlos und ohne Anmeldung.",
+   "start": 6.482,
+   "end": 11.359
+  },
+  {
+   "i": 2,
+   "step": "laptop",
+   "text": "У ноутбуці ти знайдеш уроки – від A1 до B2 для роботи.",
+   "de": "Im Laptop findest du die Lektionen – von A1 bis B2 Beruf.",
+   "start": 11.659,
+   "end": 17.127
+  },
+  {
+   "i": 3,
+   "step": "heft",
+   "text": "У моєму зошиті ти гортаєш усі розділи – просто торкнися теми.",
+   "de": "In meinem Heft blätterst du durch alle Bereiche – tippe einfach auf ein Thema.",
+   "start": 17.427,
+   "end": 22.381
+  },
+  {
+   "i": 4,
+   "step": "kopfhoerer",
+   "text": "З навушниками ти тренуєш аудіювання, з книжками – читання.",
+   "de": "Mit den Kopfhörern übst du Hören, mit den Büchern Lesen.",
+   "start": 22.681,
+   "end": 27.561
+  },
+  {
+   "i": 5,
+   "step": "mikrofon",
+   "text": "Біля мікрофона ти тренуєш мовлення.",
+   "de": "Am Mikrofon trainierst du Sprechen.",
+   "start": 27.861,
+   "end": 30.741
+  },
+  {
+   "i": 6,
+   "step": "gamepad",
+   "text": "З геймпадом ти вчишся граючи.",
+   "de": "Mit dem Gamepad lernst du spielerisch.",
+   "start": 31.041,
+   "end": 33.693
+  },
+  {
+   "i": 7,
+   "step": "pruefung",
+   "text": "Скоро іспит? Екзаменаційний аркуш приведе тебе до пробних іспитів.",
+   "de": "Bald eine Prüfung? Der Prüfungsbogen bringt dich zu den Probeprüfungen.",
+   "start": 33.993,
+   "end": 39.193
+  },
+  {
+   "i": 8,
+   "step": "globus",
+   "text": "Глобус веде тебе до теми «Життя в Німеччині», а по радіо грають мої пісні.",
+   "de": "Der Globus führt dich zu „Leben in Deutschland“, und im Radio laufen meine Lieder.",
+   "start": 39.493,
+   "end": 46.213
+  },
+  {
+   "i": 9,
+   "step": "shop",
+   "text": "На підставці для книжок ти знайдеш мої книжки та навчальні пакети.",
+   "de": "Am Buchständer findest du meine Bücher und Lernpakete.",
+   "start": 46.513,
+   "end": 51.153
+  },
+  {
+   "i": 10,
+   "step": "desk",
+   "text": "Просто торкнися будь-якого предмета. Успіхів – я радий, що ти тут!",
+   "de": "Tippe einfach auf einen Gegenstand. Viel Erfolg – ich freue mich, dass du da bist!",
+   "start": 51.453,
+   "end": 56.846
+  }
+ ]
+}

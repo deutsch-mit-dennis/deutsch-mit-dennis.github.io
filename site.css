@@ -588,3 +588,30 @@ nav.dm-tabs a,nav.dm-scenes a{flex:0 0 auto}
 .sp-sr{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
 /* keep the footer below the fold until the first page is rendered (avoids layout shift) */
 main:empty,main:has(> .dm-boot){min-height:100vh!important}
+
+/* Switch to the 3D view (/3d/) – keeps the current page via the #hash */
+header.dm-header .dm-3d-switch{display:inline-flex;align-items:center;justify-content:center;min-width:48px;min-height:44px;padding:0 14px;border-radius:999px;background:linear-gradient(135deg,var(--dm-tinte),#7A4FD8);color:#fff;font:700 16px var(--dm-font);text-decoration:none;letter-spacing:.02em;box-shadow:0 4px 12px -4px rgba(35,65,181,.6);flex:none}
+header.dm-header .dm-3d-switch:hover{filter:brightness(1.1)}
+header.dm-header .dm-3d-switch:focus-visible{outline:3px solid var(--dm-marker);outline-offset:2px}
+@media (max-width:1180px){header.dm-header #pl-menu{order:1}header.dm-header .dm-3d-switch{order:2}header.dm-header nav{order:3}}
+@media (max-width:1180px){header.dm-header .dm-3d-switch{order:0}}
+@media (max-width:460px){header.dm-header{gap:4px}header.dm-header .logo{font-size:17px}header.dm-header .dm-3d-switch{min-width:44px;padding:0 8px;font-size:14px}}
+@media (max-width:350px){header.dm-header .logo{font-size:15px}}
+@media (max-width:374px){header.dm-header .dm-hshare{display:none}}
+@media (max-width:374px){header.dm-header{column-gap:4px}}
+
+/* 3D switch: eye-catching entrance (cube spin), 3 pulse rings, periodic shine, "NEU" badge */
+header.dm-header .dm-3d-switch{position:relative;overflow:visible;transform-style:preserve-3d;animation:dm3dIn 1.1s cubic-bezier(.2,.9,.25,1.2) .6s both,dm3dPulse 1.6s ease-out 1.8s 3}
+header.dm-header .dm-3d-switch::before{content:"";position:absolute;inset:0;border-radius:inherit;background:linear-gradient(110deg,transparent 30%,rgba(255,255,255,.75) 48%,transparent 66%) -150% 0/250% 100% no-repeat;animation:dm3dShine 5s ease-in-out 2.4s infinite;pointer-events:none}
+header.dm-header .dm-3d-switch::after{content:"NEU";position:absolute;top:-8px;right:-10px;padding:1px 5px;border-radius:999px;background:var(--dm-marker,#FFE45C);color:var(--dm-ink,#172036);font:800 9px/1.4 var(--dm-font);letter-spacing:.04em;box-shadow:0 2px 6px rgba(0,0,0,.2);animation:dm3dBadge .5s cubic-bezier(.2,.9,.3,1.6) 1.6s both}
+header.dm-header .dm-3d-switch:hover{animation:dm3dIn 1.1s cubic-bezier(.2,.9,.25,1.2) .6s both,dm3dPulse 1.6s ease-out 1.8s 3,dm3dWobble .6s ease}
+@keyframes dm3dIn{0%{transform:perspective(300px) rotateY(-540deg) scale(.2);opacity:0}70%{transform:perspective(300px) rotateY(15deg) scale(1.15);opacity:1}100%{transform:none}}
+@keyframes dm3dPulse{0%{box-shadow:0 4px 12px -4px rgba(35,65,181,.6),0 0 0 0 rgba(122,79,216,.55)}100%{box-shadow:0 4px 12px -4px rgba(35,65,181,.6),0 0 0 16px rgba(122,79,216,0)}}
+@keyframes dm3dShine{0%,70%{background-position:-150% 0}100%{background-position:150% 0}}
+@keyframes dm3dBadge{from{transform:scale(0) rotate(-30deg)}}
+@keyframes dm3dWobble{0%{transform:none}30%{transform:perspective(300px) rotateY(25deg) scale(1.08)}65%{transform:perspective(300px) rotateY(-12deg)}100%{transform:none}}
+@media (prefers-reduced-motion:reduce){header.dm-header .dm-3d-switch,header.dm-header .dm-3d-switch::before,header.dm-header .dm-3d-switch::after{animation:none}}
+
+/* after 20.12.2026 or once the 3D view was visited: no "NEU" badge, no pulse – only the entrance spin */
+header.dm-header .dm-3d-switch.dm-3d-seen{animation:dm3dIn 1.1s cubic-bezier(.2,.9,.25,1.2) .6s both}
+header.dm-header .dm-3d-switch.dm-3d-seen::after{display:none}

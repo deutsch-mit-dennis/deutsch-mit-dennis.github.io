@@ -1092,14 +1092,16 @@
 
   /* ---------- Routen ---------- */
   DM.routes ||= {};
+  // Pages load their data asynchronously: the router sets the title before the h1 exists -> set it again afterwards.
+  const fixTitle = r => { const h = location.hash; Promise.resolve(r).then(() => { if (location.hash !== h) return; const t = document.querySelector('main h1')?.textContent.trim(); if (t) document.title = `${t.length < 70 ? t : 'Prüfungssimulation'} – Deutsch mit Dennis`; }).catch(() => {}); return r; };
   DM.routes.simulation = p => {
     const id = p[1];
     if (!id || !META[id]) { stopAll(); return hub(); }
-    if (p[2] === 'run') return run(id);
-    if (p[2] === 'ergebnis') return result(id);
-    if (p[2] === 'ergebnis-papier') { stopAll(); return result(id, true); }
-    if (p[2] === 'pruefen') { stopAll(); return paperCheck(id); }
-    stopAll(); return intro(id);
+    if (p[2] === 'run') return fixTitle(run(id));
+    if (p[2] === 'ergebnis') return fixTitle(result(id));
+    if (p[2] === 'ergebnis-papier') { stopAll(); return fixTitle(result(id, true)); }
+    if (p[2] === 'pruefen') { stopAll(); return fixTitle(paperCheck(id)); }
+    stopAll(); return fixTitle(intro(id));
   };
   DM.routes.vorbereitung = p => { stopAll(); return p[1] ? prepPage(p[1]) : prepHub(); };
   DM.sim = { META, ORDER, load, prepare, score, fnv };
