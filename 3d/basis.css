@@ -1,0 +1,42 @@
+/* Shared base for the 3D idea pages (fonts, colours, header, info card, buttons). */
+@font-face{font-family:'Atkinson Hyperlegible';font-weight:400;font-display:swap;src:url(../assets/fonts/atkinson-hyperlegible-latin-400-normal.woff2) format('woff2')}
+@font-face{font-family:'Atkinson Hyperlegible';font-weight:700;font-display:swap;src:url(../assets/fonts/atkinson-hyperlegible-latin-700-normal.woff2) format('woff2')}
+@font-face{font-family:'Lehrerschrift';font-weight:600;font-display:swap;src:url(../assets/fonts/caveat-latin-600-normal.woff2) format('woff2')}
+:root{--ink:#172036;--tinte:#2341B5;--tinte-dark:#182E86;--paper:#FBFBF8;--marker:#FFE45C;--rot:#C2362B;--gruen:#1D7A45;--muted:#566078;--line:#DADFEA;
+  --font:'Atkinson Hyperlegible',system-ui,'Segoe UI',Roboto,Arial,sans-serif;--hand:'Lehrerschrift','Segoe Print',cursive}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html,body{height:100%}
+body{margin:0;font-family:var(--font);color:var(--ink);line-height:1.45;overflow-x:hidden;
+  background:linear-gradient(rgba(35,65,181,.06) 1px,transparent 1px) 0 0/28px 28px,
+    linear-gradient(90deg,rgba(35,65,181,.06) 1px,transparent 1px) 0 0/28px 28px,
+    radial-gradient(110% 90% at 65% 45%,#fff 0%,#F1F3FB 60%,#E3E8F7 100%);background-attachment:fixed}
+.stage{position:fixed;inset:0;width:100%;height:100%;display:block;touch-action:none}
+.loader{position:fixed;inset:0;display:grid;place-items:center;z-index:9;background:var(--paper);font-family:var(--hand);font-size:2rem;color:var(--tinte);transition:opacity .6s;text-align:center;padding:20px}
+.loader.off{opacity:0;pointer-events:none}
+.top{position:fixed;top:0;left:0;right:0;z-index:5;display:flex;align-items:center;gap:8px;padding:12px 16px;pointer-events:none}
+.top>*{pointer-events:auto}
+.logo{font-weight:700;font-size:1.1rem;color:var(--ink);text-decoration:none;background:rgba(255,255,255,.88);padding:6px 12px;border-radius:999px;white-space:nowrap}
+.logo span{color:var(--tinte)}
+.all{margin-left:auto;font-size:.85rem;padding:8px 12px;border-radius:999px;background:rgba(255,255,255,.88);color:var(--tinte);text-decoration:none;border:1px solid var(--line);white-space:nowrap}
+.info{position:fixed;z-index:5;left:4vw;top:50%;transform:translateY(-50%);width:360px;max-width:calc(100% - 24px);
+  background:rgba(255,255,255,.92);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid var(--line);border-radius:20px;padding:22px;box-shadow:0 20px 50px -20px rgba(23,32,54,.35)}
+.kicker{font-family:var(--hand);color:var(--rot);font-size:1.4rem;margin:0 0 4px;transform:rotate(-2deg);transform-origin:left}
+.info h1{font-size:1.6rem;line-height:1.15;margin:0 0 8px}
+.info p{margin:0 0 14px;color:var(--muted)}
+.btn{display:inline-flex;align-items:center;min-height:48px;padding:0 18px;border-radius:12px;background:var(--tinte);color:#fff;font-weight:700;text-decoration:none;box-shadow:0 6px 0 var(--tinte-dark);border:0;font:inherit;font-weight:700;cursor:pointer}
+.btn.ghost{background:#fff;color:var(--tinte);border:2px solid var(--tinte);box-shadow:0 6px 0 var(--line)}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:16px;padding-top:12px;border-top:1px dashed var(--line)}
+.chips button{font:inherit;font-size:.88rem;min-height:44px;padding:0 12px;border-radius:999px;border:2px solid var(--line);background:#fff;color:var(--ink);cursor:pointer}
+.chips button[aria-pressed=true]{background:var(--marker);border-color:#E8C500}
+.hint{font-size:.82rem;color:var(--muted);margin:16px 0 0}
+@media (max-width:900px),(orientation:portrait){
+  .info{left:10px;right:10px;bottom:10px;top:auto;transform:none;width:auto;max-width:none;padding:14px 16px;border-radius:18px}
+  .kicker{font-size:1.15rem}.info h1{font-size:1.3rem}.info p{font-size:.95rem;margin-bottom:10px}
+  .chips{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;margin-top:10px;padding-top:10px}.chips button{flex:none}
+}
+@media (max-width:380px){.logo{font-size:.95rem;padding:6px 10px}.all{font-size:.75rem;padding:7px 9px}}
+.logo,.all{min-height:44px;display:inline-flex;align-items:center}
+.logo{gap:.28em}
+@media (min-width:600px) and (max-width:900px),(min-width:600px) and (orientation:portrait){.info{left:50%;right:auto;width:min(640px,calc(100% - 32px));transform:translateX(-50%)}}
+@media (max-width:900px),(orientation:portrait){.chips{-webkit-mask-image:linear-gradient(90deg,#000 82%,transparent);mask-image:linear-gradient(90deg,#000 82%,transparent);padding-right:40px}}

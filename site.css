@@ -588,3 +588,14 @@ nav.dm-tabs a,nav.dm-scenes a{flex:0 0 auto}
 .sp-sr{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
 /* keep the footer below the fold until the first page is rendered (avoids layout shift) */
 main:empty,main:has(> .dm-boot){min-height:100vh!important}
+
+/* Switch to the 3D view (/3d/) – keeps the current page via the #hash */
+header.dm-header .dm-3d-switch{display:inline-flex;align-items:center;justify-content:center;min-width:48px;min-height:44px;padding:0 14px;border-radius:999px;background:linear-gradient(135deg,var(--dm-tinte),#7A4FD8);color:#fff;font:700 16px var(--dm-font);text-decoration:none;letter-spacing:.02em;box-shadow:0 4px 12px -4px rgba(35,65,181,.6);flex:none}
+header.dm-header .dm-3d-switch:hover{filter:brightness(1.1)}
+header.dm-header .dm-3d-switch:focus-visible{outline:3px solid var(--dm-marker);outline-offset:2px}
+@media (max-width:1180px){header.dm-header #pl-menu{order:1}header.dm-header .dm-3d-switch{order:2}header.dm-header nav{order:3}}
+@media (max-width:1180px){header.dm-header .dm-3d-switch{order:0}}
+@media (max-width:460px){header.dm-header{gap:4px}header.dm-header .logo{font-size:17px}header.dm-header .dm-3d-switch{min-width:44px;padding:0 8px;font-size:14px}}
+@media (max-width:350px){header.dm-header .logo{font-size:15px}}
+@media (max-width:374px){header.dm-header .dm-hshare{display:none}}
+@media (max-width:374px){header.dm-header{column-gap:4px}}
