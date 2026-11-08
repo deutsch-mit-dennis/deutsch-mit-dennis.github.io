@@ -9,12 +9,12 @@
 <meta name="theme-color" content="#2341B5">
 <link rel="icon" href="../favicon.svg">
 <link rel="preload" href="../assets/fonts/atkinson-hyperlegible-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="basis.css?v=20261108j">
+<link rel="stylesheet" href="basis.css?v=20261108k">
 <link rel="stylesheet" href="werkstatt.css?v=20261108m">
 <link rel="stylesheet" href="werkstatt-anim.css?v=20261108m">
 <script src="../site-data.js?v=20261108j"></script>
 <script type="importmap">{"imports":{"three":"./vendor/three.module.min.js"}}</script>
-<script type="module" src="werkstatt.js?v=20261108n"></script>
+<script type="module" src="werkstatt.js?v=20261108o"></script>
 </head>
 <body>
 <canvas id="desk" aria-hidden="true"></canvas>
@@ -23,7 +23,8 @@
 <noscript><p class="noscript">Die 3D-Ansicht braucht JavaScript. <a href="../index.html">Zur klassischen Seite</a></p></noscript>
 <script>setTimeout(function(){var l=document.getElementById("loader");if(l&&!l.classList.contains("off"))l.innerHTML='Die 3D-Ansicht lädt nicht?<br><a href="../index.html">Zur klassischen Seite</a>';},12000);</script>
 <header class="top"><a href="../" class="logo">Deutsch <span>mit Dennis</span></a><button type="button" class="all snd" id="snd" aria-pressed="false"><svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18"><path d="M4 9h4l5-4v14l-5-4H4z" fill="currentColor"/><path class="snd-w" d="M16 8.5a5 5 0 0 1 0 7M18.5 6a8.5 8.5 0 0 1 0 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path class="snd-x" d="M16.5 9.5l5 5m0-5l-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><span class="snd-t">Ton aus</span></button><a class="all to-classic" id="to-classic" href="../index.html" title="Zur klassischen Ansicht wechseln">Klassisch</a></header>
-<aside class="info">
+<aside class="info" id="info">
+  <button type="button" class="info-mini" id="info-mini" aria-controls="info" aria-expanded="true" aria-label="Fenster verkleinern" title="Fenster verkleinern"><svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
   <p class="kicker">Neu: Deutsch mit Dennis in 3D</p>
   <h1>Mein Lernschreibtisch</h1>
   <p>Klick auf einen Gegenstand – er öffnet sich auf der ganzen Seite. Laptop und Heft klappen auf!</p>

@@ -379,6 +379,19 @@ function resize() {
 }
 addEventListener('resize', resize);
 
+// minimise / restore the info panel (state remembered in dmd.3d.infoMini)
+const infoEl = $('info'), miniBtn = $('info-mini');
+function setMini(on, keep = true) {
+  infoEl.classList.toggle('mini', on);
+  const label = on ? 'Fenster öffnen' : 'Fenster verkleinern';
+  miniBtn.setAttribute('aria-expanded', String(!on)); miniBtn.setAttribute('aria-label', label); miniBtn.title = label;
+  if (keep) try { localStorage.setItem('dmd.3d.infoMini', on ? '1' : '0'); } catch {}
+  resize();
+}
+miniBtn.addEventListener('click', e => { e.stopPropagation(); setMini(!infoEl.classList.contains('mini')); });
+infoEl.querySelector('h1').addEventListener('click', () => { if (infoEl.classList.contains('mini')) setMini(false); });
+try { if (localStorage.getItem('dmd.3d.infoMini') === '1') setMini(true, false); } catch {}
+
 // ---------- animation ----------
 const tag = $('tag'), v = new THREE.Vector3(), clock = new THREE.Clock();
 const outBounce = t => { const n = 7.5625, d = 2.75; if (t < 1 / d) return n * t * t; if (t < 2 / d) return n * (t -= 1.5 / d) * t + .75; if (t < 2.5 / d) return n * (t -= 2.25 / d) * t + .9375; return n * (t -= 2.625 / d) * t + .984375; };

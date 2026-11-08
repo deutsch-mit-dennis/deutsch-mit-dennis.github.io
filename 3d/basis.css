@@ -40,3 +40,13 @@ body{margin:0;font-family:var(--font);color:var(--ink);line-height:1.45;overflow
 .logo{gap:.28em}
 @media (min-width:600px) and (max-width:900px),(min-width:600px) and (orientation:portrait){.info{left:50%;right:auto;width:min(640px,calc(100% - 32px));transform:translateX(-50%)}}
 @media (max-width:900px),(orientation:portrait){.chips{-webkit-mask-image:linear-gradient(90deg,#000 82%,transparent);mask-image:linear-gradient(90deg,#000 82%,transparent);padding-right:40px}}
+/* minimise button of the info panel */
+.info-mini{position:absolute;top:10px;right:10px;width:44px;height:44px;border-radius:50%;border:2px solid var(--line);background:#fff;color:var(--ink);display:grid;place-items:center;cursor:pointer;padding:0;z-index:1}
+.info-mini:hover{border-color:var(--tinte);color:var(--tinte)}
+.info-mini svg{transition:transform .25s}
+.info .kicker,.info h1{padding-right:46px}
+.info.mini>:not(h1):not(.info-mini){display:none}
+.info.mini{padding:12px 16px}
+.info.mini h1{margin:0;font-size:1.15rem;line-height:44px;cursor:pointer}
+.info.mini .info-mini{top:50%;transform:translateY(-50%)}
+.info.mini .info-mini svg{transform:rotate(180deg)}
