@@ -4,11 +4,21 @@ const KEY = 'dmd.3d.sound';
 let ctx = null, on = false;
 try { on = localStorage.getItem(KEY) === '1'; } catch {}
 
+// iPhone/iPad: Web Audio is muted by the silent switch unless the page asks for "playback" (Safari 16.4+)
+function iosSession() { try { if (navigator.audioSession && navigator.audioSession.type !== 'playback') navigator.audioSession.type = 'playback'; } catch {} }
 function ac() {
-  if (!ctx) { const A = window.AudioContext || window.webkitAudioContext; if (!A) return null; ctx = new A(); }
-  if (ctx.state === 'suspended') ctx.resume().catch(() => {});
+  if (!ctx) { const A = window.AudioContext || window.webkitAudioContext; if (!A) return null; iosSession(); ctx = new A(); }
+  if (ctx.state !== 'running') ctx.resume().catch(() => {});
   return ctx;
 }
+// Safari only starts audio inside a tap: unlock once on the first touch/click while the sound is on
+function unlock() {
+  if (!on) return;
+  const c = ac(); if (!c) return;
+  try { const b = c.createBuffer(1, 1, 22050), src = c.createBufferSource(); src.buffer = b; src.connect(c.destination); src.start(0); } catch {}
+  if (c.state === 'running') ['touchend', 'pointerdown', 'click', 'keydown'].forEach(t => removeEventListener(t, unlock, true));
+}
+['touchend', 'pointerdown', 'click', 'keydown'].forEach(t => addEventListener(t, unlock, true));
 function env(g, t, a, peak, d) { g.gain.setValueAtTime(0.0001, t); g.gain.exponentialRampToValueAtTime(peak, t + a); g.gain.exponentialRampToValueAtTime(0.0001, t + a + d); }
 function tone(c, freq, t, dur, type = 'sine', vol = .12) {
   const o = c.createOscillator(), g = c.createGain(); o.type = type; o.frequency.setValueAtTime(freq, t);
@@ -30,8 +40,16 @@ const SOUNDS = {
 
 export const sound = {
   get on() { return on; },
-  set(v) { on = !!v; try { localStorage.setItem(KEY, on ? '1' : '0'); } catch {} if (on) { const c = ac(); c && SOUNDS.click(c); } },
-  play(name) { if (!on || !SOUNDS[name]) return; if (!ctx && navigator.userActivation && !navigator.userActivation.hasBeenActive) return; try { const c = ac(); if (c && c.state === 'running') SOUNDS[name](c); } catch {} },
+  set(v) { on = !!v; try { localStorage.setItem(KEY, on ? '1' : '0'); } catch {} if (on) { unlock(); const c = ac(); if (c) (c.state === 'running' ? Promise.resolve() : c.resume()).then(() => SOUNDS.click(c)).catch(() => {}); } },
+  play(name) {
+    if (!on || !SOUNDS[name]) return;
+    if (!ctx && navigator.userActivation && !navigator.userActivation.hasBeenActive) return;
+    try {
+      const c = ac(); if (!c) return;
+      if (c.state === 'running') SOUNDS[name](c);
+      else c.resume().then(() => { if (c.state === 'running') SOUNDS[name](c); }).catch(() => {});
+    } catch {}
+  },
 };
 
 // header button
