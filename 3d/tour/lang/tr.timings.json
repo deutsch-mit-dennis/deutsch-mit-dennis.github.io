@@ -1,0 +1,94 @@
+{
+ "duration": 49.093,
+ "lang": "tr",
+ "steps": [
+  {
+   "i": 0,
+   "step": "desk",
+   "text": "Merhaba ve hoş geldin! Ben Dennis – Almanca öğretmeni ve sınav görevlisiyim.",
+   "de": "Hallo und herzlich willkommen! Ich bin Dennis – Deutschlehrer und Prüfer.",
+   "start": 0.15,
+   "end": 5.021
+  },
+  {
+   "i": 1,
+   "step": "desk",
+   "text": "Burası benim öğrenme masam – ücretsiz ve kayıt olmadan.",
+   "de": "Das ist mein Lernschreibtisch – kostenlos und ohne Anmeldung.",
+   "start": 5.321,
+   "end": 9.288
+  },
+  {
+   "i": 2,
+   "step": "laptop",
+   "text": "Dizüstü bilgisayarda dersleri bulursun – A1'den B2 meslek seviyesine kadar.",
+   "de": "Im Laptop findest du die Lektionen – von A1 bis B2 Beruf.",
+   "start": 9.588,
+   "end": 14.77
+  },
+  {
+   "i": 3,
+   "step": "heft",
+   "text": "Defterimde tüm bölümlere göz atabilirsin – bir konuya dokunman yeterli.",
+   "de": "In meinem Heft blätterst du durch alle Bereiche – tippe einfach auf ein Thema.",
+   "start": 15.07,
+   "end": 19.296
+  },
+  {
+   "i": 4,
+   "step": "kopfhoerer",
+   "text": "Kulaklıklarla dinlemeyi, kitaplarla okumayı çalışırsın.",
+   "de": "Mit den Kopfhörern übst du Hören, mit den Büchern Lesen.",
+   "start": 19.596,
+   "end": 23.261
+  },
+  {
+   "i": 5,
+   "step": "mikrofon",
+   "text": "Mikrofonda konuşma pratiği yaparsın.",
+   "de": "Am Mikrofon trainierst du Sprechen.",
+   "start": 23.561,
+   "end": 26.041
+  },
+  {
+   "i": 6,
+   "step": "gamepad",
+   "text": "Oyun koluyla oynayarak öğrenirsin.",
+   "de": "Mit dem Gamepad lernst du spielerisch.",
+   "start": 26.341,
+   "end": 28.81
+  },
+  {
+   "i": 7,
+   "step": "pruefung",
+   "text": "Yakında sınavın mı var? Sınav kâğıdı seni deneme sınavlarına götürür.",
+   "de": "Bald eine Prüfung? Der Prüfungsbogen bringt dich zu den Probeprüfungen.",
+   "start": 29.11,
+   "end": 33.35
+  },
+  {
+   "i": 8,
+   "step": "globus",
+   "text": "Küre seni „Almanya'da Yaşam“ konusuna götürür, radyoda da şarkılarım çalar.",
+   "de": "Der Globus führt dich zu „Leben in Deutschland“, und im Radio laufen meine Lieder.",
+   "start": 33.65,
+   "end": 39.089
+  },
+  {
+   "i": 9,
+   "step": "shop",
+   "text": "Kitap standında kitaplarımı ve öğrenme paketlerimi bulursun.",
+   "de": "Am Buchständer findest du meine Bücher und Lernpakete.",
+   "start": 39.389,
+   "end": 43.54
+  },
+  {
+   "i": 10,
+   "step": "desk",
+   "text": "Bir nesneye dokunman yeterli. Başarılar – burada olmana çok sevindim!",
+   "de": "Tippe einfach auf einen Gegenstand. Viel Erfolg – ich freue mich, dass du da bist!",
+   "start": 43.84,
+   "end": 48.693
+  }
+ ]
+}

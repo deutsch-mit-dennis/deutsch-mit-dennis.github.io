@@ -1,5 +1,5 @@
 // Full-page "inside" views for each desk object (test build). Every link points to the real site, nothing is changed there.
-import { openHeft } from './heft-buch.js?v=20261108f';
+import { openHeft } from './heft-buch.js?v=20261108i';
 
 const SITE = 'https://deutsch-mit-dennis.de/';
 const L = (h) => SITE + h;
@@ -159,6 +159,7 @@ function heftView(ctx = {}) {
     v.querySelector('.hf-links').innerHTML = s.links.map(([a, h]) => `<a href="${L(h)}">${esc(a)}</a>`).join('');
     v.querySelector('.hf-prev').disabled = n === 0; v.querySelector('.hf-next').disabled = n === SPREADS.length - 1; };
   const step = d => ctl && ctl.goTo(ctl.stage + d);
+  try { if (localStorage.getItem('dmd.3d.heftHint')) v.querySelector('.hf-hint').hidden = true; } catch {}
   v.querySelector('.hf-prev').onclick = () => step(-1); v.querySelector('.hf-next').onclick = () => step(1);
   const host = v.querySelector('.hf-host');
   host.addEventListener('pointerdown', e => { x0 = e.clientX; });
@@ -166,7 +167,7 @@ function heftView(ctx = {}) {
     if (x0 == null) return; const dx = e.clientX - x0; x0 = null;
     if (Math.abs(dx) > 40) { step(dx < 0 ? 1 : -1); return; }
     const r = ctl && ctl.stage > 0 && ctl.pick(e.clientX, e.clientY);
-    if (r && window.dmOpenRoute) window.dmOpenRoute(r, { stay: true }); else step(1);
+    if (r && window.dmOpenRoute) { window.dmOpenRoute(r, { stay: true }); try { localStorage.setItem('dmd.3d.heftHint', '1'); } catch {} v.querySelector('.hf-hint').hidden = true; } else step(1);
   });
   host.addEventListener('pointermove', e => { if (e.pointerType !== 'mouse' || !ctl) return; host.classList.toggle('hf-hot', !!(ctl.stage > 0 && ctl.pick(e.clientX, e.clientY))); });
   const key = e => { if (e.key === 'ArrowRight') step(1); if (e.key === 'ArrowLeft') step(-1); };
@@ -190,17 +191,29 @@ function mugView() {
 const AMAZON_TAG = 'deutschmitden-21';
 const amazon = u => u + (u.includes('?') ? '&' : '?') + 'tag=' + AMAZON_TAG;
 function shopView() {
-  const DM = window.DM || {}, books = (DM.books || []).filter(b => b.amazon), packs = DM.packages || [];
+  const DM = window.DM || {}, packs = DM.packages || [];
+  let visited = []; try { visited = Object.keys((JSON.parse(localStorage.getItem('dmd.v1') || '{}') || {}).visited || {}); } catch {}
+  const rec = visited.some(r => /dtz|bild/.test(r)) ? 'DTZ' : visited.some(r => /dtb/.test(r)) ? 'DTB' : '';
+  const isRec = b => rec && String(b.target || '').includes(rec);
+  const books = (DM.books || []).filter(b => b.amazon).sort((a, b) => isRec(b) - isRec(a));
   const img = p => '../' + String(p || '').split('?')[0];
   const v = el(`<div class="v-shop">
     <section><h2>Meine Übungsbücher</h2><div class="sp-books">${books.map(b => `<article class="sp-book">
-      <div class="sp-cover"><img src="${img(b.img)}" alt="Cover: ${esc(b.title)}" loading="lazy"></div>
+      <div class="sp-cover">${isRec(b) ? '<span class="sp-rec">★ Empfohlen für dich</span>' : ''}<img src="${img(b.img)}" alt="Cover: ${esc(b.title)}" loading="lazy"></div>
+      <span class="sp-fit">Passt zu: ${esc(b.target || 'Alltag')}${b.level ? ' · ' + esc(b.level) : ''}</span>
       <h3>${esc(b.title)}</h3><p>${esc(b.level || '')}${b.pages ? ` · ${b.pages} Seiten` : ''}${b.price ? ` · <b>${esc(b.price)}</b>` : ''}</p>
       <div class="sp-btns"><a class="btn" href="${amazon(b.amazon)}" target="_blank" rel="sponsored noopener">Bei Amazon ↗</a><a class="sp-more" href="${L('#lernpakete/buecher')}">Mehr erfahren</a></div></article>`).join('')}</div>
       <p class="sp-note">Werbelink: Als Amazon-Partner verdiene ich an qualifizierten Verkäufen.</p></section>
     <section><h2>PDF-Lernpakete</h2><div class="sp-packs">${packs.map(p => `<a class="sp-pack" href="${L('#lernpakete')}"><img src="${img(p.img)}" alt="" loading="lazy">
       <span><b>${esc(p.title || '')}</b><small>${esc(p.level || '')}${p.pages ? ` · ${p.pages} Seiten` : ''}${p.price ? ` · ${esc(p.price)}` : ''}</small></span></a>`).join('')}</div></section></div>`);
   return { node: v };
+}
+
+// build the notebook while the visitor is still on the desk, so the first opening is instant (kept in heft-buch's cache)
+export async function prewarmHeft(renderer) {
+  const host = document.createElement('div'); host.style.cssText = 'position:fixed;left:0;top:0;width:10px;height:10px;visibility:hidden;pointer-events:none';
+  document.body.append(host);
+  try { const c = await openHeft(host, { maxStage: 4, renderer }); c && c.dispose(); } catch {} finally { host.remove(); }
 }
 
 export const VIEWS = { shop: shopView, tasse: mugView, laptop: laptopView, kopfhoerer: playerView, buecher: shelfView, mikrofon: studioView, gamepad: arcadeView, pruefung: examView, globus: globeView, radio: radioView, heft: heftView };

@@ -9,12 +9,12 @@
 <meta name="theme-color" content="#2341B5">
 <link rel="icon" href="../favicon.svg">
 <link rel="preload" href="../assets/fonts/atkinson-hyperlegible-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="basis.css?v=20261108f">
-<link rel="stylesheet" href="werkstatt.css?v=20261108f">
-<link rel="stylesheet" href="werkstatt-anim.css?v=20261108f">
-<script src="../site-data.js?v=20261108f"></script>
+<link rel="stylesheet" href="basis.css?v=20261108i">
+<link rel="stylesheet" href="werkstatt.css?v=20261108i">
+<link rel="stylesheet" href="werkstatt-anim.css?v=20261108i">
+<script src="../site-data.js?v=20261108i"></script>
 <script type="importmap">{"imports":{"three":"./vendor/three.module.min.js"}}</script>
-<script type="module" src="werkstatt.js?v=20261108f"></script>
+<script type="module" src="werkstatt.js?v=20261108i"></script>
 </head>
 <body>
 <canvas id="desk" aria-hidden="true"></canvas>
@@ -28,14 +28,15 @@
   <button type="button" class="resume" id="resume" hidden><span class="r-k">Weitermachen</span><b></b><span aria-hidden="true">→</span></button>
   <div class="tour-hint" id="tour-hint" hidden role="note"><span>Neu hier? Ich zeige dir alles in 1 Minute.</span><button type="button" class="th-x" aria-label="Hinweis schließen">×</button></div>
   <button type="button" class="btn tour-btn" id="tour-start"><span class="tour-face" aria-hidden="true"></span>Tour mit Dennis starten</button>
-  <div class="chips" id="chips"></div>
+  <div class="tour-langs" id="tour-langs" role="group" aria-label="Sprache der Tour"></div>
+  <div class="chips" id="chips" role="group" aria-label="Gegenstände auf dem Schreibtisch"></div>
   <nav class="legal" aria-label="Rechtliches"><a href="https://deutsch-mit-dennis.de/#ueber-mich" data-route="ueber-mich">Über mich</a><a href="https://deutsch-mit-dennis.de/#impressum" data-route="impressum">Impressum</a><a href="https://deutsch-mit-dennis.de/#datenschutz" data-route="datenschutz">Datenschutz</a></nav>
 </aside>
 <section class="tourbox" id="tourbox" hidden aria-label="Tour mit Dennis">
-  <div class="tour-bubble"><video id="tour-media" playsinline preload="none" poster="../assets/avatar/dennis-avatar.jpg"><source src="tour/dennis-tour.mp3" type="audio/mpeg"></video></div>
-  <div class="tour-side"><p class="tour-sub" id="tour-sub" aria-live="polite"></p>
+  <div class="tour-bubble"><video id="tour-media" playsinline preload="none" poster="../assets/avatar/dennis-avatar.jpg"></video></div>
+  <div class="tour-side"><p class="tour-sub" id="tour-sub" aria-live="polite"></p><p class="tour-sub2" id="tour-sub2" lang="de"></p>
     <div class="tour-ctrl"><button type="button" id="tour-pause">Pause</button><button type="button" id="tour-stop">Tour beenden</button></div>
-    <p class="tour-ai">KI-Stimme: Klon von Dennis' Stimme</p></div>
+    <p class="tour-ai">Video/Stimme mit KI erstellt (Avatar und Stimmklon von Dennis)</p></div>
 </section>
 </body>
 </html>

@@ -1,0 +1,94 @@
+{
+ "duration": 57.111,
+ "lang": "ru",
+ "steps": [
+  {
+   "i": 0,
+   "step": "desk",
+   "text": "Привет и добро пожаловать! Я Деннис – преподаватель немецкого языка и экзаменатор.",
+   "de": "Hallo und herzlich willkommen! Ich bin Dennis – Deutschlehrer und Prüfer.",
+   "start": 0.15,
+   "end": 6.389
+  },
+  {
+   "i": 1,
+   "step": "desk",
+   "text": "Это мой учебный письменный стол – бесплатно и без регистрации.",
+   "de": "Das ist mein Lernschreibtisch – kostenlos und ohne Anmeldung.",
+   "start": 6.689,
+   "end": 11.909
+  },
+  {
+   "i": 2,
+   "step": "laptop",
+   "text": "В ноутбуке ты найдёшь уроки – от A1 до B2 для работы.",
+   "de": "Im Laptop findest du die Lektionen – von A1 bis B2 Beruf.",
+   "start": 12.209,
+   "end": 18.184
+  },
+  {
+   "i": 3,
+   "step": "heft",
+   "text": "В моей тетради ты листаешь все разделы – просто нажми на тему.",
+   "de": "In meinem Heft blätterst du durch alle Bereiche – tippe einfach auf ein Thema.",
+   "start": 18.484,
+   "end": 23.651
+  },
+  {
+   "i": 4,
+   "step": "kopfhoerer",
+   "text": "С наушниками ты тренируешь аудирование, с книгами – чтение.",
+   "de": "Mit den Kopfhörern übst du Hören, mit den Büchern Lesen.",
+   "start": 23.951,
+   "end": 28.749
+  },
+  {
+   "i": 5,
+   "step": "mikrofon",
+   "text": "У микрофона ты тренируешь говорение.",
+   "de": "Am Mikrofon trainierst du Sprechen.",
+   "start": 29.049,
+   "end": 31.748
+  },
+  {
+   "i": 6,
+   "step": "gamepad",
+   "text": "С геймпадом ты учишься играя.",
+   "de": "Mit dem Gamepad lernst du spielerisch.",
+   "start": 32.048,
+   "end": 34.864
+  },
+  {
+   "i": 7,
+   "step": "pruefung",
+   "text": "Скоро экзамен? Экзаменационный лист приведёт тебя к пробным экзаменам.",
+   "de": "Bald eine Prüfung? Der Prüfungsbogen bringt dich zu den Probeprüfungen.",
+   "start": 35.164,
+   "end": 40.204
+  },
+  {
+   "i": 8,
+   "step": "globus",
+   "text": "Глобус ведёт тебя к теме «Жизнь в Германии», а по радио звучат мои песни.",
+   "de": "Der Globus führt dich zu „Leben in Deutschland“, und im Radio laufen meine Lieder.",
+   "start": 40.504,
+   "end": 46.024
+  },
+  {
+   "i": 9,
+   "step": "shop",
+   "text": "На книжной подставке ты найдёшь мои книги и учебные пакеты.",
+   "de": "Am Buchständer findest du meine Bücher und Lernpakete.",
+   "start": 46.324,
+   "end": 51.155
+  },
+  {
+   "i": 10,
+   "step": "desk",
+   "text": "Просто нажми на любой предмет. Удачи – я рад, что ты здесь!",
+   "de": "Tippe einfach auf einen Gegenstand. Viel Erfolg – ich freue mich, dass du da bist!",
+   "start": 51.455,
+   "end": 56.711
+  }
+ ]
+}

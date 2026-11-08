@@ -1,6 +1,6 @@
 // Idea 6 'Heft + Schreibtisch': click an object -> camera flies in, object opens, full-page themed view (test build).
 import * as THREE from 'three';
-import { VIEWS } from './werkstatt-views.js?v=20261108f';
+import { VIEWS, prewarmHeft } from './werkstatt-views.js?v=20261108i';
 
 const SITE = 'https://deutsch-mit-dennis.de/';
 const C = { tinte: '#2341B5', tinteDark: '#182E86', paper: '#FBFBF8', ink: '#172036', marker: '#FFE45C', rot: '#C2362B', gruen: '#1D7A45', sun: '#E8A800', sky: '#2C86CF', mint: '#2B9A78' };
@@ -14,6 +14,7 @@ const AREAS = {
   pruefung:  { title: 'Prüfung', text: 'Probeprüfungen im Stil von DTZ, telc B1/B2 und DTB B1/B2.', href: '#simulation', icon: 'pokal', btn: 'Probeprüfung starten' },
   globus:    { title: 'Leben in Deutschland', text: 'Fragen üben und den Test mit 33 Fragen ausprobieren.', href: '#lid', icon: 'globus', btn: 'LiD üben' },
   shop:      { title: 'Bücher & Lernpakete', text: 'Meine Übungsbücher und PDF-Lernpakete.', href: '#lernpakete', icon: 'buecher', btn: 'Ansehen' },
+  lampe:     { title: 'Licht an / aus', noChip: true },
   tasse:     { title: 'Pause', text: 'Witz des Tages, Tages-Challenge und deine Meinung.', href: '#witz', icon: 'idee', btn: 'Pause machen' },
   radio:     { title: 'Lieder', text: 'Deutsch mit Liedern bis C1 – mit Liedtext zum Mitlesen.', href: '#lieder', icon: 'noten', btn: 'Lieder hören' },
 };
@@ -35,7 +36,7 @@ const scene = new THREE.Scene();
 const camera = new THREE.OrthographicCamera(-1, 1, 1, -1, .1, 100);
 camera.position.set(10, 9.5, 10); camera.lookAt(0, 0, 0);
 
-scene.add(new THREE.HemisphereLight(0xffffff, 0xBFC8E8, 1.5));
+const hemi = new THREE.HemisphereLight(0xffffff, 0xBFC8E8, 1.5); scene.add(hemi);
 const sun = new THREE.DirectionalLight(0xffffff, 2.4);
 sun.position.set(-4, 10, 6); sun.castShadow = true; sun.shadow.mapSize.set(SMALL ? 1024 : 2048, SMALL ? 1024 : 2048);
 Object.assign(sun.shadow.camera, { left: -8, right: 8, top: 8, bottom: -8, near: 1, far: 30 }); sun.shadow.bias = -0.0005; sun.shadow.radius = 4;
@@ -212,6 +213,21 @@ function makeBookStand() { // Dennis' own books (covers from the website data) +
   g.add(mesh(new THREE.BoxGeometry(.1, .05, .52), std('#FFE45C'), 1.25, .34, .05));
   return g;
 }
+function makeLamp() { // desk lamp: off by day, on at night (click toggles)
+  const g = new THREE.Group(), metal = std('#2A3042', { metalness: .5, roughness: .4 }), shadeM = std(C.tinte, { roughness: .45, side: THREE.DoubleSide });
+  g.add(mesh(new THREE.CylinderGeometry(.3, .34, .07, 28), metal, 0, .035, 0));
+  const a1 = mesh(new THREE.CylinderGeometry(.035, .035, 1.0, 10), metal, .12, .52, 0); a1.rotation.z = -.25; g.add(a1);
+  g.add(mesh(new THREE.SphereGeometry(.06, 12, 8), metal, .25, 1.0, 0));
+  const a2 = mesh(new THREE.CylinderGeometry(.03, .03, .75, 10), metal, .55, 1.12, 0); a2.rotation.z = -1.25; g.add(a2);
+  const head = new THREE.Group(); head.position.set(.88, 1.2, 0); head.rotation.z = -.55; g.add(head);
+  const shade = mesh(new THREE.ConeGeometry(.26, .34, 28, 1, true), shadeM, 0, -.12, 0); head.add(shade);
+  const bulbM = new THREE.MeshStandardMaterial({ color: '#FFF3C4', emissive: '#FFD27A', emissiveIntensity: 0, roughness: .3 });
+  const bulb = new THREE.Mesh(new THREE.SphereGeometry(.09, 16, 12), bulbM); bulb.position.y = -.22; head.add(bulb);
+  const spot = new THREE.SpotLight(0xFFD9A0, 0, 9, .85, .7, 1.2); spot.position.set(0, -.2, 0); head.add(spot);
+  const target = new THREE.Object3D(); target.position.set(.9, -3, 0); head.add(target); spot.target = target;
+  g.userData.lamp = { bulbM, spot };
+  return g;
+}
 function makeMug() { // decoration
   const g = new THREE.Group(), m = std('#fff', { roughness: .3 });
   g.add(mesh(new THREE.CylinderGeometry(.24, .22, .5, 28), m, 0, .25, 0));
@@ -249,6 +265,7 @@ const LAYOUT = [
   ['kopfhoerer', makeHeadphones, 3.5, .7, .9, .85],
   ['mikrofon', makeMic, 3.8, 2.1, 0, .6],
   ['tasse', makeMug, -4.1, .1, 0, .55],
+  ['lampe', makeLamp, .8, -2.45, 1.2, .45],
   ['shop', makeBookStand, -3.9, 2.35, .62, 1.25],
 ];
 LAYOUT.forEach(([key, make, x, z, ry, r], i) => {
@@ -265,12 +282,17 @@ LAYOUT.forEach(([key, make, x, z, ry, r], i) => {
 // ---------- UI ----------
 const chips = $('chips');
 Object.entries(AREAS).forEach(([key, a]) => {
+  if (a.noChip) return;
   const b = document.createElement('button'); b.type = 'button'; b.textContent = a.title; b.dataset.key = key;
   b.addEventListener('click', () => openObject(key)); chips.appendChild(b);
 });
 let hovered = null, focusKey = null, focusObj = null, view = null, focusF = 0, zoomGoal = 1;
 const fp = new THREE.Vector3(), center = new THREE.Vector3(), camOff = new THREE.Vector3(10, 9.5, 10);
+let lastFocus = null;
+const setInert = on => document.querySelectorAll('.info, .top').forEach(e => { e.inert = on; });
 function openObject(key, route) {
+  lastFocus = document.activeElement;
+  if (key === 'lampe') { setNight(!night, true); return; }
   if (focusKey || view) return;
   focusKey = key; focusObj = objs.find(o => o.key === key); hovered = null; canvas.style.cursor = '';
   const size = new THREE.Box3().setFromObject(focusObj.obj).getSize(new THREE.Vector3()), r = Math.max(size.x, size.y, size.z, .8);
@@ -284,7 +306,7 @@ function showView(key, route) {
   wrap.innerHTML = `<div class="view-bar"><button type="button" class="view-back">← Schreibtisch</button><span class="view-title">${a.title}</span></div><div class="view-body"></div>`;
   wrap.querySelector('.view-body').append(inst.node);
   wrap.style.transformOrigin = '50% 55%';
-  document.body.append(wrap); view = { wrap, inst, key };
+  document.body.append(wrap); view = { wrap, inst, key }; setInert(true);
   requestAnimationFrame(() => requestAnimationFrame(() => wrap.classList.add('in')));
   wrap.querySelector('.view-back').addEventListener('click', () => closeView()); wrap.querySelector('.view-back').focus({ preventScroll: true });
   inst.onOpen && inst.onOpen();
@@ -294,7 +316,8 @@ function closeView(then) {
   if (!view) return; content = null; const { wrap, inst } = view; view = null;
   wrap.classList.remove('in'); wrap.classList.add('out'); inst.dispose && inst.dispose();
   setTimeout(() => wrap.remove(), 380);
-  focusKey = null; document.body.classList.remove('focused');
+  focusKey = null; document.body.classList.remove('focused'); setInert(false);
+  try { if (!then && lastFocus && document.contains(lastFocus)) lastFocus.focus({ preventScroll: true }); } catch {}
   if (then) setTimeout(then, reduced ? 0 : 1100);
 }
 addEventListener('keydown', e => { if (e.key !== 'Escape') return; if (content) hideContent(); else closeView(); });
@@ -367,6 +390,7 @@ function frame() {
 (async () => {
   await Promise.all([document.fonts.load("700 40px 'Atkinson Hyperlegible'"), document.fonts.load('600 40px Lehrerschrift')]).catch(() => {});
   buildDesk();
+  setNight(night);
   resize(); started = clock.getElapsedTime();
   $('loader').classList.add('off');
   renderer.setAnimationLoop(frame);
@@ -385,7 +409,7 @@ const ROUTES = [ // first match wins: route prefix -> desk object
 ];
 const objectForRoute = r => (ROUTES.find(([p]) => r === p || r.startsWith(p + '/')) || [, 'laptop'])[1];
 let content = null; // { el, frame, key }
-const HIDE_CSS = '.dm-header,.dm-footer,.skip,#dm-tour,.dm-tour,.dm-news-toast,.dm-3d-switch{display:none!important}body{padding-top:0!important}.dm-tour-dim::before{display:none!important}main{padding-top:12px!important}';
+const HIDE_CSS = '.dm-backbar,.dm-header,.dm-footer,.skip,#dm-tour,.dm-tour,.dm-news-toast,.dm-3d-switch{display:none!important}body{padding-top:0!important}.dm-tour-dim::before{display:none!important}main{padding-top:12px!important}';
 
 function openRoute(route, opts = {}) {
   route = route.replace(/^#/, ''); const key = objectForRoute(route);
@@ -404,8 +428,8 @@ function showContent(route, stay = false) {
     <div class="cf-page"><iframe class="cf-frame" title="Inhalt" src="../index.html#${route}"></iframe></div></div>`;
   view.wrap.append(el);
   const frame = el.querySelector('iframe');
-  content = { el, frame, key, route, stay };
-  el.querySelector('.cf-back').addEventListener('click', hideContent);
+  content = { el, frame, key, route, stay, depth: 0, back: false };
+  el.querySelector('.cf-back').addEventListener('click', cfBack);
   frame.addEventListener('load', () => wireFrame(frame));
   requestAnimationFrame(() => requestAnimationFrame(() => el.classList.add('in')));
 }
@@ -419,7 +443,7 @@ function wireFrame(frame) {
     const r = w.location.hash.slice(1); if (!content) return;
     const k = objectForRoute(r);
     if (k !== content.key && !content.stay) { openRoute(r); return; } // another object: fly over on the desk (not in notebook mode)
-    content.route = r; pageTurn(); setTimeout(title, 300);
+    content.route = r; if (content.back) { content.depth = Math.max(0, content.depth - 1); content.back = false; } else content.depth++; updBack(); pageTurn(); setTimeout(title, 300);
   });
 }
 function pageTurn() { // new page swings in like a turned sheet
@@ -440,27 +464,44 @@ document.addEventListener('click', e => {
   e.preventDefault(); openRoute(a.getAttribute('href').split('#')[1], { stay: !!a.closest('.hf-links') });
 }, true);
 
-// ---------- guided tour with Dennis' avatar (audio/video drive the camera) ----------
+// ---------- guided tour: German = website welcome video (lip-synced), other languages = Dennis' ElevenLabs clone ----------
+const SITE_BASE = '../'; // where the real website lives (build: '../')
+const TOURS = {
+  de: { label: 'Deutsch', media: SITE_BASE + 'assets/avatar/willkommen.mp4', timings: 'tour/de-welcome.timings.json', video: true },
+  uk: { label: 'Українська', media: 'tour/lang/uk.mp3', timings: 'tour/lang/uk.timings.json' },
+  ru: { label: 'Русский', media: 'tour/lang/ru.mp3', timings: 'tour/lang/ru.timings.json' },
+  tr: { label: 'Türkçe', media: 'tour/lang/tr.mp3', timings: 'tour/lang/tr.timings.json' },
+  ar: { label: 'العربية', media: 'tour/lang/ar.mp3', timings: 'tour/lang/ar.timings.json', rtl: true },
+};
 const TOUR_SPLIT = { kopfhoerer: 'buecher', globus: 'radio' }; // second object mentioned in the same sentence
-let tour = null, touring = false;
+let touring = false, tourLang = 'de';
+try { const l = localStorage.getItem('dmd.3d.tourLang'); if (TOURS[l]) tourLang = l; } catch {}
 function previewObject(key) { // camera flies in, object opens a little, no full-page view
   if (!key) { focusKey = null; return; }
   focusKey = key; focusObj = objs.find(o => o.key === key);
   const size = new THREE.Box3().setFromObject(focusObj.obj).getSize(new THREE.Vector3()), r = Math.max(size.x, size.y, size.z, .8);
   zoomGoal = Math.max(2.2, Math.min(4.5, (camera.top - camera.bottom) / (r * 3)));
 }
+const stepKeys = s => s.includes('>') ? s.split('>') : (TOUR_SPLIT[s] ? [s, TOUR_SPLIT[s]] : [s]);
 async function startTour() {
   if (view) closeView();
-  let timings; try { timings = await (await fetch('tour/timings.json', { cache: 'no-store' })).json(); } catch { return; }
-  const box = document.getElementById('tourbox'), media = document.getElementById('tour-media'), sub = document.getElementById('tour-sub');
+  const T = TOURS[tourLang];
+  let timings; try { timings = await (await fetch(T.timings, { cache: 'no-store' })).json(); } catch { return; }
+  const box = document.getElementById('tourbox'), media = document.getElementById('tour-media'), sub = document.getElementById('tour-sub'), sub2 = document.getElementById('tour-sub2');
+  if (media.getAttribute('src') !== T.media) { media.src = T.media; media.load(); }
+  box.classList.toggle('is-video', !!T.video); sub.dir = T.rtl ? 'rtl' : 'auto'; sub.lang = tourLang;
+  sub.textContent = timings.steps[0].text; sub2.textContent = tourLang === 'de' ? '' : timings.steps[0].de || ''; // subtitles always on
   touring = true; document.body.classList.add('touring'); box.hidden = false;
-  let last = -1, half = false;
+  try { localStorage.setItem('dmd.3d.tourDone', '1'); } catch {}
+  document.getElementById('tour-start')?.classList.add('used');
+  let lastKey = '';
   const tick = () => {
     if (!touring) return;
     const t = media.currentTime, i = timings.steps.findIndex(s => t >= s.start - .05 && t < s.end + .35);
     if (i >= 0) {
-      const s = timings.steps[i], k = s.step === 'desk' ? null : s.step, late = TOUR_SPLIT[s.step] && t > s.start + (s.end - s.start) * .52;
-      if (i !== last || late !== half) { previewObject(late ? TOUR_SPLIT[s.step] : k); sub.textContent = s.text; last = i; half = late; }
+      const s = timings.steps[i], keys = stepKeys(s.step), part = Math.min(keys.length - 1, Math.floor((t - s.start) / Math.max(.1, s.end - s.start) * keys.length));
+      const k = keys[Math.max(0, part)], id = i + ':' + k;
+      if (id !== lastKey) { previewObject(k === 'desk' ? null : k); sub.textContent = s.text; sub2.textContent = tourLang === 'de' ? '' : (s.de || ''); lastKey = id; }
     }
     requestAnimationFrame(tick);
   };
@@ -473,6 +514,14 @@ function stopTour() {
   touring = false; const media = document.getElementById('tour-media'); media.pause();
   document.getElementById('tourbox').hidden = true; document.body.classList.remove('touring'); previewObject(null);
 }
+// language buttons for the tour
+(() => {
+  const row = document.getElementById('tour-langs'); if (!row) return;
+  row.innerHTML = Object.entries(TOURS).map(([k, t]) => `<button type="button" data-l="${k}" lang="${k}" aria-pressed="${k === tourLang}">${t.label}</button>`).join('');
+  row.addEventListener('click', e => { const b = e.target.closest('button'); if (!b) return; tourLang = b.dataset.l; try { localStorage.setItem('dmd.3d.tourLang', tourLang); } catch {}
+    row.querySelectorAll('button').forEach(x => x.setAttribute('aria-pressed', String(x === b))); startTour(); });
+  try { if (localStorage.getItem('dmd.3d.tourDone')) document.getElementById('tour-start')?.classList.add('used'); } catch {}
+})();
 document.getElementById('tour-start')?.addEventListener('click', startTour);
 document.getElementById('tour-stop')?.addEventListener('click', stopTour);
 document.getElementById('tour-pause')?.addEventListener('click', e => {
@@ -511,3 +560,41 @@ document.addEventListener('click', e => { if (e.target.closest('.view-back')) se
   hint.querySelector('.th-x').addEventListener('click', done);
   document.getElementById('tour-start')?.addEventListener('click', done);
 })();
+
+// ---------- (2) one back button: page by page inside the frame, then close ----------
+function updBack() { if (!content) return; const b = content.el.querySelector('.cf-back'); b.textContent = content.depth > 0 ? '\u2190 Zurück' : '\u2190 ' + AREAS[content.key].title; }
+function cfBack() {
+  if (content && content.depth > 0) { content.back = true; try { content.frame.contentWindow.history.back(); return; } catch {} }
+  hideContent();
+}
+
+// ---------- (12) day / night: desk lamp ----------
+let night = false;
+function setNight(on, byUser = false) {
+  night = on; const lamp = objs.find(o => o.key === 'lampe'); const L = lamp && lamp.obj.userData.lamp;
+  hemi.intensity = on ? .55 : 1.5; hemi.color.set(on ? 0x8FA0D8 : 0xffffff);
+  sun.intensity = on ? .45 : 2.4; sun.color.set(on ? 0x9DB0FF : 0xffffff);
+  if (L) { L.spot.intensity = on ? 45 : 0; L.bulbM.emissiveIntensity = on ? 2.2 : 0; }
+  document.body.classList.toggle('night', on);
+  if (byUser) try { sessionStorage.setItem('dmd.3d.night', on ? '1' : '0'); } catch {}
+}
+{ const h = new Date().getHours(); let n = h < 7 || h >= 19; try { const s = sessionStorage.getItem('dmd.3d.night'); if (s) n = s === '1'; } catch {} night = n; }
+
+// ---------- (4) keyboard: arrows choose an object, Enter opens; screen reader announcement ----------
+{
+  const live = document.createElement('p'); live.className = 'sr-only'; live.setAttribute('aria-live', 'polite'); document.body.append(live);
+  const keys = Object.keys(AREAS).filter(k => !AREAS[k].noChip);
+  addEventListener('keydown', e => {
+    const tg = e.target instanceof Element ? e.target : document.body;
+    if (view || touring || tg.closest('input, textarea, select, iframe')) return;
+    if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
+      e.preventDefault(); const i = keys.indexOf(hovered); hovered = keys[(i + (e.key === 'ArrowRight' ? 1 : keys.length - 1)) % keys.length];
+      live.textContent = AREAS[hovered].title + ' – Enter zum Öffnen';
+    } else if ((e.key === 'Enter' || e.key === ' ') && hovered && (tg === document.body || tg === document.documentElement)) { e.preventDefault(); openObject(hovered); }
+  });
+}
+// the 3D view was seen -> the website can stop highlighting the "NEU" badge
+try { localStorage.setItem('dmd.3d.seen', '1'); } catch {}
+
+// prepare the notebook in an idle moment (desk stays smooth, first opening is instant)
+setTimeout(() => { const go = () => { if (!view && !touring) prewarmHeft(renderer); }; ('requestIdleCallback' in window) ? requestIdleCallback(go, { timeout: 4000 }) : go(); }, 3500);

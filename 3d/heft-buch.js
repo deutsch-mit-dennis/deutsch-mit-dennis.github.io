@@ -8,6 +8,8 @@ const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 // Opens the 3D notebook inside `host` (full-size element). Returns a controller {goTo, dispose}.
 // With opts.renderer the notebook reuses an existing WebGL renderer (no second GPU context) and the caller calls tick() every frame.
+let CACHE = null; // built notebook kept between openings (same renderer, same progress)
+const K = Math.min(innerWidth, innerHeight) < 700 ? .75 : 1; // page texture scale on small screens
 export async function openHeft(host, { onStage, maxStage = 4, renderer: shared = null } = {}) {
 let canvas = null, renderer = shared;
 if (!shared) {
@@ -34,8 +36,8 @@ const smooth = (a, b, v) => { const t = clamp((v - a) / (b - a), 0, 1); return t
 
 // Page canvas: squared paper, margin line, shadow near the spine.
 function page(side) {
-  const c = document.createElement('canvas'); c.width = 1024; c.height = 1366;
-  const g = c.getContext('2d');
+  const c = document.createElement('canvas'); c.width = 1024 * K; c.height = 1366 * K;
+  const g = c.getContext('2d'); g.scale(K, K);
   g.fillStyle = C.paper; g.fillRect(0, 0, 1024, 1366);
   g.strokeStyle = 'rgba(35,65,181,.12)'; g.lineWidth = 2;
   for (let x = 20; x < 1024; x += 42) { g.beginPath(); g.moveTo(x, 0); g.lineTo(x, 1366); g.stroke(); }
@@ -57,6 +59,16 @@ function marker(g, t, x, y, s) {
   sans(g, t, x, y, s);
   hand(g, '→', x + w + 26, y, s * .7, C.tinte);
 }
+function progress() { // counts from the website's own memory (localStorage dmd.v1, same origin)
+  let m = {}; try { m = JSON.parse(localStorage.getItem('dmd.v1') || '{}') || {}; } catch {}
+  const v = Object.keys(m.visited || {}), dn = Object.keys(m.done || {});
+  const sub = (pre, depth = 2, exact = false) => new Set(v.filter(r => (exact && r === pre) || r.startsWith(pre + '/')).map(r => r.split('/').slice(0, depth).join('/'))).size;
+  const done = p => dn.filter(k => k.startsWith(p)).length;
+  return { lernen: Math.max(sub('lektion'), done('lektion:')), hoeren: sub('hoeren'), lesen: Math.max(sub('lesen'), done('lesen:')),
+    sprechen: sub('ueben/sprechen', 3, true), schreiben: sub('ueben/schreiben', 3, true), spiele: sub('spiele'),
+    lieder: Math.max(sub('lieder'), done('lied:')), pruefung: sub('simulation'), lid: sub('lid') + (v.includes('simulation/lid') ? 1 : 0) };
+}
+function stick(g, n, x, y) { if (!n) return; check(g, x, y, 44, C.gruen); hand(g, `${n} geübt`, x + 56, y + 12, 56, C.gruen, -0.02); }
 function check(g, x, y, s = 60, col = C.rot) {
   g.save(); g.strokeStyle = col; g.lineWidth = 10; g.lineCap = 'round'; g.lineJoin = 'round';
   g.beginPath(); g.moveTo(x, y); g.lineTo(x + s * .35, y + s * .4); g.lineTo(x + s, y - s * .55); g.stroke(); g.restore();
@@ -72,9 +84,10 @@ async function build() {
   const names = ['kopfhoerer', 'buecher', 'mikrofon', 'spiel', 'pokal', 'schreiben', 'globus', 'stern', 'idee', 'sprechblase', 'noten'];
   const I = Object.fromEntries(await Promise.all(names.map(async n => [n, await loadImg(`../assets/3d/${n}.webp`)])));
   const dennis = await loadImg('../assets/dennis.webp');
+  const P = progress();
 
   // Cover (front)
-  const cv = document.createElement('canvas'); cv.width = 1024; cv.height = 1366; let g = cv.getContext('2d');
+  const cv = document.createElement('canvas'); cv.width = 1024 * K; cv.height = 1366 * K; let g = cv.getContext('2d'); g.scale(K, K);
   const cg = g.createLinearGradient(0, 0, 1024, 1366); cg.addColorStop(0, '#2C4FD0'); cg.addColorStop(1, C.tinteDark);
   g.fillStyle = cg; g.fillRect(0, 0, 1024, 1366);
   for (let i = 0; i < 2600; i++) { g.fillStyle = `rgba(255,255,255,${Math.random() * .05})`; g.fillRect(Math.random() * 1024, Math.random() * 1366, 2, 2); }
@@ -102,7 +115,7 @@ async function build() {
   // Page 1 front (right, stage 1): Lektionen
   p = page('R'); g = p.g;
   hand(g, 'Seite 1', p.x0, 130, 64, C.rot);
-  marker(g, 'Lektionen', p.x0, 270, 110);
+  marker(g, 'Lektionen', p.x0, 270, 110); stick(g, P.lernen, p.x0, 345);
   ['A1', 'A2', 'B1', 'B2'].forEach((l, i) => {
     const x = p.x0 + 20 + i * 180, h = 120 + i * 90, y = 900 - h;
     g.fillStyle = [C.gruen, '#2B9A78', '#2C86CF', C.tinte][i]; g.beginPath(); g.roundRect(x, y, 140, h, 16); g.fill();
@@ -115,10 +128,10 @@ async function build() {
   // Page 1 back (left, stage 2): Hören & Lesen
   p = page('L'); g = p.g;
   hand(g, 'Seite 2', p.x0, 130, 64, C.rot);
-  marker(g, 'Hören', p.x0, 270, 110);
+  marker(g, 'Hören', p.x0, 270, 110); stick(g, P.hoeren, p.x0, 345);
   icon(g, I.kopfhoerer, 640, 150, 220, .1);
   bullets(g, ['Dialoge aus dem Alltag', 'echte Stimmen', 'mit Fragen & Lösung'], p.x0, 450);
-  marker(g, 'Lesen', p.x0, 820, 110);
+  marker(g, 'Lesen', p.x0, 820, 110); stick(g, P.lesen, p.x0, 895);
   icon(g, I.buecher, 640, 720, 210, -.1);
   bullets(g, ['Texte nach Niveau', 'mit Aufgaben'], p.x0, 980);
   const p1b = spots(tex(p.c), [[0, 0, 1024, 700, 'hoeren'], [0, 700, 1024, 666, 'lesen']]);
@@ -126,10 +139,10 @@ async function build() {
   // Page 2 front (right, stage 2): Sprechen & Schreiben
   p = page('R'); g = p.g;
   hand(g, 'Seite 3', p.x0, 130, 64, C.rot);
-  marker(g, 'Sprechen', p.x0, 270, 100);
+  marker(g, 'Sprechen', p.x0, 270, 100); stick(g, P.sprechen, p.x0, 340);
   icon(g, I.mikrofon, 700, 140, 210, .12);
   hand(g, '„Ich heiße …"', p.x0, 420, 80, C.tinte);
-  marker(g, 'Schreiben', p.x0, 650, 100);
+  marker(g, 'Schreiben', p.x0, 650, 100); stick(g, P.schreiben, p.x0, 720);
   icon(g, I.schreiben, 700, 540, 200, -.1);
   sans(g, 'Ich habe gestern', p.x0, 820, 50, C.ink, 400);
   sans(g, 'ein Brief', p.x0, 900, 50, C.ink, 400);
@@ -143,7 +156,7 @@ async function build() {
   // Page 2 back (left, stage 3): Spiele
   p = page('L'); g = p.g;
   hand(g, 'Seite 4', p.x0, 130, 64, C.rot);
-  marker(g, 'Spiele', p.x0, 270, 110);
+  marker(g, 'Spiele', p.x0, 270, 110); stick(g, P.spiele, p.x0, 345);
   icon(g, I.spiel, 600, 120, 260, .12);
   [['der', C.tinte], ['die', C.rot], ['das', C.gruen]].forEach(([w, col], i) => {
     const x = p.x0 + i * 250, y = 520;
@@ -159,7 +172,7 @@ async function build() {
   // Page 3 front (right, stage 3): Lieder
   p = page('R'); g = p.g;
   hand(g, 'Seite 5', p.x0, 130, 64, C.rot);
-  marker(g, 'Lieder', p.x0, 270, 110);
+  marker(g, 'Lieder', p.x0, 270, 110); stick(g, P.lieder, p.x0, 345);
   icon(g, I.noten, 640, 110, 240, -.1);
   g.strokeStyle = C.ink; g.lineWidth = 3;
   for (let i = 0; i < 5; i++) { g.beginPath(); g.moveTo(p.x0, 470 + i * 26); g.lineTo(940, 470 + i * 26); g.stroke(); }
@@ -174,7 +187,7 @@ async function build() {
   // Page 3 back (left, stage 4): Prüfung
   p = page('L'); g = p.g;
   hand(g, 'Seite 6', p.x0, 130, 64, C.rot);
-  marker(g, 'Prüfung', p.x0, 270, 110);
+  marker(g, 'Prüfung', p.x0, 270, 110); stick(g, P.pruefung, p.x0, 345);
   icon(g, I.pokal, 620, 110, 240, .1);
   ['DTZ', 'telc B1 / B2', 'DTB B1 / B2'].forEach((t, i) => {
     const y = 470 + i * 140; g.strokeStyle = C.tinte; g.lineWidth = 5; g.strokeRect(p.x0, y - 60, 70, 70);
@@ -189,7 +202,7 @@ async function build() {
   p = page('R'); g = p.g;
   hand(g, 'Seite 7', p.x0, 130, 64, C.rot);
   marker(g, 'Leben in', p.x0, 270, 100);
-  marker(g, 'Deutschland', p.x0, 390, 100);
+  marker(g, 'Deutschland', p.x0, 390, 100); stick(g, P.lid, p.x0, 462);
   icon(g, I.globus, 640, 470, 240, .1);
   bullets(g, ['Fragen üben', 'Test mit 33 Fragen'], p.x0, 560);
   hand(g, 'Los geht’s!', p.x0, 1080, 150, C.tinte, -0.06);
@@ -283,7 +296,12 @@ function bend(leaf, t) {
   for (let i = 0; i < pos.count; i++) { const x = base[i * 3]; pos.array[i * 3 + 2] = -k * (x / w) ** 2; }
   pos.needsUpdate = true; leaf.geo.computeVertexNormals();
 }
-const { book, leaves, floaters } = await build();
+const disposeBuilt = b => [b.book, b.floaters].forEach(r => r.traverse(o => { o.geometry && o.geometry.dispose(); [].concat(o.material || []).forEach(m => { m.map && m.map.dispose(); m.dispose(); }); }));
+const ckey = JSON.stringify(progress()) + K;
+let built;
+if (CACHE && CACHE.key === ckey && CACHE.renderer === renderer) built = CACHE.built;
+else { if (CACHE && CACHE.renderer === renderer) disposeBuilt(CACHE.built); built = await build(); if (shared) CACHE = { key: ckey, built, renderer }; }
+const { book, leaves, floaters } = built; scene.add(book); scene.add(floaters);
 if (!alive) return null;
 resize();
 const clock = new THREE.Clock();
@@ -325,7 +343,7 @@ return {
   dispose() {
     alive = false; ro.disconnect(); removeEventListener('pointermove', onMove); removeEventListener('resize', resize);
     // free GPU memory of the notebook scene
-    scene.traverse(o => { o.geometry && o.geometry.dispose(); [].concat(o.material || []).forEach(m => { m.map && m.map.dispose(); m.dispose(); }); });
+    if (!shared) scene.traverse(o => { o.geometry && o.geometry.dispose(); [].concat(o.material || []).forEach(m => { m.map && m.map.dispose(); m.dispose(); }); }); // shared: kept in CACHE for the next opening
     if (!shared) { renderer.setAnimationLoop(null); renderer.dispose(); renderer.forceContextLoss(); canvas.remove(); }
   },
 };

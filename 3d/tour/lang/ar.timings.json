@@ -1,0 +1,94 @@
+{
+ "duration": 65.54,
+ "lang": "ar",
+ "steps": [
+  {
+   "i": 0,
+   "step": "desk",
+   "text": "مرحبًا بك! أنا دينيس – مدرّس لغة ألمانية وممتحِن.",
+   "de": "Hallo und herzlich willkommen! Ich bin Dennis – Deutschlehrer und Prüfer.",
+   "start": 0.15,
+   "end": 5.082
+  },
+  {
+   "i": 1,
+   "step": "desk",
+   "text": "هذا مكتبي للتعلّم – مجانًا وبدون تسجيل.",
+   "de": "Das ist mein Lernschreibtisch – kostenlos und ohne Anmeldung.",
+   "start": 5.382,
+   "end": 9.996
+  },
+  {
+   "i": 2,
+   "step": "laptop",
+   "text": "في الحاسوب المحمول تجد الدروس – من المستوى A1 حتى B2 المهني.",
+   "de": "Im Laptop findest du die Lektionen – von A1 bis B2 Beruf.",
+   "start": 10.296,
+   "end": 18.913
+  },
+  {
+   "i": 3,
+   "step": "heft",
+   "text": "في دفتري تتصفّح كل الأقسام – فقط اضغط على موضوع.",
+   "de": "In meinem Heft blätterst du durch alle Bereiche – tippe einfach auf ein Thema.",
+   "start": 19.213,
+   "end": 24.938
+  },
+  {
+   "i": 4,
+   "step": "kopfhoerer",
+   "text": "مع السمّاعات تتدرّب على الاستماع، ومع الكتب على القراءة.",
+   "de": "Mit den Kopfhörern übst du Hören, mit den Büchern Lesen.",
+   "start": 25.238,
+   "end": 30.35
+  },
+  {
+   "i": 5,
+   "step": "mikrofon",
+   "text": "عند الميكروفون تتدرّب على المحادثة.",
+   "de": "Am Mikrofon trainierst du Sprechen.",
+   "start": 30.65,
+   "end": 34.005
+  },
+  {
+   "i": 6,
+   "step": "gamepad",
+   "text": "مع يد التحكّم تتعلّم وأنت تلعب.",
+   "de": "Mit dem Gamepad lernst du spielerisch.",
+   "start": 34.305,
+   "end": 37.905
+  },
+  {
+   "i": 7,
+   "step": "pruefung",
+   "text": "لديك امتحان قريبًا؟ ورقة الامتحان تأخذك إلى الامتحانات التجريبية.",
+   "de": "Bald eine Prüfung? Der Prüfungsbogen bringt dich zu den Probeprüfungen.",
+   "start": 38.205,
+   "end": 45.033
+  },
+  {
+   "i": 8,
+   "step": "globus",
+   "text": "الكرة الأرضية تأخذك إلى «الحياة في ألمانيا»، وفي الراديو تُعزف أغنياتي.",
+   "de": "Der Globus führt dich zu „Leben in Deutschland“, und im Radio laufen meine Lieder.",
+   "start": 45.333,
+   "end": 52.559
+  },
+  {
+   "i": 9,
+   "step": "shop",
+   "text": "عند حامل الكتب تجد كتبي وحزم التعلّم.",
+   "de": "Am Buchständer findest du meine Bücher und Lernpakete.",
+   "start": 52.859,
+   "end": 57.404
+  },
+  {
+   "i": 10,
+   "step": "desk",
+   "text": "فقط اضغط على أي شيء. بالتوفيق – أنا سعيد بوجودك هنا!",
+   "de": "Tippe einfach auf einen Gegenstand. Viel Erfolg – ich freue mich, dass du da bist!",
+   "start": 57.704,
+   "end": 65.14
+  }
+ ]
+}

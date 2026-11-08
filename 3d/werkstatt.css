@@ -331,3 +331,26 @@ body.touring .info{opacity:0;pointer-events:none}
 @media (prefers-reduced-motion:reduce){.tour-hint{animation:none}.resume{transition:none}}
 @media (max-width:900px),(orientation:portrait){.info:has(.resume:not([hidden]))>p:not(.kicker){display:none}.resume{margin-bottom:10px}.tour-hint{font-size:.85rem;padding:8px 10px}}
 .v-laptop{padding:0 2%}.lt-base{margin:0 -1.5%}
+
+/* (6) tour button calmer after the first tour */
+.tour-btn.used{background:#fff;color:var(--tinte);box-shadow:0 4px 0 var(--line);border:2px solid var(--line);min-height:44px;font-size:.92rem}
+.tour-btn.used .tour-face{width:24px;height:24px}
+/* tour language buttons */
+.tour-langs{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 2px}
+.tour-langs button{font:inherit;font-size:.82rem;font-weight:700;min-height:36px;padding:0 10px;border-radius:999px;border:1px solid var(--line);background:#fff;color:var(--ink);cursor:pointer}
+.tour-langs button[aria-pressed=true]{border-color:var(--tinte);color:var(--tinte)}
+@media (max-width:900px),(orientation:portrait){.tour-langs{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none}.tour-langs button{flex:none}}
+/* (7) subtitles always visible; translation + German line */
+.tour-sub{font-size:1.08rem}
+.tour-sub2{margin:-6px 0 10px;font-size:.9rem;color:var(--muted);font-style:italic}
+.tour-sub2:empty{display:none}
+.tourbox.is-video .tour-bubble{background:#000}
+/* (11) books: fit + recommendation */
+.sp-cover{position:relative}
+.sp-rec{position:absolute;z-index:1;left:8px;top:8px;padding:3px 8px;border-radius:999px;background:var(--marker);color:var(--ink);font-size:.72rem;font-weight:800;box-shadow:0 2px 6px rgba(0,0,0,.25)}
+.sp-fit{display:inline-block;align-self:flex-start;margin-top:6px;padding:2px 8px;border-radius:999px;background:#fff;border:1px solid #EBD3AE;font-size:.75rem;font-weight:700;color:var(--ink)}
+/* (12) night */
+body.night{background:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px) 0 0/28px 28px,linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px) 0 0/28px 28px,radial-gradient(110% 90% at 60% 40%,#2a3360 0%,#141a36 60%,#0b0f22 100%);background-attachment:fixed}
+/* (4) screen-reader only */
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+@media (min-width:901px) and (orientation:landscape){.info{top:80px;transform:none;max-height:calc(100vh - 96px);overflow-y:auto;scrollbar-width:thin}.info:has(.resume:not([hidden]))>p:not(.kicker){display:none}}
