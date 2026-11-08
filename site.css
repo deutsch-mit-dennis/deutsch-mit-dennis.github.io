@@ -623,3 +623,83 @@ header.dm-header .dm-3d-switch.dm-3d-seen::after{display:none}
 /* tour invitation: text never runs under the close button; hide the invitation while the phone menu is open */
 .dm-tour .dm-tour-intro p{padding-right:30px}
 body:has(header.dm-header.menu-open) .dm-tour:not(.dm-tour-open){visibility:hidden}
+
+/* ---------- Shorter start page (2026-11-08) ---------- */
+.dm-promise{display:none}
+@media (max-width:700px){
+  .dm-home .dm-promise{display:block;grid-column:1/-1;margin:6px 0 0;font-weight:700;font-size:16px;color:var(--dm-tinte)}
+  .dm-home .dm-hero-copy .dm-lead,.dm-home .dm-hand{display:none}
+  .dm-home .dm-quick{gap:8px;margin-top:12px}
+  .dm-home .dm-quick a{min-height:78px;padding:10px 12px}
+  .dm-home .dm-quick .dm-q-ico{font-size:22px}
+  .dm-home .dm-quick b{font-size:16px}
+  .dm-home .dm-quick small{-webkit-line-clamp:1}
+  .dm-home .dm-quick .dm-q-mk{padding:8px 10px}
+  .dm-home .dm-quick .dm-q-mk img{flex-basis:48px;width:48px;height:48px}
+  .dm-home .dm-quick .dm-q-mk em{white-space:nowrap}
+  .dm-home .dm-quick .dm-q-mk small{display:none}
+  .dm-home .dm-quick .dm-q-mk-go{flex-basis:38px;width:38px;height:38px}
+  .dm-home .dm-hero .dm-row{flex-wrap:nowrap;gap:8px}
+  .dm-home .dm-hero .dm-row .dm-btn{flex:1 1 0;padding-left:10px;padding-right:10px;font-size:15px;text-align:center;justify-content:center}
+}
+/* Lied des Tages */
+.dm-song-home-card{display:flex;align-items:center;gap:14px;padding:14px 18px;border-radius:20px;text-decoration:none;color:#fff;background:linear-gradient(135deg,#2b2f77,#5b3fa8);box-shadow:0 10px 24px rgba(43,47,119,.22);transition:transform .2s}
+.dm-song-home-card:hover{transform:translateY(-2px)}
+.dm-song-home-disc{flex:0 0 52px;width:52px;height:52px;border-radius:50%;background:repeating-radial-gradient(circle,#1b1d3a 0 3px,#2a2d55 3px 5px);display:grid;place-items:center}
+.dm-song-home-disc i{width:16px;height:16px;border-radius:50%;background:#ffc928}
+@media (prefers-reduced-motion:no-preference){.dm-song-home-disc{animation:dmSpin 6s linear infinite}}
+@keyframes dmSpin{to{transform:rotate(360deg)}}
+.dm-song-home-copy{display:flex;flex-direction:column;gap:2px;flex:1;min-width:0}
+.dm-song-home-copy small{color:#e3defc;font-size:13px;font-weight:700}
+.dm-song-home-copy b{font-size:19px;line-height:1.25}
+.dm-song-home-copy>span{color:#e3defc;font-size:14px}
+.dm-song-home-go{flex:0 0 44px;width:44px;height:44px;border-radius:50%;background:#ffc928;color:#172036;display:grid;place-items:center;font-size:18px}
+.dm-song-home-more{margin:8px 4px 0;font-size:15px}
+.dm-song-home-more a{display:inline-flex;min-height:44px;align-items:center}
+/* Neu: news + latest video + Mikula in one section */
+.dm-news-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:16px;align-items:start}
+.dm-news-grid .dm-newslist{grid-template-columns:1fr}
+.dm-news-side{display:grid;gap:10px}
+.dm-news-video{grid-template-columns:1fr!important}
+.dm-news-mk{display:flex;gap:12px;align-items:center;padding:12px 14px;border-radius:16px;background:#eaf6ec;color:var(--dm-ink);text-decoration:none;border:1px solid #cfe8d4}
+.dm-news-mk>span:first-child{font-size:28px}
+.dm-news-mk b{display:block}.dm-news-mk small{color:#3c5a44}
+.dm-news-more{margin:0;text-align:right}
+.dm-news-more a{display:inline-flex;min-height:44px;align-items:center}
+@media (max-width:760px){.dm-news-grid{grid-template-columns:1fr}}
+/* footer groups */
+.dm-fgroup>summary{list-style:none;cursor:pointer}
+.dm-fgroup>summary::-webkit-details-marker{display:none}
+.dm-fgroup>summary h2{display:inline}
+@media (min-width:601px){.dm-fgroup>summary{pointer-events:none}}
+@media (max-width:600px){
+  footer.dm-footer{padding-top:28px!important}
+  .dm-footer-grid{grid-template-columns:1fr;gap:0}
+  .dm-footer-grid>div:first-child{margin-bottom:12px}
+  .dm-fgroup{border-top:1px solid rgba(255,255,255,.14)}
+  .dm-fgroup>summary{display:flex;justify-content:space-between;align-items:center;min-height:48px}
+  .dm-fgroup>summary::after{content:'+';color:#fff;font-size:22px;line-height:1}
+  .dm-fgroup[open]>summary::after{content:'–'}
+  .dm-fgroup>summary h2{margin:0}
+  .dm-fgroup ul{padding-bottom:10px}
+}
+.dm-news-grid .dm-newslist b{overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+@media (max-width:600px){
+  .dm-news-grid .dm-newslist img{width:36px;height:36px}
+  .dm-news-grid .dm-newslist a{padding:10px 12px}
+  .dm-news-video .dm-vcard{display:grid;grid-template-columns:132px 1fr;grid-template-rows:auto;align-items:center}
+  .dm-news-video .dm-vthumb{aspect-ratio:16/9;height:auto}
+  .dm-news-video .dm-vmeta{padding:8px 12px}
+  .dm-news-video .dm-vmeta strong{font-size:15px;overflow:hidden;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical}
+  .dm-news-video .dm-tag{display:none}
+  .dm-news-mk small{font-size:13px}
+  .dm-song-home-card{padding:12px 14px;gap:12px}
+  .dm-song-home-copy>span{display:none}
+  .dm-song-home-copy b{font-size:17px}
+  .dm-fgroup{margin:0;padding:0}
+  .dm-fgroup:not([open]) ul{display:none}
+}
+.dm-fgroup>summary::before{display:none}
+.dm-fgroup>summary h2{margin:4px 0 10px}
+@media (min-width:601px){.dm-fgroup>summary{min-height:0;display:block}}
+@media (max-width:600px){.dm-fgroup>summary h2{margin:0}.dm-home .dm-promise{font-size:15px}}

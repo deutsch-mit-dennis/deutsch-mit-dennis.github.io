@@ -183,9 +183,9 @@
     return `<section class="dm-section dm-pkg-teaser" aria-labelledby="pkgt-h">
       <div class="dm-pkg-teaser-copy"><p class="dm-kicker">Alles zum Üben bleibt kostenlos</p>
         <h2 id="pkgt-h">Du willst gezielt mehr üben?</h2>
-        <p>${BK.length ? 'Meine Übungsbücher gedruckt bei Amazon – und ausführliche PDF-Lernpakete' : 'Ausführliche PDF-Lernpakete'} mit Musterlösungen für DTZ, B2 Beruf, „Leben in Deutschland“ und für Lehrkräfte${from ? ` · PDF ab ${from}` : ''}.</p>
+        <p>${BK.length ? 'Übungsbücher bei Amazon und PDF-Lernpakete' : 'PDF-Lernpakete'} mit Musterlösungen für DTZ, B2 Beruf und „Leben in Deutschland“${from ? ` · PDF ab ${from}` : ''}.</p>
         <div class="dm-row">${BK.length ? '<a class="dm-btn" href="#lernpakete/buecher">Übungsbücher bei Amazon</a><a class="dm-btn dm-btn-quiet" href="#lernpakete">PDF-Lernpakete</a>' : '<a class="dm-btn" href="#lernpakete">Alle Lernpakete ansehen</a>'}</div></div>
-      <ul class="dm-pkg-teaser-list">${BK.map(b => `<li><a href="#lernpakete/buecher"><img src="${b.img}" alt="" width="72" height="72" loading="lazy" style="object-fit:contain"><span><b>${x(b.title)}</b><small>Taschenbuch · ${x(b.price)}</small></span></a></li>`).join('')}${pick.slice(0, Math.max(1, 3 - BK.length)).map(k => `<li><a href="#lernpakete/${k.id}"><img src="${k.img}" alt="" width="72" height="72" loading="lazy"><span><b>${x(k.title)}</b><small>${x(k.level)} · ${x(k.price)}</small></span></a></li>`).join('')}</ul>
+      <ul class="dm-pkg-teaser-list">${BK.slice(0, 2).map(b => `<li><a href="#lernpakete/buecher"><img src="${b.img}" alt="" width="72" height="72" loading="lazy" style="object-fit:contain"><span><b>${x(b.title)}</b><small>Taschenbuch · ${x(b.price)}</small></span></a></li>`).join('')}${pick.slice(0, Math.max(1, 2 - BK.length)).map(k => `<li><a href="#lernpakete/${k.id}"><img src="${k.img}" alt="" width="72" height="72" loading="lazy"><span><b>${x(k.title)}</b><small>${x(k.level)} · ${x(k.price)}</small></span></a></li>`).join('')}</ul>
     </section>`;
   }
   /* Schnellstart: auf dem Handy direkt unter der Überschrift (Challenge, Probeprüfung, Lino, Lied des Tages) */
@@ -211,6 +211,7 @@
       <div class="dm-hero-copy">
         <a class="lino-hero-chip mk-hero-chip" href="#spiele/mikula"><span aria-hidden="true">💎</span><span><b>Neu:</b> Lernspiel „Mikula sucht den Weg nach Hause“ – A1, A2, B1</span><span class="lino-hero-go" aria-hidden="true">▶</span></a>
         <h1>Deutsch lernen mit Dennis</h1>
+        <p class="dm-promise">Kostenlos · A1 bis B2 · ohne Anmeldung</p>
         ${quickStart()}
         <p class="dm-lead">Kostenlose Übungen von A1 bis B2 Beruf – für deinen Alltag, deine Prüfung und deinen Job. Ohne Anmeldung.</p>
         <p class="dm-hand">Hallo! Ich bin Dennis, dein Deutschlehrer und zugelassener Prüfer. Wähle unten deinen Weg – ich zeige dir die nächsten Schritte.</p>
@@ -302,7 +303,7 @@
       </a>
     </section>
 
-    ${songStage(false)}
+    ${songHome()}
 
     <section class="dm-section dm-tools" aria-labelledby="tools-h">
       <div class="dm-section-head"><h2 id="tools-h">Direkt üben</h2></div>
@@ -322,36 +323,33 @@
 
     ${window.DMChallenge ? `<section class="dm-section ch-home" aria-label="Tages-Challenge und Lernspiele">${DMChallenge.teaser()}<a class="sp-home" href="#spiele"><span aria-hidden="true">🎮</span><span><b>Lernspiele</b><small>23 Spiele: Jump’n’Run · Story-Abenteuer · Mikula · Artikel · Verben · Alltag · DTB B2 · Leben in Deutschland</small></span><span class="sp-home-go">Spielen →</span></a></section>` : ''}
 
-    ${window.DMMikula ? DMMikula.card() : ''}
-
     <section class="dm-section dm-news" aria-labelledby="news-h">
-      <div class="dm-section-head"><h2 id="news-h">Neu auf der Seite</h2><p>Jede Woche kommt etwas dazu.</p></div>
-      <ol class="dm-newslist" id="dm-newslist" aria-busy="true"></ol>
+      <div class="dm-section-head"><h2 id="news-h">Neu</h2><p>Jede Woche kommt etwas dazu.</p></div>
+      <div class="dm-news-grid">
+        <ol class="dm-newslist" id="dm-newslist" aria-busy="true"></ol>
+        <div class="dm-news-side">
+          <div class="dm-vgrid dm-news-video" id="dm-home-video" aria-busy="true"><p class="dm-hint">Video wird geladen …</p></div>
+          <a class="dm-news-mk" href="#mikula"><span aria-hidden="true">🧔</span><span><b>Mikula lernt Deutsch</b><small>Neue Folgen mittwochs und samstags · Findest du den Fehler?</small></span></a>
+          <p class="dm-news-more"><a href="#videos">Alle Videos →</a></p>
+        </div>
+      </div>
     </section>
 
-    <section class="dm-section dm-home-video" id="dm-home-video" aria-labelledby="video-h">
-      <div class="dm-section-head"><h2 id="video-h">Neu auf YouTube</h2><a href="#videos">Alle Videos</a></div>
-      <div class="dm-vgrid dm-vgrid-feature" aria-busy="true"><p class="dm-hint">Videos werden geladen …</p></div>
-    </section>
-
-    ${window.DMWitz ? DMWitz.card() : ''}
     <section class="dm-section dm-about-teaser">
       <img src="assets/dennis.webp" alt="" width="120" height="192" loading="lazy">
-      <div><h2>Wer ist Dennis?</h2><p>Seit 2017 im Deutschunterricht – DaF, Integrationskurse, DSH und TestDaF. Master in Germanistik, lizenzierter DTZ- und telc-Prüfer, vom BAMF zugelassen für Integrations- und Berufssprachkurse bis C2. Ich kenne die Prüfungen aus dem Unterricht und als Prüfer.</p><div class="dm-row"><a class="dm-btn dm-btn-quiet" href="#ueber-mich">Mehr über mich</a><a class="dm-btn dm-btn-quiet" href="#ueber-mich/nachweise">Meine Zulassungen ansehen</a><a class="dm-btn dm-btn-quiet" href="#" data-tour-start><span aria-hidden="true">▶</span> Video: Dennis stellt sich vor</a></div></div>
+      <div><h2>Wer ist Dennis?</h2><p>Master in Germanistik, seit 2017 Deutschlehrer und lizenzierter DTZ- und telc-Prüfer. Ich kenne die Prüfungen aus dem Unterricht und als Prüfer.</p><div class="dm-row"><a class="dm-btn dm-btn-quiet" href="#ueber-mich">Mehr über mich</a><a class="dm-btn dm-btn-quiet" href="#ueber-mich/nachweise">Zulassungen</a></div></div>
     </section>
-
-    <section class="dm-section dm-share-teaser"><div><h2>Kennst du jemanden, der Deutsch lernt?</h2><p>Schick ihm oder ihr den Link – per WhatsApp, Telegram oder E-Mail. Alles ist kostenlos und ohne Anmeldung.</p></div><button type="button" class="dm-btn" data-share="site"><span aria-hidden="true">↗</span> Website teilen</button></section>
 
     ${pkgTeaser()}`, 'dm-home');
     (window.DMNews ? DMNews.items() : fetch('neu.json?v=' + Math.floor(Date.now() / 36e5), { cache: 'no-cache' }).then(r => r.json()).then(j => j.items || [])).then(items => {
       const ico = { lied: ['noten', 'Lied'], hoeren: ['kopfhoerer', 'Hören'], sprechen: ['sprechblase', 'Sprechen'], schreiben: ['schreiben', 'Schreiben'], uebung: ['idee', 'Übung'], neu: ['funkeln', 'Neu'], video: ['video', 'Video'], kahoot: ['spiel', 'Kahoot'] };
       const ol = $('#dm-newslist'); if (!ol) return; ol.removeAttribute('aria-busy');
-      ol.innerHTML = items.slice(0, 4).map(it => { const [img, lab] = ico[it.type] || ico.neu; return `<li><a href="${x(it.link)}"><img src="assets/3d/${img}.webp" alt="" width="192" height="192" loading="lazy"><span><small>${lab} · ${fmtDate(it.date)}</small><b>${x(it.title)}</b></span></a></li>`; }).join('');
+      ol.innerHTML = items.filter(it => it.type !== 'video').slice(0, 3).map(it => { const [img, lab] = ico[it.type] || ico.neu; return `<li><a href="${x(it.link)}"><img src="assets/3d/${img}.webp" alt="" width="192" height="192" loading="lazy"><span><small>${lab} · ${fmtDate(it.date)}</small><b>${x(it.title)}</b></span></a></li>`; }).join('');
     }).catch(() => $('.dm-news')?.remove());
     loadVideos().then(list => {
-      const box = $('#dm-home-video .dm-vgrid'); if (!box) return;
+      const box = $('#dm-home-video'); if (!box) return;
       box.removeAttribute('aria-busy');
-      box.innerHTML = list.slice(0, 3).map((v, i) => `<a class="dm-vcard dm-cat-${v.category}${i === 0 ? ' dm-vcard-big' : ''}" href="#videos/alle/${v.id}"><span class="dm-vthumb">${vthumb(v)}</span><span class="dm-vmeta"><span class="dm-tag">${i === 0 ? 'Neuestes Video · ' : ''}${DM.videoCategories[v.category]}</span><strong>${x(v.title)}</strong>${v.published ? `<small>${fmtDate(v.published)}</small>` : ''}</span></a>`).join('');
+      box.innerHTML = list.slice(0, 1).map((v, i) => `<a class="dm-vcard dm-cat-${v.category}" href="#videos/alle/${v.id}"><span class="dm-vthumb">${vthumb(v)}</span><span class="dm-vmeta"><span class="dm-tag">${i === 0 ? 'Neuestes Video · ' : ''}${DM.videoCategories[v.category]}</span><strong>${x(v.title)}</strong>${v.published ? `<small>${fmtDate(v.published)}</small>` : ''}</span></a>`).join('');
     });
   }
   function pathCard(id) {
@@ -756,6 +754,16 @@
   const SONG_LEVELS = ['A1', 'A2', 'B1', 'B2', 'C1'];
   const sunoConsent = () => !!mem.sunoConsent;
   function songOfDay() { const all = (DM.songs || []).filter(sg => sg.suno); if (!all.length) return null; const d = new Date(); return all[(d.getFullYear() * 400 + d.getMonth() * 31 + d.getDate()) % all.length]; }
+  /* Startseite: kompakte Karte statt der großen Lieder-Bühne */
+  function songHome() {
+    const all = DM.songs || [], sod = songOfDay();
+    return `<section class="dm-section dm-song-home" aria-labelledby="songh-h">
+      <a class="dm-song-home-card" href="${sod ? '#lieder/' + sod.id : '#lieder'}"><span class="dm-song-home-disc" aria-hidden="true"><i></i></span>
+        <span class="dm-song-home-copy"><small>Deutsch mit Liedern · ${all.length} eigene Lieder A1–C1</small><b id="songh-h">${sod ? 'Lied des Tages: „' + x(sod.title) + '“' : 'Deutsch mit Liedern'}</b><span>Hör zu, sing mit, lerne die Wörter. 🤖 Musik und Gesang mit KI (Suno).</span></span>
+        <span class="dm-song-home-go" aria-hidden="true">▶</span></a>
+      <p class="dm-song-home-more"><a href="#lieder">Alle Lieder</a> · <a href="#lieder/playlist">♫ Playlist</a></p>
+    </section>`;
+  }
   function songStage(isHub) {
     const all = DM.songs || [], sod = songOfDay();
     return `<section class="dm-stage${isHub ? ' dm-stage-hub' : ''}" aria-labelledby="stage-h">
@@ -1729,4 +1737,7 @@
   route();
   ttsReady.then(() => { if (/^#(hoeren|ueben)/.test(location.hash)) route(); });
   DM.speak = speak; DM.loadVideos = loadVideos;
+  // footer link groups: folded on phones, open on larger screens
+  const fq = matchMedia('(max-width:600px)'), fold = () => document.querySelectorAll('.dm-fgroup').forEach(d => { d.open = !fq.matches; });
+  fold(); fq.addEventListener && fq.addEventListener('change', fold);
 })();
