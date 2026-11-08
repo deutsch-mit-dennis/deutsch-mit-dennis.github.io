@@ -222,6 +222,12 @@
       </div>
     </section>
 
+    <section class="dm-section" aria-labelledby="wege-h">
+      <div class="dm-section-head"><h2 id="wege-h">Wähle deinen Weg</h2><p>Du kannst jederzeit wechseln.</p></div>
+      <div class="dm-paths">${(DM.pathHome || DM.pathOrder).map(id => pathCard(id)).join('')}</div>
+      <p class="dm-center"><a class="dm-btn dm-btn-quiet" href="#lernweg">Alle ${DM.pathOrder.length} Lernwege ansehen →</a></p>
+    </section>
+
     <section class="dm-section lino-home mk-home" aria-labelledby="mkh-h">
       <a class="lino-home-card mk-home-card" href="#spiele/mikula">
         <img class="lino-home-art mk-home-art" src="spiele/mikula/img/station-bahnhof.webp" alt="Mikula, ein Bauer aus dem Jahr 1024, steht staunend an einem deutschen Bahnhof vor einem Fahrkartenautomaten" width="960" height="640" decoding="async">
@@ -234,30 +240,6 @@
         </span>
       </a>
     </section>
-
-    <section class="dm-section" aria-labelledby="wege-h">
-      <div class="dm-section-head"><h2 id="wege-h">Wähle deinen Weg</h2><p>Du kannst jederzeit wechseln.</p></div>
-      <div class="dm-paths">${(DM.pathHome || DM.pathOrder).map(id => pathCard(id)).join('')}</div>
-      <p class="dm-center"><a class="dm-btn dm-btn-quiet" href="#lernweg">Alle ${DM.pathOrder.length} Lernwege ansehen →</a></p>
-    </section>
-
-    <section class="dm-section dm-tools" aria-labelledby="tools-h">
-      <div class="dm-section-head"><h2 id="tools-h">Direkt üben</h2></div>
-      <div class="dm-toolgrid">
-        <a href="#simulation" data-img="pokal"><img class="dm-tool-3d" src="assets/3d/pokal.webp" alt="" width="192" height="192" loading="lazy" aria-hidden="true"><b>Probeprüfungen</b><span>DTZ, Leben in Deutschland, telc B1/B2, DTB B1/B2 – mit echter Zeit, Punkten und Lösungen.</span></a>
-        <a href="#ueben/sprechen/A1" data-img="sprechblase"><img class="dm-tool-3d" src="assets/3d/sprechblase.webp" alt="" width="192" height="192" loading="lazy" aria-hidden="true"><b>Sprechen</b><span>Gespräche aus dem Alltag, mit Satzanfängen und Beispiel zum Anhören.</span></a>
-        <a href="#ueben/schreiben/A2" data-img="schreiben"><img class="dm-tool-3d" src="assets/3d/schreiben.webp" alt="" width="192" height="192" loading="lazy" aria-hidden="true"><b>Schreiben</b><span>Nachrichten, Briefe und E-Mails – mit Sofort-Korrektur, Checkliste und Mustertext.</span></a>
-        <a href="#hoeren" data-img="kopfhoerer"><img class="dm-tool-3d" src="assets/3d/kopfhoerer.webp" alt="" width="192" height="192" loading="lazy" aria-hidden="true"><b>Hören</b><span>Hörtraining für Alltag und Beruf mit natürlichen Stimmen: Ansagen, Mailbox, Gespräche.</span></a>
-        <a href="#lesen" data-img="buecher"><img class="dm-tool-3d" src="assets/3d/buecher.webp" alt="" width="192" height="192" loading="lazy" aria-hidden="true"><b>Lesen</b><span>Mitteilungen, Anzeigen, E-Mails und Artikel verstehen – wie in der Prüfung.</span></a>
-        <a href="#lid" data-img="gebaeude"><img class="dm-tool-3d" src="assets/3d/gebaeude.webp" alt="" width="192" height="192" loading="lazy" aria-hidden="true"><b>Leben in Deutschland</b><span>Lernspiele und Wissen für den Orientierungskurs.</span></a>
-        <a href="#lieder" data-img="mikrofon"><img class="dm-tool-3d" src="assets/3d/mikrofon.webp" alt="" width="192" height="192" loading="lazy" aria-hidden="true"><b>Deutsch mit Liedern</b><span>62 eigene Lieder von A1 bis C1 – mit Text, Aufgaben und Lösungen.</span></a>
-        <a href="#kahoot" data-img="spiel"><img class="dm-tool-3d" src="assets/3d/spiel.webp" alt="" width="192" height="192" loading="lazy" aria-hidden="true"><b>Kahoot-Quiz</b><span>Spielerisch wiederholen – allein oder mit dem ganzen Kurs.</span></a>
-        <a href="#material" data-img="blatt"><img class="dm-tool-3d" src="assets/3d/blatt.webp" alt="" width="192" height="192" loading="lazy" aria-hidden="true"><b>Materialien</b><span>Arbeitsblätter und Merkblätter als PDF – zum Ausdrucken.</span></a>
-
-      </div>
-    </section>
-
-    ${window.DMChallenge ? `<section class="dm-section ch-home" aria-label="Tages-Challenge und Lernspiele">${DMChallenge.teaser()}<a class="sp-home" href="#spiele"><span aria-hidden="true">🎮</span><span><b>Lernspiele</b><small>23 Spiele: Jump’n’Run · Story-Abenteuer · Mikula · Artikel · Verben · Alltag · DTB B2 · Leben in Deutschland</small></span><span class="sp-home-go">Spielen →</span></a></section>` : ''}
 
     <section class="dm-section lino-home" aria-labelledby="nid-h">
       <a class="lino-home-card nid-home-card" href="#spiele/nid">
@@ -321,6 +303,24 @@
     </section>
 
     ${songStage(false)}
+
+    <section class="dm-section dm-tools" aria-labelledby="tools-h">
+      <div class="dm-section-head"><h2 id="tools-h">Direkt üben</h2></div>
+      <div class="dm-toolgrid">
+        <a href="#simulation" data-img="pokal"><img class="dm-tool-3d" src="assets/3d/pokal.webp" alt="" width="192" height="192" loading="lazy" aria-hidden="true"><b>Probeprüfungen</b><span>DTZ, Leben in Deutschland, telc B1/B2, DTB B1/B2 – mit echter Zeit, Punkten und Lösungen.</span></a>
+        <a href="#ueben/sprechen/A1" data-img="sprechblase"><img class="dm-tool-3d" src="assets/3d/sprechblase.webp" alt="" width="192" height="192" loading="lazy" aria-hidden="true"><b>Sprechen</b><span>Gespräche aus dem Alltag, mit Satzanfängen und Beispiel zum Anhören.</span></a>
+        <a href="#ueben/schreiben/A2" data-img="schreiben"><img class="dm-tool-3d" src="assets/3d/schreiben.webp" alt="" width="192" height="192" loading="lazy" aria-hidden="true"><b>Schreiben</b><span>Nachrichten, Briefe und E-Mails – mit Sofort-Korrektur, Checkliste und Mustertext.</span></a>
+        <a href="#hoeren" data-img="kopfhoerer"><img class="dm-tool-3d" src="assets/3d/kopfhoerer.webp" alt="" width="192" height="192" loading="lazy" aria-hidden="true"><b>Hören</b><span>Hörtraining für Alltag und Beruf mit natürlichen Stimmen: Ansagen, Mailbox, Gespräche.</span></a>
+        <a href="#lesen" data-img="buecher"><img class="dm-tool-3d" src="assets/3d/buecher.webp" alt="" width="192" height="192" loading="lazy" aria-hidden="true"><b>Lesen</b><span>Mitteilungen, Anzeigen, E-Mails und Artikel verstehen – wie in der Prüfung.</span></a>
+        <a href="#lid" data-img="gebaeude"><img class="dm-tool-3d" src="assets/3d/gebaeude.webp" alt="" width="192" height="192" loading="lazy" aria-hidden="true"><b>Leben in Deutschland</b><span>Lernspiele und Wissen für den Orientierungskurs.</span></a>
+        <a href="#lieder" data-img="mikrofon"><img class="dm-tool-3d" src="assets/3d/mikrofon.webp" alt="" width="192" height="192" loading="lazy" aria-hidden="true"><b>Deutsch mit Liedern</b><span>62 eigene Lieder von A1 bis C1 – mit Text, Aufgaben und Lösungen.</span></a>
+        <a href="#kahoot" data-img="spiel"><img class="dm-tool-3d" src="assets/3d/spiel.webp" alt="" width="192" height="192" loading="lazy" aria-hidden="true"><b>Kahoot-Quiz</b><span>Spielerisch wiederholen – allein oder mit dem ganzen Kurs.</span></a>
+        <a href="#material" data-img="blatt"><img class="dm-tool-3d" src="assets/3d/blatt.webp" alt="" width="192" height="192" loading="lazy" aria-hidden="true"><b>Materialien</b><span>Arbeitsblätter und Merkblätter als PDF – zum Ausdrucken.</span></a>
+
+      </div>
+    </section>
+
+    ${window.DMChallenge ? `<section class="dm-section ch-home" aria-label="Tages-Challenge und Lernspiele">${DMChallenge.teaser()}<a class="sp-home" href="#spiele"><span aria-hidden="true">🎮</span><span><b>Lernspiele</b><small>23 Spiele: Jump’n’Run · Story-Abenteuer · Mikula · Artikel · Verben · Alltag · DTB B2 · Leben in Deutschland</small></span><span class="sp-home-go">Spielen →</span></a></section>` : ''}
 
     ${window.DMMikula ? DMMikula.card() : ''}
 
