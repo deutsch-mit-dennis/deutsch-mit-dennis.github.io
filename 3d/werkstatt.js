@@ -1,6 +1,6 @@
 // Idea 6 'Heft + Schreibtisch': click an object -> camera flies in, object opens, full-page themed view (test build).
 import * as THREE from 'three';
-import { VIEWS } from './werkstatt-views.js?v=20261108a';
+import { VIEWS } from './werkstatt-views.js?v=20261108b';
 
 const SITE = 'https://deutsch-mit-dennis.de/';
 const C = { tinte: '#2341B5', tinteDark: '#182E86', paper: '#FBFBF8', ink: '#172036', marker: '#FFE45C', rot: '#C2362B', gruen: '#1D7A45', sun: '#E8A800', sky: '#2C86CF', mint: '#2B9A78' };

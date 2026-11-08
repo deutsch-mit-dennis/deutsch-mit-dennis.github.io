@@ -1,5 +1,5 @@
 // Full-page "inside" views for each desk object (test build). Every link points to the real site, nothing is changed there.
-import { openHeft } from './heft-buch.js?v=20261108a';
+import { openHeft } from './heft-buch.js?v=20261108b';
 
 const SITE = 'https://deutsch-mit-dennis.de/';
 const L = (h) => SITE + h;
