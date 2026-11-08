@@ -1,6 +1,6 @@
 // Idea 6 'Heft + Schreibtisch': click an object -> camera flies in, object opens, full-page themed view (test build).
 import * as THREE from 'three';
-import { VIEWS, prewarmHeft } from './werkstatt-views.js?v=20261108i';
+import { VIEWS, prewarmHeft } from './werkstatt-views.js?v=20261108j';
 
 const SITE = 'https://deutsch-mit-dennis.de/';
 const C = { tinte: '#2341B5', tinteDark: '#182E86', paper: '#FBFBF8', ink: '#172036', marker: '#FFE45C', rot: '#C2362B', gruen: '#1D7A45', sun: '#E8A800', sky: '#2C86CF', mint: '#2B9A78' };
@@ -21,12 +21,14 @@ const AREAS = {
 const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
 const canHover = matchMedia('(hover:hover)').matches;
 const $ = id => document.getElementById(id);
+const safeRoute = r => { r = String(r || '').replace(/^#/, ''); return /^[\w\-\/.~=&]+$/.test(r) ? r : ''; };
+let deskReady = false, pendingRoute = null; // deep link waits until the desk is built
 
 // ---------- renderer / scene ----------
 const canvas = $('desk');
 let renderer;
 try { renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true }); }
-catch (e) { $('loader').classList.add('off'); canvas.remove(); throw e; }
+catch (e) { $('loader').textContent = 'Dein Gerät kann die 3D-Ansicht leider nicht anzeigen. Du kommst gleich zur klassischen Seite …'; canvas.remove(); setTimeout(() => location.replace('../index.html' + location.hash), 1800); throw e; }
 const SMALL = Math.min(innerWidth, innerHeight) < 700;
 renderer.setPixelRatio(Math.min(devicePixelRatio, SMALL ? 1.5 : 2));
 renderer.shadowMap.enabled = true; renderer.shadowMap.type = THREE.PCFSoftShadowMap;
@@ -298,7 +300,11 @@ function openObject(key, route) {
   const size = new THREE.Box3().setFromObject(focusObj.obj).getSize(new THREE.Vector3()), r = Math.max(size.x, size.y, size.z, .8);
   zoomGoal = Math.min(7, (camera.top - camera.bottom) / (r * 2.6));
   document.body.classList.add('focused');
-  setTimeout(() => showView(key, route), reduced ? 0 : 850);
+  setTimeout(() => {
+    if (focusKey !== key || view) return;
+    try { showView(key, route); }
+    catch (err) { console.error(err); focusKey = null; focusObj = null; zoomGoal = 1; document.body.classList.remove('focused'); }
+  }, reduced ? 0 : 850);
 }
 function showView(key, route) {
   const inst = VIEWS[key]({ renderer }), a = AREAS[key];
@@ -394,6 +400,7 @@ function frame() {
   resize(); started = clock.getElapsedTime();
   $('loader').classList.add('off');
   renderer.setAnimationLoop(frame);
+  deskReady = true; if (pendingRoute) setTimeout(() => openRoute(pendingRoute), 300);
 })();
 
 
@@ -409,10 +416,10 @@ const ROUTES = [ // first match wins: route prefix -> desk object
 ];
 const objectForRoute = r => (ROUTES.find(([p]) => r === p || r.startsWith(p + '/')) || [, 'laptop'])[1];
 let content = null; // { el, frame, key }
-const HIDE_CSS = '.dm-backbar,.dm-header,.dm-footer,.skip,#dm-tour,.dm-tour,.dm-news-toast,.dm-3d-switch{display:none!important}body{padding-top:0!important}.dm-tour-dim::before{display:none!important}main{padding-top:12px!important}';
+const HIDE_CSS = '.dm-backbar,.dm-header,.skip,#dm-tour,.dm-tour,.dm-news-toast,.dm-3d-switch{display:none!important}body{padding-top:0!important}.dm-tour-dim::before{display:none!important}main{padding-top:12px!important}';
 
 function openRoute(route, opts = {}) {
-  route = route.replace(/^#/, ''); const key = objectForRoute(route);
+  route = safeRoute(route); if (!route || !deskReady) return; const key = objectForRoute(route);
   if (view && (view.key === key || opts.stay)) { showContent(route, !!opts.stay); return; }
   if (view) { closeView(() => openObject(key, route)); return; }
   openObject(key, route);
@@ -435,6 +442,7 @@ function showContent(route, stay = false) {
 }
 function wireFrame(frame) {
   let w; try { w = frame.contentWindow; } catch { return; }
+  w.addEventListener('keydown', e => { if (e.key === 'Escape') hideContent(); });
   const doc = w.document, st = doc.createElement('style'); st.textContent = HIDE_CSS; doc.head.append(st);
   try { w.sessionStorage.setItem('dm-tour-seen', '1'); } catch {}
   const title = () => { if (content) content.el.querySelector('.cf-title').textContent = (doc.title || '').replace(/ – Deutsch mit Dennis$/, ''); };
@@ -536,7 +544,7 @@ const classic = document.getElementById('to-classic');
 function currentRoute() { try { return content ? content.frame.contentWindow.location.hash.slice(1) : ''; } catch { return ''; } }
 if (classic) classic.addEventListener('click', e => { e.preventDefault(); location.href = '../index.html' + (currentRoute() ? '#' + currentRoute() : ''); });
 // deep link: werkstatt.html#lernen opens that page inside the matching object
-if (location.hash.length > 1) { const r = decodeURIComponent(location.hash.slice(1)); setTimeout(() => openRoute(r), 1200); }
+if (location.hash.length > 1) { try { pendingRoute = safeRoute(decodeURIComponent(location.hash.slice(1))); } catch { pendingRoute = null; } if (deskReady && pendingRoute) openRoute(pendingRoute); }
 
 // ---------- "Weitermachen": last learning page from the website's own memory (localStorage dmd.v1, same origin) ----------
 function lastPage() { try { const m = JSON.parse(localStorage.getItem('dmd.v1') || '{}'); return m.last && m.last.route ? m.last : null; } catch { return null; } }

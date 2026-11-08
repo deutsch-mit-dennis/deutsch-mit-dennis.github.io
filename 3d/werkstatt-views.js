@@ -1,5 +1,5 @@
 // Full-page "inside" views for each desk object (test build). Every link points to the real site, nothing is changed there.
-import { openHeft } from './heft-buch.js?v=20261108i';
+import { openHeft } from './heft-buch.js?v=20261108j';
 
 const SITE = 'https://deutsch-mit-dennis.de/';
 const L = (h) => SITE + h;
@@ -198,11 +198,11 @@ function shopView() {
   const books = (DM.books || []).filter(b => b.amazon).sort((a, b) => isRec(b) - isRec(a));
   const img = p => '../' + String(p || '').split('?')[0];
   const v = el(`<div class="v-shop">
-    <section><h2>Meine Übungsbücher</h2><div class="sp-books">${books.map(b => `<article class="sp-book">
+    <section><h2>Meine Übungsbücher</h2><p class="sp-note sp-ad">Anzeige · Die Amazon-Knöpfe sind Werbelinks.</p><div class="sp-books">${books.map(b => `<article class="sp-book">
       <div class="sp-cover">${isRec(b) ? '<span class="sp-rec">★ Empfohlen für dich</span>' : ''}<img src="${img(b.img)}" alt="Cover: ${esc(b.title)}" loading="lazy"></div>
       <span class="sp-fit">Passt zu: ${esc(b.target || 'Alltag')}${b.level ? ' · ' + esc(b.level) : ''}</span>
       <h3>${esc(b.title)}</h3><p>${esc(b.level || '')}${b.pages ? ` · ${b.pages} Seiten` : ''}${b.price ? ` · <b>${esc(b.price)}</b>` : ''}</p>
-      <div class="sp-btns"><a class="btn" href="${amazon(b.amazon)}" target="_blank" rel="sponsored noopener">Bei Amazon ↗</a><a class="sp-more" href="${L('#lernpakete/buecher')}">Mehr erfahren</a></div></article>`).join('')}</div>
+      <div class="sp-btns"><a class="btn" href="${amazon(b.amazon)}" target="_blank" rel="sponsored nofollow noopener">Bei Amazon ↗</a><a class="sp-more" href="${L('#lernpakete/buecher')}">Mehr erfahren</a></div></article>`).join('')}</div>
       <p class="sp-note">Werbelink: Als Amazon-Partner verdiene ich an qualifizierten Verkäufen.</p></section>
     <section><h2>PDF-Lernpakete</h2><div class="sp-packs">${packs.map(p => `<a class="sp-pack" href="${L('#lernpakete')}"><img src="${img(p.img)}" alt="" loading="lazy">
       <span><b>${esc(p.title || '')}</b><small>${esc(p.level || '')}${p.pages ? ` · ${p.pages} Seiten` : ''}${p.price ? ` · ${esc(p.price)}` : ''}</small></span></a>`).join('')}</div></section></div>`);
