@@ -50,3 +50,5 @@ body{margin:0;font-family:var(--font);color:var(--ink);line-height:1.45;overflow
 .info.mini h1{margin:0;font-size:1.15rem;line-height:44px;cursor:pointer}
 .info.mini .info-mini{top:50%;transform:translateY(-50%)}
 .info.mini .info-mini svg{transform:rotate(180deg)}
+/* short phones (iPhone SE etc.): drop the help sentence so the desk gets more room */
+@media (max-width:599px) and (max-height:720px){.info>p:not(.kicker){display:none}.info h1{margin-bottom:10px}}

@@ -364,12 +364,16 @@ function chipCounts(counts) {
 }
 
 // ---------- layout / resize ----------
+const CAM_R = Math.hypot(10, 10), AZ_PHONE = 72 * Math.PI / 180;
 let phone = false, base = { w: 1, h: 1, offX: 0, offY: 0 };
 function resize() {
   const w = innerWidth, h = innerHeight; renderer.setSize(w, h, false);
   phone = w <= 900 || h > w;
   const info = document.querySelector('.info').getBoundingClientRect();
-  const aspect = w / h, needW = w < 600 ? 11.4 : (phone ? 13.4 : 12.5), needH = phone ? 9 : 8.5;
+  // narrow portrait phones: turn the view so the long desk side runs more top-to-bottom -> objects appear bigger
+  const turn = w < 600 && h > w, az = turn ? AZ_PHONE : Math.PI / 4;
+  camOff.set(CAM_R * Math.sin(az), 9.5, CAM_R * Math.cos(az));
+  const aspect = w / h, needW = turn ? (10 * Math.cos(az) + 6 * Math.sin(az)) * 1.01 : (phone ? 13.4 : 12.5), needH = phone ? 9 : 8.5;
   let fitW, fitH, offX = 0, offY = 0;
   if (phone) { fitW = .98; fitH = Math.max(.3, (info.top - 60) / h); offY = (h - (info.top + 50)) / 2; }
   else { const free = (w - info.right - 30) / w; fitW = Math.max(.4, free); fitH = .9; offX = -(info.right + 10) / 2; }
