@@ -1007,8 +1007,15 @@ main#main{overflow-x:clip} /* schwebende 3D-Bilder dürfen die Seite nicht seitl
 .dm-game small{display:block;color:var(--dm-muted,#526078);font-size:14px;line-height:1.35}
 .dm-game-new{display:inline-block;margin-bottom:2px;padding:1px 8px;border-radius:999px;background:var(--dm-marker,#FFE45C);color:#172036;font-style:normal;font-weight:800;font-size:12px}
 @media (max-width:760px){.dm-games-grid{grid-template-columns:1fr}}
-@media (min-width:480px){.dm-level-btns{grid-template-columns:repeat(6,minmax(0,1fr))}}
+@media (min-width:1100px){.dm-level-btns{grid-template-columns:repeat(6,minmax(0,1fr))}}
 .dm-hero .dm-level,.dm-hero .dm-social{grid-column:1/-1}
 .dm-level-lbl{display:inline-flex;align-items:center;gap:8px;white-space:nowrap}
 .dm-level-more{display:flex!important;flex-flow:row wrap}
 .dm-promise[dir=rtl]{text-align:right}
+/* phones up to 640 px: header always on ONE row (logo, 3D, share, bell, icon-only menu). Replaces many older per-width patches. */
+@media (max-width:640px){header.dm-header{column-gap:6px!important}header.dm-header .logo{margin-right:0!important}header.dm-header #pl-menu{font-size:0!important;width:44px;height:44px;min-width:44px;padding:0!important;display:inline-grid;place-items:center}header.dm-header #pl-menu::after{content:'\2630';font-size:20px;line-height:1}}
+@media (max-width:400px){header.dm-header #pl-menu{width:40px;height:40px;min-width:40px}}
+@media (max-width:360px){header.dm-header{column-gap:4px!important}}
+/* tablet + laptop: photo stays in view next to the (now taller) text instead of sinking below the fold */
+@media (min-width:761px){.dm-hero{align-items:start}.dm-hero-photo{align-self:start;position:sticky;top:88px}}
+@media (min-width:761px){.dm-hero::before{display:none}.dm-hero-photo{isolation:isolate}.dm-hero-photo::before{content:'';position:absolute;z-index:-1;left:-6%;right:-6%;bottom:9%;height:26%;background:var(--dm-marker);border-radius:40% 55% 45% 60%/60% 45% 55% 40%;transform:rotate(-7deg);opacity:.85}}

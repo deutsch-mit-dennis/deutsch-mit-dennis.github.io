@@ -364,3 +364,5 @@ body.night{background:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px
 .soc3d a:hover,.soc3d a:focus-visible,.soc3d .s-share:hover,.soc3d .s-share:focus-visible{background:var(--marker)}
 .soc3d .s-ok{font-size:.8rem;color:var(--muted)}
 body.touring .soc3d{display:none}
+/* phones in landscape: info panel on the left, scrollable, never cut off at the top */
+@media (orientation:landscape) and (max-height:560px){.info{left:10px;right:auto;top:76px;bottom:10px;transform:none;width:min(360px,46vw);max-width:none;max-height:none;overflow-y:auto;scrollbar-width:thin}.chips{flex-wrap:wrap;-webkit-mask-image:none;mask-image:none;padding-right:0}}
