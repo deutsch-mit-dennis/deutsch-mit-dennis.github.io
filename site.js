@@ -436,9 +436,18 @@
     document.body.appendChild(a); a.click(); setTimeout(() => { URL.revokeObjectURL(url); a.remove(); }, 60000);
   }
   /* Google Kalender: öffnet auf Android direkt die Kalender-App bzw. Google Kalender mit vorausgefüllter täglicher Erinnerung (ohne Datei) */
-  function gcalUrl(time) {
-    const [hh, mm] = (time || '18:00').split(':').map(Number), now = new Date(), pad = n => String(n).padStart(2, '0');
+  function reminderStart(time) {
+    const [hh, mm] = (time || '18:00').split(':').map(Number), now = new Date();
     const start = new Date(now.getFullYear(), now.getMonth(), now.getDate(), hh || 0, mm || 0); if (start <= now) start.setDate(start.getDate() + 1);
+    return start;
+  }
+  /* Android: intent link -> opens the installed calendar app with the event prefilled (title, time, daily repeat); falls back to Google Calendar in the browser */
+  function androidCalUrl(time) {
+    const start = reminderStart(time), end = new Date(start.getTime() + 15 * 60000), e = encodeURIComponent;
+    return 'intent:#Intent;action=android.intent.action.INSERT;type=vnd.android.cursor.dir/event;S.title=' + e('Deutsch üben') + ';S.description=' + e('Heute kurz Deutsch üben: https://deutsch-mit-dennis.de/') + ';l.beginTime=' + start.getTime() + ';l.endTime=' + end.getTime() + ';B.allDay=false;S.rrule=' + e('FREQ=DAILY') + ';S.browser_fallback_url=' + e(gcalUrl(time)) + ';end';
+  }
+  function gcalUrl(time) {
+    const pad = n => String(n).padStart(2, '0'), start = reminderStart(time);
     const end = new Date(start.getTime() + 15 * 60000), f = t => `${t.getFullYear()}${pad(t.getMonth() + 1)}${pad(t.getDate())}T${pad(t.getHours())}${pad(t.getMinutes())}00`;
     return 'https://calendar.google.com/calendar/render?action=TEMPLATE&text=' + encodeURIComponent('Deutsch üben') + '&details=' + encodeURIComponent('Heute kurz Deutsch üben: https://deutsch-mit-dennis.de/') + '&dates=' + f(start) + '/' + f(end) + '&recur=' + encodeURIComponent('RRULE:FREQ=DAILY');
   }
@@ -473,7 +482,9 @@
       <section class="dm-card dm-ls"><h2><span aria-hidden="true">🔔</span> Tägliche Erinnerung</h2>
         <p>Eine Erinnerung in deinem Kalender – jeden Tag zur gleichen Zeit. Ohne Anmeldung.</p>
         <p><label for="ls-time"><b>Uhrzeit</b></label> <input type="time" id="ls-time" value="18:00" required></p>
-        <p><a class="dm-btn" id="ls-gcal" href="${x(gcalUrl('18:00'))}" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">📅</span> In Google Kalender eintragen</a></p>
+        ${/Android/i.test(navigator.userAgent) ? `<p><a class="dm-btn" id="ls-intent" href="${x(androidCalUrl('18:00'))}"><span aria-hidden="true">📅</span> In die Kalender-App meines Handys eintragen</a></p>
+        <p class="dm-small">Öffnet deine Kalender-App (Google, Samsung …) mit der täglichen Erinnerung. Du tippst nur noch auf „Speichern“.</p>` : ''}
+        <p><a class="dm-btn${/Android/i.test(navigator.userAgent) ? ' dm-btn-quiet' : ''}" id="ls-gcal" href="${x(gcalUrl('18:00'))}" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">📅</span> In Google Kalender eintragen</a></p>
         <p class="dm-small">Öffnet Google Kalender (Handy: die Kalender-App) mit der Erinnerung. Du musst nur noch auf „Speichern“ tippen. Ändern oder löschen kannst du sie dort jederzeit.</p>
         <p><button type="button" class="dm-btn dm-btn-quiet" id="ls-ics"><span aria-hidden="true">📄</span> Oder: Kalender-Datei (.ics) laden</button></p>
         <p class="dm-small">Für andere Kalender-Apps. Die Datei danach aus der Benachrichtigung oder dem Ordner „Downloads“ öffnen.</p></section>
@@ -487,7 +498,7 @@
         <p id="ls-msg" class="dm-ls-msg" role="status" aria-live="polite"></p>
         <p class="dm-small">Beim Wiederherstellen bleiben deine vorhandenen Daten erhalten. Es kommt nur dazu, was fehlt.</p></section>`);
     const msg = t => { $('#ls-msg').textContent = t; };
-    $('#ls-time').addEventListener('input', () => { $('#ls-gcal').href = gcalUrl($('#ls-time').value || '18:00'); });
+    $('#ls-time').addEventListener('input', () => { const v = $('#ls-time').value || '18:00'; $('#ls-gcal').href = gcalUrl(v); const ai = $('#ls-intent'); if (ai) ai.setAttribute('href', androidCalUrl(v)); });
     if (navigator.share) {
       const sh = $('#ls-share'); sh.hidden = false;
       sh.onclick = async () => { try { await navigator.share({ title: 'Mein Lernstand – Deutsch mit Dennis', text: 'DMD1:' + b64enc(stateBundle()) }); msg('✓ Gesendet. Bewahre die Nachricht auf. Der Code darin stellt deinen Lernstand wieder her.'); } catch (e) { if (e && e.name !== 'AbortError') msg('Senden hat nicht geklappt. Nimm „Code kopieren“.'); } };
