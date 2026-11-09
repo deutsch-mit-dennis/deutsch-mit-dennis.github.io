@@ -54,6 +54,8 @@
       ch_shop: "Bücher & Lernpakete",
       ch_tasse: "Pause",
       ch_radio: "Lieder",
+      d3_min: "Fenster verkleinern",
+      d3_restore: "Fenster wieder öffnen",
     },
     en: {
       lvl_q: "How good is your German?",
@@ -92,6 +94,8 @@
       ch_shop: "Books & packages",
       ch_tasse: "Break",
       ch_radio: "Songs",
+      d3_min: "Minimise window",
+      d3_restore: "Reopen window",
     },
     uk: {
       lvl_q: "Наскільки добре ти знаєш німецьку?",
@@ -130,6 +134,8 @@
       ch_shop: "Книги та пакети",
       ch_tasse: "Перерва",
       ch_radio: "Пісні",
+      d3_min: "Згорнути вікно",
+      d3_restore: "Відкрити вікно знову",
     },
     ru: {
       lvl_q: "Насколько хорошо ты знаешь немецкий?",
@@ -168,6 +174,8 @@
       ch_shop: "Книги и пакеты",
       ch_tasse: "Перерыв",
       ch_radio: "Песни",
+      d3_min: "Свернуть окно",
+      d3_restore: "Открыть окно снова",
     },
     ar: {
       lvl_q: "ما مستوى لغتك الألمانية؟",
@@ -206,6 +214,8 @@
       ch_shop: "كتب وحِزم",
       ch_tasse: "استراحة",
       ch_radio: "أغانٍ",
+      d3_min: "تصغير النافذة",
+      d3_restore: "إعادة فتح النافذة",
     },
     tr: {
       lvl_q: "Almancan ne kadar iyi?",
@@ -244,6 +254,8 @@
       ch_shop: "Kitaplar ve paketler",
       ch_tasse: "Mola",
       ch_radio: "Şarkılar",
+      d3_min: "Pencereyi küçült",
+      d3_restore: "Pencereyi yeniden aç",
     },
     fa: {
       lvl_q: "آلمانی تو چقدر خوب است؟",
@@ -282,6 +294,8 @@
       ch_shop: "کتاب‌ها و بسته‌ها",
       ch_tasse: "استراحت",
       ch_radio: "آهنگ‌ها",
+      d3_min: "کوچک کردن پنجره",
+      d3_restore: "باز کردن دوباره پنجره",
     },
     es: {
       lvl_q: "¿Qué tan bueno es tu alemán?",
@@ -320,6 +334,8 @@
       ch_shop: "Libros y paquetes",
       ch_tasse: "Descanso",
       ch_radio: "Canciones",
+      d3_min: "Minimizar ventana",
+      d3_restore: "Reabrir ventana",
     },
     it: {
       lvl_q: "Quanto è buono il tuo tedesco?",
@@ -358,6 +374,8 @@
       ch_shop: "Libri e pacchetti",
       ch_tasse: "Pausa",
       ch_radio: "Canzoni",
+      d3_min: "Riduci la finestra",
+      d3_restore: "Riapri la finestra",
     },
   };
   const KEY = "dmd.lang";

@@ -311,6 +311,7 @@ document.addEventListener('pointerleave', () => { mouse.x = mouse.y = 0; });
 let lastFocus = null;
 const setInert = on => document.querySelectorAll('.info, .top').forEach(e => { e.inert = on; });
 function openObject(key, route) {
+  if (mini && key !== 'lampe') { if (mini.key === key && !route) { restoreMini(); return; } discardMini(); }
   lastFocus = document.activeElement;
   if (key === 'lampe') { sound.play('click'); setNight(!night, true); return; }
   if (focusKey || view) return;
@@ -329,14 +330,53 @@ function openObject(key, route) {
 function showView(key, route) {
   const inst = VIEWS[key]({ renderer }), a = AREAS[key];
   const wrap = document.createElement('div'); wrap.className = `view view-${key}`; wrap.setAttribute('role', 'dialog'); wrap.setAttribute('aria-modal', 'true'); wrap.setAttribute('aria-label', areaTitle(key));
-  wrap.innerHTML = `<div class="view-bar"><button type="button" class="view-back">← Schreibtisch</button><span class="view-title">${areaTitle(key)}</span></div><div class="view-body"></div>`;
+  wrap.innerHTML = `<div class="view-bar"><button type="button" class="view-back">← Schreibtisch</button><span class="view-title">${areaTitle(key)}</span><button type="button" class="view-min" aria-label="${T('d3_min', 'Fenster verkleinern')}" title="${T('d3_min', 'Fenster verkleinern')}"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M5 12h14" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg></button></div><div class="view-body"></div>`;
   wrap.querySelector('.view-body').append(inst.node);
   wrap.style.transformOrigin = '50% 55%';
   document.body.append(wrap); view = { wrap, inst, key }; setInert(true);
   requestAnimationFrame(() => requestAnimationFrame(() => wrap.classList.add('in')));
+  wrap.querySelector('.view-min').addEventListener('click', minimizeView);
   wrap.querySelector('.view-back').addEventListener('click', () => closeView()); wrap.querySelector('.view-back').focus({ preventScroll: true });
   inst.onOpen && inst.onOpen();
   if (route) setTimeout(() => showContent(route), reduced ? 0 : 500);
+}
+/* Minimize: the window disappears, the desk is free again, a small field top right brings the window back exactly as it was (page, scroll position, audio keep running) */
+let mini = null;
+function minimizeView() {
+  if (!view) return;
+  const { wrap, inst, key } = view, c = content;
+  const title = (c && c.el.querySelector('.cf-title') && c.el.querySelector('.cf-title').textContent.trim()) || areaTitle(key);
+  wrap.classList.add('is-min');
+  mini = { wrap, inst, key, content: c, title };
+  view = null; content = null; focusKey = null; focusObj = null; zoomGoal = 1;
+  document.body.classList.remove('focused'); setInert(false); sound.play('close');
+  const pill = document.createElement('div'); pill.className = 'mini-pill'; pill.id = 'mini-pill';
+  pill.innerHTML = '<button type="button" class="mini-open"><span class="mini-i" aria-hidden="true">▢</span><span class="mini-t"></span></button><button type="button" class="mini-x" aria-label="×">×</button>';
+  pill.querySelector('.mini-t').textContent = title;
+  pill.querySelector('.mini-open').setAttribute('aria-label', T('d3_restore', 'Fenster wieder öffnen') + ': ' + title);
+  pill.querySelector('.mini-open').addEventListener('click', restoreMini);
+  pill.querySelector('.mini-x').addEventListener('click', discardMini);
+  document.body.append(pill);
+  try { stickers && stickers.refresh(.5); } catch {}
+  pill.querySelector('.mini-open').focus({ preventScroll: true });
+}
+function restoreMini() {
+  if (!mini || view || focusKey) return;
+  const m = mini; mini = null; const pill = document.getElementById('mini-pill'); if (pill) pill.remove();
+  lastFocus = document.activeElement;
+  view = { wrap: m.wrap, inst: m.inst, key: m.key }; content = m.content;
+  focusKey = m.key; focusObj = objs.find(o => o.key === m.key); hovered = null;
+  const size = new THREE.Box3().setFromObject(focusObj.obj).getSize(new THREE.Vector3()), r = Math.max(size.x, size.y, size.z, .8);
+  zoomGoal = Math.min(7, (camera.top - camera.bottom) / (r * 2.6));
+  document.body.classList.add('focused'); setInert(true); sound.play('open');
+  m.wrap.classList.remove('is-min');
+  const f = m.wrap.querySelector('.cf-min, .view-min, .view-back'); if (f) f.focus({ preventScroll: true });
+}
+function discardMini() { // really close a minimized window (X on the field, or another object is opened)
+  if (!mini) return; const m = mini; mini = null;
+  const pill = document.getElementById('mini-pill'); if (pill) pill.remove();
+  try { m.inst.dispose && m.inst.dispose(); } catch {}
+  m.wrap.remove();
 }
 function closeView(then) {
   if (!view) return; content = null; const { wrap, inst } = view; view = null;
@@ -497,12 +537,13 @@ function showContent(route, stay = false) {
   const key = view.key;
   if (content && content.key === key) { content.stay = content.stay || stay; turnTo(route); return; }
   const el = document.createElement('div'); el.className = `cf cf-${key}`;
-  el.innerHTML = `<div class="cf-card"><div class="cf-bar"><button type="button" class="cf-back">\u2190 ${areaTitle(key)}</button><span class="cf-title">Lädt …</span></div>
+  el.innerHTML = `<div class="cf-card"><div class="cf-bar"><button type="button" class="cf-back">\u2190 ${areaTitle(key)}</button><span class="cf-title">Lädt …</span><button type="button" class="cf-min" aria-label="${T('d3_min', 'Fenster verkleinern')}" title="${T('d3_min', 'Fenster verkleinern')}"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M5 12h14" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg></button></div>
     <div class="cf-page"><iframe class="cf-frame" title="Inhalt" src="../index.html#${route}"></iframe></div></div>`;
   view.wrap.append(el);
   const frame = el.querySelector('iframe');
   content = { el, frame, key, route, stay, depth: 0, back: false };
   el.querySelector('.cf-back').addEventListener('click', cfBack);
+  el.querySelector('.cf-min').addEventListener('click', minimizeView);
   frame.addEventListener('load', () => wireFrame(frame));
   requestAnimationFrame(() => requestAnimationFrame(() => el.classList.add('in')));
 }
@@ -565,6 +606,7 @@ const lastWhere = (arr, fn) => { let r = -1; for (let i = 0; i < arr.length; i++
 let tourRun = 0; // only the newest tour run may drive subtitles and camera (switching the language mid-tour must not leave the old loop running)
 async function startTour() {
   const run = ++tourRun;
+  discardMini();
   if (view) closeView();
   const T = TOURS[tourLang];
   const box = document.getElementById('tourbox'), media = document.getElementById('tour-media'), sub = document.getElementById('tour-sub'), sub2 = document.getElementById('tour-sub2');
