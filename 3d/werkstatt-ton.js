@@ -31,7 +31,17 @@ function whoosh(c, t, from, to, dur, vol = .09) {
   f.type = 'bandpass'; f.Q.value = 1.4; f.frequency.setValueAtTime(from, t); f.frequency.exponentialRampToValueAtTime(to, t + dur);
   env(g, t, dur * .35, vol, dur * .6); s.connect(f).connect(g).connect(c.destination); s.start(t); s.stop(t + dur);
 }
+// paper rustle: noise with fast random amplitude flicker (like a page being lifted and bent)
+function crinkle(c, t, dur, vol) {
+  const n = Math.floor(c.sampleRate * dur), b = c.createBuffer(1, n, c.sampleRate), d = b.getChannelData(0);
+  let a = 0; for (let i = 0; i < n; i++) { if (i % 90 === 0) a = Math.random() < .35 ? 1 : .25 + Math.random() * .4; d[i] = (Math.random() * 2 - 1) * a; }
+  const s = c.createBufferSource(), hp = c.createBiquadFilter(), lp = c.createBiquadFilter(), g = c.createGain();
+  hp.type = 'highpass'; hp.frequency.value = 1400; lp.type = 'lowpass'; lp.frequency.value = 7000;
+  env(g, t, .02, vol, dur); s.buffer = b; s.connect(hp).connect(lp).connect(g).connect(c.destination); s.start(t); s.stop(t + dur + .02);
+}
 const SOUNDS = {
+  page: c => { const t = c.currentTime; crinkle(c, t, .24, .075); whoosh(c, t + .05, 900, 3200, .42, .06); },   // page lifts and swings over
+  pagetap: c => { const t = c.currentTime; whoosh(c, t, 1600, 600, .1, .04); tone(c, 170, t, .07, 'sine', .05); }, // page lands
   open: c => { const t = c.currentTime; whoosh(c, t, 500, 2400, .32); tone(c, 660, t + .18, .12, 'triangle', .05); },
   close: c => whoosh(c, c.currentTime, 2000, 450, .28, .07),
   click: c => { const t = c.currentTime; tone(c, 1800, t, .03, 'square', .04); tone(c, 900, t + .05, .04, 'square', .03); },

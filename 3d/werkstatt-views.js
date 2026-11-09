@@ -1,5 +1,6 @@
 // Full-page "inside" views for each desk object (test build). Every link points to the real site, nothing is changed there.
-import { openHeft } from './heft-buch.js?v=20261108m';
+import { openHeft } from './heft-buch.js?v=20261110d';
+import { sound } from './werkstatt-ton.js?v=20261110a';
 
 const SITE = 'https://deutsch-mit-dennis.de/';
 const L = (h) => SITE + h;
@@ -152,30 +153,59 @@ const SPREADS = [
   { t: 'Seite 6–7 · Prüfung & LiD', links: [['Probeprüfungen', '#simulation'], ['DTZ', '#simulation/dtz'], ['telc B1', '#simulation/telc-b1'], ['DTB B1', '#simulation/dtb-b1'], ['Leben in Deutschland', '#lid'], ['LiD-Test', '#simulation/lid'], ['Materialien', '#material'], ['Lernpakete', '#lernpakete']] },
 ];
 function heftView(ctx = {}) {
-  const v = el(`<div class="v-heft"><div class="hf-host"></div><div class="hf-bar"><button type="button" class="hf-prev" aria-label="Zurückblättern">←</button>
+  const v = el(`<div class="v-heft"><div class="hf-host"></div>
+    <div class="hf-spots" aria-label="Themen im Heft"></div>
+    <button type="button" class="hf-corner hf-corner-prev" aria-label="Zurückblättern" title="Zurückblättern" hidden><svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path d="M18 3.5H8.5L4 8v12.5h14z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M8.5 3.5V8H4" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M14.5 14h-7m3-3l-3 3 3 3" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+    <button type="button" class="hf-corner hf-corner-next" aria-label="Weiterblättern" title="Weiterblättern" hidden><svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path d="M6 3.5h9.5L20 8v12.5H6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M15.5 3.5V8H20" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M9.5 14h7m-3-3l3 3-3 3" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+    <button type="button" class="hf-snd" aria-pressed="false"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M4 9h4l5-4v14l-5-4H4z" fill="currentColor"/><path class="snd-w" d="M16 8.5a5 5 0 0 1 0 7M18.5 6a8.5 8.5 0 0 1 0 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path class="snd-x" d="M16.5 9.5l5 5m0-5l-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><span class="hf-snd-t"></span></button>
+    <div class="hf-bar"><button type="button" class="hf-prev" aria-label="Zurückblättern">←</button>
     <div class="hf-mid"><b class="hf-t" aria-live="polite"></b><small class="hf-hint">Tippe auf ein Thema im Heft – oder blättere weiter.</small><div class="hf-links"></div></div><button type="button" class="hf-next" aria-label="Weiterblättern">→</button></div></div>`);
-  let ctl = null, x0 = null;
+  let ctl = null, x0 = null, shownKey = '', openedAt = 0;
+  const spotsBox = v.querySelector('.hf-spots'), cNext = v.querySelector('.hf-corner-next'), cPrev = v.querySelector('.hf-corner-prev');
   const paint = n => { const s = SPREADS[n]; v.querySelector('.hf-t').textContent = s.t;
     v.querySelector('.hf-links').innerHTML = s.links.map(([a, h]) => `<a href="${L(h)}">${esc(a)}</a>`).join('');
     v.querySelector('.hf-prev').disabled = n === 0; v.querySelector('.hf-next').disabled = n === SPREADS.length - 1; };
   const step = d => ctl && ctl.goTo(ctl.stage + d);
+  const openRoute = r => { if (r && window.dmOpenRoute) { window.dmOpenRoute(r, { stay: true }); try { localStorage.setItem('dmd.3d.heftHint', '1'); } catch {} v.querySelector('.hf-hint').hidden = true; } };
   try { if (localStorage.getItem('dmd.3d.heftHint')) v.querySelector('.hf-hint').hidden = true; } catch {}
   v.querySelector('.hf-prev').onclick = () => step(-1); v.querySelector('.hf-next').onclick = () => step(1);
+  cNext.onclick = () => step(1); cPrev.onclick = () => step(-1);
+  // sound switch inside the notebook (the header button is hidden while a window is open)
+  const snd = v.querySelector('.hf-snd'), sndShow = () => { snd.setAttribute('aria-pressed', String(sound.on)); snd.title = sound.on ? 'Ton ausschalten' : 'Ton einschalten'; snd.querySelector('.hf-snd-t').textContent = sound.on ? 'Ton an' : 'Ton aus'; };
+  snd.onclick = () => { sound.set(!sound.on); sndShow(); sound.play('page'); }; sndShow();
+  // clickable areas: real links laid over the pages (projected from the 3D page every frame)
+  let R = { left: 0, top: 0 }; // the notebook area: positions are given relative to it (the window sits below the title bar and may be transformed)
+  const place = (n, r) => { n.style.left = (r.x - R.left) + 'px'; n.style.top = (r.y - R.top) + 'px'; n.style.width = r.w + 'px'; n.style.height = r.h + 'px'; };
+  const syncOverlay = () => {
+    const inView = v.closest('.view') && v.closest('.view').classList.contains('in') && performance.now() - openedAt > 900;
+    const lay = ctl && inView ? ctl.layout() : null; R = v.getBoundingClientRect();
+    if (!lay || !lay.settled) { if (shownKey) { spotsBox.textContent = ''; shownKey = ''; } cNext.hidden = cPrev.hidden = true; return; }
+    const spots = lay.spots.filter(sp => sp.h >= 18 && sp.w >= 30); // rows too small for a finger are left out here: the same targets are big buttons in the bar below
+    const key = lay.stage + ':' + spots.length;
+    if (key !== shownKey) { // new spread: build the links once, then only move them
+      shownKey = key; spotsBox.textContent = '';
+      spots.forEach(sp => { const a = document.createElement('a'); a.className = 'hf-spot'; a.href = '#' + sp.route; // plain hash link: the global handler for site links must not open it a second time a.setAttribute('aria-label', sp.label); a.title = sp.label;
+        a.innerHTML = `<span>${esc(sp.label)}</span>`; a.dataset.route = sp.route; a.addEventListener('click', e => { e.preventDefault(); openRoute(sp.route); }); spotsBox.append(a); });
+      spotsBox.classList.remove('pulse'); void spotsBox.offsetWidth; spotsBox.classList.add('pulse');
+    }
+    [...spotsBox.children].forEach((a, i) => { const sp = spots[i]; if (sp) place(a, sp); });
+    const put = (b, q) => { b.hidden = !q; if (q) { const m = 38; b.style.left = (Math.min(innerWidth - m - 4, Math.max(m + 4, q.x)) - R.left) + 'px'; b.style.top = (Math.min(innerHeight - m - 4, Math.max(m + 4, q.y)) - R.top) + 'px'; } };
+    put(cNext, lay.next); put(cPrev, lay.prev);
+  };
   const host = v.querySelector('.hf-host');
   host.addEventListener('pointerdown', e => { x0 = e.clientX; });
-  host.addEventListener('pointerup', e => {
+  host.addEventListener('pointerup', e => { // swipe = turn; tap on paper outside the links = turn towards that side (like a book)
     if (x0 == null) return; const dx = e.clientX - x0; x0 = null;
     if (Math.abs(dx) > 40) { step(dx < 0 ? 1 : -1); return; }
-    const r = ctl && ctl.stage > 0 && ctl.pick(e.clientX, e.clientY);
-    if (r && window.dmOpenRoute) { window.dmOpenRoute(r, { stay: true }); try { localStorage.setItem('dmd.3d.heftHint', '1'); } catch {} v.querySelector('.hf-hint').hidden = true; } else step(1);
+    if (!ctl) return;
+    step(ctl.stage === 0 || e.clientX >= innerWidth / 2 ? 1 : -1);
   });
-  host.addEventListener('pointermove', e => { if (e.pointerType !== 'mouse' || !ctl) return; host.classList.toggle('hf-hot', !!(ctl.stage > 0 && ctl.pick(e.clientX, e.clientY))); });
   const key = e => { if (e.key === 'ArrowRight') step(1); if (e.key === 'ArrowLeft') step(-1); };
   addEventListener('keydown', key); paint(0);
   return {
     node: v,
-    async onOpen() { ctl = await openHeft(host, { maxStage: SPREADS.length - 1, onStage: paint, renderer: ctx.renderer }); window.dmHeft = ctl; setTimeout(() => ctl && ctl.stage === 0 && ctl.goTo(1), 700); },
-    tick() { ctl && ctl.tick(); },
+    async onOpen() { openedAt = performance.now(); ctl = await openHeft(host, { maxStage: SPREADS.length - 1, onStage: paint, renderer: ctx.renderer, onSound: n => sound.play(n) }); window.dmHeft = ctl; setTimeout(() => ctl && ctl.stage === 0 && ctl.goTo(1), 700); },
+    tick() { if (!ctl) return; ctl.tick(); syncOverlay(); },
     dispose() { removeEventListener('keydown', key); ctl && ctl.dispose(); ctl = null; },
   };
 }
