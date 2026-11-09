@@ -382,12 +382,14 @@
       <div class="dm-progress" role="progressbar" aria-valuemin="0" aria-valuemax="${p.steps.length}" aria-valuenow="${done}" aria-label="Fortschritt"><i style="width:${Math.round(done / p.steps.length * 100)}%"></i></div>
       <p class="dm-progress-text">${done ? `${done} von ${p.steps.length} Schritten erledigt.` : 'Noch nichts erledigt – fang einfach mit Schritt 1 an.'} ${next ? `<a href="${next[1]}">Nächster Schritt: ${x(next[0])}</a>` : '<b>Super, alles geschafft!</b>'}</p>
       <div class="dm-split">
+        <div class="dm-steps-wrap"><p class="dm-steps-hint"><b>So geht's:</b> Tippe bei einem Schritt auf <b>„Starten“</b>. Danach kommst du hierher zurück und markierst ihn als erledigt.</p>
         <ol class="dm-steps">${p.steps.map(([title, url, desc, kind], i) => {
-          const k = 'weg:' + id + ':' + url, isDone = !!mem.done[k];
-          return `<li class="${isDone ? 'is-done' : ''}"><span class="dm-step-no" aria-hidden="true">${isDone ? '✓' : i + 1}</span>
-            <a href="${url}" class="dm-step-link"><span class="dm-tag">${kind}</span><b>${x(title)}</b><span>${x(desc)}</span></a>
-            <label class="dm-check"><input type="checkbox" data-done="${x(k)}" ${isDone ? 'checked' : ''}> <span>erledigt</span></label></li>`;
-        }).join('')}</ol>
+          const k = 'weg:' + id + ':' + url, isDone = !!mem.done[k], isNext = !!next && next[1] === url;
+          return `<li class="${isDone ? 'is-done' : ''}${isNext ? ' is-next' : ''}"><span class="dm-step-no" aria-hidden="true">${isDone ? '✓' : i + 1}</span>
+            <div class="dm-step-body"><span class="dm-tag">${kind}</span><a href="${url}" class="dm-step-link"><b>${x(title)}</b><span>${x(desc)}</span></a>
+            <div class="dm-step-actions"><a class="dm-btn dm-step-go${isNext || !isDone ? '' : ' dm-btn-quiet'}" href="${url}">${isDone ? 'Nochmal üben' : isNext ? 'Hier weitermachen ▶' : 'Starten ▶'}</a>
+            <button type="button" class="dm-step-done" data-done="${x(k)}" aria-pressed="${isDone}">${isDone ? '✓ Erledigt' : 'Als erledigt markieren'}</button></div></div></li>`;
+        }).join('')}</ol></div>
         <aside class="dm-aside">
           ${note(p.tip)}
           <section class="dm-card"><h2>Deine Lernrunde</h2><ul class="dm-plan">${p.plan.map(t => `<li>${x(t)}</li>`).join('')}</ul></section>
@@ -396,7 +398,7 @@
       </div>
       ${['bridge', 'repeat', 'dtbb2'].includes(id) ? '<p class="dm-small">B2 Beruf: Die Übungen orientieren sich am beruflichen Deutsch und am Deutsch-Test für den Beruf B2. Wenn du eine andere B2-Prüfung machst, prüfe das Format bei deinem Anbieter.</p>' : ''}
       <div id="dm-path-videos"></div>`);
-      $$('[data-done]').forEach(c => c.onchange = () => { if (c.checked) mem.done[c.dataset.done] = Date.now(); else delete mem.done[c.dataset.done]; save(); render(); });
+      $$('[data-done]').forEach(c => c.onclick = () => { if (mem.done[c.dataset.done]) delete mem.done[c.dataset.done]; else mem.done[c.dataset.done] = Date.now(); save(); render(); });
       const cat = { dtz: 'pruefung', repeat: 'pruefung', bridge: 'deutsch', start: 'deutsch', sprechen: 'deutsch', schreiben: 'pruefung', lid: 'orientierung', telcb1: 'pruefung', telcb2: 'pruefung', dtbb1: 'pruefung', dtbb2: 'pruefung' }[id];
       videoSection(cat, 'Passende Videos').then(sec => sec && $('#dm-path-videos')?.replaceWith(sec));
     };

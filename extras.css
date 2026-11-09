@@ -936,3 +936,15 @@ main#main{overflow-x:clip} /* schwebende 3D-Bilder dürfen die Seite nicht seitl
 .dm-soc-yt{color:#c4161c}.dm-soc-ig{color:#c13584}.dm-soc-tt{color:#111}
 @media (max-width:520px){.dm-social{flex-wrap:nowrap;gap:10px}.dm-soc{width:48px;height:48px;padding:0}.dm-soc span{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}.dm-soc svg{width:24px;height:24px}}
 @media print{.dm-social{display:none}}
+
+/* Learning-path steps: one big "Starten" button per step, "erledigt" is a small secondary toggle */
+.dm-steps-hint{margin:0 0 12px;padding:10px 14px;border-radius:var(--dm-r,12px);background:var(--dm-tinte-soft,#e3e9fb);color:var(--dm-ink,#172036);font-size:16px;line-height:1.45}
+.dm-steps li{align-items:start}
+.dm-steps li.is-next{border-color:var(--dm-tinte);box-shadow:0 0 0 2px var(--dm-tinte-soft,#e3e9fb)}
+.dm-step-body{display:grid;gap:8px;min-width:0;justify-items:start}
+.dm-step-body .dm-step-link{width:100%}
+.dm-step-actions{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;width:100%}
+.dm-step-go{min-height:48px;white-space:normal}
+.dm-step-done{min-height:44px;padding:0 6px;border:0;background:none;color:var(--dm-muted,#526078);font:inherit;font-size:15px;text-decoration:underline;cursor:pointer}
+.dm-steps li.is-done .dm-step-done{color:var(--dm-gruen,#1f7a3d);font-weight:700;text-decoration:none}
+@media (max-width:600px){.dm-steps li{grid-template-columns:36px minmax(0,1fr)}.dm-step-go{flex:1 1 100%;justify-content:center}}
