@@ -940,9 +940,9 @@ DM.books = [
     desc: 'Rund 700 wichtige Wörter in 24 Themen – von Wohnen und Einkaufen bis Amt, Arbeit und Gesundheit. Jedes Wort mit Artikel, Plural, Übersetzung ins Persische und Beispielsatz, dazu Dialoge und Übungen.' },
   { id: 'wortschatz-en', img: 'assets/buecher/wortschatz-en.jpg?v=2', title: 'Deutscher Wortschatz nach Themen – Deutsch–Englisch', level: 'A1–B1', target: 'Alltag & Beruf', pages: 150, price: '16,99 €', amazon: '',
     desc: 'Rund 700 wichtige Wörter in 24 Themen – von Wohnen und Einkaufen bis Amt, Arbeit und Gesundheit. Jedes Wort mit Artikel, Plural, Übersetzung ins Englische und Beispielsatz, dazu Dialoge und Übungen.' },
-  { id: 'mikula-uk', img: 'assets/buecher/mikula-uk.jpg', title: 'Mikula sucht den Weg nach Hause – Deutsch–Ukrainisch', level: 'A1–B1', target: 'Alltag & DTZ', pages: 210, price: '16,99 €', amazon: '',
+  { id: 'mikula-uk', img: 'assets/buecher/mikula-uk.jpg', title: 'Mikula sucht den Weg nach Hause – Deutsch–Ukrainisch', level: 'A1–B1', target: 'Alltag & DTZ', pages: 210, price: '16,99 €', amazon: 'https://www.amazon.de/dp/B0HQY8C8RF',
     desc: 'Mikula kommt aus dem Jahr 1024 und muss im Deutschland von heute zurechtkommen. 6 Stationen aus dem Alltag, jede Geschichte in A1, A2 und B1, über 170 Übungen mit Lösungen und Hörtexte per QR-Code. Anleitungen und Grammatik auf Ukrainisch.' },
-  { id: 'mikula-ar', img: 'assets/buecher/mikula-ar.jpg', title: 'Mikula sucht den Weg nach Hause – Deutsch–Arabisch', level: 'A1–B1', target: 'Alltag & DTZ', pages: 224, price: '16,99 €', amazon: '',
+  { id: 'mikula-ar', img: 'assets/buecher/mikula-ar.jpg', title: 'Mikula sucht den Weg nach Hause – Deutsch–Arabisch', level: 'A1–B1', target: 'Alltag & DTZ', pages: 224, price: '16,99 €', amazon: 'https://www.amazon.de/dp/B0HQY345BC',
     desc: 'Mikula kommt aus dem Jahr 1024 und muss im Deutschland von heute zurechtkommen. 6 Stationen aus dem Alltag, jede Geschichte in A1, A2 und B1, über 170 Übungen mit Lösungen und Hörtexte per QR-Code. Anleitungen und Grammatik auf Arabisch.' }
 ];
 
