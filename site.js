@@ -895,7 +895,7 @@
     const sg = all[i], prev = all[i - 1], next = all[i + 1];
     const lyr = sg.lyrics.split('\n').map(l => { const m = l.match(/^\[(.+)\]$/); return m ? `<p class="dm-lyr-tag">${x(m[1].replace('Verse', 'Strophe').replace('Pre-Chorus', 'Vor-Refrain').replace('Chorus', 'Refrain').replace('Outro', 'Schluss').replace('Intro', 'Anfang'))}</p>` : l.trim() ? `<p>${x(l)}</p>` : ''; }).join('');
     const player = !sg.suno ? `<div class="dm-song-soon"><span aria-hidden="true">🎵</span><p><b>Die Aufnahme folgt in Kürze.</b> Den Text und die Aufgaben kannst du schon jetzt bearbeiten.</p></div>`
-      : sunoConsent() ? `<div class="dm-suno"><iframe src="https://suno.com/embed/${x(sg.suno)}" title="${x(sg.title)}" loading="lazy" allow="autoplay; encrypted-media"></iframe></div><p class="dm-small"><a href="https://suno.com/song/${x(sg.suno)}" target="_blank" rel="noopener noreferrer">Bei Suno öffnen ↗</a></p>`
+      : sunoConsent() ? `<div class="dm-suno"><iframe src="https://suno.com/embed/${x(sg.suno)}" title="${x(sg.title)}" loading="lazy" allow="autoplay; encrypted-media"></iframe></div><a class="dm-btn dm-btn-sun dm-pl-from" href="#lieder/playlist/alle/${x(sg.id)}">♫ Ab hier automatisch weiterhören</a><p class="dm-small"><a href="https://suno.com/song/${x(sg.suno)}" target="_blank" rel="noopener noreferrer">Bei Suno öffnen ↗</a></p>`
       : `<div class="dm-consent"><p><b>Das Lied wird von Suno geladen.</b> Beim Abspielen überträgt dein Browser Daten (zum Beispiel deine IP-Adresse) an Suno. Mehr in der <a href="#datenschutz">Datenschutzerklärung</a>.</p><div class="dm-row"><button type="button" class="dm-btn" id="dm-suno-ok">▶ Lied hier abspielen</button><a class="dm-btn dm-btn-quiet" href="https://suno.com/song/${x(sg.suno)}" target="_blank" rel="noopener noreferrer">Bei Suno öffnen ↗</a></div></div>`;
     const gap = sg.gap;
     page(`${crumbs([['Deutsch mit Liedern', '#lieder/' + sg.level], [sg.title]])}
@@ -930,13 +930,13 @@
   const mmss = t => `${Math.floor(t / 60)}:${String(Math.floor(t % 60)).padStart(2, '0')}`;
   let plTimer = null, plTimerWin = window;
   const plStop = () => { if (plTimer) plTimerWin.clearInterval(plTimer); plTimer = null; };
-  function songPlaylist(sel) {
+  function songPlaylist(sel, startId) {
     plStop();
     const filt = ['alle', ...SONG_LEVELS].includes(sel) ? sel : (mem.plLevel || 'alle');
     mem.plLevel = filt; save();
     const base = (DM.songs || []).filter(sg => sg.suno && (filt === 'alle' || sg.level === filt));
     let order = base.map((_, i) => i);
-    if (mem.plShuffle) for (let i = order.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [order[i], order[j]] = [order[j], order[i]]; }
+    if (mem.plShuffle && !startId) for (let i = order.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [order[i], order[j]] = [order[j], order[i]]; }
     const list = order.map(i => base[i]);
     const total = list.reduce((a, sg) => a + (SONG_SEC[sg.suno] || 200), 0);
     let cur = -1, left = 0, endAt = 0, paused = false, loading = false, tapped = false;
@@ -1007,6 +1007,8 @@
         if (left <= 0) play(cur + 1);
       }, 1000);
     };
+    const startK = startId ? list.findIndex(sg => sg.id === startId) : -1;
+    if (startK >= 0 && sunoConsent()) setTimeout(() => { play(startK); $('.dm-pl-player')?.scrollIntoView({ block: 'nearest', behavior: 'smooth' }); }, 50);
     $('#dm-pl-go').onclick = () => { mem.sunoConsent = true; save(); play(Math.max(0, cur)); $('.dm-pl-player').scrollIntoView({ block: 'nearest', behavior: 'smooth' }); };
     $('#dm-pl-next').onclick = () => { if (sunoConsent()) play(cur + 1); };
     $('#dm-pl-prev').onclick = () => { if (sunoConsent()) play(cur - 1); };
@@ -1727,7 +1729,7 @@
     kahoot: () => kahootPage(),
     lernstand: () => lernstand(),
     hallo: () => hallo(),
-    lieder: p => p[1] === 'playlist' ? songPlaylist(p[2]) : p[1] && !SONG_LEVELS.includes(p[1]) ? songPage(p[1]) : songsHub(p[1])
+    lieder: p => p[1] === 'playlist' ? songPlaylist(p[2], p[3]) : p[1] && !SONG_LEVELS.includes(p[1]) ? songPage(p[1]) : songsHub(p[1])
   };
   const ALIAS = { meinung: 'pinnwand', buch: 'lernen', themen: 'lernen', cover: '', praxis: 'ueben', pruefungen: 'pruefung', start: '' };
 

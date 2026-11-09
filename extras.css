@@ -1063,3 +1063,6 @@ main#main{overflow-x:clip} /* schwebende 3D-Bilder dürfen die Seite nicht seitl
 /* phones in landscape: the greeting popup is compact so it does not cover half of the screen */
 @media (orientation:landscape) and (max-height:520px){.dm-tour:not(.dm-tour-open){width:min(320px,48vw);padding:8px 12px}.dm-tour:not(.dm-tour-open) .dm-tour-ai,.dm-tour:not(.dm-tour-open) .dm-tour-intro img{display:none}.dm-tour:not(.dm-tour-open) .dm-tour-intro p{margin:0 0 4px;font-size:14px}}
 .dm-lp-t b,.dm-lp-t small{unicode-bidi:plaintext}
+
+/* song page: start the playlist from this song */
+.dm-pl-from{margin:12px 0 4px;min-height:48px}
