@@ -9,6 +9,7 @@ const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
 // Opens the 3D notebook inside `host` (full-size element). Returns a controller {goTo, dispose}.
 // With opts.renderer the notebook reuses an existing WebGL renderer (no second GPU context) and the caller calls tick() every frame.
 let CACHE = null; // built notebook kept between openings (same renderer, same progress)
+const SPOTS = new Map(); // click areas per page texture - module level, because the cached notebook is reused (before: empty after the first opening, so clicks did nothing)
 const K = Math.min(innerWidth, innerHeight) < 700 ? .75 : 1; // page texture scale on small screens
 export function progress() { // counts from the website's own memory (localStorage dmd.v1, same origin)
   let m = {}; try { m = JSON.parse(localStorage.getItem('dmd.v1') || '{}') || {}; } catch {}
@@ -19,7 +20,7 @@ export function progress() { // counts from the website's own memory (localStora
     sprechen: sub('ueben/sprechen', 3, true), schreiben: sub('ueben/schreiben', 3, true), spiele: sub('spiele'),
     lieder: Math.max(sub('lieder'), done('lied:')), pruefung: sub('simulation'), lid: sub('lid') + (v.includes('simulation/lid') ? 1 : 0) };
 }
-export async function openHeft(host, { onStage, maxStage = 4, renderer: shared = null } = {}) {
+export async function openHeft(host, { onStage, maxStage = 4, renderer: shared = null, onSound = null } = {}) {
 let canvas = null, renderer = shared;
 if (!shared) {
   canvas = document.createElement('canvas'); canvas.className = 'heft-canvas'; host.appendChild(canvas);
@@ -37,7 +38,6 @@ const rim = new THREE.DirectionalLight(0x9fb2ff, 1.2); rim.position.set(5, -2, -
 
 // ---------- helpers ----------
 const loadImg = src => new Promise(res => { const i = new Image(); i.onload = () => res(i); i.onerror = () => res(null); i.src = src; });
-const SPOTS = new Map();
 const spots = (t, list) => { SPOTS.set(t, list); return t; };
 const tex = c => { const t = new THREE.CanvasTexture(c); t.colorSpace = THREE.SRGBColorSpace; t.anisotropy = maxAniso; return t; };
 const clamp = (v, a, b) => Math.min(b, Math.max(a, v));
@@ -110,7 +110,7 @@ async function build() {
   sans(g, 'Ich bin Dennis.', p.x0, 360, 58);
   bullets(g, ['DaZ-Lehrer', 'Prüfer: DTZ, telc', 'Kostenlos lernen'], p.x0, 700, 48);
   hand(g, 'Viel Spaß beim Lernen!', p.x0, 1180, 80, C.rot, -0.03);
-  const insideCover = spots(tex(p.c), [[40, 40, 944, 1286, 'ueber-mich']]);
+  const insideCover = spots(tex(p.c), [[40, 40, 944, 1286, 'ueber-mich', 'Über Dennis']]);
 
   // Page 1 front (right, stage 1): Lektionen
   p = page('R'); g = p.g;
@@ -123,7 +123,7 @@ async function build() {
   });
   hand(g, 'Schritt für Schritt nach oben!', p.x0, 1040, 72, C.tinte, -0.03);
   icon(g, I.buecher, 700, 1120, 190, -.1);
-  const p1f = spots(tex(p.c), [[60, 960, 960, 110, 'lernweg'], [0, 0, 1024, 1366, 'lernen']]);
+  const p1f = spots(tex(p.c), [[90, 150, 640, 170, 'lernen', 'Lektionen'], [90, 520, 700, 420, 'lernen', 'Lektionen A1 bis B2'], [60, 980, 900, 130, 'lernweg', 'Mein Lernweg']]);
 
   // Page 1 back (left, stage 2): Hören & Lesen
   p = page('L'); g = p.g;
@@ -134,7 +134,7 @@ async function build() {
   marker(g, 'Lesen', p.x0, 820, 110); stick(g, P.lesen, p.x0, 895);
   icon(g, I.buecher, 640, 720, 210, -.1);
   bullets(g, ['Texte nach Niveau', 'mit Aufgaben'], p.x0, 980);
-  const p1b = spots(tex(p.c), [[0, 0, 1024, 700, 'hoeren'], [0, 700, 1024, 666, 'lesen']]);
+  const p1b = spots(tex(p.c), [[130, 150, 780, 520, 'hoeren', 'Hören'], [130, 720, 780, 420, 'lesen', 'Lesen']]);
 
   // Page 2 front (right, stage 2): Sprechen & Schreiben
   p = page('R'); g = p.g;
@@ -151,7 +151,7 @@ async function build() {
   sans(g, 'geschrieben.', p.x0 + 220, 900, 50, C.ink, 400);
   check(g, p.x0 + 560, 900, 70);
   hand(g, 'Schreib-Check hilft dir!', p.x0, 1120, 72, C.rot, -0.03);
-  const p2f = spots(tex(p.c), [[0, 0, 1024, 520, 'ueben/sprechen'], [0, 520, 1024, 846, 'ueben/schreiben']]);
+  const p2f = spots(tex(p.c), [[60, 150, 900, 430, 'ueben/sprechen', 'Sprechen'], [60, 590, 900, 560, 'ueben/schreiben', 'Schreiben']]);
 
   // Page 2 back (left, stage 3): Spiele
   p = page('L'); g = p.g;
@@ -166,8 +166,8 @@ async function build() {
   sans(g, '? Tisch', p.x0, 780, 66);
   hand(g, 'der Tisch', p.x0 + 320, 780, 80, C.gruen, -0.04); check(g, p.x0 + 640, 770, 60, C.gruen);
   bullets(g, ['Artikel & Verben', 'Zahlen & Uhrzeit', 'Jump’n’Run mit Lino'], p.x0, 960);
-  const p2b = spots(tex(p.c), [[140, 500, 760, 160, 'spiele/artikel'], [140, 700, 860, 110, 'spiele/artikel'], [140, 900, 860, 72, 'spiele/verben'],
-    [140, 984, 860, 72, 'spiele/zahlen'], [140, 1068, 860, 80, 'spiele/lino'], [0, 0, 1024, 1366, 'spiele']]);
+  const p2b = spots(tex(p.c), [[130, 150, 560, 170, 'spiele', 'Lernspiele'], [130, 500, 780, 310, 'spiele/artikel', 'der · die · das'], [130, 900, 880, 72, 'spiele/verben', 'Verben'],
+    [130, 984, 880, 72, 'spiele/zahlen', 'Zahlen'], [130, 1068, 880, 80, 'spiele/lino', 'Lino']]);
 
   // Page 3 front (right, stage 3): Lieder
   p = page('R'); g = p.g;
@@ -182,7 +182,7 @@ async function build() {
   });
   hand(g, 'Singen, verstehen, behalten.', p.x0, 760, 72, C.tinte, -0.03);
   bullets(g, ['Liedtext zum Mitlesen', 'zum Mitsingen', 'bis C1'], p.x0, 900);
-  const p3f = spots(tex(p.c), [[0, 0, 1024, 1366, 'lieder']]);
+  const p3f = spots(tex(p.c), [[60, 150, 900, 1150, 'lieder', 'Lieder']]);
 
   // Page 3 back (left, stage 4): Prüfung
   p = page('L'); g = p.g;
@@ -195,8 +195,8 @@ async function build() {
   });
   hand(g, 'bestanden!', p.x0 + 250, 1020, 130, C.rot, -0.12);
   g.strokeStyle = C.rot; g.lineWidth = 6; g.beginPath(); g.ellipse(p.x0 + 520, 980, 330, 110, -0.12, 0, 7); g.stroke();
-  const p3b = spots(tex(p.c), [[140, 395, 860, 100, 'simulation/dtz'], [140, 535, 860, 100, 'simulation/telc-b1'], [140, 675, 860, 100, 'simulation/dtb-b1'],
-    [140, 860, 880, 260, 'pruefung'], [0, 0, 1024, 1366, 'simulation']]);
+  const p3b = spots(tex(p.c), [[130, 150, 560, 170, 'simulation', 'Probeprüfungen'], [130, 395, 880, 100, 'simulation/dtz', 'DTZ'], [130, 535, 880, 100, 'simulation/telc-b1', 'telc B1 / B2'], [130, 675, 880, 100, 'simulation/dtb-b1', 'DTB B1 / B2'],
+    [130, 860, 880, 260, 'pruefung', 'Prüfungstraining']]);
 
   // Back cover inside (right, stage 4): Leben in Deutschland
   p = page('R'); g = p.g;
@@ -207,7 +207,7 @@ async function build() {
   bullets(g, ['Fragen üben', 'Test mit 33 Fragen'], p.x0, 560);
   hand(g, 'Los geht’s!', p.x0, 1080, 150, C.tinte, -0.06);
   check(g, p.x0 + 600, 1060, 110);
-  const backInside = spots(tex(p.c), [[60, 508, 900, 72, 'lid'], [60, 592, 900, 72, 'simulation/lid'], [60, 940, 940, 180, 'lernweg'], [40, 40, 944, 1286, 'lid']]);
+  const backInside = spots(tex(p.c), [[60, 150, 900, 330, 'lid', 'Leben in Deutschland'], [60, 508, 900, 72, 'lid', 'Fragen üben'], [60, 592, 900, 72, 'simulation/lid', 'Test mit 33 Fragen'], [60, 940, 940, 180, 'lernweg', 'Los geht\u2019s']]);
 
   // ---------- meshes ----------
   const book = new THREE.Group(); scene.add(book);
@@ -240,7 +240,7 @@ async function build() {
       pivot.add(new THREE.Mesh(geo, paperMat(bm, THREE.BackSide)));
       geo.userData.base = Float32Array.from(geo.attributes.position.array);
     }
-    leaves.push({ pivot, geo, zR, zL, t: 0 });
+    leaves.push({ pivot, geo, zR, zL, t: 0, front, back: backMap, xs: new Float32Array(29), zs: new Float32Array(29) });
   }
   addLeaf(coverTex, insideCover, true, 0.05, -0.05);
   addLeaf(p1f, p1b, false, 0.030, 0.012);
@@ -272,11 +272,11 @@ async function build() {
     floaters.add(s);
   });
 
-  return { book, leaves, floaters };
+  return { book, leaves, floaters, block, backInside };
 }
 
 // ---------- layout + animation ----------
-let stageTarget = 0, stage = 0, px = 0, py = 0, tpx = 0, tpy = 0, dist = 9, alive = true;
+let stageTarget = 0, stage = 0, px = 0, py = 0, tpx = 0, tpy = 0, dist = 9, alive = true, lastMs = performance.now();
 const onMove = e => { tpx = e.clientX / innerWidth - .5; tpy = e.clientY / innerHeight - .5; };
 addEventListener('pointermove', onMove, { passive: true });
 function resize() {
@@ -290,26 +290,44 @@ function resize() {
   camera.setViewOffset(w, h, 0, h / 2 - cy, w, h); camera.updateProjectionMatrix();
 }
 const ro = new ResizeObserver(resize); ro.observe(host); addEventListener('resize', resize);
-function bend(leaf, t) {
+const NSEG = 28;
+function bend(leaf, t) { // paper strip of 28 segments: the spine side follows, the free edge leads (lifted by a finger), always flat at rest
   if (!leaf.geo) return;
-  const pos = leaf.geo.attributes.position, base = leaf.geo.userData.base, k = Math.sin(t * Math.PI) * .55, w = W - .03;
-  for (let i = 0; i < pos.count; i++) { const x = base[i * 3]; pos.array[i * 3 + 2] = -k * (x / w) ** 2; }
-  pos.needsUpdate = true; leaf.geo.computeVertexNormals();
+  const pos = leaf.geo.attributes.position, w = W - .03, ds = w / NSEG, xs = leaf.xs, zs = leaf.zs;
+  const th = Math.PI * t, c = .75 * Math.sin(Math.PI * t);
+  let x = 0, z = 0; xs[0] = 0; zs[0] = 0;
+  for (let i = 1; i <= NSEG; i++) {
+    const a = Math.min(Math.PI, th + c * Math.pow((i - .5) / NSEG, 1.6));
+    x += Math.cos(a) * ds; z += Math.sin(a) * ds; xs[i] = x; zs[i] = z;
+  }
+  for (let r = 0; r < 2; r++) for (let i = 0; i <= NSEG; i++) { const k = (r * (NSEG + 1) + i) * 3; pos.array[k] = xs[i]; pos.array[k + 2] = zs[i]; }
+  pos.needsUpdate = true; leaf.geo.computeVertexNormals(); leaf.geo.computeBoundingSphere(); // bounds follow the bent page (needed for clicks and for the frustum culling)
 }
 const disposeBuilt = b => [b.book, b.floaters].forEach(r => r.traverse(o => { o.geometry && o.geometry.dispose(); [].concat(o.material || []).forEach(m => { m.map && m.map.dispose(); m.dispose(); }); }));
 const ckey = JSON.stringify(progress()) + K;
 let built;
 if (CACHE && CACHE.key === ckey && CACHE.renderer === renderer) built = CACHE.built;
 else { if (CACHE && CACHE.renderer === renderer) disposeBuilt(CACHE.built); built = await build(); if (shared) CACHE = { key: ckey, built, renderer }; }
-const { book, leaves, floaters } = built; scene.add(book); scene.add(floaters);
+const { book, leaves, floaters, block, backInside } = built; scene.add(book); scene.add(floaters);
+leaves.forEach(L => { L.prevT = undefined; }); // cached notebook: no sound for the jump into the start pose
 if (!alive) return null;
 resize();
 const clock = new THREE.Clock();
 const tick = () => {
-  const time = clock.getElapsedTime();
-  stage += (stageTarget - stage) * (reduced ? 1 : .09);
-  px += (tpx - px) * .05; py += (tpy - py) * .05;
-  leaves.forEach((L, i) => { const t = smooth(i + .1, i + .9, stage); bend(L, t); L.t = t; L.pivot.rotation.y = -t * Math.PI; L.pivot.position.z = THREE.MathUtils.lerp(L.zR, L.zL, t) + Math.sin(t * Math.PI) * .02; });
+  const time = clock.getElapsedTime(), now = performance.now(), dt = Math.min(.1, (now - lastMs) / 1000); lastMs = now;
+  const step = reduced ? 99 : 1.0 * dt; // one page per second, the same on every device
+  stage += clamp(stageTarget - stage, -step, step);
+  const k = 1 - Math.pow(1 - .05, dt * 60); px += (tpx - px) * k; py += (tpy - py) * k;
+  leaves.forEach((L, i) => {
+    const t = smooth(i + .1, i + .9, stage); bend(L, t);
+    if (onSound && L.prevT !== undefined) { // paper rustles when a page starts to turn, taps when it has landed
+      const p0 = L.prevT;
+      if ((p0 <= .001 && t > .001) || (p0 >= .999 && t < .999)) onSound('page');
+      else if ((p0 > .001 && t <= .001) || (p0 < .999 && t >= .999)) onSound('pagetap');
+    }
+    L.prevT = t; L.t = t; L.pivot.rotation.y = L.geo ? 0 : -t * Math.PI; // paper leaves bend (above), the stiff cover swings as a whole
+    L.pivot.position.z = THREE.MathUtils.lerp(L.zR, L.zL, t) + Math.sin(t * Math.PI) * .02;
+  });
   const open = leaves[0].t;
   book.position.x = -W / 2 * (1 - open);
   book.position.y = reduced ? 0 : Math.sin(time * .8) * .05;
@@ -321,8 +339,39 @@ const tick = () => {
   renderer.render(scene, camera);
 };
 if (!shared) renderer.setAnimationLoop(tick);
+const _v = new THREE.Vector3();
+function surf(kind, X, Y) { // texture pixel (X, Y) of a visible page surface -> client pixels
+  let w3;
+  if (kind.block) w3 = block.localToWorld(_v.set(X / 1024 * (W - .02), (.5 - Y / 1366) * (H - .02), .018));
+  else {
+    const L = kind.leaf, cover = !L.geo, w = cover ? W + .06 : W - .03, h = cover ? H + .08 : H - .04, u = kind.face === 'front' ? X / 1024 : 1 - X / 1024, y = (.5 - Y / 1366) * h;
+    if (cover) w3 = L.pivot.localToWorld(_v.set(u * w, y, kind.face === 'front' ? .015 : -.015));
+    else { const f = clamp(u, 0, 1) * NSEG, i = Math.min(NSEG - 1, Math.floor(f)), r = f - i; w3 = L.pivot.localToWorld(_v.set(L.xs[i] + (L.xs[i + 1] - L.xs[i]) * r, y, L.zs[i] + (L.zs[i + 1] - L.zs[i]) * r)); }
+  }
+  w3.project(camera); return [(w3.x + 1) / 2 * innerWidth, (1 - w3.y) / 2 * innerHeight];
+}
+const surfaceOf = (side, n) => side === 'R' ? (n === 0 ? { leaf: leaves[0], face: 'front', map: null } : n < leaves.length ? { leaf: leaves[n], face: 'front', map: leaves[n].front } : { block: true, map: backInside })
+  : (n >= 1 ? { leaf: leaves[n - 1], face: 'back', map: leaves[n - 1].back } : null);
 return {
   tick,
+  layout() { // where the click areas and the page-turn corners are on the screen right now (only meaningful once the page has settled)
+    const n = stageTarget, settled = Math.abs(stage - stageTarget) < .004 && !!shared;
+    const out = { settled, stage: n, max: maxStage, spots: [], next: null, prev: null };
+    if (!settled) return out;
+    camera.updateMatrixWorld(); book.updateMatrixWorld(true);
+    ['L', 'R'].forEach(side => {
+      const sf = surfaceOf(side, n); if (!sf) return;
+      (sf.map && SPOTS.get(sf.map) || []).forEach(([x, y, w, h, route, label]) => {
+        const a = surf(sf, x, y), b = surf(sf, x + w, y + h), c = surf(sf, x + w, y), d = surf(sf, x, y + h);
+        const xs = [a[0], b[0], c[0], d[0]], ys = [a[1], b[1], c[1], d[1]];
+        out.spots.push({ route, label, x: Math.min(...xs), y: Math.min(...ys), w: Math.max(...xs) - Math.min(...xs), h: Math.max(...ys) - Math.min(...ys) });
+      });
+    });
+    const sr = surfaceOf('R', n), sl = surfaceOf('L', n);
+    if (n < maxStage && sr) { const q = surf(sr, 1024 - 64, 1366 - 64); out.next = { x: q[0], y: q[1] }; }
+    if (n > 0 && sl) { const q = surf(sl, 64, 1366 - 64); out.prev = { x: q[0], y: q[1] }; }
+    return out;
+  },
   pick(clientX, clientY) {
     const ray = new THREE.Raycaster(), ndc = new THREE.Vector2(clientX / innerWidth * 2 - 1, -clientY / innerHeight * 2 + 1);
     camera.updateMatrixWorld(); ray.setFromCamera(ndc, camera);
@@ -340,6 +389,7 @@ return {
   },
   goTo(n) { stageTarget = clamp(Math.round(n), 0, maxStage); onStage && onStage(stageTarget); return stageTarget; },
   get stage() { return stageTarget; },
+  get pos() { return stage; }, // the animated position (for tests)
   dispose() {
     alive = false; ro.disconnect(); removeEventListener('pointermove', onMove); removeEventListener('resize', resize);
     // free GPU memory of the notebook scene
