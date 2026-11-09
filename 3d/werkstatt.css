@@ -355,3 +355,12 @@ body.night{background:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px
 /* (4) screen-reader only */
 .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 @media (min-width:901px) and (orientation:landscape){.info{top:80px;transform:none;max-height:calc(100vh - 96px);overflow-y:auto;scrollbar-width:thin}.info:has(.resume:not([hidden]))>p:not(.kicker){display:none}}
+
+/* Social links + share in the info panel */
+.soc3d{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:10px}
+.soc3d a,.soc3d .s-share{display:inline-flex;align-items:center;justify-content:center;gap:6px;min-width:44px;height:44px;border-radius:999px;border:2px solid var(--line);background:#fff;color:var(--ink);font:inherit;font-size:.88rem;font-weight:700;text-decoration:none;cursor:pointer}
+.soc3d a{width:44px}.soc3d .s-share{padding:0 14px}
+.soc3d .s-yt{color:#c4161c}.soc3d .s-ig{color:#c13584}.soc3d .s-tt{color:#111}
+.soc3d a:hover,.soc3d a:focus-visible,.soc3d .s-share:hover,.soc3d .s-share:focus-visible{background:var(--marker)}
+.soc3d .s-ok{font-size:.8rem;color:var(--muted)}
+body.touring .soc3d{display:none}
