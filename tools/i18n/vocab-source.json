@@ -1,0 +1,1962 @@
+[
+ {
+  "key": "Name",
+  "word": "der Name",
+  "pos": "Nomen",
+  "meaning": "So heißt eine Person.",
+  "example": "Mein Name ist Amir."
+ },
+ {
+  "key": "Vorname",
+  "word": "der Vorname",
+  "pos": "Nomen",
+  "meaning": "Der persönliche Name vor dem Familiennamen.",
+  "example": "Mein Vorname ist Sara."
+ },
+ {
+  "key": "Familienname",
+  "word": "der Familienname",
+  "pos": "Nomen",
+  "meaning": "Der Nachname einer Person.",
+  "example": "Mein Familienname ist Yilmaz."
+ },
+ {
+  "key": "Land",
+  "word": "das Land",
+  "pos": "Nomen",
+  "meaning": "Ein Gebiet mit einer Regierung und Grenzen.",
+  "example": "Deutschland ist ein Land in Europa."
+ },
+ {
+  "key": "Stadt",
+  "word": "die Stadt",
+  "pos": "Nomen",
+  "meaning": "Ein größerer Ort mit vielen Häusern.",
+  "example": "Ich wohne in einer kleinen Stadt."
+ },
+ {
+  "key": "Sprache",
+  "word": "die Sprache",
+  "pos": "Nomen",
+  "meaning": "Mit Sprache sprechen und schreiben Menschen miteinander.",
+  "example": "Ich lerne die deutsche Sprache."
+ },
+ {
+  "key": "Adresse",
+  "word": "die Adresse",
+  "pos": "Nomen",
+  "meaning": "Straße, Hausnummer und Ort einer Wohnung.",
+  "example": "Meine Adresse ist neu."
+ },
+ {
+  "key": "Beruf",
+  "word": "der Beruf",
+  "pos": "Nomen",
+  "meaning": "Eine Tätigkeit, die man gelernt hat oder als Arbeit macht.",
+  "example": "Mein Beruf ist Koch."
+ },
+ {
+  "key": "Brot",
+  "word": "das Brot",
+  "pos": "Nomen",
+  "meaning": "Ein Lebensmittel aus Mehl und Wasser.",
+  "example": "Ich kaufe ein Brot."
+ },
+ {
+  "key": "Milch",
+  "word": "die Milch",
+  "pos": "Nomen",
+  "meaning": "Ein Getränk, zum Beispiel von der Kuh.",
+  "example": "Die Milch steht im Kühlschrank."
+ },
+ {
+  "key": "Apfel",
+  "word": "der Apfel",
+  "pos": "Nomen",
+  "meaning": "Eine runde Frucht, oft rot oder grün.",
+  "example": "Ich esse einen Apfel."
+ },
+ {
+  "key": "Preis",
+  "word": "der Preis",
+  "pos": "Nomen",
+  "meaning": "So viel Geld kostet etwas.",
+  "example": "Der Preis ist niedrig."
+ },
+ {
+  "key": "Geld",
+  "word": "das Geld",
+  "pos": "Nomen",
+  "meaning": "Damit kann man bezahlen.",
+  "example": "Ich habe genug Geld."
+ },
+ {
+  "key": "Kasse",
+  "word": "die Kasse",
+  "pos": "Nomen",
+  "meaning": "Hier bezahlt man im Geschäft.",
+  "example": "Ich bezahle an der Kasse."
+ },
+ {
+  "key": "Tüte",
+  "word": "die Tüte",
+  "pos": "Nomen",
+  "meaning": "Ein Beutel zum Tragen von Waren.",
+  "example": "Ich brauche eine Tüte."
+ },
+ {
+  "key": "Gemüse",
+  "word": "das Gemüse",
+  "pos": "Nomen",
+  "meaning": "Pflanzen oder Pflanzenteile zum Essen, etwa Karotten.",
+  "example": "Das Gemüse ist frisch."
+ },
+ {
+  "key": "Termin",
+  "word": "der Termin",
+  "pos": "Nomen",
+  "meaning": "Eine vereinbarte Zeit für ein Treffen.",
+  "example": "Ich habe morgen einen Termin."
+ },
+ {
+  "key": "Tag",
+  "word": "der Tag",
+  "pos": "Nomen",
+  "meaning": "Ein Zeitraum von 24 Stunden.",
+  "example": "Heute ist ein schöner Tag."
+ },
+ {
+  "key": "Woche",
+  "word": "die Woche",
+  "pos": "Nomen",
+  "meaning": "Sieben Tage.",
+  "example": "Eine Woche hat sieben Tage."
+ },
+ {
+  "key": "Uhr",
+  "word": "die Uhr",
+  "pos": "Nomen",
+  "meaning": "Sie zeigt die Zeit.",
+  "example": "Die Uhr hängt an der Wand."
+ },
+ {
+  "key": "Minute",
+  "word": "die Minute",
+  "pos": "Nomen",
+  "meaning": "Eine Minute hat 60 Sekunden.",
+  "example": "Ich warte eine Minute."
+ },
+ {
+  "key": "Stunde",
+  "word": "die Stunde",
+  "pos": "Nomen",
+  "meaning": "Eine Stunde hat 60 Minuten.",
+  "example": "Der Kurs dauert eine Stunde."
+ },
+ {
+  "key": "Kalender",
+  "word": "der Kalender",
+  "pos": "Nomen",
+  "meaning": "Eine Übersicht über Tage und Monate.",
+  "example": "Der Termin steht im Kalender."
+ },
+ {
+  "key": "Pause",
+  "word": "die Pause",
+  "pos": "Nomen",
+  "meaning": "Eine kurze Zeit ohne Arbeit oder Unterricht.",
+  "example": "Wir machen eine Pause."
+ },
+ {
+  "key": "Wohnung",
+  "word": "die Wohnung",
+  "pos": "Nomen",
+  "meaning": "Räume, in denen jemand lebt.",
+  "example": "Unsere Wohnung hat drei Zimmer."
+ },
+ {
+  "key": "Zimmer",
+  "word": "das Zimmer",
+  "pos": "Nomen",
+  "meaning": "Ein einzelner Raum in einer Wohnung.",
+  "example": "Mein Zimmer ist hell."
+ },
+ {
+  "key": "Küche",
+  "word": "die Küche",
+  "pos": "Nomen",
+  "meaning": "Ein Raum zum Kochen.",
+  "example": "Wir essen in der Küche."
+ },
+ {
+  "key": "Bad",
+  "word": "das Bad",
+  "pos": "Nomen",
+  "meaning": "Ein Raum zum Waschen und Duschen.",
+  "example": "Das Bad ist klein."
+ },
+ {
+  "key": "Tisch",
+  "word": "der Tisch",
+  "pos": "Nomen",
+  "meaning": "Ein Möbelstück mit einer Fläche und Beinen.",
+  "example": "Das Buch liegt auf dem Tisch."
+ },
+ {
+  "key": "Stuhl",
+  "word": "der Stuhl",
+  "pos": "Nomen",
+  "meaning": "Ein Möbelstück zum Sitzen.",
+  "example": "Der Stuhl steht am Tisch."
+ },
+ {
+  "key": "Miete",
+  "word": "die Miete",
+  "pos": "Nomen",
+  "meaning": "Geld, das man regelmäßig für eine gemietete Wohnung zahlt.",
+  "example": "Die Miete ist hoch."
+ },
+ {
+  "key": "Schlüssel",
+  "word": "der Schlüssel",
+  "pos": "Nomen",
+  "meaning": "Damit öffnet und schließt man ein Schloss.",
+  "example": "Mein Schlüssel liegt auf dem Tisch."
+ },
+ {
+  "key": "Morgen",
+  "word": "der Morgen",
+  "pos": "Nomen",
+  "meaning": "Die frühe Zeit des Tages.",
+  "example": "Am Morgen trinke ich Tee."
+ },
+ {
+  "key": "Abend",
+  "word": "der Abend",
+  "pos": "Nomen",
+  "meaning": "Die Zeit zwischen Nachmittag und Nacht.",
+  "example": "Am Abend lese ich ein Buch."
+ },
+ {
+  "key": "Frühstück",
+  "word": "das Frühstück",
+  "pos": "Nomen",
+  "meaning": "Die erste Mahlzeit des Tages.",
+  "example": "Das Frühstück ist fertig."
+ },
+ {
+  "key": "Arbeit",
+  "word": "die Arbeit",
+  "pos": "Nomen",
+  "meaning": "Eine Tätigkeit, zum Beispiel im Beruf.",
+  "example": "Meine Arbeit beginnt um acht Uhr."
+ },
+ {
+  "key": "Familie",
+  "word": "die Familie",
+  "pos": "Nomen",
+  "meaning": "Menschen, die miteinander verwandt sind oder als Familie zusammenleben.",
+  "example": "Meine Familie wohnt hier."
+ },
+ {
+  "key": "Einkauf",
+  "word": "der Einkauf",
+  "pos": "Nomen",
+  "meaning": "Das Kaufen von Dingen; auch die gekauften Waren.",
+  "example": "Ich erledige den Einkauf."
+ },
+ {
+  "key": "Bus",
+  "word": "der Bus",
+  "pos": "Nomen",
+  "meaning": "Ein großes Fahrzeug für viele Fahrgäste.",
+  "example": "Der Bus kommt um neun Uhr."
+ },
+ {
+  "key": "Arzt",
+  "word": "der Arzt",
+  "pos": "Nomen",
+  "meaning": "Ein Mann, der kranke Menschen untersucht und behandelt.",
+  "example": "Der Arzt untersucht meinen Arm."
+ },
+ {
+  "key": "Ärztin",
+  "word": "die Ärztin",
+  "pos": "Nomen",
+  "meaning": "Eine Frau, die kranke Menschen untersucht und behandelt.",
+  "example": "Die Ärztin hilft mir."
+ },
+ {
+  "key": "Schmerz",
+  "word": "der Schmerz",
+  "pos": "Nomen",
+  "meaning": "Ein unangenehmes Gefühl im Körper.",
+  "example": "Ich habe Schmerzen im Rücken."
+ },
+ {
+  "key": "Apotheke",
+  "word": "die Apotheke",
+  "pos": "Nomen",
+  "meaning": "Ein Geschäft, in dem man Medikamente erhält.",
+  "example": "Ich hole die Tabletten in der Apotheke."
+ },
+ {
+  "key": "Tablette",
+  "word": "die Tablette",
+  "pos": "Nomen",
+  "meaning": "Ein festes Medikament zum Einnehmen.",
+  "example": "Ich nehme eine Tablette."
+ },
+ {
+  "key": "Kopf",
+  "word": "der Kopf",
+  "pos": "Nomen",
+  "meaning": "Der Körperteil mit Augen, Mund und Gehirn.",
+  "example": "Mein Kopf tut weh."
+ },
+ {
+  "key": "Rücken",
+  "word": "der Rücken",
+  "pos": "Nomen",
+  "meaning": "Die hintere Seite des Oberkörpers.",
+  "example": "Mein Rücken tut weh."
+ },
+ {
+  "key": "Haltestelle",
+  "word": "die Haltestelle",
+  "pos": "Nomen",
+  "meaning": "Hier hält ein Bus oder eine Straßenbahn.",
+  "example": "Wir warten an der Haltestelle."
+ },
+ {
+  "key": "Bahnhof",
+  "word": "der Bahnhof",
+  "pos": "Nomen",
+  "meaning": "Hier halten Züge.",
+  "example": "Der Bahnhof liegt im Zentrum."
+ },
+ {
+  "key": "Fahrkarte",
+  "word": "die Fahrkarte",
+  "pos": "Nomen",
+  "meaning": "Ein Ticket für Bus oder Bahn.",
+  "example": "Ich kaufe eine Fahrkarte."
+ },
+ {
+  "key": "Weg",
+  "word": "der Weg",
+  "pos": "Nomen",
+  "meaning": "Eine Strecke, die man gehen oder fahren kann.",
+  "example": "Der Weg ist kurz."
+ },
+ {
+  "key": "Straße",
+  "word": "die Straße",
+  "pos": "Nomen",
+  "meaning": "Ein Weg für Fahrzeuge und Menschen.",
+  "example": "Die Straße ist breit."
+ },
+ {
+  "key": "Kreuzung",
+  "word": "die Kreuzung",
+  "pos": "Nomen",
+  "meaning": "Hier treffen mehrere Straßen aufeinander.",
+  "example": "An der Kreuzung gehen Sie rechts."
+ },
+ {
+  "key": "Ampel",
+  "word": "die Ampel",
+  "pos": "Nomen",
+  "meaning": "Ein Lichtsignal, das den Verkehr regelt.",
+  "example": "Die Ampel ist rot."
+ },
+ {
+  "key": "Schule",
+  "word": "die Schule",
+  "pos": "Nomen",
+  "meaning": "Ein Ort, an dem Kinder und Jugendliche lernen.",
+  "example": "Die Schule beginnt um acht Uhr."
+ },
+ {
+  "key": "Kind",
+  "word": "das Kind",
+  "pos": "Nomen",
+  "meaning": "Ein junger Mensch.",
+  "example": "Mein Kind geht in die Schule."
+ },
+ {
+  "key": "Lehrerin",
+  "word": "die Lehrerin",
+  "pos": "Nomen",
+  "meaning": "Eine Frau, die unterrichtet.",
+  "example": "Die Lehrerin erklärt die Aufgabe."
+ },
+ {
+  "key": "Nachricht",
+  "word": "die Nachricht",
+  "pos": "Nomen",
+  "meaning": "Eine kurze Information für jemanden.",
+  "example": "Ich schreibe eine Nachricht."
+ },
+ {
+  "key": "Entschuldigung",
+  "word": "die Entschuldigung",
+  "pos": "Nomen",
+  "meaning": "Eine Bitte um Verzeihung oder eine Mitteilung über eine Abwesenheit.",
+  "example": "Ich schreibe eine Entschuldigung für mein Kind."
+ },
+ {
+  "key": "Aufgabe",
+  "word": "die Aufgabe",
+  "pos": "Nomen",
+  "meaning": "Etwas, das man bearbeiten oder erledigen soll.",
+  "example": "Die Aufgabe ist wichtig."
+ },
+ {
+  "key": "Heft",
+  "word": "das Heft",
+  "pos": "Nomen",
+  "meaning": "Zusammengebundene Papierseiten zum Schreiben.",
+  "example": "Ich schreibe den Satz ins Heft."
+ },
+ {
+  "key": "Frage",
+  "word": "die Frage",
+  "pos": "Nomen",
+  "meaning": "Damit möchte man etwas erfahren.",
+  "example": "Ich habe eine Frage."
+ },
+ {
+  "key": "Rechnung",
+  "word": "die Rechnung",
+  "pos": "Nomen",
+  "meaning": "Eine Aufstellung der Kosten.",
+  "example": "Ich prüfe die Rechnung."
+ },
+ {
+  "key": "Mangel",
+  "word": "der Mangel",
+  "pos": "Nomen",
+  "meaning": "Ein Fehler an einem Produkt oder einer Leistung.",
+  "example": "Der Mangel war schon bei der Lieferung vorhanden."
+ },
+ {
+  "key": "Ware",
+  "word": "die Ware",
+  "pos": "Nomen",
+  "meaning": "Ein Produkt, das verkauft wird.",
+  "example": "Die Ware ist beschädigt."
+ },
+ {
+  "key": "Ersatz",
+  "word": "der Ersatz",
+  "pos": "Nomen",
+  "meaning": "Etwas, das an die Stelle von etwas anderem tritt.",
+  "example": "Wir liefern kostenlosen Ersatz."
+ },
+ {
+  "key": "Lieferung",
+  "word": "die Lieferung",
+  "pos": "Nomen",
+  "meaning": "Das Bringen oder Versenden bestellter Waren.",
+  "example": "Die Lieferung kommt morgen an."
+ },
+ {
+  "key": "Frist",
+  "word": "die Frist",
+  "pos": "Nomen",
+  "meaning": "Ein festgelegter Zeitraum, in dem etwas erledigt werden muss.",
+  "example": "Die Frist endet am Freitag."
+ },
+ {
+  "key": "Lösung",
+  "word": "die Lösung",
+  "pos": "Nomen",
+  "meaning": "Ein Weg, ein Problem zu beheben.",
+  "example": "Wir suchen eine gemeinsame Lösung."
+ },
+ {
+  "key": "Meinung",
+  "word": "die Meinung",
+  "pos": "Nomen",
+  "meaning": "Was jemand über ein Thema denkt.",
+  "example": "Ich möchte meine Meinung erklären."
+ },
+ {
+  "key": "Vorteil",
+  "word": "der Vorteil",
+  "pos": "Nomen",
+  "meaning": "Ein positiver Punkt.",
+  "example": "Ein Vorteil ist der kurze Arbeitsweg."
+ },
+ {
+  "key": "Nachteil",
+  "word": "der Nachteil",
+  "pos": "Nomen",
+  "meaning": "Ein negativer Punkt.",
+  "example": "Ein Nachteil sind die hohen Kosten."
+ },
+ {
+  "key": "Grund",
+  "word": "der Grund",
+  "pos": "Nomen",
+  "meaning": "Die Ursache oder Begründung für etwas.",
+  "example": "Ich nenne einen Grund für meine Entscheidung."
+ },
+ {
+  "key": "Beispiel",
+  "word": "das Beispiel",
+  "pos": "Nomen",
+  "meaning": "Ein konkreter Fall, der etwas zeigt.",
+  "example": "Dieses Beispiel erklärt die Regel."
+ },
+ {
+  "key": "Erfahrung",
+  "word": "die Erfahrung",
+  "pos": "Nomen",
+  "meaning": "Wissen, das man durch Erlebnisse oder Arbeit gewinnt.",
+  "example": "Ich habe Erfahrung im Verkauf."
+ },
+ {
+  "key": "Entscheidung",
+  "word": "die Entscheidung",
+  "pos": "Nomen",
+  "meaning": "Die Wahl zwischen mehreren Möglichkeiten.",
+  "example": "Wir treffen die Entscheidung gemeinsam."
+ },
+ {
+  "key": "Vorschlag",
+  "word": "der Vorschlag",
+  "pos": "Nomen",
+  "meaning": "Eine Idee, was man tun könnte.",
+  "example": "Dein Vorschlag klingt gut."
+ },
+ {
+  "key": "Stelle",
+  "word": "die Stelle",
+  "pos": "Nomen",
+  "meaning": "Ein Arbeitsplatz bei einem Arbeitgeber.",
+  "example": "Ich suche eine Stelle im Büro."
+ },
+ {
+  "key": "Bewerbung",
+  "word": "die Bewerbung",
+  "pos": "Nomen",
+  "meaning": "Unterlagen oder ein Gespräch, mit denen man eine Stelle bekommen möchte.",
+  "example": "Ich schicke meine Bewerbung heute ab."
+ },
+ {
+  "key": "Lebenslauf",
+  "word": "der Lebenslauf",
+  "pos": "Nomen",
+  "meaning": "Eine Übersicht über Ausbildung und beruflichen Werdegang.",
+  "example": "Mein Lebenslauf ist aktuell."
+ },
+ {
+  "key": "Gespräch",
+  "word": "das Gespräch",
+  "pos": "Nomen",
+  "meaning": "Ein Austausch zwischen Menschen.",
+  "example": "Das Gespräch beginnt um zehn Uhr."
+ },
+ {
+  "key": "Ausbildung",
+  "word": "die Ausbildung",
+  "pos": "Nomen",
+  "meaning": "Das Erlernen eines Berufs.",
+  "example": "Ich habe meine Ausbildung abgeschlossen."
+ },
+ {
+  "key": "Team",
+  "word": "das Team",
+  "pos": "Nomen",
+  "meaning": "Eine Gruppe, die zusammenarbeitet.",
+  "example": "Unser Team plant das Projekt."
+ },
+ {
+  "key": "Ausflug",
+  "word": "der Ausflug",
+  "pos": "Nomen",
+  "meaning": "Eine kurze Reise zu einem Ziel.",
+  "example": "Wir planen einen Ausflug in den Park."
+ },
+ {
+  "key": "Treffen",
+  "word": "das Treffen",
+  "pos": "Nomen",
+  "meaning": "Eine Zusammenkunft von Menschen.",
+  "example": "Das Treffen findet am Montag statt."
+ },
+ {
+  "key": "Liste",
+  "word": "die Liste",
+  "pos": "Nomen",
+  "meaning": "Eine geordnete Sammlung von Einträgen.",
+  "example": "Ich schreibe eine Liste für den Einkauf."
+ },
+ {
+  "key": "Hilfe",
+  "word": "die Hilfe",
+  "pos": "Nomen",
+  "meaning": "Unterstützung für jemanden.",
+  "example": "Vielen Dank für deine Hilfe."
+ },
+ {
+  "key": "Jacke",
+  "word": "die Jacke",
+  "pos": "Nomen",
+  "meaning": "Ein Kleidungsstück für den Oberkörper mit einer Öffnung vorn.",
+  "example": "Die Frau trägt eine schwarze Jacke."
+ },
+ {
+  "key": "Hose",
+  "word": "die Hose",
+  "pos": "Nomen",
+  "meaning": "Ein Kleidungsstück für die Beine.",
+  "example": "Die Hose ist blau."
+ },
+ {
+  "key": "Pullover",
+  "word": "der Pullover",
+  "pos": "Nomen",
+  "meaning": "Ein Kleidungsstück für den Oberkörper, meist mit langen Ärmeln.",
+  "example": "Der Mann trägt einen roten Pullover."
+ },
+ {
+  "key": "Hemd",
+  "word": "das Hemd",
+  "pos": "Nomen",
+  "meaning": "Ein Kleidungsstück mit Kragen und Knöpfen.",
+  "example": "Er trägt ein weißes Hemd."
+ },
+ {
+  "key": "Schuh",
+  "word": "der Schuh",
+  "pos": "Nomen",
+  "meaning": "Ein Kleidungsstück für den Fuß.",
+  "example": "Der Schuh passt gut."
+ },
+ {
+  "key": "Größe",
+  "word": "die Größe",
+  "pos": "Nomen",
+  "meaning": "Ein Maß, zum Beispiel bei Kleidung.",
+  "example": "Welche Größe brauchen Sie?"
+ },
+ {
+  "key": "Farbe",
+  "word": "die Farbe",
+  "pos": "Nomen",
+  "meaning": "Zum Beispiel Rot, Grün oder Blau.",
+  "example": "Meine Lieblingsfarbe ist Blau."
+ },
+ {
+  "key": "Kleid",
+  "word": "das Kleid",
+  "pos": "Nomen",
+  "meaning": "Ein einteiliges Kleidungsstück mit Rockteil.",
+  "example": "Das Kleid ist elegant."
+ },
+ {
+  "key": "Qualifikation",
+  "word": "die Qualifikation",
+  "pos": "Nomen",
+  "meaning": "Kenntnisse und Fähigkeiten, die für eine Aufgabe erforderlich sind.",
+  "example": "Diese Qualifikation ist für die Stelle erforderlich."
+ },
+ {
+  "key": "Verantwortung",
+  "word": "die Verantwortung",
+  "pos": "Nomen",
+  "meaning": "Die Pflicht, für Aufgaben und Folgen einzustehen; meist im Singular.",
+  "example": "Ich übernehme Verantwortung für das Projekt."
+ },
+ {
+  "key": "Fähigkeit",
+  "word": "die Fähigkeit",
+  "pos": "Nomen",
+  "meaning": "Etwas, das jemand gut kann.",
+  "example": "Kommunikation ist eine wichtige Fähigkeit."
+ },
+ {
+  "key": "Weiterbildung",
+  "word": "die Weiterbildung",
+  "pos": "Nomen",
+  "meaning": "Lernen, mit dem man vorhandene Kenntnisse erweitert.",
+  "example": "Ich nehme an einer Weiterbildung teil."
+ },
+ {
+  "key": "Abteilung",
+  "word": "die Abteilung",
+  "pos": "Nomen",
+  "meaning": "Ein Teil eines Unternehmens mit bestimmten Aufgaben.",
+  "example": "Unsere Abteilung betreut die Kunden."
+ },
+ {
+  "key": "Beschwerde",
+  "word": "die Beschwerde",
+  "pos": "Nomen",
+  "meaning": "Eine Mitteilung, dass man unzufrieden ist.",
+  "example": "Wir reagieren auf Ihre Beschwerde."
+ },
+ {
+  "key": "Kunde",
+  "word": "der Kunde",
+  "pos": "Nomen",
+  "meaning": "Ein Mann, der Waren oder Dienstleistungen kauft.",
+  "example": "Wir beraten den Kunden ausführlich."
+ },
+ {
+  "key": "Kundin",
+  "word": "die Kundin",
+  "pos": "Nomen",
+  "meaning": "Eine Frau, die Waren oder Dienstleistungen kauft.",
+  "example": "Die Kundin bittet um einen Rückruf."
+ },
+ {
+  "key": "Rückmeldung",
+  "word": "die Rückmeldung",
+  "pos": "Nomen",
+  "meaning": "Eine Antwort oder Einschätzung.",
+  "example": "Vielen Dank für Ihre Rückmeldung."
+ },
+ {
+  "key": "Erstattung",
+  "word": "die Erstattung",
+  "pos": "Nomen",
+  "meaning": "Die Rückzahlung von Geld.",
+  "example": "Die Erstattung erfolgt in dieser Woche."
+ },
+ {
+  "key": "Maßnahme",
+  "word": "die Maßnahme",
+  "pos": "Nomen",
+  "meaning": "Eine konkrete Handlung, um ein Ziel zu erreichen.",
+  "example": "Die Maßnahme verbessert die Qualität."
+ },
+ {
+  "key": "Vereinbarung",
+  "word": "die Vereinbarung",
+  "pos": "Nomen",
+  "meaning": "Etwas, worauf sich Beteiligte verständigt haben.",
+  "example": "Wir halten die Vereinbarung schriftlich fest."
+ },
+ {
+  "key": "Betrieb",
+  "word": "der Betrieb",
+  "pos": "Nomen",
+  "meaning": "Ein Unternehmen oder eine Arbeitsstätte.",
+  "example": "Unser Betrieb bietet flexible Arbeitszeiten an."
+ },
+ {
+  "key": "Arbeitszeit",
+  "word": "die Arbeitszeit",
+  "pos": "Nomen",
+  "meaning": "Die Zeit, in der man arbeitet.",
+  "example": "Wir möchten die Arbeitszeit flexibler gestalten."
+ },
+ {
+  "key": "Regelung",
+  "word": "die Regelung",
+  "pos": "Nomen",
+  "meaning": "Eine verbindliche Festlegung.",
+  "example": "Die neue Regelung gilt ab Oktober."
+ },
+ {
+  "key": "Belastung",
+  "word": "die Belastung",
+  "pos": "Nomen",
+  "meaning": "Etwas, das anstrengend ist oder Druck verursacht.",
+  "example": "Die hohe Belastung führt zu Fehlern."
+ },
+ {
+  "key": "Kompromiss",
+  "word": "der Kompromiss",
+  "pos": "Nomen",
+  "meaning": "Eine Einigung, bei der alle Seiten etwas nachgeben.",
+  "example": "Wir haben einen fairen Kompromiss gefunden."
+ },
+ {
+  "key": "Zustimmung",
+  "word": "die Zustimmung",
+  "pos": "Nomen",
+  "meaning": "Das Einverständnis mit einem Vorschlag.",
+  "example": "Der Vorschlag findet meine Zustimmung."
+ },
+ {
+  "key": "Umsetzung",
+  "word": "die Umsetzung",
+  "pos": "Nomen",
+  "meaning": "Das Überführen eines Plans in die Praxis.",
+  "example": "Die Umsetzung beginnt nächste Woche."
+ },
+ {
+  "key": "Ziel",
+  "word": "das Ziel",
+  "pos": "Nomen",
+  "meaning": "Ein Ergebnis, das man erreichen möchte.",
+  "example": "Unser Ziel ist eine pünktliche Lieferung."
+ },
+ {
+  "key": "Ursache",
+  "word": "die Ursache",
+  "pos": "Nomen",
+  "meaning": "Der Auslöser eines Problems oder Ereignisses.",
+  "example": "Wir untersuchen die Ursache des Fehlers."
+ },
+ {
+  "key": "Zuständigkeit",
+  "word": "die Zuständigkeit",
+  "pos": "Nomen",
+  "meaning": "Die Zuordnung von Aufgaben und Verantwortung.",
+  "example": "Die Zuständigkeit muss klar sein."
+ },
+ {
+  "key": "Ablauf",
+  "word": "der Ablauf",
+  "pos": "Nomen",
+  "meaning": "Die Reihenfolge einzelner Schritte.",
+  "example": "Wir verbessern den Ablauf."
+ },
+ {
+  "key": "Qualität",
+  "word": "die Qualität",
+  "pos": "Nomen",
+  "meaning": "Die Beschaffenheit oder Güte von etwas.",
+  "example": "Wir überprüfen die Qualität regelmäßig."
+ },
+ {
+  "key": "heißen",
+  "word": "heißen",
+  "pos": "Verb",
+  "meaning": "Einen Namen haben.",
+  "example": "Ich heiße Sara."
+ },
+ {
+  "key": "kommen",
+  "word": "kommen",
+  "pos": "Verb",
+  "meaning": "Sich zu einem Ort bewegen oder von dort stammen.",
+  "example": "Ich komme aus der Türkei."
+ },
+ {
+  "key": "wohnen",
+  "word": "wohnen",
+  "pos": "Verb",
+  "meaning": "Seinen Wohnort haben.",
+  "example": "Ich wohne in der Stadt."
+ },
+ {
+  "key": "sprechen",
+  "word": "sprechen",
+  "pos": "Verb",
+  "meaning": "Wörter laut sagen und sich verständigen.",
+  "example": "Ich spreche mit meiner Lehrerin."
+ },
+ {
+  "key": "lernen",
+  "word": "lernen",
+  "pos": "Verb",
+  "meaning": "Sich neues Wissen oder eine Fähigkeit aneignen.",
+  "example": "Ich lerne jeden Tag Deutsch."
+ },
+ {
+  "key": "sein",
+  "word": "sein",
+  "pos": "Verb",
+  "meaning": "Eine Eigenschaft, Identität oder einen Zustand ausdrücken.",
+  "example": "Ich bin neu im Kurs."
+ },
+ {
+  "key": "kaufen",
+  "word": "kaufen",
+  "pos": "Verb",
+  "meaning": "Geld geben und dafür etwas erhalten.",
+  "example": "Ich kaufe einen Apfel."
+ },
+ {
+  "key": "bezahlen",
+  "word": "bezahlen",
+  "pos": "Verb",
+  "meaning": "Geld für etwas geben.",
+  "example": "Ich bezahle die Rechnung."
+ },
+ {
+  "key": "brauchen",
+  "word": "brauchen",
+  "pos": "Verb",
+  "meaning": "Etwas nötig haben.",
+  "example": "Ich brauche eine Tüte."
+ },
+ {
+  "key": "kosten",
+  "word": "kosten",
+  "pos": "Verb",
+  "meaning": "Einen bestimmten Preis haben.",
+  "example": "Das Brot kostet drei Euro."
+ },
+ {
+  "key": "essen",
+  "word": "essen",
+  "pos": "Verb",
+  "meaning": "Nahrung zu sich nehmen.",
+  "example": "Ich esse einen Apfel."
+ },
+ {
+  "key": "nehmen",
+  "word": "nehmen",
+  "pos": "Verb",
+  "meaning": "Etwas greifen, auswählen oder einnehmen.",
+  "example": "Ich nehme eine Tablette."
+ },
+ {
+  "key": "haben",
+  "word": "haben",
+  "pos": "Verb",
+  "meaning": "Etwas besitzen oder über etwas verfügen.",
+  "example": "Ich habe heute einen Termin."
+ },
+ {
+  "key": "beginnen",
+  "word": "beginnen",
+  "pos": "Verb",
+  "meaning": "Mit etwas anfangen.",
+  "example": "Der Kurs beginnt um neun Uhr."
+ },
+ {
+  "key": "dauern",
+  "word": "dauern",
+  "pos": "Verb",
+  "meaning": "Eine bestimmte Zeit benötigen; meist es dauert.",
+  "example": "Der Kurs dauert eine Stunde."
+ },
+ {
+  "key": "warten",
+  "word": "warten",
+  "pos": "Verb",
+  "meaning": "An einem Ort bleiben, bis etwas geschieht.",
+  "example": "Ich warte auf den Bus."
+ },
+ {
+  "key": "fragen",
+  "word": "fragen",
+  "pos": "Verb",
+  "meaning": "Eine Antwort oder Information erhalten wollen.",
+  "example": "Ich frage die Lehrerin nach dem Termin."
+ },
+ {
+  "key": "vereinbaren",
+  "word": "vereinbaren",
+  "pos": "Verb",
+  "meaning": "Gemeinsam etwas verbindlich festlegen.",
+  "example": "Ich vereinbare einen Termin mit der Ärztin."
+ },
+ {
+  "key": "suchen",
+  "word": "suchen",
+  "pos": "Verb",
+  "meaning": "Versuchen, etwas oder jemanden zu finden.",
+  "example": "Ich suche eine Wohnung."
+ },
+ {
+  "key": "finden",
+  "word": "finden",
+  "pos": "Verb",
+  "meaning": "Etwas Gesuchtes entdecken.",
+  "example": "Ich finde den Schlüssel."
+ },
+ {
+  "key": "öffnen",
+  "word": "öffnen",
+  "pos": "Verb",
+  "meaning": "Etwas aufmachen.",
+  "example": "Ich öffne das Fenster."
+ },
+ {
+  "key": "schließen",
+  "word": "schließen",
+  "pos": "Verb",
+  "meaning": "Etwas zumachen.",
+  "example": "Ich schließe die Tür."
+ },
+ {
+  "key": "putzen",
+  "word": "putzen",
+  "pos": "Verb",
+  "meaning": "Etwas sauber machen.",
+  "example": "Ich putze das Bad."
+ },
+ {
+  "key": "aufstehen",
+  "word": "aufstehen",
+  "pos": "Verb",
+  "meaning": "Das Bett oder einen Sitzplatz verlassen.",
+  "example": "Ich stehe um sieben Uhr auf."
+ },
+ {
+  "key": "arbeiten",
+  "word": "arbeiten",
+  "pos": "Verb",
+  "meaning": "Eine berufliche Tätigkeit oder Aufgabe ausführen.",
+  "example": "Ich arbeite als Koch."
+ },
+ {
+  "key": "kochen",
+  "word": "kochen",
+  "pos": "Verb",
+  "meaning": "Essen mit Wärme zubereiten.",
+  "example": "Ich koche eine Suppe."
+ },
+ {
+  "key": "fahren",
+  "word": "fahren",
+  "pos": "Verb",
+  "meaning": "Sich mit einem Fahrzeug fortbewegen.",
+  "example": "Ich fahre mit dem Bus."
+ },
+ {
+  "key": "einkaufen",
+  "word": "einkaufen",
+  "pos": "Verb",
+  "meaning": "Waren für den eigenen Bedarf kaufen.",
+  "example": "Ich kaufe am Samstag ein."
+ },
+ {
+  "key": "helfen",
+  "word": "helfen",
+  "pos": "Verb",
+  "meaning": "Jemanden unterstützen.",
+  "example": "Die Ärztin hilft mir."
+ },
+ {
+  "key": "sollen",
+  "word": "sollen",
+  "pos": "Verb",
+  "meaning": "Einen Auftrag oder Rat wiedergeben.",
+  "example": "Ich soll mehr Wasser trinken."
+ },
+ {
+  "key": "müssen",
+  "word": "müssen",
+  "pos": "Verb",
+  "meaning": "Eine Notwendigkeit ausdrücken.",
+  "example": "Ich muss heute zum Arzt gehen."
+ },
+ {
+  "key": "trinken",
+  "word": "trinken",
+  "pos": "Verb",
+  "meaning": "Flüssigkeit zu sich nehmen.",
+  "example": "Ich trinke viel Wasser."
+ },
+ {
+  "key": "fehlen",
+  "word": "fehlen",
+  "pos": "Verb",
+  "meaning": "Nicht da sein oder vermisst werden.",
+  "example": "Mein Kind fehlt heute in der Schule."
+ },
+ {
+  "key": "aussteigen",
+  "word": "aussteigen",
+  "pos": "Verb",
+  "meaning": "Ein Fahrzeug verlassen.",
+  "example": "Ich steige aus dem Bus aus."
+ },
+ {
+  "key": "umsteigen",
+  "word": "umsteigen",
+  "pos": "Verb",
+  "meaning": "Das Verkehrsmittel wechseln.",
+  "example": "Ich steige in den Zug um."
+ },
+ {
+  "key": "gehen",
+  "word": "gehen",
+  "pos": "Verb",
+  "meaning": "Sich zu Fuß fortbewegen.",
+  "example": "Ich gehe zur Schule."
+ },
+ {
+  "key": "zeigen",
+  "word": "zeigen",
+  "pos": "Verb",
+  "meaning": "Etwas sichtbar oder verständlich machen.",
+  "example": "Ich zeige Ihnen den Weg."
+ },
+ {
+  "key": "schreiben",
+  "word": "schreiben",
+  "pos": "Verb",
+  "meaning": "Wörter und Sätze schriftlich festhalten.",
+  "example": "Ich schreibe der Lehrerin eine Nachricht."
+ },
+ {
+  "key": "erklären",
+  "word": "erklären",
+  "pos": "Verb",
+  "meaning": "Etwas verständlich machen.",
+  "example": "Die Lehrerin erklärt mir die Aufgabe."
+ },
+ {
+  "key": "entschuldigen",
+  "word": "entschuldigen",
+  "pos": "Verb",
+  "meaning": "Um Verständnis für einen Fehler oder eine Abwesenheit bitten.",
+  "example": "Ich entschuldige mein Kind für heute."
+ },
+ {
+  "key": "bitten",
+  "word": "bitten",
+  "pos": "Verb",
+  "meaning": "Einen Wunsch höflich äußern.",
+  "example": "Ich bitte die Lehrerin um Hilfe."
+ },
+ {
+  "key": "reklamieren",
+  "word": "reklamieren",
+  "pos": "Verb",
+  "meaning": "Einen Mangel melden und Abhilfe verlangen.",
+  "example": "Ich reklamiere die beschädigte Ware."
+ },
+ {
+  "key": "umtauschen",
+  "word": "umtauschen",
+  "pos": "Verb",
+  "meaning": "Eine Ware gegen eine andere austauschen.",
+  "example": "Ich tausche die Jacke gegen eine größere Jacke um."
+ },
+ {
+  "key": "prüfen",
+  "word": "prüfen",
+  "pos": "Verb",
+  "meaning": "Etwas genau kontrollieren.",
+  "example": "Wir prüfen die Rechnung auf Fehler."
+ },
+ {
+  "key": "liefern",
+  "word": "liefern",
+  "pos": "Verb",
+  "meaning": "Eine bestellte Ware bringen.",
+  "example": "Wir liefern Ihnen die Ware am Freitag."
+ },
+ {
+  "key": "erwarten",
+  "word": "erwarten",
+  "pos": "Verb",
+  "meaning": "Mit etwas rechnen oder etwas verlangen.",
+  "example": "Ich erwarte eine schnelle Lösung."
+ },
+ {
+  "key": "meinen",
+  "word": "meinen",
+  "pos": "Verb",
+  "meaning": "Eine Meinung ausdrücken oder etwas sagen wollen.",
+  "example": "Ich meine, dass der Vorschlag sinnvoll ist."
+ },
+ {
+  "key": "begründen",
+  "word": "begründen",
+  "pos": "Verb",
+  "meaning": "Gründe für eine Aussage nennen.",
+  "example": "Ich begründe meine Meinung mit einem Beispiel."
+ },
+ {
+  "key": "zustimmen",
+  "word": "zustimmen",
+  "pos": "Verb",
+  "meaning": "Sagen, dass man derselben Meinung ist.",
+  "example": "Ich stimme Ihrem Vorschlag zu."
+ },
+ {
+  "key": "ablehnen",
+  "word": "ablehnen",
+  "pos": "Verb",
+  "meaning": "Einen Vorschlag oder eine Bitte nicht annehmen.",
+  "example": "Ich lehne den Vorschlag ab."
+ },
+ {
+  "key": "diskutieren",
+  "word": "diskutieren",
+  "pos": "Verb",
+  "meaning": "Verschiedene Meinungen zu einem Thema austauschen.",
+  "example": "Wir diskutieren über die Arbeitszeit."
+ },
+ {
+  "key": "vergleichen",
+  "word": "vergleichen",
+  "pos": "Verb",
+  "meaning": "Gemeinsamkeiten und Unterschiede untersuchen.",
+  "example": "Wir vergleichen den Vorschlag mit einer Alternative."
+ },
+ {
+  "key": "sich bewerben",
+  "word": "sich bewerben",
+  "pos": "Verb",
+  "meaning": "Sich um einen Arbeitsplatz bemühen.",
+  "example": "Ich bewerbe mich um eine Stelle im Büro."
+ },
+ {
+  "key": "vorbereiten",
+  "word": "vorbereiten",
+  "pos": "Verb",
+  "meaning": "Etwas für einen späteren Zweck fertig machen.",
+  "example": "Ich bereite das Gespräch vor."
+ },
+ {
+  "key": "verdienen",
+  "word": "verdienen",
+  "pos": "Verb",
+  "meaning": "Geld für Arbeit bekommen.",
+  "example": "Ich verdiene mein Geld im Verkauf."
+ },
+ {
+  "key": "planen",
+  "word": "planen",
+  "pos": "Verb",
+  "meaning": "Überlegen, wie man etwas durchführen möchte.",
+  "example": "Wir planen einen Ausflug."
+ },
+ {
+  "key": "vorschlagen",
+  "word": "vorschlagen",
+  "pos": "Verb",
+  "meaning": "Eine Idee anbieten.",
+  "example": "Ich schlage einen Ausflug in den Park vor."
+ },
+ {
+  "key": "mitbringen",
+  "word": "mitbringen",
+  "pos": "Verb",
+  "meaning": "Etwas zu einem Treffen mitnehmen.",
+  "example": "Ich bringe einen Kuchen mit."
+ },
+ {
+  "key": "organisieren",
+  "word": "organisieren",
+  "pos": "Verb",
+  "meaning": "Etwas planen und dafür sorgen, dass es stattfindet.",
+  "example": "Wir organisieren das Treffen gemeinsam."
+ },
+ {
+  "key": "tragen",
+  "word": "tragen",
+  "pos": "Verb",
+  "meaning": "Etwas am Körper haben oder transportieren.",
+  "example": "Der Mann trägt einen roten Pullover."
+ },
+ {
+  "key": "passen",
+  "word": "passen",
+  "pos": "Verb",
+  "meaning": "Die richtige Größe haben oder geeignet sein.",
+  "example": "Die Jacke passt mir gut."
+ },
+ {
+  "key": "anprobieren",
+  "word": "anprobieren",
+  "pos": "Verb",
+  "meaning": "Kleidung zum Prüfen der Größe anziehen.",
+  "example": "Ich probiere die blaue Hose an."
+ },
+ {
+  "key": "aussehen",
+  "word": "aussehen",
+  "pos": "Verb",
+  "meaning": "Einen bestimmten Eindruck machen.",
+  "example": "Die Jacke sieht elegant aus."
+ },
+ {
+  "key": "beschreiben",
+  "word": "beschreiben",
+  "pos": "Verb",
+  "meaning": "Mit Worten darstellen, wie etwas ist.",
+  "example": "Ich beschreibe die Kleidung der Frau."
+ },
+ {
+  "key": "übernehmen",
+  "word": "übernehmen",
+  "pos": "Verb",
+  "meaning": "Eine Aufgabe oder Verantwortung auf sich nehmen.",
+  "example": "Ich übernehme die Verantwortung für das Projekt."
+ },
+ {
+  "key": "verfügen",
+  "word": "verfügen",
+  "pos": "Verb",
+  "meaning": "Etwas besitzen und einsetzen können.",
+  "example": "Ich verfüge über Erfahrung im Verkauf."
+ },
+ {
+  "key": "teilnehmen",
+  "word": "teilnehmen",
+  "pos": "Verb",
+  "meaning": "Bei einer Veranstaltung mitmachen.",
+  "example": "Ich nehme an einer Weiterbildung teil."
+ },
+ {
+  "key": "überzeugen",
+  "word": "überzeugen",
+  "pos": "Verb",
+  "meaning": "Jemanden dazu bringen, eine Ansicht für richtig zu halten.",
+  "example": "Ich überzeuge das Team von meinem Vorschlag."
+ },
+ {
+  "key": "reagieren",
+  "word": "reagieren",
+  "pos": "Verb",
+  "meaning": "Als Antwort auf etwas handeln.",
+  "example": "Wir reagieren sofort auf Ihre Beschwerde."
+ },
+ {
+  "key": "erstatten",
+  "word": "erstatten",
+  "pos": "Verb",
+  "meaning": "Gezahltes Geld zurückgeben.",
+  "example": "Wir erstatten Ihnen die Kosten."
+ },
+ {
+  "key": "bearbeiten",
+  "word": "bearbeiten",
+  "pos": "Verb",
+  "meaning": "Sich mit einer Aufgabe oder Anfrage beschäftigen.",
+  "example": "Wir bearbeiten Ihre Beschwerde heute."
+ },
+ {
+  "key": "vermeiden",
+  "word": "vermeiden",
+  "pos": "Verb",
+  "meaning": "Dafür sorgen, dass etwas nicht passiert.",
+  "example": "Wir vermeiden unnötige Fehler."
+ },
+ {
+  "key": "berücksichtigen",
+  "word": "berücksichtigen",
+  "pos": "Verb",
+  "meaning": "Etwas in die Überlegungen einbeziehen.",
+  "example": "Wir berücksichtigen Ihre Wünsche bei der Planung."
+ },
+ {
+  "key": "ermöglichen",
+  "word": "ermöglichen",
+  "pos": "Verb",
+  "meaning": "Die Voraussetzungen für etwas schaffen.",
+  "example": "Die Regelung ermöglicht uns flexible Arbeitszeiten."
+ },
+ {
+  "key": "verbessern",
+  "word": "verbessern",
+  "pos": "Verb",
+  "meaning": "Etwas besser machen.",
+  "example": "Wir verbessern die Qualität unserer Arbeit."
+ },
+ {
+  "key": "umsetzen",
+  "word": "umsetzen",
+  "pos": "Verb",
+  "meaning": "Einen Plan in die Praxis überführen.",
+  "example": "Wir setzen die Maßnahme sofort um."
+ },
+ {
+  "key": "festlegen",
+  "word": "festlegen",
+  "pos": "Verb",
+  "meaning": "Etwas verbindlich bestimmen.",
+  "example": "Wir legen die Frist gemeinsam fest."
+ },
+ {
+  "key": "lösen",
+  "word": "lösen",
+  "pos": "Verb",
+  "meaning": "Ein Problem beseitigen.",
+  "example": "Wir lösen das Problem gemeinsam."
+ },
+ {
+  "key": "kontrollieren",
+  "word": "kontrollieren",
+  "pos": "Verb",
+  "meaning": "Prüfen, ob etwas richtig funktioniert.",
+  "example": "Wir kontrollieren den Ablauf regelmäßig."
+ },
+ {
+  "key": "neu",
+  "word": "neu",
+  "pos": "Adjektiv",
+  "meaning": "Erst seit kurzer Zeit vorhanden.",
+  "example": "Ich bin neu im Kurs."
+ },
+ {
+  "key": "alt",
+  "word": "alt",
+  "pos": "Adjektiv",
+  "meaning": "Schon lange vorhanden oder nicht mehr jung.",
+  "example": "Das Haus ist alt."
+ },
+ {
+  "key": "jung",
+  "word": "jung",
+  "pos": "Adjektiv",
+  "meaning": "Noch nicht lange am Leben.",
+  "example": "Mein Bruder ist jung."
+ },
+ {
+  "key": "freundlich",
+  "word": "freundlich",
+  "pos": "Adjektiv",
+  "meaning": "Nett und zugewandt im Umgang mit anderen.",
+  "example": "Die Lehrerin ist freundlich."
+ },
+ {
+  "key": "gut",
+  "word": "gut",
+  "pos": "Adjektiv",
+  "meaning": "Von positiver Qualität.",
+  "example": "Mein Deutsch ist gut."
+ },
+ {
+  "key": "international",
+  "word": "international",
+  "pos": "Adjektiv",
+  "meaning": "Mehrere Länder betreffend.",
+  "example": "Unser Kurs ist international."
+ },
+ {
+  "key": "frisch",
+  "word": "frisch",
+  "pos": "Adjektiv",
+  "meaning": "Vor kurzer Zeit hergestellt oder geerntet.",
+  "example": "Das Gemüse ist frisch."
+ },
+ {
+  "key": "teuer",
+  "word": "teuer",
+  "pos": "Adjektiv",
+  "meaning": "Viel Geld kostend.",
+  "example": "Die Milch ist teuer."
+ },
+ {
+  "key": "günstig",
+  "word": "günstig",
+  "pos": "Adjektiv",
+  "meaning": "Preiswert oder vorteilhaft.",
+  "example": "Das Brot ist günstig."
+ },
+ {
+  "key": "süß",
+  "word": "süß",
+  "pos": "Adjektiv",
+  "meaning": "Wie Zucker schmeckend.",
+  "example": "Der Apfel ist süß."
+ },
+ {
+  "key": "lecker",
+  "word": "lecker",
+  "pos": "Adjektiv",
+  "meaning": "Gut schmeckend.",
+  "example": "Das Brot ist lecker."
+ },
+ {
+  "key": "billig",
+  "word": "billig",
+  "pos": "Adjektiv",
+  "meaning": "Wenig Geld kostend; manchmal auch minderwertig gemeint.",
+  "example": "Die Tüte ist billig."
+ },
+ {
+  "key": "pünktlich",
+  "word": "pünktlich",
+  "pos": "Adjektiv",
+  "meaning": "Zur vereinbarten Zeit.",
+  "example": "Ich bin immer pünktlich."
+ },
+ {
+  "key": "früh",
+  "word": "früh",
+  "pos": "Adjektiv",
+  "meaning": "Am Anfang eines Zeitraums.",
+  "example": "Der Termin ist früh am Morgen."
+ },
+ {
+  "key": "spät",
+  "word": "spät",
+  "pos": "Adjektiv",
+  "meaning": "Am Ende eines Zeitraums.",
+  "example": "Es ist schon spät."
+ },
+ {
+  "key": "frei",
+  "word": "frei",
+  "pos": "Adjektiv",
+  "meaning": "Nicht belegt oder verfügbar.",
+  "example": "Der Termin ist noch frei."
+ },
+ {
+  "key": "kurz",
+  "word": "kurz",
+  "pos": "Adjektiv",
+  "meaning": "Von geringer Dauer oder Länge.",
+  "example": "Die Pause ist kurz."
+ },
+ {
+  "key": "lang",
+  "word": "lang",
+  "pos": "Adjektiv",
+  "meaning": "Von großer Dauer oder Länge.",
+  "example": "Der Tag ist lang."
+ },
+ {
+  "key": "groß",
+  "word": "groß",
+  "pos": "Adjektiv",
+  "meaning": "Von beträchtlicher Größe.",
+  "example": "Die Wohnung ist groß."
+ },
+ {
+  "key": "klein",
+  "word": "klein",
+  "pos": "Adjektiv",
+  "meaning": "Von geringer Größe.",
+  "example": "Das Bad ist klein."
+ },
+ {
+  "key": "hell",
+  "word": "hell",
+  "pos": "Adjektiv",
+  "meaning": "Mit viel Licht.",
+  "example": "Das Zimmer ist hell."
+ },
+ {
+  "key": "dunkel",
+  "word": "dunkel",
+  "pos": "Adjektiv",
+  "meaning": "Mit wenig Licht.",
+  "example": "Die Küche ist dunkel."
+ },
+ {
+  "key": "ruhig",
+  "word": "ruhig",
+  "pos": "Adjektiv",
+  "meaning": "Ohne viel Lärm oder Aufregung.",
+  "example": "Die Wohnung ist ruhig."
+ },
+ {
+  "key": "sauber",
+  "word": "sauber",
+  "pos": "Adjektiv",
+  "meaning": "Ohne Schmutz.",
+  "example": "Das Bad ist sauber."
+ },
+ {
+  "key": "müde",
+  "word": "müde",
+  "pos": "Adjektiv",
+  "meaning": "Schlaf oder Ruhe brauchend.",
+  "example": "Ich bin am Abend müde."
+ },
+ {
+  "key": "wach",
+  "word": "wach",
+  "pos": "Adjektiv",
+  "meaning": "Nicht schlafend und aufmerksam.",
+  "example": "Ich bin schon wach."
+ },
+ {
+  "key": "fertig",
+  "word": "fertig",
+  "pos": "Adjektiv",
+  "meaning": "Abgeschlossen oder bereit.",
+  "example": "Das Frühstück ist fertig."
+ },
+ {
+  "key": "beschäftigt",
+  "word": "beschäftigt",
+  "pos": "Adjektiv",
+  "meaning": "Mit einer Tätigkeit befasst.",
+  "example": "Ich bin heute beschäftigt."
+ },
+ {
+  "key": "zufrieden",
+  "word": "zufrieden",
+  "pos": "Adjektiv",
+  "meaning": "Mit einer Situation einverstanden und glücklich.",
+  "example": "Ich bin mit meiner Arbeit zufrieden."
+ },
+ {
+  "key": "krank",
+  "word": "krank",
+  "pos": "Adjektiv",
+  "meaning": "Nicht gesund.",
+  "example": "Mein Kind ist krank."
+ },
+ {
+  "key": "gesund",
+  "word": "gesund",
+  "pos": "Adjektiv",
+  "meaning": "Nicht krank oder gut für die Gesundheit.",
+  "example": "Ich bin wieder gesund."
+ },
+ {
+  "key": "stark",
+  "word": "stark",
+  "pos": "Adjektiv",
+  "meaning": "Mit großer Kraft oder Intensität.",
+  "example": "Die Schmerzen sind stark."
+ },
+ {
+  "key": "schwach",
+  "word": "schwach",
+  "pos": "Adjektiv",
+  "meaning": "Mit wenig Kraft.",
+  "example": "Ich fühle mich schwach."
+ },
+ {
+  "key": "wichtig",
+  "word": "wichtig",
+  "pos": "Adjektiv",
+  "meaning": "Von großer Bedeutung.",
+  "example": "Der Termin ist wichtig."
+ },
+ {
+  "key": "nah",
+  "word": "nah",
+  "pos": "Adjektiv",
+  "meaning": "In geringer Entfernung.",
+  "example": "Der Bahnhof ist nah."
+ },
+ {
+  "key": "weit",
+  "word": "weit",
+  "pos": "Adjektiv",
+  "meaning": "Bei Kleidung: locker und nicht eng; bei Entfernung: nicht nah.",
+  "example": "Die Hose ist zu weit."
+ },
+ {
+  "key": "richtig",
+  "word": "richtig",
+  "pos": "Adjektiv",
+  "meaning": "Ohne Fehler oder passend.",
+  "example": "Das ist die richtige Haltestelle."
+ },
+ {
+  "key": "falsch",
+  "word": "falsch",
+  "pos": "Adjektiv",
+  "meaning": "Nicht richtig.",
+  "example": "Das ist die falsche Straße."
+ },
+ {
+  "key": "voll",
+  "word": "voll",
+  "pos": "Adjektiv",
+  "meaning": "Ohne freien Platz oder mit viel Inhalt.",
+  "example": "Der Bus ist voll."
+ },
+ {
+  "key": "leer",
+  "word": "leer",
+  "pos": "Adjektiv",
+  "meaning": "Ohne Inhalt.",
+  "example": "Der Bus ist leer."
+ },
+ {
+  "key": "höflich",
+  "word": "höflich",
+  "pos": "Adjektiv",
+  "meaning": "Respektvoll im Umgang mit anderen.",
+  "example": "Die Nachricht ist höflich."
+ },
+ {
+  "key": "schwierig",
+  "word": "schwierig",
+  "pos": "Adjektiv",
+  "meaning": "Nicht einfach zu bewältigen.",
+  "example": "Die Aufgabe ist schwierig."
+ },
+ {
+  "key": "leicht",
+  "word": "leicht",
+  "pos": "Adjektiv",
+  "meaning": "Einfach oder von geringem Gewicht.",
+  "example": "Die Aufgabe ist leicht."
+ },
+ {
+  "key": "verständlich",
+  "word": "verständlich",
+  "pos": "Adjektiv",
+  "meaning": "Gut zu verstehen.",
+  "example": "Die Erklärung ist verständlich."
+ },
+ {
+  "key": "beschädigt",
+  "word": "beschädigt",
+  "pos": "Adjektiv",
+  "meaning": "Mit einem Schaden.",
+  "example": "Die Ware ist beschädigt."
+ },
+ {
+  "key": "defekt",
+  "word": "defekt",
+  "pos": "Adjektiv",
+  "meaning": "Nicht richtig funktionierend.",
+  "example": "Das Gerät ist defekt."
+ },
+ {
+  "key": "unzufrieden",
+  "word": "unzufrieden",
+  "pos": "Adjektiv",
+  "meaning": "Mit einer Situation nicht einverstanden.",
+  "example": "Ich bin mit der Lieferung unzufrieden."
+ },
+ {
+  "key": "kostenlos",
+  "word": "kostenlos",
+  "pos": "Adjektiv",
+  "meaning": "Ohne Kosten.",
+  "example": "Der Ersatz ist kostenlos."
+ },
+ {
+  "key": "möglich",
+  "word": "möglich",
+  "pos": "Adjektiv",
+  "meaning": "Durchführbar oder denkbar.",
+  "example": "Ein Umtausch ist möglich."
+ },
+ {
+  "key": "notwendig",
+  "word": "notwendig",
+  "pos": "Adjektiv",
+  "meaning": "Unbedingt gebraucht.",
+  "example": "Eine Reparatur ist notwendig."
+ },
+ {
+  "key": "sinnvoll",
+  "word": "sinnvoll",
+  "pos": "Adjektiv",
+  "meaning": "Mit einem erkennbaren Nutzen.",
+  "example": "Der Vorschlag ist sinnvoll."
+ },
+ {
+  "key": "überzeugend",
+  "word": "überzeugend",
+  "pos": "Adjektiv",
+  "meaning": "Gut begründet und glaubwürdig.",
+  "example": "Ihr Argument ist überzeugend."
+ },
+ {
+  "key": "unterschiedlich",
+  "word": "unterschiedlich",
+  "pos": "Adjektiv",
+  "meaning": "Nicht gleich.",
+  "example": "Unsere Meinungen sind unterschiedlich."
+ },
+ {
+  "key": "gemeinsam",
+  "word": "gemeinsam",
+  "pos": "Adjektiv",
+  "meaning": "Zusammen mit anderen.",
+  "example": "Wir haben ein gemeinsames Ziel."
+ },
+ {
+  "key": "persönlich",
+  "word": "persönlich",
+  "pos": "Adjektiv",
+  "meaning": "Eine bestimmte Person betreffend.",
+  "example": "Das ist meine persönliche Meinung."
+ },
+ {
+  "key": "zuverlässig",
+  "word": "zuverlässig",
+  "pos": "Adjektiv",
+  "meaning": "So, dass man sich darauf verlassen kann.",
+  "example": "Meine Kollegin ist zuverlässig."
+ },
+ {
+  "key": "flexibel",
+  "word": "flexibel",
+  "pos": "Adjektiv",
+  "meaning": "Anpassungsfähig.",
+  "example": "Ich bin zeitlich flexibel."
+ },
+ {
+  "key": "erfahren",
+  "word": "erfahren",
+  "pos": "Adjektiv",
+  "meaning": "Mit viel praktischer Erfahrung.",
+  "example": "Sie ist eine erfahrene Mitarbeiterin."
+ },
+ {
+  "key": "selbstständig",
+  "word": "selbstständig",
+  "pos": "Adjektiv",
+  "meaning": "Ohne ständige Hilfe arbeitend.",
+  "example": "Ich arbeite selbstständig."
+ },
+ {
+  "key": "verantwortlich",
+  "word": "verantwortlich",
+  "pos": "Adjektiv",
+  "meaning": "Für eine Aufgabe zuständig.",
+  "example": "Ich bin für die Planung verantwortlich."
+ },
+ {
+  "key": "praktisch",
+  "word": "praktisch",
+  "pos": "Adjektiv",
+  "meaning": "Im Alltag nützlich und gut anwendbar.",
+  "example": "Deine Idee ist praktisch."
+ },
+ {
+  "key": "gemütlich",
+  "word": "gemütlich",
+  "pos": "Adjektiv",
+  "meaning": "Angenehm und behaglich.",
+  "example": "Der Raum ist gemütlich."
+ },
+ {
+  "key": "bequem",
+  "word": "bequem",
+  "pos": "Adjektiv",
+  "meaning": "Angenehm zu tragen oder zu benutzen.",
+  "example": "Die Hose ist bequem."
+ },
+ {
+  "key": "eng",
+  "word": "eng",
+  "pos": "Adjektiv",
+  "meaning": "Mit wenig Platz oder dicht anliegend.",
+  "example": "Die Jacke ist zu eng."
+ },
+ {
+  "key": "elegant",
+  "word": "elegant",
+  "pos": "Adjektiv",
+  "meaning": "Geschmackvoll und gepflegt.",
+  "example": "Das Kleid ist elegant."
+ },
+ {
+  "key": "bunt",
+  "word": "bunt",
+  "pos": "Adjektiv",
+  "meaning": "Mit mehreren Farben.",
+  "example": "Der Pullover ist bunt."
+ },
+ {
+  "key": "schwarz",
+  "word": "schwarz",
+  "pos": "Adjektiv",
+  "meaning": "Sehr dunkel, ohne helle Farbe.",
+  "example": "Die Jacke ist schwarz."
+ },
+ {
+  "key": "qualifiziert",
+  "word": "qualifiziert",
+  "pos": "Adjektiv",
+  "meaning": "Mit den nötigen Kenntnissen und Fähigkeiten.",
+  "example": "Sie ist für die Stelle qualifiziert."
+ },
+ {
+  "key": "belastbar",
+  "word": "belastbar",
+  "pos": "Adjektiv",
+  "meaning": "Auch unter Druck leistungsfähig.",
+  "example": "Ich bin belastbar und zuverlässig."
+ },
+ {
+  "key": "teamfähig",
+  "word": "teamfähig",
+  "pos": "Adjektiv",
+  "meaning": "Gut mit anderen zusammenarbeitend.",
+  "example": "Die neue Kollegin ist teamfähig."
+ },
+ {
+  "key": "lösungsorientiert",
+  "word": "lösungsorientiert",
+  "pos": "Adjektiv",
+  "meaning": "Auf die Suche nach Lösungen ausgerichtet.",
+  "example": "Wir arbeiten lösungsorientiert."
+ },
+ {
+  "key": "verbindlich",
+  "word": "verbindlich",
+  "pos": "Adjektiv",
+  "meaning": "Fest vereinbart und einzuhalten.",
+  "example": "Der Termin ist verbindlich."
+ },
+ {
+  "key": "angemessen",
+  "word": "angemessen",
+  "pos": "Adjektiv",
+  "meaning": "Zur Situation passend.",
+  "example": "Wir suchen eine angemessene Lösung."
+ },
+ {
+  "key": "zeitnah",
+  "word": "zeitnah",
+  "pos": "Adjektiv",
+  "meaning": "Bald nach einem Ereignis.",
+  "example": "Wir antworten zeitnah."
+ },
+ {
+  "key": "transparent",
+  "word": "transparent",
+  "pos": "Adjektiv",
+  "meaning": "Offen und nachvollziehbar.",
+  "example": "Der Ablauf ist transparent."
+ },
+ {
+  "key": "wirtschaftlich",
+  "word": "wirtschaftlich",
+  "pos": "Adjektiv",
+  "meaning": "Mit einem guten Verhältnis von Aufwand und Nutzen.",
+  "example": "Diese Lösung ist wirtschaftlich."
+ },
+ {
+  "key": "fair",
+  "word": "fair",
+  "pos": "Adjektiv",
+  "meaning": "Gerecht gegenüber allen Beteiligten.",
+  "example": "Der Kompromiss ist fair."
+ },
+ {
+  "key": "langfristig",
+  "word": "langfristig",
+  "pos": "Adjektiv",
+  "meaning": "Für eine längere Zeit geplant.",
+  "example": "Wir brauchen eine langfristige Lösung."
+ },
+ {
+  "key": "effizient",
+  "word": "effizient",
+  "pos": "Adjektiv",
+  "meaning": "Mit wenig Aufwand ein gutes Ergebnis erreichend.",
+  "example": "Der neue Ablauf ist effizient."
+ },
+ {
+  "key": "umsetzbar",
+  "word": "umsetzbar",
+  "pos": "Adjektiv",
+  "meaning": "In der Praxis durchführbar.",
+  "example": "Die Maßnahme ist umsetzbar."
+ },
+ {
+  "key": "dringend",
+  "word": "dringend",
+  "pos": "Adjektiv",
+  "meaning": "Keinen Aufschub erlaubend.",
+  "example": "Das Problem ist dringend."
+ },
+ {
+  "key": "zuständig",
+  "word": "zuständig",
+  "pos": "Adjektiv",
+  "meaning": "Für eine Aufgabe offiziell verantwortlich.",
+  "example": "Unsere Abteilung ist dafür zuständig."
+ },
+ {
+  "key": "realistisch",
+  "word": "realistisch",
+  "pos": "Adjektiv",
+  "meaning": "Mit den tatsächlichen Möglichkeiten vereinbar.",
+  "example": "Die Frist ist realistisch."
+ }
+]

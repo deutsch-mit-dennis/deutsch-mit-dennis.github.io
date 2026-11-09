@@ -56,6 +56,7 @@
       ch_radio: "Lieder",
       d3_min: "Fenster verkleinern",
       d3_restore: "Fenster wieder öffnen",
+      ch_zettel: "Tages-Challenge",
     },
     en: {
       lvl_q: "How good is your German?",
@@ -96,6 +97,7 @@
       ch_radio: "Songs",
       d3_min: "Minimise window",
       d3_restore: "Reopen window",
+      ch_zettel: "Daily challenge",
     },
     uk: {
       lvl_q: "Наскільки добре ти знаєш німецьку?",
@@ -136,6 +138,7 @@
       ch_radio: "Пісні",
       d3_min: "Згорнути вікно",
       d3_restore: "Відкрити вікно знову",
+      ch_zettel: "Челендж дня",
     },
     ru: {
       lvl_q: "Насколько хорошо ты знаешь немецкий?",
@@ -176,6 +179,7 @@
       ch_radio: "Песни",
       d3_min: "Свернуть окно",
       d3_restore: "Открыть окно снова",
+      ch_zettel: "Челлендж дня",
     },
     ar: {
       lvl_q: "ما مستوى لغتك الألمانية؟",
@@ -216,6 +220,7 @@
       ch_radio: "أغانٍ",
       d3_min: "تصغير النافذة",
       d3_restore: "إعادة فتح النافذة",
+      ch_zettel: "تحدّي اليوم",
     },
     tr: {
       lvl_q: "Almancan ne kadar iyi?",
@@ -256,6 +261,7 @@
       ch_radio: "Şarkılar",
       d3_min: "Pencereyi küçült",
       d3_restore: "Pencereyi yeniden aç",
+      ch_zettel: "Günün meydan okuması",
     },
     fa: {
       lvl_q: "آلمانی تو چقدر خوب است؟",
@@ -296,6 +302,7 @@
       ch_radio: "آهنگ‌ها",
       d3_min: "کوچک کردن پنجره",
       d3_restore: "باز کردن دوباره پنجره",
+      ch_zettel: "چالش روز",
     },
     es: {
       lvl_q: "¿Qué tan bueno es tu alemán?",
@@ -336,6 +343,7 @@
       ch_radio: "Canciones",
       d3_min: "Minimizar ventana",
       d3_restore: "Reabrir ventana",
+      ch_zettel: "Reto del día",
     },
     it: {
       lvl_q: "Quanto è buono il tuo tedesco?",
@@ -376,6 +384,7 @@
       ch_radio: "Canzoni",
       d3_min: "Riduci la finestra",
       d3_restore: "Riapri la finestra",
+      ch_zettel: "Sfida del giorno",
     },
   };
   const KEY = "dmd.lang";

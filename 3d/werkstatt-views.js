@@ -210,6 +210,19 @@ function heftView(ctx = {}) {
   };
 }
 
+// ---------- Sticky note: daily challenge ----------
+function noteView() {
+  let s = {}; try { s = JSON.parse(localStorage.getItem('dm-challenge') || '{}') || {}; } catch {}
+  const f = d => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+  const now = new Date(), y = new Date(now); y.setDate(now.getDate() - 1);
+  const streak = (s.last === f(now) || s.last === f(y)) ? s.streak || 0 : 0, done = s.last === f(now);
+  const v = el(`<div class="v-note"><div class="nt-paper"><p class="nt-k">Tages-Challenge</p>
+    <b class="nt-big">${streak ? `${streak} ${streak === 1 ? 'Tag' : 'Tage'} in Folge` : 'Starte deine Serie!'}</b>
+    <p class="nt-t">10 Aufgaben · etwa 3 Minuten · jeden Tag neu</p>${done ? '<p class="nt-done">✓ Heute geschafft – bis morgen!</p>' : ''}
+    <a class="btn" href="${L('#challenge')}">${done ? 'Nochmal üben' : '▶ Challenge starten'}</a></div></div>`);
+  return { node: v };
+}
+
 // ---------- Mug: break ----------
 function mugView() {
   const v = el(`<div class="v-mug"><div class="mg-cup" aria-hidden="true"><i class="mg-steam"></i><i class="mg-steam"></i><i class="mg-steam"></i><span>Pause</span></div>
@@ -246,4 +259,4 @@ export async function prewarmHeft(renderer) {
   try { const c = await openHeft(host, { maxStage: 4, renderer }); c && c.dispose(); } catch {} finally { host.remove(); }
 }
 
-export const VIEWS = { shop: shopView, tasse: mugView, laptop: laptopView, kopfhoerer: playerView, buecher: shelfView, mikrofon: studioView, gamepad: arcadeView, pruefung: examView, globus: globeView, radio: radioView, heft: heftView };
+export const VIEWS = { zettel: noteView, shop: shopView, tasse: mugView, laptop: laptopView, kopfhoerer: playerView, buecher: shelfView, mikrofon: studioView, gamepad: arcadeView, pruefung: examView, globus: globeView, radio: radioView, heft: heftView };

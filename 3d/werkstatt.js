@@ -1,6 +1,6 @@
 // Idea 6 'Heft + Schreibtisch': click an object -> camera flies in, object opens, full-page themed view (test build).
 import * as THREE from 'three';
-import { VIEWS, prewarmHeft } from './werkstatt-views.js?v=20261110i';
+import { VIEWS, prewarmHeft } from './werkstatt-views.js?v=20261110j';
 import { addLife } from './werkstatt-leben.js?v=20261108m';
 import { progress } from './heft-buch.js?v=20261110e';
 import { addStickers } from './werkstatt-sticker.js?v=20261108m';
@@ -18,6 +18,7 @@ const AREAS = {
   pruefung:  { title: 'Prüfung', text: 'Probeprüfungen im Stil von DTZ, telc B1/B2 und DTB B1/B2.', href: '#simulation', icon: 'pokal', btn: 'Probeprüfung starten' },
   globus:    { title: 'Leben in Deutschland', text: 'Fragen üben und den Test mit 33 Fragen ausprobieren.', href: '#lid', icon: 'globus', btn: 'LiD üben' },
   shop:      { title: 'Bücher & Lernpakete', text: 'Meine Übungsbücher und PDF-Lernpakete.', href: '#lernpakete', icon: 'buecher', btn: 'Ansehen' },
+  zettel:    { title: 'Tages-Challenge', text: '10 Aufgaben, jeden Tag neu – hol dir deine Serie.', href: '#challenge', icon: 'stern', btn: 'Challenge starten' },
   lampe:     { title: 'Licht an / aus', noChip: true },
   tasse:     { title: 'Pause', text: 'Witz des Tages, Tages-Challenge und deine Meinung.', href: '#witz', icon: 'idee', btn: 'Pause machen' },
   radio:     { title: 'Lieder', text: 'Deutsch mit Liedern bis C1 – mit Liedtext zum Mitlesen.', href: '#lieder', icon: 'noten', btn: 'Lieder hören' },
@@ -26,7 +27,7 @@ const AREAS = {
 const HI = () => (window.DM && window.DM.hi18n) || null;
 const T = (k, fb) => { const H = HI(); return (H && H.t(k)) || fb; };
 const areaTitle = key => T('ch_' + key, AREAS[key] ? AREAS[key].title : key);
-const CHIP_ICON = { laptop: '💻', kopfhoerer: '🎧', buecher: '📚', mikrofon: '🎤', heft: '📓', gamepad: '🎮', pruefung: '📝', globus: '🌍', shop: '🛍️', tasse: '☕', radio: '🎵' };
+const CHIP_ICON = { laptop: '💻', kopfhoerer: '🎧', buecher: '📚', mikrofon: '🎤', heft: '📓', gamepad: '🎮', pruefung: '📝', globus: '🌍', shop: '🛍️', tasse: '☕', zettel: '🔥', radio: '🎵' };
 // which desk objects fit which level, in a sensible order (my suggestion, not binding)
 const LEVEL_DESK = { A0: ['laptop', 'kopfhoerer', 'mikrofon', 'gamepad', 'radio'], A1: ['laptop', 'kopfhoerer', 'mikrofon', 'heft', 'gamepad', 'radio'], A2: ['laptop', 'kopfhoerer', 'buecher', 'mikrofon', 'heft', 'gamepad'], B1: ['pruefung', 'kopfhoerer', 'buecher', 'mikrofon', 'heft', 'globus'], B2: ['pruefung', 'buecher', 'kopfhoerer', 'mikrofon', 'heft'] };
 let recKeys = [], recSet = new Set(); // objects recommended for the chosen level
@@ -242,6 +243,36 @@ function makeLamp() { // desk lamp: off by day, on at night (click toggles)
   g.userData.lamp = { bulbM, spot };
   return g;
 }
+// sticky note with today's challenge: series of days in a row (same memory as the website: localStorage dm-challenge)
+function noteState() {
+  let s = {}; try { s = JSON.parse(localStorage.getItem('dm-challenge') || '{}') || {}; } catch {}
+  const f = d => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+  const now = new Date(), y = new Date(now); y.setDate(now.getDate() - 1);
+  const alive = s.last === f(now) || s.last === f(y);
+  return { streak: alive ? s.streak || 0 : 0, done: s.last === f(now) };
+}
+let noteTex = null;
+function drawNote(c, w, h) {
+  const st = noteState();
+  c.fillStyle = '#FFE45C'; c.fillRect(0, 0, w, h);
+  const g = c.createLinearGradient(0, 0, 0, h); g.addColorStop(0, 'rgba(255,255,255,.2)'); g.addColorStop(1, 'rgba(0,0,0,.07)'); c.fillStyle = g; c.fillRect(0, 0, w, h);
+  c.fillStyle = 'rgba(0,0,0,.07)'; c.fillRect(0, 0, w, 36);
+  const title = T('ch_zettel', 'Tages-Challenge'); let fs = 56; font(c, fs); while (c.measureText(title).width > w - 64 && fs > 30) { fs -= 2; font(c, fs); }
+  c.fillStyle = C.ink; c.fillText(title, 32, 112);
+  font(c, 124, 600, 'Lehrerschrift'); c.fillStyle = C.rot; c.fillText(st.streak ? `${st.streak} ${st.streak === 1 ? 'Tag' : 'Tage'}` : 'Heute!', 32, 272);
+  font(c, 44); c.fillStyle = st.done ? C.gruen : C.tinte; c.fillText(st.done ? '✓ geschafft' : '10 Aufgaben · 3 Min.', 32, 380);
+  font(c, 46, 600, 'Lehrerschrift'); c.fillStyle = C.tinte; c.fillText(st.done ? 'Bis morgen!' : 'Los geht’s →', 32, 462);
+}
+function makeNote() {
+  const g = new THREE.Group();
+  noteTex = canvasTex(512, 512, drawNote);
+  const paper = new THREE.MeshStandardMaterial({ map: noteTex, roughness: .8 }), side = std('#EFCF3A', { roughness: .8 });
+  const m = mesh(new THREE.BoxGeometry(.95, .012, .95), [side, side, paper, side, side, side], 0, .007, 0); m.rotation.x = -.015; g.add(m);
+  return g;
+}
+function refreshNote() { if (!noteTex) return; drawNote(noteTex.image.getContext('2d'), noteTex.image.width, noteTex.image.height); noteTex.needsUpdate = true; }
+addEventListener('focus', refreshNote);
+
 function makeMug() { // decoration
   const g = new THREE.Group(), m = std('#fff', { roughness: .3 });
   g.add(mesh(new THREE.CylinderGeometry(.24, .22, .5, 28), m, 0, .25, 0));
@@ -279,6 +310,7 @@ const LAYOUT = [
   ['kopfhoerer', makeHeadphones, 3.5, .7, .9, .85],
   ['mikrofon', makeMic, 3.8, 2.1, 0, .6],
   ['tasse', makeMug, -4.1, .1, 0, .55],
+  ['zettel', makeNote, -1.9, 2.3, Math.PI / 4 - .12, .62],
   ['lampe', makeLamp, .8, -2.45, 1.2, .45],
   ['shop', makeBookStand, -3.9, 2.35, .62, 1.25],
 ];
@@ -383,7 +415,7 @@ function closeView(then) {
   wrap.classList.remove('in'); wrap.classList.add('out'); inst.dispose && inst.dispose();
   setTimeout(() => wrap.remove(), 380); sound.play('close');
   focusKey = null; document.body.classList.remove('focused'); setInert(false);
-  setTimeout(() => { try { stickers && stickers.refresh(.5); } catch {} }, 300); // practised inside? the new sticker pops on the desk
+  setTimeout(() => { try { stickers && stickers.refresh(.5); } catch {} refreshNote(); }, 300); // practised inside? the new sticker pops on the desk, the note shows the new series
   try { if (!then && lastFocus && document.contains(lastFocus)) lastFocus.focus({ preventScroll: true }); } catch {}
   if (then) setTimeout(then, reduced ? 0 : 1100);
 }
@@ -514,7 +546,7 @@ function frame() {
 const ROUTES = [ // first match wins: route prefix -> desk object
   ['ueben/schreiben', 'heft'], ['ueben/sprechen', 'mikrofon'], ['bild', 'mikrofon'], ['ueben', 'mikrofon'],
   ['lernweg', 'laptop'], ['lernen', 'laptop'], ['videos', 'laptop'], ['wegweiser', 'laptop'], ['impressum', 'laptop'], ['datenschutz', 'laptop'],
-  ['kahoot', 'gamepad'], ['challenge', 'gamepad'], ['mikula', 'buecher'], ['lernpakete', 'shop'], ['musik', 'radio'],
+  ['kahoot', 'gamepad'], ['challenge', 'zettel'], ['mikula', 'buecher'], ['lernpakete', 'shop'], ['musik', 'radio'],
   ['orientierungskurs', 'globus'], ['quellen', 'pruefung'], ['material', 'heft'], ['ueber-mich', 'heft'], ['witz', 'tasse'], ['pinnwand', 'tasse'],
   ['hoeren', 'kopfhoerer'], ['lesen', 'buecher'], ['spiele', 'gamepad'],
   ['simulation', 'pruefung'], ['pruefung', 'pruefung'], ['vorbereitung', 'pruefung'],
@@ -700,7 +732,7 @@ function applyLevel(lv) {
 document.querySelectorAll('#lvl3d [data-lv]').forEach(b => b.addEventListener('click', () => { const lv = b.getAttribute('aria-pressed') === 'true' ? '' : b.dataset.lv; writeLevel(lv); applyLevel(lv); }));
 function relabel() {
   chips.querySelectorAll('button').forEach(b => { const l = b.querySelector('.chip-l'); if (l) l.textContent = areaTitle(b.dataset.key); });
-  renderResume();
+  renderResume(); refreshNote();
 }
 (() => {
   const H = HI(), sel = document.getElementById('lang3d');
@@ -717,9 +749,10 @@ function relabel() {
 // ---------- one-time invitation to the tour ----------
 (() => {
   const KEY = 'dmd.3d.tourHint'; let seen = false; try { seen = !!localStorage.getItem(KEY); } catch {}
-  const hint = document.getElementById('tour-hint'); if (!hint || seen) return;
+  const hint = document.getElementById('tour-hint'); if (!hint) return; if (seen) { hint.remove(); return; }
   const done = () => { hint.hidden = true; try { localStorage.setItem(KEY, '1'); } catch {} };
-  setTimeout(() => { if (!touring && !view) hint.hidden = false; }, 2500);
+  hint.hidden = false; hint.classList.add('th-wait'); // takes its place right away, invisible: no layout jump when it fades in
+  setTimeout(() => { if (!touring && !view) hint.classList.remove('th-wait'); }, 2500);
   hint.querySelector('.th-x').addEventListener('click', done);
   document.getElementById('tour-start')?.addEventListener('click', done);
 })();

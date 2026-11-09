@@ -424,3 +424,15 @@ body.touring .soc3d{display:none}
 .hf-corner svg{width:55%;height:55%}
 .hf-snd.hint{animation:hfPulse 1.2s ease-out 2;border-color:var(--tinte);background:var(--marker)}
 @media (prefers-reduced-motion:reduce){.hf-snd.hint{animation:none}}
+
+.tour-hint{transition:opacity .4s}.tour-hint.th-wait{visibility:hidden;opacity:0}
+
+/* daily challenge note */
+.v-note{height:100%;display:grid;place-items:center;padding:20px}
+.nt-paper{width:min(420px,90vw);padding:30px 28px 26px;background:linear-gradient(#fff2a0,#FFE45C);box-shadow:0 22px 40px -18px rgba(23,32,54,.55);transform:rotate(-2deg);border-radius:4px;color:var(--ink);text-align:left}
+.nt-paper::before{content:'';display:block;height:16px;margin:-30px -28px 18px;background:rgba(0,0,0,.07)}
+.nt-k{margin:0 0 6px;font-weight:800;letter-spacing:.02em}
+.nt-big{display:block;font-family:var(--hand);font-size:clamp(2rem,9vw,2.8rem);line-height:1.1;color:var(--rot);margin:4px 0 10px}
+.nt-t{margin:0 0 12px;color:var(--ink)}
+.nt-done{margin:0 0 12px;font-weight:800;color:var(--gruen,#1D7A45)}
+.v-note .btn{margin-top:4px}

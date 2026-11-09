@@ -34,8 +34,8 @@
 
   let el, anim, timer;
   function build() {
-    el = document.createElement('div');
-    el.className = 'lw';
+    el = document.createElement('aside');
+    el.className = 'lw'; el.setAttribute('aria-label', 'Lesewurm');
     el.innerHTML = `<button type="button" class="lw-btn" aria-label="Lesewurm: Dennis' Bücherregal öffnen">${SVG}</button><button type="button" class="lw-x" aria-label="Lesewurm für heute ausblenden"><span>×</span></button><span class="lw-tip">Meine Bücher 📚</span>`;
     el.querySelector('.lw-btn').onclick = shelf;
     el.querySelector('.lw-x').onclick = () => { try { localStorage.setItem(OFF, today()); } catch {} hide(); clearTimeout(timer); };

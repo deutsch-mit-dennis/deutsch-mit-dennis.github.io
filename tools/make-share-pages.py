@@ -99,3 +99,5 @@ for k in P:
 open(os.path.join(R, 'sitemap.xml'), 'w').write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + ''.join(f'  <url><loc>{u}</loc></url>\n' for u in urls) + '</urlset>\n')
 open(os.path.join(R, 'robots.txt'), 'w').write(f'User-agent: *\nAllow: /\nSitemap: {SITE}/sitemap.xml\n')
 print(len(urls), 'Seiten')
+# readable content pages (songs, LiD questions, simulations) add themselves to the sitemap
+subprocess.run(['python3', os.path.join(R, 'tools', 'make-seo-pages.py')], cwd=R, check=True)

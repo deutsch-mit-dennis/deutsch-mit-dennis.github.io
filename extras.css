@@ -768,7 +768,7 @@ header.dm-header nav{margin-left:auto}
 .dm-pl-badge i:nth-child(2){animation-delay:-.35s}.dm-pl-badge i:nth-child(3){animation-delay:-.7s;margin-right:4px}
 @media (prefers-reduced-motion:reduce){.dm-pl-badge i{animation:none}}
 
-.dm-song-new{font-style:normal;font-weight:800;color:#fff;background:#e0457b;border-radius:6px;padding:0 6px;font-size:12px;letter-spacing:.02em}
+.dm-song-new{font-style:normal;font-weight:800;color:#fff;background:#c92a63;border-radius:6px;padding:0 6px;font-size:12px;letter-spacing:.02em}
 
 @media (max-width:1180px){#main-navigation a[data-nav="pruefung"]::after{position:static;display:inline-block;margin-left:8px;vertical-align:middle}}
 /* Einheitlichkeit 21.10.: Nummer in LiD-Karten mit Abstand, Hilfe-Knopf am Handy kleiner und weiter am Rand */
