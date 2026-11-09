@@ -188,6 +188,13 @@
       <ul class="dm-pkg-teaser-list">${BK.slice(0, 2).map(b => `<li><a href="#lernpakete/buecher"><img src="${b.img}" alt="" width="72" height="72" loading="lazy" style="object-fit:contain"><span><b>${x(b.title)}</b><small>Taschenbuch · ${x(b.price)}</small></span></a></li>`).join('')}${pick.slice(0, Math.max(1, 2 - BK.length)).map(k => `<li><a href="#lernpakete/${k.id}"><img src="${k.img}" alt="" width="72" height="72" loading="lazy"><span><b>${x(k.title)}</b><small>${x(k.level)} · ${x(k.price)}</small></span></a></li>`).join('')}</ul>
     </section>`;
   }
+  /* Wege auf der Startseite: passend zum gewählten Niveau zuerst (Einschätzung von Dennis' Wegen, nicht verbindlich) */
+  const LEVEL_PATHS = { A0: ['start', 'sprechen'], A1: ['start', 'sprechen', 'schreiben'], A2: ['dtz', 'sprechen', 'schreiben', 'start'], B1: ['telcb1', 'dtz', 'dtbb1', 'sprechen', 'lid'], B2: ['telcb2', 'dtbb2', 'bridge', 'repeat', 'schreiben'] };
+  function homePaths(lv) {
+    const fit = (LEVEL_PATHS[lv] || []).filter(id => DM.paths[id]);
+    const ids = [...new Set(fit.concat(DM.pathHome || DM.pathOrder))].slice(0, 6);
+    return ids.map(id => fit.includes(id) ? pathCard(id).replace('class="dm-path ', 'class="dm-path dm-fit ') : pathCard(id)).join('');
+  }
   /* Niveau-Wahl statt Kacheln: eine Frage, ein großer Knopf. Hilfetexte in mehreren Sprachen (home-i18n.js). */
   const LV_KEYS = [['A0', 'a0'], ['A1', 'a1'], ['A2', 'a2'], ['B1', 'b1'], ['B2', 'b2']];
   const hi = () => DM.hi18n || null;
@@ -218,8 +225,9 @@
       const lv = mem.level, st = lv ? levelStart(lv) : null;
       go.innerHTML = (last ? `<a class="dm-btn dm-level-last" href="#${x(last.route)}"><span data-i18n="go_cont">Weitermachen</span>: ${x(last.title)}</a>` : '')
         + (st ? `<a class="dm-btn dm-level-start" href="${x(st.href)}"><span class="dm-level-lbl"><span data-i18n="${st.key}">${st.key === 'go_start' ? 'Jetzt starten' : 'Lektionen öffnen'}</span> <span aria-hidden="true">▶</span></span><small>${x(st.sub)}</small></a>` : '')
-        + `<p class="dm-level-more"><a href="#challenge">🔥 Tages-Challenge</a><a href="#simulation">🎯 Probeprüfung</a></p>`;
+        + `<p class="dm-level-more"><a href="#challenge"><span aria-hidden="true">🔥</span> <span data-i18n="chal_l">Tages-Challenge</span></a><a href="#hallo"><span aria-hidden="true">🎧</span> <span data-i18n="hello_l">Dennis in deiner Sprache</span></a><a href="#lernstand"><span aria-hidden="true">💾</span> <span data-i18n="mem_l">Lernstand &amp; Erinnerung</span></a></p>`;
       $$('.dm-lv[data-lv]', box).forEach(b => b.setAttribute('aria-pressed', String(b.dataset.lv === lv)));
+      const pw = $('#dm-paths'); if (pw) pw.innerHTML = homePaths(lv);
       if (H) H.apply(box);
     };
     $$('.dm-lv[data-lv]', box).forEach(b => b.onclick = () => { mem.level = b.dataset.lv; save(); draw(); });
@@ -256,7 +264,7 @@
 
     <section class="dm-section" aria-labelledby="wege-h">
       <div class="dm-section-head"><h2 id="wege-h" data-i18n="paths_h">Wähle deinen Weg</h2><p>Du kannst jederzeit wechseln.</p></div>
-      <div class="dm-paths">${(DM.pathHome || DM.pathOrder).map(id => pathCard(id)).join('')}</div>
+      <div class="dm-paths" id="dm-paths">${homePaths(mem.level)}</div>
       <p class="dm-center"><a class="dm-btn dm-btn-quiet" href="#lernweg">Alle ${DM.pathOrder.length} Lernwege ansehen →</a></p>
     </section>
 
@@ -404,6 +412,89 @@
       videoSection(cat, 'Passende Videos').then(sec => sec && $('#dm-path-videos')?.replaceWith(sec));
     };
     render();
+  }
+
+  /* ---------- Lernstand sichern + tägliche Erinnerung (alles lokal, nichts wird gesendet) ---------- */
+  const SAVE_KEYS = ['dmd.v1', 'dmd.lang', 'dm-challenge', 'dm-spiele', 'dm-nid', 'dm-mikula'];
+  const b64enc = t => btoa(unescape(encodeURIComponent(t)));
+  const b64dec = t => decodeURIComponent(escape(atob(t)));
+  function stateBundle() {
+    const data = {};
+    SAVE_KEYS.forEach(k => { try { const v = localStorage.getItem(k); if (v !== null) data[k] = v; } catch { /* privater Modus */ } });
+    return JSON.stringify({ app: 'deutsch-mit-dennis', v: 1, saved: new Date().toISOString(), data });
+  }
+  function download(name, text, type) {
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(new Blob([text], { type })); a.download = name; a.rel = 'noopener';
+    document.body.appendChild(a); a.click(); setTimeout(() => { URL.revokeObjectURL(a.href); a.remove(); }, 1500);
+  }
+  function restoreState(raw) {
+    let obj; const t = String(raw || '').trim().replace(/^DMD1:/, '');
+    if (!t) throw new Error('Bitte Datei auswählen oder Code einfügen.');
+    try { obj = JSON.parse(t.startsWith('{') ? t : b64dec(t.replace(/\s+/g, ''))); } catch { throw new Error('Das ist kein gültiger Lernstand.'); }
+    if (!obj || obj.app !== 'deutsch-mit-dennis' || typeof obj.data !== 'object') throw new Error('Das ist kein Lernstand von Deutsch mit Dennis.');
+    let n = 0;
+    Object.entries(obj.data).forEach(([k, v]) => {
+      if (!SAVE_KEYS.includes(k) || typeof v !== 'string' || v.length > 2e6) return;
+      if (k === 'dmd.v1') {
+        let imp; try { imp = JSON.parse(v) || {}; } catch { return; }
+        ['visited', 'done', 'drafts'].forEach(g => { mem[g] = Object.assign({}, imp[g] || {}, mem[g] || {}); });
+        Object.keys(imp).forEach(g => { if (!['visited', 'done', 'drafts'].includes(g) && mem[g] === undefined) mem[g] = imp[g]; });
+        save(); n++;
+      } else { try { if (localStorage.getItem(k) === null) { localStorage.setItem(k, v); n++; } } catch { /* privater Modus */ } }
+    });
+    if (!n) throw new Error('Es gab nichts Neues zu übernehmen.');
+    return n;
+  }
+  function reminderIcs(time) {
+    const [hh, mm] = (time || '18:00').split(':'), d = new Date(), pad = n => String(n).padStart(2, '0');
+    const day = `${d.getFullYear()}${pad(d.getMonth() + 1)}${pad(d.getDate())}`, stamp = d.toISOString().replace(/[-:]/g, '').replace(/\.\d+Z$/, 'Z');
+    return ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//Deutsch mit Dennis//DE', 'CALSCALE:GREGORIAN', 'BEGIN:VEVENT', `UID:dmd-reminder-${hh}${mm}@deutsch-mit-dennis.de`, `DTSTAMP:${stamp}`,
+      `DTSTART:${day}T${pad(+hh)}${pad(+mm)}00`, 'DURATION:PT15M', 'RRULE:FREQ=DAILY', 'SUMMARY:Deutsch üben', 'DESCRIPTION:Heute kurz Deutsch üben: https://deutsch-mit-dennis.de/', 'URL:https://deutsch-mit-dennis.de/',
+      'BEGIN:VALARM', 'TRIGGER:PT0M', 'ACTION:DISPLAY', 'DESCRIPTION:Deutsch üben', 'END:VALARM', 'END:VEVENT', 'END:VCALENDAR'].join('\r\n') + '\r\n';
+  }
+  function lernstand() {
+    page(`${crumbs([['Lernstand & Erinnerung']])}
+      <div class="dm-head"><h1>Lernstand &amp; Erinnerung</h1><p class="dm-lead">Alles bleibt auf deinem Gerät. Nichts wird an uns gesendet.</p></div>
+      <section class="dm-card dm-ls"><h2><span aria-hidden="true">🔔</span> Tägliche Erinnerung</h2>
+        <p>Eine Erinnerung in deinem Kalender – jeden Tag zur gleichen Zeit. Ohne Anmeldung.</p>
+        <p><label for="ls-time"><b>Uhrzeit</b></label> <input type="time" id="ls-time" value="18:00" required></p>
+        <p><button type="button" class="dm-btn" id="ls-ics"><span aria-hidden="true">📅</span> In meinen Kalender eintragen</button></p>
+        <p class="dm-small">Die Datei öffnet sich in deiner Kalender-App. Dort kannst du die Erinnerung jederzeit ändern oder löschen. Wenn nichts passiert: Datei aus den Downloads öffnen.</p></section>
+      <section class="dm-card dm-ls"><h2><span aria-hidden="true">💾</span> Lernstand sichern</h2>
+        <p>Dein Fortschritt (erledigte Schritte, Niveau, Challenge, Spiele) liegt nur auf diesem Gerät. Sichere ihn, bevor du das Handy wechselst oder Browserdaten löschst.</p>
+        <p class="dm-row"><button type="button" class="dm-btn" id="ls-save">Datei speichern</button><button type="button" class="dm-btn dm-btn-quiet" id="ls-copy">Code kopieren</button></p>
+        <h3>Wiederherstellen</h3>
+        <p><label for="ls-file">Datei auswählen</label><br><input type="file" id="ls-file" accept=".json,application/json"></p>
+        <p><label for="ls-code">oder Code einfügen</label><br><textarea id="ls-code" rows="3" class="dm-ls-code" spellcheck="false"></textarea></p>
+        <p><button type="button" class="dm-btn dm-btn-quiet" id="ls-restore">Wiederherstellen</button></p>
+        <p id="ls-msg" class="dm-ls-msg" role="status" aria-live="polite"></p>
+        <p class="dm-small">Beim Wiederherstellen bleiben deine vorhandenen Daten erhalten. Es kommt nur dazu, was fehlt.</p></section>`);
+    const msg = t => { $('#ls-msg').textContent = t; };
+    $('#ls-ics').onclick = () => { const t = $('#ls-time').value || '18:00'; download('deutsch-ueben-erinnerung.ics', reminderIcs(t), 'text/calendar;charset=utf-8'); msg('✓ Datei erstellt. Öffne sie, um die Erinnerung in deinen Kalender zu übernehmen.'); };
+    $('#ls-save').onclick = () => { download(`deutsch-mit-dennis-lernstand-${new Date().toISOString().slice(0, 10)}.json`, stateBundle(), 'application/json'); msg('✓ Datei gespeichert. Bewahre sie gut auf, zum Beispiel in deiner Cloud.'); };
+    $('#ls-copy').onclick = async () => {
+      const code = 'DMD1:' + b64enc(stateBundle());
+      try { await navigator.clipboard.writeText(code); msg('✓ Code kopiert. Schicke ihn dir selbst, zum Beispiel per WhatsApp oder E-Mail.'); }
+      catch { const ta = $('#ls-code'); ta.value = code; ta.select(); msg('Bitte den Code im Feld markieren und kopieren.'); }
+    };
+    $('#ls-file').onchange = e => { const f = e.target.files[0]; if (!f) return; const r = new FileReader(); r.onload = () => { $('#ls-code').value = String(r.result).slice(0, 2e6); msg('Datei gelesen. Jetzt auf „Wiederherstellen“ tippen.'); }; r.readAsText(f); };
+    $('#ls-restore').onclick = () => {
+      try { const n = restoreState($('#ls-code').value); msg(`✓ Fertig: ${n} Bereiche übernommen. Die Seite lädt neu …`); setTimeout(() => location.reload(), 1200); }
+      catch (err) { msg(err.message); }
+    };
+  }
+
+  /* ---------- Dennis begrüßt dich in deiner Sprache (Text; Audio erscheint, sobald Dateien in assets/hallo/ liegen) ---------- */
+  async function hallo() {
+    const list = DM.hallo || [];
+    let files = {}; try { const r = await fetch('assets/hallo/manifest.json?v=' + Math.floor(Date.now() / 36e5), { cache: 'no-cache' }); if (r.ok) files = (await r.json()).files || {}; } catch { /* ohne Audio */ }
+    const RTL = ['ar', 'fa'], any = list.some(([c]) => files[c] && (files[c].src || files[c].video));
+    page(`${crumbs([['Dennis in deiner Sprache']])}
+      <div class="dm-head"><h1>Dennis in deiner Sprache</h1><p class="dm-lead">Hallo! Hier sagt Dennis dir in deiner Sprache, wie es losgeht. Danach lernst du Schritt für Schritt Deutsch.</p></div>
+      <p class="dm-row"><a class="dm-btn" href="#">▶ Zur Startseite: Niveau wählen</a><a class="dm-btn dm-btn-quiet" href="#" data-tour-start>▶ Auf Deutsch: Dennis zeigt dir die Seite (Video)</a></p>
+      <div class="dm-hallo-grid">${list.map(([c, name, text]) => { const f = files[c]; return `<article class="dm-card dm-hallo" lang="${c}" dir="${RTL.includes(c) ? 'rtl' : 'ltr'}"><header><img src="assets/avatar/dennis-avatar-klein.jpg" alt="" width="64" height="80" loading="lazy" decoding="async"><h2>${x(name)}</h2></header><p class="dm-hallo-t">${x(text)}</p>${f && f.video ? `<video controls playsinline preload="none" poster="assets/avatar/dennis-avatar.jpg" src="${x(f.video)}">${f.vtt ? `<track kind="captions" srclang="${c}" label="${x(name)}" src="${x(f.vtt)}" default>` : ''}</video>` : f && f.src ? `<audio controls preload="none" src="${x(f.src)}"></audio>` : ''}</article>`; }).join('')}</div>
+      ${any ? '<p class="dm-small">🤖 Stimme mit KI erstellt (Stimmklon von Dennis). Die Texte wurden übersetzt, bitte melde Fehler über die Pinnwand.</p>' : '<p class="dm-small">Die Texte wurden übersetzt. Bitte melde Fehler über die Pinnwand.</p>'}`);
   }
 
   /* ---------- Wegweiser ---------- */
@@ -1616,7 +1707,7 @@
   /* ---------- Router ---------- */
   const legacyRoute = window.route;
   const NAV = { '': 'start', lernweg: 'wege', wegweiser: 'wege', lernen: 'lernen', lektion: 'lernen', wortschatz: 'lernen', wort: 'lernen', ueben: 'ueben', schreiben: 'ueben', hoeren: 'ueben', lesen: 'ueben', kahoot: 'ueben', challenge: 'spiele', spiele: 'spiele', bild: 'pruefung', pruefung: 'pruefung', training: 'pruefung', orientierungskurs: 'pruefung', lid: 'pruefung', quellen: 'pruefung', simulation: 'pruefung', vorbereitung: 'pruefung', videos: 'videos', 'ueber-mich': 'ueber', material: 'material', lernpakete: 'pakete', lieder: 'lieder' };
-  const TITLES = { '': 'Deutsch lernen mit Dennis', lernweg: 'Mein Lernweg', wegweiser: 'Welcher Weg passt?', lernen: 'Lektionen', lektion: 'Lektion', wortschatz: 'Wortschatz', wort: 'Wortkarte', ueben: 'Üben', schreiben: 'Schreib-Bausteine', hoeren: 'Hören', lesen: 'Lesen', kahoot: 'Kahoot-Quiz', challenge: 'Tages-Challenge', spiele: 'Lernspiele', bild: 'Bild beschreiben', pruefung: 'Prüfungstraining', training: 'Prüfungstraining', orientierungskurs: 'Deutschland verstehen', lid: 'Leben in Deutschland – 310 Fragen', quellen: 'Prüfungsinfos & Quellen', simulation: 'Prüfungssimulationen', vorbereitung: 'Gezielte Vorbereitung', videos: 'Videos', 'ueber-mich': 'Über mich', impressum: 'Impressum', datenschutz: 'Datenschutz', pinnwand: 'Deine Meinung', material: 'Materialien', lernpakete: 'Lernpakete', lieder: 'Deutsch mit Liedern', musik: 'Musik zum Lernen' };
+  const TITLES = { '': 'Deutsch lernen mit Dennis', lernstand: 'Lernstand & Erinnerung', hallo: 'Dennis in deiner Sprache', lernweg: 'Mein Lernweg', wegweiser: 'Welcher Weg passt?', lernen: 'Lektionen', lektion: 'Lektion', wortschatz: 'Wortschatz', wort: 'Wortkarte', ueben: 'Üben', schreiben: 'Schreib-Bausteine', hoeren: 'Hören', lesen: 'Lesen', kahoot: 'Kahoot-Quiz', challenge: 'Tages-Challenge', spiele: 'Lernspiele', bild: 'Bild beschreiben', pruefung: 'Prüfungstraining', training: 'Prüfungstraining', orientierungskurs: 'Deutschland verstehen', lid: 'Leben in Deutschland – 310 Fragen', quellen: 'Prüfungsinfos & Quellen', simulation: 'Prüfungssimulationen', vorbereitung: 'Gezielte Vorbereitung', videos: 'Videos', 'ueber-mich': 'Über mich', impressum: 'Impressum', datenschutz: 'Datenschutz', pinnwand: 'Deine Meinung', material: 'Materialien', lernpakete: 'Lernpakete', lieder: 'Deutsch mit Liedern', musik: 'Musik zum Lernen' };
   const OWN = {
     '': () => home(),
     lernweg: p => p[1] ? pathPage(p[1]) : paths(),
@@ -1636,6 +1727,8 @@
     material: p => materials(p[1], p[2]),
     lernpakete: p => p[1] ? packagePage(p[1]) : packages(),
     kahoot: () => kahootPage(),
+    lernstand: () => lernstand(),
+    hallo: () => hallo(),
     lieder: p => p[1] === 'playlist' ? songPlaylist(p[2]) : p[1] && !SONG_LEVELS.includes(p[1]) ? songPage(p[1]) : songsHub(p[1])
   };
   const ALIAS = { meinung: 'pinnwand', buch: 'lernen', themen: 'lernen', cover: '', praxis: 'ueben', pruefungen: 'pruefung', start: '' };

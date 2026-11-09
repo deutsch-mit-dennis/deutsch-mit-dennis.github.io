@@ -1019,3 +1019,27 @@ main#main{overflow-x:clip} /* schwebende 3D-Bilder dürfen die Seite nicht seitl
 /* tablet + laptop: photo stays in view next to the (now taller) text instead of sinking below the fold */
 @media (min-width:761px){.dm-hero{align-items:start}.dm-hero-photo{align-self:start;position:sticky;top:88px}}
 @media (min-width:761px){.dm-hero::before{display:none}.dm-hero-photo{isolation:isolate}.dm-hero-photo::before{content:'';position:absolute;z-index:-1;left:-6%;right:-6%;bottom:9%;height:26%;background:var(--dm-marker);border-radius:40% 55% 45% 60%/60% 45% 55% 40%;transform:rotate(-7deg);opacity:.85}}
+
+/* idea 1: paths that fit the chosen level */
+.dm-path.dm-fit{border-color:var(--dm-tinte);box-shadow:0 0 0 2px var(--dm-tinte-soft,#e3e9fb)}
+.dm-path.dm-fit .dm-path-meta::after{content:' · \2605'}
+/* idea 3: help button on tablets (721-1180 px) as round "?" so it does not cover content */
+@media (min-width:721px) and (max-width:1180px){#site-helper .help-launch{font-size:0!important;width:52px;height:52px;min-width:52px;padding:0!important;border-radius:50%;display:grid;place-items:center}#site-helper .help-launch::after{content:'?';font-size:26px;font-weight:800;line-height:1}}
+/* idea 4/5: reminder + progress page, idea 6: greeting page */
+.dm-ls{margin:0 0 16px}
+.dm-ls h2{margin:0 0 8px}
+.dm-ls input[type=time]{min-height:44px;padding:0 10px;font:inherit;border:2px solid var(--dm-line);border-radius:10px}
+.dm-ls input[type=file]{max-width:100%;font:inherit}
+.dm-ls-code{width:100%;font:14px/1.4 ui-monospace,monospace;border:2px solid var(--dm-line);border-radius:10px;padding:8px}
+.dm-ls-msg{min-height:1.5em;font-weight:700;color:var(--dm-gruen,#1f7a3d)}
+.dm-hallo-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:14px;margin:12px 0}
+.dm-hallo h2{margin:0 0 6px;font-size:22px}
+.dm-hallo-t{font-size:19px;line-height:1.55}
+.dm-hallo audio{width:100%;margin-top:8px}
+.dm-hallo[dir=rtl]{text-align:right}
+.dm-hallo header{display:flex;align-items:center;gap:12px;margin-bottom:8px}
+.dm-hallo header img{width:56px;height:70px;object-fit:cover;object-position:top;border-radius:12px;flex:none;background:var(--dm-tinte-soft,#e3e9fb)}
+.dm-hallo header h2{margin:0}
+.dm-hallo video{width:100%;max-height:70vh;margin-top:8px;border-radius:12px;background:#000}
+.dm-hallo header{justify-content:flex-start;border:0;padding:0;background:none;min-height:0}
+.dm-hallo header h2{flex:1;min-width:0}

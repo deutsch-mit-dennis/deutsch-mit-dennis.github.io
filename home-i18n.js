@@ -10,8 +10,12 @@
     ["uk", "Українська"],
     ["ru", "Русский"],
     ["ar", "العربية"],
+    ["fa", "فارسی"],
     ["tr", "Türkçe"],
+    ["es", "Español"],
+    ["it", "Italiano"],
   ];
+  const RTL = ["ar", "fa"];
   const D = {
     de: {
       lvl_q: "Wie gut ist dein Deutsch?",
@@ -29,6 +33,9 @@
       paths_h: "Wähle deinen Weg",
       games_h: "Spiele zum Üben",
       lang_h: "Hilfe in deiner Sprache",
+      chal_l: "Tages-Challenge",
+      hello_l: "Dennis in deiner Sprache",
+      mem_l: "Lernstand & Erinnerung",
     },
     en: {
       lvl_q: "How good is your German?",
@@ -46,6 +53,9 @@
       paths_h: "Choose your path",
       games_h: "Games to practise",
       lang_h: "Help in your language",
+      chal_l: "Daily challenge",
+      hello_l: "Dennis in your language",
+      mem_l: "Progress & reminder",
     },
     uk: {
       lvl_q: "Наскільки добре ти знаєш німецьку?",
@@ -63,6 +73,9 @@
       paths_h: "Обери свій шлях",
       games_h: "Ігри для практики",
       lang_h: "Допомога твоєю мовою",
+      chal_l: "Челендж дня",
+      hello_l: "Деніс твоєю мовою",
+      mem_l: "Прогрес і нагадування",
     },
     ru: {
       lvl_q: "Насколько хорошо ты знаешь немецкий?",
@@ -80,6 +93,9 @@
       paths_h: "Выбери свой путь",
       games_h: "Игры для практики",
       lang_h: "Помощь на твоём языке",
+      chal_l: "Челлендж дня",
+      hello_l: "Деннис на твоём языке",
+      mem_l: "Прогресс и напоминание",
     },
     ar: {
       lvl_q: "ما مستوى لغتك الألمانية؟",
@@ -97,6 +113,9 @@
       paths_h: "اختر طريقك",
       games_h: "ألعاب للتدريب",
       lang_h: "مساعدة بلغتك",
+      chal_l: "تحدّي اليوم",
+      hello_l: "دينيس بلغتك",
+      mem_l: "تقدّمي والتذكير",
     },
     tr: {
       lvl_q: "Almancan ne kadar iyi?",
@@ -114,6 +133,69 @@
       paths_h: "Yolunu seç",
       games_h: "Alıştırma oyunları",
       lang_h: "Kendi dilinde yardım",
+      chal_l: "Günün meydan okuması",
+      hello_l: "Dennis kendi dilinde",
+      mem_l: "İlerleme ve hatırlatma",
+    },
+    fa: {
+      lvl_q: "آلمانی تو چقدر خوب است؟",
+      lvl_hint: "روی سطح خودت بزن. قدم اول را نشانت می‌دهم.",
+      lv_a0: "تازه شروع می‌کنم",
+      lv_a1: "جمله‌های اول",
+      lv_a2: "زندگی روزمره",
+      lv_b1: "گفتگو",
+      lv_b2: "کار",
+      lvl_unk: "نمی‌دانم",
+      go_start: "همین حالا شروع کن",
+      go_lessons: "باز کردن درس‌ها",
+      go_cont: "ادامه",
+      free: "رایگان · از A1 تا B2 · بدون ثبت‌نام",
+      paths_h: "راه خودت را انتخاب کن",
+      games_h: "بازی برای تمرین",
+      lang_h: "راهنمایی به زبان خودت",
+      chal_l: "چالش روز",
+      hello_l: "دنیس به زبان تو",
+      mem_l: "پیشرفت و یادآوری",
+    },
+    es: {
+      lvl_q: "¿Qué tan bueno es tu alemán?",
+      lvl_hint: "Toca tu nivel. Te muestro el primer paso.",
+      lv_a0: "Estoy empezando",
+      lv_a1: "Primeras frases",
+      lv_a2: "Vida cotidiana",
+      lv_b1: "Conversaciones",
+      lv_b2: "Trabajo",
+      lvl_unk: "No lo sé",
+      go_start: "Empezar ahora",
+      go_lessons: "Abrir lecciones",
+      go_cont: "Continuar",
+      free: "Gratis · de A1 a B2 · sin registro",
+      paths_h: "Elige tu camino",
+      games_h: "Juegos para practicar",
+      lang_h: "Ayuda en tu idioma",
+      chal_l: "Reto del día",
+      hello_l: "Dennis en tu idioma",
+      mem_l: "Progreso y recordatorio",
+    },
+    it: {
+      lvl_q: "Quanto è buono il tuo tedesco?",
+      lvl_hint: "Tocca il tuo livello. Ti mostro il primo passo.",
+      lv_a0: "Sto iniziando",
+      lv_a1: "Prime frasi",
+      lv_a2: "Vita quotidiana",
+      lv_b1: "Conversazioni",
+      lv_b2: "Lavoro",
+      lvl_unk: "Non lo so",
+      go_start: "Inizia ora",
+      go_lessons: "Apri le lezioni",
+      go_cont: "Continua",
+      free: "Gratis · da A1 a B2 · senza registrazione",
+      paths_h: "Scegli il tuo percorso",
+      games_h: "Giochi per esercitarti",
+      lang_h: "Aiuto nella tua lingua",
+      chal_l: "Sfida del giorno",
+      hello_l: "Dennis nella tua lingua",
+      mem_l: "Progressi e promemoria",
     },
   };
   const KEY = "dmd.lang";
@@ -138,7 +220,7 @@
       el.lang = cur;
     });
     root.querySelectorAll("[data-i18n-dir]").forEach((el) => {
-      el.dir = cur === "ar" ? "rtl" : "ltr";
+      el.dir = RTL.indexOf(cur) > -1 ? "rtl" : "ltr";
     });
     root.querySelectorAll("[data-lang-set]").forEach((b) => {
       b.setAttribute("aria-pressed", String(b.dataset.langSet === cur));
@@ -152,5 +234,16 @@
     } catch (_) {}
     apply(document);
   }
+
+  /* Greeting of Dennis in seven languages (text for the #hallo page and for the voice recording). Please have native speakers check. */
+  DM.hallo = [
+    ["uk", "Українська", "Привіт, я Деніс, твій викладач німецької. На цьому сайті ти безкоштовно вивчаєш німецьку крок за кроком. Натисни свій рівень на головній сторінці, і я покажу тобі перший крок. Ти впораєшся. Успіхів!"],
+    ["ru", "Русский", "Привет, я Деннис, твой учитель немецкого. На этом сайте ты бесплатно учишь немецкий шаг за шагом. Нажми на свой уровень на главной странице, и я покажу тебе первый шаг. У тебя всё получится. Удачи!"],
+    ["ar", "العربية", "مرحباً، أنا دينيس، مدرّس اللغة الألمانية. في هذا الموقع تتعلّم الألمانية مجاناً خطوة بعد خطوة. اضغط على مستواك في الصفحة الرئيسية وسأريك الخطوة الأولى. أنت قادر على ذلك. بالتوفيق!"],
+    ["fa", "فارسی", "سلام، من دنیس هستم، معلم زبان آلمانی تو. در این سایت رایگان و قدم به قدم آلمانی یاد می‌گیری. در صفحهٔ اصلی روی سطح خودت بزن تا قدم اول را نشانت بدهم. تو می‌توانی. موفق باشی!"],
+    ["tr", "Türkçe", "Merhaba, ben Dennis, Almanca öğretmenin. Bu sitede Almancayı ücretsiz ve adım adım öğrenirsin. Ana sayfada seviyene dokun, sana ilk adımı göstereyim. Başarabilirsin. Bol şans!"],
+    ["es", "Español", "Hola, soy Dennis, tu profesor de alemán. En esta página aprendes alemán gratis, paso a paso. Toca tu nivel en la página de inicio y te muestro el primer paso. Tú puedes. ¡Mucho éxito!"],
+    ["it", "Italiano", "Ciao, sono Dennis, il tuo insegnante di tedesco. Su questo sito impari il tedesco gratis, passo dopo passo. Tocca il tuo livello nella pagina iniziale e ti mostro il primo passo. Ce la farai. Buona fortuna!"],
+  ];
   DM.hi18n = { langs: LANGS, t, apply, set, get: () => cur };
 })();

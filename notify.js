@@ -103,7 +103,7 @@
       const first = get(SEEN) === null;
       if (first) { markSeen(items.filter(i => Date.now() - i.t > 3 * 864e5)); } // erster Besuch: nur Älteres gilt als bekannt
       const nw = fresh(items);
-      badge(nw.length);
+      badge(first ? 0 : nw.length); // first visit: no alarm-red number, news stay in the bell panel
       // „Neu seit deinem letzten Besuch“ nur für wiederkehrende Besucher; Neue sehen die Zahl an der Glocke
       if (nw.length && !first) setTimeout(() => showToast(nw), 2500);
     });

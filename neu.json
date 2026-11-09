@@ -2,6 +2,12 @@
  "note": "Neu auf der Seite – neueste Einträge oben. Wird vom Redaktionsplan (geplante Aufgaben) ergänzt.",
  "items": [
   {
+   "date": "2026-11-09",
+   "type": "neu",
+   "title": "Neu: tägliche Erinnerung im Kalender und Lernstand sichern – dein Fortschritt geht beim Handywechsel nicht mehr verloren",
+   "link": "#lernstand"
+  },
+  {
    "date": "2026-11-07",
    "type": "neu",
    "title": "Neues Lernspiel: Mikula sucht den Weg nach Hause – hilf Mikula am Bahnhof und im Supermarkt (A1–B1)",

@@ -1,0 +1,47 @@
+{
+ "note": "Greeting of Dennis per language for the voice recording (VoiceStudio, Dennis clone). No digits in the texts. Output: assets/hallo/<code>.mp3, then add the code to assets/hallo/manifest.json.",
+ "languages": [
+  {
+   "code": "uk",
+   "name": "Українська",
+   "text": "Привіт, я Деніс, твій викладач німецької. На цьому сайті ти безкоштовно вивчаєш німецьку крок за кроком. Натисни свій рівень на головній сторінці, і я покажу тобі перший крок. Ти впораєшся. Успіхів!",
+   "out": "assets/hallo/uk.mp3"
+  },
+  {
+   "code": "ru",
+   "name": "Русский",
+   "text": "Привет, я Деннис, твой учитель немецкого. На этом сайте ты бесплатно учишь немецкий шаг за шагом. Нажми на свой уровень на главной странице, и я покажу тебе первый шаг. У тебя всё получится. Удачи!",
+   "out": "assets/hallo/ru.mp3"
+  },
+  {
+   "code": "ar",
+   "name": "العربية",
+   "text": "مرحباً، أنا دينيس، مدرّس اللغة الألمانية. في هذا الموقع تتعلّم الألمانية مجاناً خطوة بعد خطوة. اضغط على مستواك في الصفحة الرئيسية وسأريك الخطوة الأولى. أنت قادر على ذلك. بالتوفيق!",
+   "out": "assets/hallo/ar.mp3"
+  },
+  {
+   "code": "fa",
+   "name": "فارسی",
+   "text": "سلام، من دنیس هستم، معلم زبان آلمانی تو. در این سایت رایگان و قدم به قدم آلمانی یاد می‌گیری. در صفحهٔ اصلی روی سطح خودت بزن تا قدم اول را نشانت بدهم. تو می‌توانی. موفق باشی!",
+   "out": "assets/hallo/fa.mp3"
+  },
+  {
+   "code": "tr",
+   "name": "Türkçe",
+   "text": "Merhaba, ben Dennis, Almanca öğretmenin. Bu sitede Almancayı ücretsiz ve adım adım öğrenirsin. Ana sayfada seviyene dokun, sana ilk adımı göstereyim. Başarabilirsin. Bol şans!",
+   "out": "assets/hallo/tr.mp3"
+  },
+  {
+   "code": "es",
+   "name": "Español",
+   "text": "Hola, soy Dennis, tu profesor de alemán. En esta página aprendes alemán gratis, paso a paso. Toca tu nivel en la página de inicio y te muestro el primer paso. Tú puedes. ¡Mucho éxito!",
+   "out": "assets/hallo/es.mp3"
+  },
+  {
+   "code": "it",
+   "name": "Italiano",
+   "text": "Ciao, sono Dennis, il tuo insegnante di tedesco. Su questo sito impari il tedesco gratis, passo dopo passo. Tocca il tuo livello nella pagina iniziale e ti mostro il primo passo. Ce la farai. Buona fortuna!",
+   "out": "assets/hallo/it.mp3"
+  }
+ ]
+}
