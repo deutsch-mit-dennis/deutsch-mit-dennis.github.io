@@ -22,6 +22,14 @@ const AREAS = {
   tasse:     { title: 'Pause', text: 'Witz des Tages, Tages-Challenge und deine Meinung.', href: '#witz', icon: 'idee', btn: 'Pause machen' },
   radio:     { title: 'Lieder', text: 'Deutsch mit Liedern bis C1 – mit Liedtext zum Mitlesen.', href: '#lieder', icon: 'noten', btn: 'Lieder hören' },
 };
+// interface texts in the learner's language (same choice as on the start page: localStorage dmd.lang). The learning content inside the objects stays German.
+const HI = () => (window.DM && window.DM.hi18n) || null;
+const T = (k, fb) => { const H = HI(); return (H && H.t(k)) || fb; };
+const areaTitle = key => T('ch_' + key, AREAS[key] ? AREAS[key].title : key);
+const CHIP_ICON = { laptop: '💻', kopfhoerer: '🎧', buecher: '📚', mikrofon: '🎤', heft: '📓', gamepad: '🎮', pruefung: '📝', globus: '🌍', shop: '🛍️', tasse: '☕', radio: '🎵' };
+// which desk objects fit which level, in a sensible order (my suggestion, not binding)
+const LEVEL_DESK = { A0: ['laptop', 'kopfhoerer', 'mikrofon', 'gamepad', 'radio'], A1: ['laptop', 'kopfhoerer', 'mikrofon', 'heft', 'gamepad', 'radio'], A2: ['laptop', 'kopfhoerer', 'buecher', 'mikrofon', 'heft', 'gamepad'], B1: ['pruefung', 'kopfhoerer', 'buecher', 'mikrofon', 'heft', 'globus'], B2: ['pruefung', 'buecher', 'kopfhoerer', 'mikrofon', 'heft'] };
+let recKeys = [], recSet = new Set(); // objects recommended for the chosen level
 const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
 const canHover = matchMedia('(hover:hover)').matches;
 const $ = id => document.getElementById(id);
@@ -289,7 +297,7 @@ LAYOUT.forEach(([key, make, x, z, ry, r], i) => {
 const chips = $('chips');
 Object.entries(AREAS).forEach(([key, a]) => {
   if (a.noChip) return;
-  const b = document.createElement('button'); b.type = 'button'; b.textContent = a.title; b.dataset.key = key; b.style.setProperty('--i', chips.children.length);
+  const b = document.createElement('button'); b.type = 'button'; b.innerHTML = `<span class="chip-i" aria-hidden="true">${CHIP_ICON[key] || ''}</span><span class="chip-l"></span>`; b.querySelector('.chip-l').textContent = areaTitle(key); b.dataset.key = key; b.style.setProperty('--i', chips.children.length);
   b.addEventListener('click', () => openObject(key)); chips.appendChild(b);
   const on = () => { if (!focusKey && !touring) { hovered = key; chipHover = key; } }, off = () => { if (chipHover === key) { chipHover = null; if (hovered === key) hovered = null; } };
   b.addEventListener('pointerenter', on); b.addEventListener('focus', on); b.addEventListener('pointerleave', off); b.addEventListener('blur', off);
@@ -320,8 +328,8 @@ function openObject(key, route) {
 }
 function showView(key, route) {
   const inst = VIEWS[key]({ renderer }), a = AREAS[key];
-  const wrap = document.createElement('div'); wrap.className = `view view-${key}`; wrap.setAttribute('role', 'dialog'); wrap.setAttribute('aria-modal', 'true'); wrap.setAttribute('aria-label', a.title);
-  wrap.innerHTML = `<div class="view-bar"><button type="button" class="view-back">← Schreibtisch</button><span class="view-title">${a.title}</span></div><div class="view-body"></div>`;
+  const wrap = document.createElement('div'); wrap.className = `view view-${key}`; wrap.setAttribute('role', 'dialog'); wrap.setAttribute('aria-modal', 'true'); wrap.setAttribute('aria-label', areaTitle(key));
+  wrap.innerHTML = `<div class="view-bar"><button type="button" class="view-back">← Schreibtisch</button><span class="view-title">${areaTitle(key)}</span></div><div class="view-body"></div>`;
   wrap.querySelector('.view-body').append(inst.node);
   wrap.style.transformOrigin = '50% 55%';
   document.body.append(wrap); view = { wrap, inst, key }; setInert(true);
@@ -434,7 +442,7 @@ function frame() {
     o.lift += ((active ? .32 : 0) - o.lift) * K(.15);
     o.holder.position.y = (1 - drop) * 7 + o.lift + (o.hop || 0);
     o.obj.rotation.z = active && !reduced ? Math.sin(time * 3) * .03 : o.obj.rotation.z * Math.pow(.9, dt * 60);
-    if (o.ring) { const s = o.ring.scale.x + ((active ? 1 : .001) - o.ring.scale.x) * K(.18); o.ring.scale.setScalar(s); o.ring.position.y = .025 - o.lift; }
+    if (o.ring) { const s = o.ring.scale.x + ((active ? 1 : recSet.has(o.key) ? .55 : .001) - o.ring.scale.x) * K(.18); o.ring.scale.setScalar(s); o.ring.position.y = .025 - o.lift; }
     if (!reduced) o.obj.getObjectByName('spin')?.rotateY(.006 * dt * 60);
   });
   const show = touring ? focusKey : (focusKey ? null : hovered || (life && life.teasing));
@@ -443,7 +451,7 @@ function frame() {
   if (show) {
     const o = objs.find(x => x.key === show); v.set(o.holder.position.x, o.height + o.lift + .35, o.holder.position.z).project(camera);
     tag.style.left = ((v.x + 1) / 2 * innerWidth) + 'px'; tag.style.top = ((1 - v.y) / 2 * innerHeight) + 'px';
-    const n = stickers ? stickers.count(show) : 0, label = AREAS[show].title + (n ? ` · ${n}× geübt` : '');
+    const n = stickers ? stickers.count(show) : 0, label = areaTitle(show) + (n ? ` · ${n}×` : '');
     if (tag.textContent !== label) { tag.textContent = label; tag.classList.remove('pop'); void tag.offsetWidth; tag.classList.add('pop'); } tag.hidden = false;
   } else tag.hidden = true;
   renderer.render(scene, camera);
@@ -489,7 +497,7 @@ function showContent(route, stay = false) {
   const key = view.key;
   if (content && content.key === key) { content.stay = content.stay || stay; turnTo(route); return; }
   const el = document.createElement('div'); el.className = `cf cf-${key}`;
-  el.innerHTML = `<div class="cf-card"><div class="cf-bar"><button type="button" class="cf-back">\u2190 ${AREAS[key].title}</button><span class="cf-title">Lädt …</span></div>
+  el.innerHTML = `<div class="cf-card"><div class="cf-bar"><button type="button" class="cf-back">\u2190 ${areaTitle(key)}</button><span class="cf-title">Lädt …</span></div>
     <div class="cf-page"><iframe class="cf-frame" title="Inhalt" src="../index.html#${route}"></iframe></div></div>`;
   view.wrap.append(el);
   const frame = el.querySelector('iframe');
@@ -561,7 +569,7 @@ async function startTour() {
   const T = TOURS[tourLang];
   const box = document.getElementById('tourbox'), media = document.getElementById('tour-media'), sub = document.getElementById('tour-sub'), sub2 = document.getElementById('tour-sub2');
   const pauseBtn = document.getElementById('tour-pause'); if (pauseBtn) pauseBtn.textContent = 'Pause';
-  media.preload = 'auto';
+  media.preload = 'auto'; if (!media.getAttribute('poster')) media.setAttribute('poster', SITE_BASE + 'assets/avatar/dennis-avatar.jpg');
   if (media.getAttribute('src') !== T.media) { media.src = T.media; media.load(); }
   media.currentTime = 0;
   const playing = media.play(); // inside the tap, before any await
@@ -627,14 +635,42 @@ if (location.hash.length > 1) { try { pendingRoute = safeRoute(decodeURIComponen
 function lastPage() { try { const m = JSON.parse(localStorage.getItem('dmd.v1') || '{}'); return m.last && m.last.route ? m.last : null; } catch { return null; } }
 function renderResume() {
   const box = document.getElementById('resume'); if (!box) return;
-  const l = lastPage(); box.hidden = !l; if (!l) return;
-  box.querySelector('b').textContent = l.title || l.route;
-  box.onclick = () => openRoute(l.route);
+  const l = lastPage(), first = recKeys[0], k = box.querySelector('.r-k');
+  if (l) { box.hidden = false; k.textContent = T('go_cont', 'Weitermachen'); box.querySelector('b').textContent = l.title || l.route; box.onclick = () => openRoute(l.route); }
+  else if (first) { box.hidden = false; k.textContent = T('go_start', 'Jetzt starten'); box.querySelector('b').textContent = areaTitle(first); box.onclick = () => openObject(first); }
+  else box.hidden = true;
 }
 renderResume();
 addEventListener('focus', renderResume);
 // refresh the note whenever the user comes back to the desk
 document.addEventListener('click', e => { if (e.target.closest('.view-back')) setTimeout(renderResume, 600); });
+
+// ---------- level (shared with the start page: dmd.v1 -> level) + language (dmd.lang) ----------
+function readLevel() { try { const m = JSON.parse(localStorage.getItem('dmd.v1') || '{}'); return LEVEL_DESK[m.level] ? m.level : ''; } catch { return ''; } }
+function writeLevel(lv) { try { const m = JSON.parse(localStorage.getItem('dmd.v1') || '{}'); m.level = lv; localStorage.setItem('dmd.v1', JSON.stringify(m)); } catch {} }
+function applyLevel(lv) {
+  recKeys = (LEVEL_DESK[lv] || []).filter(k => AREAS[k]); recSet = new Set(recKeys);
+  chips.classList.toggle('has-level', !!recKeys.length);
+  chips.querySelectorAll('button').forEach((b, n) => { const i = recKeys.indexOf(b.dataset.key); if (i >= 0) { b.dataset.rec = i + 1; b.style.order = i; } else { delete b.dataset.rec; b.style.order = recKeys.length ? 100 + n : ''; } }); // recommended chips first, in order
+  document.querySelectorAll('#lvl3d [data-lv]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.lv === lv)));
+  renderResume();
+}
+document.querySelectorAll('#lvl3d [data-lv]').forEach(b => b.addEventListener('click', () => { const lv = b.getAttribute('aria-pressed') === 'true' ? '' : b.dataset.lv; writeLevel(lv); applyLevel(lv); }));
+function relabel() {
+  chips.querySelectorAll('button').forEach(b => { const l = b.querySelector('.chip-l'); if (l) l.textContent = areaTitle(b.dataset.key); });
+  renderResume();
+}
+(() => {
+  const H = HI(), sel = document.getElementById('lang3d');
+  if (H && sel) {
+    sel.innerHTML = H.langs.map(([c, n]) => `<option value="${c}" lang="${c}">${n}</option>`).join('');
+    sel.value = H.get();
+    sel.addEventListener('change', () => { H.set(sel.value); relabel(); });
+    H.apply(document);
+  }
+  applyLevel(readLevel());
+  addEventListener('focus', () => applyLevel(readLevel())); // level may have been changed on the start page in another tab
+})();
 
 // ---------- one-time invitation to the tour ----------
 (() => {
@@ -647,7 +683,7 @@ document.addEventListener('click', e => { if (e.target.closest('.view-back')) se
 })();
 
 // ---------- (2) one back button: page by page inside the frame, then close ----------
-function updBack() { if (!content) return; const b = content.el.querySelector('.cf-back'); b.textContent = content.depth > 0 ? '\u2190 Zurück' : '\u2190 ' + AREAS[content.key].title; }
+function updBack() { if (!content) return; const b = content.el.querySelector('.cf-back'); b.textContent = content.depth > 0 ? '\u2190 Zurück' : '\u2190 ' + areaTitle(content.key); }
 function cfBack() {
   if (content && content.depth > 0) { content.back = true; try { content.frame.contentWindow.history.back(); return; } catch {} }
   hideContent();
@@ -674,7 +710,7 @@ function setNight(on, byUser = false) {
     if (view || touring || tg.closest('input, textarea, select, iframe')) return;
     if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
       e.preventDefault(); const i = keys.indexOf(hovered); hovered = keys[(i + (e.key === 'ArrowRight' ? 1 : keys.length - 1)) % keys.length];
-      live.textContent = AREAS[hovered].title + ' – Enter zum Öffnen';
+      live.textContent = areaTitle(hovered) + ' – Enter';
     } else if ((e.key === 'Enter' || e.key === ' ') && hovered && (tg === document.body || tg === document.documentElement)) { e.preventDefault(); openObject(hovered); }
   });
 }

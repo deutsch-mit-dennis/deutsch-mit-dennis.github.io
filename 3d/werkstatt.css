@@ -238,7 +238,7 @@ body.focused .info,body.focused .tag,body.focused .top{opacity:0;pointer-events:
 
 /* ---------- guided tour ---------- */
 .tour-btn{gap:10px;margin:2px 0 4px;min-height:52px}
-.tour-face{width:30px;height:30px;border-radius:50%;background:url(../assets/avatar/dennis-avatar.jpg) 50% 20%/cover;box-shadow:0 0 0 2px #fff}
+.tour-face{width:30px;height:30px;border-radius:50%;background:url(../assets/avatar/dennis-avatar-klein.jpg) 50% 20%/cover;box-shadow:0 0 0 2px #fff}
 body.touring .info{opacity:0;pointer-events:none}
 .tourbox{position:fixed;z-index:15;left:max(16px,env(safe-area-inset-left,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));display:flex;align-items:flex-end;gap:14px;max-width:min(560px,calc(100% - 32px));
   animation:tourIn .6s cubic-bezier(.2,.9,.25,1.1)}
@@ -369,3 +369,22 @@ body.touring .soc3d{display:none}
 
 /* tour video is buffering */
 .tour-bubble.is-loading::after{content:'';position:absolute;inset:0;background:rgba(23,32,54,.45) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='12' r='9' fill='none' stroke='%23fff' stroke-width='3' stroke-dasharray='14 40'%3E%3CanimateTransform attributeName='transform' type='rotate' from='0 12 12' to='360 12 12' dur='.9s' repeatCount='indefinite'/%3E%3C/circle%3E%3C/svg%3E") center/36px no-repeat;pointer-events:none}
+
+/* level picker, language select, chip icons, recommended objects */
+.lvl3d{display:flex;align-items:center;gap:8px;margin-top:12px;flex-wrap:wrap}
+.lvl3d-h{font-size:.85rem;font-weight:700;color:var(--muted)}
+.lvl3d-b{display:flex;gap:6px;flex:1 1 auto}
+.lvl3d-b button{flex:1 1 0;min-width:44px;min-height:44px;border-radius:12px;border:2px solid var(--line);background:#fff;color:var(--tinte);font:inherit;font-weight:800;font-size:.95rem;cursor:pointer}
+.lvl3d-b button[aria-pressed=true]{background:var(--marker);border-color:#E8C500;color:var(--ink)}
+.chips button{display:inline-flex;align-items:center;gap:6px;position:relative}
+.chip-i{font-size:1.05em;line-height:1}
+.chips.has-level button:not([data-rec]){opacity:.62}
+.chips button[data-rec]::before{content:attr(data-rec);display:inline-grid;place-items:center;min-width:20px;height:20px;padding:0 5px;border-radius:999px;background:var(--tinte);color:#fff;font-size:.72rem;font-weight:800;line-height:1}
+.soc3d .s-share span{display:none}
+.soc3d .s-share{width:44px;padding:0}
+.lang3d{display:inline-flex;align-items:center;gap:4px;min-height:44px;padding:0 8px;border:2px solid var(--line);border-radius:999px;background:#fff}
+.lang3d select{min-height:40px;border:0;background:transparent;font:inherit;font-size:.88rem;color:var(--ink);cursor:pointer;max-width:130px}
+#info[dir=rtl]{text-align:right}
+/* portrait phones: the info panel never grows beyond the screen (scrolls instead) and the intro text gives way on short screens */
+@media (max-width:900px),(orientation:portrait){.info{max-height:calc(100dvh - 84px);overflow-y:auto;scrollbar-width:thin}}
+@media (max-height:700px) and (orientation:portrait){.info>p:not(.kicker){display:none}.lvl3d{margin-top:8px}.info{padding-top:10px;padding-bottom:10px}}
