@@ -36,6 +36,7 @@
       chal_l: "Tages-Challenge",
       hello_l: "Dennis in deiner Sprache",
       mem_l: "Lernstand & Erinnerung",
+      lp_h: "Deine Wege",
     },
     en: {
       lvl_q: "How good is your German?",
@@ -56,6 +57,7 @@
       chal_l: "Daily challenge",
       hello_l: "Dennis in your language",
       mem_l: "Progress & reminder",
+      lp_h: "Your paths",
     },
     uk: {
       lvl_q: "Наскільки добре ти знаєш німецьку?",
@@ -76,6 +78,7 @@
       chal_l: "Челендж дня",
       hello_l: "Деніс твоєю мовою",
       mem_l: "Прогрес і нагадування",
+      lp_h: "Твої шляхи",
     },
     ru: {
       lvl_q: "Насколько хорошо ты знаешь немецкий?",
@@ -96,6 +99,7 @@
       chal_l: "Челлендж дня",
       hello_l: "Деннис на твоём языке",
       mem_l: "Прогресс и напоминание",
+      lp_h: "Твои пути",
     },
     ar: {
       lvl_q: "ما مستوى لغتك الألمانية؟",
@@ -116,6 +120,7 @@
       chal_l: "تحدّي اليوم",
       hello_l: "دينيس بلغتك",
       mem_l: "تقدّمي والتذكير",
+      lp_h: "طرقك",
     },
     tr: {
       lvl_q: "Almancan ne kadar iyi?",
@@ -136,6 +141,7 @@
       chal_l: "Günün meydan okuması",
       hello_l: "Dennis kendi dilinde",
       mem_l: "İlerleme ve hatırlatma",
+      lp_h: "Yolların",
     },
     fa: {
       lvl_q: "آلمانی تو چقدر خوب است؟",
@@ -156,6 +162,7 @@
       chal_l: "چالش روز",
       hello_l: "دنیس به زبان تو",
       mem_l: "پیشرفت و یادآوری",
+      lp_h: "راه‌های تو",
     },
     es: {
       lvl_q: "¿Qué tan bueno es tu alemán?",
@@ -176,6 +183,7 @@
       chal_l: "Reto del día",
       hello_l: "Dennis en tu idioma",
       mem_l: "Progreso y recordatorio",
+      lp_h: "Tus caminos",
     },
     it: {
       lvl_q: "Quanto è buono il tuo tedesco?",
@@ -196,6 +204,7 @@
       chal_l: "Sfida del giorno",
       hello_l: "Dennis nella tua lingua",
       mem_l: "Progressi e promemoria",
+      lp_h: "I tuoi percorsi",
     },
   };
   const KEY = "dmd.lang";

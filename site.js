@@ -192,9 +192,13 @@
   const LEVEL_PATHS = { A0: ['start', 'sprechen'], A1: ['start', 'sprechen', 'schreiben'], A2: ['dtz', 'sprechen', 'schreiben', 'lid'], B1: ['telcb1', 'dtz', 'dtbb1', 'bridge', 'sprechen', 'schreiben', 'lid'], B2: ['telcb2', 'dtbb2', 'bridge', 'repeat', 'sprechen', 'schreiben', 'lid'] };
   const fitPaths = lv => (LEVEL_PATHS[lv] || []).filter(id => DM.paths[id]);
   /* Startseite: mit gewähltem Niveau ALLE passenden Wege, sonst die sechs Standard-Wege */
-  function homePaths(lv) {
-    const fit = fitPaths(lv);
-    return (fit.length ? fit : (DM.pathHome || DM.pathOrder)).map(pathCard).join('');
+  function homePaths() {
+    return (DM.pathHome || DM.pathOrder).map(pathCard).join('');
+  }
+  /* Übersicht direkt unter den Niveau-Knöpfen: alle Wege zum gewählten Niveau, sofort sichtbar */
+  function levelOverview(lv) {
+    const fit = fitPaths(lv); if (!fit.length) return '';
+    return `<div class="dm-level-paths"><h3 class="dm-lp-h"><span data-i18n="lp_h">Deine Wege</span> · ${x(lv)}</h3><ul>${fit.map(id => { const q = DM.paths[id], g = DM.groups[q.group]; return `<li><a class="dm-lp dm-g-${g.color}" href="#lernweg/${id}"><span class="dm-lp-ico" aria-hidden="true">${q.icon}</span><span class="dm-lp-t"><b>${x(q.title)}</b><small>${x(q.level)}</small></span><span aria-hidden="true">→</span></a></li>`; }).join('')}</ul></div>`;
   }
   /* Niveau-Wahl statt Kacheln: eine Frage, ein großer Knopf. Hilfetexte in mehreren Sprachen (home-i18n.js). */
   const LV_KEYS = [['A0', 'a0'], ['A1', 'a1'], ['A2', 'a2'], ['B1', 'b1'], ['B2', 'b2']];
@@ -226,12 +230,12 @@
       const lv = mem.level, st = lv ? levelStart(lv) : null;
       go.innerHTML = (last ? `<a class="dm-btn dm-level-last" href="#${x(last.route)}"><span data-i18n="go_cont">Weitermachen</span>: ${x(last.title)}</a>` : '')
         + (st ? `<a class="dm-btn dm-level-start" href="${x(st.href)}"><span class="dm-level-lbl"><span data-i18n="${st.key}">${st.key === 'go_start' ? 'Jetzt starten' : 'Lektionen öffnen'}</span> <span aria-hidden="true">▶</span></span><small>${x(st.sub)}</small></a>` : '')
+        + levelOverview(lv)
         + `<p class="dm-level-more"><a href="#challenge"><span aria-hidden="true">🔥</span> <span data-i18n="chal_l">Tages-Challenge</span></a><a href="#hallo"><span aria-hidden="true">🎧</span> <span data-i18n="hello_l">Dennis in deiner Sprache</span></a><a href="#lernstand"><span aria-hidden="true">💾</span> <span data-i18n="mem_l">Lernstand &amp; Erinnerung</span></a></p>`;
       $$('.dm-lv[data-lv]', box).forEach(b => b.setAttribute('aria-pressed', String(b.dataset.lv === lv)));
-      const pw = $('#dm-paths'); if (pw) pw.innerHTML = homePaths(lv);
       if (H) H.apply(box);
     };
-    $$('.dm-lv[data-lv]', box).forEach(b => b.onclick = () => { mem.level = mem.level === b.dataset.lv ? '' : b.dataset.lv; save(); draw(); }); // second tap on the same level shows all paths again
+    $$('.dm-lv[data-lv]', box).forEach(b => b.onclick = () => { mem.level = mem.level === b.dataset.lv ? '' : b.dataset.lv; save(); draw(); const ov = $('.dm-level-paths', box); if (ov) ov.scrollIntoView({ block: 'nearest', behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' }); }); // second tap on the same level shows all paths again
     $$('[data-lang-set]', box).forEach(b => b.onclick = () => H.set(b.dataset.langSet));
     draw();
     if (H) H.apply(document);
