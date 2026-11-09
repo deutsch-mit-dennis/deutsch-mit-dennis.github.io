@@ -86,6 +86,18 @@ DM.paths = {
     "#lektion/wohnen",
     "Zimmer beschreiben und „kein“ und „nicht“ benutzen.",
     "Lektion"
+   ],
+   [
+    "Meine Familie",
+    "#lektion/familie",
+    "Mutter, Vater, Geschwister – mein, dein, sein, ihr.",
+    "Lektion"
+   ],
+   [
+    "Was machst du gern?",
+    "#lektion/freizeit",
+    "Hobbys, gern und lieber, „Ich kann …“.",
+    "Lektion"
    ]
   ]
  },
