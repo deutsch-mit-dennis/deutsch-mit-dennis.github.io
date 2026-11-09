@@ -597,7 +597,7 @@ header.dm-header .dm-3d-switch:focus-visible{outline:3px solid var(--dm-marker);
 @media (max-width:1180px){header.dm-header .dm-3d-switch{order:0}}
 @media (max-width:460px){header.dm-header{gap:4px}header.dm-header .logo{font-size:17px}header.dm-header .dm-3d-switch{min-width:44px;padding:0 8px;font-size:14px}}
 @media (max-width:350px){header.dm-header .logo{font-size:15px}}
-@media (max-width:374px){header.dm-header .dm-hshare{display:none}}
+@media (max-width:329px){header.dm-header .dm-hshare{display:none}}
 @media (max-width:374px){header.dm-header{column-gap:4px}}
 
 /* 3D switch: eye-catching entrance (cube spin), 3 pulse rings, periodic shine, "NEU" badge */

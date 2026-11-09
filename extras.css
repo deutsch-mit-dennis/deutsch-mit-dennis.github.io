@@ -928,3 +928,11 @@ main#main{overflow-x:clip} /* schwebende 3D-Bilder dürfen die Seite nicht seitl
   .dm-quick .dm-q-mk small{color:#eaf6ec}
   .dm-quick .dm-q-mk-go{flex:0 0 44px;width:44px;height:44px;display:grid;place-items:center;border-radius:50%;background:#ffc928;color:#172036;font-size:18px}
 }
+
+/* Social channels on the start page: direct links to YouTube, Instagram, TikTok */
+.dm-social{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 0}
+.dm-soc{display:inline-flex;align-items:center;justify-content:center;gap:6px;min-height:44px;padding:0 14px;border-radius:999px;border:1px solid var(--dm-line);background:var(--dm-surface,#fff);color:var(--dm-tinte);font-weight:700;font-size:15px;text-decoration:none;line-height:1}
+.dm-soc:hover,.dm-soc:focus-visible{background:var(--dm-tinte-soft)}
+.dm-soc-yt{color:#c4161c}.dm-soc-ig{color:#c13584}.dm-soc-tt{color:#111}
+@media (max-width:520px){.dm-social{flex-wrap:nowrap;gap:10px}.dm-soc{width:48px;height:48px;padding:0}.dm-soc span{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}.dm-soc svg{width:24px;height:24px}}
+@media print{.dm-social{display:none}}
