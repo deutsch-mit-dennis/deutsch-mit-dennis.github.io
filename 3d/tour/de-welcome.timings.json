@@ -1,16 +1,81 @@
 {
  "lang": "de",
- "note": "Website welcome video (assets/avatar/willkommen.mp4, HeyGen + ElevenLabs clone). Times from willkommen.vtt; step = desk object(s) the camera visits ('a>b' = split the sentence).",
+ "note": "Website welcome video (assets/avatar/willkommen.mp4, HeyGen + ElevenLabs clone). start/end = sentence (subtitle), checked against the pauses in the audio (silence analysis, 09.11.2026). cam = moment the desk object is NAMED (estimated from syllables); the camera leads by 0.7 s (TOUR_LEAD in werkstatt.js) so it has arrived when the word is spoken. cuts = naming times of the parts of a split step 'a>b>c'.",
  "duration": 42.32,
  "steps": [
-  { "i": 0, "step": "desk", "start": 0.0, "end": 2.85, "text": "Hallo und herzlich willkommen! Ich bin Dennis –" },
-  { "i": 1, "step": "desk", "start": 2.9, "end": 6.75, "text": "Deutschlehrer und Prüfer für den DTZ und für telc." },
-  { "i": 2, "step": "desk", "start": 6.8, "end": 11.25, "text": "Hier lernst du Deutsch kostenlos und ohne Anmeldung." },
-  { "i": 3, "step": "laptop", "start": 11.3, "end": 18.25, "text": "Wähle zuerst deinen Lernweg: vom ersten Wort auf A1 bis zum B2-Beruf." },
-  { "i": 4, "step": "mikrofon>heft>kopfhoerer", "start": 18.3, "end": 25.15, "text": "Unter „Üben“ trainierst du Sprechen, Schreiben und Hören – mit Sofort-Korrektur." },
-  { "i": 5, "step": "pruefung", "start": 25.2, "end": 29.05, "text": "Du hast bald eine Prüfung? Dann geh zum Prüfungstraining:" },
-  { "i": 6, "step": "pruefung>globus", "start": 29.1, "end": 33.35, "text": "DTZ, B2 und „Leben in Deutschland“." },
-  { "i": 7, "step": "radio", "start": 33.4, "end": 39.15, "text": "Und hör auch in meine Lieder rein – so bleibt die Grammatik im Kopf." },
-  { "i": 8, "step": "desk", "start": 39.2, "end": 42.25, "text": "Viel Erfolg! Ich freue mich, dass du da bist." }
+  {
+   "i": 0,
+   "step": "desk",
+   "start": 0.0,
+   "end": 2.85,
+   "text": "Hallo und herzlich willkommen! Ich bin Dennis –"
+  },
+  {
+   "i": 1,
+   "step": "desk",
+   "start": 2.9,
+   "end": 6.75,
+   "text": "Deutschlehrer und Prüfer für den DTZ und für telc."
+  },
+  {
+   "i": 2,
+   "step": "desk",
+   "start": 6.8,
+   "end": 11.25,
+   "text": "Hier lernst du Deutsch kostenlos und ohne Anmeldung."
+  },
+  {
+   "i": 3,
+   "step": "laptop",
+   "start": 11.3,
+   "end": 18.25,
+   "text": "Wähle zuerst deinen Lernweg: vom ersten Wort auf A1 bis zum B2-Beruf.",
+   "cam": 11.9
+  },
+  {
+   "i": 4,
+   "step": "laptop>mikrofon>heft>kopfhoerer",
+   "start": 18.45,
+   "end": 25.15,
+   "text": "Unter „Üben“ trainierst du Sprechen, Schreiben und Hören – mit Sofort-Korrektur.",
+   "cuts": [
+    20.7,
+    21.35,
+    22.05
+   ]
+  },
+  {
+   "i": 5,
+   "step": "pruefung",
+   "start": 25.4,
+   "end": 29.05,
+   "text": "Du hast bald eine Prüfung? Dann geh zum Prüfungstraining:",
+   "cam": 25.9
+  },
+  {
+   "i": 6,
+   "step": "pruefung>globus",
+   "start": 29.6,
+   "end": 33.75,
+   "text": "DTZ, B2 und „Leben in Deutschland“.",
+   "cuts": [
+    31.95
+   ]
+  },
+  {
+   "i": 7,
+   "step": "radio",
+   "start": 34.15,
+   "end": 39.15,
+   "text": "Und hör auch in meine Lieder rein – so bleibt die Grammatik im Kopf.",
+   "cam": 35.0
+  },
+  {
+   "i": 8,
+   "step": "desk",
+   "start": 39.2,
+   "end": 42.25,
+   "text": "Viel Erfolg! Ich freue mich, dass du da bist."
+  }
  ]
 }

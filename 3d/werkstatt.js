@@ -402,21 +402,27 @@ const outBounce = t => { const n = 7.5625, d = 2.75; if (t < 1 / d) return n * t
 let started = 0;
 let laptopOpen = 0, heftOpen = 0, lastActive = performance.now(), skip = 0;
 ['pointermove', 'pointerdown', 'keydown', 'wheel', 'resize', 'touchstart'].forEach(ev => addEventListener(ev, () => { lastActive = performance.now(); }, { passive: true }));
+let lastFrameMs = performance.now();
 function frame() {
-  if (!touring && !view && !focusKey && focusF < .001 && performance.now() - lastActive > 10000 && (skip++ % 2)) return; // idle: ~30 fps
+  const nowMs = performance.now();
+  if (touring && nowMs - lastFrameMs < 28) return; // tour: ~35 fps is enough and leaves the GPU to the video (no stutter)
+  if (!touring && !view && !focusKey && focusF < .001 && nowMs - lastActive > 10000 && (skip++ % 2)) return; // idle: ~30 fps
+  // all motion is time-based (not per frame), so a slow phone shows the same thing at the same moment as a fast one
+  const dt = Math.min(.1, (nowMs - lastFrameMs) / 1000 || .016); lastFrameMs = nowMs;
+  const K = r => 1 - Math.pow(1 - r, dt * 60);
   const time = clock.getElapsedTime(), t0 = time - started;
   if (view && focusF > .995) { if (view.inst.tick) view.inst.tick(); return; } // full-page view covers the desk (the notebook draws itself here)
-  focusF += ((focusKey ? 1 : 0) - focusF) * (reduced ? 1 : .07);
+  focusF += ((focusKey ? 1 : 0) - focusF) * (reduced ? 1 : K(.07));
   if (!focusKey && focusF < .002) { focusF = 0; focusObj = null; }
   if (focusObj) { focusObj.holder.getWorldPosition(fp); fp.y = focusObj.height * .45; }
   center.copy(fp).multiplyScalar(focusF);
   // gentle parallax: the desk turns a little with the mouse (not while zoomed in)
   const pf = (1 - focusF) * (reduced || !canHover ? 0 : 1);
-  par.x += (mouse.x * pf - par.x) * .05; par.y += (mouse.y * pf - par.y) * .05;
+  par.x += (mouse.x * pf - par.x) * K(.05); par.y += (mouse.y * pf - par.y) * K(.05);
   camera.position.copy(center).add(camOff); camera.position.x += par.x * .9; camera.position.z -= par.x * .9; camera.position.y += par.y * .8; camera.lookAt(center);
   camera.zoom = 1 + (zoomGoal - 1) * focusF;
   camera.setViewOffset(base.w, base.h, base.offX * (1 - focusF), base.offY * (1 - focusF), base.w, base.h); camera.updateProjectionMatrix();
-  laptopOpen += ((focusKey === 'laptop' ? 1 : 0) - laptopOpen) * .08; heftOpen += ((focusKey === 'heft' ? 1 : 0) - heftOpen) * .08;
+  laptopOpen += ((focusKey === 'laptop' ? 1 : 0) - laptopOpen) * K(.08); heftOpen += ((focusKey === 'heft' ? 1 : 0) - heftOpen) * K(.08);
   const lap = objs.find(o => o.key === 'laptop'), hf = objs.find(o => o.key === 'heft');
   if (stickers) stickers.tick(time);
   if (life) life.tick(time, { hovered, focusKey, busy: touring || !!view, idleMs: performance.now() - lastActive, night });
@@ -425,11 +431,11 @@ function frame() {
   objs.forEach(o => {
     const drop = reduced ? 1 : outBounce(Math.min(1, Math.max(0, (t0 - o.delay) / .8)));
     const active = o.key && (o.key === hovered || o.key === focusKey);
-    o.lift += ((active ? .32 : 0) - o.lift) * .15;
+    o.lift += ((active ? .32 : 0) - o.lift) * K(.15);
     o.holder.position.y = (1 - drop) * 7 + o.lift + (o.hop || 0);
-    o.obj.rotation.z = active && !reduced ? Math.sin(time * 3) * .03 : o.obj.rotation.z * .9;
-    if (o.ring) { const s = o.ring.scale.x + ((active ? 1 : .001) - o.ring.scale.x) * .18; o.ring.scale.setScalar(s); o.ring.position.y = .025 - o.lift; }
-    if (!reduced) o.obj.getObjectByName('spin')?.rotateY(.006);
+    o.obj.rotation.z = active && !reduced ? Math.sin(time * 3) * .03 : o.obj.rotation.z * Math.pow(.9, dt * 60);
+    if (o.ring) { const s = o.ring.scale.x + ((active ? 1 : .001) - o.ring.scale.x) * K(.18); o.ring.scale.setScalar(s); o.ring.position.y = .025 - o.lift; }
+    if (!reduced) o.obj.getObjectByName('spin')?.rotateY(.006 * dt * 60);
   });
   const show = touring ? focusKey : (focusKey ? null : hovered || (life && life.teasing));
   const hot = focusKey ? null : hovered; // desk -> chip: the matching button lights up
@@ -543,35 +549,54 @@ function previewObject(key) { // camera flies in, object opens a little, no full
   zoomGoal = Math.max(2.2, Math.min(4.5, (camera.top - camera.bottom) / (r * 3)));
 }
 const stepKeys = s => s.includes('>') ? s.split('>') : (TOUR_SPLIT[s] ? [s, TOUR_SPLIT[s]] : [s]);
+const timingsCache = {}; // loaded early, so play() can start inside the tap (iPhone blocks play() after a network wait)
+const loadTimings = l => timingsCache[l] ? Promise.resolve(timingsCache[l]) : fetch(TOURS[l].timings, { cache: 'no-store' }).then(r => r.json()).then(j => (timingsCache[l] = j));
+loadTimings(tourLang).catch(() => {});
+const TOUR_LEAD = .7; // the camera starts flying this many seconds before the word is spoken, so the object is there when it is named
+const lastWhere = (arr, fn) => { let r = -1; for (let i = 0; i < arr.length; i++) if (fn(arr[i])) r = i; return r; };
+let tourRun = 0; // only the newest tour run may drive subtitles and camera (switching the language mid-tour must not leave the old loop running)
 async function startTour() {
+  const run = ++tourRun;
   if (view) closeView();
   const T = TOURS[tourLang];
-  let timings; try { timings = await (await fetch(T.timings, { cache: 'no-store' })).json(); } catch { return; }
   const box = document.getElementById('tourbox'), media = document.getElementById('tour-media'), sub = document.getElementById('tour-sub'), sub2 = document.getElementById('tour-sub2');
+  const pauseBtn = document.getElementById('tour-pause'); if (pauseBtn) pauseBtn.textContent = 'Pause';
+  media.preload = 'auto';
   if (media.getAttribute('src') !== T.media) { media.src = T.media; media.load(); }
+  media.currentTime = 0;
+  const playing = media.play(); // inside the tap, before any await
+  let timings = timingsCache[tourLang]; if (!timings) { try { timings = await loadTimings(tourLang); } catch { return; } }
+  if (run !== tourRun) return;
   box.classList.toggle('is-video', !!T.video); sub.dir = T.rtl ? 'rtl' : 'auto'; sub.lang = tourLang;
   sub.textContent = timings.steps[0].text; sub2.textContent = tourLang === 'de' ? '' : timings.steps[0].de || ''; // subtitles always on
   touring = true; document.body.classList.add('touring'); box.hidden = false;
+  renderer.setPixelRatio(Math.min(devicePixelRatio, 1.25)); resize(); // lighter picture while the video plays
   try { localStorage.setItem('dmd.3d.tourDone', '1'); } catch {}
   document.getElementById('tour-start')?.classList.add('used');
-  let lastKey = '';
+  let lastCam = '', lastSub = -1;
   const tick = () => {
-    if (!touring) return;
-    const t = media.currentTime, i = timings.steps.findIndex(s => t >= s.start - .05 && t < s.end + .35);
-    if (i >= 0) {
-      const s = timings.steps[i], keys = stepKeys(s.step), part = Math.min(keys.length - 1, Math.floor((t - s.start) / Math.max(.1, s.end - s.start) * keys.length));
-      const k = keys[Math.max(0, part)], id = i + ':' + k;
-      if (id !== lastKey) { previewObject(k === 'desk' ? null : k); sub.textContent = s.text; sub2.textContent = tourLang === 'de' ? '' : (s.de || ''); lastKey = id; }
+    if (!touring || run !== tourRun) return;
+    const t = media.currentTime, tc = t + TOUR_LEAD, st = timings.steps;
+    const si = lastWhere(st, s => t >= s.start - .05), ci = lastWhere(st, s => tc >= (s.cam ?? s.start) - .05);
+    if (si >= 0 && si !== lastSub) { sub.textContent = st[si].text; sub2.textContent = tourLang === 'de' ? '' : (st[si].de || ''); lastSub = si; }
+    if (ci >= 0) {
+      const s = st[ci], keys = stepKeys(s.step);
+      const part = s.cuts ? Math.min(keys.length - 1, s.cuts.filter(c => tc >= c).length) : Math.min(keys.length - 1, Math.max(0, Math.floor((tc - (s.cam ?? s.start)) / Math.max(.1, s.end - (s.cam ?? s.start)) * keys.length)));
+      const k = keys[part], id = ci + ':' + k;
+      if (id !== lastCam) { previewObject(k === 'desk' ? null : k); lastCam = id; }
     }
     requestAnimationFrame(tick);
   };
   const bubble = box.querySelector('.tour-bubble');
   media.onplay = () => bubble.classList.add('talking'); media.onpause = () => bubble.classList.remove('talking');
-  media.currentTime = 0; media.play().catch(() => {}); requestAnimationFrame(tick);
+  media.onwaiting = () => bubble.classList.add('is-loading'); media.onplaying = () => bubble.classList.remove('is-loading');
+  Promise.resolve(playing).catch(() => { if (pauseBtn) pauseBtn.textContent = 'Weiter'; }); // blocked by the browser: the button starts it
+  requestAnimationFrame(tick);
   media.onended = stopTour;
 }
 function stopTour() {
-  touring = false; const media = document.getElementById('tour-media'); media.pause();
+  tourRun++; touring = false; const media = document.getElementById('tour-media'); media.pause();
+  renderer.setPixelRatio(Math.min(devicePixelRatio, SMALL ? 1.5 : 2)); resize();
   document.getElementById('tourbox').hidden = true; document.body.classList.remove('touring'); previewObject(null);
 }
 // language buttons for the tour
