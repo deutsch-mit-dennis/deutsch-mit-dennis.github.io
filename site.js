@@ -189,11 +189,12 @@
     </section>`;
   }
   /* Wege auf der Startseite: passend zum gewählten Niveau zuerst (Einschätzung von Dennis' Wegen, nicht verbindlich) */
-  const LEVEL_PATHS = { A0: ['start', 'sprechen'], A1: ['start', 'sprechen', 'schreiben'], A2: ['dtz', 'sprechen', 'schreiben', 'start'], B1: ['telcb1', 'dtz', 'dtbb1', 'sprechen', 'lid'], B2: ['telcb2', 'dtbb2', 'bridge', 'repeat', 'schreiben'] };
+  const LEVEL_PATHS = { A0: ['start', 'sprechen'], A1: ['start', 'sprechen', 'schreiben'], A2: ['dtz', 'sprechen', 'schreiben', 'lid'], B1: ['telcb1', 'dtz', 'dtbb1', 'bridge', 'sprechen', 'schreiben', 'lid'], B2: ['telcb2', 'dtbb2', 'bridge', 'repeat', 'sprechen', 'schreiben', 'lid'] };
+  const fitPaths = lv => (LEVEL_PATHS[lv] || []).filter(id => DM.paths[id]);
+  /* Startseite: mit gewähltem Niveau ALLE passenden Wege, sonst die sechs Standard-Wege */
   function homePaths(lv) {
-    const fit = (LEVEL_PATHS[lv] || []).filter(id => DM.paths[id]);
-    const ids = [...new Set(fit.concat(DM.pathHome || DM.pathOrder))].slice(0, 6);
-    return ids.map(id => fit.includes(id) ? pathCard(id).replace('class="dm-path ', 'class="dm-path dm-fit ') : pathCard(id)).join('');
+    const fit = fitPaths(lv);
+    return (fit.length ? fit : (DM.pathHome || DM.pathOrder)).map(pathCard).join('');
   }
   /* Niveau-Wahl statt Kacheln: eine Frage, ein großer Knopf. Hilfetexte in mehreren Sprachen (home-i18n.js). */
   const LV_KEYS = [['A0', 'a0'], ['A1', 'a1'], ['A2', 'a2'], ['B1', 'b1'], ['B2', 'b2']];
@@ -230,7 +231,7 @@
       const pw = $('#dm-paths'); if (pw) pw.innerHTML = homePaths(lv);
       if (H) H.apply(box);
     };
-    $$('.dm-lv[data-lv]', box).forEach(b => b.onclick = () => { mem.level = b.dataset.lv; save(); draw(); });
+    $$('.dm-lv[data-lv]', box).forEach(b => b.onclick = () => { mem.level = mem.level === b.dataset.lv ? '' : b.dataset.lv; save(); draw(); }); // second tap on the same level shows all paths again
     $$('[data-lang-set]', box).forEach(b => b.onclick = () => H.set(b.dataset.langSet));
     draw();
     if (H) H.apply(document);
@@ -333,6 +334,7 @@
   function paths() {
     page(`${crumbs([['Mein Lernweg']])}
       <div class="dm-head"><h1>Mein Lernweg</h1><p class="dm-lead">Jeder Weg ist eine Reihenfolge von Übungen. Hake ab, was du geschafft hast – dein Fortschritt bleibt auf deinem Gerät gespeichert.</p></div>
+      ${fitPaths(mem.level).length ? `<section class="dm-section" aria-label="Wege für dein Niveau"><div class="dm-section-head"><h2>Für dein Niveau: ${x(mem.level)}</h2><p>Alle passenden Wege – ändern kannst du das auf der Startseite.</p></div><div class="dm-paths">${fitPaths(mem.level).map(pathCard).join('')}</div></section>` : ''}
       ${['start', 'alltag', 'pruefung', 'beruf'].map(gk => { const ids = DM.pathOrder.filter(id => DM.paths[id].group === gk); return ids.length ? `<section class="dm-section" aria-label="${x(DM.groups[gk].label)}"><div class="dm-section-head"><h2>${{ start: 'Neu in Deutschland', alltag: 'Deutsch im Alltag', pruefung: 'Prüfungen: DTZ, Leben in Deutschland, telc', beruf: 'Beruf: DTB B1 und B2' }[gk]}</h2><p>${{ start: 'Für den Anfang', alltag: 'Ohne Prüfungsdruck', pruefung: 'Mit Probeprüfung und echter Zeit', beruf: 'Berufssprachkurs – mit Probeprüfung' }[gk]}</p></div><div class="dm-paths">${ids.map(pathCard).join('')}</div></section>` : ''; }).join('')}
       <p class="dm-center"><a class="dm-btn" href="#simulation">Direkt zu den Prüfungssimulationen</a> <a class="dm-btn dm-btn-quiet" href="#wegweiser">Ich weiß nicht, welcher Weg passt</a></p>`);
   }
