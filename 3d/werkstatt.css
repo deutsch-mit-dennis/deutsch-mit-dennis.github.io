@@ -388,3 +388,16 @@ body.touring .soc3d{display:none}
 /* portrait phones: the info panel never grows beyond the screen (scrolls instead) and the intro text gives way on short screens */
 @media (max-width:900px),(orientation:portrait){.info{max-height:calc(100dvh - 84px);overflow-y:auto;scrollbar-width:thin}}
 @media (max-height:700px) and (orientation:portrait){.info>p:not(.kicker){display:none}.lvl3d{margin-top:8px}.info{padding-top:10px;padding-bottom:10px}}
+
+/* minimize button in the window bars + the small field that brings the window back */
+.view-min,.cf-min{margin-left:auto;flex:none;display:inline-grid;place-items:center;width:44px;height:44px;border-radius:50%;border:0;background:rgba(255,255,255,.92);color:var(--ink);cursor:pointer;box-shadow:0 4px 14px -6px rgba(0,0,0,.4)}
+.cf-min{background:rgba(255,255,255,.16);color:#fff;box-shadow:none}
+.view-min:hover,.view-min:focus-visible,.cf-min:hover,.cf-min:focus-visible{background:var(--marker);color:var(--ink)}
+.view.is-min{visibility:hidden;pointer-events:none;opacity:0;transition:none}
+.mini-pill{position:fixed;z-index:16;top:76px;right:max(12px,env(safe-area-inset-right,0px));display:flex;align-items:center;max-width:min(360px,calc(100vw - 24px));background:#fff;border-radius:999px;box-shadow:0 10px 28px -10px rgba(23,32,54,.55);border:2px solid var(--tinte)}
+.mini-open{display:flex;align-items:center;gap:8px;min-height:44px;padding:0 6px 0 14px;border:0;background:none;font:inherit;font-weight:700;color:var(--tinte);cursor:pointer;min-width:0}
+.mini-t{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:230px}
+.mini-i{font-size:1.1rem;line-height:1}
+.mini-x{width:44px;height:44px;border:0;background:none;font-size:1.4rem;line-height:1;color:var(--muted);cursor:pointer;border-radius:50%}
+.mini-x:hover,.mini-x:focus-visible,.mini-open:hover,.mini-open:focus-visible{background:var(--marker)}
+@media (max-width:400px){.mini-t{max-width:150px}}
