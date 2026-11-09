@@ -368,8 +368,13 @@ return {
       });
     });
     const sr = surfaceOf('R', n), sl = surfaceOf('L', n);
-    if (n < maxStage && sr) { const q = surf(sr, 1024 - 64, 1366 - 64); out.next = { x: q[0], y: q[1] }; }
-    if (n > 0 && sl) { const q = surf(sl, 64, 1366 - 64); out.prev = { x: q[0], y: q[1] }; }
+    // turn buttons sit fully ON the page, in its bottom corner (size follows the page width on the screen)
+    const corner = (sf, X, dir) => {
+      const c = surf(sf, X, 1366), e = surf(sf, X === 1024 ? 0 : 1024, 1366), size = clamp(Math.abs(e[0] - c[0]) * .2, 40, 58), inset = size / 2 + 8;
+      return { x: c[0] + dir * inset, y: c[1] - inset, s: size };
+    };
+    if (n < maxStage && sr) out.next = corner(sr, 1024, -1);
+    if (n > 0 && sl) out.prev = corner(sl, 0, 1);
     return out;
   },
   pick(clientX, clientY) {

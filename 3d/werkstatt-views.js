@@ -1,6 +1,6 @@
 // Full-page "inside" views for each desk object (test build). Every link points to the real site, nothing is changed there.
-import { openHeft } from './heft-buch.js?v=20261110d';
-import { sound } from './werkstatt-ton.js?v=20261110a';
+import { openHeft } from './heft-buch.js?v=20261110e';
+import { sound } from './werkstatt-ton.js?v=20261110b';
 
 const SITE = 'https://deutsch-mit-dennis.de/';
 const L = (h) => SITE + h;
@@ -160,7 +160,7 @@ function heftView(ctx = {}) {
     <button type="button" class="hf-snd" aria-pressed="false"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M4 9h4l5-4v14l-5-4H4z" fill="currentColor"/><path class="snd-w" d="M16 8.5a5 5 0 0 1 0 7M18.5 6a8.5 8.5 0 0 1 0 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path class="snd-x" d="M16.5 9.5l5 5m0-5l-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><span class="hf-snd-t"></span></button>
     <div class="hf-bar"><button type="button" class="hf-prev" aria-label="Zurückblättern">←</button>
     <div class="hf-mid"><b class="hf-t" aria-live="polite"></b><small class="hf-hint">Tippe auf ein Thema im Heft – oder blättere weiter.</small><div class="hf-links"></div></div><button type="button" class="hf-next" aria-label="Weiterblättern">→</button></div></div>`);
-  let ctl = null, x0 = null, shownKey = '', openedAt = 0;
+  let ctl = null, x0 = null, shownKey = '', openedAt = 0, hinted = false; // hinted: the sound switch pulses once when a page turns while the sound is off
   const spotsBox = v.querySelector('.hf-spots'), cNext = v.querySelector('.hf-corner-next'), cPrev = v.querySelector('.hf-corner-prev');
   const paint = n => { const s = SPREADS[n]; v.querySelector('.hf-t').textContent = s.t;
     v.querySelector('.hf-links').innerHTML = s.links.map(([a, h]) => `<a href="${L(h)}">${esc(a)}</a>`).join('');
@@ -189,7 +189,7 @@ function heftView(ctx = {}) {
       spotsBox.classList.remove('pulse'); void spotsBox.offsetWidth; spotsBox.classList.add('pulse');
     }
     [...spotsBox.children].forEach((a, i) => { const sp = spots[i]; if (sp) place(a, sp); });
-    const put = (b, q) => { b.hidden = !q; if (q) { const m = 38; b.style.left = (Math.min(innerWidth - m - 4, Math.max(m + 4, q.x)) - R.left) + 'px'; b.style.top = (Math.min(innerHeight - m - 4, Math.max(m + 4, q.y)) - R.top) + 'px'; } };
+    const put = (b, q) => { b.hidden = !q; if (q) { const h = q.s / 2; b.style.width = b.style.height = q.s + 'px'; b.style.margin = -h + 'px 0 0 ' + -h + 'px'; b.style.left = (Math.min(innerWidth - h - 4, Math.max(h + 4, q.x)) - R.left) + 'px'; b.style.top = (Math.min(innerHeight - h - 4, Math.max(h + 4, q.y)) - R.top) + 'px'; } };
     put(cNext, lay.next); put(cPrev, lay.prev);
   };
   const host = v.querySelector('.hf-host');
@@ -204,7 +204,7 @@ function heftView(ctx = {}) {
   addEventListener('keydown', key); paint(0);
   return {
     node: v,
-    async onOpen() { openedAt = performance.now(); ctl = await openHeft(host, { maxStage: SPREADS.length - 1, onStage: paint, renderer: ctx.renderer, onSound: n => sound.play(n) }); window.dmHeft = ctl; setTimeout(() => ctl && ctl.stage === 0 && ctl.goTo(1), 700); },
+    async onOpen() { openedAt = performance.now(); ctl = await openHeft(host, { maxStage: SPREADS.length - 1, onStage: paint, renderer: ctx.renderer, onSound: n => { if (n === 'page' && !sound.on && !hinted) { hinted = true; snd.classList.add('hint'); setTimeout(() => snd.classList.remove('hint'), 3000); } sound.play(n); } }); window.dmHeft = ctl; setTimeout(() => ctl && ctl.stage === 0 && ctl.goTo(1), 700); },
     tick() { if (!ctl) return; ctl.tick(); syncOverlay(); },
     dispose() { removeEventListener('keydown', key); ctl && ctl.dispose(); ctl = null; },
   };

@@ -19,17 +19,22 @@ function unlock() {
   if (c.state === 'running') ['touchend', 'pointerdown', 'click', 'keydown'].forEach(t => removeEventListener(t, unlock, true));
 }
 ['touchend', 'pointerdown', 'click', 'keydown'].forEach(t => addEventListener(t, unlock, true));
+// master bus: the generated sounds were very quiet (peaks around -26 dBFS). +8 dB and a soft limiter against clipping.
+function bus(c) {
+  if (!c.__bus) { const g = c.createGain(), lim = c.createDynamicsCompressor(); g.gain.value = 2.5; lim.threshold.value = -8; lim.knee.value = 8; lim.ratio.value = 6; lim.attack.value = .002; lim.release.value = .2; g.connect(lim).connect(c.destination); c.__bus = g; }
+  return c.__bus;
+}
 function env(g, t, a, peak, d) { g.gain.setValueAtTime(0.0001, t); g.gain.exponentialRampToValueAtTime(peak, t + a); g.gain.exponentialRampToValueAtTime(0.0001, t + a + d); }
 function tone(c, freq, t, dur, type = 'sine', vol = .12) {
   const o = c.createOscillator(), g = c.createGain(); o.type = type; o.frequency.setValueAtTime(freq, t);
-  env(g, t, .008, vol, dur); o.connect(g).connect(c.destination); o.start(t); o.stop(t + dur + .05);
+  env(g, t, .008, vol, dur); o.connect(g).connect(bus(c)); o.start(t); o.stop(t + dur + .05);
 }
 function whoosh(c, t, from, to, dur, vol = .09) {
   const n = Math.floor(c.sampleRate * dur), b = c.createBuffer(1, n, c.sampleRate), d = b.getChannelData(0);
   for (let i = 0; i < n; i++) d[i] = Math.random() * 2 - 1;
   const s = c.createBufferSource(), f = c.createBiquadFilter(), g = c.createGain(); s.buffer = b;
   f.type = 'bandpass'; f.Q.value = 1.4; f.frequency.setValueAtTime(from, t); f.frequency.exponentialRampToValueAtTime(to, t + dur);
-  env(g, t, dur * .35, vol, dur * .6); s.connect(f).connect(g).connect(c.destination); s.start(t); s.stop(t + dur);
+  env(g, t, dur * .35, vol, dur * .6); s.connect(f).connect(g).connect(bus(c)); s.start(t); s.stop(t + dur);
 }
 // paper rustle: noise with fast random amplitude flicker (like a page being lifted and bent)
 function crinkle(c, t, dur, vol) {
@@ -37,11 +42,11 @@ function crinkle(c, t, dur, vol) {
   let a = 0; for (let i = 0; i < n; i++) { if (i % 90 === 0) a = Math.random() < .35 ? 1 : .25 + Math.random() * .4; d[i] = (Math.random() * 2 - 1) * a; }
   const s = c.createBufferSource(), hp = c.createBiquadFilter(), lp = c.createBiquadFilter(), g = c.createGain();
   hp.type = 'highpass'; hp.frequency.value = 1400; lp.type = 'lowpass'; lp.frequency.value = 7000;
-  env(g, t, .02, vol, dur); s.buffer = b; s.connect(hp).connect(lp).connect(g).connect(c.destination); s.start(t); s.stop(t + dur + .02);
+  env(g, t, .02, vol, dur); s.buffer = b; s.connect(hp).connect(lp).connect(g).connect(bus(c)); s.start(t); s.stop(t + dur + .02);
 }
 const SOUNDS = {
-  page: c => { const t = c.currentTime; crinkle(c, t, .24, .075); whoosh(c, t + .05, 900, 3200, .42, .06); },   // page lifts and swings over
-  pagetap: c => { const t = c.currentTime; whoosh(c, t, 1600, 600, .1, .04); tone(c, 170, t, .07, 'sine', .05); }, // page lands
+  page: c => { const t = c.currentTime; crinkle(c, t, .34, .2); whoosh(c, t + .04, 700, 3600, .5, .2); },   // page lifts and swings over
+  pagetap: c => { const t = c.currentTime; whoosh(c, t, 1400, 450, .14, .16); tone(c, 150, t, .1, 'sine', .16); }, // page lands
   open: c => { const t = c.currentTime; whoosh(c, t, 500, 2400, .32); tone(c, 660, t + .18, .12, 'triangle', .05); },
   close: c => whoosh(c, c.currentTime, 2000, 450, .28, .07),
   click: c => { const t = c.currentTime; tone(c, 1800, t, .03, 'square', .04); tone(c, 900, t + .05, .04, 'square', .03); },

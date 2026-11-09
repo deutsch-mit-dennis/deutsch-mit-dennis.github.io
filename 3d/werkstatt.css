@@ -420,3 +420,7 @@ body.touring .soc3d{display:none}
 .hf-snd{position:absolute;top:6px;right:12px;z-index:4;display:inline-flex;align-items:center;gap:6px;min-height:44px;padding:0 14px;border:2px solid var(--line);border-radius:999px;background:rgba(255,255,255,.94);color:var(--ink);font:inherit;font-weight:700;font-size:.85rem;cursor:pointer}
 .hf-snd[aria-pressed=false] .snd-w{display:none}.hf-snd[aria-pressed=true] .snd-x{display:none}
 @media (max-width:420px){.hf-snd-t{display:none}.hf-snd{padding:0 12px}}
+
+.hf-corner svg{width:55%;height:55%}
+.hf-snd.hint{animation:hfPulse 1.2s ease-out 2;border-color:var(--tinte);background:var(--marker)}
+@media (prefers-reduced-motion:reduce){.hf-snd.hint{animation:none}}
