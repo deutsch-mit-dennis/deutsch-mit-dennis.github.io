@@ -430,8 +430,6 @@
         }).join('')}</ol></div>
         <aside class="dm-aside">
           ${note(p.tip)}
-          <section class="dm-card"><h2>Deine Lernrunde</h2><ul class="dm-plan">${p.plan.map(t => `<li>${x(t)}</li>`).join('')}</ul></section>
-          <section class="dm-card"><h2>Anderer Weg?</h2><p>Du kannst jederzeit wechseln.</p><a href="#lernweg">Alle Wege ansehen</a> · <a href="#wegweiser">Wegweiser</a></section>
         </aside>
       </div>
       ${['bridge', 'repeat', 'dtbb2'].includes(id) ? '<p class="dm-small">B2 Beruf: Die Übungen orientieren sich am beruflichen Deutsch und am Deutsch-Test für den Beruf B2. Wenn du eine andere B2-Prüfung machst, prüfe das Format bei deinem Anbieter.</p>' : ''}
