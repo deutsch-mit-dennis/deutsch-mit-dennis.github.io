@@ -68,12 +68,21 @@
 
   window.DMTour = { start: () => check().then(ok => { if (!ok) return; location.hash = ''; setTimeout(() => { bubble(); document.querySelector('.dm-tour-play')?.click(); }, 400); }) };
 
+  /* Do not cover the start page at once: show the greeting after the first real scroll (3 s+) or after 25 s */
+  function whenEngaged(cb) {
+    let done = false;
+    const t0 = Date.now();
+    const go = () => { if (done) return; done = true; removeEventListener('scroll', onScroll); clearTimeout(timer); cb(); };
+    const onScroll = () => { if (scrollY > 400 && Date.now() - t0 > 3000) go(); };
+    const timer = setTimeout(go, 25000);
+    addEventListener('scroll', onScroll, { passive: true });
+  }
   function maybeShow() {
     const onHome = !location.hash || location.hash === '#';
     let later = false; try { later = !!sessionStorage.getItem(SEEN); } catch {}
     if (!onHome || get(SEEN) || later || (+get(LATER) || 0) >= 3 || document.getElementById('dm-tour')) return;
     window.DMTourPending = true; // Neuigkeiten-Hinweis wartet, damit nie zwei Fenster gleichzeitig offen sind
-    check().then(ok => { if (!ok) { window.DMTourPending = false; return; } setTimeout(() => { if (!location.hash || location.hash === '#') bubble(); else window.DMTourPending = false; }, 1800); });
+    check().then(ok => { if (!ok) { window.DMTourPending = false; return; } whenEngaged(() => { if (!location.hash || location.hash === '#') bubble(); else window.DMTourPending = false; }); });
   }
   document.addEventListener('click', e => { const a = e.target.closest('[data-tour-start]'); if (a) { e.preventDefault(); window.DMTour.start(); } });
   window.addEventListener('hashchange', () => {

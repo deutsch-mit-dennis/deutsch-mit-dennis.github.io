@@ -188,20 +188,55 @@
       <ul class="dm-pkg-teaser-list">${BK.slice(0, 2).map(b => `<li><a href="#lernpakete/buecher"><img src="${b.img}" alt="" width="72" height="72" loading="lazy" style="object-fit:contain"><span><b>${x(b.title)}</b><small>Taschenbuch · ${x(b.price)}</small></span></a></li>`).join('')}${pick.slice(0, Math.max(1, 2 - BK.length)).map(k => `<li><a href="#lernpakete/${k.id}"><img src="${k.img}" alt="" width="72" height="72" loading="lazy"><span><b>${x(k.title)}</b><small>${x(k.level)} · ${x(k.price)}</small></span></a></li>`).join('')}</ul>
     </section>`;
   }
-  /* Schnellstart: auf dem Handy direkt unter der Überschrift (Challenge, Probeprüfung, Lino, Lied des Tages) */
-  function quickStart() {
-    let ch = { streak: 0, doneToday: false };
-    try { if (window.DMChallenge) ch = DMChallenge.status() || ch; } catch (e) { /* Startseite trotzdem zeigen */ }
-    let sod = null; try { sod = songOfDay(); } catch (e) { sod = null; }
-    const chSub = ch.doneToday ? `✓ Heute geschafft · ${ch.streak} 🔥` : ch.streak ? `Serie: ${ch.streak} ${ch.streak === 1 ? 'Tag' : 'Tage'} 🔥` : '10 Aufgaben · 3 Min.';
-    const tiles = [
-      ['#challenge', 'dm-q-ch', '🔥', 'Tages-Challenge', chSub],
-      ['#simulation', 'dm-q-sp', '🎯', 'Probeprüfung', 'DTZ, LiD, telc, DTB · mit Uhr'],
-      ['#spiele/lino', 'dm-q-lino', '🏃', 'Lino läuft', '14 Welten · Tageslauf & Shop'],
-      [sod ? '#lieder/' + sod.id : '#lieder', 'dm-q-song', '🎵', sod ? 'Lied des Tages' : 'Lieder', sod ? sod.title : '62 Lieder A1–C1']
-    ];
-    const mk = `<a class="dm-q-mk" href="#spiele/mikula"><img src="spiele/mikula/img/mikula-freude.webp" alt="" width="64" height="64" aria-hidden="true"><span><em>Neu · Lernspiel A1–B1</em><b>Mikula sucht den Weg nach Hause</b><small>Hilf Mikula aus dem Jahr 1024 im Deutschland von heute</small></span><span class="dm-q-mk-go" aria-hidden="true">▶</span></a>`;
-    return `<nav class="dm-quick" aria-label="Schnellstart">${mk}${tiles.map(([u, c, i, t, s]) => `<a class="${c}" href="${x(u)}"><span class="dm-q-ico" aria-hidden="true">${i}</span><b>${x(t)}</b><small>${x(s)}</small></a>`).join('')}</nav>`;
+  /* Niveau-Wahl statt Kacheln: eine Frage, ein großer Knopf. Hilfetexte in mehreren Sprachen (home-i18n.js). */
+  const LV_KEYS = [['A0', 'a0'], ['A1', 'a1'], ['A2', 'a2'], ['B1', 'b1'], ['B2', 'b2']];
+  const hi = () => DM.hi18n || null;
+  const ht = (k, de) => (hi() ? hi().t(k) : de);
+  function levelStart(lv) {
+    if (lv === 'A0' || lv === 'A1') {
+      const pth = DM.paths && DM.paths.start;
+      if (pth) { const nx = pth.steps.find(st => !mem.done['weg:start:' + st[1]]) || pth.steps[0]; return { href: nx[1], key: 'go_start', sub: nx[0] }; }
+    }
+    const l = LEVELS.includes(lv) ? lv : 'A1';
+    return { href: '#lernen/' + l, key: 'go_lessons', sub: l === 'B2' ? 'B2 Beruf' : 'Niveau ' + l };
+  }
+  function levelPicker() {
+    const H = hi(), sel = mem.level || '';
+    return `<section class="dm-level" id="dm-level" aria-labelledby="dm-level-h" data-i18n-dir>
+      <h2 id="dm-level-h" data-i18n="lvl_q">Wie gut ist dein Deutsch?</h2>
+      <p class="dm-level-hint" data-i18n="lvl_hint">Tippe auf dein Niveau. Ich zeige dir den ersten Schritt.</p>
+      <div class="dm-level-btns" role="group" aria-labelledby="dm-level-h">${LV_KEYS.map(([l, k]) => `<button type="button" class="dm-lv" data-lv="${l}" aria-pressed="${sel === l}"><b>${l}</b><small data-i18n="lv_${k}">${x(({ a0: 'Ich fange an', a1: 'Erste Sätze', a2: 'Alltag', b1: 'Gespräche', b2: 'Beruf' })[k])}</small></button>`).join('')}<a class="dm-lv dm-lv-unk" href="#wegweiser"><b>?</b><small data-i18n="lvl_unk">Ich weiß es nicht</small></a></div>
+      <div class="dm-level-go" id="dm-level-go" aria-live="polite"></div>
+      ${H ? `<div class="dm-lang" role="group" aria-label="${x(H.t('lang_h'))}" dir="ltr"><span aria-hidden="true">🌐</span>${H.langs.map(([c, n]) => `<button type="button" class="dm-lang-b" data-lang-set="${c}" lang="${c}" aria-pressed="false">${x(n)}</button>`).join('')}</div>` : ''}
+    </section>`;
+  }
+  function wireLevel() {
+    const box = $('#dm-level'); if (!box) return;
+    const H = hi(), go = $('#dm-level-go', box);
+    const last = mem.last && mem.last.route !== '' ? mem.last : null;
+    const draw = () => {
+      const lv = mem.level, st = lv ? levelStart(lv) : null;
+      go.innerHTML = (last ? `<a class="dm-btn dm-level-last" href="#${x(last.route)}"><span data-i18n="go_cont">Weitermachen</span>: ${x(last.title)}</a>` : '')
+        + (st ? `<a class="dm-btn dm-level-start" href="${x(st.href)}"><span class="dm-level-lbl"><span data-i18n="${st.key}">${st.key === 'go_start' ? 'Jetzt starten' : 'Lektionen öffnen'}</span> <span aria-hidden="true">▶</span></span><small>${x(st.sub)}</small></a>` : '')
+        + `<p class="dm-level-more"><a href="#challenge">🔥 Tages-Challenge</a><a href="#simulation">🎯 Probeprüfung</a></p>`;
+      $$('.dm-lv[data-lv]', box).forEach(b => b.setAttribute('aria-pressed', String(b.dataset.lv === lv)));
+      if (H) H.apply(box);
+    };
+    $$('.dm-lv[data-lv]', box).forEach(b => b.onclick = () => { mem.level = b.dataset.lv; save(); draw(); });
+    $$('[data-lang-set]', box).forEach(b => b.onclick = () => H.set(b.dataset.langSet));
+    draw();
+    if (H) H.apply(document);
+  }
+  /* Spiele: eine kompakte Zeile statt drei großer Werbekarten; nur Mikula trägt „Neu“ */
+  function gamesStrip() {
+    return `<section class="dm-section dm-games" aria-labelledby="gm-h">
+      <div class="dm-section-head"><h2 id="gm-h" data-i18n="games_h">Spiele zum Üben</h2><p>Spielerisch Deutsch lernen – kostenlos.</p></div>
+      <div class="dm-games-grid">
+        <a class="dm-game dm-game-mk" href="#spiele/mikula"><img src="spiele/mikula/img/station-bahnhof.webp" alt="" width="120" height="80" loading="lazy" decoding="async"><span><em class="dm-game-new">Neu</em><b>Mikula sucht den Weg nach Hause</b><small>A1–B1 · Bahnhof, Supermarkt, Jobcenter</small></span></a>
+        <a class="dm-game" href="#spiele/nid"><span class="dm-game-ico" aria-hidden="true">🏠</span><span><b>Neu in Deutschland – deine Geschichte</b><small>8 Kapitel · A1–C1</small></span></a>
+        <a class="dm-game" href="#spiele/lino"><span class="dm-game-ico" aria-hidden="true">🏃</span><span><b>Lino läuft</b><small>Jump’n’Run · 14 Welten · A1–C1</small></span></a>
+      </div>
+    </section>`;
   }
   function home() {
     const last = mem.last && mem.last.route !== '' ? mem.last : null;
@@ -209,100 +244,23 @@
     <section class="dm-hero">
       <figure class="dm-hero-photo"><img src="assets/dennis.webp" alt="Dennis, dein Deutschlehrer" width="626" height="1004" fetchpriority="high"></figure>
       <div class="dm-hero-copy">
-        <a class="lino-hero-chip mk-hero-chip" href="#spiele/mikula"><span aria-hidden="true">💎</span><span><b>Neu:</b> Lernspiel „Mikula sucht den Weg nach Hause“ – A1, A2, B1</span><span class="lino-hero-go" aria-hidden="true">▶</span></a>
         <h1>Deutsch lernen mit Dennis</h1>
-        <p class="dm-promise">Kostenlos · A1 bis B2 · ohne Anmeldung</p>
+        <p class="dm-promise" data-i18n="free" data-i18n-dir>Kostenlos · A1 bis B2 · ohne Anmeldung</p>
         <p class="dm-social" aria-label="Dennis in den sozialen Netzwerken"><a class="dm-soc dm-soc-yt" href="https://www.youtube.com/@deutsch-mit-Dennis" target="_blank" rel="noopener noreferrer" aria-label="YouTube – Kanal öffnen"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="currentColor"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2C.5 9.1.5 12 .5 12s0 2.9.5 4.8a3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1c.5-1.9.5-4.8.5-4.8s0-2.9-.5-4.8zM9.7 15.5v-7l6 3.5-6 3.5z"/></svg><span>YouTube</span></a><a class="dm-soc dm-soc-ig" href="https://www.instagram.com/deutsch_mit_dennis/" target="_blank" rel="noopener noreferrer" aria-label="Instagram – Kanal öffnen"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg><span>Instagram</span></a><a class="dm-soc dm-soc-tt" href="https://www.tiktok.com/@deutsch_mit_dennis" target="_blank" rel="noopener noreferrer" aria-label="TikTok – Kanal öffnen"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="currentColor"><path d="M16.6 2h-3.2v13.2a2.8 2.8 0 1 1-2-2.7V9.2a6 6 0 1 0 5.2 5.9V8.6a7.4 7.4 0 0 0 4.3 1.4V6.8a4.3 4.3 0 0 1-4.3-4.8z"/></svg><span>TikTok</span></a></p>
-        ${quickStart()}
-        <p class="dm-lead">Kostenlose Übungen von A1 bis B2 Beruf – für deinen Alltag, deine Prüfung und deinen Job. Ohne Anmeldung.</p>
+        ${levelPicker()}
         <p class="dm-hand">Hallo! Ich bin Dennis, dein Deutschlehrer und zugelassener Prüfer. Wähle unten deinen Weg – ich zeige dir die nächsten Schritte.</p>
         <ul class="dm-trust"><li>✓ DTZ-Prüfer</li><li>✓ telc-Prüfer B1–C1</li><li>✓ Lehrkraft mit BAMF-Zulassung bis C2</li></ul>
         <p class="dm-tour-start"><a href="#" data-tour-start><span aria-hidden="true">▶</span> Rundgang mit Dennis ansehen (40 Sek.)</a></p>
-        <div class="dm-row">
-          ${last ? `<a class="dm-btn" href="#${x(last.route)}">Weitermachen: ${x(last.title)}</a><a class="dm-btn dm-btn-quiet" href="#wegweiser">Welcher Weg passt zu mir?</a>` : `<a class="dm-btn" href="#wegweiser">Welcher Weg passt zu mir?</a><a class="dm-btn dm-btn-quiet" href="#lernen/A1">Mit A1 beginnen</a>`}
-        </div>
       </div>
     </section>
 
     <section class="dm-section" aria-labelledby="wege-h">
-      <div class="dm-section-head"><h2 id="wege-h">Wähle deinen Weg</h2><p>Du kannst jederzeit wechseln.</p></div>
+      <div class="dm-section-head"><h2 id="wege-h" data-i18n="paths_h">Wähle deinen Weg</h2><p>Du kannst jederzeit wechseln.</p></div>
       <div class="dm-paths">${(DM.pathHome || DM.pathOrder).map(id => pathCard(id)).join('')}</div>
       <p class="dm-center"><a class="dm-btn dm-btn-quiet" href="#lernweg">Alle ${DM.pathOrder.length} Lernwege ansehen →</a></p>
     </section>
 
-    <section class="dm-section lino-home mk-home" aria-labelledby="mkh-h">
-      <a class="lino-home-card mk-home-card" href="#spiele/mikula">
-        <img class="lino-home-art mk-home-art" src="spiele/mikula/img/station-bahnhof.webp" alt="Mikula, ein Bauer aus dem Jahr 1024, steht staunend an einem deutschen Bahnhof vor einem Fahrkartenautomaten" width="960" height="640" decoding="async">
-        <span class="lino-home-copy">
-          <span class="lino-home-kicker">Neu: Lernspiel mit Geschichte</span>
-          <b id="mkh-h">Mikula sucht den Weg nach Hause</b>
-          <span class="lino-home-text">Mikula ist Bauer im Jahr 1024 – und landet plötzlich im Deutschland von heute. Hilf ihm am Bahnhof, im Supermarkt, beim Bäcker und im Jobcenter. Für jede Station bekommt er einen Zeitkristall.</span>
-          <span class="lino-home-levels" aria-label="Niveau A1, A2 und B1, sechs Stationen"><i>A1</i><i>A2</i><i>B1</i><i>🚉</i><i>🛒</i><i>🥨</i><i>📮</i><i>🏛️</i><i>♻️</i></span>
-          <span class="lino-home-go">▶ Mikula helfen</span>
-        </span>
-      </a>
-    </section>
-
-    <section class="dm-section lino-home" aria-labelledby="nid-h">
-      <a class="lino-home-card nid-home-card" href="#spiele/nid">
-        <svg class="lino-home-art" viewBox="0 0 320 180" aria-hidden="true" focusable="false">
-          <defs><linearGradient id="nhSky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffd9a8"/><stop offset="1" stop-color="#fff3e2"/></linearGradient></defs>
-          <rect width="320" height="180" fill="url(#nhSky)"/>
-          <circle cx="262" cy="38" r="18" fill="#ffc928" opacity=".85"/>
-          <g fill="#7aa6c9"><rect x="18" y="62" width="44" height="88"/><rect x="250" y="70" width="52" height="80"/></g>
-          <g><rect x="70" y="78" width="58" height="72" fill="#e85d4a"/><path d="M64 80 L99 52 L134 80Z" fill="#9c3426"/><rect x="134" y="66" width="62" height="84" fill="#f2b33d"/><path d="M128 68 L165 40 L202 68Z" fill="#b67415"/><rect x="196" y="84" width="50" height="66" fill="#4f9d8a"/><path d="M190 86 L221 62 L252 86Z" fill="#2f6e5f"/></g>
-          <g fill="#fff8ec"><rect x="80" y="90" width="12" height="14" rx="2"/><rect x="106" y="90" width="12" height="14" rx="2"/><rect x="146" y="80" width="12" height="14" rx="2"/><rect x="172" y="80" width="12" height="14" rx="2"/><rect x="146" y="108" width="12" height="14" rx="2"/><rect x="206" y="98" width="12" height="14" rx="2"/><rect x="226" y="98" width="12" height="14" rx="2"/></g>
-          <rect x="158" y="126" width="16" height="24" rx="2" fill="#7a4a1c"/>
-          <rect x="0" y="150" width="320" height="30" fill="#9aa3b5"/><rect x="0" y="150" width="320" height="4" fill="#c7ccd8"/>
-          <g transform="translate(232 104)"><rect x="0" y="0" width="64" height="18" rx="4" fill="#0f5c4f"/><text x="32" y="13" font-size="10" font-weight="800" fill="#fff" text-anchor="middle" font-family="system-ui,sans-serif">Lindenfeld</text><rect x="30" y="18" width="4" height="32" fill="#5d6577"/></g>
-          <g class="lino-home-hero" transform="translate(52 112)">
-            <rect x="-26" y="18" width="20" height="16" rx="3" fill="#2341B5"/><rect x="-20" y="14" width="8" height="5" rx="2" fill="none" stroke="#2341B5" stroke-width="2"/>
-            <path d="M-2 30 L-6 40 M8 30 L12 40" stroke="#2b2f45" stroke-width="5" stroke-linecap="round"/>
-            <rect x="-8" y="6" width="22" height="26" rx="7" fill="#0f766e"/>
-            <circle cx="3" cy="-4" r="9" fill="#c98e62"/><path d="M-6 -6 A9 9 0 0 1 12 -7 Q4 -15 -6 -6Z" fill="#2b1d14"/>
-          </g>
-          <g transform="translate(70 66)"><rect x="0" y="0" width="74" height="26" rx="10" fill="#fff" stroke="#0f766e" stroke-width="2"/><path d="M10 26 L6 36 L20 26Z" fill="#fff" stroke="#0f766e" stroke-width="2"/><text x="37" y="17" font-size="11" font-weight="800" fill="#0f766e" text-anchor="middle" font-family="system-ui,sans-serif">Guten Tag!</text></g>
-        </svg>
-        <span class="lino-home-copy">
-          <span class="lino-home-kicker">Neu: Story-Abenteuer in 8 Kapiteln</span>
-          <b id="nid-h">Neu in Deutschland – deine Geschichte</b>
-          <span class="lino-home-text">Du ziehst nach Lindenfeld: Wohnung finden, beim Amt anmelden, zum Arzt, Sprachkurs, Vorstellungsgespräch – bis zum Widerspruch beim Amt. Du entscheidest, was du sagst, und sammelst Dokumente in deinem Ordner. Mit natürlich klingenden KI-Stimmen.</span>
-          <span class="lino-home-levels" aria-label="8 Kapitel von A1 bis C1"><i>A1</i><i>A2</i><i>B1</i><i>B2</i><i>C1</i><i>🏠</i><i>🏛️</i><i>🩺</i><i>📚</i><i>💼</i><i>⚖️</i></span>
-          <span class="lino-home-go">▶ Geschichte starten</span>
-        </span>
-      </a>
-    </section>
-
-    <section class="dm-section lino-home" aria-labelledby="lino-h">
-      <a class="lino-home-card" href="#spiele/lino">
-        <svg class="lino-home-art" viewBox="0 0 320 180" aria-hidden="true" focusable="false">
-          <defs><linearGradient id="lhSky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9fd8ff"/><stop offset="1" stop-color="#e3f4ff"/></linearGradient></defs>
-          <rect width="320" height="180" fill="url(#lhSky)"/>
-          <g fill="#fff" opacity=".9"><circle cx="52" cy="34" r="11"/><circle cx="66" cy="28" r="14"/><circle cx="82" cy="35" r="10"/><circle cx="238" cy="26" r="9"/><circle cx="250" cy="21" r="12"/><circle cx="264" cy="27" r="9"/></g>
-          <path d="M0 120 Q60 88 120 108 T240 100 T320 96 V180 H0Z" fill="#7cc46a"/>
-          <rect x="0" y="142" width="128" height="38" fill="#8a5a32"/><rect x="0" y="142" width="128" height="8" fill="#4fb341"/>
-          <rect x="128" y="146" width="56" height="34" fill="#22160e"/>
-          <rect x="184" y="142" width="136" height="38" fill="#8a5a32"/><rect x="184" y="142" width="136" height="8" fill="#4fb341"/>
-          <g class="lino-home-coins" fill="#ffc928" stroke="#d18f00" stroke-width="2"><circle cx="140" cy="72" r="7"/><circle cx="158" cy="62" r="7"/><circle cx="176" cy="72" r="7"/></g>
-          <g transform="translate(250 92)"><rect x="-4" y="0" width="8" height="50" fill="#7d7f8c"/><rect x="26" y="0" width="8" height="50" fill="#7d7f8c"/><rect x="-10" y="-20" width="50" height="22" rx="6" fill="#2341B5"/><text x="15" y="-4" font-size="12" font-weight="800" fill="#fff" text-anchor="middle" font-family="system-ui,sans-serif">Tor ?</text><g stroke="#2341B5" stroke-width="2"><path d="M4 10H26M4 22H26M4 34H26M4 46H26"/></g></g>
-          <g class="lino-home-hero" transform="translate(150 78) rotate(-6)">
-            <path d="M-6 30 L-12 42 M4 30 L12 40" stroke="#2b2f45" stroke-width="6" stroke-linecap="round"/>
-            <rect x="-17" y="6" width="11" height="17" rx="3" fill="#ffc928"/>
-            <rect x="-8" y="4" width="26" height="28" rx="8" fill="#2341B5"/>
-            <path d="M12 12 L24 0" stroke="#2341B5" stroke-width="6" stroke-linecap="round"/>
-            <circle cx="5" cy="-6" r="10" fill="#f2c79b"/><path d="M-5 -8 A10 10 0 0 1 15 -9 L10 -12 Q4 -18 -4 -12Z" fill="#5a3a22"/><circle cx="10" cy="-6" r="1.8" fill="#172036"/>
-            <path d="M-6 4 H16 V9 H-6Z M-6 4 L-22 0 L-20 8 L-6 9Z" fill="#ff7a2f"/>
-          </g>
-        </svg>
-        <span class="lino-home-copy">
-          <span class="lino-home-kicker">Neu: 📅 Tageslauf · 🛍️ Shop · 🏅 Abzeichen</span>
-          <b id="lino-h">Lino läuft – das Deutsch-Abenteuer</b>
-          <span class="lino-home-text">Springe, fahre Auto, Schlitten und ICE. An jedem Tor eine Deutschfrage – jetzt auch zum Hören, mit Artikeln und Satzbau. Sammle Münzen für Mütze und Krone – und jeden Tag wartet ein neuer Tageslauf.</span>
-          <span class="lino-home-levels" aria-label="14 Welten: A1 bis C1, vier Fahrzeug-Welten und fünf Alltagswelten"><i>A1</i><i>A2</i><i>B1</i><i>B2</i><i>C1</i><i>🚗</i><i>🛷</i><i>🚲</i><i>🚆</i><i>🛒</i><i>🩺</i><i>🏛️</i><i>💼</i><i>🤝</i></span>
-          <span class="lino-home-go">▶ Jetzt spielen</span>
-        </span>
-      </a>
-    </section>
+    ${gamesStrip()}
 
     ${songHome()}
 
@@ -342,6 +300,7 @@
     </section>
 
     ${pkgTeaser()}`, 'dm-home');
+    wireLevel();
     (window.DMNews ? DMNews.items() : fetch('neu.json?v=' + Math.floor(Date.now() / 36e5), { cache: 'no-cache' }).then(r => r.json()).then(j => j.items || [])).then(items => {
       const ico = { lied: ['noten', 'Lied'], hoeren: ['kopfhoerer', 'Hören'], sprechen: ['sprechblase', 'Sprechen'], schreiben: ['schreiben', 'Schreiben'], uebung: ['idee', 'Übung'], neu: ['funkeln', 'Neu'], video: ['video', 'Video'], kahoot: ['spiel', 'Kahoot'] };
       const ol = $('#dm-newslist'); if (!ol) return; ol.removeAttribute('aria-busy');
