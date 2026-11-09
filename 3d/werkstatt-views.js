@@ -8,7 +8,7 @@ const el = (html) => { const t = document.createElement('template'); t.innerHTML
 
 // ---------- Laptop: browser with level navigation ----------
 const LAPTOP_TABS = [
-  { id: 'start', label: 'Start', url: '', h: 'Willkommen!', p: 'Wähle dein Niveau – oder lass dir deinen Lernweg zeigen.', links: [['Mein Lernweg', '#lernweg'], ['Welcher Weg passt zu mir?', '#wegweiser'], ['Alle Lektionen', '#lernen'], ['Dennis in deiner Sprache', '#hallo'], ['Lernstand & Erinnerung', '#lernstand'], ['Neuigkeiten', '#']] },
+  { id: 'start', label: 'Start', url: '', h: 'Willkommen!', p: 'Wähle dein Niveau – oder lass dir deinen Lernweg zeigen.', links: [['Mein Lernweg', '#lernweg'], ['Welcher Weg passt zu mir?', '#wegweiser'], ['Alle Lektionen', '#lernen'], ['Dennis in deiner Sprache', '#hallo'], ['Neuigkeiten', '#']] },
   { id: 'a1', label: 'A1', url: '#lernen', h: 'A1 · Anfänger', p: 'Erste Wörter und Sätze: sich vorstellen, Zahlen, einkaufen.', links: [['Lektionen', '#lernen'], ['Lernspiele', '#spiele'], ['Hören', '#hoeren']] },
   { id: 'a2', label: 'A2', url: '#lernen', h: 'A2 · Grundlagen', p: 'Alltag meistern: Termine, Wohnung, Arzt, über Vergangenes sprechen.', links: [['Lektionen', '#lernen'], ['Lesen im Alltag', '#lesen/alltag'], ['Wo oder wohin?', '#spiele/wowohin']] },
   { id: 'b1', label: 'B1', url: '#lernen', h: 'B1 · Mittelstufe', p: 'Meinung sagen, Briefe schreiben – und die B1-Prüfung vorbereiten.', links: [['Lektionen', '#lernen'], ['Probeprüfung DTZ', '#simulation/dtz'], ['Probeprüfung telc B1', '#simulation/telc-b1'], ['Schreiben üben', '#ueben/schreiben']] },

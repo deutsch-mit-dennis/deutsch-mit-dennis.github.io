@@ -231,7 +231,7 @@
       go.innerHTML = (last ? `<a class="dm-btn dm-level-last" href="#${x(last.route)}"><span data-i18n="go_cont">Weitermachen</span>: ${x(last.title)}</a>` : '')
         + (st ? `<a class="dm-btn dm-level-start" href="${x(st.href)}"><span class="dm-level-lbl"><span data-i18n="${st.key}">${st.key === 'go_start' ? 'Jetzt starten' : 'Lektionen öffnen'}</span> <span aria-hidden="true">▶</span></span><small>${x(st.sub)}</small></a>` : '')
         + levelOverview(lv)
-        + `<p class="dm-level-more"><a href="#challenge"><span aria-hidden="true">🔥</span> <span data-i18n="chal_l">Tages-Challenge</span></a><a href="#hallo"><span aria-hidden="true">🎧</span> <span data-i18n="hello_l">Dennis in deiner Sprache</span></a><a href="#lernstand"><span aria-hidden="true">💾</span> <span data-i18n="mem_l">Lernstand &amp; Erinnerung</span></a></p>`;
+        + `<p class="dm-level-more"><a href="#challenge"><span aria-hidden="true">🔥</span> <span data-i18n="chal_l">Tages-Challenge</span></a><a href="#hallo"><span aria-hidden="true">🎧</span> <span data-i18n="hello_l">Dennis in deiner Sprache</span></a></p>`;
       $$('.dm-lv[data-lv]', box).forEach(b => b.setAttribute('aria-pressed', String(b.dataset.lv === lv)));
       if (H) H.apply(box);
     };
@@ -420,7 +420,7 @@
     render();
   }
 
-  /* ---------- Lernstand sichern + tägliche Erinnerung (alles lokal, nichts wird gesendet) ---------- */
+  /* ---------- Lernstand sichern (alles lokal, nichts wird gesendet) ---------- */
   const SAVE_KEYS = ['dmd.v1', 'dmd.lang', 'dm-challenge', 'dm-spiele', 'dm-nid', 'dm-mikula'];
   const b64enc = t => btoa(unescape(encodeURIComponent(t)));
   const b64dec = t => decodeURIComponent(escape(atob(t)));
@@ -434,22 +434,6 @@
     a.href = url; a.download = name; a.rel = 'noopener'; a.style.display = 'none';
     if (!('download' in a)) a.target = '_blank'; // old iOS: opens the file in a new tab instead
     document.body.appendChild(a); a.click(); setTimeout(() => { URL.revokeObjectURL(url); a.remove(); }, 60000);
-  }
-  /* Google Kalender: öffnet auf Android direkt die Kalender-App bzw. Google Kalender mit vorausgefüllter täglicher Erinnerung (ohne Datei) */
-  function reminderStart(time) {
-    const [hh, mm] = (time || '18:00').split(':').map(Number), now = new Date();
-    const start = new Date(now.getFullYear(), now.getMonth(), now.getDate(), hh || 0, mm || 0); if (start <= now) start.setDate(start.getDate() + 1);
-    return start;
-  }
-  /* Android: intent link -> opens the installed calendar app with the event prefilled (title, time, daily repeat); falls back to Google Calendar in the browser */
-  function androidCalUrl(time) {
-    const start = reminderStart(time), end = new Date(start.getTime() + 15 * 60000), e = encodeURIComponent;
-    return 'intent:#Intent;action=android.intent.action.INSERT;type=vnd.android.cursor.dir/event;S.title=' + e('Deutsch üben') + ';S.description=' + e('Heute kurz Deutsch üben: https://deutsch-mit-dennis.de/') + ';l.beginTime=' + start.getTime() + ';l.endTime=' + end.getTime() + ';B.allDay=false;S.rrule=' + e('FREQ=DAILY') + ';S.browser_fallback_url=' + e(gcalUrl(time)) + ';end';
-  }
-  function gcalUrl(time) {
-    const pad = n => String(n).padStart(2, '0'), start = reminderStart(time);
-    const end = new Date(start.getTime() + 15 * 60000), f = t => `${t.getFullYear()}${pad(t.getMonth() + 1)}${pad(t.getDate())}T${pad(t.getHours())}${pad(t.getMinutes())}00`;
-    return 'https://calendar.google.com/calendar/render?action=TEMPLATE&text=' + encodeURIComponent('Deutsch üben') + '&details=' + encodeURIComponent('Heute kurz Deutsch üben: https://deutsch-mit-dennis.de/') + '&dates=' + f(start) + '/' + f(end) + '&recur=' + encodeURIComponent('RRULE:FREQ=DAILY');
   }
   function restoreState(raw) {
     let obj; const t = String(raw || '').trim().replace(/^DMD1:/, '');
@@ -469,25 +453,9 @@
     if (!n) throw new Error('Es gab nichts Neues zu übernehmen.');
     return n;
   }
-  function reminderIcs(time) {
-    const [hh, mm] = (time || '18:00').split(':'), d = new Date(), pad = n => String(n).padStart(2, '0');
-    const day = `${d.getFullYear()}${pad(d.getMonth() + 1)}${pad(d.getDate())}`, stamp = d.toISOString().replace(/[-:]/g, '').replace(/\.\d+Z$/, 'Z');
-    return ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//Deutsch mit Dennis//DE', 'CALSCALE:GREGORIAN', 'BEGIN:VEVENT', `UID:dmd-reminder-${hh}${mm}@deutsch-mit-dennis.de`, `DTSTAMP:${stamp}`,
-      `DTSTART:${day}T${pad(+hh)}${pad(+mm)}00`, 'DURATION:PT15M', 'RRULE:FREQ=DAILY', 'SUMMARY:Deutsch üben', 'DESCRIPTION:Heute kurz Deutsch üben: https://deutsch-mit-dennis.de/', 'URL:https://deutsch-mit-dennis.de/',
-      'BEGIN:VALARM', 'TRIGGER:PT0M', 'ACTION:DISPLAY', 'DESCRIPTION:Deutsch üben', 'END:VALARM', 'END:VEVENT', 'END:VCALENDAR'].join('\r\n') + '\r\n';
-  }
   function lernstand() {
-    page(`${crumbs([['Lernstand & Erinnerung']])}
-      <div class="dm-head"><h1>Lernstand &amp; Erinnerung</h1><p class="dm-lead">Alles bleibt auf deinem Gerät. Nichts wird an uns gesendet.</p></div>
-      <section class="dm-card dm-ls"><h2><span aria-hidden="true">🔔</span> Tägliche Erinnerung</h2>
-        <p>Eine Erinnerung in deinem Kalender – jeden Tag zur gleichen Zeit. Ohne Anmeldung.</p>
-        <p><label for="ls-time"><b>Uhrzeit</b></label> <input type="time" id="ls-time" value="18:00" required></p>
-        ${/Android/i.test(navigator.userAgent) ? `<p><a class="dm-btn" id="ls-intent" href="${x(androidCalUrl('18:00'))}"><span aria-hidden="true">📅</span> In die Kalender-App meines Handys eintragen</a></p>
-        <p class="dm-small">Öffnet deine Kalender-App (Google, Samsung …) mit der täglichen Erinnerung. Du tippst nur noch auf „Speichern“.</p>` : ''}
-        <p><a class="dm-btn${/Android/i.test(navigator.userAgent) ? ' dm-btn-quiet' : ''}" id="ls-gcal" href="${x(gcalUrl('18:00'))}" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">📅</span> In Google Kalender eintragen</a></p>
-        <p class="dm-small">Öffnet Google Kalender (Handy: die Kalender-App) mit der Erinnerung. Du musst nur noch auf „Speichern“ tippen. Ändern oder löschen kannst du sie dort jederzeit.</p>
-        <p><button type="button" class="dm-btn dm-btn-quiet" id="ls-ics"><span aria-hidden="true">📄</span> Oder: Kalender-Datei (.ics) laden</button></p>
-        <p class="dm-small">Für andere Kalender-Apps. Die Datei danach aus der Benachrichtigung oder dem Ordner „Downloads“ öffnen.</p></section>
+    page(`${crumbs([['Lernstand sichern']])}
+      <div class="dm-head"><h1>Lernstand sichern</h1><p class="dm-lead">Alles bleibt auf deinem Gerät. Nichts wird an uns gesendet.</p></div>
       <section class="dm-card dm-ls"><h2><span aria-hidden="true">💾</span> Lernstand sichern</h2>
         <p>Dein Fortschritt (erledigte Schritte, Niveau, Challenge, Spiele) liegt nur auf diesem Gerät. Sichere ihn, bevor du das Handy wechselst oder Browserdaten löschst.</p>
         <p class="dm-row"><button type="button" class="dm-btn" id="ls-save">Datei speichern</button><button type="button" class="dm-btn dm-btn-quiet" id="ls-copy">Code kopieren</button><button type="button" class="dm-btn dm-btn-quiet" id="ls-share" hidden>Senden …</button></p>
@@ -498,12 +466,10 @@
         <p id="ls-msg" class="dm-ls-msg" role="status" aria-live="polite"></p>
         <p class="dm-small">Beim Wiederherstellen bleiben deine vorhandenen Daten erhalten. Es kommt nur dazu, was fehlt.</p></section>`);
     const msg = t => { $('#ls-msg').textContent = t; };
-    $('#ls-time').addEventListener('input', () => { const v = $('#ls-time').value || '18:00'; $('#ls-gcal').href = gcalUrl(v); const ai = $('#ls-intent'); if (ai) ai.setAttribute('href', androidCalUrl(v)); });
     if (navigator.share) {
       const sh = $('#ls-share'); sh.hidden = false;
       sh.onclick = async () => { try { await navigator.share({ title: 'Mein Lernstand – Deutsch mit Dennis', text: 'DMD1:' + b64enc(stateBundle()) }); msg('✓ Gesendet. Bewahre die Nachricht auf. Der Code darin stellt deinen Lernstand wieder her.'); } catch (e) { if (e && e.name !== 'AbortError') msg('Senden hat nicht geklappt. Nimm „Code kopieren“.'); } };
     }
-    $('#ls-ics').onclick = () => { const t = $('#ls-time').value || '18:00'; download('deutsch-ueben-erinnerung.ics', reminderIcs(t), 'text/calendar;charset=utf-8'); msg('✓ Die Datei wird geladen. Öffne sie danach aus der Benachrichtigung oder aus „Downloads“.'); };
     $('#ls-save').onclick = () => { download(`deutsch-mit-dennis-lernstand-${new Date().toISOString().slice(0, 10)}.json`, stateBundle(), 'application/json'); msg('✓ Die Datei wird gespeichert (Ordner „Downloads“). Bewahre sie gut auf. Wenn nichts passiert: „Code kopieren“ nehmen.'); };
     $('#ls-copy').onclick = async () => {
       const code = 'DMD1:' + b64enc(stateBundle());
@@ -1739,7 +1705,7 @@
   /* ---------- Router ---------- */
   const legacyRoute = window.route;
   const NAV = { '': 'start', lernweg: 'wege', wegweiser: 'wege', lernen: 'lernen', lektion: 'lernen', wortschatz: 'lernen', wort: 'lernen', ueben: 'ueben', schreiben: 'ueben', hoeren: 'ueben', lesen: 'ueben', kahoot: 'ueben', challenge: 'spiele', spiele: 'spiele', bild: 'pruefung', pruefung: 'pruefung', training: 'pruefung', orientierungskurs: 'pruefung', lid: 'pruefung', quellen: 'pruefung', simulation: 'pruefung', vorbereitung: 'pruefung', videos: 'videos', 'ueber-mich': 'ueber', material: 'material', lernpakete: 'pakete', lieder: 'lieder' };
-  const TITLES = { '': 'Deutsch lernen mit Dennis', lernstand: 'Lernstand & Erinnerung', hallo: 'Dennis in deiner Sprache', lernweg: 'Mein Lernweg', wegweiser: 'Welcher Weg passt?', lernen: 'Lektionen', lektion: 'Lektion', wortschatz: 'Wortschatz', wort: 'Wortkarte', ueben: 'Üben', schreiben: 'Schreib-Bausteine', hoeren: 'Hören', lesen: 'Lesen', kahoot: 'Kahoot-Quiz', challenge: 'Tages-Challenge', spiele: 'Lernspiele', bild: 'Bild beschreiben', pruefung: 'Prüfungstraining', training: 'Prüfungstraining', orientierungskurs: 'Deutschland verstehen', lid: 'Leben in Deutschland – 310 Fragen', quellen: 'Prüfungsinfos & Quellen', simulation: 'Prüfungssimulationen', vorbereitung: 'Gezielte Vorbereitung', videos: 'Videos', 'ueber-mich': 'Über mich', impressum: 'Impressum', datenschutz: 'Datenschutz', pinnwand: 'Deine Meinung', material: 'Materialien', lernpakete: 'Lernpakete', lieder: 'Deutsch mit Liedern', musik: 'Musik zum Lernen' };
+  const TITLES = { '': 'Deutsch lernen mit Dennis', lernstand: 'Lernstand sichern', hallo: 'Dennis in deiner Sprache', lernweg: 'Mein Lernweg', wegweiser: 'Welcher Weg passt?', lernen: 'Lektionen', lektion: 'Lektion', wortschatz: 'Wortschatz', wort: 'Wortkarte', ueben: 'Üben', schreiben: 'Schreib-Bausteine', hoeren: 'Hören', lesen: 'Lesen', kahoot: 'Kahoot-Quiz', challenge: 'Tages-Challenge', spiele: 'Lernspiele', bild: 'Bild beschreiben', pruefung: 'Prüfungstraining', training: 'Prüfungstraining', orientierungskurs: 'Deutschland verstehen', lid: 'Leben in Deutschland – 310 Fragen', quellen: 'Prüfungsinfos & Quellen', simulation: 'Prüfungssimulationen', vorbereitung: 'Gezielte Vorbereitung', videos: 'Videos', 'ueber-mich': 'Über mich', impressum: 'Impressum', datenschutz: 'Datenschutz', pinnwand: 'Deine Meinung', material: 'Materialien', lernpakete: 'Lernpakete', lieder: 'Deutsch mit Liedern', musik: 'Musik zum Lernen' };
   const OWN = {
     '': () => home(),
     lernweg: p => p[1] ? pathPage(p[1]) : paths(),
