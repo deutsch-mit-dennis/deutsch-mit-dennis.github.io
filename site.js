@@ -369,9 +369,43 @@
       ${['start', 'alltag', 'pruefung', 'beruf'].map(gk => { const ids = DM.pathOrder.filter(id => DM.paths[id].group === gk); return ids.length ? `<section class="dm-section" aria-label="${x(DM.groups[gk].label)}"><div class="dm-section-head"><h2>${{ start: 'Neu in Deutschland', alltag: 'Deutsch im Alltag', pruefung: 'Prüfungen: DTZ, Leben in Deutschland, telc', beruf: 'Beruf: DTB B1 und B2' }[gk]}</h2><p>${{ start: 'Für den Anfang', alltag: 'Ohne Prüfungsdruck', pruefung: 'Mit Probeprüfung und echter Zeit', beruf: 'Berufssprachkurs – mit Probeprüfung' }[gk]}</p></div><div class="dm-paths">${ids.map(pathCard).join('')}</div></section>` : ''; }).join('')}
       <p class="dm-center"><a class="dm-btn" href="#simulation">Direkt zu den Prüfungssimulationen</a> <a class="dm-btn dm-btn-quiet" href="#wegweiser">Ich weiß nicht, welcher Weg passt</a></p>`);
   }
+  /* Lernkarten-Rückseite eines Schritts: Tipp + passende Materialien (nur echte Seiten der Website) */
+  const STEP_TIPS = {
+    'Lektion': 'Lies zuerst den Dialog, dann sprich die Sätze laut nach.',
+    'Wörter': 'Sag jedes Wort mit Artikel laut: „der Tisch“, nicht nur „Tisch“.',
+    'Hören': 'Höre zuerst ohne Text, dann mit Text. Wiederhole schwierige Stellen.',
+    'Lesen': 'Lies erst die Fragen, dann den Text – so suchst du gezielt.',
+    'Sprechen': 'Sprich laut und in ganzen Sätzen. Nimm dich ruhig auf und höre dich an.',
+    'Schreiben': 'Schreibe kurze, klare Sätze. Prüfe danach mit der Checkliste.',
+    'Video': 'Schau das Video mit Pausen und schreibe dir 2–3 Beispielsätze auf.',
+    'Spiel': 'Spiele eine Runde und wiederhole die Fragen, die du falsch hattest.',
+    'Simulation': 'Übe wie in der Prüfung: Zeit stoppen, erst danach die Lösungen ansehen.',
+    'Prüfung': 'Übe wie in der Prüfung: Zeit stoppen, erst danach die Lösungen ansehen.',
+    'Vorbereitung': 'Übe wie in der Prüfung: Zeit stoppen, erst danach die Lösungen ansehen.'
+  };
+  const MAT_GRAM = ['Arbeitsblätter zur Grammatik (PDF)', '#material/grammatik'], VID = ['Erklärvideos', '#videos'], MAT_PRUEF = ['Prüfungs-Arbeitsblätter (PDF)', '#material/pruefung'];
+  const STEP_EXTRA = {
+    'Lektion': [MAT_GRAM, ['Wortlisten (PDF)', '#material/wortschatz'], VID],
+    'Wörter': [['Wortlisten (PDF)', '#material/wortschatz'], MAT_GRAM, VID],
+    'Lernen': [MAT_GRAM, ['Wortlisten (PDF)', '#material/wortschatz'], VID],
+    'Hören': [['Hör- und Lese-Blätter (PDF)', '#material/lesen-hoeren'], ['Weitere Hörtexte', '#hoeren'], VID],
+    'Lesen': [['Hör- und Lese-Blätter (PDF)', '#material/lesen-hoeren'], ['Weitere Lesetexte', '#lesen'], VID],
+    'Sprechen': [['Sprech-Arbeitsblätter (PDF)', '#material/sprechen'], ['Weitere Sprechübungen', '#ueben/sprechen'], VID],
+    'Schreiben': [['Schreib-Bausteine', '#schreiben'], MAT_GRAM, VID],
+    'Video': [['Alle Videos', '#videos'], ['Arbeitsblätter (PDF)', '#material']],
+    'Spiel': [['Alle Lernspiele', '#spiele'], ['Arbeitsblätter (PDF)', '#material']]
+  };
+  const stepBack = (kind, url, desc) => {
+    const tip = STEP_TIPS[kind] || 'Arbeite in Ruhe. Du kannst jede Übung beliebig oft wiederholen.';
+    const extra = (STEP_EXTRA[kind] || [MAT_PRUEF, ['Prüfungssimulationen', '#simulation'], VID]).filter(e => e[1] !== url);
+    return `<p class="dm-back-h">Das machst du hier</p><p class="dm-back-p">${x(desc)}</p>
+      <p class="dm-back-h">Tipp</p><p class="dm-back-p">${x(tip)}</p>
+      <p class="dm-back-h">Dazu passt</p><ul class="dm-back-links">${extra.map(([t, h]) => `<li><a href="${h}">${x(t)} →</a></li>`).join('')}</ul>`;
+  };
   async function pathPage(id) {
     const p = DM.paths[id]; if (!p) return paths();
     const g = DM.groups[p.group];
+    const flipped = new Set();
     const render = () => {
       const done = pathDone(id), next = p.steps.find(s => !mem.done['weg:' + id + ':' + s[1]]);
       page(`${crumbs([['Mein Lernweg', '#lernweg'], [p.title]])}
@@ -384,11 +418,15 @@
       <div class="dm-split">
         <div class="dm-steps-wrap"><p class="dm-steps-hint"><b>So geht's:</b> Tippe bei einem Schritt auf <b>„Starten“</b>. Danach kommst du hierher zurück und markierst ihn als erledigt.</p>
         <ol class="dm-steps">${p.steps.map(([title, url, desc, kind], i) => {
-          const k = 'weg:' + id + ':' + url, isDone = !!mem.done[k], isNext = !!next && next[1] === url;
-          return `<li class="${isDone ? 'is-done' : ''}${isNext ? ' is-next' : ''}"><span class="dm-step-no" aria-hidden="true">${isDone ? '✓' : i + 1}</span>
-            <div class="dm-step-body"><span class="dm-tag">${kind}</span><a href="${url}" class="dm-step-link"><b>${x(title)}</b><span>${x(desc)}</span></a>
-            <div class="dm-step-actions"><a class="dm-btn dm-step-go${isNext || !isDone ? '' : ' dm-btn-quiet'}" href="${url}">${isDone ? 'Nochmal üben' : isNext ? 'Hier weitermachen ▶' : 'Starten ▶'}</a>
-            <button type="button" class="dm-step-done" data-done="${x(k)}" aria-pressed="${isDone}">${isDone ? '✓ Erledigt' : 'Als erledigt markieren'}</button></div></div></li>`;
+          const k = 'weg:' + id + ':' + url, isDone = !!mem.done[k], isNext = !!next && next[1] === url, fl = flipped.has(k);
+          const actions = `<div class="dm-step-actions"><a class="dm-btn dm-step-go${isNext || !isDone ? '' : ' dm-btn-quiet'}" href="${url}">${isDone ? 'Nochmal üben' : isNext ? 'Hier weitermachen ▶' : 'Starten ▶'}</a>
+            <button type="button" class="dm-step-done" data-done="${x(k)}" aria-pressed="${isDone}">${isDone ? '✓ Erledigt' : 'Als erledigt markieren'}</button></div>`;
+          return `<li class="${isDone ? 'is-done' : ''}${isNext ? ' is-next' : ''}${fl ? ' is-flipped' : ''}" data-flip="${x(k)}"><div class="dm-flip">
+            <div class="dm-face dm-face-front"${fl ? ' aria-hidden="true"' : ''}><span class="dm-step-no" aria-hidden="true">${isDone ? '✓' : i + 1}</span>
+              <div class="dm-step-body"><span class="dm-tag">${kind}</span><a href="${url}" class="dm-step-link"><b>${x(title)}</b><span>${x(desc)}</span></a>${actions}</div>
+              <button type="button" class="dm-flipbtn" data-flipbtn aria-label="Karte umdrehen: Tipp und passende Materialien zu „${x(title)}“"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h13l-3-3M20 16H7l3 3"/></svg><span>Mehr</span></button></div>
+            <div class="dm-face dm-face-back"${fl ? '' : ' aria-hidden="true"'}><div class="dm-back-body"><span class="dm-tag">${kind}</span><b class="dm-back-title">${x(title)}</b>${stepBack(kind, url, desc)}</div>
+              <button type="button" class="dm-flipbtn" data-flipbtn aria-label="Karte zurückdrehen"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h13l-3-3M20 16H7l3 3"/></svg><span>Zurück</span></button></div></div></li>`;
         }).join('')}</ol></div>
         <aside class="dm-aside">
           ${note(p.tip)}
@@ -398,6 +436,12 @@
       </div>
       ${['bridge', 'repeat', 'dtbb2'].includes(id) ? '<p class="dm-small">B2 Beruf: Die Übungen orientieren sich am beruflichen Deutsch und am Deutsch-Test für den Beruf B2. Wenn du eine andere B2-Prüfung machst, prüfe das Format bei deinem Anbieter.</p>' : ''}
       <div id="dm-path-videos"></div>`);
+      $$('[data-flipbtn]').forEach(bt => bt.onclick = () => {
+        const li = bt.closest('li'), key = li.dataset.flip, on = !li.classList.contains('is-flipped');
+        li.classList.toggle('is-flipped', on); if (on) flipped.add(key); else flipped.delete(key);
+        li.querySelector('.dm-face-front').setAttribute('aria-hidden', on ? 'true' : 'false'); li.querySelector('.dm-face-back').setAttribute('aria-hidden', on ? 'false' : 'true');
+        (li.querySelector(on ? '.dm-face-back .dm-flipbtn' : '.dm-face-front .dm-flipbtn') || bt).focus({ preventScroll: true });
+      });
       $$('[data-done]').forEach(c => c.onclick = () => { if (mem.done[c.dataset.done]) delete mem.done[c.dataset.done]; else mem.done[c.dataset.done] = Date.now(); save(); render(); });
       const cat = { dtz: 'pruefung', repeat: 'pruefung', bridge: 'deutsch', start: 'deutsch', sprechen: 'deutsch', schreiben: 'pruefung', lid: 'orientierung', telcb1: 'pruefung', telcb2: 'pruefung', dtbb1: 'pruefung', dtbb2: 'pruefung' }[id];
       videoSection(cat, 'Passende Videos').then(sec => sec && $('#dm-path-videos')?.replaceWith(sec));

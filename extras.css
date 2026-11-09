@@ -948,3 +948,31 @@ main#main{overflow-x:clip} /* schwebende 3D-Bilder dürfen die Seite nicht seitl
 .dm-step-done{min-height:44px;padding:0 6px;border:0;background:none;color:var(--dm-muted,#526078);font:inherit;font-size:15px;text-decoration:underline;cursor:pointer}
 .dm-steps li.is-done .dm-step-done{color:var(--dm-gruen,#1f7a3d);font-weight:700;text-decoration:none}
 @media (max-width:600px){.dm-steps li{grid-template-columns:36px minmax(0,1fr)}.dm-step-go{flex:1 1 100%;justify-content:center}}
+
+/* Step cards as flash cards: flip icon bottom right shows tip + matching materials on the back */
+.dm-steps li{display:block;padding:0;background:none;border:0;box-shadow:none}
+.dm-steps li.is-done,.dm-steps li.is-next{background:none;border:0;box-shadow:none}
+.dm-flip{display:grid;perspective:1200px}
+.dm-face{grid-area:1/1;position:relative;display:grid;grid-template-columns:44px minmax(0,1fr);gap:14px;align-items:start;padding:14px 16px 62px;background:var(--dm-surface,#fff);border:1px solid var(--dm-line);border-radius:var(--dm-r,16px);backface-visibility:hidden;-webkit-backface-visibility:hidden;transition:transform .55s cubic-bezier(.3,.7,.3,1),visibility 0s .27s}
+.dm-face-back{grid-template-columns:minmax(0,1fr);transform:rotateY(180deg);visibility:hidden;background:#FFFBEA;border-color:#EBD98A}
+.dm-steps li.is-done .dm-face-front{background:#F3F8F4;border-color:#CBE3D3}
+.dm-steps li.is-next .dm-face-front{border-color:var(--dm-tinte);box-shadow:0 0 0 2px var(--dm-tinte-soft,#e3e9fb)}
+.dm-steps li.is-flipped .dm-face-front{transform:rotateY(-180deg);visibility:hidden}
+.dm-steps li.is-flipped .dm-face-back{transform:none;visibility:visible}
+.dm-flipbtn{position:absolute;right:10px;bottom:10px;display:inline-flex;align-items:center;gap:6px;min-height:44px;padding:0 14px 0 12px;border:2px solid var(--dm-tinte);border-radius:999px;background:#fff;color:var(--dm-tinte);font:inherit;font-weight:700;font-size:15px;cursor:pointer}
+.dm-flipbtn:hover,.dm-flipbtn:focus-visible{background:var(--dm-tinte-soft,#e3e9fb)}
+.dm-back-body{display:grid;gap:4px;min-width:0;justify-items:start}
+.dm-back-title{font-size:19px;line-height:1.3;margin:4px 0 6px}
+.dm-back-h{margin:8px 0 0;font-size:13px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;color:var(--dm-muted,#526078)}
+.dm-back-p{margin:0;font-size:16px;line-height:1.45;color:var(--dm-ink,#172036)}
+.dm-back-links{list-style:none;margin:2px 0 0;padding:0;display:grid;gap:0}
+.dm-back-links a{display:inline-flex;align-items:center;min-height:44px;font-weight:700;color:var(--dm-tinte)}
+@media (max-width:600px){.dm-face{grid-template-columns:36px minmax(0,1fr)}.dm-face-back{grid-template-columns:minmax(0,1fr)}}
+@media (prefers-reduced-motion:reduce){.dm-face{transition:none}}
+.dm-back-links li{display:block;padding:0;background:none;border:0;border-radius:0;box-shadow:none}
+/* only the visible face decides the card height (no empty space on the front) */
+.dm-flip{position:relative}
+.dm-face{grid-area:auto}
+.dm-face-back{position:absolute;inset:0;overflow:hidden}
+.dm-steps li.is-flipped .dm-face-back{position:relative;inset:auto;overflow:visible}
+.dm-steps li.is-flipped .dm-face-front{position:absolute;inset:0;overflow:hidden}
