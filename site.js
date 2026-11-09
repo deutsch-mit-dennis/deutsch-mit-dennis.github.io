@@ -430,9 +430,17 @@
     return JSON.stringify({ app: 'deutsch-mit-dennis', v: 1, saved: new Date().toISOString(), data });
   }
   function download(name, text, type) {
-    const a = document.createElement('a');
-    a.href = URL.createObjectURL(new Blob([text], { type })); a.download = name; a.rel = 'noopener';
-    document.body.appendChild(a); a.click(); setTimeout(() => { URL.revokeObjectURL(a.href); a.remove(); }, 1500);
+    const a = document.createElement('a'), url = URL.createObjectURL(new Blob([text], { type }));
+    a.href = url; a.download = name; a.rel = 'noopener'; a.style.display = 'none';
+    if (!('download' in a)) a.target = '_blank'; // old iOS: opens the file in a new tab instead
+    document.body.appendChild(a); a.click(); setTimeout(() => { URL.revokeObjectURL(url); a.remove(); }, 60000);
+  }
+  /* Google Kalender: öffnet auf Android direkt die Kalender-App bzw. Google Kalender mit vorausgefüllter täglicher Erinnerung (ohne Datei) */
+  function gcalUrl(time) {
+    const [hh, mm] = (time || '18:00').split(':').map(Number), now = new Date(), pad = n => String(n).padStart(2, '0');
+    const start = new Date(now.getFullYear(), now.getMonth(), now.getDate(), hh || 0, mm || 0); if (start <= now) start.setDate(start.getDate() + 1);
+    const end = new Date(start.getTime() + 15 * 60000), f = t => `${t.getFullYear()}${pad(t.getMonth() + 1)}${pad(t.getDate())}T${pad(t.getHours())}${pad(t.getMinutes())}00`;
+    return 'https://calendar.google.com/calendar/render?action=TEMPLATE&text=' + encodeURIComponent('Deutsch üben') + '&details=' + encodeURIComponent('Heute kurz Deutsch üben: https://deutsch-mit-dennis.de/') + '&dates=' + f(start) + '/' + f(end) + '&recur=' + encodeURIComponent('RRULE:FREQ=DAILY');
   }
   function restoreState(raw) {
     let obj; const t = String(raw || '').trim().replace(/^DMD1:/, '');
@@ -465,20 +473,27 @@
       <section class="dm-card dm-ls"><h2><span aria-hidden="true">🔔</span> Tägliche Erinnerung</h2>
         <p>Eine Erinnerung in deinem Kalender – jeden Tag zur gleichen Zeit. Ohne Anmeldung.</p>
         <p><label for="ls-time"><b>Uhrzeit</b></label> <input type="time" id="ls-time" value="18:00" required></p>
-        <p><button type="button" class="dm-btn" id="ls-ics"><span aria-hidden="true">📅</span> In meinen Kalender eintragen</button></p>
-        <p class="dm-small">Die Datei öffnet sich in deiner Kalender-App. Dort kannst du die Erinnerung jederzeit ändern oder löschen. Wenn nichts passiert: Datei aus den Downloads öffnen.</p></section>
+        <p><a class="dm-btn" id="ls-gcal" href="${x(gcalUrl('18:00'))}" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">📅</span> In Google Kalender eintragen</a></p>
+        <p class="dm-small">Öffnet Google Kalender (Handy: die Kalender-App) mit der Erinnerung. Du musst nur noch auf „Speichern“ tippen. Ändern oder löschen kannst du sie dort jederzeit.</p>
+        <p><button type="button" class="dm-btn dm-btn-quiet" id="ls-ics"><span aria-hidden="true">📄</span> Oder: Kalender-Datei (.ics) laden</button></p>
+        <p class="dm-small">Für andere Kalender-Apps. Die Datei danach aus der Benachrichtigung oder dem Ordner „Downloads“ öffnen.</p></section>
       <section class="dm-card dm-ls"><h2><span aria-hidden="true">💾</span> Lernstand sichern</h2>
         <p>Dein Fortschritt (erledigte Schritte, Niveau, Challenge, Spiele) liegt nur auf diesem Gerät. Sichere ihn, bevor du das Handy wechselst oder Browserdaten löschst.</p>
-        <p class="dm-row"><button type="button" class="dm-btn" id="ls-save">Datei speichern</button><button type="button" class="dm-btn dm-btn-quiet" id="ls-copy">Code kopieren</button></p>
+        <p class="dm-row"><button type="button" class="dm-btn" id="ls-save">Datei speichern</button><button type="button" class="dm-btn dm-btn-quiet" id="ls-copy">Code kopieren</button><button type="button" class="dm-btn dm-btn-quiet" id="ls-share" hidden>Senden …</button></p>
         <h3>Wiederherstellen</h3>
-        <p><label for="ls-file">Datei auswählen</label><br><input type="file" id="ls-file" accept=".json,application/json"></p>
+        <p><label for="ls-file">Datei auswählen</label><br><input type="file" id="ls-file"></p>
         <p><label for="ls-code">oder Code einfügen</label><br><textarea id="ls-code" rows="3" class="dm-ls-code" spellcheck="false"></textarea></p>
         <p><button type="button" class="dm-btn dm-btn-quiet" id="ls-restore">Wiederherstellen</button></p>
         <p id="ls-msg" class="dm-ls-msg" role="status" aria-live="polite"></p>
         <p class="dm-small">Beim Wiederherstellen bleiben deine vorhandenen Daten erhalten. Es kommt nur dazu, was fehlt.</p></section>`);
     const msg = t => { $('#ls-msg').textContent = t; };
-    $('#ls-ics').onclick = () => { const t = $('#ls-time').value || '18:00'; download('deutsch-ueben-erinnerung.ics', reminderIcs(t), 'text/calendar;charset=utf-8'); msg('✓ Datei erstellt. Öffne sie, um die Erinnerung in deinen Kalender zu übernehmen.'); };
-    $('#ls-save').onclick = () => { download(`deutsch-mit-dennis-lernstand-${new Date().toISOString().slice(0, 10)}.json`, stateBundle(), 'application/json'); msg('✓ Datei gespeichert. Bewahre sie gut auf, zum Beispiel in deiner Cloud.'); };
+    $('#ls-time').addEventListener('input', () => { $('#ls-gcal').href = gcalUrl($('#ls-time').value || '18:00'); });
+    if (navigator.share) {
+      const sh = $('#ls-share'); sh.hidden = false;
+      sh.onclick = async () => { try { await navigator.share({ title: 'Mein Lernstand – Deutsch mit Dennis', text: 'DMD1:' + b64enc(stateBundle()) }); msg('✓ Gesendet. Bewahre die Nachricht auf. Der Code darin stellt deinen Lernstand wieder her.'); } catch (e) { if (e && e.name !== 'AbortError') msg('Senden hat nicht geklappt. Nimm „Code kopieren“.'); } };
+    }
+    $('#ls-ics').onclick = () => { const t = $('#ls-time').value || '18:00'; download('deutsch-ueben-erinnerung.ics', reminderIcs(t), 'text/calendar;charset=utf-8'); msg('✓ Die Datei wird geladen. Öffne sie danach aus der Benachrichtigung oder aus „Downloads“.'); };
+    $('#ls-save').onclick = () => { download(`deutsch-mit-dennis-lernstand-${new Date().toISOString().slice(0, 10)}.json`, stateBundle(), 'application/json'); msg('✓ Die Datei wird gespeichert (Ordner „Downloads“). Bewahre sie gut auf. Wenn nichts passiert: „Code kopieren“ nehmen.'); };
     $('#ls-copy').onclick = async () => {
       const code = 'DMD1:' + b64enc(stateBundle());
       try { await navigator.clipboard.writeText(code); msg('✓ Code kopiert. Schicke ihn dir selbst, zum Beispiel per WhatsApp oder E-Mail.'); }
