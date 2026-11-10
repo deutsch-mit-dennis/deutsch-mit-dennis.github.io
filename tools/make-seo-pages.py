@@ -2,8 +2,9 @@
 """Readable static pages for Google: songs, LiD questions, exam simulations.
 Unlike the share stubs (tools/make-share-pages.py) these pages do NOT redirect:
 they show the real content and link into the app (/#route) for practising.
+Also renders /impressum/ and /datenschutz/ from tools/legal/*.html (the legal texts live there).
 Run in the repo folder: python3 tools/make-seo-pages.py
-(make-share-pages.py calls it at the end, so the sitemap always contains both.)"""
+(make-share-pages.py calls it at the end; the last step is tools/build-sitemap.js, which writes sitemap.xml.)"""
 
 import json, os, re, subprocess, html
 
@@ -13,11 +14,11 @@ e = html.escape
 
 NODE = r"""
 const fs=require('fs'),vm=require('vm');const c={};c.window=c;vm.createContext(c);
-const files=['lieder-data.js','lid-katalog.js',...fs.readdirSync('sim').filter(f=>/^[\w-]+\.js$/.test(f)).map(f=>'sim/'+f)];
+const files=['lieder-data.js','lid-katalog.js','lid-bilder-alt.js',...fs.readdirSync('sim').filter(f=>/^[\w-]+\.js$/.test(f)).map(f=>'sim/'+f)];
 for(const f of files)vm.runInContext(fs.readFileSync(f,'utf8'),c,{filename:f});
 const sims=Object.values(c.SIM).map(s=>({id:s.id,title:s.title,short:s.short,provider:s.provider,level:s.level,intro:s.intro,
   sections:(s.sections||[]).map(x=>({title:x.title,minutes:x.minutes||0,note:x.note||''}))}));
-process.stdout.write(JSON.stringify({songs:c.DM.songs,lid:c.LID_KATALOG,stand:c.LID_KATALOG_STAND,quelle:c.LID_QUELLE_HTML,sims}));
+process.stdout.write(JSON.stringify({songs:c.DM.songs,lid:c.LID_KATALOG,stand:c.LID_KATALOG_STAND,alt:c.LID_BILD_ALT||{},quelle:c.LID_QUELLE_HTML,sims}));
 """
 D = json.loads(
     subprocess.run(
@@ -30,7 +31,7 @@ CSS = """:root{--ink:#172036;--blue:#2341B5;--muted:#4a5573;--line:#dfe4f0;--pap
 a{color:var(--blue)}header,main,footer{max-width:760px;margin:0 auto;padding:0 16px}
 header{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:14px;padding-bottom:14px;border-bottom:1px solid var(--line)}
 .pn{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}.pn a{min-height:44px;display:inline-flex;align-items:center}
-header a{white-space:nowrap}td:last-child,th:last-child{white-space:nowrap}@media(max-width:360px){header{gap:8px}.brand{font-size:1rem}header a:last-child{font-size:.9rem}}.brand{font-weight:800;color:var(--ink);text-decoration:none;font-size:1.1rem}.brand i{font-style:normal;color:var(--blue)}
+header a{white-space:nowrap}.time td:last-child,.time th:last-child{white-space:nowrap}td{overflow-wrap:anywhere}.q li,.q h3{overflow-wrap:anywhere;hyphens:auto}@media(max-width:360px){header{gap:8px}.brand{font-size:1rem}header a:last-child{font-size:.9rem}}.brand{font-weight:800;color:var(--ink);text-decoration:none;font-size:1.1rem}.brand i{font-style:normal;color:var(--blue)}
 .crumbs{font-size:.9rem;color:var(--muted);margin:16px 0 4px}.crumbs a{color:var(--muted)}
 h1{font-size:clamp(1.6rem,6vw,2.2rem);line-height:1.2;margin:.3em 0}h2{font-size:1.3rem;margin:1.6em 0 .4em}
 .tag{display:inline-block;background:#e8edfa;color:var(--blue);font-weight:700;border-radius:99px;padding:2px 12px;font-size:.85rem;margin:0 6px 6px 0}
@@ -51,7 +52,7 @@ details{background:#fff;border:1px solid var(--line);border-radius:12px;padding:
 footer{border-top:1px solid var(--line);margin-top:40px;padding-top:16px;padding-bottom:40px;font-size:.9rem;color:var(--muted)}footer a{color:var(--muted);margin-right:14px;display:inline-block;min-height:32px}"""
 
 
-def page(path, title, desc, body, crumbs, og="start"):
+def page(path, title, desc, body, crumbs, og="start", extra_ld=None, ogtype="article", script=""):
     url = f"{SITE}/{path}/"
     bl = [
         {
@@ -62,13 +63,17 @@ def page(path, title, desc, body, crumbs, og="start"):
         }
         for i, (n, p) in enumerate([("Start", "")] + crumbs)
     ]
-    ld = json.dumps(
-        {
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            "itemListElement": bl,
-        },
-        ensure_ascii=False,
+    # BreadcrumbList on every page; extra_ld adds more blocks (e.g. LearningResource)
+    ld = "\n".join(
+        '<script type="application/ld+json">' + json.dumps(b, ensure_ascii=False) + "</script>"
+        for b in [
+            {
+                "@context": "https://schema.org",
+                "@type": "BreadcrumbList",
+                "itemListElement": bl,
+            }
+        ]
+        + ([extra_ld] if extra_ld else [])
     )
     nav = " › ".join(
         [f'<a href="/">Start</a>']
@@ -80,25 +85,46 @@ def page(path, title, desc, body, crumbs, og="start"):
 <title>{e(title)} – Deutsch mit Dennis</title>
 <meta name="description" content="{e(desc)}">
 <link rel="canonical" href="{url}">
-<meta property="og:type" content="article"><meta property="og:site_name" content="Deutsch mit Dennis"><meta property="og:locale" content="de_DE">
+<meta property="og:type" content="{ogtype}"><meta property="og:site_name" content="Deutsch mit Dennis"><meta property="og:locale" content="de_DE">
 <meta property="og:title" content="{e(title)}"><meta property="og:description" content="{e(desc)}"><meta property="og:url" content="{url}">
 <meta property="og:image" content="{SITE}/assets/og/{og}.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="/favicon.svg">
-<script type="application/ld+json">{ld}</script>
+{ld}
 <style>{CSS}</style>
 </head><body>
 <header><a class="brand" href="/">Deutsch <i>mit Dennis</i></a><a href="/#start">Zur Lern-App →</a></header>
 <main><nav class="crumbs" aria-label="Brotkrumen">{nav}</nav>
 {body}
 </main>
-<footer><a href="/">Startseite</a><a href="/#impressum">Impressum</a><a href="/#datenschutz">Datenschutz</a><br>Kostenlos Deutsch lernen von A1 bis B2 (Lieder bis C1) – von Dennis, DaZ-Lehrer und lizenzierter Prüfer.</footer>
+<footer><a href="/">Startseite</a><a href="/impressum/">Impressum</a><a href="/datenschutz/">Datenschutz</a><br>Kostenlos Deutsch lernen von A1 bis B2 (Lieder bis C1) – von Dennis, DaZ-Lehrer und lizenzierter Prüfer.</footer>
+{script}
 </body></html>
 '''
     f = os.path.join(R, path, "index.html")
     os.makedirs(os.path.dirname(f), exist_ok=True)
     open(f, "w", encoding="utf-8").write(doc)
     return url
+
+
+def learning_resource(path, name, desc, level, kind):
+    """schema.org LearningResource block for exercise pages (exam simulations, LiD questions)."""
+    return {
+        "@context": "https://schema.org",
+        "@type": "LearningResource",
+        "name": name,
+        "description": desc,
+        "url": f"{SITE}/{path}/",
+        "inLanguage": "de",
+        "educationalLevel": level,
+        "isAccessibleForFree": True,
+        "learningResourceType": kind,
+        "provider": {"@type": "EducationalOrganization", "name": "Deutsch mit Dennis", "url": SITE + "/"},
+        "author": {"@type": "Person", "@id": SITE + "/#dennis", "name": "Dennis Prudnikau"},
+    }
+
+
+LID_LEVEL = "Orientierungskurs und Einbürgerungstest"
 
 
 urls = []
@@ -238,7 +264,7 @@ def pager(cur):
 def qhtml(q):
     lab = f"Frage {q['nr']}" if isinstance(q["nr"], int) else str(q["nr"])
     imgs = "".join(
-        f'<img src="/assets/lid-fragen/{e(im)}" alt="Bild {k + 1}" width="110" height="110" loading="lazy">'
+        f'<img src="/assets/lid-fragen/{e(im)}" alt="{e(("Bild " + str(k + 1) + ": ") if len(q["img"]) > 1 else "")}{e(D["alt"].get(im, ""))}" width="110" height="110" loading="lazy">'
         for k, im in enumerate(q.get("img") or [])
     )
     lis = "".join(
@@ -272,14 +298,16 @@ for slug, name, qs in groups:
     )
     first = qs[0]["q"][:90]
     desc = f"Test „Leben in Deutschland“: {name} mit richtigen Antworten, z. B. „{first}“. Kostenlos üben mit Prüfungssimulation."
+    ttl = f"Leben in Deutschland: {name} mit Antworten"
     urls.append(
         page(
             f"lid/{slug}",
-            f"Leben in Deutschland: {name} mit Antworten",
+            ttl,
             desc[:300],
             body,
             [("Leben in Deutschland", "lid"), (name, f"lid/{slug}")],
             "lid",
+            learning_resource(f"lid/{slug}", ttl, desc[:300], LID_LEVEL, "Quiz"),
         )
     )
 
@@ -294,14 +322,16 @@ body = (
     + "</ul>"
     + quelle
 )
+LID_ALL_DESC = "Alle 300 allgemeinen Fragen und die 10 NRW-Fragen zum Test „Leben in Deutschland“ mit richtigen Antworten – nach Nummern geordnet. Kostenlos üben."
 urls.append(
     page(
         "lid/fragen",
         "Leben in Deutschland: alle Fragen mit Antworten",
-        "Alle 300 allgemeinen Fragen und die 10 NRW-Fragen zum Test „Leben in Deutschland“ mit richtigen Antworten – nach Nummern geordnet. Kostenlos üben.",
+        LID_ALL_DESC,
         body,
         [("Leben in Deutschland", "lid"), ("Alle Fragen", "lid/fragen")],
         "lid",
+        learning_resource("lid/fragen", "Leben in Deutschland: alle Fragen mit Antworten", LID_ALL_DESC, LID_LEVEL, "Quiz"),
     )
 )
 
@@ -323,7 +353,7 @@ for s in sims:
 <p><span class="tag">Niveau {e(s["level"])}</span><span class="tag">Kostenlos</span><span class="tag">Mit Zeitvorgabe</span></p>
 <p class="lead">{e(s.get("intro", ""))}</p>
 <p><a class="btn" href="/#simulation/{e(s["id"])}">▶ Simulation starten</a></p>
-<h2>Aufbau der Simulation</h2><table><tr><th>Prüfungsteil</th><th>Zeit</th></tr>{rows}{f"<tr><td><b>Gesamt</b></td><td>{total} Min.</td></tr>" if total else ""}</table>
+<h2>Aufbau der Simulation</h2><table class="time"><tr><th>Prüfungsteil</th><th>Zeit</th></tr>{rows}{f"<tr><td><b>Gesamt</b></td><td>{total} Min.</td></tr>" if total else ""}</table>
 <h2>So funktioniert es</h2><ul class="list"><li>Du arbeitest mit echter Zeitvorgabe – wie in der Prüfung.</li><li>Am Ende siehst du deine Punkte, die Bestehensregel und die Lösungen.</li><li>Keine Anmeldung nötig, am Handy und am Computer.</li></ul>
 {NOTE}
 <h2>Weitere Simulationen</h2><ul class="list">{others}</ul>"""
@@ -332,10 +362,11 @@ for s in sims:
         + ", ".join(x["title"] for x in s["sections"])
         + "."
     )
+    sim_title = f"{s['title']} – kostenlose Simulation"
     urls.append(
         page(
             f"simulation/{s['id']}",
-            f"{s['title']} – kostenlose Simulation",
+            sim_title,
             desc[:300],
             body,
             [
@@ -343,23 +374,26 @@ for s in sims:
                 (s["short"] if s.get("short") else s["title"], f"simulation/{s['id']}"),
             ],
             "simulation",
+            learning_resource(f"simulation/{s['id']}", sim_title, desc[:300], s["level"], "Practice test"),
         )
     )
 
-# ---------------- sitemap: keep the share pages, replace our block ----------------
-sm = os.path.join(R, "sitemap.xml")
-old = re.findall(r"<loc>([^<]+)</loc>", open(sm, encoding="utf-8").read())
-ours = set(urls)
-keep = [
-    u
-    for u in old
-    if u not in ours
-    and not re.search(r"/(lieder/[^/]+|lid/fragen[^/]*|simulation/[^/]+)/$", u)
+# ---------------- legal pages (content lives in tools/legal/*.html) ----------------
+WIPE_JS = """<script>
+// "delete my learning progress" button of the privacy page (same keys as the app: dmd.v1, dmd-*, da-*)
+document.getElementById("dm-wipe").onclick = function () {
+  try { [localStorage, sessionStorage].forEach(function (S) { Object.keys(S).filter(function (k) { return k === "dmd.v1" || /^(dmd?|da)[-._]/.test(k); }).forEach(function (k) { S.removeItem(k); }); }); } catch (e) {}
+  document.getElementById("dm-wipe-status").textContent = "Erledigt. Dein Lernstand wurde gelöscht.";
+};
+</script>"""
+LEGAL = [
+    ("impressum", "Impressum", "Impressum von Deutsch mit Dennis: Anbieterkennzeichnung nach § 5 DDG, Kontakt, Haftung für Links und Urheberrecht.", ""),
+    ("datenschutz", "Datenschutzerklärung", "Datenschutz bei Deutsch mit Dennis: kein Konto, keine Profile, Lernstand nur auf deinem Gerät. Infos zu Hosting, YouTube, Suno und deinen Rechten.", WIPE_JS),
 ]
-allu = keep + urls
-open(sm, "w", encoding="utf-8").write(
-    '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
-    + "".join(f"  <url><loc>{u}</loc></url>\n" for u in allu)
-    + "</urlset>\n"
-)
-print(len(urls), "Inhaltsseiten,", len(allu), "URLs in der Sitemap")
+for slug, name, desc, script in LEGAL:
+    frag = open(os.path.join(R, "tools", "legal", slug + ".html"), encoding="utf-8").read()
+    urls.append(page(slug, name, desc, frag, [(name, slug)], "start", None, "website", script))
+
+# ---------------- sitemap: build-sitemap.js scans all pages and adds <lastmod> ----------------
+subprocess.run(["node", os.path.join("tools", "build-sitemap.js")], cwd=R, check=True)
+print(len(urls), "Inhaltsseiten")

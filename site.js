@@ -8,6 +8,7 @@
   const $$ = (s, r = document) => [...r.querySelectorAll(s)];
   const x = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
   const mainEl = document.querySelector('main');
+  const introEl = window.DMIntro || document.getElementById('dm-intro'); // SEO intro text from index.html; shown at the bottom of the start page
   const LEVELS = ['A1', 'A2', 'B1', 'B2'];
   const LEVEL_NAMES = { A1: 'Erste Schritte', A2: 'Alltag meistern', B1: 'Sicher ausdrücken', B2: 'Deutsch im Beruf' };
 
@@ -101,7 +102,7 @@
         const all = new Map();
         [...DM.videoSnapshot, ...feed].forEach(v => {
           if (!v || !ID_RE.test(v.id) || !v.title) return;
-          all.set(v.id, { id: v.id, title: String(v.title), published: v.published || '', category: DM.videoCategories[v.category] ? v.category : guessCategory(String(v.title)) });
+          all.set(v.id, { id: v.id, title: String(v.title), published: v.published || '', thumb: /^assets\/yt\/[\w-]{11}\.(jpg|webp)$/.test(v.thumb || '') ? v.thumb : '', category: DM.videoCategories[v.category] ? v.category : guessCategory(String(v.title)) });
         });
         return [...all.values()].sort((a, b) => String(b.published).localeCompare(String(a.published)));
       });
@@ -111,7 +112,7 @@
   const fmtDate = s => { const d = new Date(s); return isNaN(d) ? '' : d.toLocaleDateString('de-DE', { day: 'numeric', month: 'long', year: 'numeric' }); };
   const ytConsent = () => !!mem.ytConsent;
   /* Vorschaubilder liegen auf dieser Website (assets/yt, täglich synchronisiert) – kein Abruf bei YouTube nötig */
-  const vthumb = v => `<img src="assets/yt/${v.id}.jpg" alt="" loading="lazy" width="640" height="360" onerror="this.parentNode.classList.add('is-empty');this.remove()"><span class="dm-vthumb-ph" aria-hidden="true"><b>${x(v.title.split(/[|:–]/)[0].trim().slice(0, 60))}</b></span><span class="dm-vplay" aria-hidden="true">▶</span>`;
+  const vthumb = v => `<img src="${v.thumb || `assets/yt/${v.id}.jpg`}" alt="" loading="lazy" width="640" height="360" onerror="this.parentNode.classList.add('is-empty');this.remove()"><span class="dm-vthumb-ph" aria-hidden="true"><b>${x(v.title.split(/[|:–]/)[0].trim().slice(0, 60))}</b></span><span class="dm-vplay" aria-hidden="true">▶</span>`;
   function giveYtConsent() { mem.ytConsent = true; save(); }
   function videoCard(v, { big = false } = {}) {
     const thumb = vthumb(v);
@@ -122,7 +123,7 @@
   }
   function playerHTML(src, title) {
     if (!ytConsent()) {
-      return `<div class="dm-consent"><p><b>Videos werden von YouTube geladen.</b> Wenn du sie hier ansiehst, überträgt dein Browser Daten an YouTube (Google). Mehr dazu in der <a href="#datenschutz">Datenschutzerklärung</a>.</p>
+      return `<div class="dm-consent"><p><b>Videos werden von YouTube geladen.</b> Wenn du sie hier ansiehst, überträgt dein Browser Daten an YouTube (Google). Mehr dazu in der <a href="/datenschutz/">Datenschutzerklärung</a>.</p>
       <div class="dm-row"><button type="button" class="dm-btn" data-consent>Videos hier anzeigen</button><a class="dm-btn dm-btn-quiet" href="${T.youtube}" target="_blank" rel="noopener noreferrer">Auf YouTube öffnen ↗</a></div></div>`;
     }
     return `<div class="dm-player"><iframe src="${src}" title="${x(title)}" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>`;
@@ -257,7 +258,7 @@
     <section class="dm-hero">
       <figure class="dm-hero-photo"><img src="assets/dennis.webp" alt="Dennis, dein Deutschlehrer" width="626" height="1004" fetchpriority="high"></figure>
       <div class="dm-hero-copy">
-        <h1>Deutsch lernen mit Dennis</h1>
+        <p class="dm-hero-title">Deutsch lernen mit Dennis</p>
         <p class="dm-promise" data-i18n="free" data-i18n-dir>Kostenlos · A1 bis B2 · ohne Anmeldung</p>
         <p class="dm-social" aria-label="Dennis in den sozialen Netzwerken"><a class="dm-soc dm-soc-yt" href="https://www.youtube.com/@deutsch-mit-Dennis" target="_blank" rel="noopener noreferrer" aria-label="YouTube – Kanal öffnen"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="currentColor"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2C.5 9.1.5 12 .5 12s0 2.9.5 4.8a3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1c.5-1.9.5-4.8.5-4.8s0-2.9-.5-4.8zM9.7 15.5v-7l6 3.5-6 3.5z"/></svg><span>YouTube</span></a><a class="dm-soc dm-soc-ig" href="https://www.instagram.com/deutsch_mit_dennis/" target="_blank" rel="noopener noreferrer" aria-label="Instagram – Kanal öffnen"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg><span>Instagram</span></a><a class="dm-soc dm-soc-tt" href="https://www.tiktok.com/@deutsch_mit_dennis" target="_blank" rel="noopener noreferrer" aria-label="TikTok – Kanal öffnen"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="currentColor"><path d="M16.6 2h-3.2v13.2a2.8 2.8 0 1 1-2-2.7V9.2a6 6 0 1 0 5.2 5.9V8.6a7.4 7.4 0 0 0 4.3 1.4V6.8a4.3 4.3 0 0 1-4.3-4.8z"/></svg><span>TikTok</span></a></p>
         ${levelPicker()}
@@ -308,11 +309,12 @@
     </section>
 
     <section class="dm-section dm-about-teaser">
-      <img src="assets/dennis.webp" alt="" width="120" height="192" loading="lazy">
+      <img src="assets/dennis.webp" alt="Dennis Prudnikau, Deutschlehrer und Prüfer" width="120" height="192" loading="lazy">
       <div><h2>Wer ist Dennis?</h2><p>Master in Germanistik, seit 2017 Deutschlehrer und lizenzierter DTZ- und telc-Prüfer. Ich kenne die Prüfungen aus dem Unterricht und als Prüfer.</p><div class="dm-row"><a class="dm-btn dm-btn-quiet" href="#ueber-mich">Mehr über mich</a><a class="dm-btn dm-btn-quiet" href="#ueber-mich/nachweise">Zulassungen</a></div></div>
     </section>
 
     ${pkgTeaser()}`, 'dm-home');
+    if (introEl) mainEl.querySelector('.dm-home')?.append(introEl);
     wireLevel();
     (window.DMNews ? DMNews.items() : fetch('neu.json?v=' + Math.floor(Date.now() / 36e5), { cache: 'no-cache' }).then(r => r.json()).then(j => j.items || [])).then(items => {
       const ico = { lied: ['noten', 'Lied'], hoeren: ['kopfhoerer', 'Hören'], sprechen: ['sprechblase', 'Sprechen'], schreiben: ['schreiben', 'Schreiben'], uebung: ['idee', 'Übung'], neu: ['funkeln', 'Neu'], video: ['video', 'Video'], kahoot: ['spiel', 'Kahoot'] };
@@ -649,7 +651,7 @@
         <label for="dm-coach-text"><b>Das hat das Mikrofon verstanden</b> <small>(stimmt ein Wort nicht? Dann hast du es vielleicht undeutlich gesprochen – du kannst es auch korrigieren)</small></label>
         <textarea id="dm-coach-text" data-speech="1" rows="4"></textarea>
       </div>
-      <p class="dm-small dm-coach-privacy">Zuerst fragt dein Browser, ob die Seite das Mikrofon benutzen darf. ${SR ? 'Für das Live-Mitschreiben nutzt dein Browser seine eigene Spracherkennung – in Chrome und Edge wird der Ton dafür an Google bzw. Microsoft übertragen. ' : ''}Nach der Aufnahme wird sie für eine genauere Erkennung an die KI-Spracherkennung Whisper bei Cloudflare geschickt und dort nicht gespeichert. Die Korrektur nutzt LanguageTool und eigene Regeln für typische Lernerfehler. <a href="#datenschutz">Datenschutz</a></p>
+      <p class="dm-small dm-coach-privacy">Zuerst fragt dein Browser, ob die Seite das Mikrofon benutzen darf. ${SR ? 'Für das Live-Mitschreiben nutzt dein Browser seine eigene Spracherkennung – in Chrome und Edge wird der Ton dafür an Google bzw. Microsoft übertragen. ' : ''}Nach der Aufnahme wird sie für eine genauere Erkennung an die KI-Spracherkennung Whisper bei Cloudflare geschickt und dort nicht gespeichert. Die Korrektur nutzt LanguageTool und eigene Regeln für typische Lernerfehler. <a href="/datenschutz/">Datenschutz</a></p>
     </section>`;
   function bindSpeechCoach() {
     const btn = $('#dm-coach-rec'); if (!btn) return;
@@ -896,7 +898,7 @@
     const lyr = sg.lyrics.split('\n').map(l => { const m = l.match(/^\[(.+)\]$/); return m ? `<p class="dm-lyr-tag">${x(m[1].replace('Verse', 'Strophe').replace('Pre-Chorus', 'Vor-Refrain').replace('Chorus', 'Refrain').replace('Outro', 'Schluss').replace('Intro', 'Anfang'))}</p>` : l.trim() ? `<p>${x(l)}</p>` : ''; }).join('');
     const player = !sg.suno ? `<div class="dm-song-soon"><span aria-hidden="true">🎵</span><p><b>Die Aufnahme folgt in Kürze.</b> Den Text und die Aufgaben kannst du schon jetzt bearbeiten.</p></div>`
       : sunoConsent() ? `<div class="dm-suno"><iframe src="https://suno.com/embed/${x(sg.suno)}" title="${x(sg.title)}" loading="lazy" allow="autoplay; encrypted-media"></iframe></div><a class="dm-btn dm-btn-sun dm-pl-from" href="#lieder/playlist/alle/${x(sg.id)}">♫ Ab hier automatisch weiterhören</a><p class="dm-small"><a href="https://suno.com/song/${x(sg.suno)}" target="_blank" rel="noopener noreferrer">Bei Suno öffnen ↗</a></p>`
-      : `<div class="dm-consent"><p><b>Das Lied wird von Suno geladen.</b> Beim Abspielen überträgt dein Browser Daten (zum Beispiel deine IP-Adresse) an Suno. Mehr in der <a href="#datenschutz">Datenschutzerklärung</a>.</p><div class="dm-row"><button type="button" class="dm-btn" id="dm-suno-ok">▶ Lied hier abspielen</button><a class="dm-btn dm-btn-quiet" href="https://suno.com/song/${x(sg.suno)}" target="_blank" rel="noopener noreferrer">Bei Suno öffnen ↗</a></div></div>`;
+      : `<div class="dm-consent"><p><b>Das Lied wird von Suno geladen.</b> Beim Abspielen überträgt dein Browser Daten (zum Beispiel deine IP-Adresse) an Suno. Mehr in der <a href="/datenschutz/">Datenschutzerklärung</a>.</p><div class="dm-row"><button type="button" class="dm-btn" id="dm-suno-ok">▶ Lied hier abspielen</button><a class="dm-btn dm-btn-quiet" href="https://suno.com/song/${x(sg.suno)}" target="_blank" rel="noopener noreferrer">Bei Suno öffnen ↗</a></div></div>`;
     const gap = sg.gap;
     page(`${crumbs([['Deutsch mit Liedern', '#lieder/' + sg.level], [sg.title]])}
       <div class="dm-head"><p class="dm-path-meta">Niveau ${sg.level} · ${x(sg.theme)}</p><h1>${x(sg.title)}</h1><p class="dm-lead">${x(sg.intro)}</p><p class="dm-small"><b>Grammatik:</b> ${x(sg.grammar)}</p></div>
@@ -956,7 +958,7 @@
       <div class="dm-pl">
         <section class="dm-card dm-pl-player" aria-labelledby="pl-now">
           <div id="dm-pl-stage">${sunoConsent() ? `<div class="dm-pl-start"><button type="button" class="dm-btn dm-btn-sun" id="dm-pl-go">▶ Playlist starten</button></div>`
-            : `<div class="dm-consent"><p><b>Die Lieder werden von Suno geladen.</b> Beim Abspielen überträgt dein Browser Daten (zum Beispiel deine IP-Adresse) an Suno. Mehr in der <a href="#datenschutz">Datenschutzerklärung</a>.</p><div class="dm-row"><button type="button" class="dm-btn" id="dm-pl-go">▶ Einverstanden – Playlist starten</button></div></div>`}</div>
+            : `<div class="dm-consent"><p><b>Die Lieder werden von Suno geladen.</b> Beim Abspielen überträgt dein Browser Daten (zum Beispiel deine IP-Adresse) an Suno. Mehr in der <a href="/datenschutz/">Datenschutzerklärung</a>.</p><div class="dm-row"><button type="button" class="dm-btn" id="dm-pl-go">▶ Einverstanden – Playlist starten</button></div></div>`}</div>
           <p class="dm-pl-now" id="pl-now" aria-live="polite"></p>
           <div class="dm-row dm-pl-ctrl">
             <button type="button" class="dm-btn dm-btn-quiet" id="dm-pl-prev" aria-label="Vorheriges Lied">⏮ Zurück</button>
@@ -1259,70 +1261,12 @@
       </section>`);
     fillMusic(mainEl);
   }
-  function impressum() {
-    page(`${crumbs([['Impressum']])}
-      <article class="dm-legal"><h1>Impressum</h1>
-      <h2>Angaben gemäß § 5 DDG</h2>
-      <p>${T.address.map(x).join('<br>')}</p>
-      <h2>Kontakt</h2>
-      <p>Telefon: <a href="tel:${T.phone.replace(/\s/g, '')}">${T.phone}</a><br>E-Mail: <a href="mailto:${T.email}">${T.email}</a></p>
-      <h2>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h2>
-      <p>${T.address.map(x).join('<br>')}</p>
-      <h2>Hinweis</h2>
-      <p>„Deutsch mit Dennis“ ist ein unabhängiges Lernangebot. Die Website ist kostenlos; einzelne Lernpakete sind kostenpflichtig. Es ist kein Angebot der g.a.s.t., der telc gGmbH oder des Bundesamts für Migration und Flüchtlinge (BAMF). Die Website wird nicht vom BAMF unterstützt und nicht im Auftrag des BAMF oder der Bundesrepublik Deutschland betrieben. Die Übungen sind eigene Materialien und keine offiziellen Prüfungsaufgaben. Ausnahme: Die Fragen zum Test „Leben in Deutschland“ stammen aus dem Gesamtfragenkatalog des BAMF (<a href="#quellen">Quellenangabe</a>).</p>
-      <h2>Verkauf der Lernpakete</h2>
-      <p>Die kostenpflichtigen Lernpakete werden über die Digistore24 GmbH, St.-Godehard-Straße 32, 31139 Hildesheim, verkauft. Digistore24 ist Verkäufer und Vertragspartner; es gelten deren <a href="https://www.digistore24.com/page/terms/1/de" target="_blank" rel="noopener noreferrer">AGB</a>. Für Inhalt und Fragen zu den Paketen bin ich zuständig (Kontakt siehe oben).</p>
-      <h2>Haftung für Links</h2>
-      <p>Diese Website enthält Links zu externen Websites (zum Beispiel YouTube, Kahoot, Prüfungsanbieter). Für deren Inhalte sind ausschließlich die jeweiligen Anbieter verantwortlich. Bei Bekanntwerden von Rechtsverletzungen entferne ich solche Links umgehend.</p>
-      <h2>Urheberrecht</h2>
-      <p>Texte, Übungen, Bilder und Videos auf dieser Website sind urheberrechtlich geschützt. Die Nutzung für das eigene Lernen und im Unterricht ist ausdrücklich erwünscht. Eine Veröffentlichung oder kommerzielle Nutzung ist nur mit Zustimmung erlaubt.</p>
-      <p class="dm-small">3D-Symbole: <a href="https://github.com/microsoft/fluentui-emoji" target="_blank" rel="noopener noreferrer">Fluent Emoji</a> © Microsoft Corporation, MIT-Lizenz.</p>
-      </article>`);
-  }
-  function datenschutz() {
-    page(`${crumbs([['Datenschutz']])}
-      <article class="dm-legal"><h1>Datenschutzerklärung</h1>
-      <p class="dm-lead">Kurz gesagt: Du brauchst kein Konto. Ich lege keine Profile über dich an. Dein Lernstand bleibt auf deinem Gerät.</p>
-      <h2>1. Verantwortlicher</h2>
-      <p>${T.address.map(x).join('<br>')}<br>E-Mail: <a href="mailto:${T.email}">${T.email}</a></p>
-      <h2>2. Hosting und Server-Protokolle</h2>
-      <p>Beim Aufruf der Website verarbeitet der Hosting-Anbieter technisch notwendige Daten (zum Beispiel IP-Adresse, Datum und Uhrzeit, aufgerufene Seite, Browsertyp), um die Seite auszuliefern und die Sicherheit zu gewährleisten. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO.</p>
-      <p>Diese Website wird bei GitHub Pages gehostet, einem Dienst der GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA. Dabei können Daten auch in den USA verarbeitet werden. Mehr: <a href="https://docs.github.com/de/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener noreferrer">Datenschutzerklärung von GitHub</a>.</p>
-      <h2>3. Lernstand auf deinem Gerät</h2>
-      <p>Dein Lernfortschritt, abgehakte Schritte, deine Übungstexte, dein Spielstand in den Lernspielen (zum Beispiel Mikulas Zeitkristalle und dein Niveau) und welche Neuigkeiten (🔔) du schon gesehen hast, werden im Speicher deines Browsers (localStorage) gespeichert. Diese Daten werden nicht an mich oder Dritte übertragen. Du kannst sie jederzeit löschen.</p>
-      <p><button type="button" class="dm-btn dm-btn-quiet" id="dm-wipe">Meinen gespeicherten Lernstand löschen</button> <span id="dm-wipe-status" role="status"></span></p>
-      <h2>4. YouTube-Videos</h2>
-      <p>Videos werden erst geladen, wenn du auf „Videos hier anzeigen“ klickst. Erst dann werden Daten (zum Beispiel deine IP-Adresse) an YouTube (Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland) übertragen. Ich nutze den erweiterten Datenschutzmodus (youtube-nocookie.com). Deine Zustimmung wird auf deinem Gerät gespeichert; du kannst sie oben mit „Lernstand löschen“ zurücknehmen. Rechtsgrundlage ist deine Einwilligung (Art. 6 Abs. 1 lit. a DSGVO). Mehr: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Datenschutzerklärung von Google</a>.</p>
-      <p>Die Vorschaubilder der Videos liegen auf dieser Website selbst. Beim Anzeigen der Bilder werden keine Daten an YouTube übertragen.</p>
-      <h2>4b. Lieder (Suno)</h2>
-      <p>Die Lieder im Bereich „Deutsch mit Liedern“ werden erst geladen, wenn du auf „Lied hier abspielen“ oder „Playlist starten“ klickst. Dann werden Daten (zum Beispiel deine IP-Adresse) an Suno, Inc. (USA) übertragen; dabei können Daten in den USA verarbeitet werden. Rechtsgrundlage ist deine Einwilligung (Art. 6 Abs. 1 lit. a DSGVO). Du kannst sie oben mit „Lernstand löschen“ widerrufen. Mehr: <a href="https://suno.com/privacy" target="_blank" rel="noopener noreferrer">Datenschutzerklärung von Suno</a>.</p>
-      <h2>4a. Schreib-Check (LanguageTool)</h2>
-      <p>Wenn du bei einem Schreibfeld auf „Text prüfen“ klickst, wird der Text aus diesem Feld zur Rechtschreib- und Grammatikprüfung an LanguageTool übertragen (LanguageTooler GmbH, Boschstraße 23a, 22761 Hamburg, Deutschland). Dabei wird auch deine IP-Adresse übermittelt. Ohne Klick wird nichts übertragen. Für die Verarbeitung beim Anbieter gelten dessen Datenschutzbestimmungen. Rechtsgrundlage ist deine Einwilligung durch den Klick (Art. 6 Abs. 1 lit. a DSGVO). Schreib bitte keine sensiblen persönlichen Daten in die Übungsfelder. Mehr: <a href="https://languagetool.org/legal/privacy" target="_blank" rel="noopener noreferrer">Datenschutzerklärung von LanguageTool</a>.</p>
-      <h2>4c. Kauf von Lernpaketen (Digistore24)</h2>
-      <p>Die Lernpakete werden über die Digistore24 GmbH, St.-Godehard-Straße 32, 31139 Hildesheim, verkauft. Digistore24 ist Verkäufer und Vertragspartner. Erst wenn du auf „Jetzt kaufen“ klickst, öffnet sich das Bestellformular von Digistore24; vorher werden keine Daten an Digistore24 übertragen. Bei der Bestellung verarbeitet Digistore24 deine Bestell- und Zahlungsdaten. Ich erhalte von Digistore24 die für die Abwicklung nötigen Angaben (zum Beispiel Name, E-Mail-Adresse und gekauftes Produkt), um dir bei Fragen helfen zu können. Rechtsgrundlage ist die Vertragsabwicklung (Art. 6 Abs. 1 lit. b DSGVO). Mehr: <a href="https://www.digistore24.com/page/privacy/1/de" target="_blank" rel="noopener noreferrer">Datenschutzerklärung von Digistore24</a>.</p>
-      ${DM.amazonTag ? `<h2>4c-2. Amazon-Partnerprogramm</h2>
-      <p>Ich nehme am Partnerprogramm von Amazon EU teil (Amazon Europe Core S.à r.l., 38 avenue John F. Kennedy, L-1855 Luxemburg). Links zu Büchern bei Amazon sind Werbelinks und mit einem Sternchen (*) gekennzeichnet. Kaufst du über einen solchen Link, bekomme ich eine kleine Provision; für dich ändert sich der Preis nicht. Als Amazon-Partner verdiene ich an qualifizierten Verkäufen. Beim bloßen Besuch dieser Website werden keine Daten an Amazon übertragen und keine Amazon-Cookies gesetzt. Erst wenn du auf einen Amazon-Link klickst, öffnet sich die Website von Amazon. Amazon kann dann Cookies setzen, um zu erkennen, dass du über meine Website gekommen bist, und um die Provision abzurechnen. Ich erhalte dabei keine personenbezogenen Daten, sondern nur zusammengefasste Verkaufszahlen. Rechtsgrundlage ist mein berechtigtes Interesse an der Finanzierung meines kostenlosen Angebots (Art. 6 Abs. 1 lit. f DSGVO); für die Cookies auf der Amazon-Website ist Amazon verantwortlich. Mehr: <a href="https://www.amazon.de/gp/help/customer/display.html?nodeId=201909010" target="_blank" rel="noopener noreferrer">Datenschutzerklärung von Amazon</a>.</p>` : ''}
-      <h2>4d. Einsprechen und korrigieren lassen</h2>
-      <p>Bei den Sprechübungen kannst du dich aufnehmen. Erst nach deinem Klick auf „Aufnahme starten“ oder „Mich aufnehmen“ fragt dein Browser nach dem Mikrofon. Das gilt für die Sprechübungen und für die Prüfungssimulationen. Ich speichere die Aufnahme nicht. Für das automatische Mitschreiben nutzt dein Browser seine eingebaute Spracherkennung: In Chrome und Edge wird der Ton dafür an Google bzw. Microsoft übertragen (in Safari je nach Gerät an Apple) und dort in Text umgewandelt; dabei können Daten auch außerhalb der EU verarbeitet werden. Nach dem Stoppen wird die Aufnahme zur Texterkennung an meinen Cloudflare-Worker (dmd-whisper.dennis-prudnikau.workers.dev) geschickt und dort mit der KI-Spracherkennung Whisper (Cloudflare Workers AI) in Text umgewandelt, damit auch Wörter mit Akzent richtig erkannt werden. Die Aufnahme wird dabei nicht gespeichert und nicht zum Training verwendet; Anbieter ist die Cloudflare, Inc. (USA, EU-Standardvertragsklauseln). Den erkannten Text prüft danach LanguageTool (siehe 4a). Rechtsgrundlage ist deine Einwilligung durch den Klick (Art. 6 Abs. 1 lit. a DSGVO).</p>
-      <h2>4e. Deine Meinung (Zettel)</h2>
-      <p>Wenn du unter „Deine Meinung“ einen Zettel abschickst, werden deine Angaben (Art des Zettels, Text, freiwillig Vorname und E-Mail-Adresse) über den Dienst FormSubmit (formsubmit.co) per E-Mail an mich weitergeleitet. Dabei wird auch deine IP-Adresse übertragen; die Verarbeitung kann außerhalb der EU stattfinden. Ohne Klick auf „Zettel abschicken“ wird nichts übertragen. Ich veröffentliche einen Zettel nur, wenn du das erlaubt hast – mit Vorname oder anonym, nie mit E-Mail-Adresse. Rechtsgrundlage ist deine Einwilligung (Art. 6 Abs. 1 lit. a DSGVO). Wenn du möchtest, dass ich einen Zettel wieder entferne, schreib mir einfach.</p>
-      <p>Nach einiger Nutzung fragt die Seite einmal kurz, ob sie dir hilft (1–5 Sterne). Ob und wann die Frage erscheint, wird nur in deinem Browser gespeichert. Erst wenn du Sterne anklickst, werden die Sternzahl, dein freiwilliger Kommentar und die aktuelle Unterseite über FormSubmit per E-Mail an mich gesendet; dabei wird auch deine IP-Adresse übertragen. Rechtsgrundlage ist deine Einwilligung (Art. 6 Abs. 1 lit. a DSGVO).</p>
-      ${DM.analytics && DM.analytics.cloudflareToken ? `<h2>4f. Besucherstatistik (Cloudflare Web Analytics)</h2>
-      <p>Um zu sehen, wie viele Menschen die Seite nutzen und welche Bereiche gefragt sind, nutze ich Cloudflare Web Analytics (Cloudflare, Inc., 101 Townsend St., San Francisco, CA 94107, USA). Dabei werden keine Cookies gesetzt, kein Speicher deines Browsers genutzt und keine Nutzerprofile gebildet. Beim Aufruf einer Seite werden technische Daten (aufgerufene Seite, Herkunftsseite, Browser, Gerätetyp, Land, Ladezeit) an Cloudflare übertragen; dabei wird auch deine IP-Adresse verarbeitet, laut Cloudflare aber nicht gespeichert. Die Verarbeitung kann in den USA stattfinden; Cloudflare ist nach dem EU-US Data Privacy Framework zertifiziert. Ich sehe nur zusammengefasste Zahlen, keine einzelnen Personen. Rechtsgrundlage ist mein berechtigtes Interesse an einer verbesserten Website (Art. 6 Abs. 1 lit. f DSGVO). Mehr: <a href="https://www.cloudflare.com/de-de/privacypolicy/" target="_blank" rel="noopener noreferrer">Datenschutzerklärung von Cloudflare</a>.</p>` : ''}
-      <h2>5. Kontakt per E-Mail oder Telefon</h2>
-      <p>Wenn du mir schreibst, verarbeite ich deine Nachricht und deine Kontaktdaten nur, um dir zu antworten.</p>
-      <h2>6. Vorlesefunktion</h2>
-      <p>Die meisten Hörtexte sind als Audiodateien auf dieser Website gespeichert (künstlich erzeugte Stimmen). Wo es noch keine Datei gibt, nutzt die Vorlesefunktion die Sprachausgabe deines Browsers. Je nach Browser und gewählter Stimme kann der Text dafür an den Anbieter des Browsers (zum Beispiel Google, Microsoft oder Apple) übertragen werden.</p>
-      <h2>7. Schriften</h2>
-      <p>Die Schriften dieser Website liegen auf dem eigenen Server. Es werden keine Schriften von Google oder anderen Anbietern geladen.</p>
-      <h2>8. Externe Links</h2>
-      <p>Die Titelbilder und QR-Codes der Kahoot-Quiz liegen auf dieser Website. Links zu Kahoot, PayPal, YouTube oder Prüfungsanbietern führen zu anderen Websites. Dort gelten deren Datenschutzbestimmungen.</p>
-      <h2>9. Deine Rechte</h2>
-      <p>Du hast das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerspruch. Eine Einwilligung kannst du jederzeit widerrufen. Du kannst dich außerdem bei einer Datenschutz-Aufsichtsbehörde beschweren, zum Beispiel bei der Landesbeauftragten für Datenschutz und Informationsfreiheit Nordrhein-Westfalen.</p>
-      <p class="dm-small">Stand: Oktober 2026</p>
-      </article>`);
-    $('#dm-wipe').onclick = () => { try { for (const S of [localStorage, sessionStorage]) Object.keys(S).filter(k => k === KEY || /^(dmd?|da)[-._]/.test(k)).forEach(k => S.removeItem(k)); } catch {} mem = { visited: {}, done: {}, drafts: {} }; DM.store = mem; $('#dm-wipe-status').textContent = 'Erledigt. Dein Lernstand wurde gelöscht.'; };
-  }
+  /* Impressum and Datenschutz are real pages now (/impressum/, /datenschutz/ – text in tools/legal/, built by tools/make-seo-pages.py).
+     Old links like /#impressum still work: they forward to the page. */
+  const legalForward = (path, name) => () => {
+    page(`<div class="dm-head"><h1>${name}</h1><p class="dm-lead"><a href="${path}">Weiter zu „${name}“</a></p></div>`);
+    location.replace(path);
+  };
 
   /* ---------- Hilfe-Texte an die neue Navigation anpassen (Deutsch, Englisch) ---------- */
   try {
@@ -1469,7 +1413,7 @@
             <li><b>Geld zurück:</b> Du hast ${days} Tage Geld-zurück-Garantie. Schreib einfach an Digistore24 oder an mich – du bekommst den vollen Preis zurück.</li>
             <li><b>Nutzung:</b> ${teach ? 'Sie dürfen die Kopiervorlagen für Ihren eigenen Unterricht (eine Lehrkraft) beliebig oft kopieren und digital an Ihre Kursteilnehmenden weitergeben. Weiterverkauf, Veröffentlichung im Internet oder Weitergabe an andere Lehrkräfte sind nicht erlaubt.' : 'Für deinen persönlichen Gebrauch. Bitte nicht weitergeben oder im Internet veröffentlichen.'}</li>
           </ul>
-          <p class="dm-small">Verkäufer und Vertragspartner ist die Digistore24 GmbH (St.-Godehard-Straße 32, 31139 Hildesheim). Es gelten deren <a href="https://www.digistore24.com/page/terms/1/de" target="_blank" rel="noopener noreferrer">AGB</a> und <a href="https://www.digistore24.com/page/privacy/1/de" target="_blank" rel="noopener noreferrer">Datenschutzerklärung</a>. Inhalt und Support: Dzianis Prudnikau, siehe <a href="#impressum">Impressum</a>. ${k.id === 'lid-lernheft' ? 'Die Fragen stammen aus dem öffentlichen Fragenkatalog zum Test „Leben in Deutschland“. Unabhängiges Lernmaterial, keine Verbindung zum BAMF.' : 'Unabhängiges Lernmaterial: keine Verbindung zu g.a.s.t., telc oder BAMF, keine offiziellen Prüfungsaufgaben.'}</p>
+          <p class="dm-small">Verkäufer und Vertragspartner ist die Digistore24 GmbH (St.-Godehard-Straße 32, 31139 Hildesheim). Es gelten deren <a href="https://www.digistore24.com/page/terms/1/de" target="_blank" rel="noopener noreferrer">AGB</a> und <a href="https://www.digistore24.com/page/privacy/1/de" target="_blank" rel="noopener noreferrer">Datenschutzerklärung</a>. Inhalt und Support: Dzianis Prudnikau, siehe <a href="/impressum/">Impressum</a>. ${k.id === 'lid-lernheft' ? 'Die Fragen stammen aus dem öffentlichen Fragenkatalog zum Test „Leben in Deutschland“. Unabhängiges Lernmaterial, keine Verbindung zum BAMF.' : 'Unabhängiges Lernmaterial: keine Verbindung zu g.a.s.t., telc oder BAMF, keine offiziellen Prüfungsaufgaben.'}</p>
           <p class="dm-row"><a href="#lernpakete">← Alle Lernpakete</a> <button type="button" class="dm-btn dm-btn-quiet" id="dm-share" data-url="https://deutsch-mit-dennis.de/lernpakete/${k.id}/" data-title="${x(k.title)}">🔗 Link teilen</button></p>
         </div>
       </div>`);
@@ -1510,7 +1454,7 @@
           <input type="text" name="_honey" class="dm-pin-honey" tabindex="-1" autocomplete="off" aria-hidden="true">
           <button class="dm-btn" type="submit">Zettel abschicken</button>
           <p class="dm-small" id="dm-pin-status" role="status"></p>
-          <p class="dm-small">Dein Zettel geht per E-Mail an Dennis (über den Dienst FormSubmit) und erscheint erst nach Prüfung. Mehr in der <a href="#datenschutz">Datenschutzerklärung</a>.</p>
+          <p class="dm-small">Dein Zettel geht per E-Mail an Dennis (über den Dienst FormSubmit) und erscheint erst nach Prüfung. Mehr in der <a href="/datenschutz/">Datenschutzerklärung</a>.</p>
         </form>
       </div>
       <section class="dm-section dm-pin-other"><h2>Lieber direkt schreiben?</h2><div class="dm-row"><a class="dm-btn dm-btn-quiet" href="mailto:${T.email}?subject=${encodeURIComponent('Meine Meinung')}">✉️ E-Mail</a><a class="dm-btn dm-btn-quiet" href="${T.youtube}" target="_blank" rel="noopener noreferrer">▶ YouTube-Kommentar</a></div></section>`);
@@ -1586,7 +1530,7 @@
       </div>
 
       ${done ? `<div class="dm-et-done" role="status"><b>Die Zeit ist um.</b> ${c.kind === 'schreiben' ? `Du hast ${words()} Wörter geschrieben.` : ''} Prüfe dich selbst:<ul>${checks.map(t => `<li><label><input type="checkbox"> ${x(t)}</label></li>`).join('')}</ul></div>` : ''}
-      ${c.kind === 'sprechen' && !done ? '<p class="dm-et-hint">Tipp: Nimm dich auf, lies die Mitschrift und lass sie auf Fehler prüfen. Für die Mitschrift nutzt dein Browser seine Spracherkennung (Chrome/Edge: Google bzw. Microsoft); nach dem Stoppen wird die Aufnahme für eine genauere Erkennung an Whisper bei Cloudflare geschickt und nicht gespeichert. <a href="#datenschutz">Datenschutz</a></p>' : ''}`;
+      ${c.kind === 'sprechen' && !done ? '<p class="dm-et-hint">Tipp: Nimm dich auf, lies die Mitschrift und lass sie auf Fehler prüfen. Für die Mitschrift nutzt dein Browser seine Spracherkennung (Chrome/Edge: Google bzw. Microsoft); nach dem Stoppen wird die Aufnahme für eine genauere Erkennung an Whisper bei Cloudflare geschickt und nicht gespeichert. <a href="/datenschutz/">Datenschutz</a></p>' : ''}`;
     $$('[data-et]', examBox).forEach(b => b.onclick = () => examAction(b.dataset.et));
     const rows = $$('.dm-et-row', examBox);
     if (c.kind === 'sprechen') { rows[rows.length - 1].after(examMit); if (!examMit.dataset.state) drawMitBox(); } else examMit.remove();
@@ -1675,7 +1619,7 @@
       const lidSec = document.createElement('section'); lidSec.className = 'panel'; lidSec.id = 'quelle-lid';
       lidSec.innerHTML = '<h2>Fragen zum Test „Leben in Deutschland“</h2><p>Die Fragen im LiD-Trainer, in den LiD-Spielen, in der Tages-Challenge und im Lernheft stammen aus dem Gesamtfragenkatalog zum Test „Leben in Deutschland“ und zum Einbürgerungstest. Herausgeber ist das Bundesamt für Migration und Flüchtlinge (BAMF): <a href="https://www.bamf.de/SharedDocs/Anlagen/DE/Integration/Einbuergerung/gesamtfragenkatalog-lebenindeutschland.pdf?__blob=publicationFile" target="_blank" rel="noopener">Gesamtfragenkatalog als PDF (bamf.de) ↗</a>. Der Katalog unterliegt nicht dem Urheberrecht und darf für Lernplattformen verwendet werden (Auskunft des BAMF-Service-Centers, Oktober 2026).</p><p><b>Wichtig:</b> „Deutsch mit Dennis“ ist ein privates, unabhängiges Lernangebot. Es wird nicht vom BAMF unterstützt und nicht im Auftrag des BAMF oder der Bundesrepublik Deutschland betrieben. Die Erklärungen, Übungen und Spiele rund um die Fragen sind eigene Materialien.</p>';
       if (!$('#quelle-lid')) (sec || $$('main section').pop())?.after(lidSec);
-      if (sec) sec.innerHTML = '<h2>Deine Eingaben</h2><p>In „Üben“ (Sprechen, Schreiben, Hören) und in „Mein Lernweg“ bleiben deine Texte und dein Fortschritt im Speicher deines Browsers – nur auf diesem Gerät. Texte in den Lektionen und im Prüfungstraining bleiben nur, solange die Seite geöffnet ist. Lade wichtige Texte vorher herunter. Freie Texte und die Aussprache werden nicht automatisch bewertet.</p><p>Mehr dazu in der <a href="#datenschutz">Datenschutzerklärung</a>.</p>';
+      if (sec) sec.innerHTML = '<h2>Deine Eingaben</h2><p>In „Üben“ (Sprechen, Schreiben, Hören) und in „Mein Lernweg“ bleiben deine Texte und dein Fortschritt im Speicher deines Browsers – nur auf diesem Gerät. Texte in den Lektionen und im Prüfungstraining bleiben nur, solange die Seite geöffnet ist. Lade wichtige Texte vorher herunter. Freie Texte und die Aussprache werden nicht automatisch bewertet.</p><p>Mehr dazu in der <a href="/datenschutz/">Datenschutzerklärung</a>.</p>';
     }
     if (p[0] === 'orientierungskurs' && !p[1]) videoSection('orientierung', 'Videos: Leben in Deutschland').then(sec => sec && mainEl.append(sec));
     if (p[0] === 'lektion' && p[1] && lessons.some(l => l.id === p[1])) {
@@ -1704,6 +1648,19 @@
     const box = h1.closest('.lesson-head, .lid-heading, .wz-page') || h1;
     box.insertAdjacentHTML('beforebegin', crumbs(items));
   }
+  /* The navigation and footer of index.html use real addresses (/pruefung/, /lieder/ …) so that Google can follow them.
+     Inside the app a click is caught and routed as before (#pruefung …) – no page reload. Ctrl/Cmd/middle click and
+     "open in new tab" still use the real address. Pages that are not part of the app (dtz-schreiben, impressum …) load normally. */
+  const SECTION_LINK = /^\/(pruefung|simulation|lid|lieder|ueben|hoeren|lesen|spiele|bild|challenge|lernpakete|ueber-mich|vorbereitung)\/$/;
+  document.addEventListener('click', e => {
+    if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+    const a = e.target.closest && e.target.closest('a[href^="/"]');
+    if (!a || (a.target && a.target !== '_self') || a.hasAttribute('download')) return;
+    const m = SECTION_LINK.exec(a.getAttribute('href'));
+    if (!m) return;
+    e.preventDefault();
+    if (location.hash === '#' + m[1]) window.scrollTo({ top: 0, behavior: 'smooth' }); else location.hash = '#' + m[1];
+  });
   /* ---------- Router ---------- */
   const legacyRoute = window.route;
   const NAV = { '': 'start', lernweg: 'wege', wegweiser: 'wege', lernen: 'lernen', lektion: 'lernen', wortschatz: 'lernen', wort: 'lernen', ueben: 'ueben', schreiben: 'ueben', hoeren: 'ueben', lesen: 'ueben', kahoot: 'ueben', challenge: 'spiele', spiele: 'spiele', bild: 'pruefung', pruefung: 'pruefung', training: 'pruefung', orientierungskurs: 'pruefung', lid: 'pruefung', quellen: 'pruefung', simulation: 'pruefung', vorbereitung: 'pruefung', videos: 'videos', 'ueber-mich': 'ueber', material: 'material', lernpakete: 'pakete', lieder: 'lieder' };
@@ -1721,8 +1678,8 @@
     videos: p => videos(p[1], p[2]),
     musik: () => musicPage(),
     'ueber-mich': p => { about(); fillMusic(mainEl); if (p[1] === 'nachweise') setTimeout(() => $('#nachweise')?.scrollIntoView({ behavior: 'smooth' }), 60); },
-    impressum: () => impressum(),
-    datenschutz: () => datenschutz(),
+    impressum: legalForward('/impressum/', 'Impressum'),
+    datenschutz: legalForward('/datenschutz/', 'Datenschutzerklärung'),
     pinnwand: p => feedback(p[1]),
     material: p => materials(p[1], p[2]),
     lernpakete: p => p[1] ? packagePage(p[1]) : packages(),

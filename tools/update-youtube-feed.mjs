@@ -79,9 +79,13 @@ for (const v of videos) {
 try {
   const { execSync } = await import('node:child_process');
   if (fresh_files.length) execSync(`mogrify -resize '640x360^' -gravity center -extent 640x360 -strip -quality 78 ${fresh_files.map(f => `'${f}'`).join(' ')}`, { stdio: 'ignore' });
+  // WebP copy next to the JPG (smaller, used by the website)
+  if (fresh_files.length) execSync(`mogrify -format webp -quality 78 ${fresh_files.map(f => `'${f}'`).join(' ')}`, { stdio: 'ignore' });
 } catch { /* ohne ImageMagick bleiben die Originale */ }
 
 for (const v of videos) {
+  // a WebP copy (tools/make-webp.py or mogrify below) is smaller – prefer it
+  try { await access(new URL(`${v.id}.webp`, THUMBS)); v.thumb = `assets/yt/${v.id}.webp`; continue; } catch { /* no WebP */ }
   try { await access(new URL(`${v.id}.jpg`, THUMBS)); v.thumb = `assets/yt/${v.id}.jpg`; } catch { delete v.thumb; }
 }
 await writeFile(FILE, JSON.stringify({ channel: CHANNEL, updated: new Date().toISOString(), videos }, null, 2) + '\n');

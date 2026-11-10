@@ -58,16 +58,25 @@ PAGE = '''<!DOCTYPE html>
 <meta property="og:image" content="{img}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="/favicon.svg">
+<script type="application/ld+json">{ld}</script>
 <script>location.replace("/#{route}");</script>
 <style>body{{font:18px/1.6 system-ui,sans-serif;max-width:640px;margin:60px auto;padding:0 20px;color:#172036}}a{{color:#2341B5}}</style>
 </head><body><h1>{ogt}</h1><p>{desc}</p><p><a href="/#{route}">Weiter zu „{ogt}“</a></p></body></html>
 '''
 
+def breadcrumbs(route, title):
+    # Start > [Lernpakete >] page
+    items = [('Start', '')]
+    if route.startswith('lernpakete/'): items.append(('Lernpakete', 'lernpakete'))
+    items.append((title, route))
+    return json.dumps({'@context': 'https://schema.org', '@type': 'BreadcrumbList', 'itemListElement': [
+        {'@type': 'ListItem', 'position': i + 1, 'name': n, 'item': f'{SITE}/' + (p + '/' if p else '')} for i, (n, p) in enumerate(items)]}, ensure_ascii=False)
+
 def stub(route, title, desc, img):
     url = f'{SITE}/{route}/'
     e = html.escape
     path = os.path.join(R, route, 'index.html'); os.makedirs(os.path.dirname(path), exist_ok=True)
-    open(path, 'w').write(PAGE.format(title=e(title + ' – Deutsch mit Dennis'), ogt=e(title), desc=e(desc), url=url, img=f'{SITE}/{img}', route=route))
+    open(path, 'w').write(PAGE.format(title=e(title + ' – Deutsch mit Dennis'), ogt=e(title), desc=e(desc), url=url, img=f'{SITE}/{img}', route=route, ld=breadcrumbs(route, title)))
     return url
 
 js = subprocess.run(['node', '-e', "global.window={};require('./site-data.js');console.log(JSON.stringify(window.DM.packages))"], cwd=R, capture_output=True, text=True)
@@ -96,8 +105,8 @@ for k in P:
     sub = f"{k['level']} · {k['target']} · {k['pages']} Seiten PDF" + (f" · {k['price']}" if k.get('price') else '')
     card(k['title'], sub, os.path.join(R, O, 'paket-' + k['id'] + '.jpg'), pic=os.path.join(R, k['img']), kicker='Lernpaket' if k['group'] != 'lehrende' else 'Für Lehrkräfte')
     urls.append(stub('lernpakete/' + k['id'], k['title'], k['desc'], f"{O}/paket-{k['id']}.jpg"))
-open(os.path.join(R, 'sitemap.xml'), 'w').write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + ''.join(f'  <url><loc>{u}</loc></url>\n' for u in urls) + '</urlset>\n')
 open(os.path.join(R, 'robots.txt'), 'w').write(f'User-agent: *\nAllow: /\nSitemap: {SITE}/sitemap.xml\n')
 print(len(urls), 'Seiten')
-# readable content pages (songs, LiD questions, simulations) add themselves to the sitemap
+# readable content pages (songs, LiD questions, simulations, legal pages) are built next;
+# its last step runs tools/build-sitemap.js, which writes sitemap.xml (with <lastmod>)
 subprocess.run(['python3', os.path.join(R, 'tools', 'make-seo-pages.py')], cwd=R, check=True)

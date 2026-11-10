@@ -8,6 +8,7 @@
   const BLOCK = 30;
   const BLOCKS = Math.ceil(GEN.length / BLOCK); // 10 Blöcke + NRW
   const IMG = 'assets/lid-fragen/';
+  const ALT = (f, fb) => e((window.LID_BILD_ALT || {})[f] || fb); // lid-bilder-alt.js
   const $ = (s, r = document) => r.querySelector(s);
   const $$ = (s, r = document) => [...r.querySelectorAll(s)];
   const e = s => DM.esc(s);
@@ -26,13 +27,13 @@
 
   function questionHTML(q, { chosen = null, reveal = false, name = 'a' } = {}) {
     const pic = isPicAnswer(q);
-    const top = !pic && q.img.length ? `<figure class="lid-q-img">${q.img.map(f => `<img src="${IMG}${f}" alt="Abbildung zur Frage" loading="lazy">`).join('')}</figure>` : '';
+    const top = !pic && q.img.length ? `<figure class="lid-q-img">${q.img.map(f => `<img src="${IMG}${f}" alt="${ALT(f, 'Abbildung zur Frage')}" loading="lazy">`).join('')}</figure>` : '';
     const opts = q.a.map((t, i) => {
       let cls = 'lid-opt';
       if (reveal && i === q.s) cls += ' is-right';
       else if (reveal && i === chosen) cls += ' is-wrong';
       else if (!reveal && i === chosen) cls += ' is-chosen';
-      const body = pic ? `<img src="${IMG}${q.img[i]}" alt="Bild ${i + 1}" loading="lazy"><span>Bild ${i + 1}</span>` : `<span>${e(t)}</span>`;
+      const body = pic ? `<img src="${IMG}${q.img[i]}" alt="Bild ${i + 1}: ${ALT(q.img[i], '')}" loading="lazy"><span>Bild ${i + 1}</span>` : `<span>${e(t)}</span>`;
       return `<button type="button" class="${cls}${pic ? ' lid-opt-pic' : ''}" data-i="${i}" ${reveal ? 'disabled' : ''}><b>${'ABCD'[i]}</b>${body}</button>`;
     }).join('');
     return `<div class="lid-q"><p class="lid-q-nr">${nrLabel(q)}</p><h2 class="lid-q-text">${e(q.q)}</h2>${top}<div class="lid-opts${pic ? ' lid-opts-pic' : ''}" role="group" aria-label="Antworten">${opts}</div></div>`;
@@ -116,7 +117,7 @@
     DM.page(`${head('Fragen mit Lösungen', 'Lies die Fragen und die richtige Antwort. Danach übst du den Block ohne Lösungen.')}
       <nav class="dm-tabs dm-tabs-small lid-tabs" aria-label="Block">${tabs}</nav>
       <ol class="lid-list">${blockOf(n).map(q => `<li class="dm-card"><p class="lid-q-nr">${nrLabel(q)} ${known(q) ? '<span class="lid-ok">✓ sicher</span>' : mem()[q.id]?.last === false ? '<span class="lid-no">↻ wiederholen</span>' : ''}</p><p class="lid-q-text">${e(q.q)}</p>${q.img.length && !isPicAnswer(q) ? `<figure class="lid-q-img">${q.img.map(f => `<img src="${IMG}${f}" alt="Abbildung" loading="lazy">`).join('')}</figure>` : ''}
-        ${isPicAnswer(q) ? `<div class="lid-opts-pic lid-mini">${q.img.map((f, i) => `<figure class="${i === q.s ? 'is-right' : ''}"><img src="${IMG}${f}" alt="Bild ${i + 1}" loading="lazy"><figcaption>Bild ${i + 1}${i === q.s ? ' ✓' : ''}</figcaption></figure>`).join('')}</div>` : `<ul class="lid-ans">${q.a.map((t, i) => `<li class="${i === q.s ? 'is-right' : ''}">${i === q.s ? '✓ ' : ''}${e(t)}</li>`).join('')}</ul>`}</li>`).join('')}</ol>
+        ${isPicAnswer(q) ? `<div class="lid-opts-pic lid-mini">${q.img.map((f, i) => `<figure class="${i === q.s ? 'is-right' : ''}"><img src="${IMG}${f}" alt="Bild ${i + 1}: ${ALT(f, '')}" loading="lazy"><figcaption>Bild ${i + 1}${i === q.s ? ' ✓' : ''}</figcaption></figure>`).join('')}</div>` : `<ul class="lid-ans">${q.a.map((t, i) => `<li class="${i === q.s ? 'is-right' : ''}">${i === q.s ? '✓ ' : ''}${e(t)}</li>`).join('')}</ul>`}</li>`).join('')}</ol>
       <div class="lid-actions"><a class="dm-btn" href="#lid/lernen/${n}">Diesen Block üben</a><a class="dm-btn dm-btn-quiet" href="#lid">Zur Übersicht</a></div>${foot()}`, 'lid-page');
   }
 

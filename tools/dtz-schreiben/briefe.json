@@ -1,0 +1,130 @@
+{
+  "_info": "Inhalte der Seiten /dtz-schreiben/<brieftyp>/. Neue Seite = neuer Eintrag, dann: python3 tools/make-dtz-briefe.py. \"draft\": true zeigt das gelbe Entwurf-Schild.",
+  "briefe": [
+    {
+      "slug": "beschwerde",
+      "draft": false,
+      "name": "Beschwerde",
+      "title": "Beschwerde schreiben im DTZ",
+      "description": "DTZ Schreiben: eine Beschwerde an die Hausverwaltung – Aufgabe mit vier Leitpunkten, Redemittel und Musterbriefe für A2 und B1.",
+      "intro": "Eine Beschwerde ist ein formeller Brief: Du schreibst an eine Firma, eine Hausverwaltung oder ein Amt und benutzt „Sie“. Du beschreibst ein Problem ruhig und sachlich und bittest um eine Lösung.",
+      "aufgabe": {
+        "situation": "In Ihrem Haus ist es seit zwei Wochen nachts sehr laut. Schreiben Sie an die Hausverwaltung.",
+        "leitpunkte": ["Problem beschreiben", "seit wann es das Problem gibt", "Folgen für Sie", "um eine Lösung bitten"]
+      },
+      "redemittel": [
+        ["Grund nennen", "Ich schreibe Ihnen, weil …"],
+        ["Problem beschreiben", "Leider funktioniert … nicht. / Seit … ist es sehr laut."],
+        ["Seit wann?", "Das Problem gibt es seit zwei Wochen. / Seit Montag …"],
+        ["Folgen nennen", "Deshalb kann ich nicht gut schlafen. / Das ist für meine Familie sehr schwierig."],
+        ["Um Lösung bitten", "Können Sie bitte …? / Ich bitte Sie, das Problem schnell zu lösen."],
+        ["Schluss", "Bitte antworten Sie mir bis … / Ich freue mich auf Ihre Antwort."]
+      ],
+      "fehler": [
+        "Zu unhöflich: „Das ist eine Katastrophe!“ – besser sachlich: „Das ist für mich ein großes Problem.“",
+        "Einen Leitpunkt vergessen: Oft fehlt „seit wann“. Schreib eine Zeitangabe: „seit zwei Wochen“, „seit Montag“.",
+        "Falsche Anrede: Kennst du keinen Namen, schreib „Sehr geehrte Damen und Herren,“."
+      ],
+      "a2": [
+        "Sehr geehrte Damen und Herren,",
+        "ich schreibe Ihnen, weil es in unserem Haus nachts sehr laut ist. Die Familie im zweiten Stock hört laute Musik.",
+        "Das Problem gibt es seit zwei Wochen.",
+        "Ich kann nicht gut schlafen und bin bei der Arbeit sehr müde.",
+        "Können Sie bitte mit den Nachbarn sprechen? Vielen Dank.",
+        "Mit freundlichen Grüßen\nSamir Haddad"
+      ],
+      "b1": [
+        "Sehr geehrte Damen und Herren,",
+        "ich wohne in der Lindenstraße 12 und schreibe Ihnen, weil es in unserem Haus jede Nacht sehr laut ist. Die Mieter im zweiten Stock hören bis spät in die Nacht laute Musik.",
+        "Das Problem gibt es seit zwei Wochen. Ich habe schon zweimal mit den Nachbarn gesprochen, aber leider hat sich nichts geändert.",
+        "Ich muss jeden Morgen um fünf Uhr aufstehen, weil ich früh arbeite. Deshalb bin ich sehr müde, und auch meine Kinder können nicht gut schlafen.",
+        "Ich bitte Sie, mit den Nachbarn zu sprechen oder einen Hinweis im Treppenhaus aufzuhängen. Bitte antworten Sie mir bis Ende der Woche.",
+        "Mit freundlichen Grüßen\nSamir Haddad"
+      ]
+    },
+    {
+      "slug": "termin-absagen",
+      "draft": false,
+      "name": "Termin absagen",
+      "title": "Termin absagen im DTZ: Musterbrief",
+      "description": "DTZ Schreiben: einen Arzttermin absagen – Aufgabe mit vier Leitpunkten, Redemittel und Musterbriefe für A2 und B1.",
+      "intro": "Einen Termin absagen musst du oft: beim Arzt, beim Amt oder in der Schule. Wichtig sind drei Dinge: dich entschuldigen, einen Grund nennen und einen neuen Termin vorschlagen.",
+      "aufgabe": {
+        "situation": "Sie haben am Donnerstag um 10 Uhr einen Termin bei Ihrer Zahnärztin, Frau Dr. Wagner. Sie können nicht kommen. Schreiben Sie an die Praxis.",
+        "leitpunkte": ["sich entschuldigen", "Grund nennen", "neuen Termin vorschlagen", "fragen, ob Sie etwas mitbringen müssen"]
+      },
+      "redemittel": [
+        ["Absagen", "Leider kann ich am Donnerstag nicht zu meinem Termin kommen."],
+        ["Sich entschuldigen", "Das tut mir leid. / Entschuldigen Sie bitte, dass ich so kurzfristig absage."],
+        ["Grund nennen", "Mein Sohn ist krank. / Ich muss leider arbeiten."],
+        ["Neuer Termin", "Haben Sie nächste Woche einen Termin frei? / Am Montag habe ich ab 9 Uhr Zeit."],
+        ["Nachfragen", "Muss ich etwas mitbringen? / Können Sie mir bitte sagen, ob …?"],
+        ["Schluss", "Vielen Dank für Ihr Verständnis. / Ich freue mich auf Ihre Antwort."]
+      ],
+      "fehler": [
+        "Nur absagen, aber keinen neuen Termin vorschlagen – dann fehlt ein Leitpunkt.",
+        "Wochentage und Uhrzeiten falsch schreiben: „am Montag“, „um 10 Uhr“, „ab 14 Uhr“.",
+        "„Ich kann nicht kommen, weil ich bin krank.“ – Nach „weil“ steht das Verb am Ende: „weil ich krank bin“."
+      ],
+      "a2": [
+        "Sehr geehrte Frau Dr. Wagner,",
+        "leider kann ich am Donnerstag um 10 Uhr nicht zu meinem Termin kommen. Das tut mir leid.",
+        "Mein Sohn ist krank und ich muss zu Hause bleiben.",
+        "Haben Sie nächste Woche einen Termin frei? Am Montag oder Dienstag habe ich Zeit.",
+        "Muss ich etwas mitbringen? Vielen Dank für Ihr Verständnis.",
+        "Mit freundlichen Grüßen\nOlena Kovalenko"
+      ],
+      "b1": [
+        "Sehr geehrte Frau Dr. Wagner,",
+        "ich habe am Donnerstag um 10 Uhr einen Termin bei Ihnen. Leider kann ich nicht kommen, und es tut mir sehr leid, dass ich so kurzfristig absage.",
+        "Mein Sohn hat seit gestern hohes Fieber und darf nicht in die Kita gehen. Deshalb muss ich bei ihm zu Hause bleiben.",
+        "Ich würde gern einen neuen Termin vereinbaren. Am besten passt es mir nächste Woche am Montag oder Dienstag, weil ich an diesen Tagen frei habe.",
+        "Können Sie mir bitte auch sagen, ob ich außer meiner Versichertenkarte noch etwas mitbringen muss?",
+        "Mit freundlichen Grüßen\nOlena Kovalenko"
+      ]
+    },
+    {
+      "slug": "bitte-um-information",
+      "draft": false,
+      "name": "Bitte um Information",
+      "title": "Bitte um Information: DTZ-Musterbrief",
+      "description": "DTZ Schreiben: nach einem Kurs fragen – Aufgabe mit vier Leitpunkten, Redemittel und Musterbriefe für A2 und B1.",
+      "intro": "Bei einer Bitte um Information stellst du höfliche Fragen: zu Zeiten, Kosten oder zur Anmeldung. Schreib zu jedem Leitpunkt eine klare Frage – dann ist der Brief vollständig.",
+      "aufgabe": {
+        "situation": "Sie haben in der Zeitung eine Anzeige für einen Computerkurs an der Volkshochschule gelesen. Schreiben Sie an die Volkshochschule.",
+        "leitpunkte": ["warum Sie schreiben", "nach den Kurszeiten fragen", "nach den Kosten fragen", "nach der Anmeldung fragen"]
+      },
+      "redemittel": [
+        ["Grund nennen", "Ich habe Ihre Anzeige gelesen und interessiere mich für …"],
+        ["Höflich fragen", "Können Sie mir bitte sagen, wann …? / Könnten Sie mir bitte mitteilen, ob …?"],
+        ["Indirekte Frage", "Ich möchte gern wissen, wie viel der Kurs kostet."],
+        ["Eigene Situation", "Ich habe nur am Abend Zeit. / Ich arbeite vormittags."],
+        ["Noch eine Frage", "Außerdem möchte ich wissen, … / Zum Schluss habe ich noch eine Frage: …"],
+        ["Schluss", "Vielen Dank im Voraus für Ihre Antwort."]
+      ],
+      "fehler": [
+        "Indirekte Frage mit falscher Wortstellung: „Ich möchte wissen, wie viel kostet der Kurs.“ – richtig: „wie viel der Kurs kostet“.",
+        "Nur Fragen ohne Einleitung: Schreib zuerst einen Satz, warum du schreibst.",
+        "Zu direkt: „Sagen Sie mir die Kosten!“ – höflicher: „Können Sie mir bitte sagen, …?“"
+      ],
+      "a2": [
+        "Sehr geehrte Damen und Herren,",
+        "ich habe Ihre Anzeige für den Computerkurs gelesen. Ich möchte den Kurs gern machen, denn ich brauche den Computer für meine Arbeit.",
+        "Wann ist der Kurs? Ich habe nur am Abend Zeit.",
+        "Was kostet der Kurs?",
+        "Wie kann ich mich anmelden?",
+        "Vielen Dank für Ihre Antwort.",
+        "Mit freundlichen Grüßen\nMaria Lopes"
+      ],
+      "b1": [
+        "Sehr geehrte Damen und Herren,",
+        "ich habe in der Zeitung Ihre Anzeige für den Computerkurs für Anfänger gelesen und interessiere mich sehr dafür. Ich suche gerade eine neue Arbeit und brauche dafür bessere Computerkenntnisse.",
+        "Können Sie mir bitte sagen, an welchen Tagen und um wie viel Uhr der Kurs stattfindet? Ich arbeite vormittags, deshalb habe ich nur abends oder am Wochenende Zeit.",
+        "Außerdem möchte ich gern wissen, wie viel der Kurs kostet und ob es eine Ermäßigung gibt.",
+        "Zum Schluss habe ich noch eine Frage: Kann ich mich online anmelden, oder muss ich persönlich vorbeikommen?",
+        "Vielen Dank im Voraus für Ihre Antwort.",
+        "Mit freundlichen Grüßen\nMaria Lopes"
+      ]
+    }
+  ]
+}

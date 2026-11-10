@@ -108,7 +108,9 @@ button:disabled,.btn[disabled]{opacity:.5;cursor:not-allowed}
 .dm-hero-photo{position:relative;margin:0;align-self:end}
 .dm-hero-photo img{display:block;width:100%;height:auto;max-height:470px;object-fit:contain;object-position:bottom}
 .dm-hero-copy{padding:8px 0 clamp(28px,4vw,48px);min-width:0}
-.dm-hero-copy h1{font-size:clamp(38px,6vw,68px);line-height:1.02;margin:0 0 16px;letter-spacing:-.035em;max-width:13ch}
+.dm-hero-copy h1,.dm-hero-copy .dm-hero-title{font-size:clamp(38px,6vw,68px);line-height:1.02;margin:0 0 16px;letter-spacing:-.035em;max-width:13ch}
+/* the start page has exactly one <h1> (the intro text at the bottom), so the hero title is a styled paragraph */
+.dm-hero-copy .dm-hero-title{font-family:var(--dm-font);font-weight:800;text-wrap:balance}
 .dm-hero-copy .dm-lead{margin-bottom:18px}
 .dm-hand{position:relative;font-family:var(--dm-hand);font-weight:600;font-size:clamp(25px,2.6vw,31px);line-height:1.15;color:var(--dm-tinte);margin:0 0 26px;max-width:28ch;transform:rotate(-1.5deg);padding-left:44px}
 .dm-hand::before{content:'';position:absolute;left:0;top:.35em;width:34px;height:22px;border-left:3px solid var(--dm-tinte);border-bottom:3px solid var(--dm-tinte);border-radius:0 0 0 18px;transform:rotate(12deg) scaleX(-1)}
@@ -124,7 +126,7 @@ button:disabled,.btn[disabled]{opacity:.5;cursor:not-allowed}
   .dm-hero-photo{grid-column:2;grid-row:1;align-self:start;margin-top:4px}
   .dm-hero-photo img{height:210px;object-fit:cover;object-position:50% 0}
   .dm-hero-copy{display:contents}
-  .dm-hero-copy h1{grid-column:1;grid-row:1;font-size:36px;align-self:center}
+  .dm-hero-copy h1,.dm-hero-copy .dm-hero-title{grid-column:1;grid-row:1;font-size:36px;align-self:center}
   .dm-hero-copy .dm-lead,.dm-hand,.dm-hero-copy .dm-row{grid-column:1/-1}
   .dm-hero-copy .dm-lead{font-size:18px;margin-top:14px}
   .dm-hand{font-size:24px}
@@ -703,3 +705,12 @@ body:has(header.dm-header.menu-open) .dm-tour:not(.dm-tour-open){visibility:hidd
 .dm-fgroup>summary h2{margin:4px 0 10px}
 @media (min-width:601px){.dm-fgroup>summary{min-height:0;display:block}}
 @media (max-width:600px){.dm-fgroup>summary h2{margin:0}.dm-home .dm-promise{font-size:15px}}
+
+/* ---------- Start page intro text (SEO text block, see index.html #dm-intro) ---------- */
+.js #main>#dm-intro{display:none}                       /* while the app is starting, the static copy stays hidden (no flash) */
+.dm-intro{margin:56px 0 0;padding:28px clamp(18px,3vw,32px);background:var(--dm-surface);border:1px solid var(--dm-line);border-radius:20px}
+.dm-intro h1{font-size:clamp(26px,3.4vw,36px)!important;line-height:1.15;margin:0 0 14px}
+.dm-intro h2{font-size:clamp(20px,2.2vw,24px);line-height:1.25;margin:26px 0 6px}
+.dm-intro p{margin:0 0 12px;max-width:68ch}
+.dm-intro a{font-weight:700}
+.dm-draft{display:inline-block;background:var(--dm-marker);color:#4a3b00;font-weight:700;font-size:14px;border-radius:99px;padding:2px 12px;margin:0 0 12px}

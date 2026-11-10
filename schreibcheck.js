@@ -315,10 +315,10 @@
     ta.dataset.sc = '1';
     ta.spellcheck = true; ta.lang = 'de';
     const bar = document.createElement('div'); bar.className = 'sc-bar';
-    bar.innerHTML = '<button type="button" class="sc-btn"><span aria-hidden="true">✓</span> Text prüfen</button><span class="sc-note">Sofort-Feedback zu Rechtschreibung, Grammatik und Zeichensetzung. Beim Klick wird dein Text an LanguageTool gesendet (<a href="#datenschutz">Datenschutz</a>).</span>';
+    bar.innerHTML = '<button type="button" class="sc-btn"><span aria-hidden="true">✓</span> Text prüfen</button><span class="sc-note">Sofort-Feedback zu Rechtschreibung, Grammatik und Zeichensetzung. Beim Klick wird dein Text an LanguageTool gesendet (<a href="/datenschutz/">Datenschutz</a>).</span>';
     const panel = document.createElement('div'); panel.className = 'sc-panel'; panel.hidden = true; panel.setAttribute('aria-live', 'polite');
     ta.after(bar, panel);
-    if (ta.dataset.speech === '1') { bar.querySelector('.sc-btn').innerHTML = '<span aria-hidden="true">✓</span> Fehler prüfen'; bar.querySelector('.sc-note').innerHTML = 'Zeigt Fehler in Grammatik und Wortformen. Beim Klick wird der Text an LanguageTool gesendet (<a href="#datenschutz">Datenschutz</a>).'; }
+    if (ta.dataset.speech === '1') { bar.querySelector('.sc-btn').innerHTML = '<span aria-hidden="true">✓</span> Fehler prüfen'; bar.querySelector('.sc-note').innerHTML = 'Zeigt Fehler in Grammatik und Wortformen. Beim Klick wird der Text an LanguageTool gesendet (<a href="/datenschutz/">Datenschutz</a>).'; }
     bar.querySelector('button').onclick = e => check(ta, panel, e.currentTarget);
   }
   window.DMSchreibcheck = { attach: ta => enhance(ta, true) };

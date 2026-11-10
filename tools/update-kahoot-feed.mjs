@@ -49,7 +49,10 @@ for (const k of list) {
       }
     } catch { /* ohne Bild */ }
   }
-  if (await exists(cover)) item.cover = `assets/kahoot/${k.uuid}.jpg`;
+  const webp = new URL(`${k.uuid}.webp`, DIR);
+  if (await exists(cover) && !(await exists(webp))) { try { (await import('node:child_process')).execSync(`mogrify -format webp -quality 78 '${cover.pathname}'`, { stdio: 'ignore' }); } catch { /* ohne ImageMagick */ } }
+  if (await exists(webp)) item.cover = `assets/kahoot/${k.uuid}.webp`;
+  else if (await exists(cover)) item.cover = `assets/kahoot/${k.uuid}.jpg`;
   const qr = new URL(`${k.uuid}-qr.svg`, DIR);
   if (QR && !(await exists(qr))) await writeFile(qr, await QR.toString(url, { type: 'svg', margin: 1, color: { dark: '#172036', light: '#ffffff' } }));
   if (await exists(qr)) item.qr = `assets/kahoot/${k.uuid}-qr.svg`;
