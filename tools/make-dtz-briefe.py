@@ -75,7 +75,7 @@ def build(b):
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{e(b['title'])} – Deutsch mit Dennis</title>
+<title>{e(b['title'] + ' – Deutsch mit Dennis' if len(b['title']) < 39 else b['title'])}</title>
 <meta name="description" content="{e(b['description'])}">
 <link rel="canonical" href="{url}">
 <meta property="og:type" content="article"><meta property="og:site_name" content="Deutsch mit Dennis"><meta property="og:locale" content="de_DE">

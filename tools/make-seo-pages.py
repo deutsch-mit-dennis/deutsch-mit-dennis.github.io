@@ -52,6 +52,21 @@ details{background:#fff;border:1px solid var(--line);border-radius:12px;padding:
 footer{border-top:1px solid var(--line);margin-top:40px;padding-top:16px;padding-bottom:40px;font-size:.9rem;color:var(--muted)}footer a{color:var(--muted);margin-right:14px;display:inline-block;min-height:32px}"""
 
 
+def seo_title(t):
+    """<title>: add the brand only while the whole title stays under 60 characters (Google cuts longer ones)."""
+    full = f"{t} – Deutsch mit Dennis"
+    if len(full) < 60:
+        return full
+    # still too long: keep the part before the last dash ("Lehrerpaket: X – details" -> "Lehrerpaket: X")
+    return t.rsplit(" – ", 1)[0] if len(t) >= 60 and " – " in t else t
+
+
+def seo_desc(d, n=154):
+    """meta description under 155 characters, cut at a word boundary."""
+    d = " ".join(d.split())
+    return d if len(d) <= n else d[: n - 1].rsplit(" ", 1)[0].rstrip(",;:–-") + "…"
+
+
 def page(path, title, desc, body, crumbs, og="start", extra_ld=None, ogtype="article", script=""):
     url = f"{SITE}/{path}/"
     bl = [
@@ -82,8 +97,8 @@ def page(path, title, desc, body, crumbs, og="start", extra_ld=None, ogtype="art
     )
     doc = f'''<!DOCTYPE html>
 <html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>{e(title)} – Deutsch mit Dennis</title>
-<meta name="description" content="{e(desc)}">
+<title>{e(seo_title(title))}</title>
+<meta name="description" content="{e(seo_desc(desc))}">
 <link rel="canonical" href="{url}">
 <meta property="og:type" content="{ogtype}"><meta property="og:site_name" content="Deutsch mit Dennis"><meta property="og:locale" content="de_DE">
 <meta property="og:title" content="{e(title)}"><meta property="og:description" content="{e(desc)}"><meta property="og:url" content="{url}">
@@ -298,7 +313,7 @@ for slug, name, qs in groups:
     )
     first = qs[0]["q"][:90]
     desc = f"Test „Leben in Deutschland“: {name} mit richtigen Antworten, z. B. „{first}“. Kostenlos üben mit Prüfungssimulation."
-    ttl = f"Leben in Deutschland: {name} mit Antworten"
+    ttl = f"Leben in Deutschland: {name.replace('Nordrhein-Westfalen', 'NRW')} mit Antworten"
     urls.append(
         page(
             f"lid/{slug}",
@@ -362,7 +377,7 @@ for s in sims:
         + ", ".join(x["title"] for x in s["sections"])
         + "."
     )
-    sim_title = f"{s['title']} – kostenlose Simulation"
+    sim_title = f"{s['short'] or s['title']} – kostenlose Probeprüfung online"
     urls.append(
         page(
             f"simulation/{s['id']}",

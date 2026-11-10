@@ -2,7 +2,7 @@
 """Erzeugt Vorschaubilder (1200x630) und kleine Teilen-Seiten mit eigenen Meta-Tags.
 Aufruf im Repo-Ordner: python3 tools/make-share-pages.py
 Jede Seite /<pfad>/index.html leitet sofort zur App-Route /#<pfad> weiter."""
-import json, os, subprocess, html
+import json, os, subprocess, html, sys
 from PIL import Image, ImageDraw, ImageFont
 R = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 F = os.path.join(R, 'tools', 'fonts')
@@ -51,7 +51,7 @@ def card(title, sub, out, pic=None, kicker='Deutsch mit Dennis'):
 PAGE = '''<!DOCTYPE html>
 <html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{title}</title>
-<meta name="description" content="{desc}">
+<meta name="description" content="{mdesc}">
 <link rel="canonical" href="{url}">
 <meta property="og:type" content="website"><meta property="og:site_name" content="Deutsch mit Dennis"><meta property="og:locale" content="de_DE">
 <meta property="og:title" content="{ogt}"><meta property="og:description" content="{desc}"><meta property="og:url" content="{url}">
@@ -63,6 +63,22 @@ PAGE = '''<!DOCTYPE html>
 <style>body{{font:18px/1.6 system-ui,sans-serif;max-width:640px;margin:60px auto;padding:0 20px;color:#172036}}a{{color:#2341B5}}</style>
 </head><body><h1>{ogt}</h1><p>{desc}</p><p><a href="/#{route}">Weiter zu „{ogt}“</a></p></body></html>
 '''
+
+
+def seo_title(t):
+    '''<title>: add the brand only while the whole title stays under 60 characters (Google cuts longer ones).'''
+    full = f"{t} – Deutsch mit Dennis"
+    if len(full) < 60:
+        return full
+    # still too long: keep the part before the last dash ("Lehrerpaket: X – details" -> "Lehrerpaket: X")
+    return t.rsplit(" – ", 1)[0] if len(t) >= 60 and " – " in t else t
+
+
+def seo_desc(d, n=154):
+    '''meta description under 155 characters, cut at a word boundary.'''
+    d = " ".join(d.split())
+    return d if len(d) <= n else d[: n - 1].rsplit(" ", 1)[0].rstrip(",;:–-") + "…"
+
 
 def breadcrumbs(route, title):
     # Start > [Lernpakete >] page
@@ -76,7 +92,7 @@ def stub(route, title, desc, img):
     url = f'{SITE}/{route}/'
     e = html.escape
     path = os.path.join(R, route, 'index.html'); os.makedirs(os.path.dirname(path), exist_ok=True)
-    open(path, 'w').write(PAGE.format(title=e(title + ' – Deutsch mit Dennis'), ogt=e(title), desc=e(desc), url=url, img=f'{SITE}/{img}', route=route, ld=breadcrumbs(route, title)))
+    open(path, 'w').write(PAGE.format(title=e(seo_title(title)), ogt=e(title), desc=e(desc), mdesc=e(seo_desc(desc)), url=url, img=f'{SITE}/{img}', route=route, ld=breadcrumbs(route, title)))
     return url
 
 js = subprocess.run(['node', '-e', "global.window={};require('./site-data.js');console.log(JSON.stringify(window.DM.packages))"], cwd=R, capture_output=True, text=True)
@@ -109,4 +125,4 @@ open(os.path.join(R, 'robots.txt'), 'w').write(f'User-agent: *\nAllow: /\nSitema
 print(len(urls), 'Seiten')
 # readable content pages (songs, LiD questions, simulations, legal pages) are built next;
 # its last step runs tools/build-sitemap.js, which writes sitemap.xml (with <lastmod>)
-subprocess.run(['python3', os.path.join(R, 'tools', 'make-seo-pages.py')], cwd=R, check=True)
+subprocess.run([sys.executable, '-X', 'utf8', os.path.join(R, 'tools', 'make-seo-pages.py')], cwd=R, check=True)  # same Python (works on Windows too)
