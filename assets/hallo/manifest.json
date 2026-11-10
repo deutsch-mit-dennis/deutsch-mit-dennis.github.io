@@ -6,6 +6,16 @@
    "video": "assets/hallo/ru.mp4",
    "vtt": "assets/hallo/ru.vtt"
   },
+  "ar": {
+   "src": "assets/hallo/ar.mp3",
+   "video": "assets/hallo/ar.mp4",
+   "vtt": "assets/hallo/ar.vtt"
+  },
+  "tr": {
+   "src": "assets/hallo/tr.mp3",
+   "video": "assets/hallo/tr.mp4",
+   "vtt": "assets/hallo/tr.vtt"
+  },
   "es": {
    "src": "assets/hallo/es.mp3",
    "video": "assets/hallo/es.mp4",
