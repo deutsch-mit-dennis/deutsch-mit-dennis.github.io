@@ -1,6 +1,11 @@
 {
  "note": "Greetings of Dennis (AI voice clone + photo). Per language: \"src\" = MP3, optional \"video\" = MP4 (photo + voice) and \"vtt\" = captions. Example: \"uk\": {\"src\": \"assets/hallo/uk.mp3\", \"video\": \"assets/hallo/uk.mp4\", \"vtt\": \"assets/hallo/uk.vtt\"}. Players appear automatically. Only add languages whose audio was made with a commercially usable engine.",
  "files": {
+  "uk": {
+   "src": "assets/hallo/uk.mp3",
+   "video": "assets/hallo/uk.mp4",
+   "vtt": "assets/hallo/uk.vtt"
+  },
   "ru": {
    "src": "assets/hallo/ru.mp3",
    "video": "assets/hallo/ru.mp4",
@@ -10,6 +15,11 @@
    "src": "assets/hallo/ar.mp3",
    "video": "assets/hallo/ar.mp4",
    "vtt": "assets/hallo/ar.vtt"
+  },
+  "fa": {
+   "src": "assets/hallo/fa.mp3",
+   "video": "assets/hallo/fa.mp4",
+   "vtt": "assets/hallo/fa.vtt"
   },
   "tr": {
    "src": "assets/hallo/tr.mp3",
