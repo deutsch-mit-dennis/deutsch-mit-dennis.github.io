@@ -1,66 +1,71 @@
 {
  "hinweis": "Zusammengefasste Besucherzahlen (Cloudflare Web Analytics, ohne Cookies). Automatisch erzeugt.",
- "stand": "2026-11-09T12:43:41.841Z",
- "tag": "2026-11-08",
+ "stand": "2026-11-10T12:26:44.377Z",
+ "tag": "2026-11-09",
  "gestern": {
-  "besuche": 26,
-  "seitenaufrufe": 1177
+  "besuche": 49,
+  "seitenaufrufe": 212
  },
  "letzte7Tage": {
-  "besuche": 281,
-  "seitenaufrufe": 4174
+  "besuche": 285,
+  "seitenaufrufe": 4275
  },
  "herkunft": [
   {
    "name": "deutsch-mit-dennis.de",
    "besuche": 0,
-   "aufrufe": 3893
+   "aufrufe": 3990
   },
   {
    "name": "(direkt)",
-   "besuche": 271,
-   "aufrufe": 271
+   "besuche": 269,
+   "aufrufe": 269
   },
   {
    "name": "l.instagram.com",
+   "besuche": 5,
+   "aufrufe": 5
+  },
+  {
+   "name": "www.facebook.com",
    "besuche": 4,
    "aufrufe": 4
   },
   {
    "name": "www.google.com",
-   "besuche": 2,
-   "aufrufe": 2
+   "besuche": 3,
+   "aufrufe": 3
   },
   {
    "name": "m.facebook.com",
-   "besuche": 2,
-   "aufrufe": 2
+   "besuche": 3,
+   "aufrufe": 3
   },
   {
-   "name": "www.facebook.com",
-   "besuche": 2,
-   "aufrufe": 2
+   "name": "bing.com",
+   "besuche": 1,
+   "aufrufe": 1
   }
  ],
  "laender": [
   {
    "name": "DE",
-   "besuche": 251,
-   "aufrufe": 4142
+   "besuche": 252,
+   "aufrufe": 4240
   },
   {
    "name": "US",
-   "besuche": 24,
-   "aufrufe": 24
+   "besuche": 23,
+   "aufrufe": 23
+  },
+  {
+   "name": "SE",
+   "besuche": 6,
+   "aufrufe": 6
   },
   {
    "name": "TR",
    "besuche": 1,
-   "aufrufe": 2
-  },
-  {
-   "name": "SE",
-   "besuche": 2,
    "aufrufe": 2
   },
   {
@@ -82,25 +87,25 @@
  "geraete": [
   {
    "name": "desktop",
-   "besuche": 221,
-   "aufrufe": 3815
+   "besuche": 214,
+   "aufrufe": 3853
   },
   {
    "name": "mobile",
-   "besuche": 60,
-   "aufrufe": 359
+   "besuche": 71,
+   "aufrufe": 422
   }
  ],
  "seiten": [
   {
    "name": "/",
-   "besuche": 281,
-   "aufrufe": 4160
+   "besuche": 285,
+   "aufrufe": 4221
   },
   {
    "name": "/index.html",
    "besuche": 0,
-   "aufrufe": 14
+   "aufrufe": 54
   }
  ],
  "verlauf": {
@@ -235,6 +240,10 @@
   "2026-11-08": {
    "besuche": 26,
    "seitenaufrufe": 1177
+  },
+  "2026-11-09": {
+   "besuche": 49,
+   "seitenaufrufe": 212
   }
  }
 }
