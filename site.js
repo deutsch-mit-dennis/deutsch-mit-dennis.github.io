@@ -8,7 +8,9 @@
   const $$ = (s, r = document) => [...r.querySelectorAll(s)];
   const x = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
   const mainEl = document.querySelector('main');
-  const introEl = window.DMIntro || document.getElementById('dm-intro'); // SEO intro text from index.html; shown at the bottom of the start page
+  const introEl = window.DMIntro || document.getElementById('dm-intro');
+  // section pages (/pruefung/ … built by tools/make-share-pages.py, they have <base href="/">) keep their own <title> on the first view
+  const entry = document.querySelector('base') ? { hash: location.hash, title: document.title } : null; // SEO intro text from index.html; shown at the bottom of the start page
   const LEVELS = ['A1', 'A2', 'B1', 'B2'];
   const LEVEL_NAMES = { A1: 'Erste Schritte', A2: 'Alltag meistern', B1: 'Sicher ausdrücken', B2: 'Deutsch im Beruf' };
 
@@ -186,7 +188,7 @@
         <h2 id="pkgt-h">Du willst gezielt mehr üben?</h2>
         <p>${BK.length ? 'Übungsbücher bei Amazon und PDF-Lernpakete' : 'PDF-Lernpakete'} mit Musterlösungen für DTZ, B2 Beruf und „Leben in Deutschland“${from ? ` · PDF ab ${from}` : ''}.</p>
         <div class="dm-row">${BK.length ? '<a class="dm-btn" href="#lernpakete/buecher">Übungsbücher bei Amazon</a><a class="dm-btn dm-btn-quiet" href="#lernpakete">PDF-Lernpakete</a>' : '<a class="dm-btn" href="#lernpakete">Alle Lernpakete ansehen</a>'}</div></div>
-      <ul class="dm-pkg-teaser-list">${BK.slice(0, 2).map(b => `<li><a href="#lernpakete/buecher"><img src="${b.img}" alt="" width="72" height="72" loading="lazy" style="object-fit:contain"><span><b>${x(b.title)}</b><small>Taschenbuch · ${x(b.price)}</small></span></a></li>`).join('')}${pick.slice(0, Math.max(1, 2 - BK.length)).map(k => `<li><a href="#lernpakete/${k.id}"><img src="${k.img}" alt="" width="72" height="72" loading="lazy"><span><b>${x(k.title)}</b><small>${x(k.level)} · ${x(k.price)}</small></span></a></li>`).join('')}</ul>
+      <ul class="dm-pkg-teaser-list">${BK.slice(0, 2).map(b => `<li><a href="#lernpakete/buecher"><img src="${b.img}" alt="" width="72" height="72" loading="lazy" style="object-fit:contain"><span><b>${x(b.title)}</b><small>Taschenbuch · ${x(b.price)}</small></span></a></li>`).join('')}${pick.slice(0, Math.max(1, 2 - BK.length)).map(k => `<li><a href="/lernpakete/${k.id}/"><img src="${k.img}" alt="" width="72" height="72" loading="lazy"><span><b>${x(k.title)}</b><small>${x(k.level)} · ${x(k.price)}</small></span></a></li>`).join('')}</ul>
     </section>`;
   }
   /* Wege auf der Startseite: passend zum gewählten Niveau zuerst (Einschätzung von Dennis' Wegen, nicht verbindlich) */
@@ -1359,14 +1361,14 @@
   function packages() {
     const P = DM.packages || [];
     const card = k => `<article class="dm-card dm-pkg dm-pkg-row" id="paket-${k.id}">
-      ${k.img ? `<a class="dm-pkg-thumb" href="#lernpakete/${k.id}" tabindex="-1" aria-hidden="true"><img src="${k.img}" alt="" loading="lazy" width="800" height="800"></a>` : ''}
+      ${k.img ? `<a class="dm-pkg-thumb" href="/lernpakete/${k.id}/" tabindex="-1" aria-hidden="true"><img src="${k.img}" alt="" loading="lazy" width="800" height="800"></a>` : ''}
       <div class="dm-pkg-body">
         <p class="dm-pkg-meta">${x(k.level)} · ${x(k.target)} · ${k.pages} Seiten PDF</p>
-        <h2><a href="#lernpakete/${k.id}">${x(k.title)}</a></h2>
+        <h2><a href="/lernpakete/${k.id}/">${x(k.title)}</a></h2>
         <p class="dm-pkg-short">${x(k.contents.slice(0, 2).join(' · '))}</p>
         <div class="dm-pkg-buy">
           ${k.buy && k.price ? `<span class="dm-pkg-price">${x(k.price)}</span>` : '<span class="dm-pkg-lock">🔒 Bald erhältlich</span>'}
-          <a class="dm-btn" href="#lernpakete/${k.id}">${k.buy ? 'Details und Kauf' : 'Details ansehen'}</a>
+          <a class="dm-btn" href="/lernpakete/${k.id}/">${k.buy ? 'Details und Kauf' : 'Details ansehen'}</a>
           ${k.preview ? `<a class="dm-pkg-probe" href="${x(k.preview)}" target="_blank" rel="noopener">Leseprobe (PDF)</a>` : ''}
         </div>
       </div></article>`;
@@ -1651,7 +1653,7 @@
   /* The navigation and footer of index.html use real addresses (/pruefung/, /lieder/ …) so that Google can follow them.
      Inside the app a click is caught and routed as before (#pruefung …) – no page reload. Ctrl/Cmd/middle click and
      "open in new tab" still use the real address. Pages that are not part of the app (dtz-schreiben, impressum …) load normally. */
-  const SECTION_LINK = /^\/(pruefung|simulation|lid|lieder|ueben|hoeren|lesen|spiele|bild|challenge|lernpakete|ueber-mich|vorbereitung)\/$/;
+  const SECTION_LINK = /^\/(pruefung|simulation|lid|lieder|ueben|hoeren|lesen|spiele|bild|challenge|lernpakete|ueber-mich|vorbereitung|lernpakete\/[\w-]+)\/$/;
   document.addEventListener('click', e => {
     if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
     const a = e.target.closest && e.target.closest('a[href^="/"]');
@@ -1749,6 +1751,7 @@
     const nav = NAV[p[0]] ?? '';
     $$('#main-navigation a[data-nav]').forEach(a => { const on = a.dataset.nav === nav; a.classList.toggle('active', on); if (on) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current'); });
     const setTitle = () => { const h1 = $('main h1')?.textContent.trim();
+      if (entry && location.hash === entry.hash) { document.title = entry.title; return; }
       document.title = (p[0] === '' ? 'Deutsch mit Dennis – kostenlos Deutsch lernen von A1 bis B2' : `${h1 && h1.length < 60 ? h1 : TITLES[p[0]] || 'Deutsch lernen'} – Deutsch mit Dennis`); };
     setTitle();
     // pages that build asynchronously (e.g. videos load the feed first): set the title again once they are ready

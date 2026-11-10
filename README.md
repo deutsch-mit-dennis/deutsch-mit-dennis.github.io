@@ -28,11 +28,11 @@ Die App läuft über `#route`. Damit Google alle Bereiche findet, gibt es zusät
 | Was | Wo / Befehl |
 |---|---|
 | **Sitemap** mit `<lastmod>` | `node tools/build-sitemap.js` – nimmt jede `index.html` (außer `noindex`). Datum = letzter Git-Commit der Datei, bei ungespeicherten Änderungen das Datei-Datum. Die Startseite nimmt das neueste Datum von `index.html`, `site.js`, `site-data.js`, `neu.json`. Läuft automatisch am Ende der Generatoren unten. |
-| Teilen-Seiten der Bereiche (`/pruefung/` …) | `python3 tools/make-share-pages.py` (leiten zur App weiter, mit BreadcrumbList) |
+| Bereichsseiten (`/pruefung/`, `/lernpakete/<paket>/` …) | `python3 tools/make-share-pages.py` – Kopien von `index.html` mit eigenem Titel, Beschreibung, BreadcrumbList; sie öffnen die App direkt im Bereich (Adresse wird `/#pruefung`). Nach jeder Änderung an `index.html` neu erzeugen – der Workflow `seiten.yml` macht das nach jedem Push automatisch. Vorschaubilder nur neu mit `--images`. |
 | Lieder, LiD-Fragen, Simulationen, **Impressum, Datenschutz** | `python3 tools/make-seo-pages.py` – Rechtstexte stehen in `tools/legal/impressum.html` und `tools/legal/datenschutz.html` (dort ändern, dann Skript laufen lassen). Alte Links `/#impressum` leiten weiter. |
 | DTZ-Musterbriefe `/dtz-schreiben/<brieftyp>/` | Inhalt in `tools/dtz-schreiben/briefe.json`, Seiten bauen mit `python3 tools/make-dtz-briefe.py` (`"draft": true` = gelbes Entwurf-Schild) |
 | Einleitungstext der Startseite | in `index.html` zwischen `<!--intro:start-->` und `<!--intro:end-->` ändern, dann `python3 tools/sync-home-intro.py` (kopiert ihn in den `<noscript>`-Teil, zählt Wörter). `site.js` hängt ihn unten an die Startseite. |
-| Navigation/Fußzeile | echte Links (`/pruefung/`), `site.js` fängt den Klick ab und routet in der App (`SECTION_LINK`). Neue Bereiche dort und in `index.html` ergänzen. |
+| Navigation/Fußzeile, Lernpaket-Links | echte Links (`/pruefung/`, `/lernpakete/<paket>/`), `site.js` fängt den Klick ab und routet in der App (`SECTION_LINK`). Neue Bereiche dort, in `index.html` und in `SECTIONS` (make-share-pages.py) ergänzen. |
 | Bilder > 200 KB | `python3 tools/make-webp.py` legt eine WebP-Kopie daneben und stellt `youtube-feed.json`/`kahoot-feed.json` darauf um (Original bleibt). |
 | alt-Texte der LiD-Bilder | `lid-bilder-alt.js` |
 | Prüfung | `python3 tools/seo-audit.py` – lang, ein H1, Title < 60, Description < 155, img ohne alt, Skripte ohne defer |

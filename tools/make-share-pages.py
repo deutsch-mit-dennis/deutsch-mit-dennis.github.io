@@ -1,8 +1,15 @@
 #!/usr/bin/env python3
-"""Erzeugt Vorschaubilder (1200x630) und kleine Teilen-Seiten mit eigenen Meta-Tags.
-Aufruf im Repo-Ordner: python3 tools/make-share-pages.py
-Jede Seite /<pfad>/index.html leitet sofort zur App-Route /#<pfad> weiter."""
-import json, os, subprocess, html, sys
+"""Builds the section pages /<pfad>/ (pruefung, lieder, lernpakete, lernpakete/<paket> …) and their preview images.
+
+Each page is a copy of index.html (the full app) with its own title, description, canonical address and
+BreadcrumbList. On load it switches the address to /#<pfad>, so the app opens the right section directly –
+no redirect, so Google indexes the page with its real content.
+Preview images (assets/og/*.jpg) are only drawn when missing; --images redraws all of them.
+
+IMPORTANT: run again after every change to index.html (new ?v= numbers!). The GitHub workflow
+"Seiten aktualisieren" (.github/workflows/seiten.yml) does that automatically after each push.
+Run in the repo folder:  python3 tools/make-share-pages.py  [--images]"""
+import json, os, re, subprocess, html, sys
 from PIL import Image, ImageDraw, ImageFont
 R = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 F = os.path.join(R, 'tools', 'fonts')
@@ -21,6 +28,8 @@ def wrap(d, t, f, w):
     return out + [line]
 
 def card(title, sub, out, pic=None, kicker='Deutsch mit Dennis'):
+    if os.path.exists(out) and '--images' not in sys.argv:
+        return  # keep the existing image (redrawing only re-encodes it)
     im = Image.new('RGB', (1200, 630), PAPER); d = ImageDraw.Draw(im)
     for x in range(0, 1200, 30): d.line([(x, 0), (x, 630)], fill=(232, 236, 247))
     for y in range(0, 630, 30): d.line([(0, y), (1200, y)], fill=(232, 236, 247))
@@ -48,21 +57,6 @@ def card(title, sub, out, pic=None, kicker='Deutsch mit Dennis'):
     d.text((64, 596), 'deutsch-mit-dennis.de', font=Rg(22), fill=(86, 96, 120))
     os.makedirs(os.path.dirname(out), exist_ok=True); im.save(out, quality=86, optimize=True)
 
-PAGE = '''<!DOCTYPE html>
-<html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>{title}</title>
-<meta name="description" content="{mdesc}">
-<link rel="canonical" href="{url}">
-<meta property="og:type" content="website"><meta property="og:site_name" content="Deutsch mit Dennis"><meta property="og:locale" content="de_DE">
-<meta property="og:title" content="{ogt}"><meta property="og:description" content="{desc}"><meta property="og:url" content="{url}">
-<meta property="og:image" content="{img}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
-<meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="/favicon.svg">
-<script type="application/ld+json">{ld}</script>
-<script>location.replace("/#{route}");</script>
-<style>body{{font:18px/1.6 system-ui,sans-serif;max-width:640px;margin:60px auto;padding:0 20px;color:#172036}}a{{color:#2341B5}}</style>
-</head><body><h1>{ogt}</h1><p>{desc}</p><p><a href="/#{route}">Weiter zu „{ogt}“</a></p></body></html>
-'''
 
 
 def seo_title(t):
@@ -88,11 +82,39 @@ def breadcrumbs(route, title):
     return json.dumps({'@context': 'https://schema.org', '@type': 'BreadcrumbList', 'itemListElement': [
         {'@type': 'ListItem', 'position': i + 1, 'name': n, 'item': f'{SITE}/' + (p + '/' if p else '')} for i, (n, p) in enumerate(items)]}, ensure_ascii=False)
 
+APP = open(os.path.join(R, 'index.html'), encoding='utf-8').read()
+
+
+def swap(doc, pattern, new):
+    doc2, n = re.subn(pattern, lambda _: new, doc, count=1, flags=re.S)
+    if n != 1:
+        raise SystemExit(f'index.html changed – pattern not found: {pattern}')
+    return doc2
+
+
 def stub(route, title, desc, img):
+    """Copy of the app for one section (see module docstring)."""
     url = f'{SITE}/{route}/'
     e = html.escape
+    d = APP
+    # base address for all relative links/files + open the right section (keeps an extra #part: /lieder/#a1 -> #lieder/a1)
+    d = swap(d, r'<head>\n', '<head>\n<base href="/">\n<script>(function(){var h=location.hash.slice(1);'
+             'history.replaceState(null,"","/#%s"+(h?"/"+h:""))})()</script>\n' % route)
+    d = swap(d, r'<title>.*?</title>', f'<title>{e(seo_title(title))}</title>')
+    d = swap(d, r'<meta name="description" content="[^"]*">', f'<meta name="description" content="{e(seo_desc(desc))}">')
+    d = swap(d, r'<script type="application/ld\+json">.*?</script>', f'<script type="application/ld+json">{breadcrumbs(route, title)}</script>')
+    d = swap(d, r'<link rel="canonical" href="[^"]*">', f'<link rel="canonical" href="{url}">')
+    d = swap(d, r'<meta property="og:url" content="[^"]*">', f'<meta property="og:url" content="{url}">')
+    d = swap(d, r'<meta property="og:title" content="[^"]*">', f'<meta property="og:title" content="{e(title)}">')
+    d = swap(d, r'<meta property="og:description" content="[^"]*">', f'<meta property="og:description" content="{e(desc)}">')
+    d = swap(d, r'<meta property="og:image" content="[^"]*">', f'<meta property="og:image" content="{SITE}/{img}">')
+    # the start-page intro text belongs to the start page only
+    d = swap(d, r'<!--intro:start-->.*?<!--intro:end-->\n<script>window\.DMIntro=[^<]*</script>\n', '')
+    d = swap(d, r'<!--intro-noscript:start-->.*?<!--intro-noscript:end-->',
+             f'<h1>{e(title)}</h1>\n<p>{e(desc)}</p>\n<p><a href="/#{route}">Weiter zu „{e(title)}“</a></p>')
+    d = d.replace('<!DOCTYPE html>', '<!DOCTYPE html>\n<!-- generated by tools/make-share-pages.py from index.html – do not edit -->', 1)
     path = os.path.join(R, route, 'index.html'); os.makedirs(os.path.dirname(path), exist_ok=True)
-    open(path, 'w').write(PAGE.format(title=e(seo_title(title)), ogt=e(title), desc=e(desc), mdesc=e(seo_desc(desc)), url=url, img=f'{SITE}/{img}', route=route, ld=breadcrumbs(route, title)))
+    open(path, 'w', encoding='utf-8', newline='\n').write(d)
     return url
 
 js = subprocess.run(['node', '-e', "global.window={};require('./site-data.js');console.log(JSON.stringify(window.DM.packages))"], cwd=R, capture_output=True, text=True)

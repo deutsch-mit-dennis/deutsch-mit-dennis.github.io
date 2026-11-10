@@ -13,7 +13,7 @@ Arbeitsanleitung für Claude Code. Wird bei jeder Sitzung in diesem Repository a
 - Routing über `#hash`: `site.js` (`window.route`, `OWN`-Routen, `DM.routes.*`). Ältere Bereiche (Lektionen, Wortschatz) in `app.js`, `book.js`, `vocab.js`, `platform.js`.
 - Inhalte: `site-data.js` (Seiten, Lernpakete), `hoeren-data.js`, `lesen-data.js`, `lieder-data.js`, `lid-katalog.js` (LiD-Fragen), `sim/<id>.js` (Prüfungssimulationen, Format: `tools/sim/SCHEMA.md`).
 - Lernspiele: `spiele.js` (Rahmen, API siehe Kopfkommentar) + `spiele/<id>.js`. Lino (Jump’n’Run): neue Fragen in `spiele/lino-extra.js`, nicht in `lino.js`.
-- Teilen-Seiten/Vorschaubilder: `python3 tools/make-share-pages.py` (nach neuen Paketen, Preisen, Bereichen).
+- Bereichsseiten `/pruefung/`, `/lernpakete/<paket>/` … sind **Kopien von `index.html`** mit eigenem Titel (für Google). Erzeugen: `python3 tools/make-share-pages.py` – macht nach jedem Push der Workflow „Seiten aktualisieren“ (`seiten.yml`) automatisch. Nie von Hand bearbeiten. SEO-Werkzeuge und Sitemap: siehe README, Abschnitt „SEO“.
 
 ## Hörtexte (natürliche Stimmen statt Gerätestimme)
 - Jeder vorgelesene Satz ist ein Eintrag in `tools/tts/manifest.json` → MP3 in `audio/tts/<key>.mp3`, Übersicht `audio/tts/index.json` (welcher Anbieter: `engine`).

@@ -27,6 +27,7 @@ class Page(HTMLParser):
         super().__init__(convert_charrefs=True)
         self.lang = None
         self.h1 = 0
+        self.h1_noscript = 0
         self.title = ""
         self._in_title = False
         self.desc = None
@@ -46,8 +47,11 @@ class Page(HTMLParser):
             self.noscript += 1
         elif tag == "title":
             self._in_title = True
-        elif tag == "h1" and not self.noscript:
-            self.h1 += 1
+        elif tag == "h1":
+            if self.noscript:
+                self.h1_noscript += 1
+            else:
+                self.h1 += 1
         elif tag == "meta":
             n = (a.get("name") or "").lower()
             if n == "description":
@@ -125,7 +129,9 @@ def audit():
         probs = []
         if p.lang != "de":
             probs.append(f"lang={p.lang!r}")
-        if p.h1 != 1:
+        # app pages (start page copies) get their H1 from JavaScript; the <noscript> H1 is their fallback
+        h1 = p.h1 or (1 if p.h1_noscript == 1 and '<base href="/">' in open(os.path.join(R, rel), encoding="utf-8").read() else 0)
+        if h1 != 1:
             probs.append(f"{p.h1} × H1")
         t = " ".join(p.title.split())
         if not t:
