@@ -1107,7 +1107,7 @@
         },
         {
           kind: "speak",
-          title: "Teil 1B: Fragen beantworten",
+          title: "Teil 1B und 1C: Prüferfragen und Erläuterung eines Aspekts",
           skill: "sprechen",
           pts: 12,
           minutes: 2,
@@ -1138,7 +1138,7 @@
         },
         {
           kind: "speak",
-          title: "Teil 2: Gespräch mit Kollegen",
+          title: "Teil 2: Mit Kolleginnen und Kollegen sprechen",
           skill: "sprechen",
           pts: 16,
           minutes: 3,
@@ -1171,7 +1171,7 @@
         },
         {
           kind: "speak",
-          title: "Teil 3: Lösungen finden",
+          title: "Teil 3: Lösungswege diskutieren",
           skill: "sprechen",
           pts: 20,
           minutes: 5,
@@ -1879,7 +1879,7 @@
         tip: "Bereite zu typischen Themen (Weiterbildung, Homeoffice, Teamarbeit, Digitalisierung, Work-Life-Balance) je ein echtes Beispiel aus deinem Leben vor.",
       },
       {
-        name: "Sprechen Teil 2: Gespräch mit Kollegen",
+        name: "Sprechen Teil 2: Mit Kolleginnen und Kollegen sprechen",
         skill: "Sprechen",
         time: "ca. 3 Min.",
         what: "Ein informelles Gespräch mit einer Kollegin / einem Kollegen: Erfahrungen austauschen, Tipps geben, nachfragen.",
@@ -1897,7 +1897,7 @@
         tip: "Ein gutes Gespräch ist ein Ping-Pong: Antwort + Frage zurück. Das zeigt Interaktion – dafür gibt es Punkte.",
       },
       {
-        name: "Sprechen Teil 3: Lösungen finden",
+        name: "Sprechen Teil 3: Lösungswege diskutieren",
         skill: "Sprechen",
         time: "ca. 5 Min.",
         what: "Du diskutierst mit deiner Partnerin / deinem Partner ein Problem am Arbeitsplatz. Ihr wägt Vorschläge ab und einigt euch auf eine Lösung.",
@@ -1953,7 +1953,7 @@
         ],
       },
       {
-        h: "Sprechen Teil 3: Lösungen finden",
+        h: "Sprechen Teil 3: Lösungswege diskutieren",
         list: [
           "Ich schlage vor, dass wir …",
           "Was hältst du davon, wenn …?",

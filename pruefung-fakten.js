@@ -54,6 +54,18 @@
       "telc – Übungstest 1 Zertifikat Deutsch B1 (PDF)",
       "https://shop.telc.net/media/catalog/product/file/telc_deutsch_b1_zd_uebungstest_1.pdf",
     ],
+    uebDtbB1: [
+      "telc – Übungstest 1, Deutsch-Test für den Beruf B1 (2022)",
+      "https://www.telc.net/en/language-examinations/certificate-exams/german/german-for-business/german-for-business-b1/",
+    ],
+    uebDtbB2: [
+      "telc – Übungstest 1, Deutsch-Test für den Beruf B2 (2022)",
+      "https://shop.telc.net/media/catalog/product/file/1/0/1011431_20220708_5015-b00-010102_web.pdf",
+    ],
+    uebTelcB2: [
+      "telc – Übungstest 1, telc Deutsch B2 (2019)",
+      "https://www.telc.net/en/language-examinations/certificate-exams/german/telc-german-b2/",
+    ],
     telcB2: [
       "telc – telc Deutsch B2",
       "https://www.telc.net/en/language-examinations/certificate-exams/german/telc-german-b2/",
@@ -355,24 +367,29 @@
         [
           "Leseverstehen und Sprachbausteine",
           "90 Min.",
-          "Lesen: 3 Teile. Dazu Sprachbausteine.",
+          "Lesen: 3 Teile (5 + 5 + 10 Aufgaben). Sprachbausteine: 2 Teile (10 + 10 Aufgaben).",
           "Lesen 75 · Sprachbausteine 30",
         ],
-        ["Hörverstehen", "ca. 20 Min.", "3 Teile", "75 Punkte"],
+        [
+          "Hörverstehen",
+          "ca. 20 Min.",
+          "3 Teile: 5 + 10 + 5 Aufgaben (richtig oder falsch). Du hörst alle Texte nur einmal.",
+          "75 Punkte",
+        ],
         [
           "Schriftlicher Ausdruck",
           "30 Min.",
-          "1 formeller Brief oder 1 formelle E-Mail",
+          "1 halbformelle E-Mail. Du wählst Aufgabe A oder B (zum Beispiel Bitte um Informationen oder Beschwerde).",
           "45 Punkte",
         ],
         [
           "Mündliche Prüfung",
           "ca. 15 Min.",
-          "3 Teile: über Erfahrungen sprechen, Diskussion, gemeinsam etwas planen · zu zweit · vorher 20 Min. Vorbereitung",
+          "3 Teile, je ca. 5 Min.: Über Erfahrungen sprechen, Diskussion, Gemeinsam etwas planen · zu zweit (zu dritt ca. 25 Min.) · vorher 20 Min. Vorbereitung",
           "75 Punkte",
         ],
       ],
-      partsSrc: ["telcB2", "telcB2Hb"],
+      partsSrc: ["telcB2", "telcB2Hb", "uebTelcB2"],
       blocks: [
         {
           h: "Bestanden?",
@@ -432,19 +449,39 @@
       sim: "dtb-b1",
       lead: "Der DTB B1 ist die Prüfung am Ende eines Berufssprachkurses B1. Es geht um Deutsch am Arbeitsplatz.",
       parts: [
-        ["Lesen", "40 Min.", "4 Teile", ""],
-        ["Lesen und Schreiben", "20 Min.", "1 Teil", ""],
-        ["Hören", "20 Min.", "4 Teile", ""],
-        ["Hören und Schreiben", "5 Min.", "", ""],
-        ["Sprachbausteine und Schreiben", "10 Min.", "", ""],
+        ["Lesen", "40 Min.", "4 Teile · 18 Aufgaben", "60 Punkte"],
+        [
+          "Lesen und Schreiben",
+          "20 Min.",
+          "2 Aufgaben zu einer Kunden-E-Mail, dann eine Antwort-E-Mail schreiben",
+          "",
+        ],
+        [
+          "Hören",
+          "20 Min.",
+          "4 Teile · 19 Aufgaben · Du hörst alle Texte nur einmal.",
+          "60 Punkte",
+        ],
+        [
+          "Hören und Schreiben",
+          "5 Min.",
+          "Eine Mitteilung am Telefon: 1 Aufgabe, dann eine Notiz schreiben. Du hörst die Mitteilung zweimal.",
+          "",
+        ],
+        [
+          "Sprachbausteine und Schreiben",
+          "10 Min.",
+          "6 Aufgaben, dann eine Kurznachricht schreiben",
+          "Schreiben insgesamt: 60 Punkte",
+        ],
         [
           "Sprechen",
           "ca. 16 Min.",
-          "3 Teile · zu zweit · keine Vorbereitungszeit",
-          "",
+          "Zu zweit, keine Vorbereitungszeit: Teil 1A Über ein Thema sprechen und 1B Anschlussfragen (je ca. 2 Min. pro Person), Teil 2 Mit Kolleginnen und Kollegen sprechen (ca. 3 Min.), Teil 3 Gemeinsam etwas planen (ca. 5 Min.)",
+          "60 Punkte",
         ],
       ],
-      partsSrc: ["telcDtbB1", "bamfDtbB1"],
+      partsSrc: ["uebDtbB1", "telcDtbB1", "bamfDtbB1"],
       blocks: [
         {
           h: "Was ist der DTB? Wer macht ihn?",
@@ -458,10 +495,11 @@
         {
           h: "Punkte und Bestehen",
           list: [
-            "Die genaue Punktzahl und die Bestehensregel für B1 konnte ich nicht sicher prüfen. Bitte frag deinen Kursträger oder lies im Prüfungshandbuch nach.",
-            "In der Simulation hier rechne ich wie beim DTB B2: 240 Punkte, bestanden ab 144 Punkten. Das ist eine Schätzung.",
+            "Du kannst 240 Punkte erreichen: je 60 für Lesen, Hören, Schreiben und Sprechen.",
+            "Bestanden hast du mit mindestens 144 Punkten (60 Prozent).",
+            "Dazu brauchst du in mindestens drei der vier Teile mehr als 36 Punkte. Ein schwächerer Teil ist möglich, wenn er zwischen 40 und 60 Prozent liegt.",
           ],
-          src: ["telcDtbHb", "bamfDtbB1"],
+          src: ["uebDtbB1"],
         },
         {
           h: "Kosten und Wiederholung",
@@ -499,24 +537,39 @@
       sim: "dtb-b2",
       lead: "Der DTB B2 ist die Prüfung am Ende eines Berufssprachkurses B2. Es geht um Deutsch am Arbeitsplatz.",
       parts: [
-        ["Lesen", "45 Min.", "4 Teile", "60 Punkte"],
-        ["Lesen und Schreiben", "20 Min.", "", ""],
-        ["Hören", "20 Min.", "4 Teile", "60 Punkte"],
-        ["Hören und Schreiben", "5 Min.", "Eine Mitteilung am Telefon", ""],
+        ["Lesen", "45 Min.", "4 Teile · 18 Aufgaben", "60 Punkte"],
+        [
+          "Lesen und Schreiben",
+          "20 Min.",
+          "2 Aufgaben zu einer Beschwerde, dann eine Antwort schreiben",
+          "",
+        ],
+        [
+          "Hören",
+          "20 Min.",
+          "4 Teile · 19 Aufgaben · Du hörst alle Texte nur einmal.",
+          "60 Punkte",
+        ],
+        [
+          "Hören und Schreiben",
+          "5 Min.",
+          "Eine Mitteilung am Telefon: 1 Aufgabe, dann die Informationen notieren. Du hörst die Mitteilung einmal.",
+          "",
+        ],
         [
           "Sprachbausteine und Schreiben",
           "35 Min.",
-          "",
+          "12 Aufgaben, dann einen Forumsbeitrag schreiben (du wählst eines von zwei Themen)",
           "Schreiben insgesamt: 60 Punkte",
         ],
         [
           "Sprechen",
           "ca. 16 Min.",
-          "3 Teile · zu zweit · keine Vorbereitungszeit",
+          "Zu zweit, keine Vorbereitungszeit: Teil 1A Über ein Thema sprechen, 1B Prüferfragen, 1C Erläuterung eines Aspekts (zusammen ca. 4–5 Min. pro Person), Teil 2 Mit Kolleginnen und Kollegen sprechen (ca. 3 Min.), Teil 3 Lösungswege diskutieren (ca. 4–5 Min.)",
           "60 Punkte",
         ],
       ],
-      partsSrc: ["telcDtbB2", "bamfDtbB2"],
+      partsSrc: ["uebDtbB2", "telcDtbB2", "bamfDtbB2"],
       blocks: [
         {
           h: "Was ist der DTB? Wer macht ihn?",

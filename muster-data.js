@@ -39,11 +39,11 @@
     "telc-b1":
       "Kriterien bei telc B1: Aufgabenbewältigung (vier Leitpunkte), kommunikative Gestaltung, formale Richtigkeit.",
     "telc-b2":
-      "Kriterien bei telc B2: Inhalt (Schreibanlass), kommunikative Gestaltung, formale Richtigkeit.",
+      "Kriterien bei telc B2: Aufgabenbewältigung, kommunikative Gestaltung, formale Richtigkeit.",
     "dtb-b1":
-      "Kriterien im DTB: inhaltliche Angemessenheit, sprachliche Angemessenheit.",
+      "Kriterien im DTB: kommunikative Aufgabenbewältigung (Inhalt), kommunikative Gestaltung, formale Richtigkeit, Spektrum sprachlicher Mittel.",
     "dtb-b2":
-      "Kriterien im DTB: inhaltliche Angemessenheit, sprachliche Angemessenheit.",
+      "Kriterien im DTB: kommunikative Aufgabenbewältigung (Inhalt), kommunikative Gestaltung, formale Richtigkeit, Spektrum sprachlicher Mittel.",
     ueben: "Ich schaue auf Inhalt und Sprache, bei Briefen und E-Mails auch auf den Aufbau (Anrede, Gruß, Reihenfolge).",
   };
 

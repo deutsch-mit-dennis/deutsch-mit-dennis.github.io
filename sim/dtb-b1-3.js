@@ -90,7 +90,7 @@ const CALL = [
         minWords: 70,
         check: ['Formelle Anrede („Sehr geehrte Frau Yilmaz“) und Gruß („Mit freundlichen Grüßen“)', 'Entschuldigung mit Grund (Laptops vergessen)', 'Fernwartung mit Tag, Uhrzeit und Hinweis „Laptops anlassen“', 'Antwort zum Umzug mit konkretem Terminvorschlag', 'Hotline-Nummer genannt', 'Mindestens 70 Wörter, Sie-Form durchgehend'] }
     ] },
-    { id: 'hoeren', title: 'Hören', minutes: 20, note: 'Teil 1–3 hörst du nur einmal, Teil 4 zweimal. Lies die Aufgaben immer vor dem Hören.', parts: [
+    { id: 'hoeren', title: 'Hören', minutes: 20, note: 'Du hörst alle vier Teile nur einmal. Lies die Aufgaben immer vor dem Hören.', parts: [
       { title: 'Hören Teil 1: Arbeitsabläufe, Probleme, Vorschläge', skill: 'hoeren', pts: 3, plays: 1,
         instr: 'Sie hören vier Gespräche. Sie hören jedes Gespräch einmal. Lösen Sie zu jedem Gespräch zwei Aufgaben: Ist die Aussage richtig oder falsch? Und welche Antwort (a, b oder c) passt am besten?',
         audio: [
@@ -176,8 +176,8 @@ const CALL = [
           { au: 1, q: '33. Was muss man zuerst machen?', opts: ['a) Die Platte sauber machen.', 'b) Auf das H drücken.', 'c) Die Kindersicherung ausschalten.'], a: 2, why: '„Zuerst drücken Sie zwei Sekunden auf das Schloss-Symbol. Das ist die Kindersicherung.“' },
           { au: 1, q: '34. Was bedeutet das H?', opts: ['a) Der Herd ist kaputt.', 'b) Die Platte ist noch heiß.', 'c) Der Herd ist ausgeschaltet.'], a: 1, why: '„Das H heißt: Die Platte ist noch heiß.“' }
         ] },
-      { title: 'Hören Teil 4: Anliegen', skill: 'hoeren', pts: 3, plays: 2,
-        instr: 'Sie hören fünf Nachrichten auf dem Anrufbeantworter bzw. der Mailbox. Sie hören jede Nachricht zweimal. Welche Antwort (a, b oder c) passt am besten?',
+      { title: 'Hören Teil 4: Anliegen', skill: 'hoeren', pts: 3, plays: 1,
+        instr: 'Sie hören fünf Nachrichten auf dem Anrufbeantworter bzw. der Mailbox. Sie hören jede Nachricht einmal. Welche Antwort (a, b oder c) passt am besten?',
         audio: [
           { h: 'Nachricht 1', lines: [{ s: 'm', t: 'Hallo Frau Weiß, hier ist Bernd Kühn aus der Personalabteilung. Für Ihren Antrag auf Elternzeit fehlt noch die Geburtsurkunde Ihrer Tochter. Eine Kopie reicht. Sie können sie mir per E-Mail schicken oder in meinen Briefkasten im Erdgeschoss werfen. Danke und alles Gute für Sie und die Kleine!' }] },
           { h: 'Nachricht 2', lines: [{ s: 'f', t: 'Hallo Mustafa, hier ist Ines. Du, die Schulung zum Gabelstapler morgen fällt aus, der Trainer ist krank. Der neue Termin ist nächsten Dienstag, gleiche Uhrzeit, acht Uhr. Du musst dich nicht noch einmal anmelden. Bis dann!' }] },
@@ -236,7 +236,7 @@ const CALL = [
         redemittel: ['Ich möchte von meinem ersten Arbeitstag erzählen.', 'Am Anfang war ich sehr nervös, weil …', 'Besonders geholfen hat mir …', 'Schwierig war für mich …', 'Neuen Kollegen rate ich, …'],
         muster: 'Ich möchte von meinem ersten Arbeitstag erzählen. Vor zwei Jahren habe ich in einem Logistikzentrum in Dortmund angefangen. Am Anfang war ich sehr nervös, weil alles so groß war und ich viele Wörter nicht kannte. Besonders geholfen hat mir mein Kollege Pavel, er hat mir die Scanner und die Gänge gezeigt. Schwierig war für mich die Frühschicht um sechs Uhr. Schön war, dass alle sehr freundlich waren und wir zusammen Pause gemacht haben. Neuen Kollegen rate ich, viele Fragen zu stellen und sich die Namen aufzuschreiben.',
         check: ['Alle vier Stichpunkte angesprochen', 'Etwa eine Minute zusammenhängend gesprochen', 'Vergangenheit richtig benutzt (habe … angefangen, war …)', 'Mindestens eine Begründung mit „weil“'] },
-      { kind: 'speak', title: 'Sprechen Teil 1B: Fragen beantworten', skill: 'sprechen', pts: 12, minutes: 2,
+      { kind: 'speak', title: 'Sprechen Teil 1B: Anschlussfragen beantworten', skill: 'sprechen', pts: 12, minutes: 2,
         instr: 'Die Prüferin / der Prüfer stellt Ihnen Fragen zu Ihrem Thema. Antworten Sie in ganzen Sätzen und begründen Sie Ihre Antworten.',
         task: 'Antworten Sie auf die Fragen zum Thema „Mein erster Arbeitstag“.',
         prompts: ['Sollte jede Firma neuen Mitarbeitern einen Paten oder eine Patin geben? Warum?', 'Was ist für Sie am ersten Tag wichtiger: die Kollegen kennenlernen oder die Arbeit verstehen?', 'Wie kann man sich auf einen neuen Arbeitsplatz gut vorbereiten?'],
@@ -250,7 +250,7 @@ const CALL = [
         redemittel: ['Bei mir ist es so: …', 'Und wie machst du das?', 'Das kenne ich gut.', 'Das ist bei mir ganz anders: …', 'Ich fände es gut, wenn der Chef …'],
         muster: 'A: Sag mal, wie machst du das eigentlich mit den Kindern, wenn du Frühschicht hast?\nB: Mein Mann bringt sie zur Kita, und ich hole sie um halb drei ab. Und bei dir?\nA: Bei mir ist es schwieriger, ich bin allein mit meiner Tochter. Meine Nachbarin hilft mir manchmal am Morgen.\nB: Das kenne ich. Und wenn die Kleine krank ist?\nA: Dann muss ich zu Hause bleiben, das ist für das Team natürlich blöd.\nB: Ich fände es gut, wenn der Chef die Schichten früher planen würde. Dann kann man sich besser organisieren.\nA: Stimmt, und vielleicht könnten Eltern öfter Frühschicht machen.',
         check: ['Von eigenen Erfahrungen erzählt', 'Auch Fragen an den Partner gestellt', 'Auf den Partner reagiert (Das kenne ich, Bei mir ist das anders …)', 'Einen Vorschlag für den Arbeitgeber gemacht'] },
-      { kind: 'speak', title: 'Sprechen Teil 3: Etwas gemeinsam planen', skill: 'sprechen', pts: 20, minutes: 5,
+      { kind: 'speak', title: 'Sprechen Teil 3: Gemeinsam etwas planen', skill: 'sprechen', pts: 20, minutes: 5,
         instr: 'Ihre Abteilung bekommt nächsten Monat zwei neue Kolleginnen aus dem Ausland. Ihre Chefin hat Sie beide gebeten, die erste Woche zu planen. Machen Sie Vorschläge, reagieren Sie auf die Vorschläge Ihrer Partnerin / Ihres Partners und einigen Sie sich.',
         task: 'Die erste Woche für neue Kolleginnen planen\n\n• Wer zeigt ihnen den Betrieb und wann?\n• Welche Unterlagen brauchen sie (Ausweis, Kleidung, Schlüssel …)?\n• Hilfe bei der Sprache?\n• Ein Treffen mit dem Team?',
         prompts: ['Beginnen Sie bitte. Wer soll den neuen Kolleginnen am ersten Tag den Betrieb zeigen?', 'Die Kolleginnen sprechen noch nicht so gut Deutsch. Wie können Sie helfen?', 'Wie möchten Sie das Team und die neuen Kolleginnen zusammenbringen?'],

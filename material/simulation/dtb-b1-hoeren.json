@@ -1,5 +1,5 @@
 {
- "total": 1178,
+ "total": 1007,
  "marks": [
   {
    "part": "Hören Teil 1: Arbeitsabläufe, Probleme, Vorschläge",
@@ -53,37 +53,37 @@
    "part": "Hören Teil 4: Anliegen",
    "clip": 1,
    "h": "Nachricht 2",
-   "start": 531
+   "start": 493
   },
   {
    "part": "Hören Teil 4: Anliegen",
    "clip": 2,
    "h": "Nachricht 3",
-   "start": 597
+   "start": 531
   },
   {
    "part": "Hören Teil 4: Anliegen",
    "clip": 3,
    "h": "Nachricht 4",
-   "start": 702
+   "start": 588
   },
   {
    "part": "Hören Teil 4: Anliegen",
    "clip": 4,
    "h": "Nachricht 5",
-   "start": 771
+   "start": 626
   },
   {
    "part": "Hören und Schreiben Teil 1: Ein Telefonat verstehen",
    "clip": 0,
    "h": "Telefongespräch",
-   "start": 839
+   "start": 667
   },
   {
    "part": "Hören und Schreiben Teil 2: Eine Gesprächsnotiz schreiben",
    "clip": 0,
    "h": "Telefongespräch (noch einmal)",
-   "start": 1011
+   "start": 839
   }
  ]
 }

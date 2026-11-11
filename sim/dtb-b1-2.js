@@ -90,7 +90,7 @@ const CALL = [
         minWords: 70,
         check: ['Formelle Anrede („Sehr geehrter Herr Wagner“) und Gruß („Mit freundlichen Grüßen“)', 'Entschuldigung mit Grund (fehlerhafte Farbe)', 'Kostenlose Nachbesserung: Mittwoch, 8 Uhr, Herr Baumann', 'Fassade: Besichtigung nötig, Terminvorschlag Freitag 14 Uhr', 'Telefonnummer bzw. Ansprechpartner genannt', 'Sie-Form durchgehend, höflicher Ton', 'Mindestens 70 Wörter, Sätze verbunden (deshalb, aber, außerdem)'] }
     ] },
-    { id: 'hoeren', title: 'Hören', minutes: 20, note: 'Teil 1–3 hörst du nur einmal, Teil 4 zweimal. Lies die Aufgaben immer vor dem Hören.', parts: [
+    { id: 'hoeren', title: 'Hören', minutes: 20, note: 'Du hörst alle vier Teile nur einmal. Lies die Aufgaben immer vor dem Hören.', parts: [
       { title: 'Hören Teil 1: Arbeitsabläufe, Probleme, Vorschläge', skill: 'hoeren', pts: 3, plays: 1,
         instr: 'Sie hören vier Gespräche. Sie hören jedes Gespräch einmal. Lösen Sie zu jedem Gespräch zwei Aufgaben: Ist die Aussage richtig oder falsch? Und welche Antwort (a, b oder c) passt am besten?',
         audio: [
@@ -180,8 +180,8 @@ const CALL = [
           { au: 1, q: '33. Die Geheimzahl für die Tankkarte …', opts: ['a) kommt mit einem eigenen Brief.', 'b) steht auf der Karte.', 'c) bekommt Herr Lindner von der Tankstelle.'], a: 0, why: '„Die Geheimzahl bekommen Sie in einem Brief, nicht zusammen mit der Karte.“' },
           { au: 1, q: '34. Was muss Herr Lindner mit den Quittungen machen?', opts: ['a) Er gibt sie jeden Tag ab.', 'b) Er schickt sie per Post.', 'c) Er bringt sie am Monatsende ins Büro.'], a: 2, why: '„die Quittungen geben Sie bitte am Ende vom Monat bei mir im Büro ab.“' }
         ] },
-      { title: 'Hören Teil 4: Anliegen', skill: 'hoeren', pts: 3, plays: 2,
-        instr: 'Sie hören fünf Nachrichten auf dem Anrufbeantworter bzw. der Mailbox. Sie hören jede Nachricht zweimal. Welche Antwort (a, b oder c) passt am besten?',
+      { title: 'Hören Teil 4: Anliegen', skill: 'hoeren', pts: 3, plays: 1,
+        instr: 'Sie hören fünf Nachrichten auf dem Anrufbeantworter bzw. der Mailbox. Sie hören jede Nachricht einmal. Welche Antwort (a, b oder c) passt am besten?',
         audio: [
           { h: 'Nachricht 1', lines: [{ s: 'f', t: 'Guten Morgen, Herr Ahmadi, hier ist Petra Sommer, Personalabteilung. Ihre Lohnabrechnung für Oktober war leider falsch, die Nachtzuschläge fehlen. Das korrigieren wir mit der Novemberabrechnung, Sie müssen nichts tun. Sie bekommen das Geld also Ende November. Bei Fragen erreichen Sie mich unter Durchwahl zwei vier sieben. Schönen Tag noch!' }] },
           { h: 'Nachricht 2', lines: [{ s: 'm', t: 'Hallo Frau Okoye, hier ist Ralf von der Spätschicht. Du, kannst du morgen für mich die Spätschicht übernehmen? Meine Frau bekommt ihr Baby, wahrscheinlich morgen, und ich möchte dabei sein. Ich übernehme dafür gern deine Schicht am Samstag. Ruf mich bitte bis heute Abend zurück, dann sag ich dem Chef Bescheid. Danke!' }] },
@@ -240,7 +240,7 @@ const CALL = [
         redemittel: ['Ich möchte etwas über … erzählen.', 'Vor zwei Jahren habe ich einen Kurs … gemacht.', 'Weiterbildungen sind wichtig, weil …', 'Schwierig ist manchmal, dass …', 'In Zukunft möchte ich gern …', 'Zum Schluss möchte ich sagen, dass …'],
         muster: 'Ich möchte etwas über Weiterbildung im Beruf erzählen. Ich arbeite als Pflegehelferin in einem Seniorenheim. Letztes Jahr habe ich einen Kurs „Kommunikation in der Pflege“ gemacht, an sechs Samstagen. Das hat mir sehr geholfen, weil ich jetzt besser mit Angehörigen sprechen kann. Ich finde Weiterbildungen wichtig, denn in der Pflege ändert sich viel, zum Beispiel jetzt die Dokumentation auf dem Tablet. Schwierig ist es manchmal mit der Zeit, weil ich zwei Kinder habe und Schicht arbeite. Zum Glück hat mein Mann am Samstag auf die Kinder aufgepasst. In Zukunft möchte ich gern die Ausbildung zur Pflegefachfrau machen.',
         check: ['Alle vier Stichpunkte angesprochen', 'Etwa eine Minute zusammenhängend gesprochen', 'Beispiele aus dem eigenen Berufsleben', 'Sätze verbunden (weil, wenn, deshalb, außerdem)'] },
-      { kind: 'speak', title: 'Sprechen Teil 1B: Fragen beantworten', skill: 'sprechen', pts: 12, minutes: 2,
+      { kind: 'speak', title: 'Sprechen Teil 1B: Anschlussfragen beantworten', skill: 'sprechen', pts: 12, minutes: 2,
         instr: 'Die Prüferin / der Prüfer stellt Ihnen Fragen zu Ihrem Thema. Antworten Sie in ganzen Sätzen und begründen Sie Ihre Antworten.',
         task: 'Antworten Sie auf die Fragen zum Thema „Weiterbildung im Beruf“.',
         prompts: ['Lernen Sie lieber in einem Kurs mit anderen oder allein am Computer? Warum?', 'Wer sollte eine Weiterbildung bezahlen – der Arbeitgeber oder die Mitarbeiter selbst?', 'Wie ist das mit Weiterbildungen in Ihrem Heimatland?', 'Was würden Sie einem Kollegen raten, der keine Zeit für eine Weiterbildung hat?'],
@@ -254,7 +254,7 @@ const CALL = [
         redemittel: ['Bei mir ist es so: …', 'Und wie ist das bei dir?', 'Das kenne ich! / Das ist bei mir ganz anders.', 'Wenn ich Stress habe, …', 'Nach der Arbeit … ich gern …', 'Ich fände es gut, wenn die Firma …'],
         muster: 'A: Sag mal, wann hast du eigentlich am meisten Stress?\nB: Am Freitagabend, wenn das Restaurant voll ist und alle Bestellungen gleichzeitig kommen. Und bei dir?\nA: Bei mir ist es morgens. Wenn ein Kollege krank ist, müssen wir die Arbeit zu zweit machen.\nB: Das kenne ich. Was machst du dann?\nA: Ich versuche, ruhig zu bleiben, und mache eine Liste, was am wichtigsten ist. Und nach der Arbeit gehe ich joggen. Das hilft mir sehr.\nB: Ich gehe lieber spazieren oder telefoniere mit meiner Schwester.\nA: Was könnte die Firma deiner Meinung nach tun?\nB: Ich fände es gut, wenn es mehr Aushilfen für die vollen Tage gäbe. Und die Pausen sollten wirklich Pausen sein.\nA: Da hast du recht. Vielleicht sollten wir das in der nächsten Teambesprechung sagen.',
         check: ['Von eigenen Erfahrungen erzählt', 'Auch Fragen an den Partner gestellt', 'Auf den Partner reagiert (Das kenne ich! / Bei mir ist das anders.)', 'Alle Stichpunkte angesprochen', 'Du-Form unter Kollegen passend benutzt'] },
-      { kind: 'speak', title: 'Sprechen Teil 3: Etwas gemeinsam planen', skill: 'sprechen', pts: 20, minutes: 5,
+      { kind: 'speak', title: 'Sprechen Teil 3: Gemeinsam etwas planen', skill: 'sprechen', pts: 20, minutes: 5,
         instr: 'Ihre Firma macht am 1. Mai einen Tag der offenen Tür. Ihr Chef hat Sie beide gebeten, den Stand Ihrer Abteilung zu planen. Machen Sie Vorschläge, reagieren Sie auf die Vorschläge Ihrer Partnerin / Ihres Partners und einigen Sie sich.',
         task: 'Tag der offenen Tür: den Stand der Abteilung planen\n\n• Was zeigen Sie den Besuchern (Vorführung, Fotos, Mitmachaktion …)?\n• Was gibt es für Kinder?\n• Essen und Getränke?\n• Wer betreut den Stand wann?\n• Was muss vorher gekauft oder vorbereitet werden?',
         prompts: ['Beginnen Sie bitte. Was möchten Sie den Besuchern an Ihrem Stand zeigen?', 'Es kommen bestimmt auch viele Familien. Was machen wir für die Kinder?', 'Und was bieten wir zum Essen und Trinken an?', 'Der Tag dauert von zehn bis sechzehn Uhr. Wie teilen wir die Zeit am Stand auf?', 'Fassen Sie bitte zum Schluss zusammen: Wer übernimmt welche Aufgabe?'],

@@ -342,7 +342,7 @@
       id: "hoeren",
       title: "Hören",
       minutes: 20,
-      note: "Teil 1–3 hörst du nur einmal, Teil 4 zweimal. Lies die Aufgaben immer vor dem Hören.",
+      note: "Du hörst alle vier Teile nur einmal. Lies die Aufgaben immer vor dem Hören.",
       parts: [
         {
           title: "Hören Teil 1: Arbeitsabläufe, Probleme, Vorschläge",
@@ -716,9 +716,9 @@
           title: "Hören Teil 4: Anliegen",
           skill: "hoeren",
           pts: 3,
-          plays: 2,
+          plays: 1,
           instr:
-            "Sie hören fünf Nachrichten auf dem Anrufbeantworter bzw. der Mailbox. Sie hören jede Nachricht zweimal. Welche Antwort (a, b oder c) passt am besten?",
+            "Sie hören fünf Nachrichten auf dem Anrufbeantworter bzw. der Mailbox. Sie hören jede Nachricht einmal. Welche Antwort (a, b oder c) passt am besten?",
           audio: [
             {
               h: "Nachricht 1",
@@ -1110,7 +1110,7 @@
         },
         {
           kind: "speak",
-          title: "Sprechen Teil 1B: Fragen beantworten",
+          title: "Sprechen Teil 1B: Anschlussfragen beantworten",
           skill: "sprechen",
           pts: 12,
           minutes: 2,
@@ -1145,7 +1145,7 @@
             "Sprechen Teil 2: Mit Kollegen sprechen – Erfahrungen austauschen",
           skill: "sprechen",
           pts: 16,
-          minutes: 4,
+          minutes: 3,
           instr:
             "Sie sind Kolleginnen / Kollegen und sprechen in der Pause über Ihre Erfahrungen. Erzählen Sie von sich, stellen Sie Fragen und reagieren Sie auf das, was Ihre Partnerin / Ihr Partner sagt.",
           task: "Thema: Der erste Arbeitstag in einer neuen Firma\n\n• Wie war Ihr erster Arbeitstag? Wer hat Ihnen geholfen?\n• Was war schwierig oder überraschend?\n• Was hätten Sie sich gewünscht?\n• Welche Tipps haben Sie für neue Kollegen?",
@@ -1175,7 +1175,7 @@
         },
         {
           kind: "speak",
-          title: "Sprechen Teil 3: Etwas gemeinsam planen",
+          title: "Sprechen Teil 3: Gemeinsam etwas planen",
           skill: "sprechen",
           pts: 20,
           minutes: 5,
@@ -1666,7 +1666,7 @@
         name: "Hören Teil 4 – Anliegen",
         skill: "Hören",
         time: "ca. 6 Min.",
-        what: "Fünf Nachrichten auf dem Anrufbeantworter oder der Mailbox. Zu jeder Nachricht eine Frage a/b/c. Du hörst zweimal.",
+        what: "Fünf Nachrichten auf dem Anrufbeantworter oder der Mailbox. Zu jeder Nachricht eine Frage a/b/c. Du hörst jede Nachricht nur einmal.",
         steps: [
           "Lies die Frage: Was soll man tun? Was ändert sich? Was soll man mitbringen?",
           "Beim ersten Hören: Antwort wählen.",
@@ -1680,7 +1680,7 @@
         ],
         tip: "Mailbox-Nachrichten enden meistens mit der Bitte. Hör das Ende beim zweiten Mal besonders genau.",
         mini: {
-          instr: "Sie hören eine Nachricht zweimal. Welche Antwort passt?",
+          instr: "Sie hören eine Nachricht einmal. Welche Antwort passt?",
           audio: [
             {
               h: "Nachricht",
