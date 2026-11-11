@@ -1,5 +1,5 @@
 {
- "total": 1095,
+ "total": 776,
  "marks": [
   {
    "part": "Hören Teil 1: Arbeitsabläufe, Probleme, Vorschläge",
@@ -41,37 +41,37 @@
    "part": "Hören Teil 4: Anliegen am Telefon",
    "clip": 1,
    "h": "Nachricht 2",
-   "start": 452
+   "start": 423
   },
   {
    "part": "Hören Teil 4: Anliegen am Telefon",
    "clip": 2,
    "h": "Nachricht 3",
-   "start": 509
+   "start": 456
   },
   {
    "part": "Hören Teil 4: Anliegen am Telefon",
    "clip": 3,
    "h": "Nachricht 4",
-   "start": 580
+   "start": 496
   },
   {
    "part": "Hören Teil 4: Anliegen am Telefon",
    "clip": 4,
    "h": "Nachricht 5",
-   "start": 645
+   "start": 533
   },
   {
    "part": "Hören und Schreiben Teil 1: Anruf einer Kundin",
    "clip": 0,
    "h": "Mailbox – Demir & Kollegen",
-   "start": 706
+   "start": 570
   },
   {
    "part": "Hören und Schreiben Teil 2: Telefonnotiz",
    "clip": 0,
    "h": "Mailbox – Demir & Kollegen (Wiederholung)",
-   "start": 903
+   "start": 675
   }
  ]
 }

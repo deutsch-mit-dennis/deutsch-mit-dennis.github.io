@@ -1,5 +1,5 @@
 {
- "total": 1470,
+ "total": 1021,
  "marks": [
   {
    "part": "Hören Teil 1: Arbeitsabläufe, Probleme, Vorschläge",
@@ -35,43 +35,43 @@
    "part": "Hören Teil 4: Anliegen am Telefon",
    "clip": 0,
    "h": "Nachricht 1",
-   "start": 548
+   "start": 547
   },
   {
    "part": "Hören Teil 4: Anliegen am Telefon",
    "clip": 1,
    "h": "Nachricht 2",
-   "start": 643
+   "start": 600
   },
   {
    "part": "Hören Teil 4: Anliegen am Telefon",
    "clip": 2,
    "h": "Nachricht 3",
-   "start": 768
+   "start": 667
   },
   {
    "part": "Hören Teil 4: Anliegen am Telefon",
    "clip": 3,
    "h": "Nachricht 4",
-   "start": 886
+   "start": 730
   },
   {
    "part": "Hören Teil 4: Anliegen am Telefon",
    "clip": 4,
    "h": "Nachricht 5",
-   "start": 998
+   "start": 789
   },
   {
    "part": "Hören und Schreiben Teil 1: Anruf eines Kunden",
    "clip": 0,
    "h": "Mailbox – Haustechnik Brandt",
-   "start": 1090
+   "start": 841
   },
   {
    "part": "Hören und Schreiben Teil 2: Telefonnotiz",
    "clip": 0,
    "h": "Mailbox – Haustechnik Brandt (Wiederholung)",
-   "start": 1282
+   "start": 933
   }
  ]
 }

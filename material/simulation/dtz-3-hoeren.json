@@ -1,5 +1,5 @@
 {
- "total": 761,
+ "total": 649,
  "marks": [
   {
    "part": "Hören Teil 1: Ansagen am Telefon und Durchsagen",
@@ -11,91 +11,91 @@
    "part": "Hören Teil 1: Ansagen am Telefon und Durchsagen",
    "clip": 1,
    "h": "Text 2",
-   "start": 76
+   "start": 45
   },
   {
    "part": "Hören Teil 1: Ansagen am Telefon und Durchsagen",
    "clip": 2,
    "h": "Text 3",
-   "start": 137
+   "start": 79
   },
   {
    "part": "Hören Teil 1: Ansagen am Telefon und Durchsagen",
    "clip": 3,
    "h": "Text 4",
-   "start": 201
+   "start": 116
   },
   {
    "part": "Hören Teil 2: Informationen im Radio",
    "clip": 0,
    "h": "Text 1",
-   "start": 269
+   "start": 157
   },
   {
    "part": "Hören Teil 2: Informationen im Radio",
    "clip": 1,
    "h": "Text 2",
-   "start": 304
+   "start": 191
   },
   {
    "part": "Hören Teil 2: Informationen im Radio",
    "clip": 2,
    "h": "Text 3",
-   "start": 337
+   "start": 224
   },
   {
    "part": "Hören Teil 2: Informationen im Radio",
    "clip": 3,
    "h": "Text 4",
-   "start": 375
+   "start": 262
   },
   {
    "part": "Hören Teil 2: Informationen im Radio",
    "clip": 4,
    "h": "Text 5",
-   "start": 407
+   "start": 295
   },
   {
    "part": "Hören Teil 3: Gespräche im Alltag",
    "clip": 0,
    "h": "Gespräch 1",
-   "start": 447
+   "start": 335
   },
   {
    "part": "Hören Teil 3: Gespräche im Alltag",
    "clip": 1,
    "h": "Gespräch 2",
-   "start": 500
+   "start": 388
   },
   {
    "part": "Hören Teil 3: Gespräche im Alltag",
    "clip": 2,
    "h": "Gespräch 3",
-   "start": 552
+   "start": 439
   },
   {
    "part": "Hören Teil 3: Gespräche im Alltag",
    "clip": 3,
    "h": "Gespräch 4",
-   "start": 598
+   "start": 485
   },
   {
    "part": "Hören Teil 4: Meinungen im Radio",
    "clip": 0,
    "h": "Person 1: Frau Okafor",
-   "start": 642
+   "start": 529
   },
   {
    "part": "Hören Teil 4: Meinungen im Radio",
    "clip": 1,
    "h": "Person 2: Herr Dimitrov",
-   "start": 686
+   "start": 574
   },
   {
    "part": "Hören Teil 4: Meinungen im Radio",
    "clip": 2,
    "h": "Person 3: Frau Brenner",
-   "start": 722
+   "start": 610
   }
  ]
 }

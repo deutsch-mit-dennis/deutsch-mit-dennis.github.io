@@ -27,7 +27,7 @@
           skill: "hl",
           pts: 1,
           instr:
-            "Sie hören vier Ansagen. Zu jedem Text gibt es eine Aufgabe. Wählen Sie die richtige Lösung a, b oder c. Sie hören jeden Text zweimal.",
+            "Sie hören vier Ansagen. Zu jedem Text gibt es eine Aufgabe. Wählen Sie die richtige Lösung a, b oder c. Sie hören jeden Text einmal.",
           audio: [
             {
               h: "Text 1",
@@ -66,7 +66,7 @@
               ],
             },
           ],
-          plays: 2,
+          plays: 1,
           items: [
             {
               au: 0,

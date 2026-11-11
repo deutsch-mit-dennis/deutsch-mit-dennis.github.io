@@ -177,7 +177,7 @@
       ? blockCard("land")
       : `<a class="lid-block lid-block-ask" href="#lid" data-pick><b>Dein Bundesland (10 Fragen)</b><small>Wähle zuerst dein Bundesland.</small></a>`;
     DM.page(
-      `${head("", "Alle 300 allgemeinen Fragen und die 10 Fragen für dein Bundesland aus dem offiziellen Katalog. Lerne in Blöcken, wiederhole deine Fehler und mach den Test unter echten Bedingungen.")}
+      `${head("", "Alle 300 allgemeinen Fragen und die 10 Fragen für dein Bundesland. Die Fragen und Antworten stammen aus dem offiziellen Gesamtfragenkatalog des Bundesamts für Migration und Flüchtlinge (BAMF). Lerne in Blöcken, wiederhole deine Fehler und mach den Test unter echten Bedingungen.")}
       ${landCard()}
       <section class="lid-stats dm-card">
         <div><b>${ok}</b><span>von ${all} Fragen sicher</span></div>
@@ -443,7 +443,7 @@
     }
     DM.page(
       `${head("Testsimulation", `Wie in der echten Prüfung: 33 Fragen (30 allgemeine + 3 zu ${e(l.name)}), 60 Minuten, ab 15 richtigen Antworten bestanden.`)}
-      <section class="dm-card lid-intro"><ul><li>Die Fragen werden zufällig aus dem offiziellen Katalog gezogen.</li><li>Die 3 Länderfragen sind für <b>${e(l.name)}</b>. <a href="#lid">Bundesland ändern</a></li><li>Die Uhr läuft ab dem Start. Nach 60 Minuten wird automatisch abgegeben.</li><li>Lösungen und Erklärungen siehst du erst am Ende.</li><li>Für die Einbürgerung brauchst du mindestens 17 richtige Antworten.</li></ul>
+      <section class="dm-card lid-intro"><ul><li>Die Fragen werden zufällig aus dem offiziellen Gesamtfragenkatalog des BAMF gezogen.</li><li>Die 3 Länderfragen sind für <b>${e(l.name)}</b>. <a href="#lid">Bundesland ändern</a></li><li>Die Uhr läuft ab dem Start. Nach 60 Minuten wird automatisch abgegeben.</li><li>Lösungen und Erklärungen siehst du erst am Ende.</li><li>Für die Einbürgerung brauchst du mindestens 17 richtige Antworten.</li></ul>
       <button type="button" class="dm-btn" id="lid-start">Test starten</button></section>${foot()}`,
       "lid-page",
     );

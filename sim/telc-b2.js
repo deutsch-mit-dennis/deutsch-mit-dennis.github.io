@@ -539,9 +539,9 @@
           title: "Hörverstehen Teil 2",
           skill: "hoeren",
           pts: 2.5,
-          plays: 2,
+          plays: 1,
           instr:
-            "Sie hören ein Interview aus der Radiosendung „Arbeitswelten“. Sie hören das Interview zweimal. Entscheiden Sie bei den Aussagen 1–10, ob sie richtig oder falsch sind. Lesen Sie jetzt die Aussagen.",
+            "Sie hören ein Interview aus der Radiosendung „Arbeitswelten“. Sie hören das Interview einmal. Entscheiden Sie bei den Aussagen 1–10, ob sie richtig oder falsch sind. Lesen Sie jetzt die Aussagen.",
           audio: [
             {
               h: "Interview: Vom Bankschalter in die Werkstatt",
@@ -703,9 +703,9 @@
           title: "Hörverstehen Teil 3",
           skill: "hoeren",
           pts: 5,
-          plays: 2,
+          plays: 1,
           instr:
-            "Sie hören fünf kurze Texte: Durchsagen, eine Telefonansage und Hinweise im Radio. Sie hören jeden Text zweimal. Entscheiden Sie bei jeder Aussage, ob sie richtig oder falsch ist.",
+            "Sie hören fünf kurze Texte: Durchsagen, eine Telefonansage und Hinweise im Radio. Sie hören jeden Text einmal. Entscheiden Sie bei jeder Aussage, ob sie richtig oder falsch ist.",
           audio: [
             {
               h: "Text 1",
@@ -1311,7 +1311,7 @@
         name: "Hörverstehen Teil 2",
         skill: "Hören",
         time: "ca. 10 Min.",
-        what: "Du hörst ein längeres Radiointerview zweimal und entscheidest bei zehn Aussagen, ob sie richtig oder falsch sind.",
+        what: "Du hörst ein längeres Radiointerview einmal und entscheidest bei zehn Aussagen, ob sie richtig oder falsch sind.",
         steps: [
           "Lies alle zehn Aussagen vorher – sie folgen dem Ablauf des Interviews.",
           "Beim ersten Hören: Kreuz an, was du sicher verstehst.",
@@ -1327,8 +1327,8 @@
         mini: {
           title: "Mini-Übung: Interview",
           instr:
-            "Sie hören einen Ausschnitt aus einem Interview zweimal. Richtig oder falsch?",
-          plays: 2,
+            "Sie hören einen Ausschnitt aus einem Interview einmal. Richtig oder falsch?",
+          plays: 1,
           audio: [
             {
               h: "Interview: Repair-Café",
@@ -1370,7 +1370,7 @@
         name: "Hörverstehen Teil 3",
         skill: "Hören",
         time: "ca. 5 Min.",
-        what: "Du hörst kurze Durchsagen, Telefonansagen oder Radiohinweise zweimal und entscheidest jeweils, ob eine Aussage richtig oder falsch ist.",
+        what: "Du hörst kurze Durchsagen, Telefonansagen oder Radiohinweise einmal und entscheidest jeweils, ob eine Aussage richtig oder falsch ist.",
         steps: [
           "Lies die Aussage und überleg: Nach welcher Information muss ich suchen (Ort, Zeit, Grund)?",
           "Achte auf Wörter wie „heute“, „ausnahmsweise“, „ab morgen“, „stattdessen“.",
@@ -1384,8 +1384,8 @@
         tip: "Durchsagen wiederholen das Wichtigste oft selbst („Ich wiederhole …“). Genau dort steckt meist die Lösung.",
         mini: {
           title: "Mini-Übung: Durchsagen",
-          instr: "Sie hören zwei Texte zweimal. Richtig oder falsch?",
-          plays: 2,
+          instr: "Sie hören zwei Texte einmal. Richtig oder falsch?",
+          plays: 1,
           audio: [
             {
               h: "Text 1",

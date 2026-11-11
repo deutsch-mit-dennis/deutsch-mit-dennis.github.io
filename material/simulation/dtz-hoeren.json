@@ -1,5 +1,5 @@
 {
- "total": 995,
+ "total": 824,
  "marks": [
   {
    "part": "Hören Teil 1: Ansagen am Telefon und Durchsagen",
@@ -11,91 +11,91 @@
    "part": "Hören Teil 1: Ansagen am Telefon und Durchsagen",
    "clip": 1,
    "h": "Text 2",
-   "start": 108
+   "start": 61
   },
   {
    "part": "Hören Teil 1: Ansagen am Telefon und Durchsagen",
    "clip": 2,
    "h": "Text 3",
-   "start": 184
+   "start": 103
   },
   {
    "part": "Hören Teil 1: Ansagen am Telefon und Durchsagen",
    "clip": 3,
    "h": "Text 4",
-   "start": 290
+   "start": 160
   },
   {
    "part": "Hören Teil 2: Informationen im Radio",
    "clip": 0,
    "h": "Text 1",
-   "start": 385
+   "start": 215
   },
   {
    "part": "Hören Teil 2: Informationen im Radio",
    "clip": 1,
    "h": "Text 2",
-   "start": 425
+   "start": 254
   },
   {
    "part": "Hören Teil 2: Informationen im Radio",
    "clip": 2,
    "h": "Text 3",
-   "start": 461
+   "start": 290
   },
   {
    "part": "Hören Teil 2: Informationen im Radio",
    "clip": 3,
    "h": "Text 4",
-   "start": 498
+   "start": 328
   },
   {
    "part": "Hören Teil 2: Informationen im Radio",
    "clip": 4,
    "h": "Text 5",
-   "start": 542
+   "start": 371
   },
   {
    "part": "Hören Teil 3: Gespräche im Alltag",
    "clip": 0,
    "h": "Gespräch 1",
-   "start": 583
+   "start": 413
   },
   {
    "part": "Hören Teil 3: Gespräche im Alltag",
    "clip": 1,
    "h": "Gespräch 2",
-   "start": 649
+   "start": 479
   },
   {
    "part": "Hören Teil 3: Gespräche im Alltag",
    "clip": 2,
    "h": "Gespräch 3",
-   "start": 718
+   "start": 548
   },
   {
    "part": "Hören Teil 3: Gespräche im Alltag",
    "clip": 3,
    "h": "Gespräch 4",
-   "start": 776
+   "start": 605
   },
   {
    "part": "Hören Teil 4: Meinungen im Radio",
    "clip": 0,
    "h": "Person 1: Frau Jansen",
-   "start": 837
+   "start": 666
   },
   {
    "part": "Hören Teil 4: Meinungen im Radio",
    "clip": 1,
    "h": "Person 2: Herr Brandt",
-   "start": 891
+   "start": 720
   },
   {
    "part": "Hören Teil 4: Meinungen im Radio",
    "clip": 2,
    "h": "Person 3: Herr Schäfer",
-   "start": 945
+   "start": 775
   }
  ]
 }

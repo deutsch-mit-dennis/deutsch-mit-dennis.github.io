@@ -85,7 +85,7 @@ const MAILBOX = [
         minWords: 100,
         check: ['Formelle Anrede und passender Gruß', 'Dank und Entschuldigung am Anfang', 'Beide Probleme erklärt (Beamer, Zimmer) mit Grund', 'Neue Lösung für die Technik genannt (Bereitschaftsdienst)', 'Rechnungskorrektur klar beschrieben', 'Rabatt und kostenloser Tagungsraum angeboten', 'Ansprechpartner mit Telefonnummer', 'Höflicher, professioneller Ton (keine Ausreden, kein Umgangston)'] }
     ] },
-    { id: 'hoeren', title: 'Hören', minutes: 20, note: 'Lies vor jedem Hörtext die Aufgaben. Die Teile 1–3 hörst du nur einmal, Teil 4 zweimal.', parts: [
+    { id: 'hoeren', title: 'Hören', minutes: 20, note: 'Lies vor jedem Hörtext die Aufgaben. Du hörst alle Teile nur einmal.', parts: [
       { title: 'Hören Teil 1: Arbeitsabläufe, Probleme, Vorschläge', skill: 'hoeren', pts: 3, plays: 1,
         instr: 'Sie hören drei kurze Gespräche unter Kolleginnen und Kollegen. Zu jedem Gespräch gibt es eine Aussage (richtig oder falsch) und eine Aufgabe (a, b oder c). Sie hören jedes Gespräch einmal.',
         audio: [
@@ -154,8 +154,8 @@ const MAILBOX = [
           { q: '3. Was machen die neuen Mitarbeitenden mit ihrer Mentorin oder ihrem Mentor?', opts: ['a) Sie machen zusammen die Hygieneschulung.', 'b) Sie holen die Arbeitskleidung ab.', 'c) Sie planen ihre Fortbildungen.'], a: 2, why: '„Mit ihnen planen Sie auch Ihre Fortbildungen.“' },
           { q: '4. Was findet jeden ersten Freitag im Monat statt?', opts: ['a) Eine Fortbildung im Hörsaal.', 'b) Die Ausgabe der Arbeitskleidung.', 'c) Ein Treffen für neue Mitarbeitende.'], a: 2, why: '„… ein Treffen für neue Mitarbeitende in der Cafeteria.“' }
         ] },
-      { title: 'Hören Teil 4: Anliegen am Telefon', skill: 'hoeren', pts: 3, plays: 2,
-        instr: 'Sie hören fünf Nachrichten auf dem Anrufbeantworter. Welche Lösung (a, b oder c) ist richtig? Sie hören jede Nachricht zweimal.',
+      { title: 'Hören Teil 4: Anliegen am Telefon', skill: 'hoeren', pts: 3, plays: 1,
+        instr: 'Sie hören fünf Nachrichten auf dem Anrufbeantworter. Welche Lösung (a, b oder c) ist richtig? Sie hören jede Nachricht einmal.',
         audio: [
           { h: 'Nachricht 1', lines: [{ s: 'm', t: 'Guten Tag, hier spricht Wolfgang Richter von der Firma Richter Haustechnik. Sie haben bei uns eine Wärmepumpe bestellt. Der Liefertermin im November verschiebt sich leider um drei Wochen, weil ein Bauteil beim Hersteller fehlt. Wenn Sie möchten, können wir Ihnen in der Zwischenzeit kostenlos ein mobiles Heizgerät bringen. Rufen Sie mich bitte zurück, ob Sie das brauchen.' }] },
           { h: 'Nachricht 2', lines: [{ s: 'f', t: 'Hallo, hier ist Nicole Brandt aus der Personalabteilung. Ihr Antrag auf Teilzeit ab Februar ist genehmigt. Für den neuen Vertrag brauche ich aber noch Ihre Wunschverteilung der Stunden auf die Wochentage. Schicken Sie mir die bitte bis Ende nächster Woche per E-Mail, dann kann ich den Vertrag vorbereiten.' }] },
@@ -171,12 +171,12 @@ const MAILBOX = [
           { au: 4, q: '5. Wann ist die Betriebsversammlung?', opts: ['a) Am Donnerstag um 14 Uhr.', 'b) Morgen per E-Mail.', 'c) Am Mittwoch um 14 Uhr.'], a: 2, why: '„… nicht wie geplant am Donnerstag, sondern schon am Mittwoch um vierzehn Uhr“.' }
         ] }
     ] },
-    { id: 'hoeren-schreiben', title: 'Hören und Schreiben', minutes: 5, note: 'Du hörst einen Anruf zweimal. Löse Aufgabe 1 und schreib dann eine Telefonnotiz für deinen Kollegen. Mach dir schon beim Hören Notizen.', parts: [
-      { title: 'Hören und Schreiben Teil 1: Anruf einer Kundin', skill: 'hoeren', pts: 3, plays: 2,
-        instr: 'Sie arbeiten bei der Firma MediTech Service in Bochum. Sie hören eine Nachricht auf der Mailbox. Welche Lösung (a, b oder c) ist richtig? Sie hören die Nachricht zweimal.',
+    { id: 'hoeren-schreiben', title: 'Hören und Schreiben', minutes: 5, note: 'Du hörst einen Anruf einmal. Löse Aufgabe 1 und schreib dann eine Telefonnotiz für deinen Kollegen. Mach dir schon beim Hören Notizen.', parts: [
+      { title: 'Hören und Schreiben Teil 1: Anruf einer Kundin', skill: 'hoeren', pts: 3, plays: 1,
+        instr: 'Sie arbeiten bei der Firma MediTech Service in Bochum. Sie hören eine Nachricht auf der Mailbox. Welche Lösung (a, b oder c) ist richtig? Sie hören die Nachricht einmal.',
         audio: [{ h: 'Mailbox – MediTech Service', lines: MAILBOX }],
         items: [{ au: 0, q: 'Was möchte Frau Vogel?', opts: ['a) die Wartung absagen, weil die Betten neu sind', 'b) den Wartungstermin verschieben und mehr Betten prüfen lassen', 'c) neue Fernbedienungen für alle Betten bestellen'], a: 1, why: 'Sie möchte Donnerstag statt Dienstag und 26 statt 24 Betten prüfen lassen.' }] },
-      { kind: 'write', title: 'Hören und Schreiben Teil 2: Telefonnotiz', skill: 'schreiben', pts: 10, plays: 2,
+      { kind: 'write', title: 'Hören und Schreiben Teil 2: Telefonnotiz', skill: 'schreiben', pts: 10, plays: 1,
         instr: 'Schreiben Sie für Ihren Kollegen Herrn Albers eine Telefonnotiz zu diesem Anruf. Notieren Sie alle wichtigen Informationen. Stichpunkte sind erlaubt, die Notiz muss aber für Herrn Albers ohne Rückfrage verständlich sein. Sie können die Nachricht hier noch einmal hören.',
         audio: [{ h: 'Mailbox – MediTech Service (Wiederholung)', lines: MAILBOX }],
         options: [{ h: 'Telefonnotiz', situation: 'Herr Albers plant bei MediTech Service die Wartungstermine der Techniker.', task: 'Schreiben Sie eine Telefonnotiz für Herrn Albers mit allen wichtigen Informationen.',

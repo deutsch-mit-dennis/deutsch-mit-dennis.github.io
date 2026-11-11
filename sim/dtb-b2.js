@@ -363,7 +363,7 @@
       id: "hoeren",
       title: "Hören",
       minutes: 20,
-      note: "Lies vor jedem Hörtext die Aufgaben. Die Teile 1–3 hörst du nur einmal, Teil 4 zweimal.",
+      note: "Lies vor jedem Hörtext die Aufgaben. Du hörst alle Teile nur einmal.",
       parts: [
         {
           title: "Hören Teil 1: Arbeitsabläufe, Probleme, Vorschläge",
@@ -705,7 +705,7 @@
           skill: "hoeren",
           pts: 3,
           instr:
-            "Sie hören fünf Nachrichten auf dem Anrufbeantworter. Welche Lösung (a, b oder c) ist richtig? Sie hören jede Nachricht zweimal.",
+            "Sie hören fünf Nachrichten auf dem Anrufbeantworter. Welche Lösung (a, b oder c) ist richtig? Sie hören jede Nachricht einmal.",
           audio: [
             {
               h: "Nachricht 1",
@@ -753,7 +753,7 @@
               ],
             },
           ],
-          plays: 2,
+          plays: 1,
           items: [
             {
               au: 0,
@@ -820,14 +820,14 @@
       id: "hoeren-schreiben",
       title: "Hören und Schreiben",
       minutes: 5,
-      note: "Du hörst einen Anruf zweimal. Löse Aufgabe 1 und schreib dann eine Telefonnotiz für deine Kollegin. Mach dir schon beim Hören Notizen.",
+      note: "Du hörst einen Anruf einmal. Löse Aufgabe 1 und schreib dann eine Telefonnotiz für deine Kollegin. Mach dir schon beim Hören Notizen.",
       parts: [
         {
           title: "Hören und Schreiben Teil 1: Anruf eines Kunden",
           skill: "hoeren",
           pts: 3,
           instr:
-            "Sie arbeiten bei der Haustechnik Brandt GmbH in Bochum. Sie hören eine Nachricht auf der Mailbox. Welche Lösung (a, b oder c) ist richtig? Sie hören die Nachricht zweimal.",
+            "Sie arbeiten bei der Haustechnik Brandt GmbH in Bochum. Sie hören eine Nachricht auf der Mailbox. Welche Lösung (a, b oder c) ist richtig? Sie hören die Nachricht einmal.",
           audio: [
             {
               h: "Mailbox – Haustechnik Brandt",
@@ -839,7 +839,7 @@
               ],
             },
           ],
-          plays: 2,
+          plays: 1,
           items: [
             {
               au: 0,
@@ -872,7 +872,7 @@
               ],
             },
           ],
-          plays: 2,
+          plays: 1,
           options: [
             {
               h: "Telefonnotiz für Frau Lindemann",
@@ -1648,7 +1648,7 @@
         name: "Hören Teil 4: Anliegen am Telefon",
         skill: "Hören",
         time: "ca. 6 Min.",
-        what: "Du hörst fünf Nachrichten auf dem Anrufbeantworter und beantwortest je eine Frage. Du hörst jede Nachricht zweimal.",
+        what: "Du hörst fünf Nachrichten auf dem Anrufbeantworter und beantwortest je eine Frage. Du hörst jede Nachricht einmal.",
         steps: [
           "Lies die Frage genau: Warum ruft jemand an? Was soll man tun? Was ändert sich?",
           "Beim ersten Hören die Richtung erkennen, beim zweiten Hören das Detail prüfen.",
@@ -1662,7 +1662,7 @@
         tip: "Die Bitte steht oft am Ende: „Könnten Sie bitte …?“, „Denken Sie bitte an …“.",
         mini: {
           instr:
-            "Hören Sie die Nachrichten zweimal. Welche Lösung ist richtig?",
+            "Hören Sie die Nachrichten einmal. Welche Lösung ist richtig?",
           audio: [
             {
               h: "Nachricht 1",
@@ -1683,7 +1683,7 @@
               ],
             },
           ],
-          plays: 2,
+          plays: 1,
           items: [
             {
               au: 0,
@@ -1714,7 +1714,7 @@
         name: "Hören und Schreiben: Anruf und Telefonnotiz",
         skill: "Hören / Schreiben",
         time: "ca. 5 Min.",
-        what: "Du hörst einen Anruf (zweimal), beantwortest eine Frage und schreibst eine Telefonnotiz für eine Kollegin. Die Notiz muss alle wichtigen Informationen enthalten.",
+        what: "Du hörst einen Anruf (einmal), beantwortest eine Frage und schreibst eine Telefonnotiz für eine Kollegin. Die Notiz muss alle wichtigen Informationen enthalten.",
         steps: [
           "Leg vor dem Hören ein Raster an: Anrufer – Firma – Rückruf – Anliegen – Details – zu tun.",
           "Beim ersten Hören Namen, Anliegen und Zahlen notieren.",
@@ -1728,7 +1728,7 @@
         ],
         tip: "Stichpunkte sind erlaubt, aber vollständig. Prüfe: Könnte deine Kollegin damit ohne Rückfrage arbeiten?",
         mini: {
-          instr: "Hören Sie den Anruf zweimal. Welche Lösung ist richtig?",
+          instr: "Hören Sie den Anruf einmal. Welche Lösung ist richtig?",
           audio: [
             {
               h: "Anruf",
@@ -1740,7 +1740,7 @@
               ],
             },
           ],
-          plays: 2,
+          plays: 1,
           items: [
             {
               au: 0,

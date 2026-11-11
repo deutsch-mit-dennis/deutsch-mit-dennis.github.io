@@ -1,5 +1,5 @@
 {
- "total": 883,
+ "total": 733,
  "marks": [
   {
    "part": "Hören Teil 1: Ansagen am Telefon und Durchsagen",
@@ -11,91 +11,91 @@
    "part": "Hören Teil 1: Ansagen am Telefon und Durchsagen",
    "clip": 1,
    "h": "Text 2",
-   "start": 99
+   "start": 56
   },
   {
    "part": "Hören Teil 1: Ansagen am Telefon und Durchsagen",
    "clip": 2,
    "h": "Text 3",
-   "start": 183
+   "start": 102
   },
   {
    "part": "Hören Teil 1: Ansagen am Telefon und Durchsagen",
    "clip": 3,
    "h": "Text 4",
-   "start": 272
+   "start": 152
   },
   {
    "part": "Hören Teil 2: Informationen im Radio",
    "clip": 0,
    "h": "Text 1",
-   "start": 344
+   "start": 194
   },
   {
    "part": "Hören Teil 2: Informationen im Radio",
    "clip": 1,
    "h": "Text 2",
-   "start": 382
+   "start": 232
   },
   {
    "part": "Hören Teil 2: Informationen im Radio",
    "clip": 2,
    "h": "Text 3",
-   "start": 423
+   "start": 273
   },
   {
    "part": "Hören Teil 2: Informationen im Radio",
    "clip": 3,
    "h": "Text 4",
-   "start": 465
+   "start": 315
   },
   {
    "part": "Hören Teil 2: Informationen im Radio",
    "clip": 4,
    "h": "Text 5",
-   "start": 503
+   "start": 353
   },
   {
    "part": "Hören Teil 3: Gespräche im Alltag",
    "clip": 0,
    "h": "Gespräch 1",
-   "start": 544
+   "start": 394
   },
   {
    "part": "Hören Teil 3: Gespräche im Alltag",
    "clip": 1,
    "h": "Gespräch 2",
-   "start": 619
+   "start": 469
   },
   {
    "part": "Hören Teil 3: Gespräche im Alltag",
    "clip": 2,
    "h": "Gespräch 3",
-   "start": 678
+   "start": 528
   },
   {
    "part": "Hören Teil 3: Gespräche im Alltag",
    "clip": 3,
    "h": "Gespräch 4",
-   "start": 723
+   "start": 574
   },
   {
    "part": "Hören Teil 4: Meinungen im Radio",
    "clip": 0,
    "h": "Person 1: Herr Lukić",
-   "start": 770
+   "start": 620
   },
   {
    "part": "Hören Teil 4: Meinungen im Radio",
    "clip": 1,
    "h": "Person 2: Frau Nguyen",
-   "start": 811
+   "start": 661
   },
   {
    "part": "Hören Teil 4: Meinungen im Radio",
    "clip": 2,
    "h": "Person 3: Herr Brandt",
-   "start": 847
+   "start": 697
   }
  ]
 }

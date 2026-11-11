@@ -168,7 +168,7 @@
     ] },
     { id: 'schreiben', title: 'Schriftlicher Ausdruck', minutes: 30, parts: [
       { kind: 'write', title: 'Schriftlicher Ausdruck', skill: 'schreiben', pts: 45,
-        instr: 'Wählen Sie eine der beiden Aufgaben (A oder B). Schreiben Sie einen Brief bzw. eine E-Mail. Behandeln Sie darin alle vier Leitpunkte. Überlegen Sie sich eine passende Reihenfolge der Leitpunkte. Vergessen Sie nicht Anrede, Einleitung und Gruß. Schreiben Sie etwa 100 bis 150 Wörter.',
+        instr: 'In der echten Prüfung gibt es nur eine Aufgabe. Hier können Sie zwischen zwei Übungsaufgaben (A oder B) wählen. Schreiben Sie einen Brief bzw. eine E-Mail. Behandeln Sie darin alle vier Leitpunkte. Überlegen Sie sich eine passende Reihenfolge der Leitpunkte. Vergessen Sie nicht Anrede, Einleitung und Gruß. Schreiben Sie etwa 100 bis 150 Wörter.',
         options: [
           { h: 'Aufgabe A: E-Mail an einen Freund', situation: 'Sie haben folgende E-Mail von Ihrem Freund Paul bekommen:\n\n„Hallo …,\nich habe tolle Neuigkeiten: Ich habe endlich eine Stelle als Koch in einem Hotel in Österreich gefunden! Ende Mai ziehe ich nach Salzburg. Vorher möchte ich meine Möbel verkaufen und brauche Hilfe beim Umzug. Hast du am letzten Maiwochenende Zeit?\nViele Grüße\nPaul“', task: 'Antworten Sie Paul. Schreiben Sie etwas zu den folgenden Punkten:',
             points: ['Glückwunsch zur neuen Stelle', 'ob und wie Sie beim Umzug helfen können', 'Interesse an einem Möbelstück', 'Vorschlag für einen Besuch in Salzburg'],

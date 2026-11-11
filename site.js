@@ -279,7 +279,7 @@
         <p class="dm-promise" data-i18n="free" data-i18n-dir>Kostenlos · A0 bis B2 · ohne Anmeldung</p>
         ${levelPicker()}
         <p class="dm-hand">Hallo! Ich bin Dennis, dein Deutschlehrer und zugelassener Prüfer. Tippe auf dein Niveau – ich zeige dir den nächsten Schritt.</p>
-        <ul class="dm-trust"><li>✓ DTZ-Prüfer</li><li>✓ telc-Prüfer B1–C1</li><li>✓ Lehrkraft mit BAMF-Zulassung bis C2</li></ul>
+        <ul class="dm-trust"><li>✓ DTZ-Prüfer</li><li>✓ telc-Prüfer B1–B2</li><li>✓ Lehrkraft mit BAMF-Zulassung bis C2</li></ul>
       </div>
     </section>
 

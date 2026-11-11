@@ -7,13 +7,13 @@
   sections: [
     { id: 'hoeren', title: 'Hören', minutes: 25, note: 'Vier Teile, 20 Aufgaben. Lies vor jedem Hörtext zuerst die Aufgabe.', parts: [
       { title: 'Hören Teil 1: Ansagen am Telefon und Durchsagen', skill: 'hl', pts: 1,
-        instr: 'Sie hören vier Ansagen. Zu jedem Text gibt es eine Aufgabe. Wählen Sie die richtige Lösung a, b oder c. Sie hören jeden Text zweimal.',
+        instr: 'Sie hören vier Ansagen. Zu jedem Text gibt es eine Aufgabe. Wählen Sie die richtige Lösung a, b oder c. Sie hören jeden Text einmal.',
         audio: [
           { h: 'Text 1', lines: [{ s: 'f', t: 'Guten Tag, hier ist das Bürgeramt Duisburg-Mitte, Frau Krämer. Die Nachricht ist für Herrn Popescu. Herr Popescu, Ihr neuer Personalausweis ist fertig. Sie können ihn ab Montag bei uns abholen, ähm, aber nur mit Termin. Den Termin machen Sie bitte online oder Sie rufen uns an. Bringen Sie bitte Ihren alten Ausweis mit, der wird dann ungültig gemacht. Ein Foto brauchen Sie nicht mehr, das haben wir ja schon. Danke und einen schönen Tag noch.' }] },
           { h: 'Text 2', lines: [{ s: 'm', t: 'Ja, hallo Frau Ibrahim, hier ist die Praxis Doktor Wendt. Ihre Blutwerte sind jetzt da. Also, keine Sorge, es ist alles in Ordnung, nur Ihr Eisenwert ist ein bisschen niedrig. Der Doktor möchte das gern kurz mit Ihnen besprechen. Sie müssen aber nicht extra kommen, er ruft Sie morgen zwischen zwölf und eins an. Wenn das nicht passt, melden Sie sich bitte kurz bei uns. Tschüss!' }] },
           { h: 'Text 3', lines: [{ s: 'f2', t: 'Hallo, liebe Teilnehmerinnen und Teilnehmer, hier ist Anja von der Sprachschule Wort und Welt. Nur eine kurze Info: Unser Kurs morgen findet statt, aber nicht in Raum zwölf, sondern unten im Erdgeschoss, in Raum drei. Oben wird nämlich gestrichen. Die Uhrzeit bleibt gleich, neun Uhr. Und bitte denkt an eure Hausaufgaben, wir sprechen morgen darüber. Bis morgen!' }] },
           { h: 'Text 4', lines: [{ s: 'f', t: 'Hallo Ali, hier ist Monika von nebenan, aus dem zweiten Stock. Du, ich hab heute ein Paket für dich angenommen. Der Paketbote hat bei dir geklingelt, aber du warst nicht da. Ich bin heute Abend leider nicht zu Hause, ich hab Spätschicht. Ich stell dir das Paket einfach vor deine Wohnungstür, okay? Ist nicht so groß. Wenn du das nicht willst, schreib mir schnell eine Nachricht. Ciao!' }] }
-        ], plays: 2,
+        ], plays: 1,
         items: [
           { au: 0, q: 'Was muss Herr Popescu tun?', opts: ['Ein neues Foto mitbringen.', 'Einen Termin machen.', 'Am Montag ohne Termin kommen.'], a: 1, why: '„nur mit Termin. Den Termin machen Sie bitte online oder Sie rufen uns an.“ Ein Foto braucht er nicht.' },
           { au: 1, q: 'Was passiert morgen?', opts: ['Frau Ibrahim muss in die Praxis kommen.', 'Frau Ibrahim bekommt neue Tabletten.', 'Der Arzt ruft Frau Ibrahim an.'], a: 2, why: '„er ruft Sie morgen zwischen zwölf und eins an.“ Sie muss nicht extra kommen.' },

@@ -112,8 +112,8 @@
           { au: 3, q: 'Der Mann findet, dass man im Homeoffice Arbeit und Freizeit schlechter trennen kann.', a: 0, why: 'Seine Frau „kann schlechter abschalten“ und liest abends noch E-Mails.' },
           { au: 4, q: 'Die Teamleiterin führt die Gespräche mit ihrem Team per Video.', a: 1, why: '„und zwar wirklich vor Ort, nicht per Video.“' }
         ] },
-      { title: 'Hörverstehen Teil 2', skill: 'hoeren', pts: 2.5, plays: 2,
-        instr: 'Sie hören ein Interview aus der Radiosendung „Arbeitswelten“. Sie hören das Interview zweimal. Entscheiden Sie bei den Aussagen 1–10, ob sie richtig oder falsch sind. Lesen Sie jetzt die Aussagen.',
+      { title: 'Hörverstehen Teil 2', skill: 'hoeren', pts: 2.5, plays: 1,
+        instr: 'Sie hören ein Interview aus der Radiosendung „Arbeitswelten“. Sie hören das Interview einmal. Entscheiden Sie bei den Aussagen 1–10, ob sie richtig oder falsch sind. Lesen Sie jetzt die Aussagen.',
         opts: ['Richtig', 'Falsch'],
         audio: [{ h: 'Interview: Ärztin auf dem Land', lines: [
           { s: 'm', t: 'Willkommen bei Arbeitswelten. Mein Gast heute ist Dr. Leyla Şahin. Sie hat vor drei Jahren eine Hausarztpraxis in einem kleinen Dorf in Mecklenburg übernommen – obwohl sie vorher in Berlin gelebt hat. Frau Şahin, wie kam es dazu?' },
@@ -143,8 +143,8 @@
           { au: 0, q: 'Sie meint, Geld ist das Wichtigste, um junge Ärzte aufs Land zu holen.', a: 1, why: '„das Wichtigste ist eigentlich etwas anderes“: Jobs für Partner, Schulen für Kinder.' },
           { au: 0, q: 'Sie fährt nie mehr nach Berlin.', a: 1, why: '„ich fahr ja ab und zu hin“.' }
         ] },
-      { title: 'Hörverstehen Teil 3', skill: 'hoeren', pts: 5, plays: 2,
-        instr: 'Sie hören fünf kurze Texte: Durchsagen, eine Telefonansage und Hinweise im Radio. Sie hören jeden Text zweimal. Entscheiden Sie bei jeder Aussage, ob sie richtig oder falsch ist.',
+      { title: 'Hörverstehen Teil 3', skill: 'hoeren', pts: 5, plays: 1,
+        instr: 'Sie hören fünf kurze Texte: Durchsagen, eine Telefonansage und Hinweise im Radio. Sie hören jeden Text einmal. Entscheiden Sie bei jeder Aussage, ob sie richtig oder falsch ist.',
         opts: ['Richtig', 'Falsch'],
         audio: [
           { h: 'Text 1', lines: [{ s: 'n', t: 'Liebe Besucherinnen und Besucher, das Museum schließt heute aufgrund einer Veranstaltung bereits um sechzehn Uhr. Die Sonderausstellung „Farben des Nordens“ im zweiten Stock ist ab fünfzehn Uhr nicht mehr zugänglich. Ihre Eintrittskarte gilt auch morgen noch einmal. Vielen Dank für Ihr Verständnis.' }] },

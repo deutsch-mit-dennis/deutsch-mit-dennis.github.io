@@ -83,7 +83,7 @@ const MAILBOX = [{ s: 'f', t: 'Guten Tag, hier spricht Claudia Reinhardt von der
         minWords: 100,
         check: ['Betreff, formelle Anrede („Sehr geehrter Herr Dr. Brückner“) und passender Gruß (mit „i. A.“)', 'Dank und Entschuldigung für BEIDE Probleme', 'Verspätung erklärt (Unfall, Stau) und fehlende Information bedauert', 'Fehler im Lager erklärt (Etiketten vertauscht)', 'Austausch am Samstag, 8 Uhr, mit Bitte um Bestätigung', '15 % Rabatt genannt', 'Rückfragen: Herr Hoffmeister mit Telefonnummer', 'durchgehend Sie-Form, verbundene Sätze statt Stichpunkte'] }
     ] },
-    { id: 'hoeren', title: 'Hören', minutes: 20, note: 'Lies vor jedem Hörtext die Aufgaben. Die Teile 1–3 hörst du nur einmal, Teil 4 zweimal.', parts: [
+    { id: 'hoeren', title: 'Hören', minutes: 20, note: 'Lies vor jedem Hörtext die Aufgaben. Du hörst alle Teile nur einmal.', parts: [
       { title: 'Hören Teil 1: Arbeitsabläufe, Probleme, Vorschläge', skill: 'hoeren', pts: 3, plays: 1,
         instr: 'Sie hören drei kurze Gespräche unter Kolleginnen und Kollegen. Zu jedem Gespräch gibt es eine Aussage (richtig oder falsch) und eine Aufgabe (a, b oder c). Sie hören jedes Gespräch einmal.',
         audio: [
@@ -152,8 +152,8 @@ const MAILBOX = [{ s: 'f', t: 'Guten Tag, hier spricht Claudia Reinhardt von der
           { q: '3. Was gilt in den ersten zwei Wochen?', opts: ['Erfahrene Mitarbeiter dürfen allein auf Dächer steigen.', 'Alle arbeiten nur im Büro.', 'Niemand darf allein auf ein Dach steigen.'], a: 2, why: '„darf niemand von Ihnen allein auf ein Dach steigen, auch nicht, wenn Sie schon Erfahrung haben.“' },
           { q: '4. Wann bekommt man eine Prämie?', opts: ['Wenn man einen neuen Mitarbeiter für die Firma findet.', 'Wenn man die Probezeit besteht.', 'Wenn man beim Sommerfest hilft.'], a: 0, why: '„wer einen neuen Kollegen oder eine Kollegin für uns gewinnt, bekommt … fünfhundert Euro Prämie.“' }
         ] },
-      { title: 'Hören Teil 4: Anliegen am Telefon', skill: 'hoeren', pts: 3, plays: 2,
-        instr: 'Sie hören fünf Nachrichten auf dem Anrufbeantworter. Welche Lösung (a, b oder c) ist richtig? Sie hören jede Nachricht zweimal.',
+      { title: 'Hören Teil 4: Anliegen am Telefon', skill: 'hoeren', pts: 3, plays: 1,
+        instr: 'Sie hören fünf Nachrichten auf dem Anrufbeantworter. Welche Lösung (a, b oder c) ist richtig? Sie hören jede Nachricht einmal.',
         audio: [
           { h: 'Nachricht 1', lines: [{ s: 'm', t: 'Guten Tag, hier spricht Henrik Vogel vom Großhandel Vogel und Söhne. Es geht um Ihre Bestellung von letzter Woche, die Kühlregale. Leider können wir nur drei statt fünf Regale liefern, die anderen zwei kommen erst Ende des Monats. Sie können natürlich auch die ganze Bestellung zusammen Ende des Monats bekommen, dann sparen Sie die zweite Lieferpauschale. Bitte teilen Sie mir bis Mittwoch mit, was Ihnen lieber ist.' }] },
           { h: 'Nachricht 2', lines: [{ s: 'f', t: 'Hallo, hier ist Doris Wendt aus der Personalabteilung. Ihr Antrag auf Bildungsurlaub für das Seminar im Februar ist genehmigt. Bitte reichen Sie nach dem Seminar die Teilnahmebescheinigung bei uns ein, sonst wird der Bildungsurlaub als normaler Urlaub gerechnet. Viel Spaß beim Seminar!' }] },
@@ -169,12 +169,12 @@ const MAILBOX = [{ s: 'f', t: 'Guten Tag, hier spricht Claudia Reinhardt von der
           { au: 4, q: '5. Was soll die Kollegin morgen mitbringen?', opts: ['Eine Sicherung ihrer Dateien.', 'Den alten Laptop und das Ladekabel.', 'Einen Antrag für den neuen Laptop.'], a: 1, why: '„Bring bitte den alten mit und dein Ladekabel.“' }
         ] }
     ] },
-    { id: 'hoeren-schreiben', title: 'Hören und Schreiben', minutes: 5, note: 'Du hörst einen Anruf zweimal. Löse Aufgabe 1 und schreib dann eine Telefonnotiz für deinen Kollegen. Mach dir schon beim Hören Notizen.', parts: [
-      { title: 'Hören und Schreiben Teil 1: Anruf einer Kundin', skill: 'hoeren', pts: 3, plays: 2,
-        instr: 'Sie arbeiten bei der Malerfirma Demir & Kollegen in Gelsenkirchen. Sie hören eine Nachricht auf der Mailbox. Welche Lösung (a, b oder c) ist richtig? Sie hören die Nachricht zweimal.',
+    { id: 'hoeren-schreiben', title: 'Hören und Schreiben', minutes: 5, note: 'Du hörst einen Anruf einmal. Löse Aufgabe 1 und schreib dann eine Telefonnotiz für deinen Kollegen. Mach dir schon beim Hören Notizen.', parts: [
+      { title: 'Hören und Schreiben Teil 1: Anruf einer Kundin', skill: 'hoeren', pts: 3, plays: 1,
+        instr: 'Sie arbeiten bei der Malerfirma Demir & Kollegen in Gelsenkirchen. Sie hören eine Nachricht auf der Mailbox. Welche Lösung (a, b oder c) ist richtig? Sie hören die Nachricht einmal.',
         audio: [{ h: 'Mailbox – Demir & Kollegen', lines: MAILBOX }],
         items: [{ au: 0, q: 'Was möchte Frau Reinhardt?', opts: ['den Auftrag absagen, weil die Kita geschlossen ist', 'die Malerarbeiten auf die Weihnachtsferien verschieben', 'eine andere Farbe für die Gruppenräume bestellen'], a: 1, why: '„Wir müssten die Arbeiten also verschieben, am liebsten auf die Weihnachtsferien“.' }] },
-      { kind: 'write', title: 'Hören und Schreiben Teil 2: Telefonnotiz', skill: 'schreiben', pts: 10, plays: 2,
+      { kind: 'write', title: 'Hören und Schreiben Teil 2: Telefonnotiz', skill: 'schreiben', pts: 10, plays: 1,
         instr: 'Schreiben Sie für Ihren Kollegen Herrn Demir eine Telefonnotiz zu diesem Anruf. Notieren Sie alle wichtigen Informationen. Stichpunkte sind erlaubt, die Notiz muss aber für Herrn Demir ohne Rückfrage verständlich sein. Sie können die Nachricht hier noch einmal hören.',
         audio: [{ h: 'Mailbox – Demir & Kollegen (Wiederholung)', lines: MAILBOX }],
         options: [{ h: 'Telefonnotiz', situation: 'Herr Demir ist Inhaber der Malerfirma und plant die Aufträge. Er war nicht erreichbar.', task: 'Schreiben Sie eine Telefonnotiz für Herrn Demir.',

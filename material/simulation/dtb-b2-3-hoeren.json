@@ -1,5 +1,5 @@
 {
- "total": 927,
+ "total": 664,
  "marks": [
   {
    "part": "Hören Teil 1: Arbeitsabläufe, Probleme, Vorschläge",
@@ -41,37 +41,37 @@
    "part": "Hören Teil 4: Anliegen am Telefon",
    "clip": 1,
    "h": "Nachricht 2",
-   "start": 395
+   "start": 367
   },
   {
    "part": "Hören Teil 4: Anliegen am Telefon",
    "clip": 2,
    "h": "Nachricht 3",
-   "start": 452
+   "start": 400
   },
   {
    "part": "Hören Teil 4: Anliegen am Telefon",
    "clip": 3,
    "h": "Nachricht 4",
-   "start": 506
+   "start": 431
   },
   {
    "part": "Hören Teil 4: Anliegen am Telefon",
    "clip": 4,
    "h": "Nachricht 5",
-   "start": 565
+   "start": 465
   },
   {
    "part": "Hören und Schreiben Teil 1: Anruf einer Kundin",
    "clip": 0,
    "h": "Mailbox – MediTech Service",
-   "start": 619
+   "start": 499
   },
   {
    "part": "Hören und Schreiben Teil 2: Telefonnotiz",
    "clip": 0,
    "h": "Mailbox – MediTech Service (Wiederholung)",
-   "start": 775
+   "start": 583
   }
  ]
 }

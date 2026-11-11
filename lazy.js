@@ -24,7 +24,7 @@ window.DMLazy = (() => {
     "spiele/lino.js?v=20261107e"
   ],
   "hoeren": [
-    "hoeren-data.js?v=20261111m"
+    "hoeren-data.js?v=20261111n"
   ],
   "lesen": [
     "lesen-data.js?v=20261111m"

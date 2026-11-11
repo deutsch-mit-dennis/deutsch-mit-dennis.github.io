@@ -5,7 +5,7 @@
 "title": "DTZ Hören · Übungssatz 1",
 "level": "A2–B1",
 "exam": "DTZ",
-"intro": "Ein kompletter Durchgang mit allen vier Teilen: Ansagen, Durchsagen, ein Alltagsgespräch und Meinungen. Hör jeden Text einmal (Teil 1 und 3 darfst du zweimal hören) und entscheide dich schnell.",
+"intro": "Ein kompletter Durchgang mit allen vier Teilen: Ansagen, Durchsagen, ein Alltagsgespräch und Meinungen. Im DTZ hörst du jeden Text nur einmal. Entscheide dich schnell.",
 "group": "dtz",
 "items": [
 {

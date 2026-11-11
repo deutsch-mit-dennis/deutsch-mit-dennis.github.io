@@ -1,5 +1,5 @@
 {
- "total": 778,
+ "total": 505,
  "marks": [
   {
    "part": "Hörverstehen Teil 1",
@@ -41,31 +41,31 @@
    "part": "Hörverstehen Teil 3",
    "clip": 0,
    "h": "Text 1",
-   "start": 469
+   "start": 328
   },
   {
    "part": "Hörverstehen Teil 3",
    "clip": 1,
    "h": "Text 2",
-   "start": 533
+   "start": 365
   },
   {
    "part": "Hörverstehen Teil 3",
    "clip": 2,
    "h": "Text 3",
-   "start": 600
+   "start": 403
   },
   {
    "part": "Hörverstehen Teil 3",
    "clip": 3,
    "h": "Text 4",
-   "start": 658
+   "start": 436
   },
   {
    "part": "Hörverstehen Teil 3",
    "clip": 4,
    "h": "Text 5",
-   "start": 721
+   "start": 472
   }
  ]
 }

@@ -785,7 +785,7 @@
           skill: "schreiben",
           pts: 45,
           instr:
-            "Wählen Sie eine der beiden Aufgaben (A oder B). Schreiben Sie einen Brief bzw. eine E-Mail. Behandeln Sie darin alle vier Leitpunkte. Überlegen Sie sich eine passende Reihenfolge der Leitpunkte. Vergessen Sie nicht Anrede, Einleitung und Gruß. Schreiben Sie etwa 100 bis 150 Wörter.",
+            "In der echten Prüfung gibt es nur eine Aufgabe. Hier können Sie zwischen zwei Übungsaufgaben (A oder B) wählen. Schreiben Sie einen Brief bzw. eine E-Mail. Behandeln Sie darin alle vier Leitpunkte. Überlegen Sie sich eine passende Reihenfolge der Leitpunkte. Vergessen Sie nicht Anrede, Einleitung und Gruß. Schreiben Sie etwa 100 bis 150 Wörter.",
           options: [
             {
               h: "Aufgabe A: E-Mail an eine Freundin",
