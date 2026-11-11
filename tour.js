@@ -10,7 +10,7 @@
     [11.3, '#dm-level', 'Tippe auf dein Niveau – dann kommt dein nächster Schritt'],
     [18.3, '.dm-tools', 'Direkt üben: Sprechen, Schreiben, Hören'],
     [25.2, '.dm-paths a[href="#lernweg/dtz"], .dm-tools a[href="#lid"]', 'Prüfungstraining: DTZ, B2, Leben in Deutschland'],
-    [33.4, '.dm-stage', 'Deutsch mit Liedern'],
+    [33.4, '.dm-stage, .dm-song-home, .dm-tools a[href="#lieder"]', 'Deutsch mit Liedern'],
     [39.2, null, 'Viel Erfolg!']
   ];
   const get = k => { try { return localStorage.getItem(k); } catch { return null; } };
