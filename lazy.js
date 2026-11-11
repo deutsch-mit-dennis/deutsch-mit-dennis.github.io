@@ -30,7 +30,7 @@ window.DMLazy = (() => {
     "lesen-data.js?v=20261111m"
   ],
   "erste": [
-    "erste-schritte-data.js?v=20261111m",
+    "erste-schritte-data.js?v=20261111n",
     "erste-schritte.js?v=20261111m"
   ],
   "bild": [
@@ -38,11 +38,11 @@ window.DMLazy = (() => {
     "bild.js?v=20261008e"
   ],
   "grammatik": [
-    "grammatik-data.js?v=20261111m",
+    "grammatik-data.js?v=20261111n",
     "grammatik.js?v=20261111m"
   ],
   "laute": [
-    "laute.js?v=20261111m"
+    "laute.js?v=20261111n"
   ],
   "lidx": [
     "lid-laender.js?v=20261111m",
