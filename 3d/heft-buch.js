@@ -116,14 +116,14 @@ async function build() {
   p = page('R'); g = p.g;
   hand(g, 'Seite 1', p.x0, 130, 64, C.rot);
   marker(g, 'Lektionen', p.x0, 270, 110); stick(g, P.lernen, p.x0, 345);
-  ['A1', 'A2', 'B1', 'B2'].forEach((l, i) => {
-    const x = p.x0 + 20 + i * 180, h = 120 + i * 90, y = 900 - h;
-    g.fillStyle = [C.gruen, '#2B9A78', '#2C86CF', C.tinte][i]; g.beginPath(); g.roundRect(x, y, 140, h, 16); g.fill();
-    sans(g, l, x + 30, y + 70, 60, '#fff');
+  ['A0', 'A1', 'A2', 'B1', 'B2'].forEach((l, i) => {
+    const x = p.x0 + 10 + i * 148, h = 110 + i * 72, y = 900 - h;
+    g.fillStyle = ['#E8A800', C.gruen, '#2B9A78', '#2C86CF', C.tinte][i]; g.beginPath(); g.roundRect(x, y, 128, h, 16); g.fill();
+    sans(g, l, x + 22, y + 68, 56, '#fff');
   });
   hand(g, 'Schritt für Schritt nach oben!', p.x0, 1040, 72, C.tinte, -0.03);
   icon(g, I.buecher, 700, 1120, 190, -.1);
-  const p1f = spots(tex(p.c), [[90, 150, 640, 170, 'lernen', 'Lektionen'], [90, 520, 700, 420, 'lernen', 'Lektionen A1 bis B2'], [60, 980, 900, 130, 'lernweg', 'Mein Lernweg']]);
+  const p1f = spots(tex(p.c), [[90, 150, 640, 170, 'lernen', 'Lektionen'], [90, 520, 760, 420, 'kurs', 'Kurse A0 bis B2'], [60, 980, 900, 130, 'kurs', 'Mein Kurs']]);
 
   // Page 1 back (left, stage 2): Hören & Lesen
   p = page('L'); g = p.g;

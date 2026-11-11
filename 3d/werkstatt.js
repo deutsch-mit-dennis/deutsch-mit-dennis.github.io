@@ -1,15 +1,15 @@
 // Idea 6 'Heft + Schreibtisch': click an object -> camera flies in, object opens, full-page themed view (test build).
 import * as THREE from 'three';
-import { VIEWS, prewarmHeft } from './werkstatt-views.js?v=20261110j';
+import { VIEWS, prewarmHeft } from './werkstatt-views.js?v=20261111s';
 import { addLife } from './werkstatt-leben.js?v=20261108m';
-import { progress } from './heft-buch.js?v=20261110e';
+import { progress } from './heft-buch.js?v=20261111s';
 import { addStickers } from './werkstatt-sticker.js?v=20261108m';
 import { sound, soundButton } from './werkstatt-ton.js?v=20261110b';
 
 const SITE = 'https://deutsch-mit-dennis.de/';
 const C = { tinte: '#2341B5', tinteDark: '#182E86', paper: '#FBFBF8', ink: '#172036', marker: '#FFE45C', rot: '#C2362B', gruen: '#1D7A45', sun: '#E8A800', sky: '#2C86CF', mint: '#2B9A78' };
 const AREAS = {
-  laptop:    { title: 'Lektionen', text: 'Schritt für Schritt von A1 bis B2 Beruf: Grammatik, Wortschatz und Übungen.', href: '#lernen', icon: 'stern', btn: 'Lektionen öffnen' },
+  laptop:    { title: 'Lektionen', text: 'Dein Kurs von A0 bis B2 Beruf: immer der nächste Schritt – Lektionen, Grammatik und Übungen.', href: '#kurs', icon: 'stern', btn: 'Kurs öffnen' },
   kopfhoerer:{ title: 'Hören', text: 'Dialoge aus dem Alltag mit natürlichen Stimmen – mit Aufgaben.', href: '#hoeren', icon: 'kopfhoerer', btn: 'Hören üben' },
   buecher:   { title: 'Lesen', text: 'Lesetexte mit Aufgaben – passend zu deinem Niveau.', href: '#lesen', icon: 'buecher', btn: 'Lesen üben' },
   mikrofon:  { title: 'Sprechen', text: 'Sprich deine Antwort ein – die Sprech-Mitschrift zeigt, was verstanden wurde.', href: '#ueben', icon: 'mikrofon', btn: 'Sprechen üben' },
@@ -86,10 +86,10 @@ function makeLaptop() {
     const gr = c.createLinearGradient(0, 0, w, h); gr.addColorStop(0, '#2C4FD0'); gr.addColorStop(1, C.tinteDark); c.fillStyle = gr; c.fillRect(0, 0, w, h);
     c.fillStyle = 'rgba(255,255,255,.12)'; c.fillRect(0, 0, w, 56);
     font(c, 30, 700); c.fillStyle = '#fff'; c.fillText('deutsch-mit-dennis.de', 32, 38);
-    font(c, 96); c.fillText('Lektionen', 60, 190);
-    [['A1', C.gruen], ['A2', C.mint], ['B1', C.sky], ['B2', C.marker]].forEach(([l, col], i) => {
-      const x = 70 + i * 230, hh = 110 + i * 80, y = 600 - hh; c.fillStyle = col; c.beginPath(); c.roundRect(x, y, 170, hh, 18); c.fill();
-      font(c, 64); c.fillStyle = i === 3 ? C.ink : '#fff'; c.fillText(l, x + 40, y + 76);
+    font(c, 96); c.fillText('Mein Kurs', 60, 190);
+    [['A0', C.sun], ['A1', C.gruen], ['A2', C.mint], ['B1', C.sky], ['B2', C.marker]].forEach(([l, col], i) => {
+      const x = 56 + i * 186, hh = 100 + i * 66, y = 600 - hh; c.fillStyle = col; c.beginPath(); c.roundRect(x, y, 158, hh, 18); c.fill();
+      font(c, 60); c.fillStyle = i === 4 ? C.ink : '#fff'; c.fillText(l, x + 36, y + 72);
     });
   });
   const screen = new THREE.Mesh(new THREE.PlaneGeometry(2.04, 1.3), new THREE.MeshBasicMaterial({ map: scr, toneMapped: false }));
@@ -709,8 +709,10 @@ if (location.hash.length > 1) { try { pendingRoute = safeRoute(decodeURIComponen
 function lastPage() { try { const m = JSON.parse(localStorage.getItem('dmd.v1') || '{}'); return m.last && m.last.route ? m.last : null; } catch { return null; } }
 function renderResume() {
   const box = document.getElementById('resume'); if (!box) return;
-  const l = lastPage(), first = recKeys[0], k = box.querySelector('.r-k');
-  if (l) { box.hidden = false; k.textContent = T('go_cont', 'Weitermachen'); box.querySelector('b').textContent = l.title || l.route; box.onclick = () => openRoute(l.route); }
+  const l = lastPage(), first = recKeys[0], k = box.querySelector('.r-k'), lv = readLevel();
+  // same logic as the start page: with a chosen level the one big button is the next step of the course
+  if (lv) { box.hidden = false; k.textContent = T('next_step', 'Dein nächster Schritt'); box.querySelector('b').textContent = 'Kurs ' + lv; box.onclick = () => openRoute('kurs/' + lv); }
+  else if (l) { box.hidden = false; k.textContent = T('go_cont', 'Weitermachen'); box.querySelector('b').textContent = l.title || l.route; box.onclick = () => openRoute(l.route); }
   else if (first) { box.hidden = false; k.textContent = T('go_start', 'Jetzt starten'); box.querySelector('b').textContent = areaTitle(first); box.onclick = () => openObject(first); }
   else box.hidden = true;
 }

@@ -1,5 +1,5 @@
 // Full-page "inside" views for each desk object (test build). Every link points to the real site, nothing is changed there.
-import { openHeft } from './heft-buch.js?v=20261110e';
+import { openHeft } from './heft-buch.js?v=20261111s';
 import { sound } from './werkstatt-ton.js?v=20261110b';
 
 const SITE = 'https://deutsch-mit-dennis.de/';
@@ -9,11 +9,12 @@ const el = (html) => { const t = document.createElement('template'); t.innerHTML
 
 // ---------- Laptop: browser with level navigation ----------
 const LAPTOP_TABS = [
-  { id: 'start', label: 'Start', url: '', h: 'Willkommen!', p: 'Wähle dein Niveau – oder lass dir deinen Lernweg zeigen.', links: [['Mein Lernweg', '#lernweg'], ['Welcher Weg passt zu mir?', '#wegweiser'], ['Alle Lektionen', '#lernen'], ['Dennis in deiner Sprache', '#hallo'], ['Neuigkeiten', '#']] },
-  { id: 'a1', label: 'A1', url: '#lernen', h: 'A1 · Anfänger', p: 'Erste Wörter und Sätze: sich vorstellen, Zahlen, einkaufen.', links: [['Lektionen', '#lernen'], ['Lernspiele', '#spiele'], ['Hören', '#hoeren']] },
-  { id: 'a2', label: 'A2', url: '#lernen', h: 'A2 · Grundlagen', p: 'Alltag meistern: Termine, Wohnung, Arzt, über Vergangenes sprechen.', links: [['Lektionen', '#lernen'], ['Lesen im Alltag', '#lesen/alltag'], ['Wo oder wohin?', '#spiele/wowohin']] },
-  { id: 'b1', label: 'B1', url: '#lernen', h: 'B1 · Mittelstufe', p: 'Meinung sagen, Briefe schreiben – und die B1-Prüfung vorbereiten.', links: [['Lektionen', '#lernen'], ['Probeprüfung DTZ', '#simulation/dtz'], ['Probeprüfung telc B1', '#simulation/telc-b1'], ['Schreiben üben', '#ueben/schreiben']] },
-  { id: 'b2', label: 'B2 Beruf', url: '#lernen', h: 'B2 · Beruf', p: 'Deutsch für den Job: E-Mails, Besprechungen, Arbeitsabläufe.', links: [['Lektionen', '#lernen'], ['Lesen im Beruf', '#lesen/beruf'], ['Hören B2', '#hoeren/b2-1'], ['B2-Lernspiele', '#spiele/b2'], ['Probeprüfung DTB B2', '#simulation/dtb-b2']] },
+  { id: 'start', label: 'Start', url: '#kurs', h: 'Willkommen!', p: 'Wähle dein Niveau. Dein Kurs zeigt dir immer den nächsten Schritt.', links: [['Mein Kurs', '#kurs'], ['Einstufungstest (5 Minuten)', '#einstufung'], ['Grammatik üben', '#grammatik'], ['Meine Fehler wiederholen', '#fehler'], ['Alle Lektionen', '#lernen'], ['Dennis in deiner Sprache', '#hallo']] },
+  { id: 'a0', label: 'A0', url: '#kurs/A0', h: 'A0 · Ich fange an', p: 'Die ersten Wörter, das Alphabet und die Zahlen – mit Bildern und Ton.', links: [['Kurs A0 starten', '#kurs/A0'], ['Erste Schritte: Bildkarten', '#erste-schritte'], ['Laute und Buchstaben', '#laute'], ['Lernspiele', '#spiele']] },
+  { id: 'a1', label: 'A1', url: '#kurs/A1', h: 'A1 · Erste Sätze', p: 'Sich vorstellen, einkaufen, Termine machen, kurze Texte verstehen.', links: [['Kurs A1 starten', '#kurs/A1'], ['Lektionen', '#lernen/A1'], ['Grammatik A1', '#grammatik'], ['Hören A1', '#hoeren/a1'], ['Lesen A1', '#lesen/a1']] },
+  { id: 'a2', label: 'A2', url: '#kurs/A2', h: 'A2 · Alltag', p: 'Alltag meistern: Termine, Wohnung, Arzt, über Vergangenes sprechen.', links: [['Kurs A2 starten', '#kurs/A2'], ['Lektionen', '#lernen/A2'], ['Grammatik A2', '#grammatik'], ['Hören A2', '#hoeren/a2'], ['Lesen A2', '#lesen/a2']] },
+  { id: 'b1', label: 'B1', url: '#kurs/B1', h: 'B1 · Gespräche', p: 'Meinung sagen, Briefe schreiben – und die B1-Prüfung vorbereiten.', links: [['Kurs B1 starten', '#kurs/B1'], ['Lektionen', '#lernen/B1'], ['Probeprüfung DTZ', '#simulation/dtz'], ['Probeprüfung telc B1', '#simulation/telc-b1'], ['Schreiben üben', '#ueben/schreiben']] },
+  { id: 'b2', label: 'B2 Beruf', url: '#kurs/B2', h: 'B2 · Beruf', p: 'Deutsch für den Job: E-Mails, Besprechungen, Arbeitsabläufe.', links: [['Kurs B2 starten', '#kurs/B2'], ['Lektionen', '#lernen/B2'], ['Lesen im Beruf', '#lesen/beruf'], ['Probeprüfung DTB B2', '#simulation/dtb-b2'], ['Probeprüfung telc B2', '#simulation/telc-b2']] },
   { id: 'videos', label: 'Videos', url: '#videos/alle', h: 'Erklärvideos', p: 'Grammatik und Prüfungstipps als Video.', links: [['Alle Videos', '#videos/alle']], ext: ['YouTube-Kanal', 'https://www.youtube.com/@deutsch-mit-Dennis'] },
 ];
 function laptopView() {
