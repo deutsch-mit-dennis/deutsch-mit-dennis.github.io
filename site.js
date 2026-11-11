@@ -285,7 +285,7 @@
 
     <details class="dm-more" id="dm-more"${mem.moreOpen ? ' open' : ''}>
     <summary><span data-i18n="more_h">Mehr entdecken</span><small>Prüfung · Lernwege · Spiele · Lieder · Videos</small></summary>
-    <p class="dm-more-links"><a class="dm-btn dm-btn-quiet" href="#pruefung">📝 Prüfung</a><a class="dm-btn dm-btn-quiet" href="#kurs">🧭 Alle Kurse</a><a class="dm-btn dm-btn-quiet" href="#grammatik">🧩 Grammatik</a><a class="dm-btn dm-btn-quiet" href="#fehler">🔁 Meine Fehler</a><a class="dm-btn dm-btn-quiet" href="#" data-tour-start>▶ Rundgang (40 Sek.)</a></p>
+    <p class="dm-more-links"><a class="dm-btn dm-btn-quiet" href="#pruefung">📝 Prüfung</a><a class="dm-btn dm-btn-quiet" href="#kurs">🧭 Alle Kurse</a><a class="dm-btn dm-btn-quiet" href="#einstufung">🎯 Einstufungstest</a><a class="dm-btn dm-btn-quiet" href="#grammatik">🧩 Grammatik</a><a class="dm-btn dm-btn-quiet" href="#fehler">🔁 Meine Fehler</a><a class="dm-btn dm-btn-quiet" href="#" data-tour-start>▶ Rundgang (40 Sek.)</a></p>
 
     <section class="dm-section" aria-labelledby="wege-h">
       <div class="dm-section-head"><h2 id="wege-h" data-i18n="paths_h">Wähle deinen Weg</h2><p>Du kannst jederzeit wechseln.</p></div>

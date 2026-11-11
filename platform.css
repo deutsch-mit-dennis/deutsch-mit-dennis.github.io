@@ -11,3 +11,11 @@
 @media(max-width:600px){.pl-lesson-head{margin:14px 0 10px}.pl-lesson-head p{font-size:15px}.pl-breadcrumb{margin-bottom:12px}.pl-mobile-step{margin-top:12px}.pl-lesson-aside{margin-top:2px}}
 .video-page{background:transparent;border:0;padding:0;box-shadow:none}.video-page h1,.oral-head h1,.lid-head h1{font-family:Arial,Helvetica,sans-serif;color:var(--ink);font-size:clamp(32px,4.8vw,64px)}.video-card{padding:26px}.video-card .video-player{border-radius:8px}.video-actions .btn{overflow-wrap:normal}
 @media(max-width:600px){.video-page h1,.oral-head h1,.lid-head h1{font-size:34px}.video-card{padding:16px}.video-actions .btn{font-size:15px;padding:12px}}
+
+/* B1/B2 grammar: example + one-line rule, long text folded (2026-11-11) */
+.pl-grammar-kurz .pl-g-ex{margin:.35em 0;font-size:1.08rem;line-height:1.7}
+.pl-grammar-kurz .pl-g-ex mark{background:#fff3b0;padding:1px 5px;border-radius:5px;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.pl-grammar-kurz .pl-g-rule{margin:.2em 0 .3em;font-weight:700}
+.pl-g-more{margin:.2em 0 0}
+.pl-g-more>summary{cursor:pointer;display:inline-flex;align-items:center;min-height:44px;color:#2341B5;font-weight:700;font-size:.95rem}
+.pl-g-more>p{margin:.2em 0 .6em;color:#4a5573}
