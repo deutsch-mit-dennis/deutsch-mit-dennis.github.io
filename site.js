@@ -1207,14 +1207,13 @@
           <h1>Hallo, ich bin Dennis.</h1>
           <p class="dm-lead">Seit Oktober 2017 bringe ich Menschen Deutsch bei – vom ersten Satz bis zur Hochschulprüfung. Und ich bin zugelassener Prüfer.</p>
           <p>In ${teachYears()} Jahren Unterricht habe ich <b>Deutsch als Fremdsprache von A1 bis B2</b> unterrichtet, <b>Integrationskurse</b> geleitet und Lernende auf die <b>DSH</b> und den <b>TestDaF</b> vorbereitet – also auf die Sprachprüfungen für das Studium in Deutschland.</p>
-          <p>Ich habe einen Master in Germanistik. Ich bin <b>lizenzierter Prüfer für den DTZ</b> (Deutsch-Test für Zuwanderer), <b>telc-Prüfer für Deutsch B1–B2</b> und <b>Prüfender für den Deutsch-Test für den Beruf B2–C1</b>. Das Bundesamt für Migration und Flüchtlinge (BAMF) hat mich als <b>Lehrkraft für Integrationskurse</b> und für <b>Berufssprachkurse bis zum Niveau C2</b> zugelassen.</p>
+          <p>Ich habe einen Master in Germanistik. Ich bin <b>lizenzierter Prüfer für den DTZ</b> (Deutsch-Test für Zuwanderer) und <b>telc-Prüfer für Deutsch B1–B2</b>. Das Bundesamt für Migration und Flüchtlinge (BAMF) hat mich als <b>Lehrkraft für Integrationskurse</b> und für <b>Berufssprachkurse bis zum Niveau C2</b> zugelassen.</p>
           <p>Ich kenne die Prüfungen also von beiden Seiten: aus dem Unterricht und als Prüfer. Deshalb weiß ich genau, worauf es ankommt – und wo die größten Stolpersteine liegen.</p>
           <p>Auf dieser Seite findest du, was sich in meinem Unterricht bewährt hat: Lektionen, Übungen zum Sprechen und Schreiben, Prüfungstraining und meine Erklärvideos. Alle Übungen sind kostenlos und ohne Anmeldung.</p>
           <ul class="dm-facts">
             <li><b>seit 2017</b><span>im Unterricht</span></li>
             <li><b>DTZ</b><span>Prüferlizenz g.a.s.t.</span></li>
             <li><b>B1–B2</b><span>telc-Prüferlizenz</span></li>
-            <li><b>B2–C1</b><span>DTB-Prüfendenlizenz</span></li>
             <li><b>bis C2</b><span>BAMF-Zulassung als Lehrkraft</span></li>
           </ul>
           <h2>Meine Erfahrung im Unterricht</h2>

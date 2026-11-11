@@ -918,7 +918,7 @@ DM.packages = [
 DM.teacher.music = 'https://www.youtube.com/@PrudnikauMusic';
 DM.credentials = [
   { id: 'dtz-pruefer', icon: '🎙', kind: 'Prüferlizenz', title: 'DTZ-Prüfer', org: 'g.a.s.t. · Deutsch-Test für Zuwanderer', desc: 'Lizenz zur Abnahme und Bewertung der mündlichen DTZ-Prüfung (A2/B1).' },
-  { id: 'telc-pruefer', icon: '📝', kind: 'Prüferlizenzen', title: 'telc Deutsch B1–B2 und DTB B2–C1', org: 'telc gGmbH', desc: 'Prüferlizenz Deutsch B1–B2 und Prüfendenlizenz Deutsch-Test für den Beruf B2–C1.' },
+  { id: 'telc-pruefer', icon: '📝', kind: 'Prüferlizenzen', title: 'telc Deutsch B1–B2', org: 'telc gGmbH', desc: 'Prüferlizenz telc Deutsch B1–B2.' },
   { id: 'bamf-integrationskurs', icon: '🏛', kind: 'Zulassung BAMF', title: 'Lehrkraft in Integrationskursen', org: 'Bundesamt für Migration und Flüchtlinge', desc: 'Zulassung zur Lehrtätigkeit in Integrationskursen nach § 15 IntV.' },
   { id: 'bamf-berufssprachkurs', icon: '💼', kind: 'Zulassung BAMF', title: 'Berufssprachkurse bis C2', org: 'Bundesamt für Migration und Flüchtlinge', desc: 'Erweiterung der Zulassung auf Berufssprachkurse (DeuFöV) bis Sprachniveau C2.' },
   { id: 'master-germanistik', icon: '🎓', kind: 'Studium', title: 'Master of Arts Germanistik', org: 'Ruhr-Universität Bochum', desc: 'Masterarbeit über linguistische Aspekte des deutsch-russischen Sprachkontakts.' },
