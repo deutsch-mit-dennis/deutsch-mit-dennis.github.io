@@ -1,7 +1,9 @@
+// Second check (consistency, level, language): 2026-11-11.
 /* Graded sample answers ("Bewertete Musterantworten") for all free-writing tasks.
    Lazy-loaded for routes "simulation" and "ueben" (see lazy.js).
 
-   STATUS: DRAFTS. Every task carries review: true – the owner (licensed examiner) must read
+   STATUS: DRAFTS, second check done. Every task carries review: false (= second check done on
+   2026-11-11; review: true would mean "not re-checked yet") – the owner (licensed examiner) must read
    and correct texts and comments before they count as final. They are own examples in the
    style of the exams, NOT official assessments.
 
@@ -22,7 +24,7 @@
 (() => {
   const T = {};
   const add = (key, ex, target, lp, s) => {
-    T[key] = { ex, target, lp, s, review: true };
+    T[key] = { ex, target, lp, s, review: false };
   };
   const FIX = {
     dtz: "So wird daraus B1:",
@@ -42,14 +44,14 @@
       "Kriterien im DTB: inhaltliche Angemessenheit, sprachliche Angemessenheit.",
     "dtb-b2":
       "Kriterien im DTB: inhaltliche Angemessenheit, sprachliche Angemessenheit.",
-    ueben: "Ich schaue auf drei Dinge: Inhalt, Aufbau, Sprache.",
+    ueben: "Ich schaue auf Inhalt und Sprache, bei Briefen und E-Mails auch auf den Aufbau (Anrede, Gruß, Reihenfolge).",
   };
 
   /* ================= DTZ ================= */
   const DTZ = ["unter A2", "A2", "B1"];
 
   add(
-    "dtz/2.0/0",
+    "dtz-2/2.0/0",
     "dtz",
     80,
     [
@@ -89,9 +91,9 @@
         DTZ[1],
         `Sehr geehrte Damen und Herren,\n\nich schreibe Ihnen, weil der Aufzug ist kaputt seit eine Woche. Ich wohne im 5. Stock und ich habe ein kleines Kind. Ich muss jeden Tag den Kinderwagen tragen. Das ist sehr schwer für mich.\nBitte reparieren Sie den Aufzug. Wann kommt der Techniker?\n\nMit freundlichen Grüße\nSamira Haddad`,
         [
-          "Aufgabenbewältigung: Alle vier Punkte sind da. Die Bitte und die Frage sind aber nur ein kurzer Satz.",
-          "Kommunikative Gestaltung: Anrede und Gruß passen. Es gibt aber fast nur „und“. Der Betreff fehlt.",
-          "Korrektheit: Nach „weil“ steht das Verb nicht am Ende. „seit eine Woche“ braucht Dativ.",
+          "Aufgabenbewältigung: Alle vier Punkte sind da. Die Bitte und die Frage sind aber nur je ein kurzer Satz.",
+          "Kommunikative Gestaltung: Anrede und Gruß passen. Die Sätze sind nur mit „weil“ und „und“ verbunden. Der Betreff fehlt.",
+          "Korrektheit: Nach „weil“ steht das Verb nicht am Ende. „seit eine Woche“ braucht Dativ. Im Gruß fehlt ein „n“ („Grüßen“).",
           "Wortschatz: reicht für die Situation, ist aber einfach.",
         ],
         [
@@ -120,7 +122,7 @@
   );
 
   add(
-    "dtz/2.0/1",
+    "dtz-2/2.0/1",
     "dtz",
     80,
     [
@@ -140,7 +142,7 @@
         DTZ[0],
         `Hallo Julia\nDanke für Einladung. Ich komme nicht. Ich habe Arbeit Samstag. Wir treffen andere Tag? Was du möchtest Geschenk?\nTschüss`,
         [
-          "Aufgabenbewältigung: Zu allen Punkten steht ein Wort oder ein kurzer Satz. Das ist mehr als nichts.",
+          "Aufgabenbewältigung: Zu allen Punkten steht ein Wort oder ein kurzer Satz. Das ist ein Anfang, aber noch viel zu kurz.",
           "Kommunikative Gestaltung: Man versteht die Idee. Es gibt aber keine Verbindung zwischen den Sätzen und keinen Namen am Ende.",
           "Korrektheit: Wortstellung in Fragen ist falsch. Artikel und Präpositionen fehlen fast immer.",
           "Wortschatz: sehr wenig. Für eine Absage fehlen „leider“ und „weil“.",
@@ -185,7 +187,7 @@
   );
 
   add(
-    "dtz-2/2.0/0",
+    "dtz-3/2.0/0",
     "dtz",
     80,
     [
@@ -217,7 +219,7 @@
           "Wortschatz: nur Grundwörter.",
         ],
         [
-          ["Mein Kind krank.", "Mein Kind ist heute Morgen krank geworden."],
+          ["mein Kind krank.", "Mein Kind ist heute Morgen krank geworden."],
           [
             "Ich komme heute nicht Arbeit.",
             "Deshalb kann ich heute nicht zur Arbeit kommen.",
@@ -259,7 +261,7 @@
   );
 
   add(
-    "dtz-2/2.0/1",
+    "dtz-3/2.0/1",
     "dtz",
     80,
     [
@@ -330,7 +332,7 @@
   );
 
   add(
-    "dtz-3/2.0/0",
+    "dtz/2.0/0",
     "dtz",
     80,
     [
@@ -343,7 +345,7 @@
         "Bitte um Unterlagen und Hausaufgaben",
         "unterlagen|hausaufgabe|material|blätter|arbeitsblätter|schicken|aufgaben",
       ],
-      ["Frage nach dem nächsten Test", "test|prüfung|wann"],
+      ["Frage nach dem nächsten Test", "test|prüfung|klausur"],
     ],
     [
       [
@@ -352,7 +354,7 @@
         [
           "Aufgabenbewältigung: Alle vier Punkte haben je ein paar Wörter. Das ist sehr knapp, aber vorhanden.",
           "Kommunikative Gestaltung: wie eine SMS. Es fehlen ganze Sätze und ein Gruß.",
-          "Korrektheit: Fragen und Bitten haben kein Verb an der richtigen Stelle („Wann Test?“).",
+          "Korrektheit: In der Frage fehlt das Verb („Wann Test?“). In der Bitte fehlt „Sie“ („Bitte Hausaufgabe geben“).",
           "Wortschatz: sehr wenig.",
         ],
         [
@@ -398,7 +400,7 @@
   );
 
   add(
-    "dtz-3/2.0/1",
+    "dtz/2.0/1",
     "dtz",
     80,
     [
@@ -416,7 +418,7 @@
       ],
       [
         "Wann ein Handwerker kommen kann",
-        "zu hause|ab |uhr|vormittag|nachmittag|montag|dienstag|mittwoch|donnerstag|freitag|termin",
+        "zu hause|uhr|vormittag|nachmittag|montag|dienstag|mittwoch|donnerstag|freitag|termin",
       ],
     ],
     [
@@ -431,7 +433,7 @@
         ],
         [
           [
-            "Die Heizung ist kaputt in Kinderzimmer.",
+            "die Heizung ist kaputt in Kinderzimmer.",
             "Die Heizung im Kinderzimmer ist kaputt.",
           ],
           [
@@ -451,7 +453,7 @@
         ],
         [
           [
-            "Seit eine Woche die Heizung im Kinderzimmer funktioniert nicht.",
+            "seit eine Woche die Heizung im Kinderzimmer funktioniert nicht.",
             "Seit einer Woche funktioniert die Heizung im Kinderzimmer nicht.",
           ],
           [
@@ -502,7 +504,7 @@ add(
       `Hallo Clara,\n\ndanke für E-Mail. Du heiratest, das ist super! Ich kann nicht kommen zu Hochzeit. Ich habe Arbeit am 13 Juni. Schade.\nWas möchtest du Geschenk?\n\nTschüss\nDaria`,
       [
         "Leitpunkte: Drei Punkte sind sehr kurz da. Der Vorschlag für ein anderes Treffen fehlt ganz.",
-        "Kommunikative Gestaltung: Der Text ist viel zu kurz (etwa 35 Wörter). Die Sätze stehen ohne Verbindung nebeneinander.",
+        "Kommunikative Gestaltung: Der Text ist viel zu kurz (etwa 30 Wörter). Die Sätze stehen ohne Verbindung nebeneinander.",
         "Formale Richtigkeit: Artikel und Präpositionen fehlen oft. Die Wortstellung stimmt mehrmals nicht.",
       ],
       [
@@ -534,11 +536,11 @@ add(
     ],
     [
       PASS[2],
-      `Liebe Clara,\n\nvielen Dank für deine E-Mail – was für eine schöne Nachricht! Ich gratuliere dir und Tobias ganz herzlich und freue mich sehr für euch.\nLeider kann ich am 13. Juni nicht nach Lübeck kommen. Genau an diesem Wochenende hat meine Schwester ihre Abschlussfeier in München, und ich habe ihr schon vor Monaten versprochen, dass ich dabei bin. Es tut mir wirklich leid, denn ich wäre sehr gern gekommen.\nIch würde euch aber gern bald besuchen. Wie wäre es mit einem Wochenende im Juli? Dann könnt ihr mir die Fotos zeigen und alles erzählen.\nNoch eine Frage: Habt ihr einen Wunsch für ein Geschenk? Oder gibt es vielleicht eine Liste?\n\nIch wünsche euch eine wunderschöne Feier!\n\nLiebe Grüße\nDaria`,
+      `Liebe Clara,\n\nvielen Dank für deine E-Mail – was für eine schöne Nachricht! Ich gratuliere dir und Tobias ganz herzlich und freue mich sehr für euch.\nLeider kann ich am 13. Juni nicht nach Lübeck kommen. Genau an diesem Wochenende hat meine Schwester ihre Abschlussfeier in München, und ich habe ihr schon vor Monaten versprochen, dass ich dabei bin. Es tut mir wirklich leid, denn ich wäre sehr gern gekommen.\nIch würde euch aber gern bald besuchen. Wie wäre es mit einem Wochenende im Juli? Dann könnt ihr mir die Fotos zeigen und alles erzählen.\nNoch eine Frage: Habt ihr einen Geschenkwunsch? Oder gibt es vielleicht eine Liste?\n\nIch wünsche euch eine wunderschöne Feier!\n\nLiebe Grüße\nDaria`,
       [
         "Leitpunkte: Alle vier Punkte sind ausführlich und persönlich bearbeitet.",
         "Kommunikative Gestaltung: sehr guter Aufbau, natürliche Übergänge, passender Ton für eine Freundin.",
-        "Formale Richtigkeit: fast fehlerfrei. Nebensätze und Konjunktiv II („wäre gekommen“, „würde“) sind sicher.",
+        "Formale Richtigkeit: sicher und ohne Fehler. Nebensätze und Konjunktiv II („wäre … gekommen“, „würde“) stimmen.",
       ],
       [],
     ],
@@ -652,7 +654,7 @@ add(
       ],
       [
         [
-          "Du hast Arbeit gefunden, gut.",
+          "du hast Arbeit gefunden, gut.",
           "Herzlichen Glückwunsch zu deiner neuen Stelle!",
         ],
         [
@@ -667,7 +669,7 @@ add(
       [
         "Leitpunkte: Alle vier Punkte sind bearbeitet, mit konkreten Angaben.",
         "Kommunikative Gestaltung: passende Anrede, Einleitung und Gruß. Der Text hat eine klare Reihenfolge.",
-        "Formale Richtigkeit: Verb im Nebensatz steht falsch („weil mein Sofa ist“, „wenn ich habe“), Dativ nach „mit“ fehlt.",
+        "Formale Richtigkeit: Das Verb steht mehrmals falsch („Natürlich ich helfe“, „weil mein Sofa ist“, „wenn ich habe“). Der Dativ nach „mit“ fehlt („mit mein Auto“).",
       ],
       [
         [
@@ -769,7 +771,7 @@ add(
   [
     [
       "Termine und Ort der Präsenztage",
-      "präsenz|termin|ort|wo|wann|düsseldorf|wochenende|samstag",
+      "präsenz|termin|an welchen tagen|an welchem ort|stattfinden|wann|düsseldorf|wochenende|samstag",
     ],
     [
       "Voraussetzungen für die Teilnahme",
@@ -777,11 +779,11 @@ add(
     ],
     [
       "Kosten und Fördermöglichkeiten",
-      "kosten|gebühr|preis|förder|bildungsgutschein|arbeitgeber|raten",
+      "kosten|kostet|gebühr|preis|förder|bildungsgutschein|raten|finanz",
     ],
     [
       "Anerkennung des Zertifikats",
-      "anerkannt|anerkennung|zertifikat|ihk|arbeitgeber akzept",
+      "anerkannt|anerkennung|anerkennen|ihk|akzeptier",
     ],
   ],
   [
@@ -789,8 +791,8 @@ add(
       PASS[0],
       `Guten Tag,\n\nich habe Ihre Anzeige gelesen. Ich interessiere mich für den Kurs Projektmanagement. Ich arbeite in einer Firma und mein Chef sagt, ich soll Projekte machen.\nWann sind die Präsenztage und wo? Ich arbeite von Montag bis Freitag. Was kostet der Kurs? Ist er teuer? Ich habe nicht viel Geld.\nBekomme ich ein Zertifikat?\nBitte schreiben Sie mir.\n\nMit freundlichen Grüßen\nAndrei Popescu`,
       [
-        "Inhalt: Drei Punkte werden gefragt, aber jeweils nur mit einer kurzen Frage. Es gibt keine Erklärung, warum die Information wichtig ist.",
-        "Kommunikative Gestaltung: etwa 70 Wörter – weniger als die Hälfte. Kein Betreff, einfache Sätze wie auf A2/B1, kein formeller Stil.",
+        "Inhalt: Termine und Kosten werden gefragt, aber nur mit kurzen Fragen. „Bekomme ich ein Zertifikat?“ passt nicht zum Punkt „Anerkennung“ – dass es ein Zertifikat gibt, steht schon in der Anzeige. Es wird kaum erklärt, warum die Informationen wichtig sind.",
+        "Kommunikative Gestaltung: etwa 65 Wörter – weniger als die Hälfte. Kein Betreff, einfache Sätze wie auf A2/B1, kein formeller Stil.",
         "Formale Richtigkeit: wenige Fehler, aber nur weil die Sätze sehr einfach sind. Nebensätze, Konjunktiv II und Passiv fehlen.",
       ],
       [
@@ -809,7 +811,7 @@ add(
       `Betreff: Lehrgang „Projektmanagement kompakt“\n\nSehr geehrte Damen und Herren,\n\nich habe Ihre Anzeige in einer Fachzeitschrift gelesen und interessiere mich für den Lehrgang. Ich arbeite seit drei Jahren in einem Logistikunternehmen und soll bald mehr Verantwortung für Projekte übernehmen. Deshalb ich möchte mich weiterbilden.\nZuerst möchte ich wissen, wann und wo die Präsenztage stattfinden. Ich arbeite in Schichten, deshalb ist das für mich wichtig zu planen.\nAußerdem habe ich eine Frage zu den Kosten. Wie viel kostet der Lehrgang und gibt es eine Förderung? Vielleicht mein Arbeitgeber kann einen Teil bezahlen.\nIch möchte auch wissen, ob das Zertifikat ist anerkannt bei anderen Firmen.\n\nIch freue mich auf Ihre Antwort.\n\nMit freundlichen Grüßen\nAndrei Popescu`,
       [
         "Inhalt: Drei Leitpunkte sind bearbeitet und kurz begründet. Das reicht für die Aufgabe.",
-        "Kommunikative Gestaltung: Betreff, Einleitung, Gliederung und Schluss sind da. Der Wortschatz bleibt einfach („möchte wissen“ dreimal). Mit etwa 125 Wörtern ist der Text zu kurz.",
+        "Kommunikative Gestaltung: Betreff, Einleitung, Gliederung und Schluss sind da. Der Wortschatz bleibt einfach („möchte … wissen“ zweimal). Mit etwa 115 Wörtern ist der Text zu kurz (Ziel: mindestens 150).",
         "Formale Richtigkeit: mehrere Fehler bei der Verbposition („Deshalb ich möchte“, „ob das Zertifikat ist anerkannt“). Sie stören das Lesen etwas.",
       ],
       [
@@ -864,12 +866,12 @@ add(
       `Sehr geehrte Damen und Herren,\n\nich war mit Ihre Firma in Prag. Die Reise war sehr schlecht! Das Hotel war nicht im Zentrum und es war schmutzig. Wir haben keine Bootsfahrt gemacht. Der Bus war auch alt.\nIch bin sehr böse. Ich habe 549 Euro bezahlt und das ist viel Geld für mich. Ich will mein Geld zurück. Wenn nicht, ich gehe zu Anwalt.\n\nMit freundlichen Grüßen\nNadia Rahimi`,
       [
         "Inhalt: Die Probleme werden genannt, aber nicht erklärt. Welche Folgen es gab, fehlt. Die Forderung ist unklar (alles Geld?).",
-        "Kommunikative Gestaltung: etwa 65 Wörter statt 150. Der Ton ist emotional („sehr böse“, Ausrufezeichen) statt sachlich. Betreff und Gliederung fehlen.",
+        "Kommunikative Gestaltung: etwa 70 Wörter statt 150. Der Ton ist emotional („sehr böse“, Ausrufezeichen) statt sachlich. Betreff und Gliederung fehlen.",
         "Formale Richtigkeit: Fehler bei Endungen („mit Ihre Firma“) und im Bedingungssatz („Wenn nicht, ich gehe“).",
       ],
       [
         [
-          "Ich bin sehr böse. Ich will mein Geld zurück.",
+          "Ich bin sehr böse. … Ich will mein Geld zurück.",
           "Ich bin von dieser Reise sehr enttäuscht und erwarte, dass Sie mir einen Teil des Reisepreises erstatten.",
         ],
         [
@@ -883,7 +885,7 @@ add(
       `Betreff: Beschwerde über die Busreise nach Prag\n\nSehr geehrte Damen und Herren,\n\nich habe bei Ihnen eine fünftägige Busreise nach Prag gebucht und 549 Euro bezahlt. Leider war die Reise nicht so, wie im Katalog beschrieben ist.\nIm Katalog steht, dass das Hotel im Stadtzentrum liegt. Aber das Hotel war 40 Minuten vom Zentrum und wir mussten jeden Tag mit der Straßenbahn fahren. Außerdem die Bootsfahrt auf der Moldau hat nicht stattgefunden, weil der Reiseleiter hat gesagt, es gibt keine Plätze mehr.\nDas war für uns sehr ärgerlich. Wir haben viel Zeit verloren und wir mussten die Fahrkarten selbst bezahlen.\nIch erwarte von Ihnen, dass Sie mir einen Teil von dem Geld zurückgeben. Ich warte auf Ihre Antwort bis Ende des Monats.\n\nMit freundlichen Grüßen\nNadia Rahimi`,
       [
         "Inhalt: Alle vier Leitpunkte sind bearbeitet und mit Beispielen erklärt.",
-        "Kommunikative Gestaltung: Betreff, Einleitung und klare Reihenfolge. Der Ton ist sachlich. Die Verbindungen bleiben einfach (aber, außerdem, weil), der Text ist etwas kurz.",
+        "Kommunikative Gestaltung: Betreff, Einleitung und klare Reihenfolge. Der Ton ist sachlich. Die Verbindungen bleiben einfach (aber, außerdem, weil), und der Text ist mit etwa 125 Wörtern zu kurz (Ziel: mindestens 150).",
         "Formale Richtigkeit: Fehler bei der Verbposition nach „außerdem“ und „weil“. Für B2 sind das zu viele Grundfehler – deshalb nur knapp.",
       ],
       [
@@ -938,7 +940,7 @@ add(
       `Hallo,\n\nich habe die Reise nach Wien gebucht für 790 Euro. Das war nicht gut. Das Hotel war weit weg vom Zentrum und mein Zimmer war nicht sauber. Der Reiseleiter hat nicht gut Deutsch gesprochen. Schloss Schönbrunn mussten wir bezahlen, das war nicht richtig.\nBitte geben Sie mir Geld zurück.\n\nGrüße\nOleksandr Kovalenko`,
       [
         "Inhalt: Zwei Punkte sind genannt, die Forderung ist sehr allgemein. Was passiert, wenn keine Antwort kommt, fehlt.",
-        "Kommunikative Gestaltung: „Hallo“ und „Grüße“ passen nicht zu einer formellen Beschwerde. Etwa 60 Wörter, keine Absätze, einfache Hauptsätze.",
+        "Kommunikative Gestaltung: „Hallo“ und „Grüße“ passen nicht zu einer formellen Beschwerde. Etwa 55 Wörter, keine Absätze, einfache Hauptsätze.",
         "Formale Richtigkeit: wenige Fehler, aber das Niveau der Sätze ist B1, nicht B2.",
       ],
       [
@@ -957,7 +959,7 @@ add(
       `Betreff: Beschwerde Reise nach Wien\n\nSehr geehrte Damen und Herren,\n\nich habe bei Ihnen im Internet die Busreise „Wien entdecken“ gebucht. Ich bin mit der Reise sehr unzufrieden, weil viele Sachen waren anders als in der Beschreibung.\nErstens das Hotel war nicht im Zentrum. Wir haben am Stadtrand gewohnt und die Zimmer waren alt und nicht sauber. Zweitens gab es nicht jeden Tag eine Stadtführung, sondern nur zwei Mal. Der Reiseleiter konnte nur wenig Deutsch, deshalb wir haben fast nichts verstanden. Den Eintritt für Schloss Schönbrunn mussten wir selbst bezahlen.\nIch finde, das ist nicht in Ordnung. Ich möchte 300 Euro zurückbekommen.\nWenn Sie mir nicht antworten, ich werde eine schlechte Bewertung im Internet schreiben.\n\nMit freundlichen Grüßen\nOleksandr Kovalenko`,
       [
         "Inhalt: Alle vier Punkte sind bearbeitet, mit konkreten Beispielen und einer genauen Forderung.",
-        "Kommunikative Gestaltung: Betreff, Gliederung mit „erstens/zweitens“, sachlicher Ton. Etwas kurz, Wortschatz eher einfach („viele Sachen“, „nicht in Ordnung“).",
+        "Kommunikative Gestaltung: Betreff, Gliederung mit „erstens/zweitens“, sachlicher Ton. Mit etwa 120 Wörtern zu kurz (Ziel: mindestens 150), Wortschatz eher einfach („viele Sachen“, „nicht in Ordnung“).",
         "Formale Richtigkeit: wiederholt falsche Verbposition („weil viele Sachen waren“, „deshalb wir haben“, „Wenn …, ich werde“).",
       ],
       [
@@ -1031,7 +1033,7 @@ add(
       `Betreff: Ihre Anzeige Mehrgenerationenhaus\n\nSehr geehrte Damen und Herren,\n\nich habe in der Zeitung Ihre Anzeige gelesen und ich interessiere mich für eine Wohnung in Ihrem Haus. Ich wohne mit meinem Mann und zwei Kindern in einer kleinen Wohnung. Unsere Eltern leben im Ausland, deshalb unsere Kinder haben hier keine Großeltern. Ich finde die Idee schön, dass junge und alte Menschen wohnen zusammen.\nIch habe einige Fragen. Wie groß ist eine Wohnung mit vier Zimmern und wie hoch ist die Miete? Sind die Nebenkosten dabei?\nIch möchte auch wissen, ob die Bewohner müssen bestimmte Aufgaben machen, zum Beispiel im Garten.\nKönnen wir die Wohnung besichtigen? Wir haben am Wochenende Zeit.\n\nMit freundlichen Grüßen\nHalima Yusuf`,
       [
         "Inhalt: Alle vier Punkte sind bearbeitet, der Grund ist persönlich und überzeugend.",
-        "Kommunikative Gestaltung: Betreff, Einleitung und sinnvolle Reihenfolge. Der Stil ist höflich, aber einfach, und der Schluss ist kurz.",
+        "Kommunikative Gestaltung: Betreff, Einleitung und sinnvolle Reihenfolge. Der Stil ist höflich, aber einfach. Ein Schlusssatz fehlt, und der Text ist mit etwa 115 Wörtern zu kurz (Ziel: mindestens 150).",
         "Formale Richtigkeit: Verb im Nebensatz steht mehrmals falsch („dass … wohnen zusammen“, „ob die Bewohner müssen“).",
       ],
       [
@@ -1040,8 +1042,8 @@ add(
           "…, dass junge und alte Menschen unter einem Dach zusammenleben.",
         ],
         [
-          "…, ob die Bewohner müssen bestimmte Aufgaben machen.",
-          "…, ob die Bewohnerinnen und Bewohner bestimmte Aufgaben übernehmen müssen.",
+          "…, ob die Bewohner müssen bestimmte Aufgaben machen, …",
+          "…, ob die Bewohnerinnen und Bewohner bestimmte Aufgaben übernehmen müssen, …",
         ],
       ],
     ],
@@ -1083,7 +1085,7 @@ add(
   [
     [
       "sich entschuldigen und den Grund nennen",
-      "entschuldig|leid|krank|vertretung|neu",
+      "entschuldig|leid|krank|vertretung",
     ],
     [
       "kostenlose Zusatzreinigung anbieten (Donnerstag, 18 Uhr)",
@@ -1130,8 +1132,8 @@ add(
           "Im Dezember haben wir leider kein Personal, aber ab Januar ist es möglich.",
         ],
         [
-          "Wenn Sie Fragen haben, Sie können Frau Weber anrufen.",
-          "Wenn Sie Fragen haben, können Sie Frau Weber gern anrufen.",
+          "Wenn Sie Fragen haben, Sie können Frau Weber anrufen: …",
+          "Wenn Sie Fragen haben, können Sie Frau Weber gern anrufen: …",
         ],
       ],
     ],
@@ -1206,7 +1208,7 @@ add("dtb-b1/4.1/0", "dtb-b1", 40, LP_CHAT, [
     PASS[0],
     `Hallo. Ich finde nicht gut. Ich will mit alle arbeiten.`,
     [
-      "Inhaltliche Angemessenheit: Eine Meinung ist da. Begründung und eigener Vorschlag fehlen.",
+      "Inhaltliche Angemessenheit: Eine Meinung ist da, der Grund ist nur angedeutet („mit alle arbeiten“). Ein eigener Vorschlag fehlt.",
       "Sprachliche Angemessenheit: 10 Wörter statt 40. Dem ersten Satz fehlt das Objekt („das“).",
     ],
     [
@@ -1226,8 +1228,8 @@ add("dtb-b1/4.1/0", "dtb-b1", 40, LP_CHAT, [
     ],
     [
       [
-        "Wenn ich immer im Versand arbeite, ich kenne die Arbeit besser.",
-        "Wenn ich immer im Versand arbeite, kenne ich die Arbeit besser.",
+        "Wenn ich immer im Versand arbeite, ich kenne die Arbeit besser …",
+        "Wenn ich immer im Versand arbeite, kenne ich die Arbeit besser …",
       ],
       ["…, wenn mein Partner ist krank.", "…, wenn mein Partner krank ist."],
     ],
@@ -1390,8 +1392,8 @@ add("dtb-b1-2/4.1/0", "dtb-b1", 40, LP_CHAT, [
     ],
     [
       [
-        "Am Montag Mittag viele Leute aus den Büros suchen ein Restaurant.",
-        "Am Montagmittag suchen viele Leute aus den Büros ein Restaurant.",
+        "Am Montag Mittag viele Leute aus den Büros suchen ein Restaurant, …",
+        "Am Montagmittag suchen viele Leute aus den Büros ein Restaurant, …",
       ],
       [
         "… und dann wir sehen.",
@@ -1571,7 +1573,7 @@ add("dtb-b1-3/4.1/0", "dtb-b1", 40, LP_CHAT, [
     `Hallo Daria,\nfür mich wäre der Beginn um 5 Uhr schwierig, weil mein erster Bus erst um 5:10 Uhr fährt. Den früheren Feierabend finde ich aber gut, vor allem im Sommer. Ich schlage deshalb vor, dass wir um 5:30 Uhr anfangen oder dass jeder zwischen zwei Startzeiten wählen kann.\nViele Grüße\nPiotr`,
     [
       "Inhaltliche Angemessenheit: klare Meinung, guter Grund, fairer Vorschlag.",
-      "Sprachliche Angemessenheit: sachlich und höflich („wäre schwierig“), gut verbunden.",
+      "Sprachliche Angemessenheit: sachlich und höflich („wäre … schwierig“), gut verbunden.",
     ],
     [],
   ],
@@ -1579,7 +1581,7 @@ add("dtb-b1-3/4.1/0", "dtb-b1", 40, LP_CHAT, [
 
 /* ================= DTB B2 ================= */
 const LP_NOTE = (a, b, c, d, e2) => [
-  ["Anrufer/in und Firma", a],
+  ["Anrufer/in und Firma oder Einrichtung", a],
   ["Rückrufnummer", b],
   ["Anliegen", c],
   ["Details", d],
@@ -1623,7 +1625,7 @@ add(
       "Erklärung zu den vegetarischen Portionen und neue Kontrolle",
       "vegetarisch|küche|übertragen|kontroll",
     ],
-    ["Angebot: 25 % Nachlass, neue Rechnung", "25|nachlass|rabatt|rechnung"],
+    ["Angebot: 25 % Nachlass, neue Rechnung", "25 %|25%|25 prozent|nachlass|rabatt|rechnung"],
     [
       "kostenloses Dessertbuffet bei der Weihnachtsfeier",
       "dessert|weihnachtsfeier|kostenlos",
@@ -1638,7 +1640,7 @@ add(
       PASS[0],
       `Sehr geehrte Frau Hoffmann,\n\nentschuldigung für das Problem. Unser Auto war kaputt, deshalb der Fahrer ist spät gekommen. Er hat Ärger bekommen. Die Küche hat einen Fehler gemacht mit vegetarisch.\nSie bekommen 25 % Rabatt.\n\nMit freundlichen Grüßen\nTafelwerk Catering`,
       [
-        "Inhaltliche Angemessenheit: Nur drei von sechs Punkten. Es fehlen die neue Rechnung, das Dessertbuffet und der Anruf von Frau Engel. Schwerer Fehler: Über Konsequenzen für den Fahrer sollte nichts geschrieben werden.",
+        "Inhaltliche Angemessenheit: Nur etwa die Hälfte der sechs Punkte ist da. Es fehlen die neue Rechnung, das Dessertbuffet und der Anruf von Frau Engel. Schwerer Fehler: Über Konsequenzen für den Fahrer sollte nichts geschrieben werden.",
         "Sprachliche Angemessenheit: etwa 40 Wörter statt 100. Einfache Sätze, „Ärger bekommen“ ist zu umgangssprachlich für eine Kundin.",
       ],
       [
@@ -1665,7 +1667,7 @@ add(
           "Dass unser Fahrer Sie nicht vorher informiert hat, hätte nicht passieren dürfen.",
         ],
         [
-          "Frau Engel kann Sie auch anrufen.",
+          "Frau Engel kann Sie auch anrufen: …",
           "Wenn Sie es wünschen, ruft Frau Engel Sie gern persönlich an. Ihre Durchwahl ist 0251/48 39 27-12.",
         ],
       ],
@@ -1748,7 +1750,7 @@ add(
       `Hallo,\nich finde die Vier-Tage-Woche gut. Man hat drei Tage frei, das ist schön für die Familie. Aber zehn Stunden arbeiten ist lang. Ich bin dann müde. Mein Freund arbeitet so und er findet es gut. Ich denke, wir sollen das probieren.\nViele Grüße\nAhmed`,
       [
         "Inhaltliche Angemessenheit: Meinung, ein Vorteil und ein Nachteil sind genannt. Das Beispiel bleibt ohne Inhalt, ein eigener Vorschlag für den Test fehlt.",
-        "Sprachliche Angemessenheit: etwa 50 Wörter statt 150. Kurze Hauptsätze, kaum Verbindungen – das ist B1, nicht B2.",
+        "Sprachliche Angemessenheit: etwa 45 Wörter statt 150. Kurze Hauptsätze, kaum Verbindungen – das ist B1, nicht B2.",
       ],
       [
         [
@@ -1766,7 +1768,7 @@ add(
       `Liebe Kolleginnen und Kollegen,\n\nich möchte meine Meinung zur Vier-Tage-Woche schreiben. Ich finde die Idee interessant, aber ich habe auch Zweifel.\nEin Vorteil ist, dass man einen Tag mehr frei hat. Man kann Termine beim Arzt oder beim Amt machen und muss keinen Urlaub nehmen. Auch man spart einmal pro Woche den Weg zur Arbeit.\nEin Nachteil ist, dass die Tage sehr lang sind. In meiner Abteilung wir haben schon jetzt viel Stress am Nachmittag. Wenn wir zehn Stunden arbeiten, wir machen bestimmt mehr Fehler. Für Eltern ist es auch schwierig, weil die Kita um 16:30 Uhr schließt.\nMein Vorschlag ist, dass jeder kann selbst entscheiden, ob er vier oder fünf Tage arbeitet.\n\nViele Grüße\nAhmed Saleh, Versand`,
       [
         "Inhaltliche Angemessenheit: Meinung, Vor- und Nachteile, ein Beispiel aus der Abteilung und ein Vorschlag – alle Punkte sind da.",
-        "Sprachliche Angemessenheit: gut gegliedert, passender Ton fürs Forum. Etwas kurz (etwa 125 Wörter) und mit wiederholten Fehlern bei der Verbposition („Auch man spart“, „Wenn …, wir machen“, „dass jeder kann“).",
+        "Sprachliche Angemessenheit: gut gegliedert, passender Ton fürs Forum. Zu kurz (etwa 120 statt mindestens 150 Wörter) und mit wiederholten Fehlern bei der Verbposition („Auch man spart“, „Wenn …, wir machen“, „dass jeder kann“).",
       ],
       [
         [
@@ -1804,7 +1806,7 @@ add(
       `Hallo,\nich finde, nach Feierabend ich will meine Ruhe. Ich habe Familie. Wenn der Chef anruft am Abend, ist das Stress. Aber manchmal ist es wichtig. Dann ist es ok. Wir brauchen Regeln.\nGruß\nIrina`,
       [
         "Inhaltliche Angemessenheit: Eine Meinung und ein Grund sind da. Beispiele fehlen, „Wir brauchen Regeln“ ist kein Vorschlag – welche Regeln?",
-        "Sprachliche Angemessenheit: etwa 40 Wörter. Sehr einfache Sätze, Wortstellungsfehler („ich finde, … ich will“).",
+        "Sprachliche Angemessenheit: etwa 35 Wörter statt 150. Sehr einfache Sätze, Wortstellungsfehler („ich finde, … ich will“).",
       ],
       [
         [
@@ -1822,7 +1824,7 @@ add(
       `Liebe Kolleginnen und Kollegen,\n\nmeiner Meinung nach sollen wir nach Feierabend nicht immer erreichbar sein. Jeder braucht Zeit für Familie und Erholung.\nSeit ich ein Diensthandy habe, ich bekomme oft am Abend Nachrichten. Letzte Woche hat mich ein Kunde am Samstag angerufen wegen einer Rechnung. Das war nicht dringend, aber ich habe trotzdem eine Stunde gearbeitet.\nNatürlich es gibt Notfälle. Wenn zum Beispiel eine Maschine steht, muss jemand erreichbar sein. Das verstehe ich.\nIch schlage vor, dass es gibt einen Bereitschaftsdienst. Eine Person ist am Wochenende erreichbar und die anderen haben frei. Diese Person bekommt dafür einen freien Tag.\n\nViele Grüße\nIrina Volkova, Buchhaltung`,
       [
         "Inhaltliche Angemessenheit: Meinung, Gegenargument, ein gutes Beispiel und ein konkreter Vorschlag sind vorhanden.",
-        "Sprachliche Angemessenheit: klarer Aufbau und passender Ton. Etwas kurz (etwa 120 Wörter); mehrere Verbfehler („Seit …, ich bekomme“, „Natürlich es gibt“, „dass es gibt“).",
+        "Sprachliche Angemessenheit: klarer Aufbau und passender Ton. Zu kurz (etwa 105 statt mindestens 150 Wörter); mehrere Verbfehler („Seit …, ich bekomme“, „Natürlich es gibt“, „dass es gibt“).",
       ],
       [
         [
@@ -1868,7 +1870,7 @@ add(
       "Angebot: Austausch am Samstag, 8 Uhr – Bitte um Bestätigung",
       "austausch|samstag|8 uhr|bestätig",
     ],
-    ["15 % Rabatt auf den Gesamtpreis", "15|rabatt|nachlass"],
+    ["15 % Rabatt auf den Gesamtpreis", "15 %|15%|15 prozent|rabatt|nachlass"],
     [
       "Kontaktmöglichkeit bei Rückfragen",
       "rückfragen|hoffmeister|0231|erreichen",
@@ -1928,7 +1930,7 @@ add(
   20,
   LP_NOTE(
     "reinhardt|kita sonnenschein",
-    "71 00|7100|0209",
+    "71 00|7100|71-00",
     "verschieb|malerarbeiten|herbstferien|notbetreuung",
     "23|dezember|januar|weihnachtsferien|lösungsmittel|pohl|hausmeister|schlüssel|71 03",
     "freitag|zurückrufen|rückruf|andere firma",
@@ -2010,7 +2012,7 @@ add(
       `Liebe Kolleginnen und Kollegen,\n\nich habe über den Plan gelesen und ich bin nicht ganz dafür.\nNatürlich hat ein Großraumbüro Vorteile. Man kann schneller mit den Kollegen sprechen und die Firma spart Platz und Geld.\nAber ich sehe auch Nachteile. In meiner alten Firma wir haben in einem Großraumbüro gearbeitet. Es war immer laut und ich konnte mich schlecht konzentrieren, besonders wenn ich habe mit Kunden telefoniert. Auch ohne festen Arbeitsplatz man muss jeden Morgen einen Platz suchen, das kostet Zeit.\nIch schlage vor, dass es genug Ruhezonen gibt und dass jede Abteilung hat einen eigenen Bereich.\n\nViele Grüße\nKemal Aydın, Einkauf`,
       [
         "Inhaltliche Angemessenheit: Meinung, Vorteile, Nachteile, eigenes Beispiel und Vorschlag sind vorhanden.",
-        "Sprachliche Angemessenheit: sinnvoller Aufbau. Etwas kurz (etwa 115 Wörter) und mit typischen Verbfehlern („In meiner alten Firma wir haben“, „wenn ich habe … telefoniert“, „dass jede Abteilung hat“).",
+        "Sprachliche Angemessenheit: sinnvoller Aufbau. Zu kurz (etwa 100 statt mindestens 150 Wörter) und mit typischen Verbfehlern („In meiner alten Firma wir haben“, „wenn ich habe … telefoniert“, „dass jede Abteilung hat“).",
       ],
       [
         [
@@ -2018,8 +2020,8 @@ add(
           "…, besonders wenn ich mit Kunden telefoniert habe.",
         ],
         [
-          "…, dass jede Abteilung hat einen eigenen Bereich.",
-          "…, dass jede Abteilung einen eigenen Bereich bekommt.",
+          "… dass jede Abteilung hat einen eigenen Bereich.",
+          "… dass jede Abteilung einen eigenen Bereich bekommt.",
         ],
       ],
     ],
@@ -2045,7 +2047,7 @@ add(
       `Hallo,\nzwei Tage ohne Fleisch ist für mich kein Problem. Gemüse ist gesund. Aber manche Kollegen wollen Fleisch essen, sie arbeiten schwer. Die Kantine soll gutes Essen machen.\nGrüße, Dana`,
       [
         "Inhaltliche Angemessenheit: Meinung und je ein Grund dafür und dagegen sind da. Ein Beispiel und ein konkreter Vorschlag fehlen.",
-        "Sprachliche Angemessenheit: etwa 35 Wörter statt 150, sehr einfache Sätze.",
+        "Sprachliche Angemessenheit: etwa 30 Wörter statt 150, sehr einfache Sätze.",
       ],
       [
         [
@@ -2063,7 +2065,7 @@ add(
       `Liebe Kolleginnen und Kollegen,\n\nich finde den Vorschlag von der Kantine gut. Zwei vegetarische Tage sind gesund und gut für das Klima.\nIch esse selbst gern Fleisch, aber nicht jeden Tag. Bei uns in der Kantine das vegetarische Essen ist oft langweilig, zum Beispiel nur Nudeln mit Tomatensoße. Deshalb viele Kollegen nehmen immer das Fleischgericht.\nEin Grund dagegen ist, dass jeder Mensch soll selbst entscheiden, was er isst. Manche Kollegen werden vielleicht dann draußen essen.\nMein Vorschlag: Die Kantine macht an diesen Tagen zwei oder drei verschiedene vegetarische Gerichte. Und wir können nach einem Monat abstimmen.\n\nViele Grüße\nDana Kowalski, Personalabteilung`,
       [
         "Inhaltliche Angemessenheit: alle vier Punkte bearbeitet, mit einem treffenden Beispiel aus der eigenen Kantine.",
-        "Sprachliche Angemessenheit: verständlich und freundlich, etwas kurz (etwa 110 Wörter). Verbposition mehrmals falsch („in der Kantine das … Essen ist“, „Deshalb viele Kollegen nehmen“, „dass jeder Mensch soll“).",
+        "Sprachliche Angemessenheit: verständlich und freundlich, aber zu kurz (etwa 100 statt mindestens 150 Wörter). Verbposition mehrmals falsch („in der Kantine das … Essen ist“, „Deshalb viele Kollegen nehmen“, „dass jeder Mensch soll“).",
       ],
       [
         [
@@ -2105,7 +2107,7 @@ add(
     ["Korrektur der Rechnung", "rechnung|abendessen|storn"],
     [
       "10 % Rabatt und kostenloser Tagungsraum im Frühjahr",
-      "10|rabatt|tagungsraum|kostenlos|frühjahr",
+      "10 %|10%|10 prozent|rabatt|tagungsraum|kostenlos|frühjahr",
     ],
     ["Ansprechpartner für die Frühjahrstagung", "brenner|bankett|0221"],
   ],
@@ -2227,7 +2229,7 @@ add(
       `Hallo,\nDesk-Sharing finde ich nicht gut. Ich möchte meinen Schreibtisch haben mit meinen Sachen. Jeden Tag ein anderer Platz ist stressig. Die App funktioniert vielleicht nicht. Aber die Firma spart Geld.\nGrüße, Luca`,
       [
         "Inhaltliche Angemessenheit: Meinung, zwei Nachteile und ein Vorteil sind genannt. Es gibt kein Beispiel und keinen Vorschlag.",
-        "Sprachliche Angemessenheit: etwa 40 Wörter, einfache Reihung von Hauptsätzen.",
+        "Sprachliche Angemessenheit: etwa 35 Wörter statt 150, einfache Reihung von Hauptsätzen.",
       ],
       [
         [
@@ -2245,7 +2247,7 @@ add(
       `Liebe Kolleginnen und Kollegen,\n\nich möchte etwas zum Desk-Sharing sagen. Ich verstehe die Idee, aber ich bin skeptisch.\nEin Vorteil ist, dass die Firma weniger Platz braucht, weil viele Kollegen sind im Homeoffice. Man lernt auch andere Kollegen kennen, wenn man neben ihnen sitzt.\nEin Nachteil ist, dass man hat keinen persönlichen Platz mehr. Ich brauche zwei Bildschirme und meine Unterlagen. Wenn ich jeden Tag alles aufbauen muss, ich verliere viel Zeit. In der Firma von meiner Frau gibt es Desk-Sharing und oft sitzt ihr Team nicht zusammen.\nIch schlage vor, dass jedes Team hat eine feste Zone. In der Zone kann man dann den Platz buchen.\n\nViele Grüße\nLuca Moretti, Controlling`,
       [
         "Inhaltliche Angemessenheit: Meinung, Vor- und Nachteile, zwei Beispiele und ein sinnvoller Vorschlag – alles vorhanden.",
-        "Sprachliche Angemessenheit: gute Gliederung, etwas kurz (etwa 120 Wörter). Wiederholter Fehler: Verb im Nebensatz („weil viele Kollegen sind“, „dass man hat“, „dass jedes Team hat“).",
+        "Sprachliche Angemessenheit: gute Gliederung, aber zu kurz (etwa 110 statt mindestens 150 Wörter). Wiederholter Fehler: Verb im Nebensatz („weil viele Kollegen sind“, „dass man hat“, „dass jedes Team hat“).",
       ],
       [
         [
@@ -2301,7 +2303,7 @@ add(
       `Liebe Kolleginnen und Kollegen,\n\nich finde es gut, dass die Firma kostenlose Online-Kurse anbietet. Aber ich finde es nicht ganz fair, dass wir sie nur in der Freizeit machen sollen.\nDie Kurse sind gut für uns, weil wir können etwas Neues lernen und vielleicht eine bessere Stelle bekommen. Aber die Firma hat auch einen Vorteil, wenn die Mitarbeiter mehr können.\nIch arbeite Vollzeit und ich habe zwei Kinder. Am Abend ich bin müde und ich kann mich nicht mehr konzentrieren. Letztes Jahr ich habe einen Excel-Kurs am Abend gemacht und nach drei Wochen aufgehört.\nMein Vorschlag ist: Die Hälfte von der Zeit ist Arbeitszeit und die Hälfte ist Freizeit.\n\nViele Grüße\nAmina Diallo, Kundenservice`,
       [
         "Inhaltliche Angemessenheit: klare Meinung, Gründe für beide Seiten, gutes persönliches Beispiel, konkreter Vorschlag.",
-        "Sprachliche Angemessenheit: verständlich und gut aufgebaut, etwas kurz (etwa 120 Wörter). Verbposition häufig falsch („weil wir können“, „Am Abend ich bin“, „Letztes Jahr ich habe“); „aber“ wiederholt sich.",
+        "Sprachliche Angemessenheit: verständlich und gut aufgebaut, aber zu kurz (etwa 115 statt mindestens 150 Wörter). Verbposition häufig falsch („weil wir können“, „Am Abend ich bin“, „Letztes Jahr ich habe“); „aber“ wiederholt sich.",
       ],
       [
         [
@@ -2351,7 +2353,7 @@ u(
       `ich Mila. Essen wohnen. sprechen ukrainisch.`,
       [
         "Inhalt: Alle drei Informationen sind da.",
-        "Sprache: Die Verben sind nicht konjugiert, „ich“ fehlt zweimal. Satzanfänge und Sprachen schreibt man groß.",
+        "Sprache: Im ersten Satz fehlt das Verb, die anderen Verben sind nicht konjugiert. „ich“ fehlt zweimal. Satzanfänge und Sprachen schreibt man groß.",
       ],
       [
         ["ich Mila.", "Ich heiße Mila."],
@@ -2500,7 +2502,7 @@ u(
         "Sprache: gute Sätze mit „und“. „meine Tochter“ (feminin) und „in der Ukraine“ sind noch falsch.",
       ],
       [
-        ["Mein Tochter heißt Lea.", "Meine Tochter heißt Lea."],
+        ["Mein Tochter heißt Lea …", "Meine Tochter heißt Lea …"],
         ["… wohnen in Ukraine.", "… wohnen in der Ukraine."],
       ],
     ],
@@ -2521,14 +2523,14 @@ u(
   [
     ["Wohin möchtest du fahren?", "bahnhof|fahren|möchte"],
     ["Was kostet die Fahrkarte?", "kostet|preis|fahrkarte|ticket"],
-    ["Wo musst du aussteigen?", "aussteigen|haltestelle|wo"],
+    ["Wo musst du aussteigen?", "aussteigen|haltestelle|ausstieg"],
   ],
   [
     [
       `Bahnhof. Ticket bitte. Wo aussteigen?`,
       [
-        "Inhalt: Der Busfahrer versteht das Ziel.",
-        "Sprache: nur Wörter, keine Sätze. Die Frage nach dem Preis fehlt.",
+        "Inhalt: Der Busfahrer versteht das Ziel. Die Frage nach dem Preis fehlt.",
+        "Sprache: nur Wörter, keine Sätze.",
       ],
       [
         ["Bahnhof.", "Ich möchte zum Bahnhof fahren."],
@@ -2539,7 +2541,7 @@ u(
       `Guten Tag! Ich möchte zu Bahnhof. Eine Fahrkarte bitte. Was kostet? Wo ich muss aussteigen?`,
       [
         "Inhalt: alle drei Punkte sind da.",
-        "Sprache: höflich. „zum Bahnhof“, „Was kostet das?“ und die Wortstellung in der Frage fehlen noch.",
+        "Sprache: höflich. Richtig heißt es „zum Bahnhof“ und „Was kostet das?“. In der letzten Frage steht das Verb noch falsch.",
       ],
       [
         ["Ich möchte zu Bahnhof.", "Ich möchte zum Bahnhof."],
@@ -2680,7 +2682,7 @@ u(
       ],
       [
         [
-          "Kommst du Park? Samstag.",
+          "kommst du Park? Samstag.",
           "Hast du am Samstag Zeit? Wir können in den Park gehen.",
         ],
         ["Ich bringe Trinken.", "Ich bringe Getränke mit."],
@@ -2719,7 +2721,7 @@ u(
     ["Seit wann?", "seit|montag|tagen|woche"],
     [
       "Wann kann jemand kommen?",
-      "zu hause|uhr|ab |donnerstag|freitag|handwerker",
+      "zu hause|uhr|donnerstag|freitag|handwerker|vormittag|nachmittag",
     ],
   ],
   [
@@ -2745,7 +2747,7 @@ u(
       ],
       [
         [
-          "Die Heizung in meine Wohnung ist kaputt seit Montag.",
+          "die Heizung in meine Wohnung ist kaputt seit Montag.",
           "Seit Montag ist die Heizung in meiner Wohnung kaputt.",
         ],
         [
@@ -2781,7 +2783,7 @@ u(
       `Hallo Sara, danke. Ich komme nicht Samstag. Meine Schwester kommt.`,
       [
         "Inhalt: Dank und Absage sind da. Ein Vorschlag fehlt.",
-        "Sprache: Ohne „leider“ klingt die Absage hart. „am Samstag“ fehlt.",
+        "Sprache: Ohne „leider“ klingt die Absage hart. Vor „Samstag“ fehlt „am“.",
       ],
       [
         [
@@ -2832,7 +2834,7 @@ u(
       "arbeiten|arbeit|länger|kann nicht",
     ],
     ["Wer holt das Kind ab, und wann?", "schwester|holt|abholen|uhr"],
-    ["Was muss die Person mitbringen?", "mitbringen|ausweis|brauchen"],
+    ["Was muss die Person mitbringen?", "bringen|ausweis|brauch"],
   ],
   [
     [
@@ -2907,7 +2909,7 @@ u(
       ],
       [
         [
-          "Kannst du Samstag arbeiten für mich?",
+          "kannst du Samstag arbeiten für mich?",
           "Kannst du am Samstag meine Frühschicht übernehmen?",
         ],
         ["(fehlt)", "Dafür übernehme ich gern deine Spätschicht am Dienstag."],
@@ -2921,8 +2923,8 @@ u(
       ],
       [
         [
-          "Am Samstag ich habe Frühschicht.",
-          "Am Samstag habe ich Frühschicht.",
+          "Am Samstag ich habe Frühschicht, …",
+          "Am Samstag habe ich Frühschicht, …",
         ],
         [
           "Bitte antworte bis Mittwoch.",
@@ -2965,7 +2967,7 @@ u("B1", 0, 55,
       ],
       [
         [
-          "Wir essen zusammen am Freitag. Im Kursraum.",
+          "wir essen zusammen am Freitag. Im Kursraum.",
           "Ich schlage vor, dass wir am Freitag nach dem Unterricht im Kursraum essen.",
         ],
         [
@@ -3003,7 +3005,7 @@ u("B1", 0, 55,
 );
 u("B1", 1, 55,
   [
-    ["Was und wann hast du bestellt?", "bestellt|bestellung|jacke|am |nummer"],
+    ["Was und wann hast du bestellt?", "bestellt|bestellung|jacke|bestellnummer|nummer"],
     ["Was ist das Problem?", "kaputt|beschädigt|reißverschluss|loch|defekt"],
     [
       "Welche Lösung möchtest du?",
@@ -3033,7 +3035,7 @@ u("B1", 1, 55,
       ],
       [
         [
-          "Am 2. Mai ich habe bei Ihnen eine blaue Jacke bestellt.",
+          "am 2. Mai ich habe bei Ihnen eine blaue Jacke bestellt.",
           "Am 2. Mai habe ich bei Ihnen eine blaue Jacke bestellt.",
         ],
         [
@@ -3076,7 +3078,7 @@ u("B1", 2, 55,
       ],
       [
         [
-          "Meine Nachbarn sind sehr laut in der Nacht.",
+          "meine Nachbarn sind sehr laut in der Nacht.",
           "Seit drei Wochen sind meine Nachbarn nachts sehr laut.",
         ],
         [
@@ -3176,7 +3178,7 @@ u("B1", 4, 55,
       "Warum möchtest du zuerst ein Praktikum machen?",
       "praktikum|weil|normen|fachwörter|erfahrung|kennenlernen",
     ],
-    ["Wann und wie lange hast du Zeit?", "ab |monate|wochen|januar|zeit"],
+    ["Wann und wie lange hast du Zeit?", "monat|wochen|januar|ab dem|zeit"],
     [
       "Welche Hilfe brauchst du?",
       "helfen|hilfe|bewerbung|firmen|anerkenn|kontakte",
@@ -3312,7 +3314,7 @@ u("B2", 0, 85,
         ],
         [
           "Es dauert nicht lange.",
-          "Zwar brauchen wir am Anfang etwas Zeit, später sparen wir aber viele Rückfragen.",
+          "Zwar brauchen wir am Anfang etwas Zeit, später vermeiden wir aber viele Rückfragen.",
         ],
       ],
     ],
@@ -3364,7 +3366,7 @@ u("B2", 1, 85,
       ],
       [
         [
-          "Entschuldigung, Ihre Bestellung ist noch nicht da.",
+          "entschuldigung, Ihre Bestellung ist noch nicht da.",
           "Bitte entschuldigen Sie, dass Ihre Bestellung noch nicht vollständig geliefert wurde.",
         ],
         [
@@ -3377,7 +3379,7 @@ u("B2", 1, 85,
       `Sehr geehrter Herr Weber,\nvielen Dank für Ihre Nachricht. Wir entschuldigen uns, dass Ihre Bestellung ist noch nicht komplett. Ein Artikel ist erst ab Montag im Lager. Wir können die anderen Artikel morgen schicken und den letzten Artikel am Montag, ohne Versandkosten. Oder wir schicken alles zusammen am Montag. Bitte schreiben Sie uns, was Sie möchten.\nMit freundlichen Grüßen\nMila Petrova`,
       [
         "Inhalt: Alle drei Punkte sind da, mit zwei Möglichkeiten.",
-        "Sprache: höflich und klar, aber eher B1: einfache Verben („schicken“ dreimal), ein Fehler im „dass“-Satz.",
+        "Sprache: höflich und klar, aber eher B1: einfache Verben („schicken“ zweimal), ein Fehler im „dass“-Satz.",
       ],
       [
         [
@@ -3404,7 +3406,7 @@ u("B2", 2, 85,
   [
     [
       "Welche Weiterbildung, wann und wo?",
-      "weiterbildung|schulung|seminar|am |november|findet",
+      "weiterbildung|schulung|seminar|november|findet|ihk|kostet",
     ],
     [
       "Welchen Nutzen hat sie für das Team?",
@@ -3437,7 +3439,7 @@ u("B2", 2, 85,
       `Sehr geehrte Frau Krüger,\nich möchte an der Weiterbildung „Professionell telefonieren mit Kunden“ teilnehmen. Sie ist am 14. und 15. November bei der IHK in Hagen. Ich denke, die Weiterbildung ist gut für unser Team, weil wir bekommen immer mehr Anrufe. Danach ich kann den Kollegen zeigen, was ich gelernt habe. Herr Aydın macht in dieser Zeit meine Aufgaben, ich habe ihn schon gefragt.\nMit freundlichen Grüßen\nMila Petrova`,
       [
         "Inhalt: Alle drei Punkte sind da und begründet.",
-        "Sprache: klar, aber mit B1-Fehlern („weil wir bekommen“, „Danach ich kann“) und einfachem Wortschatz („macht meine Aufgaben“).",
+        "Sprache: klar, aber mit B1-Fehlern („weil wir bekommen“, „Danach ich kann“) und einfachem Wortschatz („macht … meine Aufgaben“).",
       ],
       [
         [
@@ -3445,13 +3447,13 @@ u("B2", 2, 85,
           "…, da wir zunehmend Anfragen per Telefon bekommen.",
         ],
         [
-          "Herr Aydın macht in dieser Zeit meine Aufgaben.",
+          "Herr Aydın macht in dieser Zeit meine Aufgaben, …",
           "Meine Aufgaben würde in dieser Zeit Herr Aydın übernehmen.",
         ],
       ],
     ],
     [
-      `Sehr geehrte Frau Krüger,\nich möchte Sie bitten, mir die Teilnahme an der Weiterbildung „Professionell telefonieren mit Kunden“ am 14. und 15. November zu genehmigen. Die Schulung findet bei der IHK in Hagen statt.\nSie wäre für unser Team hilfreich, da wir zunehmend Anfragen per Telefon bekommen und ich die Inhalte anschließend an die Kolleginnen und Kollegen weitergeben könnte. Meine Aufgaben würde in dieser Zeit Herr Aydın übernehmen; das habe ich bereits mit ihm abgesprochen.\nFür Rückfragen stehe ich Ihnen gern zur Verfügung.\nMit freundlichen Grüßen\nMila Petrova`,
+      `Sehr geehrte Frau Krüger,\nich möchte Sie bitten, mir die Teilnahme an der Weiterbildung „Professionell telefonieren mit Kunden“ am 14. und 15. November zu genehmigen. Die Schulung findet bei der IHK in Hagen statt und kostet 280 Euro.\nSie wäre für unser Team hilfreich, da wir zunehmend Anfragen per Telefon bekommen und ich die Inhalte anschließend an die Kolleginnen und Kollegen weitergeben könnte. Meine Aufgaben würde in dieser Zeit Herr Aydın übernehmen; das habe ich bereits mit ihm abgesprochen.\nFür Rückfragen stehe ich Ihnen gern zur Verfügung.\nMit freundlichen Grüßen\nMila Petrova`,
       [
         "Inhalt: vollständig, mit überzeugendem Nutzen.",
         "Sprache: formell und sicher, Konjunktiv II und Infinitiv mit „zu“ passen.",
@@ -3514,7 +3516,7 @@ u("B2", 3, 85,
       `Liebe Kolleginnen und Kollegen,\nmeiner Ansicht nach ist Homeoffice eine gute Möglichkeit – allerdings nicht für alle Abteilungen in gleichem Umfang. Dafür spricht, dass viele von uns lange Fahrtwege haben. Wer zu Hause arbeitet, spart Zeit und kann sich oft besser konzentrieren. In unserer Buchhaltung hat das in der Testphase gut funktioniert.\nMan könnte zwar einwenden, dass die Zusammenarbeit leidet, allerdings lässt sich das mit festen Teamtagen lösen. In der Produktion oder im Lager ist Homeoffice dagegen kaum möglich. Deshalb schlage ich vor, dass jede Abteilung selbst eine passende Regelung entwickelt.\nViele Grüße\nMila`,
       [
         "Inhalt: klare, differenzierte Position mit Beispiel und entkräftetem Gegenargument.",
-        "Sprache: „zwar … allerdings“, Relativsatz mit „wer“, „lässt sich lösen“ – sicher auf B2.",
+        "Sprache: „zwar … allerdings“, Relativsatz mit „wer“, „lässt sich … lösen“ – sicher auf B2.",
       ],
       [],
     ],
