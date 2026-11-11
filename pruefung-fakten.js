@@ -622,5 +622,5 @@
 
   DM.routes ||= {};
   DM.routes.pruefungsinfo = (p) => (X[p[1]] ? page(p[1]) : hub());
-  window.DMFakten = { STAND, ids: ORDER };
+  window.DMFakten = { STAND, ids: ORDER, data: X, sources: S }; // data + sources: read by tools/make-learn-pages.py
 })();

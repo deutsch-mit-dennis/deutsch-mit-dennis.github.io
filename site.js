@@ -1676,7 +1676,7 @@
   /* The navigation and footer of index.html use real addresses (/pruefung/, /lieder/ …) so that Google can follow them.
      Inside the app a click is caught and routed as before (#pruefung …) – no page reload. Ctrl/Cmd/middle click and
      "open in new tab" still use the real address. Pages that are not part of the app (dtz-schreiben, impressum …) load normally. */
-  const SECTION_LINK = /^\/(pruefung|simulation|lid|lieder|ueben|hoeren|lesen|spiele|bild|challenge|lernpakete|ueber-mich|vorbereitung|lernpakete\/[\w-]+)\/$/;
+  const SECTION_LINK = /^\/(pruefung|simulation|lid|lieder|ueben|hoeren|lesen|spiele|bild|challenge|lernpakete|ueber-mich|vorbereitung|kurs|grammatik|pruefungsinfo|laute|lernpakete\/[\w-]+)\/$/;
   document.addEventListener('click', e => {
     if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
     const a = e.target.closest && e.target.closest('a[href^="/"]');

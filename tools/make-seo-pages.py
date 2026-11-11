@@ -14,11 +14,11 @@ e = html.escape
 
 NODE = r"""
 const fs=require('fs'),vm=require('vm');const c={};c.window=c;vm.createContext(c);
-const files=['lieder-data.js','lid-katalog.js','lid-bilder-alt.js',...fs.readdirSync('sim').filter(f=>/^[\w-]+\.js$/.test(f)).map(f=>'sim/'+f)];
+const files=['lieder-data.js','lid-katalog.js','lid-bilder-alt.js','lid-laender.js','lid-warum.js',...fs.readdirSync('sim').filter(f=>/^[\w-]+\.js$/.test(f)).map(f=>'sim/'+f)];
 for(const f of files)vm.runInContext(fs.readFileSync(f,'utf8'),c,{filename:f});
 const sims=Object.values(c.SIM).map(s=>({id:s.id,title:s.title,short:s.short,provider:s.provider,level:s.level,intro:s.intro,
   sections:(s.sections||[]).map(x=>({title:x.title,minutes:x.minutes||0,note:x.note||''}))}));
-process.stdout.write(JSON.stringify({songs:c.DM.songs,lid:c.LID_KATALOG,stand:c.LID_KATALOG_STAND,alt:c.LID_BILD_ALT||{},quelle:c.LID_QUELLE_HTML,sims}));
+process.stdout.write(JSON.stringify({songs:c.DM.songs,lid:c.LID_KATALOG,stand:c.LID_KATALOG_STAND,alt:c.LID_BILD_ALT||{},quelle:c.LID_QUELLE_HTML,laender:c.LID_LAENDER||{},warum:c.LID_WARUM||{},sims}));
 """
 D = json.loads(
     subprocess.run(
@@ -260,6 +260,26 @@ groups = [
     for a in range(1, len(gen) + 1, 10)
 ]
 groups.append(("fragen-nrw", "Fragen Nordrhein-Westfalen", nrw))
+# the other 15 federal states (lid-laender.js); NRW keeps its old address
+WARUM = D.get("warum") or {}
+NRW_IDS = {q["id"] for q in nrw}
+
+
+def land_slug(name):
+    t = name.lower()
+    for a, b in (("ä", "ae"), ("ö", "oe"), ("ü", "ue"), ("ß", "ss")):
+        t = t.replace(a, b)
+    return "fragen-" + re.sub(r"[^a-z]+", "-", t).strip("-")
+
+
+SHORT = {"fragen-nrw": "NRW"}
+for code, land in sorted((D.get("laender") or {}).items(), key=lambda kv: kv[1]["name"]):
+    qs = land.get("fragen") or []
+    if not qs or {q["id"] for q in qs} & NRW_IDS or land["name"] == "Nordrhein-Westfalen":
+        continue
+    groups.append((land_slug(land["name"]), "Fragen " + land["name"], qs))
+    SHORT[land_slug(land["name"])] = code.upper()
+STATE_GROUPS = [g for g in groups if g[0] in SHORT]
 
 
 CUR = ' aria-current="page"'
@@ -269,7 +289,7 @@ def pager(cur):
     return (
         '<nav class="pager" aria-label="Fragengruppen">'
         + "".join(
-            f'<a href="/lid/{slug}/"{CUR if slug == cur else ""}>{"NRW" if slug == "fragen-nrw" else int(slug[7:10])}</a>'
+            f'<a href="/lid/{slug}/"{CUR if slug == cur else ""}>{SHORT[slug] if slug in SHORT else int(slug[7:10])}</a>'
             for slug, _, _ in groups
         )
         + "</nav>"
@@ -286,7 +306,8 @@ def qhtml(q):
         ('<li class="ok">' if k == q["s"] else "<li>") + e(a) + "</li>"
         for k, a in enumerate(q["a"])
     )
-    return f'<div class="q" id="{e(q["id"])}"><h3>{e(lab)}: {e(q["q"])}</h3>{f"<div>{imgs}</div>" if imgs else ""}<ol type="1">{lis}</ol></div>'
+    why = WARUM.get(q["id"])
+    return f'<div class="q" id="{e(q["id"])}"><h3>{e(lab)}: {e(q["q"])}</h3>{f"<div>{imgs}</div>" if imgs else ""}<ol type="1">{lis}</ol>{f"<p class=muted><b>Warum?</b> {e(why)}</p>" if why else ""}</div>'
 
 
 def prevnext(cur):
@@ -302,7 +323,7 @@ def prevnext(cur):
 
 for slug, name, qs in groups:
     body = (
-        f'<h1>Leben in Deutschland – {e(name)}</h1><p class="lead">Fragen aus dem offiziellen Gesamtfragenkatalog mit der richtigen Antwort (✓). '
+        f'<h1>Leben in Deutschland – {e(name)}</h1><p class="lead">Fragen aus dem offiziellen Gesamtfragenkatalog mit der richtigen Antwort (✓) und einer kurzen Erklärung. '
         "Üben mit Lernmodus, Wiederholung und Prüfungssimulation kannst du kostenlos in der Lern-App.</p>"
         '<p><a class="btn" href="/#lid">▶ Fragen interaktiv üben</a></p>'
         + prevnext(slug)
@@ -310,6 +331,7 @@ for slug, name, qs in groups:
         + pager(slug)
         + '<p><a href="/lid/fragen/">Alle Fragengruppen im Überblick</a></p>'
         + quelle
+        + '<p class="small">Erklärungen („Warum?“): Deutsch mit Dennis – nicht vom BAMF.</p>'
     )
     first = qs[0]["q"][:90]
     desc = f"Test „Leben in Deutschland“: {name} mit richtigen Antworten, z. B. „{first}“. Kostenlos üben mit Prüfungssimulation."
@@ -327,8 +349,8 @@ for slug, name, qs in groups:
     )
 
 body = (
-    '<h1>Leben in Deutschland: alle 310 Fragen mit Antworten</h1><p class="lead">Der Test „Leben in Deutschland“ hat 33 Fragen: 30 aus den 300 allgemeinen Fragen und 3 Fragen zu deinem Bundesland. '
-    "Für das Bundesland sind hier die 10 Fragen für Nordrhein-Westfalen aufgeführt. Hier findest du alle Fragen nach Nummern geordnet – jeweils mit der richtigen Antwort.</p>"
+    '<h1>Leben in Deutschland: alle Fragen mit Antworten</h1><p class="lead">Der Test „Leben in Deutschland“ hat 33 Fragen: 30 aus den 300 allgemeinen Fragen und 3 Fragen zu deinem Bundesland. '
+    f"Hier findest du die 300 allgemeinen Fragen nach Nummern geordnet und die 10 Fragen für jedes der {len(STATE_GROUPS)} Bundesländer – jeweils mit der richtigen Antwort und einer kurzen Erklärung.</p>"
     '<p><a class="btn" href="/#lid">▶ Kostenlos üben mit Prüfungssimulation</a></p><ul class="list">'
     + "".join(
         f'<li><a href="/lid/{slug}/">{e(name)}</a> <span class="muted">– {e(qs[0]["q"][:70])} …</span></li>'
@@ -337,7 +359,7 @@ body = (
     + "</ul>"
     + quelle
 )
-LID_ALL_DESC = "Alle 300 allgemeinen Fragen und die 10 NRW-Fragen zum Test „Leben in Deutschland“ mit richtigen Antworten – nach Nummern geordnet. Kostenlos üben."
+LID_ALL_DESC = "Alle 300 allgemeinen Fragen und die Fragen für alle 16 Bundesländer zum Test „Leben in Deutschland“ – mit richtigen Antworten und kurzer Erklärung. Kostenlos üben."
 urls.append(
     page(
         "lid/fragen",
@@ -410,5 +432,9 @@ for slug, name, desc, script in LEGAL:
     urls.append(page(slug, name, desc, frag, [(name, slug)], "start", None, "website", script))
 
 # ---------------- sitemap: build-sitemap.js scans all pages and adds <lastmod> ----------------
+# lessons, grammar, courses, reading/listening texts, exam facts (real text pages)
+import sys
+
+subprocess.run([sys.executable, "-X", "utf8", os.path.join(R, "tools", "make-learn-pages.py")], cwd=R, check=True)
 subprocess.run(["node", os.path.join("tools", "build-sitemap.js")], cwd=R, check=True)
 print(len(urls), "Inhaltsseiten")
