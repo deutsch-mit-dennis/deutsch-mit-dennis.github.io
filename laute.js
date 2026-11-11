@@ -1066,6 +1066,5 @@
     if (!id) hub();
     else if (id === "abc") abc();
     else section(id);
-    window.scrollTo && 0;
   };
 })();

@@ -487,7 +487,7 @@
         ${
           d
             ? `<button type="button" class="dm-btn fh-go" id="fh-go">Jetzt wiederholen ▶${tr("start")}</button><p class="dm-small">${d > SESSION ? `Eine Runde hat ${SESSION} Aufgaben.` : `Eine Runde: ${d} ${d === 1 ? "Aufgabe" : "Aufgaben"}.`} Das dauert nur ein paar Minuten.</p>`
-            : `<p><b>Heute ist nichts dran. Komm ${Math.round((dayStart(nextDue) - dayStart()) / DAY) <= 1 ? "morgen" : `in ${Math.round((dayStart(nextDue) - dayStart()) / DAY)} Tagen`} wieder!</b></p>${tr("nodue", "p")}<p class="dm-row"><a class="dm-btn" href="#kurs">Weiterlernen →</a><a class="dm-btn dm-btn-quiet" href="#challenge">Tages-Challenge →</a></p>`
+            : `<p><b>Heute ist nichts dran. Komm ${Math.round((dayStart(nextDue) - dayStart()) / DAY) <= 1 ? "morgen" : `in ${Math.round((dayStart(nextDue) - dayStart()) / DAY)} Tagen`} wieder!</b></p>${(Math.round((dayStart(nextDue) - dayStart()) / DAY) <= 1 ? tr("nodue", "p") : "")}<p class="dm-row"><a class="dm-btn" href="#kurs">Weiterlernen →</a><a class="dm-btn dm-btn-quiet" href="#challenge">Tages-Challenge →</a></p>`
         }
         ${boxRow(items)}
         <p class="fh-learned">✓ Gelernt: <b>${learned}</b>${tr("learned")}</p>
@@ -533,7 +533,7 @@
       it,
     ) => `<p class="fh-src"><span class="dm-tag">${esc(it.src)}</span> <span class="dm-small">Fach ${it.box || 1}</span></p>
       ${it.ctx ? `<details class="fh-ctx"><summary>Text lesen</summary><p>${esc(it.ctx)}</p></details>` : ""}
-      ${it.img ? `<img class="fh-img" src="${esc(it.img)}" alt="" loading="lazy">` : ""}
+      ${it.img ? `<img class="fh-img" src="${esc(it.img)}" alt="" onerror="this.remove()">` : ""}
       ${it.listen ? `<p><button type="button" class="dm-btn dm-btn-quiet fh-listen"><span aria-hidden="true">🔊</span> Anhören${tr("listen")}</button></p>` : ""}
       ${it.q ? `<h1 class="fh-question">${esc(it.q)}</h1>` : `<h1 class="fh-question">${it.listen ? "Hör zu. Was passt?" : "Was ist das?"}</h1>`}`;
     function feedback(it, ok) {

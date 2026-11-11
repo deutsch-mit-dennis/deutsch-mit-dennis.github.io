@@ -1,1 +1,527 @@
-/* grammatik.css */
+/* grammatik.css – grammar trainer (#grammatik). Everything is namespaced .gr-*; colours and fonts come from site.css. */
+.gr-sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+.gr-page mark {
+  background: var(--dm-marker);
+  color: var(--dm-ink);
+  padding: 0 0.12em;
+  border-radius: 3px;
+  font-weight: 700;
+}
+
+/* overview */
+.gr-top {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 18px;
+  align-items: center;
+  justify-content: space-between;
+}
+.gr-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.gr-chip {
+  min-height: 44px;
+  min-width: 52px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  border: 2px solid var(--dm-line);
+  background: var(--dm-surface);
+  color: var(--dm-ink);
+  font: 700 16px var(--dm-font);
+  cursor: pointer;
+}
+.gr-chip[aria-pressed="true"] {
+  background: var(--dm-tinte);
+  border-color: var(--dm-tinte);
+  color: #fff;
+}
+.gr-total {
+  margin: 0;
+}
+.gr-level {
+  margin-top: 36px;
+}
+.gr-lvname {
+  font-size: 0.6em;
+  font-weight: 400;
+  color: var(--dm-muted);
+  letter-spacing: 0;
+}
+.gr-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 12px;
+}
+.gr-card {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  color: var(--dm-ink);
+  height: 100%;
+  box-sizing: border-box;
+}
+.gr-card:hover {
+  border-color: var(--dm-tinte);
+  color: var(--dm-ink);
+}
+.gr-card.is-done {
+  border-color: #bfe0cc;
+}
+.gr-card-text {
+  display: grid;
+  gap: 3px;
+  min-width: 0;
+  flex: 1;
+}
+.gr-card-text b {
+  line-height: 1.25;
+  overflow-wrap: anywhere;
+}
+.gr-card-text small {
+  font-size: 14px;
+  color: var(--dm-muted);
+  line-height: 1.35;
+}
+.gr-kurslink {
+  margin: 10px 0 0;
+}
+.gr-ring {
+  position: relative;
+  flex: none;
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+}
+.gr-ring svg {
+  position: absolute;
+  inset: 0;
+}
+.gr-ring circle {
+  fill: none;
+  stroke-width: 5;
+}
+.gr-ring-bg {
+  stroke: var(--dm-tinte-soft);
+}
+.gr-ring-fg {
+  stroke: var(--dm-tinte);
+  stroke-linecap: round;
+}
+.gr-ring b {
+  position: relative;
+  font-size: 13px;
+  color: var(--dm-tinte);
+}
+.gr-ring.is-done .gr-ring-fg {
+  stroke: var(--dm-gruen);
+}
+.gr-ring.is-done b {
+  color: var(--dm-gruen);
+  font-size: 18px;
+}
+
+/* topic page */
+.gr-head {
+  margin-bottom: 18px;
+}
+.gr-head h1,
+.gr-play-head h1 {
+  font-size: clamp(26px, 4.4vw, 40px);
+  overflow-wrap: anywhere;
+  margin-top: 6px;
+}
+.gr-play-head h1 {
+  font-size: clamp(20px, 3vw, 26px);
+  margin: 6px 0 14px;
+}
+.gr-rule {
+  max-width: 820px;
+}
+.gr-kurz {
+  font-size: 20px;
+  line-height: 1.6;
+  margin: 0 0 10px;
+}
+.gr-tr {
+  font-size: 16px;
+  color: var(--dm-muted);
+  margin: 0 0 14px;
+  padding: 8px 12px;
+  border-inline-start: 4px solid var(--dm-tinte-soft);
+  background: var(--dm-paper);
+  border-radius: 6px;
+  unicode-bidi: plaintext;
+}
+.gr-tr mark {
+  background: none;
+  font-weight: 700;
+  color: inherit;
+  padding: 0;
+}
+.gr-tablewrap {
+  overflow-x: auto;
+  margin: 14px 0 4px;
+  -webkit-overflow-scrolling: touch;
+}
+.gr-table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 16px;
+}
+.gr-table th,
+.gr-table td {
+  border: 1px solid var(--dm-line);
+  padding: 7px 9px;
+  text-align: left;
+  vertical-align: top;
+}
+.gr-table thead th {
+  background: var(--dm-tinte-soft);
+  color: var(--dm-tinte-dark);
+}
+.gr-table tbody th {
+  font-weight: 700;
+  color: var(--dm-muted);
+  background: var(--dm-paper);
+}
+.gr-cta {
+  margin-top: 18px;
+}
+.gr-cta-end {
+  margin-top: 32px;
+}
+.gr-status {
+  margin: 10px 0 0;
+}
+.gr-sec {
+  margin-top: 36px;
+  max-width: 820px;
+}
+.gr-sec h2 {
+  font-size: 24px;
+  margin: 0 0 12px;
+}
+.gr-examples,
+.gr-errors {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+.gr-examples li {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  background: var(--dm-surface);
+  border: 1px solid var(--dm-line);
+  border-radius: 12px;
+  padding: 8px 12px;
+}
+.gr-say {
+  flex: none;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 8px 12px;
+}
+.gr-errors li {
+  background: var(--dm-surface);
+  border: 1px solid var(--dm-line);
+  border-radius: 12px;
+  padding: 12px 14px;
+}
+.gr-errors p {
+  margin: 0;
+}
+.gr-bad {
+  color: var(--dm-rot);
+}
+.gr-good {
+  color: var(--dm-gruen);
+  font-weight: 700;
+}
+.gr-errors .dm-small {
+  margin-top: 4px;
+}
+
+/* practice */
+.gr-play {
+  max-width: 720px;
+}
+.gr-bar {
+  display: grid;
+  gap: 6px;
+  margin: 0 0 14px;
+  font-size: 15px;
+  color: var(--dm-muted);
+  font-weight: 700;
+}
+.gr-task {
+  font-size: 17px !important;
+  color: var(--dm-muted);
+  margin: 0 0 12px !important;
+  font-weight: 700;
+  outline-offset: 4px;
+}
+.gr-q {
+  font-size: 22px;
+  line-height: 1.5;
+  margin: 0 0 16px;
+  overflow-wrap: anywhere;
+}
+.gr-blank {
+  color: var(--dm-tinte);
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.gr-opts {
+  display: grid;
+  gap: 10px;
+}
+.gr-opt {
+  min-height: 52px;
+  padding: 12px 16px;
+  border-radius: 12px;
+  border: 2px solid var(--dm-line);
+  background: var(--dm-surface);
+  color: var(--dm-ink);
+  font: 700 19px/1.35 var(--dm-font);
+  text-align: left;
+  cursor: pointer;
+  overflow-wrap: anywhere;
+}
+.gr-opts-fix .gr-opt {
+  font-weight: 400;
+}
+.gr-opt:hover:not(:disabled) {
+  border-color: var(--dm-tinte);
+  background: var(--dm-tinte-soft);
+}
+.gr-opt:disabled {
+  cursor: default;
+  color: var(--dm-ink);
+  opacity: 1;
+}
+.gr-opt.is-ok,
+.gr-in.is-ok,
+.gr-line.is-ok {
+  border-color: var(--dm-gruen);
+  background: #e8f5ec;
+}
+.gr-opt.is-bad,
+.gr-in.is-bad,
+.gr-line.is-bad {
+  border-color: var(--dm-rot);
+  background: #fcebe9;
+}
+.gr-opt.is-ok::after {
+  content: " ✓";
+  color: var(--dm-gruen);
+}
+.gr-opt.is-bad::after {
+  content: " ✗";
+  color: var(--dm-rot);
+}
+.gr-gapform {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.gr-in {
+  flex: 1 1 180px;
+  min-width: 0;
+  min-height: 48px;
+  padding: 10px 14px;
+  border: 2px solid var(--dm-line);
+  border-radius: 12px;
+  font: 700 20px var(--dm-font);
+  color: var(--dm-ink);
+  background: var(--dm-surface);
+  box-sizing: border-box;
+}
+.gr-in:focus {
+  border-color: var(--dm-tinte);
+  outline: none;
+  box-shadow: 0 0 0 3px var(--dm-tinte-soft);
+}
+.gr-tip {
+  margin: 10px 0 0;
+}
+.gr-line {
+  min-height: 56px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  padding: 10px;
+  border: 2px dashed var(--dm-line);
+  border-radius: 12px;
+  background: var(--dm-paper);
+  margin-bottom: 14px;
+}
+.gr-line-empty {
+  color: var(--dm-muted);
+  font-size: 16px;
+}
+.gr-pool {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  min-height: 48px;
+  margin-bottom: 16px;
+}
+.gr-chip-w {
+  min-height: 44px;
+  padding: 8px 14px;
+  border-radius: 10px;
+  border: 2px solid var(--dm-tinte);
+  background: var(--dm-surface);
+  color: var(--dm-ink);
+  font: 700 18px var(--dm-font);
+  cursor: pointer;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  text-align: left;
+}
+.gr-chip-w.is-placed {
+  background: var(--dm-tinte-soft);
+}
+.gr-pool .gr-chip-w:disabled {
+  visibility: hidden;
+}
+.gr-line .gr-chip-w:disabled {
+  cursor: default;
+  color: var(--dm-ink);
+  opacity: 1;
+}
+.gr-item .dm-btn:disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+.gr-fb {
+  margin-top: 14px;
+}
+.gr-fb:empty {
+  display: none;
+}
+.gr-fb.is-ok,
+.gr-fb.is-bad {
+  padding: 12px 14px;
+  border-radius: 12px;
+  border-left: 6px solid var(--dm-gruen);
+  background: #e8f5ec;
+}
+.gr-fb.is-bad {
+  border-left-color: var(--dm-rot);
+  background: #fcebe9;
+}
+.gr-fb p {
+  margin: 0 0 6px;
+}
+.gr-fb p:last-child {
+  margin-bottom: 0;
+}
+.gr-fb-head {
+  font-weight: 700;
+  font-size: 19px;
+  color: var(--dm-gruen);
+}
+.gr-fb.is-bad .gr-fb-head {
+  color: var(--dm-rot);
+}
+.gr-next-row {
+  margin-top: 14px;
+}
+.gr-next-row .dm-btn {
+  flex: 1 1 auto;
+}
+.gr-leave {
+  margin-top: 14px;
+}
+
+/* result */
+.gr-result h2 {
+  margin-bottom: 12px;
+}
+.gr-score {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  font-size: 22px;
+}
+.gr-score p {
+  margin: 0;
+}
+.gr-msg {
+  font-size: 19px;
+  margin: 12px 0;
+}
+.gr-review h3 {
+  font-size: 18px;
+  margin: 18px 0 8px;
+}
+.gr-review ul {
+  list-style: none;
+  margin: 0 0 10px;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+.gr-review li {
+  display: grid;
+  gap: 2px;
+  padding: 8px 12px;
+  border-left: 4px solid var(--dm-rot);
+  background: var(--dm-paper);
+  border-radius: 6px;
+  overflow-wrap: anywhere;
+}
+.gr-review small {
+  font-size: 15px;
+  color: var(--dm-muted);
+}
+.gr-result-actions {
+  margin-top: 18px;
+}
+.gr-result-links {
+  margin: 14px 0 0;
+  line-height: 2;
+}
+@media (max-width: 480px) {
+  .gr-kurz {
+    font-size: 18px;
+  }
+  .gr-q {
+    font-size: 20px;
+  }
+  .gr-table {
+    font-size: 14px;
+  }
+  .gr-table th,
+  .gr-table td {
+    padding: 6px 6px;
+  }
+  .gr-result-actions .dm-btn,
+  .gr-cta .dm-btn,
+  .gr-order-actions .dm-btn {
+    flex: 1 1 100%;
+  }
+  .gr-grid {
+    grid-template-columns: 1fr;
+  }
+}

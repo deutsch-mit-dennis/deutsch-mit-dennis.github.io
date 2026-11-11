@@ -451,3 +451,9 @@ p.fh-tr {
   border-color: var(--dm-tinte);
   background: var(--dm-tinte-soft);
 }
+.fh-help p.fh-tr {
+  font-family: var(--dm-font);
+  font-size: 15px;
+  line-height: 1.5;
+  font-weight: 400;
+}
