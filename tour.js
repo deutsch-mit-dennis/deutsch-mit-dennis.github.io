@@ -7,7 +7,7 @@
   // [Startsekunde, CSS-Selektor auf der Startseite, kurzer Hinweis]
   const STEPS = [
     [0, null, 'Willkommen!'],
-    [11.3, '.dm-paths', 'Hier wählst du deinen Lernweg'],
+    [11.3, '#dm-level', 'Tippe auf dein Niveau – dann kommt dein nächster Schritt'],
     [18.3, '.dm-tools', 'Direkt üben: Sprechen, Schreiben, Hören'],
     [25.2, '.dm-paths a[href="#lernweg/dtz"], .dm-tools a[href="#lid"]', 'Prüfungstraining: DTZ, B2, Leben in Deutschland'],
     [33.4, '.dm-stage', 'Deutsch mit Liedern'],
