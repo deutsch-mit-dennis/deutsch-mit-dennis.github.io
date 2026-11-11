@@ -2,6 +2,18 @@
  "note": "Neu auf der Seite – neueste Einträge oben. Wird vom Redaktionsplan (geplante Aufgaben) ergänzt.",
  "items": [
   {
+   "date": "2026-11-11",
+   "type": "uebung",
+   "title": "Neuer Lesetext: Neue Waschmaschinen im Waschkeller – Aushang (Alltag, A2–B1)",
+   "link": "#lesen/alltag/10"
+  },
+  {
+   "date": "2026-11-11",
+   "type": "uebung",
+   "title": "Neuer Lesetext: Sachbearbeitung Kundenservice bei den Stadtwerken – Stellenanzeige (Beruf, B1–B2)",
+   "link": "#lesen/beruf/9"
+  },
+  {
    "date": "2026-11-10",
    "type": "schreiben",
    "title": "DTZ Schreiben: 3 Musterbriefe mit Aufgabe, Redemitteln und Mustertext A2/B1 – Beschwerde, Termin absagen, Bitte um Information",
@@ -168,54 +180,6 @@
    "type": "neu",
    "title": "Neu für B2 Beruf: „Arbeitsabläufe ordnen“ und „Quiz-Leiter Arbeitsrecht“",
    "link": "#spiele/b2"
-  },
-  {
-   "date": "2026-10-27",
-   "type": "neu",
-   "title": "Lernspiele neu: Fangen, Sortieren, Hau den Maulwurf, Quiz-Leiter und Zeitstrahl – statt einfacher Auswahlfragen",
-   "link": "#spiele"
-  },
-  {
-   "date": "2026-10-27",
-   "type": "lied",
-   "title": "10 neue Lieder: je 2 für A1, A2, B1, B2 und C1 – mit Liedtext, PDF, Aufgaben und Lösungen",
-   "link": "#lieder/A1"
-  },
-  {
-   "date": "2026-10-27",
-   "type": "lied",
-   "title": "Neues Lied (A1): „Wo ist mein Schlüssel?“ – Zu Hause: Dinge suchen und finden – Möbel und Gegenstände in der Wohnung",
-   "link": "#lieder/a1-11-wo-ist-mein-schluessel"
-  },
-  {
-   "date": "2026-10-27",
-   "type": "hoeren",
-   "title": "Neuer DTZ-Hörtext: Durchsage im Baumarkt (Übungssatz 5)",
-   "link": "#hoeren/dtz-5/2"
-  },
-  {
-   "date": "2026-10-27",
-   "type": "hoeren",
-   "title": "Neuer B2-Hörtext: Teambesprechung beim Pflegedienst (Übungssatz 4)",
-   "link": "#hoeren/b2-4/2"
-  },
-  {
-   "date": "2026-10-27",
-   "type": "uebung",
-   "title": "Sprechen B1: Bei der Berufsberatung einen Praktikumsplatz finden",
-   "link": "#ueben/sprechen/B1/4"
-  },
-  {
-   "date": "2026-10-27",
-   "type": "uebung",
-   "title": "Schreiben B1: E-Mail an die Volkshochschule – den Kurs wechseln",
-   "link": "#ueben/schreiben/B1/5"
-  },
-  {
-   "date": "2026-10-27",
-   "type": "neu",
-   "title": "Neues Arbeitsblatt: Aushänge im Wohnhaus verstehen (A2, Lesen)",
-   "link": "#material"
   }
  ]
 }
