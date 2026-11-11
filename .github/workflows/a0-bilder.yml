@@ -1,0 +1,41 @@
+# Erzeugt die Bilder für "Erste Schritte" (tools/make-a0-bilder.py, Gemini, ca. 0,04 $ pro Bild – vorhandene Bilder werden übersprungen)
+# und baut danach die Arbeitsblätter neu (tools/pdf/build_erste_schritte.py). Start: Actions → Erste-Schritte-Bilder → Run workflow.
+name: Erste-Schritte-Bilder
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "tools/make-a0-bilder.py"
+permissions:
+  contents: write
+concurrency:
+  group: repo-bot
+  cancel-in-progress: false
+jobs:
+  bilder:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Werkzeuge
+        run: pip install -q pillow reportlab pypdf
+      - name: Bilder erzeugen
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python tools/make-a0-bilder.py
+      - name: Arbeitsblätter bauen
+        run: |
+          python tools/pdf/build_erste_schritte.py
+          python tools/pdf/register_erste_schritte.py
+      - name: Speichern
+        run: |
+          git config user.name "bilder-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add assets/a0 material/arbeitsblaetter/es-*.pdf site-data.js
+          git diff --cached --quiet && exit 0
+          git commit -m "Erste Schritte: Bilder und Arbeitsblätter"
+          for i in 1 2 3; do git pull --rebase -q && git push && break; sleep 5; done
