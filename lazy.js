@@ -27,7 +27,7 @@ window.DMLazy = (() => {
     "hoeren-data.js?v=20261104a"
   ],
   "lesen": [
-    "lesen-data.js?v=20261104a"
+    "lesen-data.js?v=20261111a"
   ],
   "bild": [
     "bild-data.js?v=20261008e",
