@@ -525,3 +525,15 @@
     grid-template-columns: 1fr;
   }
 }
+.gr-item.is-answered .gr-pool,
+.gr-item.is-answered .gr-order-actions,
+.gr-item.is-answered .gr-tip {
+  display: none;
+}
+.gr-item.is-answered .gr-line {
+  margin-bottom: 0;
+}
+.gr-task:focus,
+.gr-result h2:focus {
+  outline: none;
+}

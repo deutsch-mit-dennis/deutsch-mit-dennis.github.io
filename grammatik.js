@@ -323,6 +323,7 @@
     const finish = (ok, opts = {}) => {
       if (R.answered) return;
       R.answered = true;
+      stage.querySelector(".gr-item").classList.add("is-answered");
       const p = prog(t.id);
       p.mastered[i] = ok ? (p.mastered[i] || 0) + 1 : 0;
       save();

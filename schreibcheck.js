@@ -259,6 +259,37 @@
     return { text: out, map: (o, l) => { const a = back(o), b = back(o + l); return b > a ? [a, b - a] : null; } };
   }
 
+  /* ---------- Task hints: word count vs. target, Leitpunkt coverage (keyword heuristic, only a hint) ----------
+     opts = { target: 80, need: 4, leitpunkte: [{ label, kw: ['aufzug', 'kaputt'] }] } – all optional.
+     Callers: simulation.js (result page) and check() below. Task data lives in muster-data.js (DMMuster.task(key)).
+     A textarea can name its task with data-sc-task="<key>" and/or data-sc-target="<words>". */
+  const countWords = t => (String(t || '').trim().match(/[\p{L}\p{N}][\p{L}\p{N}'’.-]*/gu) || []).length;
+  function taskHints(text, opts) {
+    if (!opts || (!opts.target && !opts.leitpunkte?.length)) return '';
+    const n = countWords(text), low = String(text || '').toLowerCase();
+    let html = '';
+    if (opts.target) {
+      const more = n < opts.target * 0.9;
+      html += `<p class="sc-wc ${more ? 'is-short' : 'is-ok'}">Du hast <b>${n} ${n === 1 ? 'Wort' : 'Wörter'}</b>. Ziel: ungefähr ${opts.target}.${n === 0 ? '' : more ? ' Schreib noch etwas mehr.' : ' Die Länge passt.'}</p>`;
+    }
+    const lps = opts.leitpunkte || [];
+    if (lps.length && n > 0) {
+      const hit = lps.map(lp => (lp.kw || []).some(k => k && low.includes(String(k).toLowerCase())));
+      const found = hit.filter(Boolean).length, need = Math.min(opts.need || lps.length, lps.length);
+      html += `<p class="sc-lph"><b>Hast du zu jedem Punkt etwas geschrieben?</b>${need < lps.length ? ` Du brauchst mindestens ${need} von ${lps.length} Punkten.` : ''}</p>
+        <ul class="sc-lp">${lps.map((lp, i) => hit[i] ? `<li class="is-ok"><span aria-hidden="true">✓</span> <span><b>gefunden:</b> ${esc(lp.label)}</span></li>` : `<li class="is-q"><span aria-hidden="true">?</span> <span><b>nicht gefunden:</b> ${esc(lp.label)} – hast du dazu etwas geschrieben?</span></li>`).join('')}</ul>
+        <p class="sc-hint">Das ist nur ein Hinweis. Die Seite sucht nach typischen Wörtern – sie versteht deinen Text nicht. ${found < need ? 'Ein „?“ kann auch falsch sein: Vielleicht hast du andere Wörter benutzt. Lies den Punkt noch einmal und prüfe selbst.' : 'Ein „✓“ heißt nicht, dass der Punkt gut gelöst ist. Prüfe selbst, ob alles klar und vollständig ist.'}</p>`;
+    }
+    return html ? `<div class="sc-task">${html}</div>` : '';
+  }
+  function taskOf(ta) {
+    const M = window.DMMuster;
+    const key = ta.dataset.scTask || (ta.id === 'dm-draft' && M?.uebenKey ? M.uebenKey() : '');
+    const t = (key && M?.task?.(key)) || {};
+    const target = Number(ta.dataset.scTarget) || t.target || 0;
+    return target || t.leitpunkte ? { ...t, target } : null;
+  }
+
   async function check(ta, panel, btn) {
     const text = ta.value;
     if (text.trim().length < 3) { panel.hidden = false; panel.innerHTML = '<p>Schreib zuerst einen Text. Dann kannst du ihn prüfen lassen.</p>'; return; }
@@ -294,6 +325,7 @@
       ${matches.length === 0 && !out.length ? '<p>Sehr gut! Lies deinen Text trotzdem noch einmal laut: Passt alles zur Aufgabe?</p>' : '<p class="sc-hint">Tipp: Klicke auf einen Vorschlag, um ihn zu übernehmen. Versuche aber zuerst selbst, den Fehler zu finden – so lernst du am meisten.</p>'}
       ${ltFailed ? `<p class="sc-hint">${ltFailed === 'limit' ? 'LanguageTool ist gerade ausgelastet' : 'LanguageTool ist gerade nicht erreichbar'} – angezeigt werden nur die typischen Lernerfehler. Prüfe später noch einmal.</p>` : ''}
       ${speech ? '<p class="sc-hint">Gesprochener Text: Satzzeichen werden hier nicht bewertet – achte auf Wortformen, Endungen und Satzbau.</p>' : ''}
+      ${speech ? '' : taskHints(text, taskOf(ta))}
       <p class="sc-privacy">Automatische Prüfung (LanguageTool und eigene Regeln für typische Lernerfehler). Sie findet nicht alle Fehler und bewertet nicht den Inhalt.</p>`;
     panel.querySelectorAll('.sc-fix button').forEach(b => b.onclick = () => {
       const m = matches[Number(b.dataset.i)];
@@ -321,7 +353,7 @@
     if (ta.dataset.speech === '1') { bar.querySelector('.sc-btn').innerHTML = '<span aria-hidden="true">✓</span> Fehler prüfen'; bar.querySelector('.sc-note').innerHTML = 'Zeigt Fehler in Grammatik und Wortformen. Beim Klick wird der Text an LanguageTool gesendet (<a href="/datenschutz/">Datenschutz</a>).'; }
     bar.querySelector('button').onclick = e => check(ta, panel, e.currentTarget);
   }
-  window.DMSchreibcheck = { attach: ta => enhance(ta, true) };
+  window.DMSchreibcheck = { attach: ta => enhance(ta, true), taskHints, countWords };
   const scan = () => document.querySelectorAll('main textarea').forEach(enhance);
   new MutationObserver(scan).observe(document.querySelector('main') || document.body, { childList: true, subtree: true });
   window.addEventListener('hashchange', () => setTimeout(scan, 50));

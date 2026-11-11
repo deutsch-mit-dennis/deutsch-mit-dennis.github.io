@@ -278,3 +278,470 @@
     "Diese Seite gibt es nicht (mehr)|This page does not exist (any more)|Цієї сторінки (вже) немає|Этой страницы (больше) нет|هذه الصفحة غير موجودة (بعد الآن)|این صفحه (دیگر) وجود ندارد|Bu sayfa (artık) yok|Esta página (ya) no existe|Questa pagina non esiste (più)",
     "Vielleicht ist der Link alt oder falsch geschrieben. Hier geht es weiter:|Maybe the link is old or misspelt. Continue here:|Можливо, посилання старе або з помилкою. Продовжуй тут:|Возможно, ссылка старая или с ошибкой. Продолжай здесь:|ربما الرابط قديم أو مكتوب بشكل خاطئ. تابع من هنا:|شاید پیوند قدیمی است یا اشتباه نوشته شده. از اینجا ادامه بده:|Bağlantı eski veya yanlış yazılmış olabilir. Buradan devam et:|Quizá el enlace es antiguo o está mal escrito. Continúa aquí:|Forse il link è vecchio o scritto male. Continua da qui:",
   ];
+
+  /* ---------- help widget: Ukrainian (same structure as the other languages in help-data.js) ---------- */
+  try {
+    if (typeof siteHelpText !== "undefined" && siteHelpText && !siteHelpText.uk) {
+      siteHelpText.uk = {
+        ui: [
+          "Допомога по сайту",
+          "Мова",
+          "Закрити",
+          "Твоє запитання про сайт",
+          "Надіслати",
+          "Почати спочатку",
+          "Привіт! Я допоможу тобі розібратися із сайтом. Обери тему або напиши коротке запитання.",
+          "Я використовую готові відповіді про сайт. З іншими запитаннями про німецьку допоможе Деніс.",
+          "Цього мені ще треба навчитися! Поки що я не можу відповісти на твоє запитання, але вже можу допомогти з цими темами. Обери запитання нижче:",
+          "Відкрити",
+          "Теми",
+        ],
+        titles: ["Обрати рівень", "Навігація", "Нові вправи", "Слова і граматика", "Переклади", "Аудіоприклади", "Завантажити PDF", "Підготовка до іспиту", "Відео", "Контакт"],
+        answers: [
+          "Реєстрація не потрібна. A1 – перші кроки, A2 – повсякденні ситуації, B1 – самостійне спілкування, B2 – німецька для роботи. Це орієнтир, а не тест рівня. Відкрий свій рівень нижче.",
+          "Обери свою мету на головній сторінці. Кожен урок має сім кроків. Користуйся кнопками Weiter і Zurück або обери крок одразу. На телефоні та планшеті розділи є в Menü.",
+          "Натисни «Neue Runde» або кнопку нової вправи. Обери легше, таку саму складність або складніше. Завдання змінюються в межах підготовлених наборів.",
+          "Відкрий урок і натисни «Wortschatz». Там 20 слів: іменники, дієслова і прикметники. На картці слова є приклади, дієвідмінювання і прийменники.",
+          "На рівнях A1 і A2 обери мову в «Kurzregel übersetzen» або «Wortübersetzung». Уроки B1 і B2 – німецькою. Розділ «Deutschland verstehen» має власні переклади. Мова чату не змінює мову уроку.",
+          "Аудіоприклади є в кроці Dialog & Lesen. Натисни відтворення. Tempo змінює швидкість. Перевір гучність свого пристрою.",
+          "Натисни «Lerneinheit als PDF» в уроці або «20 Wörter & Grammatik als PDF» у словнику. PDF містить навчальний матеріал і вправи. Файл можна також зберегти у вікні перегляду PDF у браузері.",
+          "DTZ і DTB B2 є в розділі Prüfungstraining. Орієнтаційний курс і Leben in Deutschland мають окремий розділ: Deutschland verstehen.",
+          "Пояснення є в розділі «Videos». Якщо програвач не працює, натисни «Video auf YouTube öffnen». Там є також посилання на канал Деніса.",
+          "Напиши Денісу електронною поштою або залиш відгук у розділі «Deine Meinung» (твоя думка). Повідомлення не надсилаються автоматично.",
+        ],
+      };
+    }
+  } catch (_) {}
+
+  /* ---------- dictionary ---------- */
+  const norm = (s) => s.replace(/\s+/g, " ").trim();
+  const stripEnd = (s) => s.replace(/[\s→←↻↗↓✓▶☰:…]+$/u, "");
+  const strip = (s) => stripEnd(s.replace(/^[^\p{L}„“"«({]+/u, ""));
+  const EXACT = new Map();
+  const PATTERNS = [];
+  ROWS.forEach((row) => {
+    const a = row.split("|");
+    if (a.length !== 9) return;
+    const key = strip(norm(a[0]));
+    if (key.indexOf("{1}") > -1) {
+      const re = new RegExp("^" + key.replace(/[.*+?^$()|[\]\\]/g, "\\$&").replace(/\{\d\}/g, "(\\S+)") + "$", "u");
+      const order = (key.match(/\{\d\}/g) || []).map((m) => m.charAt(1));
+      PATTERNS.push({ re, order, a });
+    } else EXACT.set(key, a);
+  });
+  function lookup(text, lang) {
+    const i = ORDER.indexOf(lang) + 1;
+    if (i < 1) return "";
+    const tries = [text, stripEnd(text), strip(text)];
+    for (let k = 0; k < tries.length; k++) {
+      const t = tries[k];
+      if (k && t === tries[k - 1]) continue;
+      const hit = EXACT.get(t);
+      if (hit) return hit[i];
+      if (/\d|[AB][0-2]/.test(t))
+        for (const p of PATTERNS) {
+          const m = p.re.exec(t);
+          if (m) return hit2(p, m, i);
+        }
+    }
+    return "";
+  }
+  function hit2(p, m, i) {
+    let out = p.a[i];
+    p.order.forEach((n, k) => {
+      out = out.split("{" + n + "}").join(m[k + 1]);
+    });
+    return out;
+  }
+  /* Erste Schritte: title / intro / tip (anywhere) and sentences (only in the sentence list) */
+  let esMaps = null;
+  function esLookup(text, lang, inSent) {
+    const ES = DM.ersteSchritte;
+    if (!ES || !ES.topics) return "";
+    if (!esMaps) {
+      esMaps = { any: new Map(), sent: new Map() };
+      ES.topics.forEach((t) => {
+        if (!t.i18n) return;
+        esMaps.any.set(strip(norm(t.title)), [t, "title"]);
+        esMaps.any.set(strip(norm(t.intro)), [t, "intro"]);
+        esMaps.any.set(strip(norm(t.tip)), [t, "tip"]);
+        (t.sentences || []).forEach((s, k) => esMaps.sent.set(norm(s[0]), [t, k]));
+      });
+    }
+    if (inSent) {
+      const s = esMaps.sent.get(text);
+      if (s && s[0].i18n[lang]) return s[0].i18n[lang].sentences[s[1]] || "";
+    }
+    const h = esMaps.any.get(strip(text));
+    return h && h[0].i18n[lang] ? h[0].i18n[lang][h[1]] || "" : "";
+  }
+
+  /* ---------- state ---------- */
+  const hi = () => DM.hi18n || null;
+  const cur = () => (hi() ? hi().get() : "de");
+  let done = new WeakMap(); // text node -> signature (lang + text) already handled
+  let busy = false,
+    pendingEs = null,
+    obs = null;
+  const SKIP =
+    '[data-no-i18n],[data-i18n],script,style,textarea,select,option,input,code,pre,[contenteditable="true"],.ui-tr,.ui-say,svg,audio,video,' +
+    ".es-card,.es-opt,.es-qword,.es-fb b,.dm-model,.translation-copy,.sentence-part,#site-helper,.dm-lang";
+  const HOST = "button,a,h1,h2,h3,h4,label,summary,legend,p,th,figcaption,li,.dm-lead,.dm-hint,.dm-kicker,.dm-tag";
+  const SAY_HOST = "p:not(.dm-kicker):not(.dm-small):not(.dm-path-meta),.dm-lead,.dm-hint,legend";
+
+  /* ---------- voices ---------- */
+  let voices = [];
+  function loadVoices() {
+    try {
+      voices = window.speechSynthesis ? speechSynthesis.getVoices() || [] : [];
+    } catch (_) {
+      voices = [];
+    }
+  }
+  const voiceFor = (l) => voices.find((v) => v.lang && v.lang.replace("_", "-").toLowerCase() === VOICE[l].toLowerCase()) || voices.find((v) => v.lang && v.lang.toLowerCase().indexOf(l) === 0) || null;
+  function say(text, l) {
+    try {
+      const v = voiceFor(l);
+      if (!v) return;
+      speechSynthesis.cancel();
+      const u = new SpeechSynthesisUtterance(text);
+      u.lang = VOICE[l];
+      try {
+        u.voice = v;
+      } catch (_) {}
+      u.rate = 0.9;
+      speechSynthesis.speak(u);
+    } catch (_) {}
+  }
+
+  /* ---------- glosses ---------- */
+  function makeGloss(text, l, line) {
+    const g = document.createElement("small");
+    g.className = "ui-tr" + (line ? " ui-tr-line" : "");
+    g.lang = l;
+    g.dir = RTL[l] ? "rtl" : "ltr";
+    g.setAttribute("data-t", text);
+    return g;
+  }
+  function gloss(node, text, l, isEs) {
+    const p = node.parentElement;
+    const inter = p.closest("button,a,label,summary");
+    const line = !inter;
+    const g = makeGloss(text, l, line);
+    if (isEs) g.classList.add("ui-tr-es");
+    let cs = null;
+    try {
+      cs = getComputedStyle(p);
+    } catch (_) {}
+    // German text that is only there for screen readers (e.g. "Menü" next to the ☰ icon) gets no visible gloss
+    if ((cs && parseFloat(cs.fontSize) < 6) || p.closest(".dm-sr,.es-sr,.sr-only,[hidden]")) return;
+    if (line && cs && (cs.textAlign === "start" || cs.textAlign === "left")) g.classList.add("ui-tr-l");
+    if (line && node.nodeValue.trim().length >= 15 && p.matches(SAY_HOST) && voiceFor(l)) {
+      const b = document.createElement("button");
+      b.type = "button";
+      b.className = "ui-say";
+      b.setAttribute("aria-label", SAY_LABEL[l] || "🔊");
+      b.title = SAY_LABEL[l] || "";
+      g.appendChild(b);
+    }
+    if (cs && /flex|grid/.test(cs.display)) {
+      // in a flex/grid parent a new child would sit NEXT to the German text: keep both in one column
+      const w = document.createElement("span");
+      w.className = "ui-w";
+      p.insertBefore(w, node);
+      w.appendChild(node);
+      w.appendChild(g);
+    } else node.after(g);
+    if (inter && (inter.tagName === "BUTTON" || inter.tagName === "A") && !inter.title) {
+      inter.title = text;
+      inter.setAttribute("data-ui-title", "1");
+    }
+  }
+  function esLang(site) {
+    const sel = document.getElementById("es-lang");
+    if (sel) return sel.value;
+    return site;
+  }
+  function roots() {
+    const r = [];
+    document.querySelectorAll("header.dm-header, main, .dm-backbar").forEach((e) => r.push(e));
+    return r;
+  }
+  function scan() {
+    if (busy) return;
+    const site = cur();
+    const sel = document.getElementById("es-lang");
+    if (pendingEs && sel) {
+      const want = pendingEs;
+      pendingEs = null;
+      if (sel.value !== want && Array.prototype.some.call(sel.options, (o) => o.value === want)) {
+        sel.value = want;
+        if (typeof sel.onchange === "function") {
+          sel.onchange(); // re-renders the page -> the observer calls scan again
+          return;
+        }
+      }
+    }
+    const esL = esLang(site);
+    if (site === "de" && (esL === "de" || !sel)) return;
+    busy = true;
+    try {
+      // Farsi in Erste Schritte cards is right-to-left (the page only knows Arabic)
+      document.querySelectorAll('main .es-tr[lang="fa"][dir="ltr"]').forEach((e) => (e.dir = "rtl"));
+      const todo = [];
+      roots().forEach((root) => {
+        const w = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+        let n;
+        while ((n = w.nextNode())) {
+          const v = n.nodeValue;
+          if (v.length < 2 || v.length > 400) continue;
+          const sig = site + "|" + esL + "|" + v;
+          if (done.get(n) === sig) continue;
+          done.set(n, sig);
+          todo.push(n);
+        }
+      });
+      todo.forEach((n) => {
+        const p = n.parentElement;
+        if (!p || !n.isConnected) return;
+        if (p.classList.contains("ui-w")) {
+          // text changed inside our wrapper: drop the old gloss
+          const old = p.querySelector(":scope > .ui-tr");
+          if (old) old.remove();
+        } else if (n.nextSibling && n.nextSibling.nodeType === 1 && n.nextSibling.classList.contains("ui-tr")) n.nextSibling.remove();
+        const text = norm(n.nodeValue);
+        if (text.length < 2 || text.length > 240 || !/\p{L}{2}/u.test(text)) return;
+        if (p.closest(SKIP)) return;
+        const foreign = p.closest("[lang]");
+        if (foreign && foreign.lang && foreign.lang.slice(0, 2) !== "de") return;
+        if (!(p.closest(HOST) || p.childNodes.length === 1 || p.classList.contains("ui-w"))) return;
+        let tr = site !== "de" ? lookup(text, site) : "",
+          isEs = false;
+        if (!tr && esL !== "de" && p.closest("main")) {
+          tr = esLookup(text, esL, !!p.closest(".es-sent"));
+          isEs = !!tr;
+        }
+        if (!tr || tr === text || tr === strip(text)) return;
+        gloss(n, tr, isEs ? esL : site, isEs);
+      });
+    } catch (e) {
+      if (window.console) console.warn("ui-i18n", e);
+    }
+    if (obs) obs.takeRecords();
+    busy = false;
+  }
+  function clear() {
+    busy = true;
+    document.querySelectorAll(".ui-tr").forEach((e) => e.remove());
+    document.querySelectorAll(".ui-w").forEach((w) => {
+      while (w.firstChild) w.parentNode.insertBefore(w.firstChild, w);
+      w.remove();
+    });
+    document.querySelectorAll("[data-ui-title]").forEach((e) => {
+      e.removeAttribute("title");
+      e.removeAttribute("data-ui-title");
+    });
+    done = new WeakMap();
+    if (obs) obs.takeRecords();
+    busy = false;
+  }
+  let timer = 0,
+    first = 0;
+  function later() {
+    const now = Date.now();
+    if (!timer) first = now;
+    clearTimeout(timer);
+    // debounce 120 ms, but never wait longer than 600 ms while the page keeps changing
+    timer = setTimeout(
+      () => {
+        timer = 0;
+        scan();
+      },
+      now - first > 480 ? 0 : 120,
+    );
+  }
+  function refresh() {
+    clear();
+    updateButton();
+    scan();
+  }
+
+  /* ---------- language switcher in the header ---------- */
+  let btn = null,
+    menu = null;
+  function updateButton() {
+    if (!btn) return;
+    const l = cur();
+    btn.querySelector("b").textContent = l.toUpperCase();
+    if (menu) menu.querySelectorAll("button").forEach((b) => b.setAttribute("aria-checked", String(b.dataset.l === l)));
+  }
+  function closeMenu() {
+    if (!menu || menu.hidden) return;
+    menu.hidden = true;
+    btn.setAttribute("aria-expanded", "false");
+  }
+  function openMenu() {
+    const r = btn.getBoundingClientRect();
+    menu.hidden = false;
+    menu.style.top = Math.round(r.bottom + 6) + "px";
+    const w = menu.offsetWidth,
+      vw = document.documentElement.clientWidth;
+    menu.style.left = Math.max(8, Math.min(vw - w - 8, Math.round(r.left + r.width / 2 - w / 2))) + "px";
+    btn.setAttribute("aria-expanded", "true");
+    const on = menu.querySelector('[aria-checked="true"]') || menu.querySelector("button");
+    if (on) on.focus();
+  }
+  function header() {
+    const head = document.querySelector("header.dm-header");
+    const H = hi();
+    if (!head || !H || head.querySelector(".ui-lang-btn")) return;
+    btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "ui-lang-btn";
+    btn.setAttribute("data-no-i18n", "");
+    btn.setAttribute("aria-haspopup", "true");
+    btn.setAttribute("aria-expanded", "false");
+    btn.setAttribute("aria-label", "Sprache für Hilfen wählen / Language");
+    btn.title = "Sprache / Language";
+    btn.innerHTML = '<span aria-hidden="true">🌐</span><b></b>';
+    const anchor = head.querySelector(".dm-hshare") || head.querySelector(".dm-bell");
+    if (anchor) anchor.before(btn);
+    else if (head.querySelector(".logo")) head.querySelector(".logo").after(btn);
+    else head.appendChild(btn);
+    menu = document.createElement("div");
+    menu.className = "ui-lang-menu";
+    menu.setAttribute("role", "menu");
+    menu.setAttribute("data-no-i18n", "");
+    menu.setAttribute("aria-label", "Sprache / Language");
+    menu.hidden = true;
+    H.langs.forEach(([c, n]) => {
+      const b = document.createElement("button");
+      b.type = "button";
+      b.setAttribute("role", "menuitemradio");
+      b.dataset.l = c;
+      b.lang = c;
+      b.dir = RTL[c] ? "rtl" : "ltr";
+      b.textContent = n;
+      b.onclick = () => {
+        H.set(c);
+        closeMenu();
+        btn.focus();
+      };
+      menu.appendChild(b);
+    });
+    document.body.appendChild(menu);
+    btn.onclick = (e) => {
+      e.stopPropagation();
+      if (menu.hidden) openMenu();
+      else closeMenu();
+    };
+    document.addEventListener("click", (e) => {
+      if (menu && !menu.hidden && !menu.contains(e.target)) closeMenu();
+    });
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && menu && !menu.hidden) {
+        closeMenu();
+        btn.focus();
+      }
+    });
+    window.addEventListener("scroll", closeMenu, { passive: true });
+    window.addEventListener("resize", closeMenu);
+    updateButton();
+  }
+
+  /* ---------- CSS (this file owns no stylesheet) ---------- */
+  function css() {
+    if (document.getElementById("ui-i18n-css")) return;
+    const s = document.createElement("style");
+    s.id = "ui-i18n-css";
+    s.textContent = [
+      ".ui-tr{display:block;margin:2px 0 0;font-size:max(11.5px,.72em);line-height:1.3;font-weight:400;font-style:normal;letter-spacing:0;text-transform:none;white-space:normal;opacity:.82;unicode-bidi:isolate;overflow-wrap:anywhere;text-decoration:none}",
+      ".ui-tr::after{content:attr(data-t)}",
+      ".ui-tr-line{font-size:max(13px,.8em);opacity:.78;margin-top:3px}",
+      "h1 .ui-tr-line,h2 .ui-tr-line,h3 .ui-tr-line{font-size:max(13px,.52em);line-height:1.35}",
+      ".ui-tr-l[dir=rtl]{text-align:left}",
+      ".ui-tr[lang=ar],.ui-tr[lang=fa]{font-size:max(13px,.8em);line-height:1.5}",
+      "h1 .ui-tr[lang=ar],h1 .ui-tr[lang=fa],h2 .ui-tr[lang=ar],h2 .ui-tr[lang=fa]{font-size:max(14px,.56em)}",
+      ".ui-w{display:inline-flex;flex-direction:column;text-align:inherit}",
+      "header.dm-header nav .ui-tr{font-size:11.5px;line-height:1.2;margin-top:1px}",
+      ".es-sbtn .ui-tr,.es-sent .dm-note .ui-tr{font-size:max(13px,.82em)}",
+      ".ui-say{all:unset;box-sizing:border-box;display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;margin:-12px 2px -12px -6px;vertical-align:middle;cursor:pointer;border-radius:50%;font-size:17px;opacity:1}",
+      "[dir=rtl]>.ui-say{margin:-12px -6px -12px 2px}",
+      ".ui-say::before{content:'🔊'}",
+      ".ui-say:hover,.ui-say:focus-visible{background:rgba(127,127,127,.18)}",
+      ".ui-say:focus-visible{outline:2px solid currentColor;outline-offset:-4px}",
+      ".ui-lang-btn{flex:0 0 auto;display:inline-flex;align-items:center;justify-content:center;gap:3px;min-width:44px;height:40px;padding:0 7px;border:1px solid var(--dm-line,#d9d9d2);border-radius:999px;background:var(--dm-card,#fff);color:inherit;font:inherit;font-size:15px;line-height:1;cursor:pointer}",
+      ".ui-lang-btn b{font-size:11.5px;font-weight:700;letter-spacing:.02em}",
+      ".ui-lang-btn:hover,.ui-lang-btn[aria-expanded=true]{border-color:currentColor}",
+      "@media (max-width:400px){.ui-lang-btn{min-width:40px;padding:0 5px;gap:2px;border-color:transparent;background:transparent}}",
+      "@media (max-width:345px){.ui-lang-btn b{display:none}}",
+      ".ui-lang-menu{position:fixed;z-index:1000;display:grid;gap:2px;min-width:168px;max-width:calc(100vw - 16px);max-height:calc(100vh - 80px);overflow:auto;padding:6px;border:1px solid var(--dm-line,#d9d9d2);border-radius:14px;background:var(--dm-card,#fff);color:var(--dm-ink,#1c1c1a);box-shadow:0 12px 32px rgba(0,0,0,.2)}",
+      ".ui-lang-menu[hidden]{display:none}",
+      ".ui-lang-menu button{display:block;width:100%;min-height:44px;padding:8px 14px;border:0;border-radius:10px;background:transparent;color:inherit;font:inherit;font-size:16px;text-align:start;cursor:pointer}",
+      ".ui-lang-menu button:hover,.ui-lang-menu button:focus-visible{background:rgba(127,127,127,.16)}",
+      ".ui-lang-menu button[aria-checked=true]{font-weight:700;background:rgba(127,127,127,.12)}",
+      "@media print{.ui-tr,.ui-say,.ui-lang-btn,.ui-lang-menu{display:none!important}}",
+    ].join("\n");
+    document.head.appendChild(s);
+  }
+
+  /* ---------- start ---------- */
+  function hookSet() {
+    const H = hi();
+    if (!H || H._uiHook) return;
+    const orig = H.set;
+    H.set = function (l) {
+      orig.apply(H, arguments);
+      if (H.get() !== "de") {
+        pendingEs = H.get();
+        try {
+          localStorage.setItem("dmd.eslang", H.get());
+        } catch (_) {}
+      }
+      refresh();
+    };
+    H._uiHook = true;
+  }
+  function start() {
+    css();
+    hookSet();
+    header();
+    loadVoices();
+    try {
+      if (window.speechSynthesis && speechSynthesis.addEventListener)
+        speechSynthesis.addEventListener("voiceschanged", () => {
+          const had = voices.length;
+          loadVoices();
+          if (voices.length !== had) refresh();
+        });
+    } catch (_) {}
+    // read the translated instruction aloud; never trigger the surrounding element
+    document.addEventListener(
+      "click",
+      (e) => {
+        const b = e.target && e.target.closest ? e.target.closest(".ui-say") : null;
+        if (!b) return;
+        e.preventDefault();
+        e.stopPropagation();
+        const g = b.closest(".ui-tr");
+        if (g) say(g.getAttribute("data-t"), g.lang);
+      },
+      true,
+    );
+    window.addEventListener("hashchange", later);
+    try {
+      obs = new MutationObserver(() => {
+        if (!busy) later();
+      });
+      obs.observe(document.body, { childList: true, subtree: true, characterData: true });
+    } catch (_) {}
+    scan();
+    setTimeout(() => {
+      header();
+      scan();
+    }, 1600);
+  }
+  DM.uiI18n = { refresh, scan, lookup, rows: () => ROWS.length };
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", start);
+  else start();
+})();

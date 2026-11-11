@@ -29,7 +29,22 @@
   const count = id => TESTS[id] || 2;
   const base = id => id.replace(/-[2-9]$/, '');
   ORDER.filter(id => id !== 'lid').forEach(id => { for (let n = 2; n <= count(id); n++) META[`${id}-${n}`] = { ...META[id], short: `${META[id].short} · Test ${n}` }; });
-  const testTabs = id => id === 'lid' ? '' : `<nav class="dm-tabs dm-tabs-small" aria-label="Modelltest">${Array.from({ length: count(base(id)) }, (_, i) => i ? `${base(id)}-${i + 1}` : base(id)).map((v, i) => `<a href="#simulation/${v}"${v === id ? ' aria-current="page"' : ''}><b><span class="sim-tab-long">Modelltest</span><span class="sim-tab-short">Test</span> ${i + 1}</b></a>`).join('')}</nav>`;
+  const testTabs = id => id === 'lid' ? '' : `<nav class="dm-tabs dm-tabs-small" aria-label="Modelltest">${Array.from({ length: count(base(id)) }, (_, i) => i ? `${base(id)}-${i + 1}` : base(id)).map((v, i) => `<a href="#simulation/${v}"${v === id ? ' aria-current="page"' : ''}><b><span class="sim-tab-long">Modelltest</span><span class="sim-tab-short">Test</span> ${i + 1}${knownTest(v) ? ' <span class="sim-tab-done" title="schon gemacht">✓</span>' : ''}</b></a>`).join('')}</nav>`;
+  /* Which model tests has the learner finished? store().done[<id>] = { written|oral: timestamp } (+ history as fallback) */
+  const family = id => Array.from({ length: count(base(id)) }, (_, i) => i ? `${base(id)}-${i + 1}` : base(id));
+  const testNo = id => family(id).indexOf(id) + 1;
+  const TOTAL_TESTS = () => ORDER.filter(id => id !== 'lid').reduce((a, id) => a + count(id), 0);
+  function knownTest(id, mode) {
+    const d = store().done?.[id] || {}, h = store()[id + '_hist'] || [];
+    const has = m => !!d[m] || h.some(x => x.mode === m || x.mode === 'full' || (m === 'written' && x.mode === 'paper'));
+    return mode ? has(mode) : has('written') || has('oral');
+  }
+  function markDone(id, mode) {
+    if (id === 'lid' || !['written', 'oral', 'full'].includes(mode)) return;
+    const d = (store().done ||= {})[id] ||= {};
+    (mode === 'full' ? ['written', 'oral'] : [mode]).forEach(m => { d[m] = Date.now(); });
+  }
+  const infoLink = id => `<p class="sim-infolink"><a href="#pruefungsinfo${id ? '/' + base(id) : ''}">Prüfungsinfos: Dauer, Punkte, Anmeldung →</a></p>`;
   const PREP = ['telc-b1', 'telc-b2', 'dtb-b1', 'dtb-b2'];
   /* Paper practice: PDFs + listening MP3 (built by tools/pdf/build_sim_pdf.py and tools/sim/build_listening_mp3.py) */
   const DL = 'material/simulation/';
@@ -251,10 +266,11 @@
     const card = id => {
       const m = META[id], st = S[id], last = (S[id + '_hist'] || []).slice(-1)[0];
       const status = st && !st.done ? `<span class="sim-badge">⏸ angefangen</span>` : last ? `<span class="sim-badge ${last.pass ? 'ok' : ''}">Letztes Ergebnis: ${last.pct} %</span>` : '';
-      return `<a class="sim-card dm-g-${m.g}" href="#simulation/${id}"><span class="dm-tag">${e(m.who)}</span><b>${e(m.title)}</b><span class="sim-dur">${blockTimes(m)}</span><span class="sim-secs">${m.secs.map(([t, min, prep]) => `<i>${e(t)} · ${min} Min.${prep ? ` (+${prep} Vorb.)` : ''}</i>`).join('')}</span>${status}</a>`;
+      return `<a class="sim-card dm-g-${m.g}" href="#simulation/${id}"><span class="dm-tag">${e(m.who)}</span><b>${e(m.title)}</b><span class="sim-dur">${blockTimes(m)}</span><span class="sim-tests">${id === 'lid' ? 'Fragen jedes Mal neu gemischt' : `${count(id)} Modelltests${family(id).some(v => knownTest(v)) ? ` · ${family(id).filter(v => knownTest(v)).length} schon gemacht` : ''}`}</span><span class="sim-secs">${m.secs.map(([t, min, prep]) => `<i>${e(t)} · ${min} Min.${prep ? ` (+${prep} Vorb.)` : ''}</i>`).join('')}</span>${status}</a>`;
     };
     DM.page(`${DM.crumbs([['Prüfungstraining', '#pruefung'], ['Prüfungssimulationen']])}
-      <div class="dm-head"><h1>Prüfungssimulationen</h1><p class="dm-lead">Sechs komplette Prüfungen zum Üben, DTZ, DTB B1 und DTB B2 mit je drei, telc B1 und B2 mit je zwei Modelltests – mit der echten Zeit für jeden Prüfungsteil. Am Ende siehst du deine Punkte, ob du bestanden hättest und alle Lösungen mit Erklärung.</p></div>
+      <div class="dm-head"><h1>Prüfungssimulationen</h1><p class="dm-lead"><b>${ORDER.length} Prüfungen · ${TOTAL_TESTS()} Modelltests.</b> DTZ, DTB B1 und DTB B2 haben je drei Modelltests, telc B1 und telc B2 je zwei. Beim Test „Leben in Deutschland“ werden die Fragen jedes Mal neu gemischt. Alles mit der echten Zeit für jeden Prüfungsteil. Am Ende siehst du deine Punkte, ob du bestanden hättest und alle Lösungen mit Erklärung.</p></div>
+      ${infoLink()}
       <div class="sim-grid">${ORDER.map(card).join('')}</div>
       <section class="dm-card sim-how"><h2>So läuft eine Simulation</h2>
         <ul class="sim-list">
@@ -310,6 +326,9 @@
     DM.page(`${DM.crumbs([['Prüfungstraining', '#pruefung'], ['Simulationen', '#simulation'], [m.short]])}
       <div class="dm-head"><span class="dm-tag">${e(m.who)}</span><h1>Simulation: ${e(ex.title)}</h1><p class="dm-lead">${e(ex.intro)}</p></div>
       ${testTabs(id)}
+      ${id === 'lid' ? '' : `<p class="sim-testno">Du bist bei <b>Test ${testNo(id)} von ${count(base(id))}</b>.${knownTest(id) ? ' Diesen Test hast du schon gemacht.' : ''}</p>`}
+      ${infoLink(id)}
+      <div id="sim-known"></div>
       ${running ? `<aside class="dm-card sim-resume"><b>Du bist mitten in der Simulation.</b> <span>${e(runTitle)} – noch ${mmss(st.left)} Min.${st.phase === 'break' ? ' (Pause vor dem nächsten Teil)' : ''}</span><div class="dm-row"><a class="dm-btn" href="#simulation/${id}/run">▶ Fortsetzen</a><button type="button" class="dm-btn dm-btn-quiet" id="sim-new">Neu beginnen</button></div></aside>` : ''}
       <h2 class="sim-h2">Prüfung starten</h2>
       <p class="sim-startlead">${hasOral ? 'Starte die schriftliche und die mündliche Prüfung getrennt – wie am Prüfungstag. Sobald du startest, läuft <b>eine Uhr für die gesamte schriftliche bzw. mündliche Prüfung</b>. Die Zeit teilst du dir selbst ein; ist sie um, wird automatisch abgegeben.' : 'Sobald du startest, läuft die Uhr für den gesamten Test. Ist sie um, wird automatisch abgegeben.'}</p>
@@ -326,8 +345,19 @@
       ${hist.length ? `<section class="dm-card"><h2>Deine Ergebnisse</h2><ul class="sim-hist">${hist.slice(-6).reverse().map(h => `<li><span>${new Date(h.date).toLocaleDateString('de-DE')}</span><span class="sim-hmode">${e(modeLabel(h.mode || (h.single ? 'single' : 'full')))}</span><b>${h.pct} %</b><span>${h.pass === true ? '✓ bestanden' : h.pass === false && (h.mode === 'full' || !h.mode) && !h.single ? '✗ noch nicht bestanden' : ''}</span></li>`).join('')}</ul></section>` : ''}
       <p class="dm-small">Eigene Übungsaufgaben im Stil der Prüfung – keine offiziellen Aufgaben.</p>
       ${id === 'lid' ? window.LID_QUELLE_HTML || '' : ''}`, 'sim-page');
-    $('#sim-go')?.addEventListener('click', () => begin(id, ex, 'full'));
-    $$('[data-start]').forEach(b => b.addEventListener('click', () => begin(id, ex, b.dataset.start)));
+    /* Already finished this model test? Offer the next new one first – repeating is still possible. */
+    const startOrAsk = mode => {
+      const m = mode === 'full' ? 'written' : mode;
+      const fresh = id === 'lid' ? null : family(id).find(v => v !== id && !knownTest(v, m));
+      if (!fresh || !knownTest(id, m)) return begin(id, ex, mode);
+      const box = $('#sim-known');
+      box.innerHTML = `<aside class="dm-card sim-known" role="alert"><b>Diesen Test kennst du schon.</b><p>Neu für dich: <b>Test ${testNo(fresh)}</b>. Mit neuen Aufgaben siehst du besser, was du wirklich kannst.</p><div class="dm-row"><a class="dm-btn" href="#simulation/${fresh}">Neu für dich: Test ${testNo(fresh)} ▶</a><button type="button" class="dm-btn dm-btn-quiet" id="sim-repeat">Diesen Test noch einmal machen</button></div></aside>`;
+      $('#sim-repeat').onclick = () => begin(id, ex, mode);
+      box.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      box.querySelector('a').focus({ preventScroll: true });
+    };
+    $('#sim-go')?.addEventListener('click', () => startOrAsk('full'));
+    $$('[data-start]').forEach(b => b.addEventListener('click', () => startOrAsk(b.dataset.start)));
     $('#sim-new')?.addEventListener('click', ev => { const b = ev.currentTarget; if (!b.dataset.sure) { b.dataset.sure = 1; b.textContent = 'Wirklich? Dein Stand wird gelöscht.'; return; } delete store()[id]; save(); intro(id); });
     $$('[data-unpark]').forEach(b => b.addEventListener('click', () => unpark(id)));
     $$('[data-part]').forEach(b => b.addEventListener('click', () => { const [si, pi] = b.dataset.part.split('.').map(Number); begin(id, ex, 'single', si, pi); }));
@@ -558,6 +588,7 @@
     st.k = isBlock(st) ? st.secs.length : st.k + 1;
     if (st.k >= st.secs.length) {
       st.done = true; st.finished = Date.now();
+      markDone(id, st.mode);
       const r = score(ex, st);
       const hist = store()[id + '_hist'] ||= [];
       hist.push({ date: Date.now(), mode: st.mode, pauses: st.pauses || 0, pct: r.pct, pass: r.verdict ? (r.verdict.pass ?? null) : null, single: st.mode === 'single', sk: skMap(r.sk) });
@@ -864,7 +895,7 @@
       return `<details class="sim-rsec" open><summary><h2>${e(s.title)}</h2></summary>${secParts(s, st).map(p => {
         const ps = partScore(p, st);
         const head = `<h3>${e(p.title)} ${ps.n != null ? `<small>${ps.ok} von ${ps.n} richtig</small>` : ''}</h3>${p.kind ? '' : `<p class="sim-instr">${e(instrOf(p))}</p>`}`;
-        if (p.kind === 'write') return `<section class="sim-part">${head}${reviewWrite(p, st)}</section>`;
+        if (p.kind === 'write') return `<section class="sim-part">${head}${reviewWrite(p, st, id)}</section>`;
         if (p.kind === 'speak') return `<section class="sim-part">${head}${reviewSpeak(p, st, id)}</section>`;
         return `<section class="sim-part">${head}${partHTML(p, st, 'review')}</section>`;
       }).join('')}</details>`;
@@ -901,12 +932,17 @@
     const r = st.rate[p._key] || [];
     return `<fieldset class="sim-check"><legend>Bewerte dich ehrlich (${p.pts} Punkte möglich)</legend>${p.check.map((c, i) => `<label><input type="checkbox" data-rate="${p._key}|${i}" ${r[i] ? 'checked' : ''}> ${e(c)}</label>`).join('')}</fieldset>`;
   }
-  function reviewWrite(p, st) {
+  function reviewWrite(p, st, id) {
     const w = st.write[p._key] || {}, o = p.options[w.opt ?? 0], n = words(w.text);
+    /* task data (target words, Leitpunkte with keywords, graded samples) comes from muster-data.js – optional */
+    const mKey = `${id}/${p._key}/${w.opt ?? 0}`, mTask = window.DMMuster?.task(mKey);
+    const hints = w.text && window.DMSchreibcheck?.taskHints ? DMSchreibcheck.taskHints(w.text, { target: p.minWords, need: mTask?.need, leitpunkte: mTask?.leitpunkte || [] }) : '';
     return `${p.options.length > 1 ? `<p class="dm-small">Gewählt: ${e(o.h || '')}</p>` : ''}
       ${p.audio?.length ? `<details class="sim-det"><summary>Transkript</summary>${p.audio.map(transcript).join('')}</details>` : ''}
       <div class="sim-yours"><b>Dein Text (${n} Wörter${p.minWords && n < p.minWords ? ` – zu kurz, mindestens ${p.minWords}` : ''})</b><p class="sim-pre">${w.text ? e(w.text) : st.paper ? '<i>Dein Text steht in deinem Heft. Vergleiche ihn mit dem Mustertext und bewerte dich mit der Checkliste.</i>' : '<i>Kein Text geschrieben.</i>'}</p></div>
+      ${hints}
       <details class="sim-det" open><summary>Mustertext</summary><div class="sim-muster">${para(o.muster)}</div></details>
+      ${window.DMMuster?.html(mKey) || ''}
       ${checklist(p, st)}`;
   }
   function reviewSpeak(p, st, id) {
