@@ -37,7 +37,7 @@
   const CRIT = {
     dtz: "Kriterien im DTZ: Aufgabenbewältigung, kommunikative Gestaltung, Korrektheit, Wortschatz.",
     "telc-b1":
-      "Kriterien bei telc B1: Leitpunkte, kommunikative Gestaltung, formale Richtigkeit.",
+      "Kriterien bei telc B1: Aufgabenbewältigung (vier Leitpunkte), kommunikative Gestaltung, formale Richtigkeit.",
     "telc-b2":
       "Kriterien bei telc B2: Inhalt (Schreibanlass), kommunikative Gestaltung, formale Richtigkeit.",
     "dtb-b1":

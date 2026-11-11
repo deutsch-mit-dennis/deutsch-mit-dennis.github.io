@@ -840,7 +840,7 @@
       parts: [
         {
           kind: "speak",
-          title: "Teil 1: Kontaktaufnahme",
+          title: "Teil 1: Einander kennenlernen",
           skill: "muendlich",
           pts: 15,
           minutes: 3,
@@ -878,7 +878,7 @@
         },
         {
           kind: "speak",
-          title: "Teil 2: Gespräch über ein Thema",
+          title: "Teil 2: Über ein Thema sprechen",
           skill: "muendlich",
           pts: 30,
           minutes: 6,
@@ -1439,7 +1439,7 @@
         tip: "Als Prüfer achte ich zuerst darauf, ob alle vier Leitpunkte da sind. Ein einfacher, klarer Text mit allen Punkten ist besser als ein komplizierter Text, in dem einer fehlt.",
       },
       {
-        name: "Sprechen Teil 1: Kontaktaufnahme",
+        name: "Sprechen Teil 1: Einander kennenlernen",
         skill: "Sprechen",
         time: "ca. 3 Min.",
         what: "Du und deine Partnerin / dein Partner lernt euch kennen. Ihr stellt euch gegenseitig Fragen zu Herkunft, Wohnen, Arbeit, Familie, Sprachen und Hobbys.",
@@ -1456,7 +1456,7 @@
         tip: "Teil 1 ist das Aufwärmen. Sprich lieber einfach und flüssig – und zeig mit Rückfragen, dass du ein echtes Gespräch führst.",
       },
       {
-        name: "Sprechen Teil 2: Gespräch über ein Thema",
+        name: "Sprechen Teil 2: Über ein Thema sprechen",
         skill: "Sprechen",
         time: "ca. 6 Min.",
         what: "Jede Person hat einen kurzen Text zum gleichen Thema gelesen. Du berichtest kurz über deinen Text, erzählst von eigenen Erfahrungen, und ihr tauscht Meinungen aus.",

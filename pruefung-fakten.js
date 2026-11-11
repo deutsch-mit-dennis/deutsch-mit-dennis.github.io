@@ -277,19 +277,19 @@
         [
           "Hörverstehen",
           "ca. 30 Min.",
-          "3 Teile: 5 + 10 + 5 Aufgaben",
+          "3 Teile: 5 + 10 + 5 Aufgaben (richtig oder falsch). Teil 1 hörst du einmal, Teil 2 und 3 zweimal.",
           "75 Punkte",
         ],
         [
           "Schriftlicher Ausdruck",
           "30 Min.",
-          "1 Brief oder 1 E-Mail mit Leitpunkten",
+          "1 E-Mail (persönlich oder halbformell) mit 4 Leitpunkten",
           "45 Punkte",
         ],
         [
           "Mündliche Prüfung",
           "ca. 15 Min.",
-          "3 Teile · zu zweit · vorher 20 Min. Vorbereitung",
+          "3 Teile zu zweit: Einander kennenlernen (ca. 3 Min.), Über ein Thema sprechen (ca. 6 Min.), Gemeinsam etwas planen (ca. 6 Min.) · vorher 20 Min. Vorbereitung",
           "75 Punkte",
         ],
       ],
