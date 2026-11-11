@@ -593,7 +593,7 @@ header.dm-header nav{margin-left:auto}
 /* Bild beschreiben (bild.js) */
 .bd-legend{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 18px}
 .bd-legend span{padding:5px 12px;border-radius:99px;font-weight:700;font-size:14px;background:#f3f5fb}
-.g-der{color:#c62828}.g-die{color:#1565c0}.g-das{color:#7b1fa2}.g-pl{color:#2e7d32}
+.g-der{color:#2463c7}.g-die{color:#c2362b}.g-das{color:#1d7a45}.g-pl{color:#b26a00}
 .bd-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px;margin-bottom:24px}
 .bd-scene{display:flex;flex-direction:column;background:#fff;border:1px solid var(--dm-line);border-radius:18px;overflow:hidden;text-decoration:none;color:var(--dm-ink);transition:transform .15s,box-shadow .15s}
 .bd-scene:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(23,32,54,.1)}

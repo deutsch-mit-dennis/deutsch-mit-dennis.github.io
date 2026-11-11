@@ -758,6 +758,9 @@
     const group = g => Object.entries(ex).filter(([, s]) => s.group === g);
     page(`${crumbs([['Üben', '#ueben'], ['Hören']])}
       <div class="dm-head dm-head-art"><div><h1>Hören</h1><p class="dm-lead">Ansagen, Mailbox-Nachrichten, Gespräche und Radiobeiträge – mit Fragen und Lösungen. Die Texte sind mit natürlich klingenden KI-Stimmen vertont, verschiedene Figuren sprechen.</p></div><span class="dm-wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span></div>
+      <section class="dm-section"><div class="dm-section-head"><h2>Für den Anfang: kurze Hörtexte</h2><p>A1 bis B1 · Alltag und Beruf · ohne Prüfungsdruck</p></div>
+        <div class="dm-paths">${Object.entries(DM.listening).map(([id, set]) => setCard(id, set, id === 'beruf' ? 'sky' : 'mint')).join('')}</div>
+        <p class="dm-small">Die neuen A1- und A2-Texte liest im Moment die Stimme deines Geräts. Aufnahmen kommen später.</p></section>
       <section class="dm-section"><div class="dm-section-head"><h2>DTZ Hören – Übungssätze</h2><p>A2–B1 · alle vier Teile wie in der Prüfung</p></div>
         <div class="dm-paths">${group('dtz').map(([id, s]) => setCard(id, s, 'sun')).join('')}</div></section>
       ${group('telcb1').length ? `<section class="dm-section"><div class="dm-section-head"><h2>telc B1 Hören – allgemein</h2><p>B1 · Radiomeldungen, Interview, Durchsagen – richtig oder falsch</p></div>
@@ -766,8 +769,6 @@
         <div class="dm-paths">${group('dtbb1').map(([id, s]) => setCard(id, s, 'ink')).join('')}</div></section>` : ''}
       <section class="dm-section"><div class="dm-section-head"><h2>DTB B2 Hören – Beruf</h2><p>B2 · Mailbox, Besprechung, Kundengespräch, Radio</p></div>
         <div class="dm-paths">${group('b2').map(([id, s]) => setCard(id, s, 'ink')).join('')}</div></section>
-      <section class="dm-section"><div class="dm-section-head"><h2>Kurze Hörtexte zum Einstieg</h2></div>
-        <div class="dm-paths">${Object.entries(DM.listening).map(([id, set]) => setCard(id, set, id === 'beruf' ? 'sky' : 'mint')).join('')}</div></section>
       <p class="dm-small">Alle Hörtexte sind eigene Übungstexte im Stil der Prüfungen, keine offiziellen Prüfungsaufgaben. Die Stimmen sind künstlich erzeugt (KI).</p>`);
   }
   function listening(setId, raw) {
@@ -825,9 +826,9 @@
   /* ---------- Leseverstehen ---------- */
   const readSets = () => DM.reading || [];
   function readingHub() {
-    const sets = readSets();
+    const sets = readSets().slice().sort((a, b) => (/^a[12]$/.test(b.id) - /^a[12]$/.test(a.id)) || 0);
     page(`${crumbs([['Üben', '#ueben'], ['Lesen']])}
-      <div class="dm-head"><h1>Lesen</h1><p class="dm-lead">Mitteilungen, Anzeigen, E-Mails und Artikel verstehen – wie im Alltag, im DTZ und im DTB B2. Jede Woche kommt ein neuer Text dazu.</p></div>
+      <div class="dm-head"><h1>Lesen</h1><p class="dm-lead">Schilder, Nachrichten, Anzeigen, E-Mails und Artikel verstehen – von A1 bis B2, wie im Alltag, im DTZ und im DTB B2. Jede Woche kommt ein neuer Text dazu.</p></div>
       <div class="dm-paths">${sets.map((st, k) => { const done = st.items.filter(it => mem.done['lesen:' + it.id] !== undefined).length;
         return `<a class="dm-path dm-g-${k ? 'ink' : 'sun'}" href="#lesen/${st.id}"><span class="dm-path-icon" aria-hidden="true">📖</span><span class="dm-path-text"><span class="dm-path-meta">${x(st.level)} · ${x(st.exam)}</span><b>${x(st.title)}</b><span>${st.items.length} Lesetexte: ${x([...new Set(st.items.map(i => i.type))].slice(0, 3).join(', '))} …</span>${done ? `<span class="dm-mini-progress"><i style="width:${Math.round(done / st.items.length * 100)}%"></i></span><small>${done} von ${st.items.length} bearbeitet</small>` : ''}</span></a>`; }).join('')}</div>
       <p class="dm-small">Alle Lesetexte sind eigene Übungstexte im Stil der Prüfungen, keine offiziellen Prüfungsaufgaben.</p>`);
@@ -1643,7 +1644,7 @@
       const lidSec = document.createElement('section'); lidSec.className = 'panel'; lidSec.id = 'quelle-lid';
       lidSec.innerHTML = '<h2>Fragen zum Test „Leben in Deutschland“</h2><p>Die Fragen im LiD-Trainer, in den LiD-Spielen, in der Tages-Challenge und im Lernheft stammen aus dem Gesamtfragenkatalog zum Test „Leben in Deutschland“ und zum Einbürgerungstest. Herausgeber ist das Bundesamt für Migration und Flüchtlinge (BAMF): <a href="https://www.bamf.de/SharedDocs/Anlagen/DE/Integration/Einbuergerung/gesamtfragenkatalog-lebenindeutschland.pdf?__blob=publicationFile" target="_blank" rel="noopener">Gesamtfragenkatalog als PDF (bamf.de) ↗</a>. Der Katalog unterliegt nicht dem Urheberrecht und darf für Lernplattformen verwendet werden (Auskunft des BAMF-Service-Centers, Oktober 2026).</p><p><b>Wichtig:</b> „Deutsch mit Dennis“ ist ein privates, unabhängiges Lernangebot. Es wird nicht vom BAMF unterstützt und nicht im Auftrag des BAMF oder der Bundesrepublik Deutschland betrieben. Die Erklärungen, Übungen und Spiele rund um die Fragen sind eigene Materialien.</p>';
       if (!$('#quelle-lid')) (sec || $$('main section').pop())?.after(lidSec);
-      if (sec) sec.innerHTML = '<h2>Deine Eingaben</h2><p>In „Üben“ (Sprechen, Schreiben, Hören) und in „Mein Lernweg“ bleiben deine Texte und dein Fortschritt im Speicher deines Browsers – nur auf diesem Gerät. Texte in den Lektionen und im Prüfungstraining bleiben nur, solange die Seite geöffnet ist. Lade wichtige Texte vorher herunter. Freie Texte und die Aussprache werden nicht automatisch bewertet.</p><p>Mehr dazu in der <a href="/datenschutz/">Datenschutzerklärung</a>.</p>';
+      if (sec) sec.innerHTML = '<h2>Deine Eingaben</h2><p>In „Üben“ (Sprechen, Schreiben, Hören) und in „Mein Lernweg“ bleiben deine Texte und dein Fortschritt im Speicher deines Browsers – nur auf diesem Gerät. Auch dein Fortschritt in den Lektionen, im Kurs und im Fehlerheft bleibt auf diesem Gerät gespeichert. Sichere ihn unter „Lernstand sichern“, bevor du das Gerät wechselst. Freie Texte und die Aussprache werden nicht automatisch bewertet.</p><p>Mehr dazu in der <a href="/datenschutz/">Datenschutzerklärung</a>.</p>';
     }
     if (p[0] === 'orientierungskurs' && !p[1]) videoSection('orientierung', 'Videos: Leben in Deutschland').then(sec => sec && mainEl.append(sec));
     if (p[0] === 'lektion' && p[1] && lessons.some(l => l.id === p[1])) {
