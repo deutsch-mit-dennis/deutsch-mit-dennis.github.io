@@ -1,5 +1,5 @@
 {
-"updated": "2026-11-10T11:59:55Z",
+"updated": "2026-11-11T07:42:05Z",
 "engines": [
 "elevenlabs",
 "gemini"
@@ -434,6 +434,2083 @@
 "engine": "gemini",
 "sig": "8fd9cb21f1",
 "text": "e93609b413"
+},
+"es-alphabet-0": {
+"v": "c70538feb1",
+"engine": "gemini",
+"sig": "c70538feb1",
+"text": "eeb3b33017",
+"whole": true
+},
+"es-alphabet-1": {
+"v": "1dd30016b8",
+"engine": "gemini",
+"sig": "1dd30016b8",
+"text": "6b85279b12",
+"whole": true
+},
+"es-alphabet-10": {
+"v": "a63e23e515",
+"engine": "gemini",
+"sig": "a63e23e515",
+"text": "6afe1fa764",
+"whole": true
+},
+"es-alphabet-11": {
+"v": "7d81db601e",
+"engine": "gemini",
+"sig": "7d81db601e",
+"text": "b911fbf11b",
+"whole": true
+},
+"es-alphabet-12": {
+"v": "7f3b9c81b2",
+"engine": "gemini",
+"sig": "7f3b9c81b2",
+"text": "73808bde33",
+"whole": true
+},
+"es-alphabet-13": {
+"v": "5febd41eb4",
+"engine": "gemini",
+"sig": "5febd41eb4",
+"text": "d13df901ee",
+"whole": true
+},
+"es-alphabet-14": {
+"v": "3e1bbe2079",
+"engine": "gemini",
+"sig": "3e1bbe2079",
+"text": "1a40221a78",
+"whole": true
+},
+"es-alphabet-15": {
+"v": "961496a567",
+"engine": "gemini",
+"sig": "961496a567",
+"text": "6581c25fe2",
+"whole": true
+},
+"es-alphabet-16": {
+"v": "7e1eada8bd",
+"engine": "gemini",
+"sig": "7e1eada8bd",
+"text": "921a04d866"
+},
+"es-alphabet-17": {
+"v": "901c1b01b6",
+"engine": "gemini",
+"sig": "901c1b01b6",
+"text": "837753d303",
+"whole": true
+},
+"es-alphabet-18": {
+"v": "64da1a970c",
+"engine": "gemini",
+"sig": "64da1a970c",
+"text": "e0bdf9502a",
+"whole": true
+},
+"es-alphabet-19": {
+"v": "827c8a860c",
+"engine": "gemini",
+"sig": "827c8a860c",
+"text": "5eec2416ef",
+"whole": true
+},
+"es-alphabet-2": {
+"v": "c29cc9de0c",
+"engine": "gemini",
+"sig": "c29cc9de0c",
+"text": "551076e5e2",
+"whole": true
+},
+"es-alphabet-20": {
+"v": "0f31e5664b",
+"engine": "gemini",
+"sig": "0f31e5664b",
+"text": "368c475627",
+"whole": true
+},
+"es-alphabet-21": {
+"v": "eedab3c49f",
+"engine": "gemini",
+"sig": "eedab3c49f",
+"text": "87f5fd1727",
+"whole": true
+},
+"es-alphabet-22": {
+"v": "5bcf2203c1",
+"engine": "gemini",
+"sig": "5bcf2203c1",
+"text": "b335eab813",
+"whole": true
+},
+"es-alphabet-23": {
+"v": "b4acd31eef",
+"engine": "gemini",
+"sig": "b4acd31eef",
+"text": "5ef10912ab",
+"whole": true
+},
+"es-alphabet-24": {
+"v": "6ba4531be8",
+"engine": "gemini",
+"sig": "6ba4531be8",
+"text": "fbbc203328",
+"whole": true
+},
+"es-alphabet-25": {
+"v": "cb527e4fad",
+"engine": "gemini",
+"sig": "cb527e4fad",
+"text": "06b5f88442",
+"whole": true
+},
+"es-alphabet-26": {
+"v": "dd8a096943",
+"engine": "gemini",
+"sig": "dd8a096943",
+"text": "fcb7626c71",
+"whole": true
+},
+"es-alphabet-27": {
+"v": "acfc4e2ada",
+"engine": "gemini",
+"sig": "acfc4e2ada",
+"text": "59ca8abc13",
+"whole": true
+},
+"es-alphabet-28": {
+"v": "9792174f0e",
+"engine": "gemini",
+"sig": "9792174f0e",
+"text": "3f75ecb253",
+"whole": true
+},
+"es-alphabet-29": {
+"v": "c2f894272f",
+"engine": "gemini",
+"sig": "c2f894272f",
+"text": "6199f4266a",
+"whole": true
+},
+"es-alphabet-3": {
+"v": "e0fea7c205",
+"engine": "gemini",
+"sig": "e0fea7c205",
+"text": "2995fcbc0b",
+"whole": true
+},
+"es-alphabet-4": {
+"v": "50595b712b",
+"engine": "gemini",
+"sig": "50595b712b",
+"text": "cf3045970b",
+"whole": true
+},
+"es-alphabet-5": {
+"v": "172be2e4f4",
+"engine": "gemini",
+"sig": "172be2e4f4",
+"text": "3ffee5a39c",
+"whole": true
+},
+"es-alphabet-6": {
+"v": "1f7c6e3b44",
+"engine": "gemini",
+"sig": "1f7c6e3b44",
+"text": "e36e4e4efe",
+"whole": true
+},
+"es-alphabet-7": {
+"v": "fbf6b8f8fc",
+"engine": "gemini",
+"sig": "fbf6b8f8fc",
+"text": "745b7995a9",
+"whole": true
+},
+"es-alphabet-8": {
+"v": "9fa99414fb",
+"engine": "gemini",
+"sig": "9fa99414fb",
+"text": "8526e42030",
+"whole": true
+},
+"es-alphabet-9": {
+"v": "0ed479eb24",
+"engine": "gemini",
+"sig": "0ed479eb24",
+"text": "eabe0ab702",
+"whole": true
+},
+"es-alphabet-s0": {
+"v": "da184ea53d",
+"engine": "gemini",
+"sig": "da184ea53d",
+"text": "07a0813ea4",
+"whole": true
+},
+"es-alphabet-s1": {
+"v": "2d19f2ad21",
+"engine": "gemini",
+"sig": "2d19f2ad21",
+"text": "cba8f2c7f1",
+"whole": true
+},
+"es-alphabet-s2": {
+"v": "3b47ae4907",
+"engine": "gemini",
+"sig": "3b47ae4907",
+"text": "0b8d58f0e1",
+"whole": true
+},
+"es-alphabet-s3": {
+"v": "c6e43e81df",
+"engine": "gemini",
+"sig": "c6e43e81df",
+"text": "c32a7a8306",
+"whole": true
+},
+"es-alphabet-s4": {
+"v": "277555fc22",
+"engine": "gemini",
+"sig": "277555fc22",
+"text": "ad9393bfe1",
+"whole": true
+},
+"es-alphabet-s5": {
+"v": "0a884cd491",
+"engine": "gemini",
+"sig": "0a884cd491",
+"text": "42c9fa6b09",
+"whole": true
+},
+"es-berufe-0": {
+"v": "1438c9bb16",
+"engine": "gemini",
+"sig": "1438c9bb16",
+"text": "0bf4d58def",
+"whole": true
+},
+"es-berufe-1": {
+"v": "60606ee6c6",
+"engine": "gemini",
+"sig": "60606ee6c6",
+"text": "4fa4047911",
+"whole": true
+},
+"es-berufe-2": {
+"v": "1bcbfeca1a",
+"engine": "gemini",
+"sig": "1bcbfeca1a",
+"text": "7b8bd0b461",
+"whole": true
+},
+"es-berufe-3": {
+"v": "5ad9003ee5",
+"engine": "gemini",
+"sig": "5ad9003ee5",
+"text": "62fbbc35f6",
+"whole": true
+},
+"es-berufe-4": {
+"v": "95ebd89d70",
+"engine": "gemini",
+"sig": "95ebd89d70",
+"text": "f177eee8c3",
+"whole": true
+},
+"es-berufe-5": {
+"v": "23b39dc2fb",
+"engine": "gemini",
+"sig": "23b39dc2fb",
+"text": "0585d9a3d5",
+"whole": true
+},
+"es-berufe-6": {
+"v": "18bc30627d",
+"engine": "gemini",
+"sig": "18bc30627d",
+"text": "50ac84b002",
+"whole": true
+},
+"es-berufe-7": {
+"v": "9ddbba65e4",
+"engine": "gemini",
+"sig": "9ddbba65e4",
+"text": "7e866260cb",
+"whole": true
+},
+"es-berufe-8": {
+"v": "325a66138a",
+"engine": "gemini",
+"sig": "325a66138a",
+"text": "001231dbb5",
+"whole": true
+},
+"es-berufe-9": {
+"v": "37342da3b7",
+"engine": "gemini",
+"sig": "37342da3b7",
+"text": "f06a945ff1",
+"whole": true
+},
+"es-berufe-s0": {
+"v": "dbe69857e3",
+"engine": "gemini",
+"sig": "dbe69857e3",
+"text": "9bf84ad4e6",
+"whole": true
+},
+"es-berufe-s1": {
+"v": "d0dfefb34b",
+"engine": "gemini",
+"sig": "d0dfefb34b",
+"text": "6498706e37",
+"whole": true
+},
+"es-berufe-s2": {
+"v": "079cac5243",
+"engine": "gemini",
+"sig": "079cac5243",
+"text": "a7fdd072fe",
+"whole": true
+},
+"es-berufe-s3": {
+"v": "20a86764b8",
+"engine": "gemini",
+"sig": "20a86764b8",
+"text": "03e5384a6f",
+"whole": true
+},
+"es-berufe-s4": {
+"v": "49db2452f3",
+"engine": "gemini",
+"sig": "49db2452f3",
+"text": "27aa7d945f",
+"whole": true
+},
+"es-essen-0": {
+"v": "2af8724af9",
+"engine": "gemini",
+"sig": "2af8724af9",
+"text": "e6b8b37de3",
+"whole": true
+},
+"es-essen-1": {
+"v": "f58a95187d",
+"engine": "gemini",
+"sig": "f58a95187d",
+"text": "05e47ba057",
+"whole": true
+},
+"es-essen-10": {
+"v": "6a923af6ff",
+"engine": "gemini",
+"sig": "6a923af6ff",
+"text": "4b1d965ae0",
+"whole": true
+},
+"es-essen-11": {
+"v": "e8b6c2be1f",
+"engine": "gemini",
+"sig": "e8b6c2be1f",
+"text": "8c3d8cab3f",
+"whole": true
+},
+"es-essen-2": {
+"v": "51b8011992",
+"engine": "gemini",
+"sig": "51b8011992",
+"text": "2fd08c2506",
+"whole": true
+},
+"es-essen-3": {
+"v": "816fe8e78e",
+"engine": "gemini",
+"sig": "816fe8e78e",
+"text": "654b579cf5",
+"whole": true
+},
+"es-essen-4": {
+"v": "0996b1f45a",
+"engine": "gemini",
+"sig": "0996b1f45a",
+"text": "8a740a620c",
+"whole": true
+},
+"es-essen-5": {
+"v": "a86347d59b",
+"engine": "gemini",
+"sig": "a86347d59b",
+"text": "be816fd132",
+"whole": true
+},
+"es-essen-6": {
+"v": "b72233e4d6",
+"engine": "gemini",
+"sig": "b72233e4d6",
+"text": "bb523e49c4",
+"whole": true
+},
+"es-essen-7": {
+"v": "93a31e1a2a",
+"engine": "gemini",
+"sig": "93a31e1a2a",
+"text": "ed544e16f8",
+"whole": true
+},
+"es-essen-8": {
+"v": "8f5cb1015c",
+"engine": "gemini",
+"sig": "8f5cb1015c",
+"text": "f663f2e6c6",
+"whole": true
+},
+"es-essen-9": {
+"v": "d656c35f4c",
+"engine": "gemini",
+"sig": "d656c35f4c",
+"text": "bc7c3f99df",
+"whole": true
+},
+"es-essen-s0": {
+"v": "91f5c13a41",
+"engine": "gemini",
+"sig": "91f5c13a41",
+"text": "378456f7b6",
+"whole": true
+},
+"es-essen-s1": {
+"v": "f5974581bd",
+"engine": "gemini",
+"sig": "f5974581bd",
+"text": "f62f24e2fa",
+"whole": true
+},
+"es-essen-s2": {
+"v": "15fc44c348",
+"engine": "gemini",
+"sig": "15fc44c348",
+"text": "56f8625797",
+"whole": true
+},
+"es-essen-s3": {
+"v": "3a81072209",
+"engine": "gemini",
+"sig": "3a81072209",
+"text": "d7a74a66b0",
+"whole": true
+},
+"es-essen-s4": {
+"v": "d08871e690",
+"engine": "gemini",
+"sig": "d08871e690",
+"text": "eb0a898adc",
+"whole": true
+},
+"es-familie-0": {
+"v": "e26ce86dc3",
+"engine": "gemini",
+"sig": "e26ce86dc3",
+"text": "5ec12d6379",
+"whole": true
+},
+"es-familie-1": {
+"v": "d72ac18618",
+"engine": "gemini",
+"sig": "d72ac18618",
+"text": "02fcddc112",
+"whole": true
+},
+"es-familie-2": {
+"v": "3fb3decc37",
+"engine": "gemini",
+"sig": "3fb3decc37",
+"text": "0802b54597",
+"whole": true
+},
+"es-familie-3": {
+"v": "7c13e42060",
+"engine": "gemini",
+"sig": "7c13e42060",
+"text": "5ccf00485f",
+"whole": true
+},
+"es-familie-4": {
+"v": "840d5fb9f7",
+"engine": "gemini",
+"sig": "840d5fb9f7",
+"text": "5e45057c1c",
+"whole": true
+},
+"es-familie-5": {
+"v": "d4e762797f",
+"engine": "gemini",
+"sig": "d4e762797f",
+"text": "09239dec01",
+"whole": true
+},
+"es-familie-6": {
+"v": "9b5f679819",
+"engine": "gemini",
+"sig": "9b5f679819",
+"text": "c72a84014a",
+"whole": true
+},
+"es-familie-7": {
+"v": "975f3fad35",
+"engine": "gemini",
+"sig": "975f3fad35",
+"text": "9244add49d",
+"whole": true
+},
+"es-familie-8": {
+"v": "4ffeb81f46",
+"engine": "gemini",
+"sig": "4ffeb81f46",
+"text": "123bbd24a8",
+"whole": true
+},
+"es-familie-9": {
+"v": "e218d23614",
+"engine": "gemini",
+"sig": "e218d23614",
+"text": "0e9a950fb8",
+"whole": true
+},
+"es-familie-s0": {
+"v": "12274bcae1",
+"engine": "gemini",
+"sig": "12274bcae1",
+"text": "0973bdb971",
+"whole": true
+},
+"es-familie-s1": {
+"v": "75e172d985",
+"engine": "gemini",
+"sig": "75e172d985",
+"text": "331364057a",
+"whole": true
+},
+"es-familie-s2": {
+"v": "44b401e473",
+"engine": "gemini",
+"sig": "44b401e473",
+"text": "c6883aa786",
+"whole": true
+},
+"es-familie-s3": {
+"v": "9c12a528c1",
+"engine": "gemini",
+"sig": "9c12a528c1",
+"text": "6d4ca19404",
+"whole": true
+},
+"es-familie-s4": {
+"v": "ade213a0c8",
+"engine": "gemini",
+"sig": "ade213a0c8",
+"text": "d9e13aa181",
+"whole": true
+},
+"es-farben-0": {
+"v": "df1e6a020e",
+"engine": "gemini",
+"sig": "df1e6a020e",
+"text": "cb39d7b17b",
+"whole": true
+},
+"es-farben-1": {
+"v": "747e39d8fb",
+"engine": "gemini",
+"sig": "747e39d8fb",
+"text": "b68042e2e3",
+"whole": true
+},
+"es-farben-10": {
+"v": "45e6c4a3b3",
+"engine": "gemini",
+"sig": "45e6c4a3b3",
+"text": "c2204b35b2",
+"whole": true
+},
+"es-farben-2": {
+"v": "3ae876e9ba",
+"engine": "gemini",
+"sig": "3ae876e9ba",
+"text": "ac5c91b9fe",
+"whole": true
+},
+"es-farben-3": {
+"v": "3443d0584a",
+"engine": "gemini",
+"sig": "3443d0584a",
+"text": "81a57d6ea4",
+"whole": true
+},
+"es-farben-4": {
+"v": "602805f8f3",
+"engine": "gemini",
+"sig": "602805f8f3",
+"text": "463c37d408",
+"whole": true
+},
+"es-farben-5": {
+"v": "6f4870b791",
+"engine": "gemini",
+"sig": "6f4870b791",
+"text": "42da34e30d",
+"whole": true
+},
+"es-farben-6": {
+"v": "e156c624a6",
+"engine": "gemini",
+"sig": "e156c624a6",
+"text": "86786938fc",
+"whole": true
+},
+"es-farben-7": {
+"v": "e00b1c0377",
+"engine": "gemini",
+"sig": "e00b1c0377",
+"text": "4232856c2f",
+"whole": true
+},
+"es-farben-8": {
+"v": "46a2fe5243",
+"engine": "gemini",
+"sig": "46a2fe5243",
+"text": "a46d7ce0df",
+"whole": true
+},
+"es-farben-9": {
+"v": "1c6d648a77",
+"engine": "gemini",
+"sig": "1c6d648a77",
+"text": "42f4369c23",
+"whole": true
+},
+"es-farben-s0": {
+"v": "7414f34a81",
+"engine": "gemini",
+"sig": "7414f34a81",
+"text": "d4c0ba4071",
+"whole": true
+},
+"es-farben-s1": {
+"v": "69ce92e420",
+"engine": "gemini",
+"sig": "69ce92e420",
+"text": "27df7bb56c",
+"whole": true
+},
+"es-farben-s2": {
+"v": "7173689bda",
+"engine": "gemini",
+"sig": "7173689bda",
+"text": "7a9d2278ee",
+"whole": true
+},
+"es-farben-s3": {
+"v": "edeec21566",
+"engine": "gemini",
+"sig": "edeec21566",
+"text": "0f87b3af31",
+"whole": true
+},
+"es-hallo-0": {
+"v": "58a1456e01",
+"engine": "gemini",
+"sig": "58a1456e01",
+"text": "75a9136c9b",
+"whole": true
+},
+"es-hallo-1": {
+"v": "2a78f7e515",
+"engine": "gemini",
+"sig": "2a78f7e515",
+"text": "a79e5f2149",
+"whole": true
+},
+"es-hallo-2": {
+"v": "123566ba11",
+"engine": "gemini",
+"sig": "123566ba11",
+"text": "37cb51233f",
+"whole": true
+},
+"es-hallo-3": {
+"v": "0f3c8e72f0",
+"engine": "gemini",
+"sig": "0f3c8e72f0",
+"text": "8273c4bbfe",
+"whole": true
+},
+"es-hallo-4": {
+"v": "757650aebb",
+"engine": "gemini",
+"sig": "757650aebb",
+"text": "76f5124912",
+"whole": true
+},
+"es-hallo-5": {
+"v": "6ec4735b83",
+"engine": "gemini",
+"sig": "6ec4735b83",
+"text": "025b1e45ac",
+"whole": true
+},
+"es-hallo-6": {
+"v": "ae3d28d3d6",
+"engine": "gemini",
+"sig": "ae3d28d3d6",
+"text": "b41545c30e",
+"whole": true
+},
+"es-hallo-7": {
+"v": "42bbb27c72",
+"engine": "gemini",
+"sig": "42bbb27c72",
+"text": "cc9d8dd3c7",
+"whole": true
+},
+"es-hallo-8": {
+"v": "c919749109",
+"engine": "gemini",
+"sig": "c919749109",
+"text": "b24b7696fb",
+"whole": true
+},
+"es-hallo-9": {
+"v": "bec39ee439",
+"engine": "gemini",
+"sig": "bec39ee439",
+"text": "12b45cc81a",
+"whole": true
+},
+"es-hallo-s0": {
+"v": "ef0926e2f9",
+"engine": "gemini",
+"sig": "ef0926e2f9",
+"text": "92b2baa9a1",
+"whole": true
+},
+"es-hallo-s1": {
+"v": "d7ba8d22c1",
+"engine": "gemini",
+"sig": "d7ba8d22c1",
+"text": "0285d02248",
+"whole": true
+},
+"es-hallo-s2": {
+"v": "e1f13319ca",
+"engine": "gemini",
+"sig": "e1f13319ca",
+"text": "2df327247c",
+"whole": true
+},
+"es-hallo-s3": {
+"v": "4dacefff88",
+"engine": "gemini",
+"sig": "4dacefff88",
+"text": "613fca952b",
+"whole": true
+},
+"es-hallo-s4": {
+"v": "085ed8b304",
+"engine": "gemini",
+"sig": "085ed8b304",
+"text": "3669167371",
+"whole": true
+},
+"es-hallo-s5": {
+"v": "fbaaa697d1",
+"engine": "gemini",
+"sig": "fbaaa697d1",
+"text": "0461100101",
+"whole": true
+},
+"es-ich-0": {
+"v": "ff05153e9d",
+"engine": "gemini",
+"sig": "ff05153e9d",
+"text": "830a69fa0c",
+"whole": true
+},
+"es-ich-1": {
+"v": "cc956e0387",
+"engine": "gemini",
+"sig": "cc956e0387",
+"text": "618328e05f",
+"whole": true
+},
+"es-ich-2": {
+"v": "5def951ad2",
+"engine": "gemini",
+"sig": "5def951ad2",
+"text": "b1a95e7494",
+"whole": true
+},
+"es-ich-3": {
+"v": "8b3fa1c8fd",
+"engine": "gemini",
+"sig": "8b3fa1c8fd",
+"text": "f81c4a2e0c",
+"whole": true
+},
+"es-ich-4": {
+"v": "4a4f5068d7",
+"engine": "gemini",
+"sig": "4a4f5068d7",
+"text": "d5b10ef5d1",
+"whole": true
+},
+"es-ich-5": {
+"v": "b14166615b",
+"engine": "gemini",
+"sig": "b14166615b",
+"text": "02aabf2429",
+"whole": true
+},
+"es-ich-6": {
+"v": "1c15f1ee27",
+"engine": "gemini",
+"sig": "1c15f1ee27",
+"text": "ae0441b964",
+"whole": true
+},
+"es-ich-7": {
+"v": "0f4331a190",
+"engine": "gemini",
+"sig": "0f4331a190",
+"text": "5ae3f71aca",
+"whole": true
+},
+"es-ich-s0": {
+"v": "d395ede2ec",
+"engine": "gemini",
+"sig": "d395ede2ec",
+"text": "d8062d5b9b",
+"whole": true
+},
+"es-ich-s1": {
+"v": "6952f96b7e",
+"engine": "gemini",
+"sig": "6952f96b7e",
+"text": "a6355ae824",
+"whole": true
+},
+"es-ich-s2": {
+"v": "5f402f0818",
+"engine": "gemini",
+"sig": "5f402f0818",
+"text": "10b2a84344",
+"whole": true
+},
+"es-ich-s3": {
+"v": "0cdd37cc5a",
+"engine": "gemini",
+"sig": "0cdd37cc5a",
+"text": "09efca8743",
+"whole": true
+},
+"es-ich-s4": {
+"v": "7f400de6ae",
+"engine": "gemini",
+"sig": "7f400de6ae",
+"text": "af712bfff8",
+"whole": true
+},
+"es-ich-s5": {
+"v": "9d6aed187c",
+"engine": "gemini",
+"sig": "9d6aed187c",
+"text": "15f7616002",
+"whole": true
+},
+"es-kleidung-0": {
+"v": "e66762c71d",
+"engine": "gemini",
+"sig": "e66762c71d",
+"text": "741856550b",
+"whole": true
+},
+"es-kleidung-1": {
+"v": "1fc2b78b01",
+"engine": "gemini",
+"sig": "1fc2b78b01",
+"text": "94d6fa3085",
+"whole": true
+},
+"es-kleidung-2": {
+"v": "f4d5d0729c",
+"engine": "gemini",
+"sig": "f4d5d0729c",
+"text": "d3965d9566",
+"whole": true
+},
+"es-kleidung-3": {
+"v": "eb76c06e40",
+"engine": "gemini",
+"sig": "eb76c06e40",
+"text": "3c979a5657",
+"whole": true
+},
+"es-kleidung-4": {
+"v": "30e2d814a9",
+"engine": "gemini",
+"sig": "30e2d814a9",
+"text": "bf5b6375e8",
+"whole": true
+},
+"es-kleidung-5": {
+"v": "412372b4fc",
+"engine": "gemini",
+"sig": "412372b4fc",
+"text": "1cd2266b9d",
+"whole": true
+},
+"es-kleidung-6": {
+"v": "d5968e2e0f",
+"engine": "gemini",
+"sig": "d5968e2e0f",
+"text": "6bf1258688",
+"whole": true
+},
+"es-kleidung-7": {
+"v": "c8505d1f99",
+"engine": "gemini",
+"sig": "c8505d1f99",
+"text": "b198289111",
+"whole": true
+},
+"es-kleidung-8": {
+"v": "a748bc3149",
+"engine": "gemini",
+"sig": "a748bc3149",
+"text": "b83e2e7c5b",
+"whole": true
+},
+"es-kleidung-9": {
+"v": "14d7720d34",
+"engine": "gemini",
+"sig": "14d7720d34",
+"text": "46fd8fff4b",
+"whole": true
+},
+"es-kleidung-s0": {
+"v": "fa249d0eb9",
+"engine": "gemini",
+"sig": "fa249d0eb9",
+"text": "28a391992e",
+"whole": true
+},
+"es-kleidung-s1": {
+"v": "7effa79406",
+"engine": "gemini",
+"sig": "7effa79406",
+"text": "5e698afb94",
+"whole": true
+},
+"es-kleidung-s2": {
+"v": "9a667596ce",
+"engine": "gemini",
+"sig": "9a667596ce",
+"text": "e6ba8e2b83",
+"whole": true
+},
+"es-kleidung-s3": {
+"v": "7eb00e86cf",
+"engine": "gemini",
+"sig": "7eb00e86cf",
+"text": "9b72fc8c03",
+"whole": true
+},
+"es-kleidung-s4": {
+"v": "265e831f34",
+"engine": "gemini",
+"sig": "265e831f34",
+"text": "b9043dcdcb",
+"whole": true
+},
+"es-koerper-0": {
+"v": "561496c4a9",
+"engine": "gemini",
+"sig": "561496c4a9",
+"text": "f3e8e716d9",
+"whole": true
+},
+"es-koerper-1": {
+"v": "2578182286",
+"engine": "gemini",
+"sig": "2578182286",
+"text": "56811ad14f",
+"whole": true
+},
+"es-koerper-10": {
+"v": "7ae673ad6e",
+"engine": "gemini",
+"sig": "7ae673ad6e",
+"text": "1909076199",
+"whole": true
+},
+"es-koerper-11": {
+"v": "85f2253d29",
+"engine": "gemini",
+"sig": "85f2253d29",
+"text": "a6287b5bca",
+"whole": true
+},
+"es-koerper-2": {
+"v": "c8b4922ea3",
+"engine": "gemini",
+"sig": "c8b4922ea3",
+"text": "a8c63c040e",
+"whole": true
+},
+"es-koerper-3": {
+"v": "99eba025a1",
+"engine": "gemini",
+"sig": "99eba025a1",
+"text": "f77c61f375",
+"whole": true
+},
+"es-koerper-4": {
+"v": "53388fb018",
+"engine": "gemini",
+"sig": "53388fb018",
+"text": "5be525ca42",
+"whole": true
+},
+"es-koerper-5": {
+"v": "90bd6180a6",
+"engine": "gemini",
+"sig": "90bd6180a6",
+"text": "e5154b0bb0",
+"whole": true
+},
+"es-koerper-6": {
+"v": "64cfdfa0eb",
+"engine": "gemini",
+"sig": "64cfdfa0eb",
+"text": "595ddf3fd0",
+"whole": true
+},
+"es-koerper-7": {
+"v": "9956001261",
+"engine": "elevenlabs",
+"sig": "9956001261",
+"text": "e622248cbc"
+},
+"es-koerper-8": {
+"v": "13a81d5b42",
+"engine": "elevenlabs",
+"sig": "13a81d5b42",
+"text": "6e457de106"
+},
+"es-koerper-9": {
+"v": "21c046826f",
+"engine": "elevenlabs",
+"sig": "21c046826f",
+"text": "0071bef17e"
+},
+"es-koerper-s0": {
+"v": "2e0372e170",
+"engine": "elevenlabs",
+"sig": "2e0372e170",
+"text": "2232f27dae"
+},
+"es-koerper-s1": {
+"v": "cf35eab83e",
+"engine": "elevenlabs",
+"sig": "cf35eab83e",
+"text": "a107c2e38f"
+},
+"es-koerper-s2": {
+"v": "4e3bb100de",
+"engine": "elevenlabs",
+"sig": "4e3bb100de",
+"text": "4577d14d6d"
+},
+"es-koerper-s3": {
+"v": "08acd5cfea",
+"engine": "elevenlabs",
+"sig": "08acd5cfea",
+"text": "dd3bd7a04a"
+},
+"es-koerper-s4": {
+"v": "32b3723f5f",
+"engine": "elevenlabs",
+"sig": "32b3723f5f",
+"text": "cad46fd0e4"
+},
+"es-kurs-0": {
+"v": "b78dd5f266",
+"engine": "elevenlabs",
+"sig": "b78dd5f266",
+"text": "0fee29eaf5"
+},
+"es-kurs-1": {
+"v": "f0960e5e31",
+"engine": "elevenlabs",
+"sig": "f0960e5e31",
+"text": "09d0cd9fde"
+},
+"es-kurs-10": {
+"v": "df7d30167e",
+"engine": "elevenlabs",
+"sig": "df7d30167e",
+"text": "fb66e86179"
+},
+"es-kurs-11": {
+"v": "9cd719d48d",
+"engine": "elevenlabs",
+"sig": "9cd719d48d",
+"text": "4ade5f3c8f"
+},
+"es-kurs-2": {
+"v": "385a607f27",
+"engine": "elevenlabs",
+"sig": "385a607f27",
+"text": "2d133077d7"
+},
+"es-kurs-3": {
+"v": "8f58b2e879",
+"engine": "elevenlabs",
+"sig": "8f58b2e879",
+"text": "34cb6ab03c"
+},
+"es-kurs-4": {
+"v": "64d3efe40e",
+"engine": "elevenlabs",
+"sig": "64d3efe40e",
+"text": "4f2be03525"
+},
+"es-kurs-5": {
+"v": "09467d5d63",
+"engine": "elevenlabs",
+"sig": "09467d5d63",
+"text": "f18970b009"
+},
+"es-kurs-6": {
+"v": "ec665a3909",
+"engine": "elevenlabs",
+"sig": "ec665a3909",
+"text": "2c4859eaa1"
+},
+"es-kurs-7": {
+"v": "0b64ef0063",
+"engine": "elevenlabs",
+"sig": "0b64ef0063",
+"text": "6ac9f5b2d4"
+},
+"es-kurs-8": {
+"v": "1ecacbe4f4",
+"engine": "elevenlabs",
+"sig": "1ecacbe4f4",
+"text": "21eaf2e49d"
+},
+"es-kurs-9": {
+"v": "a4fbe15440",
+"engine": "elevenlabs",
+"sig": "a4fbe15440",
+"text": "a83532c09d"
+},
+"es-kurs-s0": {
+"v": "3f8cce767e",
+"engine": "elevenlabs",
+"sig": "3f8cce767e",
+"text": "d547fbb00e"
+},
+"es-kurs-s1": {
+"v": "35661af429",
+"engine": "elevenlabs",
+"sig": "35661af429",
+"text": "b06b176fe3"
+},
+"es-kurs-s2": {
+"v": "1d858cef57",
+"engine": "elevenlabs",
+"sig": "1d858cef57",
+"text": "70eef7afe2"
+},
+"es-kurs-s3": {
+"v": "141e5c8761",
+"engine": "elevenlabs",
+"sig": "141e5c8761",
+"text": "0587852964"
+},
+"es-kurs-s4": {
+"v": "8d30b651ea",
+"engine": "elevenlabs",
+"sig": "8d30b651ea",
+"text": "5088944bf3"
+},
+"es-kurssaetze-0": {
+"v": "44d0cff320",
+"engine": "elevenlabs",
+"sig": "44d0cff320",
+"text": "62e66df43e"
+},
+"es-kurssaetze-1": {
+"v": "de8e28c288",
+"engine": "elevenlabs",
+"sig": "de8e28c288",
+"text": "13401b6921"
+},
+"es-kurssaetze-2": {
+"v": "d97db29e38",
+"engine": "elevenlabs",
+"sig": "d97db29e38",
+"text": "07f680d4e5"
+},
+"es-kurssaetze-3": {
+"v": "353da98dd3",
+"engine": "elevenlabs",
+"sig": "353da98dd3",
+"text": "3c2d20b325"
+},
+"es-kurssaetze-4": {
+"v": "e4461195cd",
+"engine": "elevenlabs",
+"sig": "e4461195cd",
+"text": "92fbc715db"
+},
+"es-kurssaetze-5": {
+"v": "ba1eb3e90f",
+"engine": "elevenlabs",
+"sig": "ba1eb3e90f",
+"text": "996eaf7020"
+},
+"es-kurssaetze-6": {
+"v": "e84d824ff5",
+"engine": "elevenlabs",
+"sig": "e84d824ff5",
+"text": "09d721bf73"
+},
+"es-kurssaetze-7": {
+"v": "72efd9ac12",
+"engine": "elevenlabs",
+"sig": "72efd9ac12",
+"text": "651d92abd7"
+},
+"es-kurssaetze-8": {
+"v": "113deff27e",
+"engine": "elevenlabs",
+"sig": "113deff27e",
+"text": "451518442a"
+},
+"es-kurssaetze-9": {
+"v": "537a525c56",
+"engine": "elevenlabs",
+"sig": "537a525c56",
+"text": "9ac3c23a42"
+},
+"es-kurssaetze-s0": {
+"v": "56ba3cd491",
+"engine": "elevenlabs",
+"sig": "56ba3cd491",
+"text": "820801d0a0"
+},
+"es-kurssaetze-s1": {
+"v": "a599d8de28",
+"engine": "elevenlabs",
+"sig": "a599d8de28",
+"text": "3e52307778"
+},
+"es-kurssaetze-s2": {
+"v": "fb78f18ea5",
+"engine": "elevenlabs",
+"sig": "fb78f18ea5",
+"text": "21c629af36"
+},
+"es-kurssaetze-s3": {
+"v": "f851d998c2",
+"engine": "elevenlabs",
+"sig": "f851d998c2",
+"text": "1e2d6059c2"
+},
+"es-moebel-0": {
+"v": "fb7c130cfb",
+"engine": "elevenlabs",
+"sig": "fb7c130cfb",
+"text": "6570b03ba9"
+},
+"es-moebel-1": {
+"v": "7fba0305ca",
+"engine": "elevenlabs",
+"sig": "7fba0305ca",
+"text": "a0559a973a"
+},
+"es-moebel-2": {
+"v": "13d860063c",
+"engine": "elevenlabs",
+"sig": "13d860063c",
+"text": "9a2e3aec81"
+},
+"es-moebel-3": {
+"v": "3b6ce5ed32",
+"engine": "elevenlabs",
+"sig": "3b6ce5ed32",
+"text": "ee69015d38"
+},
+"es-moebel-4": {
+"v": "7cf26d8d67",
+"engine": "elevenlabs",
+"sig": "7cf26d8d67",
+"text": "6ee8331cc4"
+},
+"es-moebel-5": {
+"v": "9e05b95a62",
+"engine": "elevenlabs",
+"sig": "9e05b95a62",
+"text": "1c16d2df73"
+},
+"es-moebel-6": {
+"v": "867289257e",
+"engine": "elevenlabs",
+"sig": "867289257e",
+"text": "593bbaaeba"
+},
+"es-moebel-7": {
+"v": "0bfbbbd270",
+"engine": "elevenlabs",
+"sig": "0bfbbbd270",
+"text": "dbebc5de59"
+},
+"es-moebel-8": {
+"v": "29db849f5c",
+"engine": "elevenlabs",
+"sig": "29db849f5c",
+"text": "613f0c5617"
+},
+"es-moebel-9": {
+"v": "a0459de38d",
+"engine": "elevenlabs",
+"sig": "a0459de38d",
+"text": "cbfe66796f"
+},
+"es-moebel-s0": {
+"v": "53487be251",
+"engine": "elevenlabs",
+"sig": "53487be251",
+"text": "87eb942f33"
+},
+"es-moebel-s1": {
+"v": "51f92aab40",
+"engine": "elevenlabs",
+"sig": "51f92aab40",
+"text": "ee4f374c10"
+},
+"es-moebel-s2": {
+"v": "1d528b3b24",
+"engine": "elevenlabs",
+"sig": "1d528b3b24",
+"text": "e8fa840f52"
+},
+"es-moebel-s3": {
+"v": "f00a5021d1",
+"engine": "elevenlabs",
+"sig": "f00a5021d1",
+"text": "df0d99ac71"
+},
+"es-moebel-s4": {
+"v": "89b2f05068",
+"engine": "elevenlabs",
+"sig": "89b2f05068",
+"text": "e637e3419d"
+},
+"es-stadt-0": {
+"v": "7666dcd1d9",
+"engine": "elevenlabs",
+"sig": "7666dcd1d9",
+"text": "c7b37dd805"
+},
+"es-stadt-1": {
+"v": "8c58af9753",
+"engine": "elevenlabs",
+"sig": "8c58af9753",
+"text": "0bde1bfad4"
+},
+"es-stadt-2": {
+"v": "49f40ee120",
+"engine": "elevenlabs",
+"sig": "49f40ee120",
+"text": "215b5bc98f"
+},
+"es-stadt-3": {
+"v": "0cd529c63a",
+"engine": "elevenlabs",
+"sig": "0cd529c63a",
+"text": "6f4ef822d4"
+},
+"es-stadt-4": {
+"v": "1e8217c8a4",
+"engine": "elevenlabs",
+"sig": "1e8217c8a4",
+"text": "96fbc728d3"
+},
+"es-stadt-5": {
+"v": "9b6326f0c3",
+"engine": "elevenlabs",
+"sig": "9b6326f0c3",
+"text": "cfcb602dd0"
+},
+"es-stadt-6": {
+"v": "7fb98b4250",
+"engine": "elevenlabs",
+"sig": "7fb98b4250",
+"text": "c807a64310"
+},
+"es-stadt-7": {
+"v": "e666f61345",
+"engine": "elevenlabs",
+"sig": "e666f61345",
+"text": "abbeda4873"
+},
+"es-stadt-8": {
+"v": "05b9dc7142",
+"engine": "elevenlabs",
+"sig": "05b9dc7142",
+"text": "1583529d93"
+},
+"es-stadt-9": {
+"v": "40ffe19af4",
+"engine": "elevenlabs",
+"sig": "40ffe19af4",
+"text": "f3327a27f4"
+},
+"es-stadt-s0": {
+"v": "556653888e",
+"engine": "elevenlabs",
+"sig": "556653888e",
+"text": "f0ae75619b"
+},
+"es-stadt-s1": {
+"v": "6a4145f760",
+"engine": "elevenlabs",
+"sig": "6a4145f760",
+"text": "bfe06a4b8f"
+},
+"es-stadt-s2": {
+"v": "fdff962ebe",
+"engine": "elevenlabs",
+"sig": "fdff962ebe",
+"text": "eceb1efb6e"
+},
+"es-stadt-s3": {
+"v": "1a40edebda",
+"engine": "elevenlabs",
+"sig": "1a40edebda",
+"text": "8c99159b49"
+},
+"es-stadt-s4": {
+"v": "20c8cab6bf",
+"engine": "elevenlabs",
+"sig": "20c8cab6bf",
+"text": "7855ad9366"
+},
+"es-uhrzeit-0": {
+"v": "c13dbd8acd",
+"engine": "elevenlabs",
+"sig": "c13dbd8acd",
+"text": "367b41c297"
+},
+"es-uhrzeit-1": {
+"v": "46dc614c3e",
+"engine": "elevenlabs",
+"sig": "46dc614c3e",
+"text": "e98c1b7c5c"
+},
+"es-uhrzeit-2": {
+"v": "f2ebbd1eaa",
+"engine": "elevenlabs",
+"sig": "f2ebbd1eaa",
+"text": "b642e38448"
+},
+"es-uhrzeit-3": {
+"v": "52c88149a5",
+"engine": "elevenlabs",
+"sig": "52c88149a5",
+"text": "5577f7c53f"
+},
+"es-uhrzeit-4": {
+"v": "b2dfc329f9",
+"engine": "elevenlabs",
+"sig": "b2dfc329f9",
+"text": "5ab8fde2a6"
+},
+"es-uhrzeit-5": {
+"v": "25910c2685",
+"engine": "elevenlabs",
+"sig": "25910c2685",
+"text": "ebcf289da0"
+},
+"es-uhrzeit-6": {
+"v": "d7c13280b5",
+"engine": "elevenlabs",
+"sig": "d7c13280b5",
+"text": "765290843e"
+},
+"es-uhrzeit-7": {
+"v": "3634e5eda1",
+"engine": "elevenlabs",
+"sig": "3634e5eda1",
+"text": "23ebba25cf"
+},
+"es-uhrzeit-8": {
+"v": "d9b0f8fa1e",
+"engine": "elevenlabs",
+"sig": "d9b0f8fa1e",
+"text": "b565072cb4"
+},
+"es-uhrzeit-9": {
+"v": "e8e5897df7",
+"engine": "elevenlabs",
+"sig": "e8e5897df7",
+"text": "49d3a1430c"
+},
+"es-uhrzeit-s0": {
+"v": "be0cf713dc",
+"engine": "elevenlabs",
+"sig": "be0cf713dc",
+"text": "0d19710ead"
+},
+"es-uhrzeit-s1": {
+"v": "5349bf4e54",
+"engine": "elevenlabs",
+"sig": "5349bf4e54",
+"text": "6ec7b5ffe4"
+},
+"es-uhrzeit-s2": {
+"v": "b89bf3e62a",
+"engine": "elevenlabs",
+"sig": "b89bf3e62a",
+"text": "37296cde1a"
+},
+"es-uhrzeit-s3": {
+"v": "ad7beb4c32",
+"engine": "elevenlabs",
+"sig": "ad7beb4c32",
+"text": "6f4138a8d5"
+},
+"es-uhrzeit-s4": {
+"v": "df13ef5be5",
+"engine": "elevenlabs",
+"sig": "df13ef5be5",
+"text": "a1e490cfcb"
+},
+"es-verkehr-0": {
+"v": "da8d60e97f",
+"engine": "elevenlabs",
+"sig": "da8d60e97f",
+"text": "b6f12a23ac"
+},
+"es-verkehr-1": {
+"v": "fff3c1d7a6",
+"engine": "elevenlabs",
+"sig": "fff3c1d7a6",
+"text": "9fa56f72f5"
+},
+"es-verkehr-2": {
+"v": "bd0bf8d45c",
+"engine": "elevenlabs",
+"sig": "bd0bf8d45c",
+"text": "e3cde28a08"
+},
+"es-verkehr-3": {
+"v": "b7d3c43c52",
+"engine": "elevenlabs",
+"sig": "b7d3c43c52",
+"text": "f522a20bc6"
+},
+"es-verkehr-4": {
+"v": "2fd594bc7a",
+"engine": "elevenlabs",
+"sig": "2fd594bc7a",
+"text": "aa64d2cfe6"
+},
+"es-verkehr-5": {
+"v": "6460d6a76a",
+"engine": "elevenlabs",
+"sig": "6460d6a76a",
+"text": "d22c274512"
+},
+"es-verkehr-6": {
+"v": "e7e42da0ec",
+"engine": "elevenlabs",
+"sig": "e7e42da0ec",
+"text": "dee6575107"
+},
+"es-verkehr-7": {
+"v": "d02343c510",
+"engine": "elevenlabs",
+"sig": "d02343c510",
+"text": "ce48b5cbc2"
+},
+"es-verkehr-8": {
+"v": "69206b5cf6",
+"engine": "elevenlabs",
+"sig": "69206b5cf6",
+"text": "e6212ac739"
+},
+"es-verkehr-9": {
+"v": "c8231ef637",
+"engine": "elevenlabs",
+"sig": "c8231ef637",
+"text": "12436fad3f"
+},
+"es-verkehr-s0": {
+"v": "00a1af5d74",
+"engine": "elevenlabs",
+"sig": "00a1af5d74",
+"text": "5f0c2f6ba6"
+},
+"es-verkehr-s1": {
+"v": "14aed10aa8",
+"engine": "elevenlabs",
+"sig": "14aed10aa8",
+"text": "aaa515dcc4"
+},
+"es-verkehr-s2": {
+"v": "b174d0fd9c",
+"engine": "elevenlabs",
+"sig": "b174d0fd9c",
+"text": "9af837b0e1"
+},
+"es-verkehr-s3": {
+"v": "0624e720ff",
+"engine": "elevenlabs",
+"sig": "0624e720ff",
+"text": "ef009d82e8"
+},
+"es-verkehr-s4": {
+"v": "ede96bfcba",
+"engine": "elevenlabs",
+"sig": "ede96bfcba",
+"text": "00509b4d6a"
+},
+"es-wetter-0": {
+"v": "d4b0ea81c8",
+"engine": "elevenlabs",
+"sig": "d4b0ea81c8",
+"text": "267239411e"
+},
+"es-wetter-1": {
+"v": "ac4b8e17d9",
+"engine": "elevenlabs",
+"sig": "ac4b8e17d9",
+"text": "7bab761310"
+},
+"es-wetter-2": {
+"v": "6ba024a73c",
+"engine": "elevenlabs",
+"sig": "6ba024a73c",
+"text": "a56745d964"
+},
+"es-wetter-3": {
+"v": "e14d55a393",
+"engine": "elevenlabs",
+"sig": "e14d55a393",
+"text": "5a7d71b06a"
+},
+"es-wetter-4": {
+"v": "a87bf22c90",
+"engine": "elevenlabs",
+"sig": "a87bf22c90",
+"text": "6ad63064aa"
+},
+"es-wetter-5": {
+"v": "36703de563",
+"engine": "elevenlabs",
+"sig": "36703de563",
+"text": "a05265a4d2"
+},
+"es-wetter-6": {
+"v": "c8048eddb0",
+"engine": "elevenlabs",
+"sig": "c8048eddb0",
+"text": "760f0ecdb9"
+},
+"es-wetter-7": {
+"v": "b885c0d36c",
+"engine": "elevenlabs",
+"sig": "b885c0d36c",
+"text": "288b11135d"
+},
+"es-wetter-8": {
+"v": "b3eaec9e14",
+"engine": "elevenlabs",
+"sig": "b3eaec9e14",
+"text": "48f0179fe2"
+},
+"es-wetter-9": {
+"v": "08647e507c",
+"engine": "elevenlabs",
+"sig": "08647e507c",
+"text": "d4cf1895ba"
+},
+"es-wetter-s0": {
+"v": "996c230130",
+"engine": "elevenlabs",
+"sig": "996c230130",
+"text": "813ec444b7"
+},
+"es-wetter-s1": {
+"v": "4aa027ee40",
+"engine": "elevenlabs",
+"sig": "4aa027ee40",
+"text": "e72970f475"
+},
+"es-wetter-s2": {
+"v": "b5b7412f36",
+"engine": "elevenlabs",
+"sig": "b5b7412f36",
+"text": "03f044676d"
+},
+"es-wetter-s3": {
+"v": "70424eca81",
+"engine": "elevenlabs",
+"sig": "70424eca81",
+"text": "54490b4d35"
+},
+"es-wetter-s4": {
+"v": "40770ca4a2",
+"engine": "elevenlabs",
+"sig": "40770ca4a2",
+"text": "cf54eb807a"
+},
+"es-wetter-s5": {
+"v": "3cce42111b",
+"engine": "elevenlabs",
+"sig": "3cce42111b",
+"text": "d2752d73b9"
+},
+"es-zahlen-0": {
+"v": "390c475c93",
+"engine": "elevenlabs",
+"sig": "390c475c93",
+"text": "dee534be89"
+},
+"es-zahlen-1": {
+"v": "20b62858ca",
+"engine": "elevenlabs",
+"sig": "20b62858ca",
+"text": "0c6876a3db"
+},
+"es-zahlen-10": {
+"v": "aa50d82b52",
+"engine": "elevenlabs",
+"sig": "aa50d82b52",
+"text": "9adc7d5d20"
+},
+"es-zahlen-11": {
+"v": "fb5bfcfcd6",
+"engine": "elevenlabs",
+"sig": "fb5bfcfcd6",
+"text": "b42f06c4c6"
+},
+"es-zahlen-12": {
+"v": "a5dce240d1",
+"engine": "elevenlabs",
+"sig": "a5dce240d1",
+"text": "47da3c4483"
+},
+"es-zahlen-13": {
+"v": "62679c9385",
+"engine": "elevenlabs",
+"sig": "62679c9385",
+"text": "61755f096a"
+},
+"es-zahlen-14": {
+"v": "40e19c8f55",
+"engine": "elevenlabs",
+"sig": "40e19c8f55",
+"text": "d0e737035f"
+},
+"es-zahlen-15": {
+"v": "dc7db0a629",
+"engine": "elevenlabs",
+"sig": "dc7db0a629",
+"text": "6342781699"
+},
+"es-zahlen-16": {
+"v": "2adb53ba87",
+"engine": "elevenlabs",
+"sig": "2adb53ba87",
+"text": "7a09ccd3d2"
+},
+"es-zahlen-17": {
+"v": "b11e12e46d",
+"engine": "elevenlabs",
+"sig": "b11e12e46d",
+"text": "1720da97cc"
+},
+"es-zahlen-18": {
+"v": "31cdace872",
+"engine": "elevenlabs",
+"sig": "31cdace872",
+"text": "24680fc490"
+},
+"es-zahlen-19": {
+"v": "648ae83a3b",
+"engine": "elevenlabs",
+"sig": "648ae83a3b",
+"text": "7fb30444a0"
+},
+"es-zahlen-2": {
+"v": "3f8f3fc836",
+"engine": "elevenlabs",
+"sig": "3f8f3fc836",
+"text": "e8e48788bf"
+},
+"es-zahlen-20": {
+"v": "fe8872e3bd",
+"engine": "elevenlabs",
+"sig": "fe8872e3bd",
+"text": "86043022a4"
+},
+"es-zahlen-21": {
+"v": "f95351e24a",
+"engine": "elevenlabs",
+"sig": "f95351e24a",
+"text": "127401a73a"
+},
+"es-zahlen-22": {
+"v": "54bc96beba",
+"engine": "elevenlabs",
+"sig": "54bc96beba",
+"text": "2a166d114a"
+},
+"es-zahlen-23": {
+"v": "1e690fb41b",
+"engine": "elevenlabs",
+"sig": "1e690fb41b",
+"text": "8addb49ad8"
+},
+"es-zahlen-24": {
+"v": "040b48f23b",
+"engine": "elevenlabs",
+"sig": "040b48f23b",
+"text": "5715d162de"
+},
+"es-zahlen-25": {
+"v": "d37e1f45cf",
+"engine": "elevenlabs",
+"sig": "d37e1f45cf",
+"text": "f1e9238c67"
+},
+"es-zahlen-26": {
+"v": "290ce81125",
+"engine": "elevenlabs",
+"sig": "290ce81125",
+"text": "c3700a4af2"
+},
+"es-zahlen-27": {
+"v": "168e709778",
+"engine": "elevenlabs",
+"sig": "168e709778",
+"text": "b22e80a882"
+},
+"es-zahlen-28": {
+"v": "fc2743a00b",
+"engine": "elevenlabs",
+"sig": "fc2743a00b",
+"text": "351cc81753"
+},
+"es-zahlen-29": {
+"v": "e01f496a77",
+"engine": "elevenlabs",
+"sig": "e01f496a77",
+"text": "4e52b00b89"
+},
+"es-zahlen-3": {
+"v": "c963a12756",
+"engine": "elevenlabs",
+"sig": "c963a12756",
+"text": "28d53e7abb"
+},
+"es-zahlen-4": {
+"v": "e117e73824",
+"engine": "elevenlabs",
+"sig": "e117e73824",
+"text": "4f2ec10021"
+},
+"es-zahlen-5": {
+"v": "c4483e4e62",
+"engine": "elevenlabs",
+"sig": "c4483e4e62",
+"text": "a99b5a7ed3"
+},
+"es-zahlen-6": {
+"v": "7fa6aeff98",
+"engine": "elevenlabs",
+"sig": "7fa6aeff98",
+"text": "0a46bad4f5"
+},
+"es-zahlen-7": {
+"v": "1dc1b5b7ce",
+"engine": "elevenlabs",
+"sig": "1dc1b5b7ce",
+"text": "dff4f07248"
+},
+"es-zahlen-8": {
+"v": "c1390445fc",
+"engine": "elevenlabs",
+"sig": "c1390445fc",
+"text": "19ada65032"
+},
+"es-zahlen-9": {
+"v": "9b75971f02",
+"engine": "elevenlabs",
+"sig": "9b75971f02",
+"text": "bbdd4f8993"
+},
+"es-zahlen-s0": {
+"v": "e86536ef81",
+"engine": "elevenlabs",
+"sig": "e86536ef81",
+"text": "d52e48deb1"
+},
+"es-zahlen-s1": {
+"v": "1cce131808",
+"engine": "elevenlabs",
+"sig": "1cce131808",
+"text": "2c23467d89"
+},
+"es-zahlen-s2": {
+"v": "14b22a40fc",
+"engine": "elevenlabs",
+"sig": "14b22a40fc",
+"text": "8645de9999"
+},
+"es-zahlen-s3": {
+"v": "d766ffe6dc",
+"engine": "elevenlabs",
+"sig": "d766ffe6dc",
+"text": "c4ffb89c58"
+},
+"es-zeit-0": {
+"v": "196059a53a",
+"engine": "elevenlabs",
+"sig": "196059a53a",
+"text": "444cf06d12"
+},
+"es-zeit-1": {
+"v": "3f6d50a8f3",
+"engine": "elevenlabs",
+"sig": "3f6d50a8f3",
+"text": "144b496399"
+},
+"es-zeit-10": {
+"v": "62a27940b6",
+"engine": "elevenlabs",
+"sig": "62a27940b6",
+"text": "0d69f3837b"
+},
+"es-zeit-11": {
+"v": "3024268b7f",
+"engine": "elevenlabs",
+"sig": "3024268b7f",
+"text": "5254856ea2"
+},
+"es-zeit-12": {
+"v": "7cebbd3549",
+"engine": "elevenlabs",
+"sig": "7cebbd3549",
+"text": "5008900383"
+},
+"es-zeit-13": {
+"v": "db9274327c",
+"engine": "elevenlabs",
+"sig": "db9274327c",
+"text": "8e641290da"
+},
+"es-zeit-14": {
+"v": "e2940f92a3",
+"engine": "elevenlabs",
+"sig": "e2940f92a3",
+"text": "7b2416f996"
+},
+"es-zeit-2": {
+"v": "109226d470",
+"engine": "elevenlabs",
+"sig": "109226d470",
+"text": "a7f9e56ae9"
+},
+"es-zeit-3": {
+"v": "a1174f9a29",
+"engine": "elevenlabs",
+"sig": "a1174f9a29",
+"text": "2b135a7144"
+},
+"es-zeit-4": {
+"v": "2476b24231",
+"engine": "elevenlabs",
+"sig": "2476b24231",
+"text": "163d1a8f7e"
+},
+"es-zeit-5": {
+"v": "a591b204d9",
+"engine": "elevenlabs",
+"sig": "a591b204d9",
+"text": "bcdbd69972"
+},
+"es-zeit-6": {
+"v": "9720a765af",
+"engine": "elevenlabs",
+"sig": "9720a765af",
+"text": "d12a602040"
+},
+"es-zeit-7": {
+"v": "efc485d738",
+"engine": "elevenlabs",
+"sig": "efc485d738",
+"text": "e31a4acda8"
+},
+"es-zeit-8": {
+"v": "3d2f730c17",
+"engine": "elevenlabs",
+"sig": "3d2f730c17",
+"text": "f6519583e7"
+},
+"es-zeit-9": {
+"v": "8b30907855",
+"engine": "elevenlabs",
+"sig": "8b30907855",
+"text": "fdd4cd9211"
+},
+"es-zeit-s0": {
+"v": "2aebad6008",
+"engine": "elevenlabs",
+"sig": "2aebad6008",
+"text": "c20cd05353"
+},
+"es-zeit-s1": {
+"v": "2befcbed3b",
+"engine": "elevenlabs",
+"sig": "2befcbed3b",
+"text": "c896a4089a"
+},
+"es-zeit-s2": {
+"v": "79630a556e",
+"engine": "elevenlabs",
+"sig": "79630a556e",
+"text": "b3593e370b"
+},
+"es-zeit-s3": {
+"v": "43bbd8939b",
+"engine": "elevenlabs",
+"sig": "43bbd8939b",
+"text": "99a637151e"
+},
+"es-zeit-s4": {
+"v": "05466b84fc",
+"engine": "elevenlabs",
+"sig": "05466b84fc",
+"text": "2489fa491d"
 },
 "ex-alltag": {
 "v": "89ced11fe5",
