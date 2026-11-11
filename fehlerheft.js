@@ -493,7 +493,7 @@
         <p class="fh-learned">✓ Gelernt: <b>${learned}</b>${tr("learned")}</p>
       </section>
       ${help()}
-      <details class="dm-card fh-list"><summary>Alle Fehler ansehen (${n})${tr("list")}</summary>
+      <details class="dm-card fh-list" data-rv="1"><summary>Alle Fehler ansehen (${n})${tr("list")}</summary>
         ${Object.entries(groups)
           .map(
             ([src, list]) =>

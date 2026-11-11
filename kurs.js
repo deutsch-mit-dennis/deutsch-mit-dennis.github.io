@@ -668,7 +668,7 @@
             .join("")}</ol></section>`;
         })
         .join("")}
-      <p class="ku-foot"><a class="dm-btn dm-btn-quiet ku-bi" href="#kurs">${bi("other")}</a>${exams.length && nx ? exams.map(([lab, href]) => `<a class="dm-btn dm-btn-quiet" href="${href}">${esc(lab)}</a>`).join("") : ""}</p>`);
+      <p class="ku-foot"><a class="dm-btn dm-btn-quiet ku-bi" href="#kurs"><span>${bi("other")}</span></a>${exams.length && nx ? exams.map(([lab, href]) => `<a class="dm-btn dm-btn-quiet" href="${href}">${esc(lab)}</a>`).join("") : ""}</p>`);
     document.querySelectorAll("[data-ku-key]").forEach((b) => {
       b.onclick = () => {
         const k = b.dataset.kuKey,
@@ -912,7 +912,7 @@
           </div>
         </section>
         <p class="dm-small ku-bi">${bi("res_note")}</p>
-        ${last && last.level ? `<p class="ku-foot"><a class="dm-btn dm-btn-quiet ku-bi" href="#kurs/${esc(last.level)}">${bi("last_result", { lv: last.level })}</a></p>` : ""}`,
+        ${last && last.level ? `<p class="ku-foot"><a class="dm-btn dm-btn-quiet ku-bi" href="#kurs/${esc(last.level)}"><span>${bi("last_result", { lv: last.level })}</span></a></p>` : ""}`,
         "ku-test",
       );
       wireLang(drawTest);
@@ -974,7 +974,7 @@
         ${lang() !== "de" ? `<p class="ku-result-tr ku-bi"><small class="ku-tr" lang="${lang()}" dir="${RTL.includes(lang()) ? "rtl" : "ltr"}">${esc(r.skipped ? t("res_a0") : t("res_h", { lv }))}</small></p>` : ""}
         <p class="dm-lead">Kurs ${lv} · ${esc(DM.kurs[lv].title)}: ${esc(DM.kurs[lv].goal)}</p></div>
       <p class="ku-res-actions"><button type="button" class="dm-btn ku-start ku-bi" id="ku-start"><span>${bi("start", { lv })}</span> <span aria-hidden="true">▶</span></button>
-        <a class="dm-btn dm-btn-quiet ku-bi" href="#kurs">${bi("other")}</a></p>
+        <a class="dm-btn dm-btn-quiet ku-bi" href="#kurs"><span>${bi("other")}</span></a></p>
       <aside class="dm-card ku-res-note"><p class="ku-bi">${bi("res_note")}</p>${r.stopped ? `<p class="ku-bi">${bi("res_stop")}</p>` : ""}</aside>
       ${
         r.skipped
@@ -987,7 +987,7 @@
             : "";
         }).join("")}</ul></section>`
       }
-      <p class="ku-foot"><button type="button" class="dm-btn dm-btn-quiet ku-bi" id="ku-again">${bi("again")}</button></p>`,
+      <p class="ku-foot"><button type="button" class="dm-btn dm-btn-quiet ku-bi" id="ku-again"><span>${bi("again")}</span></button></p>`,
       "ku-test",
     );
     document.getElementById("ku-start").onclick = () => {
