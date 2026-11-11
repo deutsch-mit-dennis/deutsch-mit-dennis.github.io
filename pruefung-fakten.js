@@ -66,6 +66,10 @@
       "telc – Übungstest 1, telc Deutsch B2 (2019)",
       "https://www.telc.net/en/language-examinations/certificate-exams/german/telc-german-b2/",
     ],
+    uebDtz: [
+      "g.a.s.t. – DTZ Übungssatz 1 (Erwachsene), Ausgabe November 2026",
+      "https://www.gast.de/de/forschung-entwicklung/entwicklung/auftraege/deutsch-test-fuer-zuwanderer-dtz/faq",
+    ],
     telcB2: [
       "telc – telc Deutsch B2",
       "https://www.telc.net/en/language-examinations/certificate-exams/german/telc-german-b2/",
@@ -123,7 +127,7 @@
           "4 Teile · 20 Aufgaben · Du hörst alle Texte einmal.",
           "zusammen mit Lesen: 45 Punkte",
         ],
-        ["Lesen", "45 Min.", "25 Aufgaben", "zusammen mit Hören: 45 Punkte"],
+        ["Lesen", "45 Min.", "5 Teile · 25 Aufgaben", "zusammen mit Hören: 45 Punkte"],
         [
           "Schreiben",
           "30 Min.",
@@ -133,11 +137,11 @@
         [
           "Sprechen",
           "ca. 16 Min.",
-          "3 Teile · zu zweit · 2 Prüfende · keine Vorbereitungszeit",
+          "Zu zweit, 2 Prüfende, keine Vorbereitungszeit: Teil 1 Über sich sprechen (ca. 4 Min.), Teil 2 Über Erfahrungen sprechen mit Bild (ca. 6 Min.), Teil 3 Gemeinsam etwas planen (ca. 6 Min.). In Teil 1 und 2 stellen die Prüfenden Nachfragen.",
           "100 Punkte",
         ],
       ],
-      partsSrc: ["gastFaq", "gastBlick", "gastUeb"],
+      partsSrc: ["uebDtz", "gastFaq", "gastBlick", "gastUeb"],
       blocks: [
         {
           h: "Was ist der DTZ? Wer braucht ihn?",
