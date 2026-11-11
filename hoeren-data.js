@@ -3796,3 +3796,274 @@
 ]
 }
 };
+
+/* ---------- Hören A1 und A2: kurze Alltagstexte für den Einstieg (#hoeren/a1, #hoeren/a2) ----------
+   Own practice texts, no exam tasks. These sets are deliberately NOT part of DM.listeningExam, so
+   tools/sync-listening-audio.mjs does not send them to the (paid) audio workflow by accident.
+   Until recordings exist, the device voice reads item.text (numbers written out there);
+   the transcript shows segments[].text. Segment format: [voice, text, say?] */
+(function () {
+  const DM = window.DM || (window.DM = {});
+  const Q = (q, options, answer, why) => ({ q, options, answer, why });
+  const RF = (q, richtig, why) => Q(q, ['Richtig', 'Falsch'], richtig ? 0 : 1, why);
+  const T = (id, type, situation, segs, questions) => {
+    const segments = segs.map(([voice, text, say]) => say ? { voice, text, say } : { voice, text });
+    return { id, type, situation, segments, text: segments.map(s => s.say || s.text).join(' – '), questions };
+  };
+  const a1 = {
+    title: 'Hören A1 – erste Gespräche', level: 'A1', exam: 'Alltag', group: 'start',
+    intro: 'Kurze, einfache Gespräche aus dem Alltag. Lies zuerst die Fragen. Hör dann den Text. Du kannst das Tempo „langsamer“ wählen.',
+    items: [
+      T('a1-01', 'Sich vorstellen', 'Zwei Personen treffen sich im Deutschkurs.', [
+        ['f1', 'Hallo! Ich heiße Mariam. Wie heißt du?'],
+        ['m1', 'Ich heiße Tomás. Ich komme aus Chile. Und du?'],
+        ['f1', 'Ich komme aus Georgien. Ich wohne jetzt in Köln.'],
+        ['m1', 'Ich wohne auch in Köln.']
+      ], [
+        Q('Woher kommt Tomás?', ['Aus Georgien', 'Aus Chile', 'Aus Köln'], 1, 'Tomás sagt: „Ich komme aus Chile.“'),
+        Q('Wo wohnt Mariam jetzt?', ['In Köln', 'In Chile', 'In Georgien'], 0, 'Mariam sagt: „Ich wohne jetzt in Köln.“'),
+        RF('Tomás wohnt auch in Köln.', true, 'Er sagt: „Ich wohne auch in Köln.“')
+      ]),
+      T('a1-02', 'Im Kurs', 'Der Deutschkurs beginnt. Die Lehrerin spricht.', [
+        ['f2', 'Guten Morgen! Wir machen heute Seite 12. Haben alle ein Buch?', 'Guten Morgen! Wir machen heute Seite zwölf. Haben alle ein Buch?'],
+        ['m2', 'Entschuldigung, ich habe heute kein Buch.'],
+        ['f2', 'Kein Problem. Sie lesen heute zusammen mit Frau Okafor.'],
+        ['m2', 'Danke schön!']
+      ], [
+        Q('Welche Seite machen sie heute?', ['Seite 2', 'Seite 20', 'Seite 12'], 2, 'Die Lehrerin sagt: „Wir machen heute Seite 12.“'),
+        Q('Was hat der Mann heute nicht?', ['Ein Buch', 'Einen Stift', 'Ein Heft'], 0, 'Er sagt: „Ich habe heute kein Buch.“'),
+        RF('Der Mann liest heute allein.', false, 'Er liest zusammen mit Frau Okafor.')
+      ]),
+      T('a1-03', 'Telefonnummer', 'Zwei Freunde sprechen.', [
+        ['f3', 'Wie ist deine Telefonnummer, Jonas?'],
+        ['m3', 'Meine Nummer ist 0123 45 67 89.', 'Meine Nummer ist null, eins, zwei, drei, vier, fünf, sechs, sieben, acht, neun.'],
+        ['f3', 'Noch einmal, bitte. Langsam!'],
+        ['m3', '0123 45 67 89.', 'Null, eins, zwei, drei. Vier, fünf. Sechs, sieben. Acht, neun.'],
+        ['f3', 'Danke. Ich rufe dich morgen an.']
+      ], [
+        Q('Wie ist die Nummer von Jonas?', ['0123 45 76 89', '0123 45 67 89', '0132 45 67 89'], 1, 'Jonas sagt: null, eins, zwei, drei, vier, fünf, sechs, sieben, acht, neun.'),
+        Q('Wann ruft die Frau an?', ['Heute', 'Am Montag', 'Morgen'], 2, 'Sie sagt: „Ich rufe dich morgen an.“')
+      ]),
+      T('a1-04', 'Uhrzeit', 'Ein Mann fragt im Büro der Sprachschule.', [
+        ['m1', 'Guten Tag. Wann beginnt der Deutschkurs?'],
+        ['f1', 'Der Kurs beginnt um 9 Uhr.', 'Der Kurs beginnt um neun Uhr.'],
+        ['m1', 'Und wann ist die Pause?'],
+        ['f1', 'Die Pause ist um halb elf. Um 12 Uhr ist der Kurs zu Ende.', 'Die Pause ist um halb elf. Um zwölf Uhr ist der Kurs zu Ende.']
+      ], [
+        Q('Wann beginnt der Kurs?', ['Um 9 Uhr', 'Um 8 Uhr', 'Um 10 Uhr'], 0, 'Die Frau sagt: „Der Kurs beginnt um 9 Uhr.“'),
+        Q('Wann ist die Pause?', ['Um 11:30 Uhr', 'Um 10:30 Uhr', 'Um 11:00 Uhr'], 1, '„Halb elf“ bedeutet 10:30 Uhr.'),
+        RF('Der Kurs ist um 12 Uhr zu Ende.', true, 'Die Frau sagt: „Um 12 Uhr ist der Kurs zu Ende.“')
+      ]),
+      T('a1-05', 'In der Bäckerei', 'Ein Mann kauft am Morgen ein.', [
+        ['f2', 'Guten Morgen! Was möchten Sie?'],
+        ['m2', 'Ich möchte vier Brötchen und ein Brot, bitte.'],
+        ['f2', 'Gern. Das macht 5,20 Euro.', 'Gern. Das macht fünf Euro zwanzig.'],
+        ['m2', 'Hier, bitte.'],
+        ['f2', 'Danke. Einen schönen Tag!']
+      ], [
+        Q('Was kauft der Mann?', ['Vier Brötchen und ein Brot', 'Ein Brötchen und vier Brote', 'Vier Brötchen und einen Kuchen'], 0, 'Er sagt: „Ich möchte vier Brötchen und ein Brot.“'),
+        Q('Wie viel kostet das?', ['2,50 Euro', '5,02 Euro', '5,20 Euro'], 2, 'Die Verkäuferin sagt: „Das macht fünf Euro zwanzig.“')
+      ]),
+      T('a1-06', 'Im Imbiss', 'Eine Frau bestellt Essen.', [
+        ['m1', 'Hallo! Was möchtest du essen?'],
+        ['f1', 'Einen Falafel-Teller, bitte. Ohne Zwiebeln.'],
+        ['m1', 'Möchtest du auch etwas trinken?'],
+        ['f1', 'Ja, ein Wasser, bitte.'],
+        ['m1', 'Das macht zusammen 9 Euro.', 'Das macht zusammen neun Euro.'],
+        ['f1', 'Hier sind 10 Euro. Stimmt so.', 'Hier sind zehn Euro. Stimmt so.']
+      ], [
+        Q('Was isst die Frau?', ['Eine Pizza', 'Einen Falafel-Teller', 'Eine Suppe'], 1, 'Sie bestellt einen Falafel-Teller ohne Zwiebeln.'),
+        Q('Was trinkt sie?', ['Tee', 'Saft', 'Wasser'], 2, 'Sie sagt: „Ja, ein Wasser, bitte.“'),
+        Q('Wie viel kostet alles zusammen?', ['9 Euro', '10 Euro', '19 Euro'], 0, 'Es kostet 9 Euro. Die Frau gibt 10 Euro.')
+      ]),
+      T('a1-07', 'Der Weg', 'Eine Frau fragt auf der Straße.', [
+        ['f2', 'Entschuldigung, wo ist die Apotheke?'],
+        ['m2', 'Gehen Sie hier geradeaus. An der Ampel gehen Sie nach rechts. Die Apotheke ist neben der Bank.'],
+        ['f2', 'Ist das weit?'],
+        ['m2', 'Nein, nur fünf Minuten zu Fuß.'],
+        ['f2', 'Vielen Dank!']
+      ], [
+        Q('Was sucht die Frau?', ['Die Bank', 'Die Post', 'Die Apotheke'], 2, 'Sie fragt: „Wo ist die Apotheke?“'),
+        Q('Wohin geht sie an der Ampel?', ['Nach rechts', 'Nach links', 'Geradeaus'], 0, 'Der Mann sagt: „An der Ampel gehen Sie nach rechts.“'),
+        Q('Wie lange geht sie zu Fuß?', ['15 Minuten', '5 Minuten', '50 Minuten'], 1, 'Der Mann sagt: „Nur fünf Minuten zu Fuß.“')
+      ]),
+      T('a1-08', 'Termin beim Arzt', 'Ein Mann ruft in einer Arztpraxis an.', [
+        ['f3', 'Praxis Doktor Brandt, guten Tag.'],
+        ['m3', 'Guten Tag, hier ist Amir Rahimi. Ich brauche einen Termin. Ich habe Halsschmerzen.'],
+        ['f3', 'Können Sie morgen um 10 Uhr kommen?', 'Können Sie morgen um zehn Uhr kommen?'],
+        ['m3', 'Ja, das geht.'],
+        ['f3', 'Gut. Bitte bringen Sie Ihre Versichertenkarte mit.']
+      ], [
+        Q('Was hat Herr Rahimi?', ['Kopfschmerzen', 'Halsschmerzen', 'Bauchschmerzen'], 1, 'Er sagt: „Ich habe Halsschmerzen.“'),
+        Q('Wann ist der Termin?', ['Morgen um 10 Uhr', 'Heute um 10 Uhr', 'Morgen um 12 Uhr'], 0, 'Die Frau fragt: „Können Sie morgen um 10 Uhr kommen?“ Er sagt Ja.'),
+        Q('Was bringt Herr Rahimi mit?', ['Ein Foto', 'Geld', 'Die Versichertenkarte'], 2, 'Die Frau sagt: „Bitte bringen Sie Ihre Versichertenkarte mit.“')
+      ]),
+      T('a1-09', 'Die Wohnung', 'Zwei Freunde sprechen über eine neue Wohnung.', [
+        ['f1', 'Wie ist deine neue Wohnung, Daniel?'],
+        ['m1', 'Sie ist klein, aber schön. Ich habe zwei Zimmer, eine Küche und ein Bad.'],
+        ['f1', 'Hast du auch einen Balkon?'],
+        ['m1', 'Nein, leider nicht. Aber die Wohnung ist hell und ruhig.']
+      ], [
+        Q('Wie viele Zimmer hat die Wohnung?', ['Ein Zimmer', 'Drei Zimmer', 'Zwei Zimmer'], 2, 'Daniel sagt: „Ich habe zwei Zimmer, eine Küche und ein Bad.“'),
+        RF('Die Wohnung hat einen Balkon.', false, 'Daniel sagt: „Nein, leider nicht.“'),
+        Q('Wie ist die Wohnung?', ['Hell und ruhig', 'Groß und laut', 'Dunkel und teuer'], 0, 'Daniel sagt: „Die Wohnung ist hell und ruhig.“')
+      ]),
+      T('a1-10', 'Meine Familie', 'Eine Frau zeigt ein Foto.', [
+        ['f2', 'Das ist meine Familie. Mein Mann heißt Viktor. Wir haben zwei Kinder. Unsere Tochter Lina ist acht Jahre alt. Unser Sohn Emil ist drei. Meine Eltern wohnen nicht hier. Sie leben in Polen.']
+      ], [
+        Q('Wie viele Kinder hat die Frau?', ['Zwei', 'Drei', 'Acht'], 0, 'Sie sagt: „Wir haben zwei Kinder.“'),
+        Q('Wie alt ist Lina?', ['3 Jahre', '8 Jahre', '18 Jahre'], 1, 'Sie sagt: „Unsere Tochter Lina ist acht Jahre alt.“'),
+        RF("Die Eltern der Frau wohnen auch hier.", false, 'Sie sagt: „Meine Eltern wohnen nicht hier. Sie leben in Polen.“')
+      ]),
+      T('a1-11', 'Ansage am Bahnhof', 'Du bist am Bahnhof und hörst eine Ansage.', [
+        ['m2', 'Achtung an Gleis 3! Der Zug nach Hamburg fährt heute von Gleis 5. Der Zug hat zehn Minuten Verspätung. Bitte gehen Sie jetzt zu Gleis 5.', 'Achtung an Gleis drei! Der Zug nach Hamburg fährt heute von Gleis fünf. Der Zug hat zehn Minuten Verspätung. Bitte gehen Sie jetzt zu Gleis fünf.']
+      ], [
+        Q('Wohin fährt der Zug?', ['Nach Hannover', 'Nach Bremen', 'Nach Hamburg'], 2, 'Die Ansage sagt: „Der Zug nach Hamburg …“'),
+        Q('Von welchem Gleis fährt der Zug heute?', ['Von Gleis 3', 'Von Gleis 5', 'Von Gleis 10'], 1, 'Heute fährt der Zug von Gleis 5, nicht von Gleis 3.'),
+        RF('Der Zug ist pünktlich.', false, 'Der Zug hat zehn Minuten Verspätung.')
+      ]),
+      T('a1-12', 'Auf der Post', 'Ein Mann ist in der Postfiliale.', [
+        ['m3', 'Guten Tag. Ich möchte ein Paket abholen. Hier ist die Karte.'],
+        ['f3', 'Haben Sie auch einen Ausweis?'],
+        ['m3', 'Ja, hier, bitte.'],
+        ['f3', 'Danke, Herr Sousa. Einen Moment, bitte. Hier ist Ihr Paket. Bitte unterschreiben Sie hier.']
+      ], [
+        Q('Was möchte der Mann?', ['Ein Paket abholen', 'Einen Brief schicken', 'Briefmarken kaufen'], 0, 'Er sagt: „Ich möchte ein Paket abholen.“'),
+        Q('Was möchte die Frau noch sehen?', ['Das Geld', 'Den Ausweis', 'Die Adresse'], 1, 'Sie fragt: „Haben Sie auch einen Ausweis?“'),
+        RF('Der Mann muss unterschreiben.', true, 'Die Frau sagt: „Bitte unterschreiben Sie hier.“')
+      ]),
+      T('a1-13', 'In der Kita', 'Eine Mutter holt ihr Kind ab. Sie spricht mit der Erzieherin.', [
+        ['f1', 'Hallo, Frau Demirci! Sie sind heute früh da.'],
+        ['f2', 'Ja, Noah hat um 3 Uhr einen Termin beim Zahnarzt. Wo ist er?', 'Ja, Noah hat um drei Uhr einen Termin beim Zahnarzt. Wo ist er?'],
+        ['f1', 'Er spielt im Garten. Ich hole ihn.'],
+        ['f2', 'Danke. Morgen holt mein Mann Noah ab.'],
+        ['f1', 'In Ordnung. Bis morgen!']
+      ], [
+        Q('Warum ist Frau Demirci heute früh da?', ['Noah ist krank.', 'Die Kita schließt früh.', 'Noah hat einen Termin beim Zahnarzt.'], 2, 'Sie sagt: „Noah hat um 3 Uhr einen Termin beim Zahnarzt.“'),
+        Q('Wo ist Noah?', ['Im Garten', 'In der Küche', 'Im Bad'], 0, 'Die Erzieherin sagt: „Er spielt im Garten.“'),
+        Q('Wer holt Noah morgen ab?', ['Die Oma', 'Der Vater', 'Die Mutter'], 1, 'Frau Demirci sagt: „Morgen holt mein Mann Noah ab.“')
+      ]),
+      T('a1-14', 'Arbeit', 'Zwei Freunde sprechen über die Arbeit.', [
+        ['m1', 'Hallo Samira! Wann arbeitest du diese Woche?'],
+        ['f3', 'Ich arbeite von Montag bis Mittwoch. Immer von 6 bis 14 Uhr.', 'Ich arbeite von Montag bis Mittwoch. Immer von sechs bis vierzehn Uhr.'],
+        ['m1', 'So früh! Und am Donnerstag?'],
+        ['f3', 'Am Donnerstag und am Freitag habe ich frei.'],
+        ['m1', 'Schön! Dann trinken wir am Donnerstag einen Kaffee.']
+      ], [
+        Q('Wann beginnt Samira mit der Arbeit?', ['Um 8 Uhr', 'Um 6 Uhr', 'Um 14 Uhr'], 1, 'Sie sagt: „Immer von 6 bis 14 Uhr.“'),
+        Q('Wann hat Samira frei?', ['Am Donnerstag und am Freitag', 'Von Montag bis Mittwoch', 'Nur am Samstag'], 0, 'Sie sagt: „Am Donnerstag und am Freitag habe ich frei.“'),
+        Q('Was machen die zwei am Donnerstag?', ['Sie arbeiten.', 'Sie kaufen ein.', 'Sie trinken einen Kaffee.'], 2, 'Der Mann sagt: „Dann trinken wir am Donnerstag einen Kaffee.“')
+      ])
+    ]
+  };
+  const a2 = {
+    title: 'Hören A2 – Nachrichten und Gespräche', level: 'A2', exam: 'Alltag', group: 'start',
+    intro: 'Mailbox-Nachrichten, Durchsagen und Gespräche: Amt, Arzt, Wohnung, Arbeit und Freizeit. Lies zuerst die Fragen. Hör jeden Text zweimal.',
+    items: [
+      T('a2-01', 'Mailbox: Jobcenter', 'Herr Mbeki hört seine Mailbox ab.', [
+        ['f2', 'Guten Tag, Herr Mbeki, hier ist Frau Lindner vom Jobcenter. Ich muss Ihren Termin am Dienstag leider verschieben. Der neue Termin ist am Donnerstag um 9:30 Uhr in Zimmer 214. Bitte bringen Sie Ihren Ausweis und Ihren Lebenslauf mit. Wenn Sie am Donnerstag nicht können, rufen Sie mich bitte bis Mittwoch an. Meine Durchwahl ist die 45. Auf Wiederhören.',
+          'Guten Tag, Herr Mbeki, hier ist Frau Lindner vom Jobcenter. Ich muss Ihren Termin am Dienstag leider verschieben. Der neue Termin ist am Donnerstag um neun Uhr dreißig in Zimmer zweihundertvierzehn. Bitte bringen Sie Ihren Ausweis und Ihren Lebenslauf mit. Wenn Sie am Donnerstag nicht können, rufen Sie mich bitte bis Mittwoch an. Meine Durchwahl ist die fünfundvierzig. Auf Wiederhören.']
+      ], [
+        Q('Wann ist der neue Termin?', ['Am Dienstag um 9:30 Uhr', 'Am Donnerstag um 9:30 Uhr', 'Am Mittwoch um 14 Uhr'], 1, 'Frau Lindner sagt: „Der neue Termin ist am Donnerstag um 9:30 Uhr.“ Der Termin am Dienstag fällt aus.'),
+        Q('Was soll Herr Mbeki mitbringen?', ['Ausweis und Lebenslauf', 'Mietvertrag und Ausweis', 'Lebenslauf und Zeugnisse'], 0, 'Sie sagt: „Bitte bringen Sie Ihren Ausweis und Ihren Lebenslauf mit.“'),
+        Q('Herr Mbeki hat am Donnerstag keine Zeit. Was soll er tun?', ['Am Dienstag kommen', 'Eine E-Mail schreiben', 'Bis Mittwoch anrufen'], 2, 'Sie sagt: „Wenn Sie am Donnerstag nicht können, rufen Sie mich bitte bis Mittwoch an.“')
+      ]),
+      T('a2-02', 'Gespräch: beim Arzt', 'Frau Petrenko ist beim Hausarzt.', [
+        ['m1', 'So, Frau Petrenko, Sie haben eine Erkältung, aber es ist nicht schlimm. Ich schreibe Ihnen ein Rezept für einen Hustensaft.'],
+        ['f1', 'Wie oft muss ich den nehmen?'],
+        ['m1', 'Dreimal am Tag, immer nach dem Essen. Trinken Sie viel Tee und bleiben Sie drei Tage zu Hause.'],
+        ['f1', 'Brauche ich eine Krankmeldung für meinen Chef?'],
+        ['m1', 'Ja. Die bekommen Sie gleich vorne am Empfang.']
+      ], [
+        Q('Was bekommt Frau Petrenko auf Rezept?', ['Tabletten', 'Einen Hustensaft', 'Einen Tee'], 1, 'Der Arzt sagt: „Ich schreibe Ihnen ein Rezept für einen Hustensaft.“ Tee soll sie nur viel trinken.'),
+        Q('Wann soll sie den Hustensaft nehmen?', ['Dreimal am Tag nach dem Essen', 'Dreimal am Tag vor dem Essen', 'Einmal am Tag, drei Tage lang'], 0, 'Der Arzt sagt: „Dreimal am Tag, immer nach dem Essen.“'),
+        Q('Wo bekommt sie die Krankmeldung?', ['In der Apotheke', 'Bei ihrem Chef', 'Am Empfang'], 2, 'Der Arzt sagt: „Die bekommen Sie gleich vorne am Empfang.“')
+      ]),
+      T('a2-03', 'Mailbox: Vermieter', 'Frau Hoang hat eine Nachricht von ihrem Vermieter.', [
+        ['m2', 'Guten Tag, Frau Hoang, hier ist Bergmann, Ihr Vermieter. Sie haben mir geschrieben, dass die Heizung im Bad nicht funktioniert. Der Handwerker kommt am Freitag zwischen 8 und 10 Uhr. Bitte seien Sie dann zu Hause. Wenn das nicht geht, können Sie den Schlüssel bei Ihrer Nachbarin, Frau Schulz, abgeben. Vielen Dank und auf Wiederhören.',
+          'Guten Tag, Frau Hoang, hier ist Bergmann, Ihr Vermieter. Sie haben mir geschrieben, dass die Heizung im Bad nicht funktioniert. Der Handwerker kommt am Freitag zwischen acht und zehn Uhr. Bitte seien Sie dann zu Hause. Wenn das nicht geht, können Sie den Schlüssel bei Ihrer Nachbarin, Frau Schulz, abgeben. Vielen Dank und auf Wiederhören.']
+      ], [
+        Q('Was ist kaputt?', ['Die Heizung im Bad', 'Die Dusche im Bad', 'Das Fenster in der Küche'], 0, 'Herr Bergmann sagt: „… dass die Heizung im Bad nicht funktioniert.“'),
+        Q('Wann kommt der Handwerker?', ['Am Freitag ab 10 Uhr', 'Am Donnerstag zwischen 8 und 10 Uhr', 'Am Freitag zwischen 8 und 10 Uhr'], 2, 'Er sagt: „Der Handwerker kommt am Freitag zwischen 8 und 10 Uhr.“'),
+        Q('Frau Hoang ist am Freitag nicht zu Hause. Was kann sie tun?', ['Den Handwerker anrufen', 'Den Schlüssel bei der Nachbarin abgeben', 'Einen neuen Termin machen'], 1, 'Er sagt: „Wenn das nicht geht, können Sie den Schlüssel bei Ihrer Nachbarin, Frau Schulz, abgeben.“')
+      ]),
+      T('a2-04', 'Mailbox: Schule', 'Die Grundschule hat auf Ihre Mailbox gesprochen.', [
+        ['f3', 'Guten Tag, hier ist das Sekretariat der Grundschule am Park. Diese Nachricht ist für die Eltern der Klasse 2b. Morgen fällt der Sportunterricht aus, weil die Sporthalle geschlossen ist. Die Kinder haben deshalb schon um 11:30 Uhr Schluss. Die Betreuung am Nachmittag findet normal statt. Bitte geben Sie Ihrem Kind trotzdem ein Pausenbrot mit. Vielen Dank!',
+          'Guten Tag, hier ist das Sekretariat der Grundschule am Park. Diese Nachricht ist für die Eltern der Klasse zwei b. Morgen fällt der Sportunterricht aus, weil die Sporthalle geschlossen ist. Die Kinder haben deshalb schon um elf Uhr dreißig Schluss. Die Betreuung am Nachmittag findet normal statt. Bitte geben Sie Ihrem Kind trotzdem ein Pausenbrot mit. Vielen Dank!']
+      ], [
+        Q('Warum fällt der Sportunterricht aus?', ['Die Lehrerin ist krank.', 'Die Sporthalle ist geschlossen.', 'Die Klasse macht einen Ausflug.'], 1, 'Die Schule sagt: „… weil die Sporthalle geschlossen ist.“'),
+        Q('Wann haben die Kinder morgen Schluss?', ['Um 11:30 Uhr', 'Um 12:30 Uhr', 'Um 13:00 Uhr'], 0, 'Die Schule sagt: „Die Kinder haben deshalb schon um 11:30 Uhr Schluss.“'),
+        RF('Die Betreuung am Nachmittag fällt morgen auch aus.', false, 'Die Betreuung am Nachmittag „findet normal statt“.')
+      ]),
+      T('a2-05', 'Gespräch: in der Bank', 'Ein Mann ist in einer Bankfiliale.', [
+        ['m3', 'Guten Tag, ich möchte ein Konto eröffnen.'],
+        ['f2', 'Gern. Haben Sie einen Termin?'],
+        ['m3', 'Nein, leider nicht.'],
+        ['f2', 'Heute ist leider nichts mehr frei. Ich kann Ihnen morgen um 15 Uhr einen Termin geben. Bringen Sie bitte Ihren Pass und Ihre Meldebescheinigung mit.', 'Heute ist leider nichts mehr frei. Ich kann Ihnen morgen um fünfzehn Uhr einen Termin geben. Bringen Sie bitte Ihren Pass und Ihre Meldebescheinigung mit.'],
+        ['m3', 'Kostet das Konto etwas?'],
+        ['f2', 'Das erklärt Ihnen meine Kollegin morgen genau.'],
+        ['m3', 'Gut, dann komme ich morgen.']
+      ], [
+        Q('Was möchte der Mann?', ['Geld abheben', 'Eine neue Karte bestellen', 'Ein Konto eröffnen'], 2, 'Er sagt: „Ich möchte ein Konto eröffnen.“'),
+        Q('Wann bekommt er einen Termin?', ['Heute um 15 Uhr', 'Morgen um 15 Uhr', 'Morgen um 5 Uhr'], 1, 'Heute ist nichts mehr frei. Die Frau sagt: „Ich kann Ihnen morgen um 15 Uhr einen Termin geben.“'),
+        Q('Was soll er mitbringen?', ['Pass und Meldebescheinigung', 'Pass und Mietvertrag', 'Ausweis und Geld'], 0, 'Die Frau sagt: „Bringen Sie bitte Ihren Pass und Ihre Meldebescheinigung mit.“')
+      ]),
+      T('a2-06', 'Telefon: krank melden', 'Luca ruft am Morgen bei seiner Arbeit an.', [
+        ['f1', 'Bäckerei Sommer, Yildiz am Apparat.'],
+        ['m1', 'Guten Morgen, Frau Yildiz, hier ist Luca. Ich kann heute leider nicht kommen. Ich habe Fieber.'],
+        ['f1', 'Oh, gute Besserung! Gehst du zum Arzt?'],
+        ['m1', 'Ja, um zehn. Die Krankmeldung schicke ich Ihnen heute Nachmittag.'],
+        ['f1', 'Gut. Dann rufe ich Karim an. Vielleicht kann er deine Schicht übernehmen. Melde dich bitte morgen noch einmal.'],
+        ['m1', 'Das mache ich. Danke!']
+      ], [
+        Q('Warum kommt Luca heute nicht zur Arbeit?', ['Er hat Fieber.', 'Er hat frei.', 'Er hat den Bus verpasst.'], 0, 'Luca sagt: „Ich kann heute leider nicht kommen. Ich habe Fieber.“'),
+        Q('Wann schickt Luca die Krankmeldung?', ['Morgen früh', 'Um zehn Uhr', 'Heute Nachmittag'], 2, 'Er sagt: „Die Krankmeldung schicke ich Ihnen heute Nachmittag.“ Um zehn ist er beim Arzt.'),
+        Q('Was macht Frau Yildiz jetzt?', ['Sie schließt die Bäckerei.', 'Sie ruft Karim an.', 'Sie arbeitet selbst länger.'], 1, 'Sie sagt: „Dann rufe ich Karim an. Vielleicht kann er deine Schicht übernehmen.“')
+      ]),
+      T('a2-07', 'Telefon: Tisch reservieren', 'Ein Mann ruft in einem Restaurant an.', [
+        ['f3', 'Restaurant Olivenbaum, guten Abend.'],
+        ['m2', 'Guten Abend, mein Name ist Okonkwo. Ich möchte für Samstag einen Tisch reservieren, für sechs Personen.'],
+        ['f3', 'Um wie viel Uhr möchten Sie kommen?'],
+        ['m2', 'Um 19 Uhr, wenn es geht.', 'Um neunzehn Uhr, wenn es geht.'],
+        ['f3', 'Um 19 Uhr ist leider alles voll. Um 20 Uhr habe ich noch einen Tisch am Fenster.', 'Um neunzehn Uhr ist leider alles voll. Um zwanzig Uhr habe ich noch einen Tisch am Fenster.'],
+        ['m2', 'Das passt auch. Wir brauchen noch einen Kinderstuhl.'],
+        ['f3', 'Kein Problem, Herr Okonkwo. Bis Samstag!']
+      ], [
+        Q('Für wie viele Personen reserviert Herr Okonkwo?', ['Für zwei', 'Für sechs', 'Für sechzehn'], 1, 'Er sagt: „… einen Tisch reservieren, für sechs Personen.“'),
+        Q('Wann kommt die Gruppe?', ['Am Samstag um 20 Uhr', 'Am Samstag um 19 Uhr', 'Am Sonntag um 20 Uhr'], 0, 'Um 19 Uhr ist alles voll. Um 20 Uhr gibt es noch einen Tisch, und Herr Okonkwo sagt: „Das passt auch.“'),
+        Q('Was braucht Herr Okonkwo noch?', ['Einen Parkplatz', 'Einen Tisch im Garten', 'Einen Kinderstuhl'], 2, 'Er sagt: „Wir brauchen noch einen Kinderstuhl.“')
+      ]),
+      T('a2-08', 'Mailbox: Paket', 'Frau Castillo hört eine Nachricht von ihrem Nachbarn.', [
+        ['m3', 'Hallo Frau Castillo, hier ist Ihr Nachbar Jürgen Weiß aus dem zweiten Stock. Der Paketbote war heute Mittag da, aber Sie waren nicht zu Hause. Ich habe Ihr Paket angenommen. Sie können es heute Abend ab 18 Uhr bei mir abholen. Morgen bin ich den ganzen Tag bei der Arbeit, dann geht es erst wieder am Abend. Klingeln Sie einfach. Bis später!',
+          'Hallo Frau Castillo, hier ist Ihr Nachbar Jürgen Weiß aus dem zweiten Stock. Der Paketbote war heute Mittag da, aber Sie waren nicht zu Hause. Ich habe Ihr Paket angenommen. Sie können es heute Abend ab achtzehn Uhr bei mir abholen. Morgen bin ich den ganzen Tag bei der Arbeit, dann geht es erst wieder am Abend. Klingeln Sie einfach. Bis später!']
+      ], [
+        Q('Wo ist das Paket von Frau Castillo?', ['In der Postfiliale', 'Vor ihrer Wohnungstür', 'Bei ihrem Nachbarn'], 2, 'Herr Weiß sagt: „Ich habe Ihr Paket angenommen.“'),
+        Q('Wann kann sie das Paket heute abholen?', ['Ab 18 Uhr', 'Am Mittag', 'Ab 8 Uhr'], 0, 'Er sagt: „Sie können es heute Abend ab 18 Uhr bei mir abholen.“'),
+        RF('Morgen Vormittag ist Herr Weiß zu Hause.', false, 'Er sagt: „Morgen bin ich den ganzen Tag bei der Arbeit.“')
+      ]),
+      T('a2-09', 'Mailbox: Sprachkurs', 'Herr Haddad hat sich für einen Deutschkurs angemeldet.', [
+        ['f2', 'Guten Tag, Herr Haddad, hier ist die Sprachschule am Markt. Ihr A2-Kurs beginnt am Montag, dem 3. März. Der Unterricht ist montags bis donnerstags von 9 bis 12:15 Uhr in Raum 4. Das Kursbuch können Sie am ersten Tag bei uns im Büro kaufen. Bitte kommen Sie am Montag schon um 8:45 Uhr, weil wir noch ein Formular ausfüllen müssen. Bis Montag!',
+          'Guten Tag, Herr Haddad, hier ist die Sprachschule am Markt. Ihr A zwei Kurs beginnt am Montag, dem dritten März. Der Unterricht ist montags bis donnerstags von neun bis zwölf Uhr fünfzehn in Raum vier. Das Kursbuch können Sie am ersten Tag bei uns im Büro kaufen. Bitte kommen Sie am Montag schon um acht Uhr fünfundvierzig, weil wir noch ein Formular ausfüllen müssen. Bis Montag!']
+      ], [
+        Q('An welchen Tagen ist der Unterricht?', ['Von Montag bis Freitag', 'Von Montag bis Donnerstag', 'Nur am Montag'], 1, 'Die Schule sagt: „Der Unterricht ist montags bis donnerstags.“'),
+        Q('Wo bekommt Herr Haddad das Kursbuch?', ['Im Büro der Sprachschule', 'In einer Buchhandlung', 'Per Post'], 0, 'Sie sagt: „Das Kursbuch können Sie am ersten Tag bei uns im Büro kaufen.“'),
+        Q('Wann soll er am ersten Tag kommen?', ['Um 9:00 Uhr', 'Um 12:15 Uhr', 'Um 8:45 Uhr'], 2, 'Er soll „schon um 8:45 Uhr“ kommen, weil er noch ein Formular ausfüllen muss.')
+      ]),
+      T('a2-10', 'Gespräch: Verabredung', 'Elif ruft ihren Freund Ben an.', [
+        ['f1', 'Hi Ben, hier ist Elif. Hast du am Samstag Zeit? Ich möchte ins Kino gehen.'],
+        ['m2', 'Am Samstag kann ich leider nicht, ich muss arbeiten. Aber am Sonntag habe ich frei.'],
+        ['f1', 'Sonntag ist auch gut. Der Film fängt um 17 Uhr an.', 'Sonntag ist auch gut. Der Film fängt um siebzehn Uhr an.'],
+        ['m2', 'Super. Wollen wir uns um halb fünf vor dem Kino treffen?'],
+        ['f1', 'Ja, gern. Ich kaufe die Karten online.'],
+        ['m2', 'Prima. Dann lade ich dich danach zum Essen ein.']
+      ], [
+        Q('Warum kann Ben am Samstag nicht?', ['Er ist krank.', 'Er muss arbeiten.', 'Er fährt weg.'], 1, 'Ben sagt: „Am Samstag kann ich leider nicht, ich muss arbeiten.“'),
+        Q('Wann treffen sich Elif und Ben?', ['Am Sonntag um 17:00 Uhr', 'Am Samstag um 16:30 Uhr', 'Am Sonntag um 16:30 Uhr'], 2, 'Sie treffen sich am Sonntag „um halb fünf“, also um 16:30 Uhr. Der Film beginnt um 17 Uhr.'),
+        Q('Wer kauft die Kinokarten?', ['Elif', 'Ben', 'Beide zusammen'], 0, 'Elif sagt: „Ich kaufe die Karten online.“ Ben bezahlt später das Essen.')
+      ])
+    ]
+  };
+  DM.listeningStart = { a1, a2 };
+  /* Show them first in the hub block “Kurze Hörtexte zum Einstieg” (DM.listening comes from site-data.js). */
+  DM.listening = Object.assign({ a1, a2 }, DM.listening || {});
+})();

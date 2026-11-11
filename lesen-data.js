@@ -241,3 +241,264 @@
     }
   ];
 })();
+
+/* ---------- Lesen A1 und A2: sehr kurze Alltagstexte für den Einstieg (#lesen/a1, #lesen/a2) ----------
+   Own practice texts. All names, addresses, phone numbers and amounts are invented.
+   Appended at the end on purpose: site.js reads the first two sets by position. */
+(function () {
+  const R = (q, options, answer, why) => ({ q, options, answer, why });
+  const RF = (q, richtig, why) => R(q, ['Richtig', 'Falsch'], richtig ? 0 : 1, why);
+  const DM = window.DM || (window.DM = {});
+  (DM.reading || (DM.reading = [])).push(
+    {
+      id: 'a1', level: 'A1', exam: 'Alltag', title: 'Lesen A1 – Schilder, Nachrichten, Formulare',
+      intro: 'Sehr kurze Texte aus dem Alltag: Schilder, Nachrichten, Formulare und Anzeigen. Lies zuerst die Fragen, dann den Text.',
+      items: [
+        {
+          id: 'a1-oeffnungszeiten', type: 'Schild', title: 'Öffnungszeiten',
+          situation: 'Dieses Schild hängt an der Tür einer Bäckerei.',
+          text: 'Bäckerei Korn\nÖffnungszeiten\nMontag bis Freitag: 6:30–18:00 Uhr\nSamstag: 7:00–13:00 Uhr\nSonntag: geschlossen',
+          questions: [
+            R('Wann schließt die Bäckerei am Samstag?', ['Um 13 Uhr', 'Um 18 Uhr', 'Um 7 Uhr'], 0, 'Am Samstag ist die Bäckerei von 7:00 bis 13:00 Uhr offen.'),
+            R('Es ist Dienstag, 6:00 Uhr. Ist die Bäckerei offen?', ['Ja.', 'Nein, sie öffnet um 6:30 Uhr.', 'Nein, sie öffnet um 7:00 Uhr.'], 1, 'Von Montag bis Freitag öffnet die Bäckerei um 6:30 Uhr.'),
+            RF('Am Sonntag kann man hier Brot kaufen.', false, 'Am Sonntag ist die Bäckerei geschlossen.')
+          ]
+        },
+        {
+          id: 'a1-rauchen', type: 'Aushang', title: 'Bitte nicht rauchen',
+          situation: 'Dieser Aushang hängt in einem Wohnheim.',
+          text: 'Liebe Gäste,\nbitte hier nicht rauchen!\nIm Haus und im Hof ist Rauchen verboten.\nDer Raucherplatz ist vor dem Haus, neben dem Parkplatz.\nVielen Dank!',
+          questions: [
+            R('Wo darf man rauchen?', ['Im Hof', 'Im Haus', 'Vor dem Haus'], 2, 'Der Raucherplatz ist vor dem Haus, neben dem Parkplatz.'),
+            RF('Im Hof darf man rauchen.', false, 'Im Haus und im Hof ist Rauchen verboten.')
+          ]
+        },
+        {
+          id: 'a1-sprechzeiten', type: 'Schild', title: 'Sprechzeiten',
+          situation: 'Dieses Schild hängt an einer Arztpraxis.',
+          text: 'Praxis Dr. Elena Marković\nHausärztin\nSprechzeiten\nMontag, Dienstag, Donnerstag: 8–12 Uhr und 15–18 Uhr\nMittwoch, Freitag: 8–13 Uhr\nTermine nur nach Anmeldung\nTelefon: 0123 44 55 66',
+          questions: [
+            R('Du möchtest am Mittwoch um 16 Uhr zur Ärztin. Geht das?', ['Ja, die Praxis ist offen.', 'Nein, die Praxis ist dann geschlossen.', 'Ja, aber nur ohne Termin.'], 1, 'Am Mittwoch ist die Praxis nur von 8 bis 13 Uhr offen.'),
+            R('Was brauchst du für einen Besuch?', ['Einen Termin', 'Ein Foto', 'Nichts'], 0, 'Auf dem Schild steht: „Termine nur nach Anmeldung“. Du rufst also zuerst an.'),
+            RF('Am Donnerstag ist die Praxis auch am Nachmittag offen.', true, 'Am Donnerstag: 8–12 Uhr und 15–18 Uhr.')
+          ]
+        },
+        {
+          id: 'a1-sms', type: 'Nachricht', title: 'Ich komme später',
+          situation: 'Sara bekommt eine Nachricht auf ihr Handy.',
+          text: 'Hallo Sara!\nIch komme heute 20 Minuten später. Mein Bus hat Verspätung. Wartest du im Café auf mich?\nBis gleich!\nNadia',
+          questions: [
+            R('Warum kommt Nadia später?', ['Sie arbeitet noch.', 'Sie ist krank.', 'Ihr Bus hat Verspätung.'], 2, 'Nadia schreibt: „Mein Bus hat Verspätung.“'),
+            R('Wo soll Sara warten?', ['Im Café', 'Im Bus', 'Zu Hause'], 0, 'Nadia fragt: „Wartest du im Café auf mich?“')
+          ]
+        },
+        {
+          id: 'a1-formular', type: 'Formular', title: 'Anmeldung zum Deutschkurs',
+          situation: 'Eine Frau hat ein Formular ausgefüllt. (Alle Daten sind erfunden.)',
+          text: 'Anmeldung zum Deutschkurs\nFamilienname: Beispiel\nVorname: Maria\nGeburtsdatum: 01.01.1990\nStraße: Musterstraße 1\nPostleitzahl, Ort: 12345 Musterstadt\nTelefon: 0123 45 67 89\nMuttersprache: Spanisch',
+          questions: [
+            R('Wie ist der Vorname?', ['Beispiel', 'Maria', 'Muster'], 1, 'Vorname: Maria. „Beispiel“ ist der Familienname.'),
+            R('Wo wohnt die Frau?', ['In Spanien', 'In der Marienstraße', 'In Musterstadt'], 2, 'Im Formular steht: „12345 Musterstadt“.'),
+            R('Wann ist sie geboren?', ['1990', '1999', '2001'], 0, 'Geburtsdatum: 01.01.1990.')
+          ]
+        },
+        {
+          id: 'a1-kassenbon', type: 'Kassenbon', title: 'Im Supermarkt',
+          situation: 'Du bekommst an der Kasse diesen Bon.',
+          text: 'Supermarkt Frisch & Gut\n1 Brot: 2,29 €\n2 Milch: 2,38 €\n1 kg Äpfel: 2,99 €\nSumme: 7,66 €\nGegeben: 10,00 €\nZurück: 2,34 €\nVielen Dank für Ihren Einkauf!',
+          questions: [
+            R('Was kostet das Brot?', ['2,38 €', '2,29 €', '2,99 €'], 1, 'Auf dem Bon steht: „1 Brot: 2,29 €“.'),
+            R('Wie viel kostet alles zusammen?', ['7,66 €', '10,00 €', '2,34 €'], 0, 'Die Summe ist 7,66 €.'),
+            R('Wie viel Geld bekommst du zurück?', ['7,66 €', '10,00 €', '2,34 €'], 2, 'Du gibst 10,00 € und bekommst 2,34 € zurück.')
+          ]
+        },
+        {
+          id: 'a1-fahrplan', type: 'Fahrplan', title: 'Bus 12',
+          situation: 'Du stehst an der Haltestelle Marktplatz und liest den Fahrplan.',
+          text: 'Bus 12 – Richtung Hauptbahnhof\nHaltestelle: Marktplatz\nMontag bis Freitag\n7:05 · 7:25 · 7:45\n8:05 · 8:35\nSamstag und Sonntag: alle 60 Minuten',
+          questions: [
+            R('Wohin fährt der Bus 12?', ['Zum Marktplatz', 'Zum Hauptbahnhof', 'Zum Flughafen'], 1, 'Oben steht: „Richtung Hauptbahnhof“. Der Marktplatz ist deine Haltestelle.'),
+            R('Es ist Montag, 7:30 Uhr. Wann kommt der nächste Bus?', ['Um 7:25 Uhr', 'Um 8:05 Uhr', 'Um 7:45 Uhr'], 2, 'Der Bus um 7:25 Uhr ist schon weg. Der nächste Bus kommt um 7:45 Uhr.'),
+            RF('Am Sonntag fährt kein Bus.', false, 'Am Samstag und am Sonntag fährt der Bus alle 60 Minuten.')
+          ]
+        },
+        {
+          id: 'a1-speisekarte', type: 'Speisekarte', title: 'Imbiss Sonne',
+          situation: 'Du hast Hunger und liest die Speisekarte.',
+          text: 'Imbiss Sonne – Speisekarte\nLinsensuppe: 4,50 €\nFalafel im Brot: 5,00 €\nPommes: 3,00 €\nSalat: 4,00 €\nWasser, Saft: 2,00 €\nTee: 1,50 €',
+          questions: [
+            R('Was kostet die Linsensuppe?', ['4,50 €', '5,00 €', '4,00 €'], 0, 'Auf der Karte steht: „Linsensuppe: 4,50 €“.'),
+            R('Welches Getränk kostet am wenigsten?', ['Wasser', 'Tee', 'Saft'], 1, 'Tee kostet 1,50 €. Wasser und Saft kosten 2,00 €.'),
+            R('Du hast 5 Euro. Was kannst du kaufen?', ['Falafel im Brot und ein Wasser', 'Linsensuppe und einen Saft', 'Pommes und einen Tee'], 2, 'Pommes und Tee kosten zusammen 4,50 €. Die anderen Sachen kosten mehr als 5 Euro.')
+          ]
+        },
+        {
+          id: 'a1-terminzettel', type: 'Termin-Zettel', title: 'Ihr nächster Termin',
+          situation: 'Herr Ali bekommt beim Zahnarzt diesen Zettel.',
+          text: 'Zahnarztpraxis Dr. Nowak\nIhr nächster Termin\nName: Yusuf Ali\nDatum: Dienstag, 14. Mai\nUhrzeit: 10:15 Uhr\nBitte bringen Sie Ihre Versichertenkarte mit.\nSie können nicht kommen? Dann rufen Sie uns bitte an.',
+          questions: [
+            R('Wann ist der Termin?', ['Am Donnerstag um 10:15 Uhr', 'Am Dienstag um 10:15 Uhr', 'Am Dienstag um 14:00 Uhr'], 1, 'Datum: Dienstag, 14. Mai. Uhrzeit: 10:15 Uhr.'),
+            R('Was bringt Herr Ali mit?', ['Die Versichertenkarte', 'Den Pass', 'Geld'], 0, 'Auf dem Zettel steht: „Bitte bringen Sie Ihre Versichertenkarte mit.“'),
+            R('Herr Ali kann nicht kommen. Was macht er?', ['Er kommt am Mittwoch.', 'Er schreibt einen Brief.', 'Er ruft die Praxis an.'], 2, '„Sie können nicht kommen? Dann rufen Sie uns bitte an.“')
+          ]
+        },
+        {
+          id: 'a1-wohnungsanzeige', type: 'Anzeige', title: 'Wohnung frei',
+          situation: 'Du suchst eine Wohnung und liest diese Anzeige.',
+          text: '2-Zimmer-Wohnung, 50 m², 2. Stock\nKüche, Bad, Balkon\nMiete: 480 € + 120 € Nebenkosten\nFrei ab 1. Juli\nTelefon: 0123 98 76 54 (Frau Lehmann)',
+          questions: [
+            R('Wie viele Zimmer hat die Wohnung?', ['Zwei', 'Drei', 'Fünf'], 0, 'In der Anzeige steht: „2-Zimmer-Wohnung“.'),
+            R('Wie viel kostet die Wohnung im Monat mit Nebenkosten?', ['480 €', '120 €', '600 €'], 2, '480 € Miete und 120 € Nebenkosten sind zusammen 600 €.'),
+            RF('Die Wohnung hat einen Balkon.', true, 'In der Anzeige steht: „Küche, Bad, Balkon“.')
+          ]
+        },
+        {
+          id: 'a1-minijob', type: 'Stellenanzeige', title: 'Hilfe für die Küche',
+          situation: 'Dieser Zettel hängt im Fenster eines Cafés.',
+          text: 'Wir suchen Hilfe für die Küche!\nDas Café Blau sucht eine Aushilfe (Minijob).\nArbeitszeit: Samstag und Sonntag, 9–14 Uhr\nSie spülen und helfen in der Küche.\nKommen Sie vorbei oder rufen Sie an: 0123 11 22 33',
+          questions: [
+            R('Wann arbeitet man im Café Blau?', ['Von Montag bis Freitag', 'Am Samstag und am Sonntag', 'Jeden Abend'], 1, 'Arbeitszeit: Samstag und Sonntag, 9–14 Uhr.'),
+            R('Was macht die Aushilfe?', ['Sie spült und hilft in der Küche.', 'Sie arbeitet an der Kasse.', 'Sie putzt die Fenster.'], 0, 'In der Anzeige steht: „Sie spülen und helfen in der Küche.“'),
+            RF('Man kann nur einen Brief schreiben.', false, 'Man kann vorbeikommen oder anrufen.')
+          ]
+        },
+        {
+          id: 'a1-elternbrief', type: 'Elternbrief', title: 'Ausflug in den Zoo',
+          situation: 'Die Kita gibt den Eltern diesen Zettel.',
+          text: 'Liebe Eltern,\nam Freitag machen wir einen Ausflug in den Zoo. Bitte geben Sie Ihrem Kind ein Brot und eine Flasche Wasser mit. Wir sind um 15 Uhr wieder in der Kita.\nIhr Kita-Team',
+          questions: [
+            R('Wohin gehen die Kinder am Freitag?', ['In den Park', 'Ins Schwimmbad', 'In den Zoo'], 2, 'Die Kita schreibt: „… einen Ausflug in den Zoo“.'),
+            R('Was braucht das Kind?', ['Ein Brot und Wasser', 'Geld für den Bus', 'Sportschuhe'], 0, '„Bitte geben Sie Ihrem Kind ein Brot und eine Flasche Wasser mit.“'),
+            R('Wann sind die Kinder wieder in der Kita?', ['Um 13 Uhr', 'Um 15 Uhr', 'Um 17 Uhr'], 1, '„Wir sind um 15 Uhr wieder in der Kita.“')
+          ]
+        },
+        {
+          id: 'a1-paketkarte', type: 'Paketkarte', title: 'Ihr Paket ist da',
+          situation: 'Diese Karte liegt in deinem Briefkasten.',
+          text: 'Ihr Paket ist da!\nSie waren heute nicht zu Hause.\nIhr Paket liegt in der Postfiliale, Bahnhofstraße 8.\nAbholen: ab morgen, 10 Uhr\nBitte bringen Sie diese Karte und Ihren Ausweis mit.',
+          questions: [
+            R('Wo ist das Paket?', ['Beim Nachbarn', 'In der Postfiliale', 'Vor der Tür'], 1, '„Ihr Paket liegt in der Postfiliale, Bahnhofstraße 8.“'),
+            R('Ab wann kannst du das Paket abholen?', ['Ab morgen, 10 Uhr', 'Heute ab 10 Uhr', 'Ab morgen, 8 Uhr'], 0, 'Auf der Karte steht: „Abholen: ab morgen, 10 Uhr“.'),
+            R('Was bringst du mit?', ['Nur den Ausweis', 'Geld und die Karte', 'Die Karte und den Ausweis'], 2, '„Bitte bringen Sie diese Karte und Ihren Ausweis mit.“')
+          ]
+        },
+        {
+          id: 'a1-kontoauszug', type: 'Kontoauszug', title: 'Mein Konto im Mai',
+          situation: 'Du liest einen Kontoauszug. Minus (−) heißt: Du bezahlst. Plus (+) heißt: Du bekommst Geld.',
+          text: 'Kontoauszug Mai\n02.05. Miete Mai, Frau Lehmann: −600,00 €\n05.05. Supermarkt Frisch & Gut: −23,40 €\n15.05. Lohn Café Blau: +480,00 €',
+          questions: [
+            R('Was kostet 600 Euro?', ['Der Einkauf im Supermarkt', 'Die Miete', 'Das Café'], 1, 'Am 02.05. steht: „Miete Mai … −600,00 €“.'),
+            R('Von wem kommt Geld auf das Konto?', ['Vom Café Blau', 'Von Frau Lehmann', 'Vom Supermarkt'], 0, 'Am 15.05. steht: „Lohn Café Blau: +480,00 €“. Plus heißt: Du bekommst Geld.'),
+            RF('Am 5. Mai bezahlt die Person im Supermarkt.', true, 'Am 05.05. steht: „Supermarkt Frisch & Gut: −23,40 €“.')
+          ]
+        }
+      ]
+    },
+    {
+      id: 'a2', level: 'A2', exam: 'Alltag', title: 'Lesen A2 – Briefe, E-Mails, Pläne',
+      intro: 'Kurze Briefe, E-Mails, Pläne und Anzeigen aus dem Alltag: Amt, Wohnung, Kita und Schule, Arbeit und Bank. Lies zuerst die Fragen, dann den Text.',
+      items: [
+        {
+          id: 'a2-jobcenter', type: 'Brief', title: 'Einladung zu einem Gespräch',
+          situation: 'Herr Kamara bekommt einen Brief vom Jobcenter. (Übungstext – echte Briefe sehen anders aus.)',
+          text: 'Einladung zu einem Gespräch\nSehr geehrter Herr Kamara,\nich möchte mit Ihnen über Ihre berufliche Situation sprechen. Bitte kommen Sie am Mittwoch, dem 12. Juni, um 10:00 Uhr in mein Büro (Zimmer 118, 1. Stock).\nBitte bringen Sie mit: diesen Brief, Ihren Ausweis und Ihre Bewerbungen aus den letzten Wochen.\nWenn Sie krank sind oder aus einem anderen wichtigen Grund nicht kommen können, rufen Sie mich bitte vorher an: Telefon 0123 40 50 60.\nMit freundlichen Grüßen\nS. Albrecht\nJobcenter Musterstadt',
+          questions: [
+            R('Worüber möchte Frau Albrecht sprechen?', ['Über die Wohnung von Herrn Kamara', 'Über die berufliche Situation von Herrn Kamara', 'Über einen Deutschkurs'], 1, 'Im Brief steht: „Ich möchte mit Ihnen über Ihre berufliche Situation sprechen.“'),
+            R('Was soll Herr Kamara mitbringen?', ['Den Brief, den Ausweis und seine Bewerbungen', 'Den Ausweis und den Mietvertrag', 'Nur den Brief'], 0, '„Bitte bringen Sie mit: diesen Brief, Ihren Ausweis und Ihre Bewerbungen aus den letzten Wochen.“'),
+            R('Herr Kamara ist am 12. Juni krank. Was soll er tun?', ['Am nächsten Tag kommen', 'Nichts – der Termin fällt dann aus', 'Vor dem Termin anrufen'], 2, '„Wenn Sie krank sind … rufen Sie mich bitte vorher an.“')
+          ]
+        },
+        {
+          id: 'a2-vermieter', type: 'E-Mail', title: 'Der Wasserhahn tropft',
+          situation: 'Frau Hoang schreibt ihrem Vermieter.',
+          text: 'Betreff: Wasserhahn in der Küche tropft\nSehr geehrter Herr Bergmann,\nich wohne in der Gartenstraße 7 im dritten Stock. Seit einer Woche tropft der Wasserhahn in der Küche. Ich habe ihn fest zugedreht, aber das hilft nicht. Jetzt ist auch der Schrank unter der Spüle nass.\nKönnen Sie bitte einen Handwerker schicken? Ich bin diese Woche jeden Tag ab 15 Uhr zu Hause. Am Samstag bin ich den ganzen Tag da.\nSie erreichen mich unter 0123 77 88 99.\nVielen Dank und freundliche Grüße\nThi Hoang',
+          questions: [
+            R('Was ist das Problem?', ['Der Wasserhahn in der Küche tropft.', 'Die Heizung in der Küche ist kalt.', 'Der Schrank ist kaputt.'], 0, '„Seit einer Woche tropft der Wasserhahn in der Küche.“ Der Schrank ist nur nass.'),
+            R('Was möchte Frau Hoang von Herrn Bergmann?', ['Er soll weniger Miete nehmen.', 'Er soll einen neuen Schrank kaufen.', 'Er soll einen Handwerker schicken.'], 2, 'Sie fragt: „Können Sie bitte einen Handwerker schicken?“'),
+            R('Wann ist Frau Hoang zu Hause?', ['Jeden Tag am Vormittag', 'Jeden Tag ab 15 Uhr und am Samstag den ganzen Tag', 'Nur am Samstag ab 15 Uhr'], 1, '„Ich bin diese Woche jeden Tag ab 15 Uhr zu Hause. Am Samstag bin ich den ganzen Tag da.“')
+          ]
+        },
+        {
+          id: 'a2-hausordnung', type: 'Hausordnung', title: 'Regeln im Haus',
+          situation: 'Im Hausflur hängt ein Auszug aus der Hausordnung. (Beispiel – jedes Haus hat eigene Regeln.)',
+          text: 'Hausordnung (Auszug)\n1. Ruhe: Von 22 bis 6 Uhr und von 13 bis 15 Uhr bitte keine laute Musik und keine lauten Arbeiten.\n2. Müll: Bitte trennen Sie den Müll. Papier kommt in die blaue Tonne, Verpackungen kommen in die gelbe Tonne.\n3. Treppenhaus: Fahrräder und Kinderwagen dürfen nicht im Treppenhaus stehen. Für Fahrräder gibt es einen Raum im Keller.\n4. Haustür: Bitte machen Sie die Haustür immer zu.\nVielen Dank für Ihre Hilfe!\nIhre Hausverwaltung',
+          questions: [
+            R('Wann soll es im Haus ruhig sein?', ['Nur in der Nacht', 'Von 6 bis 13 Uhr', 'In der Nacht und von 13 bis 15 Uhr'], 2, 'Regel 1: „Von 22 bis 6 Uhr und von 13 bis 15 Uhr bitte keine laute Musik …“'),
+            R('Wohin kommt Papier in diesem Haus?', ['In die blaue Tonne', 'In die gelbe Tonne', 'In den Keller'], 0, 'Regel 2: „Papier kommt in die blaue Tonne.“'),
+            R('Wo können die Fahrräder stehen?', ['Im Treppenhaus', 'In einem Raum im Keller', 'Vor der Haustür'], 1, 'Regel 3: „Für Fahrräder gibt es einen Raum im Keller.“ Im Treppenhaus dürfen sie nicht stehen.')
+          ]
+        },
+        {
+          id: 'a2-elternabend', type: 'Elternbrief', title: 'Einladung zum Elternabend',
+          situation: 'Ihr Kind bringt diesen Brief aus der Schule mit.',
+          text: 'Liebe Eltern der Klasse 3a,\nich lade Sie herzlich zum Elternabend ein. Er findet am Donnerstag, dem 19. September, um 18:30 Uhr im Klassenraum statt.\nWir sprechen über die Klassenfahrt im Mai und über die neuen Bücher. Außerdem wählen wir zwei Elternvertreter.\nBitte geben Sie Ihrem Kind den Zettel unten bis Montag wieder mit. Schreiben Sie darauf, ob Sie kommen können. Wenn Sie eine Übersetzung brauchen, sagen Sie mir bitte Bescheid.\nMit freundlichen Grüßen\nKatrin Aydın, Klassenlehrerin',
+          questions: [
+            R('Wann ist der Elternabend?', ['Am Montag um 18:30 Uhr', 'Am Donnerstag um 18:30 Uhr', 'Am Donnerstag um 19:00 Uhr'], 1, '„Er findet am Donnerstag, dem 19. September, um 18:30 Uhr … statt.“'),
+            R('Worüber sprechen die Eltern und die Lehrerin?', ['Über die Klassenfahrt und die neuen Bücher', 'Über die Noten der Kinder', 'Über das Essen in der Schule'], 0, '„Wir sprechen über die Klassenfahrt im Mai und über die neuen Bücher.“'),
+            R('Was sollen die Eltern bis Montag tun?', ['Die Lehrerin anrufen', 'Die neuen Bücher kaufen', 'Den Zettel ausfüllen und dem Kind mitgeben'], 2, '„Bitte geben Sie Ihrem Kind den Zettel unten bis Montag wieder mit.“')
+          ]
+        },
+        {
+          id: 'a2-arbeitsplan', type: 'Arbeitsplan', title: 'Arbeitsplan für die Küche',
+          situation: 'In der Küche eines Restaurants hängt der Plan für die nächste Woche.',
+          text: 'Arbeitsplan Küche – Montag bis Freitag\nFrühschicht (6–14 Uhr)\nMontag bis Mittwoch: Rosa und Mehmet\nDonnerstag und Freitag: Rosa und Ivan\nSpätschicht (14–22 Uhr)\nMontag bis Mittwoch: Ivan und Chidi\nDonnerstag und Freitag: Mehmet und Chidi\nWichtig: Am Mittwoch kommt um 7 Uhr die Lieferung. Die Frühschicht räumt die Ware ein.\nWer tauschen möchte, spricht bitte bis Freitag mit Frau Keller. Bitte tauscht nicht ohne Absprache!',
+          questions: [
+            R('Wann arbeitet Ivan am Dienstag?', ['Von 14 bis 22 Uhr', 'Von 6 bis 14 Uhr', 'Er hat frei.'], 0, 'Spätschicht (14–22 Uhr), Montag bis Mittwoch: Ivan und Chidi.'),
+            R('Wer räumt am Mittwoch die Ware ein?', ['Ivan und Chidi', 'Frau Keller', 'Rosa und Mehmet'], 2, 'Die Frühschicht räumt die Ware ein. Am Mittwoch arbeiten Rosa und Mehmet in der Frühschicht.'),
+            R('Mehmet möchte eine Schicht tauschen. Was muss er tun?', ['Einfach mit Ivan tauschen', 'Mit Frau Keller sprechen', 'Am Mittwoch um 7 Uhr kommen'], 1, '„Wer tauschen möchte, spricht bitte bis Freitag mit Frau Keller.“')
+          ]
+        },
+        {
+          id: 'a2-mittagstisch', type: 'Speiseplan', title: 'Mittagstisch im Restaurant',
+          situation: 'Vor einem Restaurant steht dieses Schild.',
+          text: 'Restaurant Olivenbaum – Mittagstisch\nMontag bis Freitag, 11:30 bis 14:30 Uhr\nJedes Mittagsgericht kostet 8,90 €. Eine kleine Suppe oder ein Salat ist dabei.\nMontag: Gemüsepfanne mit Reis (vegan)\nDienstag: Hähnchen mit Kartoffeln\nMittwoch: Nudeln mit Tomatensoße (vegetarisch)\nDonnerstag: Fisch mit Reis und Gemüse\nFreitag: Linseneintopf mit Brot (vegan)\nGetränke kosten extra. Alle Gerichte gibt es auch zum Mitnehmen.\nHaben Sie eine Allergie? Bitte fragen Sie uns.',
+          questions: [
+            R('Was bekommt man für 8,90 €?', ['Ein Gericht und ein Getränk', 'Ein Gericht mit Suppe oder Salat', 'Nur eine Suppe'], 1, '„Jedes Mittagsgericht kostet 8,90 €. Eine kleine Suppe oder ein Salat ist dabei.“ Getränke kosten extra.'),
+            R('An welchem Tag gibt es Fisch?', ['Am Dienstag', 'Am Freitag', 'Am Donnerstag'], 2, 'Donnerstag: Fisch mit Reis und Gemüse.'),
+            R('Sie essen kein Fleisch und keinen Fisch. An welchen Tagen können Sie hier essen?', ['Am Montag, Mittwoch und Freitag', 'Am Dienstag und Donnerstag', 'Nur am Montag'], 0, 'Am Montag, Mittwoch und Freitag sind die Gerichte vegan oder vegetarisch.')
+          ]
+        },
+        {
+          id: 'a2-bankkarte', type: 'Brief', title: 'Ihre neue Bankkarte',
+          situation: 'Frau Sokolova bekommt einen Brief von ihrer Bank. (Übungstext mit einer erfundenen Bank.)',
+          text: 'Ihre neue Bankkarte\nSehr geehrte Frau Sokolova,\nIhre alte Bankkarte ist nur noch bis Ende März gültig. Mit diesem Brief bekommen Sie Ihre neue Karte.\nBitte unterschreiben Sie die Karte sofort auf der Rückseite. Ihre Geheimzahl (PIN) bleibt gleich. Sie bekommen also keine neue PIN.\nSie können die neue Karte ab sofort benutzen. Bitte schneiden Sie die alte Karte danach durch und werfen Sie sie weg.\nHaben Sie Fragen? Wir helfen Ihnen gern in Ihrer Filiale.\nMit freundlichen Grüßen\nIhre Stadtbank Musterstadt',
+          questions: [
+            R('Bis wann kann Frau Sokolova die alte Karte benutzen?', ['Bis Ende März', 'Bis Ende Mai', 'Nur noch heute'], 0, '„Ihre alte Bankkarte ist nur noch bis Ende März gültig.“'),
+            R('Was passiert mit der Geheimzahl (PIN)?', ['Sie kommt mit einem zweiten Brief.', 'Frau Sokolova holt sie in der Filiale ab.', 'Sie bleibt gleich.'], 2, '„Ihre Geheimzahl (PIN) bleibt gleich. Sie bekommen also keine neue PIN.“'),
+            R('Was soll sie mit der alten Karte machen?', ['Sie in die Filiale bringen', 'Sie durchschneiden und wegwerfen', 'Sie zurückschicken'], 1, '„Bitte schneiden Sie die alte Karte danach durch und werfen Sie sie weg.“')
+          ]
+        },
+        {
+          id: 'a2-kursinfo', type: 'Kursinformation', title: 'Deutschkurs A2 am Abend',
+          situation: 'Sie suchen einen Deutschkurs und lesen diese Information.',
+          text: 'Deutschkurs A2 am Abend\nBeginn: Montag, 2. September\nZeit: montags und mittwochs, 18:00–20:30 Uhr\nOrt: Bildungszentrum am Markt, Raum 12\nDer Kurs dauert zwölf Wochen. Am Ende gibt es einen Test.\nDas Kursbuch bekommen Sie am ersten Abend. Es kostet 20 €.\nAnmeldung: bis 26. August im Büro (Montag bis Freitag, 9–13 Uhr) oder online. Bitte bringen Sie zur Anmeldung Ihren Ausweis mit.\nSie wissen nicht, ob A2 für Sie passt? Dann machen Sie bei uns einen kostenlosen Einstufungstest.',
+          questions: [
+            R('Wann ist der Unterricht?', ['Jeden Abend von Montag bis Freitag', 'Am Montag und am Mittwoch am Vormittag', 'Am Montag und am Mittwoch am Abend'], 2, '„Zeit: montags und mittwochs, 18:00–20:30 Uhr“.'),
+            R('Bis wann muss man sich anmelden?', ['Bis zum 26. August', 'Bis zum 2. September', 'Bis zum ersten Abend'], 0, '„Anmeldung: bis 26. August“. Am 2. September beginnt der Kurs.'),
+            R('Sie wissen nicht, ob der Kurs für Sie passt. Was können Sie tun?', ['Das Kursbuch kaufen', 'Einen Einstufungstest machen', 'Zwölf Wochen warten'], 1, '„Dann machen Sie bei uns einen kostenlosen Einstufungstest.“')
+          ]
+        },
+        {
+          id: 'a2-wohnung', type: 'Anzeige', title: '3-Zimmer-Wohnung mit Garten',
+          situation: 'Familie Rossi sucht eine größere Wohnung und liest diese Anzeige. (Alle Angaben sind erfunden.)',
+          text: '3-Zimmer-Wohnung in ruhiger Lage\nHelle Wohnung im Erdgeschoss, 72 m², mit Küche, Bad mit Dusche und kleinem Garten. Die Wohnung ist frisch renoviert. Bis zur Bushaltestelle sind es zwei Minuten zu Fuß. Schule und Supermarkt sind in der Nähe.\nMiete: 690 € kalt, dazu 180 € Nebenkosten. Kaution: zwei Monatsmieten.\nFrei ab 1. Oktober. Haustiere sind nach Absprache möglich.\nBesichtigung am Samstag, 14. September, um 11 Uhr. Bitte melden Sie sich vorher per E-Mail an: wohnung@beispiel.example',
+          questions: [
+            R('Was hat die Wohnung?', ['Einen Balkon im dritten Stock', 'Einen kleinen Garten', 'Eine Garage'], 1, '„Helle Wohnung im Erdgeschoss … mit Küche, Bad mit Dusche und kleinem Garten.“'),
+            R('Wie viel bezahlt man im Monat für Miete und Nebenkosten zusammen?', ['690 €', '180 €', '870 €'], 2, '690 € Kaltmiete und 180 € Nebenkosten sind zusammen 870 €.'),
+            R('Familie Rossi möchte die Wohnung sehen. Was muss sie tun?', ['Sich vorher per E-Mail anmelden', 'Am 1. Oktober kommen', 'Zuerst die Kaution bezahlen'], 0, '„Besichtigung am Samstag, 14. September, um 11 Uhr. Bitte melden Sie sich vorher per E-Mail an.“')
+          ]
+        },
+        {
+          id: 'a2-chef', type: 'Nachricht', title: 'Nachricht vom Chef',
+          situation: 'Der Chef schreibt eine Nachricht an das ganze Team.',
+          text: 'Hallo zusammen,\nam Freitag bekommen wir eine große Lieferung. Deshalb brauche ich am Freitag zwei Personen, die schon um 6 Uhr anfangen können. Wer früher kommt, kann natürlich auch zwei Stunden früher gehen.\nBitte schreibt mir bis morgen Mittag, wer Zeit hat.\nNoch etwas: Die neue Arbeitskleidung ist da. Ihr könnt sie ab Donnerstag im Büro abholen. Bitte sagt mir vorher eure Größe.\nDanke und viele Grüße\nStefan',
+          questions: [
+            R('Warum sollen am Freitag zwei Personen früher anfangen?', ['Weil eine große Lieferung kommt.', 'Weil zwei Kollegen krank sind.', 'Weil das Büro früher schließt.'], 0, '„Am Freitag bekommen wir eine große Lieferung. Deshalb brauche ich … zwei Personen, die schon um 6 Uhr anfangen können.“'),
+            R('Bis wann sollen die Kollegen antworten?', ['Bis Freitag um 6 Uhr', 'Bis Donnerstag', 'Bis morgen Mittag'], 2, '„Bitte schreibt mir bis morgen Mittag, wer Zeit hat.“'),
+            R('Was können die Kollegen ab Donnerstag im Büro abholen?', ['Den neuen Arbeitsplan', 'Die neue Arbeitskleidung', 'Ihr Geld'], 1, '„Die neue Arbeitskleidung ist da. Ihr könnt sie ab Donnerstag im Büro abholen.“')
+          ]
+        }
+      ]
+    }
+  );
+})();

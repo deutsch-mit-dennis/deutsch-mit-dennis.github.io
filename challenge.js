@@ -135,6 +135,12 @@
     };
     const feedback = (ok, t, correctText) => {
       if (ok) score++; else wrong.push({ t, correctText });
+      if (!ok && window.DMFehler) { // wrong answer -> mistakes notebook (fehlerheft.js)
+        const base = { src: 'Tages-Challenge', level: t.type === 'lid' ? 'LiD' : LEVELS[lvl], hint: t.tip || '' };
+        if (t.type === 'artikel') DMFehler.add({ ...base, q: `Der, die oder das? ___ ${t.q}`, a: correctText, opts: t.o.map(o => `${o} ${t.q}`) });
+        else if (t.type === 'satz') DMFehler.add({ ...base, q: 'Bilde den Satz: ' + [t.words[0], ...t.mix.map(m => m.w)].join(' / '), a: correctText });
+        else DMFehler.add({ ...base, q: t.type === 'lid' ? t.q : `${t.label}: ${t.q}`, a: correctText, opts: t.o });
+      }
       const fb = $('.ch-feedback');
       fb.hidden = false; fb.className = 'ch-feedback ' + (ok ? 'is-ok' : 'is-bad');
       fb.innerHTML = `<b>${ok ? ['Richtig!', 'Super!', 'Genau!', 'Sehr gut!'][score % 4] : 'Leider falsch.'}</b>${ok ? '' : ` Richtig ist: <b>${esc(correctText)}</b>.`}${t.tip ? `<span>${esc(t.tip)}</span>` : ''}`;

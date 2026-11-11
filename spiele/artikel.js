@@ -19,7 +19,8 @@
 .sp-artikel-card.is-back{transition:transform .2s ease-out}
 .sp-artikel-card.is-in{animation:spArIn .22s ease-out}
 @keyframes spArIn{from{opacity:0;transform:scale(.85)}to{opacity:1;transform:none}}
-.sp-artikel-card.g-der-b{border-color:#c62828}.sp-artikel-card.g-die-b{border-color:#1565c0}.sp-artikel-card.g-das-b{border-color:#7b1fa2}
+/* article colours as in Erste Schritte: der = blue, die = red, das = green */
+.sp-artikel-card.g-der-b{border-color:#2463c7}.sp-artikel-card.g-die-b{border-color:#c2362b}.sp-artikel-card.g-das-b{border-color:#1d7a45}
 .sp-artikel-pic{font-size:46px;line-height:1;font-family:"Apple Color Emoji","Segoe UI Emoji","Noto Color Emoji",sans-serif}
 .sp-artikel-w{font:800 clamp(24px,7vw,32px)/1.15 var(--dm-font);text-align:center;overflow-wrap:anywhere;hyphens:auto}
 .sp-artikel-w.is-long{font-size:clamp(19px,5.4vw,26px)}
@@ -28,9 +29,9 @@
 .sp-artikel-combo b{display:inline-block;background:#fff1d0;border-radius:99px;padding:2px 12px;animation:spArPulse .4s ease-out}
 @keyframes spArPulse{from{transform:scale(1.3)}to{transform:none}}
 .sp-artikel-btns .ch-opt{font-weight:800}
-.sp-artikel-btns .ch-opt[data-a=der]{color:#c62828}.sp-artikel-btns .ch-opt[data-a=die]{color:#1565c0}.sp-artikel-btns .ch-opt[data-a=das]{color:#7b1fa2}
+.sp-artikel-btns .ch-opt[data-a=der]{color:#2463c7}.sp-artikel-btns .ch-opt[data-a=die]{color:#c2362b}.sp-artikel-btns .ch-opt[data-a=das]{color:#1d7a45}
 .sp-artikel-btns .ch-opt small{font-size:15px;opacity:.75}
-.g-der{color:#c62828}.g-die{color:#1565c0}.g-das{color:#7b1fa2}
+.g-der{color:#2463c7}.g-die{color:#c2362b}.g-das{color:#1d7a45}
 @media (max-height:700px){.sp-artikel-stage{height:220px}.sp-artikel-card{height:140px}.sp-artikel-pic{font-size:38px}}
 @media (prefers-reduced-motion:reduce){.sp-artikel-card.is-anim{transition:opacity .2s}.sp-artikel-card.is-in,.sp-artikel-combo b{animation:none}.sp-artikel-h{transition:none}}
 `;
@@ -113,7 +114,8 @@
         if (busy || over || !cur) return;
         busy = true;
         const ok = a === cur.a, d = DIR[cur.a];
-        if (ok) { streak++; score += streak >= 3 ? 2 : 1; } else { streak = 0; if (!wrong.some(x => x.w === cur.w)) wrong.push({ w: cur.w, correct: `${cur.a} ${cur.w}`, tip: cur.tip || '' }); }
+        if (ok) { streak++; score += streak >= 3 ? 2 : 1; } else { streak = 0; if (!wrong.some(x => x.w === cur.w)) wrong.push({ w: cur.w, correct: `${cur.a} ${cur.w}`, tip: cur.tip || '' });
+          if (window.DMFehler) DMFehler.add({ q: `Der, die oder das? ___ ${cur.w}`, a: `${cur.a} ${cur.w}`, opts: ['der', 'die', 'das'].map(x => `${x} ${cur.w}`), hint: cur.tip || '', src: 'Spiel: Der, die, das', level: cur.lvl === 'B' ? 'B1' : 'A1–A2' }); }
         api.hud({ score });
         comboEl.innerHTML = streak >= 3 ? `<b>🔥 Combo x2 · ${streak} richtig in Folge</b>` : streak > 0 ? `${streak} richtig in Folge` : '';
         api.el.querySelectorAll('.sp-artikel-btns .ch-opt').forEach(b => { b.classList.remove('is-right', 'is-wrong'); if (b.dataset.a === cur.a) b.classList.add('is-right'); else if (b.dataset.a === a) b.classList.add('is-wrong'); });

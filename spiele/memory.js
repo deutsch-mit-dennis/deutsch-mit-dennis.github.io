@@ -23,7 +23,8 @@
 .sp-memory-card.is-match .sp-memory-front{border-color:#1f9d55;background:#e8f6ec}
 .sp-memory-card.is-miss .sp-memory-front{border-color:#d6332b;background:#fdecea}
 .sp-memory-card.is-match{cursor:default}
-.g-der{color:#c62828}.g-die{color:#1565c0}.g-das{color:#7b1fa2}
+/* article colours as in Erste Schritte: der = blue, die = red, das = green */
+.g-der{color:#2463c7}.g-die{color:#c2362b}.g-das{color:#1d7a45}
 .sp-memory-legend{display:flex;justify-content:center;gap:14px;margin:12px 0 0;font-weight:700;font-size:14px}
 @media (prefers-reduced-motion:reduce){.sp-memory-in{transition:none}}
 `;
@@ -61,7 +62,7 @@
   DMGame.register({
     id: 'memory', title: 'Wort-Memory', icon: '🃏', level: 'A1–A2',
     desc: 'Finde die Paare: Bild und Wort mit Artikel – in den Farben der, die, das.',
-    intro: 'Decke immer zwei Karten auf und finde Bild und Wort, die zusammenpassen. Merk dir den Artikel: der (rot), die (blau), das (lila). Je weniger Züge und je schneller, desto mehr Punkte.',
+    intro: 'Decke immer zwei Karten auf und finde Bild und Wort, die zusammenpassen. Merk dir den Artikel: der (blau), die (rot), das (grün). Je weniger Züge und je schneller, desto mehr Punkte.',
     optionsLabel: 'Thema',
     options: [{ id: 'essen', label: 'Essen & Trinken' }, { id: 'kleidung', label: 'Kleidung' }, { id: 'wohnung', label: 'Wohnung' },
       { id: 'koerper', label: 'Körper & Gesundheit' }, { id: 'arbeit', label: 'Arbeit & Berufe' }],

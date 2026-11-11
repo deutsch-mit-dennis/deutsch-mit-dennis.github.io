@@ -86,18 +86,20 @@
   }
   function lidPick() {
     const K = window.LID_KATALOG || [];
-    const gen = K.filter(q => typeof q.nr === 'number'), land = K.filter(q => typeof q.nr !== 'number');
+    // state questions: the Bundesland chosen in the LiD trainer (DM.store.lid.land, lid-trainer.js); fallback NRW from the catalogue
+    const gen = K.filter(q => typeof q.nr === 'number'), land = ((window.DM && DM.lidLand && DM.lidLand()) || {}).fragen || K.filter(q => typeof q.nr !== 'number');
     const shuf = a => { a = [...a]; for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
     return [...shuf(gen).slice(0, 30), ...shuf(land).slice(0, 3)].map(q => q.id);
   }
   function lidExam(st) {
     const K = window.LID_KATALOG || [];
-    const by = Object.fromEntries(K.map(q => [q.id, q]));
+    const by = Object.fromEntries([...K, ...Object.values(window.LID_LAENDER || {}).flatMap(l => l.fragen)].map(q => [q.id, q]));
     const ex = lidBase();
     ex.sections[0].parts[0].items = (st?.lidQs || []).map(id => by[id]).filter(Boolean).map(q => {
       const pic = q.img.length === 4 && /^Bild \d$/.test(q.a[0]);
-      const nr = typeof q.nr === 'number' ? `Frage ${q.nr} aus dem Katalog` : q.nr.replace('NRW', 'Frage NRW');
-      return { q: q.q, opts: q.a, a: q.s, why: `${nr}. Richtig: ${pic ? q.a[q.s] : q.a[q.s]}`, img: pic ? [] : q.img, optImg: pic ? q.img : null, nr };
+      const nr = typeof q.nr === 'number' ? `Frage ${q.nr} aus dem Katalog` : window.DM && DM.lidLabel ? DM.lidLabel(q) : q.nr.replace('NRW', 'Frage NRW');
+      const warum = (window.LID_WARUM || {})[q.id]; // lid-warum.js (own explanations, not from BAMF)
+      return { q: q.q, opts: q.a, a: q.s, why: `${nr}. Richtig: ${q.a[q.s].replace(/\.$/, '')}.${warum ? ` Warum? ${warum}` : ''}`, img: pic ? [] : q.img, optImg: pic ? q.img : null, nr };
     });
     return prepare(ex);
   }
@@ -315,7 +317,7 @@
       ${combo ? `<aside class="dm-card sim-combo ${combo.verdict.pass ? 'ok' : 'no'}"><b>Gesamtergebnis (schriftlich + mündlich): ${e(combo.verdict.head)}</b>${combo.verdict.lines.map(l => `<span>${e(l)}</span>`).join('')}<small>Aus deiner letzten schriftlichen (${combo.wDate}) und mündlichen Prüfung (${combo.oDate}).</small></aside>` : ''}
       ${hasPaper(id) ? paperCard(id) : ''}
       ${ruleBox(ex)}
-      ${id === 'lid' ? `<p class="dm-small">Für die drei Bundesland-Fragen nimmt die Simulation die Fragen für Nordrhein-Westfalen.</p>` : ''}
+      ${id === 'lid' ? (window.DM && DM.lidLandPicker ? DM.lidLandPicker() : '') : ''}
       ${ex.sections.length > 1 ? `<details class="sim-more dm-card"><summary>Andere Möglichkeiten: Teil für Teil oder nur einen Teil üben</summary>
         <p>Bei <b>Teil für Teil</b> hat jeder Prüfungsteil seine eigene Uhr, mit Pause dazwischen. Du kannst auch nur einen einzelnen Teil üben.</p>
         <button type="button" class="dm-btn dm-btn-quiet" id="sim-go">▶ Ganze Prüfung Teil für Teil (${e(m.total)})</button>
@@ -874,7 +876,7 @@
       <div class="dm-row sim-tools" id="sim-nextblock" hidden><button type="button" class="dm-btn" id="sim-other">${GROUP[other].ic} ${GROUP[other].name} starten (${groupMin(ex, other)} Min.)</button></div>
       <div class="dm-row sim-tools"><label class="sim-toggle"><input type="checkbox" id="sim-only"> Nur Fehler zeigen</label><button type="button" class="dm-btn dm-btn-quiet" id="sim-again">${paper ? '✎ Antworten ändern' : 'Neue Simulation'}</button><a class="dm-btn dm-btn-quiet" href="#simulation">Alle Simulationen</a>${PREP.includes(base(id)) ? `<a class="dm-btn dm-btn-quiet" href="#vorbereitung/${base(id)}">Gezielt üben</a>` : ''}</div>
       <div class="sim-review">${sections}</div>
-      ${id === 'lid' ? window.LID_QUELLE_HTML || '' : '<p class="dm-small">Eigene Übungsaufgaben im Stil der Prüfung – keine offiziellen Aufgaben. Die Bewertung ist eine Schätzung.</p>'}`, 'sim-page');
+      ${id === 'lid' ? (window.LID_QUELLE_HTML || '') + (window.LID_WARUM ? '<p class="dm-small">Erklärungen: Deutsch mit Dennis – nicht vom BAMF.</p>' : '') : '<p class="dm-small">Eigene Übungsaufgaben im Stil der Prüfung – keine offiziellen Aufgaben. Die Bewertung ist eine Schätzung.</p>'}`, 'sim-page');
     paint();
     $('#sim-only').onchange = ev => main().classList.toggle('sim-only-wrong', ev.target.checked);
     $('#sim-again').onclick = () => paper ? (location.hash = `#simulation/${id}/pruefen`) : begin(id, ex, st.mode, st.secs[0], st.only);
@@ -1049,7 +1051,7 @@
       </section>
       ${body}
       <div class="sim-end"><p class="pc-count" id="pc-count"></p><div class="dm-row"><button type="button" class="dm-btn" id="pc-go">✓ Auswerten</button><button type="button" class="dm-btn dm-btn-quiet" id="pc-clear">Eingaben löschen</button></div></div>
-      ${id === 'lid' ? window.LID_QUELLE_HTML || '' : '<p class="dm-small">Eigene Übungsaufgaben im Stil der Prüfung – keine offiziellen Aufgaben. Die Bewertung ist eine Schätzung.</p>'}`, 'sim-page');
+      ${id === 'lid' ? (window.LID_QUELLE_HTML || '') + (window.LID_WARUM ? '<p class="dm-small">Erklärungen: Deutsch mit Dennis – nicht vom BAMF.</p>' : '') : '<p class="dm-small">Eigene Übungsaufgaben im Stil der Prüfung – keine offiziellen Aufgaben. Die Bewertung ist eine Schätzung.</p>'}`, 'sim-page');
     const m = main();
     const count = () => {
       const filled = secs.reduce((a, si) => a + ex.sections[si].parts.reduce((b, p) => b + (p.items || []).filter(it => draft.ans[it._n] != null).length, 0), 0);

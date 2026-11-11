@@ -15,3 +15,20 @@
 .lid-hint[open]>summary{border-style:solid;border-bottom:0;margin-bottom:0}
 .lid-hint[open] .lid-notebook{border-top:0}
 .lid-heading{position:relative}.lid-3d{position:absolute;right:0;top:6px;width:clamp(70px,9vw,118px)}@media(max-width:620px){.lid-3d{position:static;display:block;width:60px;margin-bottom:6px}}
+
+/* ---------- LiD-Trainer: Bundesland wählen + „Warum?“ ---------- */
+.lid-land{margin:0 0 16px}
+.lid-land h2{margin:0 0 6px;font-size:1.25rem}
+.lid-land.is-ask{border:2px solid var(--dm-gruen,#2f6b4f)}
+.lid-land>summary{cursor:pointer;min-height:44px;display:flex;flex-wrap:wrap;align-items:center;gap:6px 10px;list-style:none}
+.lid-land>summary::-webkit-details-marker{display:none}
+.lid-land-change{margin-left:auto;text-decoration:underline;font-size:.95rem}
+.lid-land-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(132px,1fr));gap:8px;margin-top:10px}
+.lid-land-btn{min-height:44px;padding:8px 10px;border:1.5px solid var(--dm-line,#cfd6c9);border-radius:10px;background:#fff;color:inherit;font:inherit;font-size:.95rem;line-height:1.2;cursor:pointer;text-align:left;overflow-wrap:anywhere;hyphens:auto}
+.lid-land-btn:hover,.lid-land-btn:focus-visible{border-color:var(--dm-gruen,#2f6b4f)}
+.lid-land-btn[aria-pressed="true"]{background:var(--dm-gruen,#2f6b4f);border-color:var(--dm-gruen,#2f6b4f);color:#fff;font-weight:700}
+.lid-block-ask{border-style:dashed}
+.lid-warum{margin:10px 0 0;padding:10px 12px;border-left:4px solid var(--dm-sonne,#e0b83a);border-radius:0 8px 8px 0;background:var(--dm-paper,#fbf8ee);font-size:1rem;line-height:1.5;color:inherit;overflow-wrap:anywhere}
+.lid-feedback>p{margin:0}
+.lid-feedback .lid-warum{margin-top:8px}
+.lid-land-sim select{min-height:44px;max-width:100%;font:inherit;padding:6px 8px;border-radius:8px}

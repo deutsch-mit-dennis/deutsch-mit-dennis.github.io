@@ -212,6 +212,7 @@
                 b,
                 b.dataset.a === cur.it.art,
                 `${cur.it.art} ${cur.it.w}`,
+                cur,
               )),
         );
         return;
@@ -229,10 +230,59 @@
       $$(".es-opt", box).forEach(
         (b) =>
           (b.onclick = () =>
-            answer(b, opts[+b.dataset.k] === cur, label(cur.it))),
+            answer(b, opts[+b.dataset.k] === cur, label(cur.it), cur, opts)),
       );
     }
-    function answer(btn, ok, right) {
+    // short reason for the article where a safe rule exists (word endings)
+    const artWhy = (it) => {
+      const w = it.w.toLowerCase();
+      const m = w.match(/(ung|heit|keit|schaft|ion|tät)$/);
+      if (it.art === "die" && m) return `Wörter auf -${m[1]} haben fast immer „die“.`;
+      if (it.art === "das" && /(chen|lein)$/.test(w))
+        return "Wörter auf -chen und -lein haben „das“.";
+      if (it.art === "die" && /e$/.test(w))
+        return "Viele Wörter auf -e haben „die“.";
+      return "";
+    };
+    // wrong answer -> mistakes notebook (fehlerheft.js)
+    function note(cur, opts) {
+      if (!window.DMFehler || !cur) return;
+      const it = cur.it,
+        shown = (o) => (t.kind === "tile" ? optText(o) : label(o)),
+        base = {
+          src: "Erste Schritte: " + t.title,
+          level: t.level,
+          speak: sayOf(it),
+          lkey: itemKey(t, cur.i),
+        };
+      if (mode === "artikel")
+        return DMFehler.add({
+          ...base,
+          q: `Der, die oder das? ___ ${it.w}`,
+          a: `${it.art} ${it.w}`,
+          opts: ["der", "die", "das"].map((a) => `${a} ${it.w}`),
+          hint: [artWhy(it), it.pl ? "Plural: " + it.pl : ""]
+            .filter(Boolean)
+            .join(" "),
+        });
+      const texts = (opts || []).map((o) => shown(o.it));
+      if (mode === "lesen" && it.img)
+        return DMFehler.add({
+          ...base,
+          q: it.img.includes("/") ? "Was ist das?" : `Was ist das? ${it.img}`,
+          img: it.img.includes("/") ? `assets/${it.img}.webp` : "",
+          a: shown(it),
+          opts: texts,
+        });
+      DMFehler.add({
+        ...base,
+        q: "Hör zu. Was passt?",
+        listen: sayOf(it),
+        a: shown(it),
+        opts: texts,
+      });
+    }
+    function answer(btn, ok, right, cur, opts) {
       $$(".es-opt", box).forEach((b) => (b.disabled = true));
       btn.classList.add(ok ? "is-right" : "is-wrong");
       if (ok) score++;
@@ -244,8 +294,16 @@
         );
         if (k) k.classList.add("is-right");
       }
+      if (!ok) note(cur, opts);
+      // feedback with a reason: the word with its coloured article, plural, a short rule, and the audio
+      const it = cur.it,
+        why = mode === "artikel" ? artWhy(it) : "";
       $(".es-fb", box).innerHTML =
-        `${ok ? "✓ Richtig!" : "✗ Richtig ist:"} <b>${x(right)}</b> <button type="button" class="dm-btn es-next">${r + 1 < rounds.length ? "Weiter →" : "Ergebnis"}</button>`;
+        `${ok ? "✓ Richtig!" : "✗ Richtig ist:"} <b class="es-fbw${it.art ? " es-" + it.art : ""}">${it.art ? `<em>${it.art}</em> ${x(it.w)}` : x(right)}</b> <button type="button" class="es-fbsay" aria-label="Anhören: ${x(label(it))}">🔊</button>${mode === "artikel" && it.pl ? `<span class="es-why">Plural: ${x(it.pl)}</span>` : ""}${why ? `<span class="es-why">💡 ${x(why)}</span>` : ""} <button type="button" class="dm-btn es-next">${r + 1 < rounds.length ? "Weiter →" : "Ergebnis"}</button>`;
+      const sb = $(".es-fbsay", box);
+      sb.onclick = () => play(sayOf(it), itemKey(t, cur.i), sb);
+      // hear the right word: always in the article quiz, otherwise after a mistake
+      if (mode === "artikel" || !ok) sb.click();
       const nx = $(".es-next", box);
       nx.onclick = () => {
         r++;
