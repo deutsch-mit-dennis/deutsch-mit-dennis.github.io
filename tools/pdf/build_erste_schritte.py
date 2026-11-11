@@ -86,16 +86,26 @@ def visual(it, size=30 * mm):
             PILImage.open(p).convert("RGB").save(buf, "JPEG", quality=78)
             buf.seek(0)
             return Image(buf, width=size, height=size)
+    if img or it.get("art") or len(it["w"]) > 12:
+        return Spacer(1, 1)  # emoji or missing picture: the word below is enough
     big = it["w"] if any(ch.isalnum() for ch in it["w"]) else it.get("sub", "")
+    if "big" not in st:
+        st["big"] = type(st["p"])(
+            "big",
+            parent=st["p"],
+            fontName="Atk-B",
+            fontSize=26,
+            leading=30,
+            textColor=TINTE,
+            alignment=1,
+        )
     return (
-        R(f'<font size="26" color="#2341B5"><b>{fallback(big)}</b></font>', "p")
-        if len(big) < 5
-        else R(f"<b>{fallback(big)}</b>", "p")
+        R(fallback(big), "big") if len(big) < 5 else Spacer(1, 1)
     )
 
 
 def word(it):
-    w = fallback(it["w"])
+    w = fallback(it["w"] if any(ch.isalnum() for ch in it["w"]) else it.get("sub", ""))  # emoji tiles: use the word
     return (
         f'<font color="{ART[it["art"]]}"><b>{it["art"]}</b></font> <b>{w}</b>'
         if it.get("art")
@@ -166,7 +176,7 @@ def sheet(t):
     cells = []
     for it in items:
         parts = [visual(it, 26 * mm if kind == "pic" else 22 * mm), centered(word(it))]
-        if it.get("sub") and kind != "phrase":
+        if it.get("sub") and kind != "phrase" and any(ch.isalnum() for ch in it["w"]):
             parts.append(
                 centered(f'<font color="#566078">{fallback(it["sub"])}</font>')
             )
