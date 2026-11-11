@@ -38,3 +38,18 @@ Die App läuft über `#route`. Damit Google alle Bereiche findet, gibt es zusät
 | Prüfung | `python3 tools/seo-audit.py` – lang, ein H1, Title < 60, Description < 155, img ohne alt, Skripte ohne defer |
 
 JSON-LD: Startseite `WebSite` + `Person` + `EducationalOrganization` (in `index.html`), alle Unterseiten `BreadcrumbList`, Simulationen, LiD-Seiten und Musterbriefe zusätzlich `LearningResource`.
+
+## Kurs, Fehlerheft, Grammatik, Prüfungsinfos (seit 2026-11-11)
+| Was | Wo |
+|---|---|
+| **Kurs pro Niveau** (`#kurs`, `#kurs/A1` …) und **Einstufungstest** (`#einstufung`) | Reihenfolge der Schritte: `kurs-data.js`. Logik, Testfragen (`ITEMS`) und Übersetzungen: `kurs.js`. Schritte haken sich selbst ab (45 Sek. auf der Seite). |
+| **Startseite** | Niveau wählen → ein Knopf „Dein nächster Schritt“ (`site.js`, `levelStart`). Alles Weitere liegt unter „Mehr entdecken“. |
+| **Fehlerheft** (`#fehler`) | `fehlerheft.js`. Andere Bereiche melden Fehler mit `DMFehler.add({q, a, src, hint})`. Wiederholung nach 0/1/3/7/21 Tagen. |
+| **Grammatik-Trainer** (`#grammatik`) | Themen und Aufgaben: `grammatik-data.js`, Prüfskript: `node tools/grammatik-validate.js`. |
+| **Laute und Buchstaben** (`#laute`) | `laute.js` |
+| **Hören/Lesen A1 und A2** | am Ende von `hoeren-data.js` (`DM.listeningStart`) und `lesen-data.js`. Noch ohne Aufnahmen (Gerätestimme). |
+| **LiD: alle Bundesländer, „Warum?“** | `lid-laender.js`, `lid-warum.js` (Erklärungen von uns, nicht vom BAMF) |
+| **Prüfungsinfos** (`#pruefungsinfo`) | `pruefung-fakten.js` – jede Angabe mit Quelle; nach Prüfung der Quellen `STAND` ändern. |
+| **Bewertete Musterantworten** | `muster-data.js` (`review: true` = von Dennis noch zu prüfen) |
+| **Hilfe in 8 Sprachen** | Startseite: `home-i18n.js`; alle anderen Seiten: `ui-i18n.js` (Wörterbuch deutscher Text → Übersetzung, erscheint klein unter dem deutschen Text) |
+| **Lesbare Seiten für Google** `/grammatik/…`, `/lektion/…`, `/kurs/…`, `/lesen/…`, `/hoeren/…`, `/pruefungsinfo/…` | `python3 tools/make-learn-pages.py` (läuft automatisch mit `make-seo-pages.py`) |
