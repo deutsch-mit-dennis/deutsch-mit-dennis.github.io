@@ -78,6 +78,8 @@
   function hideToast() { if (!toast) return; const t = toast; toast = null; t.classList.remove('dm-in'); setTimeout(() => t.remove(), 300); }
   function showToast(nw) {
     // Begrüßung von Dennis hat Vorrang – dann kein zweites Fenster
+    // first visit: no pop-up ("new since your last visit" makes no sense yet); the bell still shows the news
+    try { if ((+localStorage.getItem('dm-visits') || 0) < 2) return; } catch {}
     if (window.DMTourPending || document.getElementById('dm-tour') || document.querySelector('header.menu-open')) return;
     try { if (sessionStorage.getItem(TOAST)) return; sessionStorage.setItem(TOAST, '1'); } catch {}
     toast = document.createElement('aside');

@@ -4,6 +4,24 @@
   {
    "date": "2026-11-11",
    "type": "neu",
+   "title": "Neu: Kurse von A0 bis B2 – der Kurs zeigt dir immer den nächsten Schritt. Dazu ein Einstufungstest (5 Minuten).",
+   "link": "#kurs"
+  },
+  {
+   "date": "2026-11-11",
+   "type": "uebung",
+   "title": "Neu: Grammatik-Trainer mit 22 Themen und ein Fehlerheft, das deine Fehler wiederholt",
+   "link": "#grammatik"
+  },
+  {
+   "date": "2026-11-11",
+   "type": "neu",
+   "title": "Leben in Deutschland: jetzt alle 16 Bundesländer und eine Erklärung zu jeder Frage",
+   "link": "#lid"
+  },
+  {
+   "date": "2026-11-11",
+   "type": "neu",
    "title": "Neu: Erste Schritte – 18 Themen mit Bildkarten, Ton und Übungen für A0 und A1 (Alphabet, Zahlen, Familie, Essen, Uhrzeit, Kleidung …)",
    "link": "#erste-schritte"
   },

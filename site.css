@@ -732,3 +732,7 @@ body:has(header.dm-header.menu-open) .dm-tour:not(.dm-tour-open){visibility:hidd
 .dm-more .dm-social{justify-content:center;margin-top:24px}
 
 .dm-more>summary::before{content:none!important;display:none!important}
+
+/* narrow phones: the language button needs the room of the share button (sharing stays in the footer) */
+@media (max-width:430px){header.dm-header .dm-hshare{display:none!important}}
+@media (max-width:350px){header.dm-header{gap:4px!important;padding-left:8px!important;padding-right:8px!important}header.dm-header .logo{font-size:12.5px!important;margin-right:0!important}header.dm-header .ui-lang-btn b{display:none}header.dm-header .ui-lang-btn{min-width:36px;padding:0 2px}}

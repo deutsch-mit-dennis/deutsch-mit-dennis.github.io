@@ -10,8 +10,8 @@ window.DMLazy = (() => {
     "spiele/dialog.js?v=20261008e",
     "spiele/brief.js?v=20261008e",
     "spiele/verben.js?v=20261008e",
-    "spiele/artikel.js?v=20261008e",
-    "spiele/memory.js?v=20261008e",
+    "spiele/artikel.js?v=20261111m",
+    "spiele/memory.js?v=20261111m",
     "spiele/kit.js?v=20261014d",
     "spiele/arcade.js?v=20261028f",
     "spiele/b2.js?v=20261027b",
@@ -24,35 +24,35 @@ window.DMLazy = (() => {
     "spiele/lino.js?v=20261107e"
   ],
   "hoeren": [
-    "hoeren-data.js?v=20261104a"
+    "hoeren-data.js?v=20261111m"
   ],
   "lesen": [
-    "lesen-data.js?v=20261111a"
+    "lesen-data.js?v=20261111m"
   ],
   "erste": [
-    "erste-schritte-data.js?v=20261111a",
-    "erste-schritte.js?v=20261111a"
+    "erste-schritte-data.js?v=20261111m",
+    "erste-schritte.js?v=20261111m"
   ],
   "bild": [
     "bild-data.js?v=20261008e",
     "bild.js?v=20261008e"
   ],
   "grammatik": [
-    "grammatik-data.js?v=20261111k",
-    "grammatik.js?v=20261111k"
+    "grammatik-data.js?v=20261111m",
+    "grammatik.js?v=20261111m"
   ],
   "laute": [
-    "laute.js?v=20261111k"
+    "laute.js?v=20261111m"
   ],
   "lidx": [
-    "lid-laender.js?v=20261111k",
-    "lid-warum.js?v=20261111k"
+    "lid-laender.js?v=20261111m",
+    "lid-warum.js?v=20261111m"
   ],
   "muster": [
-    "muster-data.js?v=20261111k"
+    "muster-data.js?v=20261111m"
   ],
   "fakten": [
-    "pruefung-fakten.js?v=20261111k"
+    "pruefung-fakten.js?v=20261111m"
   ]
 };
   const NEED = { spiele: ['spiele'], hoeren: ['hoeren'], lesen: ['lesen'], pruefung: ['hoeren', 'lesen'], training: ['hoeren', 'lesen'], bild: ['bild'], 'erste-schritte': ['erste'], niveau: ['erste', 'hoeren', 'lesen'], grammatik: ['grammatik'], laute: ['laute'], lid: ['lidx'], simulation: ['lidx', 'muster'], ueben: ['muster'], pruefungsinfo: ['fakten'] };
