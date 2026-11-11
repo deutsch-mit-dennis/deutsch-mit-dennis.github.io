@@ -36,9 +36,26 @@ window.DMLazy = (() => {
   "bild": [
     "bild-data.js?v=20261008e",
     "bild.js?v=20261008e"
+  ],
+  "grammatik": [
+    "grammatik-data.js?v=20261111k",
+    "grammatik.js?v=20261111k"
+  ],
+  "laute": [
+    "laute.js?v=20261111k"
+  ],
+  "lidx": [
+    "lid-laender.js?v=20261111k",
+    "lid-warum.js?v=20261111k"
+  ],
+  "muster": [
+    "muster-data.js?v=20261111k"
+  ],
+  "fakten": [
+    "pruefung-fakten.js?v=20261111k"
   ]
 };
-  const NEED = { spiele: ['spiele'], hoeren: ['hoeren'], lesen: ['lesen'], pruefung: ['hoeren', 'lesen'], training: ['hoeren', 'lesen'], bild: ['bild'], 'erste-schritte': ['erste'], niveau: ['erste', 'hoeren', 'lesen'] };
+  const NEED = { spiele: ['spiele'], hoeren: ['hoeren'], lesen: ['lesen'], pruefung: ['hoeren', 'lesen'], training: ['hoeren', 'lesen'], bild: ['bild'], 'erste-schritte': ['erste'], niveau: ['erste', 'hoeren', 'lesen'], grammatik: ['grammatik'], laute: ['laute'], lid: ['lidx'], simulation: ['lidx', 'muster'], ueben: ['muster'], pruefungsinfo: ['fakten'] };
   const done = {}, busy = {};
   const one = src => new Promise(res => { const s = document.createElement('script'); s.src = src; s.async = false; s.onload = s.onerror = () => res(); document.head.appendChild(s); });
   const group = g => busy[g] || (busy[g] = GROUPS[g].reduce((p, src) => p.then(() => one(src)), Promise.resolve()).then(() => { done[g] = true; }));

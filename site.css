@@ -714,3 +714,21 @@ body:has(header.dm-header.menu-open) .dm-tour:not(.dm-tour-open){visibility:hidd
 .dm-intro p{margin:0 0 12px;max-width:68ch}
 .dm-intro a{font-weight:700}
 .dm-draft{display:inline-block;background:var(--dm-marker);color:#4a3b00;font-weight:700;font-size:14px;border-radius:99px;padding:2px 12px;margin:0 0 12px}
+
+/* start page: one next step, the rest folded (2026-11-11) */
+.dm-level-course{margin:6px 0 0;font-size:.95rem}
+.dm-level-course a{display:inline-flex;align-items:center;min-height:44px;font-weight:700}
+.dm-level-note{margin:6px 0 0;font-size:.95rem;color:var(--dm-muted,#55607a)}
+.dm-level-test{margin-top:4px}
+.dm-more{margin:28px 0 0;border-top:1px solid rgba(35,65,181,.15);padding-top:8px}
+.dm-more>summary{list-style:none;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:2px;min-height:56px;justify-content:center;padding:10px 14px;margin:0 auto;max-width:520px;border:2px solid #2341B5;border-radius:14px;font-weight:700;font-size:1.1rem;color:#2341B5;background:#fff;text-align:center}
+.dm-more>summary::-webkit-details-marker{display:none}
+.dm-more>summary::after{content:"▾";font-size:1rem;line-height:1}
+.dm-more[open]>summary::after{content:"▴"}
+.dm-more>summary small{font-weight:400;font-size:.85rem;color:#55607a}
+.dm-more>summary:focus-visible{outline:3px solid #f5a623;outline-offset:2px}
+.dm-more-links{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:16px 0 0}
+.dm-more-links .dm-btn{min-height:44px}
+.dm-more .dm-social{justify-content:center;margin-top:24px}
+
+.dm-more>summary::before{content:none!important;display:none!important}

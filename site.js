@@ -12,7 +12,7 @@
   // section pages (/pruefung/ … built by tools/make-share-pages.py, they have <base href="/">) keep their own <title> on the first view
   const entry = document.querySelector('base') ? { hash: location.hash, title: document.title } : null; // SEO intro text from index.html; shown at the bottom of the start page
   const LEVELS = ['A1', 'A2', 'B1', 'B2'];
-  const LEVEL_NAMES = { A1: 'Erste Schritte', A2: 'Alltag meistern', B1: 'Sicher ausdrücken', B2: 'Deutsch im Beruf' };
+  const LEVEL_NAMES = { A1: 'Erste Sätze', A2: 'Alltag meistern', B1: 'Sicher ausdrücken', B2: 'Deutsch im Beruf' };
 
   /* ---------- Speicher auf dem Gerät (nur lokal, nie übertragen) ---------- */
   const KEY = 'dmd.v1';
@@ -207,8 +207,12 @@
   const LV_KEYS = [['A0', 'a0'], ['A1', 'a1'], ['A2', 'a2'], ['B1', 'b1'], ['B2', 'b2']];
   const hi = () => DM.hi18n || null;
   const ht = (k, de) => (hi() ? hi().t(k) : de);
+  const tr = (k, de) => { const v = ht(k, de); return !v || v === k ? de : v; };
   function levelStart(lv) {
-    if (lv === 'A0' || lv === 'A1') {
+    const k = window.DMKurs && DMKurs.next ? DMKurs.next(lv) : null;
+    if (k && k.href) return { href: k.href, key: 'next_step', sub: k.title, course: k };
+    if (lv === 'A0') return { href: '#erste-schritte', key: 'go_start', sub: 'Erste Schritte' };
+    if (lv === 'A1') {
       const pth = DM.paths && DM.paths.start;
       if (pth) { const nx = pth.steps.find(st => !mem.done['weg:start:' + st[1]]) || pth.steps[0]; return { href: nx[1], key: 'go_start', sub: nx[0] }; }
     }
@@ -219,8 +223,8 @@
     const H = hi(), sel = mem.level || '';
     return `<section class="dm-level" id="dm-level" aria-labelledby="dm-level-h" data-i18n-dir>
       <h2 id="dm-level-h" data-i18n="lvl_q">Wie gut ist dein Deutsch?</h2>
-      <p class="dm-level-hint" data-i18n="lvl_hint">Tippe auf dein Niveau. Ich zeige dir alle Materialien dafür.</p>
-      <div class="dm-level-btns" role="group" aria-labelledby="dm-level-h">${LV_KEYS.map(([l, k]) => `<button type="button" class="dm-lv" data-lv="${l}" aria-pressed="${sel === l}"><b>${l}</b><small data-i18n="lv_${k}">${x(({ a0: 'Ich fange an', a1: 'Erste Sätze', a2: 'Alltag', b1: 'Gespräche', b2: 'Beruf' })[k])}</small></button>`).join('')}<a class="dm-lv dm-lv-unk" href="#wegweiser"><b>?</b><small data-i18n="lvl_unk">Ich weiß es nicht</small></a></div>
+      <p class="dm-level-hint" data-i18n="lvl_hint">Tippe auf dein Niveau. Dann zeige ich dir den nächsten Schritt.</p>
+      <div class="dm-level-btns" role="group" aria-labelledby="dm-level-h">${LV_KEYS.map(([l, k]) => `<button type="button" class="dm-lv" data-lv="${l}" aria-pressed="${sel === l}"><b>${l}</b><small data-i18n="lv_${k}">${x(({ a0: 'Ich fange an', a1: 'Erste Sätze', a2: 'Alltag', b1: 'Gespräche', b2: 'Beruf' })[k])}</small></button>`).join('')}<a class="dm-lv dm-lv-unk" href="#einstufung"><b>?</b><small data-i18n="lvl_unk">Ich weiß es nicht</small></a></div>
       <div class="dm-level-go" id="dm-level-go" aria-live="polite"></div>
       ${H ? `<div class="dm-lang" role="group" aria-label="${x(H.t('lang_h'))}" dir="ltr"><span aria-hidden="true">🌐</span>${H.langs.map(([c, n]) => `<button type="button" class="dm-lang-b" data-lang-set="${c}" lang="${c}" aria-pressed="false">${x(n)}</button>`).join('')}</div>` : ''}
     </section>`;
@@ -230,17 +234,27 @@
     const H = hi(), go = $('#dm-level-go', box);
     const last = mem.last && mem.last.route !== '' ? mem.last : null;
     const draw = () => {
-      const lv = mem.level, st = lv ? levelStart(lv) : null;
-      go.innerHTML = (last ? `<a class="dm-btn dm-level-last" href="#${x(last.route)}"><span data-i18n="go_cont">Weitermachen</span>: ${x(last.title)}</a>` : '')
-        + (st ? `<a class="dm-btn dm-level-start" href="${x(st.href)}"><span class="dm-level-lbl"><span data-i18n="${st.key}">${st.key === 'go_start' ? 'Jetzt starten' : 'Lektionen öffnen'}</span> <span aria-hidden="true">▶</span></span><small>${x(st.sub)}</small></a>` : '')
-        + levelOverview(lv)
-        + `<p class="dm-level-more"><a href="#challenge"><span aria-hidden="true">🔥</span> <span data-i18n="chal_l">Tages-Challenge</span></a><a href="#hallo"><span aria-hidden="true">🎧</span> <span data-i18n="hello_l">Dennis in deiner Sprache</span></a></p>`;
+      const lv = mem.level, st = lv ? levelStart(lv) : null, c = st && st.course;
+      let due = 0; try { const d = window.DMFehler && DMFehler.due ? DMFehler.due() : 0; due = Array.isArray(d) ? d.length : Number(d) || 0; } catch { due = 0; }
+      const hasProgress = Object.keys(mem.done || {}).length + Object.keys((mem.kurs && mem.kurs.done) || {}).length >= 3;
+      const lastDiffers = last && (!st || '#' + last.route !== st.href);
+      // one clear next step; everything else is a small secondary link
+      go.innerHTML = (st
+        ? `<a class="dm-btn dm-level-start" href="${x(st.href)}"><span class="dm-level-lbl"><span>${x(tr(st.key, st.key === 'next_step' ? 'Dein nächster Schritt' : st.key === 'go_start' ? 'Jetzt starten' : 'Lektionen öffnen'))}</span> <span aria-hidden="true">▶</span></span><small>${x(st.sub)}</small></a>`
+        : `<a class="dm-btn dm-btn-quiet dm-level-test" href="#einstufung"><span aria-hidden="true">🧭</span> ${x(tr('test_l', 'Einstufungstest – 5 Minuten'))}</a><p class="dm-level-note">${x(tr('test_hint', 'Du kennst dein Niveau nicht? Mach den kurzen Test.'))}</p>`)
+        + (c ? `<p class="dm-level-course"><a href="${x(c.courseHref || '#kurs/' + lv)}">${x(tr('course_of', 'Kurs {lv}: Schritt {n} von {total}').replace('{lv}', lv).replace('{n}', Math.min((c.done || 0) + 1, c.total || 1)).replace('{total}', c.total || ''))}</a></p>` : '')
+        + `<p class="dm-level-more">`
+        + (lastDiffers ? `<a href="#${x(last.route)}"><span aria-hidden="true">↩</span> ${x(tr('go_cont', 'Weitermachen'))}: ${x(last.title)}</a>` : '')
+        + (due ? `<a href="#fehler"><span aria-hidden="true">🔁</span> ${x(tr('errors_l', 'Meine Fehler wiederholen'))} (${due})</a>` : '')
+        + (lv ? `<a href="#niveau/${x(lv)}"><span aria-hidden="true">📚</span> Alle Materialien ${x(lv)}</a>` : '')
+        + (hasProgress ? `<a href="#lernstand"><span aria-hidden="true">💾</span> ${x(tr('backup_l', 'Lernstand sichern'))}</a>` : '')
+        + `</p>`;
       $$('.dm-lv[data-lv]', box).forEach(b => b.setAttribute('aria-pressed', String(b.dataset.lv === lv)));
       if (H) H.apply(box);
     };
-    // a level button opens the level page with all materials for that level (erste-schritte.js)
-    $$('.dm-lv[data-lv]', box).forEach(b => b.onclick = () => { mem.level = b.dataset.lv; save(); location.hash = '#niveau/' + b.dataset.lv; });
-    $$('[data-lang-set]', box).forEach(b => b.onclick = () => H.set(b.dataset.langSet));
+    // a level button stays on the start page and shows exactly one next step (course in kurs.js)
+    $$('.dm-lv[data-lv]', box).forEach(b => b.onclick = () => { mem.level = b.dataset.lv; save(); draw(); go.scrollIntoView({ behavior: 'smooth', block: 'nearest' }); go.querySelector('.dm-level-start')?.focus({ preventScroll: true }); });
+    $$('[data-lang-set]', box).forEach(b => b.onclick = () => { H.set(b.dataset.langSet); draw(); });
     draw();
     if (H) H.apply(document);
   }
@@ -262,14 +276,16 @@
       <figure class="dm-hero-photo"><img src="assets/dennis.webp" alt="Dennis, dein Deutschlehrer" width="626" height="1004" fetchpriority="high"></figure>
       <div class="dm-hero-copy">
         <p class="dm-hero-title">Deutsch lernen mit Dennis</p>
-        <p class="dm-promise" data-i18n="free" data-i18n-dir>Kostenlos · A1 bis B2 · ohne Anmeldung</p>
-        <p class="dm-social" aria-label="Dennis in den sozialen Netzwerken"><a class="dm-soc dm-soc-yt" href="https://www.youtube.com/@deutsch-mit-Dennis" target="_blank" rel="noopener noreferrer" aria-label="YouTube – Kanal öffnen"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="currentColor"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2C.5 9.1.5 12 .5 12s0 2.9.5 4.8a3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1c.5-1.9.5-4.8.5-4.8s0-2.9-.5-4.8zM9.7 15.5v-7l6 3.5-6 3.5z"/></svg><span>YouTube</span></a><a class="dm-soc dm-soc-ig" href="https://www.instagram.com/deutsch_mit_dennis/" target="_blank" rel="noopener noreferrer" aria-label="Instagram – Kanal öffnen"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg><span>Instagram</span></a><a class="dm-soc dm-soc-tt" href="https://www.tiktok.com/@deutsch_mit_dennis" target="_blank" rel="noopener noreferrer" aria-label="TikTok – Kanal öffnen"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="currentColor"><path d="M16.6 2h-3.2v13.2a2.8 2.8 0 1 1-2-2.7V9.2a6 6 0 1 0 5.2 5.9V8.6a7.4 7.4 0 0 0 4.3 1.4V6.8a4.3 4.3 0 0 1-4.3-4.8z"/></svg><span>TikTok</span></a></p>
+        <p class="dm-promise" data-i18n="free" data-i18n-dir>Kostenlos · A0 bis B2 · ohne Anmeldung</p>
         ${levelPicker()}
-        <p class="dm-hand">Hallo! Ich bin Dennis, dein Deutschlehrer und zugelassener Prüfer. Wähle unten deinen Weg – ich zeige dir die nächsten Schritte.</p>
+        <p class="dm-hand">Hallo! Ich bin Dennis, dein Deutschlehrer und zugelassener Prüfer. Tippe auf dein Niveau – ich zeige dir den nächsten Schritt.</p>
         <ul class="dm-trust"><li>✓ DTZ-Prüfer</li><li>✓ telc-Prüfer B1–C1</li><li>✓ Lehrkraft mit BAMF-Zulassung bis C2</li></ul>
-        <p class="dm-tour-start"><a href="#" data-tour-start><span aria-hidden="true">▶</span> Rundgang mit Dennis ansehen (40 Sek.)</a></p>
       </div>
     </section>
+
+    <details class="dm-more" id="dm-more"${mem.moreOpen ? ' open' : ''}>
+    <summary><span data-i18n="more_h">Mehr entdecken</span><small>Prüfung · Lernwege · Spiele · Lieder · Videos</small></summary>
+    <p class="dm-more-links"><a class="dm-btn dm-btn-quiet" href="#pruefung">📝 Prüfung</a><a class="dm-btn dm-btn-quiet" href="#kurs">🧭 Alle Kurse</a><a class="dm-btn dm-btn-quiet" href="#grammatik">🧩 Grammatik</a><a class="dm-btn dm-btn-quiet" href="#fehler">🔁 Meine Fehler</a><a class="dm-btn dm-btn-quiet" href="#" data-tour-start>▶ Rundgang (40 Sek.)</a></p>
 
     <section class="dm-section" aria-labelledby="wege-h">
       <div class="dm-section-head"><h2 id="wege-h" data-i18n="paths_h">Wähle deinen Weg</h2><p>Du kannst jederzeit wechseln.</p></div>
@@ -284,7 +300,7 @@
     <section class="dm-section dm-tools" aria-labelledby="tools-h">
       <div class="dm-section-head"><h2 id="tools-h">Direkt üben</h2></div>
       <div class="dm-toolgrid">
-        <a href="#simulation" data-img="pokal"><img class="dm-tool-3d" src="assets/3d/pokal.webp" alt="" width="192" height="192" loading="lazy" aria-hidden="true"><b>Probeprüfungen</b><span>DTZ, Leben in Deutschland, telc B1/B2, DTB B1/B2 – mit echter Zeit, Punkten und Lösungen.</span></a>
+        <a href="#simulation" data-img="pokal"><img class="dm-tool-3d" src="assets/3d/pokal.webp" alt="" width="192" height="192" loading="lazy" aria-hidden="true"><b>Probeprüfungen</b><span>DTZ, Leben in Deutschland, telc B1/B2, DTB B1/B2 – 13 Modelltests mit echter Zeit, Punkten und Lösungen.</span></a>
         <a href="#ueben/sprechen/A1" data-img="sprechblase"><img class="dm-tool-3d" src="assets/3d/sprechblase.webp" alt="" width="192" height="192" loading="lazy" aria-hidden="true"><b>Sprechen</b><span>Gespräche aus dem Alltag, mit Satzanfängen und Beispiel zum Anhören.</span></a>
         <a href="#ueben/schreiben/A2" data-img="schreiben"><img class="dm-tool-3d" src="assets/3d/schreiben.webp" alt="" width="192" height="192" loading="lazy" aria-hidden="true"><b>Schreiben</b><span>Nachrichten, Briefe und E-Mails – mit Sofort-Korrektur, Checkliste und Mustertext.</span></a>
         <a href="#hoeren" data-img="kopfhoerer"><img class="dm-tool-3d" src="assets/3d/kopfhoerer.webp" alt="" width="192" height="192" loading="lazy" aria-hidden="true"><b>Hören</b><span>Hörtraining für Alltag und Beruf mit natürlichen Stimmen: Ansagen, Mailbox, Gespräche.</span></a>
@@ -316,9 +332,12 @@
       <div><h2>Wer ist Dennis?</h2><p>Master in Germanistik, seit 2017 Deutschlehrer und lizenzierter DTZ- und telc-Prüfer. Ich kenne die Prüfungen aus dem Unterricht und als Prüfer.</p><div class="dm-row"><a class="dm-btn dm-btn-quiet" href="#ueber-mich">Mehr über mich</a><a class="dm-btn dm-btn-quiet" href="#ueber-mich/nachweise">Zulassungen</a></div></div>
     </section>
 
-    ${pkgTeaser()}`, 'dm-home');
+    ${pkgTeaser()}
+        <p class="dm-social" aria-label="Dennis in den sozialen Netzwerken"><a class="dm-soc dm-soc-yt" href="https://www.youtube.com/@deutsch-mit-Dennis" target="_blank" rel="noopener noreferrer" aria-label="YouTube – Kanal öffnen"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="currentColor"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2C.5 9.1.5 12 .5 12s0 2.9.5 4.8a3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1c.5-1.9.5-4.8.5-4.8s0-2.9-.5-4.8zM9.7 15.5v-7l6 3.5-6 3.5z"/></svg><span>YouTube</span></a><a class="dm-soc dm-soc-ig" href="https://www.instagram.com/deutsch_mit_dennis/" target="_blank" rel="noopener noreferrer" aria-label="Instagram – Kanal öffnen"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg><span>Instagram</span></a><a class="dm-soc dm-soc-tt" href="https://www.tiktok.com/@deutsch_mit_dennis" target="_blank" rel="noopener noreferrer" aria-label="TikTok – Kanal öffnen"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="currentColor"><path d="M16.6 2h-3.2v13.2a2.8 2.8 0 1 1-2-2.7V9.2a6 6 0 1 0 5.2 5.9V8.6a7.4 7.4 0 0 0 4.3 1.4V6.8a4.3 4.3 0 0 1-4.3-4.8z"/></svg><span>TikTok</span></a></p>
+    </details>`, 'dm-home');
     if (introEl) mainEl.querySelector('.dm-home')?.append(introEl);
     wireLevel();
+    const more = $('#dm-more'); if (more) more.ontoggle = () => { mem.moreOpen = more.open; save(); };
     (window.DMNews ? DMNews.items() : fetch('neu.json?v=' + Math.floor(Date.now() / 36e5), { cache: 'no-cache' }).then(r => r.json()).then(j => j.items || [])).then(items => {
       const ico = { lied: ['noten', 'Lied'], hoeren: ['kopfhoerer', 'Hören'], sprechen: ['sprechblase', 'Sprechen'], schreiben: ['schreiben', 'Schreiben'], uebung: ['idee', 'Übung'], neu: ['funkeln', 'Neu'], video: ['video', 'Video'], kahoot: ['spiel', 'Kahoot'] };
       const ol = $('#dm-newslist'); if (!ol) return; ol.removeAttribute('aria-busy');
@@ -426,7 +445,7 @@
   }
 
   /* ---------- Lernstand sichern (alles lokal, nichts wird gesendet) ---------- */
-  const SAVE_KEYS = ['dmd.v1', 'dmd.lang', 'dm-challenge', 'dm-spiele', 'dm-nid', 'dm-mikula'];
+  const SAVE_KEYS = ['dmd.v1', 'dmd.lang', 'dm-challenge', 'dm-spiele', 'dm-nid', 'dm-mikula', 'dm-lino', 'dmd.vlang', 'dmd.eslang'];
   const b64enc = t => btoa(unescape(encodeURIComponent(t)));
   const b64dec = t => decodeURIComponent(escape(atob(t)));
   function stateBundle() {
@@ -451,6 +470,8 @@
       if (k === 'dmd.v1') {
         let imp; try { imp = JSON.parse(v) || {}; } catch { return; }
         ['visited', 'done', 'drafts'].forEach(g => { mem[g] = Object.assign({}, imp[g] || {}, mem[g] || {}); });
+        // course, mistakes notebook, grammar, lessons …: merge one level deep, existing entries win
+        ['kurs', 'fehler', 'grammatik', 'lektion', 'laute', 'lid', 'sim'].forEach(g => { if (imp[g] && typeof imp[g] === 'object' && mem[g] && typeof mem[g] === 'object' && !Array.isArray(mem[g])) Object.keys(imp[g]).forEach(k2 => { if (mem[g][k2] === undefined) mem[g][k2] = imp[g][k2]; else if (imp[g][k2] && typeof imp[g][k2] === 'object' && !Array.isArray(imp[g][k2]) && typeof mem[g][k2] === 'object' && !Array.isArray(mem[g][k2])) mem[g][k2] = Object.assign({}, imp[g][k2], mem[g][k2]); }); });
         Object.keys(imp).forEach(g => { if (!['visited', 'done', 'drafts'].includes(g) && mem[g] === undefined) mem[g] = imp[g]; });
         save(); n++;
       } else { try { if (localStorage.getItem(k) === null) { localStorage.setItem(k, v); n++; } } catch { /* privater Modus */ } }
@@ -462,7 +483,7 @@
     page(`${crumbs([['Lernstand sichern']])}
       <div class="dm-head"><h1>Lernstand sichern</h1><p class="dm-lead">Alles bleibt auf deinem Gerät. Nichts wird an uns gesendet.</p></div>
       <section class="dm-card dm-ls"><h2><span aria-hidden="true">💾</span> Lernstand sichern</h2>
-        <p>Dein Fortschritt (erledigte Schritte, Niveau, Challenge, Spiele) liegt nur auf diesem Gerät. Sichere ihn, bevor du das Handy wechselst oder Browserdaten löschst.</p>
+        <p>Dein Fortschritt (Kurs, erledigte Schritte, Fehlerheft, Niveau, Challenge, Spiele) liegt nur auf diesem Gerät. Sichere ihn, bevor du das Handy wechselst oder Browserdaten löschst.</p>
         <p class="dm-row"><button type="button" class="dm-btn" id="ls-save">Datei speichern</button><button type="button" class="dm-btn dm-btn-quiet" id="ls-copy">Code kopieren</button><button type="button" class="dm-btn dm-btn-quiet" id="ls-share" hidden>Senden …</button></p>
         <h3>Wiederherstellen</h3>
         <p><label for="ls-file">Datei auswählen</label><br><input type="file" id="ls-file"></p>
@@ -536,7 +557,7 @@
   /* ---------- Lektionen ---------- */
   function lessonsPage(sel) {
     if (!LEVELS.includes(sel)) sel = mem.level && LEVELS.includes(mem.level) ? mem.level : 'A1';
-    mem.level = sel; save();
+    if (!mem.level) { mem.level = sel; save(); }
     const imgFor = l => typeof platformImage === 'function' ? platformImage(l) : 'alltag';
     page(`${crumbs([['Lektionen']])}
       <div class="dm-head"><h1>Lektionen</h1><p class="dm-lead">Jede Lektion hat sieben kurze Schritte: Einstieg, Wortschatz, Grammatik, Dialog, Übungen, Anwenden, Mitnehmen.</p></div>
@@ -1139,7 +1160,7 @@
         <div class="dm-exam-head"><h2 id="ex-h">${x(t.h)}</h2><p>${x(t.p)}</p>${P ? `<a href="#lernweg/${t.path}">Lernweg „${x(P.title)}“ öffnen</a>` : ''}</div>
         <div class="dm-examgrid">${t.cards()}</div>
       </section>
-      <p class="dm-center"><a class="dm-btn dm-btn-quiet" href="#simulation">Alle 6 Probeprüfungen im Überblick</a></p>
+      <p class="dm-center"><a class="dm-btn dm-btn-quiet" href="#simulation">Alle Probeprüfungen im Überblick (13 Modelltests)</a></p>
       <section class="dm-card dm-official"><h2>Offizielle Informationen und Modelltests</h2><p>Prüfungsaufbau, Bewertung und offizielle Übungssätze findest du bei den Prüfungsanbietern. Die Links haben wir für dich gesammelt.</p><a class="dm-btn dm-btn-quiet" href="#quellen">Prüfungsinfos und Quellen</a></section>
       ${materialLinks('pruefung', 'Arbeitsblätter zur Prüfung', mine)}
       <div id="dm-exam-videos"></div>`);
@@ -1666,8 +1687,8 @@
   });
   /* ---------- Router ---------- */
   const legacyRoute = window.route;
-  const NAV = { '': 'start', lernweg: 'wege', wegweiser: 'wege', lernen: 'lernen', lektion: 'lernen', wortschatz: 'lernen', wort: 'lernen', ueben: 'ueben', schreiben: 'ueben', hoeren: 'ueben', lesen: 'ueben', kahoot: 'ueben', challenge: 'spiele', spiele: 'spiele', bild: 'pruefung', pruefung: 'pruefung', training: 'pruefung', orientierungskurs: 'pruefung', lid: 'pruefung', quellen: 'pruefung', simulation: 'pruefung', vorbereitung: 'pruefung', videos: 'videos', 'ueber-mich': 'ueber', material: 'material', lernpakete: 'pakete', lieder: 'lieder', niveau: 'lernen', 'erste-schritte': 'lernen' };
-  const TITLES = { '': 'Deutsch lernen mit Dennis', lernstand: 'Lernstand sichern', hallo: 'Dennis in deiner Sprache', lernweg: 'Mein Lernweg', wegweiser: 'Welcher Weg passt?', lernen: 'Lektionen', lektion: 'Lektion', wortschatz: 'Wortschatz', wort: 'Wortkarte', ueben: 'Üben', schreiben: 'Schreib-Bausteine', hoeren: 'Hören', lesen: 'Lesen', kahoot: 'Kahoot-Quiz', challenge: 'Tages-Challenge', spiele: 'Lernspiele', bild: 'Bild beschreiben', pruefung: 'Prüfungstraining', training: 'Prüfungstraining', orientierungskurs: 'Deutschland verstehen', lid: 'Leben in Deutschland – 310 Fragen', quellen: 'Prüfungsinfos & Quellen', simulation: 'Prüfungssimulationen', vorbereitung: 'Gezielte Vorbereitung', videos: 'Videos', 'ueber-mich': 'Über mich', impressum: 'Impressum', datenschutz: 'Datenschutz', pinnwand: 'Deine Meinung', material: 'Materialien', lernpakete: 'Lernpakete', lieder: 'Deutsch mit Liedern', musik: 'Musik zum Lernen', niveau: 'Materialien nach Niveau', 'erste-schritte': 'Erste Schritte' };
+  const NAV = { '': 'start', lernweg: 'wege', wegweiser: 'wege', lernen: 'lernen', lektion: 'lernen', wortschatz: 'lernen', wort: 'lernen', ueben: 'ueben', schreiben: 'ueben', hoeren: 'ueben', lesen: 'ueben', kahoot: 'ueben', challenge: 'spiele', spiele: 'spiele', bild: 'pruefung', pruefung: 'pruefung', training: 'pruefung', orientierungskurs: 'pruefung', lid: 'pruefung', quellen: 'pruefung', simulation: 'pruefung', vorbereitung: 'pruefung', videos: 'videos', 'ueber-mich': 'ueber', material: 'material', lernpakete: 'pakete', lieder: 'lieder', niveau: 'lernen', 'erste-schritte': 'lernen', kurs: 'wege', einstufung: 'wege', fehler: 'wege', grammatik: 'lernen', laute: 'lernen', pruefungsinfo: 'pruefung' };
+  const TITLES = { '': 'Deutsch lernen mit Dennis', lernstand: 'Lernstand sichern', hallo: 'Dennis in deiner Sprache', lernweg: 'Mein Lernweg', wegweiser: 'Welcher Weg passt?', lernen: 'Lektionen', lektion: 'Lektion', wortschatz: 'Wortschatz', wort: 'Wortkarte', ueben: 'Üben', schreiben: 'Schreib-Bausteine', hoeren: 'Hören', lesen: 'Lesen', kahoot: 'Kahoot-Quiz', challenge: 'Tages-Challenge', spiele: 'Lernspiele', bild: 'Bild beschreiben', pruefung: 'Prüfungstraining', training: 'Prüfungstraining', orientierungskurs: 'Deutschland verstehen', lid: 'Leben in Deutschland – 310 Fragen', quellen: 'Prüfungsinfos & Quellen', simulation: 'Prüfungssimulationen', vorbereitung: 'Gezielte Vorbereitung', videos: 'Videos', 'ueber-mich': 'Über mich', impressum: 'Impressum', datenschutz: 'Datenschutz', pinnwand: 'Deine Meinung', material: 'Materialien', lernpakete: 'Lernpakete', lieder: 'Deutsch mit Liedern', musik: 'Musik zum Lernen', niveau: 'Materialien nach Niveau', 'erste-schritte': 'Erste Schritte', kurs: 'Mein Kurs', einstufung: 'Einstufungstest', fehler: 'Meine Fehler', grammatik: 'Grammatik üben', laute: 'Laute und Buchstaben', pruefungsinfo: 'Prüfungsinfos' };
   const OWN = {
     '': () => home(),
     lernweg: p => p[1] ? pathPage(p[1]) : paths(),
@@ -1721,7 +1742,7 @@
   /* unknown or outdated address: clear page instead of an endless loading placeholder */
   function notFound() {
     page(`<div class="dm-head"><h1>Diese Seite gibt es nicht (mehr)</h1><p class="dm-lead">Vielleicht ist der Link alt oder falsch geschrieben. Hier geht es weiter:</p></div>
-      <p class="dm-actions"><a class="dm-btn" href="#">🏠 Startseite</a> <a class="dm-btn dm-btn-quiet" href="#lernweg">🧭 Mein Lernweg</a> <a class="dm-btn dm-btn-quiet" href="#pruefung">📝 Prüfung</a> <a class="dm-btn dm-btn-quiet" href="#spiele">🎮 Spiele</a></p>`);
+      <p class="dm-actions"><a class="dm-btn" href="#">🏠 Startseite</a> <a class="dm-btn dm-btn-quiet" href="#kurs">🧭 Mein Kurs</a> <a class="dm-btn dm-btn-quiet" href="#pruefung">📝 Prüfung</a> <a class="dm-btn dm-btn-quiet" href="#spiele">🎮 Spiele</a></p>`);
   }
 
   window.route = function () {
@@ -1763,7 +1784,8 @@
     revealCards();
     // Weitermachen merken: nur Lernseiten
     const routeStr = p.filter(Boolean).join('/');
-    if (['erste-schritte', 'lektion', 'wortschatz', 'ueben', 'hoeren', 'training', 'lernweg', 'orientierungskurs', 'lid', 'lieder', 'challenge', 'bild', 'spiele', 'vorbereitung', 'simulation'].includes(p[0]) && routeStr && p[2] !== 'run' && p[2] !== 'ergebnis') {
+    try { window.DMKurs && DMKurs.visit && DMKurs.visit(routeStr); } catch (e) { console.error(e); }
+    if (['erste-schritte', 'grammatik', 'laute', 'lesen', 'lektion', 'wortschatz', 'ueben', 'hoeren', 'training', 'lernweg', 'orientierungskurs', 'lid', 'lieder', 'challenge', 'bild', 'spiele', 'vorbereitung', 'simulation'].includes(p[0]) && routeStr && p[2] !== 'run' && p[2] !== 'ergebnis') {
       mem.visited[routeStr] = Date.now();
       mem.last = { route: routeStr, title: ($("main h1")?.textContent.trim() || TITLES[p[0]] || '').replace(/\.$/, '').slice(0, 48), ts: Date.now() };
       save();

@@ -1,5 +1,5 @@
 /* Kleine Sterne-Abfrage „Hilft dir die Seite?“
-   Erscheint nur nach echter Nutzung (3 erledigte Übungen oder 2. Besuch), nur auf Übersichtsseiten,
+   Erscheint nur nach echter Nutzung (3 erledigte Übungen oder 3. Besuch), nur auf Übersichtsseiten,
    höchstens einmal; „Später“ fragt frühestens nach 30 Tagen wieder. Ergebnis geht per FormSubmit an Dennis. */
 (function () {
   const RK = 'dm-rate', VK = 'dm-visits', MEM = 'dmd.v1';
@@ -17,7 +17,7 @@
     if (s.done) return false;
     if (s.later && Date.now() < s.later) return false;
     let done = 0; try { done = Object.keys((JSON.parse(get(MEM) || '{}').done) || {}).length; } catch {}
-    return done >= 3 || (+get(VK) || 0) >= 2;
+    return done >= 3 || (+get(VK) || 0) >= 3;
   }
   function onOverview() {
     const p = decodeURIComponent(location.hash.slice(1)).replace(/^\/+/, '').split('/');

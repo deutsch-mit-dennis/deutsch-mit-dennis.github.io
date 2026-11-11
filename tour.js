@@ -80,11 +80,15 @@
   function maybeShow() {
     const onHome = !location.hash || location.hash === '#';
     let later = false; try { later = !!sessionStorage.getItem(SEEN); } catch {}
+    // not on the very first visit: let new learners find their level first
+    if ((+get('dm-visits') || 0) < 2) return;
     if (!onHome || get(SEEN) || later || (+get(LATER) || 0) >= 3 || document.getElementById('dm-tour')) return;
     window.DMTourPending = true; // Neuigkeiten-Hinweis wartet, damit nie zwei Fenster gleichzeitig offen sind
     check().then(ok => { if (!ok) { window.DMTourPending = false; return; } whenEngaged(() => { if (!location.hash || location.hash === '#') bubble(); else window.DMTourPending = false; }); });
   }
-  document.addEventListener('click', e => { const a = e.target.closest('[data-tour-start]'); if (a) { e.preventDefault(); window.DMTour.start(); } });
+  // the tour points at sections inside the folded "Mehr entdecken" block: open it first
+  const openMore = () => { const m = document.getElementById('dm-more'); if (m) m.open = true; };
+  document.addEventListener('click', e => { if (e.target.closest('.dm-tour-play')) openMore(); const a = e.target.closest('[data-tour-start]'); if (a) { e.preventDefault(); openMore(); window.DMTour.start(); } }, true);
   window.addEventListener('hashchange', () => {
     // Begrüßung (noch nicht gestartet) ausblenden, sobald man die Startseite verlässt – z. B. beim Spielen
     const t = document.getElementById('dm-tour'), onHome = !location.hash || location.hash === '#';
