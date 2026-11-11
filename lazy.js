@@ -29,12 +29,16 @@ window.DMLazy = (() => {
   "lesen": [
     "lesen-data.js?v=20261111a"
   ],
+  "erste": [
+    "erste-schritte-data.js?v=20261111a",
+    "erste-schritte.js?v=20261111a"
+  ],
   "bild": [
     "bild-data.js?v=20261008e",
     "bild.js?v=20261008e"
   ]
 };
-  const NEED = { spiele: ['spiele'], hoeren: ['hoeren'], lesen: ['lesen'], pruefung: ['hoeren', 'lesen'], training: ['hoeren', 'lesen'], bild: ['bild'] };
+  const NEED = { spiele: ['spiele'], hoeren: ['hoeren'], lesen: ['lesen'], pruefung: ['hoeren', 'lesen'], training: ['hoeren', 'lesen'], bild: ['bild'], 'erste-schritte': ['erste'], niveau: ['erste', 'hoeren', 'lesen'] };
   const done = {}, busy = {};
   const one = src => new Promise(res => { const s = document.createElement('script'); s.src = src; s.async = false; s.onload = s.onerror = () => res(); document.head.appendChild(s); });
   const group = g => busy[g] || (busy[g] = GROUPS[g].reduce((p, src) => p.then(() => one(src)), Promise.resolve()).then(() => { done[g] = true; }));

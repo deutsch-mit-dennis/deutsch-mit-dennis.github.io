@@ -154,7 +154,7 @@
 
   /* ---------- Bausteine ---------- */
   const art3d = (n, anim = 'float') => `<img class="dm-3d dm-3d-${anim}" src="assets/3d/${n}.webp" alt="" width="192" height="192" aria-hidden="true">`;
-  const HEAD_ART = { lernweg: ['kompass', 'swing'], wegweiser: ['kompass', 'swing'], lernen: ['buecher', 'float'], ueben: ['idee', 'glow'], 'ueben/sprechen': ['sprechblase', 'bounce'], 'ueben/schreiben': ['schreiben', 'swing'], schreiben: ['memo', 'swing'], hoeren: ['kopfhoerer', 'float'], lesen: ['buecher', 'float'], lieder: ['mikrofon', 'float'], spiele: ['spiel', 'bounce'], kahoot: ['spiel', 'bounce'], pruefung: ['pokal', 'glow'], training: ['pokal', 'glow'], videos: ['video', 'swing'], material: ['blatt', 'float'], lernpakete: ['paket', 'bounce'], pinnwand: ['pin', 'swing'], quellen: ['register', 'float'] };
+  const HEAD_ART = { lernweg: ['kompass', 'swing'], wegweiser: ['kompass', 'swing'], lernen: ['buecher', 'float'], ueben: ['idee', 'glow'], 'ueben/sprechen': ['sprechblase', 'bounce'], 'ueben/schreiben': ['schreiben', 'swing'], schreiben: ['memo', 'swing'], hoeren: ['kopfhoerer', 'float'], lesen: ['buecher', 'float'], lieder: ['mikrofon', 'float'], spiele: ['spiel', 'bounce'], kahoot: ['spiel', 'bounce'], pruefung: ['pokal', 'glow'], training: ['pokal', 'glow'], videos: ['video', 'swing'], material: ['blatt', 'float'], niveau: ['buecher', 'float'], 'erste-schritte': ['sprechblase', 'bounce'], lernpakete: ['paket', 'bounce'], pinnwand: ['pin', 'swing'], quellen: ['register', 'float'] };
   function decorateHead() {
     const h = location.hash.slice(1).split('/'), key = HEAD_ART[h[0] + '/' + h[1]] ? h[0] + '/' + h[1] : h[0];
     let a = HEAD_ART[key]; if (h[0] === 'lieder' && h[1] && !['A1', 'A2', 'B1', 'B2', 'C1'].includes(h[1])) a = ['noten', 'float'];
@@ -219,7 +219,7 @@
     const H = hi(), sel = mem.level || '';
     return `<section class="dm-level" id="dm-level" aria-labelledby="dm-level-h" data-i18n-dir>
       <h2 id="dm-level-h" data-i18n="lvl_q">Wie gut ist dein Deutsch?</h2>
-      <p class="dm-level-hint" data-i18n="lvl_hint">Tippe auf dein Niveau. Ich zeige dir den ersten Schritt.</p>
+      <p class="dm-level-hint" data-i18n="lvl_hint">Tippe auf dein Niveau. Ich zeige dir alle Materialien dafür.</p>
       <div class="dm-level-btns" role="group" aria-labelledby="dm-level-h">${LV_KEYS.map(([l, k]) => `<button type="button" class="dm-lv" data-lv="${l}" aria-pressed="${sel === l}"><b>${l}</b><small data-i18n="lv_${k}">${x(({ a0: 'Ich fange an', a1: 'Erste Sätze', a2: 'Alltag', b1: 'Gespräche', b2: 'Beruf' })[k])}</small></button>`).join('')}<a class="dm-lv dm-lv-unk" href="#wegweiser"><b>?</b><small data-i18n="lvl_unk">Ich weiß es nicht</small></a></div>
       <div class="dm-level-go" id="dm-level-go" aria-live="polite"></div>
       ${H ? `<div class="dm-lang" role="group" aria-label="${x(H.t('lang_h'))}" dir="ltr"><span aria-hidden="true">🌐</span>${H.langs.map(([c, n]) => `<button type="button" class="dm-lang-b" data-lang-set="${c}" lang="${c}" aria-pressed="false">${x(n)}</button>`).join('')}</div>` : ''}
@@ -238,7 +238,8 @@
       $$('.dm-lv[data-lv]', box).forEach(b => b.setAttribute('aria-pressed', String(b.dataset.lv === lv)));
       if (H) H.apply(box);
     };
-    $$('.dm-lv[data-lv]', box).forEach(b => b.onclick = () => { mem.level = mem.level === b.dataset.lv ? '' : b.dataset.lv; save(); draw(); const ov = $('.dm-level-paths', box); if (ov) ov.scrollIntoView({ block: 'nearest', behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' }); }); // second tap on the same level shows all paths again
+    // a level button opens the level page with all materials for that level (erste-schritte.js)
+    $$('.dm-lv[data-lv]', box).forEach(b => b.onclick = () => { mem.level = b.dataset.lv; save(); location.hash = '#niveau/' + b.dataset.lv; });
     $$('[data-lang-set]', box).forEach(b => b.onclick = () => H.set(b.dataset.langSet));
     draw();
     if (H) H.apply(document);
@@ -1665,8 +1666,8 @@
   });
   /* ---------- Router ---------- */
   const legacyRoute = window.route;
-  const NAV = { '': 'start', lernweg: 'wege', wegweiser: 'wege', lernen: 'lernen', lektion: 'lernen', wortschatz: 'lernen', wort: 'lernen', ueben: 'ueben', schreiben: 'ueben', hoeren: 'ueben', lesen: 'ueben', kahoot: 'ueben', challenge: 'spiele', spiele: 'spiele', bild: 'pruefung', pruefung: 'pruefung', training: 'pruefung', orientierungskurs: 'pruefung', lid: 'pruefung', quellen: 'pruefung', simulation: 'pruefung', vorbereitung: 'pruefung', videos: 'videos', 'ueber-mich': 'ueber', material: 'material', lernpakete: 'pakete', lieder: 'lieder' };
-  const TITLES = { '': 'Deutsch lernen mit Dennis', lernstand: 'Lernstand sichern', hallo: 'Dennis in deiner Sprache', lernweg: 'Mein Lernweg', wegweiser: 'Welcher Weg passt?', lernen: 'Lektionen', lektion: 'Lektion', wortschatz: 'Wortschatz', wort: 'Wortkarte', ueben: 'Üben', schreiben: 'Schreib-Bausteine', hoeren: 'Hören', lesen: 'Lesen', kahoot: 'Kahoot-Quiz', challenge: 'Tages-Challenge', spiele: 'Lernspiele', bild: 'Bild beschreiben', pruefung: 'Prüfungstraining', training: 'Prüfungstraining', orientierungskurs: 'Deutschland verstehen', lid: 'Leben in Deutschland – 310 Fragen', quellen: 'Prüfungsinfos & Quellen', simulation: 'Prüfungssimulationen', vorbereitung: 'Gezielte Vorbereitung', videos: 'Videos', 'ueber-mich': 'Über mich', impressum: 'Impressum', datenschutz: 'Datenschutz', pinnwand: 'Deine Meinung', material: 'Materialien', lernpakete: 'Lernpakete', lieder: 'Deutsch mit Liedern', musik: 'Musik zum Lernen' };
+  const NAV = { '': 'start', lernweg: 'wege', wegweiser: 'wege', lernen: 'lernen', lektion: 'lernen', wortschatz: 'lernen', wort: 'lernen', ueben: 'ueben', schreiben: 'ueben', hoeren: 'ueben', lesen: 'ueben', kahoot: 'ueben', challenge: 'spiele', spiele: 'spiele', bild: 'pruefung', pruefung: 'pruefung', training: 'pruefung', orientierungskurs: 'pruefung', lid: 'pruefung', quellen: 'pruefung', simulation: 'pruefung', vorbereitung: 'pruefung', videos: 'videos', 'ueber-mich': 'ueber', material: 'material', lernpakete: 'pakete', lieder: 'lieder', niveau: 'lernen', 'erste-schritte': 'lernen' };
+  const TITLES = { '': 'Deutsch lernen mit Dennis', lernstand: 'Lernstand sichern', hallo: 'Dennis in deiner Sprache', lernweg: 'Mein Lernweg', wegweiser: 'Welcher Weg passt?', lernen: 'Lektionen', lektion: 'Lektion', wortschatz: 'Wortschatz', wort: 'Wortkarte', ueben: 'Üben', schreiben: 'Schreib-Bausteine', hoeren: 'Hören', lesen: 'Lesen', kahoot: 'Kahoot-Quiz', challenge: 'Tages-Challenge', spiele: 'Lernspiele', bild: 'Bild beschreiben', pruefung: 'Prüfungstraining', training: 'Prüfungstraining', orientierungskurs: 'Deutschland verstehen', lid: 'Leben in Deutschland – 310 Fragen', quellen: 'Prüfungsinfos & Quellen', simulation: 'Prüfungssimulationen', vorbereitung: 'Gezielte Vorbereitung', videos: 'Videos', 'ueber-mich': 'Über mich', impressum: 'Impressum', datenschutz: 'Datenschutz', pinnwand: 'Deine Meinung', material: 'Materialien', lernpakete: 'Lernpakete', lieder: 'Deutsch mit Liedern', musik: 'Musik zum Lernen', niveau: 'Materialien nach Niveau', 'erste-schritte': 'Erste Schritte' };
   const OWN = {
     '': () => home(),
     lernweg: p => p[1] ? pathPage(p[1]) : paths(),
@@ -1762,7 +1763,7 @@
     revealCards();
     // Weitermachen merken: nur Lernseiten
     const routeStr = p.filter(Boolean).join('/');
-    if (['lektion', 'wortschatz', 'ueben', 'hoeren', 'training', 'lernweg', 'orientierungskurs', 'lid', 'lieder', 'challenge', 'bild', 'spiele', 'vorbereitung', 'simulation'].includes(p[0]) && routeStr && p[2] !== 'run' && p[2] !== 'ergebnis') {
+    if (['erste-schritte', 'lektion', 'wortschatz', 'ueben', 'hoeren', 'training', 'lernweg', 'orientierungskurs', 'lid', 'lieder', 'challenge', 'bild', 'spiele', 'vorbereitung', 'simulation'].includes(p[0]) && routeStr && p[2] !== 'run' && p[2] !== 'ergebnis') {
       mem.visited[routeStr] = Date.now();
       mem.last = { route: routeStr, title: ($("main h1")?.textContent.trim() || TITLES[p[0]] || '').replace(/\.$/, '').slice(0, 48), ts: Date.now() };
       save();

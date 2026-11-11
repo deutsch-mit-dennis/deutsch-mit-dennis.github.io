@@ -3,6 +3,12 @@
  "items": [
   {
    "date": "2026-11-11",
+   "type": "neu",
+   "title": "Neu: Erste Schritte – 18 Themen mit Bildkarten, Ton und Übungen für A0 und A1 (Alphabet, Zahlen, Familie, Essen, Uhrzeit, Kleidung …)",
+   "link": "#erste-schritte"
+  },
+  {
+   "date": "2026-11-11",
    "type": "uebung",
    "title": "Neuer Lesetext: Neue Waschmaschinen im Waschkeller – Aushang (Alltag, A2–B1)",
    "link": "#lesen/alltag/10"

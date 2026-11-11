@@ -26893,6 +26893,2895 @@
      "text": "die Pfandflasche. Ich bringe die Pfandflaschen in den Supermarkt."
     }
    ]
+  },
+  {
+   "key": "es-hallo-0",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Hallo!"
+    }
+   ]
+  },
+  {
+   "key": "es-hallo-1",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Guten Morgen!"
+    }
+   ]
+  },
+  {
+   "key": "es-hallo-2",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Guten Tag!"
+    }
+   ]
+  },
+  {
+   "key": "es-hallo-3",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Guten Abend!"
+    }
+   ]
+  },
+  {
+   "key": "es-hallo-4",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Gute Nacht!"
+    }
+   ]
+  },
+  {
+   "key": "es-hallo-5",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Tschüss!"
+    }
+   ]
+  },
+  {
+   "key": "es-hallo-6",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Danke!"
+    }
+   ]
+  },
+  {
+   "key": "es-hallo-7",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Bitte!"
+    }
+   ]
+  },
+  {
+   "key": "es-hallo-8",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Entschuldigung!"
+    }
+   ]
+  },
+  {
+   "key": "es-hallo-9",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Wie geht es dir?"
+    }
+   ]
+  },
+  {
+   "key": "es-hallo-s0",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Hallo! Ich bin Ali."
+    }
+   ]
+  },
+  {
+   "key": "es-hallo-s1",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Hallo, Ali! Ich bin Mila. Wie geht es dir?"
+    }
+   ]
+  },
+  {
+   "key": "es-hallo-s2",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Gut, danke. Und dir?"
+    }
+   ]
+  },
+  {
+   "key": "es-hallo-s3",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Auch gut, danke. Tschüss!"
+    }
+   ]
+  },
+  {
+   "key": "es-hallo-s4",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Guten Tag, Frau Weber! Wie geht es Ihnen?"
+    }
+   ]
+  },
+  {
+   "key": "es-hallo-s5",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Danke, gut. Auf Wiedersehen!"
+    }
+   ]
+  },
+  {
+   "key": "es-alphabet-0",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "A. A wie Apfel."
+    }
+   ]
+  },
+  {
+   "key": "es-alphabet-1",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Be. Be wie Buch."
+    }
+   ]
+  },
+  {
+   "key": "es-alphabet-2",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Ze. Ze wie Computer."
+    }
+   ]
+  },
+  {
+   "key": "es-alphabet-3",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "De. De wie Dusche."
+    }
+   ]
+  },
+  {
+   "key": "es-alphabet-4",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "E. E wie Ei."
+    }
+   ]
+  },
+  {
+   "key": "es-alphabet-5",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Eff. Eff wie Fenster."
+    }
+   ]
+  },
+  {
+   "key": "es-alphabet-6",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Ge. Ge wie Glas."
+    }
+   ]
+  },
+  {
+   "key": "es-alphabet-7",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Ha. Ha wie Hand."
+    }
+   ]
+  },
+  {
+   "key": "es-alphabet-8",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "I. I wie Igel."
+    }
+   ]
+  },
+  {
+   "key": "es-alphabet-9",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Jot. Jot wie Jacke."
+    }
+   ]
+  },
+  {
+   "key": "es-alphabet-10",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Ka. Ka wie Käse."
+    }
+   ]
+  },
+  {
+   "key": "es-alphabet-11",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "El. El wie Lampe."
+    }
+   ]
+  },
+  {
+   "key": "es-alphabet-12",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Em. Em wie Mund."
+    }
+   ]
+  },
+  {
+   "key": "es-alphabet-13",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "En. En wie Nase."
+    }
+   ]
+  },
+  {
+   "key": "es-alphabet-14",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "O. O wie Oma."
+    }
+   ]
+  },
+  {
+   "key": "es-alphabet-15",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Pe. Pe wie Pullover."
+    }
+   ]
+  },
+  {
+   "key": "es-alphabet-16",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Ku. Ku wie Quark."
+    }
+   ]
+  },
+  {
+   "key": "es-alphabet-17",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Er. Er wie Reis."
+    }
+   ]
+  },
+  {
+   "key": "es-alphabet-18",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Es. Es wie Sofa."
+    }
+   ]
+  },
+  {
+   "key": "es-alphabet-19",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Te. Te wie Tee."
+    }
+   ]
+  },
+  {
+   "key": "es-alphabet-20",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "U. U wie Uhr."
+    }
+   ]
+  },
+  {
+   "key": "es-alphabet-21",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Vau. Vau wie Vater."
+    }
+   ]
+  },
+  {
+   "key": "es-alphabet-22",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "We. We wie Wasser."
+    }
+   ]
+  },
+  {
+   "key": "es-alphabet-23",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Ix. Ix wie Xylofon."
+    }
+   ]
+  },
+  {
+   "key": "es-alphabet-24",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Ypsilon. Ypsilon wie Yoga."
+    }
+   ]
+  },
+  {
+   "key": "es-alphabet-25",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Zett. Zett wie Zug."
+    }
+   ]
+  },
+  {
+   "key": "es-alphabet-26",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Ä. Ä wie Ärztin."
+    }
+   ]
+  },
+  {
+   "key": "es-alphabet-27",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Ö. Ö wie Öl."
+    }
+   ]
+  },
+  {
+   "key": "es-alphabet-28",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Ü. Ü wie Übung."
+    }
+   ]
+  },
+  {
+   "key": "es-alphabet-29",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Eszett. Eszett wie Straße."
+    }
+   ]
+  },
+  {
+   "key": "es-alphabet-s0",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Wie heißen Sie?"
+    }
+   ]
+  },
+  {
+   "key": "es-alphabet-s1",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Ich heiße Ali Demir."
+    }
+   ]
+  },
+  {
+   "key": "es-alphabet-s2",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Wie schreibt man das? Buchstabieren Sie, bitte."
+    }
+   ]
+  },
+  {
+   "key": "es-alphabet-s3",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "De. E. Em. I. Er."
+    }
+   ]
+  },
+  {
+   "key": "es-alphabet-s4",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Danke. Und wie ist Ihr Vorname?"
+    }
+   ]
+  },
+  {
+   "key": "es-alphabet-s5",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "A. El. I."
+    }
+   ]
+  },
+  {
+   "key": "es-zahlen-0",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "null"
+    }
+   ]
+  },
+  {
+   "key": "es-zahlen-1",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "eins"
+    }
+   ]
+  },
+  {
+   "key": "es-zahlen-2",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "zwei"
+    }
+   ]
+  },
+  {
+   "key": "es-zahlen-3",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "drei"
+    }
+   ]
+  },
+  {
+   "key": "es-zahlen-4",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "vier"
+    }
+   ]
+  },
+  {
+   "key": "es-zahlen-5",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "fünf"
+    }
+   ]
+  },
+  {
+   "key": "es-zahlen-6",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "sechs"
+    }
+   ]
+  },
+  {
+   "key": "es-zahlen-7",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "sieben"
+    }
+   ]
+  },
+  {
+   "key": "es-zahlen-8",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "acht"
+    }
+   ]
+  },
+  {
+   "key": "es-zahlen-9",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "neun"
+    }
+   ]
+  },
+  {
+   "key": "es-zahlen-10",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "zehn"
+    }
+   ]
+  },
+  {
+   "key": "es-zahlen-11",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "elf"
+    }
+   ]
+  },
+  {
+   "key": "es-zahlen-12",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "zwölf"
+    }
+   ]
+  },
+  {
+   "key": "es-zahlen-13",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "dreizehn"
+    }
+   ]
+  },
+  {
+   "key": "es-zahlen-14",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "vierzehn"
+    }
+   ]
+  },
+  {
+   "key": "es-zahlen-15",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "fünfzehn"
+    }
+   ]
+  },
+  {
+   "key": "es-zahlen-16",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "sechzehn"
+    }
+   ]
+  },
+  {
+   "key": "es-zahlen-17",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "siebzehn"
+    }
+   ]
+  },
+  {
+   "key": "es-zahlen-18",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "achtzehn"
+    }
+   ]
+  },
+  {
+   "key": "es-zahlen-19",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "neunzehn"
+    }
+   ]
+  },
+  {
+   "key": "es-zahlen-20",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "zwanzig"
+    }
+   ]
+  },
+  {
+   "key": "es-zahlen-21",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "einundzwanzig"
+    }
+   ]
+  },
+  {
+   "key": "es-zahlen-22",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "dreißig"
+    }
+   ]
+  },
+  {
+   "key": "es-zahlen-23",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "vierzig"
+    }
+   ]
+  },
+  {
+   "key": "es-zahlen-24",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "fünfzig"
+    }
+   ]
+  },
+  {
+   "key": "es-zahlen-25",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "sechzig"
+    }
+   ]
+  },
+  {
+   "key": "es-zahlen-26",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "siebzig"
+    }
+   ]
+  },
+  {
+   "key": "es-zahlen-27",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "achtzig"
+    }
+   ]
+  },
+  {
+   "key": "es-zahlen-28",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "neunzig"
+    }
+   ]
+  },
+  {
+   "key": "es-zahlen-29",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "hundert"
+    }
+   ]
+  },
+  {
+   "key": "es-zahlen-s0",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Wie alt bist du? Ich bin fünfundzwanzig Jahre alt."
+    }
+   ]
+  },
+  {
+   "key": "es-zahlen-s1",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Wie ist deine Telefonnummer? Null, eins, sieben, sechs. Achtunddreißig. Zweiundvierzig. Fünfzehn."
+    }
+   ]
+  },
+  {
+   "key": "es-zahlen-s2",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Ich wohne in der Hauptstraße zwölf."
+    }
+   ]
+  },
+  {
+   "key": "es-zahlen-s3",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Das Brot kostet drei Euro."
+    }
+   ]
+  },
+  {
+   "key": "es-farben-0",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "rot"
+    }
+   ]
+  },
+  {
+   "key": "es-farben-1",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "orange"
+    }
+   ]
+  },
+  {
+   "key": "es-farben-2",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "gelb"
+    }
+   ]
+  },
+  {
+   "key": "es-farben-3",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "grün"
+    }
+   ]
+  },
+  {
+   "key": "es-farben-4",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "blau"
+    }
+   ]
+  },
+  {
+   "key": "es-farben-5",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "lila"
+    }
+   ]
+  },
+  {
+   "key": "es-farben-6",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "rosa"
+    }
+   ]
+  },
+  {
+   "key": "es-farben-7",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "braun"
+    }
+   ]
+  },
+  {
+   "key": "es-farben-8",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "grau"
+    }
+   ]
+  },
+  {
+   "key": "es-farben-9",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "schwarz"
+    }
+   ]
+  },
+  {
+   "key": "es-farben-10",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "weiß"
+    }
+   ]
+  },
+  {
+   "key": "es-farben-s0",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Der Apfel ist rot."
+    }
+   ]
+  },
+  {
+   "key": "es-farben-s1",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Die Banane ist gelb."
+    }
+   ]
+  },
+  {
+   "key": "es-farben-s2",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Welche Farbe hat die Jacke? Die Jacke ist blau."
+    }
+   ]
+  },
+  {
+   "key": "es-farben-s3",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Meine Lieblingsfarbe ist grün."
+    }
+   ]
+  },
+  {
+   "key": "es-kurs-0",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "der Kugelschreiber"
+    }
+   ]
+  },
+  {
+   "key": "es-kurs-1",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "der Bleistift"
+    }
+   ]
+  },
+  {
+   "key": "es-kurs-2",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "der Radiergummi"
+    }
+   ]
+  },
+  {
+   "key": "es-kurs-3",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "das Heft"
+    }
+   ]
+  },
+  {
+   "key": "es-kurs-4",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "das Buch"
+    }
+   ]
+  },
+  {
+   "key": "es-kurs-5",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "der Tisch"
+    }
+   ]
+  },
+  {
+   "key": "es-kurs-6",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "der Stuhl"
+    }
+   ]
+  },
+  {
+   "key": "es-kurs-7",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "die Tafel"
+    }
+   ]
+  },
+  {
+   "key": "es-kurs-8",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "das Handy"
+    }
+   ]
+  },
+  {
+   "key": "es-kurs-9",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "die Tasche"
+    }
+   ]
+  },
+  {
+   "key": "es-kurs-10",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "der Lehrer"
+    }
+   ]
+  },
+  {
+   "key": "es-kurs-11",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "die Lehrerin"
+    }
+   ]
+  },
+  {
+   "key": "es-kurs-s0",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Was ist das? Das ist ein Heft."
+    }
+   ]
+  },
+  {
+   "key": "es-kurs-s1",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Das ist eine Tasche."
+    }
+   ]
+  },
+  {
+   "key": "es-kurs-s2",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Hast du einen Bleistift? Ja, hier, bitte."
+    }
+   ]
+  },
+  {
+   "key": "es-kurs-s3",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Der Tisch ist groß."
+    }
+   ]
+  },
+  {
+   "key": "es-kurs-s4",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Die Lehrerin heißt Frau Schmidt."
+    }
+   ]
+  },
+  {
+   "key": "es-kurssaetze-0",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Wie bitte?"
+    }
+   ]
+  },
+  {
+   "key": "es-kurssaetze-1",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Noch einmal, bitte."
+    }
+   ]
+  },
+  {
+   "key": "es-kurssaetze-2",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Langsam, bitte."
+    }
+   ]
+  },
+  {
+   "key": "es-kurssaetze-3",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Ich verstehe das nicht."
+    }
+   ]
+  },
+  {
+   "key": "es-kurssaetze-4",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Was heißt das auf Deutsch?"
+    }
+   ]
+  },
+  {
+   "key": "es-kurssaetze-5",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Wie schreibt man das?"
+    }
+   ]
+  },
+  {
+   "key": "es-kurssaetze-6",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Ich habe eine Frage."
+    }
+   ]
+  },
+  {
+   "key": "es-kurssaetze-7",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Ich weiß es nicht."
+    }
+   ]
+  },
+  {
+   "key": "es-kurssaetze-8",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Darf ich zur Toilette gehen?"
+    }
+   ]
+  },
+  {
+   "key": "es-kurssaetze-9",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Ich bin fertig."
+    }
+   ]
+  },
+  {
+   "key": "es-kurssaetze-s0",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Entschuldigung, wie bitte?"
+    }
+   ]
+  },
+  {
+   "key": "es-kurssaetze-s1",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Können Sie das bitte noch einmal sagen?"
+    }
+   ]
+  },
+  {
+   "key": "es-kurssaetze-s2",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Können Sie bitte langsam sprechen?"
+    }
+   ]
+  },
+  {
+   "key": "es-kurssaetze-s3",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Was heißt „Tafel“ auf Englisch?"
+    }
+   ]
+  },
+  {
+   "key": "es-ich-0",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Ich heiße Mila."
+    }
+   ]
+  },
+  {
+   "key": "es-ich-1",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Ich komme aus der Ukraine."
+    }
+   ]
+  },
+  {
+   "key": "es-ich-2",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Ich wohne in Essen."
+    }
+   ]
+  },
+  {
+   "key": "es-ich-3",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Ich spreche Ukrainisch und ein bisschen Deutsch."
+    }
+   ]
+  },
+  {
+   "key": "es-ich-4",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Ich bin zweiunddreißig Jahre alt."
+    }
+   ]
+  },
+  {
+   "key": "es-ich-5",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Ich bin verheiratet."
+    }
+   ]
+  },
+  {
+   "key": "es-ich-6",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Ich habe zwei Kinder."
+    }
+   ]
+  },
+  {
+   "key": "es-ich-7",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Ich lerne Deutsch."
+    }
+   ]
+  },
+  {
+   "key": "es-ich-s0",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Wie heißt du?"
+    }
+   ]
+  },
+  {
+   "key": "es-ich-s1",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Woher kommst du?"
+    }
+   ]
+  },
+  {
+   "key": "es-ich-s2",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Wo wohnst du?"
+    }
+   ]
+  },
+  {
+   "key": "es-ich-s3",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Welche Sprachen sprichst du?"
+    }
+   ]
+  },
+  {
+   "key": "es-ich-s4",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Wie alt bist du?"
+    }
+   ]
+  },
+  {
+   "key": "es-ich-s5",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Und Sie? Wie heißen Sie? Woher kommen Sie?"
+    }
+   ]
+  },
+  {
+   "key": "es-familie-0",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "die Mutter"
+    }
+   ]
+  },
+  {
+   "key": "es-familie-1",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "der Vater"
+    }
+   ]
+  },
+  {
+   "key": "es-familie-2",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "das Kind"
+    }
+   ]
+  },
+  {
+   "key": "es-familie-3",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "der Sohn"
+    }
+   ]
+  },
+  {
+   "key": "es-familie-4",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "die Tochter"
+    }
+   ]
+  },
+  {
+   "key": "es-familie-5",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "der Bruder"
+    }
+   ]
+  },
+  {
+   "key": "es-familie-6",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "die Schwester"
+    }
+   ]
+  },
+  {
+   "key": "es-familie-7",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "die Oma"
+    }
+   ]
+  },
+  {
+   "key": "es-familie-8",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "der Opa"
+    }
+   ]
+  },
+  {
+   "key": "es-familie-9",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "das Baby"
+    }
+   ]
+  },
+  {
+   "key": "es-familie-s0",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Das ist meine Mutter."
+    }
+   ]
+  },
+  {
+   "key": "es-familie-s1",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Das ist mein Vater."
+    }
+   ]
+  },
+  {
+   "key": "es-familie-s2",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Ich habe einen Bruder und eine Schwester."
+    }
+   ]
+  },
+  {
+   "key": "es-familie-s3",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Meine Tochter ist fünf Jahre alt."
+    }
+   ]
+  },
+  {
+   "key": "es-familie-s4",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Hast du Kinder? Ja, ich habe einen Sohn."
+    }
+   ]
+  },
+  {
+   "key": "es-essen-0",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "das Brot"
+    }
+   ]
+  },
+  {
+   "key": "es-essen-1",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "das Wasser"
+    }
+   ]
+  },
+  {
+   "key": "es-essen-2",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "der Kaffee"
+    }
+   ]
+  },
+  {
+   "key": "es-essen-3",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "der Tee"
+    }
+   ]
+  },
+  {
+   "key": "es-essen-4",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "die Milch"
+    }
+   ]
+  },
+  {
+   "key": "es-essen-5",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "der Apfel"
+    }
+   ]
+  },
+  {
+   "key": "es-essen-6",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "die Banane"
+    }
+   ]
+  },
+  {
+   "key": "es-essen-7",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "der Käse"
+    }
+   ]
+  },
+  {
+   "key": "es-essen-8",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "das Ei"
+    }
+   ]
+  },
+  {
+   "key": "es-essen-9",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "der Reis"
+    }
+   ]
+  },
+  {
+   "key": "es-essen-10",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "die Kartoffel"
+    }
+   ]
+  },
+  {
+   "key": "es-essen-11",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "die Tomate"
+    }
+   ]
+  },
+  {
+   "key": "es-essen-s0",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Ich esse gern Brot."
+    }
+   ]
+  },
+  {
+   "key": "es-essen-s1",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Ich trinke Tee."
+    }
+   ]
+  },
+  {
+   "key": "es-essen-s2",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Einen Kaffee, bitte."
+    }
+   ]
+  },
+  {
+   "key": "es-essen-s3",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Was isst du gern? Ich esse gern Reis."
+    }
+   ]
+  },
+  {
+   "key": "es-essen-s4",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Trinkst du Milch? Nein, ich trinke Wasser."
+    }
+   ]
+  },
+  {
+   "key": "es-zeit-0",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "der Montag"
+    }
+   ]
+  },
+  {
+   "key": "es-zeit-1",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "der Dienstag"
+    }
+   ]
+  },
+  {
+   "key": "es-zeit-2",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "der Mittwoch"
+    }
+   ]
+  },
+  {
+   "key": "es-zeit-3",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "der Donnerstag"
+    }
+   ]
+  },
+  {
+   "key": "es-zeit-4",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "der Freitag"
+    }
+   ]
+  },
+  {
+   "key": "es-zeit-5",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "der Samstag"
+    }
+   ]
+  },
+  {
+   "key": "es-zeit-6",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "der Sonntag"
+    }
+   ]
+  },
+  {
+   "key": "es-zeit-7",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "der Morgen"
+    }
+   ]
+  },
+  {
+   "key": "es-zeit-8",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "der Mittag"
+    }
+   ]
+  },
+  {
+   "key": "es-zeit-9",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "der Nachmittag"
+    }
+   ]
+  },
+  {
+   "key": "es-zeit-10",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "der Abend"
+    }
+   ]
+  },
+  {
+   "key": "es-zeit-11",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "die Nacht"
+    }
+   ]
+  },
+  {
+   "key": "es-zeit-12",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "gestern"
+    }
+   ]
+  },
+  {
+   "key": "es-zeit-13",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "heute"
+    }
+   ]
+  },
+  {
+   "key": "es-zeit-14",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "morgen"
+    }
+   ]
+  },
+  {
+   "key": "es-zeit-s0",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Heute ist Montag."
+    }
+   ]
+  },
+  {
+   "key": "es-zeit-s1",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Am Samstag habe ich frei."
+    }
+   ]
+  },
+  {
+   "key": "es-zeit-s2",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Am Morgen trinke ich Kaffee."
+    }
+   ]
+  },
+  {
+   "key": "es-zeit-s3",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Am Abend lerne ich Deutsch."
+    }
+   ]
+  },
+  {
+   "key": "es-zeit-s4",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Morgen gehe ich zum Arzt."
+    }
+   ]
+  },
+  {
+   "key": "es-uhrzeit-0",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Es ist acht Uhr."
+    }
+   ]
+  },
+  {
+   "key": "es-uhrzeit-1",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Es ist halb zehn. Offiziell: neun Uhr dreißig."
+    }
+   ]
+  },
+  {
+   "key": "es-uhrzeit-2",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Es ist Viertel nach sieben."
+    }
+   ]
+  },
+  {
+   "key": "es-uhrzeit-3",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Es ist Viertel vor elf."
+    }
+   ]
+  },
+  {
+   "key": "es-uhrzeit-4",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Es ist fünf nach sechs."
+    }
+   ]
+  },
+  {
+   "key": "es-uhrzeit-5",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Es ist zehn vor zwölf."
+    }
+   ]
+  },
+  {
+   "key": "es-uhrzeit-6",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Es ist zwanzig nach drei."
+    }
+   ]
+  },
+  {
+   "key": "es-uhrzeit-7",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Es ist halb zwei."
+    }
+   ]
+  },
+  {
+   "key": "es-uhrzeit-8",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Es ist zwölf Uhr. Mittag."
+    }
+   ]
+  },
+  {
+   "key": "es-uhrzeit-9",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Es ist zwanzig vor fünf."
+    }
+   ]
+  },
+  {
+   "key": "es-uhrzeit-s0",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Wie spät ist es? Es ist halb drei."
+    }
+   ]
+  },
+  {
+   "key": "es-uhrzeit-s1",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Um wie viel Uhr beginnt der Kurs? Um neun Uhr."
+    }
+   ]
+  },
+  {
+   "key": "es-uhrzeit-s2",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Der Termin ist am Montag um zehn Uhr dreißig."
+    }
+   ]
+  },
+  {
+   "key": "es-uhrzeit-s3",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Ich stehe um sechs Uhr auf."
+    }
+   ]
+  },
+  {
+   "key": "es-uhrzeit-s4",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Der Zug fährt um vierzehn Uhr fünfzehn."
+    }
+   ]
+  },
+  {
+   "key": "es-kleidung-0",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "die Hose"
+    }
+   ]
+  },
+  {
+   "key": "es-kleidung-1",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "das Hemd"
+    }
+   ]
+  },
+  {
+   "key": "es-kleidung-2",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "das T-Shirt"
+    }
+   ]
+  },
+  {
+   "key": "es-kleidung-3",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "der Pullover"
+    }
+   ]
+  },
+  {
+   "key": "es-kleidung-4",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "die Jacke"
+    }
+   ]
+  },
+  {
+   "key": "es-kleidung-5",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "das Kleid"
+    }
+   ]
+  },
+  {
+   "key": "es-kleidung-6",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "der Rock"
+    }
+   ]
+  },
+  {
+   "key": "es-kleidung-7",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "der Schuh"
+    }
+   ]
+  },
+  {
+   "key": "es-kleidung-8",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "die Mütze"
+    }
+   ]
+  },
+  {
+   "key": "es-kleidung-9",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "der Schal"
+    }
+   ]
+  },
+  {
+   "key": "es-kleidung-s0",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Die Jacke ist warm."
+    }
+   ]
+  },
+  {
+   "key": "es-kleidung-s1",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Was kostet der Pullover? Zwanzig Euro."
+    }
+   ]
+  },
+  {
+   "key": "es-kleidung-s2",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Ich brauche neue Schuhe."
+    }
+   ]
+  },
+  {
+   "key": "es-kleidung-s3",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Im Winter trage ich eine Mütze und einen Schal."
+    }
+   ]
+  },
+  {
+   "key": "es-kleidung-s4",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Kann ich das Kleid anprobieren?"
+    }
+   ]
+  },
+  {
+   "key": "es-wetter-0",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "die Sonne"
+    }
+   ]
+  },
+  {
+   "key": "es-wetter-1",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "der Regen"
+    }
+   ]
+  },
+  {
+   "key": "es-wetter-2",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "der Schnee"
+    }
+   ]
+  },
+  {
+   "key": "es-wetter-3",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "der Wind"
+    }
+   ]
+  },
+  {
+   "key": "es-wetter-4",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "die Wolke"
+    }
+   ]
+  },
+  {
+   "key": "es-wetter-5",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "das Gewitter"
+    }
+   ]
+  },
+  {
+   "key": "es-wetter-6",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "der Frühling"
+    }
+   ]
+  },
+  {
+   "key": "es-wetter-7",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "der Sommer"
+    }
+   ]
+  },
+  {
+   "key": "es-wetter-8",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "der Herbst"
+    }
+   ]
+  },
+  {
+   "key": "es-wetter-9",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "der Winter"
+    }
+   ]
+  },
+  {
+   "key": "es-wetter-s0",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Wie ist das Wetter heute? Es ist sonnig und warm."
+    }
+   ]
+  },
+  {
+   "key": "es-wetter-s1",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Es regnet. Nimm einen Regenschirm mit!"
+    }
+   ]
+  },
+  {
+   "key": "es-wetter-s2",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Es schneit."
+    }
+   ]
+  },
+  {
+   "key": "es-wetter-s3",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Es ist kalt und windig."
+    }
+   ]
+  },
+  {
+   "key": "es-wetter-s4",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Im Sommer ist es heiß."
+    }
+   ]
+  },
+  {
+   "key": "es-wetter-s5",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Im Herbst ist es oft kühl."
+    }
+   ]
+  },
+  {
+   "key": "es-stadt-0",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "der Bahnhof"
+    }
+   ]
+  },
+  {
+   "key": "es-stadt-1",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "der Supermarkt"
+    }
+   ]
+  },
+  {
+   "key": "es-stadt-2",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "die Apotheke"
+    }
+   ]
+  },
+  {
+   "key": "es-stadt-3",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "die Bank"
+    }
+   ]
+  },
+  {
+   "key": "es-stadt-4",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "die Post"
+    }
+   ]
+  },
+  {
+   "key": "es-stadt-5",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "die Schule"
+    }
+   ]
+  },
+  {
+   "key": "es-stadt-6",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "das Krankenhaus"
+    }
+   ]
+  },
+  {
+   "key": "es-stadt-7",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "der Park"
+    }
+   ]
+  },
+  {
+   "key": "es-stadt-8",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "die Bäckerei"
+    }
+   ]
+  },
+  {
+   "key": "es-stadt-9",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "das Rathaus"
+    }
+   ]
+  },
+  {
+   "key": "es-stadt-s0",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Entschuldigung, wo ist der Bahnhof?"
+    }
+   ]
+  },
+  {
+   "key": "es-stadt-s1",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Geradeaus und dann links."
+    }
+   ]
+  },
+  {
+   "key": "es-stadt-s2",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Ich gehe zur Apotheke."
+    }
+   ]
+  },
+  {
+   "key": "es-stadt-s3",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Gibt es hier einen Supermarkt?"
+    }
+   ]
+  },
+  {
+   "key": "es-stadt-s4",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Die Bäckerei ist neben der Bank."
+    }
+   ]
+  },
+  {
+   "key": "es-verkehr-0",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "der Bus"
+    }
+   ]
+  },
+  {
+   "key": "es-verkehr-1",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "der Zug"
+    }
+   ]
+  },
+  {
+   "key": "es-verkehr-2",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "die Straßenbahn"
+    }
+   ]
+  },
+  {
+   "key": "es-verkehr-3",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "die U-Bahn"
+    }
+   ]
+  },
+  {
+   "key": "es-verkehr-4",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "das Auto"
+    }
+   ]
+  },
+  {
+   "key": "es-verkehr-5",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "das Fahrrad"
+    }
+   ]
+  },
+  {
+   "key": "es-verkehr-6",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "das Taxi"
+    }
+   ]
+  },
+  {
+   "key": "es-verkehr-7",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "das Flugzeug"
+    }
+   ]
+  },
+  {
+   "key": "es-verkehr-8",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "die Fahrkarte"
+    }
+   ]
+  },
+  {
+   "key": "es-verkehr-9",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "zu Fuß"
+    }
+   ]
+  },
+  {
+   "key": "es-verkehr-s0",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Ich fahre mit dem Bus zur Arbeit."
+    }
+   ]
+  },
+  {
+   "key": "es-verkehr-s1",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Ich gehe zu Fuß."
+    }
+   ]
+  },
+  {
+   "key": "es-verkehr-s2",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Wann fährt der nächste Zug nach Köln?"
+    }
+   ]
+  },
+  {
+   "key": "es-verkehr-s3",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Eine Fahrkarte nach Dortmund, bitte."
+    }
+   ]
+  },
+  {
+   "key": "es-verkehr-s4",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Ich fahre gern Fahrrad."
+    }
+   ]
+  },
+  {
+   "key": "es-koerper-0",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "der Kopf"
+    }
+   ]
+  },
+  {
+   "key": "es-koerper-1",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "das Auge"
+    }
+   ]
+  },
+  {
+   "key": "es-koerper-2",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "das Ohr"
+    }
+   ]
+  },
+  {
+   "key": "es-koerper-3",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "die Nase"
+    }
+   ]
+  },
+  {
+   "key": "es-koerper-4",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "der Mund"
+    }
+   ]
+  },
+  {
+   "key": "es-koerper-5",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "der Zahn"
+    }
+   ]
+  },
+  {
+   "key": "es-koerper-6",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "die Hand"
+    }
+   ]
+  },
+  {
+   "key": "es-koerper-7",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "der Arm"
+    }
+   ]
+  },
+  {
+   "key": "es-koerper-8",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "das Bein"
+    }
+   ]
+  },
+  {
+   "key": "es-koerper-9",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "der Fuß"
+    }
+   ]
+  },
+  {
+   "key": "es-koerper-10",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "der Bauch"
+    }
+   ]
+  },
+  {
+   "key": "es-koerper-11",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "der Rücken"
+    }
+   ]
+  },
+  {
+   "key": "es-koerper-s0",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Mein Kopf tut weh."
+    }
+   ]
+  },
+  {
+   "key": "es-koerper-s1",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Ich habe Bauchschmerzen."
+    }
+   ]
+  },
+  {
+   "key": "es-koerper-s2",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Mir tut der Rücken weh."
+    }
+   ]
+  },
+  {
+   "key": "es-koerper-s3",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Ich habe Zahnschmerzen. Ich brauche einen Termin."
+    }
+   ]
+  },
+  {
+   "key": "es-koerper-s4",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Was fehlt Ihnen? Mein Bein tut weh."
+    }
+   ]
+  },
+  {
+   "key": "es-moebel-0",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "das Bett"
+    }
+   ]
+  },
+  {
+   "key": "es-moebel-1",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "das Sofa"
+    }
+   ]
+  },
+  {
+   "key": "es-moebel-2",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "der Schrank"
+    }
+   ]
+  },
+  {
+   "key": "es-moebel-3",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "die Lampe"
+    }
+   ]
+  },
+  {
+   "key": "es-moebel-4",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "der Kühlschrank"
+    }
+   ]
+  },
+  {
+   "key": "es-moebel-5",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "der Herd"
+    }
+   ]
+  },
+  {
+   "key": "es-moebel-6",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "die Waschmaschine"
+    }
+   ]
+  },
+  {
+   "key": "es-moebel-7",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "die Dusche"
+    }
+   ]
+  },
+  {
+   "key": "es-moebel-8",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "das Fenster"
+    }
+   ]
+  },
+  {
+   "key": "es-moebel-9",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "die Tür"
+    }
+   ]
+  },
+  {
+   "key": "es-moebel-s0",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Das Bett ist im Schlafzimmer."
+    }
+   ]
+  },
+  {
+   "key": "es-moebel-s1",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Der Kühlschrank ist leer."
+    }
+   ]
+  },
+  {
+   "key": "es-moebel-s2",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Die Waschmaschine ist kaputt."
+    }
+   ]
+  },
+  {
+   "key": "es-moebel-s3",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Mach bitte das Fenster auf."
+    }
+   ]
+  },
+  {
+   "key": "es-moebel-s4",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Wir brauchen eine neue Lampe."
+    }
+   ]
+  },
+  {
+   "key": "es-berufe-0",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "der Arzt, die Ärztin"
+    }
+   ]
+  },
+  {
+   "key": "es-berufe-1",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "der Koch, die Köchin"
+    }
+   ]
+  },
+  {
+   "key": "es-berufe-2",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "der Verkäufer, die Verkäuferin"
+    }
+   ]
+  },
+  {
+   "key": "es-berufe-3",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "der Busfahrer, die Busfahrerin"
+    }
+   ]
+  },
+  {
+   "key": "es-berufe-4",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "der Pfleger, die Pflegerin"
+    }
+   ]
+  },
+  {
+   "key": "es-berufe-5",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "der Friseur, die Friseurin"
+    }
+   ]
+  },
+  {
+   "key": "es-berufe-6",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "der Kellner, die Kellnerin"
+    }
+   ]
+  },
+  {
+   "key": "es-berufe-7",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "der Elektriker, die Elektrikerin"
+    }
+   ]
+  },
+  {
+   "key": "es-berufe-8",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "der Mechaniker, die Mechanikerin"
+    }
+   ]
+  },
+  {
+   "key": "es-berufe-9",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "der Programmierer, die Programmiererin"
+    }
+   ]
+  },
+  {
+   "key": "es-berufe-s0",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Was sind Sie von Beruf? Ich bin Köchin."
+    }
+   ]
+  },
+  {
+   "key": "es-berufe-s1",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Ich arbeite als Busfahrer."
+    }
+   ]
+  },
+  {
+   "key": "es-berufe-s2",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Meine Schwester ist Ärztin."
+    }
+   ]
+  },
+  {
+   "key": "es-berufe-s3",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Ich arbeite im Krankenhaus."
+    }
+   ]
+  },
+  {
+   "key": "es-berufe-s4",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Ich suche eine Arbeit als Verkäuferin."
+    }
+   ]
   }
  ]
 }

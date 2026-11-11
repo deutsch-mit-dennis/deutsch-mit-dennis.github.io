@@ -19,7 +19,7 @@
   const D = {
     de: {
       lvl_q: "Wie gut ist dein Deutsch?",
-      lvl_hint: "Tippe auf dein Niveau. Ich zeige dir den ersten Schritt.",
+      lvl_hint: "Tippe auf dein Niveau. Ich zeige dir alle Materialien dafür.",
       lv_a0: "Ich fange an",
       lv_a1: "Erste Sätze",
       lv_a2: "Alltag",
