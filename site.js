@@ -412,6 +412,7 @@
       </div>
       <div class="dm-progress" role="progressbar" aria-valuemin="0" aria-valuemax="${p.steps.length}" aria-valuenow="${done}" aria-label="Fortschritt"><i style="width:${Math.round(done / p.steps.length * 100)}%"></i></div>
       <p class="dm-progress-text">${done ? `${done} von ${p.steps.length} Schritten erledigt.` : 'Noch nichts erledigt – fang einfach mit Schritt 1 an.'} ${next ? `<a href="${next[1]}">Nächster Schritt: ${x(next[0])}</a>` : '<b>Super, alles geschafft!</b>'}</p>
+      ${id === 'dtz' ? '<p class="dm-progress-text"><a class="dm-dtz30-link" href="#dtz-30-tage"><span aria-hidden="true">📅</span> Lieber mit festem Plan? DTZ in 30 Tagen – jeden Tag 20–40 Minuten</a></p>' : ''}
       <div class="dm-split">
         <div class="dm-steps-wrap"><p class="dm-steps-hint"><b>So geht's:</b> Tippe bei einem Schritt auf <b>„Starten“</b>. Danach kommst du hierher zurück und markierst ihn als erledigt.</p>
         <ol class="dm-steps">${p.steps.map(([title, url, desc, kind], i) => {
@@ -1158,7 +1159,7 @@
       <div class="dm-head"><h1>Prüfungstraining</h1><p class="dm-lead">Wähle deine Prüfung: Probeprüfung mit echter Zeit, gezieltes Training und dein Lernweg.</p></div>
       <div class="sp-filter-wrap"><nav class="sp-tabs dm-examtabs" aria-label="Prüfung wählen">${Object.entries(T).map(([k, v]) => `<a href="#pruefung/${k}"${k === tab ? ' aria-current="page"' : ''}>${x(v.label)}</a>`).join('')}</nav></div>
       <section class="dm-exam-block dm-g-${t.color}" aria-labelledby="ex-h">
-        <div class="dm-exam-head"><h2 id="ex-h">${x(t.h)}</h2><p>${x(t.p)}</p>${P ? `<a href="#lernweg/${t.path}">Lernweg „${x(P.title)}“ öffnen</a>` : ''}</div>
+        <div class="dm-exam-head"><h2 id="ex-h">${x(t.h)}</h2><p>${x(t.p)}</p>${P ? `<a href="#lernweg/${t.path}">Lernweg „${x(P.title)}“ öffnen</a>` : ''}${t.path === 'dtz' ? '<a class="dm-dtz30-link" href="#dtz-30-tage"><span aria-hidden="true">📅</span> DTZ in 30 Tagen: fester Lernplan, jeden Tag 20–40 Minuten</a>' : ''}</div>
         <div class="dm-examgrid">${t.cards()}</div>
       </section>
       <p class="dm-center"><a class="dm-btn dm-btn-quiet" href="#simulation">Alle Probeprüfungen im Überblick (13 Modelltests)</a></p>

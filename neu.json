@@ -2,6 +2,12 @@
  "note": "Neu auf der Seite – neueste Einträge oben. Wird vom Redaktionsplan (geplante Aufgaben) ergänzt.",
  "items": [
   {
+   "date": "2026-11-12",
+   "type": "neu",
+   "title": "Neu: DTZ in 30 Tagen – ein fester Lernplan mit Aufgaben für jeden Tag und sechs Probeprüfungen",
+   "link": "#dtz-30-tage"
+  },
+  {
    "date": "2026-11-11",
    "type": "neu",
    "title": "Neu: Kurse von A0 bis B2 – der Kurs zeigt dir immer den nächsten Schritt. Dazu ein Einstufungstest (5 Minuten).",
