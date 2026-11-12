@@ -67,11 +67,21 @@
       return `<span class="es-swatch${it.color === "#ffffff" ? " es-white" : ""}" style="background:${it.color}" aria-hidden="true"></span>`;
     if (it.time) return clockSvg(it.time, big ? 120 : 96);
     if (it.img && it.img.includes("/"))
-      return `<img class="es-img" src="assets/${it.img}.webp" alt="" width="256" height="256" loading="lazy">`;
+      return `<img class="es-img" src="assets/${it.img}.webp" alt="" width="256" height="256" loading="lazy" data-w="${x(it.w)}">`;
     if (it.img)
       return `<span class="es-emoji" aria-hidden="true">${it.img}</span>`;
     return `<span class="es-tile${it.w.length > 3 ? " es-tile-long" : ""}" aria-hidden="true">${x(it.w)}</span>`;
   }
+  /* picture not there yet (assets/a0 is filled step by step): show the word tile / topic icon instead of a broken image */
+  document.addEventListener("error", (e) => {
+    const im = e.target;
+    if (!(im instanceof HTMLImageElement) || !/\/assets\/a0\//.test(im.src)) return;
+    const s = document.createElement("span");
+    s.setAttribute("aria-hidden", "true");
+    if (im.dataset.w) { s.className = "es-tile" + (im.dataset.w.length > 3 ? " es-tile-long" : ""); s.textContent = im.dataset.w; }
+    else { s.className = "es-tcard-ic"; s.textContent = im.dataset.ic || "🖼️"; }
+    im.replaceWith(s);
+  }, true);
   const isVisual = (t) =>
     t.kind === "pic" || t.kind === "color" || t.kind === "clock";
   const doneCount = (list) => list.filter((t) => mem.done["es:" + t.id]).length;
@@ -79,7 +89,7 @@
   /* ---------- hub ---------- */
   function topicCard(t) {
     const it = t.items.find((i) => i.img && i.img.includes("/"));
-    return `<li><a class="es-tcard${mem.done["es:" + t.id] ? " is-done" : ""}" href="#erste-schritte/${t.id}">${it ? `<img src="assets/${it.img}.webp" alt="" width="256" height="256" loading="lazy">` : `<span class="es-tcard-ic" aria-hidden="true">${t.icon}</span>`}<span class="es-tcard-t"><small>${t.level}${mem.done["es:" + t.id] ? " · ✓ geschafft" : ` · ${t.items.length} Karten`}</small><b>${x(t.title)}</b></span></a></li>`;
+    return `<li><a class="es-tcard${mem.done["es:" + t.id] ? " is-done" : ""}" href="#erste-schritte/${t.id}">${it ? `<img src="assets/${it.img}.webp" alt="" width="256" height="256" loading="lazy" data-ic="${x(t.icon)}">` :`<span class="es-tcard-ic" aria-hidden="true">${t.icon}</span>`}<span class="es-tcard-t"><small>${t.level}${mem.done["es:" + t.id] ? " · ✓ geschafft" : ` · ${t.items.length} Karten`}</small><b>${x(t.title)}</b></span></a></li>`;
   }
   const topicGrid = (list) =>
     `<ul class="es-tgrid">${list.map(topicCard).join("")}</ul>`;

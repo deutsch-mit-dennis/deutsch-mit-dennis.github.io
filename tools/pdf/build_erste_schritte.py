@@ -225,16 +225,16 @@ def sheet(t):
         )
         nr += 1
     # 3) picture -> word
-    if kind in ("pic", "clock", "color"):
-        # only items with a real picture – a text fallback would give the answer away
-        pick = [
-            it
-            for it in items
-            if kind != "pic"
-            or os.path.exists(
-                os.path.join(REPO, "assets", (it.get("img") or "x") + ".webp")
-            )
-        ]
+    # only items with a real picture – a text fallback would give the answer away
+    pick = [
+        it
+        for it in items
+        if kind != "pic"
+        or os.path.exists(
+            os.path.join(REPO, "assets", (it.get("img") or "x") + ".webp")
+        )
+    ] if kind in ("pic", "clock", "color") else []
+    if pick:  # no pictures yet (topic waits for its images): skip this task
         rnd.shuffle(pick)
         pick = pick[: 9 if kind != "clock" else 6]
         title, hint = (
