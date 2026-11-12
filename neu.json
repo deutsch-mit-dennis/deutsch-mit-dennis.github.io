@@ -3,6 +3,12 @@
  "items": [
   {
    "date": "2026-11-12",
+   "type": "lied",
+   "title": "Neues Lied (B1): „Ich frage mich, ob du träumst“ – indirekte Fragen mit ob und Fragewort",
+   "link": "#lieder/b1-13-ob-du-traeumst"
+  },
+  {
+   "date": "2026-11-12",
    "type": "neu",
    "title": "Neu: DTZ in 30 Tagen – ein fester Lernplan mit Aufgaben für jeden Tag und sechs Probeprüfungen",
    "link": "#dtz-30-tage"
