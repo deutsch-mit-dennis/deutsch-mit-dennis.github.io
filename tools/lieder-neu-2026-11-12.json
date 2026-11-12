@@ -1,0 +1,65 @@
+[
+ {
+  "id": "b1-13-ob-du-traeumst",
+  "level": "B1",
+  "title": "Ich frage mich, ob du träumst",
+  "theme": "Eltern sein: nachts am Bett des Kindes – Sorgen, Hoffnungen und Fragen an die Zukunft",
+  "grammar": "Indirekte Fragen mit ob und mit Fragewort (wo, wie, wer, wen …): Ich frage mich, ob du träumst. Ich weiß nicht, wo du später wohnst. – das Verb steht am Ende",
+  "intro": "Zwei Uhr nachts, Regen am Fenster: Ein Vater sitzt am Bett seines Kindes und stellt sich viele Fragen über die Zukunft. Mit diesem Lied übst du indirekte Fragen mit ob und Fragewort – das Verb steht am Ende.",
+  "lyrics": "[Verse 1]\nEs ist zwei Uhr, die Straßen schweigen,\nder Regen klopft ans Fensterglas.\nIch sitze leise an deinem Bett,\ndein Teddy liegt im Mondlicht da.\nDu atmest ruhig, die Hand so klein,\nich weiß nicht, wie lange ich hier sitze –\nich weiß nur: Ich will bei dir sein.\n\n[Chorus]\nIch frage mich, ob du träumst,\nob du im Traum durch Sterne läufst.\nIch frage mich, wer du mal wirst –\nschlaf ruhig, mein Kind, ich bin noch hier.\nIch bin noch hier.\n\n[Verse 2]\nIch weiß nicht, wo du später wohnst,\nin welcher Stadt, an welchem Meer.\nIch weiß nicht, ob du an mich denkst –\ndoch heute Nacht, da bist du hier.\nEin Auto fährt, ein Licht geht aus,\nder Wind singt leise um das Haus.\n\n[Chorus]\nIch frage mich, ob du träumst,\nob du im Traum durch Sterne läufst.\nIch frage mich, wer du mal wirst –\nschlaf ruhig, mein Kind, ich bin noch hier.\nIch bin noch hier.\n\n[Bridge]\nDu weißt noch nicht, wie groß die Welt ist,\ndu weißt noch nicht, wie laut sie sein kann.\nDoch ich weiß, wie still es hier ist,\nwenn deine Hand die meine hält.\n\n[Chorus]\nIch frage mich, ob du träumst,\nob du im Traum durch Sterne läufst.\nIch frage mich, wer du mal wirst –\nschlaf ruhig, mein Kind, ich bin noch hier.\nIch bin noch hier.\n\n[Outro]\nIch frage mich, ob du träumst …\nSchlaf ruhig. Ich bin noch hier.",
+  "vocab": [
+   ["schweigen (schwieg, hat geschwiegen)", "nichts sagen, ganz still sein – auch: Die Straßen schweigen."],
+   ["klopfen (an + Akk.)", "mehrmals leicht gegen etwas schlagen, z. B. an die Tür"],
+   ["das Fensterglas", "die Glasscheibe im Fenster"],
+   ["das Mondlicht", "das helle Licht vom Mond in der Nacht"],
+   ["atmen", "Luft in den Körper holen und wieder hinauslassen"],
+   ["sich fragen", "über etwas nachdenken, auf das man noch keine Antwort hat"],
+   ["träumen (von + Dat.)", "im Schlaf Bilder sehen – oder sich etwas sehr wünschen"],
+   ["an jemanden denken", "jemanden im Kopf und im Herzen haben"],
+   ["ausgehen (das Licht geht aus)", "nicht mehr leuchten, dunkel werden"],
+   ["halten (hält, hielt, hat gehalten)", "etwas fest in der Hand haben und nicht loslassen"]
+  ],
+  "gap": {
+   "type": "gap",
+   "title": "Aufgabe 2: Lückentext",
+   "instruction": "Hör das Lied und ergänze die fehlenden Wörter.",
+   "items": [
+    "der Regen ___ ans Fensterglas.",
+    "dein Teddy liegt im ___ da.",
+    "Ich frage mich, ___ du träumst,",
+    "in welcher Stadt, an welchem ___.",
+    "Ein Auto fährt, ein Licht geht ___,"
+   ],
+   "solutions": ["klopft", "Mondlicht", "ob", "Meer", "aus"]
+  },
+  "tf": [
+   ["Es ist mitten in der Nacht.", true, ""],
+   ["Das Kind ist wach und spielt mit dem Teddy.", false, "Das Kind schläft, der Teddy liegt im Mondlicht."],
+   ["Draußen regnet es.", true, ""],
+   ["Der Vater weiß genau, wo das Kind später wohnt.", false, "Er weiß es nicht: in welcher Stadt, an welchem Meer."],
+   ["Es ist ganz still, wenn das Kind die Hand des Vaters hält.", true, ""]
+  ],
+  "gram": {
+   "title": "Grammatik – Indirekte Fragen mit ob und Fragewort",
+   "instruction": "Bilde indirekte Fragen. Ja-/Nein-Frage → ob; W-Frage → Fragewort bleibt. Das Verb steht am Ende.",
+   "items": [
+    "Ich frage mich, ___. (Träumst du?)",
+    "Ich weiß nicht, ___. (Wo wohnst du später?)",
+    "Weißt du, ___? (Wie spät ist es?)",
+    "Ich frage mich, ___. (Denkst du an mich?)",
+    "Kannst du mir sagen, ___? (Wann kommt der Bus?)",
+    "Ich weiß nicht, ___. (Wen wirst du einmal lieben?)"
+   ],
+   "solutions": [
+    "Ich frage mich, ob du träumst.",
+    "Ich weiß nicht, wo du später wohnst.",
+    "Weißt du, wie spät es ist?",
+    "Ich frage mich, ob du an mich denkst.",
+    "Kannst du mir sagen, wann der Bus kommt?",
+    "Ich weiß nicht, wen du einmal lieben wirst."
+   ]
+  },
+  "style": "Atmospheric future garage, 130 BPM. Intimate male vocals with heavy reverb and pitch-shifted textures. Soaring female vocals in the chorus. Deep sub-bass, shuffled 2-step garage drums, atmospheric pads, chopped vocal samples, piano, cello, vinyl crackle. Nocturnal city ambience, distant voices, rain. Dreamy, melancholic, romantic, mysterious, cinematic. Poetry clearly understandable. Unforgettable hook, cinematic finale. 2026 future garage aesthetic.",
+  "author": "Dzianis Prudnikau (Dennis)"
+ }
+]
