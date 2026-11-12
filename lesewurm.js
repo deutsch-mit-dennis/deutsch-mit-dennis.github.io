@@ -10,8 +10,8 @@
   const still = matchMedia('(prefers-reduced-motion: reduce)');
   const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
   const books = () => (window.DM?.books || []).filter(b => b.amazon);
-  // laufende Prüfung (#simulation/<id>/run), laufendes Spiel (.sp-play), Begrüßung (#dm-tour) oder offenes Fenster → nicht stören
-  const busy = () => /^#simulation\/[^/]+\/run/.test(location.hash) || document.querySelector('.sp-play, #dm-tour, dialog[open], [aria-modal="true"]');
+  // laufende Prüfung (#simulation/<id>/run), Lektion/Training/Übung (covers the bottom nav buttons), laufendes Spiel (.sp-play), Begrüßung (#dm-tour) oder offenes Fenster → nicht stören
+  const busy = () => /^#(simulation\/[^/]+\/run|lektion\/|training\/|uebung\/|kurs\/|lernstand)/.test(location.hash) || document.querySelector('.sp-play, #dm-tour, dialog[open], [aria-modal="true"]');
 
   const SVG = `<svg viewBox="0 0 132 66" aria-hidden="true">
     <g fill="#7CC243" stroke="#3F7D20" stroke-width="2">

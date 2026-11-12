@@ -487,7 +487,7 @@
         <p class="dm-row"><button type="button" class="dm-btn" id="ls-save">Datei speichern</button><button type="button" class="dm-btn dm-btn-quiet" id="ls-copy">Code kopieren</button><button type="button" class="dm-btn dm-btn-quiet" id="ls-share" hidden>Senden …</button></p>
         <h3>Wiederherstellen</h3>
         <p><label for="ls-file">Datei auswählen</label><br><input type="file" id="ls-file"></p>
-        <p><label for="ls-code">oder Code einfügen</label><br><textarea id="ls-code" rows="3" class="dm-ls-code" spellcheck="false"></textarea></p>
+        <p><label for="ls-code">oder Code einfügen</label><br><textarea id="ls-code" rows="3" class="dm-ls-code" spellcheck="false" data-nocheck></textarea></p>
         <p><button type="button" class="dm-btn dm-btn-quiet" id="ls-restore">Wiederherstellen</button></p>
         <p id="ls-msg" class="dm-ls-msg" role="status" aria-live="polite"></p>
         <p class="dm-small">Beim Wiederherstellen bleiben deine vorhandenen Daten erhalten. Es kommt nur dazu, was fehlt.</p></section>`);
