@@ -262,6 +262,8 @@ groups = [
 groups.append(("fragen-nrw", "Fragen Nordrhein-Westfalen", nrw))
 # the other 15 federal states (lid-laender.js); NRW keeps its old address
 WARUM = D.get("warum") or {}
+# one page per general question (own explanation = unique content): /lid/frage-001/ ... /lid/frage-300/
+SINGLE = {q["id"]: f"frage-{q['nr']:03d}" for q in gen if isinstance(q["nr"], int)}
 NRW_IDS = {q["id"] for q in nrw}
 
 
@@ -307,7 +309,11 @@ def qhtml(q):
         for k, a in enumerate(q["a"])
     )
     why = WARUM.get(q["id"])
-    return f'<div class="q" id="{e(q["id"])}"><h3>{e(lab)}: {e(q["q"])}</h3>{f"<div>{imgs}</div>" if imgs else ""}<ol type="1">{lis}</ol>{f"<p class=muted><b>Warum?</b> {e(why)}</p>" if why else ""}</div>'
+    if q["id"] in SINGLE:  # general questions have their own page (/lid/frage-NNN/)
+        lab = f'<a href="/lid/{SINGLE[q["id"]]}/">{e(lab)}</a>'
+    else:
+        lab = e(lab)
+    return f'<div class="q" id="{e(q["id"])}"><h3>{lab}: {e(q["q"])}</h3>{f"<div>{imgs}</div>" if imgs else ""}<ol type="1">{lis}</ol>{f"<p class=muted><b>Warum?</b> {e(why)}</p>" if why else ""}</div>'
 
 
 def prevnext(cur):
@@ -345,6 +351,48 @@ for slug, name, qs in groups:
             [("Leben in Deutschland", "lid"), (name, f"lid/{slug}")],
             "lid",
             learning_resource(f"lid/{slug}", ttl, desc[:300], LID_LEVEL, "Quiz"),
+        )
+    )
+
+# ---- single question pages (/lid/frage-NNN/) ----
+singles = [q for q in gen if q["id"] in SINGLE]
+for i, q in enumerate(singles):
+    nr, slug = q["nr"], SINGLE[q["id"]]
+    group_slug, group_name = groups[(nr - 1) // 10][0], groups[(nr - 1) // 10][1]
+    right = q["a"][q["s"]]
+    imgs = "".join(
+        f'<img src="/assets/lid-fragen/{e(im)}" alt="{e(("Bild " + str(k + 1) + ": ") if len(q["img"]) > 1 else "")}{e(D["alt"].get(im, ""))}" width="110" height="110" loading="lazy">'
+        for k, im in enumerate(q.get("img") or [])
+    )
+    lis = "".join(
+        ('<li class="ok">' if k == q["s"] else "<li>") + e(a) + "</li>"
+        for k, a in enumerate(q["a"])
+    )
+    why = WARUM.get(q["id"])
+    prev_a = f'<a href="/lid/{SINGLE[singles[i - 1]["id"]]}/">← Frage {singles[i - 1]["nr"]}</a>' if i else ""
+    next_a = f'<a href="/lid/{SINGLE[singles[i + 1]["id"]]}/">Frage {singles[i + 1]["nr"]} →</a>' if i + 1 < len(singles) else ""
+    body = (
+        f'<h1>Leben in Deutschland – Frage {nr}</h1>'
+        f'<div class="q"><h2 style="font-size:1.15rem;margin-top:0">{e(q["q"])}</h2>{f"<div>{imgs}</div>" if imgs else ""}<ol type="1">{lis}</ol></div>'
+        f'<p><b>Richtige Antwort:</b> {e(right)}</p>'
+        + (f'<h2>Warum?</h2><p>{e(why)}</p>' if why else "")
+        + f'<p class="pn">{prev_a}{next_a}</p>'
+        '<p><a class="btn" href="/#lid">▶ Alle 310 Fragen interaktiv üben</a></p>'
+        f'<p>Diese Frage im Zusammenhang: <a href="/lid/{group_slug}/#{e(q["id"])}">{e(group_name)}</a> · <a href="/lid/fragen/">Alle Fragen im Überblick</a></p>'
+        + quelle
+        + '<p class="small">Erklärung („Warum?“): Deutsch mit Dennis – nicht vom BAMF.</p>'
+    )
+    ttl = f"Leben in Deutschland Frage {nr}: Antwort und Erklärung"
+    desc = f"LiD-Frage {nr}: „{q['q']}“ Richtige Antwort: {right}."
+    urls.append(
+        page(
+            f"lid/{slug}",
+            ttl,
+            desc,
+            body,
+            [("Leben in Deutschland", "lid"), (group_name, f"lid/{group_slug}"), (f"Frage {nr}", f"lid/{slug}")],
+            "lid",
+            learning_resource(f"lid/{slug}", ttl, seo_desc(desc), LID_LEVEL, "Quiz"),
         )
     )
 

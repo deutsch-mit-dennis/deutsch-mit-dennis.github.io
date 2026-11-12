@@ -37,6 +37,40 @@ const $ = id => document.getElementById(id);
 const safeRoute = r => { r = String(r || '').replace(/^#/, ''); return /^[\w\-\/.~=&]+$/.test(r) ? r : ''; };
 let deskReady = false, pendingRoute = null; // deep link waits until the desk is built
 
+// ---------- browser history: back button + shareable address (/3d/#route) ----------
+// Every level gets its own entry: desk -> object window ('view') -> page ('content'); pages inside the
+// iframe add their own entries automatically. Closing with our own buttons steps the history back too.
+let popping = 0, restoring = false;
+const d3Href = r => location.pathname + location.search + (r ? '#' + r : '');
+function d3Push(level, route) {
+  try {
+    if (restoring) { // re-opening from browser forward: the entry already exists
+      if (level === 'content') { restoring = false; history.replaceState({ d3: level, route }, '', d3Href(route)); }
+      return;
+    }
+    history.pushState({ d3: level, route }, '', d3Href(route));
+  } catch {}
+}
+function d3Url(r) { try { history.replaceState(history.state, '', d3Href(r)); } catch {} }
+function d3Unwind(n) {
+  if (popping || !(history.state && history.state.d3) || n < 1) return;
+  popping++; setTimeout(() => { popping = 0; }, 800);
+  history.go(-n);
+}
+addEventListener('popstate', e => {
+  if (popping) { popping--; return; } // caused by d3Unwind: the window is already closed
+  const s = e.state || {};
+  popping++; // closing from here must not step back a second time
+  try {
+    if (!s.d3) { if (view) closeView(); }
+    else if (s.d3 === 'view') { if (content) hideContent(); }
+    else if (s.d3 === 'content' && s.route && !(content && content.route === s.route)) {
+      restoring = !(content && view && view.key === objectForRoute(s.route));
+      openRoute(s.route);
+    }
+  } finally { popping--; }
+});
+
 // ---------- renderer / scene ----------
 const canvas = $('desk');
 let renderer;
@@ -366,6 +400,7 @@ function showView(key, route) {
   wrap.querySelector('.view-body').append(inst.node);
   wrap.style.transformOrigin = '50% 55%';
   document.body.append(wrap); view = { wrap, inst, key }; setInert(true);
+  d3Push('view', '');
   requestAnimationFrame(() => requestAnimationFrame(() => wrap.classList.add('in')));
   wrap.querySelector('.view-min').addEventListener('click', minimizeView);
   wrap.querySelector('.view-back').addEventListener('click', () => closeView()); wrap.querySelector('.view-back').focus({ preventScroll: true });
@@ -411,7 +446,9 @@ function discardMini() { // really close a minimized window (X on the field, or 
   m.wrap.remove();
 }
 function closeView(then) {
-  if (!view) return; content = null; const { wrap, inst } = view; view = null;
+  if (!view) return;
+  d3Unwind(1 + (content ? 1 + content.depth : 0)); // closed with our own button: drop its history entries too
+  content = null; const { wrap, inst } = view; view = null;
   wrap.classList.remove('in'); wrap.classList.add('out'); inst.dispose && inst.dispose();
   setTimeout(() => wrap.remove(), 380); sound.play('close');
   focusKey = null; document.body.classList.remove('focused'); setInert(false);
@@ -573,7 +610,8 @@ function showContent(route, stay = false) {
     <div class="cf-page"><iframe class="cf-frame" title="Inhalt" src="../index.html#${route}"></iframe></div></div>`;
   view.wrap.append(el);
   const frame = el.querySelector('iframe');
-  content = { el, frame, key, route, stay, depth: 0, back: false };
+  content = { el, frame, key, route, stay, depth: 0, back: false, stack: [route] };
+  d3Push('content', route);
   el.querySelector('.cf-back').addEventListener('click', cfBack);
   el.querySelector('.cf-min').addEventListener('click', minimizeView);
   frame.addEventListener('load', () => wireFrame(frame));
@@ -590,7 +628,10 @@ function wireFrame(frame) {
     const r = w.location.hash.slice(1); if (!content) return;
     const k = objectForRoute(r);
     if (k !== content.key && !content.stay) { openRoute(r); return; } // another object: fly over on the desk (not in notebook mode)
-    content.route = r; if (content.back) { content.depth = Math.max(0, content.depth - 1); content.back = false; } else content.depth++; updBack(); pageTurn(); setTimeout(title, 300);
+    // stack of visited routes: works for our own back button and for the browser's back/forward (both move the iframe's history)
+    const st = content.stack; content.route = r;
+    if (st.length > 1 && st[st.length - 2] === r) st.pop(); else if (st[st.length - 1] !== r) st.push(r);
+    content.depth = st.length - 1; content.back = false; d3Url(r); updBack(); pageTurn(); setTimeout(title, 300);
   });
 }
 function pageTurn() { // new page swings in like a turned sheet
@@ -602,7 +643,7 @@ function turnTo(route) {
   if (w && w.location) { if (w.location.hash.slice(1) === route) return; w.location.hash = route; } // hashchange -> pageTurn
 }
 function hideContent() {
-  if (!content) return; const { el } = content; content = null;
+  if (!content) return; d3Unwind(1 + content.depth); const { el } = content; content = null;
   el.classList.remove('in'); el.classList.add('out'); setTimeout(() => el.remove(), reduced ? 0 : 450);
 }
 // links in the object views that point to the real site open inside the 3D desk instead
@@ -703,7 +744,7 @@ const classic = document.getElementById('to-classic');
 function currentRoute() { try { return content ? content.frame.contentWindow.location.hash.slice(1) : ''; } catch { return ''; } }
 if (classic) classic.addEventListener('click', e => { e.preventDefault(); location.href = '../index.html' + (currentRoute() ? '#' + currentRoute() : ''); });
 // deep link: werkstatt.html#lernen opens that page inside the matching object
-if (location.hash.length > 1) { try { pendingRoute = safeRoute(decodeURIComponent(location.hash.slice(1))); } catch { pendingRoute = null; } if (deskReady && pendingRoute) openRoute(pendingRoute); }
+if (location.hash.length > 1) { try { pendingRoute = safeRoute(decodeURIComponent(location.hash.slice(1))); } catch { pendingRoute = null; } d3Url(''); /* the desk is the first entry; opening adds the route again */ if (deskReady && pendingRoute) openRoute(pendingRoute); }
 
 // ---------- "Weitermachen": last learning page from the website's own memory (localStorage dmd.v1, same origin) ----------
 function lastPage() { try { const m = JSON.parse(localStorage.getItem('dmd.v1') || '{}'); return m.last && m.last.route ? m.last : null; } catch { return null; } }
