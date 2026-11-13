@@ -603,6 +603,9 @@
   const levelLinks = base => `<div class="dm-pills">${LEVELS.map(k => `<a href="#${base}/${k}"><b>${k}</b><small>${{ A1: 'Erste Sätze', A2: 'Alltag', B1: 'Begründen', B2: 'Beruf' }[k]}</small></a>`).join('')}</div>`;
 
   /* ---------- Sprechen & Schreiben ---------- */
+  // Exam tasks are marked by their title prefix ("telc B2 · Teil …", "DTB B2 · Teil …"); the scene bar gets a small group label.
+  const EXAM_GROUP = { 'telc B2': 'telc B2 Mündlich', 'DTB B2': 'DTB B2 Sprechen' };
+  const examGroup = t => (/^(telc B2|DTB B2) ·/.exec(t || '') || [])[1] || '';
   function practice(mode, sel, raw) {
     if (!['sprechen', 'schreiben'].includes(mode)) mode = 'sprechen';
     if (!LEVELS.includes(sel)) sel = 'A1';
@@ -616,7 +619,7 @@
       <div class="dm-head dm-head-row"><div><h1>${writing ? 'Schreiben' : 'Sprechen'} · ${sel}</h1><p class="dm-lead">${writing ? 'Planen, schreiben, vergleichen, verbessern.' : 'Erst mit Hilfen, dann frei. Allein oder zu zweit.'}</p></div>
         <div class="dm-switch" role="group" aria-label="Übungsart"><a href="#ueben/sprechen/${sel}/${n}" ${!writing ? 'aria-current="page"' : ''}>💬 Sprechen</a><a href="#ueben/schreiben/${sel}/${n}" ${writing ? 'aria-current="page"' : ''}>✍️ Schreiben</a></div></div>
       <nav class="dm-tabs dm-tabs-small" aria-label="Niveau">${LEVELS.map(k => `<a href="#ueben/${mode}/${k}" ${k === sel ? 'aria-current="page"' : ''}><b>${k}</b></a>`).join('')}</nav>
-      <nav class="dm-scenes" aria-label="Situation wählen">${scenes.map((sc, i) => `<a href="#ueben/${mode}/${sel}/${i}" ${i === n ? 'aria-current="page"' : ''}>${x(sc.title)}</a>`).join('')}</nav>
+      <nav class="dm-scenes" aria-label="Situation wählen">${scenes.map((sc, i) => { const g = examGroup(sc.title), head = g && g !== examGroup(i ? scenes[i - 1].title : '') ? `<span class="dm-scenes-group" style="flex:none;align-self:center;font-size:14px;font-weight:700;padding:0 2px 0 8px;white-space:nowrap">${EXAM_GROUP[g]}:</span>` : ''; return `${head}<a href="#ueben/${mode}/${sel}/${i}" ${i === n ? 'aria-current="page"' : ''}>${x(sc.title)}</a>`; }).join('')}</nav>
       <div class="dm-practice">
         <section class="dm-card">
           <p class="dm-path-meta">Situation ${n + 1} von ${scenes.length}</p>
@@ -648,6 +651,8 @@
         <a class="dm-btn dm-btn-quiet" href="#ueben/${writing ? 'sprechen' : 'schreiben'}/${sel}/${n}">${writing ? 'Diese Situation sprechen' : 'Diese Situation schreiben'}</a>
         ${s.lesson ? `<a href="#lektion/${s.lesson}">Passende Lektion</a>` : ''}${writing ? ' · <a href="#schreiben/bausteine">Schreib-Bausteine</a>' : ''}
       </div>`);
+    const curScene = $('.dm-scenes [aria-current]');
+    if (curScene) { const bar = curScene.parentNode; bar.scrollLeft += curScene.getBoundingClientRect().left - bar.getBoundingClientRect().left - 16; }
     const box = $('#dm-draft'), words = $('#dm-words');
     const count = () => { const n = (box.value.match(/[\p{L}\p{N}]+/gu) || []).length; words.textContent = n ? `${n} Wörter · automatisch gespeichert` : ''; const r = $('#dm-read-own'); if (r) r.dataset.speak = box.value; };
     let t; box.oninput = () => { clearTimeout(t); t = setTimeout(() => { if (box.value.trim()) mem.drafts[key] = box.value; else delete mem.drafts[key]; save(); count(); }, 300); };
