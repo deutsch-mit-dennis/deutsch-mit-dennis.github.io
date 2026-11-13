@@ -342,6 +342,8 @@ for slug, name, qs in groups:
     first = qs[0]["q"][:90]
     desc = f"Test „Leben in Deutschland“: {name} mit richtigen Antworten, z. B. „{first}“. Kostenlos üben mit Prüfungssimulation."
     ttl = f"Leben in Deutschland: {name.replace('Nordrhein-Westfalen', 'NRW')} mit Antworten"
+    if len(ttl) >= 60:  # long state names: keep the keyword, drop the long test name
+        ttl = f"LiD-{name} mit Antworten"
     urls.append(
         page(
             f"lid/{slug}",
