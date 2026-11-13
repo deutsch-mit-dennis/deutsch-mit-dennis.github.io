@@ -364,6 +364,93 @@
             ["A1", "A2", "B1", "B2", "C1"].indexOf(lv) <
               ["A1", "A2", "B1", "B2", "C1"].indexOf(arr[1])),
       );
+  /* exam preparation per level: one group per exam (online training, preparation, mock exams, printable PDFs) */
+  const SIM = "material/simulation/";
+  const mock = (id, name, n) =>
+    tile(`#simulation/${id}`, "⏱️", `${name} · Probeprüfung ${n}`, "Mit Zeit und Auswertung");
+  const mockPdf = (id, name, n) =>
+    tile(`${SIM}${id}-schriftlich.pdf`, "📄", `${name} · Probeprüfung ${n} zum Ausdrucken`, "PDF · mit Lösungen und Antwortbogen", true);
+  const EXAM = {
+    dtz: () => ({
+      h: "DTZ – Deutsch-Test für Zuwanderer (A2–B1)",
+      items: [
+        tile("#pruefung/dtz", "🎯", "DTZ-Prüfungstraining", "Alle Prüfungsteile mit Übungen"),
+        tile("#dtz-30-tage", "📅", "DTZ in 30 Tagen", "Lernplan Tag für Tag"),
+        tile("/dtz-schreiben/", "✍️", "DTZ Schreiben", "Übungen, Muster, Timer"),
+        tile("#bild", "🖼️", "Bild beschreiben", "Sprechen Teil 2 – Schritt für Schritt"),
+        tile("#pruefungsinfo/dtz", "ℹ️", "DTZ-Infos", "Ablauf, Punkte, Anmeldung"),
+        ...[["dtz", 1], ["dtz-2", 2], ["dtz-3", 3]].map(([id, n]) => mock(id, "DTZ", n)),
+        ...[["dtz", 1], ["dtz-2", 2], ["dtz-3", 3]].map(([id, n]) => mockPdf(id, "DTZ", n)),
+      ],
+    }),
+    lid: () => ({
+      h: "Leben in Deutschland",
+      items: [
+        tile("#lid", "🇩🇪", "LiD-Trainer: alle 310 Fragen", "Block für Block, Fehler wiederholen"),
+        tile("#simulation/lid", "⏱️", "LiD · Probetest", "33 Fragen · 60 Minuten"),
+        tile(`${SIM}lid-test-1.pdf`, "📄", "LiD · Probetest 1 zum Ausdrucken", "PDF · mit Lösungen", true),
+        tile(`${SIM}lid-test-2.pdf`, "📄", "LiD · Probetest 2 zum Ausdrucken", "PDF · mit Lösungen", true),
+      ],
+    }),
+    telcb1: () => ({
+      h: "telc Deutsch B1",
+      items: [
+        tile("#pruefung/telcb1", "🎯", "telc B1 – Prüfungstraining", "Lesen, Hören, Schreiben, Sprechen"),
+        tile("#vorbereitung/telc-b1", "🧭", "Aufbau und Strategien", "Jeder Teil mit Fallen und Lernplan"),
+        ...[["telc-b1", 1], ["telc-b1-2", 2]].map(([id, n]) => mock(id, "telc B1", n)),
+        ...[["telc-b1", 1], ["telc-b1-2", 2]].map(([id, n]) => mockPdf(id, "telc B1", n)),
+      ],
+    }),
+    dtbb1: () => ({
+      h: "DTB B1 – Deutsch-Test für den Beruf",
+      items: [
+        tile("#pruefung/dtbb1", "🎯", "DTB B1 – Prüfungstraining", "Kunden-E-Mail, Notiz, Gespräche im Team"),
+        tile("#vorbereitung/dtb-b1", "🧭", "Aufbau und Strategien", "Jeder Teil mit Fallen und Lernplan"),
+        ...[["dtb-b1", 1], ["dtb-b1-2", 2], ["dtb-b1-3", 3]].map(([id, n]) => mock(id, "DTB B1", n)),
+        ...[["dtb-b1", 1], ["dtb-b1-2", 2], ["dtb-b1-3", 3]].map(([id, n]) => mockPdf(id, "DTB B1", n)),
+      ],
+    }),
+    telcb2: () => ({
+      h: "telc Deutsch B2",
+      items: [
+        tile("#pruefung/telcb2", "🎯", "telc B2 – Prüfungstraining", "Lesen, Hören, E-Mail, Sprechen"),
+        tile("#vorbereitung/telc-b2", "🧭", "Aufbau und Strategien", "Jeder Teil mit Fallen und Lernplan"),
+        ...[["telc-b2", 1], ["telc-b2-2", 2]].map(([id, n]) => mock(id, "telc B2", n)),
+        ...[["telc-b2", 1], ["telc-b2-2", 2]].map(([id, n]) => mockPdf(id, "telc B2", n)),
+      ],
+    }),
+    dtbb2: () => ({
+      h: "DTB B2 – Deutsch-Test für den Beruf",
+      items: [
+        tile("#pruefung/dtbb2", "🎯", "DTB B2 – Prüfungstraining", "Beschwerde, Telefonnotiz, Besprechung"),
+        tile("#vorbereitung/dtb-b2", "🧭", "Aufbau und Strategien", "Jeder Teil mit Fallen und Lernplan"),
+        ...[["dtb-b2", 1], ["dtb-b2-2", 2], ["dtb-b2-3", 3]].map(([id, n]) => mock(id, "DTB B2", n)),
+        ...[["dtb-b2", 1], ["dtb-b2-2", 2], ["dtb-b2-3", 3]].map(([id, n]) => mockPdf(id, "DTB B2", n)),
+      ],
+    }),
+    start: () => ({
+      h: "Dein Weg zur Prüfung",
+      items: [
+        tile("#einstufung", "🧭", "Einstufungstest", "5 Minuten · finde dein Niveau"),
+        tile("#pruefungsinfo", "ℹ️", "Welche Prüfung brauche ich?", "DTZ, telc, DTB, Leben in Deutschland"),
+        tile("#pruefung/dtz", "🎯", "Ziel nach A2: der DTZ", "So sieht die Prüfung im Integrationskurs aus"),
+      ],
+    }),
+  };
+  const LEVEL_EXAMS = {
+    A0: ["start"],
+    A1: ["start", "lid"],
+    A2: ["dtz", "lid"],
+    B1: ["dtz", "telcb1", "dtbb1", "lid"],
+    B2: ["telcb2", "dtbb2"],
+  };
+  function examSection(lv) {
+    const groups = (LEVEL_EXAMS[lv] || []).map((k) => EXAM[k]());
+    if (!groups.length) return "";
+    return `<section class="dm-section es-lv-sec es-lv-exam" aria-labelledby="lv-exam"><div class="dm-section-head"><h2 id="lv-exam">Prüfungsvorbereitung</h2><a href="#pruefung">Alle Prüfungen</a></div>${groups
+      .map((g) => `<h3 class="es-lv-h3">${x(g.h)}</h3><ul class="es-links">${g.items.join("")}</ul>`)
+      .join("")}</section>`;
+  }
   function levelPage(lv) {
     if (!LV_NAME[lv]) lv = "A1";
     mem.level = lv;
@@ -423,6 +510,7 @@
           ),
         ]),
       );
+      S.push(examSection(lv));
     } else {
       if (es.length)
         S.push(
@@ -438,6 +526,7 @@
           `<a href="#lernen/${L}">Alle ${L}-Lektionen</a>`,
         ),
       );
+      S.push(examSection(lv));
       S.push(
         block(
           "wort",
@@ -478,39 +567,39 @@
           ),
         ]),
       );
-      S.push(
-        block(
-          "pdf",
-          "Arbeitsblätter zum Ausdrucken (PDF)",
-          mats
-            .slice(0, 24)
-            .map((m) =>
-              tile(
-                m.file,
-                "📄",
-                m.title,
-                `${m.level} · ${m.pages} ${m.pages === 1 ? "Seite" : "Seiten"}${m.loes ? " · mit Lösungen" : ""}`,
-                true,
-              ),
-            ),
-          `<a href="#material/alle/${L}">Alle ${mats.length} PDFs</a>`,
-        ),
+      const lessonPdfs = LS.map((l) =>
+        tile(`material/${l.id}.pdf`, "📘", `Lektion: ${l.title}`, `${l.level} · Arbeitsblatt zur Lektion`, true),
       );
+      const matTile = (m) =>
+        tile(
+          m.file,
+          "📄",
+          m.title,
+          `${m.level} · ${m.pages} ${m.pages === 1 ? "Seite" : "Seiten"}${m.loes ? " · mit Lösungen" : ""}`,
+          true,
+        );
+      const allPdfs = `<a href="#material/alle/${L}">Alle ${mats.length} PDFs</a>`;
+      if (mats.some((m) => m.fmt)) {
+        // levels with several exam formats (B2): shared material first, then one group per exam format
+        const groups = [
+          ["Für alle Prüfungen: Grammatik, Wortschatz, Sprechen", mats.filter((m) => !m.fmt).map(matTile)],
+          ["DTB B2 – Deutsch-Test für den Beruf", mats.filter((m) => m.fmt === "dtb").map(matTile)],
+          ["telc Deutsch B2 – allgemein", mats.filter((m) => m.fmt === "telc").map(matTile)],
+          ["Arbeitsblätter zu den Lektionen", lessonPdfs],
+        ].filter(([, items]) => items.length);
+        S.push(
+          `<section class="dm-section es-lv-sec es-lv-exam" aria-labelledby="lv-pdf"><div class="dm-section-head"><h2 id="lv-pdf">Arbeitsblätter zum Ausdrucken (PDF)</h2>${allPdfs}</div>${groups
+            .map(([h, items]) => `<h3 class="es-lv-h3">${x(h)}</h3><ul class="es-links">${items.join("")}</ul>`)
+            .join("")}</section>`,
+        );
+      } else {
+        S.push(block("pdf", "Arbeitsblätter zum Ausdrucken (PDF)", [...lessonPdfs, ...mats.slice(0, 24).map(matTile)], allPdfs));
+      }
       S.push(
-        block("mehr", "Lieder, Spiele und Prüfung", [
+        block("mehr", "Lieder und Spiele", [
           tile("#lieder/" + L, "🎵", `Lieder ${L}`, "Mit Text und Aufgaben"),
           tile("#spiele", "🎮", "Lernspiele", "Artikel, Verben, Alltag …"),
           tile("#kahoot", "🟣", "Kahoot-Quiz", "Allein oder im Kurs"),
-          ...(L !== "A1"
-            ? [
-                tile(
-                  "#simulation",
-                  "🏆",
-                  "Probeprüfungen",
-                  "DTZ, telc, DTB – mit Zeit und Punkten",
-                ),
-              ]
-            : []),
         ]),
       );
     }
