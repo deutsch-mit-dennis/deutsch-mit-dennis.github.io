@@ -121,21 +121,44 @@ const MAILBOX = [{ s: 'f', t: 'Guten Tag, hier spricht Claudia Reinhardt von der
           { au: 2, q: 'Was rät der Mann für die Präsentation?', opts: ['Mehr Grafiken und weniger Text verwenden.', 'Die Zahlen vom zweiten Quartal nehmen.', 'Die Präsentation auf nächste Woche verschieben.'], a: 0, why: '„Lieber weniger Text und mehr Grafiken.“' }
         ] },
       { title: 'Hören Teil 2: Argumente', skill: 'hoeren', pts: 3, plays: 1,
-        instr: 'Sie hören einen Ausschnitt aus einer Teamsitzung im Krankenhaus St. Marien. Es geht um den Vorschlag, eine Betriebskita einzurichten. Wer sagt was? Ordnen Sie die Aussagen 1–4 den Personen zu. Sie hören die Diskussion einmal.',
-        audio: [{ h: 'Teamsitzung – Vorschlag Betriebskita', lines: [
-          { s: 'm2', t: 'So, kommen wir zum nächsten Punkt. Die Klinikleitung überlegt, auf dem Gelände eine eigene Kita einzurichten, mit Öffnungszeiten von halb sechs bis zweiundzwanzig Uhr, passend zu unseren Schichten. Ich möchte gern Ihre Meinung hören. Frau Novak, Sie zuerst.' },
-          { s: 'f', t: 'Also, für mich wäre das ein Traum. Ich habe zwei kleine Kinder, und unsere städtische Kita macht erst um sieben auf. Mein Frühdienst beginnt aber um sechs. Im Moment muss jeden Morgen meine Nachbarin einspringen. Viele Kolleginnen arbeiten genau deswegen nur Teilzeit. Mit einer Kita hier könnten sie mehr Stunden arbeiten, und das würde unseren Personalmangel verringern.' },
-          { s: 'm2', t: 'Danke. Herr Weber?' },
-          { s: 'm', t: 'Ich finde die Idee grundsätzlich gut, aber ich habe Bedenken bei den Kosten. Eine Kita mit so langen Öffnungszeiten braucht viele Erzieherinnen, und die sind genauso schwer zu finden wie Pflegekräfte. Ich würde vorschlagen, erst einmal mit einer bestehenden Kita in der Nähe zusammenzuarbeiten und dort Plätze für unsere Mitarbeiter zu reservieren. Das ist billiger und geht schneller.' },
-          { s: 'm2', t: 'Frau Ahmadi, Sie haben auch Kinder, oder?' },
-          { s: 'f2', t: 'Ja, aber die sind schon in der Schule. Für mich ist eher wichtig: Wenn wir eine Kita bekommen, dann muss das fair sein. Nicht nur Ärztinnen und Ärzte, sondern auch das Reinigungspersonal und die Küche müssen Plätze bekommen. Ich fände es gut, wenn es dafür klare Regeln gibt, zum Beispiel nach Schichtdiensten und nicht nach Position.' }
-        ] }],
-        opts: ['a) Frau Novak', 'b) Herr Weber', 'c) Frau Ahmadi'],
+        instr: 'Sie hören vier kurze Gespräche. Welcher Satz (a–f) passt zu welchem Gespräch? Zwei Sätze passen nicht. Sie haben jetzt eine Minute Zeit, die Sätze a–f zu lesen. Sie hören jedes Gespräch einmal.',
+        audio: [
+          { h: 'Gespräch 1 – im Logistikzentrum', lines: [
+            { s: 'm2', t: 'Frau Mbeki, haben Sie kurz Zeit? Der neue Kollege, Herr Sørensen, stand heute Morgen zwanzig Minuten in der falschen Halle. Keiner hat ihm gesagt, wo er hinsoll.' },
+            { s: 'f2', t: 'Oh nein. Ich hatte ihm doch den Plan per E-Mail geschickt.' },
+            { s: 'm2', t: 'Ja, schon. Aber so ein Plan beantwortet halt keine Fragen. Wo ist der Pausenraum, wen ruf ich an, wenn der Scanner spinnt … Ich finde, jeder Neue sollte in den ersten Wochen einen festen Kollegen an der Seite haben. Einen, den er alles fragen kann, ohne sich dumm zu fühlen.' },
+            { s: 'f2', t: 'Hm, das bindet aber auch Zeit.' },
+            { s: 'm2', t: 'Am Anfang ein bisschen, klar. Aber wenn die Leute sich verloren fühlen, sind sie nach drei Monaten wieder weg. Und dann fangen wir ganz von vorne an.' },
+            { s: 'f2', t: 'Da ist was dran. Würden Sie das bei Herrn Sørensen übernehmen?' }
+          ] },
+          { h: 'Gespräch 2 – in der Kita', lines: [
+            { s: 'f', t: 'Anna, mir ist heute was Blödes passiert. Beim Mittagessen hätte ich dem kleinen Emil fast den Nachtisch mit Nüssen gegeben. Dabei hat er doch eine Allergie. Zum Glück hat Merve es noch gesehen.' },
+            { s: 'f2', t: 'Oh, Mensch. Aber es ist ja nichts passiert. Musst du jetzt nicht an die große Glocke hängen.' },
+            { s: 'f', t: 'Doch, ich will das in der Teamsitzung am Donnerstag ansprechen. Nicht, weil ich mich schlecht fühlen will. Aber wenn mir das passiert, kann das jedem passieren. Die Allergieliste hängt in der Küche, aber nicht im Gruppenraum. Vielleicht müssen wir da was ändern.' },
+            { s: 'f2', t: 'Stimmt eigentlich. Wenn keiner was sagt, ändert sich auch nichts.' },
+            { s: 'f', t: 'Genau. Lieber einmal kurz unangenehm als irgendwann ein echter Notfall.' }
+          ] },
+          { h: 'Gespräch 3 – in der Physiotherapie-Praxis', lines: [
+            { s: 'm', t: 'Frau Kühn, das Telefon klingelt schon wieder. Ich bin heute schon dreimal aus der Behandlung gerannt.' },
+            { s: 'f', t: 'Ich weiß, am Empfang ist es genauso. Die Hälfte der Anrufe sind Leute, die einfach nur einen Termin wollen.' },
+            { s: 'm', t: 'Eben. Und genau deshalb sollten wir endlich die Terminbuchung über die Website anbieten. Die Patienten sehen dann selbst, wann was frei ist, und buchen auch abends um elf, wenn sie Zeit haben. Wir hätten mehr Ruhe für die Behandlung.' },
+            { s: 'f', t: 'Und die älteren Patienten? Die buchen doch nicht im Internet.' },
+            { s: 'm', t: 'Die können ja weiter anrufen. Aber wenn nur die Hälfte online bucht, sparen wir jeden Tag bestimmt eine Stunde.' },
+            { s: 'f', t: 'Okay. Ich frag mal, was so ein Programm kostet.' }
+          ] },
+          { h: 'Gespräch 4 – in der Stadtverwaltung', lines: [
+            { s: 'm2', t: 'Herr Osei, Sie essen ja schon wieder am Schreibtisch. Kommen Sie doch mit in die Kantine.' },
+            { s: 'm', t: 'Ach, ich hab so viel auf dem Tisch. So kann ich nebenbei noch ein paar E-Mails lesen.' },
+            { s: 'm2', t: 'Genau das meine ich. Das ist doch keine Pause. Sie schauen die ganze Zeit auf denselben Bildschirm, und um drei sind Sie todmüde. Eine halbe Stunde raus aus dem Büro, mit anderen reden, ein paar Schritte gehen – danach arbeiten Sie viel konzentrierter. Glauben Sie mir, ich hab das früher auch so gemacht wie Sie.' },
+            { s: 'm', t: 'Hm. Na gut, heute komm ich mit. Aber nur eine halbe Stunde.' }
+          ] }
+        ],
+        opts: ['a) Fehler sollte man offen ansprechen, damit sich etwas verbessern kann.', 'b) In der Pause sollte man den Arbeitsplatz verlassen, um sich wirklich zu erholen.', 'c) Im Sommer sollte die Arbeit früher am Morgen beginnen.', 'd) Neue Beschäftigte sollten am Anfang eine feste Ansprechperson bekommen.', 'e) Es lohnt sich, Geräte reparieren zu lassen, statt sofort neue zu kaufen.', 'f) Wenn man Termine online buchen kann, spart das allen Zeit.'],
         items: [
-          { au: 0, q: '1. Eine Kita könnte dabei helfen, dass Beschäftigte mehr Stunden arbeiten.', a: 0, why: 'Frau Novak: „Mit einer Kita hier könnten sie mehr Stunden arbeiten“.' },
-          { au: 0, q: '2. Man sollte zuerst mit einer Kita in der Nähe kooperieren.', a: 1, why: 'Herr Weber: „erst einmal mit einer bestehenden Kita in der Nähe zusammenzuarbeiten“.' },
-          { au: 0, q: '3. Alle Berufsgruppen im Krankenhaus sollten die gleichen Chancen auf einen Platz haben.', a: 2, why: 'Frau Ahmadi: „nicht nur Ärztinnen und Ärzte, sondern auch das Reinigungspersonal und die Küche“.' },
-          { au: 0, q: '4. Es wird schwierig sein, genug Fachpersonal für die Kita zu finden.', a: 1, why: 'Herr Weber: Erzieherinnen „sind genauso schwer zu finden wie Pflegekräfte“.' }
+          { au: 0, q: 'Gespräch 1: Welcher Satz passt?', a: 3, why: 'Der Kollege: „jeder Neue sollte in den ersten Wochen einen festen Kollegen an der Seite haben“.' },
+          { au: 1, q: 'Gespräch 2: Welcher Satz passt?', a: 0, why: 'Die Erzieherin will den Fehler im Team ansprechen: „Wenn keiner was sagt, ändert sich auch nichts.“' },
+          { au: 2, q: 'Gespräch 3: Welcher Satz passt?', a: 5, why: 'Der Therapeut: „Terminbuchung über die Website anbieten … Wir hätten mehr Ruhe für die Behandlung.“' },
+          { au: 3, q: 'Gespräch 4: Welcher Satz passt?', a: 1, why: 'Der Kollege: „Das ist doch keine Pause … Eine halbe Stunde raus aus dem Büro“.' }
         ] },
       { title: 'Hören Teil 3: Unternehmensinformationen', skill: 'hoeren', pts: 3, plays: 1,
         instr: 'Sie hören eine Präsentation am ersten Arbeitstag neuer Mitarbeiterinnen und Mitarbeiter. Welche Lösung (a, b oder c) ist richtig? Sie hören die Präsentation einmal.',

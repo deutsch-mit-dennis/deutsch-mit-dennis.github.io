@@ -96,21 +96,24 @@
     ] },
     { id: 'hoeren', title: 'Hörverstehen', minutes: 20, parts: [
       { title: 'Hörverstehen Teil 1', skill: 'hoeren', pts: 5, plays: 1,
-        instr: 'Sie hören fünf kurze Äußerungen zum Thema „Homeoffice“. Sie hören jede Äußerung nur einmal. Entscheiden Sie bei jeder Aussage, ob sie richtig oder falsch ist. Lesen Sie zuerst die Aussagen.',
-        opts: ['Richtig', 'Falsch'],
+        instr: 'Sie hören eine Nachrichtensendung mit fünf Meldungen. Sie hören die Sendung nur einmal. Entscheiden Sie bei jeder Aussage, ob sie richtig oder falsch ist. Sie haben jetzt 30 Sekunden Zeit, die Aussagen zu lesen.',
         audio: [
-          { h: 'Beitrag 1', lines: [{ s: 'f', t: 'Also für mich ist Homeoffice ein Segen. Ich hab zwei kleine Kinder, und früher bin ich jeden Tag anderthalb Stunden gependelt. Jetzt kann ich die Kinder morgens in die Kita bringen und bin trotzdem um halb neun am Schreibtisch. Ich arbeite sogar mehr als früher, ehrlich gesagt, weil ich nicht mehr im Stau steh.' }] },
-          { h: 'Beitrag 2', lines: [{ s: 'm', t: 'Ich bin ja eher skeptisch. Ich hab das zwei Jahre gemacht, während Corona, und irgendwann ist mir die Decke auf den Kopf gefallen. Mir fehlt einfach der Kontakt, der Kaffee mit den Kollegen, das kurze Gespräch auf dem Flur. Jetzt geh ich wieder jeden Tag ins Büro, und ich bin viel zufriedener.' }] },
-          { h: 'Beitrag 3', lines: [{ s: 'f2', t: 'Bei uns in der Firma ist das ganz klar geregelt: zwei Tage zu Hause, drei Tage im Büro. Und das finde ich eigentlich ideal. Die Tage im Büro nutz ich für Besprechungen, und zu Hause mach ich die Sachen, für die ich Ruhe brauche, Berichte schreiben zum Beispiel. Das Einzige, was mich stört: Wir haben keine festen Schreibtische mehr.' }] },
-          { h: 'Beitrag 4', lines: [{ s: 'm2', t: 'Für meinen Job ist Homeoffice leider gar keine Option, ich bin Elektriker. Aber meine Frau arbeitet im Büro einer Versicherung, und sie ist fast nur zu Hause. Was ich sehe: Sie kann schlechter abschalten. Oft sitzt sie abends noch am Laptop und liest E-Mails. Da muss man echt aufpassen.' }] },
-          { h: 'Beitrag 5', lines: [{ s: 'f', t: 'Ich bin Teamleiterin, und ich muss sagen: Für mich als Chefin ist es schwieriger geworden. Man merkt am Bildschirm nicht so schnell, wenn es jemandem nicht gut geht. Deshalb mach ich jetzt mit jedem im Team einmal im Monat ein persönliches Gespräch, und zwar wirklich vor Ort, nicht per Video.' }] }
+          { h: 'Nachrichtensendung', lines: [
+            { s: 'n', t: 'Guten Abend. Hier sind die Nachrichten von Radio Mittelland, achtzehn Uhr.' },
+            { s: 'n', t: 'Im Landkreis Wiesental sollen alle Grundschulen bis zum Sommer einen Trinkwasserbrunnen bekommen. Das hat der Kreistag heute beschlossen. Die Kinder sollen sich dort jederzeit kostenlos Wasser abfüllen können. Bezahlt werden die Brunnen vom Landkreis und von einer regionalen Stiftung. Die Eltern müssen nichts dazugeben.' },
+            { s: 'n', t: 'Gesetzlich Versicherte warten im Durchschnitt länger auf einen Termin beim Facharzt als noch vor drei Jahren. Das geht aus einer Auswertung eines Verbands der Krankenkassen hervor. Besonders lang seien die Wartezeiten bei Augen- und Hautärzten, hier oft mehr als zwei Monate. Der Verband fordert, dass Praxen freie Termine besser online melden.' },
+            { s: 'n', t: 'Eine Drogeriekette testet in zwanzig ihrer Filialen die Vier-Tage-Woche. Die Beschäftigten arbeiten dort ab Januar an vier statt an fünf Tagen, die Wochenstunden bleiben aber gleich. Die zuständige Gewerkschaft begrüßte den Versuch. Er könne zeigen, so ein Sprecher, dass auch im Handel flexiblere Arbeitszeiten möglich seien.' },
+            { s: 'n', t: 'Die Stadtbibliothek Weißenkamp öffnet ab sofort auch sonntags. Von zehn bis achtzehn Uhr können Besucherinnen und Besucher mit ihrem Bibliotheksausweis hinein, Bücher ausleihen und zurückgeben. Personal ist an diesen Tagen nicht vor Ort. Nach einer dreimonatigen Testphase zieht die Stadt eine positive Bilanz: Vor allem Familien und Berufstätige nutzen das Angebot.' },
+            { s: 'n', t: 'Und zum Sport: Der Weißenkamper Stadtlauf findet wie geplant am kommenden Sonntag statt. Wegen Bauarbeiten am Marktplatz verläuft die Strecke in diesem Jahr allerdings durch den Stadtpark. Start und Ziel sind deshalb am Parkeingang an der Mühlenstraße. Die Veranstalter erwarten rund dreitausend Läuferinnen und Läufer.' }
+          ] }
         ],
+        opts: ['Richtig', 'Falsch'],
         items: [
-          { au: 0, q: 'Die Frau arbeitet im Homeoffice weniger als früher.', a: 1, why: '„Ich arbeite sogar mehr als früher“.' },
-          { au: 1, q: 'Der Mann arbeitet inzwischen wieder im Büro.', a: 0, why: '„Jetzt geh ich wieder jeden Tag ins Büro“.' },
-          { au: 2, q: 'Die Frau hat in der Firma einen festen Arbeitsplatz.', a: 1, why: '„Wir haben keine festen Schreibtische mehr.“' },
-          { au: 3, q: 'Der Mann findet, dass man im Homeoffice Arbeit und Freizeit schlechter trennen kann.', a: 0, why: 'Seine Frau „kann schlechter abschalten“ und liest abends noch E-Mails.' },
-          { au: 4, q: 'Die Teamleiterin führt die Gespräche mit ihrem Team per Video.', a: 1, why: '„und zwar wirklich vor Ort, nicht per Video.“' }
+          { au: 0, q: 'Meldung 1: Alle Grundschulen im Landkreis sollen kostenloses Trinkwasser anbieten.', a: 0, why: 'Jede Grundschule bekommt einen Brunnen, die Kinder können „jederzeit kostenlos Wasser abfüllen“.' },
+          { au: 0, q: 'Meldung 2: Inzwischen bekommt man schneller einen Termin beim Facharzt.', a: 1, why: 'Versicherte warten „länger … als noch vor drei Jahren“.' },
+          { au: 0, q: 'Meldung 3: Die Gewerkschaft kritisiert den Versuch der Drogeriekette.', a: 1, why: '„Die zuständige Gewerkschaft begrüßte den Versuch.“' },
+          { au: 0, q: 'Meldung 4: Die Stadtbibliothek ist jetzt auch am Sonntag geöffnet.', a: 0, why: '„öffnet ab sofort auch sonntags“ – von zehn bis achtzehn Uhr.' },
+          { au: 0, q: 'Meldung 5: Der Stadtlauf findet in diesem Jahr auf einer anderen Strecke statt.', a: 0, why: 'Wegen Bauarbeiten „verläuft die Strecke in diesem Jahr allerdings durch den Stadtpark“.' }
         ] },
       { title: 'Hörverstehen Teil 2', skill: 'hoeren', pts: 2.5, plays: 1,
         instr: 'Sie hören ein Interview aus der Radiosendung „Arbeitswelten“. Sie hören das Interview einmal. Entscheiden Sie bei den Aussagen 1–10, ob sie richtig oder falsch sind. Lesen Sie jetzt die Aussagen.',

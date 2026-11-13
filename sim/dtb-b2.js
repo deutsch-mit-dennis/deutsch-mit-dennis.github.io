@@ -556,72 +556,148 @@
           title: "Hören Teil 2: Argumente",
           skill: "hoeren",
           pts: 3,
-          instr:
-            "Sie hören einen Ausschnitt aus einer Betriebsversammlung der Firma Westfalia Verpackungen. Es geht um ein Pilotprojekt „Vier-Tage-Woche“. Wer sagt was? Ordnen Sie die Aussagen 1–4 den Personen zu. Sie hören die Diskussion einmal.",
+          plays: 1,
+          instr: "Sie hören vier kurze Gespräche. Welcher Satz (a–f) passt zu welchem Gespräch? Zwei Sätze passen nicht. Sie haben jetzt eine Minute Zeit, die Sätze a–f zu lesen. Sie hören jedes Gespräch einmal.",
           audio: [
             {
-              h: "Betriebsversammlung – Pilotprojekt Vier-Tage-Woche",
+              h: "Gespräch 1 – im ambulanten Pflegedienst",
               lines: [
                 {
-                  s: "m2",
-                  t: "So, liebe Kolleginnen und Kollegen, dann kommen wir zu Punkt drei, dem Pilotprojekt Vier-Tage-Woche. Kurz zur Idee: vier Tage mit je neuneinhalb Stunden statt fünf kürzerer Tage. Also weiterhin achtunddreißig Stunden pro Woche, beim gleichen Gehalt. Frau Kranz, Sie hatten sich für den Betriebsrat zuerst gemeldet. Bitte.",
+                  s: "m",
+                  t: "Jelena, kurze Frage: Du trägst die Werte immer gleich beim Patienten ins Tablet ein, oder? Ich mach das lieber abends im Büro. In Ruhe, alles auf einmal."
                 },
                 {
                   s: "f",
-                  t: "Ja, danke. Also, grundsätzlich finden wir vom Betriebsrat die Idee gut. Viele Kolleginnen und Kollegen haben uns gesagt, dass sie sich einfach einen Tag mehr Erholung wünschen. Aber, und das ist uns ganz wichtig, das Ganze muss freiwillig sein. Wer bei fünf Tagen bleiben will, muss das können. Ohne Nachteile. Und, na ja, neuneinhalb Stunden an der Maschine, das ist anstrengend, das wissen wir alle. Wir fordern deshalb eine zusätzliche Pause von fünfzehn Minuten.",
-                },
-                {
-                  s: "m2",
-                  t: "Danke, Frau Kranz. Herr Ölmez, Sie leiten die Produktion. Wie sehen Sie das?",
+                  t: "Ja, ich mach das direkt vor Ort. Weißt du, früher hab ich das genauso gemacht wie du. Und dann sitzt man abends da und überlegt: War der Blutdruck bei Frau Stein jetzt hundertvierzig oder hundertsechzig? Hat Herr Yıldırım seine Tabletten genommen oder nicht?"
                 },
                 {
                   s: "m",
-                  t: "Tja … ich will hier nicht der Spielverderber sein, ehrlich nicht. Aber ich muss an die Abläufe denken. Unsere Maschinen laufen von Montag bis Freitag, und die Kunden wollen ihre Ware auch freitags. Wenn jetzt alle am Freitag frei haben wollen, und das wollen natürlich alle, dann steht bei uns freitags die Halle leer. Also, wenn wir das machen, dann nur so, dass der freie Tag wechselt. Die eine Gruppe hat montags frei, die andere freitags, und alle paar Wochen wird getauscht. Und zur Freiwilligkeit, Frau Kranz: Das klingt gut, keine Frage. Aber dann muss ich zwei Modelle parallel planen. Das ist ein enormer Aufwand.",
+                  t: "Na ja, so schlimm ist es bei mir nicht. Ich hab ein ziemlich gutes Gedächtnis."
+                },
+                {
+                  s: "f",
+                  t: "Das dachte ich auch. Aber nach acht, neun Besuchen verschwimmt alles. Und wenn dann was Falsches drinsteht, arbeitet die Spätschicht mit falschen Zahlen. Das kostet zwei Minuten pro Besuch, mehr nicht."
+                },
+                {
+                  s: "m",
+                  t: "Hm. Und abends spar ich mir dann die ganze Schreiberei … Okay, ich probier’s mal."
+                }
+              ]
+            },
+            {
+              h: "Gespräch 2 – im Hotel",
+              lines: [
+                {
+                  s: "m2",
+                  t: "Frau Lindqvist, wir haben schon wieder drei Beschwerden wegen des Frühstücks. Zwischen acht und neun ist kein Tisch frei, die Gäste stehen mit ihren Tellern herum. Einer wollte sogar sein Geld fürs Frühstück zurück."
+                },
+                {
+                  s: "f",
+                  t: "Ich weiß. Aber jedes Mal Geld zurückgeben, das kann ja keine Lösung sein."
                 },
                 {
                   s: "m2",
-                  t: "Verstehe. Frau Weber, Sie arbeiten im Versand. Was sagen Sie dazu?",
+                  t: "Ich dachte, wir nehmen für die Stoßzeit eine Aushilfe dazu, die schneller abräumt."
+                },
+                {
+                  s: "f",
+                  t: "Das hilft nur wenig, glaube ich. Das Problem sind nicht die Tische, sondern dass alle gleichzeitig kommen. Um sieben ist der Raum halb leer, um halb zehn auch. Wenn Sie den Gästen beim Einchecken sagen, wann es ruhig ist, und wir einen kleinen Hinweis aufs Zimmer legen, dann verteilt sich das von allein. Und es kostet uns fast nichts."
+                },
+                {
+                  s: "m2",
+                  t: "Gut. Versuchen wir es zwei Wochen lang so."
+                }
+              ]
+            },
+            {
+              h: "Gespräch 3 – in der Autowerkstatt",
+              lines: [
+                {
+                  s: "f2",
+                  t: "Herr Kaminski, der Kunde mit dem blauen Kombi ist da. Soll ich Sie holen, oder …?"
+                },
+                {
+                  s: "m",
+                  t: "Nein, nein, das machst du heute selbst. Du hast die Bremsen gewechselt, du weißt am besten, was gemacht wurde."
                 },
                 {
                   s: "f2",
-                  t: "Ja, also … ich seh das ein bisschen gemischt. Für Kollegen, die jeden Tag eine Stunde mit dem Auto herfahren, ist das natürlich super. Die sparen sich einen ganzen Tag Fahrerei, und die Spritkosten auch. Aber ich hab zwei kleine Kinder, und die Kita macht um halb fünf zu. Wenn ich da neuneinhalb Stunden arbeite, plus Pause, dann schaff ich das einfach nicht. Ich wär eher für mehr Gleitzeit, dass man morgens flexibler anfangen kann. Und, äh, ehrlich gesagt, Frau Kranz, nehmen Sie’s mir nicht übel: Eine Viertelstunde mehr Pause macht den Tag ja noch länger.",
+                  t: "Ich? Aber ich bin doch erst im zweiten Lehrjahr. Was ist, wenn er was fragt, das ich nicht weiß?"
                 },
-                { s: "f", t: "Nee, da haben Sie recht. Das müssen wir mitdenken." },
                 {
-                  s: "m2",
-                  t: "Gut. Dann sammeln wir jetzt erst mal weitere Meinungen aus dem Saal. Ja, bitte, da hinten …",
+                  s: "m",
+                  t: "Dann sagst du ehrlich: Moment, da frag ich kurz nach. Das ist völlig in Ordnung. Schau mal, schrauben lernst du hier jeden Tag. Aber einem Kunden erklären, warum eine Reparatur so viel kostet – das lernt man nur, wenn man es selbst macht. Und je früher, desto besser."
                 },
-              ],
+                {
+                  s: "f2",
+                  t: "Okay … dann geh ich mal."
+                }
+              ]
             },
+            {
+              h: "Gespräch 4 – im Büro",
+              lines: [
+                {
+                  s: "m",
+                  t: "Frau Haddad, kommen Sie nachher auch zur Besprechung um zehn?"
+                },
+                {
+                  s: "f",
+                  t: "Worum geht’s denn?"
+                },
+                {
+                  s: "m",
+                  t: "Ehrlich gesagt, weiß ich das auch nicht genau. Irgendwas mit dem neuen Kundenportal, glaube ich."
+                },
+                {
+                  s: "f",
+                  t: "Sehen Sie, genau das ist das Problem. Wir sitzen dann eine Stunde da, die Hälfte muss sich erst mal einlesen, und am Ende wird nichts entschieden. Ich hab der Teamleitung schon gesagt: Wer eine Besprechung macht, schickt einen Tag vorher die Themen rum. Dann kann sich jeder vorbereiten. Und man sieht auch, ob man überhaupt dabei sein muss."
+                },
+                {
+                  s: "m",
+                  t: "Klingt vernünftig. Heute geh ich aber trotzdem hin."
+                },
+                {
+                  s: "f",
+                  t: "Ich auch. Aber ich frag gleich am Anfang, was wir heute eigentlich entscheiden wollen."
+                }
+              ]
+            }
           ],
-          plays: 1,
           opts: [
-            "a) Frau Kranz (Betriebsrat)",
-            "b) Herr Ölmez (Produktionsleitung)",
-            "c) Frau Weber (Versand)",
+            "a) Auszubildende sollten früh selbst mit Kunden sprechen, weil man das nur durch Übung lernt.",
+            "b) Neue Geräte sollte man erst einführen, wenn alle eine Schulung bekommen haben.",
+            "c) Man sollte Informationen sofort notieren, weil man später wichtige Details vergisst.",
+            "d) Eine Besprechung bringt nur etwas, wenn alle vorher wissen, worum es geht.",
+            "e) Statt mehr Personal einzusetzen, sollte man die Kundschaft besser informieren.",
+            "f) Unzufriedenen Kunden sollte man einen Teil des Preises erstatten."
           ],
           items: [
             {
-              q: "Für Beschäftigte mit einem weiten Arbeitsweg wäre das Modell ein großer Vorteil.",
+              au: 0,
+              q: "Gespräch 1: Welcher Satz passt?",
               a: 2,
-              why: "Frau Weber: „Für Kollegen, die jeden Tag eine Stunde mit dem Auto herfahren, ist das natürlich super.“",
+              why: "Jelena trägt die Werte direkt ein: „nach acht, neun Besuchen verschwimmt alles“. Von einer Schulung (b) spricht niemand."
             },
             {
-              q: "Wenn jeder selbst entscheiden darf, ob er mitmacht, wird die Planung sehr aufwendig.",
-              a: 1,
-              why: "Herr Ölmez: „Zur Freiwilligkeit … dann muss ich zwei Modelle parallel planen. Das ist ein enormer Aufwand.“",
+              au: 1,
+              q: "Gespräch 2: Welcher Satz passt?",
+              a: 4,
+              why: "Frau Lindqvist will keine Aushilfe, sondern den Gästen „beim Einchecken sagen, wann es ruhig ist“. Geld zurückgeben (f) lehnt sie ab."
             },
             {
-              q: "Bei so langen Arbeitstagen braucht man mehr Erholung während der Arbeitszeit.",
+              au: 2,
+              q: "Gespräch 3: Welcher Satz passt?",
               a: 0,
-              why: "Frau Kranz fordert „eine zusätzliche Pause von fünfzehn Minuten“. Frau Weber kritisiert diese Pause gerade.",
+              why: "Herr Kaminski: Kunden etwas erklären „lernt man nur, wenn man es selbst macht. Und je früher, desto besser.“"
             },
             {
-              q: "Ein flexibler Arbeitsbeginn wäre besser als vier lange Tage.",
-              a: 2,
-              why: "Frau Weber: „Ich wär eher für mehr Gleitzeit, dass man morgens flexibler anfangen kann.“",
-            },
-          ],
+              au: 3,
+              q: "Gespräch 4: Welcher Satz passt?",
+              a: 3,
+              why: "Frau Haddad: „Wer eine Besprechung macht, schickt einen Tag vorher die Themen rum.“"
+            }
+          ]
         },
         {
           title: "Hören Teil 3: Unternehmensinformationen",
@@ -1546,51 +1622,71 @@
         name: "Hören Teil 2: Argumente",
         skill: "Hören",
         time: "ca. 5 Min.",
-        what: "Laut offiziellem Modelltest (telc, 2022) hörst du vier kurze Gespräche und ordnest jedem Gespräch einen von sechs Sätzen (a–f) zu; zwei Sätze bleiben übrig. Vorher hast du eine Minute Lesezeit, gehört wird einmal. (Die Online-Simulation übt das Zuordnen an einer Diskussion mit mehreren Personen.)",
+        what: "Laut offiziellem Modelltest (telc, 2022) hörst du vier kurze Gespräche und ordnest jedem Gespräch einen von sechs Sätzen (a–f) zu; zwei Sätze bleiben übrig. Vorher hast du eine Minute Lesezeit, jedes Gespräch hörst du einmal.",
         steps: [
-          "Nutze die Lesezeit: Markiere in jedem der sechs Sätze das Schlüsselwort.",
-          "Überleg vor dem Hören: Zu welcher Situation oder Meinung passt welcher Satz?",
-          "Notiere beim Hören zu jeder Person 1–2 Stichwörter.",
-          "Achte auf Widerspruch: „Ehrlich gesagt, …“, „Das klingt gut, aber …“.",
+          "Nutze die Lesezeit: Markiere in jedem der sechs Sätze das Schlüsselwort (z. B. „sofort notieren“, „Personal“).",
+          "Überleg vor dem Hören: Welche Situation im Beruf könnte zu welchem Satz passen?",
+          "Hör auf die Person, die argumentiert: Was schlägt sie vor, und warum?",
+          "Streich Sätze, die du schon vergeben hast – jeder Satz passt höchstens einmal."
         ],
         traps: [
-          "Eine Person erwähnt ein Argument, um es zu kritisieren.",
-          "Ähnliche Themen bei zwei Personen (z. B. Pause, Erholung).",
-          "Die Aussage ist umformuliert, nicht wörtlich.",
+          "Ein Vorschlag wird im Gespräch genannt, aber abgelehnt („Das kann ja keine Lösung sein“).",
+          "Ein Thema passt (z. B. Gäste, Kunden), aber das Argument ist ein anderes.",
+          "Der Satz ist umformuliert, nicht wörtlich."
         ],
-        tip: "Es geht um die Meinung, nicht um das Thema. Frag dich: Ist die Person dafür oder dagegen?",
+        tip: "Es geht um das Argument, nicht um das Thema. Frag dich nach jedem Gespräch: Was will die Person erreichen – und mit welcher Begründung?",
         mini: {
-          instr: "Hören Sie die Diskussion einmal. Wer sagt das?",
+          instr: "Sie hören zwei kurze Gespräche einmal. Welcher Satz (a–d) passt? Zwei Sätze passen nicht.",
           audio: [
             {
-              h: "Teambesprechung",
+              h: "Gespräch 1",
               lines: [
                 {
                   s: "f",
-                  t: "Also, ich fänd’s gut, wenn wir die Teambesprechung auf Montag legen. Dann starten alle informiert in die Woche.",
+                  t: "Sollen wir die Teamsitzung nicht auf Montag legen? Dann starten alle informiert in die Woche."
                 },
                 {
                   s: "m",
-                  t: "Hm, Montag? Montag ist bei uns im Lager immer Chaos, da kommen die meisten Lieferungen. Mittwoch wär ruhiger.",
-                },
-              ],
+                  t: "Montag? Da kommen im Lager die meisten Lieferungen, da hat keiner Zeit. Mittwoch ist viel ruhiger. Dann sind auch wirklich alle dabei."
+                }
+              ]
             },
+            {
+              h: "Gespräch 2",
+              lines: [
+                {
+                  s: "m",
+                  t: "Der Drucker ist schon wieder kaputt. Ich bestell einfach einen neuen."
+                },
+                {
+                  s: "f",
+                  t: "Warte mal. Der ist doch erst zwei Jahre alt. Ruf lieber den Service an – eine Reparatur ist viel billiger als ein neues Gerät."
+                }
+              ]
+            }
           ],
           plays: 1,
-          opts: ["a) die Frau", "b) der Mann"],
+          opts: [
+            "a) Man sollte Besprechungen an einem ruhigeren Tag machen.",
+            "b) Besprechungen sollten kürzer sein.",
+            "c) Reparieren ist günstiger als neu kaufen.",
+            "d) Jedes Team sollte einen eigenen Drucker bekommen."
+          ],
           items: [
             {
-              q: "Zu Wochenbeginn ist zu viel zu tun.",
-              a: 1,
-              why: "Mann: „Montag ist … immer Chaos.“",
+              au: 0,
+              q: "Gespräch 1",
+              a: 0,
+              why: "Der Mann: „Mittwoch ist viel ruhiger. Dann sind auch wirklich alle dabei.“"
             },
             {
-              q: "Am Anfang der Woche sollten alle Bescheid wissen.",
-              a: 0,
-              why: "Frau: „Dann starten alle informiert in die Woche.“",
-            },
-          ],
-        },
+              au: 1,
+              q: "Gespräch 2",
+              a: 2,
+              why: "Die Frau: „eine Reparatur ist viel billiger als ein neues Gerät“."
+            }
+          ]
+        }
       },
       {
         name: "Hören Teil 3: Unternehmensinformationen",

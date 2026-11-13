@@ -452,88 +452,74 @@
           skill: "hoeren",
           pts: 5,
           plays: 1,
-          instr:
-            "Sie hören fünf kurze Äußerungen zum Thema „Bezahlen ohne Bargeld“. Sie hören jede Äußerung nur einmal. Entscheiden Sie bei jeder Aussage, ob sie richtig oder falsch ist. Lesen Sie zuerst die Aussagen.",
+          instr: "Sie hören eine Nachrichtensendung mit fünf Meldungen. Sie hören die Sendung nur einmal. Entscheiden Sie bei jeder Aussage, ob sie richtig oder falsch ist. Sie haben jetzt 30 Sekunden Zeit, die Aussagen zu lesen.",
           audio: [
             {
-              h: "Beitrag 1",
+              h: "Nachrichtensendung",
               lines: [
                 {
-                  s: "f",
-                  t: "Also, ich zahl eigentlich fast alles mit dem Handy. Im Supermarkt, an der Tankstelle, sogar im Kino. Geht einfach schneller, ne? Aber, äh, ganz ohne Bargeld geht's bei mir trotzdem nicht. Ich hab immer so zwanzig Euro im Portemonnaie, für den Wochenmarkt zum Beispiel, oder für den kleinen Bäcker bei uns um die Ecke. Der nimmt nämlich keine Karten.",
+                  s: "n",
+                  t: "Radio Westwelle. Es ist zwölf Uhr. Sie hören Nachrichten."
                 },
-              ],
-            },
-            {
-              h: "Beitrag 2",
-              lines: [
                 {
-                  s: "m",
-                  t: "Ich bin da altmodisch, das geb ich zu. Am Monatsanfang heb ich einen festen Betrag ab und teil mir das Geld ein. Und wenn das Portemonnaie leer ist, dann ist es eben leer. Mit der Karte, da merkt man ja gar nicht, wie viel man ausgibt. Zack, bezahlt, und am Monatsende wundert man sich. So weiß ich wenigstens immer genau, wo ich stehe.",
+                  s: "n",
+                  t: "Die Stadt Hallerstedt testet ab dem ersten März kostenlose Busfahrten. Allerdings gilt das Angebot nur an Samstagen und Sonntagen. Der Versuch ist zunächst auf sechs Monate begrenzt. Danach will der Stadtrat entscheiden, ob es weitergeht. Ziel sei es, so eine Sprecherin der Stadt, an den Wochenenden weniger Autos in der Innenstadt zu haben."
                 },
-              ],
-            },
-            {
-              h: "Beitrag 3",
-              lines: [
                 {
-                  s: "f2",
-                  t: "Ich hab ein kleines Café in der Altstadt. Lange Zeit hab ich nur Bargeld genommen, weil ich für jede Kartenzahlung Gebühren zahlen muss. Aber immer mehr Gäste haben gefragt, und manche sind sogar wieder gegangen. Na ja. Seit letztem Jahr kann man bei mir auch mit Karte zahlen, und, ehrlich gesagt, seitdem verkauf ich mehr. Die Leute bestellen dann eben noch ein Stück Kuchen dazu. Also, die Gebühren, die lohnen sich.",
+                  s: "n",
+                  t: "Immer mehr ältere Beschäftigte möchten nach dem Erreichen des Rentenalters weiterarbeiten – allerdings mit weniger Stunden. Das ergab eine Umfrage unter rund zweitausend Arbeitnehmerinnen und Arbeitnehmern zwischen fünfundfünfzig und fünfundsechzig Jahren. Fast die Hälfte der Befragten kann sich vorstellen, nach der Rente noch in Teilzeit im Beruf zu bleiben. Als wichtigsten Grund nannten viele den Kontakt zu Kolleginnen und Kollegen, erst danach kam das zusätzliche Einkommen."
                 },
-              ],
-            },
-            {
-              h: "Beitrag 4",
-              lines: [
                 {
-                  s: "m2",
-                  t: "Praktisch ist das alles schon, keine Frage. Aber mich stört, dass bei jeder Zahlung irgendwo gespeichert wird, was ich wann und wo gekauft hab. Und wer hat denn Zugriff auf diese Daten? Die Bank, die Firma hinter der App, vielleicht noch andere? Das weiß doch keiner so genau. Deshalb zahl ich größere Sachen lieber bar.",
+                  s: "n",
+                  t: "Der Fahrradteile-Hersteller Rennwerk verschiebt den Bau seines neuen Werks im Gewerbegebiet Lindenfeld. Ursprünglich sollte die Fabrik im Herbst eröffnet werden und zweihundert neue Arbeitsplätze bringen. Nach Angaben der Geschäftsführung findet das Unternehmen aber nicht genug Fachkräfte. Man wolle das Projekt nicht aufgeben, sondern erst einmal mehr junge Menschen selbst ausbilden."
                 },
-              ],
-            },
-            {
-              h: "Beitrag 5",
-              lines: [
                 {
-                  s: "f",
-                  t: "Ich bin Studentin und geh oft mit Freunden essen. Früher war das mit dem Bezahlen immer total kompliziert. Wer hat Kleingeld, wer kriegt noch was zurück, und so weiter. Heute zahlt einer die ganze Rechnung, und die anderen schicken ihm ihren Anteil einfach per App. Dauert zehn Sekunden. Bargeld hab ich, ehrlich gesagt, fast nie dabei.",
+                  s: "n",
+                  t: "Autofahrerinnen und Autofahrer im Raum Ostermoor müssen sich auf längere Fahrzeiten einstellen. Die Brücke über den Kamp-Kanal bleibt voraussichtlich bis Ende des Jahres gesperrt. Bei einer Prüfung waren Risse in mehreren Stützen entdeckt worden. Eine Umleitung ist ausgeschildert. Die Verkehrsbehörde rät Pendlern, morgens mindestens zwanzig Minuten mehr einzuplanen oder auf die Bahn umzusteigen."
                 },
-              ],
-            },
+                {
+                  s: "n",
+                  t: "Und nun das Wetter: Heute Nachmittag ziehen von Westen Regenwolken auf, örtlich kann es Gewitter geben. Die Temperaturen erreichen höchstens vierzehn Grad. Ab Samstag wird es freundlicher und deutlich wärmer, mit bis zu zwanzig Grad."
+                }
+              ]
+            }
           ],
-          opts: ["Richtig", "Falsch"],
+          opts: [
+            "Richtig",
+            "Falsch"
+          ],
           items: [
             {
               au: 0,
-              q: "Die Frau bezahlt inzwischen gar nicht mehr mit Bargeld.",
+              q: "Meldung 1: In Hallerstedt kann man künftig an allen Tagen kostenlos Bus fahren.",
               a: 1,
-              why: "„ganz ohne Bargeld geht's bei mir trotzdem nicht“ – sie hat immer 20 Euro für Markt und Bäcker dabei.",
+              why: "Das Angebot gilt „nur an Samstagen und Sonntagen“ und ist ein Versuch für sechs Monate."
             },
             {
-              au: 1,
-              q: "Der Mann behält mit Bargeld besser den Überblick über seine Ausgaben.",
+              au: 0,
+              q: "Meldung 2: Viele ältere Beschäftigte möchten auch nach der Rente weiterarbeiten, aber weniger Stunden.",
               a: 0,
-              why: "„So weiß ich wenigstens immer genau, wo ich stehe.“",
+              why: "„Fast die Hälfte … kann sich vorstellen, nach der Rente noch in Teilzeit im Beruf zu bleiben.“"
             },
             {
-              au: 2,
-              q: "Die Café-Besitzerin ist unzufrieden, seit sie Kartenzahlung anbietet.",
+              au: 0,
+              q: "Meldung 3: Eine Firma hat ein neues Werk eröffnet und stellt dort zweihundert Leute ein.",
               a: 1,
-              why: "Seitdem verkauft sie mehr: „die Gebühren, die lohnen sich“.",
+              why: "Rennwerk „verschiebt den Bau“ – es fehlen Fachkräfte, das Werk ist noch nicht eröffnet."
             },
             {
-              au: 3,
-              q: "Der Mann macht sich Sorgen darüber, was mit seinen Daten passiert.",
+              au: 0,
+              q: "Meldung 4: Eine Brücke bleibt wegen Schäden mehrere Monate gesperrt.",
               a: 0,
-              why: "„mich stört, dass … gespeichert wird“ und „Wer hat denn Zugriff auf diese Daten?“",
+              why: "Risse in den Stützen, gesperrt „voraussichtlich bis Ende des Jahres“."
             },
             {
-              au: 4,
-              q: "Für die Studentin ist es mit Bargeld einfacher, eine Rechnung unter Freunden zu teilen.",
+              au: 0,
+              q: "Meldung 5: Zum Wochenende soll es kälter werden.",
               a: 1,
-              why: "Früher mit Bargeld war es „total kompliziert“, heute per App dauert es zehn Sekunden.",
-            },
-          ],
+              why: "„Ab Samstag wird es freundlicher und deutlich wärmer“."
+            }
+          ]
         },
         {
           title: "Hörverstehen Teil 2",
@@ -1253,59 +1239,57 @@
         name: "Hörverstehen Teil 1",
         skill: "Hören",
         time: "ca. 5 Min.",
-        what: "Laut offiziellem Modelltest (telc, 2019) hörst du eine Nachrichtensendung mit fünf Meldungen – nur einmal, vorher hast du 30 Sekunden Lesezeit. Zu jeder Meldung entscheidest du, ob eine Aussage richtig oder falsch ist. (Die Online-Simulation übt das mit kurzen Meinungsbeiträgen.)",
+        what: "Laut offiziellem Modelltest (telc, 2019) hörst du eine Nachrichtensendung mit fünf Meldungen – nur einmal, vorher hast du 30 Sekunden Lesezeit. Zu jeder Meldung entscheidest du, ob eine Aussage richtig oder falsch ist.",
         steps: [
-          "Nutze die Lesezeit: Markiere in jeder Aussage das wichtigste Wort.",
+          "Nutze die Lesezeit: Markiere in jeder Aussage das wichtigste Wort (Ort, Zahl, Zeitraum, „kritisiert“/„begrüßt“).",
+          "Die Aussagen kommen in der Reihenfolge der Meldungen – zu jeder Meldung gehört genau eine Aussage.",
           "Achte bei jeder Meldung auf die Kernaussage: Was ist passiert, wer ist betroffen, was ist das Ergebnis?",
-          "Entscheide sofort nach jedem Beitrag – es gibt keine Wiederholung.",
-          "Wenn du unsicher bist, kreuz trotzdem an und geh weiter.",
+          "Entscheide sofort nach jeder Meldung – es gibt keine Wiederholung."
         ],
         traps: [
-          "Einschränkungen wie „aber“, „trotzdem“, „ganz ohne … geht's nicht“ drehen die Aussage.",
-          "Die Person nennt zuerst ein Gegenargument und dann ihre eigentliche Meinung.",
-          "Absolute Wörter in der Aussage („gar nicht mehr“, „immer“) sind oft falsch.",
+          "Geplant oder beschlossen? „verschiebt“, „testet“, „soll“ ist nicht dasselbe wie „hat eröffnet“.",
+          "Einschränkungen wie „allerdings nur …“ oder „zunächst“ machen eine allgemeine Aussage falsch.",
+          "Absolute Wörter in der Aussage („an allen Tagen“, „immer“) sind oft falsch."
         ],
-        tip: "Hör besonders auf den letzten Satz jedes Beitrags – dort steht oft das Fazit der Person.",
+        tip: "Der erste Satz einer Meldung enthält meist die Hauptinformation – die Details danach bestätigen oder schränken sie ein.",
         mini: {
-          title: "Mini-Übung: Meinungen",
-          instr: "Sie hören zwei Äußerungen einmal. Richtig oder falsch?",
+          title: "Mini-Übung: Nachrichten",
+          instr: "Sie hören zwei kurze Meldungen einmal. Richtig oder falsch?",
           plays: 1,
           audio: [
             {
-              h: "Beitrag 1",
+              h: "Meldungen",
               lines: [
                 {
-                  s: "m",
-                  t: "Also, ich fahr seit zwei Jahren mit dem Fahrrad zur Arbeit, auch im Winter. Nur wenn's glatt ist, nehm ich den Bus. Da bin ich dann doch vorsichtig.",
+                  s: "n",
+                  t: "Das Freibad in Lindenau bleibt in diesem Sommer geschlossen. Grund sind Bauarbeiten an den Becken, die länger dauern als geplant. Die Stadt bietet als Ersatz einen kostenlosen Bus zum Badesee an."
                 },
-              ],
-            },
-            {
-              h: "Beitrag 2",
-              lines: [
                 {
-                  s: "f",
-                  t: "Homeoffice? Nee, ist nichts für mich. Ich brauch die Kolleginnen um mich herum, sonst fühl ich mich ganz schnell allein.",
-                },
-              ],
-            },
+                  s: "n",
+                  t: "Die Verbraucherzentrale bietet ab Mai eine telefonische Beratung zu Handyverträgen an. Das Angebot ist kostenlos und gilt montags bis freitags."
+                }
+              ]
+            }
           ],
-          opts: ["Richtig", "Falsch"],
+          opts: [
+            "Richtig",
+            "Falsch"
+          ],
           items: [
             {
               au: 0,
-              q: "Der Mann fährt bei jedem Wetter mit dem Fahrrad.",
+              q: "Meldung 1: Das Freibad öffnet in diesem Sommer später als sonst.",
               a: 1,
-              why: "Bei Glätte nimmt er den Bus.",
+              why: "Es „bleibt in diesem Sommer geschlossen“."
             },
             {
-              au: 1,
-              q: "Die Frau arbeitet lieber im Büro.",
+              au: 0,
+              q: "Meldung 2: Die Beratung zu Handyverträgen kostet nichts.",
               a: 0,
-              why: "„Homeoffice? Nee, ist nichts für mich. Ich brauch die Kolleginnen um mich herum.“",
-            },
-          ],
-        },
+              why: "„Das Angebot ist kostenlos“."
+            }
+          ]
+        }
       },
       {
         name: "Hörverstehen Teil 2",

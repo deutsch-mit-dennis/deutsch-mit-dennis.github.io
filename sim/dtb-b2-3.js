@@ -123,21 +123,45 @@ const MAILBOX = [
           { au: 2, q: 'Was soll die Kollegin tun, wenn sie tauschen möchte?', opts: ['a) Einen Antrag bei Frau Kaya stellen.', 'b) Einen freien Nachmittag nehmen.', 'c) Mit Herrn Brandl sprechen.'], a: 2, why: '„Dann sprechen Sie am besten direkt mit Herrn Brandl, der macht den Plan.“' }
         ] },
       { title: 'Hören Teil 2: Argumente', skill: 'hoeren', pts: 3, plays: 1,
-        instr: 'Sie hören einen Ausschnitt aus einer Abteilungsbesprechung in einer Versicherung. Es geht um den Vorschlag, die Vier-Tage-Woche einzuführen. Wer sagt was? Ordnen Sie die Aussagen 1–4 den Personen zu. Sie hören die Diskussion einmal.',
-        audio: [{ h: 'Abteilungsbesprechung – Vier-Tage-Woche', lines: [
-          { s: 'm2', t: 'Ich habe Sie gebeten, über die Vier-Tage-Woche nachzudenken. Frau Lorenz, Herr Hamid, Frau Becker – was meinen Sie?' },
-          { s: 'f', t: 'Lorenz. Also, ich bin sehr dafür. Wir suchen seit Monaten neue Leute für das Team, und die jungen Bewerber fragen im Gespräch fast immer danach. Mit vier Tagen wären wir als Arbeitgeber einfach attraktiver.' },
-          { s: 'm', t: 'Hamid. Grundsätzlich finde ich die Idee gut. Aber unsere Kunden rufen von Montag bis Freitag an. Wenn wir an einem Tag fehlen, muss das jemand auffangen. Ich würde deshalb vorschlagen, das erst einmal sechs Monate in einem Team zu testen.' },
-          { s: 'f2', t: 'Becker. Ich sehe vor allem ein Problem: Wenn die gleiche Arbeit in vier Tagen erledigt werden soll, werden die Tage sehr lang. Neun, zehn Stunden am Telefon – das ist anstrengend, und dann machen wir mehr Fehler. Die Gesundheit der Mitarbeitenden darf nicht leiden.' },
-          { s: 'f', t: 'Lorenz. Das verstehe ich, Frau Becker. Aber Studien zeigen, dass viele Beschäftigte mit drei freien Tagen erholter sind und seltener krank werden.' },
-          { s: 'm', t: 'Hamid. Und genau das könnten wir in der Testphase messen: Krankheitstage, Fehler, Kundenzufriedenheit. Dann entscheiden wir mit Zahlen statt mit Gefühlen.' }
-        ] }],
-        opts: ['a) Frau Lorenz', 'b) Herr Hamid', 'c) Frau Becker'],
+        instr: 'Sie hören vier kurze Gespräche. Welcher Satz (a–f) passt zu welchem Gespräch? Zwei Sätze passen nicht. Sie haben jetzt eine Minute Zeit, die Sätze a–f zu lesen. Sie hören jedes Gespräch einmal.',
+        audio: [
+          { h: 'Gespräch 1 – im Supermarkt', lines: [
+            { s: 'm', t: 'Frau Petrova, soll ich die Joghurts hier wegwerfen? Die laufen morgen ab.' },
+            { s: 'f', t: 'Moment, nicht wegwerfen. Die sind doch noch völlig in Ordnung.' },
+            { s: 'm', t: 'Ja, aber die kauft doch keiner mehr, wenn morgen das Datum drauf ist.' },
+            { s: 'f', t: 'Doch, wenn sie billiger sind. Kleb einen roten Aufkleber drauf, minus fünfzig Prozent, und stell sie vorne an die Kasse. Du wirst sehen, um sechs ist alles weg. Wir verdienen zwar weniger daran, aber immer noch mehr, als wenn alles in der Tonne landet. Und es ist einfach schade um die Lebensmittel.' },
+            { s: 'm', t: 'Okay, mach ich. Gilt das auch für das Brot von gestern?' },
+            { s: 'f', t: 'Für das Brot auch, ja.' }
+          ] },
+          { h: 'Gespräch 2 – im Elektrobetrieb', lines: [
+            { s: 'm2', t: 'Chef, ich hab hier die Anmeldung für den Kurs zu Solaranlagen. Sechs Wochen, jeden Samstag. Ich weiß, der ist nicht billig.' },
+            { s: 'm', t: 'Eintausendneunhundert Euro, ja, das hab ich gesehen. Das ist schon eine Menge Geld.' },
+            { s: 'm2', t: 'Schon. Aber überlegen Sie mal: Letzten Monat haben wir drei Anfragen für Solaranlagen abgesagt, weil keiner von uns das machen darf. Mit dem Zertifikat können wir diese Aufträge annehmen. Nach zwei, drei Anlagen hat sich der Kurs bezahlt gemacht.' },
+            { s: 'm', t: 'Hm. Und wenn Sie danach zur Konkurrenz gehen?' },
+            { s: 'm2', t: 'Ich hab nicht vor, zu gehen. Mir gefällt’s hier. Und ehrlich gesagt: Wer in seine Leute investiert, der behält sie auch eher.' },
+            { s: 'm', t: 'Na gut. Ich unterschreib das.' }
+          ] },
+          { h: 'Gespräch 3 – im Kundenservice', lines: [
+            { s: 'f2', t: 'Herr Lange, haben Sie gesehen? Die Geschäftsleitung überlegt, dass wir auf alle E-Mails erst mal eine automatische Antwort schicken. „Vielen Dank, wir melden uns.“' },
+            { s: 'm', t: 'Ja, hab ich gehört. Spart ja Zeit.' },
+            { s: 'f2', t: 'Ich weiß nicht. Ich hab mir die Beschwerden vom letzten Monat angeschaut. Die Leute ärgern sich am meisten, wenn sie das Gefühl haben, mit einer Maschine zu reden. Zwei, drei persönliche Sätze mit Namen – „Ich kümmere mich darum und melde mich bis morgen“ – das dauert keine Minute, und die Kunden sind schon viel ruhiger.' },
+            { s: 'm', t: 'Aber bei zweihundert Mails am Tag?' },
+            { s: 'f2', t: 'Dann sind es zweihundert Minuten. Und dafür bekommen wir viel weniger Nachfragen, wo denn die Antwort bleibt.' }
+          ] },
+          { h: 'Gespräch 4 – auf der Krankenhausstation', lines: [
+            { s: 'f', t: 'Sag mal, Lea, warum machst du die Übergabe eigentlich immer im Zimmer und nicht im Stationszimmer wie alle anderen?' },
+            { s: 'f2', t: 'Weil der Patient dann dabei ist. Der hört, was wir besprechen, und kann gleich sagen: „Nein, die Schmerzen sind eher schlimmer geworden“ oder „Ich hab heute noch nichts getrunken“. Das wissen wir sonst oft gar nicht.' },
+            { s: 'f', t: 'Und was ist mit dem Datenschutz? Im Zimmer liegen doch oft zwei Leute.' },
+            { s: 'f2', t: 'Klar, heikle Sachen bespreche ich draußen. Aber das meiste ist ja nicht geheim. Und die Patienten fühlen sich ernst genommen. Die wissen dann auch, wer in der nächsten Schicht für sie zuständig ist.' },
+            { s: 'f', t: 'Hm, das probier ich morgen früh mal aus.' }
+          ] }
+        ],
+        opts: ['a) Eine Weiterbildung lohnt sich für den Betrieb, auch wenn sie zuerst viel kostet.', 'b) Wer Überstunden macht, sollte dafür freie Tage bekommen.', 'c) Die Übergabe zwischen zwei Schichten sollte direkt beim Patienten stattfinden.', 'd) Lebensmittel kurz vor dem Ablaufdatum sollte man günstiger verkaufen, statt sie wegzuwerfen.', 'e) Eine kurze persönliche Antwort ist besser als eine automatische Nachricht.', 'f) Manche Aufgaben sollte man an externe Firmen abgeben.'],
         items: [
-          { au: 0, q: '1. Die Vier-Tage-Woche könnte helfen, neues Personal zu finden.', a: 0, why: 'Frau Lorenz: „Mit vier Tagen wären wir als Arbeitgeber einfach attraktiver.“' },
-          { au: 0, q: '2. Lange Arbeitstage können zu mehr Fehlern führen.', a: 2, why: 'Frau Becker: „das ist anstrengend, und dann machen wir mehr Fehler.“' },
-          { au: 0, q: '3. Man sollte die Idee zuerst in einem Team ausprobieren.', a: 1, why: 'Herr Hamid: „das erst einmal sechs Monate in einem Team zu testen.“' },
-          { au: 0, q: '4. Mitarbeitende mit drei freien Tagen sind oft weniger krank.', a: 0, why: 'Frau Lorenz: „… erholter sind und seltener krank werden.“' }
+          { au: 0, q: 'Gespräch 1: Welcher Satz passt?', a: 3, why: 'Frau Petrova: „Kleb einen roten Aufkleber drauf, minus fünfzig Prozent … immer noch mehr, als wenn alles in der Tonne landet.“' },
+          { au: 1, q: 'Gespräch 2: Welcher Satz passt?', a: 0, why: 'Der Mitarbeiter: Mit dem Zertifikat kann der Betrieb Aufträge annehmen – „Nach zwei, drei Anlagen hat sich der Kurs bezahlt gemacht.“' },
+          { au: 2, q: 'Gespräch 3: Welcher Satz passt?', a: 4, why: 'Die Kollegin: „Zwei, drei persönliche Sätze mit Namen … das dauert keine Minute“ – statt automatischer Antwort.' },
+          { au: 3, q: 'Gespräch 4: Welcher Satz passt?', a: 2, why: 'Lea macht die Übergabe „im Zimmer“, weil „der Patient dann dabei ist“.' }
         ] },
       { title: 'Hören Teil 3: Unternehmensinformationen', skill: 'hoeren', pts: 3, plays: 1,
         instr: 'Sie hören eine Präsentation am ersten Arbeitstag neuer Mitarbeiterinnen und Mitarbeiter. Welche Lösung (a, b oder c) ist richtig? Sie hören die Präsentation einmal.',
