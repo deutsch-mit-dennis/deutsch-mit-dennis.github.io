@@ -1,5 +1,5 @@
 {
- "run": "2026-11-13T11:35:04Z",
+ "run": "2026-11-13T13:13:38Z",
  "runs": [
   {
    "engine": "gemini",
@@ -13,7 +13,7 @@
    "engine": "elevenlabs",
    "created": 0,
    "open": 0,
-   "chars_this_month": 113841,
+   "chars_this_month": 126164,
    "monthly_limit": 30000,
    "errors": []
   },
