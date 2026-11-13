@@ -127,6 +127,7 @@ SECTIONS = [
     ('pruefung', 'Prüfungstraining DTZ, telc und DTB', 'Schreiben, Sprechen, Hören und Lesen wie in der Prüfung – DTZ, Leben in Deutschland, telc B1/B2, DTB B1/B2. Von einem lizenzierten Prüfer.'),
     ('dtz-30-tage', 'DTZ in 30 Tagen: Lernplan', 'Fester Lernplan für den Deutsch-Test für Zuwanderer: 30 Tage, jeden Tag 20–40 Minuten, sechs Probeprüfungen mit Uhr. Kostenlos, von einem DTZ-Prüfer.'),
     ('b2-30-tage', 'B2 in 30 Tagen: Lernplan', 'Fester Lernplan für telc Deutsch B2 oder DTB B2: 30 Tage, meist 30–60 Minuten am Tag, Einstiegstest Teil für Teil und Generalprobe mit Uhr. Kostenlos, von einem telc-Prüfer.'),
+    ('b2-woerter', 'B2-Wörter nach Prüfungsthemen: Karteikarten', '216 Karteikarten für telc Deutsch B2 und DTB B2 in 8 Themen – Arbeit, Kunden, Behörden, Wohnen, Gesundheit, Medien, Umwelt, Bildung. Mit Artikel, Plural, Beispielsatz und Vorlesen. Kostenlos.'),
     ('simulation', 'Prüfungssimulationen mit Zeitvorgabe', 'DTZ, Leben in Deutschland, telc B1, DTB B1, telc B2 und DTB B2 – komplette Prüfungen mit echter Zeit, Punkten, Bestehensregel und Lösungen. Kostenlos.'),
     ('vorbereitung', 'Gezielte Vorbereitung: telc B1, telc B2, DTB', 'Aufbau, Strategien und Fallen für jeden Prüfungsteil, Mini-Übungen, Redemittel und 4-Wochen-Lernplan – von einem lizenzierten Prüfer.'),
     ('ueben', 'Deutsch üben', 'Sprechen und Schreiben mit Sofort-Korrektur, Satzanfängen und Mustertexten. Kostenlos.'),

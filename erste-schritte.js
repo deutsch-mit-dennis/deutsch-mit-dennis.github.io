@@ -462,6 +462,7 @@
       try { localStorage.setItem(FMT_KEY, v); } catch {}
       if (wrap) wrap.dataset.show = v;
       document.querySelectorAll("[data-fmt-set]").forEach((o) => o.setAttribute("aria-pressed", String(o === btn)));
+      lvProgress();
     }));
   }
   function examSection(lv) {
@@ -471,6 +472,60 @@
     return `<section class="dm-section es-lv-sec es-lv-exam" aria-labelledby="lv-exam"><div class="dm-section-head"><h2 id="lv-exam">Prüfungsvorbereitung</h2><a href="#pruefung">Alle Prüfungen</a></div>${groups
       .map((g) => `<div class="es-fmtgrp"${g.fmt ? ` data-fmt="${g.fmt}"` : ""}><h3 class="es-lv-h3">${x(g.h)}</h3><ul class="es-links">${g.items.join("")}</ul></div>`)
       .join("")}</section>`;
+  }
+  /* level page progress: which tiles were opened on this device (DM.store.seen = { "<href>": timestamp }, saved with DM.save,
+     part of the learning-progress backup) plus results that already exist elsewhere (lessons, listening, reading, mock exams …).
+     Nothing is sent anywhere. */
+  const seenStore = () => (mem.seen ||= {});
+  function doneElsewhere(href) {
+    const m = /^#([^/]+)\/?([^/]*)/.exec(href || "");
+    if (!m) return false;
+    const [, r, id] = m, d = mem.done || {};
+    const anyKey = (pre) => Object.keys(d).some((k) => k.startsWith(pre));
+    try {
+      if (r === "lektion") return !!d["lektion:" + id] || (typeof platformDone !== "undefined" && platformDone.has(id));
+      if (r === "hoeren") return anyKey(`hoeren:${id}:`);
+      if (r === "lesen") return ((DM.reading || []).find((s) => s.id === id)?.items || []).some((it) => d["lesen:" + it.id] !== undefined);
+      if (r === "lernweg") return anyKey(`weg:${id}:`);
+      if (r === "simulation") {
+        const sim = mem.sim || {};
+        return !!(sim.done && sim.done[id] && Object.keys(sim.done[id]).length) || !!(sim[id + "_hist"] || []).length;
+      }
+      if (r === "b2-30-tage") return !!Object.keys((mem.b2_30 && mem.b2_30[id] && mem.b2_30[id].done) || {}).length;
+      if (r === "b2-woerter") return !!Object.keys((mem.b2w && mem.b2w.s) || {}).length;
+    } catch {}
+    return false;
+  }
+  const isSeen = (href) => !!seenStore()[href] || doneElsewhere(href);
+  function lvProgress() {
+    const wrap = $(".es-fmtwrap"), out = $("#es-prog");
+    if (!wrap || !out) return;
+    const show = wrap.dataset.show || "all";
+    const hrefs = new Set();
+    $$("a.es-link", wrap).forEach((a) => {
+      const href = a.getAttribute("href"), on = isSeen(href);
+      if (on && !a.classList.contains("is-seen")) {
+        a.classList.add("is-seen");
+        a.insertAdjacentHTML("beforeend", '<span class="es-seen" aria-hidden="true">✓</span><span class="dm-sr"> – bereits geöffnet</span>');
+      }
+      const g = a.closest("[data-fmt]");
+      if (show === "all" || !g || g.dataset.fmt === show) hrefs.add(href);
+    });
+    const total = hrefs.size, n = [...hrefs].filter(isSeen).length, pct = total ? Math.round((n / total) * 100) : 0;
+    out.innerHTML = `<p class="es-prog-t">Du hast <b>${n} von ${total}</b> Materialien geöffnet</p><div class="es-prog-bar" role="progressbar" aria-label="Geöffnete Materialien" aria-valuemin="0" aria-valuemax="${total}" aria-valuenow="${n}" aria-valuetext="${n} von ${total}"><span style="width:${pct}%"></span></div><p class="es-prog-note">Nur auf diesem Gerät gespeichert · <a href="#lernstand">Lernstand sichern</a></p>`;
+  }
+  function lvTrack() {
+    const wrap = $(".es-fmtwrap");
+    if (!wrap) return;
+    const mark = (e) => {
+      const a = e.target.closest && e.target.closest("a.es-link");
+      if (!a || (e.type === "auxclick" && e.button !== 1)) return;
+      seenStore()[a.getAttribute("href")] = Date.now();
+      DM.save && DM.save();
+      lvProgress();
+    };
+    wrap.addEventListener("click", mark);
+    wrap.addEventListener("auxclick", mark);
   }
   function levelPage(lv) {
     if (!LV_NAME[lv]) lv = "A1";
@@ -552,7 +607,9 @@
         block(
           "wort",
           "Wortschatz",
-          LS.map((l) =>
+          [
+            ...(lv === "B2" ? [tile("#b2-woerter", "🗂️", "B2-Wörter nach Prüfungsthemen – Karteikarten", "8 Themen · Wort, Artikel, Plural, Beispielsatz")] : []),
+            ...LS.map((l) =>
             tile(
               "#wortschatz/" + l.id + "/0",
               "🗂️",
@@ -560,6 +617,7 @@
               "20 Wortkarten mit Bild und Lernspielen",
             ),
           ),
+          ],
         ),
       );
       S.push(
@@ -636,7 +694,7 @@
         ),
       );
     DM.page(`${DM.crumbs([["Niveau " + lv]])}
-      <div class="dm-head"><p class="dm-kicker">Deine Materialien</p><h1>Niveau ${lv} · ${x(lv === "B2" ? "Beruf und Prüfung" : LV_NAME[lv])}</h1><p class="dm-lead">${lv === "A0" ? "Du fängst ganz neu an? Hier sind deine ersten Schritte – in dieser Reihenfolge." : `Alles für ${L} an einem Ort: Lektionen, Wörter, Übungen, Hörtexte und Arbeitsblätter.`}</p></div>
+      <div class="dm-head"><p class="dm-kicker">Deine Materialien</p><h1>Niveau ${lv} · ${x(lv === "B2" ? "Beruf und Prüfung" : LV_NAME[lv])}</h1><p class="dm-lead">${lv === "A0" ? "Du fängst ganz neu an? Hier sind deine ersten Schritte – in dieser Reihenfolge." : `Alles für ${L} an einem Ort: Lektionen, Wörter, Übungen, Hörtexte und Arbeitsblätter.`}</p><div class="es-prog" id="es-prog"></div></div>
       <nav class="dm-tabs dm-tabs-small es-lvtabs" aria-label="Niveau wechseln">${Object.keys(
         LV_NAME,
       )
@@ -647,6 +705,8 @@
         .join("")}</nav>
       ${lv === "B2" ? fmtSwitch() : ""}<div class="es-fmtwrap" data-show="${lv === "B2" ? fmtGet() : "all"}">${S.join("")}</div>`);
     if (lv === "B2") fmtBind();
+    lvProgress();
+    lvTrack();
   }
 
   DM.routes["erste-schritte"] = (p) => (p[1] ? topicPage(p[1]) : hub());
