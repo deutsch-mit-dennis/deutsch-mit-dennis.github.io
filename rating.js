@@ -6,7 +6,6 @@
   const OK_ROUTES = ['', 'lernweg', 'lernen', 'ueben', 'pruefung', 'lieder', 'material', 'videos', 'lernpakete', 'hoeren', 'kahoot', 'orientierungskurs'];
   const get = k => { try { return localStorage.getItem(k); } catch { return null; } };
   const set = (k, v) => { try { localStorage.setItem(k, v); } catch {} };
-  const email = () => (window.DM && DM.teacher && DM.teacher.email) || 'dennis.prudnikau@gmail.com';
 
   // Besuche zählen (einmal pro Browser-Sitzung)
   try { if (!sessionStorage.getItem(VK)) { sessionStorage.setItem(VK, '1'); set(VK, String((+get(VK) || 0) + 1)); } } catch {}
@@ -25,7 +24,7 @@
   }
   async function send(stars, text) {
     const body = { _subject: `Bewertung: ${stars} von 5 Sternen`, _template: 'table', _captcha: 'false', Sterne: '★'.repeat(stars) + '☆'.repeat(5 - stars), Kommentar: text || '–', Seite: location.hash || '#' };
-    try { await fetch(`https://formsubmit.co/ajax/${email()}`, { method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' }, body: JSON.stringify(body) }); } catch {}
+    try { await fetch(`https://formsubmit.co/ajax/e030a6e811e14a42f5b87082aeb17628`, { method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' }, body: JSON.stringify(body) }); } catch {}
   }
 
   function show() {

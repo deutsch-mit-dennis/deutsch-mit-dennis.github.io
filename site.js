@@ -1513,7 +1513,7 @@
       if (fd.get('email')) body._replyto = body['E-Mail'] = fd.get('email');
       st.textContent = 'Wird gesendet …'; form.querySelector('button').disabled = true;
       try {
-        const r = await fetch(`https://formsubmit.co/ajax/${T.email}`, { method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' }, body: JSON.stringify(body) });
+        const r = await fetch(`https://formsubmit.co/ajax/e030a6e811e14a42f5b87082aeb17628`, { method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' }, body: JSON.stringify(body) });
         if (!r.ok) throw 0;
         form.reset(); $('#dm-pin-count').textContent = '0 / 600';
         st.innerHTML = '<b>Danke! Dein Zettel ist bei Dennis angekommen.</b> ' + (ok ? 'Nach kurzer Prüfung hängt er hier an der Wand.' : 'Er bleibt privat, weil du die Veröffentlichung nicht erlaubt hast.');
