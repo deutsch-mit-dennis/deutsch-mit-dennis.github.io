@@ -546,3 +546,6 @@
 .b2w-end-t{margin:0 0 12px;font-size:1.05rem}
 .b2w-pdf{margin-top:22px;font-size:.95rem}
 @media (max-width:400px){.b2w-tgrid{grid-template-columns:1fr 1fr}.b2w-tb{padding:8px 9px}.b2w-word{font-size:1.4rem}}
+.es-fmt-status{margin:10px 0 0;font-weight:700;color:var(--dm-gruen,#1D7A45)}
+.es-fmt-status:empty{display:none}
+#lv-exam{scroll-margin-top:90px}

@@ -453,8 +453,9 @@
   const fmtSwitch = () => {
     const cur = fmtGet();
     const b = (v, label, sub) => `<button type="button" class="es-fmt-b" data-fmt-set="${v}" aria-pressed="${cur === v}"><b>${label}</b><small>${sub}</small></button>`;
-    return `<section class="es-fmt" aria-labelledby="es-fmt-h"><h2 id="es-fmt-h" class="es-fmt-h">Welche Prüfung machst du?</h2><div class="es-fmt-row" role="group" aria-labelledby="es-fmt-h">${b("telc", "telc Deutsch B2", "allgemein")}${b("dtb", "DTB B2", "Deutsch-Test für den Beruf")}${b("all", "Beide / weiß noch nicht", "alles zeigen")}</div><p class="es-fmt-note"><a href="#pruefungsinfo">Unterschied telc B2 und DTB B2?</a></p></section>`;
+    return `<section class="es-fmt" aria-labelledby="es-fmt-h"><h2 id="es-fmt-h" class="es-fmt-h">Welche Prüfung machst du?</h2><div class="es-fmt-row" role="group" aria-labelledby="es-fmt-h">${b("telc", "telc Deutsch B2", "allgemein")}${b("dtb", "DTB B2", "Deutsch-Test für den Beruf")}${b("all", "Beide / weiß noch nicht", "alles zeigen")}</div><p class="es-fmt-status" role="status" aria-live="polite"></p><p class="es-fmt-note"><a href="#pruefungsinfo">Unterschied telc B2 und DTB B2?</a></p></section>`;
   };
+  const FMT_LABEL = { telc: "nur telc Deutsch B2", dtb: "nur DTB B2", all: "telc B2 und DTB B2" };
   function fmtBind() {
     const wrap = document.querySelector(".es-fmtwrap");
     document.querySelectorAll("[data-fmt-set]").forEach((btn) => (btn.onclick = () => {
@@ -463,7 +464,18 @@
       if (wrap) wrap.dataset.show = v;
       document.querySelectorAll("[data-fmt-set]").forEach((o) => o.setAttribute("aria-pressed", String(o === btn)));
       lvProgress();
+      // visible feedback: the change happens further down the page, so confirm it and scroll there
+      const st = document.querySelector(".es-fmt-status");
+      if (st) st.innerHTML = `✓ Du siehst jetzt ${FMT_LABEL[v] || ""}. <a href="#lv-exam" class="es-fmt-jump">Zur Prüfungsvorbereitung ↓</a>`;
+      const target = document.getElementById("lv-exam");
+      if (target) target.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
     }));
+    document.querySelector(".es-fmt")?.addEventListener("click", (e) => {
+      const a = e.target.closest(".es-fmt-jump");
+      if (!a) return;
+      e.preventDefault();
+      document.getElementById("lv-exam")?.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
   }
   function examSection(lv) {
     const FMT = { telcb2: "telc", dtbb2: "dtb", telcb1: "telc", dtbb1: "dtb" };
