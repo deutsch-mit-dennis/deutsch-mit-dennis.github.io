@@ -1,5 +1,5 @@
 {
- "total": 1021,
+ "total": 1088,
  "marks": [
   {
    "part": "Hören Teil 1: Arbeitsabläufe, Probleme, Vorschläge",
@@ -22,56 +22,74 @@
   {
    "part": "Hören Teil 2: Argumente",
    "clip": 0,
-   "h": "Betriebsversammlung – Pilotprojekt Vier-Tage-Woche",
+   "h": "Gespräch 1 – im ambulanten Pflegedienst",
    "start": 229
+  },
+  {
+   "part": "Hören Teil 2: Argumente",
+   "clip": 1,
+   "h": "Gespräch 2 – im Hotel",
+   "start": 291
+  },
+  {
+   "part": "Hören Teil 2: Argumente",
+   "clip": 2,
+   "h": "Gespräch 3 – in der Autowerkstatt",
+   "start": 349
+  },
+  {
+   "part": "Hören Teil 2: Argumente",
+   "clip": 3,
+   "h": "Gespräch 4 – im Büro",
+   "start": 405
   },
   {
    "part": "Hören Teil 3: Unternehmensinformationen",
    "clip": 0,
    "h": "Begrüßung bei Rhein-Ruhr Frischelogistik",
-   "start": 397
+   "start": 463
   },
   {
    "part": "Hören Teil 4: Anliegen am Telefon",
    "clip": 0,
    "h": "Nachricht 1",
-   "start": 547
+   "start": 613
   },
   {
    "part": "Hören Teil 4: Anliegen am Telefon",
    "clip": 1,
    "h": "Nachricht 2",
-   "start": 600
+   "start": 666
   },
   {
    "part": "Hören Teil 4: Anliegen am Telefon",
    "clip": 2,
    "h": "Nachricht 3",
-   "start": 667
+   "start": 733
   },
   {
    "part": "Hören Teil 4: Anliegen am Telefon",
    "clip": 3,
    "h": "Nachricht 4",
-   "start": 730
+   "start": 796
   },
   {
    "part": "Hören Teil 4: Anliegen am Telefon",
    "clip": 4,
    "h": "Nachricht 5",
-   "start": 789
+   "start": 855
   },
   {
    "part": "Hören und Schreiben Teil 1: Anruf eines Kunden",
    "clip": 0,
    "h": "Mailbox – Haustechnik Brandt",
-   "start": 841
+   "start": 908
   },
   {
    "part": "Hören und Schreiben Teil 2: Telefonnotiz",
    "clip": 0,
    "h": "Mailbox – Haustechnik Brandt (Wiederholung)",
-   "start": 933
+   "start": 1000
   }
  ]
 }

@@ -1,5 +1,5 @@
 {
- "total": 664,
+ "total": 787,
  "marks": [
   {
    "part": "Hören Teil 1: Arbeitsabläufe, Probleme, Vorschläge",
@@ -22,56 +22,74 @@
   {
    "part": "Hören Teil 2: Argumente",
    "clip": 0,
-   "h": "Abteilungsbesprechung – Vier-Tage-Woche",
+   "h": "Gespräch 1 – im Supermarkt",
    "start": 138
+  },
+  {
+   "part": "Hören Teil 2: Argumente",
+   "clip": 1,
+   "h": "Gespräch 2 – im Elektrobetrieb",
+   "start": 190
+  },
+  {
+   "part": "Hören Teil 2: Argumente",
+   "clip": 2,
+   "h": "Gespräch 3 – im Kundenservice",
+   "start": 248
+  },
+  {
+   "part": "Hören Teil 2: Argumente",
+   "clip": 3,
+   "h": "Gespräch 4 – auf der Krankenhausstation",
+   "start": 302
   },
   {
    "part": "Hören Teil 3: Unternehmensinformationen",
    "clip": 0,
    "h": "Begrüßung im Klinikum Westfalen",
-   "start": 234
+   "start": 357
   },
   {
    "part": "Hören Teil 4: Anliegen am Telefon",
    "clip": 0,
    "h": "Nachricht 1",
-   "start": 330
+   "start": 453
   },
   {
    "part": "Hören Teil 4: Anliegen am Telefon",
    "clip": 1,
    "h": "Nachricht 2",
-   "start": 367
+   "start": 490
   },
   {
    "part": "Hören Teil 4: Anliegen am Telefon",
    "clip": 2,
    "h": "Nachricht 3",
-   "start": 400
+   "start": 523
   },
   {
    "part": "Hören Teil 4: Anliegen am Telefon",
    "clip": 3,
    "h": "Nachricht 4",
-   "start": 431
+   "start": 555
   },
   {
    "part": "Hören Teil 4: Anliegen am Telefon",
    "clip": 4,
    "h": "Nachricht 5",
-   "start": 465
+   "start": 588
   },
   {
    "part": "Hören und Schreiben Teil 1: Anruf einer Kundin",
    "clip": 0,
    "h": "Mailbox – MediTech Service",
-   "start": 499
+   "start": 622
   },
   {
    "part": "Hören und Schreiben Teil 2: Telefonnotiz",
    "clip": 0,
    "h": "Mailbox – MediTech Service (Wiederholung)",
-   "start": 583
+   "start": 707
   }
  ]
 }

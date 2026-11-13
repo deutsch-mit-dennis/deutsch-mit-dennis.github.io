@@ -1,71 +1,47 @@
 {
- "total": 675,
+ "total": 629,
  "marks": [
   {
    "part": "Hörverstehen Teil 1",
    "clip": 0,
-   "h": "Beitrag 1",
+   "h": "Nachrichtensendung",
    "start": 4
-  },
-  {
-   "part": "Hörverstehen Teil 1",
-   "clip": 1,
-   "h": "Beitrag 2",
-   "start": 38
-  },
-  {
-   "part": "Hörverstehen Teil 1",
-   "clip": 2,
-   "h": "Beitrag 3",
-   "start": 73
-  },
-  {
-   "part": "Hörverstehen Teil 1",
-   "clip": 3,
-   "h": "Beitrag 4",
-   "start": 113
-  },
-  {
-   "part": "Hörverstehen Teil 1",
-   "clip": 4,
-   "h": "Beitrag 5",
-   "start": 149
   },
   {
    "part": "Hörverstehen Teil 2",
    "clip": 0,
    "h": "Interview: Vom Bankschalter in die Werkstatt",
-   "start": 188
+   "start": 141
   },
   {
    "part": "Hörverstehen Teil 3",
    "clip": 0,
    "h": "Text 1",
-   "start": 473
+   "start": 426
   },
   {
    "part": "Hörverstehen Teil 3",
    "clip": 1,
    "h": "Text 2",
-   "start": 509
+   "start": 463
   },
   {
    "part": "Hörverstehen Teil 3",
    "clip": 2,
    "h": "Text 3",
-   "start": 564
+   "start": 517
   },
   {
    "part": "Hörverstehen Teil 3",
    "clip": 3,
    "h": "Text 4",
-   "start": 602
+   "start": 556
   },
   {
    "part": "Hörverstehen Teil 3",
    "clip": 4,
    "h": "Text 5",
-   "start": 641
+   "start": 595
   }
  ]
 }
