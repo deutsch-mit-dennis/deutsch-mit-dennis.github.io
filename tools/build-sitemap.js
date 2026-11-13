@@ -6,7 +6,7 @@
  *
  * What is included: the start page and every index.html in a sub folder, except
  *   - pages with <meta name="robots" content="...noindex...">
- *   - technical folders (.git, node_modules, qa-out, tools, .github, assets, audio, material)
+ *   - technical folders (.git, node_modules, qa-out, tools, .github, assets, audio)
  * <lastmod> = date of the last commit that touched the page file (git log).
  * Files with uncommitted changes, or without git history, use the file's modified date.
  * The start page also depends on the files that build its content (see HOME_DEPENDS).
@@ -18,7 +18,7 @@ const { execFileSync } = require('child_process');
 
 const ROOT = path.resolve(__dirname, '..');
 const SITE = 'https://deutsch-mit-dennis.de';
-const SKIP_TOP = new Set(['.git', 'node_modules', 'qa-out', 'tools', '.github', 'assets', 'audio', 'material']);
+const SKIP_TOP = new Set(['.git', 'node_modules', 'qa-out', 'tools', '.github', 'assets', 'audio']);  // material/ holds PDFs and the readable worksheet pages (material/index.html, material/<niveau>/)
 const HOME_DEPENDS = ['index.html', 'site.js', 'site-data.js', 'neu.json'];
 
 /* ---- find pages ---- */

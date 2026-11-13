@@ -17,7 +17,7 @@ import sys
 from html.parser import HTMLParser
 
 R = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-SKIP_DIRS = {".git", "node_modules", "qa-out", "tools", ".github", "assets", "audio", "material"}
+SKIP_DIRS = {".git", "node_modules", "qa-out", "tools", ".github", "assets", "audio"}  # material/ has readable worksheet pages since 2026-11-13
 SKIP_FILES = {"google34659683a6a2bee5.html", "google4d11dd3b62b27ae8.html"}
 MAX_TITLE, MAX_DESC = 60, 155
 

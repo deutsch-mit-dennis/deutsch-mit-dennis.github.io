@@ -1683,7 +1683,9 @@
   /* The navigation and footer of index.html use real addresses (/pruefung/, /lieder/ …) so that Google can follow them.
      Inside the app a click is caught and routed as before (#pruefung …) – no page reload. Ctrl/Cmd/middle click and
      "open in new tab" still use the real address. Pages that are not part of the app (dtz-schreiben, impressum …) load normally. */
-  const SECTION_LINK = /^\/(pruefung|simulation|lid|lieder|ueben|hoeren|lesen|spiele|bild|challenge|lernpakete|ueber-mich|vorbereitung|kurs|grammatik|pruefungsinfo|laute|lernpakete\/[\w-]+)\/$/;
+  const SECTION_LINK = /^\/(pruefung|simulation|lid|lieder|ueben|hoeren|lesen|spiele|bild|challenge|lernpakete|ueber-mich|vorbereitung|kurs|grammatik|pruefungsinfo|laute|material|b2-30-tage|b2-woerter|dtz-30-tage|lernpakete\/[\w-]+|vorbereitung\/[\w-]+|niveau\/a[0-2]|niveau\/b[12]|material\/[ab][12]|ueben\/sprechen\/b2)\/$/;
+  /* readable pages use lower-case levels (/niveau/b2/), the app routes use upper case (#niveau/B2, #material/alle/B2) */
+  const appRoute = r => r.replace(/^(niveau|ueben\/sprechen)\/(\w\d)$/, (_, a, l) => a + '/' + l.toUpperCase()).replace(/^material\/(\w\d)$/, (_, l) => 'material/alle/' + l.toUpperCase());
   document.addEventListener('click', e => {
     if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
     const a = e.target.closest && e.target.closest('a[href^="/"]');
@@ -1691,7 +1693,8 @@
     const m = SECTION_LINK.exec(a.getAttribute('href'));
     if (!m) return;
     e.preventDefault();
-    if (location.hash === '#' + m[1]) window.scrollTo({ top: 0, behavior: 'smooth' }); else location.hash = '#' + m[1];
+    const r = appRoute(m[1]);
+    if (location.hash === '#' + r) window.scrollTo({ top: 0, behavior: 'smooth' }); else location.hash = '#' + r;
   });
   /* ---------- Router ---------- */
   const legacyRoute = window.route;
