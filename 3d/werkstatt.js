@@ -1,6 +1,6 @@
 // Idea 6 'Heft + Schreibtisch': click an object -> camera flies in, object opens, full-page themed view (test build).
 import * as THREE from 'three';
-import { VIEWS, prewarmHeft } from './werkstatt-views.js?v=20261113a';
+import { VIEWS, prewarmHeft } from './werkstatt-views.js?v=20261113g2';
 import { addLife } from './werkstatt-leben.js?v=20261108m';
 import { progress } from './heft-buch.js?v=20261111s';
 import { addStickers } from './werkstatt-sticker.js?v=20261108m';

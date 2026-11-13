@@ -415,6 +415,7 @@
       items: [
         tile("#pruefung/telcb2", "🎯", "telc B2 – Prüfungstraining", "Lesen, Hören, E-Mail, Sprechen"),
         tile("#vorbereitung/telc-b2", "🧭", "Aufbau und Strategien", "Jeder Teil mit Fallen und Lernplan"),
+        tile("#b2-30-tage/telc", "📅", "B2 in 30 Tagen", "Lernplan telc B2 Tag für Tag"),
         ...[["telc-b2", 1], ["telc-b2-2", 2]].map(([id, n]) => mock(id, "telc B2", n)),
         ...[["telc-b2", 1], ["telc-b2-2", 2]].map(([id, n]) => mockPdf(id, "telc B2", n)),
       ],
@@ -424,6 +425,7 @@
       items: [
         tile("#pruefung/dtbb2", "🎯", "DTB B2 – Prüfungstraining", "Beschwerde, Telefonnotiz, Besprechung"),
         tile("#vorbereitung/dtb-b2", "🧭", "Aufbau und Strategien", "Jeder Teil mit Fallen und Lernplan"),
+        tile("#b2-30-tage/dtb", "📅", "B2 in 30 Tagen", "Lernplan DTB B2 Tag für Tag"),
         ...[["dtb-b2", 1], ["dtb-b2-2", 2], ["dtb-b2-3", 3]].map(([id, n]) => mock(id, "DTB B2", n)),
         ...[["dtb-b2", 1], ["dtb-b2-2", 2], ["dtb-b2-3", 3]].map(([id, n]) => mockPdf(id, "DTB B2", n)),
       ],

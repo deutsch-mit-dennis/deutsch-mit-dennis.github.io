@@ -1124,6 +1124,7 @@
       telcb2: { label: 'telc B2', h: 'telc Deutsch B2', p: 'B2 allgemein · zum Beispiel für Arbeit, Anerkennung oder Studium', path: 'telcb2', color: 'sky',
         cards: () => simCards('telc-b2', 'Lesen, Sprachbausteine, Hören, E-Mail · 140 Min.', 'Paarprüfung · 15 Min. + 20 Min. Vorbereitung') +
           card('#vorbereitung/telc-b2', 'Vorbereitung', 'Aufbau und Strategien', 'Jeder Teil mit Fallen, Mini-Übung und Lernplan') +
+          card('#b2-30-tage/telc', 'Lernplan', 'B2 in 30 Tagen', 'Jeden Tag 30–60 Minuten, mit Generalprobe') +
           card('#lesen/beruf', 'Lesen', 'Lesen auf B2', 'Längere Texte, Regelungen, Artikel') +
           card('#ueben/schreiben/B2/2', 'Schreiben', 'Halbformelle E-Mail', 'Bitte um Information oder Beschwerde') +
           card('#ueben/schreiben/B2/3', 'Schreiben', 'Meinung vertreten', 'Argumente sammeln und gewichten') +
@@ -1142,6 +1143,7 @@
       dtbb2: { label: 'DTB B2', h: 'DTB B2 – Deutsch-Test für den Beruf', p: 'Berufssprachkurs B2 · Vorbereitung und Wiederholung', path: 'dtbb2', color: 'ink',
         cards: () => simCards('dtb-b2', 'Lesen, Hören, Schreiben · 125 Min.', 'Drei Sprechteile · 16 Min.') +
           card('#vorbereitung/dtb-b2', 'Vorbereitung', 'Aufbau und Strategien', 'Jeder Teil mit Fallen, Mini-Übung und Lernplan') +
+          card('#b2-30-tage/dtb', 'Lernplan', 'B2 in 30 Tagen', 'Jeden Tag 30–60 Minuten, mit Generalprobe') +
           card('#training/dtb-thema', 'Sprechen 1', 'Über ein Thema sprechen', 'Strukturieren und Beispiele geben') +
           card('#training/dtb-kollegen', 'Sprechen 2', 'Mit Kollegen sprechen', 'Eingehen und nachfragen') +
           card('#training/dtb-sprechen', 'Sprechen 3', 'Lösungen diskutieren', 'Abwägen und vereinbaren') +

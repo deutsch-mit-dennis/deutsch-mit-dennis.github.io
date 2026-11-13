@@ -36,3 +36,8 @@
   .d30-day{break-inside:avoid;border:1px solid #999;box-shadow:none}
   .d30-check::before{content:'☐';font-size:1.2em}
 }
+/* B2 in 30 Tagen (b2-30.js): exam switch reuses .es-fmt from erste-schritte.css, two buttons only */
+.d30-fmt{margin:0 0 18px}
+.d30-fmt .es-fmt-row{grid-template-columns:repeat(2,minmax(0,1fr))}
+.d30-fmt-hint{padding:8px 10px;border-radius:10px;background:var(--dm-tinte-soft,#E8ECFA)}
+@media (max-width:520px){.d30-fmt .es-fmt-row{grid-template-columns:1fr}}
