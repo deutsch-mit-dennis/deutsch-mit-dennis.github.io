@@ -9604,7 +9604,7 @@
     }
    ],
    "prio": 0,
-   "ord": 189
+   "ord": 188
   },
   {
    "key": "t25a9e69d",
@@ -9866,7 +9866,7 @@
     }
    ],
    "prio": 0,
-   "ord": 107
+   "ord": 110
   },
   {
    "key": "t2d897dc7",
@@ -9877,7 +9877,7 @@
     }
    ],
    "prio": 0,
-   "ord": 108
+   "ord": 111
   },
   {
    "key": "t264ce37b",
@@ -9888,7 +9888,7 @@
     }
    ],
    "prio": 0,
-   "ord": 109
+   "ord": 112
   },
   {
    "key": "t9bb527cb",
@@ -9899,7 +9899,7 @@
     }
    ],
    "prio": 0,
-   "ord": 110
+   "ord": 113
   },
   {
    "key": "t91de3e36",
@@ -9910,7 +9910,7 @@
     }
    ],
    "prio": 0,
-   "ord": 111
+   "ord": 114
   },
   {
    "key": "t45eba600",
@@ -9921,7 +9921,7 @@
     }
    ],
    "prio": 0,
-   "ord": 112
+   "ord": 115
   },
   {
    "key": "te5dcef51",
@@ -9933,7 +9933,7 @@
    ],
    "fx": "telefon",
    "prio": 0,
-   "ord": 114
+   "ord": 117
   },
   {
    "key": "td256e0f9",
@@ -9944,7 +9944,7 @@
     }
    ],
    "prio": 0,
-   "ord": 115
+   "ord": 118
   },
   {
    "key": "t54af3d89",
@@ -9955,7 +9955,7 @@
     }
    ],
    "prio": 0,
-   "ord": 116
+   "ord": 119
   },
   {
    "key": "t62ef4cc0",
@@ -9966,7 +9966,7 @@
     }
    ],
    "prio": 0,
-   "ord": 117
+   "ord": 120
   },
   {
    "key": "tcb955df9",
@@ -9977,7 +9977,7 @@
     }
    ],
    "prio": 0,
-   "ord": 118
+   "ord": 121
   },
   {
    "key": "t50780f7f",
@@ -9988,7 +9988,7 @@
     }
    ],
    "prio": 0,
-   "ord": 119
+   "ord": 122
   },
   {
    "key": "tf74fed0f",
@@ -9999,7 +9999,7 @@
     }
    ],
    "prio": 0,
-   "ord": 120
+   "ord": 123
   },
   {
    "key": "tc8cc210e",
@@ -10010,7 +10010,7 @@
     }
    ],
    "prio": 0,
-   "ord": 121
+   "ord": 124
   },
   {
    "key": "t5e2cc8d8",
@@ -10021,7 +10021,7 @@
     }
    ],
    "prio": 0,
-   "ord": 122
+   "ord": 125
   },
   {
    "key": "t12a39c59",
@@ -10032,7 +10032,7 @@
     }
    ],
    "prio": 0,
-   "ord": 123
+   "ord": 126
   },
   {
    "key": "ta68ac6b6",
@@ -10043,7 +10043,7 @@
     }
    ],
    "prio": 0,
-   "ord": 124
+   "ord": 127
   },
   {
    "key": "tb79abd6f",
@@ -10054,7 +10054,7 @@
     }
    ],
    "prio": 0,
-   "ord": 125
+   "ord": 128
   },
   {
    "key": "t5d3a7918",
@@ -10065,7 +10065,7 @@
     }
    ],
    "prio": 0,
-   "ord": 126
+   "ord": 129
   },
   {
    "key": "t0c7a991e",
@@ -10076,7 +10076,7 @@
     }
    ],
    "prio": 0,
-   "ord": 127
+   "ord": 130
   },
   {
    "key": "te9c87ecf",
@@ -10095,7 +10095,7 @@
     }
    ],
    "prio": 0,
-   "ord": 128
+   "ord": 131
   },
   {
    "key": "tf08ec092",
@@ -10121,7 +10121,7 @@
     }
    ],
    "prio": 0,
-   "ord": 130
+   "ord": 134
   },
   {
    "key": "t8ac9bea1",
@@ -10132,7 +10132,7 @@
     }
    ],
    "prio": 0,
-   "ord": 131
+   "ord": 135
   },
   {
    "key": "t41bd8385",
@@ -10143,7 +10143,7 @@
     }
    ],
    "prio": 0,
-   "ord": 132
+   "ord": 136
   },
   {
    "key": "t4c012581",
@@ -10155,7 +10155,7 @@
    ],
    "fx": "telefon",
    "prio": 0,
-   "ord": 133
+   "ord": 137
   },
   {
    "key": "ta17790b8",
@@ -11538,7 +11538,7 @@
     }
    ],
    "prio": 0,
-   "ord": 159
+   "ord": 158
   },
   {
    "key": "t8f9e17a8",
@@ -11549,7 +11549,7 @@
     }
    ],
    "prio": 0,
-   "ord": 160
+   "ord": 159
   },
   {
    "key": "ta13d0a03",
@@ -11560,7 +11560,7 @@
     }
    ],
    "prio": 0,
-   "ord": 161
+   "ord": 160
   },
   {
    "key": "telcb1-1-01",
@@ -12341,7 +12341,7 @@
   {
    "key": "t02a5a1bc",
    "prio": 0,
-   "ord": 162,
+   "ord": 161,
    "segments": [
     {
      "voice": "f2",
@@ -12376,7 +12376,7 @@
   {
    "key": "tcc39fd0c",
    "prio": 0,
-   "ord": 163,
+   "ord": 162,
    "segments": [
     {
      "voice": "m1",
@@ -12411,7 +12411,7 @@
   {
    "key": "tc0cdc0ac",
    "prio": 0,
-   "ord": 164,
+   "ord": 163,
    "segments": [
     {
      "voice": "f2",
@@ -12446,7 +12446,7 @@
   {
    "key": "tdc4cdcb1",
    "prio": 0,
-   "ord": 165,
+   "ord": 164,
    "segments": [
     {
      "voice": "m1",
@@ -12477,7 +12477,7 @@
   {
    "key": "tcce33ce6",
    "prio": 0,
-   "ord": 166,
+   "ord": 165,
    "segments": [
     {
      "voice": "f2",
@@ -12504,7 +12504,7 @@
   {
    "key": "t9102d190",
    "prio": 0,
-   "ord": 167,
+   "ord": 166,
    "segments": [
     {
      "voice": "m1",
@@ -12535,7 +12535,7 @@
   {
    "key": "tf9e0f97f",
    "prio": 0,
-   "ord": 168,
+   "ord": 167,
    "segments": [
     {
      "voice": "f2",
@@ -12566,7 +12566,7 @@
   {
    "key": "tdbb6e2c7",
    "prio": 0,
-   "ord": 169,
+   "ord": 168,
    "segments": [
     {
      "voice": "f2",
@@ -12577,7 +12577,7 @@
   {
    "key": "t67eab9dd",
    "prio": 0,
-   "ord": 170,
+   "ord": 169,
    "segments": [
     {
      "voice": "m1",
@@ -12588,7 +12588,7 @@
   {
    "key": "t3aedbf4a",
    "prio": 0,
-   "ord": 171,
+   "ord": 170,
    "segments": [
     {
      "voice": "f2",
@@ -12599,7 +12599,7 @@
   {
    "key": "ta1471315",
    "prio": 0,
-   "ord": 172,
+   "ord": 171,
    "segments": [
     {
      "voice": "m1",
@@ -12610,7 +12610,7 @@
   {
    "key": "ta0f8842b",
    "prio": 0,
-   "ord": 173,
+   "ord": 172,
    "segments": [
     {
      "voice": "f2",
@@ -12621,7 +12621,7 @@
   {
    "key": "t9232a13f",
    "prio": 0,
-   "ord": 175,
+   "ord": 174,
    "segments": [
     {
      "voice": "f2",
@@ -12676,7 +12676,7 @@
   {
    "key": "taaa3d3c3",
    "prio": 0,
-   "ord": 176,
+   "ord": 175,
    "segments": [
     {
      "voice": "f2",
@@ -12687,7 +12687,7 @@
   {
    "key": "ted28330e",
    "prio": 0,
-   "ord": 177,
+   "ord": 176,
    "segments": [
     {
      "voice": "f2",
@@ -12698,7 +12698,7 @@
   {
    "key": "tc307c06f",
    "prio": 0,
-   "ord": 178,
+   "ord": 177,
    "segments": [
     {
      "voice": "f2",
@@ -12709,7 +12709,7 @@
   {
    "key": "te4be5392",
    "prio": 0,
-   "ord": 179,
+   "ord": 178,
    "segments": [
     {
      "voice": "f2",
@@ -12720,7 +12720,7 @@
   {
    "key": "tc1963123",
    "prio": 0,
-   "ord": 180,
+   "ord": 179,
    "segments": [
     {
      "voice": "f2",
@@ -12731,7 +12731,7 @@
   {
    "key": "t8909e549",
    "prio": 0,
-   "ord": 181,
+   "ord": 180,
    "segments": [
     {
      "voice": "f2",
@@ -12742,7 +12742,7 @@
   {
    "key": "t0f6ee1f3",
    "prio": 0,
-   "ord": 209,
+   "ord": 208,
    "segments": [
     {
      "voice": "f2",
@@ -12753,7 +12753,7 @@
   {
    "key": "t405aa8bd",
    "prio": 0,
-   "ord": 183,
+   "ord": 182,
    "segments": [
     {
      "voice": "f2",
@@ -12764,7 +12764,7 @@
   {
    "key": "t710d9cd5",
    "prio": 0,
-   "ord": 184,
+   "ord": 183,
    "segments": [
     {
      "voice": "f2",
@@ -12775,7 +12775,7 @@
   {
    "key": "ta0543b1b",
    "prio": 0,
-   "ord": 185,
+   "ord": 184,
    "segments": [
     {
      "voice": "f2",
@@ -12786,7 +12786,7 @@
   {
    "key": "t99f3b272",
    "prio": 0,
-   "ord": 186,
+   "ord": 185,
    "segments": [
     {
      "voice": "f2",
@@ -12797,7 +12797,7 @@
   {
    "key": "t59920532",
    "prio": 0,
-   "ord": 187,
+   "ord": 186,
    "segments": [
     {
      "voice": "f2",
@@ -12808,7 +12808,7 @@
   {
    "key": "ta7f79a83",
    "prio": 0,
-   "ord": 188,
+   "ord": 187,
    "segments": [
     {
      "voice": "f2",
@@ -12819,7 +12819,7 @@
   {
    "key": "teda3be0b",
    "prio": 0,
-   "ord": 214,
+   "ord": 213,
    "segments": [
     {
      "voice": "f2",
@@ -12850,7 +12850,7 @@
   {
    "key": "te887a1d6",
    "prio": 0,
-   "ord": 215,
+   "ord": 214,
    "segments": [
     {
      "voice": "m1",
@@ -12881,7 +12881,7 @@
   {
    "key": "t1bb08246",
    "prio": 0,
-   "ord": 216,
+   "ord": 215,
    "segments": [
     {
      "voice": "m1",
@@ -12943,7 +12943,7 @@
   {
    "key": "t7f8498a2",
    "prio": 0,
-   "ord": 218,
+   "ord": 220,
    "segments": [
     {
      "voice": "m1",
@@ -12954,7 +12954,7 @@
   {
    "key": "td884ce34",
    "prio": 0,
-   "ord": 219,
+   "ord": 221,
    "segments": [
     {
      "voice": "m1",
@@ -12965,7 +12965,7 @@
   {
    "key": "t1345a933",
    "prio": 0,
-   "ord": 220,
+   "ord": 222,
    "segments": [
     {
      "voice": "f2",
@@ -12976,7 +12976,7 @@
   {
    "key": "t9323b1fa",
    "prio": 0,
-   "ord": 221,
+   "ord": 223,
    "segments": [
     {
      "voice": "m1",
@@ -12987,7 +12987,7 @@
   {
    "key": "t2c4d2878",
    "prio": 0,
-   "ord": 222,
+   "ord": 224,
    "segments": [
     {
      "voice": "f2",
@@ -12998,7 +12998,7 @@
   {
    "key": "t9043c280",
    "prio": 0,
-   "ord": 223,
+   "ord": 225,
    "segments": [
     {
      "voice": "m1",
@@ -13009,7 +13009,7 @@
   {
    "key": "t48680d6b",
    "prio": 0,
-   "ord": 225,
+   "ord": 227,
    "segments": [
     {
      "voice": "f2",
@@ -13021,7 +13021,7 @@
   {
    "key": "tc03a544b",
    "prio": 0,
-   "ord": 226,
+   "ord": 228,
    "segments": [
     {
      "voice": "f2",
@@ -13032,7 +13032,7 @@
   {
    "key": "t181a4ea0",
    "prio": 0,
-   "ord": 227,
+   "ord": 229,
    "segments": [
     {
      "voice": "f2",
@@ -13043,7 +13043,7 @@
   {
    "key": "tdc5ac08c",
    "prio": 0,
-   "ord": 228,
+   "ord": 230,
    "segments": [
     {
      "voice": "f2",
@@ -13054,7 +13054,7 @@
   {
    "key": "te3c0accc",
    "prio": 0,
-   "ord": 229,
+   "ord": 231,
    "segments": [
     {
      "voice": "f2",
@@ -13065,7 +13065,7 @@
   {
    "key": "tf4e538e2",
    "prio": 0,
-   "ord": 230,
+   "ord": 232,
    "segments": [
     {
      "voice": "f2",
@@ -13076,7 +13076,7 @@
   {
    "key": "t2c12e92c",
    "prio": 0,
-   "ord": 231,
+   "ord": 233,
    "segments": [
     {
      "voice": "f2",
@@ -13087,7 +13087,7 @@
   {
    "key": "t6978a63a",
    "prio": 0,
-   "ord": 232,
+   "ord": 234,
    "segments": [
     {
      "voice": "f2",
@@ -13098,7 +13098,7 @@
   {
    "key": "ta8dc36ce",
    "prio": 0,
-   "ord": 233,
+   "ord": 235,
    "segments": [
     {
      "voice": "f2",
@@ -13109,7 +13109,7 @@
   {
    "key": "tdae81046",
    "prio": 0,
-   "ord": 234,
+   "ord": 236,
    "segments": [
     {
      "voice": "f2",
@@ -13120,7 +13120,7 @@
   {
    "key": "t0c71bf60",
    "prio": 0,
-   "ord": 235,
+   "ord": 237,
    "segments": [
     {
      "voice": "f2",
@@ -13131,7 +13131,7 @@
   {
    "key": "tfcf71be2",
    "prio": 0,
-   "ord": 236,
+   "ord": 238,
    "segments": [
     {
      "voice": "f2",
@@ -13142,7 +13142,7 @@
   {
    "key": "tf538a61b",
    "prio": 0,
-   "ord": 237,
+   "ord": 239,
    "segments": [
     {
      "voice": "f2",
@@ -13153,7 +13153,7 @@
   {
    "key": "tb0847f7c",
    "prio": 0,
-   "ord": 238,
+   "ord": 240,
    "segments": [
     {
      "voice": "f2",
@@ -13164,7 +13164,7 @@
   {
    "key": "t585c7cfc",
    "prio": 0,
-   "ord": 239,
+   "ord": 241,
    "segments": [
     {
      "voice": "f2",
@@ -13175,7 +13175,7 @@
   {
    "key": "t1ce84433",
    "prio": 0,
-   "ord": 240,
+   "ord": 242,
    "segments": [
     {
      "voice": "f2",
@@ -13186,7 +13186,7 @@
   {
    "key": "t69d5a0c8",
    "prio": 0,
-   "ord": 268,
+   "ord": 273,
    "segments": [
     {
      "voice": "m1",
@@ -13197,7 +13197,7 @@
   {
    "key": "t62377b8a",
    "prio": 0,
-   "ord": 269,
+   "ord": 274,
    "segments": [
     {
      "voice": "f2",
@@ -13208,7 +13208,7 @@
   {
    "key": "ta42bb4fa",
    "prio": 0,
-   "ord": 270,
+   "ord": 275,
    "segments": [
     {
      "voice": "f2",
@@ -13219,7 +13219,7 @@
   {
    "key": "t8916197d",
    "prio": 0,
-   "ord": 271,
+   "ord": 276,
    "segments": [
     {
      "voice": "f3",
@@ -13230,7 +13230,7 @@
   {
    "key": "t036811a8",
    "prio": 0,
-   "ord": 272,
+   "ord": 277,
    "segments": [
     {
      "voice": "f1",
@@ -13241,7 +13241,7 @@
   {
    "key": "t7c013746",
    "prio": 0,
-   "ord": 273,
+   "ord": 278,
    "segments": [
     {
      "voice": "f1",
@@ -13252,7 +13252,7 @@
   {
    "key": "ta926a7b6",
    "prio": 0,
-   "ord": 274,
+   "ord": 279,
    "segments": [
     {
      "voice": "f1",
@@ -13263,7 +13263,7 @@
   {
    "key": "ta4bcfa8f",
    "prio": 0,
-   "ord": 275,
+   "ord": 280,
    "segments": [
     {
      "voice": "f1",
@@ -13274,7 +13274,7 @@
   {
    "key": "ta5c3cbf9",
    "prio": 0,
-   "ord": 276,
+   "ord": 281,
    "segments": [
     {
      "voice": "f1",
@@ -13285,7 +13285,7 @@
   {
    "key": "t70a90268",
    "prio": 0,
-   "ord": 277,
+   "ord": 282,
    "segments": [
     {
      "voice": "m1",
@@ -13328,7 +13328,7 @@
   {
    "key": "t27a589af",
    "prio": 0,
-   "ord": 278,
+   "ord": 283,
    "segments": [
     {
      "voice": "f2",
@@ -13363,7 +13363,7 @@
   {
    "key": "t3361caeb",
    "prio": 0,
-   "ord": 279,
+   "ord": 284,
    "segments": [
     {
      "voice": "f2",
@@ -13402,7 +13402,7 @@
   {
    "key": "t7424c52e",
    "prio": 0,
-   "ord": 280,
+   "ord": 285,
    "segments": [
     {
      "voice": "m1",
@@ -13433,7 +13433,7 @@
   {
    "key": "t428c4e7e",
    "prio": 0,
-   "ord": 281,
+   "ord": 286,
    "segments": [
     {
      "voice": "f1",
@@ -13448,7 +13448,7 @@
   {
    "key": "t8e96c9fd",
    "prio": 0,
-   "ord": 282,
+   "ord": 287,
    "segments": [
     {
      "voice": "f1",
@@ -13463,7 +13463,7 @@
   {
    "key": "t1f85df30",
    "prio": 0,
-   "ord": 283,
+   "ord": 288,
    "segments": [
     {
      "voice": "f1",
@@ -13478,7 +13478,7 @@
   {
    "key": "t8678a1b8",
    "prio": 0,
-   "ord": 284,
+   "ord": 289,
    "segments": [
     {
      "voice": "f2",
@@ -13489,7 +13489,7 @@
   {
    "key": "t69f2fb4b",
    "prio": 0,
-   "ord": 285,
+   "ord": 290,
    "segments": [
     {
      "voice": "f2",
@@ -13500,7 +13500,7 @@
   {
    "key": "t1b761729",
    "prio": 0,
-   "ord": 286,
+   "ord": 291,
    "segments": [
     {
      "voice": "f2",
@@ -13511,7 +13511,7 @@
   {
    "key": "t5f843b1c",
    "prio": 0,
-   "ord": 287,
+   "ord": 292,
    "segments": [
     {
      "voice": "f2",
@@ -13522,7 +13522,7 @@
   {
    "key": "tb7f372d3",
    "prio": 0,
-   "ord": 288,
+   "ord": 293,
    "segments": [
     {
      "voice": "f2",
@@ -13533,7 +13533,7 @@
   {
    "key": "t5c7c9dc4",
    "prio": 0,
-   "ord": 289,
+   "ord": 294,
    "segments": [
     {
      "voice": "f2",
@@ -13544,7 +13544,7 @@
   {
    "key": "t3ee00050",
    "prio": 0,
-   "ord": 290,
+   "ord": 295,
    "segments": [
     {
      "voice": "f2",
@@ -13555,7 +13555,7 @@
   {
    "key": "t20ac9602",
    "prio": 0,
-   "ord": 291,
+   "ord": 296,
    "segments": [
     {
      "voice": "f2",
@@ -13566,7 +13566,7 @@
   {
    "key": "t22070191",
    "prio": 0,
-   "ord": 292,
+   "ord": 297,
    "segments": [
     {
      "voice": "f2",
@@ -13577,7 +13577,7 @@
   {
    "key": "t59d32fca",
    "prio": 0,
-   "ord": 293,
+   "ord": 298,
    "segments": [
     {
      "voice": "f2",
@@ -13588,7 +13588,7 @@
   {
    "key": "t35dd9b57",
    "prio": 0,
-   "ord": 294,
+   "ord": 299,
    "segments": [
     {
      "voice": "f2",
@@ -13599,7 +13599,7 @@
   {
    "key": "tea88b857",
    "prio": 0,
-   "ord": 295,
+   "ord": 300,
    "segments": [
     {
      "voice": "f2",
@@ -13610,7 +13610,7 @@
   {
    "key": "td417a3e3",
    "prio": 0,
-   "ord": 296,
+   "ord": 301,
    "segments": [
     {
      "voice": "f2",
@@ -13621,7 +13621,7 @@
   {
    "key": "tf72cd440",
    "prio": 0,
-   "ord": 297,
+   "ord": 302,
    "segments": [
     {
      "voice": "f2",
@@ -13632,7 +13632,7 @@
   {
    "key": "t79834ea7",
    "prio": 0,
-   "ord": 298,
+   "ord": 303,
    "segments": [
     {
      "voice": "f2",
@@ -13643,7 +13643,7 @@
   {
    "key": "tc08ab54d",
    "prio": 0,
-   "ord": 330,
+   "ord": 335,
    "segments": [
     {
      "voice": "f1",
@@ -13654,7 +13654,7 @@
   {
    "key": "td63a81d6",
    "prio": 0,
-   "ord": 331,
+   "ord": 336,
    "segments": [
     {
      "voice": "f1",
@@ -13665,7 +13665,7 @@
   {
    "key": "tb202848c",
    "prio": 0,
-   "ord": 332,
+   "ord": 337,
    "segments": [
     {
      "voice": "f1",
@@ -13676,7 +13676,7 @@
   {
    "key": "tdeccc507",
    "prio": 0,
-   "ord": 333,
+   "ord": 338,
    "segments": [
     {
      "voice": "f1",
@@ -13687,7 +13687,7 @@
   {
    "key": "td2925e17",
    "prio": 0,
-   "ord": 334,
+   "ord": 339,
    "segments": [
     {
      "voice": "f1",
@@ -13698,7 +13698,7 @@
   {
    "key": "tefcd7819",
    "prio": 0,
-   "ord": 335,
+   "ord": 340,
    "segments": [
     {
      "voice": "m1",
@@ -13781,7 +13781,7 @@
   {
    "key": "tafa0de48",
    "prio": 0,
-   "ord": 336,
+   "ord": 341,
    "segments": [
     {
      "voice": "f1",
@@ -13792,7 +13792,7 @@
   {
    "key": "tdbb79d77",
    "prio": 0,
-   "ord": 337,
+   "ord": 342,
    "segments": [
     {
      "voice": "m1",
@@ -13804,7 +13804,7 @@
   {
    "key": "te117443d",
    "prio": 0,
-   "ord": 338,
+   "ord": 343,
    "segments": [
     {
      "voice": "f1",
@@ -13815,7 +13815,7 @@
   {
    "key": "t30b83ab8",
    "prio": 0,
-   "ord": 339,
+   "ord": 344,
    "segments": [
     {
      "voice": "f2",
@@ -13827,7 +13827,7 @@
   {
    "key": "t5b502a80",
    "prio": 0,
-   "ord": 340,
+   "ord": 345,
    "segments": [
     {
      "voice": "f1",
@@ -13838,7 +13838,7 @@
   {
    "key": "t26943fc3",
    "prio": 0,
-   "ord": 341,
+   "ord": 346,
    "segments": [
     {
      "voice": "f2",
@@ -13849,7 +13849,7 @@
   {
    "key": "t1304662a",
    "prio": 0,
-   "ord": 342,
+   "ord": 347,
    "segments": [
     {
      "voice": "f2",
@@ -13860,7 +13860,7 @@
   {
    "key": "t54e22efb",
    "prio": 0,
-   "ord": 343,
+   "ord": 348,
    "segments": [
     {
      "voice": "f2",
@@ -13871,7 +13871,7 @@
   {
    "key": "ted378aeb",
    "prio": 0,
-   "ord": 344,
+   "ord": 349,
    "segments": [
     {
      "voice": "f2",
@@ -13882,7 +13882,7 @@
   {
    "key": "td21a0505",
    "prio": 0,
-   "ord": 345,
+   "ord": 350,
    "segments": [
     {
      "voice": "f2",
@@ -13893,7 +13893,7 @@
   {
    "key": "t626c5926",
    "prio": 0,
-   "ord": 346,
+   "ord": 351,
    "segments": [
     {
      "voice": "f2",
@@ -13904,7 +13904,7 @@
   {
    "key": "tdbe81522",
    "prio": 0,
-   "ord": 347,
+   "ord": 352,
    "segments": [
     {
      "voice": "f2",
@@ -13915,7 +13915,7 @@
   {
    "key": "t16509be7",
    "prio": 0,
-   "ord": 348,
+   "ord": 353,
    "segments": [
     {
      "voice": "f2",
@@ -13926,7 +13926,7 @@
   {
    "key": "t64b49d18",
    "prio": 0,
-   "ord": 349,
+   "ord": 354,
    "segments": [
     {
      "voice": "f2",
@@ -13937,7 +13937,7 @@
   {
    "key": "t8db3802d",
    "prio": 0,
-   "ord": 350,
+   "ord": 355,
    "segments": [
     {
      "voice": "f2",
@@ -13948,7 +13948,7 @@
   {
    "key": "ta97673ec",
    "prio": 0,
-   "ord": 351,
+   "ord": 356,
    "segments": [
     {
      "voice": "f2",
@@ -13959,7 +13959,7 @@
   {
    "key": "ta54b6102",
    "prio": 0,
-   "ord": 352,
+   "ord": 357,
    "segments": [
     {
      "voice": "f2",
@@ -13970,7 +13970,7 @@
   {
    "key": "t7ba2e02e",
    "prio": 0,
-   "ord": 353,
+   "ord": 358,
    "segments": [
     {
      "voice": "f2",
@@ -13981,7 +13981,7 @@
   {
    "key": "tbc2fa2d3",
    "prio": 0,
-   "ord": 354,
+   "ord": 359,
    "segments": [
     {
      "voice": "f2",
@@ -13992,7 +13992,7 @@
   {
    "key": "tb98fd735",
    "prio": 0,
-   "ord": 355,
+   "ord": 360,
    "segments": [
     {
      "voice": "f2",
@@ -14003,7 +14003,7 @@
   {
    "key": "tc7284b25",
    "prio": 0,
-   "ord": 356,
+   "ord": 361,
    "segments": [
     {
      "voice": "f2",
@@ -14014,7 +14014,7 @@
   {
    "key": "t35b61670",
    "prio": 0,
-   "ord": 357,
+   "ord": 362,
    "segments": [
     {
      "voice": "f2",
@@ -14025,7 +14025,7 @@
   {
    "key": "t5dc76332",
    "prio": 0,
-   "ord": 358,
+   "ord": 363,
    "segments": [
     {
      "voice": "f2",
@@ -14036,7 +14036,7 @@
   {
    "key": "ta8c796fd",
    "prio": 0,
-   "ord": 359,
+   "ord": 364,
    "segments": [
     {
      "voice": "f2",
@@ -14047,7 +14047,7 @@
   {
    "key": "ta39fe1c3",
    "prio": 0,
-   "ord": 360,
+   "ord": 365,
    "segments": [
     {
      "voice": "f2",
@@ -14058,7 +14058,7 @@
   {
    "key": "t73f4e6ba",
    "prio": 0,
-   "ord": 361,
+   "ord": 366,
    "segments": [
     {
      "voice": "f2",
@@ -14069,7 +14069,7 @@
   {
    "key": "t4f1959cc",
    "prio": 0,
-   "ord": 362,
+   "ord": 367,
    "segments": [
     {
      "voice": "f2",
@@ -14135,7 +14135,7 @@
   {
    "key": "t8cc7c64f",
    "prio": 0,
-   "ord": 368,
+   "ord": 369,
    "segments": [
     {
      "voice": "m1",
@@ -14198,7 +14198,7 @@
   {
    "key": "t7bff5be7",
    "prio": 0,
-   "ord": 369,
+   "ord": 370,
    "segments": [
     {
      "voice": "f1",
@@ -14209,7 +14209,7 @@
   {
    "key": "tce01f80e",
    "prio": 0,
-   "ord": 370,
+   "ord": 371,
    "segments": [
     {
      "voice": "f1",
@@ -14220,7 +14220,7 @@
   {
    "key": "tb84ec43f",
    "prio": 0,
-   "ord": 371,
+   "ord": 372,
    "segments": [
     {
      "voice": "f1",
@@ -14231,7 +14231,7 @@
   {
    "key": "t7be0eb30",
    "prio": 0,
-   "ord": 372,
+   "ord": 373,
    "segments": [
     {
      "voice": "f1",
@@ -14242,7 +14242,7 @@
   {
    "key": "t50040482",
    "prio": 0,
-   "ord": 373,
+   "ord": 374,
    "segments": [
     {
      "voice": "f1",
@@ -14253,7 +14253,7 @@
   {
    "key": "t7233f490",
    "prio": 0,
-   "ord": 374,
+   "ord": 375,
    "segments": [
     {
      "voice": "f2",
@@ -14264,7 +14264,7 @@
   {
    "key": "t5831cd5b",
    "prio": 0,
-   "ord": 375,
+   "ord": 376,
    "segments": [
     {
      "voice": "f2",
@@ -14275,7 +14275,7 @@
   {
    "key": "t54ccba3f",
    "prio": 0,
-   "ord": 376,
+   "ord": 377,
    "segments": [
     {
      "voice": "f2",
@@ -14286,7 +14286,7 @@
   {
    "key": "tc5520133",
    "prio": 0,
-   "ord": 377,
+   "ord": 378,
    "segments": [
     {
      "voice": "f2",
@@ -14297,7 +14297,7 @@
   {
    "key": "t23050c1d",
    "prio": 0,
-   "ord": 378,
+   "ord": 379,
    "segments": [
     {
      "voice": "f2",
@@ -14308,7 +14308,7 @@
   {
    "key": "t0d2c6686",
    "prio": 0,
-   "ord": 379,
+   "ord": 380,
    "segments": [
     {
      "voice": "f2",
@@ -14319,7 +14319,7 @@
   {
    "key": "t86e150a5",
    "prio": 0,
-   "ord": 380,
+   "ord": 381,
    "segments": [
     {
      "voice": "f2",
@@ -14330,7 +14330,7 @@
   {
    "key": "tf8fba62b",
    "prio": 0,
-   "ord": 381,
+   "ord": 382,
    "segments": [
     {
      "voice": "f2",
@@ -14341,7 +14341,7 @@
   {
    "key": "t6798d1bc",
    "prio": 0,
-   "ord": 382,
+   "ord": 383,
    "segments": [
     {
      "voice": "f2",
@@ -14352,7 +14352,7 @@
   {
    "key": "t047a5623",
    "prio": 0,
-   "ord": 383,
+   "ord": 384,
    "segments": [
     {
      "voice": "f2",
@@ -14363,7 +14363,7 @@
   {
    "key": "tad78b155",
    "prio": 0,
-   "ord": 384,
+   "ord": 385,
    "segments": [
     {
      "voice": "f2",
@@ -14374,7 +14374,7 @@
   {
    "key": "t0e86a781",
    "prio": 0,
-   "ord": 385,
+   "ord": 386,
    "segments": [
     {
      "voice": "f2",
@@ -14385,7 +14385,7 @@
   {
    "key": "t4f67cde2",
    "prio": 0,
-   "ord": 386,
+   "ord": 387,
    "segments": [
     {
      "voice": "f2",
@@ -14396,7 +14396,7 @@
   {
    "key": "tf98315ec",
    "prio": 0,
-   "ord": 387,
+   "ord": 388,
    "segments": [
     {
      "voice": "f2",
@@ -14407,7 +14407,7 @@
   {
    "key": "t3c6c3019",
    "prio": 0,
-   "ord": 388,
+   "ord": 389,
    "segments": [
     {
      "voice": "f2",
@@ -14418,7 +14418,7 @@
   {
    "key": "t3e873086",
    "prio": 0,
-   "ord": 389,
+   "ord": 390,
    "segments": [
     {
      "voice": "f2",
@@ -14429,7 +14429,7 @@
   {
    "key": "t4bb29357",
    "prio": 0,
-   "ord": 299,
+   "ord": 304,
    "segments": [
     {
      "voice": "f2",
@@ -14440,7 +14440,7 @@
   {
    "key": "ta93ce450",
    "prio": 0,
-   "ord": 300,
+   "ord": 305,
    "segments": [
     {
      "voice": "m1",
@@ -14451,7 +14451,7 @@
   {
    "key": "td14110c6",
    "prio": 0,
-   "ord": 301,
+   "ord": 306,
    "segments": [
     {
      "voice": "f3",
@@ -14462,7 +14462,7 @@
   {
    "key": "t61b64f1f",
    "prio": 0,
-   "ord": 302,
+   "ord": 307,
    "segments": [
     {
      "voice": "f2",
@@ -14473,7 +14473,7 @@
   {
    "key": "t13394218",
    "prio": 0,
-   "ord": 303,
+   "ord": 308,
    "segments": [
     {
      "voice": "f1",
@@ -14484,7 +14484,7 @@
   {
    "key": "t35d9bc69",
    "prio": 0,
-   "ord": 304,
+   "ord": 309,
    "segments": [
     {
      "voice": "f1",
@@ -14495,7 +14495,7 @@
   {
    "key": "td4752b4a",
    "prio": 0,
-   "ord": 305,
+   "ord": 310,
    "segments": [
     {
      "voice": "f1",
@@ -14506,7 +14506,7 @@
   {
    "key": "tf676cdcb",
    "prio": 0,
-   "ord": 306,
+   "ord": 311,
    "segments": [
     {
      "voice": "f1",
@@ -14517,7 +14517,7 @@
   {
    "key": "t51f7133c",
    "prio": 0,
-   "ord": 307,
+   "ord": 312,
    "segments": [
     {
      "voice": "f1",
@@ -14528,7 +14528,7 @@
   {
    "key": "t94727b01",
    "prio": 0,
-   "ord": 308,
+   "ord": 313,
    "segments": [
     {
      "voice": "m1",
@@ -14563,7 +14563,7 @@
   {
    "key": "t4079a8f9",
    "prio": 0,
-   "ord": 309,
+   "ord": 314,
    "segments": [
     {
      "voice": "f2",
@@ -14594,7 +14594,7 @@
   {
    "key": "t8c6d42a0",
    "prio": 0,
-   "ord": 310,
+   "ord": 315,
    "segments": [
     {
      "voice": "m1",
@@ -14629,7 +14629,7 @@
   {
    "key": "t38cdd8ea",
    "prio": 0,
-   "ord": 311,
+   "ord": 316,
    "segments": [
     {
      "voice": "f2",
@@ -14656,7 +14656,7 @@
   {
    "key": "tbd7fff11",
    "prio": 0,
-   "ord": 312,
+   "ord": 317,
    "segments": [
     {
      "voice": "f1",
@@ -14671,7 +14671,7 @@
   {
    "key": "t4812fc37",
    "prio": 0,
-   "ord": 313,
+   "ord": 318,
    "segments": [
     {
      "voice": "f1",
@@ -14686,7 +14686,7 @@
   {
    "key": "tb2852d33",
    "prio": 0,
-   "ord": 314,
+   "ord": 319,
    "segments": [
     {
      "voice": "f1",
@@ -14701,7 +14701,7 @@
   {
    "key": "t8ed6f0c2",
    "prio": 0,
-   "ord": 315,
+   "ord": 320,
    "segments": [
     {
      "voice": "f2",
@@ -14712,7 +14712,7 @@
   {
    "key": "t6b6ded05",
    "prio": 0,
-   "ord": 316,
+   "ord": 321,
    "segments": [
     {
      "voice": "f2",
@@ -14723,7 +14723,7 @@
   {
    "key": "t36a1666b",
    "prio": 0,
-   "ord": 317,
+   "ord": 322,
    "segments": [
     {
      "voice": "f2",
@@ -14734,7 +14734,7 @@
   {
    "key": "t633a0eee",
    "prio": 0,
-   "ord": 318,
+   "ord": 323,
    "segments": [
     {
      "voice": "f2",
@@ -14745,7 +14745,7 @@
   {
    "key": "t178467d3",
    "prio": 0,
-   "ord": 319,
+   "ord": 324,
    "segments": [
     {
      "voice": "f2",
@@ -14756,7 +14756,7 @@
   {
    "key": "tffabe82e",
    "prio": 0,
-   "ord": 320,
+   "ord": 325,
    "segments": [
     {
      "voice": "f2",
@@ -14767,7 +14767,7 @@
   {
    "key": "tabc83c96",
    "prio": 0,
-   "ord": 321,
+   "ord": 326,
    "segments": [
     {
      "voice": "f2",
@@ -14778,7 +14778,7 @@
   {
    "key": "t26a71641",
    "prio": 0,
-   "ord": 322,
+   "ord": 327,
    "segments": [
     {
      "voice": "f2",
@@ -14789,7 +14789,7 @@
   {
    "key": "t7b833ced",
    "prio": 0,
-   "ord": 323,
+   "ord": 328,
    "segments": [
     {
      "voice": "f2",
@@ -14800,7 +14800,7 @@
   {
    "key": "t3693a68b",
    "prio": 0,
-   "ord": 324,
+   "ord": 329,
    "segments": [
     {
      "voice": "f2",
@@ -14811,7 +14811,7 @@
   {
    "key": "t73fb5963",
    "prio": 0,
-   "ord": 325,
+   "ord": 330,
    "segments": [
     {
      "voice": "f2",
@@ -14822,7 +14822,7 @@
   {
    "key": "t58283174",
    "prio": 0,
-   "ord": 326,
+   "ord": 331,
    "segments": [
     {
      "voice": "f2",
@@ -14833,7 +14833,7 @@
   {
    "key": "t654022bb",
    "prio": 0,
-   "ord": 327,
+   "ord": 332,
    "segments": [
     {
      "voice": "f2",
@@ -14844,7 +14844,7 @@
   {
    "key": "t283c80dc",
    "prio": 0,
-   "ord": 328,
+   "ord": 333,
    "segments": [
     {
      "voice": "f2",
@@ -14855,7 +14855,7 @@
   {
    "key": "t47dcbe0e",
    "prio": 0,
-   "ord": 329,
+   "ord": 334,
    "segments": [
     {
      "voice": "f2",
@@ -18187,7 +18187,7 @@
   {
    "key": "tf9712b11",
    "prio": 0,
-   "ord": 190,
+   "ord": 189,
    "segments": [
     {
      "voice": "m1",
@@ -18218,7 +18218,7 @@
   {
    "key": "t4aeaab04",
    "prio": 0,
-   "ord": 191,
+   "ord": 190,
    "segments": [
     {
      "voice": "f2",
@@ -18249,7 +18249,7 @@
   {
    "key": "t9d819e1c",
    "prio": 0,
-   "ord": 192,
+   "ord": 191,
    "segments": [
     {
      "voice": "m1",
@@ -18280,7 +18280,7 @@
   {
    "key": "tb94dd2f6",
    "prio": 0,
-   "ord": 193,
+   "ord": 192,
    "segments": [
     {
      "voice": "f2",
@@ -18307,7 +18307,7 @@
   {
    "key": "ta1b3762a",
    "prio": 0,
-   "ord": 194,
+   "ord": 193,
    "segments": [
     {
      "voice": "f2",
@@ -18334,7 +18334,7 @@
   {
    "key": "t87f25e88",
    "prio": 0,
-   "ord": 195,
+   "ord": 194,
    "segments": [
     {
      "voice": "f2",
@@ -18365,7 +18365,7 @@
   {
    "key": "t37c85fd0",
    "prio": 0,
-   "ord": 196,
+   "ord": 195,
    "segments": [
     {
      "voice": "m1",
@@ -18396,7 +18396,7 @@
   {
    "key": "tff021de1",
    "prio": 0,
-   "ord": 197,
+   "ord": 196,
    "segments": [
     {
      "voice": "m1",
@@ -18407,7 +18407,7 @@
   {
    "key": "ta94de454",
    "prio": 0,
-   "ord": 198,
+   "ord": 197,
    "segments": [
     {
      "voice": "f2",
@@ -18418,7 +18418,7 @@
   {
    "key": "tb5825ee5",
    "prio": 0,
-   "ord": 199,
+   "ord": 198,
    "segments": [
     {
      "voice": "m1",
@@ -18429,7 +18429,7 @@
   {
    "key": "t9af595c0",
    "prio": 0,
-   "ord": 200,
+   "ord": 199,
    "segments": [
     {
      "voice": "f2",
@@ -18440,7 +18440,7 @@
   {
    "key": "t7aa75c1c",
    "prio": 0,
-   "ord": 201,
+   "ord": 200,
    "segments": [
     {
      "voice": "m1",
@@ -18451,7 +18451,7 @@
   {
    "key": "te7b5a9ef",
    "prio": 0,
-   "ord": 203,
+   "ord": 202,
    "segments": [
     {
      "voice": "m1",
@@ -18506,7 +18506,7 @@
   {
    "key": "t5b2183e6",
    "prio": 0,
-   "ord": 204,
+   "ord": 203,
    "segments": [
     {
      "voice": "f2",
@@ -18517,7 +18517,7 @@
   {
    "key": "t5c1a7c69",
    "prio": 0,
-   "ord": 205,
+   "ord": 204,
    "segments": [
     {
      "voice": "f2",
@@ -18528,7 +18528,7 @@
   {
    "key": "tabacb16d",
    "prio": 0,
-   "ord": 206,
+   "ord": 205,
    "segments": [
     {
      "voice": "f2",
@@ -18539,7 +18539,7 @@
   {
    "key": "t080dd7ba",
    "prio": 0,
-   "ord": 207,
+   "ord": 206,
    "segments": [
     {
      "voice": "f2",
@@ -18550,7 +18550,7 @@
   {
    "key": "t809eecc9",
    "prio": 0,
-   "ord": 208,
+   "ord": 207,
    "segments": [
     {
      "voice": "f2",
@@ -18561,7 +18561,7 @@
   {
    "key": "t70f64cb9",
    "prio": 0,
-   "ord": 210,
+   "ord": 209,
    "segments": [
     {
      "voice": "f2",
@@ -18572,7 +18572,7 @@
   {
    "key": "t5cab948c",
    "prio": 0,
-   "ord": 211,
+   "ord": 210,
    "segments": [
     {
      "voice": "f2",
@@ -18583,7 +18583,7 @@
   {
    "key": "t996e5fcb",
    "prio": 0,
-   "ord": 212,
+   "ord": 211,
    "segments": [
     {
      "voice": "f2",
@@ -18594,7 +18594,7 @@
   {
    "key": "t0e9cd286",
    "prio": 0,
-   "ord": 213,
+   "ord": 212,
    "segments": [
     {
      "voice": "f2",
@@ -18605,7 +18605,7 @@
   {
    "key": "td77c95ef",
    "prio": 0,
-   "ord": 241,
+   "ord": 243,
    "segments": [
     {
      "voice": "f2",
@@ -18636,7 +18636,7 @@
   {
    "key": "t6a6ad082",
    "prio": 0,
-   "ord": 242,
+   "ord": 244,
    "segments": [
     {
      "voice": "m1",
@@ -18667,7 +18667,7 @@
   {
    "key": "tcd8e22c6",
    "prio": 0,
-   "ord": 243,
+   "ord": 245,
    "segments": [
     {
      "voice": "f2",
@@ -18729,7 +18729,7 @@
   {
    "key": "tf1164457",
    "prio": 0,
-   "ord": 245,
+   "ord": 250,
    "segments": [
     {
      "voice": "f2",
@@ -18740,7 +18740,7 @@
   {
    "key": "t4e43e35d",
    "prio": 0,
-   "ord": 246,
+   "ord": 251,
    "segments": [
     {
      "voice": "m1",
@@ -18751,7 +18751,7 @@
   {
    "key": "t150c1cd0",
    "prio": 0,
-   "ord": 247,
+   "ord": 252,
    "segments": [
     {
      "voice": "f2",
@@ -18762,7 +18762,7 @@
   {
    "key": "tf20331e6",
    "prio": 0,
-   "ord": 248,
+   "ord": 253,
    "segments": [
     {
      "voice": "m1",
@@ -18773,7 +18773,7 @@
   {
    "key": "t0da70337",
    "prio": 0,
-   "ord": 249,
+   "ord": 254,
    "segments": [
     {
      "voice": "f2",
@@ -18784,7 +18784,7 @@
   {
    "key": "tc56287cc",
    "prio": 0,
-   "ord": 250,
+   "ord": 255,
    "segments": [
     {
      "voice": "m1",
@@ -18795,7 +18795,7 @@
   {
    "key": "t5be1db05",
    "prio": 0,
-   "ord": 252,
+   "ord": 257,
    "segments": [
     {
      "voice": "f2",
@@ -18807,7 +18807,7 @@
   {
    "key": "t294e72a7",
    "prio": 0,
-   "ord": 253,
+   "ord": 258,
    "segments": [
     {
      "voice": "f2",
@@ -18818,7 +18818,7 @@
   {
    "key": "t6a94a777",
    "prio": 0,
-   "ord": 254,
+   "ord": 259,
    "segments": [
     {
      "voice": "f2",
@@ -18829,7 +18829,7 @@
   {
    "key": "tb4375961",
    "prio": 0,
-   "ord": 255,
+   "ord": 260,
    "segments": [
     {
      "voice": "f2",
@@ -18840,7 +18840,7 @@
   {
    "key": "tc87b1248",
    "prio": 0,
-   "ord": 256,
+   "ord": 261,
    "segments": [
     {
      "voice": "f2",
@@ -18851,7 +18851,7 @@
   {
    "key": "tb0cb6fc1",
    "prio": 0,
-   "ord": 257,
+   "ord": 262,
    "segments": [
     {
      "voice": "f2",
@@ -18862,7 +18862,7 @@
   {
    "key": "tf479b6ba",
    "prio": 0,
-   "ord": 258,
+   "ord": 263,
    "segments": [
     {
      "voice": "f2",
@@ -18873,7 +18873,7 @@
   {
    "key": "t63783481",
    "prio": 0,
-   "ord": 259,
+   "ord": 264,
    "segments": [
     {
      "voice": "f2",
@@ -18884,7 +18884,7 @@
   {
    "key": "t1def7a6f",
    "prio": 0,
-   "ord": 260,
+   "ord": 265,
    "segments": [
     {
      "voice": "f2",
@@ -18895,7 +18895,7 @@
   {
    "key": "tc91c7761",
    "prio": 0,
-   "ord": 261,
+   "ord": 266,
    "segments": [
     {
      "voice": "f2",
@@ -18906,7 +18906,7 @@
   {
    "key": "t9e990cde",
    "prio": 0,
-   "ord": 262,
+   "ord": 267,
    "segments": [
     {
      "voice": "f2",
@@ -18917,7 +18917,7 @@
   {
    "key": "t33bee7c6",
    "prio": 0,
-   "ord": 263,
+   "ord": 268,
    "segments": [
     {
      "voice": "f2",
@@ -18928,7 +18928,7 @@
   {
    "key": "tfff8affa",
    "prio": 0,
-   "ord": 264,
+   "ord": 269,
    "segments": [
     {
      "voice": "f2",
@@ -18939,7 +18939,7 @@
   {
    "key": "tc4636cfe",
    "prio": 0,
-   "ord": 265,
+   "ord": 270,
    "segments": [
     {
      "voice": "f2",
@@ -18950,7 +18950,7 @@
   {
    "key": "t19de7041",
    "prio": 0,
-   "ord": 266,
+   "ord": 271,
    "segments": [
     {
      "voice": "f2",
@@ -18961,7 +18961,7 @@
   {
    "key": "tc2acbbec",
    "prio": 0,
-   "ord": 267,
+   "ord": 272,
    "segments": [
     {
      "voice": "f2",
@@ -29780,6 +29780,409 @@
     {
      "voice": "f2",
      "text": "Ich suche eine Arbeit als Verkäuferin."
+    }
+   ]
+  },
+  {
+   "key": "tc2829af0",
+   "prio": 0,
+   "ord": 106,
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Jelena, kurze Frage: Du trägst die Werte immer gleich beim Patienten ins Tablet ein, oder? Ich mach das lieber abends im Büro. In Ruhe, alles auf einmal."
+    },
+    {
+     "voice": "f2",
+     "text": "Ja, ich mach das direkt vor Ort. Weißt du, früher hab ich das genauso gemacht wie du. Und dann sitzt man abends da und überlegt: War der Blutdruck bei Frau Stein jetzt hundertvierzig oder hundertsechzig? Hat Herr Yıldırım seine Tabletten genommen oder nicht?"
+    },
+    {
+     "voice": "m1",
+     "text": "Na ja, so schlimm ist es bei mir nicht. Ich hab ein ziemlich gutes Gedächtnis."
+    },
+    {
+     "voice": "f2",
+     "text": "Das dachte ich auch. Aber nach acht, neun Besuchen verschwimmt alles. Und wenn dann was Falsches drinsteht, arbeitet die Spätschicht mit falschen Zahlen. Das kostet zwei Minuten pro Besuch, mehr nicht."
+    },
+    {
+     "voice": "m1",
+     "text": "Hm. Und abends spar ich mir dann die ganze Schreiberei … Okay, ich probier’s mal."
+    }
+   ]
+  },
+  {
+   "key": "t90c5562b",
+   "prio": 0,
+   "ord": 107,
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Frau Lindqvist, wir haben schon wieder drei Beschwerden wegen des Frühstücks. Zwischen acht und neun ist kein Tisch frei, die Gäste stehen mit ihren Tellern herum. Einer wollte sogar sein Geld fürs Frühstück zurück."
+    },
+    {
+     "voice": "f2",
+     "text": "Ich weiß. Aber jedes Mal Geld zurückgeben, das kann ja keine Lösung sein."
+    },
+    {
+     "voice": "m2",
+     "text": "Ich dachte, wir nehmen für die Stoßzeit eine Aushilfe dazu, die schneller abräumt."
+    },
+    {
+     "voice": "f2",
+     "text": "Das hilft nur wenig, glaube ich. Das Problem sind nicht die Tische, sondern dass alle gleichzeitig kommen. Um sieben ist der Raum halb leer, um halb zehn auch. Wenn Sie den Gästen beim Einchecken sagen, wann es ruhig ist, und wir einen kleinen Hinweis aufs Zimmer legen, dann verteilt sich das von allein. Und es kostet uns fast nichts."
+    },
+    {
+     "voice": "m2",
+     "text": "Gut. Versuchen wir es zwei Wochen lang so."
+    }
+   ]
+  },
+  {
+   "key": "tf99ea92d",
+   "prio": 0,
+   "ord": 108,
+   "segments": [
+    {
+     "voice": "f3",
+     "text": "Herr Kaminski, der Kunde mit dem blauen Kombi ist da. Soll ich Sie holen, oder …?"
+    },
+    {
+     "voice": "m1",
+     "text": "Nein, nein, das machst du heute selbst. Du hast die Bremsen gewechselt, du weißt am besten, was gemacht wurde."
+    },
+    {
+     "voice": "f3",
+     "text": "Ich? Aber ich bin doch erst im zweiten Lehrjahr. Was ist, wenn er was fragt, das ich nicht weiß?"
+    },
+    {
+     "voice": "m1",
+     "text": "Dann sagst du ehrlich: Moment, da frag ich kurz nach. Das ist völlig in Ordnung. Schau mal, schrauben lernst du hier jeden Tag. Aber einem Kunden erklären, warum eine Reparatur so viel kostet – das lernt man nur, wenn man es selbst macht. Und je früher, desto besser."
+    },
+    {
+     "voice": "f3",
+     "text": "Okay … dann geh ich mal."
+    }
+   ]
+  },
+  {
+   "key": "t428a9376",
+   "prio": 0,
+   "ord": 109,
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Frau Haddad, kommen Sie nachher auch zur Besprechung um zehn?"
+    },
+    {
+     "voice": "f2",
+     "text": "Worum geht’s denn?"
+    },
+    {
+     "voice": "m1",
+     "text": "Ehrlich gesagt, weiß ich das auch nicht genau. Irgendwas mit dem neuen Kundenportal, glaube ich."
+    },
+    {
+     "voice": "f2",
+     "text": "Sehen Sie, genau das ist das Problem. Wir sitzen dann eine Stunde da, die Hälfte muss sich erst mal einlesen, und am Ende wird nichts entschieden. Ich hab der Teamleitung schon gesagt: Wer eine Besprechung macht, schickt einen Tag vorher die Themen rum. Dann kann sich jeder vorbereiten. Und man sieht auch, ob man überhaupt dabei sein muss."
+    },
+    {
+     "voice": "m1",
+     "text": "Klingt vernünftig. Heute geh ich aber trotzdem hin."
+    },
+    {
+     "voice": "f2",
+     "text": "Ich auch. Aber ich frag gleich am Anfang, was wir heute eigentlich entscheiden wollen."
+    }
+   ]
+  },
+  {
+   "key": "tbded0979",
+   "prio": 0,
+   "ord": 132,
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Sollen wir die Teamsitzung nicht auf Montag legen? Dann starten alle informiert in die Woche."
+    },
+    {
+     "voice": "m1",
+     "text": "Montag? Da kommen im Lager die meisten Lieferungen, da hat keiner Zeit. Mittwoch ist viel ruhiger. Dann sind auch wirklich alle dabei."
+    }
+   ]
+  },
+  {
+   "key": "tfdbc672d",
+   "prio": 0,
+   "ord": 133,
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Der Drucker ist schon wieder kaputt. Ich bestell einfach einen neuen."
+    },
+    {
+     "voice": "f2",
+     "text": "Warte mal. Der ist doch erst zwei Jahre alt. Ruf lieber den Service an – eine Reparatur ist viel billiger als ein neues Gerät."
+    }
+   ]
+  },
+  {
+   "key": "tde43128c",
+   "prio": 0,
+   "ord": 138,
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Radio Westwelle. Es ist zwölf Uhr. Sie hören Nachrichten. Die Stadt Hallerstedt testet ab dem ersten März kostenlose Busfahrten. Allerdings gilt das Angebot nur an Samstagen und Sonntagen. Der Versuch ist zunächst auf sechs Monate begrenzt. Danach will der Stadtrat entscheiden, ob es weitergeht. Ziel sei es, so eine Sprecherin der Stadt, an den Wochenenden weniger Autos in der Innenstadt zu haben. Immer mehr ältere Beschäftigte möchten nach dem Erreichen des Rentenalters weiterarbeiten – allerdings mit weniger Stunden. Das ergab eine Umfrage unter rund zweitausend Arbeitnehmerinnen und Arbeitnehmern zwischen fünfundfünfzig und fünfundsechzig Jahren. Fast die Hälfte der Befragten kann sich vorstellen, nach der Rente noch in Teilzeit im Beruf zu bleiben. Als wichtigsten Grund nannten viele den Kontakt zu Kolleginnen und Kollegen, erst danach kam das zusätzliche Einkommen. Der Fahrradteile-Hersteller Rennwerk verschiebt den Bau seines neuen Werks im Gewerbegebiet Lindenfeld. Ursprünglich sollte die Fabrik im Herbst eröffnet werden und zweihundert neue Arbeitsplätze bringen. Nach Angaben der Geschäftsführung findet das Unternehmen aber nicht genug Fachkräfte. Man wolle das Projekt nicht aufgeben, sondern erst einmal mehr junge Menschen selbst ausbilden. Autofahrerinnen und Autofahrer im Raum Ostermoor müssen sich auf längere Fahrzeiten einstellen. Die Brücke über den Kamp-Kanal bleibt voraussichtlich bis Ende des Jahres gesperrt. Bei einer Prüfung waren Risse in mehreren Stützen entdeckt worden. Eine Umleitung ist ausgeschildert. Die Verkehrsbehörde rät Pendlern, morgens mindestens zwanzig Minuten mehr einzuplanen oder auf die Bahn umzusteigen. Und nun das Wetter: Heute Nachmittag ziehen von Westen Regenwolken auf, örtlich kann es Gewitter geben. Die Temperaturen erreichen höchstens vierzehn Grad. Ab Samstag wird es freundlicher und deutlich wärmer, mit bis zu zwanzig Grad."
+    }
+   ]
+  },
+  {
+   "key": "t0edc6a51",
+   "prio": 0,
+   "ord": 157,
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Das Freibad in Lindenau bleibt in diesem Sommer geschlossen. Grund sind Bauarbeiten an den Becken, die länger dauern als geplant. Die Stadt bietet als Ersatz einen kostenlosen Bus zum Badesee an. Die Verbraucherzentrale bietet ab Mai eine telefonische Beratung zu Handyverträgen an. Das Angebot ist kostenlos und gilt montags bis freitags."
+    }
+   ]
+  },
+  {
+   "key": "tea70b18d",
+   "prio": 0,
+   "ord": 216,
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Frau Mbeki, haben Sie kurz Zeit? Der neue Kollege, Herr Sørensen, stand heute Morgen zwanzig Minuten in der falschen Halle. Keiner hat ihm gesagt, wo er hinsoll."
+    },
+    {
+     "voice": "f3",
+     "text": "Oh nein. Ich hatte ihm doch den Plan per E-Mail geschickt."
+    },
+    {
+     "voice": "m2",
+     "text": "Ja, schon. Aber so ein Plan beantwortet halt keine Fragen. Wo ist der Pausenraum, wen ruf ich an, wenn der Scanner spinnt … Ich finde, jeder Neue sollte in den ersten Wochen einen festen Kollegen an der Seite haben. Einen, den er alles fragen kann, ohne sich dumm zu fühlen."
+    },
+    {
+     "voice": "f3",
+     "text": "Hm, das bindet aber auch Zeit."
+    },
+    {
+     "voice": "m2",
+     "text": "Am Anfang ein bisschen, klar. Aber wenn die Leute sich verloren fühlen, sind sie nach drei Monaten wieder weg. Und dann fangen wir ganz von vorne an."
+    },
+    {
+     "voice": "f3",
+     "text": "Da ist was dran. Würden Sie das bei Herrn Sørensen übernehmen?"
+    }
+   ]
+  },
+  {
+   "key": "t8b285579",
+   "prio": 0,
+   "ord": 217,
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Anna, mir ist heute was Blödes passiert. Beim Mittagessen hätte ich dem kleinen Emil fast den Nachtisch mit Nüssen gegeben. Dabei hat er doch eine Allergie. Zum Glück hat Merve es noch gesehen."
+    },
+    {
+     "voice": "f3",
+     "text": "Oh, Mensch. Aber es ist ja nichts passiert. Musst du jetzt nicht an die große Glocke hängen."
+    },
+    {
+     "voice": "f2",
+     "text": "Doch, ich will das in der Teamsitzung am Donnerstag ansprechen. Nicht, weil ich mich schlecht fühlen will. Aber wenn mir das passiert, kann das jedem passieren. Die Allergieliste hängt in der Küche, aber nicht im Gruppenraum. Vielleicht müssen wir da was ändern."
+    },
+    {
+     "voice": "f3",
+     "text": "Stimmt eigentlich. Wenn keiner was sagt, ändert sich auch nichts."
+    },
+    {
+     "voice": "f2",
+     "text": "Genau. Lieber einmal kurz unangenehm als irgendwann ein echter Notfall."
+    }
+   ]
+  },
+  {
+   "key": "t05e005cc",
+   "prio": 0,
+   "ord": 218,
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Frau Kühn, das Telefon klingelt schon wieder. Ich bin heute schon dreimal aus der Behandlung gerannt."
+    },
+    {
+     "voice": "f2",
+     "text": "Ich weiß, am Empfang ist es genauso. Die Hälfte der Anrufe sind Leute, die einfach nur einen Termin wollen."
+    },
+    {
+     "voice": "m1",
+     "text": "Eben. Und genau deshalb sollten wir endlich die Terminbuchung über die Website anbieten. Die Patienten sehen dann selbst, wann was frei ist, und buchen auch abends um elf, wenn sie Zeit haben. Wir hätten mehr Ruhe für die Behandlung."
+    },
+    {
+     "voice": "f2",
+     "text": "Und die älteren Patienten? Die buchen doch nicht im Internet."
+    },
+    {
+     "voice": "m1",
+     "text": "Die können ja weiter anrufen. Aber wenn nur die Hälfte online bucht, sparen wir jeden Tag bestimmt eine Stunde."
+    },
+    {
+     "voice": "f2",
+     "text": "Okay. Ich frag mal, was so ein Programm kostet."
+    }
+   ]
+  },
+  {
+   "key": "t6568b775",
+   "prio": 0,
+   "ord": 219,
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Herr Osei, Sie essen ja schon wieder am Schreibtisch. Kommen Sie doch mit in die Kantine."
+    },
+    {
+     "voice": "m1",
+     "text": "Ach, ich hab so viel auf dem Tisch. So kann ich nebenbei noch ein paar E-Mails lesen."
+    },
+    {
+     "voice": "m2",
+     "text": "Genau das meine ich. Das ist doch keine Pause. Sie schauen die ganze Zeit auf denselben Bildschirm, und um drei sind Sie todmüde. Eine halbe Stunde raus aus dem Büro, mit anderen reden, ein paar Schritte gehen – danach arbeiten Sie viel konzentrierter. Glauben Sie mir, ich hab das früher auch so gemacht wie Sie."
+    },
+    {
+     "voice": "m1",
+     "text": "Hm. Na gut, heute komm ich mit. Aber nur eine halbe Stunde."
+    }
+   ]
+  },
+  {
+   "key": "tdd4ef3d9",
+   "prio": 0,
+   "ord": 246,
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Frau Petrova, soll ich die Joghurts hier wegwerfen? Die laufen morgen ab."
+    },
+    {
+     "voice": "f2",
+     "text": "Moment, nicht wegwerfen. Die sind doch noch völlig in Ordnung."
+    },
+    {
+     "voice": "m1",
+     "text": "Ja, aber die kauft doch keiner mehr, wenn morgen das Datum drauf ist."
+    },
+    {
+     "voice": "f2",
+     "text": "Doch, wenn sie billiger sind. Kleb einen roten Aufkleber drauf, minus fünfzig Prozent, und stell sie vorne an die Kasse. Du wirst sehen, um sechs ist alles weg. Wir verdienen zwar weniger daran, aber immer noch mehr, als wenn alles in der Tonne landet. Und es ist einfach schade um die Lebensmittel."
+    },
+    {
+     "voice": "m1",
+     "text": "Okay, mach ich. Gilt das auch für das Brot von gestern?"
+    },
+    {
+     "voice": "f2",
+     "text": "Für das Brot auch, ja."
+    }
+   ]
+  },
+  {
+   "key": "t4be7e4c4",
+   "prio": 0,
+   "ord": 247,
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Chef, ich hab hier die Anmeldung für den Kurs zu Solaranlagen. Sechs Wochen, jeden Samstag. Ich weiß, der ist nicht billig."
+    },
+    {
+     "voice": "m1",
+     "text": "Eintausendneunhundert Euro, ja, das hab ich gesehen. Das ist schon eine Menge Geld."
+    },
+    {
+     "voice": "m2",
+     "text": "Schon. Aber überlegen Sie mal: Letzten Monat haben wir drei Anfragen für Solaranlagen abgesagt, weil keiner von uns das machen darf. Mit dem Zertifikat können wir diese Aufträge annehmen. Nach zwei, drei Anlagen hat sich der Kurs bezahlt gemacht."
+    },
+    {
+     "voice": "m1",
+     "text": "Hm. Und wenn Sie danach zur Konkurrenz gehen?"
+    },
+    {
+     "voice": "m2",
+     "text": "Ich hab nicht vor, zu gehen. Mir gefällt’s hier. Und ehrlich gesagt: Wer in seine Leute investiert, der behält sie auch eher."
+    },
+    {
+     "voice": "m1",
+     "text": "Na gut. Ich unterschreib das."
+    }
+   ]
+  },
+  {
+   "key": "t72956e65",
+   "prio": 0,
+   "ord": 248,
+   "segments": [
+    {
+     "voice": "f3",
+     "text": "Herr Lange, haben Sie gesehen? Die Geschäftsleitung überlegt, dass wir auf alle E-Mails erst mal eine automatische Antwort schicken. „Vielen Dank, wir melden uns.“"
+    },
+    {
+     "voice": "m1",
+     "text": "Ja, hab ich gehört. Spart ja Zeit."
+    },
+    {
+     "voice": "f3",
+     "text": "Ich weiß nicht. Ich hab mir die Beschwerden vom letzten Monat angeschaut. Die Leute ärgern sich am meisten, wenn sie das Gefühl haben, mit einer Maschine zu reden. Zwei, drei persönliche Sätze mit Namen – „Ich kümmere mich darum und melde mich bis morgen“ – das dauert keine Minute, und die Kunden sind schon viel ruhiger."
+    },
+    {
+     "voice": "m1",
+     "text": "Aber bei zweihundert Mails am Tag?"
+    },
+    {
+     "voice": "f3",
+     "text": "Dann sind es zweihundert Minuten. Und dafür bekommen wir viel weniger Nachfragen, wo denn die Antwort bleibt."
+    }
+   ]
+  },
+  {
+   "key": "tac103764",
+   "prio": 0,
+   "ord": 249,
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Sag mal, Lea, warum machst du die Übergabe eigentlich immer im Zimmer und nicht im Stationszimmer wie alle anderen?"
+    },
+    {
+     "voice": "f3",
+     "text": "Weil der Patient dann dabei ist. Der hört, was wir besprechen, und kann gleich sagen: „Nein, die Schmerzen sind eher schlimmer geworden“ oder „Ich hab heute noch nichts getrunken“. Das wissen wir sonst oft gar nicht."
+    },
+    {
+     "voice": "f2",
+     "text": "Und was ist mit dem Datenschutz? Im Zimmer liegen doch oft zwei Leute."
+    },
+    {
+     "voice": "f3",
+     "text": "Klar, heikle Sachen bespreche ich draußen. Aber das meiste ist ja nicht geheim. Und die Patienten fühlen sich ernst genommen. Die wissen dann auch, wer in der nächsten Schicht für sie zuständig ist."
+    },
+    {
+     "voice": "f2",
+     "text": "Hm, das probier ich morgen früh mal aus."
+    }
+   ]
+  },
+  {
+   "key": "tc5fbc68c",
+   "prio": 0,
+   "ord": 368,
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Guten Abend. Hier sind die Nachrichten von Radio Mittelland, achtzehn Uhr. Im Landkreis Wiesental sollen alle Grundschulen bis zum Sommer einen Trinkwasserbrunnen bekommen. Das hat der Kreistag heute beschlossen. Die Kinder sollen sich dort jederzeit kostenlos Wasser abfüllen können. Bezahlt werden die Brunnen vom Landkreis und von einer regionalen Stiftung. Die Eltern müssen nichts dazugeben. Gesetzlich Versicherte warten im Durchschnitt länger auf einen Termin beim Facharzt als noch vor drei Jahren. Das geht aus einer Auswertung eines Verbands der Krankenkassen hervor. Besonders lang seien die Wartezeiten bei Augen- und Hautärzten, hier oft mehr als zwei Monate. Der Verband fordert, dass Praxen freie Termine besser online melden. Eine Drogeriekette testet in zwanzig ihrer Filialen die Vier-Tage-Woche. Die Beschäftigten arbeiten dort ab Januar an vier statt an fünf Tagen, die Wochenstunden bleiben aber gleich. Die zuständige Gewerkschaft begrüßte den Versuch. Er könne zeigen, so ein Sprecher, dass auch im Handel flexiblere Arbeitszeiten möglich seien. Die Stadtbibliothek Weißenkamp öffnet ab sofort auch sonntags. Von zehn bis achtzehn Uhr können Besucherinnen und Besucher mit ihrem Bibliotheksausweis hinein, Bücher ausleihen und zurückgeben. Personal ist an diesen Tagen nicht vor Ort. Nach einer dreimonatigen Testphase zieht die Stadt eine positive Bilanz: Vor allem Familien und Berufstätige nutzen das Angebot. Und zum Sport: Der Weißenkamper Stadtlauf findet wie geplant am kommenden Sonntag statt. Wegen Bauarbeiten am Marktplatz verläuft die Strecke in diesem Jahr allerdings durch den Stadtpark. Start und Ziel sind deshalb am Parkeingang an der Mühlenstraße. Die Veranstalter erwarten rund dreitausend Läuferinnen und Läufer."
     }
    ]
   }
