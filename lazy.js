@@ -35,7 +35,7 @@ window.DMLazy = (() => {
   ],
   "bild": [
     "bild-data.js?v=20261008e",
-    "bild.js?v=20261008e"
+    "bild.js?v=20261113q"
   ],
   "grammatik": [
     "grammatik-data.js?v=20261111n",
@@ -52,7 +52,7 @@ window.DMLazy = (() => {
     "muster-data.js?v=20261111s"
   ],
   "fakten": [
-    "pruefung-fakten.js?v=20261111r"
+    "pruefung-fakten.js?v=20261113q"
   ]
 };
   const NEED = { spiele: ['spiele'], hoeren: ['hoeren'], lesen: ['lesen'], pruefung: ['hoeren', 'lesen'], training: ['hoeren', 'lesen'], bild: ['bild'], 'erste-schritte': ['erste'], niveau: ['erste', 'hoeren', 'lesen'], grammatik: ['grammatik'], laute: ['laute'], lid: ['lidx'], simulation: ['lidx', 'muster'], ueben: ['muster'], pruefungsinfo: ['fakten'] };

@@ -598,9 +598,9 @@
         {
           h: "So wird das Schreiben bewertet",
           list: [
-            "Zwei Kriterien: inhaltliche Angemessenheit und sprachliche Angemessenheit (Korrektheit und Wortschatz).",
+            "Zwei Bereiche: inhaltliche Angemessenheit (Aufgabe erfüllt?) und sprachliche Angemessenheit (kommunikative Gestaltung, formale Richtigkeit, Spektrum sprachlicher Mittel). Die sprachlichen Kriterien gelten für beide Texte zusammen.",
           ],
-          src: ["bamfDtbB2"],
+          src: ["bamfDtbB2", "uebDtbB2"],
         },
         {
           h: "Kosten und Wiederholung",

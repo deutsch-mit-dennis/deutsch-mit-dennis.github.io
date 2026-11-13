@@ -44,7 +44,7 @@ s += [
             ["<b>Teil</b>", "<b>Aufgabe</b>", "<b>Zeit</b>", "<b>Punkte</b>"],
             ["<b>Lesen 1</b>", "5 kurze Texte, 10 Überschriften (a–j). Welche Überschrift passt? 5 Überschriften bleiben übrig.",
              "ca. 15 Min.", fallback("5 × 5 = 25")],
-            ["<b>Lesen 2</b>", "Ein längerer Zeitungs- oder Magazinartikel (ca. 500–600 Wörter), 5 Aufgaben mit je drei Lösungen (a, b, c).",
+            ["<b>Lesen 2</b>", "Längere Zeitungs- oder Magazintexte (im Modelltest: zwei Artikel), 5 Aufgaben mit je drei Lösungen (a, b, c). (Übung: ein Text.)",
              "ca. 20 Min.", fallback("5 × 5 = 25")],
             ["<b>Lesen 3</b>", "10 Situationen, 12 Anzeigen (a–l). Jede Anzeige nur einmal. Passt keine Anzeige: x.",
              "ca. 20 Min.", fallback("10 × 2,5 = 25")],
@@ -55,7 +55,7 @@ s += [
     box(
         R(
             "<b>Wichtig:</b> Leseverstehen und Sprachbausteine haben zusammen <b>90 Minuten</b>. Die Zeiten oben sind Empfehlungen. "
-            "Insgesamt gibt es im Leseverstehen 75 Punkte. Bestanden ist der schriftliche Teil mit mindestens 60 % "
+            "Insgesamt gibt es im Leseverstehen 75 Punkte (laut offiziellem Modelltest, telc 2019). Bestanden ist der schriftliche Teil mit mindestens 60 % "
             "(135 von 225 Punkten).",
             "cell",
         ),

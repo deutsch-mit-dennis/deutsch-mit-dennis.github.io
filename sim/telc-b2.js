@@ -802,7 +802,7 @@
           skill: "schreiben",
           pts: 45,
           instr:
-            "Wählen Sie eine der beiden Aufgaben (A oder B). Schreiben Sie einen formellen Brief bzw. eine formelle E-Mail. Bearbeiten Sie mindestens drei der vier Leitpunkte und überlegen Sie sich eine sinnvolle Reihenfolge. Achten Sie auf Betreff, Anrede, Einleitung, Schluss und Gruß. Schreiben Sie mindestens 150 Wörter.",
+            "Wählen Sie eine der beiden Aufgaben (A oder B). Schreiben Sie eine halbformelle E-Mail. Bearbeiten Sie entweder drei der vier Leitpunkte oder zwei Leitpunkte und einen eigenen Aspekt. Überlegen Sie sich eine sinnvolle Reihenfolge. Achten Sie auf Betreff, Anrede, Einleitung, Schluss und Gruß. Schreiben Sie mindestens 150 Wörter.",
           options: [
             {
               h: "Aufgabe A: Bitte um Informationen",
@@ -854,7 +854,7 @@
       title: "Mündliche Prüfung",
       minutes: 15,
       prepMinutes: 20,
-      note: "Paarprüfung. In der Vorbereitungszeit bereitest du alle drei Teile vor; Notizen darfst du mitnehmen, aber nicht ablesen.",
+      note: "Paarprüfung. Teil 1 bereitest du vorher zu Hause vor, die 20 Minuten Vorbereitungszeit sind für Teil 2 und 3. Notizen darfst du mitnehmen, aber nicht ablesen. Zu Beginn stellt ihr euch kurz vor (ca. 1 Minute, wird nicht bewertet).",
       parts: [
         {
           kind: "speak",
@@ -863,7 +863,7 @@
           pts: 25,
           minutes: 5,
           instr:
-            "Wählen Sie eines der beiden Themen und sprechen Sie etwa anderthalb Minuten zusammenhängend darüber. Ihre Partnerin / Ihr Partner hört zu und stellt Ihnen danach Fragen. Anschließend tauschen Sie die Rollen. In der Simulation stellt Ihnen die Partnerin die Fragen unten.",
+            "Wählen Sie eines der beiden Themen und sprechen Sie höchstens anderthalb Minuten zusammenhängend darüber. Ihre Partnerin / Ihr Partner hört zu und stellt Ihnen danach Fragen. Anschließend tauschen Sie die Rollen. In der Simulation stellt Ihnen die Partnerin die Fragen unten.",
           task: "Thema A: Ein Ereignis, das mein Leben verändert hat\nThema B: Ein Buch oder Film, der mich beeindruckt hat\n\nSprechen Sie über:\n– worum es geht bzw. was passiert ist\n– warum es für Sie wichtig war\n– was sich dadurch verändert hat bzw. was Sie daraus gelernt haben\n– ob Sie es anderen empfehlen würden",
           prompts: [
             "Danke, das war wirklich interessant. Darf ich mal fragen, wie alt Sie damals waren?",
@@ -1050,7 +1050,7 @@
         name: "Leseverstehen Teil 2",
         skill: "Lesen",
         time: "ca. 20 Min.",
-        what: "Du liest einen längeren Zeitungs- oder Magazinartikel (ca. 500–600 Wörter) und beantwortest fünf Multiple-Choice-Aufgaben mit je drei Lösungen.",
+        what: "Du liest einen längeren Zeitungs- oder Magazintext (im offiziellen Modelltest, telc 2019: zwei Artikel) und beantwortest fünf Multiple-Choice-Aufgaben mit je drei Lösungen.",
         steps: [
           "Lies zuerst Überschrift und Untertitel: Worum geht es?",
           "Lies die Fragen (noch ohne Lösungen) – sie folgen meist der Reihenfolge des Textes.",
@@ -1100,7 +1100,7 @@
         name: "Leseverstehen Teil 3",
         skill: "Lesen",
         time: "ca. 20 Min.",
-        what: "Du ordnest zehn Situationen zwölf Anzeigen zu. Für ein bis zwei Situationen gibt es keine passende Anzeige – dann wählst du x.",
+        what: "Du ordnest zehn Situationen zwölf Anzeigen zu. Manchmal gibt es keine passende Anzeige (im offiziellen Modelltest bei einer Situation) – dann wählst du x.",
         steps: [
           "Lies jede Situation und markiere alle Bedingungen (wer, wann, wo, was genau).",
           "Überfliege die Anzeigen und notiere zu jeder ein Stichwort.",
@@ -1160,7 +1160,7 @@
         name: "Sprachbausteine Teil 1",
         skill: "Sprachbausteine",
         time: "ca. 15 Min.",
-        what: "In einem formellen Brief oder einer E-Mail gibt es zehn Lücken mit je drei Lösungen. Geprüft wird vor allem Grammatik: Präpositionen und Kasus, Konnektoren, Relativpronomen, Passiv, Konjunktiv II.",
+        what: "In einem Brief oder einer E-Mail (im offiziellen Modelltest: ein persönlicher Brief) gibt es zehn Lücken mit je drei Lösungen. Geprüft wird vor allem Grammatik: Präpositionen und Kasus, Konnektoren, Relativpronomen, Passiv, Konjunktiv II.",
         steps: [
           "Lies den ganzen Satz, nicht nur die Wörter direkt an der Lücke.",
           "Frag dich: Welche Wortart fehlt? Welcher Kasus? Wo steht das Verb?",
@@ -1253,10 +1253,10 @@
         name: "Hörverstehen Teil 1",
         skill: "Hören",
         time: "ca. 5 Min.",
-        what: "Du hörst mehrere kurze Meinungen oder Beiträge zu einem Thema – nur einmal. Zu jedem Beitrag entscheidest du, ob eine Aussage richtig oder falsch ist.",
+        what: "Laut offiziellem Modelltest (telc, 2019) hörst du eine Nachrichtensendung mit fünf Meldungen – nur einmal, vorher hast du 30 Sekunden Lesezeit. Zu jeder Meldung entscheidest du, ob eine Aussage richtig oder falsch ist. (Die Online-Simulation übt das mit kurzen Meinungsbeiträgen.)",
         steps: [
           "Nutze die Lesezeit: Markiere in jeder Aussage das wichtigste Wort.",
-          "Achte auf die Grundhaltung der Person: Ist sie dafür, dagegen oder unentschieden?",
+          "Achte bei jeder Meldung auf die Kernaussage: Was ist passiert, wer ist betroffen, was ist das Ergebnis?",
           "Entscheide sofort nach jedem Beitrag – es gibt keine Wiederholung.",
           "Wenn du unsicher bist, kreuz trotzdem an und geh weiter.",
         ],
@@ -1314,8 +1314,8 @@
         what: "Du hörst ein längeres Radiointerview einmal und entscheidest bei zehn Aussagen, ob sie richtig oder falsch sind.",
         steps: [
           "Lies alle zehn Aussagen vorher – sie folgen dem Ablauf des Interviews.",
-          "Beim ersten Hören: Kreuz an, was du sicher verstehst.",
-          "Beim zweiten Hören: Konzentrier dich auf die offenen Aussagen.",
+          "Nutze die 60 Sekunden Lesezeit: Markiere in jeder Aussage das Schlüsselwort.",
+          "Kreuz direkt beim Hören an – du hörst das Interview nur einmal.",
           "Achte auf Fragen der Moderatorin – sie kündigen das nächste Thema an.",
         ],
         traps: [
@@ -1323,7 +1323,7 @@
           "Zahlen und Vergleiche: „der Älteste“, „verkürzt“, „seit einem Jahr“.",
           "Pläne für die Zukunft werden als heutige Tatsachen formuliert („heute leitet er …“).",
         ],
-        tip: "Notiere beim ersten Hören nur Stichwörter neben die Aussagen. Entscheide endgültig erst beim zweiten Durchgang.",
+        tip: "Behalte immer die nächste Aussage im Blick. Hast du eine verpasst, geh sofort zur nächsten weiter – es gibt keinen zweiten Durchgang.",
         mini: {
           title: "Mini-Übung: Interview",
           instr:
@@ -1374,7 +1374,7 @@
         steps: [
           "Lies die Aussage und überleg: Nach welcher Information muss ich suchen (Ort, Zeit, Grund)?",
           "Achte auf Wörter wie „heute“, „ausnahmsweise“, „ab morgen“, „stattdessen“.",
-          "Nutze das zweite Hören zur Kontrolle der Details.",
+          "Du hörst jeden Text nur einmal: Entscheide direkt nach jeder Ansage.",
         ],
         traps: [
           "Mehrere Orte, Zeiten oder Gründe werden genannt – nur einer passt zur Aussage (Unfall vs. Baustelle).",
@@ -1427,7 +1427,7 @@
         name: "Schriftlicher Ausdruck",
         skill: "Schreiben",
         time: "30 Min.",
-        what: "Du wählst eine von zwei Aufgaben, meist eine Bitte um Informationen oder eine Beschwerde, und schreibst einen formellen Brief bzw. eine formelle E-Mail. Von vier Leitpunkten bearbeitest du mindestens drei.",
+        what: "Du wählst eine von zwei Aufgaben, meist eine Bitte um Informationen oder eine Beschwerde, und schreibst eine halbformelle E-Mail (mindestens 150 Wörter). Du bearbeitest entweder drei der vier Leitpunkte oder zwei Leitpunkte und einen eigenen Aspekt.",
         steps: [
           "2–3 Minuten: Aufgabe wählen und Stichwörter zu jedem Leitpunkt notieren.",
           "Gliederung festlegen: Betreff – Anrede – Einleitung – Leitpunkte in sinnvoller Reihenfolge – Schluss – Gruß.",
@@ -1442,12 +1442,12 @@
         tip: "Lieber drei Leitpunkte ausführlich als vier nur kurz. Und schreib lieber 180 sichere Wörter als 250 mit vielen Fehlern.",
       },
       {
-        name: "Mündliche Prüfung Teil 1: Präsentation",
+        name: "Mündliche Prüfung Teil 1: Über Erfahrungen sprechen",
         skill: "Sprechen",
         time: "ca. 5 Min. (für beide)",
-        what: "Du sprichst etwa anderthalb Minuten über ein Thema aus deinem Leben (z. B. ein wichtiges Ereignis, ein Buch oder einen Film). Danach stellt dir deine Partnerin bzw. dein Partner Fragen – und umgekehrt.",
+        what: "Du sprichst höchstens anderthalb Minuten über deine Erfahrungen zu einem Thema (z. B. ein wichtiges Ereignis, ein Buch oder einen Film). Danach stellt dir deine Partnerin bzw. dein Partner Fragen – und umgekehrt. In der Prüfung wählst du aus sieben Themen und bereitest diesen Teil vorher zu Hause vor.",
         steps: [
-          "In der Vorbereitung: Thema wählen und vier Stichpunkte notieren (Was? Warum wichtig? Was hat sich verändert? Empfehlung?).",
+          "Zu Hause vorbereiten: Thema wählen und vier Stichpunkte notieren (Was? Warum wichtig? Was hat sich verändert? Empfehlung?).",
           "Mit einem klaren Einleitungssatz beginnen: „Ich möchte heute über … sprechen.“",
           "Frei sprechen, mit Beispielen und Gefühlen – nicht ablesen.",
           "Beim Zuhören der Partnerin mitdenken und eine echte Nachfrage stellen.",
@@ -1463,7 +1463,7 @@
         name: "Mündliche Prüfung Teil 2: Diskussion",
         skill: "Sprechen",
         time: "ca. 5 Min.",
-        what: "Du liest einen kurzen Zeitungstext zu einem kontroversen Thema und diskutierst mit deiner Partnerin bzw. deinem Partner. Wichtig sind Meinung, Begründung und das Eingehen auf Gegenargumente.",
+        what: "Du liest in der Vorbereitungszeit einen kurzen Zeitungstext zu einem kontroversen Thema. In der Prüfung gebt ihr zuerst kurz wieder, was ihr interessant findet (höchstens eine Minute), dann diskutiert ihr. Wichtig sind Meinung, Begründung und das Eingehen auf Gegenargumente.",
         steps: [
           "In der Vorbereitung: Je zwei Argumente dafür und dagegen notieren, dazu ein Beispiel.",
           "Mit einer klaren Meinung starten und begründen.",

@@ -49,9 +49,10 @@ s += [
     table(
         [
             ["<b>Teil</b>", "<b>Aufgabe</b>", "<b>Zeit</b>", "<b>Punkte</b>"],
-            ["<b>Hören 1</b>", "Mehrere kurze Meinungen oder Beiträge zu einem Thema. Zu jedem Beitrag: Ist die Aussage richtig oder falsch?",
+            ["<b>Hören 1</b>", "Prüfung: eine Nachrichtensendung mit 5 Meldungen, vorher 30 Sekunden Lesezeit. Zu jeder Meldung: richtig oder falsch? "
+             "(Übung 1 auf diesem Blatt: kurze Meinungen.)",
              "ca. 5 Min.", fallback("5 × 5 = 25")],
-            ["<b>Hören 2</b>", "Ein längeres Radiointerview. Bei 10 Aussagen entscheiden: richtig oder falsch?",
+            ["<b>Hören 2</b>", "Ein längeres Radiointerview, vorher 60 Sekunden Lesezeit. Bei 10 Aussagen entscheiden: richtig oder falsch?",
              "ca. 10 Min.", fallback("10 × 2,5 = 25")],
             ["<b>Hören 3</b>", "Kurze Durchsagen, Telefonansagen oder Hinweise im Radio. Zu jedem Text: richtig oder falsch?",
              "ca. 5 Min.", fallback("5 × 5 = 25")],
@@ -62,7 +63,7 @@ s += [
     box(
         R(
             "<b>Wichtig:</b> Das Hörverstehen dauert insgesamt ca. <b>20 Minuten</b>, es gibt 75 Punkte. In dieser Übung "
-            "hören Sie jeden Text <b>nur einmal</b> – wie in der Simulation auf deutsch-mit-dennis.de. Lesen Sie vor jedem Teil "
+            "hören Sie jeden Text <b>nur einmal</b> – wie in der Prüfung laut offiziellem Modelltest (telc, 2019). Lesen Sie vor jedem Teil "
             "zuerst die Aussagen.",
             "cell",
         ),

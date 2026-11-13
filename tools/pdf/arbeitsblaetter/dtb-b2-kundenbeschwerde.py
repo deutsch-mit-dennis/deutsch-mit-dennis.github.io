@@ -1,5 +1,5 @@
 # Arbeitsblatt DTB B2 Prüfung: Lesen und Schreiben – eine Kundenbeschwerde beantworten
-# Format laut sim/dtb-b2.js (Teil 1: zwei Aufgaben a/b/c, Teil 2: Antwort-E-Mail, mind. 100 Wörter, 20 Minuten).
+# Format laut offiziellem Modelltest DTB B2 (telc, 2022): Teil 1 zwei Aufgaben a/b/c, Teil 2 Antwort-E-Mail, 20 Minuten, keine feste Wortzahl.
 # Eigene Texte, keine Originalaufgaben. Firmen und Personen sind erfunden.
 # Aufruf aus dem Repo-Wurzelordner: py -X utf8 tools/pdf/arbeitsblaetter/dtb-b2-kundenbeschwerde.py
 import os, sys
@@ -80,9 +80,10 @@ s = [
         ["<b>1</b> Kundenbeschwerde verstehen", "Sie lesen die E-Mail einer Kundin und eine interne Nachricht Ihrer Vorgesetzten. "
          "Dazu lösen Sie 2 Aufgaben mit a, b oder c.", "ca. 5 Min.", "2 × 3 = 6 (Lesen)"],
         ["<b>2</b> Antwort an die Kundin", "Sie schreiben im Auftrag Ihrer Vorgesetzten eine Antwort-E-Mail: alle Anweisungen umsetzen, "
-         "mindestens 100 Wörter, Anrede, Gruß, höflicher und professioneller Ton.", "ca. 15 Min.", "15 (Schreiben)"],
+         "Richtwert ca. 100 Wörter, Anrede, Gruß, höflicher und professioneller Ton.", "ca. 15 Min.", "7 + Sprache*"],
     ], [42, 90, 18, 24]),
-    R("Punkte wie in der Online-Simulation auf deutsch-mit-dennis.de.", "small"),
+    R("Punkte laut offiziellem Modelltest (telc, 2022). * Die Sprache (27 Punkte) wird für diese E-Mail und den Forumsbeitrag zusammen bewertet. "
+      "Eine feste Wortzahl gibt der Modelltest nicht vor.", "small"),
 ]
 
 # ───────────────────────── Teil 1 ─────────────────────────
@@ -180,11 +181,11 @@ for i, t in enumerate(u2, 1):
 
 s += task(3, "Ihre Antwort-E-Mail (Prüfungsformat)",
           "Schreiben Sie im Auftrag von Herrn Jensen eine Antwort-E-Mail an Frau Dr. Ribeiro. Setzen Sie alle Anweisungen Ihres Chefs um. "
-          "Schreiben Sie mindestens 100 Wörter. Achten Sie auf Anrede, Gruß und einen höflichen, professionellen Ton. Zeit: 15 Minuten.", 3)
+          "Richtwert: ca. 100 Wörter. Achten Sie auf Anrede, Gruß und einen höflichen, professionellen Ton. Zeit: 15 Minuten.", 3)
 s += [lines(13, indent=0), Spacer(1, 4)]
 check = ["Betreff, Anrede, Gruß mit „i. A.“", "Dank und Entschuldigung für alle drei Punkte", "Grund der Verspätung – ohne Namen des Lieferanten",
          "fehlende Information als eigener Fehler", "Austausch: Do., 19. November, 8–10 Uhr", "Bitte um Bestätigung des Termins",
-         "Verpackung wird mitgenommen", "Gutschein über 80 Euro (kein Rabatt)", "Kontakt: Durchwahl 214", "Sie-Form, ganze Sätze, ab 100 Wörtern"]
+         "Verpackung wird mitgenommen", "Gutschein über 80 Euro (kein Rabatt)", "Kontakt: Durchwahl 214", "Sie-Form, ganze Sätze, ca. 100 Wörter"]
 half = (len(check) + 1) // 2
 ct = Table([[R(f"{BOX} {a}", "tip"), R(f"{BOX} {b}", "tip")] for a, b in zip(check[:half], check[half:])], colWidths=[85 * mm, 85 * mm])
 ct.setStyle(TableStyle([("BACKGROUND", (0, 0), (-1, -1), SOFT), ("LEFTPADDING", (0, 0), (-1, -1), 8),

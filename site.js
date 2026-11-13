@@ -1125,7 +1125,7 @@
         cards: () => simCards('telc-b2', 'Lesen, Sprachbausteine, Hören, E-Mail · 140 Min.', 'Paarprüfung · 15 Min. + 20 Min. Vorbereitung') +
           card('#vorbereitung/telc-b2', 'Vorbereitung', 'Aufbau und Strategien', 'Jeder Teil mit Fallen, Mini-Übung und Lernplan') +
           card('#lesen/beruf', 'Lesen', 'Lesen auf B2', 'Längere Texte, Regelungen, Artikel') +
-          card('#ueben/schreiben/B2/2', 'Schreiben', 'Formelle E-Mail', 'Bitte um Information oder Beschwerde') +
+          card('#ueben/schreiben/B2/2', 'Schreiben', 'Halbformelle E-Mail', 'Bitte um Information oder Beschwerde') +
           card('#ueben/schreiben/B2/3', 'Schreiben', 'Meinung vertreten', 'Argumente sammeln und gewichten') +
           card('#spiele/b2', 'Lernspiele', 'Wortschatz und Grammatik B2', 'Nomen-Verb, Präpositionen, Konnektoren') },
       dtbb1: { label: 'DTB B1', h: 'DTB B1 – Deutsch-Test für den Beruf', p: 'Berufssprachkurs B1 · Deutsch im Berufsalltag', path: 'dtbb1', color: 'ink',
@@ -1319,7 +1319,7 @@
         <nav class="dm-tabs dm-tabs-small" aria-label="Thema">${[['alle', 'Alle']].concat(Object.entries(C)).map(([k, t]) => `<a href="#material/${k}/${lvl}" ${k === cat ? 'aria-current="page"' : ''}><b>${t}</b><small>${k === 'alle' ? all.length : all.filter(m => m.cat === k).length}</small></a>`).join('')}</nav>
       </div>
       <div class="dm-filter">
-        <nav class="dm-tabs dm-tabs-small" aria-label="Niveau">${['alle', 'A1', 'A2', 'B1'].map(k => `<a href="#material/${cat}/${k}" ${k === lvl ? 'aria-current="page"' : ''}><b>${k === 'alle' ? 'Alle Niveaus' : k}</b></a>`).join('')}</nav>
+        <nav class="dm-tabs dm-tabs-small" aria-label="Niveau">${['alle', 'A1', 'A2', 'B1', 'B2'].map(k => `<a href="#material/${cat}/${k}" ${k === lvl ? 'aria-current="page"' : ''}><b>${k === 'alle' ? 'Alle Niveaus' : k}</b></a>`).join('')}</nav>
         <label class="dm-search"><span class="dm-sr">Material suchen</span><input type="search" id="dm-mq" placeholder="Suchen, z. B. Dativ, Uhrzeit, Brief …"></label>
       </div>
       <p id="dm-mcount" class="dm-small" role="status"></p>
@@ -1526,9 +1526,9 @@
     'dtz-sprechen': { min: 5, kind: 'sprechen', label: 'DTZ Sprechen Teil 3: ca. 5 Minuten zu zweit' },
     'dtz-schreiben': { min: 30, kind: 'schreiben', label: 'DTZ Schreiben: 30 Minuten für einen Brief' },
     'dtz-lesen': { min: 10, kind: 'lesen', label: 'Übungszeit für einen Lesetext: 10 Minuten' },
-    'dtb-thema': { min: 4, kind: 'sprechen', label: 'DTB B2 Sprechen Teil 1: ca. 3–4 Minuten' },
-    'dtb-kollegen': { min: 4, kind: 'sprechen', label: 'DTB B2 Sprechen Teil 2: ca. 4 Minuten' },
-    'dtb-sprechen': { min: 4, kind: 'sprechen', label: 'DTB B2 Sprechen Teil 3: ca. 4 Minuten' },
+    'dtb-thema': { min: 5, kind: 'sprechen', label: 'DTB B2 Sprechen Teil 1 (1A–1C): ca. 4–5 Minuten pro Person' },
+    'dtb-kollegen': { min: 3, kind: 'sprechen', label: 'DTB B2 Sprechen Teil 2: ca. 3 Minuten zu zweit' },
+    'dtb-sprechen': { min: 5, kind: 'sprechen', label: 'DTB B2 Sprechen Teil 3: ca. 4–5 Minuten zu zweit' },
     'dtb-schreiben': { min: 30, kind: 'schreiben', label: 'DTB B2 Schreiben: Übungszeit 30 Minuten' },
     'dtb-lesen': { min: 10, kind: 'lesen', label: 'Übungszeit für einen Lesetext: 10 Minuten' }
   };

@@ -1,5 +1,5 @@
 # Arbeitsblatt B2 Prüfung: DTB B2 Hören und Schreiben – Anruf verstehen, Telefonnotiz schreiben
-# Format laut sim/dtb-b2.js (Hören und Schreiben: 5 Min., Teil 1 = 3 Punkte, Teil 2 = 10 Punkte).
+# Format laut offiziellem Modelltest DTB B2 (telc, 2022): Hören und Schreiben 5 Min., einmal hören, Teil 1 = 3 Punkte, Teil 2 = 6 Punkte.
 # Eigene Aufgaben im Stil der Prüfung; alle Personen, Firmen und Nummern sind erfunden.
 # Aufruf aus dem Repo-Wurzelordner: py -X utf8 tools/pdf/arbeitsblaetter/dtb-b2-telefonnotiz.py
 import os, sys
@@ -66,16 +66,17 @@ s += [
     grid([
         ["<b>Teil</b>", "<b>Was Sie tun</b>", "<b>Punkte</b>"],
         ["<b>Hören und Schreiben Teil 1:</b> Anruf eines Kunden",
-         "Sie hören eine Nachricht auf der Mailbox <b>einmal</b> und lösen eine Aufgabe: Welche Lösung (a, b oder c) ist richtig?",
+         "Sie hören eine telefonische Nachricht <b>einmal</b> und lösen eine Aufgabe (a, b oder c) – im Modelltest zum Grund des Anrufs.",
          "3 (Hören)"],
         ["<b>Hören und Schreiben Teil 2:</b> Telefonnotiz",
          "Sie schreiben für eine Kollegin oder einen Kollegen eine Telefonnotiz mit allen wichtigen Informationen. "
-         "Stichpunkte sind erlaubt – die Notiz muss aber <b>ohne Rückfrage</b> verständlich sein.",
-         "10 (Schreiben)"],
+         "Stichpunkte sind erlaubt – die Notiz muss aber <b>ohne Rückfrage</b> verständlich sein. "
+         "Name, Nummer je 0,5 · Infos 4 · zu erledigen 1.",
+         "6 (Schreiben)"],
     ], [50, 100, 24]),
     Spacer(1, 3),
-    box(R("<b>Zeit:</b> ca. 5 Minuten für beide Teile zusammen. Machen Sie sich deshalb schon beim Hören Notizen – "
-          "danach bleibt keine Zeit, lange zu überlegen.", "cell"), NOTE, GELB),
+    box(R("<b>Zeit:</b> ca. 5 Minuten für beide Teile, und Sie hören die Nachricht nur einmal (Modelltest telc, 2022). "
+          "Machen Sie sich deshalb schon beim Hören Notizen.", "cell"), NOTE, GELB),
 ]
 
 # Strategie und Fallen

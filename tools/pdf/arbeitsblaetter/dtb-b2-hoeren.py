@@ -1,5 +1,5 @@
 # Arbeitsblatt DTB B2 Prüfung: Hören Teil 1–4 (Strategien, Fallen, Übungen; Hörtexte zum Vorlesen im Lösungsteil)
-# Format laut sim/dtb-b2.js (Aufgabentypen, Anweisungen, Zeiten, jeder Text einmal). Eigene Texte, keine Originalaufgaben.
+# Format laut offiziellem Modelltest DTB B2 (telc, Übungstest 1, 2022): Zeiten, Punkte, Aufgabenzahl, jeder Text einmal. Eigene Texte, keine Originalaufgaben.
 # Aufruf aus dem Repo-Wurzelordner: py -X utf8 tools/pdf/arbeitsblaetter/dtb-b2-hoeren.py
 import os, sys
 
@@ -88,17 +88,18 @@ s = [
       "so hören Sie gezielt und vermeiden die typischen Fallen.", "lead"),
     R("So läuft der Prüfungsteil Hören", "h2"),
     box(R("Sie haben für <b>alle vier Teile zusammen 20 Minuten</b>. Lesen Sie vor jedem Hörtext die Aufgaben. "
-          "<b>Sie hören alle Teile nur einmal.</b> Jede richtige Aufgabe zählt 3 Punkte "
-          "(Wertung wie in der Online-Simulation auf deutsch-mit-dennis.de).", "cell"), NOTE, GELB),
+          "<b>Sie hören alle Teile nur einmal.</b> Vor Teil 2 und 3 haben Sie je eine Minute Lesezeit. "
+          "Jede richtige Aufgabe zählt 3 Punkte (laut offiziellem Modelltest, telc 2022).", "cell"), NOTE, GELB),
     Spacer(1, 4),
     table([
         ["<b>Teil</b>", "<b>Aufgabe</b>", "<b>Zeit</b>", "<b>Punkte</b>"],
         ["<b>1</b> Arbeitsabläufe, Probleme, Vorschläge", "3 kurze Gespräche unter Kolleginnen und Kollegen. Zu jedem Gespräch: "
-         "1 Aussage richtig/falsch und 1 Aufgabe mit a, b oder c.", "ca. 6 Min.", "6 × 3 = 18"],
-        ["<b>2</b> Argumente", "Eine Diskussion, z. B. auf einer Betriebsversammlung: Wer sagt was? 4 Aussagen den Personen zuordnen.",
+         "1 Aussage richtig/falsch und 1 Aufgabe mit a, b oder c.", "ca. 5 Min.", "6 × 3 = 18"],
+        ["<b>2</b> Argumente", "Prüfung: 4 kurze Gespräche, 6 Sätze (a–f) – welcher Satz passt zu welchem Gespräch? 2 Sätze bleiben übrig. "
+         "(Übung 2 auf diesem Blatt: Aussagen den Personen einer Diskussion zuordnen.)",
          "ca. 5 Min.", "4 × 3 = 12"],
         ["<b>3</b> Unternehmensinformationen", "Eine Präsentation über ein Unternehmen: 4 Aufgaben mit a, b oder c.", "ca. 5 Min.", "4 × 3 = 12"],
-        ["<b>4</b> Anliegen am Telefon", "5 Nachrichten auf dem Anrufbeantworter: je 1 Aufgabe mit a, b oder c.", "ca. 6 Min.", "5 × 3 = 15"],
+        ["<b>4</b> Anliegen am Telefon", "5 Nachrichten auf dem Anrufbeantworter: je 1 Aufgabe mit a, b oder c.", "ca. 5 Min.", "5 × 3 = 15"],
     ], [50, 86, 18, 20]),
     Spacer(1, 4),
     box(R(f"<b>Ohne Audio üben – so geht’s:</b> Eine Partnerin, ein Partner oder die Lehrkraft liest die Hörtexte aus dem "

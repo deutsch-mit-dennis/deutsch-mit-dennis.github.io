@@ -38,7 +38,7 @@ s += [
     table(
         [
             ["<b>Teil</b>", "<b>Aufgabe</b>", "<b>Zeit</b>", "<b>Punkte</b>"],
-            ["<b>Sprach­bausteine 1</b>", "Ein formeller Brief oder eine E-Mail mit 10 Lücken. Für jede Lücke gibt es drei Lösungen (a, b, c). "
+            ["<b>Sprach­bausteine 1</b>", "Ein Brief oder eine E-Mail (im Modelltest: ein persönlicher Brief) mit 10 Lücken. Für jede Lücke gibt es drei Lösungen (a, b, c). "
              "Vor allem Grammatik: Präpositionen und Kasus, Konnektoren, Relativpronomen, Passiv, Konjunktiv II.",
              "ca. 15 Min.", fallback("10 × 1,5 = 15")],
             ["<b>Sprach­bausteine 2</b>", "Ein Text mit 10 Lücken und 15 Wörtern (a–o). Jedes Wort passt nur einmal, 5 Wörter bleiben übrig. "
@@ -51,7 +51,7 @@ s += [
     box(
         R(
             "<b>Wichtig:</b> Die Sprachbausteine sind Teil der 90 Minuten für <b>Leseverstehen und Sprachbausteine</b>. "
-            "Die Zeiten oben sind Empfehlungen. Insgesamt gibt es hier 30 Punkte.",
+            "Die Zeiten oben sind Empfehlungen. Insgesamt gibt es hier 30 Punkte (laut offiziellem Modelltest, telc 2019).",
             "cell",
         ),
         NOTE,

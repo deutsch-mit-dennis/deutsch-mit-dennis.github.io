@@ -42,7 +42,7 @@
         return `<a class="bd-scene" href="#bild/${sc.id}"><img src="${esc(sc.svg)}" alt="" width="400" height="250" loading="lazy"><span><small>${esc(sc.thema)} · ${esc(sc.level)}</small><b>${esc(sc.title)}</b><span class="bd-prog">${done ? `${done} von 4 Teilen geschafft` : '4 Teile'}</span></span></a>`;
       }).join('')}</div>
       <section class="dm-card bd-rm"><h2>Redemittel für die Prüfung</h2><dl>${REDEMITTEL.map(([a, b]) => `<dt>${a}</dt><dd>${esc(b)}</dd>`).join('')}</dl>
-      <p class="dm-small">Arbeitsblätter mit Lösungen zum Ausdrucken findest du unter <a href="#material/pruefung">Materialien → Prüfung DTZ</a>.</p></section>`, 'bd-page');
+      <p class="dm-small">Arbeitsblätter mit Lösungen zum Ausdrucken findest du unter <a href="#material/pruefung">Materialien → Prüfung</a>.</p></section>`, 'bd-page');
   }
 
   /* ---------- Szene ---------- */

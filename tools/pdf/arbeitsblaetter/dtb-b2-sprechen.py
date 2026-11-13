@@ -1,6 +1,6 @@
 # Arbeitsblatt B2 Prüfung: DTB B2 Sprechen – Teil 1A, 1B/1C, Teil 2, Teil 3
-# Format laut sim/dtb-b2.js (Sprechen: ca. 16 Min., Paarprüfung ohne Vorbereitungszeit;
-# 1A 2 Min./12 P., 1B+1C 2 Min./12 P., Teil 2 3 Min./16 P., Teil 3 5 Min./20 P.).
+# Format laut offiziellem Modelltest DTB B2 (telc, 2022): ca. 16 Min., Paarprüfung ohne Vorbereitungszeit;
+# Teil 1A-1C ca. 4-5 Min. pro Person (5/5/2 P.), Teil 2 ca. 3 Min. (8 P.), Teil 3 ca. 4-5 Min. (10 P.), + 30 P. Sprache.
 # Eigene Aufgaben im Stil der Prüfung; alle Situationen sind erfunden.
 # Aufruf aus dem Repo-Wurzelordner: py -X utf8 tools/pdf/arbeitsblaetter/dtb-b2-sprechen.py
 import os, sys
@@ -68,20 +68,23 @@ s += [
         ["<b>Teil</b>", "<b>Was Sie tun</b>", "<b>Zeit</b>", "<b>Pkt.</b>"],
         ["<b>Teil 1A:</b> Über ein Thema sprechen",
          "allein: eines von zwei Themen wählen, frei sprechen (Erfahrungen, Situation im Beruf oder Herkunftsland, "
-         "Vor- und Nachteile, Meinung). Niemand unterbricht Sie.",
-         "ca.&nbsp;2 Min.", "12"],
+         "Vor- und Nachteile, Meinung). Wer Auswendiggelerntes aufsagt, wird unterbrochen.",
+         "ca.&nbsp;2 Min.", "5"],
         ["<b>Teil 1B und 1C:</b> Prüferfragen und Erläuterung eines Aspekts",
-         "allein: Die Prüfenden fragen zu Ihrem Thema. Sie antworten ausführlich (2–4 Sätze) und begründen.",
-         "ca.&nbsp;2 Min.", "12"],
+         "1B: Die Prüfenden fragen zu Ihrem Thema, Sie antworten ausführlich und begründen. 1C: Ihre Partnerin / Ihr Partner "
+         "erklärt einen Aspekt aus Ihrem Beitrag mit eigenen Worten – und umgekehrt.",
+         "ca.&nbsp;2–3 Min.", "5&nbsp;+&nbsp;2"],
         ["<b>Teil 2:</b> Mit Kolleginnen und Kollegen sprechen",
          "zu zweit, per du: Erfahrungen austauschen, Tipps geben, nachfragen, Hilfe anbieten.",
-         "ca.&nbsp;3 Min.", "16"],
+         "ca.&nbsp;3 Min.", "8"],
         ["<b>Teil 3:</b> Lösungswege diskutieren",
          "zu zweit: ein Problem im Betrieb. Vorschläge sammeln, abwägen, sich einigen.",
-         "ca.&nbsp;5 Min.", "20"],
+         "ca.&nbsp;4–5 Min.", "10"],
     ], [44, 94, 22, 14], pad=3),
     Spacer(1, 3),
-    box(R("<b>Insgesamt ca. 16 Minuten, keine Vorbereitungszeit.</b> Sie sehen die Aufgabe und sprechen sofort. "
+    box(R("<b>Insgesamt ca. 16 Minuten, keine Vorbereitungszeit.</b> Teil 1A–1C dauert ca. 4–5 Minuten pro Person. "
+          "Dazu kommen 30 Punkte für die Sprache (Aussprache, Richtigkeit, Wortschatz), bewertet über die ganze Prüfung – "
+          "zusammen 60 Punkte (laut offiziellem Modelltest, telc 2022). Sie sehen die Aufgabe und sprechen sofort. "
           "Üben Sie Redemittel und Aufbau deshalb vorher so oft, bis sie automatisch kommen.", "cell"), NOTE, GELB),
 ]
 

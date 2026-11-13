@@ -322,9 +322,9 @@
           kind: "write",
           title: "Lesen und Schreiben Teil 2: Antwort an die Kundin",
           skill: "schreiben",
-          pts: 15,
+          pts: 16,
           instr:
-            "Schreiben Sie im Auftrag von Frau Engel eine Antwort-E-Mail an Frau Hoffmann. Setzen Sie alle Anweisungen Ihrer Chefin um. Schreiben Sie mindestens 100 Wörter. Achten Sie auf Anrede, Gruß und einen höflichen, professionellen Ton.",
+            "Schreiben Sie im Auftrag von Frau Engel eine Antwort-E-Mail an Frau Hoffmann. Setzen Sie alle Anweisungen Ihrer Chefin um. Richtwert: ca. 100 Wörter (der offizielle Modelltest gibt keine Wortzahl vor). Achten Sie auf Anrede, Gruß und einen höflichen, professionellen Ton.",
           options: [
             {
               h: "Antwort an Frau Hoffmann",
@@ -858,9 +858,9 @@
           kind: "write",
           title: "Hören und Schreiben Teil 2: Telefonnotiz",
           skill: "schreiben",
-          pts: 10,
+          pts: 6,
           instr:
-            "Schreiben Sie für Ihre Kollegin Frau Lindemann (Disposition) eine Telefonnotiz zu diesem Anruf. Notieren Sie alle wichtigen Informationen. Stichpunkte sind erlaubt, die Notiz muss aber für Frau Lindemann ohne Rückfrage verständlich sein. Sie können die Nachricht hier noch einmal hören.",
+            "Schreiben Sie für Ihre Kollegin Frau Lindemann (Disposition) eine Telefonnotiz zu diesem Anruf. Notieren Sie alle wichtigen Informationen. Stichpunkte sind erlaubt, die Notiz muss aber für Frau Lindemann ohne Rückfrage verständlich sein. In der Prüfung hören Sie die Nachricht nur einmal (für beide Aufgaben) – hier können Sie sie zur Übung noch einmal abspielen.",
           audio: [
             {
               h: "Mailbox – Haustechnik Brandt (Wiederholung)",
@@ -1022,9 +1022,9 @@
           kind: "write",
           title: "Schreiben: Beitrag im Mitarbeiterforum",
           skill: "schreiben",
-          pts: 29,
+          pts: 32,
           instr:
-            "Im Intranet Ihrer Firma gibt es ein Mitarbeiterforum. Wählen Sie eines der beiden Themen und schreiben Sie einen Beitrag. Äußern Sie Ihre Meinung, begründen Sie sie und nennen Sie Beispiele aus Ihrer Erfahrung. Schreiben Sie mindestens 150 Wörter.",
+            "Im Intranet Ihrer Firma gibt es ein Mitarbeiterforum. Wählen Sie eines der beiden Themen und schreiben Sie einen Beitrag. Äußern Sie Ihre Meinung, begründen Sie sie und nennen Sie Beispiele aus Ihrer Erfahrung. Richtwert: ca. 150 Wörter (der offizielle Modelltest gibt keine Wortzahl vor).",
           options: [
             {
               h: "Thema A: Vier-Tage-Woche",
@@ -1064,7 +1064,7 @@
             "konkreter Vorschlag am Ende",
             "passender Ton für ein Mitarbeiterforum (Anrede an Kolleginnen und Kollegen, Gruß)",
             "Absätze und Konnektoren, abwechslungsreicher Wortschatz",
-            "mindestens 150 Wörter",
+            "ca. 150 Wörter (Richtwert)",
           ],
         },
       ],
@@ -1076,13 +1076,13 @@
       title: "Sprechen",
       minutes: 16,
       prepMinutes: 0,
-      note: "Paarprüfung ohne Vorbereitungszeit. Teil 1A und 1B sprichst du allein mit den Prüfenden, Teil 2 und 3 mit deiner Partnerin oder deinem Partner. Sprich laut – nutze die Muster nach deinem Versuch zum Vergleich.",
+      note: "Paarprüfung ohne Vorbereitungszeit. In Teil 1A und 1B sprichst du allein mit den Prüfenden, in Teil 1C erklärst du einen Aspekt aus dem Beitrag deiner Partnerin oder deines Partners, Teil 2 und 3 sprecht ihr zusammen. Sprich laut – nutze die Muster nach deinem Versuch zum Vergleich.",
       parts: [
         {
           kind: "speak",
           title: "Teil 1A: Über ein Thema sprechen",
           skill: "sprechen",
-          pts: 12,
+          pts: 10,
           minutes: 2,
           instr:
             "Wählen Sie eines der beiden Themen und sprechen Sie ca. 2 Minuten darüber. Die Prüfenden unterbrechen Sie nicht.",
@@ -1109,7 +1109,7 @@
           kind: "speak",
           title: "Teil 1B und 1C: Prüferfragen und Erläuterung eines Aspekts",
           skill: "sprechen",
-          pts: 12,
+          pts: 14,
           minutes: 2,
           instr:
             "Die Prüfenden stellen Ihnen Fragen zu Ihrem Thema. Antworten Sie ausführlich (2–4 Sätze) und begründen Sie Ihre Antworten. (Hier: Fragen zum Thema „Weiterbildung im Beruf“; zum Thema Homeoffice wären die Fragen ähnlich.)",
@@ -1467,7 +1467,7 @@
         name: "Lesen und Schreiben Teil 2: Antwort an den Kunden",
         skill: "Schreiben",
         time: "ca. 15 Min.",
-        what: "Du schreibst im Auftrag deiner Vorgesetzten eine Antwort an den Kunden (mind. ca. 100 Wörter). Bewertet wird vor allem, ob alle Anweisungen umgesetzt sind und ob der Ton professionell ist.",
+        what: "Du schreibst im Auftrag deiner Vorgesetzten eine Antwort an den Kunden (im Modelltest ohne feste Wortzahl; Richtwert ca. 100 Wörter). Bewertet wird vor allem, ob alle Anweisungen umgesetzt sind und ob der Ton professionell ist.",
         steps: [
           "Betreff mit Bezug (Datum, Auftragsnummer).",
           "Anrede, Dank für die Rückmeldung, Entschuldigung.",
@@ -1485,7 +1485,7 @@
       {
         name: "Hören Teil 1: Arbeitsabläufe, Probleme, Vorschläge",
         skill: "Hören",
-        time: "ca. 6 Min.",
+        time: "ca. 5 Min.",
         what: "Drei kurze Gespräche unter Kolleginnen und Kollegen, je eine Richtig/Falsch-Aussage und eine Frage mit a, b, c. Du hörst nur einmal.",
         steps: [
           "Lies vor jedem Gespräch beide Aufgaben und markiere Schlüsselwörter.",
@@ -1546,10 +1546,10 @@
         name: "Hören Teil 2: Argumente",
         skill: "Hören",
         time: "ca. 5 Min.",
-        what: "Du hörst eine Diskussion mit mehreren Personen (z. B. Betriebsversammlung) und ordnest Aussagen den Sprechenden zu. Einmal hören.",
+        what: "Laut offiziellem Modelltest (telc, 2022) hörst du vier kurze Gespräche und ordnest jedem Gespräch einen von sechs Sätzen (a–f) zu; zwei Sätze bleiben übrig. Vorher hast du eine Minute Lesezeit, gehört wird einmal. (Die Online-Simulation übt das Zuordnen an einer Diskussion mit mehreren Personen.)",
         steps: [
-          "Merk dir vor dem Hören Namen und Rollen der Sprechenden.",
-          "Lies die Aussagen und überleg: Wer würde das wohl sagen?",
+          "Nutze die Lesezeit: Markiere in jedem der sechs Sätze das Schlüsselwort.",
+          "Überleg vor dem Hören: Zu welcher Situation oder Meinung passt welcher Satz?",
           "Notiere beim Hören zu jeder Person 1–2 Stichwörter.",
           "Achte auf Widerspruch: „Ehrlich gesagt, …“, „Das klingt gut, aber …“.",
         ],
@@ -1647,11 +1647,11 @@
       {
         name: "Hören Teil 4: Anliegen am Telefon",
         skill: "Hören",
-        time: "ca. 6 Min.",
+        time: "ca. 5 Min.",
         what: "Du hörst fünf Nachrichten auf dem Anrufbeantworter und beantwortest je eine Frage. Du hörst jede Nachricht einmal.",
         steps: [
           "Lies die Frage genau: Warum ruft jemand an? Was soll man tun? Was ändert sich?",
-          "Beim ersten Hören die Richtung erkennen, beim zweiten Hören das Detail prüfen.",
+          "Du hörst jede Nachricht nur einmal: Lies die Frage vorher und achte gezielt auf das gefragte Detail.",
           "Achte auf Korrekturen: „äh, nein“, „das ist nicht das Problem“, „haben wir schon“.",
         ],
         traps: [
@@ -1717,8 +1717,8 @@
         what: "Du hörst einen Anruf (einmal), beantwortest eine Frage und schreibst eine Telefonnotiz für eine Kollegin. Die Notiz muss alle wichtigen Informationen enthalten.",
         steps: [
           "Leg vor dem Hören ein Raster an: Anrufer – Firma – Rückruf – Anliegen – Details – zu tun.",
-          "Beim ersten Hören Namen, Anliegen und Zahlen notieren.",
-          "Beim zweiten Hören Telefonnummern und Adressen prüfen.",
+          "Beim Hören (nur einmal!) sofort Namen, Anliegen und Zahlen notieren.",
+          "Telefonnummern und Adressen direkt mitschreiben – es gibt keine Wiederholung.",
           "Notiz so schreiben, dass die Kollegin sofort handeln kann.",
         ],
         traps: [
@@ -1845,7 +1845,7 @@
         name: "Schreiben: Forumsbeitrag",
         skill: "Schreiben",
         time: "ca. 25 Min.",
-        what: "Du schreibst einen Beitrag im Mitarbeiterforum zu einem von zwei Themen (mind. 150 Wörter). Du äußerst deine Meinung, begründest sie, nennst Beispiele und machst einen Vorschlag.",
+        what: "Du schreibst einen Beitrag im Mitarbeiterforum zu einem von zwei Themen (im Modelltest ohne feste Wortzahl; Richtwert ca. 150 Wörter). Du äußerst deine Meinung, begründest sie, nennst Beispiele und machst einen Vorschlag.",
         steps: [
           "2 Minuten planen: Meinung – 2 Gründe – 1 Gegenargument – Beispiel – Vorschlag.",
           "Einleitung mit klarer Position.",
@@ -1861,10 +1861,10 @@
         tip: "B2 zeigt sich an Verbindungen: zwar … aber, einerseits … andererseits, je … desto, dadurch, dass … Bau bewusst drei davon ein.",
       },
       {
-        name: "Sprechen Teil 1A und 1B: Über ein Thema sprechen und Fragen beantworten",
+        name: "Sprechen Teil 1A, 1B und 1C: Über ein Thema sprechen, Fragen beantworten, einen Aspekt erläutern",
         skill: "Sprechen",
-        time: "ca. 4 Min.",
-        what: "Du wählst eines von zwei Themen und sprichst ca. 2 Minuten frei. Danach stellen dir die Prüfenden Fragen dazu.",
+        time: "ca. 4–5 Min. pro Person",
+        what: "Du wählst eines von zwei Themen und sprichst ca. 2 Minuten frei (1A). Danach stellen dir die Prüfenden Fragen dazu (1B). In 1C erklärst du einen Aspekt aus dem Beitrag deiner Partnerin bzw. deines Partners mit eigenen Worten – und umgekehrt. Insgesamt ca. 4–5 Minuten pro Person.",
         steps: [
           "Gliedere im Kopf: Einleitung – Erfahrung – Situation – Vor-/Nachteile – Meinung.",
           "Erzähl konkrete Erlebnisse aus deinem Beruf.",

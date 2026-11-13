@@ -1,5 +1,5 @@
 # Arbeitsblatt DTB B2 Prüfung: Lesen Teil 1–4 (Strategien, Fallen, Übungen im Prüfungsformat)
-# Format laut sim/dtb-b2.js (Aufgabentypen, Anweisungen, Zeiten). Eigene Texte, keine Originalaufgaben.
+# Format laut offiziellem Modelltest DTB B2 (telc, 2022): Aufgabentypen, Zahl der Aufgaben, Zeit, Punkte. Eigene Texte, keine Originalaufgaben.
 # Aufruf aus dem Repo-Wurzelordner: py -X utf8 tools/pdf/arbeitsblaetter/dtb-b2-lesen.py
 import os, sys
 
@@ -94,14 +94,14 @@ s = [
       "lead"),
     R("So läuft der Prüfungsteil Lesen", "h2"),
     box(R("Sie haben für <b>alle vier Teile zusammen 45 Minuten</b>. Planen Sie ca. 10–12 Minuten pro Teil ein. "
-          "Jede richtige Aufgabe zählt 3 Punkte (Wertung wie in der Online-Simulation auf deutsch-mit-dennis.de).", "cell"),
+          "Jede richtige Aufgabe zählt 3 Punkte (laut offiziellem Modelltest, telc 2022).", "cell"),
         NOTE, GELB),
     Spacer(1, 4),
     table([
         ["<b>Teil</b>", "<b>Aufgabe</b>", "<b>Zeit</b>", "<b>Punkte</b>"],
-        ["<b>1</b> Informationen zum Arbeitsmarkt", "5 Situationen, 8 Anzeigen (a–h): Welche Anzeige passt zu welcher Person? Drei Anzeigen bleiben übrig.", "ca. 12 Min.", "5 × 3 = 15"],
-        ["<b>2</b> Anweisungen verstehen", "Hausmitteilung: Aussagen 1–2 richtig oder falsch, Aufgaben 3–4 mit a, b oder c.", "ca. 10 Min.", "4 × 3 = 12"],
-        ["<b>3</b> Arbeitsbedingungen", "4 Fragen aus einem Ratgeberforum, 5 Texte (a–e). Zu einer Frage passt kein Text: x. Zwei Texte bleiben übrig.", "ca. 10 Min.", "4 × 3 = 12"],
+        ["<b>1</b> Informationen zum Arbeitsmarkt", "5 Personen, 8 kurze Artikel (a–h): Was passt zu wem? Drei bleiben übrig. (Übung hier: Anzeigen.)", "ca. 12 Min.", "5 × 3 = 15"],
+        ["<b>2</b> Anweisungen verstehen", "2 Texte, zu jedem 1 Aussage richtig/falsch und 1 Aufgabe a, b, c. (Übung hier: 1 Text.)", "ca. 10 Min.", "4 × 3 = 12"],
+        ["<b>3</b> Arbeitsbedingungen", "4 Fragen, 6 Texte (a–f). Zu einer Frage passt kein Text: x. (Übung hier: 5 Texte.)", "ca. 10 Min.", "4 × 3 = 12"],
         ["<b>4</b> Aufgaben und Aufgabenverteilung", "Protokoll einer Teambesprechung: 5 Aufgaben mit a, b oder c.", "ca. 12 Min.", "5 × 3 = 15"],
     ], [44, 92, 18, 20]),
 ]

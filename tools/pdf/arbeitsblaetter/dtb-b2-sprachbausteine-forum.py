@@ -1,5 +1,5 @@
 # Arbeitsblatt B2 Prüfung: DTB B2 Sprachbausteine Teil 1 und 2 + Schreiben: Beitrag im Mitarbeiterforum
-# Format laut sim/dtb-b2.js (Sprachbausteine und Schreiben: 35 Min.; SB je 6 Lücken à 0,5 Punkte; Forum 29 Punkte, mind. 150 Wörter).
+# Format laut offiziellem Modelltest DTB B2 (telc, 2022): 35 Min.; SB je 6 Lücken à 0,5 Punkte; Forum 14 Punkte + Sprache, keine feste Wortzahl.
 # Eigene Aufgaben im Stil der Prüfung; alle Personen und Firmen sind erfunden.
 # Aufruf aus dem Repo-Wurzelordner: py -X utf8 tools/pdf/arbeitsblaetter/dtb-b2-sprachbausteine-forum.py
 import os, sys
@@ -64,12 +64,12 @@ s += [
          "Eine E-Mail mit 6 Lücken und je drei Möglichkeiten (a, b, c). Geprüft werden feste Wendungen, Präpositionen und "
          "der passende Ton im Geschäftsbrief.", "6 × 0,5"],
         ["<b>Schreiben:</b> Beitrag im Mitarbeiterforum",
-         "Sie wählen eines von zwei Themen und schreiben mindestens 150 Wörter: Meinung, Begründung, Beispiele aus Ihrer "
-         "Erfahrung und ein Vorschlag.", "29"],
+         "Eines von zwei Themen wählen (Richtwert ca. 150 Wörter): Meinung, Begründung, Beispiele aus Ihrer "
+         "Erfahrung und ein Vorschlag.", "14 + Sprache*"],
     ], [42, 112, 20]),
     Spacer(1, 3),
-    box(R("<b>Zeit:</b> 35 Minuten für alles. Lösen Sie die Sprachbausteine zügig (ca. 10 Minuten) – "
-          "die restliche Zeit (ca. 25 Minuten) brauchen Sie für den Forumsbeitrag.", "cell"), NOTE, GELB),
+    box(R("<b>Zeit:</b> 35 Minuten: Sprachbausteine ca. 10, Forumsbeitrag ca. 25 Minuten. "
+          "* Sprache: 27 Punkte für Forum und Kunden-E-Mail zusammen; keine feste Wortzahl (Modelltest telc, 2022).", "cell"), NOTE, GELB),
 ]
 
 s += [
@@ -206,7 +206,7 @@ s += [PageBreak()]
 s += task(4, "Schreiben: Beitrag im Mitarbeiterforum",
           "Im Intranet Ihrer Firma gibt es ein Mitarbeiterforum. Wählen Sie eines der beiden Themen und schreiben Sie einen "
           "Beitrag. Äußern Sie Ihre Meinung, begründen Sie sie und nennen Sie Beispiele aus Ihrer Erfahrung. "
-          "Schreiben Sie mindestens 150 Wörter.", 3)
+          "Richtwert: ca. 150 Wörter.", 3)
 themen = [
     ("Thema A: Patenprogramm für neue Kolleginnen und Kollegen",
      "Die Geschäftsleitung möchte ein Patenprogramm einführen: Wer neu anfängt, bekommt für die ersten drei Monate eine "
@@ -231,7 +231,7 @@ s += [t, Spacer(1, 3),
            [36, 138], head=False, pad=5.5),
       R("Schritt 2 – Schreiben (ca. 20 Minuten)", "h3"),
       lines(12, indent=0),
-      R("Weiter auf einem extra Blatt. Wörter zählen: mindestens 150!", "small"),
+      R("Weiter auf einem extra Blatt. Wörter zählen: Richtwert ca. 150.", "small"),
       ]
 
 # Lösungen
@@ -283,7 +283,7 @@ s += [KeepTogether([R("Übung 4 – Mustertext zu Thema A (ca. 190 Wörter)", "s
       Spacer(1, 3),
       box(R(f"<b>Checkliste:</b> {CB} klare Meinung am Anfang  {CB} mindestens zwei Gründe  {CB} konkretes Beispiel  "
             f"{CB} Gegenargument (zwar … aber, andererseits)  {CB} Vorschlag am Ende  {CB} Anrede und Gruß wie im Forum  "
-            f"{CB} Absätze  {CB} mindestens 150 Wörter", "cell"), SOFT)]
+            f"{CB} Absätze  {CB} ca. 150 Wörter", "cell"), SOFT)]
 
 if __name__ == "__main__":
     build(SLUG, TITLE, LEVEL, s)

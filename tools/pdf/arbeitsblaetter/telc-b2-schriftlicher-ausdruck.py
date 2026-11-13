@@ -1,6 +1,6 @@
 # Arbeitsblatt telc Deutsch B2: Schriftlicher Ausdruck (formelle E-Mail mit Leitpunkten)
-# Format laut Website-Daten (sim/telc-b2.js): 30 Min., 45 Punkte, eine von zwei Aufgaben (A/B),
-# mind. 3 von 4 Leitpunkten, mind. 150 Wörter. Eigene Aufgaben im Stil der Prüfung, keine telc-Originale.
+# Format laut offiziellem Modelltest telc Deutsch B2 (Übungstest 1, 2019): 30 Min., 45 Punkte, eine von zwei Aufgaben (A/B),
+# 3 von 4 Leitpunkten oder 2 + eigener Aspekt, mind. 150 Wörter, halbformelle E-Mail. Eigene Aufgaben im Stil der Prüfung, keine telc-Originale.
 # Aufruf aus dem Repo-Wurzelordner: py -X utf8 tools/pdf/arbeitsblaetter/telc-b2-schriftlicher-ausdruck.py
 import os, sys
 
@@ -39,13 +39,14 @@ s += [
             ["<b>Zeit</b>", "30 Minuten (am Ende der schriftlichen Prüfung, nach Lesen, Sprachbausteinen und Hören)"],
             ["<b>Aufgabe</b>",
              "Sie <b>wählen eine von zwei Aufgaben</b> (A oder B) – meist eine <b>Bitte um Informationen</b> oder eine "
-             "<b>Beschwerde</b> – und schreiben einen formellen Brief bzw. eine formelle E-Mail."],
+             "<b>Beschwerde</b> – und schreiben eine halbformelle E-Mail."],
             ["<b>Leitpunkte</b>",
-             "Zu jeder Aufgabe gibt es <b>vier Leitpunkte</b>. Bearbeiten Sie <b>mindestens drei</b> davon in einer sinnvollen "
-             "Reihenfolge – mit passender Einleitung und passendem Schluss."],
+             "Zu jeder Aufgabe gibt es <b>vier Leitpunkte</b>. Bearbeiten Sie <b>drei</b> davon – oder <b>zwei plus einen eigenen Aspekt</b> – "
+             "in einer sinnvollen Reihenfolge, mit passendem Betreff, Einleitung und Schluss."],
             ["<b>Länge</b>", "mindestens <b>150 Wörter</b>"],
             ["<b>Punkte</b>",
-             "<b>45 Punkte</b> von 225 im schriftlichen Teil. Zum Bestehen brauchen Sie mindestens 60 % im schriftlichen Teil "
+             "<b>45 Punkte</b> von 225 im schriftlichen Teil (laut offiziellem Modelltest, telc 2019): drei Kriterien – Aufgabenbewältigung, "
+             "kommunikative Gestaltung, formale Richtigkeit –, die Summe wird mal 3 genommen. Zum Bestehen brauchen Sie mindestens 60 % im schriftlichen Teil "
              "(135 von 225 Punkten) – Schreiben zählt also spürbar mit."],
         ],
         [28, 146],
@@ -196,7 +197,7 @@ plan_t = Table([[R("<b>Nr.</b>", "cell"), R("<b>Leitpunkt</b>", "cell"), R("<b>S
 plan_t.setStyle(TableStyle([("BACKGROUND", (0, 0), (-1, 0), SOFT), ("GRID", (0, 0), (-1, -1), 0.4, LINE)]))
 s += [
     R("Prüfungsaufgaben: Wählen Sie A oder B", "h2"),
-    R("Wie in der Prüfung: <b>eine</b> Aufgabe wählen, <b>mindestens drei</b> der vier Leitpunkte in sinnvoller Reihenfolge, "
+    R("Wie in der Prüfung: <b>eine</b> Aufgabe wählen, <b>drei</b> der vier Leitpunkte (oder zwei plus einen eigenen Aspekt) in sinnvoller Reihenfolge, "
       "passende Einleitung und passender Schluss, <b>mindestens 150 Wörter</b>, <b>30 Minuten</b>. "
       "Schreiben Sie auf ein liniertes Blatt oder am Computer – die zweite Aufgabe an einem anderen Tag.",
       "p"),
@@ -215,7 +216,7 @@ s += [
         anz_a,
         Spacer(1, 4),
         R("Schreiben Sie eine E-Mail an die Studienberatung und bitten Sie um weitere Informationen. "
-          "Wählen Sie dazu mindestens drei der folgenden Punkte aus:", "p"),
+          "Wählen Sie drei der vier Punkte – oder zwei Punkte plus einen eigenen Aspekt:", "p"),
         table(
             [[f"{CB} Voraussetzungen für die Zulassung", f"{CB} Zeiten der Lehrveranstaltungen"],
              [f"{CB} Kosten und Finanzierung", f"{CB} persönlicher Beratungstermin"]],
@@ -228,7 +229,7 @@ s += [
         R("Aufgabe B: Beschwerde", "h3"),
         R("Sie haben im Online-Shop „WohnWerk“ ein Schlafsofa für 890 Euro bestellt. Auf der Website stand: "
           "„Lieferung innerhalb von zehn Werktagen – Aufbau inklusive“. Bei der Lieferung und danach lief einiges schief.", "p"),
-        R("Schreiben Sie eine Beschwerde an den Online-Shop. Wählen Sie dazu mindestens drei der folgenden Punkte aus:", "p"),
+        R("Schreiben Sie eine Beschwerde an den Online-Shop. Wählen Sie drei der vier Punkte – oder zwei Punkte plus einen eigenen Aspekt:", "p"),
         table(
             [[f"{CB} Grund Ihres Schreibens", f"{CB} Probleme bei der Lieferung"],
              [f"{CB} Ihre bisherigen Versuche, das Problem zu lösen", f"{CB} Was Sie jetzt erwarten"]],

@@ -3,7 +3,7 @@
    LiD-Simulation: Fragen aus window.LID_KATALOG (BAMF-Gesamtfragenkatalog).
    Fortschritt und Antworten bleiben nur im Browser (DM.store.sim). */
 (() => {
-  const V = '20261111q';
+  const V = '20261113q';
   const $ = (s, r = document) => r.querySelector(s);
   const $$ = (s, r = document) => [...r.querySelectorAll(s)];
   const e = s => DM.esc(s);
@@ -960,7 +960,7 @@
     DM.page(`${DM.crumbs([['Prüfungstraining', '#pruefung'], ['Gezielte Vorbereitung']])}
       <div class="dm-head"><h1>Gezielte Vorbereitung</h1><p class="dm-lead">Für jede Prüfung: Aufbau und Zeiten, eine Strategie für jeden Prüfungsteil, typische Fallen, Mini-Übungen, Redemittel und ein Lernplan für 4 Wochen. Von einem lizenzierten Prüfer.</p></div>
       <h2 class="sim-h2">Allgemeine Prüfungen (telc)</h2>
-      <div class="sim-grid">${card('#vorbereitung/telc-b1', 'B1 · Alltag', 'telc Deutsch B1', 'Zertifikat Deutsch: Lesen, Sprachbausteine, Hören, Brief, Sprechen', 'sky')}${card('#vorbereitung/telc-b2', 'B2 · Alltag', 'telc Deutsch B2', 'Lesen, Sprachbausteine, Hören, formelle E-Mail, Diskussion', 'sky')}</div>
+      <div class="sim-grid">${card('#vorbereitung/telc-b1', 'B1 · Alltag', 'telc Deutsch B1', 'Zertifikat Deutsch: Lesen, Sprachbausteine, Hören, Brief, Sprechen', 'sky')}${card('#vorbereitung/telc-b2', 'B2 · Alltag', 'telc Deutsch B2', 'Lesen, Sprachbausteine, Hören, halbformelle E-Mail, Diskussion', 'sky')}</div>
       <h2 class="sim-h2">Deutsch-Test für den Beruf (DTB)</h2>
       <div class="sim-grid">${card('#vorbereitung/dtb-b1', 'B1 · Beruf', 'DTB B1', 'Berufssprachkurs B1: Kunden-E-Mail, Notiz, Gespräche im Team', 'ink')}${card('#vorbereitung/dtb-b2', 'B2 · Beruf', 'DTB B2', 'Beschwerde beantworten, Telefonnotiz, Forumsbeitrag, Lösungen finden', 'ink')}</div>
       <h2 class="sim-h2">Integrationskurs</h2>

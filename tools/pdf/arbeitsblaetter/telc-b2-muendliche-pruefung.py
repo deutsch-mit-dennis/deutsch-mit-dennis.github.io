@@ -1,5 +1,5 @@
 # Arbeitsblatt telc Deutsch B2: Mündliche Prüfung (Präsentation, Diskussion, gemeinsam planen)
-# Format laut Website-Daten (sim/telc-b2.js): Paarprüfung ca. 15 Min. + 20 Min. Vorbereitung, 3 Teile à ca. 5 Min.
+# Format laut offiziellem Modelltest telc Deutsch B2 (Übungstest 1, 2019): Paarprüfung ca. 15 Min. + 20 Min. Vorbereitung, 3 Teile à ca. 5 Min.
 # und 25 Punkte, mündlich 75 Punkte, Bestehen ab 45. Eigene Aufgaben im Stil der Prüfung, keine telc-Originale.
 # Aufruf aus dem Repo-Wurzelordner: py -X utf8 tools/pdf/arbeitsblaetter/telc-b2-muendliche-pruefung.py
 import os, sys
@@ -63,9 +63,9 @@ s += [
     R("So läuft die Prüfung", "h2"),
     table(
         [
-            ["<b>Form</b>", "<b>Paarprüfung</b>: Sie sprechen mit einer Partnerin oder einem Partner – ca. <b>15 Minuten</b> für drei Teile."],
+            ["<b>Form</b>", "<b>Paarprüfung</b>: Sie sprechen mit einer Partnerin oder einem Partner – ca. <b>15 Minuten</b>: kurzes Kennenlernen (ohne Punkte), dann drei Teile."],
             ["<b>Vorbereitung</b>",
-             "<b>20 Minuten</b> – Sie bereiten alle drei Teile vor. Notizen dürfen Sie mitnehmen, aber nicht ablesen."],
+             "<b>20 Minuten</b> für Teil 2 und 3 (Teil 1 zu Hause vorbereiten). Notizen mitnehmen ja, ablesen nein."],
             ["<b>Punkte</b>",
              "<b>75 Punkte</b> (je Teil 25). Zum Bestehen brauchen Sie mündlich mindestens <b>45 von 75 Punkten</b> (60 %) – "
              "und im schriftlichen Teil ebenfalls mindestens 60 %."],
@@ -78,10 +78,10 @@ s += [
         [
             ["<b>Teil</b>", "<b>Zeit</b>", "<b>Was passiert?</b>"],
             ["<b>1 Über Erfahrungen sprechen (Präsentation)</b>", "ca. 5 Min. für beide",
-             "Eines von zwei Themen wählen, etwa <b>anderthalb Minuten</b> zusammenhängend sprechen, "
+             "Ein Thema wählen (Prüfung: aus sieben), <b>höchstens anderthalb Minuten</b> zusammenhängend sprechen, "
              "dann Fragen der Partnerin / des Partners beantworten. Danach Rollentausch."],
             ["<b>2 Diskussion</b>", "ca. 5 Min.",
-             "Kurzen Zeitungstext zu einem kontroversen Thema lesen und diskutieren: Meinung, Begründung, "
+             "Zeitungstext zu einem kontroversen Thema kurz wiedergeben (max. 1 Min.), dann diskutieren: Meinung, Begründung, "
              "auf Argumente eingehen – am Ende zusammenfassen, ob Sie sich einigen konnten."],
             ["<b>3 Gemeinsam etwas planen</b>", "ca. 5 Min.",
              "Zusammen etwas planen (z. B. Feier, Ausflug, Projekt): zu allen Punkten der Aufgabenkarte "
