@@ -223,7 +223,7 @@
     const H = hi(), sel = mem.level || '';
     return `<section class="dm-level" id="dm-level" aria-labelledby="dm-level-h" data-i18n-dir>
       <h2 id="dm-level-h" data-i18n="lvl_q">Wie gut ist dein Deutsch?</h2>
-      <p class="dm-level-hint" data-i18n="lvl_hint">Tippe auf dein Niveau. Dann zeige ich dir den nächsten Schritt.</p>
+      <p class="dm-level-hint" data-i18n="lvl_hint">Tippe auf dein Niveau. Dann siehst du alle Materialien dafür.</p>
       <div class="dm-level-btns" role="group" aria-labelledby="dm-level-h">${LV_KEYS.map(([l, k]) => `<button type="button" class="dm-lv" data-lv="${l}" aria-pressed="${sel === l}"><b>${l}</b><small data-i18n="lv_${k}">${x(({ a0: 'Ich fange an', a1: 'Erste Sätze', a2: 'Alltag', b1: 'Gespräche', b2: 'Beruf' })[k])}</small></button>`).join('')}<a class="dm-lv dm-lv-unk" href="#einstufung"><b>?</b><small data-i18n="lvl_unk">Ich weiß es nicht</small></a></div>
       <div class="dm-level-go" id="dm-level-go" aria-live="polite"></div>
       ${H ? `<div class="dm-lang" role="group" aria-label="${x(H.t('lang_h'))}" dir="ltr"><span aria-hidden="true">🌐</span>${H.langs.map(([c, n]) => `<button type="button" class="dm-lang-b" data-lang-set="${c}" lang="${c}" aria-pressed="false">${x(n)}</button>`).join('')}</div>` : ''}
@@ -252,8 +252,8 @@
       $$('.dm-lv[data-lv]', box).forEach(b => b.setAttribute('aria-pressed', String(b.dataset.lv === lv)));
       if (H) H.apply(box);
     };
-    // a level button stays on the start page and shows exactly one next step (course in kurs.js)
-    $$('.dm-lv[data-lv]', box).forEach(b => b.onclick = () => { mem.level = b.dataset.lv; save(); draw(); go.scrollIntoView({ behavior: 'smooth', block: 'nearest' }); go.querySelector('.dm-level-start')?.focus({ preventScroll: true }); });
+    // a level button remembers the level and opens the level page with all materials and topics (#niveau/<lv>)
+    $$('.dm-lv[data-lv]', box).forEach(b => b.onclick = () => { mem.level = b.dataset.lv; save(); location.hash = '#niveau/' + b.dataset.lv; });
     $$('[data-lang-set]', box).forEach(b => b.onclick = () => { H.set(b.dataset.langSet); draw(); });
     draw();
     if (H) H.apply(document);
@@ -278,7 +278,7 @@
         <p class="dm-hero-title">Deutsch lernen mit Dennis</p>
         <p class="dm-promise" data-i18n="free" data-i18n-dir>Kostenlos · A0 bis B2 · ohne Anmeldung</p>
         ${levelPicker()}
-        <p class="dm-hand">Hallo! Ich bin Dennis, dein Deutschlehrer und zugelassener Prüfer. Tippe auf dein Niveau – ich zeige dir den nächsten Schritt.</p>
+        <p class="dm-hand">Hallo! Ich bin Dennis, dein Deutschlehrer und zugelassener Prüfer. Tippe auf dein Niveau – ich zeige dir alle Materialien dafür.</p>
         <ul class="dm-trust"><li>✓ DTZ-Prüfer</li><li>✓ telc-Prüfer B1–B2</li><li>✓ Lehrkraft mit BAMF-Zulassung bis C2</li></ul>
       </div>
     </section>

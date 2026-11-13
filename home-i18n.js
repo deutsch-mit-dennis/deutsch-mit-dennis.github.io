@@ -21,7 +21,7 @@
   const D = {
     de: {
       lvl_q: "Wie gut ist dein Deutsch?",
-      lvl_hint: "Tippe auf dein Niveau. Dann zeige ich dir den nächsten Schritt.",
+      lvl_hint: "Tippe auf dein Niveau. Dann siehst du alle Materialien dafür.",
       lv_a0: "Ich fange an",
       lv_a1: "Erste Sätze",
       lv_a2: "Alltag",
@@ -70,7 +70,7 @@
     },
     en: {
       lvl_q: "How good is your German?",
-      lvl_hint: "Tap your level. Then I will show you the next step.",
+      lvl_hint: "Tap your level. Then you will see all materials for it.",
       lv_a0: "I'm just starting",
       lv_a1: "First sentences",
       lv_a2: "Everyday life",
@@ -119,7 +119,7 @@
     },
     uk: {
       lvl_q: "Наскільки добре ти знаєш німецьку?",
-      lvl_hint: "Натисни свій рівень. Тоді я покажу тобі наступний крок.",
+      lvl_hint: "Натисни свій рівень. Тоді ти побачиш усі матеріали для нього.",
       lv_a0: "Я тільки починаю",
       lv_a1: "Перші речення",
       lv_a2: "Повсякденне життя",
@@ -168,7 +168,7 @@
     },
     ru: {
       lvl_q: "Насколько хорошо ты знаешь немецкий?",
-      lvl_hint: "Нажми на свой уровень. Тогда я покажу тебе следующий шаг.",
+      lvl_hint: "Нажми на свой уровень. Тогда ты увидишь все материалы для него.",
       lv_a0: "Я только начинаю",
       lv_a1: "Первые предложения",
       lv_a2: "Повседневная жизнь",
@@ -217,7 +217,7 @@
     },
     ar: {
       lvl_q: "ما مستوى لغتك الألمانية؟",
-      lvl_hint: "اضغط على مستواك. ثم سأريك الخطوة التالية.",
+      lvl_hint: "اضغط على مستواك. ثم سترى كل المواد الخاصة به.",
       lv_a0: "أنا في البداية",
       lv_a1: "جمل أولى",
       lv_a2: "الحياة اليومية",
@@ -266,7 +266,7 @@
     },
     tr: {
       lvl_q: "Almancan ne kadar iyi?",
-      lvl_hint: "Seviyene dokun. Sonra sana bir sonraki adımı göstereyim.",
+      lvl_hint: "Seviyene dokun. Sonra o seviyenin tüm materyallerini görürsün.",
       lv_a0: "Yeni başlıyorum",
       lv_a1: "İlk cümleler",
       lv_a2: "Günlük hayat",
@@ -315,7 +315,7 @@
     },
     fa: {
       lvl_q: "آلمانی تو چقدر خوب است؟",
-      lvl_hint: "روی سطح خودت بزن. بعد قدم بعدی را نشانت می‌دهم.",
+      lvl_hint: "روی سطح خودت بزن. بعد همهٔ مطالب آن سطح را می‌بینی.",
       lv_a0: "تازه شروع می‌کنم",
       lv_a1: "جمله‌های اول",
       lv_a2: "زندگی روزمره",
@@ -364,7 +364,7 @@
     },
     es: {
       lvl_q: "¿Qué tan bueno es tu alemán?",
-      lvl_hint: "Toca tu nivel. Después te muestro el siguiente paso.",
+      lvl_hint: "Toca tu nivel. Después verás todos los materiales de ese nivel.",
       lv_a0: "Estoy empezando",
       lv_a1: "Primeras frases",
       lv_a2: "Vida cotidiana",
@@ -413,7 +413,7 @@
     },
     it: {
       lvl_q: "Quanto è buono il tuo tedesco?",
-      lvl_hint: "Tocca il tuo livello. Poi ti mostro il prossimo passo.",
+      lvl_hint: "Tocca il tuo livello. Poi vedrai tutti i materiali di quel livello.",
       lv_a0: "Sto iniziando",
       lv_a1: "Prime frasi",
       lv_a2: "Vita quotidiana",

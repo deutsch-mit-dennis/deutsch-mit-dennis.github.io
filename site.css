@@ -733,6 +733,9 @@ body:has(header.dm-header.menu-open) .dm-tour:not(.dm-tour-open){visibility:hidd
 
 .dm-more>summary::before{content:none!important;display:none!important}
 
-/* narrow phones: the language button needs the room of the share button (sharing stays in the footer) */
-@media (max-width:430px){header.dm-header .dm-hshare{display:none!important}}
+/* narrow phones: share button stays visible next to the language button.
+   Room comes from: language button shows only the globe, slightly smaller icon buttons and gaps.
+   (Below 330px the share button is hidden by the rule further up; sharing stays in the footer.) */
+@media (max-width:430px){header.dm-header .ui-lang-btn b{display:none}header.dm-header .ui-lang-btn{min-width:36px;padding:0 2px}}
+@media (max-width:400px){html body header.dm-header{column-gap:3px!important}header.dm-header .dm-hshare,header.dm-header .dm-bell,header.dm-header #pl-menu{flex:0 0 38px!important;width:38px!important;min-width:38px!important;height:38px!important}header.dm-header .dm-3d-switch{min-width:40px;padding:0 4px}}
 @media (max-width:350px){header.dm-header{gap:4px!important;padding-left:8px!important;padding-right:8px!important}header.dm-header .logo{font-size:12.5px!important;margin-right:0!important}header.dm-header .ui-lang-btn b{display:none}header.dm-header .ui-lang-btn{min-width:36px;padding:0 2px}}
