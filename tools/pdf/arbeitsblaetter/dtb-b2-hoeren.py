@@ -84,7 +84,7 @@ def script(title, lines_, bg=SOFT):
 s = [
     R("B2 · Prüfung DTB · Arbeitsblatt", "kick"),
     R("DTB B2 Hören: alle vier Teile", "h1"),
-    R("Gespräche im Team, eine Diskussion, eine Firmenpräsentation, Nachrichten auf dem Anrufbeantworter – "
+    R("Gespräche im Team, Meinungen und Argumente, eine Firmenpräsentation, Nachrichten auf dem Anrufbeantworter – "
       "so hören Sie gezielt und vermeiden die typischen Fallen.", "lead"),
     R("So läuft der Prüfungsteil Hören", "h2"),
     box(R("Sie haben für <b>alle vier Teile zusammen 20 Minuten</b>. Lesen Sie vor jedem Hörtext die Aufgaben. "
@@ -95,8 +95,8 @@ s = [
         ["<b>Teil</b>", "<b>Aufgabe</b>", "<b>Zeit</b>", "<b>Punkte</b>"],
         ["<b>1</b> Arbeitsabläufe, Probleme, Vorschläge", "3 kurze Gespräche unter Kolleginnen und Kollegen. Zu jedem Gespräch: "
          "1 Aussage richtig/falsch und 1 Aufgabe mit a, b oder c.", "ca. 5 Min.", "6 × 3 = 18"],
-        ["<b>2</b> Argumente", "Prüfung: 4 kurze Gespräche, 6 Sätze (a–f) – welcher Satz passt zu welchem Gespräch? 2 Sätze bleiben übrig. "
-         "(Übung 2 auf diesem Blatt: Aussagen den Personen einer Diskussion zuordnen.)",
+        ["<b>2</b> Argumentationen nachvollziehen", "4 kurze Gespräche am Arbeitsplatz, 6 Sätze (a–f): Welcher Satz passt zu welchem "
+         "Gespräch? 2 Sätze bleiben übrig. 1 Minute Lesezeit.",
          "ca. 5 Min.", "4 × 3 = 12"],
         ["<b>3</b> Unternehmensinformationen", "Eine Präsentation über ein Unternehmen: 4 Aufgaben mit a, b oder c.", "ca. 5 Min.", "4 × 3 = 12"],
         ["<b>4</b> Anliegen am Telefon", "5 Nachrichten auf dem Anrufbeantworter: je 1 Aufgabe mit a, b oder c.", "ca. 5 Min.", "5 × 3 = 15"],
@@ -132,24 +132,30 @@ s += [R("Gespräch 1 – in einer Kfz-Werkstatt", "sub"),
 
 # ───────────────────────── Teil 2 ─────────────────────────
 s += [tips_traps(
-    "Teil 2 · Argumente",
-    ["Merken Sie sich vor dem Hören Namen und Rollen der Personen.",
-     "Lesen Sie die Aussagen: Wer würde das wohl sagen?",
-     "Notieren Sie beim Hören zu jeder Person 1–2 Stichwörter.",
-     "Achten Sie auf Widerspruch: <i>Ehrlich gesagt … · Das klingt gut, aber …</i>"],
-    ["Eine Person nennt ein Argument nur, um es zu kritisieren.",
-     "Zwei Personen sprechen über ähnliche Themen.",
-     "Die Aussage ist umformuliert, nicht wörtlich."])]
-s += task(2, "Wer sagt was?", "Sie hören einen Ausschnitt aus einer Abteilungsbesprechung bei den Stadtwerken Lindau-Nord. Es geht um den "
-          "Umzug in ein offenes Büro mit Desk-Sharing (ohne feste Schreibtische). Wer sagt was? Ordnen Sie die Aussagen 1–4 den Personen zu. "
-          "Sie hören die Diskussion einmal.", 2)
-s += [box(R("<b>a)</b> Frau Abara (Personalrat)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>b)</b> Herr Lindqvist (IT)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>c)</b> Frau Demir (Sachbearbeitung)", "cell"), SOFT),
-      Spacer(1, 3)]
-u2 = ["Weil viele Beschäftigte zu Hause arbeiten, bleiben Plätze im Büro oft leer.",
-      "Wer telefoniert oder sich konzentrieren muss, braucht einen ruhigen Ort.",
-      "Wenn alle jeden Tag woanders sitzen, leidet der Zusammenhalt im Team.",
-      "Die Beschäftigten sollen keine eigenen Geräte an ihren Platz mitbringen."]
-s += [R(f"<b>{i}.</b> {t}   Person: {LINE_}", "item") for i, t in enumerate(u2, 1)]
+    "Teil 2 · Argumentationen nachvollziehen",
+    ["Lesezeit (1 Min.): <b>Thema</b> und <b>Begründung</b> unterstreichen.",
+     "Gleiches Thema? Die Begründung entscheidet.",
+     "Bis zum Schluss hören: Wer überzeugt wen?"],
+    ["Die erste Meinung ist nicht das Ergebnis.",
+     "Gleiches Wort, andere Aussage.",
+     "Zwei Sätze bleiben übrig."])]
+s += task(2, "Vier kurze Gespräche, sechs Sätze", "Sie hören vier kurze Gespräche am Arbeitsplatz. Welcher Satz (a–f) passt zu "
+          "welchem Gespräch? Zwei Sätze passen nicht. Sie haben jetzt <b>eine Minute</b> Zeit, die Sätze zu lesen. "
+          "Sie hören jedes Gespräch <b>einmal</b>.", 2)
+u2 = ["Eine genaue Dokumentation schützt den Betrieb, wenn sich Kundinnen oder Kunden später beschweren.",
+      "Ein Schichtplan per App spart der Teamleitung vor allem Arbeit.",
+      "Beschäftigte sollten kleine Probleme selbst lösen dürfen, weil schnelle Hilfe Kunden zufriedener macht.",
+      "Wenn Beschäftigte ihre Schichten mitplanen, sind sie zufriedener und fallen seltener aus.",
+      "Über Entschädigungen für Kundinnen und Kunden sollte nur die Leitung entscheiden.",
+      "Feste Telefonzeiten verbessern die Betreuung der Patientinnen und Patienten in der Praxis."]
+_c = [R(f"<b>{l})</b> {t}", "tip") for l, t in zip("abcdef", u2)]
+_t = Table([[_c[i], _c[i + 1]] for i in range(0, 6, 2)], colWidths=[87 * mm] * 2)
+_t.setStyle(TableStyle([("VALIGN", (0, 0), (-1, -1), "TOP"), ("BACKGROUND", (0, 0), (-1, -1), SOFT),
+                        ("LEFTPADDING", (0, 0), (-1, -1), 6), ("RIGHTPADDING", (0, 0), (-1, -1), 6),
+                        ("TOPPADDING", (0, 0), (-1, -1), 3), ("BOTTOMPADDING", (0, 0), (-1, -1), 1)]))
+s += [_t, Spacer(1, 3),
+      R("&nbsp;&nbsp;&nbsp;&nbsp;".join(f"<b>Gespräch {i}:</b> {LINE_}" for i in range(1, 5)), "item"),
+      R("<b>Mehr Übung:</b> Arbeitsblatt ‚DTB B2 Hören Teil 2: vier kurze Gespräche, sechs Sätze‘", "small")]
 
 # ───────────────────────── Teil 3 ─────────────────────────
 s += [tips_traps(
@@ -233,29 +239,45 @@ s += [KeepTogether([R("Lösungen Teil 1", "solh")] + [R(t, "sol") for t in [
     "<b>6 b</b> – Dmitri ändert die Tafel. <i>Falle:</i> Amara schält und ruft später beim Großmarkt an.",
 ]])]
 
-s += script("Teil 2 · Abteilungsbesprechung (Herr Fischer moderiert, liest neutral)", [
-    ("Herr Fischer", "Guten Morgen zusammen. Wie Sie wissen, ziehen wir im Frühjahr in das neue Gebäude. Geplant ist ein offenes Büro mit "
-                     "Desk-Sharing: Niemand hat mehr einen festen Schreibtisch, man bucht sich morgens einen Platz per App. Ich möchte heute "
-                     "Ihre Meinungen hören. Frau Abara, Sie sind vom Personalrat."),
-    ("Frau Abara", "Danke. Wir sind nicht grundsätzlich dagegen. Aber in einem offenen Raum mit vierzig Leuten ist es laut. Wer viel telefoniert "
-                   "oder sich konzentrieren muss, braucht ruhige Räume. Unsere Bedingung ist deshalb: genug kleine Besprechungsräume, die man "
-                   "spontan nutzen kann. Und die Tische müssen höhenverstellbar sein – alle, nicht nur ein paar."),
-    ("Herr Fischer", "Herr Lindqvist, wie sieht das die IT?"),
-    ("Herr Lindqvist", "Technisch ist das kein Problem, Laptops haben ja schon alle. Ehrlich gesagt sehe ich sogar einen Vorteil: Im Moment "
-                       "steht an vielen Tagen ein Drittel der Plätze leer, weil die Leute im Homeoffice sind. Mit Desk-Sharing sparen wir Fläche "
-                       "und damit Geld. Was ich allerdings nicht möchte: dass jeder seine eigene Maus, Tastatur oder sogar den eigenen Bildschirm "
-                       "mitbringt. Das gibt Chaos. Wir statten jeden Platz gleich aus."),
-    ("Herr Fischer", "Frau Demir?"),
-    ("Frau Demir", "Also, für mich klingt das erst mal nicht so gut. Ich arbeite mit vielen Papierakten, die kann ich nicht jeden Abend wegräumen. "
-                   "Und ich habe Angst, dass das Team auseinanderfällt, wenn jeder jeden Tag woanders sitzt. Man sieht sich ja kaum noch. "
-                   "Mein Vorschlag wäre: feste Zonen für jedes Team."),
-    ("Frau Abara", "Das unterstützen wir."),
+s += script("Teil 2 · Gespräch 1 – in einem Logistiklager (Paulina, Emeka)", [
+    ("Emeka", "Paulina, ich hab gehört, ab nächsten Monat tragen wir unsere Wunschschichten selbst in eine App ein?"),
+    ("Paulina", "Genau. Jeder trägt ein, wann er gern arbeiten möchte, und ich plane dann auf dieser Grundlage."),
+    ("Emeka", "Na ja, dann spart dir die App wenigstens viel Arbeit."),
+    ("Paulina", "Ehrlich gesagt nicht. Ich muss mehr abstimmen als vorher. Aber im Nachbarlager machen sie das seit einem Jahr, "
+                "und dort gibt es deutlich weniger Krankmeldungen. Wer mitplanen darf, kann Familie und Arbeit besser verbinden – "
+                "und ist einfach zufriedener."),
+    ("Emeka", "Stimmt, das merk ich ja selbst, wenn mein Dienst zur Kita passt."),
+])
+s += script("Teil 2 · Gespräch 2 – in einem Elektrobetrieb (Ayşe, Goran)", [
+    ("Goran", "Ayşe, muss ich wirklich vor jedem Auftrag die ganze Wohnung fotografieren? Das kostet jedes Mal zehn Minuten."),
+    ("Ayşe", "Ja, bitte. Erinnerst du dich an den Kunden in der Bergstraße? Der hat behauptet, wir hätten seinen Parkettboden zerkratzt."),
+    ("Goran", "Ach, der. Die Kratzer waren doch schon vorher da."),
+    ("Ayşe", "Eben. Aber beweisen konnten wir es nicht – und am Ende hat der Betrieb bezahlt. Mit Fotos wäre das nicht passiert."),
+    ("Goran", "Okay, verstanden. Dann lieber zehn Minuten fotografieren als so einen Ärger."),
+])
+s += script("Teil 2 · Gespräch 3 – in einer Hausarztpraxis (Mariana, Jonas)", [
+    ("Jonas", "Mariana, stimmt das? Ab Januar gehen wir nur noch von acht bis zehn ans Telefon? Die Patienten werden sich ärgern."),
+    ("Mariana", "Am Anfang vielleicht. Aber überleg mal, wie es jetzt ist: Das Telefon klingelt ständig, und die Leute am Empfang "
+                "müssen warten. Neulich hab ich einer Patientin vor lauter Stress das falsche Rezept gegeben."),
+    ("Jonas", "Hm, das passiert mir auch manchmal."),
+    ("Mariana", "Wenn wir feste Telefonzeiten haben, können wir uns um die Menschen in der Praxis in Ruhe kümmern. "
+                "Termine kann man ja zusätzlich online buchen."),
+    ("Jonas", "Gut, so gesehen ist das für alle besser."),
+])
+s += script("Teil 2 · Gespräch 4 – im Kundenservice eines Möbelhauses (Hamid, Lena)", [
+    ("Hamid", "Lena, ich finde, wir sollten Kunden bei kleinen Problemen selbst einen Gutschein geben dürfen. Zum Beispiel, "
+              "wenn ein Schrank mit einem kleinen Kratzer geliefert wird."),
+    ("Lena", "Das sollte lieber die Chefin entscheiden. Sonst geben wir zu viel Geld aus."),
+    ("Hamid", "Aber bis die Chefin antwortet, vergehen oft drei, vier Tage. Der Kunde ruft dreimal an und wird immer wütender. "
+              "Wenn ich ihm sofort helfen kann, ist er zufrieden und kauft wieder bei uns."),
+    ("Lena", "Hm. Wenn es eine Grenze gibt, sagen wir zwanzig Euro, bin ich dabei."),
 ])
 s += [KeepTogether([R("Lösungen Teil 2", "solh")] + [R(t, "sol") for t in [
-    "<b>1 b</b> – Lindqvist: „ein Drittel der Plätze leer, weil die Leute im Homeoffice sind“.",
-    "<b>2 a</b> – Abara: „Wer viel telefoniert oder sich konzentrieren muss, braucht ruhige Räume.“",
-    "<b>3 c</b> – Demir: „dass das Team auseinanderfällt“. <i>Falle:</i> Abara unterstützt nur die Teamzonen.",
-    "<b>4 b</b> – Lindqvist: keine eigene Maus, Tastatur, kein eigener Bildschirm. <i>Falle:</i> Abara meint Tische, keine Geräte.",
+    "<b>Gespräch 1: d · Gespräch 2: a · Gespräch 3: f · Gespräch 4: c</b> · übrig: b und e",
+    "<b>1 d</b> – Wer mitplanen darf, ist zufriedener, weniger Krankmeldungen. <i>Falle b:</i> Paulina sagt, die App spart ihr <b>keine</b> Arbeit.",
+    "<b>2 a</b> – Mit Fotos kann der Betrieb beweisen, dass der Schaden schon vorher da war.",
+    "<b>3 f</b> – Feste Telefonzeiten: mehr Ruhe für die Patientinnen und Patienten in der Praxis.",
+    "<b>4 c</b> – Schnelle Hilfe macht Kunden zufrieden. <i>Falle e:</i> Das ist Lenas erste Meinung – Hamid überzeugt sie.",
 ]])]
 
 s += script("Teil 3 · Präsentation auf der Jobmesse (Frau Owusu)", [
