@@ -1,30 +1,30 @@
 {
- "run": "2026-11-13T13:58:23Z",
+ "run": "2026-11-14T10:57:55Z",
  "runs": [
   {
    "engine": "gemini",
    "created": 0,
-   "open": 455,
-   "chars_this_month": 49071,
+   "open": 367,
+   "chars_this_month": 49134,
    "monthly_limit": 160000,
    "errors": [
     {
-     "key": "t28b6096e",
+     "key": "t2e301ce2",
      "error": "HTTP 402: {\n  \"error\": {\n    \"code\": 402,\n    \"message\": \"Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage your project and billing. Learn more at https://ai.google.dev/gemini-api/docs/billing#prepay. \",\n    \"status\": \"RESOURCE_EXHAUSTED\"\n  }\n}\n"
     }
    ]
   },
   {
    "engine": "elevenlabs",
-   "created": 88,
-   "open": 367,
-   "chars_this_month": 147856,
-   "monthly_limit": 147895,
+   "created": 104,
+   "open": 263,
+   "chars_this_month": 152587,
+   "monthly_limit": 152598,
    "errors": []
   },
   {
    "engine": "google",
-   "created": 367,
+   "created": 0,
    "open": 0,
    "chars_this_month": 15208,
    "monthly_limit": 600000,
