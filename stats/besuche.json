@@ -1,30 +1,25 @@
 {
  "hinweis": "Zusammengefasste Besucherzahlen (Cloudflare Web Analytics, ohne Cookies). Automatisch erzeugt.",
- "stand": "2026-11-14T11:21:04.368Z",
- "tag": "2026-11-13",
+ "stand": "2026-11-15T11:53:01.614Z",
+ "tag": "2026-11-14",
  "gestern": {
-  "besuche": 29,
-  "seitenaufrufe": 657
+  "besuche": 10,
+  "seitenaufrufe": 52
  },
  "letzte7Tage": {
-  "besuche": 317,
-  "seitenaufrufe": 3617
+  "besuche": 243,
+  "seitenaufrufe": 3480
  },
  "herkunft": [
   {
    "name": "deutsch-mit-dennis.de",
    "besuche": 0,
-   "aufrufe": 3300
+   "aufrufe": 3237
   },
   {
    "name": "(direkt)",
-   "besuche": 306,
-   "aufrufe": 306
-  },
-  {
-   "name": "l.instagram.com",
-   "besuche": 4,
-   "aufrufe": 4
+   "besuche": 234,
+   "aufrufe": 234
   },
   {
    "name": "m.facebook.com",
@@ -33,6 +28,11 @@
   },
   {
    "name": "www.facebook.com",
+   "besuche": 2,
+   "aufrufe": 2
+  },
+  {
+   "name": "l.instagram.com",
    "besuche": 2,
    "aufrufe": 2
   },
@@ -55,13 +55,13 @@
  "laender": [
   {
    "name": "DE",
-   "besuche": 297,
-   "aufrufe": 3593
+   "besuche": 226,
+   "aufrufe": 3460
   },
   {
    "name": "US",
-   "besuche": 9,
-   "aufrufe": 9
+   "besuche": 7,
+   "aufrufe": 7
   },
   {
    "name": "SE",
@@ -79,9 +79,9 @@
    "aufrufe": 3
   },
   {
-   "name": "TR",
+   "name": "CA",
    "besuche": 1,
-   "aufrufe": 2
+   "aufrufe": 1
   },
   {
    "name": "FI",
@@ -89,7 +89,7 @@
    "aufrufe": 1
   },
   {
-   "name": "CA",
+   "name": "UA",
    "besuche": 1,
    "aufrufe": 1
   }
@@ -97,20 +97,20 @@
  "geraete": [
   {
    "name": "desktop",
-   "besuche": 174,
-   "aufrufe": 3143
+   "besuche": 96,
+   "aufrufe": 2971
   },
   {
    "name": "mobile",
-   "besuche": 143,
-   "aufrufe": 474
+   "besuche": 147,
+   "aufrufe": 509
   }
  ],
  "seiten": [
   {
    "name": "/",
-   "besuche": 317,
-   "aufrufe": 3551
+   "besuche": 243,
+   "aufrufe": 3414
   },
   {
    "name": "/index.html",
@@ -270,6 +270,10 @@
   "2026-11-13": {
    "besuche": 29,
    "seitenaufrufe": 657
+  },
+  "2026-11-14": {
+   "besuche": 10,
+   "seitenaufrufe": 52
   }
  }
 }
