@@ -1,5 +1,5 @@
 {
-"updated": "2026-11-15T11:32:04Z",
+"updated": "2026-11-16T12:04:03Z",
 "engines": [
 "elevenlabs",
 "gemini",
@@ -12658,9 +12658,9 @@
 "text": "b1ae244c0d"
 },
 "t8e18ca65": {
-"v": "d7e3c9805a",
-"engine": "google",
-"sig": "d7e3c9805a",
+"v": "774791d151",
+"engine": "elevenlabs",
+"sig": "774791d151",
 "text": "fd3d44a795"
 },
 "t8e1ab01e": {
@@ -12682,9 +12682,9 @@
 "text": "9f7f3fec2a"
 },
 "t8e49cddc": {
-"v": "cfdf39478f",
-"engine": "google",
-"sig": "cfdf39478f",
+"v": "ddacd37265",
+"engine": "elevenlabs",
+"sig": "ddacd37265",
 "text": "ed9838a281"
 },
 "t8e5017c5": {
@@ -12712,9 +12712,9 @@
 "text": "13fdc5ce73"
 },
 "t8e8b57f3": {
-"v": "17db5ebb6d",
-"engine": "google",
-"sig": "17db5ebb6d",
+"v": "ba71f74746",
+"engine": "elevenlabs",
+"sig": "ba71f74746",
 "text": "e41e51c591"
 },
 "t8e96c9fd": {
@@ -12725,9 +12725,9 @@
 "whole": true
 },
 "t8e9ca6ba": {
-"v": "a3b87b6460",
-"engine": "google",
-"sig": "a3b87b6460",
+"v": "f0c46c3f53",
+"engine": "elevenlabs",
+"sig": "f0c46c3f53",
 "text": "4dd5ff6b81"
 },
 "t8e9e608c": {
@@ -12780,9 +12780,9 @@
 "text": "88a928f2e8"
 },
 "t8f28ea30": {
-"v": "da80d06296",
-"engine": "google",
-"sig": "da80d06296",
+"v": "e097a8ad7f",
+"engine": "elevenlabs",
+"sig": "e097a8ad7f",
 "text": "522439cbe0"
 },
 "t8f3a079c": {
@@ -12822,9 +12822,9 @@
 "text": "d09f524891"
 },
 "t8fb6db13": {
-"v": "8f9af83bb9",
-"engine": "google",
-"sig": "8f9af83bb9",
+"v": "ef860897d4",
+"engine": "elevenlabs",
+"sig": "ef860897d4",
 "text": "b5955a840f"
 },
 "t8fd3e207": {
@@ -12834,9 +12834,9 @@
 "text": "cbe168a3ac"
 },
 "t8fe09718": {
-"v": "faa28fe21d",
-"engine": "google",
-"sig": "faa28fe21d",
+"v": "599d33dabd",
+"engine": "elevenlabs",
+"sig": "599d33dabd",
 "text": "71d1b9096b"
 },
 "t8fecd025": {
@@ -12846,9 +12846,9 @@
 "text": "dd1ff1e160"
 },
 "t90183515": {
-"v": "a9d30cae42",
-"engine": "google",
-"sig": "a9d30cae42",
+"v": "c305913cef",
+"engine": "elevenlabs",
+"sig": "c305913cef",
 "text": "13f034005a"
 },
 "t9043c280": {
@@ -12858,9 +12858,9 @@
 "text": "1286fa7402"
 },
 "t9062f3d7": {
-"v": "5b470f160a",
-"engine": "google",
-"sig": "5b470f160a",
+"v": "0a8d125500",
+"engine": "elevenlabs",
+"sig": "0a8d125500",
 "text": "a677d8049f"
 },
 "t907c2d0c": {
@@ -12888,9 +12888,9 @@
 "text": "2aa8529b86"
 },
 "t90bf00f6": {
-"v": "2428e5162c",
-"engine": "google",
-"sig": "2428e5162c",
+"v": "56fdcf2919",
+"engine": "elevenlabs",
+"sig": "56fdcf2919",
 "text": "e10494e750"
 },
 "t90c5562b": {
@@ -12912,9 +12912,9 @@
 "text": "5369af5295"
 },
 "t9115f7ad": {
-"v": "20901919a9",
-"engine": "google",
-"sig": "20901919a9",
+"v": "9af10d502d",
+"engine": "elevenlabs",
+"sig": "9af10d502d",
 "text": "4f7747c6e1"
 },
 "t9126ff84": {
@@ -12924,9 +12924,9 @@
 "text": "1f474f5ffb"
 },
 "t91362007": {
-"v": "98335a9565",
-"engine": "google",
-"sig": "98335a9565",
+"v": "774e7a7d75",
+"engine": "elevenlabs",
+"sig": "774e7a7d75",
 "text": "aa493876f6"
 },
 "t913e536e": {
@@ -12936,9 +12936,9 @@
 "text": "5556524738"
 },
 "t914668c0": {
-"v": "7ff37af8cc",
-"engine": "google",
-"sig": "7ff37af8cc",
+"v": "ed020197dd",
+"engine": "elevenlabs",
+"sig": "ed020197dd",
 "text": "52b06afe29"
 },
 "t91765c37": {
@@ -12954,15 +12954,15 @@
 "text": "3c078e432c"
 },
 "t91a7d046": {
-"v": "b78ea1c5c7",
-"engine": "google",
-"sig": "b78ea1c5c7",
+"v": "22a7f96eb4",
+"engine": "elevenlabs",
+"sig": "22a7f96eb4",
 "text": "8ee22fba90"
 },
 "t91afa7c8": {
-"v": "c29a557dfd",
-"engine": "google",
-"sig": "c29a557dfd",
+"v": "3fd09f39be",
+"engine": "elevenlabs",
+"sig": "3fd09f39be",
 "text": "803a5e73eb"
 },
 "t91b93fcd": {
@@ -12978,9 +12978,9 @@
 "text": "c6b5183441"
 },
 "t91d675f2": {
-"v": "164384c741",
-"engine": "google",
-"sig": "164384c741",
+"v": "96bf33768f",
+"engine": "elevenlabs",
+"sig": "96bf33768f",
 "text": "a598346996"
 },
 "t91de3e36": {
@@ -13014,9 +13014,9 @@
 "text": "ba24293aa5"
 },
 "t9242d9a5": {
-"v": "4df8d1e1c7",
-"engine": "google",
-"sig": "4df8d1e1c7",
+"v": "877347ec99",
+"engine": "elevenlabs",
+"sig": "877347ec99",
 "text": "7f9ff2f420"
 },
 "t92571b86": {
@@ -13038,9 +13038,9 @@
 "text": "17e0360c42"
 },
 "t927f0e43": {
-"v": "ce58c5bc94",
-"engine": "google",
-"sig": "ce58c5bc94",
+"v": "0ed3e05e1b",
+"engine": "elevenlabs",
+"sig": "0ed3e05e1b",
 "text": "0f550bfa90"
 },
 "t928d950d": {
@@ -13062,9 +13062,9 @@
 "text": "84106d6709"
 },
 "t92dd4f49": {
-"v": "5208715701",
-"engine": "google",
-"sig": "5208715701",
+"v": "96df2dc6e6",
+"engine": "elevenlabs",
+"sig": "96df2dc6e6",
 "text": "2c839854ea"
 },
 "t92ec5eb8": {
@@ -13086,9 +13086,9 @@
 "text": "85829970fd"
 },
 "t93319eb9": {
-"v": "5812304897",
-"engine": "google",
-"sig": "5812304897",
+"v": "9aedb591ce",
+"engine": "elevenlabs",
+"sig": "9aedb591ce",
 "text": "df186f40e7"
 },
 "t9351fdbb": {
@@ -13183,9 +13183,9 @@
 "text": "b47b318c6d"
 },
 "t94d4fc44": {
-"v": "f9e125a407",
-"engine": "google",
-"sig": "f9e125a407",
+"v": "4e5d62f8ca",
+"engine": "elevenlabs",
+"sig": "4e5d62f8ca",
 "text": "76a804602e"
 },
 "t950b299b": {
@@ -13195,9 +13195,9 @@
 "text": "a69c710f88"
 },
 "t951d1fff": {
-"v": "92f57e5be4",
-"engine": "google",
-"sig": "92f57e5be4",
+"v": "0756ab293c",
+"engine": "elevenlabs",
+"sig": "0756ab293c",
 "text": "fdb4f527c7"
 },
 "t952224ee": {
@@ -13207,9 +13207,9 @@
 "text": "b73b11620d"
 },
 "t9526d537": {
-"v": "e2a1489438",
-"engine": "google",
-"sig": "e2a1489438",
+"v": "34df71bff1",
+"engine": "elevenlabs",
+"sig": "34df71bff1",
 "text": "86235fba8a"
 },
 "t95390ff8": {
@@ -13225,9 +13225,9 @@
 "text": "75309caed9"
 },
 "t955cf70d": {
-"v": "b57075e133",
-"engine": "google",
-"sig": "b57075e133",
+"v": "5cd4d2d671",
+"engine": "elevenlabs",
+"sig": "5cd4d2d671",
 "text": "6d9a45a54b"
 },
 "t955fcc1d": {
@@ -13291,9 +13291,9 @@
 "text": "a63a4c215d"
 },
 "t95d11aeb": {
-"v": "ccf51a1c89",
-"engine": "google",
-"sig": "ccf51a1c89",
+"v": "f2db05cc51",
+"engine": "elevenlabs",
+"sig": "f2db05cc51",
 "text": "1e79f8bfe9"
 },
 "t95e791da": {
@@ -13309,9 +13309,9 @@
 "text": "7114f78ce6"
 },
 "t95fd7360": {
-"v": "19b2d2e6c0",
-"engine": "google",
-"sig": "19b2d2e6c0",
+"v": "5ea941bb4a",
+"engine": "elevenlabs",
+"sig": "5ea941bb4a",
 "text": "dfb3167b07"
 },
 "t96427ef5": {
@@ -13393,9 +13393,9 @@
 "text": "0e5bdac3fc"
 },
 "t97539b71": {
-"v": "38f4a557f0",
-"engine": "google",
-"sig": "38f4a557f0",
+"v": "af47f149a3",
+"engine": "elevenlabs",
+"sig": "af47f149a3",
 "text": "7b658de9d8"
 },
 "t9767c255": {
