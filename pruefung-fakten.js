@@ -389,7 +389,7 @@
         [
           "Mündliche Prüfung",
           "ca. 15 Min.",
-          "3 Teile, je ca. 5 Min.: Über Erfahrungen sprechen, Diskussion, Gemeinsam etwas planen · zu zweit (zu dritt ca. 25 Min.) · vorher 20 Min. Vorbereitung",
+          "Kurzes Kennenlernen (ca. 1 Min., ohne Bewertung), dann 3 Teile, je ca. 5 Min.: Über Erfahrungen sprechen (1 von 7 Themen, zu Hause vorbereitet, max. 1,5 Min. sprechen), Diskussion, Gemeinsam etwas planen · zu zweit (zu dritt ca. 25 Min.) · 20 Min. Vorbereitung für Teil 2 und 3",
           "75 Punkte",
         ],
       ],

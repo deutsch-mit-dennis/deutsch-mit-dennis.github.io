@@ -52,7 +52,7 @@ window.DMLazy = (() => {
     "muster-data.js?v=20261111s"
   ],
   "fakten": [
-    "pruefung-fakten.js?v=20261113q"
+    "pruefung-fakten.js?v=20261117z"
   ],
   "b230": [
     "b2-30.js?v=20261113g2"
@@ -60,7 +60,7 @@ window.DMLazy = (() => {
   "b2t": [
     "sprachbausteine-data.js?v=20261117y",
     "telc-b2-sprechen-data.js?v=20261117y",
-    "b2-training.js?v=20261117y"
+    "b2-training.js?v=20261117z"
   ],
   "b130": [
     "b1-30.js?v=20261117w"

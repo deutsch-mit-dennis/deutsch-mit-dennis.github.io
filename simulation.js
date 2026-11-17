@@ -3,7 +3,7 @@
    LiD-Simulation: Fragen aus window.LID_KATALOG (BAMF-Gesamtfragenkatalog).
    Fortschritt und Antworten bleiben nur im Browser (DM.store.sim). */
 (() => {
-  const V = '20261117x';
+  const V = '20261117z';
   const $ = (s, r = document) => r.querySelector(s);
   const $$ = (s, r = document) => [...r.querySelectorAll(s)];
   const e = s => DM.esc(s);
@@ -688,7 +688,7 @@
     return `${materialHTML(p)}${audio}${choose}${tasks}
       <label class="sim-wlabel" for="w-${p._key}">Dein Text</label>
       <textarea id="w-${p._key}" class="sim-textarea" data-w="${p._key}" rows="12" spellcheck="false" autocomplete="off" autocapitalize="sentences">${e(w.text || '')}</textarea>
-      <p class="sim-wc">Wörter: <b data-wc="${p._key}">${words(w.text)}</b>${p.minWords ? ` · Richtwert ca. ${p.minWords}` : ''}</p>`;
+      <p class="sim-wc">Wörter: <b data-wc="${p._key}">${words(w.text)}</b>${p.minWords ? ` · ${p.minStrict ? 'mindestens' : 'Richtwert ca.'} ${p.minWords}` : ''}</p>`;
   }
 
   /* ---------- Sprechen ---------- */
@@ -939,7 +939,7 @@
     const hints = w.text && window.DMSchreibcheck?.taskHints ? DMSchreibcheck.taskHints(w.text, { target: p.minWords, need: mTask?.need, leitpunkte: mTask?.leitpunkte || [] }) : '';
     return `${p.options.length > 1 ? `<p class="dm-small">Gewählt: ${e(o.h || '')}</p>` : ''}
       ${p.audio?.length ? `<details class="sim-det"><summary>Transkript</summary>${p.audio.map(transcript).join('')}</details>` : ''}
-      <div class="sim-yours"><b>Dein Text (${n} Wörter${p.minWords && n < p.minWords ? ` – eher kurz, Richtwert ca. ${p.minWords}` : ''})</b><p class="sim-pre">${w.text ? e(w.text) : st.paper ? '<i>Dein Text steht in deinem Heft. Vergleiche ihn mit dem Mustertext und bewerte dich mit der Checkliste.</i>' : '<i>Kein Text geschrieben.</i>'}</p></div>
+      <div class="sim-yours"><b>Dein Text (${n} Wörter${p.minWords && n < p.minWords ? `${p.minStrict ? ' – zu kurz, mindestens ' : ' – eher kurz, Richtwert ca. '}${p.minWords}` : ''})</b><p class="sim-pre">${w.text ? e(w.text) : st.paper ? '<i>Dein Text steht in deinem Heft. Vergleiche ihn mit dem Mustertext und bewerte dich mit der Checkliste.</i>' : '<i>Kein Text geschrieben.</i>'}</p></div>
       ${hints}
       <details class="sim-det" open><summary>Mustertext</summary><div class="sim-muster">${para(o.muster)}</div></details>
       ${window.DMMuster?.html(mKey) || ''}
@@ -975,7 +975,7 @@
     const st = { ans: {}, plays: {} };
     miniCtx = { st, clip: key => { const [pi, ai] = key.split('.').map(Number); return P.parts[pi]?.mini?.audio?.[ai]; } };
     const plan = (store().plan ||= {})[id] ||= {};
-    const aufbau = ex.sections.map(s => `<tr><th scope="row">${e(s.title)}</th><td>${s.minutes} Min.${s.prepMinutes ? ` + ${s.prepMinutes} Vorb.` : ''}</td><td>${s.parts.map(p => e(p.kind === 'write' ? `${p.title}: Text schreiben${p.minWords ? ` (Richtwert ca. ${p.minWords} Wörter)` : ''}` : p.kind === 'speak' ? `${p.title} (ca. ${p.minutes} Min.)` : `${p.title}: ${(p.items || []).length} Aufgaben`)).join('<br>')}</td></tr>`).join('');
+    const aufbau = ex.sections.map(s => `<tr><th scope="row">${e(s.title)}</th><td>${s.minutes} Min.${s.prepMinutes ? ` + ${s.prepMinutes} Vorb.` : ''}</td><td>${s.parts.map(p => e(p.kind === 'write' ? `${p.title}: Text schreiben${p.minWords ? ` (${p.minStrict ? 'mindestens' : 'Richtwert ca.'} ${p.minWords} Wörter)` : ''}` : p.kind === 'speak' ? `${p.title} (ca. ${p.minutes} Min.)` : `${p.title}: ${(p.items || []).length} Aufgaben`)).join('<br>')}</td></tr>`).join('');
     let mini = 0;
     const parts = P.parts.map((q, qi) => {
       let miniHTML = '';

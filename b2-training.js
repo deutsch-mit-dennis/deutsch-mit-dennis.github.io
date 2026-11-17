@@ -181,11 +181,12 @@
     const R = D.redemittel || {};
     let body = "";
     if (n === 1) {
-      OS.praes ||= draw("praes", D.praes);
-      const t = OS.praes;
-      body = `<section class="b2t-panel"><h2>Deine Themen – wähle eines</h2>
-        <fieldset class="b2t-choice"><legend class="dm-small">In der Prüfung bekommst du zwei Themen und wählst eins.</legend>
-        ${[t.a, t.b].map((s, i) => `<label class="b2t-opt"><input type="radio" name="b2t-th" value="${i}"${i === OS.pi ? " checked" : ""}> <span>${x(s)}</span></label>`).join("")}</fieldset>
+      // like the exam: seven topics to choose from (prepared at home); points and questions follow the chosen topic
+      OS.praes ||= shuffle(D.praes.flatMap((e) => [{ s: e.a, e }, { s: e.b, e }])).slice(0, 7);
+      const sel = OS.praes[OS.pi] || OS.praes[0], t = sel.e;
+      body = `<section class="b2t-panel"><h2>Sieben Themen – wähle eines</h2>
+        <fieldset class="b2t-choice"><legend class="dm-small">Wie in der Prüfung: Du wählst eines von sieben Themen und bereitest es zu Hause vor. Die Stichpunkte sind nur eine Anregung.</legend>
+        ${OS.praes.map((o, i) => `<label class="b2t-opt"><input type="radio" name="b2t-th" value="${i}"${i === OS.pi ? " checked" : ""}> <span>${x(o.s.replace(/^Thema [AB]:\s*/, ""))}</span></label>`).join("")}</fieldset>
         <h3>Sprich über diese Punkte</h3>${list(t.points)}
         ${timer(90, "Sprechen starten")}
         <p class="dm-small">Höchstens etwa anderthalb Minuten zusammenhängend sprechen. Danach stellt dir deine Partnerin oder dein Partner Fragen – dann tauscht ihr die Rollen.</p>
@@ -195,8 +196,8 @@
       OS.disk ||= draw("disk", D.disk);
       const t = OS.disk;
       body = `<section class="b2t-panel"><h2>Zeitungsmeldung</h2><article class="b2t-text"><h3>${x(t.h)}</h3><p>${nl(t.t)}</p></article>
-        <p>Diskutiert zu zweit: Sag deine Meinung, begründe sie mit Beispielen und geh auf die Argumente der anderen Person ein. Fasst am Ende zusammen, wo ihr euch einig seid.</p>
-        ${timer(300, "Diskussion starten")}
+        <p><b>So läuft es:</b> Zuerst sagst du kurz (höchstens 1 Minute), worum es im Text geht und welche Argumente du interessant findest. Dann diskutiert ihr: Sag deine Meinung, begründe sie mit Beispielen und geh auf die Argumente der anderen Person ein. Fasst am Ende zusammen, wo ihr euch einig seid.</p>
+        ${timer(60, "Text wiedergeben")} ${timer(300, "Diskussion starten")}
         <details class="b2t-q"><summary>Ideen, wenn dir nichts einfällt</summary><div class="b2t-two"><div><h3>Dafür</h3>${list(t.pro)}</div><div><h3>Dagegen</h3>${list(t.contra)}</div></div></details>
         <details class="b2t-q"><summary>Fragen der Partnerin oder des Prüfers</summary><ol>${t.questions.map((q) => `<li>${x(q)}</li>`).join("")}</ol></details>
         </section>${red(R.disk || [])}`;
@@ -234,7 +235,7 @@
     }[n];
     DM.page(`${DM.crumbs([["Niveau B2", "#niveau/B2"], ["telc B2", "#pruefung/telcb2"], ["Sprechen"]])}
       <div class="dm-head"><p class="dm-kicker">telc Deutsch B2 · Mündliche Prüfung</p><h1>Sprechen üben: ${x(PARTS[n - 1][1])}</h1>
-      <p class="dm-lead">Teil ${n}: ${x(PARTS[n - 1][2])}. Die Prüfung dauert zu zweit ca. 15 Minuten, vorher hast du 20 Minuten Vorbereitung.</p></div>
+      <p class="dm-lead">Teil ${n}: ${x(PARTS[n - 1][2])}. Zu zweit dauert die Prüfung ca. 15 Minuten. Am Anfang lernt ihr euch kurz kennen (ca. 1 Minute, ohne Bewertung). Teil 1 bereitest du zu Hause vor, für Teil 2 und 3 hast du vorher 20 Minuten Vorbereitung.</p></div>
       <nav class="b2t-tabs" aria-label="Teil wählen">${PARTS.map(([k, t]) => `<a href="#telc-b2-sprechen/${k}"${+k === n ? ' aria-current="page"' : ""}>${k}. ${x(t)}</a>`).join("")}</nav>
       <div class="b2t-actions"><button type="button" class="b2w-btn" id="b2t-new">↻ Neue Aufgabe</button></div>
       ${body}
@@ -257,6 +258,9 @@
       (r) =>
         (r.onchange = () => {
           OS.pi = +r.value;
+          OS.notes[1] = $("#b2t-notes").value;
+          oral(p);
+          document.querySelector(`input[name="b2t-th"][value="${OS.pi}"]`)?.focus({ preventScroll: true });
         }),
     );
     const say = $("#b2t-say");

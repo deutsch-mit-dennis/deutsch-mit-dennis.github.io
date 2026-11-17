@@ -66,7 +66,7 @@ Alle Inhalte sind **eigene, neu geschriebene Übungsaufgaben im Stil der Prüfun
   instr:'Wählen Sie eine der beiden Aufgaben …',
   material:[…], audio:[…], plays:2,          // optional (z. B. DTB Telefonnotiz, Kundenbeschwerde)
   options:[ { h:'Aufgabe A', situation:'…', task:'…', points:['Grund für Ihr Schreiben','…'], muster:'Kompletter Mustertext' }, … ],
-  minWords:150,
+  minWords:150, minStrict:true,              // minStrict nur, wenn die Prüfung die Wortzahl vorschreibt (telc B2); sonst als Richtwert angezeigt
   check:['Alle Leitpunkte bearbeitet', 'Passende Anrede und Gruß', …]   // 5–8 Punkte zur Selbstbewertung
 }
 ```

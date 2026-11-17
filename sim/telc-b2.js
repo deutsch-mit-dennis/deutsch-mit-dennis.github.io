@@ -819,7 +819,7 @@
                 "Betreff: Beschwerde über die Busreise nach Prag vom 6. bis 10. September, Buchungsnummer 48213\n\nSehr geehrte Damen und Herren,\n\nvom 6. bis 10. September habe ich mit meinem Mann an Ihrer Busreise nach Prag teilgenommen. Leider muss ich mich über mehrere Mängel beschweren.\n\nLaut Katalog hatten wir ein Drei-Sterne-Hotel im Stadtzentrum gebucht. Tatsächlich lag unser Hotel jedoch am Stadtrand, sodass wir jeden Tag fast 40 Minuten mit der Straßenbahn in die Altstadt fahren mussten. Außerdem war unser Zimmer sehr laut, weil direkt nebenan renoviert wurde. Darüber hinaus ist die angekündigte Bootsfahrt auf der Moldau ohne Begründung ausgefallen, und die Stadtführung wurde von drei Stunden auf eine Stunde gekürzt.\n\nDadurch haben wir viel Zeit und Geld verloren: Die Fahrkarten für die Straßenbahn mussten wir selbst bezahlen, und wegen des Lärms konnten wir kaum schlafen. Der Urlaub, auf den wir uns lange gefreut hatten, war deshalb sehr enttäuschend.\n\nIch erwarte daher, dass Sie uns mindestens 30 Prozent des Reisepreises zurückerstatten und die Kosten für die ausgefallene Bootsfahrt ersetzen. Bitte teilen Sie mir bis zum 30. September mit, wie Sie die Angelegenheit regeln möchten. Andernfalls sehe ich mich gezwungen, mich an die Verbraucherzentrale zu wenden.\n\nMit freundlichen Grüßen\nSabine Krämer",
             },
           ],
-          minWords: 150,
+          minWords: 150, minStrict: true,
           check: [
             "Mindestens drei Leitpunkte ausführlich bearbeitet",
             "Betreff, formelle Anrede und passender Gruß",
@@ -849,7 +849,7 @@
           pts: 25,
           minutes: 5,
           instr:
-            "Wählen Sie eines der beiden Themen und sprechen Sie höchstens anderthalb Minuten zusammenhängend darüber. Ihre Partnerin / Ihr Partner hört zu und stellt Ihnen danach Fragen. Anschließend tauschen Sie die Rollen. In der Simulation stellt Ihnen die Partnerin die Fragen unten.",
+            "Wählen Sie eines der beiden Themen (in der echten Prüfung wählen Sie aus sieben Themen, die Sie zu Hause vorbereiten) und sprechen Sie höchstens anderthalb Minuten zusammenhängend darüber. Ihre Partnerin / Ihr Partner hört zu und stellt Ihnen danach Fragen. Anschließend tauschen Sie die Rollen. In der Simulation stellt Ihnen die Partnerin die Fragen unten.",
           task: "Thema A: Ein Ereignis, das mein Leben verändert hat\nThema B: Ein Buch oder Film, der mich beeindruckt hat\n\nSprechen Sie über:\n– worum es geht bzw. was passiert ist\n– warum es für Sie wichtig war\n– was sich dadurch verändert hat bzw. was Sie daraus gelernt haben\n– ob Sie es anderen empfehlen würden",
           prompts: [
             "Danke, das war wirklich interessant. Darf ich mal fragen, wie alt Sie damals waren?",
