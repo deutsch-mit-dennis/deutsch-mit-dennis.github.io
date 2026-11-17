@@ -90,6 +90,17 @@ console.log(`spiele/tts-nid.json: ${nidItems.length} Sätze`);
   console.log(`spiele/tts-mikula.json: ${items.length} Sätze, ${items.reduce((n, x) => n + x.text.length, 0)} Zeichen`);
 }
 
+// Uhrzeit-Ohr: jeder Satz mit Uhrzeit (Zahlen ausgeschrieben)
+const uz = await load('spiele/uhrzeit.js', ['SAY']);
+await write('uhrzeit', uniq(uz.SAY.map(x => x.say)), 'f1');
+
+// DTZ-Planungsduell: Sätze der Partnerin / des Partners (🔊-Knopf)
+// voice per partner (female/male names): SC[i].voice, partner line = turn[1]
+const pl = await load('spiele/planen.js', ['SC']);
+{ const seen = new Set(), list = pl.SC.flatMap(sc => sc.turns.map(t => ({ text: t[1], voice: sc.voice }))).filter(x => !seen.has(x.text) && seen.add(x.text));
+  await writeFile(new URL('spiele/tts-planen.json', R), JSON.stringify(list.map(({ text, voice }) => ({ text, voice })), null, 1) + '\n');
+  console.log(`spiele/tts-planen.json: ${list.length} Sätze`); }
+
 // Lektionen, Wortkarten: „<Wort>. <Beispielsatz>“ (Vorlese-Knopf in vocab.js vcard)
 const vsrc = await readFile(new URL('vocab-data.js', R), 'utf8');
 const { wordLibrary } = new Function(vsrc + ';return { wordLibrary }')();

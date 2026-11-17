@@ -92,7 +92,7 @@ function studioView() {
 // ---------- Gamepad: arcade menu ----------
 const GAMES = [
   ['DER, DIE, DAS – WISCH!', '#spiele/artikel'], ['VERB-RENNEN', '#spiele/verben'], ['WORT-MEMORY', '#spiele/memory'], ['WO ODER WOHIN?', '#spiele/wowohin'],
-  ['ZAHLEN-OHR', '#spiele/zahlen'], ['LINO – JUMP’N’RUN', '#spiele/lino'], ['MIKULA SUCHT DEN WEG', '#spiele/mikula'], ['B2-SPIELE', '#spiele/b2'], ['TAGES-CHALLENGE', '#challenge'], ['KAHOOT-QUIZ', '#kahoot'], ['ALLE SPIELE', '#spiele'],
+  ['ZAHLEN-OHR', '#spiele/zahlen'], ['LINO – JUMP’N’RUN', '#spiele/lino'], ['MIKULA SUCHT DEN WEG', '#spiele/mikula'], ['ENDUNGS-BLITZ', '#spiele/endungen'], ['SATZ-BAUMEISTER', '#spiele/satzbau'], ['UHRZEIT-OHR', '#spiele/uhrzeit'], ['DTZ-PLANUNGSDUELL', '#spiele/planen'], ['B2-TAGESMIX', '#spiele/tagesmix'], ['BERUF-SPIELE B1–B2', '#spiele/b2'], ['TAGES-CHALLENGE', '#challenge'], ['KAHOOT-QUIZ', '#kahoot'], ['ALLE SPIELE', '#spiele'],
 ];
 function arcadeView() {
   const v = el(`<div class="v-arcade"><div class="ar-crt"><p class="ar-blink">PRESS START</p><h2>LERNSPIELE</h2><ul class="ar-menu" role="listbox">${GAMES.map((g, i) => `<li role="option" data-i="${i}">${esc(g[0])}</li>`).join('')}</ul><p class="ar-help">▲▼ WÄHLEN · A STARTEN</p></div>
@@ -150,7 +150,7 @@ const SPREADS = [
   { t: 'Schlag das Heft auf', links: [] },
   { t: 'Seite 1 · Lektionen', links: [['Lektionen', '#lernen'], ['Mein Lernweg', '#lernweg'], ['Über mich', '#ueber-mich']] },
   { t: 'Seite 2–3 · Hören, Lesen, Sprechen, Schreiben', links: [['Hören', '#hoeren'], ['Lesen', '#lesen'], ['Sprechen', '#ueben/sprechen'], ['Schreiben', '#ueben/schreiben']] },
-  { t: 'Seite 4–5 · Spiele & Lieder', links: [['Lernspiele', '#spiele'], ['der · die · das', '#spiele/artikel'], ['Verben', '#spiele/verben'], ['Zahlen', '#spiele/zahlen'], ['Lino', '#spiele/lino'], ['Lieder', '#lieder']] },
+  { t: 'Seite 4–5 · Spiele & Lieder', links: [['Lernspiele', '#spiele'], ['Neu: Endungs-Blitz', '#spiele/endungen'], ['Neu: Satz-Baumeister', '#spiele/satzbau'], ['der · die · das', '#spiele/artikel'], ['Verben', '#spiele/verben'], ['Zahlen', '#spiele/zahlen'], ['Lino', '#spiele/lino'], ['Lieder', '#lieder']] },
   { t: 'Seite 6–7 · Prüfung & LiD', links: [['Probeprüfungen', '#simulation'], ['DTZ', '#simulation/dtz'], ['telc B1', '#simulation/telc-b1'], ['DTB B1', '#simulation/dtb-b1'], ['Leben in Deutschland', '#lid'], ['LiD-Test', '#simulation/lid'], ['Materialien', '#material'], ['Lernpakete', '#lernpakete']] },
 ];
 function heftView(ctx = {}) {

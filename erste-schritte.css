@@ -590,3 +590,4 @@
 .b2t-notes{display:flex;flex-direction:column;gap:6px;font-weight:600;margin:14px 0}
 .b2t-notes textarea{width:100%;box-sizing:border-box;padding:10px;border:2px solid var(--dm-line,#dadfea);border-radius:12px;font:inherit}
 .b2t-check{margin:14px 0}.b2t-check .check{display:flex;gap:8px;align-items:flex-start;min-height:44px}
+.sp-next-step{margin:12px 0 4px;line-height:2}.sp-next-step a{display:inline-block;min-height:44px;line-height:44px;font-weight:700}

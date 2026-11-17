@@ -19,6 +19,11 @@ window.DMLazy = (() => {
     "spiele/alltag.js?v=20261027a",
     "spiele/nid.js?v=20261101a",
     "spiele/mikula.js?v=20261107e",
+    "spiele/endungen.js?v=20261118a",
+    "spiele/satzbau.js?v=20261118a",
+    "spiele/uhrzeit.js?v=20261118a",
+    "spiele/planen.js?v=20261118a",
+    "spiele/tagesmix.js?v=20261118a",
     "spiele/lid-spiele.js?v=20261107e",
     "spiele/lino-extra.js?v=20261019c",
     "spiele/lino.js?v=20261107e"

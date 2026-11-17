@@ -38,10 +38,11 @@
   const crumbs = g => DM.crumbs([['Üben', '#ueben'], ['Lernspiele', '#spiele'], [g.title]]);
 
   const CATS = [
+    { id: 'dtz', icon: '🎯', t: 'Prüfung DTZ', d: 'Für den Deutsch-Test für Zuwanderer: gemeinsam etwas planen und die passenden Redemittel finden.' },
     { id: 'abenteuer', icon: '🏃', t: 'Abenteuer', d: 'Spiele mit Geschichte: laufen und springen mit Lino oder neu in einer deutschen Stadt ankommen – Deutsch lernen nebenbei.' },
     { id: 'basis', icon: '🧩', t: 'Wörter und Grammatik', d: 'Zahlen, Artikel, Verben, Memory und Briefe – für A1 bis B1.' },
     { id: 'alltag', icon: '🛒', t: 'Alltag: Reisen, Einkaufen, Ämter', d: 'Wortschatz für Bahnhof, Supermarkt, Arzt, Wohnung und Behörden – ganz ohne Prüfungsdruck.' },
-    { id: 'b2', icon: '💼', t: 'Prüfung DTB B1 und B2 Beruf', d: 'Telefonieren, Berufswortschatz, formelle E-Mails, Nominalstil, Redemittel, Präpositionen und Konnektoren für den Beruf.' },
+    { id: 'b2', icon: '💼', t: 'Beruf und Prüfung B1–B2', d: 'Für DTB B1, DTB B2 und telc B2: Telefonieren, Berufswortschatz, formelle E-Mails, Nominalstil, Redemittel, Präpositionen und Konnektoren.' },
     { id: 'lid', icon: '🇩🇪', t: 'Test „Leben in Deutschland“', d: 'Prüfungsfragen, Geschichte und Staat – spielerisch wiederholen.' }
   ];
   const catOf = g => g.cat || 'basis';
@@ -128,6 +129,15 @@
     try { g.start(api, opt); } catch (e) { console.error(e); area.innerHTML = '<p>Das Spiel konnte nicht starten. Bitte lade die Seite neu.</p>'; }
   }
 
+  // after a game: one step closer to the exam (a game can set its own g.next = [[href, label], …])
+  const NEXT = {
+    basis: [['#grammatik', 'Grammatik üben'], ['#challenge', 'Tages-Challenge']],
+    alltag: [['#hoeren', 'Hören üben'], ['#pruefung/dtz', 'Prüfungstraining DTZ']],
+    dtz: [['#training/dtz-sprechen', 'DTZ Sprechen Teil 3 üben'], ['#simulation/dtz', 'DTZ-Probeprüfung']],
+    b2: [['#sprachbausteine', 'Sprachbausteine üben'], ['#pruefung/dtbb2', 'Prüfungstraining B2']],
+    lid: [['#lid', 'Alle LiD-Fragen'], ['#simulation/lid', 'LiD-Test simulieren']],
+    abenteuer: [['#challenge', 'Tages-Challenge'], ['#spiele', 'Alle Lernspiele']],
+  };
   function result(g, opt, { score = 0, max = 0, wrong = [] } = {}) {
     const all = get(), s = all[g.id] || {};
     all[g.id] = { ...s, best: Math.max(score, s.best ?? 0), plays: (s.plays || 0) + 1, last: Date.now(), opt }; put(all);
@@ -140,6 +150,7 @@
         <p class="ch-big">${score}${max ? ` <small>von ${max}</small>` : ' <small>Punkte</small>'}</p>
         ${!isBest ? `<p class="sp-best">Dein Rekord: <b>${s.best}</b></p>` : ''}
         <div class="ch-actions"><button type="button" class="dm-btn ch-go" id="sp-again">${esc(g.againLabel || 'Nochmal spielen')}</button><a class="dm-btn dm-btn-quiet" href="#spiele/${catOf(g)}">Andere Spiele</a></div>
+        ${(g.next || NEXT[catOf(g)] || []).length ? `<p class="sp-next-step">Nächster Schritt: ${(g.next || NEXT[catOf(g)]).map(([h, t]) => `<a href="${esc(h)}">${esc(t)} →</a>`).join(' · ')}</p>` : ''}
         ${wrong.length ? `<details class="ch-review" open><summary>Das solltest du dir merken (${wrong.length})</summary><ul>${wrong.slice(0, 15).map(w => `<li><b>${esc(w.correct)}</b>${w.tip ? ` – ${esc(w.tip)}` : ''}</li>`).join('')}</ul></details>` : ''}
       </section>`, 'sp-page');
     window.scrollTo({ top: 0, behavior: 'instant' });

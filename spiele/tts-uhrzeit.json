@@ -1,0 +1,326 @@
+[
+ {
+  "text": "Der Kurs beginnt um Viertel nach neun.",
+  "voice": "f1"
+ },
+ {
+  "text": "Wir treffen uns um halb drei.",
+  "voice": "f1"
+ },
+ {
+  "text": "Mein Termin beim Arzt ist um Viertel vor elf.",
+  "voice": "f1"
+ },
+ {
+  "text": "Die Kita macht um halb acht auf.",
+  "voice": "f1"
+ },
+ {
+  "text": "Ich hole meine Tochter um Viertel nach vier von der Kita ab.",
+  "voice": "f1"
+ },
+ {
+  "text": "Die Sprechstunde beginnt um acht Uhr.",
+  "voice": "f1"
+ },
+ {
+  "text": "Kommen Sie bitte um zehn nach neun in die Praxis.",
+  "voice": "f1"
+ },
+ {
+  "text": "Der Deutschkurs ist heute schon um fünf vor halb zwölf zu Ende.",
+  "voice": "f1"
+ },
+ {
+  "text": "Meine Schicht fängt um fünf nach halb sechs an.",
+  "voice": "f1"
+ },
+ {
+  "text": "Das Bürgeramt öffnet um halb neun.",
+  "voice": "f1"
+ },
+ {
+  "text": "Die Pause ist um zwanzig nach zehn.",
+  "voice": "f1"
+ },
+ {
+  "text": "Wir essen um zwölf Uhr zu Mittag.",
+  "voice": "f1"
+ },
+ {
+  "text": "Der Bus kommt immer um zehn vor sieben.",
+  "voice": "f1"
+ },
+ {
+  "text": "Ich bin um fünf vor acht im Büro.",
+  "voice": "f1"
+ },
+ {
+  "text": "Der Elternabend beginnt um halb sieben.",
+  "voice": "f1"
+ },
+ {
+  "text": "Die Kinder gehen um Viertel vor acht in die Schule.",
+  "voice": "f1"
+ },
+ {
+  "text": "Mein Mann kommt um kurz nach sechs nach Hause.",
+  "voice": "f1"
+ },
+ {
+  "text": "Der Film fängt um Viertel nach acht an.",
+  "voice": "f1"
+ },
+ {
+  "text": "Ich habe um zwanzig vor fünf einen Termin beim Jobcenter.",
+  "voice": "f1"
+ },
+ {
+  "text": "Die Praxis macht um halb eins Mittagspause.",
+  "voice": "f1"
+ },
+ {
+  "text": "Wir treffen uns um fünf nach drei vor dem Supermarkt.",
+  "voice": "f1"
+ },
+ {
+  "text": "Das Training ist um zehn nach halb fünf zu Ende.",
+  "voice": "f1"
+ },
+ {
+  "text": "Mein Zahnarzttermin ist um Viertel vor drei.",
+  "voice": "f1"
+ },
+ {
+  "text": "Die Bibliothek schließt um sieben Uhr.",
+  "voice": "f1"
+ },
+ {
+  "text": "Der Kurs fängt um zehn vor halb zehn an.",
+  "voice": "f1"
+ },
+ {
+  "text": "Ich muss um kurz vor neun beim Ausländeramt sein.",
+  "voice": "f1"
+ },
+ {
+  "text": "Die Kita schließt um halb fünf.",
+  "voice": "f1"
+ },
+ {
+  "text": "Wir frühstücken um Viertel nach sieben.",
+  "voice": "f1"
+ },
+ {
+  "text": "Die Besprechung ist um fünf vor zwölf.",
+  "voice": "f1"
+ },
+ {
+  "text": "Der Hausmeister kommt um zehn nach elf.",
+  "voice": "f1"
+ },
+ {
+  "text": "Bitte seien Sie um Viertel vor neun im Wartezimmer.",
+  "voice": "f1"
+ },
+ {
+  "text": "Der Laden macht um halb zehn auf.",
+  "voice": "f1"
+ },
+ {
+  "text": "Mein Sohn hat um fünf nach halb drei Fußball.",
+  "voice": "f1"
+ },
+ {
+  "text": "Das Vorstellungsgespräch ist um Viertel nach zwei.",
+  "voice": "f1"
+ },
+ {
+  "text": "Ich komme um zwanzig nach eins zu dir.",
+  "voice": "f1"
+ },
+ {
+  "text": "Die Schule ist um Viertel vor eins aus.",
+  "voice": "f1"
+ },
+ {
+  "text": "Wir fahren um fünf vor halb sieben los.",
+  "voice": "f1"
+ },
+ {
+  "text": "Die Ärztin hat um zehn vor vier noch einen Termin frei.",
+  "voice": "f1"
+ },
+ {
+  "text": "Der Integrationskurs beginnt um neun Uhr.",
+  "voice": "f1"
+ },
+ {
+  "text": "Meine Arbeit ist um halb vier zu Ende.",
+  "voice": "f1"
+ },
+ {
+  "text": "Kannst du mich um Viertel nach fünf anrufen?",
+  "voice": "f1"
+ },
+ {
+  "text": "Das Fest in der Kita beginnt um drei Uhr.",
+  "voice": "f1"
+ },
+ {
+  "text": "Die Post macht um zehn nach zwei wieder auf.",
+  "voice": "f1"
+ },
+ {
+  "text": "Ich nehme die Tabletten um halb elf.",
+  "voice": "f1"
+ },
+ {
+  "text": "Wir treffen uns um Viertel vor sechs am Bahnhof.",
+  "voice": "f1"
+ },
+ {
+  "text": "Die Elternsprechstunde ist um fünf nach vier.",
+  "voice": "f1"
+ },
+ {
+  "text": "Der Zug fährt um vierzehn Uhr fünfunddreißig.",
+  "voice": "f1"
+ },
+ {
+  "text": "Ihr Termin ist am Montag um acht Uhr zwanzig.",
+  "voice": "f1"
+ },
+ {
+  "text": "Der ICE nach München fährt um sechzehn Uhr zwölf ab.",
+  "voice": "f1"
+ },
+ {
+  "text": "Die Sprechzeiten sind heute bis achtzehn Uhr dreißig.",
+  "voice": "f1"
+ },
+ {
+  "text": "Der Bus zum Krankenhaus fährt um sieben Uhr fünfundvierzig.",
+  "voice": "f1"
+ },
+ {
+  "text": "Ihr Termin im Bürgeramt ist um zehn Uhr fünfzehn.",
+  "voice": "f1"
+ },
+ {
+  "text": "Der Regionalzug kommt um dreizehn Uhr achtundvierzig an.",
+  "voice": "f1"
+ },
+ {
+  "text": "Die Kita schließt um sechzehn Uhr dreißig.",
+  "voice": "f1"
+ },
+ {
+  "text": "Das Jobcenter erwartet Sie um neun Uhr vierzig.",
+  "voice": "f1"
+ },
+ {
+  "text": "Der letzte Zug fährt um dreiundzwanzig Uhr zehn.",
+  "voice": "f1"
+ },
+ {
+  "text": "Die Prüfung beginnt um acht Uhr dreißig.",
+  "voice": "f1"
+ },
+ {
+  "text": "Ihre Nachtschicht beginnt um zweiundzwanzig Uhr.",
+  "voice": "f1"
+ },
+ {
+  "text": "Die Praxis ist heute ab fünfzehn Uhr geschlossen.",
+  "voice": "f1"
+ },
+ {
+  "text": "Der Flug nach Istanbul startet um zwölf Uhr fünfundfünfzig.",
+  "voice": "f1"
+ },
+ {
+  "text": "Ihre Untersuchung ist um elf Uhr fünfundzwanzig.",
+  "voice": "f1"
+ },
+ {
+  "text": "Der Zug nach Hamburg hat Verspätung und kommt erst um siebzehn Uhr dreiundfünfzig.",
+  "voice": "f1"
+ },
+ {
+  "text": "Die Ausländerbehörde ist donnerstags bis achtzehn Uhr geöffnet.",
+  "voice": "f1"
+ },
+ {
+  "text": "Der Elternabend beginnt um neunzehn Uhr fünfzehn.",
+  "voice": "f1"
+ },
+ {
+  "text": "Die S-Bahn fährt um sechs Uhr achtzehn.",
+  "voice": "f1"
+ },
+ {
+  "text": "Ihr Termin bei der Agentur für Arbeit ist um vierzehn Uhr.",
+  "voice": "f1"
+ },
+ {
+  "text": "Der Kurs endet um zwölf Uhr fünfzehn.",
+  "voice": "f1"
+ },
+ {
+  "text": "Das Paket können Sie ab zehn Uhr dreißig abholen.",
+  "voice": "f1"
+ },
+ {
+  "text": "Der Anschlusszug fährt um einundzwanzig Uhr vierzig von Gleis zwei.",
+  "voice": "f1"
+ },
+ {
+  "text": "Die Spätschicht endet um einundzwanzig Uhr dreißig.",
+  "voice": "f1"
+ },
+ {
+  "text": "Der Zahnarzt hat um fünfzehn Uhr fünfundvierzig einen Termin frei.",
+  "voice": "f1"
+ },
+ {
+  "text": "Das Rathaus öffnet um sieben Uhr dreißig.",
+  "voice": "f1"
+ },
+ {
+  "text": "Der Bus nach Kassel fährt um zwanzig Uhr fünf.",
+  "voice": "f1"
+ },
+ {
+  "text": "Die Frühschicht beginnt um fünf Uhr fünfzig.",
+  "voice": "f1"
+ },
+ {
+  "text": "Der Zug nach Köln fährt um dreizehn Uhr vierzehn.",
+  "voice": "f1"
+ },
+ {
+  "text": "Ihr Impftermin ist um sechzehn Uhr fünf.",
+  "voice": "f1"
+ },
+ {
+  "text": "Die Tagesmutter bringt das Kind um siebzehn Uhr dreißig nach Hause.",
+  "voice": "f1"
+ },
+ {
+  "text": "Der Nachtbus fährt um null Uhr fünfzehn.",
+  "voice": "f1"
+ },
+ {
+  "text": "Die Beratung im Familienzentrum beginnt um neun Uhr fünfundvierzig.",
+  "voice": "f1"
+ },
+ {
+  "text": "Der Zug aus Berlin kommt um achtzehn Uhr siebenunddreißig an.",
+  "voice": "f1"
+ },
+ {
+  "text": "Bitte kommen Sie morgen um sieben Uhr fünfzehn nüchtern ins Labor.",
+  "voice": "f1"
+ }
+]
