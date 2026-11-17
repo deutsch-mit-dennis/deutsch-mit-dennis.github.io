@@ -1422,7 +1422,7 @@
         name: "Schriftlicher Ausdruck",
         skill: "Schreiben",
         time: "30 Min.",
-        what: "Du wählst eine von zwei Aufgaben und schreibst einen Brief oder eine E-Mail – persönlich an eine Freundin oder halbformell an eine Firma. Dabei bearbeitest du vier Leitpunkte.",
+        what: "Du schreibst eine E-Mail – persönlich an eine Freundin oder halbformell an eine Firma. Dabei bearbeitest du vier Leitpunkte.",
         steps: [
           "Wähl schnell (max. 2 Minuten) – die Aufgabe, zu der dir sofort Ideen kommen.",
           "Notiere zu jedem Leitpunkt zwei Stichwörter und leg eine sinnvolle Reihenfolge fest.",

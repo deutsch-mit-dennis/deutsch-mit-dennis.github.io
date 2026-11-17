@@ -1,6 +1,6 @@
 # Arbeitsblatt telc Deutsch B1: Schriftlicher Ausdruck (halbformelle E-Mail mit vier Leitpunkten)
 # Format laut pruefung-fakten.js (telc-b1) und sim/telc-b1.js: 30 Min., 45 Punkte, eine E-Mail (persönlich oder halbformell)
-# mit 4 Leitpunkten, etwa 100–150 Wörter, drei Bewertungskriterien. Eigene Aufgaben im Stil der Prüfung, keine telc-Originale.
+# mit 4 Leitpunkten, keine feste Wortzahl, drei Bewertungskriterien. Eigene Aufgaben im Stil der Prüfung, keine telc-Originale.
 # Aufruf aus dem Repo-Wurzelordner: python3 tools/pdf/arbeitsblaetter/telc-b1-schriftlicher-ausdruck.py
 import os, sys
 
@@ -55,7 +55,7 @@ s += [
                 "Zur Aufgabe gibt es <b>vier Leitpunkte</b>. Schreiben Sie zu <b>allen vier</b> etwas. Die Reihenfolge dürfen Sie selbst "
                 "wählen. Anrede, Einleitung, Schluss und Gruß nicht vergessen.",
             ],
-            ["<b>Länge</b>", "etwa <b>100 bis 150 Wörter</b>"],
+            ["<b>Länge</b>", "keine feste Wortzahl – wichtig: <b>alle vier Leitpunkte</b> (Übungsziel: ca. 100 bis 150 Wörter)"],
             [
                 "<b>Punkte</b>",
                 "<b>45 Punkte</b>. Drei Kriterien: Berücksichtigung der Leitpunkte · kommunikative Gestaltung (Aufbau, Anrede, passende "
@@ -309,7 +309,7 @@ s += [
     PageBreak(),
     R("Drei Prüfungsaufgaben", "h2"),
     R(
-        "Wie in der Prüfung: <b>eine</b> Aufgabe in <b>30 Minuten</b>, <b>alle vier Leitpunkte</b>, etwa <b>100 bis 150 Wörter</b>. "
+        "Wie in der Prüfung: <b>eine</b> Aufgabe in <b>30 Minuten</b>, <b>alle vier Leitpunkte</b>, Übungsziel ca. <b>100 bis 150 Wörter</b>. "
         "Schreiben Sie auf ein liniertes Blatt – jede Aufgabe an einem anderen Tag. Benutzen Sie für jede Aufgabe die Planungstabelle.",
         "p",
     ),
@@ -440,7 +440,7 @@ check = [
     "Habe ich <b>überall Sie</b> geschrieben (Sie, Ihnen, Ihr – groß)?",
     "Habe ich Sätze mit <i>weil, dass, deshalb, aber, außerdem</i> verbunden?",
     "Steht das <b>Verb</b> im Hauptsatz auf Position 2 und im Nebensatz am Ende?",
-    "Habe ich etwa <b>100 bis 150 Wörter</b>?",
+    "Habe ich zu jedem Leitpunkt genug geschrieben (Übungsziel ca. 100 bis 150 Wörter)?",
     "Gibt es einen <b>Schlusssatz</b> und meinen vollständigen Namen?",
 ]
 s += [

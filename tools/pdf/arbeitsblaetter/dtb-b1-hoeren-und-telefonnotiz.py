@@ -1,6 +1,6 @@
 # Arbeitsblatt DTB B1 Prüfung: Hören Teil 1–4 und Hören und Schreiben (Telefonat, Gesprächsnotiz)
-# Format laut pruefung-fakten.js (dtb-b1) und sim/dtb-b1*.js: Hören 20 Min., 4 Teile, 19 Aufgaben (21–39), alle Texte nur EINMAL;
-# Hören und Schreiben 5 Min.: Telefonat ZWEIMAL, Aufgabe 40 (a/b/c), dann Gesprächsnotiz in Stichpunkten. 3 Punkte pro Höraufgabe.
+# Format laut pruefung-fakten.js (dtb-b1) und sim/dtb-b1*.js: Hören 20 Min., 4 Teile, 19 Aufgaben (22–40), alle Texte nur EINMAL;
+# Hören und Schreiben 5 Min.: Telefonat ZWEIMAL, Aufgabe 41 (a/b), dann Gesprächsnotiz 42–45 in Stichpunkten. 3 Punkte pro Höraufgabe.
 # Eigene Aufgaben im Stil der Prüfung (verkürzt); alle Personen, Firmen und Nummern sind erfunden.
 # Aufruf aus dem Repo-Wurzelordner: python3 tools/pdf/arbeitsblaetter/dtb-b1-hoeren-und-telefonnotiz.py
 import os, sys
@@ -169,32 +169,32 @@ s = [
                 "<b>Hören Teil 1:</b> Arbeitsabläufe, Probleme, Vorschläge",
                 "4 kurze Gespräche unter Kollegen. Zu jedem Gespräch: 1 Aussage richtig/falsch und 1 Aufgabe a, b oder c.",
                 "<b>einmal</b>",
-                "21–28",
+                "22–29",
             ],
             [
                 "<b>Hören Teil 2:</b> Meinungen",
                 "Eine Teambesprechung. Welche Aussage (a–d) passt zu welcher Person? Zwei Aussagen passen nicht.",
                 "<b>einmal</b>",
-                "29–30",
+                "30–31",
             ],
             [
                 "<b>Hören Teil 3:</b> Gespräche über Produkte und Abläufe",
                 "2 Gespräche, z. B. eine Einweisung oder ein Verkaufsgespräch. Zu jedem Gespräch 2 Aufgaben a, b oder c.",
                 "<b>einmal</b>",
-                "31–34",
+                "32–35",
             ],
             [
                 "<b>Hören Teil 4:</b> Anliegen",
                 "5 Nachrichten auf dem Anrufbeantworter oder der Mailbox. Zu jeder Nachricht 1 Aufgabe a, b oder c.",
                 "<b>einmal</b>",
-                "35–39",
+                "36–40",
             ],
             [
                 "<b>Hören und Schreiben</b>",
-                "Ein Telefongespräch. Teil 1: 1 Aufgabe a, b oder c. Teil 2: eine Gesprächsnotiz für eine Kollegin oder einen "
+                "Ein Telefongespräch. Teil 1: 1 Aufgabe a oder b (Grund für den Anruf). Teil 2: eine Gesprächsnotiz für eine Kollegin oder einen "
                 "Kollegen in Stichpunkten.",
                 "<b>zweimal</b>",
-                "40 + Notiz",
+                "41 + Notiz 42–45",
             ],
         ],
         [46, 92, 18, 18],
@@ -204,7 +204,7 @@ s = [
     box(
         R(
             "<b>Zeit:</b> Hören dauert 20 Minuten, Hören und Schreiben 5 Minuten. <b>Im Teil Hören hören Sie alle Texte nur einmal.</b> "
-            "Nur das Telefonat in „Hören und Schreiben“ hören Sie zweimal. Jede Höraufgabe zählt 3 Punkte: 19 Aufgaben + Aufgabe 40 "
+            "Nur das Telefonat in „Hören und Schreiben“ hören Sie zweimal. Jede Höraufgabe zählt 3 Punkte: 19 Aufgaben + Aufgabe 41 "
             "= 60 Punkte für Hören. Die Gesprächsnotiz zählt zum Schreiben.",
             "cell",
         ),
@@ -384,14 +384,13 @@ s += [
         "Außendienst. Sie nehmen ein Telefongespräch für sie an."
     ),
     Spacer(1, 3),
-    R("<b>Teil 1:</b> Welche Antwort (a, b oder c) passt am besten?", "p"),
+    R("<b>Teil 1:</b> Welche Antwort (a oder b) passt?", "p"),
     abc(
         12,
         "Was möchte Frau Arslan?",
         [
             "die Gartenpflege kündigen",
             "zusätzliche Arbeiten anfragen",
-            "einen Termin mit dem Hausmeister absagen",
         ],
     ),
     Spacer(1, 2),
@@ -660,8 +659,7 @@ s += [
 ]
 s += [
     R(
-        "<b>12 b</b> – Sie möchte zusätzlich Hecken schneiden lassen und das Laub wegmachen lassen. a) Sie kündigt nicht. "
-        "c) Der Hausmeister ist nur für die Besichtigung wichtig.",
+        "<b>12 b</b> – Sie möchte zusätzlich Hecken schneiden lassen und das Laub wegmachen lassen. a) Sie kündigt nicht.",
         "sol",
     ),
     KeepTogether(

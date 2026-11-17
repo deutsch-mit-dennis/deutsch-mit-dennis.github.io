@@ -1,6 +1,6 @@
 # Arbeitsblatt DTB B1 Prüfung: Sprachbausteine und Schreiben (6 Lücken + Kurznachricht) und Sprechen Teil 1A, 1B, 2, 3
-# Format laut pruefung-fakten.js (dtb-b1) und sim/dtb-b1*.js: Sprachbausteine und Schreiben 10 Min. (Aufgaben 41–46 a/b/c,
-# dann Kurznachricht im Team-Chat, mind. 40 Wörter); Sprechen ca. 16 Min., zu zweit, keine Vorbereitungszeit:
+# Format laut pruefung-fakten.js (dtb-b1) und sim/dtb-b1*.js: Sprachbausteine und Schreiben 10 Min. (Aufgaben 46–51 a/b/c,
+# dann Kurznachricht im Team-Chat, Aufgabe 52); Sprechen ca. 16 Min., zu zweit, keine Vorbereitungszeit:
 # 1A + 1B je ca. 2 Min. pro Person, Teil 2 ca. 3 Min., Teil 3 ca. 5 Min., 60 Punkte.
 # Eigene Aufgaben im Stil der Prüfung; alle Personen und Situationen sind erfunden.
 # Aufruf aus dem Repo-Wurzelordner: python3 tools/pdf/arbeitsblaetter/dtb-b1-sprachbausteine-und-sprechen.py
@@ -145,12 +145,12 @@ s += [
                 "<b>Teil 1:</b> Sprachbausteine",
                 "Eine E-Mail mit 6 Lücken. Sie wählen für jede Lücke a, b oder c – Grammatik und typische Wendungen für "
                 "Anfragen, Bitten und Vorschläge.",
-                "41–46",
+                "46–51",
             ],
             [
                 "<b>Teil 2:</b> Kurznachricht schreiben",
                 "Sie antworten auf eine Nachricht, z. B. von der Chefin im Team-Chat. Sie sagen Ihre Meinung und begründen sie. "
-                "<b>Mindestens 40 Wörter.</b>",
+                "<b>Aufgabe 52.</b> Gehen Sie auf alle Punkte ein und schreiben Sie ganze Sätze.",
                 "Text",
             ],
         ],
@@ -209,7 +209,7 @@ s += [
 u1 = task(
     1,
     "Sprachbausteine: E-Mail an den Teamleiter",
-    "Lesen Sie die E-Mail. Welche Lösung (a, b oder c) passt in die Lücken 1–6? (In der Prüfung: Aufgaben 41–46.)",
+    "Lesen Sie die E-Mail. Welche Lösung (a, b oder c) passt in die Lücken 1–6? (In der Prüfung: Aufgaben 46–51.)",
     2,
 )
 gap = lambda n: (
@@ -266,7 +266,7 @@ s += task(
     2,
     "Kurznachricht im Team-Chat",
     "Lesen Sie die Nachricht Ihres Chefs im Team-Chat. Schreiben Sie eine Antwort, in der Sie Ihre Meinung sagen "
-    "und begründen. Schreiben Sie mindestens 40 Wörter.",
+    "und begründen. Schreiben Sie ganze Sätze (Übungsziel: ca. 40 bis 60 Wörter).",
     2,
 )
 s += [

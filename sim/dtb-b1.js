@@ -307,7 +307,7 @@
           skill: "schreiben",
           pts: 25,
           instr:
-            "Schreiben Sie eine Antwort an Frau Berger. Berücksichtigen Sie alle Punkte aus der Notiz Ihrer Chefin. Schreiben Sie mindestens 70 Wörter. Achten Sie auf Anrede und Gruß.",
+            "Schreiben Sie eine Antwort an Frau Berger. Berücksichtigen Sie alle Punkte aus der Notiz Ihrer Chefin. Schreiben Sie zu jedem Punkt mindestens zwei Sätze. Achten Sie auf Anrede und Gruß.",
           options: [
             {
               h: "Aufgabe",
@@ -332,7 +332,7 @@
             "Samstag: Dezember nein, ab Januar ja, Angebot nächste Woche",
             "Telefonnummer bzw. Ansprechpartnerin genannt",
             "Sie-Form durchgehend, höflicher Ton",
-            "Mindestens 70 Wörter, Sätze verbunden (deshalb, aber, und zwar)",
+            "Zu jedem Punkt mindestens zwei Sätze, Sätze verbunden (deshalb, aber, und zwar)",
           ],
         },
       ],
@@ -1040,7 +1040,7 @@
           skill: "schreiben",
           pts: 14,
           instr:
-            "Lesen Sie die Nachricht Ihrer Chefin im Team-Chat. Schreiben Sie eine Antwort, in der Sie Ihre Meinung sagen und begründen. Schreiben Sie mindestens 40 Wörter.",
+            "Lesen Sie die Nachricht Ihrer Chefin im Team-Chat. Schreiben Sie eine Antwort, in der Sie Ihre Meinung sagen und begründen. Schreiben Sie ganze Sätze.",
           material: [
             {
               h: "Team-Chat „Lager Halle 2“ – Nachricht von Teamleiterin Petra Schäfer",
@@ -1480,7 +1480,7 @@
         name: "Lesen und Schreiben Teil 2 – Antwort-E-Mail an Kunden",
         skill: "Schreiben",
         time: "ca. 15 Min.",
-        what: "Du schreibst eine Antwort an den Kunden und setzt alle Punkte aus der Notiz deiner Chefin um (mind. 70 Wörter).",
+        what: "Du schreibst eine Antwort an den Kunden und setzt alle Punkte aus der Notiz deiner Chefin um (zu jedem Punkt mindestens zwei Sätze, möglichst viel).",
         steps: [
           "Mach aus jedem Punkt der Notiz einen Satz – Reihenfolge der Notiz übernehmen.",
           "Formelle Anrede, Dank für die E-Mail, Entschuldigung.",
@@ -1816,7 +1816,7 @@
         name: "Sprachbausteine und Schreiben Teil 2 – Meinung im Team-Chat",
         skill: "Schreiben",
         time: "ca. 6 Min.",
-        what: "Du antwortest kurz (mind. 40 Wörter) im Team-Chat oder Intranet auf einen Vorschlag und begründest deine Meinung.",
+        what: "Du antwortest kurz in ganzen Sätzen im Team-Chat oder Intranet auf einen Vorschlag und begründest deine Meinung.",
         steps: [
           "Kurz grüßen und Bezug nehmen („danke für die Frage“).",
           "Meinung in einem Satz sagen.",

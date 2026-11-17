@@ -185,7 +185,7 @@ s = [
             [
                 "<b>Lesen und Schreiben Teil 2:</b> Eine Antwort-E-Mail schreiben",
                 "Sie schreiben die Antwort an die Kundin / den Kunden. Alle Punkte aus der Notiz müssen in die E-Mail. "
-                "<b>Mindestens 70 Wörter</b>, mit Anrede und Gruß.",
+                "<b>Zu jedem Punkt mindestens zwei Sätze</b> – schreiben Sie möglichst viel, mit Anrede und Gruß.",
                 "zählt zu Schreiben",
             ],
         ],
@@ -211,7 +211,7 @@ s += [
             "Notiz lesen und jeden Punkt nummerieren (1, 2, 3, 4). Das ist Ihre Checkliste.",
             "Aus jedem Punkt der Notiz machen Sie einen ganzen, höflichen Satz – in derselben Reihenfolge.",
             "Zahlen, Tage, Uhrzeiten und Telefonnummern genau abschreiben.",
-            "Am Ende: Punkte abhaken, Wörter grob zählen (mind. 70).",
+            "Am Ende: Punkte abhaken, zu jedem Punkt mindestens zwei Sätze?",
         ],
         [
             "Ein Punkt der Notiz fehlt – oft die Telefonnummer oder die Bitte um Bestätigung.",
@@ -372,7 +372,7 @@ s += [
 ]
 s += [
     R(
-        "Schreiben Sie jetzt die ganze E-Mail (mindestens 70 Wörter) auf ein extra Blatt – mit Betreff, Anrede und Gruß.",
+        "Schreiben Sie jetzt die ganze E-Mail (zu jedem Punkt mindestens zwei Sätze) auf ein extra Blatt – mit Betreff, Anrede und Gruß.",
         "small",
     )
 ]
@@ -402,7 +402,7 @@ s += task(
     3,
     "Übungssatz B: Textilreinigung",
     "Sie arbeiten im Kundenservice der Textilreinigung Frischwerk in Dortmund. Lesen Sie die E-Mail einer Kundin und die "
-    "Notiz Ihrer Chefin. Lösen Sie die Aufgaben 19 und 20. Schreiben Sie dann die Antwort (mindestens 70 Wörter). "
+    "Notiz Ihrer Chefin. Lösen Sie die Aufgaben 19 und 20. Schreiben Sie dann die Antwort (zu jedem Punkt mindestens zwei Sätze). "
     "Stoppen Sie die Zeit: 20 Minuten.",
     3,
 )
@@ -442,7 +442,7 @@ s += [
             "20 % Rabatt auf die nächste Wäsche",
             "Kochjacken: ja, 2,50 € pro Stück, Abholung montags",
             "Kontakt: Herr Ito, Telefonnummer",
-            "Sie-Form, ganze Sätze, mind. 70 Wörter",
+            "Sie-Form, ganze Sätze, je Punkt mind. 2 Sätze",
         ]
     )
 ]

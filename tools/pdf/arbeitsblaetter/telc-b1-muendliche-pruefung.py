@@ -1,5 +1,5 @@
 # Arbeitsblatt telc Deutsch B1: Mündliche Prüfung (Kontaktaufnahme, Gespräch über ein Thema, gemeinsam etwas planen)
-# Format laut pruefung-fakten.js (telc-b1) und sim/telc-b1.js: Paarprüfung ca. 15 Min., 20 Min. Vorbereitung (Teil 2 und 3),
+# Format laut pruefung-fakten.js (telc-b1) und sim/telc-b1.js: Paarprüfung ca. 15 Min., 20 Min. Vorbereitung (alle Aufgabenblätter),
 # Teil 1 ca. 3 Min. (15 P.), Teil 2 ca. 6 Min. (30 P.), Teil 3 ca. 6 Min. (30 P.), mündlich 75 Punkte, Bestehen ab 45.
 # Eigene Aufgaben im Stil der Prüfung, keine telc-Originale.
 # Aufruf aus dem Repo-Wurzelordner: python3 tools/pdf/arbeitsblaetter/telc-b1-muendliche-pruefung.py
@@ -93,7 +93,7 @@ s += [
             ],
             [
                 "<b>Vorbereitung</b>",
-                "<b>20 Minuten</b> vorher, für Teil 2 und Teil 3. Sie dürfen sich Notizen machen, aber nicht ablesen.",
+                "<b>20 Minuten</b> vorher. Sie bekommen alle Aufgabenblätter und dürfen sich Notizen machen, aber nicht ablesen.",
             ],
             [
                 "<b>Punkte</b>",
