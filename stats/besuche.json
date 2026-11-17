@@ -1,25 +1,30 @@
 {
  "hinweis": "Zusammengefasste Besucherzahlen (Cloudflare Web Analytics, ohne Cookies). Automatisch erzeugt.",
- "stand": "2026-11-16T12:36:44.719Z",
- "tag": "2026-11-15",
+ "stand": "2026-11-17T13:02:07.247Z",
+ "tag": "2026-11-16",
  "gestern": {
-  "besuche": 56,
-  "seitenaufrufe": 426
+  "besuche": 74,
+  "seitenaufrufe": 485
  },
  "letzte7Tage": {
-  "besuche": 273,
-  "seitenaufrufe": 2729
+  "besuche": 298,
+  "seitenaufrufe": 3002
  },
  "herkunft": [
   {
    "name": "deutsch-mit-dennis.de",
    "besuche": 0,
-   "aufrufe": 2456
+   "aufrufe": 2704
   },
   {
    "name": "(direkt)",
-   "besuche": 258,
-   "aufrufe": 258
+   "besuche": 281,
+   "aufrufe": 281
+  },
+  {
+   "name": "www.google.com",
+   "besuche": 8,
+   "aufrufe": 8
   },
   {
    "name": "www.bing.com",
@@ -27,27 +32,22 @@
    "aufrufe": 3
   },
   {
-   "name": "www.google.com",
+   "name": "com.google.android.googlequicksearchbox",
    "besuche": 3,
    "aufrufe": 3
   },
   {
+   "name": "bing.com",
+   "besuche": 1,
+   "aufrufe": 1
+  },
+  {
+   "name": "org.telegram.messenger",
+   "besuche": 1,
+   "aufrufe": 1
+  },
+  {
    "name": "l.instagram.com",
-   "besuche": 2,
-   "aufrufe": 2
-  },
-  {
-   "name": "www.facebook.com",
-   "besuche": 2,
-   "aufrufe": 2
-  },
-  {
-   "name": "m.facebook.com",
-   "besuche": 2,
-   "aufrufe": 2
-  },
-  {
-   "name": "com.google.android.googlequicksearchbox",
    "besuche": 1,
    "aufrufe": 1
   }
@@ -55,8 +55,8 @@
  "laender": [
   {
    "name": "DE",
-   "besuche": 237,
-   "aufrufe": 2583
+   "besuche": 247,
+   "aufrufe": 2746
   },
   {
    "name": "IN",
@@ -64,63 +64,63 @@
    "aufrufe": 75
   },
   {
+   "name": "CH",
+   "besuche": 6,
+   "aufrufe": 43
+  },
+  {
+   "name": "RS",
+   "besuche": 0,
+   "aufrufe": 35
+  },
+  {
+   "name": "LV",
+   "besuche": 9,
+   "aufrufe": 16
+  },
+  {
+   "name": "ES",
+   "besuche": 2,
+   "aufrufe": 13
+  },
+  {
    "name": "EG",
    "besuche": 6,
    "aufrufe": 13
   },
   {
-   "name": "CH",
-   "besuche": 3,
-   "aufrufe": 12
-  },
-  {
    "name": "TR",
    "besuche": 1,
-   "aufrufe": 10
-  },
-  {
-   "name": "US",
-   "besuche": 9,
-   "aufrufe": 10
-  },
-  {
-   "name": "UA",
-   "besuche": 2,
-   "aufrufe": 5
-  },
-  {
-   "name": "MA",
-   "besuche": 2,
-   "aufrufe": 5
+   "aufrufe": 13
   }
  ],
  "geraete": [
   {
    "name": "desktop",
-   "besuche": 94,
-   "aufrufe": 1944
+   "besuche": 78,
+   "aufrufe": 1949
   },
   {
    "name": "mobile",
-   "besuche": 175,
-   "aufrufe": 720
+   "besuche": 215,
+   "aufrufe": 962
   },
   {
    "name": "tablet",
-   "besuche": 4,
-   "aufrufe": 65
+   "besuche": 5,
+   "aufrufe": 91
   }
  ],
  "seiten": [
   {
    "name": "/",
-   "besuche": 273,
-   "aufrufe": 2632
+   "besuche": 298,
+   "aufrufe": 2931
   },
   {
    "name": "/index.html",
    "besuche": 0,
-   "aufrufe": 97
+   "aufrufe": 71
   }
  ],
  "verlauf": {
@@ -283,6 +283,10 @@
   "2026-11-15": {
    "besuche": 56,
    "seitenaufrufe": 426
+  },
+  "2026-11-16": {
+   "besuche": 74,
+   "seitenaufrufe": 485
   }
  }
 }
