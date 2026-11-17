@@ -31,7 +31,7 @@ window.DMLazy = (() => {
   ],
   "erste": [
     "erste-schritte-data.js?v=20261111n",
-    "erste-schritte.js?v=20261117w"
+    "erste-schritte.js?v=20261117y"
   ],
   "bild": [
     "bild-data.js?v=20261008e",
@@ -57,6 +57,11 @@ window.DMLazy = (() => {
   "b230": [
     "b2-30.js?v=20261113g2"
   ],
+  "b2t": [
+    "sprachbausteine-data.js?v=20261117y",
+    "telc-b2-sprechen-data.js?v=20261117y",
+    "b2-training.js?v=20261117y"
+  ],
   "b130": [
     "b1-30.js?v=20261117w"
   ],
@@ -76,7 +81,7 @@ window.DMLazy = (() => {
     "a1-woerter-data.js?v=20261117w"
   ]
 };
-  const NEED = { spiele: ['spiele'], hoeren: ['hoeren'], lesen: ['lesen'], pruefung: ['hoeren', 'lesen'], training: ['hoeren', 'lesen'], bild: ['bild'], 'erste-schritte': ['erste'], niveau: ['erste', 'hoeren', 'lesen'], grammatik: ['grammatik'], laute: ['laute'], lid: ['lidx'], simulation: ['lidx', 'muster'], ueben: ['muster'], pruefungsinfo: ['fakten'], 'b2-30-tage': ['b230'], 'b1-30-tage': ['b130'], 'b2-woerter': ['wb2', 'wcore'], 'b1-woerter': ['wb1', 'wcore'], 'dtz-woerter': ['wdtz', 'wcore'], 'a1-woerter': ['wa1', 'wcore'] };
+  const NEED = { spiele: ['spiele'], hoeren: ['hoeren'], lesen: ['lesen'], pruefung: ['hoeren', 'lesen'], training: ['hoeren', 'lesen'], bild: ['bild'], 'erste-schritte': ['erste'], niveau: ['erste', 'hoeren', 'lesen'], grammatik: ['grammatik'], laute: ['laute'], lid: ['lidx'], simulation: ['lidx', 'muster'], ueben: ['muster'], pruefungsinfo: ['fakten'], 'b2-30-tage': ['b230'], 'b1-30-tage': ['b130'], 'b2-woerter': ['wb2', 'wcore'], 'b1-woerter': ['wb1', 'wcore'], 'dtz-woerter': ['wdtz', 'wcore'], 'a1-woerter': ['wa1', 'wcore'], sprachbausteine: ['b2t'], 'telc-b2-sprechen': ['b2t'] };
   const done = {}, busy = {};
   const one = src => new Promise(res => { const s = document.createElement('script'); s.src = src; s.async = false; s.onload = s.onerror = () => res(); document.head.appendChild(s); });
   const group = g => busy[g] || (busy[g] = GROUPS[g].reduce((p, src) => p.then(() => one(src)), Promise.resolve()).then(() => { done[g] = true; }));

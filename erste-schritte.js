@@ -418,6 +418,8 @@
         tile("#pruefung/telcb2", "🎯", "telc B2 – Prüfungstraining", "Lesen, Hören, E-Mail, Sprechen"),
         tile("#vorbereitung/telc-b2", "🧭", "Aufbau und Strategien", "Jeder Teil mit Fallen und Lernplan"),
         tile("#b2-30-tage/telc", "📅", "B2 in 30 Tagen", "Lernplan telc B2 Tag für Tag"),
+        tile("#telc-b2-sprechen/1", "🎤", "Sprechen üben: Präsentation, Diskussion, Planen", "Neue Aufgaben auf Knopfdruck, mit Timer und Redemitteln"),
+        tile("#sprachbausteine/telcb2", "🧩", "Sprachbausteine üben", "Lückentexte Teil 1 und 2 mit Erklärung"),
         ...[["telc-b2", 1], ["telc-b2-2", 2]].map(([id, n]) => mock(id, "telc B2", n)),
         ...[["telc-b2", 1], ["telc-b2-2", 2]].map(([id, n]) => mockPdf(id, "telc B2", n)),
       ],
@@ -428,6 +430,7 @@
         tile("#pruefung/dtbb2", "🎯", "DTB B2 – Prüfungstraining", "Beschwerde, Telefonnotiz, Besprechung"),
         tile("#vorbereitung/dtb-b2", "🧭", "Aufbau und Strategien", "Jeder Teil mit Fallen und Lernplan"),
         tile("#b2-30-tage/dtb", "📅", "B2 in 30 Tagen", "Lernplan DTB B2 Tag für Tag"),
+        tile("#sprachbausteine/dtbb2", "🧩", "Sprachbausteine üben", "Mitarbeiterinfo und E-Mail mit Erklärung"),
         ...[["dtb-b2", 1], ["dtb-b2-2", 2], ["dtb-b2-3", 3]].map(([id, n]) => mock(id, "DTB B2", n)),
         ...[["dtb-b2", 1], ["dtb-b2-2", 2], ["dtb-b2-3", 3]].map(([id, n]) => mockPdf(id, "DTB B2", n)),
       ],
@@ -515,6 +518,7 @@
         return !!(sim.done && sim.done[id] && Object.keys(sim.done[id]).length) || !!(sim[id + "_hist"] || []).length;
       }
       if (r === "b2-30-tage") return !!Object.keys((mem.b2_30 && mem.b2_30[id] && mem.b2_30[id].done) || {}).length;
+      if (r === "sprachbausteine") { const pre = { telcb2: "telc", dtbb2: "dtb" }[id] || (id ? id + "|" : ""); return Object.keys(mem.sb || {}).some((k) => k.startsWith(pre)); }
       if (r === "b2-woerter") return !!Object.keys((mem.b2w && mem.b2w.s) || {}).length;
       if (r === "b1-30-tage") return !!Object.keys((mem.b1_30 && mem.b1_30[id] && mem.b1_30[id].done) || {}).length;
       if (/^(a1|dtz|b1)-woerter$/.test(r)) { const w = mem["w_" + r.split("-")[0]]; return !!Object.keys((w && w.s) || {}).length; }

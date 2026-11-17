@@ -1134,7 +1134,12 @@
         cards: () => simCards('telc-b2', 'Lesen, Sprachbausteine, Hören, E-Mail · 140 Min.', 'Paarprüfung · 15 Min. + 20 Min. Vorbereitung') +
           card('#vorbereitung/telc-b2', 'Vorbereitung', 'Aufbau und Strategien', 'Jeder Teil mit Fallen, Mini-Übung und Lernplan') +
           card('#b2-30-tage/telc', 'Lernplan', 'B2 in 30 Tagen', 'Jeden Tag 30–60 Minuten, mit Generalprobe') +
-          card('#lesen/beruf', 'Lesen', 'Lesen auf B2', 'Längere Texte, Regelungen, Artikel') +
+          card('#telc-b2-sprechen/1', 'Sprechen 1 · neu', 'Präsentation', 'Thema wählen, 1,5 Minuten frei sprechen, Fragen beantworten') +
+          card('#telc-b2-sprechen/2', 'Sprechen 2 · neu', 'Diskussion', 'Zeitungsmeldung, Meinung begründen, reagieren') +
+          card('#telc-b2-sprechen/3', 'Sprechen 3 · neu', 'Gemeinsam planen', 'Vorschläge machen, mit Partner-Reaktionen üben') +
+          card('#sprachbausteine/telcb2', 'Sprachbausteine · neu', 'Lückentexte mit Erklärung', 'Teil 1 (a/b/c) und Teil 2 (Wörter a–o)') +
+          card('#b2-woerter', 'Wortschatz', 'B2-Wörter: Karteikarten', 'Die Prüfungsthemen mit Beispielsätzen') +
+          card('#material/pruefung/B2', 'Arbeitsblätter', 'telc B2 als PDF', 'Lesen, Hören, Schreiben, Mündlich – mit Lösungen') +
           card('#ueben/schreiben/B2/2', 'Schreiben', 'Halbformelle E-Mail', 'Bitte um Information oder Beschwerde') +
           card('#ueben/schreiben/B2/3', 'Schreiben', 'Meinung vertreten', 'Argumente sammeln und gewichten') +
           card('#spiele/b2', 'Lernspiele', 'Wortschatz und Grammatik B2', 'Nomen-Verb, Präpositionen, Konnektoren') },
@@ -1160,6 +1165,10 @@
           card('#training/dtb-kollegen', 'Sprechen 2', 'Mit Kollegen sprechen', 'Eingehen und nachfragen') +
           card('#training/dtb-sprechen', 'Sprechen 3', 'Lösungen diskutieren', 'Abwägen und vereinbaren') +
           card('#training/dtb-schreiben', 'Schreiben', 'Kundenantwort', 'Mit internen Informationen') +
+          card('#ueben/schreiben/B2/3', 'Schreiben', 'Beitrag im Mitarbeiterforum', 'Meinung vertreten, Argumente gewichten') +
+          card('#sprachbausteine/dtbb2', 'Sprachbausteine · neu', 'Lückentexte mit Erklärung', 'Mitarbeiterinfo (Wörter a–j) und E-Mail (a/b/c)') +
+          card('#b2-woerter', 'Wortschatz', 'B2-Wörter: Karteikarten', 'Arbeit, Kunden, Medien, Gesundheit') +
+          card('#material/pruefung/B2', 'Arbeitsblätter', 'DTB B2 als PDF', '13 Blätter zu allen Teilen – mit Lösungen') +
           card('#lesen/beruf', 'Lesen', 'Regelungen und E-Mails', `${(readSets()[1] || { items: [] }).items.length} Lesetexte mit Fragen`) +
           card('#hoeren/b2-1', 'Hören', 'DTB-B2-Hörtraining', 'Mailbox, Besprechung, Kundengespräch, Radio') +
           card('#spiele/b2', 'Lernspiele', 'Wortschatz und Grammatik B2', 'Nomen-Verb, Präpositionen, Konnektoren') }
@@ -1690,7 +1699,7 @@
   /* The navigation and footer of index.html use real addresses (/pruefung/, /lieder/ …) so that Google can follow them.
      Inside the app a click is caught and routed as before (#pruefung …) – no page reload. Ctrl/Cmd/middle click and
      "open in new tab" still use the real address. Pages that are not part of the app (dtz-schreiben, impressum …) load normally. */
-  const SECTION_LINK = /^\/(pruefung|simulation|lid|lieder|ueben|hoeren|lesen|spiele|bild|challenge|lernpakete|ueber-mich|vorbereitung|kurs|grammatik|pruefungsinfo|laute|material|b2-30-tage|b2-woerter|b1-30-tage|b1-woerter|a1-woerter|dtz-woerter|dtz-30-tage|lernpakete\/[\w-]+|vorbereitung\/[\w-]+|niveau\/a[0-2]|niveau\/b[12]|material\/[ab][12]|ueben\/sprechen\/b2)\/$/;
+  const SECTION_LINK = /^\/(pruefung|simulation|lid|lieder|ueben|hoeren|lesen|spiele|bild|challenge|lernpakete|ueber-mich|vorbereitung|kurs|grammatik|pruefungsinfo|laute|material|b2-30-tage|b2-woerter|sprachbausteine|telc-b2-sprechen|b1-30-tage|b1-woerter|a1-woerter|dtz-woerter|dtz-30-tage|lernpakete\/[\w-]+|vorbereitung\/[\w-]+|niveau\/a[0-2]|niveau\/b[12]|material\/[ab][12]|ueben\/sprechen\/b2)\/$/;
   /* readable pages use lower-case levels (/niveau/b2/), the app routes use upper case (#niveau/B2, #material/alle/B2) */
   const appRoute = r => r.replace(/^(niveau|ueben\/sprechen)\/(\w\d)$/, (_, a, l) => a + '/' + l.toUpperCase()).replace(/^material\/(\w\d)$/, (_, l) => 'material/alle/' + l.toUpperCase());
   document.addEventListener('click', e => {
