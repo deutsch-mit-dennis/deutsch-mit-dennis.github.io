@@ -1111,7 +1111,8 @@
           card('#training/dtz-schreiben', 'Schreiben', 'Einen Brief schreiben', 'Vier Leitpunkte, mit Muster') +
           card('/dtz-schreiben/', 'Schreiben · neu', 'Vorbereitungspaket Schreiben', 'Neue A2-Regel: Übungen, Muster, Timer') +
           card('#lesen/alltag', 'Lesen', 'Mitteilungen verstehen', `${(readSets()[0] || { items: [] }).items.length} Lesetexte mit Fragen`) +
-          card('#hoeren/dtz-1', 'Hören', 'DTZ-Hörtraining', 'Übungssätze mit allen vier Teilen') },
+          card('#hoeren/dtz-1', 'Hören', 'DTZ-Hörtraining', 'Übungssätze mit allen vier Teilen') +
+          card('#dtz-woerter', 'Wortschatz · neu', 'DTZ-Wörter: Karteikarten', '8 Prüfungsthemen · Artikel, Plural, Beispielsatz') },
       lid: { label: 'Leben in D.', h: 'Test „Leben in Deutschland“', p: 'Orientierungskurs und Einbürgerung · 33 Fragen in 60 Minuten', path: 'lid', color: 'mint',
         cards: () => card('#simulation/lid', 'Probeprüfung', 'Test mit Uhr', '33 Fragen · 60 Min. · mit Auswertung') +
           card('#lid', 'Lernen', 'LiD-Trainer: alle 310 Fragen', 'Block für Block lernen, Fehler wiederholen') +
@@ -1122,6 +1123,9 @@
       telcb1: { label: 'telc B1', h: 'telc Deutsch B1 (Zertifikat Deutsch)', p: 'B1 allgemein · zum Beispiel für Einbürgerung, Ausbildung oder Arbeit', path: 'telcb1', color: 'sky',
         cards: () => simCards('telc-b1', 'Lesen, Sprachbausteine, Hören, Brief · 150 Min.', 'Paarprüfung · 15 Min. + 20 Min. Vorbereitung') +
           card('#vorbereitung/telc-b1', 'Vorbereitung', 'Aufbau und Strategien', 'Jeder Teil mit Fallen, Mini-Übung und Lernplan') +
+          card('#b1-30-tage/telc', 'Lernplan · neu', 'B1 in 30 Tagen', 'Jeden Tag 30–60 Minuten, mit Generalprobe') +
+          card('#b1-woerter', 'Wortschatz · neu', 'B1-Wörter: Karteikarten', '8 Prüfungsthemen · Artikel, Plural, Beispielsatz') +
+          card('#material/pruefung/B1', 'Arbeitsblätter · neu', 'telc B1 als PDF', 'Lesen, Sprachbausteine, Hören, Brief, Mündlich – mit Lösungen') +
           card('#lesen/alltag', 'Lesen', 'Lesen üben', 'Anzeigen, Mitteilungen, Artikel') +
           card(hs('telcb1-1', 'alltag'), 'Hören', 'Hören üben', 'Radio, Interview, Durchsagen') +
           card('#ueben/schreiben/B1/2', 'Schreiben', 'Einen Brief schreiben', 'Leitpunkte bearbeiten, mit Mustertext') +
@@ -1137,11 +1141,14 @@
       dtbb1: { label: 'DTB B1', h: 'DTB B1 – Deutsch-Test für den Beruf', p: 'Berufssprachkurs B1 · Deutsch im Berufsalltag', path: 'dtbb1', color: 'ink',
         cards: () => simCards('dtb-b1', 'Lesen, Hören, Schreiben · 95 Min.', 'Drei Sprechteile · 16 Min.') +
           card('#vorbereitung/dtb-b1', 'Vorbereitung', 'Aufbau und Strategien', 'Jeder Teil mit Fallen, Mini-Übung und Lernplan') +
+          card('#b1-30-tage/dtb', 'Lernplan · neu', 'B1 in 30 Tagen', 'Jeden Tag 30–60 Minuten, mit Generalprobe') +
+          card('#b1-woerter', 'Wortschatz · neu', 'B1-Wörter: Karteikarten', 'Arbeit, Kunden, Gesundheit, Kommunikation') +
+          card('#material/pruefung/B1', 'Arbeitsblätter · neu', 'DTB B1 als PDF', 'Lesen, Kunden-E-Mail, Telefonnotiz, Sprechen – mit Lösungen') +
           card('#lesen/beruf', 'Lesen', 'Lesen im Beruf', 'Regelungen, E-Mails, Anzeigen') +
           card(hs('dtbb1-1', 'beruf'), 'Hören', 'Hören im Beruf', 'Mailbox, Durchsagen, Gespräche im Team') +
-          card('#training/dtb-thema', 'Sprechen 1', 'Über ein Thema sprechen', 'Strukturieren und Beispiele geben') +
-          card('#training/dtb-kollegen', 'Sprechen 2', 'Mit Kollegen sprechen', 'Eingehen und nachfragen') +
-          card('#training/dtb-sprechen', 'Sprechen 3', 'Lösungen diskutieren', 'Abwägen und vereinbaren') +
+          card('#training/dtb-thema', 'Sprechen 1', 'Über ein Thema sprechen', 'Training im B2-Format – für B1 etwas kürzer') +
+          card('#training/dtb-kollegen', 'Sprechen 2', 'Mit Kollegen sprechen', 'Training im B2-Format – eingehen und nachfragen') +
+          card('#training/dtz-sprechen', 'Sprechen 3', 'Gemeinsam etwas planen', 'Wie im DTB B1 Teil 3: vorschlagen und einigen') +
           card('#training/dtb-schreiben', 'Schreiben', 'Antwort an Kunden', 'Mit internen Informationen') +
           card('#lektion/arbeit/3', 'Sprechen', 'Über die eigene Arbeit sprechen', 'Dialog lesen, eigene Erfahrungen ergänzen') +
           card('#spiele/b2', 'Lernspiele', 'Spiele für den Beruf', 'Telefonieren, Arbeitsbereiche, formell oder informell') },
@@ -1683,7 +1690,7 @@
   /* The navigation and footer of index.html use real addresses (/pruefung/, /lieder/ …) so that Google can follow them.
      Inside the app a click is caught and routed as before (#pruefung …) – no page reload. Ctrl/Cmd/middle click and
      "open in new tab" still use the real address. Pages that are not part of the app (dtz-schreiben, impressum …) load normally. */
-  const SECTION_LINK = /^\/(pruefung|simulation|lid|lieder|ueben|hoeren|lesen|spiele|bild|challenge|lernpakete|ueber-mich|vorbereitung|kurs|grammatik|pruefungsinfo|laute|material|b2-30-tage|b2-woerter|dtz-30-tage|lernpakete\/[\w-]+|vorbereitung\/[\w-]+|niveau\/a[0-2]|niveau\/b[12]|material\/[ab][12]|ueben\/sprechen\/b2)\/$/;
+  const SECTION_LINK = /^\/(pruefung|simulation|lid|lieder|ueben|hoeren|lesen|spiele|bild|challenge|lernpakete|ueber-mich|vorbereitung|kurs|grammatik|pruefungsinfo|laute|material|b2-30-tage|b2-woerter|b1-30-tage|b1-woerter|a1-woerter|dtz-woerter|dtz-30-tage|lernpakete\/[\w-]+|vorbereitung\/[\w-]+|niveau\/a[0-2]|niveau\/b[12]|material\/[ab][12]|ueben\/sprechen\/b2)\/$/;
   /* readable pages use lower-case levels (/niveau/b2/), the app routes use upper case (#niveau/B2, #material/alle/B2) */
   const appRoute = r => r.replace(/^(niveau|ueben\/sprechen)\/(\w\d)$/, (_, a, l) => a + '/' + l.toUpperCase()).replace(/^material\/(\w\d)$/, (_, l) => 'material/alle/' + l.toUpperCase());
   document.addEventListener('click', e => {

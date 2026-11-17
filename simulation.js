@@ -3,7 +3,7 @@
    LiD-Simulation: Fragen aus window.LID_KATALOG (BAMF-Gesamtfragenkatalog).
    Fortschritt und Antworten bleiben nur im Browser (DM.store.sim). */
 (() => {
-  const V = '20261113s';
+  const V = '20261117w';
   const $ = (s, r = document) => r.querySelector(s);
   const $$ = (s, r = document) => [...r.querySelectorAll(s)];
   const e = s => DM.esc(s);

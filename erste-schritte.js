@@ -397,6 +397,7 @@
       items: [
         tile("#pruefung/telcb1", "🎯", "telc B1 – Prüfungstraining", "Lesen, Hören, Schreiben, Sprechen"),
         tile("#vorbereitung/telc-b1", "🧭", "Aufbau und Strategien", "Jeder Teil mit Fallen und Lernplan"),
+        tile("#b1-30-tage/telc", "📅", "B1 in 30 Tagen", "Lernplan telc B1 Tag für Tag"),
         ...[["telc-b1", 1], ["telc-b1-2", 2]].map(([id, n]) => mock(id, "telc B1", n)),
         ...[["telc-b1", 1], ["telc-b1-2", 2]].map(([id, n]) => mockPdf(id, "telc B1", n)),
       ],
@@ -406,6 +407,7 @@
       items: [
         tile("#pruefung/dtbb1", "🎯", "DTB B1 – Prüfungstraining", "Kunden-E-Mail, Notiz, Gespräche im Team"),
         tile("#vorbereitung/dtb-b1", "🧭", "Aufbau und Strategien", "Jeder Teil mit Fallen und Lernplan"),
+        tile("#b1-30-tage/dtb", "📅", "B1 in 30 Tagen", "Lernplan DTB B1 Tag für Tag"),
         ...[["dtb-b1", 1], ["dtb-b1-2", 2], ["dtb-b1-3", 3]].map(([id, n]) => mock(id, "DTB B1", n)),
         ...[["dtb-b1", 1], ["dtb-b1-2", 2], ["dtb-b1-3", 3]].map(([id, n]) => mockPdf(id, "DTB B1", n)),
       ],
@@ -446,27 +448,36 @@
     B1: ["dtz", "telcb1", "dtbb1", "lid"],
     B2: ["telcb2", "dtbb2"],
   };
-  /* B2 has two exam formats: a switch shows only telc, only DTB, or both (choice remembered on this device) */
+  /* B2 (telc / DTB) and B1 (DTZ / telc / DTB) have several exam formats: a switch shows only one of them or all
+     (choice remembered on this device, the key is shared with the 30-day plans b2-30.js / b1-30.js) */
   const fmtLi = (li, f) => (f ? li.replace("<li>", `<li data-fmt="${f}">`) : li);
-  const FMT_KEY = "dmd.b2fmt";
-  const fmtGet = () => { try { return localStorage.getItem(FMT_KEY) || "all"; } catch { return "all"; } };
-  const fmtSwitch = () => {
-    const cur = fmtGet();
-    const b = (v, label, sub) => `<button type="button" class="es-fmt-b" data-fmt-set="${v}" aria-pressed="${cur === v}"><b>${label}</b><small>${sub}</small></button>`;
-    return `<section class="es-fmt" aria-labelledby="es-fmt-h"><h2 id="es-fmt-h" class="es-fmt-h">Welche Prüfung machst du?</h2><div class="es-fmt-row" role="group" aria-labelledby="es-fmt-h">${b("telc", "telc Deutsch B2", "allgemein")}${b("dtb", "DTB B2", "Deutsch-Test für den Beruf")}${b("all", "Beide / weiß noch nicht", "alles zeigen")}</div><p class="es-fmt-status" role="status" aria-live="polite"></p><p class="es-fmt-note"><a href="#pruefungsinfo">Unterschied telc B2 und DTB B2?</a></p></section>`;
+  const FMTS = {
+    B2: { key: "dmd.b2fmt", opts: [["telc", "telc Deutsch B2", "allgemein"], ["dtb", "DTB B2", "Deutsch-Test für den Beruf"]], all: "Beide / weiß noch nicht", diff: "Unterschied telc B2 und DTB B2?" },
+    B1: { key: "dmd.b1fmt", opts: [["dtz", "DTZ", "Integrationskurs"], ["telc", "telc Deutsch B1", "allgemein"], ["dtb", "DTB B1", "Deutsch-Test für den Beruf"]], all: "Alle / weiß noch nicht", diff: "Welche Prüfung passt zu mir?" },
   };
-  const FMT_LABEL = { telc: "nur telc Deutsch B2", dtb: "nur DTB B2", all: "telc B2 und DTB B2" };
+  let fmtLv = "B2";
+  const FMT_KEY = () => FMTS[fmtLv].key;
+  const fmtGet = () => { try { return localStorage.getItem(FMT_KEY()) || "all"; } catch { return "all"; } };
+  const fmtSwitch = () => {
+    const cur = fmtGet(), F = FMTS[fmtLv];
+    const b = (v, label, sub) => `<button type="button" class="es-fmt-b" data-fmt-set="${v}" aria-pressed="${cur === v}"><b>${label}</b><small>${sub}</small></button>`;
+    return `<section class="es-fmt" aria-labelledby="es-fmt-h"><h2 id="es-fmt-h" class="es-fmt-h">Welche Prüfung machst du?</h2><div class="es-fmt-row${F.opts.length > 2 ? " es-fmt-row-4" : ""}" role="group" aria-labelledby="es-fmt-h">${F.opts.map((o) => b(...o)).join("")}${b("all", F.all, "alles zeigen")}</div><p class="es-fmt-status" role="status" aria-live="polite"></p><p class="es-fmt-note"><a href="#pruefungsinfo">${F.diff}</a></p></section>`;
+  };
+  const fmtLabel = (v) => {
+    const F = FMTS[fmtLv], o = F.opts.find((q) => q[0] === v);
+    return o ? "nur " + o[1] : F.opts.map((q) => q[1]).join(", ");
+  };
   function fmtBind() {
     const wrap = document.querySelector(".es-fmtwrap");
     document.querySelectorAll("[data-fmt-set]").forEach((btn) => (btn.onclick = () => {
       const v = btn.dataset.fmtSet;
-      try { localStorage.setItem(FMT_KEY, v); } catch {}
+      try { localStorage.setItem(FMT_KEY(), v); } catch {}
       if (wrap) wrap.dataset.show = v;
       document.querySelectorAll("[data-fmt-set]").forEach((o) => o.setAttribute("aria-pressed", String(o === btn)));
       lvProgress();
       // visible feedback: the change happens further down the page, so confirm it and scroll there
       const st = document.querySelector(".es-fmt-status");
-      if (st) st.innerHTML = `✓ Du siehst jetzt ${FMT_LABEL[v] || ""}. <a href="#lv-exam" class="es-fmt-jump">Zur Prüfungsvorbereitung ↓</a>`;
+      if (st) st.innerHTML = `✓ Du siehst jetzt ${fmtLabel(v)}. <a href="#lv-exam" class="es-fmt-jump">Zur Prüfungsvorbereitung ↓</a>`;
       const target = document.getElementById("lv-exam");
       if (target) target.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
     }));
@@ -478,7 +489,7 @@
     });
   }
   function examSection(lv) {
-    const FMT = { telcb2: "telc", dtbb2: "dtb", telcb1: "telc", dtbb1: "dtb" };
+    const FMT = { telcb2: "telc", dtbb2: "dtb", telcb1: "telc", dtbb1: "dtb", ...(lv === "B1" ? { dtz: "dtz" } : {}) };
     const groups = (LEVEL_EXAMS[lv] || []).map((k) => ({ ...EXAM[k](), fmt: FMT[k] || "" }));
     if (!groups.length) return "";
     return `<section class="dm-section es-lv-sec es-lv-exam" aria-labelledby="lv-exam"><div class="dm-section-head"><h2 id="lv-exam">Prüfungsvorbereitung</h2><a href="#pruefung">Alle Prüfungen</a></div>${groups
@@ -505,6 +516,9 @@
       }
       if (r === "b2-30-tage") return !!Object.keys((mem.b2_30 && mem.b2_30[id] && mem.b2_30[id].done) || {}).length;
       if (r === "b2-woerter") return !!Object.keys((mem.b2w && mem.b2w.s) || {}).length;
+      if (r === "b1-30-tage") return !!Object.keys((mem.b1_30 && mem.b1_30[id] && mem.b1_30[id].done) || {}).length;
+      if (/^(a1|dtz|b1)-woerter$/.test(r)) { const w = mem["w_" + r.split("-")[0]]; return !!Object.keys((w && w.s) || {}).length; }
+      if (r === "dtz-30-tage") return !!Object.keys((mem.dtz30 && mem.dtz30.done) || {}).length;
     } catch {}
     return false;
   }
@@ -542,6 +556,7 @@
   function levelPage(lv) {
     if (!LV_NAME[lv]) lv = "A1";
     mem.level = lv;
+    if (FMTS[lv]) fmtLv = lv;
     DM.save && DM.save();
     const L = lv === "A0" ? "A1" : lv;
     const LS =
@@ -575,6 +590,9 @@
       );
       S.push(
         block("ueben", "3 · Hören, sprechen, spielen", [
+          tile("#kurs/A0", "🧭", "Mein Kurs A0", "Immer der nächste Schritt – Tag für Tag"),
+          tile("#laute", "🔤", "Laute und Buchstaben", "ä, ö, ü, ei, ch … hören und nachsprechen"),
+          tile("#a1-woerter", "🗂️", "Erste Wörter – Karteikarten zum Umdrehen", "Familie, Wohnen, Essen, Einkaufen … mit Ton"),
           tile(
             "#ueben/sprechen/A1/0",
             "💬",
@@ -598,6 +616,16 @@
           ),
         ]),
       );
+      const esPdf = (DM.materials || []).filter((m) => /\/es-[\w-]+\.pdf$/.test(m.file));
+      if (esPdf.length)
+        S.push(
+          block(
+            "pdf",
+            "4 · Zum Ausdrucken: Erste-Schritte-Arbeitsblätter",
+            esPdf.map((m) => tile(m.file, "📄", m.title.replace(/^(Erste Schritte|Bildwörter): /, ""), `${m.pages} ${m.pages === 1 ? "Seite" : "Seiten"}${m.loes ? " · mit Lösungen" : ""} · mit Bildern`, true)),
+            `<a href="#material/alle/A1">Alle A1-PDFs</a>`,
+          ),
+        );
       S.push(examSection(lv));
     } else {
       if (es.length)
@@ -621,6 +649,9 @@
           "Wortschatz",
           [
             ...(lv === "B2" ? [tile("#b2-woerter", "🗂️", "B2-Wörter nach Prüfungsthemen – Karteikarten", "8 Themen · Wort, Artikel, Plural, Beispielsatz")] : []),
+            ...(lv === "B1" ? [tile("#b1-woerter", "🗂️", "B1-Wörter nach Prüfungsthemen – Karteikarten", "telc B1 und DTB B1 · 8 Themen mit Beispielsatz")] : []),
+            ...(lv === "A2" || lv === "B1" ? [fmtLi(tile("#dtz-woerter", "🗂️", "DTZ-Wörter nach Prüfungsthemen – Karteikarten", "Wohnen, Arbeit, Ämter, Gesundheit … · mit Beispielsatz"), lv === "B1" ? "dtz" : "")] : []),
+            ...(lv === "A1" ? [tile("#a1-woerter", "🗂️", "A1-Wörter nach Alltagsthemen – Karteikarten", "8 Themen · Wort, Artikel, Plural, Beispielsatz")] : []),
             ...LS.map((l) =>
             tile(
               "#wortschatz/" + l.id + "/0",
@@ -651,7 +682,7 @@
       S.push(
         block("hl", "Hören und Lesen", [
           ...hoer.map(([id, s]) =>
-            fmtLi(tile("#hoeren/" + id, "🎧", s.title, `Hören · ${s.level}`), /DTB/.test(s.title) ? "dtb" : /telc/i.test(s.title) ? "telc" : ""),
+            fmtLi(tile("#hoeren/" + id, "🎧", s.title, `Hören · ${s.level}`), /DTB/.test(s.title) ? "dtb" : /telc/i.test(s.title) ? "telc" : lv === "B1" && /DTZ/.test(s.title) ? "dtz" : ""),
           ),
           ...les.map((s) =>
             tile("#lesen/" + s.id, "📖", s.title, `Lesen · ${s.level}`),
@@ -670,12 +701,15 @@
           true,
         );
       const allPdfs = `<a href="#material/alle/${L}">Alle ${mats.length} PDFs</a>`;
-      if (mats.some((m) => m.fmt)) {
-        // levels with several exam formats (B2): shared material first, then one group per exam format
+      // B1: DTZ sheets (A2–B1) belong to the DTZ format
+      const mf = (m) => m.fmt || (lv === "B1" && /\/(dtz-|bild-beschreiben)/.test(m.file) ? "dtz" : "");
+      if (mats.some(mf)) {
+        // levels with several exam formats (B1, B2): shared material first, then one group per exam format
         const groups = [
-          ["Für alle Prüfungen: Grammatik, Wortschatz, Sprechen", mats.filter((m) => !m.fmt).map(matTile)],
-          ["DTB B2 – Deutsch-Test für den Beruf", mats.filter((m) => m.fmt === "dtb").map(matTile), "dtb"],
-          ["telc Deutsch B2 – allgemein", mats.filter((m) => m.fmt === "telc").map(matTile), "telc"],
+          ["Für alle Prüfungen: Grammatik, Wortschatz, Sprechen", mats.filter((m) => !mf(m)).map(matTile)],
+          ["DTZ – Deutsch-Test für Zuwanderer", mats.filter((m) => mf(m) === "dtz").map(matTile), "dtz"],
+          [`DTB ${L} – Deutsch-Test für den Beruf`, mats.filter((m) => mf(m) === "dtb").map(matTile), "dtb"],
+          [`telc Deutsch ${L} – allgemein`, mats.filter((m) => mf(m) === "telc").map(matTile), "telc"],
           ["Arbeitsblätter zu den Lektionen", lessonPdfs],
         ].filter(([, items]) => items.length);
         S.push(
@@ -701,7 +735,7 @@
           "Lernwege mit Plan",
           paths.map((id) => {
             const q = DM.paths[id];
-            return fmtLi(tile("#lernweg/" + id, q.icon, q.title, q.level), /^telc/.test(id) ? "telc" : /^dtb/.test(id) ? "dtb" : "");
+            return fmtLi(tile("#lernweg/" + id, q.icon, q.title, q.level), /^telc/.test(id) ? "telc" : /^dtb/.test(id) ? "dtb" : lv === "B1" && /^dtz/.test(id) ? "dtz" : "");
           }),
         ),
       );
@@ -715,8 +749,8 @@
             `<a href="#niveau/${k}"${k === lv ? ' aria-current="page"' : ""}><b>${k}</b><small>${x(LV_NAME[k])}</small></a>`,
         )
         .join("")}</nav>
-      ${lv === "B2" ? fmtSwitch() : ""}<div class="es-fmtwrap" data-show="${lv === "B2" ? fmtGet() : "all"}">${S.join("")}</div>`);
-    if (lv === "B2") fmtBind();
+      ${FMTS[lv] ? fmtSwitch() : ""}<div class="es-fmtwrap" data-show="${FMTS[lv] ? fmtGet() : "all"}">${S.join("")}</div>`);
+    if (FMTS[lv]) fmtBind();
     lvProgress();
     lvTrack();
   }

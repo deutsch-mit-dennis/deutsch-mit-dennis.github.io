@@ -2,6 +2,30 @@
  "note": "Neu auf der Seite – neueste Einträge oben. Wird vom Redaktionsplan (geplante Aufgaben) ergänzt.",
  "items": [
   {
+   "date": "2026-11-17",
+   "type": "neu",
+   "title": "Neu: B1 in 30 Tagen – fester Lernplan für telc Deutsch B1 und DTB B1, Tag für Tag mit Generalprobe",
+   "link": "#b1-30-tage"
+  },
+  {
+   "date": "2026-11-17",
+   "type": "neu",
+   "title": "Neu: Karteikarten für A1, DTZ und B1 – Wörter nach Themen mit Artikel, Plural, Beispielsatz und Vorlesen",
+   "link": "#b1-woerter"
+  },
+  {
+   "date": "2026-11-17",
+   "type": "neu",
+   "title": "Neu: 9 Arbeitsblätter für telc B1 und DTB B1 (Lesen, Sprachbausteine, Hören, Schreiben, Sprechen) – mit Lösungen",
+   "link": "#material/pruefung/B1"
+  },
+  {
+   "date": "2026-11-17",
+   "type": "neu",
+   "title": "Besser: Niveau A0 mit Kurs, Lauten und Arbeitsblättern – und auf B1 wählst du jetzt deine Prüfung (DTZ, telc oder DTB)",
+   "link": "#niveau/B1"
+  },
+  {
    "date": "2026-11-13",
    "type": "neu",
    "title": "Neu: 20 B2-Sprechaufgaben im Prüfungsformat (telc B2 Mündlich, DTB B2 Sprechen) – allein üben mit Aufnahme, Mitschrift und Musterantwort",

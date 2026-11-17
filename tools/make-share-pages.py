@@ -131,6 +131,10 @@ SECTIONS = [
     ('dtz-30-tage', 'DTZ in 30 Tagen: Lernplan', 'Fester Lernplan für den Deutsch-Test für Zuwanderer: 30 Tage, jeden Tag 20–40 Minuten, sechs Probeprüfungen mit Uhr. Kostenlos, von einem DTZ-Prüfer.'),
     ('b2-30-tage', 'B2 in 30 Tagen: Lernplan', 'Fester Lernplan für telc Deutsch B2 oder DTB B2: 30 Tage, meist 30–60 Minuten am Tag, Einstiegstest Teil für Teil und Generalprobe mit Uhr. Kostenlos, von einem telc-Prüfer.'),
     ('b2-woerter', 'B2-Wörter nach Prüfungsthemen: Karteikarten', '216 Karteikarten für telc Deutsch B2 und DTB B2 in 8 Themen – Arbeit, Kunden, Behörden, Wohnen, Gesundheit, Medien, Umwelt, Bildung. Mit Artikel, Plural, Beispielsatz und Vorlesen. Kostenlos.'),
+    ('b1-30-tage', 'B1 in 30 Tagen: Lernplan', 'Fester Lernplan für telc Deutsch B1 oder DTB B1: 30 Tage, meist 30–60 Minuten am Tag, Einstiegstest Teil für Teil und Generalprobe mit Uhr. Kostenlos, von einem telc-Prüfer.'),
+    ('b1-woerter', 'B1-Wörter nach Prüfungsthemen: Karteikarten', 'Karteikarten für telc Deutsch B1 und DTB B1 in 8 Themen – Arbeit, Wohnen, Gesundheit, Lernen, Reisen, Reklamation, Medien, Umwelt. Mit Artikel, Plural, Beispielsatz und Vorlesen. Kostenlos.'),
+    ('dtz-woerter', 'DTZ-Wörter nach Prüfungsthemen: Karteikarten', 'Karteikarten für den Deutsch-Test für Zuwanderer (A2–B1) in 8 Themen – Wohnen, Arbeit, Ämter, Gesundheit, Kinder und Schule, Einkaufen, Verkehr, Freizeit. Mit Beispielsatz und Vorlesen. Kostenlos.'),
+    ('a1-woerter', 'A1-Wörter nach Alltagsthemen: Karteikarten', 'Die ersten wichtigen Wörter auf Deutsch als Karteikarten: Familie, Wohnen, Essen, Einkaufen, Stadt, Arbeit, Gesundheit, Freizeit. Mit Artikel, Plural, Beispielsatz und Vorlesen. Kostenlos.'),
     ('simulation', 'Prüfungssimulationen mit Zeitvorgabe', 'DTZ, Leben in Deutschland, telc B1, DTB B1, telc B2 und DTB B2 – komplette Prüfungen mit echter Zeit, Punkten, Bestehensregel und Lösungen. Kostenlos.'),
     ('vorbereitung', 'Gezielte Vorbereitung: telc B1, telc B2, DTB', 'Aufbau, Strategien und Fallen für jeden Prüfungsteil, Mini-Übungen, Redemittel und 4-Wochen-Lernplan – von einem lizenzierten Prüfer.'),
     ('ueben', 'Deutsch üben', 'Sprechen und Schreiben mit Sofort-Korrektur, Satzanfängen und Mustertexten. Kostenlos.'),
@@ -145,9 +149,11 @@ SECTIONS = [
 # readable content (<noscript>) for app sections that are otherwise empty without JavaScript: data read from the app files
 NODE = r"""
 const fs=require('fs'),vm=require('vm');const c={console:{log(){}}};c.window=c;c.DM={};c.localStorage={getItem(){return null},setItem(){}};vm.createContext(c);
-vm.runInContext(fs.readFileSync('b2-woerter-data.js','utf8'),c);
+for(const f of ['b2','b1','dtz','a1'])vm.runInContext(fs.readFileSync(f+'-woerter-data.js','utf8'),c);
 vm.runInContext(fs.readFileSync('b2-30.js','utf8').replace('const PLANS = {','const PLANS = DM.__b2plans = {'),c);
-process.stdout.write(JSON.stringify({words:c.DM.b2Woerter||null,plans:c.DM.__b2plans||null}));
+vm.runInContext(fs.readFileSync('b1-30.js','utf8').replace('const PLANS = {','const PLANS = DM.__b1plans = {'),c);
+const W=c.DM.woerter||{};
+process.stdout.write(JSON.stringify({words:c.DM.b2Woerter||null,plans:c.DM.__b2plans||null,plans1:c.DM.__b1plans||null,w:{'b1-woerter':W.b1,'dtz-woerter':W.dtz,'a1-woerter':W.a1}}));
 """
 X = json.loads(subprocess.run(['node', '-e', NODE], cwd=R, capture_output=True, text=True, encoding='utf-8', check=True).stdout)
 esc = html.escape
@@ -190,14 +196,30 @@ if X.get('plans'):
         'provider': {'@type': 'EducationalOrganization', '@id': f'{SITE}/#org', 'name': 'Deutsch mit Dennis', 'url': f'{SITE}/'},
         'offers': {'@type': 'Offer', 'price': '0', 'priceCurrency': 'EUR', 'category': 'Free'},
         'hasCourseInstance': {'@type': 'CourseInstance', 'courseMode': 'online', 'courseWorkload': 'P30D'}}]
+if X.get('plans1'):
+    PL = X['plans1']
+    EXTRA['b1-30-tage'] = ('\n<p>Wähle deine Prüfung: <a href="/b1-30-tage/#telc">telc Deutsch B1</a> oder <a href="/b1-30-tage/#dtb">DTB B1</a>. '
+                           'Für den DTZ gibt es einen eigenen Plan: <a href="/dtz-30-tage/">DTZ in 30 Tagen</a>. '
+                           'Aufbau und Strategien: <a href="/vorbereitung/telc-b1/">telc B1</a> · <a href="/vorbereitung/dtb-b1/">DTB B1</a>.</p>\n'
+                           + ''.join(plan_html(PL[k], k) for k in ('telc', 'dtb') if k in PL))
+plain = lambda t: re.sub(r'<[^>]+>', '', t)
+
+
+def words_html(W, more):
+    return (f'\n<p>Alle Wörter auch als <a href="/{esc(W["pdf"])}">Wortliste zum Ausdrucken (PDF)</a>. {more}</p>\n'
+            + ''.join(f'<h2>{esc(t["name"])} ({len(t["words"])} Wörter)</h2>\n<ul>'
+                      + ''.join(f'<li><b>{esc(plain(w["w"]))}</b>{" (" + esc(plain(w["f"])) + ")" if w.get("f") else ""}: {esc(w.get("b", ""))}</li>' for w in t['words'])
+                      + '</ul>\n' for t in W['themes']))
+
+
 if X.get('words'):
-    W = X['words']
-    plain = lambda t: re.sub(r'<[^>]+>', '', t)
-    EXTRA['b2-woerter'] = (f'\n<p>Alle Wörter auch als <a href="/{esc(W["pdf"])}">Wortliste zum Ausdrucken (PDF)</a>. '
-                           'Mehr für B2: <a href="/niveau/b2/">alles für B2</a> · <a href="/ueben/sprechen/b2/">Sprechaufgaben B2</a>.</p>\n'
-                           + ''.join(f'<h2>{esc(t["name"])} ({len(t["words"])} Wörter)</h2>\n<ul>'
-                                     + ''.join(f'<li><b>{esc(plain(w["w"]))}</b>{" (" + esc(w["f"]) + ")" if w.get("f") else ""}: {esc(w.get("b", ""))}</li>' for w in t['words'])
-                                     + '</ul>\n' for t in W['themes']))
+    EXTRA['b2-woerter'] = words_html(X['words'], 'Mehr für B2: <a href="/niveau/b2/">alles für B2</a> · <a href="/ueben/sprechen/b2/">Sprechaufgaben B2</a>.')
+MORE = {'b1-woerter': 'Mehr für B1: <a href="/niveau/b1/">alles für B1</a> · <a href="/b1-30-tage/">B1 in 30 Tagen</a>.',
+        'dtz-woerter': 'Mehr für den DTZ: <a href="/dtz-30-tage/">DTZ in 30 Tagen</a> · <a href="/niveau/a2/">alles für A2</a>.',
+        'a1-woerter': 'Mehr für Anfänger: <a href="/niveau/a1/">alles für A1</a> · <a href="/niveau/a0/">ganz neu anfangen (A0)</a>.'}
+for r, W in (X.get('w') or {}).items():
+    if W:
+        EXTRA[r] = words_html(W, MORE[r])
 urls = [SITE + '/']
 for route, t, dsc in SECTIONS:
     card(t, dsc, os.path.join(R, O, route + '.jpg'))

@@ -485,8 +485,10 @@
 .es-fmt-b[aria-pressed=true]{border-color:var(--dm-tinte,#2341B5);background:var(--dm-tinte-soft,#E8ECFA)}
 .es-fmt-b:focus-visible{outline:3px solid var(--dm-marker,#FFE45C);outline-offset:2px}
 .es-fmt-note{margin:8px 0 0;font-size:.9rem}
+.es-fmtwrap[data-show=telc] [data-fmt=dtb],.es-fmtwrap[data-show=telc] [data-fmt=dtz],.es-fmtwrap[data-show=dtb] [data-fmt=telc],.es-fmtwrap[data-show=dtb] [data-fmt=dtz],.es-fmtwrap[data-show=dtz] [data-fmt=telc],.es-fmtwrap[data-show=dtz] [data-fmt=dtb]{display:none}
+.es-fmt-row-4{grid-template-columns:repeat(4,minmax(0,1fr))}
+@media (max-width:760px){.es-fmt-row-4{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:520px){.es-fmt-row{grid-template-columns:1fr}.es-fmt-b{min-height:48px}}
-.es-fmtwrap[data-show=telc] [data-fmt=dtb],.es-fmtwrap[data-show=dtb] [data-fmt=telc]{display:none}
 
 /* level page: progress line + "already opened" tick on tiles (erste-schritte.js lvProgress) */
 .es-prog{margin:12px 0 0;max-width:520px}

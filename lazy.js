@@ -31,7 +31,7 @@ window.DMLazy = (() => {
   ],
   "erste": [
     "erste-schritte-data.js?v=20261111n",
-    "erste-schritte.js?v=20261113n1"
+    "erste-schritte.js?v=20261117w"
   ],
   "bild": [
     "bild-data.js?v=20261008e",
@@ -57,12 +57,26 @@ window.DMLazy = (() => {
   "b230": [
     "b2-30.js?v=20261113g2"
   ],
-  "b2w": [
-    "b2-woerter-data.js?v=20261113m1",
-    "b2-woerter.js?v=20261113m1"
+  "b130": [
+    "b1-30.js?v=20261117w"
+  ],
+  "wcore": [
+    "b2-woerter.js?v=20261117w"
+  ],
+  "wb2": [
+    "b2-woerter-data.js?v=20261117w"
+  ],
+  "wb1": [
+    "b1-woerter-data.js?v=20261117w"
+  ],
+  "wdtz": [
+    "dtz-woerter-data.js?v=20261117w"
+  ],
+  "wa1": [
+    "a1-woerter-data.js?v=20261117w"
   ]
 };
-  const NEED = { spiele: ['spiele'], hoeren: ['hoeren'], lesen: ['lesen'], pruefung: ['hoeren', 'lesen'], training: ['hoeren', 'lesen'], bild: ['bild'], 'erste-schritte': ['erste'], niveau: ['erste', 'hoeren', 'lesen'], grammatik: ['grammatik'], laute: ['laute'], lid: ['lidx'], simulation: ['lidx', 'muster'], ueben: ['muster'], pruefungsinfo: ['fakten'], 'b2-30-tage': ['b230'], 'b2-woerter': ['b2w'] };
+  const NEED = { spiele: ['spiele'], hoeren: ['hoeren'], lesen: ['lesen'], pruefung: ['hoeren', 'lesen'], training: ['hoeren', 'lesen'], bild: ['bild'], 'erste-schritte': ['erste'], niveau: ['erste', 'hoeren', 'lesen'], grammatik: ['grammatik'], laute: ['laute'], lid: ['lidx'], simulation: ['lidx', 'muster'], ueben: ['muster'], pruefungsinfo: ['fakten'], 'b2-30-tage': ['b230'], 'b1-30-tage': ['b130'], 'b2-woerter': ['wb2', 'wcore'], 'b1-woerter': ['wb1', 'wcore'], 'dtz-woerter': ['wdtz', 'wcore'], 'a1-woerter': ['wa1', 'wcore'] };
   const done = {}, busy = {};
   const one = src => new Promise(res => { const s = document.createElement('script'); s.src = src; s.async = false; s.onload = s.onerror = () => res(); document.head.appendChild(s); });
   const group = g => busy[g] || (busy[g] = GROUPS[g].reduce((p, src) => p.then(() => one(src)), Promise.resolve()).then(() => { done[g] = true; }));

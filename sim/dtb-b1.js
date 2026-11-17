@@ -1669,8 +1669,8 @@
         what: "Fünf Nachrichten auf dem Anrufbeantworter oder der Mailbox. Zu jeder Nachricht eine Frage a/b/c. Du hörst jede Nachricht nur einmal.",
         steps: [
           "Lies die Frage: Was soll man tun? Was ändert sich? Was soll man mitbringen?",
-          "Beim ersten Hören: Antwort wählen.",
-          "Beim zweiten Hören: kontrollieren, besonders Korrekturen („nicht …, sondern …“).",
+          "Du hörst nur einmal: Antwort sofort wählen, nicht lange überlegen.",
+          "Achte besonders auf Korrekturen („nicht …, sondern …“).",
           "Achte darauf, wer was macht.",
         ],
         traps: [
@@ -1678,7 +1678,7 @@
           "„Die Uhrzeit bleibt gleich“ – die Uhrzeit wird genannt, ändert sich aber nicht.",
           "Etwas ist schon erledigt („Mit Herrn Stein hab ich schon gesprochen“).",
         ],
-        tip: "Mailbox-Nachrichten enden meistens mit der Bitte. Hör das Ende beim zweiten Mal besonders genau.",
+        tip: "Mailbox-Nachrichten enden meistens mit der Bitte. Hör das Ende besonders genau – es gibt kein zweites Mal.",
         mini: {
           instr: "Sie hören eine Nachricht einmal. Welche Antwort passt?",
           audio: [
