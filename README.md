@@ -33,6 +33,8 @@ Die App läuft über `#route`. Damit Google alle Bereiche findet, gibt es zusät
 | DTZ-Musterbriefe `/dtz-schreiben/<brieftyp>/` | Inhalt in `tools/dtz-schreiben/briefe.json`, Seiten bauen mit `python3 tools/make-dtz-briefe.py` (`"draft": true` = gelbes Entwurf-Schild) |
 | Einleitungstext der Startseite | in `index.html` zwischen `<!--intro:start-->` und `<!--intro:end-->` ändern, dann `python3 tools/sync-home-intro.py` (kopiert ihn in den `<noscript>`-Teil, zählt Wörter). `site.js` hängt ihn unten an die Startseite. |
 | Navigation/Fußzeile, Lernpaket-Links | echte Links (`/pruefung/`, `/lernpakete/<paket>/`), `site.js` fängt den Klick ab und routet in der App (`SECTION_LINK`). Neue Bereiche dort, in `index.html` und in `SECTIONS` (make-share-pages.py) ergänzen. |
+| Lernspiele `/spiele/<id>/` | erzeugt `make-share-pages.py` aus den Spiel-Dateien (`node tools/spiele-meta.js` liest `DMGame.register`): Anleitung, Niveau, Varianten, ähnliche Spiele, `LearningResource`. Suchbegriff vor dem Spielnamen in `GAME_KW`. Ebenso `/simulation/lid/` (Einbürgerungstest). |
+| Arbeitsblätter (PDF) in der Sitemap | `build-sitemap.js` nimmt jede PDF aus `DM.materials` (site-data.js) auf – Titel/Autor stehen in den PDF-Metadaten. |
 | Bilder > 200 KB | `python3 tools/make-webp.py` legt eine WebP-Kopie daneben und stellt `youtube-feed.json`/`kahoot-feed.json` darauf um (Original bleibt). |
 | alt-Texte der LiD-Bilder | `lid-bilder-alt.js` |
 | Prüfung | `python3 tools/seo-audit.py` – lang, ein H1, Title < 60, Description < 155, img ohne alt, Skripte ohne defer |

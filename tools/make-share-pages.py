@@ -78,6 +78,8 @@ def breadcrumbs(route, title):
     # Start > [Lernpakete >] page
     items = [('Start', '')]
     if route.startswith('lernpakete/'): items.append(('Lernpakete', 'lernpakete'))
+    if route.startswith('spiele/'): items.append(('Lernspiele', 'spiele'))
+    if route.startswith('simulation/'): items.append(('Prüfungssimulationen', 'simulation'))
     items.append((title, route))
     return json.dumps({'@context': 'https://schema.org', '@type': 'BreadcrumbList', 'itemListElement': [
         {'@type': 'ListItem', 'position': i + 1, 'name': n, 'item': f'{SITE}/' + (p + '/' if p else '')} for i, (n, p) in enumerate(items)]}, ensure_ascii=False)
@@ -124,6 +126,7 @@ js = subprocess.run(['node', '-e', "global.window={};require('./site-data.js');c
 P = json.loads(js.stdout)
 O = 'assets/og'
 card('Deutsch lernen mit Dennis', 'Kostenlose Übungen von A1 bis B2 Beruf: Sprechen, Schreiben, Hören, DTZ- und B2-Training, Lieder. Ohne Anmeldung.', os.path.join(R, O, 'start.jpg'), kicker='DTZ-Prüfer · telc-Prüfer · BAMF-zugelassen')
+GAMES = json.loads(subprocess.run(['node', os.path.join(R, 'tools', 'spiele-meta.js')], cwd=R, capture_output=True, text=True, encoding='utf-8', check=True).stdout)
 SECTIONS = [
     ('lernpakete', 'Lernpakete als PDF', 'Ausführliche PDF-Pakete mit Musterlösungen für DTZ, B2 Beruf, „Leben in Deutschland“ und für Lehrkräfte.'),
     ('lieder', 'Deutsch mit Liedern', '63 eigene Lieder von A1 bis C1 – mit Text, Aufgaben und Lösungen. Hör zu, sing mit und lerne.'),
@@ -140,12 +143,12 @@ SECTIONS = [
     ('simulation', 'Prüfungssimulationen mit Zeitvorgabe', 'DTZ, Leben in Deutschland, telc B1, DTB B1, telc B2 und DTB B2 – komplette Prüfungen mit echter Zeit, Punkten, Bestehensregel und Lösungen. Kostenlos.'),
     ('vorbereitung', 'Gezielte Vorbereitung: telc B1, telc B2, DTB', 'Aufbau, Strategien und Fallen für jeden Prüfungsteil, Mini-Übungen, Redemittel und 4-Wochen-Lernplan – von einem lizenzierten Prüfer.'),
     ('ueben', 'Deutsch üben', 'Sprechen und Schreiben mit Sofort-Korrektur, Satzanfängen und Mustertexten. Kostenlos.'),
-    ('hoeren', 'Hörtraining DTZ und B2', 'Ansagen, Mailbox-Nachrichten und Gespräche mit Aufgaben wie in der Prüfung.'),
-    ('lesen', 'Leseverstehen DTZ und B2', 'Mitteilungen, Anzeigen, E-Mails und Artikel verstehen – mit Fragen und Erklärungen. Jede Woche ein neuer Text.'),
-    ('spiele', 'Lernspiele: Deutsch spielend üben', '22 Lernspiele: Jump’n’Run „Lino läuft“ und Story-Abenteuer „Neu in Deutschland“ (A1–C1), Grammatik und Wörter, Alltag (Reisen, Einkaufen, Ämter), Prüfung DTB B2 Beruf und Test „Leben in Deutschland“ – am Handy und am Computer.'),
+    ('hoeren', 'Hörverstehen Deutsch üben: DTZ, B1, B2', 'Hörtexte mit Aufgaben wie in der Prüfung: Ansagen, Mailbox-Nachrichten, Gespräche und Durchsagen für DTZ, DTB B1 und DTB B2 – mit natürlicher Stimme. Kostenlos.'),
+    ('lesen', 'Leseverstehen Deutsch üben: DTZ, B1, B2', 'Mitteilungen, Anzeigen, E-Mails und Artikel verstehen – mit Fragen und Erklärungen wie im DTZ und im Deutsch-Test für den Beruf. Kostenlos, ohne Anmeldung.'),
+    ('spiele', 'Deutsch lernen mit Spielen: Lernspiele A1–B2', f'{len(GAMES)} kostenlose Lernspiele: der, die, das, Adjektivendungen, Satzbau, Uhrzeit, Verben, DTZ-Sprechen, B2-Beruf, Einbürgerungstest – auf dem Handy, ohne Anmeldung.'),
     ('bild', 'Bild beschreiben – DTZ-Trainer', 'Adjektivendungen und Relativsätze an vier Bildern üben – mit Musterbeschreibung zum Anhören und Arbeitsblättern.'),
     ('challenge', 'Tages-Challenge: 10 Aufgaben, jeden Tag neu', 'Artikel, Verben, Satzbau, Wortschatz und „Leben in Deutschland“ – 3 Minuten am Tag. Wie lang wird deine Lernserie?'),
-    ('lid', 'Leben in Deutschland: alle 310 Fragen', 'Kostenloser Trainer für den Test „Leben in Deutschland“ – mit Lernmodus und Prüfungssimulation.'),
+    ('lid', 'Einbürgerungstest und Leben in Deutschland: 310 Fragen', 'Kostenlos üben für den Einbürgerungstest und den Test „Leben in Deutschland“: alle 310 Fragen mit Lösung, Lernmodus und Testsimulation mit 33 Fragen.'),
     ('ueber-mich', 'Über Dennis', 'Deutschlehrer seit 2017, lizenzierter DTZ- und telc-Prüfer, vom BAMF zugelassen bis C2.'),
 ]
 # readable content (<noscript>) for app sections that are otherwise empty without JavaScript: data read from the app files
@@ -222,10 +225,90 @@ MORE = {'b1-woerter': 'Mehr für B1: <a href="/niveau/b1/">alles für B1</a> · 
 for r, W in (X.get('w') or {}).items():
     if W:
         EXTRA[r] = words_html(W, MORE[r])
+# --- learning games: one readable page per game (/spiele/<id>/) ---
+# search phrase in front of the game name: what learners type into Google
+GAME_KW = {
+    'artikel': 'der, die, das üben', 'endungen': 'Adjektivendungen üben', 'satzbau': 'Satzbau und Wortstellung üben',
+    'uhrzeit': 'Uhrzeit auf Deutsch lernen', 'zahlen': 'Zahlen auf Deutsch hören', 'verben': 'Perfekt und Partizip II üben',
+    'wowohin': 'Wechselpräpositionen üben', 'memory': 'Deutsch-Wortschatz A1–A2', 'dialog': 'Deutsch sprechen im Alltag',
+    'brief': 'DTZ Brief schreiben üben', 'planen': 'DTZ Sprechen Teil 3 üben', 'b2-nvv': 'Nomen-Verb-Verbindungen üben',
+    'b2-praep': 'Verben mit Präpositionen üben', 'b2-konnektor': 'Konnektoren üben', 'b2-redemittel': 'Redemittel B2 Beruf',
+    'b2-nominal': 'Nominalstil üben', 'b1-telefon': 'Telefonieren im Beruf üben', 'b1-stil': 'Formelle E-Mail oder locker?',
+    'tagesmix': 'B2-Prüfung täglich üben', 'lid-pruefung': 'Einbürgerungstest Quiz', 'lid-zeitstrahl': 'Deutsche Geschichte üben',
+    'lid-staat': 'Politik in Deutschland üben', 'alltag-formular': 'Formulare ausfüllen üben',
+}
+CAT_TXT = {'basis': 'Wörter und Grammatik', 'alltag': 'Alltag: Reisen, Einkaufen, Ämter', 'dtz': 'Prüfung DTZ',
+           'b2': 'Beruf und Prüfung B1–B2', 'lid': 'Test „Leben in Deutschland“ und Einbürgerungstest', 'abenteuer': 'Abenteuer'}
+NEXT_TXT = {'basis': [('/grammatik/', 'Grammatik üben'), ('/challenge/', 'Tages-Challenge')],
+            'alltag': [('/hoeren/', 'Hörverstehen üben'), ('/pruefung/', 'Prüfungstraining')],
+            'dtz': [('/dtz-30-tage/', 'DTZ in 30 Tagen'), ('/simulation/dtz/', 'DTZ-Probeprüfung')],
+            'b2': [('/sprachbausteine/', 'Sprachbausteine üben'), ('/b2-30-tage/', 'B2 in 30 Tagen')],
+            'lid': [('/lid/', 'Alle 310 Fragen'), ('/pruefungsinfo/lid/', 'Infos zum Test')],
+            'abenteuer': [('/spiele/', 'Alle Lernspiele'), ('/challenge/', 'Tages-Challenge')]}
+
+
+def game_title(g):
+    kw = GAME_KW.get(g['id'])
+    return f"{kw}: {g['title']}" if kw and len(kw) + len(g['title']) < 52 else (g['title'] if not kw else kw + ' – Lernspiel')
+
+
+def game_html(g):
+    same = [o for o in GAMES if o['cat'] == g['cat'] and o['id'] != g['id']]
+    out = f'<h2>So spielst du „{esc(g["title"])}“</h2>\n<p>{esc(g["intro"] or g["desc"])}</p>\n'
+    out += f'<p><b>Niveau:</b> {esc(g["level"])} · <b>Bereich:</b> {esc(CAT_TXT.get(g["cat"], ""))} · kostenlos, ohne Anmeldung, auch auf dem Handy.</p>\n'
+    if g['options']:
+        out += '<h3>Varianten</h3>\n<ul>' + ''.join(f'<li>{esc(o)}</li>' for o in g['options']) + '</ul>\n'
+    out += f'<p><a href="/#spiele/{g["id"]}">▶ Jetzt spielen</a></p>\n'
+    if same:
+        out += '<h3>Ähnliche Spiele</h3>\n<ul>' + ''.join(f'<li><a href="/spiele/{o["id"]}/">{esc(o["title"])}</a> ({esc(o["level"])})</li>' for o in same) + '</ul>\n'
+    out += '<p>Danach weiter: ' + ' · '.join(f'<a href="{h}">{esc(t)}</a>' for h, t in NEXT_TXT.get(g['cat'], [])) + '</p>\n'
+    if g['cat'] == 'lid':
+        out += '<p>Die Fragen stammen aus dem öffentlichen Fragenkatalog des BAMF. Diese Website ist nicht vom BAMF.</p>\n'
+    return out
+
+
+def game_ld(g):
+    return [{'@context': 'https://schema.org', '@type': 'LearningResource', 'name': g['title'], 'description': seo_desc(g['desc'] or g['intro']),
+             'url': f'{SITE}/spiele/{g["id"]}/', 'inLanguage': 'de', 'isAccessibleForFree': True, 'learningResourceType': 'Lernspiel',
+             'educationalLevel': g['level'], 'teaches': GAME_KW.get(g['id'], g['title']),
+             'provider': {'@type': 'Person', 'name': 'Dzianis Prudnikau', 'url': f'{SITE}/ueber-mich/'}}]
+
+
+EXTRA['spiele'] = (EXTRA.get('spiele', '') + '\n<h2>Alle Lernspiele</h2>\n' + ''.join(
+    f'<h3>{esc(CAT_TXT[c])}</h3>\n<ul>' + ''.join(f'<li><a href="/spiele/{g["id"]}/">{esc(g["title"])}</a> – {esc(g["desc"])} ({esc(g["level"])})</li>' for g in GAMES if g['cat'] == c) + '</ul>\n'
+    for c in CAT_TXT if any(g['cat'] == c for g in GAMES)))
+EXTRA_LD['spiele'] = [{'@context': 'https://schema.org', '@type': 'ItemList', 'name': 'Lernspiele Deutsch', 'itemListElement': [
+    {'@type': 'ListItem', 'position': i + 1, 'url': f'{SITE}/spiele/{g["id"]}/', 'name': g['title']} for i, g in enumerate(GAMES)]}]
+# test "Leben in Deutschland" / Einbürgerungstest: facts from pruefung-fakten.js (sources: BAMF, Stand 11.11.2026)
+EXTRA['lid'] = (EXTRA.get('lid', '') + '''
+<h2>Einbürgerungstest und „Leben in Deutschland“: Was ist der Unterschied?</h2>
+<p>Der Test „Leben in Deutschland“ ist der Abschlusstest im Orientierungskurs. Für die Einbürgerung macht man den Einbürgerungstest. Beide Tests sind gleich aufgebaut und nutzen denselben öffentlichen Fragenkatalog: 300 Fragen für ganz Deutschland und 10 Fragen für jedes Bundesland.</p>
+<ul><li>33 Fragen, 60 Minuten, zu jeder Frage 4 Antworten – eine ist richtig.</li>
+<li>30 Fragen sind für ganz Deutschland, 3 Fragen zu deinem Bundesland.</li>
+<li>Orientierungskurs: bestanden mit mindestens 15 richtigen Antworten. Einbürgerungstest: bestanden mit mindestens 17 richtigen Antworten.</li></ul>
+<p>Stand: 11.11.2026, Quelle: Bundesamt für Migration und Flüchtlinge (BAMF). Mehr: <a href="/pruefungsinfo/lid/">Aufbau, Anmeldung und Kosten</a>.</p>
+<p>Üben: <a href="/simulation/lid/">Test mit 33 Fragen simulieren</a> · <a href="/spiele/lid-pruefung/">LiD-Quizshow</a> · <a href="/spiele/lid-staat/">Wer macht was im Staat?</a> · <a href="/spiele/lid-zeitstrahl/">Zeitstrahl Deutschland</a>.</p>
+<p>Die Fragen stammen aus dem öffentlichen Fragenkatalog des BAMF. Diese Website ist nicht vom BAMF.</p>
+''')
+
 urls = [SITE + '/']
 for route, t, dsc in SECTIONS:
     card(t, dsc, os.path.join(R, O, route + '.jpg'))
     urls.append(stub(route, t, dsc, f'{O}/{route}.jpg', EXTRA.get(route, ''), EXTRA_LD.get(route)))
+urls.append(stub('simulation/lid', 'Einbürgerungstest online üben: 33 Fragen mit Uhr',
+                 'Kostenlose Testsimulation für den Einbürgerungstest und „Leben in Deutschland“: 33 Fragen wie im echten Test, 60 Minuten, mit Auswertung und Lösungen. Ohne Anmeldung.',
+                 f'{O}/lid.jpg', '''
+<h2>So läuft die Simulation</h2>
+<ul><li>33 Fragen wie im echten Test: 30 Fragen für ganz Deutschland und 3 Fragen zu deinem Bundesland.</li>
+<li>60 Minuten Zeit, zu jeder Frage 4 Antworten – eine ist richtig.</li>
+<li>Am Ende siehst du dein Ergebnis und alle Lösungen. Bestanden: Orientierungskurs ab 15 richtigen Antworten, Einbürgerungstest ab 17 richtigen Antworten (Stand: 11.11.2026, Quelle: BAMF).</li></ul>
+<p><a href="/#simulation/lid">▶ Simulation starten</a> · <a href="/lid/">Alle 310 Fragen nach Themen üben</a> · <a href="/pruefungsinfo/lid/">Infos zum Test</a></p>
+<p>Die Fragen stammen aus dem öffentlichen Fragenkatalog des BAMF. Diese Website ist nicht vom BAMF.</p>
+''', [{'@context': 'https://schema.org', '@type': 'LearningResource', 'name': 'Testsimulation Einbürgerungstest / Leben in Deutschland',
+        'url': f'{SITE}/simulation/lid/', 'inLanguage': 'de', 'isAccessibleForFree': True, 'learningResourceType': 'Prüfungssimulation',
+        'educationalLevel': 'A2–B1', 'teaches': 'Einbürgerungstest, Leben in Deutschland'}]))
+for g in GAMES:
+    urls.append(stub('spiele/' + g['id'], game_title(g), f"{g['desc']} Lernspiel {g['level']}: kostenlos, ohne Anmeldung, auch auf dem Handy.", f'{O}/spiele.jpg', game_html(g), game_ld(g)))
 for k in P:
     sub = f"{k['level']} · {k['target']} · {k['pages']} Seiten PDF" + (f" · {k['price']}" if k.get('price') else '')
     card(k['title'], sub, os.path.join(R, O, 'paket-' + k['id'] + '.jpg'), pic=os.path.join(R, k['img']), kicker='Lernpaket' if k['group'] != 'lehrende' else 'Für Lehrkräfte')

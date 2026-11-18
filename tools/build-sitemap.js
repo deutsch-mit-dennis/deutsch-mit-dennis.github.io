@@ -59,6 +59,15 @@ for (const f of pages) {
   if (f === 'index.html') continue;
   entries.push({ loc: `${SITE}/${f.slice(0, -'index.html'.length)}`, lastmod: dateOf(f) });
 }
+/* free worksheets (PDF) from the material list in site-data.js: Google indexes PDFs on their own
+   (searches like "Arbeitsblatt Passiv PDF"); title and author come from the PDF metadata */
+try {
+  const vm = require('vm'), c = { window: {}, console: { log() {} } };
+  c.window.window = c.window; vm.createContext(c);
+  vm.runInContext(fs.readFileSync(path.join(ROOT, 'site-data.js'), 'utf8'), c);
+  const files = [...new Set(((c.window.DM && c.window.DM.materials) || []).map(m => m.file).filter(f => /\.pdf$/i.test(f) && fs.existsSync(path.join(ROOT, f))))].sort();
+  for (const f of files) entries.push({ loc: `${SITE}/${f.split('/').map(encodeURIComponent).join('/')}`, lastmod: dateOf(f) });
+} catch (e) { console.warn('worksheet PDFs skipped:', e.message); }
 const xml = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
   + entries.map(e => `  <url><loc>${e.loc}</loc><lastmod>${e.lastmod}</lastmod></url>\n`).join('') + '</urlset>\n';
 fs.writeFileSync(path.join(ROOT, 'sitemap.xml'), xml);

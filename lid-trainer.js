@@ -114,7 +114,7 @@
     title,
     lead,
   ) => `${DM.crumbs([["Prüfungstraining", "#pruefung/lid"], ["Leben in Deutschland", title ? "#lid" : null], ...(title ? [[title]] : [])])}
-    <div class="dm-head"><h1>${title || "Leben in Deutschland: alle 310 Fragen"}</h1>${lead ? `<p class="dm-lead">${lead}</p>` : ""}</div>${!title && window.lidHubNav ? lidHubNav("#lid") : ""}`;
+    <div class="dm-head"><h1>${title || "Leben in Deutschland und Einbürgerungstest: alle 310 Fragen"}</h1>${lead ? `<p class="dm-lead">${lead}</p>` : ""}</div>${!title && window.lidHubNav ? lidHubNav("#lid") : ""}`;
   /* One source line for all pages with catalogue questions: LID_QUELLE_HTML (lid-katalog.js). */
   const WARUM_NOTE = "Erklärungen: Deutsch mit Dennis – nicht vom BAMF.";
   const foot = () =>
