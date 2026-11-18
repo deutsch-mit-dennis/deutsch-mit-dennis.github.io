@@ -6,6 +6,8 @@
   const N = (art, w, pl, img, tr) => ({ art, w, pl, img, tr });
   const P = (w, img, tr, say) => ({ w, img, tr, say });
   const T = (w, sub, tr, say) => ({ w, sub, tr, say });
+  // single number words the voice gets wrong on their own: capital letter + full stop = clear German pronunciation
+  const NUM_SAY = { neun: "Neun." };
   (window.DM || (window.DM = {})).ersteSchritte = {
     langs: [
       ["en", "English"],
@@ -180,7 +182,7 @@
           ["80", "achtzig"],
           ["90", "neunzig"],
           ["100", "hundert"],
-        ].map(([n, w]) => T(n, w, "", w)),
+        ].map(([n, w]) => T(n, w, "", NUM_SAY[w] || w)),
         sentences: [
           [
             "Wie alt bist du? – Ich bin 25 Jahre alt.",
