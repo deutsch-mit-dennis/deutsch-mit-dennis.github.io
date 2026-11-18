@@ -1,5 +1,5 @@
 {
-"updated": "2026-11-18T11:42:22Z",
+"updated": "2026-11-18T12:15:53Z",
 "engines": [
 "elevenlabs",
 "gemini",
@@ -3580,9 +3580,9 @@
 "text": "e1e146dbd5"
 },
 "t0d0efda9": {
-"v": "df68c67a4d",
-"engine": "google",
-"sig": "df68c67a4d",
+"v": "db7fa4e6dd",
+"engine": "elevenlabs",
+"sig": "db7fa4e6dd",
 "text": "d71be09ade"
 },
 "t0d1397e4": {
@@ -3626,9 +3626,9 @@
 "whole": true
 },
 "t0da860d5": {
-"v": "b11c4b4d71",
-"engine": "google",
-"sig": "b11c4b4d71",
+"v": "9f368cbdf0",
+"engine": "elevenlabs",
+"sig": "9f368cbdf0",
 "text": "cad25dab51"
 },
 "t0db47f48": {
@@ -3671,9 +3671,9 @@
 "whole": true
 },
 "t0e698a9b": {
-"v": "05b34a5e31",
-"engine": "google",
-"sig": "05b34a5e31",
+"v": "f7bf6c11fa",
+"engine": "elevenlabs",
+"sig": "f7bf6c11fa",
 "text": "615c71f7fc"
 },
 "t0e77d457": {
