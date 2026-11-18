@@ -6,8 +6,6 @@
   const N = (art, w, pl, img, tr) => ({ art, w, pl, img, tr });
   const P = (w, img, tr, say) => ({ w, img, tr, say });
   const T = (w, sub, tr, say) => ({ w, sub, tr, say });
-  // single number words the voice gets wrong on their own: capital letter + full stop = clear German pronunciation
-  const NUM_SAY = { neun: "Neun." };
   (window.DM || (window.DM = {})).ersteSchritte = {
     langs: [
       ["en", "English"],
@@ -182,7 +180,7 @@
           ["80", "achtzig"],
           ["90", "neunzig"],
           ["100", "hundert"],
-        ].map(([n, w]) => T(n, w, "", NUM_SAY[w] || w)),
+        ].map(([n, w]) => T(n, w, "", w)),
         sentences: [
           [
             "Wie alt bist du? – Ich bin 25 Jahre alt.",
@@ -1485,4 +1483,18 @@
       t.i18n[l] = { title: a[0], intro: a[1], tip: a[2], sentences: a.slice(3) };
     });
   });
+})();
+
+/* Voice text for single words (numbers, colours, heute …): a lone lowercase word like "blau" or "neun"
+   is often mispronounced by the voices. Capital letter + full stop ("Blau.") gives clear German.
+   The card still shows the word as written. Recordings: node tools/sync-erste-schritte-audio.mjs */
+(() => {
+  const ES = window.DM && window.DM.ersteSchritte;
+  if (!ES) return;
+  ES.topics.forEach((t) =>
+    t.items.forEach((it) => {
+      const s = it.say || (it.art ? "" : it.w);
+      if (s && /^[a-zäöüß]+$/.test(s)) it.say = s[0].toUpperCase() + s.slice(1) + ".";
+    }),
+  );
 })();
