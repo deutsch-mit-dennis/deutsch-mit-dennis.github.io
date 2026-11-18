@@ -1,5 +1,5 @@
 {
-"updated": "2026-11-17T20:34:51Z",
+"updated": "2026-11-18T11:42:22Z",
 "engines": [
 "elevenlabs",
 "gemini",
@@ -2364,10 +2364,10 @@
 "text": "19ada65032"
 },
 "es-zahlen-9": {
-"v": "9b75971f02",
+"v": "dc565fb0dc",
 "engine": "elevenlabs",
-"sig": "9b75971f02",
-"text": "bbdd4f8993"
+"sig": "dc565fb0dc",
+"text": "a3c47dd4c7"
 },
 "es-zahlen-s0": {
 "v": "e86536ef81",
@@ -3435,9 +3435,9 @@
 "text": "6f1cb76991"
 },
 "t0b04c288": {
-"v": "e13a81ea06",
-"engine": "google",
-"sig": "e13a81ea06",
+"v": "daf7bc876b",
+"engine": "elevenlabs",
+"sig": "daf7bc876b",
 "text": "5f9cdb9e65"
 },
 "t0b0e30a3": {
@@ -3514,9 +3514,9 @@
 "text": "36ce468878"
 },
 "t0ca33d01": {
-"v": "593512b195",
-"engine": "google",
-"sig": "593512b195",
+"v": "b46d495753",
+"engine": "elevenlabs",
+"sig": "b46d495753",
 "text": "f1b8657a10"
 },
 "t0ca3edee": {
@@ -3538,9 +3538,9 @@
 "text": "d398b74ea0"
 },
 "t0cbd0850": {
-"v": "7be60defa8",
-"engine": "google",
-"sig": "7be60defa8",
+"v": "e03ba9a418",
+"engine": "elevenlabs",
+"sig": "e03ba9a418",
 "text": "ba2da109d5"
 },
 "t0cd3fb5e": {
@@ -3568,9 +3568,9 @@
 "text": "718da41778"
 },
 "t0cf57ac5": {
-"v": "9a6261368d",
-"engine": "google",
-"sig": "9a6261368d",
+"v": "463fc92164",
+"engine": "elevenlabs",
+"sig": "463fc92164",
 "text": "9c32754750"
 },
 "t0d029639": {
