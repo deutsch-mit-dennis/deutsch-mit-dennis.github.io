@@ -332,6 +332,7 @@ for slug, name, qs in groups:
         f'<h1>Leben in Deutschland – {e(name)}</h1><p class="lead">Fragen aus dem offiziellen Gesamtfragenkatalog mit der richtigen Antwort (✓) und einer kurzen Erklärung. '
         "Üben mit Lernmodus, Wiederholung und Prüfungssimulation kannst du kostenlos in der Lern-App.</p>"
         '<p><a class="btn" href="/#lid">▶ Fragen interaktiv üben</a></p>'
+        + '<p>Prüfung simulieren: <a href="/simulation/lid/">Einbürgerungstest online üben (33 Fragen mit Uhr)</a></p>'
         + prevnext(slug)
         + "".join(qhtml(q) for q in qs)
         + pager(slug)
@@ -380,7 +381,7 @@ for i, q in enumerate(singles):
         + (f'<h2>Warum?</h2><p>{e(why)}</p>' if why else "")
         + f'<p class="pn">{prev_a}{next_a}</p>'
         '<p><a class="btn" href="/#lid">▶ Alle 310 Fragen interaktiv üben</a></p>'
-        f'<p>Diese Frage im Zusammenhang: <a href="/lid/{group_slug}/#{e(q["id"])}">{e(group_name)}</a> · <a href="/lid/fragen/">Alle Fragen im Überblick</a></p>'
+        f'<p>Diese Frage im Zusammenhang: <a href="/lid/{group_slug}/#{e(q["id"])}">{e(group_name)}</a> · <a href="/lid/fragen/">Alle Fragen im Überblick</a> · <a href="/simulation/lid/">Einbürgerungstest online üben (33 Fragen mit Uhr)</a></p>'
         + quelle
         + '<p class="small">Erklärung („Warum?“): Deutsch mit Dennis – nicht vom BAMF.</p>'
     )
@@ -435,7 +436,7 @@ for s in sims:
         f'<li><a href="/simulation/{o["id"]}/">{e(o["title"])}</a></li>'
         for o in sims
         if o["id"] != s["id"]
-    )
+    ) + '<li><a href="/simulation/lid/">Einbürgerungstest / Leben in Deutschland (33 Fragen)</a></li>'
     body = f"""<h1>{e(s["title"])}: Prüfungssimulation</h1>
 <p><span class="tag">Niveau {e(s["level"])}</span><span class="tag">Kostenlos</span><span class="tag">Mit Zeitvorgabe</span></p>
 <p class="lead">{e(s.get("intro", ""))}</p>

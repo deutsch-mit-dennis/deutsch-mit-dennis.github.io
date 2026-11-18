@@ -274,6 +274,8 @@ def game_ld(g):
              'provider': {'@type': 'Person', 'name': 'Dzianis Prudnikau', 'url': f'{SITE}/ueber-mich/'}}]
 
 
+EXTRA['simulation'] = EXTRA.get('simulation', '') + '\n<p>Neu: <a href="/simulation/lid/">Einbürgerungstest und „Leben in Deutschland“ online simulieren – 33 Fragen mit Uhr</a>.</p>\n'
+EXTRA['pruefung'] = EXTRA.get('pruefung', '') + '\n<p>Einbürgerung: <a href="/simulation/lid/">Einbürgerungstest online üben</a> · <a href="/lid/">alle 310 Fragen</a>.</p>\n'
 EXTRA['spiele'] = (EXTRA.get('spiele', '') + '\n<h2>Alle Lernspiele</h2>\n' + ''.join(
     f'<h3>{esc(CAT_TXT[c])}</h3>\n<ul>' + ''.join(f'<li><a href="/spiele/{g["id"]}/">{esc(g["title"])}</a> – {esc(g["desc"])} ({esc(g["level"])})</li>' for g in GAMES if g['cat'] == c) + '</ul>\n'
     for c in CAT_TXT if any(g['cat'] == c for g in GAMES)))
