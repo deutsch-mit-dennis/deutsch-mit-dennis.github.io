@@ -1,6 +1,6 @@
 {
   "user": "28070f1f-b266-41cd-a90f-0e8f04c31f07",
-  "updated": "2026-11-18T14:04:43.900Z",
+  "updated": "2026-11-18T18:34:43.503Z",
   "kahoots": [
     {
       "uuid": "024875d1-ddc3-458c-9f95-91fed7863ff2",
@@ -9,7 +9,8 @@
       "questions": 20,
       "created": "2026-11-18T18:22:24.004Z",
       "url": "https://create.kahoot.it/details/024875d1-ddc3-458c-9f95-91fed7863ff2",
-      "cover": "assets/kahoot/024875d1-ddc3-458c-9f95-91fed7863ff2.webp"
+      "cover": "assets/kahoot/024875d1-ddc3-458c-9f95-91fed7863ff2.webp",
+      "qr": "assets/kahoot/024875d1-ddc3-458c-9f95-91fed7863ff2-qr.svg"
     },
     {
       "uuid": "caed22fa-4a08-4c41-8d6a-6616a9f5e574",
@@ -18,7 +19,8 @@
       "questions": 20,
       "created": "2026-11-18T18:04:10.177Z",
       "url": "https://create.kahoot.it/details/caed22fa-4a08-4c41-8d6a-6616a9f5e574",
-      "cover": "assets/kahoot/caed22fa-4a08-4c41-8d6a-6616a9f5e574.webp"
+      "cover": "assets/kahoot/caed22fa-4a08-4c41-8d6a-6616a9f5e574.webp",
+      "qr": "assets/kahoot/caed22fa-4a08-4c41-8d6a-6616a9f5e574-qr.svg"
     },
     {
       "uuid": "5f81c56f-37c5-43f3-b75c-21c25c401555",
