@@ -1,35 +1,35 @@
 {
  "hinweis": "Zusammengefasste Besucherzahlen (Cloudflare Web Analytics, ohne Cookies). Automatisch erzeugt.",
- "stand": "2026-11-17T13:02:07.247Z",
- "tag": "2026-11-16",
+ "stand": "2026-11-18T12:55:02.484Z",
+ "tag": "2026-11-17",
  "gestern": {
-  "besuche": 74,
-  "seitenaufrufe": 485
+  "besuche": 69,
+  "seitenaufrufe": 549
  },
  "letzte7Tage": {
-  "besuche": 298,
-  "seitenaufrufe": 3002
+  "besuche": 278,
+  "seitenaufrufe": 2309
  },
  "herkunft": [
   {
    "name": "deutsch-mit-dennis.de",
    "besuche": 0,
-   "aufrufe": 2704
+   "aufrufe": 2031
   },
   {
    "name": "(direkt)",
-   "besuche": 281,
-   "aufrufe": 281
+   "besuche": 254,
+   "aufrufe": 254
   },
   {
    "name": "www.google.com",
-   "besuche": 8,
-   "aufrufe": 8
+   "besuche": 12,
+   "aufrufe": 12
   },
   {
    "name": "www.bing.com",
-   "besuche": 3,
-   "aufrufe": 3
+   "besuche": 4,
+   "aufrufe": 4
   },
   {
    "name": "com.google.android.googlequicksearchbox",
@@ -37,7 +37,12 @@
    "aufrufe": 3
   },
   {
-   "name": "bing.com",
+   "name": "www.facebook.com",
+   "besuche": 2,
+   "aufrufe": 2
+  },
+  {
+   "name": "l.instagram.com",
    "besuche": 1,
    "aufrufe": 1
   },
@@ -45,23 +50,23 @@
    "name": "org.telegram.messenger",
    "besuche": 1,
    "aufrufe": 1
-  },
-  {
-   "name": "l.instagram.com",
-   "besuche": 1,
-   "aufrufe": 1
   }
  ],
  "laender": [
   {
    "name": "DE",
-   "besuche": 247,
-   "aufrufe": 2746
+   "besuche": 216,
+   "aufrufe": 1939
   },
   {
    "name": "IN",
    "besuche": 4,
    "aufrufe": 75
+  },
+  {
+   "name": "EG",
+   "besuche": 7,
+   "aufrufe": 44
   },
   {
    "name": "CH",
@@ -74,53 +79,48 @@
    "aufrufe": 35
   },
   {
-   "name": "LV",
-   "besuche": 9,
-   "aufrufe": 16
-  },
-  {
-   "name": "ES",
-   "besuche": 2,
-   "aufrufe": 13
-  },
-  {
-   "name": "EG",
-   "besuche": 6,
-   "aufrufe": 13
+   "name": "TN",
+   "besuche": 0,
+   "aufrufe": 28
   },
   {
    "name": "TR",
    "besuche": 1,
-   "aufrufe": 13
+   "aufrufe": 21
+  },
+  {
+   "name": "LV",
+   "besuche": 14,
+   "aufrufe": 21
   }
  ],
  "geraete": [
   {
-   "name": "desktop",
-   "besuche": 78,
-   "aufrufe": 1949
+   "name": "mobile",
+   "besuche": 214,
+   "aufrufe": 1199
   },
   {
-   "name": "mobile",
-   "besuche": 215,
-   "aufrufe": 962
+   "name": "desktop",
+   "besuche": 57,
+   "aufrufe": 991
   },
   {
    "name": "tablet",
-   "besuche": 5,
-   "aufrufe": 91
+   "besuche": 7,
+   "aufrufe": 119
   }
  ],
  "seiten": [
   {
    "name": "/",
-   "besuche": 298,
-   "aufrufe": 2931
+   "besuche": 278,
+   "aufrufe": 2228
   },
   {
    "name": "/index.html",
    "besuche": 0,
-   "aufrufe": 71
+   "aufrufe": 81
   }
  ],
  "verlauf": {
@@ -287,6 +287,10 @@
   "2026-11-16": {
    "besuche": 74,
    "seitenaufrufe": 485
+  },
+  "2026-11-17": {
+   "besuche": 69,
+   "seitenaufrufe": 549
   }
  }
 }
