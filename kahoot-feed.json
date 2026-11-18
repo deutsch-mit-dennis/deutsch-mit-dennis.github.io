@@ -3,6 +3,24 @@
   "updated": "2026-11-18T14:04:43.900Z",
   "kahoots": [
     {
+      "uuid": "024875d1-ddc3-458c-9f95-91fed7863ff2",
+      "title": "A1 – ich heiße, du heißt | Kahoot-Quiz (Deutsch mit Dennis)",
+      "description": "Übungsquiz Deutsch A1 für die erste Kursstunde: Verb-Endungen (ich -e, du -st, er/sie -t, Sie -en), das Verb sein, du oder Sie, er/sie/Sie, aus / aus der / aus dem und das Verb auf Position 2. 20 Fragen mit Bildern. Mehr Kahoots und Übungen: https://deutsch-mit-dennis.de/#kahoot",
+      "questions": 20,
+      "created": "2026-11-18T18:22:24.004Z",
+      "url": "https://create.kahoot.it/details/024875d1-ddc3-458c-9f95-91fed7863ff2",
+      "cover": "assets/kahoot/024875d1-ddc3-458c-9f95-91fed7863ff2.webp"
+    },
+    {
+      "uuid": "caed22fa-4a08-4c41-8d6a-6616a9f5e574",
+      "title": "A1 – Hallo! Wer bist du? | Kahoot-Quiz (Deutsch mit Dennis)",
+      "description": "Übungsquiz Deutsch A1 für die erste Kursstunde: begrüßen und verabschieden, W-Fragen (Wie? Woher? Wo? Wer?), Formular, Zahlen 0–10 und Arbeitsanweisungen im Kursbuch. 20 Fragen mit Bildern. Mehr Kahoots und Übungen: https://deutsch-mit-dennis.de/#kahoot",
+      "questions": 20,
+      "created": "2026-11-18T18:04:10.177Z",
+      "url": "https://create.kahoot.it/details/caed22fa-4a08-4c41-8d6a-6616a9f5e574",
+      "cover": "assets/kahoot/caed22fa-4a08-4c41-8d6a-6616a9f5e574.webp"
+    },
+    {
       "uuid": "5f81c56f-37c5-43f3-b75c-21c25c401555",
       "title": "LiD – Mensch & Gesellschaft | Kahoot-Quiz (Deutsch mit Dennis)",
       "description": "18 Fragen zu Familie, Schule, Arbeit, Religion, Ehrenamt und Behörden im Alltag. Übungsfragen im Stil des Tests Leben in Deutschland. Keine offiziellen Prüfungsfragen – offizieller Fragenkatalog: BAMF. Mehr: https://deutsch-mit-dennis.de/#kahoot",

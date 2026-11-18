@@ -728,6 +728,13 @@
         block("mehr", "Lieder und Spiele", [
           tile("#lieder/" + L, "🎵", `Lieder ${L}`, "Mit Text und Aufgaben"),
           tile("#spiele", "🎮", "Lernspiele", "Artikel, Verben, Alltag …"),
+          // A1 starter Kahoots (first lesson: greetings, W-questions, verb endings)
+          ...(L === "A1"
+            ? [
+                tile("https://create.kahoot.it/details/caed22fa-4a08-4c41-8d6a-6616a9f5e574", "🟣", "Kahoot: Hallo! Wer bist du?", "A1 · Wortschatz · 20 Fragen"),
+                tile("https://create.kahoot.it/details/024875d1-ddc3-458c-9f95-91fed7863ff2", "🟣", "Kahoot: ich heiße, du heißt", "A1 · Grammatik · 20 Fragen"),
+              ]
+            : []),
           tile("#kahoot", "🟣", "Kahoot-Quiz", "Allein oder im Kurs"),
         ]),
       );

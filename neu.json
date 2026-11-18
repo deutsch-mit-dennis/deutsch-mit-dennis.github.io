@@ -3,6 +3,12 @@
  "items": [
   {
    "date": "2026-11-18",
+   "type": "kahoot",
+   "title": "2 neue Kahoot-Quiz für A1: „Hallo! Wer bist du?“ (Wortschatz) und „ich heiße, du heißt“ (Grammatik) – je 20 Fragen mit Bildern",
+   "link": "#kahoot"
+  },
+  {
+   "date": "2026-11-18",
    "type": "neu",
    "title": "Neues Spiel: Endungs-Blitz – Adjektivendungen im Schnelltempo, mit Farben für der, die, das und einer Regel nach jeder Antwort (A2–B1)",
    "link": "#spiele/endungen"
