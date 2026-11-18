@@ -373,8 +373,10 @@
             q.textContent = `Was schreibst du bei „${label}“?`;
             box.innerHTML = opts(list);
             if (f) box.lastElementChild.lastElementChild.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+            const cur = f; // ignore a second tap on an old button (double tap would skip a field)
             box.querySelectorAll('.ch-opt').forEach((b, k) => {
               b.onclick = () => {
+                if (cur !== f || b.disabled) return;
                 const [, a2, , tip] = s.f[f], ok = list[k] === fill(a2);
                 dds[f].className = ok ? 'is-ok' : 'is-bad'; dds[f].textContent = (ok ? '✓ ' : '✗ → ') + fill(a2);
                 if (ok) point(); else miss(`${label}: ${a2}`, tip);
