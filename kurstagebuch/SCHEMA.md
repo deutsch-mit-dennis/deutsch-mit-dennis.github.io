@@ -63,3 +63,12 @@ Set types and their items:
 - `match`:  `{pairs:[['Wie heißen Sie?','Ich heiße Mira.'], …]}` – one item per set, 4–8 pairs; renderer shuffles right column
 - `steckbrief`: `{fields:[{key:'name', label:'Vorname', placeholder:'Mira'}, …], template:'Hallo! Ich heiße {name}. …'}` – learner fills, text is generated locally (nothing is sent anywhere)
 Instructions per type are translated by kt.js (UI strings), so data only holds German.
+
+## Features without extra data fields
+Progress saving, flashcards, self-assessment, share, finishing card etc. (see README "Funktionen") use only the fields above –
+**no new data fields are needed**:
+- Flashcards (`<date>/?karten=1`) take every item of all `words` blocks of KT_DAY (`de`, `tr`, `emoji`).
+- Self-assessment buttons are added to each entry of `goals`.
+- Saved exercise progress is keyed by set `id` and checked against a hash of the set's `type` + `items`.
+  Keep set `id`s stable; if items change, the old progress of that set is discarded automatically.
+Browser storage keys: `kt-lang`, `kt-ueben-<date>`, `kt-karten-<date>`, `kt-kann` (all optional, wrapped in try/catch).

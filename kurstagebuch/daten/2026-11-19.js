@@ -87,7 +87,7 @@ window.KT_DAY = {
                 "İyi geceler!",
                 "Noapte bună!",
                 "Natën e mirë!",
-                "Сайхан амраарай!",
+                "Сайхан нойрсоорой!",
                 "Bonne nuit !"
               ]
             },
@@ -316,51 +316,17 @@ window.KT_DAY = {
         {
           "type": "rule",
           "title": "du oder Sie?",
-          "text": "<b>du</b> = Familie, Freunde, Kinder (oft auch im Kurs).<br><b>Sie</b> = fremde Personen, Ämter, Arzt, Chef. <b>Sie</b> schreibt man immer groß.",
+          "text": "<b>du</b> = Familie, Freunde, Kinder (oft auch im Kurs).<br><b>Sie</b> = Erwachsene, die man nicht gut kennt, Ämter, Arzt, Chef – immer bei <b>Herr/Frau + Nachname</b>. <b>Sie</b> schreibt man immer groß.",
           "tr": [
-            "«du» – родина, друзі, діти. «Sie» – незнайомі люди, установи, лікар, начальник. Sie завжди пишемо з великої літери.",
-            "«du» للعائلة والأصدقاء والأطفال. «Sie» للأشخاص الغرباء والدوائر الرسمية والطبيب والمدير. تُكتب Sie دائمًا بحرف كبير.",
-            "«du» برای خانواده، دوستان و بچه‌ها. «Sie» برای افراد ناآشنا، اداره‌ها، دکتر و رئیس. Sie همیشه با حرف بزرگ نوشته می‌شود.",
-            "«du» aile, arkadaşlar ve çocuklar için. «Sie» tanımadığınız kişiler, resmî daireler, doktor ve patron için. Sie her zaman büyük harfle yazılır.",
-            "„du” – familie, prieteni, copii. „Sie” – persoane necunoscute, autorități, medic, șef. Sie se scrie mereu cu literă mare.",
-            "«du» – familja, miqtë, fëmijët. «Sie» – njerëz që nuk i njihni, zyrat, mjeku, shefi. Sie shkruhet gjithmonë me shkronjë të madhe.",
-            "«du» – гэр бүл, найз нөхөд, хүүхдүүдэд. «Sie» – танихгүй хүн, албан газар, эмч, даргад. Sie-г үргэлж том үсгээр бичнэ.",
-            "« du » = tu : famille, amis, enfants. « Sie » = vous : personnes inconnues, administrations, médecin, chef. Sie s’écrit toujours avec une majuscule."
-          ],
-          "table": {
-            "head": [
-              "",
-              "du 🙂",
-              "Sie 🤝"
-            ],
-            "rows": [
-              [
-                "Name",
-                "Wie heißt du?",
-                "Wie heißen Sie?"
-              ],
-              [
-                "Herkunft",
-                "Woher kommst du?",
-                "Woher kommen Sie?"
-              ],
-              [
-                "Befinden",
-                "Wie geht es dir?",
-                "Wie geht es Ihnen?"
-              ],
-              [
-                "Antwort",
-                "… Und dir?",
-                "… Und Ihnen?"
-              ],
-              [
-                "Tschüss",
-                "Tschüss!",
-                "Auf Wiedersehen!"
-              ]
-            ]
-          }
+            "«du» – родина, друзі, діти (часто й на курсі). «Sie» – дорослі, яких ви погано знаєте, установи, лікар, начальник – завжди з Herr/Frau + прізвище. Sie завжди пишемо з великої літери.",
+            "«du» للعائلة والأصدقاء والأطفال (وغالبًا في الدورة أيضًا). «Sie» للكبار الذين لا تعرفهم جيدًا، والدوائر الرسمية، والطبيب، والمدير – ودائمًا مع Herr/Frau + اسم العائلة. تُكتب Sie دائمًا بحرف كبير.",
+            "«du» برای خانواده، دوستان و بچه‌ها (اغلب در کلاس هم). «Sie» برای بزرگسالانی که خوب نمی‌شناسید، اداره‌ها، دکتر و رئیس – همیشه با Herr/Frau + نام خانوادگی. Sie همیشه با حرف بزرگ نوشته می‌شود.",
+            "«du» aile, arkadaşlar ve çocuklar için (kursta da çoğu zaman). «Sie» iyi tanımadığınız yetişkinler, resmî daireler, doktor ve patron için – Herr/Frau + soyadı ile her zaman. Sie her zaman büyük harfle yazılır.",
+            "„du” – familie, prieteni, copii (adesea și la curs). „Sie” – adulți pe care nu-i cunoașteți bine, autorități, medic, șef – mereu cu Herr/Frau + nume de familie. Sie se scrie mereu cu literă mare.",
+            "«du» – familja, miqtë, fëmijët (shpesh edhe në kurs). «Sie» – të rriturit që nuk i njihni mirë, zyrat, mjeku, shefi – gjithmonë me Herr/Frau + mbiemër. Sie shkruhet gjithmonë me shkronjë të madhe.",
+            "«du» – гэр бүл, найз нөхөд, хүүхдүүдэд (курст ч ихэвчлэн). «Sie» – сайн танихгүй насанд хүрэгчид, албан газар, эмч, даргад – Herr/Frau + овог нэрээр хандахад үргэлж. Sie-г үргэлж том үсгээр бичнэ.",
+            "« du » = tu : famille, amis, enfants (souvent aussi en cours). « Sie » = vous : adultes qu’on ne connaît pas bien, administrations, médecin, chef – toujours avec Herr/Frau + nom de famille. Sie s’écrit toujours avec une majuscule."
+          ]
         },
         {
           "type": "warn",
@@ -535,7 +501,7 @@ window.KT_DAY = {
             [
               "C c",
               "tse",
-              "Café",
+              "CD",
               "R r",
               "er",
               "Reis"
@@ -562,7 +528,7 @@ window.KT_DAY = {
               "Fisch",
               "U u",
               "u",
-              "Uhr ⏰"
+              "Uhr"
             ],
             [
               "G g",
@@ -723,37 +689,11 @@ window.KT_DAY = {
               ]
             },
             {
-              "de": "Ich komme aus der Ukraine.",
-              "tr": [
-                "Я з України.",
-                "أنا من أوكرانيا.",
-                "من اهل اوکراین هستم.",
-                "Ukrayna’dan geliyorum.",
-                "Sunt din Ucraina.",
-                "Unë vij nga Ukraina.",
-                "Би Украинаас ирсэн.",
-                "Je viens d’Ukraine."
-              ]
-            },
-            {
-              "de": "Ich komme aus dem Irak.",
-              "tr": [
-                "Я з Іраку.",
-                "أنا من العراق.",
-                "من اهل عراق هستم.",
-                "Irak’tan geliyorum.",
-                "Sunt din Irak.",
-                "Unë vij nga Iraku.",
-                "Би Иракаас ирсэн.",
-                "Je viens d’Irak."
-              ]
-            },
-            {
               "de": "Wo sind Sie geboren?",
               "tag": "Sie",
               "tr": [
                 "Де Ви народилися?",
-                "أين وُلدتَ؟",
+                "أين وُلدتَ حضرتُك؟",
                 "شما کجا به دنیا آمده‌اید؟",
                 "Nerede doğdunuz?",
                 "Unde v-ați născut?",
@@ -819,16 +759,16 @@ window.KT_DAY = {
         {
           "type": "rule",
           "title": "aus + Land",
-          "text": "Die meisten Länder haben <b>keinen Artikel</b>: aus Syrien, aus Afghanistan.<br>Einige Länder haben einen Artikel: <b>die</b> Ukraine → aus <b>der</b> Ukraine. <b>der</b> Irak → aus <b>dem</b> Irak.<br>Man kann auch sagen: Ich <b>bin aus</b> Syrien. = Ich <b>komme aus</b> Syrien.",
+          "text": "Die meisten Länder haben <b>keinen Artikel</b>. Einige haben einen: <b>die</b> → aus <b>der</b>, <b>der</b> → aus <b>dem</b>.<br>Ich <b>bin aus</b> Syrien = Ich <b>komme aus</b> Syrien.",
           "tr": [
-            "Більшість країн без артикля: aus Syrien. Деякі країни мають артикль: die Ukraine → aus der Ukraine, der Irak → aus dem Irak.",
-            "معظم البلدان بدون أداة تعريف: aus Syrien. بعض البلدان لها أداة: die Ukraine ← aus der Ukraine، der Irak ← aus dem Irak.",
-            "بیشتر کشورها حرف تعریف ندارند: aus Syrien. بعضی کشورها حرف تعریف دارند: die Ukraine ← aus der Ukraine، der Irak ← aus dem Irak.",
-            "Çoğu ülke artikelsizdir: aus Syrien. Bazı ülkelerin artikeli vardır: die Ukraine → aus der Ukraine, der Irak → aus dem Irak.",
-            "Majoritatea țărilor nu au articol: aus Syrien. Unele țări au articol: die Ukraine → aus der Ukraine, der Irak → aus dem Irak.",
-            "Shumica e vendeve nuk kanë nyje: aus Syrien. Disa vende kanë nyje: die Ukraine → aus der Ukraine, der Irak → aus dem Irak.",
-            "Ихэнх улсын нэр артикльгүй: aus Syrien. Зарим улс артикльтэй: die Ukraine → aus der Ukraine, der Irak → aus dem Irak.",
-            "La plupart des pays n’ont pas d’article : aus Syrien. Certains pays ont un article : die Ukraine → aus der Ukraine, der Irak → aus dem Irak."
+            "Більшість країн без артикля. Деякі мають артикль: die → aus der, der → aus dem. Ich bin aus Syrien = Ich komme aus Syrien (Я із Сирії).",
+            "معظم البلدان بدون أداة تعريف. بعضها له أداة: die ← aus der، der ← aus dem. ‏Ich bin aus Syrien = Ich komme aus Syrien (أنا من سوريا).",
+            "بیشتر کشورها حرف تعریف ندارند. بعضی دارند: die ← aus der، der ← aus dem. ‏Ich bin aus Syrien = Ich komme aus Syrien (من اهل سوریه هستم).",
+            "Çoğu ülke artikelsizdir. Bazılarının artikeli vardır: die → aus der, der → aus dem. Ich bin aus Syrien = Ich komme aus Syrien (Suriye’denim).",
+            "Majoritatea țărilor nu au articol. Unele au: die → aus der, der → aus dem. Ich bin aus Syrien = Ich komme aus Syrien (Sunt din Siria).",
+            "Shumica e vendeve nuk kanë nyje. Disa kanë: die → aus der, der → aus dem. Ich bin aus Syrien = Ich komme aus Syrien (Jam nga Siria).",
+            "Ихэнх улсын нэр артикльгүй. Заримд нь артикль бий: die → aus der, der → aus dem. Ich bin aus Syrien = Ich komme aus Syrien (Би Сириэс ирсэн).",
+            "La plupart des pays n’ont pas d’article. Certains en ont un : die → aus der, der → aus dem. Ich bin aus Syrien = Ich komme aus Syrien (Je viens de Syrie)."
           ],
           "table": {
             "head": [
@@ -868,16 +808,16 @@ window.KT_DAY = {
         {
           "type": "rule",
           "title": "geboren in …",
-          "text": "Ich bin <b>in</b> Syrien geboren. Ich bin <b>in der</b> Ukraine geboren.<br><b>in + dem = im</b>: Ich bin <b>im</b> Irak geboren.<br>Aber: Ich komme aus <b>dem</b> Irak. (aus dem = richtig)",
+          "text": "<b>in + dem = im</b>. Aber: aus <b>dem</b>.",
           "tr": [
-            "in + dem = im: Ich bin im Irak geboren (Я народився в Іраку). Але: Ich komme aus dem Irak – це правильно.",
-            "in + dem = im: ‏Ich bin im Irak geboren (وُلدتُ في العراق). لكن: Ich komme aus dem Irak صحيحة.",
-            "in + dem = im: ‏Ich bin im Irak geboren (در عراق به دنیا آمده‌ام). اما: Ich komme aus dem Irak درست است.",
-            "in + dem = im: Ich bin im Irak geboren (Irak’ta doğdum). Ama: Ich komme aus dem Irak doğrudur.",
-            "in + dem = im: Ich bin im Irak geboren (M-am născut în Irak). Dar: Ich komme aus dem Irak este corect.",
-            "in + dem = im: Ich bin im Irak geboren (Kam lindur në Irak). Por: Ich komme aus dem Irak është e saktë.",
-            "in + dem = im: Ich bin im Irak geboren (Би Иракт төрсөн). Харин: Ich komme aus dem Irak зөв.",
-            "in + dem = im : Ich bin im Irak geboren (Je suis né en Irak). Mais : Ich komme aus dem Irak est correct."
+            "in + dem = im. Але: aus dem – без скорочення.",
+            "in + dem = im. لكن: aus dem – بدون اختصار.",
+            "in + dem = im. اما: aus dem – بدون ادغام.",
+            "in + dem = im. Ama: aus dem – kısaltma yok.",
+            "in + dem = im. Dar: aus dem – fără contragere.",
+            "in + dem = im. Por: aus dem – pa shkurtim.",
+            "in + dem = im. Харин: aus dem – товчлохгүй.",
+            "in + dem = im. Mais : aus dem – sans contraction."
           ],
           "table": {
             "head": [
@@ -922,6 +862,20 @@ window.KT_DAY = {
               ]
             },
             {
+              "de": "das Nachbarland – die Nachbarländer",
+              "emoji": "🤝",
+              "tr": [
+                "сусідня країна – сусідні країни",
+                "البلد المجاور – البلدان المجاورة",
+                "کشور همسایه – کشورهای همسایه",
+                "komşu ülke – komşu ülkeler",
+                "țara vecină – țările vecine",
+                "vendi fqinj – vendet fqinje",
+                "хөрш орон – хөрш орнууд",
+                "le pays voisin – les pays voisins"
+              ]
+            },
+            {
               "de": "die Heimat",
               "emoji": "🏡",
               "tr": [
@@ -958,7 +912,7 @@ window.KT_DAY = {
                 "محل تولد",
                 "doğum yeri",
                 "locul nașterii",
-                "vendlindja",
+                "vendi i lindjes",
                 "төрсөн газар",
                 "le lieu de naissance"
               ]
@@ -1168,22 +1122,22 @@ window.KT_DAY = {
         {
           "type": "rule",
           "title": "Beruf ohne Artikel – Frauen mit -in",
-          "text": "Beim Beruf steht <b>kein Artikel</b>: Ich bin Lehrerin. Ich arbeite als Koch.<br>Frauen: meistens <b>-in</b>: Lehrer → Lehrer<b>in</b>. Oft mit Umlaut: Arzt → <b>Ä</b>rztin, Koch → K<b>ö</b>chin, Bauer → B<b>ä</b>uerin. Und: Kaufmann → Kauf<b>frau</b>.",
+          "text": "Beim Beruf steht <b>kein Artikel</b>.<br>Frauen: meistens <b>-in</b>, oft mit Umlaut (a → ä, o → ö, au → äu). <b>-mann</b> → <b>-frau</b>.",
           "tr": [
-            "Перед професією немає артикля: Ich bin Lehrerin. Для жінок зазвичай закінчення -in: Lehrer → Lehrerin, Arzt → Ärztin. Kaufmann → Kauffrau.",
-            "لا نستخدم أداة التعريف مع المهنة: Ich bin Lehrerin. للمؤنث غالبًا نضيف ‎-in: Lehrer ← Lehrerin، Arzt ← Ärztin. ‏Kaufmann ← Kauffrau.",
-            "قبل از شغل حرف تعریف نمی‌آید: Ich bin Lehrerin. برای زنان معمولاً ‎-in اضافه می‌شود: Lehrer ← Lehrerin، Arzt ← Ärztin. ‏Kaufmann ← Kauffrau.",
-            "Meslekten önce artikel kullanılmaz: Ich bin Lehrerin. Kadınlar için genellikle -in eklenir: Lehrer → Lehrerin, Arzt → Ärztin. Kaufmann → Kauffrau.",
-            "Înaintea profesiei nu se pune articol: Ich bin Lehrerin. Pentru femei se adaugă de obicei -in: Lehrer → Lehrerin, Arzt → Ärztin. Kaufmann → Kauffrau.",
-            "Para profesionit nuk vihet nyje: Ich bin Lehrerin. Për gratë zakonisht shtohet -in: Lehrer → Lehrerin, Arzt → Ärztin. Kaufmann → Kauffrau.",
-            "Мэргэжлийн өмнө артикль хэрэглэхгүй: Ich bin Lehrerin. Эмэгтэйд ихэвчлэн -in нэмнэ: Lehrer → Lehrerin, Arzt → Ärztin. Kaufmann → Kauffrau.",
-            "Pas d’article devant le métier : Ich bin Lehrerin (je suis enseignante). Au féminin, on ajoute souvent -in : Lehrer → Lehrerin, Arzt → Ärztin. Kaufmann → Kauffrau."
+            "Перед професією немає артикля. Для жінок зазвичай -in, часто з умлаутом (a → ä, o → ö, au → äu). -mann → -frau.",
+            "لا نستخدم أداة التعريف مع المهنة. للنساء غالبًا ‎-in، وكثيرًا مع الأوملاوت (a ← ä، o ← ö، au ← äu). ‏‎-mann ← ‎-frau.",
+            "قبل از شغل حرف تعریف نمی‌آید. برای زنان معمولاً ‎-in، اغلب با اوملاوت (a ← ä، o ← ö، au ← äu). ‏‎-mann ← ‎-frau.",
+            "Meslekten önce artikel kullanılmaz. Kadınlar için genellikle -in, çoğu zaman Umlaut ile (a → ä, o → ö, au → äu). -mann → -frau.",
+            "Înaintea profesiei nu se pune articol. Pentru femei: de obicei -in, adesea cu Umlaut (a → ä, o → ö, au → äu). -mann → -frau.",
+            "Para profesionit nuk vihet nyje. Për gratë: zakonisht -in, shpesh me Umlaut (a → ä, o → ö, au → äu). -mann → -frau.",
+            "Мэргэжлийн өмнө артикль хэрэглэхгүй. Эмэгтэйд ихэвчлэн -in нэмнэ, ихэнхдээ умлауттай (a → ä, o → ö, au → äu). -mann → -frau.",
+            "Pas d’article devant le métier. Au féminin : le plus souvent -in, souvent avec Umlaut (a → ä, o → ö, au → äu). -mann → -frau."
           ]
         },
         {
           "type": "rule",
           "title": "Früher und heute",
-          "text": "Heute: Ich <b>arbeite</b> als Koch.<br>Früher: Ich <b>habe</b> 10 Jahre als Koch <b>gearbeitet</b>.",
+          "text": "Heute: Präsens. Früher: <b>haben</b> (Platz 2) + <b>gearbeitet</b> (Ende).",
           "table": {
             "head": [
               "",
@@ -1202,12 +1156,6 @@ window.KT_DAY = {
                 "Ich",
                 "habe",
                 "10 Jahre als Lehrer",
-                "gearbeitet."
-              ],
-              [
-                "Ich",
-                "habe",
-                "in meiner Heimat als Verkäufer",
                 "gearbeitet."
               ]
             ]
@@ -1406,12 +1354,7 @@ window.KT_DAY = {
           "title": "Sätze aus dem Kurs (korrigiert)",
           "items": [
             "Ich bin Ingenieurin von Beruf und habe 25 Jahre gearbeitet.",
-            "Ich habe zwei Berufe: Friseurin und Masseurin. Ich habe 4 Jahre als Masseurin in meiner Heimat gearbeitet.",
-            "Ich habe in meiner Heimat als Verkäufer gearbeitet. Heute arbeite ich nicht. Ich lerne Deutsch.",
-            "Ich habe 25 Jahre als Bauer in meiner Heimat gearbeitet. Jetzt lerne ich Deutsch.",
-            "Ich bin Kauffrau von Beruf. Ich habe 11 Jahre als HR-Managerin in meiner Heimat gearbeitet.",
-            "Ich bin Koch von Beruf. Ich habe 30 Jahre als Pizzabäcker gearbeitet.",
-            "Ich habe 8 Jahre als Apothekerin und 5 Jahre als Lehrerin in der Schule gearbeitet."
+            "Ich bin Kauffrau von Beruf. Ich habe 11 Jahre als HR-Managerin in meiner Heimat gearbeitet."
           ]
         },
         {
@@ -1561,16 +1504,16 @@ window.KT_DAY = {
         {
           "type": "rule",
           "title": "seit + Dativ",
-          "text": "<b>seit</b> + Dativ. Im Plural kommt <b>-n</b> dazu: seit 2 Tage<b>n</b>, seit 2 Monate<b>n</b>, seit 2 Jahre<b>n</b>. (Wochen hat schon ein -n.)<br>Singular: seit <b>einem</b> Tag / Monat / Jahr – seit <b>einer</b> Woche.",
+          "text": "<b>seit</b> + Dativ: im Plural + <b>-n</b> (Wochen hat schon -n). Singular: seit <b>einem</b> / <b>einer</b>.",
           "tr": [
-            "Після «seit» у множині додаємо закінчення «-n»: seit 2 Tagen. В однині: seit einem Tag, seit einer Woche.",
-            "بعد «seit» نضيف في الجمع النهاية «‎-n»: seit 2 Tagen. وفي المفرد: seit einem Tag / seit einer Woche.",
-            "بعد از «seit» در جمع پسوند «‎-n» را اضافه می‌کنیم: seit 2 Tagen. در مفرد: seit einem Tag / seit einer Woche.",
-            "«seit»ten sonra çoğulda «-n» eki gelir: seit 2 Tagen. Tekilde: seit einem Tag / seit einer Woche.",
-            "După „seit”, la plural adăugăm terminația „-n”: seit 2 Tagen. La singular: seit einem Tag / seit einer Woche.",
-            "Pas «seit», në shumës shtojmë mbaresën «-n»: seit 2 Tagen. Në njëjës: seit einem Tag / seit einer Woche.",
-            "«seit»-ийн дараа олон тоонд «-n» төгсгөл нэмнэ: seit 2 Tagen. Ганц тоонд: seit einem Tag / seit einer Woche.",
-            "Après « seit », on ajoute « -n » au pluriel : seit 2 Tagen. Au singulier : seit einem Tag / seit einer Woche."
+            "seit + давальний відмінок (Dativ): у множині + -n (Wochen уже має -n). Однина: seit einem / einer.",
+            "seit + حالة الجر (Dativ): في الجمع نضيف ‎-n (‏Wochen فيها ‎-n من قبل). المفرد: seit einem / einer.",
+            "seit + حالت متممی (Dativ): در جمع ‎-n اضافه می‌شود (‏Wochen از قبل ‎-n دارد). مفرد: seit einem / einer.",
+            "seit + Dativ (-e hâli): çoğulda + -n (Wochen zaten -n ile biter). Tekil: seit einem / einer.",
+            "seit + dativ: la plural + -n (Wochen are deja -n). Singular: seit einem / einer.",
+            "seit + rasa dhanore (Dativ): në shumës + -n (Wochen e ka tashmë -n). Njëjës: seit einem / einer.",
+            "seit + өгөх оршихын тийн ялгал (Dativ): олон тоонд + -n (Wochen аль хэдийн -n-тэй). Ганц тоо: seit einem / einer.",
+            "seit + datif : au pluriel + -n (Wochen a déjà un -n). Singulier : seit einem / einer."
           ],
           "table": {
             "head": [
@@ -1764,32 +1707,6 @@ window.KT_DAY = {
                 "Keni fëmijë?",
                 "Та хүүхэдтэй юу?",
                 "Avez-vous des enfants ?"
-              ]
-            },
-            {
-              "de": "Ich habe ein Kind. / Ich habe zwei Kinder.",
-              "tr": [
-                "У мене одна дитина. / У мене двоє дітей.",
-                "لديّ طفل واحد. / لديّ طفلان.",
-                "یک بچه دارم. / دو بچه دارم.",
-                "Bir çocuğum var. / İki çocuğum var.",
-                "Am un copil. / Am doi copii.",
-                "Kam një fëmijë. / Kam dy fëmijë.",
-                "Би нэг хүүхэдтэй. / Би хоёр хүүхэдтэй.",
-                "J’ai un enfant. / J’ai deux enfants."
-              ]
-            },
-            {
-              "de": "Ich habe keine Kinder.",
-              "tr": [
-                "У мене немає дітей.",
-                "ليس لديّ أطفال.",
-                "بچه ندارم.",
-                "Çocuğum yok.",
-                "Nu am copii.",
-                "Nuk kam fëmijë.",
-                "Би хүүхэдгүй.",
-                "Je n’ai pas d’enfants."
               ]
             },
             {
@@ -2012,7 +1929,8 @@ window.KT_DAY = {
                 "vëllezërit dhe motrat",
                 "ах эгч дүү",
                 "les frères et sœurs"
-              ]
+              ],
+              "emoji": "👫"
             },
             {
               "de": "das Einzelkind",
@@ -2046,7 +1964,7 @@ window.KT_DAY = {
               "de": "alt – Wie alt …? – … Jahre alt",
               "emoji": "🎂",
               "tr": [
-                "старий – Скільки років …? – … років",
+                "вік – Скільки років …? – … років",
                 "عمر – كم عمر …؟ – … سنة",
                 "سن – چند سال دارد؟ – … ساله",
                 "yaşında – Kaç yaşında? – … yaşında",
@@ -2061,16 +1979,16 @@ window.KT_DAY = {
         {
           "type": "rule",
           "title": "Ich habe einen Sohn – haben + Akkusativ",
-          "text": "Nach <b>haben</b> kommt der Akkusativ. Nur bei <b>der</b> ändert sich etwas: der Sohn → Ich habe <b>einen</b> Sohn.<br>die Tochter → <b>eine</b> Tochter. das Kind → <b>ein</b> Kind. Plural: zwei Kinder / <b>keine</b> Kinder.",
+          "text": "Nach <b>haben</b> kommt der Akkusativ. Nur bei <b>der</b> ändert sich etwas: ein → <b>einen</b>.",
           "tr": [
-            "Після «haben» – знахідний відмінок (Akkusativ). Змінюється тільки der: der Sohn → Ich habe einen Sohn. die Tochter → eine Tochter, das Kind → ein Kind.",
-            "بعد «haben» تأتي حالة المفعول به (Akkusativ). يتغيّر فقط der: der Sohn ← Ich habe einen Sohn. ‏die Tochter ← eine Tochter، das Kind ← ein Kind.",
-            "بعد از «haben» حالت مفعولی (Akkusativ) می‌آید. فقط der تغییر می‌کند: der Sohn ← Ich habe einen Sohn. ‏die Tochter ← eine Tochter، das Kind ← ein Kind.",
-            "«haben»dan sonra Akkusativ (-i hâli) gelir. Sadece der değişir: der Sohn → Ich habe einen Sohn. die Tochter → eine Tochter, das Kind → ein Kind.",
-            "După „haben” urmează acuzativul. Se schimbă doar der: der Sohn → Ich habe einen Sohn. die Tochter → eine Tochter, das Kind → ein Kind.",
-            "Pas «haben» vjen rasa kallëzore (Akkusativ). Ndryshon vetëm der: der Sohn → Ich habe einen Sohn. die Tochter → eine Tochter, das Kind → ein Kind.",
-            "«haben»-ийн дараа заах тийн ялгал (Akkusativ) орно. Зөвхөн der өөрчлөгдөнө: der Sohn → Ich habe einen Sohn. die Tochter → eine Tochter, das Kind → ein Kind.",
-            "Après « haben », on utilise l’accusatif. Seul der change : der Sohn → Ich habe einen Sohn. die Tochter → eine Tochter, das Kind → ein Kind."
+            "Після «haben» – знахідний відмінок (Akkusativ). Змінюється тільки der: ein → einen.",
+            "بعد «haben» تأتي حالة المفعول به (Akkusativ). يتغيّر فقط der: ein ← einen.",
+            "بعد از «haben» حالت مفعولی (Akkusativ) می‌آید. فقط der تغییر می‌کند: ein ← einen.",
+            "«haben»dan sonra Akkusativ (-i hâli) gelir. Sadece der değişir: ein → einen.",
+            "După „haben” urmează acuzativul. Se schimbă doar der: ein → einen.",
+            "Pas «haben» vjen rasa kallëzore (Akkusativ). Ndryshon vetëm der: ein → einen.",
+            "«haben»-ийн дараа заах тийн ялгал (Akkusativ) орно. Зөвхөн der өөрчлөгдөнө: ein → einen.",
+            "Après « haben », on utilise l’accusatif. Seul der change : ein → einen."
           ],
           "table": {
             "head": [
@@ -2082,11 +2000,11 @@ window.KT_DAY = {
             ],
             "rows": [
               [
-                "Das ist …",
+                "Das ist / sind …",
                 "ein Sohn",
                 "eine Tochter",
                 "ein Kind",
-                "– Kinder"
+                "Kinder"
               ],
               [
                 "Ich habe …",
@@ -2255,7 +2173,7 @@ window.KT_DAY = {
               ]
             },
             {
-              "de": "Meine Hobbys sind Kochen, Singen und Deutsch lernen.",
+              "de": "Meine Hobbys sind Kochen, Singen und Deutschlernen.",
               "tr": [
                 "Мої хобі – готування, спів і вивчення німецької.",
                 "هواياتي الطبخ والغناء وتعلّم الألمانية.",
@@ -2298,22 +2216,22 @@ window.KT_DAY = {
         {
           "type": "rule",
           "title": "gern + Verb – mögen + Nomen",
-          "text": "<b>gern + Verb</b>: Ich lese <b>gern</b>. Ich koche <b>gern</b>. Ich gehe <b>gern</b> schwimmen.<br><b>mögen + Nomen</b>: Ich <b>mag</b> Musik. Ich <b>mag</b> Kuchen.<br>mögen ≈ gern haben. (lieben ist stärker: Ich liebe meine Familie.)<br>Auch richtig: Ich mag Bücher lesen. Einfacher: Ich lese gern Bücher.<br><b>gern = gerne</b> (beides ist richtig).",
+          "text": "<b>gern + Verb</b>: Ich lese <b>gern</b>.<br><b>mögen + Nomen</b>: Ich <b>mag</b> Kuchen.<br><b>gern = gerne</b>.",
           "tr": [
-            "gern + дієслово: Ich lese gern (я люблю читати). mögen + іменник: Ich mag Musik (я люблю музику). mögen ≈ «подобатися»; lieben – сильніше («кохати, дуже любити»).",
-            "gern + فعل: Ich lese gern (أحبّ القراءة). mögen + اسم: Ich mag Musik (أحبّ الموسيقى). ‏mögen تعني «يُعجبه»، أما lieben فأقوى.",
-            "gern + فعل: Ich lese gern (خواندن را دوست دارم). mögen + اسم: Ich mag Musik (موسیقی را دوست دارم). ‏mögen یعنی «خوش آمدن از»؛ lieben قوی‌تر است.",
-            "gern + fiil: Ich lese gern (okumayı severim). mögen + isim: Ich mag Musik (müziği severim). mögen ≈ «hoşlanmak»; lieben daha güçlüdür.",
-            "gern + verb: Ich lese gern (îmi place să citesc). mögen + substantiv: Ich mag Musik (îmi place muzica). mögen ≈ „a plăcea”; lieben este mai puternic.",
-            "gern + folje: Ich lese gern (më pëlqen të lexoj). mögen + emër: Ich mag Musik (më pëlqen muzika). mögen ≈ «më pëlqen»; lieben është më i fortë.",
-            "gern + үйл үг: Ich lese gern (би унших дуртай). mögen + нэр үг: Ich mag Musik (би хөгжимд дуртай). mögen ≈ «дуртай байх»; lieben илүү хүчтэй.",
-            "gern + verbe : Ich lese gern (j’aime lire). mögen + nom : Ich mag Musik (j’aime la musique). mögen ≈ « aimer bien » ; lieben est plus fort."
+            "gern + дієслово: Ich lese gern (я люблю читати). mögen + іменник: Ich mag Kuchen (я люблю пиріг). gern = gerne.",
+            "gern + فعل: Ich lese gern (أحبّ القراءة). mögen + اسم: Ich mag Kuchen (أحبّ الكعك). ‏gern = gerne.",
+            "gern + فعل: Ich lese gern (خواندن را دوست دارم). mögen + اسم: Ich mag Kuchen (کیک دوست دارم). ‏gern = gerne.",
+            "gern + fiil: Ich lese gern (okumayı severim). mögen + isim: Ich mag Kuchen (kek severim). gern = gerne.",
+            "gern + verb: Ich lese gern (îmi place să citesc). mögen + substantiv: Ich mag Kuchen (îmi place prăjitura). gern = gerne.",
+            "gern + folje: Ich lese gern (më pëlqen të lexoj). mögen + emër: Ich mag Kuchen (më pëlqen keku). gern = gerne.",
+            "gern + үйл үг: Ich lese gern (би унших дуртай). mögen + нэр үг: Ich mag Kuchen (би бялуунд дуртай). gern = gerne.",
+            "gern + verbe : Ich lese gern (j’aime lire). mögen + nom : Ich mag Kuchen (j’aime les gâteaux). gern = gerne."
           ]
         },
         {
           "type": "rule",
           "title": "kochen oder backen?",
-          "text": "<b>kochen</b> = im Topf 🍲 (Suppe, Kartoffeln, Reis). <b>backen</b> = im Ofen 🧁 (Kuchen, Torte, Kekse, Brot).",
+          "text": "<b>kochen</b> = im Topf 🍲, <b>backen</b> = im Ofen 🧁.",
           "table": {
             "head": [
               "kochen 🍲",
@@ -2342,7 +2260,7 @@ window.KT_DAY = {
         {
           "type": "rule",
           "title": "zu Hause oder nach Hause?",
-          "text": "<b>Wo?</b> → <b>zu Hause</b> (ich bin, bleibe, lerne, schlafe … zu Hause).<br><b>Wohin?</b> → <b>nach Hause</b> (ich gehe, fahre, muss … nach Hause).",
+          "text": "<b>Wo?</b> → <b>zu Hause</b>. <b>Wohin?</b> → <b>nach Hause</b>.",
           "tr": [
             "«zu Hause» = вдома (де?). «nach Hause» = додому (куди?).",
             "«zu Hause» = في البيت (أين؟). «nach Hause» = إلى البيت (إلى أين؟).",
@@ -2420,76 +2338,6 @@ window.KT_DAY = {
               ]
             },
             {
-              "de": "schwimmen",
-              "emoji": "🏊",
-              "tr": [
-                "плавати",
-                "يسبح",
-                "شنا کردن",
-                "yüzmek",
-                "a înota",
-                "notoj",
-                "усанд сэлэх",
-                "nager"
-              ]
-            },
-            {
-              "de": "tanzen",
-              "emoji": "💃",
-              "tr": [
-                "танцювати",
-                "يرقص",
-                "رقصیدن",
-                "dans etmek",
-                "a dansa",
-                "vallëzoj",
-                "бүжиглэх",
-                "danser"
-              ]
-            },
-            {
-              "de": "singen",
-              "emoji": "🎤",
-              "tr": [
-                "співати",
-                "يغنّي",
-                "آواز خواندن",
-                "şarkı söylemek",
-                "a cânta",
-                "këndoj",
-                "дуулах",
-                "chanter"
-              ]
-            },
-            {
-              "de": "kochen",
-              "emoji": "🍲",
-              "tr": [
-                "готувати (їжу), варити",
-                "يطبخ",
-                "آشپزی کردن",
-                "yemek pişirmek",
-                "a găti",
-                "gatuaj",
-                "хоол хийх",
-                "cuisiner"
-              ]
-            },
-            {
-              "de": "backen",
-              "emoji": "🧁",
-              "tr": [
-                "пекти",
-                "يخبز",
-                "پختن (در فر)",
-                "fırında pişirmek",
-                "a coace",
-                "pjek",
-                "жигнэх",
-                "faire cuire au four"
-              ]
-            },
-            {
               "de": "wandern",
               "emoji": "🥾",
               "tr": [
@@ -2544,20 +2392,6 @@ window.KT_DAY = {
                 "спортоор хичээллэх",
                 "faire du sport"
               ]
-            },
-            {
-              "de": "spielen",
-              "emoji": "🎲",
-              "tr": [
-                "грати(ся)",
-                "يلعب",
-                "بازی کردن",
-                "oynamak",
-                "a se juca",
-                "luaj",
-                "тоглох",
-                "jouer"
-              ]
             }
           ]
         },
@@ -2582,7 +2416,7 @@ window.KT_DAY = {
             {
               "wrong": "Ich gehe zu Hause.",
               "right": "Ich gehe nach Hause.",
-              "why": "Wohin? → nach Hause. Wo? → zu Hause."
+              "why": "gehen: Wohin? → nach Hause."
             }
           ]
         }
@@ -2596,16 +2430,16 @@ window.KT_DAY = {
         {
           "type": "rule",
           "title": "Das Verb steht auf Platz 2",
-          "text": "Im Satz und in der W-Frage steht das Verb immer auf <b>Platz 2</b>.<br>Steht etwas anderes auf Platz 1 (<b>Heute</b>, <b>In Deutschland</b>), kommt <b>ich</b> nach dem Verb.",
+          "text": "Im Aussagesatz und in der W-Frage steht das Verb auf <b>Platz 2</b>. Ja/Nein-Frage: Verb auf <b>Platz 1</b>: <b>Haben</b> Sie Kinder?",
           "tr": [
-            "Дієслово завжди стоїть на 2-му місці – і в реченні, і в питанні з питальним словом. Якщо на 1-му місці інше слово (Heute), то «ich» стоїть після дієслова.",
-            "الفعل يأتي دائمًا في المكان الثاني، في الجملة وفي السؤال بأداة استفهام. إذا بدأت الجملة بكلمة أخرى (Heute) يأتي «ich» بعد الفعل.",
-            "فعل همیشه در جایگاه دوم است، در جمله و در سؤال با کلمهٔ پرسشی. اگر کلمهٔ دیگری در جایگاه اول باشد (Heute)، «ich» بعد از فعل می‌آید.",
-            "Fiil her zaman 2. sıradadır – cümlede ve soru kelimesiyle başlayan soruda. 1. sırada başka bir kelime varsa (Heute), «ich» fiilden sonra gelir.",
-            "Verbul stă mereu pe locul 2 – în propoziție și în întrebarea cu cuvânt interogativ. Dacă pe locul 1 este alt cuvânt (Heute), „ich” vine după verb.",
-            "Folja qëndron gjithmonë në vendin e 2-të – në fjali dhe në pyetjen me fjalë pyetëse. Nëse në vendin e 1-rë është një fjalë tjetër (Heute), «ich» vjen pas foljes.",
-            "Үйл үг үргэлж 2-р байранд байна – өгүүлбэрт ч, асуух үгтэй асуултад ч. 1-р байранд өөр үг (Heute) байвал «ich» үйл үгийн дараа орно.",
-            "Le verbe est toujours en position 2 – dans la phrase et dans la question avec un mot interrogatif. Si un autre mot est en position 1 (Heute), « ich » vient après le verbe."
+            "У розповідному реченні та в питанні з питальним словом дієслово стоїть на 2-му місці. Питання «так/ні»: дієслово на 1-му місці: Haben Sie Kinder? (У Вас є діти?)",
+            "في الجملة الخبرية وفي السؤال بأداة استفهام يأتي الفعل في المكان الثاني. سؤال نعم/لا: الفعل في المكان الأول: ‏Haben Sie Kinder?‏ (هل لديك أطفال؟)",
+            "در جملهٔ خبری و در سؤال با کلمهٔ پرسشی، فعل در جایگاه دوم است. سؤال بله/نه: فعل در جایگاه اول: ‏Haben Sie Kinder?‏ (بچه دارید؟)",
+            "Düz cümlede ve soru kelimesiyle başlayan soruda fiil 2. sıradadır. Evet/hayır sorusu: fiil 1. sırada: Haben Sie Kinder? (Çocuğunuz var mı?)",
+            "În propoziția enunțiativă și în întrebarea cu cuvânt interogativ, verbul stă pe locul 2. Întrebarea da/nu: verbul pe locul 1: Haben Sie Kinder? (Aveți copii?)",
+            "Në fjalinë dëftore dhe në pyetjen me fjalë pyetëse folja qëndron në vendin e 2-të. Pyetja po/jo: folja në vendin e 1-rë: Haben Sie Kinder? (Keni fëmijë?)",
+            "Хүүрнэх өгүүлбэр болон асуух үгтэй асуултад үйл үг 2-р байранд байна. Тийм/үгүй асуулт: үйл үг 1-р байранд: Haben Sie Kinder? (Та хүүхэдтэй юу?)",
+            "Dans la phrase déclarative et dans la question avec un mot interrogatif, le verbe est en position 2. Question oui/non : verbe en position 1 : Haben Sie Kinder? (Avez-vous des enfants ?)"
           ],
           "table": {
             "head": [
@@ -2653,23 +2487,28 @@ window.KT_DAY = {
                 "Was",
                 "<b>machst</b>",
                 "du gern?"
+              ],
+              [
+                "<b>Sprechen</b>",
+                "Sie",
+                "Deutsch? (Ja/Nein-Frage)"
               ]
             ]
           }
         },
         {
           "type": "rule",
-          "title": "Endungen: ich -e, du -st, Sie -en",
-          "text": "ich → <b>-e</b>: ich heiß<b>e</b>, ich komm<b>e</b>.<br>du → <b>-st</b>: du komm<b>st</b>, du wohn<b>st</b>.<br>Sie → <b>-en</b>: Sie komm<b>en</b>, Sie wohn<b>en</b>.<br>Achtung: du hei<b>ßt</b> – nur <b>-t</b>, weil ß schon wie s klingt.",
+          "title": "Endungen",
+          "text": "ich <b>-e</b>, du <b>-st</b>, Sie <b>-en</b>.",
           "tr": [
-            "ich → -e, du → -st, Sie → -en. Увага: du heißt – тільки -t, бо ß уже звучить як s.",
-            "ich ← ‎-e، du ← ‎-st، Sie ← ‎-en. انتبه: du heißt – فقط ‎-t، لأن ß تُلفظ مثل s.",
-            "ich ← ‎-e، du ← ‎-st، Sie ← ‎-en. توجه: du heißt – فقط ‎-t، چون ß خودش مثل s تلفظ می‌شود.",
-            "ich → -e, du → -st, Sie → -en. Dikkat: du heißt – sadece -t, çünkü ß zaten s gibi okunur.",
-            "ich → -e, du → -st, Sie → -en. Atenție: du heißt – doar -t, pentru că ß sună deja ca s.",
-            "ich → -e, du → -st, Sie → -en. Kujdes: du heißt – vetëm -t, sepse ß tingëllon tashmë si s.",
-            "ich → -e, du → -st, Sie → -en. Анхаар: du heißt – зөвхөн -t, учир нь ß аль хэдийн s шиг дуудагддаг.",
-            "ich → -e, du → -st, Sie → -en. Attention : du heißt – seulement -t, car ß se prononce déjà comme s."
+            "ich → -e, du → -st, Sie → -en.",
+            "ich ← ‎-e، du ← ‎-st، Sie ← ‎-en.",
+            "ich ← ‎-e، du ← ‎-st، Sie ← ‎-en.",
+            "ich → -e, du → -st, Sie → -en.",
+            "ich → -e, du → -st, Sie → -en.",
+            "ich → -e, du → -st, Sie → -en.",
+            "ich → -e, du → -st, Sie → -en.",
+            "ich → -e, du → -st, Sie → -en."
           ],
           "table": {
             "head": [
@@ -3119,7 +2958,6 @@ window.KT_DAY = {
             },
             {
               "de": "die Zahl – die Zahlen",
-              "emoji": "🔢",
               "tr": [
                 "число – числа",
                 "الرقم – الأرقام",
@@ -3334,7 +3172,7 @@ window.KT_DAY = {
               ]
             },
             {
-              "de": "groß schreiben",
+              "de": "großschreiben",
               "emoji": "🔠",
               "tr": [
                 "писати з великої літери",
@@ -3386,7 +3224,8 @@ window.KT_DAY = {
                 "fjalia – fjalitë",
                 "өгүүлбэр",
                 "la phrase – les phrases"
-              ]
+              ],
+              "emoji": "📃"
             },
             {
               "de": "der Satzanfang",
@@ -3399,7 +3238,8 @@ window.KT_DAY = {
                 "fillimi i fjalisë",
                 "өгүүлбэрийн эхлэл",
                 "le début de la phrase"
-              ]
+              ],
+              "emoji": "1️⃣"
             },
             {
               "de": "die Tabelle",
@@ -3530,7 +3370,8 @@ window.KT_DAY = {
                 "numri i shtëpisë",
                 "байрны дугаар",
                 "le numéro (de rue)"
-              ]
+              ],
+              "emoji": "#️⃣"
             },
             {
               "de": "die Postleitzahl (PLZ)",
@@ -3575,21 +3416,7 @@ window.KT_DAY = {
               ]
             },
             {
-              "de": "die Nachbarländer",
-              "emoji": "🤝",
-              "tr": [
-                "сусідні країни",
-                "الدول المجاورة",
-                "کشورهای همسایه",
-                "komşu ülkeler",
-                "țările vecine",
-                "vendet fqinje",
-                "хөрш орнууд",
-                "les pays voisins"
-              ]
-            },
-            {
-              "de": "der Kugelschreiber = der Kuli = der Stift",
+              "de": "der Kugelschreiber = der Kuli (≈ der Stift)",
               "emoji": "🖊️",
               "tr": [
                 "ручка",

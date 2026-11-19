@@ -34,8 +34,8 @@ window.KT_UEBEN = {
           why: 'Kinder, Freunde und Familie: du.' },
         { q: 'Im Amt fragt ein Mitarbeiter:', options: ['Was bist du von Beruf?', 'Was ist du von Beruf?', 'Was sind Sie von Beruf?'], answer: 2,
           why: 'Im Amt spricht man formell: Sie. Sie + sind.' },
-        { q: 'In der Pause fragt Olena ihre Freundin:', options: ['Wie geht’s?', 'Wie geht es Ihnen?', 'Wie geht es ihm?'], answer: 0,
-          why: 'Freunde sagen du. „Wie geht’s?“ ist kurz und informell.' },
+        { q: 'In der Pause fragt Olena ihre Freundin:', options: ['Wie geht’s?', 'Wie geht es Ihnen?', 'Wie geht es dir, Frau Weber?'], answer: 0,
+          why: 'Freunde sagen du. „Wie geht’s?“ ist kurz und informell. Mit „Frau + Nachname“ sagt man Sie.' },
         { q: 'Welche Frage ist formell (Sie)?', options: ['Hast du Kinder?', 'Hat du Kinder?', 'Haben Sie Kinder?'], answer: 2,
           why: 'Formell: Haben Sie …? Informell: Hast du …?' },
         { q: 'Sie treffen Ihren Nachbarn, Herrn Weber. Sie kennen ihn nicht gut:', options: ['Hallo! Wie geht’s dir?', 'Guten Tag, Herr Weber! Wie geht es Ihnen?', 'Tschüss, Herr Weber!'], answer: 1,
@@ -111,7 +111,7 @@ window.KT_UEBEN = {
           why: 'der Tag – die Tage → seit drei Tagen.' },
         { text: 'Ich lerne seit vier ___ Deutsch.', options: ['Woche', 'Wochenen', 'Wochen'], answer: 2,
           why: 'die Woche – die Wochen: hat schon -n, also nichts dazu.' },
-        { text: 'Ich lerne seit zwei ___ Deutsch.', options: ['Jahre', 'Jahr', 'Jahren'], answer: 2,
+        { text: 'Ich wohne seit zwei ___ in Essen.', options: ['Jahre', 'Jahr', 'Jahren'], answer: 2,
           why: 'das Jahr – die Jahre → seit zwei Jahren.' },
         { text: 'Ich lerne seit einer ___ Deutsch.', options: ['Woche', 'Wochen', 'Wochenen'], answer: 0,
           why: 'Singular: seit einer Woche – kein -n.' },
@@ -119,6 +119,21 @@ window.KT_UEBEN = {
           why: 'Singular: seit einem Monat – kein -n.' },
         { text: 'Ich wohne seit einem ___ in Essen.', options: ['Jahr', 'Jahren', 'Jahre'], answer: 0,
           why: 'Singular: seit einem Jahr – kein -n.' }
+      ]
+    },
+    {
+      id: 'sprachen', icon: '💬', title: 'Sprachen und Familienstand', type: 'gap',
+      items: [
+        { text: '___ Sprachen sprechen Sie?', options: ['Wie', 'Welche', 'Woher'], answer: 1,
+          why: 'Welche Sprachen …? – mehrere Sprachen.' },
+        { text: 'Ich komme aus der Türkei. Meine Muttersprache ist ___.', options: ['Türkei', 'türkisch', 'Türkisch'], answer: 2,
+          why: 'Sprachen schreibt man groß: Türkisch.' },
+        { text: 'Du ___ Arabisch.', options: ['sprechst', 'sprichst', 'spreche'], answer: 1,
+          why: 'sprechen: du sprichst (e → i).' },
+        { text: 'Mira ___ Ukrainisch und Russisch.', options: ['spricht', 'sprecht', 'sprichst'], answer: 0,
+          why: 'er/sie: spricht (e → i).' },
+        { text: 'Ich habe eine Frau. Ich bin ___.', options: ['ledig', 'verheiratet', 'Einzelkind'], answer: 1,
+          why: 'Mann oder Frau = verheiratet.' }
       ]
     },
     {
@@ -137,7 +152,11 @@ window.KT_UEBEN = {
         { chunks: ['Ich', 'habe', 'zwei Kinder.'],
           why: 'Das Verb (habe) steht auf Platz 2.' },
         { chunks: ['Am Wochenende', 'koche', 'ich', 'gern.'],
-          why: 'Platz 1 ist „Am Wochenende“. Das Verb (koche) steht auf Platz 2.' }
+          why: 'Platz 1 ist „Am Wochenende“. Das Verb (koche) steht auf Platz 2.' },
+        { chunks: ['Haben', 'Sie', 'Kinder?'],
+          why: 'Ja/Nein-Frage: Verb auf Platz 1.' },
+        { chunks: ['Ich', 'habe', '10 Jahre als Koch', 'gearbeitet.'],
+          why: 'haben auf Platz 2, gearbeitet am Ende.' }
       ]
     },
     {
@@ -157,8 +176,8 @@ window.KT_UEBEN = {
           why: 'Verkäufer + -in = Verkäuferin.' },
         { q: 'Er ist Ingenieur. Sie ist …', options: ['Ingenieurin', 'Ingenieurfrau', 'Ingenieuse'], answer: 0,
           why: 'Ingenieur + -in = Ingenieurin.' },
-        { q: 'Welcher Satz ist richtig?', options: ['Ich bin eine Lehrerin.', 'Ich bin Lehrerin.', 'Ich bin die Lehrerin.'], answer: 1,
-          why: 'Beim Beruf sagt man keinen Artikel: Ich bin Lehrerin.' }
+        { q: 'Sie sagen Ihren Beruf. Welcher Satz ist richtig?', options: ['Ich bin eine Lehrerin.', 'Ich bin Lehrerin.', 'Ich bin als Lehrerin.'], answer: 1,
+          why: 'Beim Beruf: kein Artikel. „als“ nur mit arbeiten: Ich arbeite als Lehrerin.' }
       ]
     },
     {
@@ -180,7 +199,7 @@ window.KT_UEBEN = {
           why: 'die Tochter → Ich habe eine Tochter.' },
         { q: 'Ich habe … Kind.', options: ['einen', 'ein', 'eine'], answer: 1,
           why: 'das Kind → Ich habe ein Kind.' },
-        { q: 'Ich habe keine Geschwister. Ich bin …', options: ['Enkel', 'verheiratet', 'Einzelkind'], answer: 2,
+        { q: 'Ich habe keine Geschwister. Ich bin …', options: ['Bruder', 'Geschwister', 'Einzelkind'], answer: 2,
           why: 'Keine Brüder und keine Schwestern = Einzelkind.' },
         { q: 'Meine Tochter hat drei Kinder. Das sind meine …', options: ['Enkel', 'Enkeln', 'Enkels'], answer: 0,
           why: 'der Enkel – die Enkel (ohne -n). Man sagt auch: Enkelkinder.' }
@@ -212,8 +231,10 @@ window.KT_UEBEN = {
     {
       id: 'buchstabieren', icon: '🔤', title: 'Buchstabieren', type: 'choice',
       items: [
+        { q: 'H wie …', options: ['Apfel', 'Esel', 'Hand'], answer: 2,
+          why: 'Hand beginnt mit H.' },
         { q: 'B – R – O – T. Das Wort ist:', options: ['Boot', 'Brot', 'Brett'], answer: 1,
-          why: 'B wie Berta, R wie Reis, O wie Oma, T wie Tag → Brot.' },
+          why: 'B – R – O – T = Brot.' },
         { q: 'A – Doppel-M – A – Doppel-N. Der Name ist:', options: ['Ammann', 'Amman', 'Aman'], answer: 0,
           why: 'Doppel-M = zweimal M, Doppel-N = zweimal N → Ammann.' },
         { q: 'E – I – S. Das Wort ist:', options: ['Ei', 'Ice', 'Eis'], answer: 2,
@@ -227,9 +248,7 @@ window.KT_UEBEN = {
         { q: 'Wie spricht man den Buchstaben Z?', options: ['„sett“ – mit s', '„zett“ – mit ts', '„zi“'], answer: 1,
           why: 'Z heißt „zett“ und klingt wie ts – wie in Zahl.' },
         { q: 'Sie wissen nicht, wie man ein Wort schreibt. Sie fragen:', options: ['Wie schreibt man das?', 'Wie heißt du?', 'Wie geht’s?'], answer: 0,
-          why: 'Mit „Wie schreibt man das?“ fragt man nach den Buchstaben.' },
-        { q: 'H wie …', options: ['Apfel', 'Esel', 'Hand'], answer: 2,
-          why: 'Hand beginnt mit H.' }
+          why: 'Mit „Wie schreibt man das?“ fragt man nach den Buchstaben.' }
       ]
     },
     {

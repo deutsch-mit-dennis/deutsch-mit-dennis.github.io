@@ -29,6 +29,31 @@ tools/kurstagebuch/make_pdf.py   erstellt QR-Code + 2 PDFs (lang mit 8 Sprachen,
 Die Seiten sind nur „Hüllen“: `kt.js` liest `data-view` und `data-date` aus dem `<body>` und lädt die passende Datendatei.
 Sprachwahl wird im Browser gespeichert (`kt-lang`). `?alle=1` an der Adresse zeigt alle 8 Übersetzungen.
 
+## Funktionen
+
+Alles steckt in `kt.js`/`kt.css` und funktioniert für jeden neuen Kurstag automatisch – **keine neuen Datenfelder nötig**.
+Gespeichert wird nur im Browser (`localStorage`). Ist der Speicher gesperrt, funktioniert die Seite trotzdem, nur ohne Merken.
+
+- **Sprache beim ersten Besuch:** Ist noch keine Sprache gespeichert, wird sie aus der Handy-Sprache vorgewählt (wenn eine der 8 Sprachen).
+  Die Sprach-Knöpfe brechen auf dem Handy um (alle sichtbar). Gespeichert wird erst beim Antippen (`kt-lang`).
+- **Protokoll:** großer Knopf „✏️ Üben“ unter der Überschrift, dazu „🃏 Karteikarten“ und „📤 Teilen“.
+  Auf Handys (bis 600 px) sind QR-Bild und „scannen“-Satz ausgeblendet – im Druck/PDF bleiben sie.
+- **„Das kann ich“:** Jedes Lernziel hat 😊 🙂 😕 zum Selbst-Einschätzen (`kt-kann`, nicht im Druck).
+- **Karteikarten** (`<datum>/?karten=1`): alle Wörter aus `words`-Blöcken. Vorne Deutsch + Emoji, Tippen = Rückseite
+  mit Übersetzung. „✓ Weiß ich“ / „✗ Noch nicht“ (kommt ans Ende), Zähler, Richtung umschalten.
+  Bei „Nur Deutsch“/„Alle“ wird zuerst nach der Sprache gefragt. Gewusste Karten: `kt-karten-<datum>`. Nicht im Druck.
+- **Übungen:** Fortschritt wird pro Tag gespeichert (`kt-ueben-<datum>`) und beim Öffnen wiederhergestellt.
+  Ändert sich der Inhalt einer Übung, wird ihr alter Stand verworfen (Prüfsumme). Steckbrief-Eingaben werden **nie** gespeichert.
+  Oben eine schmale, mitlaufende Fortschrittsleiste und Knöpfe für alle Übungen (✓ = fertig).
+  Nach jeder Übung „Weiter ➜“, am Ende eine Abschlusskarte „🎉 Fertig! x von y richtig“ mit „Fehler üben“
+  (nur Übungen mit Fehlern starten neu). „Nochmal“ leert nur diese Übung. Unten: „Meinen Fortschritt löschen“.
+  Rückmeldungen und Knöpfe haben eine Übersetzung in der gewählten Sprache (Texte in `UI` in `kt.js`).
+- **Zuordnen:** Rückmeldung über dem Raster, gefundene Paare bekommen auf beiden Seiten dieselbe Nummer.
+- **Satzbau:** Ein Wort im Satz antippen → es geht zurück.
+- **Übersicht:** pro Tag „✓ x/y“ (erledigte Aufgaben) und „📤 Teilen“.
+- **Teilen:** Handy-Teilen-Menü, sonst WhatsApp-Link + „🔗 Link kopieren“.
+- **„↑“-Knopf** nach dem Scrollen (alle Seiten), Brotkrümel-Links mindestens 44 px hoch.
+
 ## Neuen Kurstag hinzufügen (Beispiel: 2026-11-20)
 
 1. **Daten schreiben:** `daten/2026-11-20.js` (Protokoll) und `daten/2026-11-20-ueben.js` (Übungen) nach `SCHEMA.md`.
