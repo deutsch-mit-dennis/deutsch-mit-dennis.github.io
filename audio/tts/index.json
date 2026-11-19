@@ -1,5 +1,5 @@
 {
-"updated": "2026-11-19T17:33:39Z",
+"updated": "2026-11-19T17:35:18Z",
 "engines": [
 "elevenlabs",
 "gemini",
@@ -2245,21 +2245,21 @@
 "text": "95f9928f5c"
 },
 "es-zahlen-19": {
-"v": "1bbf9e8cc5",
-"engine": "google",
-"sig": "1bbf9e8cc5",
+"v": "51e2ec3df4",
+"engine": "elevenlabs",
+"sig": "51e2ec3df4",
 "text": "675431812e"
 },
 "es-zahlen-2": {
-"v": "94245b4d16",
-"engine": "google",
-"sig": "94245b4d16",
+"v": "c903ff10ee",
+"engine": "elevenlabs",
+"sig": "c903ff10ee",
 "text": "f53f56c348"
 },
 "es-zahlen-20": {
-"v": "508f705c14",
-"engine": "google",
-"sig": "508f705c14",
+"v": "f080f172fa",
+"engine": "elevenlabs",
+"sig": "f080f172fa",
 "text": "cbb7ba4c94"
 },
 "es-zahlen-21": {
