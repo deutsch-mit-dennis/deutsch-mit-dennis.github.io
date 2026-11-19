@@ -1,5 +1,5 @@
 {
-"updated": "2026-11-18T13:43:32Z",
+"updated": "2026-11-19T17:12:00Z",
 "engines": [
 "elevenlabs",
 "gemini",
@@ -520,11 +520,10 @@
 "whole": true
 },
 "es-alphabet-2": {
-"v": "c29cc9de0c",
-"engine": "gemini",
-"sig": "c29cc9de0c",
-"text": "551076e5e2",
-"whole": true
+"v": "41168b0ff9",
+"engine": "elevenlabs",
+"sig": "41168b0ff9",
+"text": "eafdf62ebf"
 },
 "es-alphabet-20": {
 "v": "0f31e5664b",
@@ -2221,27 +2220,27 @@
 "text": "50da79b1d8"
 },
 "es-zahlen-15": {
-"v": "144982ea75",
-"engine": "google",
-"sig": "144982ea75",
+"v": "a4443a56d8",
+"engine": "elevenlabs",
+"sig": "a4443a56d8",
 "text": "067d3adf84"
 },
 "es-zahlen-16": {
-"v": "32a0d6e29d",
-"engine": "google",
-"sig": "32a0d6e29d",
+"v": "127276e32d",
+"engine": "elevenlabs",
+"sig": "127276e32d",
 "text": "bd461d849f"
 },
 "es-zahlen-17": {
-"v": "9d01c51a71",
-"engine": "google",
-"sig": "9d01c51a71",
+"v": "a99a97c8e5",
+"engine": "elevenlabs",
+"sig": "a99a97c8e5",
 "text": "f7c1327bb4"
 },
 "es-zahlen-18": {
-"v": "da28fa1db1",
-"engine": "google",
-"sig": "da28fa1db1",
+"v": "6340df8b61",
+"engine": "elevenlabs",
+"sig": "6340df8b61",
 "text": "95f9928f5c"
 },
 "es-zahlen-19": {
