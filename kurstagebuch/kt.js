@@ -167,8 +167,10 @@
     for (var i = 0; i < LANGS.length; i++) {
       var l = LANGS[i];
       if (!tr[i]) continue;
-      h += '<span class="kt-t" data-l="' + l + '" lang="' + l + '"' + (RTL[l] ? ' dir="rtl"' : '') + '>' +
-        '<span class="kt-l" title="' + GERMAN_NAME[l] + '">' + l + '</span>' + tr[i] + '</span>';
+      // label always left (LTR row), the text itself is an isolated span so RTL scripts keep their order
+      h += '<span class="kt-t' + (RTL[l] ? ' rtl' : '') + '" data-l="' + l + '">' +
+        '<span class="kt-l" title="' + GERMAN_NAME[l] + '">' + l + '</span>' +
+        '<span class="kt-x" lang="' + l + '"' + (RTL[l] ? ' dir="rtl"' : '') + '>' + tr[i] + '</span></span>';
     }
     return h + '</div>';
   }
@@ -244,8 +246,10 @@
           return '<li class="kt-item"><div class="kt-de" lang="de">' + it.de + tag + '</div>' + trHTML(it.tr) + '</li>';
         }).join('') + '</ul>';
       case 'words':
+        // same indent for every word: if one item of the block has an emoji, the others get an empty slot
+        var anyEmoji = (b.items || []).some(function (it) { return it.emoji; });
         return t + '<ul class="kt-items">' + (b.items || []).map(function (it) {
-          var em = it.emoji ? '<span class="kt-emoji" aria-hidden="true">' + it.emoji + '</span>' : '';
+          var em = anyEmoji ? '<span class="kt-emoji" aria-hidden="true">' + (it.emoji || '') + '</span>' : '';
           return '<li class="kt-item"><div class="kt-de" lang="de">' + em + it.de + '</div>' + trHTML(it.tr) + '</li>';
         }).join('') + '</ul>';
       case 'examples':

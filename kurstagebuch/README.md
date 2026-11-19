@@ -52,3 +52,8 @@ Sprachwahl wird im Browser gespeichert (`kt-lang`). `?alle=1` an der Adresse zei
    auf dem Handy-Format (320/390 px) ansehen, PDF öffnen.
 7. **Veröffentlichen:** nur nach OK von Dennis – `git add kurstagebuch tools/kurstagebuch`, `git commit -m "Kurstagebuch: day 2"`, `git push`.
    Nach Änderungen an `kt.css`/`kt.js` die Nummer `?v=…` in allen Seiten-Hüllen erhöhen.
+
+## Qualitätsregeln (von Dennis, 19.11.2026)
+- **Keine Wiederholungen:** Jeder Satz, jedes Wort und jede Grammatikregel steht nur einmal. Was schon in einer Regel-Tabelle steht, kommt nicht noch als Wortliste oder Beispielsatz. Pro Thema höchstens 2 Beispielsätze aus dem Kurs.
+- **Einheitliches Layout:** Übersetzungen immer „Kürzel links, Text daneben“ (auch Arabisch/Persisch). In einer Wortliste haben entweder alle Einträge ein Emoji oder keiner (Lücke wird automatisch freigehalten). Lange Tabellen (z. B. Alphabet) zweispaltig.
+- **Zwei PDFs:** kurz nur Deutsch (zweispaltig, ca. 10 Seiten) und lang mit 8 Sprachen. Beide vor dem Push öffnen und ansehen.
