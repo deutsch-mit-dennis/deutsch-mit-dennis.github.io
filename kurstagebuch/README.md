@@ -23,7 +23,8 @@ kurstagebuch/
   <datum>/ueben/index.html Übungs-Seite
   <datum>/qr-ueben.svg     QR-Code zu den Übungen
   <datum>/protokoll-<datum>.pdf  Druckversion
-tools/kurstagebuch/make_pdf.py   erstellt QR-Code + 2 PDFs (lang mit 8 Sprachen, kurz nur Deutsch)
+  <datum>/arbeitsblatt-<datum>.pdf  Arbeitsblatt + Lösungsseite
+tools/kurstagebuch/make_pdf.py   erstellt QR-Code + 3 PDFs (lang mit 8 Sprachen, kurz nur Deutsch, Arbeitsblatt)
 ```
 
 Die Seiten sind nur „Hüllen“: `kt.js` liest `data-view` und `data-date` aus dem `<body>` und lädt die passende Datendatei.
@@ -53,6 +54,14 @@ Gespeichert wird nur im Browser (`localStorage`). Ist der Speicher gesperrt, fun
 - **Übersicht:** pro Tag „✓ x/y“ (erledigte Aufgaben) und „📤 Teilen“.
 - **Teilen:** Handy-Teilen-Menü, sonst WhatsApp-Link + „🔗 Link kopieren“.
 - **„↑“-Knopf** nach dem Scrollen (alle Seiten), Brotkrümel-Links mindestens 44 px hoch.
+- **Arbeitsblatt** (`<datum>/ueben/?druck=blatt`): druckbare A4-Fassung aller Übungen aus `KT_UEBEN` (schwarz-weiß-tauglich),
+  für jeden Tag automatisch. Kopf „Arbeitsblatt – Tag N: Titel“, Datum, „Name/Datum“-Linien, QR-Code „Online üben mit Lösungen“.
+  Pro Übung: Nummer, Titel, deutsche Anweisung + 8 Übersetzungen klein (Kürzel links). Auswahl: a) b) c) mit Kästchen;
+  Lücke: Schreiblinie + Wörter in Klammern; Satzbau: Wörter gemischt mit „ / “ + Schreiblinie; Zuordnen: 1–n links,
+  a–… rechts gemischt + Antwortzeile; Steckbrief: Feld + Schreiblinie. Reihenfolge fest (gleicher Seed wie die Lösungen,
+  nie dreimal hintereinander derselbe Buchstabe). Danach auf neuer Seite „Lösungen“ (zweispaltig, ohne Steckbrief).
+  `&loesung=0` lässt die Lösungen weg. Ohne Sprachwahl, Knöpfe, Fortschritt und „↑“.
+  Links: Übungsseite unten „🖨️ Arbeitsblatt (PDF)“, Protokoll-Seite in der PDF-Zeile „Arbeitsblatt mit Lösungen“.
 
 ## Neuen Kurstag hinzufügen (Beispiel: 2026-11-20)
 
@@ -70,8 +79,10 @@ Gespeichert wird nur im Browser (`localStorage`). Ist der Speicher gesperrt, fun
 5. **PDF** (im Repo-Ordner):
    ```
    py -X utf8 tools/kurstagebuch/make_pdf.py 2026-11-20 [Zielordner]
-   → protokoll-<datum>.pdf (Deutsch + 8 Sprachen) und protokoll-<datum>-deutsch.pdf (kurz, nur Deutsch, zweispaltig)
+   → protokoll-<datum>.pdf (Deutsch + 8 Sprachen), protokoll-<datum>-deutsch.pdf (kurz, nur Deutsch, zweispaltig)
+     und arbeitsblatt-<datum>.pdf (Arbeitsblatt + Lösungsseite, aus …/ueben/?druck=blatt)
    ```
+   Alle drei werden in den Zielordner kopiert (falls angegeben). Optional `py -m pip install pymupdf` = halb so große PDFs.
    Einmalig nötig: `py -m pip install segno playwright` und `py -m playwright install chromium`.
 6. **Prüfen:** `py -m http.server 8765` starten, `http://localhost:8765/kurstagebuch/2026-11-20/` und `…/ueben/`
    auf dem Handy-Format (320/390 px) ansehen, PDF öffnen.
@@ -81,4 +92,4 @@ Gespeichert wird nur im Browser (`localStorage`). Ist der Speicher gesperrt, fun
 ## Qualitätsregeln (von Dennis, 19.11.2026)
 - **Keine Wiederholungen:** Jeder Satz, jedes Wort und jede Grammatikregel steht nur einmal. Was schon in einer Regel-Tabelle steht, kommt nicht noch als Wortliste oder Beispielsatz. Pro Thema höchstens 2 Beispielsätze aus dem Kurs.
 - **Einheitliches Layout:** Übersetzungen immer „Kürzel links, Text daneben“ (auch Arabisch/Persisch). In einer Wortliste haben entweder alle Einträge ein Emoji oder keiner (Lücke wird automatisch freigehalten). Lange Tabellen (z. B. Alphabet) zweispaltig.
-- **Zwei PDFs:** kurz nur Deutsch (zweispaltig, ca. 10 Seiten) und lang mit 8 Sprachen. Beide vor dem Push öffnen und ansehen.
+- **Drei PDFs:** kurz nur Deutsch (zweispaltig, ca. 10 Seiten), lang mit 8 Sprachen und das Arbeitsblatt mit Lösungen. Alle vor dem Push öffnen und ansehen.

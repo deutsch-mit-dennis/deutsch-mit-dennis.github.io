@@ -1,13 +1,17 @@
-"""Build the printable PDF of one Kurstagebuch day.
+"""Build the printable PDFs of one Kurstagebuch day.
 
 Usage:  py -X utf8 tools/kurstagebuch/make_pdf.py 2026-11-19 [outdir]
-        (creates two PDFs: protokoll-<date>.pdf = German + 8 languages, protokoll-<date>-deutsch.pdf = German only)
+        creates three PDFs in kurstagebuch/<date>/:
+          protokoll-<date>.pdf          protocol, German + 8 languages      (/kurstagebuch/<date>/?alle=1)
+          protokoll-<date>-deutsch.pdf  protocol, German only, two columns  (/kurstagebuch/<date>/?druck=de)
+          arbeitsblatt-<date>.pdf       worksheet + solutions page          (/kurstagebuch/<date>/ueben/?druck=blatt)
 
 - creates kurstagebuch/<date>/qr-ueben.svg if missing (segno)
 - serves the repo root with http.server on a free port
-- renders /kurstagebuch/<date>/?alle=1 in Playwright Chromium (print media)
-- writes kurstagebuch/<date>/protokoll-<date>.pdf (A4) and copies it to outdir if given
-Requires: pip install segno playwright && playwright install chromium
+- renders each page in Playwright Chromium (print media, A4, same margins + footer with page numbers)
+- recompresses each PDF with PyMuPDF if installed and copies it to outdir if given
+- the worksheet is skipped (with a message) if kurstagebuch/daten/<date>-ueben.js is missing
+Requires: pip install segno playwright && playwright install chromium   (optional: pip install pymupdf)
 """
 import functools
 import http.server
@@ -85,18 +89,26 @@ def main() -> int:
     handler = functools.partial(QuietHandler, directory=str(ROOT))
     server = http.server.ThreadingHTTPServer(("127.0.0.1", port), handler)
     threading.Thread(target=server.serve_forever, daemon=True).start()
-    variants = [(day_dir / f"protokoll-{date}.pdf", "alle=1"), (day_dir / f"protokoll-{date}-deutsch.pdf", "druck=de")]
+    # (pdf, page path + query, selector that shows the page has rendered)
+    variants = [
+        (day_dir / f"protokoll-{date}.pdf", f"/kurstagebuch/{date}/?alle=1", ".kt-section"),
+        (day_dir / f"protokoll-{date}-deutsch.pdf", f"/kurstagebuch/{date}/?druck=de", ".kt-section"),
+    ]
+    if (ROOT / "kurstagebuch" / "daten" / f"{date}-ueben.js").exists() and (day_dir / "ueben" / "index.html").exists():
+        variants.append((day_dir / f"arbeitsblatt-{date}.pdf", f"/kurstagebuch/{date}/ueben/?druck=blatt", ".kb-set"))
+    else:
+        print(f"Worksheet skipped: kurstagebuch/daten/{date}-ueben.js or {date}/ueben/index.html missing")
     try:
         from playwright.sync_api import sync_playwright
 
         with sync_playwright() as p:
             browser = p.chromium.launch()
-            for pdf, query in variants:
+            for pdf, path, selector in variants:
                 page = browser.new_page()
                 errors = []
                 page.on("pageerror", lambda e: errors.append(str(e)))
-                page.goto(f"http://127.0.0.1:{port}/kurstagebuch/{date}/?{query}", wait_until="networkidle")
-                page.wait_for_selector(".kt-section", timeout=15000)
+                page.goto(f"http://127.0.0.1:{port}{path}", wait_until="networkidle")
+                page.wait_for_selector(selector, timeout=15000)
                 page.evaluate("document.fonts.ready")
                 page.emulate_media(media="print")
                 page.pdf(
@@ -115,7 +127,7 @@ def main() -> int:
     finally:
         server.shutdown()
         server.server_close()
-    for pdf, _ in variants:
+    for pdf, _, _ in variants:
         shrink(pdf)
         print(f"PDF: {pdf}")
         if outdir:

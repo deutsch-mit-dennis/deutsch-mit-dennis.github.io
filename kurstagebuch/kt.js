@@ -135,6 +135,10 @@
   var cardsMode = params.get('karten') === '1';
   // ?druck=de: German-only print version (translations hidden in print)
   if (params.get('druck') === 'de') body.classList.add('kt-de-only');
+  // ?druck=blatt on the exercise page: printable worksheet (A4) + solutions page; &loesung=0 omits the solutions
+  var blattMode = view === 'ueben' && params.get('druck') === 'blatt';
+  var blattSolutions = params.get('loesung') !== '0';
+  if (blattMode) { body.classList.add('kt-blatt'); forceAll = true; }
   var version = (function () {
     var s = document.currentScript && document.currentScript.src;
     var m = s && s.match(/[?&]v=([^&]+)/);
@@ -379,7 +383,7 @@
     var main = el('main', 'kt-main');
     main.id = 'inhalt';
     body.appendChild(main);
-    body.appendChild(topButton());
+    if (!blattMode) body.appendChild(topButton());
     measureHeader();
     window.addEventListener('resize', measureHeader);
     return main;
@@ -501,7 +505,8 @@
       '<div class="kt-qr-text"><p class="kt-qr-scan">📱 Übungen auf dem Handy: QR-Code scannen</p>' +
       '<span class="kt-pdfnote">' + SITE.replace('https://', '') + uebenUrl + '</span>' +
       '<a class="kt-btn" href="' + uebenUrl + '">Zu den Übungen</a></div>' +
-      '<p class="kt-noprint">PDF zum Drucken: <a href="protokoll-' + date + '-deutsch.pdf" download>kurz, nur Deutsch</a> · <a href="protokoll-' + date + '.pdf" download>lang, mit 8 Sprachen</a></p>';
+      '<p class="kt-noprint">PDF zum Drucken: <a href="protokoll-' + date + '-deutsch.pdf" download>kurz, nur Deutsch</a> · <a href="protokoll-' + date + '.pdf" download>lang, mit 8 Sprachen</a>' +
+      ' · <a href="arbeitsblatt-' + date + '.pdf" download>Arbeitsblatt mit Lösungen</a></p>';
     main.appendChild(qr);
 
     var secs = D.sections || [];
@@ -1093,7 +1098,9 @@
     var foot = el('footer', 'kt-foot');
     foot.innerHTML = '<p>Übersetzungen mit KI erstellt und geprüft. Fehler gefunden? Sag es im Kurs.</p>' +
       '<div class="kt-row"><a class="kt-btn quiet" href="' + BASE + d + '/">← Zum Protokoll</a>' +
-      '<a class="kt-btn quiet" href="' + BASE + '">Alle Kurstage</a></div>';
+      '<a class="kt-btn quiet" href="' + BASE + '">Alle Kurstage</a>' +
+      // the PDF sits next to the protocol page: /kurstagebuch/<date>/arbeitsblatt-<date>.pdf (= ../ from ueben/)
+      '<a class="kt-btn quiet" href="' + BASE + d + '/arbeitsblatt-' + d + '.pdf" download>🖨️ Arbeitsblatt (PDF)</a></div>';
     var wipe = btn('kt-btn quiet kt-small kt-wipe', lbl('resetAll', '🗑️'));
     wipe.addEventListener('click', function () {
       if (!window.confirm('Möchten Sie Ihren Fortschritt löschen?')) return;
@@ -1112,6 +1119,161 @@
     refreshAll();
     measureHeader();
     requestAnimationFrame(function () { requestAnimationFrame(function () { body.classList.remove('kt-still'); }); });
+  }
+
+  /* ---------- worksheet (?druck=blatt on the exercise page) ---------- */
+  // Fixed seed: sheet and solutions always show the same order (independent of the online rounds).
+  var BLATT_SEED = 'blatt';
+  function letter(i) { return String.fromCharCode(97 + i); }
+  function blank(mm) { return '<span class="kb-blank" style="min-width:' + mm + 'mm"></span>'; }
+  function firstSentence(s) {
+    var m = String(s).match(/^.*?[.!?](?=\s|$)/);
+    return m ? m[0] : String(s);
+  }
+  // instructions for paper (no "tippen"); order of translations = LANGS
+  var PAPER_INSTR = {
+    choice: ['Kreuzen Sie die richtige Antwort an.', [
+      'Позначте хрестиком правильну відповідь.', 'ضع علامة × على الإجابة الصحيحة.', 'جواب درست را علامت بزنید.',
+      'Doğru cevabı işaretleyin.', 'Bifați răspunsul corect.', 'Shënoni me (×) përgjigjen e saktë.',
+      'Зөв хариултыг чагтална уу.', 'Cochez la bonne réponse.']],
+    gap: ['Schreiben Sie das richtige Wort in die Lücke.', [
+      'Впишіть правильне слово в пропуск.', 'اكتب الكلمة الصحيحة في الفراغ.', 'کلمه درست را در جای خالی بنویسید.',
+      'Boşluğa doğru kelimeyi yazın.', 'Scrieți cuvântul corect în spațiul liber.', 'Shkruani fjalën e saktë në vendin bosh.',
+      'Хоосон зайд зөв үгийг бичнэ үү.', 'Écrivez le bon mot dans le trou.']],
+    order: ['Schreiben Sie den Satz in der richtigen Reihenfolge.', [
+      'Напишіть речення в правильному порядку.', 'اكتب الجملة بالترتيب الصحيح.', 'جمله را به ترتیب درست بنویسید.',
+      'Cümleyi doğru sırayla yazın.', 'Scrieți propoziția în ordinea corectă.', 'Shkruani fjalinë në rendin e duhur.',
+      'Өгүүлбэрийг зөв дарааллаар бичнэ үү.', 'Écrivez la phrase dans le bon ordre.']],
+    match: ['Was passt zusammen? Schreiben Sie den Buchstaben zur Zahl.', [
+      'Що підходить? Напишіть букву біля цифри.', 'ما الذي يتطابق؟ اكتب الحرف بجانب الرقم.', 'چه چیزی با هم جور است؟ حرف را کنار عدد بنویسید.',
+      'Hangisi uyuyor? Harfi rakamın yanına yazın.', 'Ce se potrivește? Scrieți litera lângă număr.', 'Çfarë përputhet? Shkruani shkronjën pranë numrit.',
+      'Юу тохирох вэ? Тооны хажууд үсгийг бичнэ үү.', 'Qu’est-ce qui va ensemble ? Écrivez la lettre à côté du chiffre.']]
+  };
+  function blattInstr(type) {
+    if (PAPER_INSTR[type]) return PAPER_INSTR[type];
+    var ins = INSTR[type] || ['', []];
+    // paper: "Nichts wird gesendet." makes no sense, keep only the first sentence
+    if (type === 'steckbrief') return [firstSentence(ins[0]), ins[1].map(firstSentence)];
+    return ins;
+  }
+  function rawText(html) { var x = document.createElement('div'); x.innerHTML = html; return x.textContent || ''; } // not trimmed
+  // gap solution: the whole word around the gap ("heiß___" + "e" → "heiße")
+  function gapWord(text, opt) {
+    var parts = String(text).split('___');
+    var pre = (rawText(parts[0]).match(/\S*$/) || [''])[0].replace(/^[„“"'(«]+/, '');
+    var post = (rawText(parts[1] || '').match(/^[^\s.,!?;:…“"')»]*/) || [''])[0];
+    return pre + opt + post;
+  }
+  function blattItems(set) {
+    var items = set.items || [], out = [], sol = [];
+    if (set.type === 'choice') {
+      items.forEach(function (it, qi) {
+        var idx = (it.options || []).map(function (_, i) { return i; });
+        var order = shuffle(idx, set.id + '|' + qi + '|' + BLATT_SEED);
+        // never the same answer letter 3 times in a row (still deterministic: next fixed salt)
+        for (var k = 1; k < 8 && sol.length >= 2 && sol[sol.length - 1] === sol[sol.length - 2] &&
+          letter(order.indexOf(it.answer)) === sol[sol.length - 1]; k++) {
+          order = shuffle(idx, set.id + '|' + qi + '|' + BLATT_SEED + k);
+        }
+        out.push('<div class="kb-item kb-choice" data-n="' + (qi + 1) + '"><p class="kb-q"><span class="kb-n">' + (qi + 1) + '.</span>' +
+          '<span>' + it.q + '</span></p><ul class="kb-opts">' + order.map(function (oi, k) {
+            return '<li data-l="' + letter(k) + '"><span class="kb-box" aria-hidden="true"></span><span class="kb-let">' + letter(k) + ')</span>' +
+              '<span class="kb-otext">' + it.options[oi] + '</span></li>';
+          }).join('') + '</ul></div>');
+        sol.push(letter(order.indexOf(it.answer)));
+      });
+    } else if (set.type === 'gap') {
+      items.forEach(function (it, qi) {
+        var opts = it.options || [];
+        var longest = opts.reduce(function (m, o) { return Math.max(m, plain(o).length); }, 1);
+        var w = Math.min(60, Math.max(14, longest * 4 + 6));
+        var parts = String(it.text).split('___');
+        out.push('<div class="kb-item kb-gap" data-n="' + (qi + 1) + '"><p class="kb-q"><span class="kb-n">' + (qi + 1) + '.</span>' +
+          '<span>' + parts[0] + blank(w) + (parts[1] || '') + ' <span class="kb-hint">(' + opts.join(' / ') + ')</span></span></p></div>');
+        sol.push(gapWord(it.text, opts[it.answer]));
+      });
+    } else if (set.type === 'order') {
+      items.forEach(function (it, qi) {
+        var chunks = it.chunks || [];
+        var idx = chunks.map(function (_, i) { return i; });
+        var sh = shuffle(idx, set.id + '|' + qi + '|' + BLATT_SEED);
+        if (chunks.length > 1 && sameOrder(sh, idx)) sh.push(sh.shift());
+        out.push('<div class="kb-item kb-order" data-n="' + (qi + 1) + '"><p class="kb-q"><span class="kb-n">' + (qi + 1) + '.</span>' +
+          '<span class="kb-chunks">' + sh.map(function (ci) { return chunks[ci]; }).join(' <span class="kb-sep">/</span> ') + '</span></p>' +
+          '<div class="kb-line"></div></div>');
+        sol.push(chunks.join(' '));
+      });
+    } else if (set.type === 'match') {
+      var pairs = (items[0] && items[0].pairs) || [];
+      var ro = pairs.map(function (_, i) { return i; });
+      var sh = shuffle(ro, set.id + '|m|' + BLATT_SEED);
+      if (pairs.length > 1 && sameOrder(sh, ro)) sh.push(sh.shift());
+      var rows = '';
+      pairs.forEach(function (p, i) {
+        // "1." / "a)" like the choice items, so numbers in the data (Zahlen 0–10) are not confused with the labels
+        rows += '<span class="kb-mn">' + (i + 1) + '.</span><span class="kb-mt">' + p[0] + '</span>' +
+          '<span class="kb-mn">' + letter(i) + ')</span><span class="kb-mt" data-l="' + letter(i) + '">' + pairs[sh[i]][1] + '</span>';
+      });
+      out.push('<div class="kb-item kb-match"><div class="kb-mgrid">' + rows + '</div><p class="kb-mans">' +
+        pairs.map(function (_, i) { return '<span><b>' + (i + 1) + '</b> ' + blank(9) + '</span>'; }).join('') + '</p></div>');
+      pairs.forEach(function (_, i) { sol.push(letter(sh.indexOf(i))); });
+    } else if (set.type === 'steckbrief') {
+      ((items[0] && items[0].fields) || []).forEach(function (f) {
+        out.push('<div class="kb-item kb-field"><span class="kb-flabel">' + esc(f.label) +
+          (f.placeholder ? ' <span class="kb-ex">(z. B. ' + esc(f.placeholder) + ')</span>' : '') + '</span><span class="kb-fline"></span></div>');
+      });
+      sol = null;
+    }
+    return { html: out, sol: sol };
+  }
+  function renderBlatt(main) {
+    var U = window.KT_UEBEN;
+    var D = window.KT_DAY || null;
+    var d = U.date || date;
+    var nr = D && D.nr;
+    var title = (D && D.title) || String(U.title || '').replace(/^Übungen:\s*/, '');
+    var weekday = (D && D.weekday) || WEEKDAYS[parseDate(d).getDay()];
+    document.title = 'Arbeitsblatt' + (nr ? ' Tag ' + nr : '') + ': ' + plain(title);
+    var top = el('header', 'kb-top');
+    top.innerHTML = '<div class="kb-title"><p class="kb-kicker">Deutsch mit Dennis · Kurstagebuch' + (D && D.level ? ' ' + esc(D.level) : '') + '</p>' +
+      '<h1>Arbeitsblatt – ' + (nr ? 'Tag ' + esc(nr) : deDate(d)) + ': ' + title + '</h1>' +
+      '<p class="kb-date">' + esc(weekday) + ', ' + deDate(d) + '</p>' +
+      '<p class="kb-namerow"><span>Name: ' + blank(62) + '</span><span>Datum: ' + blank(32) + '</span></p></div>' +
+      '<div class="kb-qr"><img src="' + BASE + d + '/qr-ueben.svg" alt="QR-Code zu den Übungen" width="90" height="90">' +
+      '<span>Online üben mit Lösungen</span></div>';
+    var img = top.querySelector('img');
+    img.addEventListener('error', function () { img.remove(); });
+    main.appendChild(top);
+
+    var sols = [];
+    (U.sets || []).forEach(function (set, si) {
+      var ins = blattInstr(set.type);
+      var r = blattItems(set);
+      var head = '<div class="kb-head"><h2><span class="kb-nr">' + (si + 1) + '</span>' +
+        (set.icon ? '<span class="kb-icon" aria-hidden="true">' + set.icon + '</span>' : '') + '<span>' + set.title + '</span></h2>' +
+        '<div class="kb-instr"><div class="kt-de">' + ins[0] + '</div>' + trHTML(ins[1]) + '</div></div>';
+      var sec = el('section', 'kb-set' + (r.html.length <= 4 || set.type === 'match' ? ' kb-short' : ''));
+      sec.setAttribute('data-set', set.id);
+      sec.setAttribute('data-type', set.type);
+      // heading + instruction never stand alone at the bottom of a page: they travel with the first item
+      sec.innerHTML = '<div class="kb-first">' + head + (r.html[0] || '') + '</div>' + r.html.slice(1).join('');
+      main.appendChild(sec);
+      if (r.sol && r.sol.length) sols.push({ set: set, nr: si + 1, sol: r.sol });
+    });
+
+    if (blattSolutions && sols.length) {
+      var ls = el('section', 'kb-sols');
+      ls.innerHTML = '<h2>Lösungen</h2><p class="kb-solsub">' + (nr ? 'Tag ' + esc(nr) + ': ' : '') + title + '</p>' +
+        '<div class="kb-solcols">' + sols.map(function (s) {
+          var t = s.set.type;
+          var sep = t === 'match' ? ', ' : (t === 'order' ? '' : ' · ');
+          return '<div class="kb-sol kb-sol-' + esc(t) + '" data-set="' + esc(s.set.id) + '"><h3>' + s.nr + ' ' + s.set.title + '</h3><p>' +
+            s.sol.map(function (x, i) {
+              return '<span class="kb-s" data-n="' + (i + 1) + '" data-v="' + esc(plain(x)) + '"><b>' + (i + 1) + '</b> ' + x + '</span>';
+            }).join(sep) + '</p></div>';
+        }).join('') + '</div>';
+      main.appendChild(ls);
+    }
   }
 
   /* ---------- overview ---------- */
@@ -1159,7 +1321,7 @@
         if (!window.KT_UEBEN) return missing(main, 'Die Übungen');
         // Protocol data is optional here (only for "Tag n" in the breadcrumb).
         loadScript(BASE + 'daten/' + date + '.js', go, go);
-        function go() { renderUeben(main); setLang(getLang(), false); }
+        function go() { if (blattMode) renderBlatt(main); else renderUeben(main); setLang(getLang(), false); }
       }, function () { missing(main, 'Die Übungen'); });
     } else {
       loadScript(BASE + 'daten/tage.js', function () { renderUebersicht(main); }, function () { missing(main, 'Die Kurstage'); });

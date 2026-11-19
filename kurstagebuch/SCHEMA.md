@@ -13,6 +13,7 @@ kurstagebuch/
   <date>/ueben/index.html     exercise page  (body data-view="ueben" data-date="<date>")
   <date>/qr-ueben.svg         QR code → https://deutsch-mit-dennis.de/kurstagebuch/<date>/ueben/
   <date>/protokoll-<date>.pdf printable version (all languages, with QR)
+  <date>/arbeitsblatt-<date>.pdf worksheet + solutions (rendered from <date>/ueben/?druck=blatt)
 ```
 All asset paths are absolute (`/kurstagebuch/kt.js`). No build step, no external libraries.
 
@@ -69,6 +70,10 @@ Progress saving, flashcards, self-assessment, share, finishing card etc. (see RE
 **no new data fields are needed**:
 - Flashcards (`<date>/?karten=1`) take every item of all `words` blocks of KT_DAY (`de`, `tr`, `emoji`).
 - Self-assessment buttons are added to each entry of `goals`.
+- Worksheet (`<date>/ueben/?druck=blatt`, `&loesung=0` without solutions) is built from KT_UEBEN only:
+  `choice` uses `q`/`options`/`answer`, `gap` uses `text` (exactly one `___`)/`options`/`answer`, `order` uses `chunks`,
+  `match` uses `pairs`, `steckbrief` uses `fields[].label`/`placeholder`. `why` and `template` are not printed.
+  Option/chunk/pair order comes from a fixed seed (set `id` + item index), so changing a set `id` changes the printed order.
 - Saved exercise progress is keyed by set `id` and checked against a hash of the set's `type` + `items`.
   Keep set `id`s stable; if items change, the old progress of that set is discarded automatically.
 Browser storage keys: `kt-lang`, `kt-ueben-<date>`, `kt-karten-<date>`, `kt-kann` (all optional, wrapped in try/catch).
