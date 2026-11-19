@@ -1,0 +1,53 @@
+# Kurstagebuch
+
+Bereich `/kurstagebuch/` der Website: Für jeden Kurstag des aktuellen Integrationskurses (A1) gibt es
+ein **Protokoll** (Tafelbild, Redemittel, Wörter, Regeln mit Übersetzungen in 8 Sprachen) und
+**Übungen** für das Handy (mit sofortiger Rückmeldung). Dazu ein **PDF** mit allen Übersetzungen und einem QR-Code zu den Übungen.
+
+Datenformat: `SCHEMA.md` (genau daran halten). Sprachen immer in dieser Reihenfolge:
+`uk, ar, fa, tr, ro, sq, mn, fr`.
+
+**Datenschutz:** Nie echte Namen oder persönliche Angaben aus dem Kurs eintragen – nur erfundene Namen
+(z. B. Mira, Ali, Olena, Bat, Ardit). Keinen Kursträger, keine Kursnummer, keine E-Mail.
+
+## Ordner
+
+```
+kurstagebuch/
+  index.html               Übersicht aller Kurstage (liest daten/tage.js)
+  kt.css, kt.js            Aussehen + Programm für alle Seiten (keine Bibliotheken)
+  daten/tage.js            Liste der Kurstage (neuester zuerst)
+  daten/<datum>.js         Protokoll eines Tages (window.KT_DAY)
+  daten/<datum>-ueben.js   Übungen eines Tages (window.KT_UEBEN)
+  <datum>/index.html       Protokoll-Seite
+  <datum>/ueben/index.html Übungs-Seite
+  <datum>/qr-ueben.svg     QR-Code zu den Übungen
+  <datum>/protokoll-<datum>.pdf  Druckversion
+tools/kurstagebuch/make_pdf.py   erstellt QR-Code + PDF
+```
+
+Die Seiten sind nur „Hüllen“: `kt.js` liest `data-view` und `data-date` aus dem `<body>` und lädt die passende Datendatei.
+Sprachwahl wird im Browser gespeichert (`kt-lang`). `?alle=1` an der Adresse zeigt alle 8 Übersetzungen.
+
+## Neuen Kurstag hinzufügen (Beispiel: 2026-11-20)
+
+1. **Daten schreiben:** `daten/2026-11-20.js` (Protokoll) und `daten/2026-11-20-ueben.js` (Übungen) nach `SCHEMA.md`.
+   Fehler aus dem Tafelbild korrigieren, Übersetzungen selbst prüfen.
+2. **Liste ergänzen:** in `daten/tage.js` oben einen Eintrag einfügen:
+   `{date:'2026-11-20', nr:2, title:'…', level:'A1', teaser:'…'}`.
+3. **Seiten kopieren:** Ordner `2026-11-19/` (mit `ueben/`) nach `2026-11-20/` kopieren, aber **ohne** `qr-ueben.svg` und PDF.
+   In beiden `index.html` ändern: `data-date`, `<title>`, `meta description`, `canonical`.
+4. **QR-Code** (im Ordner `kurstagebuch/2026-11-20/`):
+   ```
+   py -X utf8 -c "import segno; segno.make('https://deutsch-mit-dennis.de/kurstagebuch/2026-11-20/ueben/', error='m').save('qr-ueben.svg', scale=8, border=2)"
+   ```
+   (macht Schritt 5 auch automatisch, wenn die Datei fehlt).
+5. **PDF** (im Repo-Ordner):
+   ```
+   py -X utf8 tools/kurstagebuch/make_pdf.py 2026-11-20 [Zielordner]
+   ```
+   Einmalig nötig: `py -m pip install segno playwright` und `py -m playwright install chromium`.
+6. **Prüfen:** `py -m http.server 8765` starten, `http://localhost:8765/kurstagebuch/2026-11-20/` und `…/ueben/`
+   auf dem Handy-Format (320/390 px) ansehen, PDF öffnen.
+7. **Veröffentlichen:** nur nach OK von Dennis – `git add kurstagebuch tools/kurstagebuch`, `git commit -m "Kurstagebuch: day 2"`, `git push`.
+   Nach Änderungen an `kt.css`/`kt.js` die Nummer `?v=…` in allen Seiten-Hüllen erhöhen.

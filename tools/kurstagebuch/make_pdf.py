@@ -1,0 +1,125 @@
+"""Build the printable PDF of one Kurstagebuch day.
+
+Usage:  py -X utf8 tools/kurstagebuch/make_pdf.py 2026-11-19 [outdir]
+
+- creates kurstagebuch/<date>/qr-ueben.svg if missing (segno)
+- serves the repo root with http.server on a free port
+- renders /kurstagebuch/<date>/?alle=1 in Playwright Chromium (print media)
+- writes kurstagebuch/<date>/protokoll-<date>.pdf (A4) and copies it to outdir if given
+Requires: pip install segno playwright && playwright install chromium
+"""
+import functools
+import http.server
+import re
+import shutil
+import socket
+import sys
+import threading
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[2]
+SITE = "https://deutsch-mit-dennis.de"
+FOOTER = (
+    '<div style="width:100%;font-size:7px;color:#566078;font-family:Arial,sans-serif;'
+    'padding:0 12mm;display:flex;justify-content:space-between">'
+    '<span>created by D.Prudnikau · deutsch-mit-dennis.de</span>'
+    '<span><span class="pageNumber"></span> / <span class="totalPages"></span></span></div>'
+)
+
+
+def free_port() -> int:
+    with socket.socket() as s:
+        s.bind(("127.0.0.1", 0))
+        return s.getsockname()[1]
+
+
+class QuietHandler(http.server.SimpleHTTPRequestHandler):
+    def log_message(self, *args):  # keep console clean
+        pass
+
+
+def ensure_qr(day_dir: Path, date: str) -> None:
+    qr = day_dir / "qr-ueben.svg"
+    if qr.exists():
+        return
+    import segno
+
+    segno.make(f"{SITE}/kurstagebuch/{date}/ueben/", error="m").save(str(qr), scale=8, border=2)
+    print(f"QR created: {qr}")
+
+
+def shrink(pdf: Path) -> None:
+    """Optional: recompress the Chromium PDF with PyMuPDF (about half the size). Skipped if not installed."""
+    try:
+        import pymupdf
+    except ImportError:
+        return
+    tmp = pdf.with_suffix(".tmp.pdf")
+    before = pdf.stat().st_size
+    with pymupdf.open(pdf) as doc:
+        doc.save(tmp, garbage=4, deflate=True, deflate_fonts=True, use_objstms=1)
+    if tmp.stat().st_size < before:
+        tmp.replace(pdf)
+        print(f"Compressed: {before // 1024} KB -> {pdf.stat().st_size // 1024} KB")
+    else:
+        tmp.unlink()
+
+
+def main() -> int:
+    if len(sys.argv) < 2 or not re.fullmatch(r"\d{4}-\d{2}-\d{2}", sys.argv[1]):
+        print(__doc__)
+        return 2
+    date = sys.argv[1]
+    outdir = Path(sys.argv[2]).resolve() if len(sys.argv) > 2 else None
+    day_dir = ROOT / "kurstagebuch" / date
+    if not (day_dir / "index.html").exists():
+        print(f"Missing page shell: {day_dir / 'index.html'}")
+        return 1
+    if not (ROOT / "kurstagebuch" / "daten" / f"{date}.js").exists():
+        print(f"Missing data file: kurstagebuch/daten/{date}.js")
+        return 1
+    ensure_qr(day_dir, date)
+
+    port = free_port()
+    handler = functools.partial(QuietHandler, directory=str(ROOT))
+    server = http.server.ThreadingHTTPServer(("127.0.0.1", port), handler)
+    threading.Thread(target=server.serve_forever, daemon=True).start()
+    pdf = day_dir / f"protokoll-{date}.pdf"
+    try:
+        from playwright.sync_api import sync_playwright
+
+        with sync_playwright() as p:
+            browser = p.chromium.launch()
+            page = browser.new_page()
+            errors = []
+            page.on("pageerror", lambda e: errors.append(str(e)))
+            page.goto(f"http://127.0.0.1:{port}/kurstagebuch/{date}/?alle=1", wait_until="networkidle")
+            page.wait_for_selector(".kt-section", timeout=15000)
+            page.evaluate("document.fonts.ready")
+            page.emulate_media(media="print")
+            page.pdf(
+                path=str(pdf),
+                format="A4",
+                print_background=True,
+                margin={"top": "12mm", "bottom": "14mm", "left": "12mm", "right": "12mm"},
+                display_header_footer=True,
+                header_template="<div></div>",
+                footer_template=FOOTER,
+            )
+            browser.close()
+            if errors:
+                print("JS errors on page:", *errors, sep="\n  ")
+    finally:
+        server.shutdown()
+        server.server_close()
+    shrink(pdf)
+    print(f"PDF: {pdf}")
+    if outdir:
+        outdir.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(pdf, outdir / pdf.name)
+        print(f"Copied to: {outdir / pdf.name}")
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())
