@@ -276,7 +276,7 @@ def eleven_remaining():
 
 # Bessere Anbieter ersetzen ältere Aufnahmen; Piper ersetzt keine Premium-Aufnahmen.
 # Gemini und ElevenLabs gelten als gleichwertig: vorhandene Aufnahmen werden nicht noch einmal (kostenpflichtig) neu erzeugt.
-RANK = {'piper': 1, 'google': 2, 'gemini': 3, 'elevenlabs': 3, 'voicestudio': 4}  # voicestudio = recorded locally (Confucius4 clone voice), never replaced by the bot
+RANK = {'piper': 1, 'google': 2, 'gemini': 3, 'elevenlabs': 3, 'voicestudio': 4, 'manual': 4}  # voicestudio/manual = takes chosen by Dennis, never replaced by the bot
 
 def prio(item):
     """Zuerst Prüfungs-Hörtexte (Simulationen und Hörtraining, neueste zuerst), dann Beispiele, dann kurze Sätze."""
