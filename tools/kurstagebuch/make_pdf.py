@@ -132,8 +132,24 @@ def main() -> int:
         print(f"PDF: {pdf}")
         if outdir:
             outdir.mkdir(parents=True, exist_ok=True)
-            shutil.copy2(pdf, outdir / pdf.name)
-            print(f"Copied to: {outdir / pdf.name}")
+            # copies for the WhatsApp group get Dennis' names: "19.11.26_Kurze Version-deutsch.pdf" …
+            y, m, d = date.split("-")
+            nice = {f"protokoll-{date}-deutsch.pdf": "Kurze Version-deutsch",
+                    f"protokoll-{date}.pdf": "Lange Version mit Übersetzungen",
+                    f"arbeitsblatt-{date}.pdf": None}.get(pdf.name, pdf.name)
+            day = f"{d}.{m}.{y[2:]}"
+            # one folder per lesson day, like Dennis keeps it: <outdir>/19.11.26/
+            target_dir = outdir / day
+            target_dir.mkdir(parents=True, exist_ok=True)
+            if pdf.name == f"arbeitsblatt-{date}.pdf":
+                target = target_dir / f"Arbeitsblatt {day}.pdf"
+            else:
+                target = target_dir / f"{day}_{nice}.pdf"
+            if target.exists() and "--force" not in sys.argv:
+                print(f"Exists, not overwritten (use --force): {target}")
+                continue
+            shutil.copy2(pdf, target)
+            print(f"Copied to: {target}")
     return 0
 
 
