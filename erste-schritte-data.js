@@ -100,7 +100,7 @@
         items: [
           ["A", "Apfel", "A"],
           ["B", "Buch", "Be"],
-          ["C", "Computer", "Ze"],
+          ["C", "Computer", "Zeh"],
           ["D", "Dusche", "De"],
           ["E", "Ei", "E"],
           ["F", "Fenster", "Eff"],
