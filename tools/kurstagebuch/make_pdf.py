@@ -1,6 +1,7 @@
 """Build the printable PDF of one Kurstagebuch day.
 
 Usage:  py -X utf8 tools/kurstagebuch/make_pdf.py 2026-11-19 [outdir]
+        (creates two PDFs: protokoll-<date>.pdf = German + 8 languages, protokoll-<date>-deutsch.pdf = German only)
 
 - creates kurstagebuch/<date>/qr-ueben.svg if missing (segno)
 - serves the repo root with http.server on a free port
@@ -84,40 +85,43 @@ def main() -> int:
     handler = functools.partial(QuietHandler, directory=str(ROOT))
     server = http.server.ThreadingHTTPServer(("127.0.0.1", port), handler)
     threading.Thread(target=server.serve_forever, daemon=True).start()
-    pdf = day_dir / f"protokoll-{date}.pdf"
+    variants = [(day_dir / f"protokoll-{date}.pdf", "alle=1"), (day_dir / f"protokoll-{date}-deutsch.pdf", "druck=de")]
     try:
         from playwright.sync_api import sync_playwright
 
         with sync_playwright() as p:
             browser = p.chromium.launch()
-            page = browser.new_page()
-            errors = []
-            page.on("pageerror", lambda e: errors.append(str(e)))
-            page.goto(f"http://127.0.0.1:{port}/kurstagebuch/{date}/?alle=1", wait_until="networkidle")
-            page.wait_for_selector(".kt-section", timeout=15000)
-            page.evaluate("document.fonts.ready")
-            page.emulate_media(media="print")
-            page.pdf(
-                path=str(pdf),
-                format="A4",
-                print_background=True,
-                margin={"top": "12mm", "bottom": "14mm", "left": "12mm", "right": "12mm"},
-                display_header_footer=True,
-                header_template="<div></div>",
-                footer_template=FOOTER,
-            )
+            for pdf, query in variants:
+                page = browser.new_page()
+                errors = []
+                page.on("pageerror", lambda e: errors.append(str(e)))
+                page.goto(f"http://127.0.0.1:{port}/kurstagebuch/{date}/?{query}", wait_until="networkidle")
+                page.wait_for_selector(".kt-section", timeout=15000)
+                page.evaluate("document.fonts.ready")
+                page.emulate_media(media="print")
+                page.pdf(
+                    path=str(pdf),
+                    format="A4",
+                    print_background=True,
+                    margin={"top": "12mm", "bottom": "14mm", "left": "12mm", "right": "12mm"},
+                    display_header_footer=True,
+                    header_template="<div></div>",
+                    footer_template=FOOTER,
+                )
+                page.close()
+                if errors:
+                    print("JS errors on page:", *errors, sep="\n  ")
             browser.close()
-            if errors:
-                print("JS errors on page:", *errors, sep="\n  ")
     finally:
         server.shutdown()
         server.server_close()
-    shrink(pdf)
-    print(f"PDF: {pdf}")
-    if outdir:
-        outdir.mkdir(parents=True, exist_ok=True)
-        shutil.copy2(pdf, outdir / pdf.name)
-        print(f"Copied to: {outdir / pdf.name}")
+    for pdf, _ in variants:
+        shrink(pdf)
+        print(f"PDF: {pdf}")
+        if outdir:
+            outdir.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(pdf, outdir / pdf.name)
+            print(f"Copied to: {outdir / pdf.name}")
     return 0
 
 

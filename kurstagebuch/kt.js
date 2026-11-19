@@ -78,6 +78,8 @@
   var date = body.getAttribute('data-date') || '';
   var params = new URLSearchParams(location.search);
   var forceAll = params.get('alle') === '1';
+  // ?druck=de: German-only print version (translations hidden in print)
+  if (params.get('druck') === 'de') body.classList.add('kt-de-only');
   var version = (function () {
     var s = document.currentScript && document.currentScript.src;
     var m = s && s.match(/[?&]v=([^&]+)/);
@@ -285,7 +287,8 @@
     qr.innerHTML = '<img src="' + BASE + D.date + '/qr-ueben.svg" alt="QR-Code zu den Übungen" width="112" height="112">' +
       '<div class="kt-qr-text"><p>📱 Übungen auf dem Handy: QR-Code scannen</p>' +
       '<span class="kt-pdfnote">' + SITE.replace('https://', '') + uebenUrl + '</span>' +
-      '<a class="kt-btn" href="' + uebenUrl + '">Zu den Übungen</a></div>';
+      '<a class="kt-btn" href="' + uebenUrl + '">Zu den Übungen</a></div>' +
+      '<p class="kt-noprint">PDF zum Drucken: <a href="protokoll-' + date + '-deutsch.pdf" download>kurz, nur Deutsch</a> · <a href="protokoll-' + date + '.pdf" download>lang, mit 8 Sprachen</a></p>';
     main.appendChild(qr);
 
     var secs = D.sections || [];

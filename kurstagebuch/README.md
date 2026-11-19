@@ -23,7 +23,7 @@ kurstagebuch/
   <datum>/ueben/index.html Übungs-Seite
   <datum>/qr-ueben.svg     QR-Code zu den Übungen
   <datum>/protokoll-<datum>.pdf  Druckversion
-tools/kurstagebuch/make_pdf.py   erstellt QR-Code + PDF
+tools/kurstagebuch/make_pdf.py   erstellt QR-Code + 2 PDFs (lang mit 8 Sprachen, kurz nur Deutsch)
 ```
 
 Die Seiten sind nur „Hüllen“: `kt.js` liest `data-view` und `data-date` aus dem `<body>` und lädt die passende Datendatei.
@@ -45,6 +45,7 @@ Sprachwahl wird im Browser gespeichert (`kt-lang`). `?alle=1` an der Adresse zei
 5. **PDF** (im Repo-Ordner):
    ```
    py -X utf8 tools/kurstagebuch/make_pdf.py 2026-11-20 [Zielordner]
+   → protokoll-<datum>.pdf (Deutsch + 8 Sprachen) und protokoll-<datum>-deutsch.pdf (kurz, nur Deutsch, zweispaltig)
    ```
    Einmalig nötig: `py -m pip install segno playwright` und `py -m playwright install chromium`.
 6. **Prüfen:** `py -m http.server 8765` starten, `http://localhost:8765/kurstagebuch/2026-11-20/` und `…/ueben/`
