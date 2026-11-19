@@ -1,9 +1,10 @@
 {
-"updated": "2026-11-19T17:12:00Z",
+"updated": "2026-11-19T17:33:39Z",
 "engines": [
 "elevenlabs",
 "gemini",
-"google"
+"google",
+"voicestudio"
 ],
 "files": {
 "b2-1-01": {
@@ -520,9 +521,9 @@
 "whole": true
 },
 "es-alphabet-2": {
-"v": "41168b0ff9",
-"engine": "elevenlabs",
-"sig": "41168b0ff9",
+"v": "78e1ece789",
+"engine": "voicestudio",
+"sig": "78e1ece789",
 "text": "eafdf62ebf"
 },
 "es-alphabet-20": {
