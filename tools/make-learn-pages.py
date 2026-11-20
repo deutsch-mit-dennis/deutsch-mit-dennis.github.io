@@ -83,6 +83,20 @@ def seo_title(t):
     return full if len(full) < 60 else t
 
 
+def fit_title(*cands):
+    """First candidate that stays under 60 chars (seo_title then appends the brand if it still fits)."""
+    for c in cands:
+        if len(c) < 60:
+            return c
+    return cands[-1]
+
+
+def theme_of(title):
+    """'Lesen A1 – Schilder, Formulare' -> 'Schilder, Formulare'; 'Hören im Alltag' -> 'im Alltag'."""
+    parts = re.split(r"\s+[–-]\s+", title, maxsplit=1)
+    return parts[1] if len(parts) > 1 else re.sub(r"^(Lesen|Hören)\s+", "", title)
+
+
 def seo_desc(d, n=154):
     d = " ".join(d.split())
     return d if len(d) <= n else d[: n - 1].rsplit(" ", 1)[0].rstrip(",;:–-") + "…"
@@ -97,8 +111,8 @@ def plain(s):
     return re.sub(r"\*(.+?)\*", r"\1", str(s))
 
 
-def learning_resource(path, name, desc, level, kind):
-    return {
+def learning_resource(path, name, desc, level, kind, teaches=None):
+    ld = {
         "@context": "https://schema.org",
         "@type": "LearningResource",
         "name": name,
@@ -119,6 +133,9 @@ def learning_resource(path, name, desc, level, kind):
             "name": "Dennis Prudnikau",
         },
     }
+    if teaches:
+        ld["teaches"] = teaches
+    return ld
 
 
 def page(path, title, desc, body, crumbs, og="start", extra_ld=None):
@@ -277,10 +294,22 @@ for i, t in enumerate(G):
 <p><a class="btn" href="/#grammatik/{e(t["id"])}">▶ Alle {n_items} Aufgaben üben</a>{f' <a class="btn ghost" href="/grammatik/{nxt["id"]}/">Nächstes Thema →</a>' if nxt else ""}</p>
 <h2>Weitere Grammatik {e(t["level"])}</h2><ul class="list">{more}</ul>
 <p><a href="/kurs/{t["level"].lower()}/">Zum Kurs {e(t["level"])}</a> · <a href="/grammatik/">Alle Grammatik-Themen</a></p>"""
-    desc = f"{topic} ({t['level']}) einfach erklärt: {plain(t['kurz'])}"
-    title = f"{topic}: Übungen {t['level']} mit Lösungen"
-    if len(title) >= 60:
-        title = f"{topic}: Übungen {t['level']}"
+    lv = t["level"]
+    topic = topic[:1].upper() + topic[1:]  # "haben und sein" -> "Haben und sein"
+    short_topic = re.split(r"\s+[–-]\s+", topic)[0]  # 'Wo? Wohin? Woher? – in, nach…' -> 'Wo? Wohin? Woher?'
+    desc = f"{topic} {lv}: kostenlos erklärt, mit {n_items} Übungen (Auswahl, Lücken, Sätze bilden) und Lösungen. {plain(t['kurz'])}"
+    # full name first: 'Präteritum: war und hatte' ranks for 'präteritum war hatte' (Search Console 2026-11)
+    # ...but only when the part after ':' is keywords ('war und hatte'), not an example sentence ('Ich stehe auf.')
+    sub = name.split(":", 1)[1].strip() if ":" in name else ""
+    full = " ".join(name.replace(":", " ").split()) if sub and sub[:1].islower() and not any(c in sub for c in ".!?") else topic
+    full = full[:1].upper() + full[1:]
+    title = fit_title(
+        f"{full} {lv}: Übungen mit Lösungen",
+        f"{topic} {lv}: Übungen mit Lösungen",
+        f"{short_topic} {lv}: Übungen mit Lösungen",
+        f"{topic} {lv}: Übungen",
+        f"{short_topic} {lv}: Übungen",
+    )
     urls.append(
         page(
             path,
@@ -289,7 +318,9 @@ for i, t in enumerate(G):
             body,
             [("Grammatik", "grammatik"), (topic, path)],
             "start",
-            learning_resource(path, title, seo_desc(desc), t["level"], "Exercise"),
+            learning_resource(
+                path, title, seo_desc(desc), lv, "Exercise", topic
+            ),
         )
     )
 
@@ -539,9 +570,15 @@ for st in D["reading"]:
 {parts}
 <p class="muted">Alle Lesetexte sind eigene Übungstexte, keine offiziellen Prüfungsaufgaben. Namen, Adressen und Zahlen sind erfunden.</p>
 <p>{" · ".join(f'<a href="/lesen/{o["id"]}/">{e(o["title"])}</a>' for o in D["reading"] if o["id"] != st["id"])}</p>"""
-    title = f"Leseverstehen {st['level']}: {len(st['items'])} Texte mit Lösungen"
+    lv, th = st["level"], theme_of(st["title"])
+    base = f"Lesetexte {lv} {th}" if th.startswith("im ") else f"Lesetexte {lv}: {th}"
+    title = fit_title(
+        f"{base} mit Lösungen",
+        f"Lesetexte {lv}: {len(st['items'])} Texte mit Lösungen",
+        base,
+    )
     desc = (
-        f"{len(st['items'])} kurze Lesetexte Deutsch {st['level']} mit Fragen und Lösungen: "
+        f"{len(st['items'])} Lesetexte Deutsch {lv} kostenlos mit Fragen und Lösungen: "
         + ", ".join(i["title"] for i in st["items"][:6])
         + "."
     )
@@ -580,8 +617,14 @@ for sid, st in D["listening"].items():
 <p><a class="btn" href="/#hoeren/{e(sid)}">▶ Hörtexte in der App anhören</a></p>
 {parts}
 <p class="muted">Alle Hörtexte sind eigene Übungstexte, keine offiziellen Prüfungsaufgaben.</p>"""
-    title = f"Hörverstehen {st['level']}: {len(st['items'])} Hörtexte mit Lösungen"
-    desc = f"{len(st['items'])} kurze Hörtexte Deutsch {st['level']} mit Fragen, Text zum Mitlesen und Lösungen – kostenlos online üben."
+    lv, th = st["level"], theme_of(st["title"])
+    base = f"Hörverstehen {lv} {th}" if th.startswith("im ") else f"Hörverstehen {lv}: {th}"
+    title = fit_title(
+        f"{base} mit Lösungen",
+        f"Hörverstehen {lv}: {len(st['items'])} Hörtexte mit Lösungen",
+        base,
+    )
+    desc = f"{len(st['items'])} Hörtexte Deutsch {lv} zum kostenlosen Üben: {th} – mit Fragen, Text zum Mitlesen und Lösungen."
     urls.append(
         page(
             path,
@@ -765,7 +808,7 @@ if MATS:
         others = " · ".join(f'<a href="/material/{o.lower()}/">{o}</a>' for o in LVS[:4] if o != lv)
         path = f"material/{lv.lower()}"
         title = (
-            "DTB B2 und telc B2 Übungen als PDF – kostenlos"
+            "telc B2 und DTB B2 Übungen als PDF – kostenlos"
             if lv == "B2"
             else f"Arbeitsblätter Deutsch {lv} als PDF – kostenlos"
         )
@@ -776,7 +819,7 @@ if MATS:
 {secs}
 <p>Andere Niveaus: {others} · <a href="/material/">Alle Arbeitsblätter</a></p>"""
         desc = (
-            f"{len(its)} kostenlose PDFs zur Deutsch B2 Prüfungsvorbereitung: DTB B2 Übungen, telc B2 Übungen, Grammatik und Wortschatz – mit Lösungen zum Ausdrucken."
+            f"{len(its)} kostenlose PDFs für B2: telc B2 Sprachbausteine (Grammatik, Wortschatz), Lesen, Hören, B2-Wortliste und DTB B2 – mit Lösungen."
             if lv == "B2"
             else f"{len(its)} kostenlose Arbeitsblätter Deutsch {lv} als PDF: " + ", ".join(m["title"].split(":")[0] for m in its[:4]) + " und mehr – mit Lösungen."
         )
@@ -793,10 +836,10 @@ if MATS:
 LEVELS = D.get("levels") or {}
 LV_TITLE = {
     "A0": ("Deutsch A0 für Anfänger: die ersten Schritte", "Deutsch A0: die ersten Schritte – kostenlos für Anfänger"),
-    "A1": ("Deutsch A1: Lektionen, Übungen und Arbeitsblätter", "Deutsch A1 lernen: Lektionen, Übungen, PDFs"),
-    "A2": ("Deutsch A2: Lektionen, Übungen und DTZ-Vorbereitung", "Deutsch A2: Übungen, DTZ-Vorbereitung, PDFs"),
-    "B1": ("Deutsch B1: Übungen und Prüfungsvorbereitung", "Deutsch B1: Übungen und Prüfungsvorbereitung"),
-    "B2": ("Deutsch B2: Prüfungsvorbereitung telc B2 und DTB B2", "Deutsch B2 Prüfungsvorbereitung kostenlos"),
+    "A1": ("Deutsch A1: Lektionen, Übungen und Arbeitsblätter", "Deutsch A1 Übungen mit Lösungen: Lektionen, PDFs"),
+    "A2": ("Deutsch A2: Lektionen, Übungen und DTZ-Vorbereitung", "Deutsch A2 Übungen kostenlos: DTZ-Vorbereitung, PDFs"),
+    "B1": ("Deutsch B1: Übungen und Prüfungsvorbereitung", "Deutsch B1 Übungen & Prüfung: telc B1, DTZ, DTB online"),
+    "B2": ("Deutsch B2: Prüfungsvorbereitung telc B2 und DTB B2", "B2 Prüfung Übungen kostenlos: telc B2 und DTB B2"),
 }
 LV_INTRO = {
     "A0": "Du fängst ganz neu mit Deutsch an? Hier lernst du die ersten Wörter mit Bildern und Ton: begrüßen, das Alphabet, Zahlen, Farben und wichtige Sätze im Kurs. Danach geht es mit den ersten Lektionen auf Niveau A1 weiter – kostenlos und ohne Anmeldung.",

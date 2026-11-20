@@ -70,7 +70,7 @@ Gespeichert wird nur im Browser (`localStorage`). Ist der Speicher gesperrt, fun
 2. **Liste ergänzen:** in `daten/tage.js` oben einen Eintrag einfügen:
    `{date:'2026-11-20', nr:2, title:'…', level:'A1', teaser:'…'}`.
 3. **Seiten kopieren:** Ordner `2026-11-19/` (mit `ueben/`) nach `2026-11-20/` kopieren, aber **ohne** `qr-ueben.svg` und PDF.
-   In beiden `index.html` ändern: `data-date`, `<title>`, `meta description`, `canonical`.
+   In beiden `index.html` ändern: `data-date`, `<title>`, `meta description`, `canonical` und den Block `<header class="kt-seo">` (H1 + Kurzbeschreibung für Google; kt.js entfernt ihn beim Laden).
 4. **QR-Code** (im Ordner `kurstagebuch/2026-11-20/`):
    ```
    py -X utf8 -c "import segno; segno.make('https://deutsch-mit-dennis.de/kurstagebuch/2026-11-20/ueben/', error='m').save('qr-ueben.svg', scale=8, border=2)"

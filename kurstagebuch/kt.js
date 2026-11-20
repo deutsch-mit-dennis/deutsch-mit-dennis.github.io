@@ -128,6 +128,8 @@
   };
 
   var body = document.body;
+  // static heading for search engines (no-JS view); the app renders its own heading
+  var seo = document.querySelector('.kt-seo'); if (seo) seo.remove();
   var view = body.getAttribute('data-view') || 'uebersicht';
   var date = body.getAttribute('data-date') || '';
   var params = new URLSearchParams(location.search);

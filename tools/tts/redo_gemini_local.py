@@ -42,8 +42,9 @@ def http_capped(url, body, hdr):
     return raw
 g.http = http_capped
 
-keys = json.load(open(os.path.join(HERE, 'redo-keys.json'), encoding='utf-8'))
-done_f = os.path.join(HERE, 'redo-done.json')
+LIST = next((a.split('=', 1)[1] for a in sys.argv if a.startswith('--list=')), 'redo')  # --list=google -> google-keys.json
+keys = json.load(open(os.path.join(HERE, f'{LIST}-keys.json'), encoding='utf-8'))
+done_f = os.path.join(HERE, f'{LIST}-done.json')
 done = set(json.load(open(done_f, encoding='utf-8'))) if os.path.exists(done_f) else set()
 entries = [e for e in g.load_entries() if e['key'] in set(keys) and e['key'] not in done]
 chars = sum(len((s.get('say') or s['text']).strip()) for e in entries for s in e['segments'])

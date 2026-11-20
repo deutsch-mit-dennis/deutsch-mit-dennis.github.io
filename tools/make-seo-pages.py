@@ -67,6 +67,12 @@ def seo_desc(d, n=154):
     return d if len(d) <= n else d[: n - 1].rsplit(" ", 1)[0].rstrip(",;:–-") + "…"
 
 
+def cut(t, n):
+    """shorten t to at most n characters at a word boundary, with an ellipsis."""
+    t = " ".join(t.split())
+    return t if len(t) <= n else t[: n - 1].rsplit(" ", 1)[0].rstrip(" ,;:–-?.") + "…"
+
+
 def page(path, title, desc, body, crumbs, og="start", extra_ld=None, ogtype="article", script=""):
     url = f"{SITE}/{path}/"
     bl = [
@@ -192,6 +198,8 @@ for i, s in enumerate(songs):
         for a, b in s.get("vocab") or []
     )
     gap = s.get("gap") or {}
+    nvoc = len(s.get("vocab") or [])
+    ngap = len(gap.get("items") or [])
     gap_html = ""
     if gap.get("items"):
         gap_html = (
@@ -210,17 +218,24 @@ for i, s in enumerate(songs):
 <p><span class="tag">Niveau {e(s["level"])}</span><span class="tag">Lied zum Deutschlernen</span></p>
 <p class="lead">{e(s.get("intro", ""))}</p>
 <p><a class="btn" href="/#lieder/{e(s["id"])}">▶ Lied anhören und üben</a></p>
-<p><b>Thema:</b> {e(s.get("theme", ""))}<br><b>Grammatik:</b> {e(s.get("grammar", ""))}</p>
+<h2>Das lernst du mit diesem Lied</h2>
+<ul class="list"><li><b>Thema:</b> {e(s.get("theme", ""))}</li><li><b>Grammatik:</b> {e(s.get("grammar", ""))}</li><li><b>Niveau:</b> {e(s["level"])}</li>{f"<li><b>Wortschatz:</b> {nvoc} Wörter aus dem Lied</li>" if nvoc else ""}{f"<li><b>Übung:</b> {ngap} Sätze im Lückentext mit Lösungen</li>" if ngap else ""}</ul>
 <h2>Liedtext</h2><div class="lyrics">{lyrics_html(s.get("lyrics", ""))}</div>
 <p class="small">Text: Dzianis Prudnikau. Musik mit KI erstellt (Suno).</p>
 {f"<h2>Wörter aus dem Lied</h2><table>{voc}</table>" if voc else ""}
 {gap_html}
 <h2>Weitere Lieder</h2><p>{f'<a href="/lieder/{prev["id"]}/">← {e(prev["title"])} ({prev["level"]})</a><br>' if prev else ""}{f'<a href="/lieder/{nxt["id"]}/">{e(nxt["title"])} ({nxt["level"]}) →</a><br>' if nxt else ""}<a href="/lieder/alle/">Alle {len(songs)} Lieder im Überblick</a></p>"""
-    desc = f"Deutsch lernen mit dem Lied „{s['title']}“ (Niveau {s['level']}): {s.get('theme', '')}. Mit Liedtext, Wörtern und Lückentext."
+    goal = s.get("theme", "").rstrip(". ")
+    gram = s.get("grammar", "").rstrip(". ")
+    desc = (
+        f"Lied „{s['title']}“ ({s['level']}): Du lernst {goal}"
+        + (f" und übst {gram}" if gram else "")
+        + f". Mit Liedtext{f', {nvoc} Wörtern' if nvoc else ''}{' und Lückentext' if ngap else ''}."
+    )
     urls.append(
         page(
             f"lieder/{s['id']}",
-            f"{s['title']} – Lied {s['level']}",
+            f"Lied: {s['title']} ({s['level']}) – Deutsch lernen mit Musik",
             desc[:300],
             body,
             [("Lieder", "lieder"), (s["title"], f"lieder/{s['id']}")],
@@ -340,8 +355,8 @@ for slug, name, qs in groups:
         + quelle
         + '<p class="small">Erklärungen („Warum?“): Deutsch mit Dennis – nicht vom BAMF.</p>'
     )
-    first = qs[0]["q"][:90]
-    desc = f"Test „Leben in Deutschland“: {name} mit richtigen Antworten, z. B. „{first}“. Kostenlos üben mit Prüfungssimulation."
+    firsts = "; ".join(f"„{cut(q['q'], 48)}“" for q in qs[:2])
+    desc = f"Leben in Deutschland Test: {name} mit richtigen Antworten und Erklärung, z. B. {firsts}. Kostenlos üben."
     ttl = f"Leben in Deutschland: {name.replace('Nordrhein-Westfalen', 'NRW')} mit Antworten"
     if len(ttl) >= 60:  # long state names: keep the keyword, drop the long test name
         ttl = f"LiD-{name} mit Antworten"
@@ -374,19 +389,33 @@ for i, q in enumerate(singles):
     why = WARUM.get(q["id"])
     prev_a = f'<a href="/lid/{SINGLE[singles[i - 1]["id"]]}/">← Frage {singles[i - 1]["nr"]}</a>' if i else ""
     next_a = f'<a href="/lid/{SINGLE[singles[i + 1]["id"]]}/">Frage {singles[i + 1]["nr"]} →</a>' if i + 1 < len(singles) else ""
+    near = singles[max(0, i - 2): i] + singles[i + 1: i + 3]
+    near_html = (
+        "<h2>Fragen davor und danach</h2><ul class=\"list\">"
+        + "".join(f'<li><a href="/lid/{SINGLE[n["id"]]}/">Frage {n["nr"]}: {e(n["q"])}</a></li>' for n in near)
+        + "</ul>"
+    )
     body = (
         f'<h1>Leben in Deutschland – Frage {nr}</h1>'
         f'<div class="q"><h2 style="font-size:1.15rem;margin-top:0">{e(q["q"])}</h2>{f"<div>{imgs}</div>" if imgs else ""}<ol type="1">{lis}</ol></div>'
         f'<p><b>Richtige Antwort:</b> {e(right)}</p>'
         + (f'<h2>Warum?</h2><p>{e(why)}</p>' if why else "")
         + f'<p class="pn">{prev_a}{next_a}</p>'
+        + near_html +
         '<p><a class="btn" href="/#lid">▶ Alle 310 Fragen interaktiv üben</a></p>'
         f'<p>Diese Frage im Zusammenhang: <a href="/lid/{group_slug}/#{e(q["id"])}">{e(group_name)}</a> · <a href="/lid/fragen/">Alle Fragen im Überblick</a> · <a href="/simulation/lid/">Einbürgerungstest online üben (33 Fragen mit Uhr)</a></p>'
         + quelle
         + '<p class="small">Erklärung („Warum?“): Deutsch mit Dennis – nicht vom BAMF.</p>'
     )
-    ttl = f"Leben in Deutschland Frage {nr}: Antwort und Erklärung"
-    desc = f"LiD-Frage {nr}: „{q['q']}“ Richtige Antwort: {right}."
+    qq = " ".join(q["q"].split())
+    pre = f"Frage {nr}: "
+    if len(pre) + len(qq) + len(" – Leben in Deutschland") <= 59:
+        ttl = f"{pre}{qq} – Leben in Deutschland"
+    else:
+        ttl = f"{pre}{cut(qq, 59 - len(pre) - len(' – LiD'))} – LiD"
+    desc = f"Leben in Deutschland, Frage {nr}: Richtige Antwort ist „{right.rstrip('.')}“."
+    if why:
+        desc += " " + why
     urls.append(
         page(
             f"lid/{slug}",
@@ -410,16 +439,16 @@ body = (
     + "</ul>"
     + quelle
 )
-LID_ALL_DESC = "Alle 300 allgemeinen Fragen und die Fragen für alle 16 Bundesländer zum Test „Leben in Deutschland“ – mit richtigen Antworten und kurzer Erklärung. Kostenlos üben."
+LID_ALL_DESC = "Leben in Deutschland Test: alle 300 allgemeinen Fragen und die Fragen aller 16 Bundesländer mit richtigen Antworten und kurzer Erklärung. Kostenlos üben."
 urls.append(
     page(
         "lid/fragen",
-        "Leben in Deutschland: alle Fragen mit Antworten",
+        "Leben in Deutschland Test: alle Fragen mit Antworten",
         LID_ALL_DESC,
         body,
         [("Leben in Deutschland", "lid"), ("Alle Fragen", "lid/fragen")],
         "lid",
-        learning_resource("lid/fragen", "Leben in Deutschland: alle Fragen mit Antworten", LID_ALL_DESC, LID_LEVEL, "Quiz"),
+        learning_resource("lid/fragen", "Leben in Deutschland Test: alle Fragen mit Antworten", LID_ALL_DESC, LID_LEVEL, "Quiz"),
     )
 )
 
@@ -450,7 +479,14 @@ for s in sims:
         + ", ".join(x["title"] for x in s["sections"])
         + "."
     )
-    sim_title = f"{s['short'] or s['title']} – kostenlose Probeprüfung online"
+    # titles follow real search queries (Search Console 2026-11: 'telc b1 modelltest online', 'deutsch b1 beruf', 'dtz test online')
+    sim_title = {
+        'telc-b1': 'telc B1 Modelltest online – kostenlose Probeprüfung',
+        'dtb-b1': 'Deutsch B1 Beruf (DTB): Modelltest online kostenlos',
+        'dtz': 'DTZ Modelltest online – kostenlose Probeprüfung B1',
+        'telc-b2': 'telc B2 Modelltest online – kostenlose Probeprüfung',
+        'dtb-b2': 'Deutsch B2 Beruf (DTB): Modelltest online kostenlos',
+    }.get(s['id'], f"{s['short'] or s['title']}: Modelltest online kostenlos")
     urls.append(
         page(
             f"simulation/{s['id']}",

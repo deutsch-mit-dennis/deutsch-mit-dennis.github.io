@@ -280,7 +280,9 @@ def eleven_remaining():
 
 # Bessere Anbieter ersetzen ältere Aufnahmen; Piper ersetzt keine Premium-Aufnahmen.
 # Gemini und ElevenLabs gelten als gleichwertig: vorhandene Aufnahmen werden nicht noch einmal (kostenpflichtig) neu erzeugt.
-RANK = {'piper': 1, 'google': 2, 'gemini': 3, 'elevenlabs': 3, 'voicestudio': 4, 'manual': 4}  # voicestudio/manual = takes chosen by Dennis, never replaced by the bot
+# google = 3 since 2026-11-20: the audit showed Google Chirp is clearer than Gemini for single words
+# (Gemini spoke 'Drei' like 'Tie'), so existing Google takes are no longer upgraded automatically.
+RANK = {'piper': 1, 'google': 3, 'gemini': 3, 'elevenlabs': 3, 'voicestudio': 4, 'manual': 4}  # voicestudio/manual = takes chosen by Dennis, never replaced by the bot
 
 def prio(item):
     """Zuerst Prüfungs-Hörtexte (Simulationen und Hörtraining, neueste zuerst), dann Beispiele, dann kurze Sätze."""
