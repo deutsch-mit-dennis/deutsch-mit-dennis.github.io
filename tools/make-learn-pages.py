@@ -18,6 +18,8 @@ import subprocess
 import datetime
 
 R = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+# Official exam figures (GEO: verifiable statistics with source). Every value checked in the source PDF, see the file header.
+STATS = json.load(open(os.path.join(R, "tools", "pruefung-statistik.json"), encoding="utf-8"))
 TODAY = datetime.date.today()
 TODAY_ISO = TODAY.isoformat()  # dateModified = day of the generator run
 TODAY_DE = TODAY.strftime("%d.%m.%Y")
@@ -784,7 +786,18 @@ if FK:
             + "".join(f"<li>{e(t)}</li>" for t in kurz)
             + f'</ul><p class="small">Stand: {e(STAND)} · Quelle: {src_names}</p></section>'
         ) if kurz else ""
-        faq = FAQ.get(fid) or []
+        st = STATS["seiten"].get(fid)
+        stat_html = ""
+        faq = list(FAQ.get(fid) or [])
+        if st:
+            q = STATS["quellen"][st["quelle"]]
+            stat_html = (
+                '<section class="box" aria-label="Zahlen und Fakten"><h2>Zahlen: So viele bestehen</h2><ul class="list">'
+                + "".join(f"<li>{e(t)}</li>" for t in st["fakten"])
+                + f'</ul><p class="small">Quelle: <a href="{e(q["url"])}" rel="noopener nofollow">{e(q["name"])}</a>, {e(st["fundstelle"])}</p></section>'
+            )
+            if st.get("faq"):
+                faq.append(tuple(st["faq"]))
         faq_html = (
             '<h2>Häufige Fragen</h2>'
             + "".join(f"<h3>{e(q)}</h3><p>{e(a)}</p>" for q, a in faq)
@@ -801,6 +814,7 @@ if FK:
 <p><span class="tag">{e(x["tag"])}</span><span class="tag">Stand: {e(STAND)}</span></p>
 <p class="lead">{e(x["lead"])}</p>
 {kurz_html}
+{stat_html}
 <h2>Die Teile der Prüfung</h2>
 {rows}
 {src_line(x.get("partsSrc"))}
@@ -816,10 +830,65 @@ if FK:
         if faq_ld:
             ld_list.append(faq_ld)
         urls.append(page(path, title, desc, body, [("Prüfungsinfos", "pruefungsinfo"), (x["short"], path)], "pruefung", ld_list, stand=STAND))
+    # Comparison tables (GEO: tables + direct answer + sources). All cell texts come from pruefung-fakten.js (same sentences as KURZ/FAQ);
+    # durations are built from the per-part times in FK["data"][id]["parts"].
+    def times(fid):
+        return "<br>".join(f"{e(r[0])}: {e(r[1])}" for r in FK["data"][fid]["parts"])
+
+    def cmp_table(caption, ids, cells, keys):
+        head = "".join(f'<th scope="col"><a href="/pruefungsinfo/{i}/">{e(FK["data"][i]["short"])}</a></th>' for i in ids)
+        body_rows = ""
+        for label, vals in cells:
+            tds = "".join(f"<td>{v}</td>" for v in vals)
+            body_rows += f'<tr><th scope="row">{e(label)}</th>{tds}</tr>'
+        body_rows += '<tr><th scope="row">Dauer der Teile</th>' + "".join(f"<td>{times(i)}</td>" for i in ids) + "</tr>"
+        links = " · ".join(f'<a href="{e(SRC[k][1])}" rel="noopener nofollow">{e(SRC[k][0])}</a>' for k in keys if k in SRC)
+        return (
+            f'<div style="overflow-x:auto"><table><caption>{e(caption)}</caption><thead><tr><th scope="col">Merkmal</th>{head}</tr></thead>'
+            f"<tbody>{body_rows}</tbody></table></div>"
+            f'<p class="small">Stand: {e(STAND)} · Quellen: {links}</p>'
+        )
+
+    cmp_html = ""
+    if all(i in FK["data"] for i in ("dtz", "telc-b1", "dtb-b1", "telc-b2", "dtb-b2")):
+        t_b1 = cmp_table(
+            "DTZ, telc B1 oder DTB B1 im Vergleich",
+            ["dtz", "telc-b1", "dtb-b1"],
+            [
+                ("Zweck / für wen", ["Abschlusstest im Integrationskurs; kostenlos im Kurs", "Allgemeine Deutschprüfung, ohne Kurs möglich (Anmeldung beim telc Prüfungszentrum)", "Prüfung am Ende eines Berufssprachkurses B1; nicht als Selbstzahler"]),
+                ("Niveau", ["A2 oder B1", "B1", "B1"]),
+                ("Punkte", ["Ergebnis nach Teilen: Hören/Lesen (45), Schreiben (20), Sprechen (100)", "300 Punkte: 225 schriftlich, 75 mündlich", "240 Punkte: je 60 für Lesen, Hören, Schreiben, Sprechen"]),
+                ("Bestehensregel", ["B1 im Sprechen und B1 in einem schriftlichen Teil; der dritte Teil mindestens A2 (seit 1. November 2026)", "60 % schriftlich (135 von 225) und 60 % mündlich (45 von 75)", "Mindestens 144 Punkte (60 %); in mindestens drei Teilen mehr als 36 Punkte"]),
+                ("Wiederholung", ["Auf eigene Kosten beliebig oft", "Ganze Prüfung beliebig oft; einzelner Teil bis Ende des nächsten Kalenderjahres", "Nur ganz, nicht einzelne Teile"]),
+                ("Ergebnis / Zertifikat", ["Unter A2 kein Zertifikat, nur Ergebnisbogen", "Zertifikat ohne Ablaufdatum", "Zertifikat für den Beruf; ob es reicht, entscheidet die Stelle"]),
+            ],
+            ["gastFaq", "gastBlick", "telcB1", "telcB1Ueb", "telcReg", "telcDtbB1", "bamfDtbDurch"],
+        )
+        t_b2 = cmp_table(
+            "telc B2 oder DTB B2 im Vergleich",
+            ["telc-b2", "dtb-b2"],
+            [
+                ("Zweck / für wen", ["Allgemeine Deutschprüfung, ohne Kurs möglich (Anmeldung beim telc Prüfungszentrum)", "Prüfung am Ende eines Berufssprachkurses B2; nicht als Selbstzahler"]),
+                ("Niveau", ["B2", "B2"]),
+                ("Punkte", ["300 Punkte: 225 schriftlich, 75 mündlich", "240 Punkte: je 60 für Lesen, Hören, Schreiben, Sprechen"]),
+                ("Bestehensregel", ["60 % schriftlich (135 von 225) und 60 % mündlich (45 von 75)", "Mindestens 144 Punkte (60 %); in mindestens drei Fertigkeiten 36 von 60 Punkten; 120 bis 143 Punkte: „B2 knapp nicht erfüllt“"]),
+                ("Wiederholung", ["Ganze Prüfung beliebig oft", "Nur ganz, nicht einzelne Teile"]),
+                ("Ergebnis / Zertifikat", ["Zertifikat ohne Ablaufdatum", "Zertifikat; ob es reicht, entscheidet die Stelle"]),
+            ],
+            ["telcB2", "telcReg", "telcDtbB2", "bamfDtbB2", "bamfDtbDurch"],
+        )
+        cmp_html = (
+            '<h2>DTZ, telc B1 oder DTB B1 – welche Prüfung passt zu mir?</h2>'
+            "<p><b>Kurz gesagt:</b> Im Integrationskurs machst du den DTZ, nach einem Berufssprachkurs den DTB. Ohne Kurs bleibt telc, das du bei einem Prüfungszentrum buchst.</p>"
+            + t_b1
+            + "<h2>telc B2 oder DTB B2 – welche Prüfung passt zu mir?</h2>"
+            "<p><b>Kurz gesagt:</b> telc B2 kannst du ohne Kurs machen. Den DTB B2 gibt es nur am Ende eines Berufssprachkurses.</p>"
+            + t_b2
+        )
     cards = "".join(f'<li><a href="/pruefungsinfo/{fid}/"><b>{e(x["title"])}</b><small>{e(x["lead"])}</small></a></li>' for fid, x in F)
     urls.append(page("pruefungsinfo", "Deutschprüfungen: Aufbau, Punkte, Anmeldung",
                      "DTZ, telc B1/B2, DTB B1/B2 und Leben in Deutschland: Aufbau, Dauer, Punkte, Bestehen, Anmeldung und Kosten – mit Quelle und Stand.",
-                     f'<h1>Deutschprüfungen im Überblick</h1><p class="lead">Aufbau, Dauer, Punkte, Bestehensregeln und Anmeldung für sechs Prüfungen. Jede Angabe hat eine Quelle und ein Datum (Stand: {e(STAND)}).</p><ul class="grid">{cards}</ul><p><a class="btn" href="/simulation/">Zu den Probeprüfungen</a></p>',
+                     f'<h1>Deutschprüfungen im Überblick</h1><p class="lead">Aufbau, Dauer, Punkte, Bestehensregeln und Anmeldung für sechs Prüfungen. Jede Angabe hat eine Quelle und ein Datum (Stand: {e(STAND)}).</p><ul class="grid">{cards}</ul>{cmp_html}<p><a class="btn" href="/simulation/">Zu den Probeprüfungen</a></p>',
                      [("Prüfungsinfos", "pruefungsinfo")], "pruefung", stand=STAND))
 
 # ---------------- worksheets /material/ + /material/<niveau>/ (DM.materials, site-data.js) ----------------

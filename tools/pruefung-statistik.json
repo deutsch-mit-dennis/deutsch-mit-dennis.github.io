@@ -1,0 +1,47 @@
+{
+  "_hinweis": "Offizielle Kennzahlen für /pruefungsinfo/ (GEO). Jede Zahl am 20.11.2026 in der Originalquelle geprüft (PDF-Text ausgelesen). Nur Werte mit Quelle und Seite eintragen.",
+  "quellen": {
+    "bamf-ik-2025": {
+      "name": "BAMF: Bericht zur Integrationskursgeschäftsstatistik für das Jahr 2025 (Abfragestand 1. April 2026)",
+      "url": "https://www.bamf.de/SharedDocs/Anlagen/DE/Statistik/Integrationskurszahlen/Bundesweit/2025-integrationskursgeschaeftsstatistik_bund.pdf?__blob=publicationFile&v=2"
+    },
+    "bamf-bsk-2024": {
+      "name": "BAMF: Jahresbericht Berufssprachkurse 2024",
+      "url": "https://www.bamf.de/SharedDocs/Anlagen/DE/Integration/Berufsbezsprachf-ESF-BAMF/BSK-Jahresberichte/bsk-jahresbericht-2024.pdf?__blob=publicationFile&v=2"
+    }
+  },
+  "seiten": {
+    "dtz": {
+      "quelle": "bamf-ik-2025",
+      "fundstelle": "S. 17",
+      "fakten": [
+        "2025 haben 318.550 Menschen den DTZ geschrieben (alle Kursarten).",
+        "55,0 % erreichten B1, 32,2 % A2 und 12,8 % unter A2 (2024: 56,3 % B1)."
+      ],
+      "faq": ["Wie viele Menschen schaffen im DTZ das Niveau B1?", "Im Jahr 2025 erreichten 55,0 % der 318.550 Teilnehmenden B1 und 32,2 % A2 (BAMF, Integrationskursgeschäftsstatistik 2025)."]
+    },
+    "lid": {
+      "quelle": "bamf-ik-2025",
+      "fundstelle": "S. 21",
+      "fakten": [
+        "2025 haben 318.633 Menschen den Test „Leben in Deutschland“ gemacht, 89,6 % haben bestanden (2024: 91,6 %).",
+        "Von den 63.773 externen Teilnehmenden (Selbstzahlende, z. B. für die Einbürgerung) bestanden 91,8 %."
+      ],
+      "faq": ["Wie viele Menschen bestehen den Test „Leben in Deutschland“?", "Im Jahr 2025 bestanden 89,6 % der 318.633 Teilnehmenden (BAMF, Integrationskursgeschäftsstatistik 2025)."]
+    },
+    "dtb-b1": {
+      "quelle": "bamf-bsk-2024",
+      "fundstelle": "Tabelle 17c, S. 43",
+      "fakten": [
+        "2024 haben 14.117 Menschen nach einem B1-Berufssprachkurs den DTB geschrieben; 45,3 % erreichten B1."
+      ]
+    },
+    "dtb-b2": {
+      "quelle": "bamf-bsk-2024",
+      "fundstelle": "Tabelle 17c, S. 43",
+      "fakten": [
+        "2024 haben 111.281 Menschen nach einem B2-Berufssprachkurs den DTB geschrieben; 58,3 % erreichten B2."
+      ]
+    }
+  }
+}
