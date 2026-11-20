@@ -95,7 +95,7 @@ Gespeichert wird nur im Browser (`localStorage`). Ist der Speicher gesperrt, fun
 - **Drei PDFs:** kurz nur Deutsch (zweispaltig, ca. 10 Seiten), lang mit 8 Sprachen und das Arbeitsblatt mit Lösungen. Alle vor dem Push öffnen und ansehen.
 
 ## Ablage und WhatsApp (Dennis, 19.11.2026)
-- `make_pdf.py <datum> "C:\Unterlagen\Arbeit\VHS Gevelsberg\IK 209"` legt die PDFs in den Tagesordner `IK 209\TT.MM.JJ\`:
+- `make_pdf.py <datum> "<Kursordner>"` legt die PDFs in den Tagesordner `<Kursordner>\TT.MM.JJ\`:
   `TT.MM.JJ_Kurze Version-deutsch.pdf`, `TT.MM.JJ_Lange Version mit Übersetzungen.pdf`, `Arbeitsblatt TT.MM.JJ.pdf`.
   Vorhandene Dateien werden nie überschrieben (nur mit `--force`).
 - Dennis schickt die 3 PDFs nach dem Unterricht in die WhatsApp-Gruppe. Claude liefert dazu jedes Mal einen kurzen Begleittext in einfacher Sprache (A1, „ihr“, Emojis).

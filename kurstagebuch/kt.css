@@ -403,3 +403,5 @@ body.kt-blatt .kb-instr [dir="rtl"]{font-size:1em}
   body.kt-blatt{font-size:11pt;line-height:1.35}
   .kt-blatt main.kt-main{padding:0;margin:0;max-width:none;box-shadow:none}
 }
+
+@media print{.kt-text a[href*="kahoot"]::after{content:" (" attr(href) ")";font-size:8.5pt;word-break:break-all}}

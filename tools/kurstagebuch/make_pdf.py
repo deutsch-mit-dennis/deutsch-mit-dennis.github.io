@@ -111,6 +111,13 @@ def main() -> int:
                 page.wait_for_selector(selector, timeout=15000)
                 page.evaluate("document.fonts.ready")
                 page.emulate_media(media="print")
+                # links in the PDF must point to the live site, not to this temporary local server
+                page.evaluate(
+                    "site => document.querySelectorAll('a[href]').forEach(a => {"
+                    " if (a.origin === location.origin && !a.getAttribute('href').startsWith('#'))"
+                    " a.href = site + a.pathname + a.search + a.hash; })",
+                    SITE,
+                )
                 page.pdf(
                     path=str(pdf),
                     format="A4",
