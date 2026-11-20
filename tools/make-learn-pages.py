@@ -15,8 +15,18 @@ import json
 import os
 import re
 import subprocess
+import datetime
 
 R = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+TODAY = datetime.date.today()
+TODAY_ISO = TODAY.isoformat()  # dateModified = day of the generator run
+TODAY_DE = TODAY.strftime("%d.%m.%Y")
+AUTHOR = {
+    "@type": "Person",
+    "@id": "https://deutsch-mit-dennis.de/#dennis",
+    "name": "Dennis Prudnikau",
+    "url": "https://deutsch-mit-dennis.de/ueber-mich/",
+}
 SITE = "https://deutsch-mit-dennis.de"
 e = html.escape
 
@@ -127,18 +137,15 @@ def learning_resource(path, name, desc, level, kind, teaches=None):
             "name": "Deutsch mit Dennis",
             "url": SITE + "/",
         },
-        "author": {
-            "@type": "Person",
-            "@id": SITE + "/#dennis",
-            "name": "Dennis Prudnikau",
-        },
+        "author": dict(AUTHOR),
+        "dateModified": TODAY_ISO,
     }
     if teaches:
         ld["teaches"] = teaches
     return ld
 
 
-def page(path, title, desc, body, crumbs, og="start", extra_ld=None):
+def page(path, title, desc, body, crumbs, og="start", extra_ld=None, stand=None):
     url = f"{SITE}/{path}/"
     bl = [
         {
@@ -158,6 +165,12 @@ def page(path, title, desc, body, crumbs, og="start", extra_ld=None):
     ]
     if extra_ld:
         blocks += extra_ld if isinstance(extra_ld, list) else [extra_ld]
+    for b in blocks[1:]:  # every content block: author + dateModified
+        b.setdefault("dateModified", TODAY_ISO)
+        if b.get("@type") in ("LearningResource", "Course", "FAQPage", "ItemList", "Article"):
+            b.setdefault("author", dict(AUTHOR))
+    if "Stand:" not in body:
+        body += f'\n<p class="small stand">Stand: {e(stand or TODAY_DE)}</p>'
     ld = "\n".join(
         '<script type="application/ld+json">'
         + json.dumps(b, ensure_ascii=False)
@@ -649,6 +662,98 @@ if FK:
         links = " · ".join(f'<a href="{e(SRC[k][1])}" rel="noopener nofollow">{e(SRC[k][0])}</a>' for k in (keys or []) if k in SRC)
         return f'<p class="small">Quelle: {links} · Stand: {e(STAND)}</p>' if links else f'<p class="small">Stand: {e(STAND)}</p>'
 
+    # Short facts + FAQ per exam. Every sentence is taken from pruefung-fakten.js (no extra facts);
+    # questions whose answer is missing there ("Bitte beim Prüfungszentrum fragen") are left out.
+    KURZ = {
+        "dtz": [
+            "Der DTZ ist der Abschlusstest für Deutsch im Integrationskurs und zeigt das Niveau A2 oder B1.",
+            "Er hat vier Teile: Hören (ca. 25 Min.), Lesen (45 Min.), Schreiben (30 Min.) und Sprechen (ca. 16 Min.).",
+            "Das Gesamtergebnis B1 braucht B1 im Sprechen und B1 in einem schriftlichen Teil; im anderen Teil mindestens A2.",
+            "Im Integrationskurs ist der Abschlusstest kostenlos; die Prüfung macht seit Januar 2023 g.a.s.t.",
+        ],
+        "lid": [
+            "Der Test „Leben in Deutschland“ ist der Abschlusstest im Orientierungskurs.",
+            "Er hat 33 Fragen mit je vier Antworten (eine richtig) und dauert 60 Minuten.",
+            "Im Orientierungskurs ist er mit mindestens 15 richtigen Antworten bestanden, der Einbürgerungstest mit mindestens 17.",
+            "Der Einbürgerungstest kostet 25 Euro.",
+        ],
+        "telc-b1": [
+            "telc Deutsch B1 ist eine allgemeine Deutschprüfung auf dem Niveau B1, die du ohne Kurs machen kannst.",
+            "Es gibt 300 Punkte: 225 schriftlich und 75 mündlich.",
+            "Bestanden hast du mit 60 % in der schriftlichen (135 von 225) und 60 % in der mündlichen Prüfung (45 von 75).",
+            "Nicht bestandene Teile (schriftlich oder mündlich) kannst du bis zum Ende des nächsten Kalenderjahres allein wiederholen.",
+        ],
+        "telc-b2": [
+            "telc Deutsch B2 ist eine allgemeine Deutschprüfung auf dem Niveau B2, die du ohne Kurs machen kannst.",
+            "Es gibt 300 Punkte: 225 schriftlich und 75 mündlich.",
+            "Bestanden hast du mit 60 % in der schriftlichen (135 von 225) und 60 % in der mündlichen Prüfung (45 von 75).",
+            "Du kannst die ganze Prüfung beliebig oft wiederholen; auf dem Zertifikat steht kein Ablaufdatum.",
+        ],
+        "dtb-b1": [
+            "Der DTB B1 ist die Prüfung am Ende eines Berufssprachkurses B1 und prüft Deutsch am Arbeitsplatz.",
+            "Es gibt 240 Punkte: je 60 für Lesen, Hören, Schreiben und Sprechen.",
+            "Bestanden hast du mit mindestens 144 Punkten (60 Prozent).",
+            "Ohne Berufssprachkurs kannst du die Prüfung nicht als Selbstzahler machen.",
+        ],
+        "dtb-b2": [
+            "Der DTB B2 ist die Prüfung am Ende eines Berufssprachkurses B2 und prüft Deutsch am Arbeitsplatz.",
+            "Es gibt 240 Punkte: je 60 für Lesen, Hören, Schreiben und Sprechen; die schriftliche Prüfung dauert 125 Minuten.",
+            "Bestanden hast du mit mindestens 144 Punkten (60 %); mit 120 bis 143 Punkten steht im Ergebnis „B2 knapp nicht erfüllt“.",
+            "Ohne Berufssprachkurs kannst du die Prüfung nicht als Selbstzahler machen.",
+        ],
+    }
+    FAQ = {
+        "dtz": [
+            ("Aus welchen Teilen besteht der DTZ?", "Der DTZ hat vier Teile: Hören (ca. 25 Min., 20 Aufgaben), Lesen (45 Min., 25 Aufgaben), Schreiben (30 Min., ein Text) und Sprechen (ca. 16 Min., zu zweit)."),
+            ("Wie viele Punkte braucht man im DTZ für B1?", "Für B1 brauchst du in Hören/Lesen 33–45 Punkte, im Schreiben 15–20 Punkte und im Sprechen 75–100 Punkte."),
+            ("Wann hat man den DTZ mit B1 bestanden?", "Du brauchst B1 im Sprechen und B1 in einem schriftlichen Teil (Hören/Lesen oder Schreiben). Seit 1. November 2026 muss der dritte Teil mindestens A2 sein."),
+            ("Was passiert, wenn man unter A2 bleibt?", "Unter A2 bekommst du kein Zertifikat, sondern nur einen Ergebnisbogen."),
+            ("Was kostet der DTZ?", "Im Integrationskurs ist der Abschlusstest kostenlos. Den Preis für Selbstzahler nennt das Prüfungszentrum."),
+            ("Wie oft kann man den DTZ wiederholen?", "Auf eigene Kosten kannst du den DTZ beliebig oft wiederholen."),
+            ("Wie melde ich mich zum DTZ an?", "Im Integrationskurs meldet dich dein Kursträger an. Die Anmeldung läuft bis 21 Tage vor dem Termin; Prüfungen gibt es alle zwei Wochen an einem Freitag und einem Samstag."),
+        ],
+        "lid": [
+            ("Wie viele Fragen hat der Test „Leben in Deutschland“?", "Der Test hat 33 Fragen mit je vier Antworten, von denen eine richtig ist. 30 Fragen gelten für ganz Deutschland, 3 betreffen dein Bundesland."),
+            ("Wie lange dauert der Test „Leben in Deutschland“?", "Der Test dauert 60 Minuten."),
+            ("Wie viele richtige Antworten braucht man für „Leben in Deutschland“?", "Im Orientierungskurs ist der Test mit mindestens 15 richtigen Antworten bestanden, der Einbürgerungstest mit mindestens 17."),
+            ("Was kostet der Einbürgerungstest?", "Der Einbürgerungstest kostet 25 Euro. Im Integrationskurs ist der Abschlusstest kostenlos."),
+            ("Sind die Fragen öffentlich?", "Ja. Es gibt 300 Fragen für ganz Deutschland und 10 Fragen für jedes Bundesland."),
+            ("Was braucht man am Prüfungstag?", "Du brauchst einen gültigen Ausweis mit Foto, der gut sichtbar auf deinem Tisch liegt."),
+        ],
+        "telc-b1": [
+            ("Wie ist telc Deutsch B1 aufgebaut?", "Die Prüfung hat Leseverstehen und Sprachbausteine (90 Min.), Hörverstehen (ca. 30 Min.), Schriftlicher Ausdruck (30 Min.) und eine Mündliche Prüfung (ca. 15 Min., zu zweit)."),
+            ("Wie viele Punkte braucht man für telc B1?", "Es gibt 300 Punkte. Du brauchst 60 % in der schriftlichen Prüfung (135 von 225 Punkten) und 60 % in der mündlichen Prüfung (45 von 75 Punkten)."),
+            ("Kann man einzelne Teile von telc B1 wiederholen?", "Ja. Hast du nur den schriftlichen oder nur den mündlichen Teil nicht bestanden, kannst du ihn bis zum Ende des nächsten Kalenderjahres allein wiederholen."),
+            ("Wie oft kann man telc B1 wiederholen?", "Die ganze Prüfung kannst du beliebig oft wiederholen."),
+            ("Braucht man für telc B1 einen Kurs?", "Nein, du kannst die Prüfung ohne Kurs machen und meldest dich bei einem telc Prüfungszentrum an."),
+            ("Läuft das telc-Zertifikat ab?", "Nein, auf dem Zertifikat steht kein Ablaufdatum."),
+        ],
+        "telc-b2": [
+            ("Wie ist telc Deutsch B2 aufgebaut?", "Die Prüfung hat Leseverstehen und Sprachbausteine (90 Min.), Hörverstehen (ca. 20 Min.), Schriftlicher Ausdruck (30 Min.) und eine Mündliche Prüfung (ca. 15 Min.)."),
+            ("Wie viele Punkte braucht man für telc B2?", "Es gibt 300 Punkte. Du brauchst 60 % in der schriftlichen Prüfung (135 von 225 Punkten) und 60 % in der mündlichen Prüfung (45 von 75 Punkten)."),
+            ("Wie oft kann man telc B2 wiederholen?", "Die ganze Prüfung kannst du beliebig oft wiederholen."),
+            ("Braucht man für telc B2 einen Kurs?", "Nein, du kannst die Prüfung ohne Kurs machen und meldest dich bei einem telc Prüfungszentrum an."),
+            ("Wie wird das Sprechen bei telc B2 bewertet?", "Es gibt vier Kriterien: Ausdrucksfähigkeit, Aufgabenbewältigung, formale Richtigkeit sowie Aussprache und Intonation."),
+            ("Läuft das telc-Zertifikat ab?", "Nein, auf dem Zertifikat steht kein Ablaufdatum."),
+        ],
+        "dtb-b1": [
+            ("Wie ist der DTB B1 aufgebaut?", "Der DTB B1 hat Lesen (40 Min.), Lesen und Schreiben (20 Min.), Hören (20 Min.), Hören und Schreiben (5 Min.), Sprachbausteine und Schreiben (10 Min.) und Sprechen (ca. 16 Min., zu zweit)."),
+            ("Wie viele Punkte braucht man für den DTB B1?", "Es gibt 240 Punkte (je 60 für Lesen, Hören, Schreiben und Sprechen). Bestanden hast du mit mindestens 144 Punkten (60 Prozent)."),
+            ("Gibt es beim DTB B1 Mindestpunkte pro Teil?", "Ja. Du brauchst in mindestens drei der vier Teile mehr als 36 Punkte. Ein schwächerer Teil ist möglich, wenn er zwischen 40 und 60 Prozent liegt."),
+            ("Wer kann den DTB B1 machen?", "Der DTB gehört zu den Berufssprachkursen des BAMF. Ohne Berufssprachkurs kannst du die Prüfung nicht als Selbstzahler machen."),
+            ("Kann man einzelne Teile des DTB B1 wiederholen?", "Nein, du kannst den Test nur ganz wiederholen, nicht einzelne Teile."),
+        ],
+        "dtb-b2": [
+            ("Wie ist der DTB B2 aufgebaut?", "Der DTB B2 hat Lesen (45 Min.), Lesen und Schreiben (20 Min.), Hören (20 Min.), Hören und Schreiben (5 Min.), Sprachbausteine und Schreiben (35 Min.) und Sprechen (ca. 16 Min., zu zweit)."),
+            ("Wie lange dauert die schriftliche Prüfung beim DTB B2?", "Die schriftliche Prüfung dauert 125 Minuten. Du kannst nicht nur einen Teil machen."),
+            ("Wie viele Punkte braucht man für den DTB B2?", "Es gibt 240 Punkte (je 60 pro Fertigkeit). Bestanden hast du mit mindestens 144 Punkten (60 %)."),
+            ("Gibt es beim DTB B2 Mindestpunkte pro Fertigkeit?", "Ja. In mindestens drei Fertigkeiten brauchst du 36 von 60 Punkten. Eine schwächere Fertigkeit ist erlaubt, wenn sie mindestens 24 Punkte hat."),
+            ("Was bedeutet „B2 knapp nicht erfüllt“?", "Mit 120 bis 143 Punkten steht im Ergebnis „B2 knapp nicht erfüllt“."),
+            ("Kann man einzelne Teile des DTB B2 wiederholen?", "Nein, du kannst den Test nur ganz wiederholen, nicht einzelne Teile."),
+        ],
+    }
+    EXAM_LEVEL = {"dtz": "A2-B1", "lid": "Orientierungskurs", "telc-b1": "B1", "telc-b2": "B2", "dtb-b1": "B1", "dtb-b2": "B2"}
+
     for fid in FK["ids"]:
         x = FK["data"][fid]
         F.append((fid, x))
@@ -668,25 +773,54 @@ if FK:
             for b in x["blocks"]
         )
         others = " · ".join(f'<a href="/pruefungsinfo/{o}/">{e(FK["data"][o]["short"])}</a>' for o in FK["ids"] if o != fid)
+        used = []
+        for k in list(x.get("partsSrc") or []) + [k for b in x["blocks"] for k in (b.get("src") or [])]:
+            if k in SRC and k not in used:
+                used.append(k)
+        src_names = " · ".join(f'<a href="{e(SRC[k][1])}" rel="noopener nofollow">{e(SRC[k][0])}</a>' for k in used)
+        kurz = KURZ.get(fid) or []
+        kurz_html = (
+            '<section class="box kurz" aria-label="Das Wichtigste in Kürze"><h2>Das Wichtigste in Kürze</h2><ul class="list">'
+            + "".join(f"<li>{e(t)}</li>" for t in kurz)
+            + f'</ul><p class="small">Stand: {e(STAND)} · Quelle: {src_names}</p></section>'
+        ) if kurz else ""
+        faq = FAQ.get(fid) or []
+        faq_html = (
+            '<h2>Häufige Fragen</h2>'
+            + "".join(f"<h3>{e(q)}</h3><p>{e(a)}</p>" for q, a in faq)
+            + f'<p class="small">Stand: {e(STAND)} · Quelle: {src_names}</p>'
+        ) if faq else ""
+        faq_ld = {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+                {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in faq
+            ],
+        } if faq else None
         body = f"""<h1>{e(x["title"])}: Aufbau, Punkte, Anmeldung</h1>
 <p><span class="tag">{e(x["tag"])}</span><span class="tag">Stand: {e(STAND)}</span></p>
 <p class="lead">{e(x["lead"])}</p>
+{kurz_html}
 <h2>Die Teile der Prüfung</h2>
 {rows}
 {src_line(x.get("partsSrc"))}
 {blocks}
 <p><a class="btn" href="/simulation/{e(x["sim"])}/">▶ Kostenlose Probeprüfung {e(x["short"])}</a> <a class="btn ghost" href="/#pruefungsinfo/{e(fid)}">In der App öffnen</a></p>
 {f'<p><a href="/vorbereitung/{e(fid)}/">Aufbau und Strategien für jeden Teil: Vorbereitung {e(x["short"])}</a></p>' if fid in (D.get("prep") or ()) else ""}
+{faq_html}
 <p class="muted">Alle Angaben ohne Gewähr. Unabhängiges Lernangebot, kein Angebot von g.a.s.t., telc oder BAMF. Keine Rechtsberatung.</p>
 <p>Weitere Prüfungen: {others}</p>"""
         title = f"{x['short']}: Aufbau, Dauer, Punkte und Anmeldung"
         desc = f"{x['lead']} Teile, Dauer, Punkte, Bestehen, Anmeldung und Kosten – mit Quelle, Stand {STAND}."
-        urls.append(page(path, title, desc, body, [("Prüfungsinfos", "pruefungsinfo"), (x["short"], path)], "pruefung"))
+        ld_list = [learning_resource(path, title, seo_desc(desc), EXAM_LEVEL.get(fid, ""), "Exam information")]
+        if faq_ld:
+            ld_list.append(faq_ld)
+        urls.append(page(path, title, desc, body, [("Prüfungsinfos", "pruefungsinfo"), (x["short"], path)], "pruefung", ld_list, stand=STAND))
     cards = "".join(f'<li><a href="/pruefungsinfo/{fid}/"><b>{e(x["title"])}</b><small>{e(x["lead"])}</small></a></li>' for fid, x in F)
     urls.append(page("pruefungsinfo", "Deutschprüfungen: Aufbau, Punkte, Anmeldung",
                      "DTZ, telc B1/B2, DTB B1/B2 und Leben in Deutschland: Aufbau, Dauer, Punkte, Bestehen, Anmeldung und Kosten – mit Quelle und Stand.",
                      f'<h1>Deutschprüfungen im Überblick</h1><p class="lead">Aufbau, Dauer, Punkte, Bestehensregeln und Anmeldung für sechs Prüfungen. Jede Angabe hat eine Quelle und ein Datum (Stand: {e(STAND)}).</p><ul class="grid">{cards}</ul><p><a class="btn" href="/simulation/">Zu den Probeprüfungen</a></p>',
-                     [("Prüfungsinfos", "pruefungsinfo")], "pruefung"))
+                     [("Prüfungsinfos", "pruefungsinfo")], "pruefung", stand=STAND))
 
 # ---------------- worksheets /material/ + /material/<niveau>/ (DM.materials, site-data.js) ----------------
 MATS = D.get("materials") or []

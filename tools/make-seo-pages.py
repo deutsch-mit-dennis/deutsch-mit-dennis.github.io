@@ -6,11 +6,15 @@ Also renders /impressum/ and /datenschutz/ from tools/legal/*.html (the legal te
 Run in the repo folder: python3 tools/make-seo-pages.py
 (make-share-pages.py calls it at the end; the last step is tools/build-sitemap.js, which writes sitemap.xml.)"""
 
-import json, os, re, subprocess, html
+import json, os, re, subprocess, html, datetime
 
 R = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SITE = "https://deutsch-mit-dennis.de"
 e = html.escape
+TODAY = datetime.date.today()
+MODIFIED = TODAY.isoformat()  # dateModified = day of the generator run
+STAND_DE = TODAY.strftime("%d.%m.%Y")
+PERSON = {"@type": "Person", "@id": SITE + "/#dennis", "name": "Dennis Prudnikau", "url": SITE + "/ueber-mich/"}
 
 NODE = r"""
 const fs=require('fs'),vm=require('vm');const c={};c.window=c;vm.createContext(c);
@@ -94,7 +98,7 @@ def page(path, title, desc, body, crumbs, og="start", extra_ld=None, ogtype="art
                 "itemListElement": bl,
             }
         ]
-        + ([extra_ld] if extra_ld else [])
+        + ([] if not extra_ld else extra_ld if isinstance(extra_ld, list) else [extra_ld])
     )
     nav = " › ".join(
         [f'<a href="/">Start</a>']
@@ -118,7 +122,7 @@ def page(path, title, desc, body, crumbs, og="start", extra_ld=None, ogtype="art
 <main><nav class="crumbs" aria-label="Brotkrumen">{nav}</nav>
 {body}
 </main>
-<footer><a href="/">Startseite</a><a href="/impressum/">Impressum</a><a href="/datenschutz/">Datenschutz</a><br>Kostenlos Deutsch lernen von A1 bis B2 (Lieder bis C1) – von Dennis, DaZ-Lehrer und lizenzierter Prüfer.</footer>
+<footer><a href="/">Startseite</a><a href="/impressum/">Impressum</a><a href="/datenschutz/">Datenschutz</a><br>Kostenlos Deutsch lernen von A1 bis B2 (Lieder bis C1) – von Dennis, DaZ-Lehrer und lizenzierter Prüfer.<br><span class="small">Stand: {STAND_DE}</span></footer>
 {script}
 </body></html>
 '''
@@ -137,11 +141,62 @@ def learning_resource(path, name, desc, level, kind):
         "description": desc,
         "url": f"{SITE}/{path}/",
         "inLanguage": "de",
+        "dateModified": MODIFIED,
         "educationalLevel": level,
         "isAccessibleForFree": True,
         "learningResourceType": kind,
         "provider": {"@type": "EducationalOrganization", "name": "Deutsch mit Dennis", "url": SITE + "/"},
-        "author": {"@type": "Person", "@id": SITE + "/#dennis", "name": "Dennis Prudnikau"},
+        "author": PERSON,
+    }
+
+
+def answer_text(q):
+    """Plain answer sentence from catalogue data: right answer + Warum text (if any)."""
+    right = " ".join(q["a"][q["s"]].split())
+    if right[-1] not in ".!?":
+        right += "."
+    why = WARUM.get(q["id"])
+    return right + (" " + " ".join(why.split()) if why else "")
+
+
+def qa_page(path, q, name):
+    """schema.org QAPage for a single question page."""
+    url = f"{SITE}/{path}/"
+    return {
+        "@context": "https://schema.org",
+        "@type": "QAPage",
+        "name": name,
+        "url": url,
+        "inLanguage": "de",
+        "dateModified": MODIFIED,
+        "isAccessibleForFree": True,
+        "author": PERSON,
+        "mainEntity": {
+            "@type": "Question",
+            "name": " ".join(q["q"].split()),
+            "text": " ".join(q["q"].split()),
+            "answerCount": 1,
+            "dateModified": MODIFIED,
+            "author": PERSON,
+            "acceptedAnswer": {"@type": "Answer", "text": answer_text(q), "url": url, "dateModified": MODIFIED, "author": PERSON},
+        },
+    }
+
+
+def faq_page(path, qs, name):
+    """schema.org FAQPage for a question group page."""
+    return {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "name": name,
+        "url": f"{SITE}/{path}/",
+        "inLanguage": "de",
+        "dateModified": MODIFIED,
+        "author": PERSON,
+        "mainEntity": [
+            {"@type": "Question", "name": " ".join(q["q"].split()), "acceptedAnswer": {"@type": "Answer", "text": answer_text(q)}}
+            for q in qs
+        ],
     }
 
 
@@ -368,7 +423,7 @@ for slug, name, qs in groups:
             body,
             [("Leben in Deutschland", "lid"), (name, f"lid/{slug}")],
             "lid",
-            learning_resource(f"lid/{slug}", ttl, desc[:300], LID_LEVEL, "Quiz"),
+            [learning_resource(f"lid/{slug}", ttl, desc[:300], LID_LEVEL, "Quiz"), faq_page(f"lid/{slug}", qs, ttl)],
         )
     )
 
@@ -397,6 +452,7 @@ for i, q in enumerate(singles):
     )
     body = (
         f'<h1>Leben in Deutschland – Frage {nr}</h1>'
+        f'<p class="lead"><b>Antwort:</b> {e(answer_text(q))}</p>'
         f'<div class="q"><h2 style="font-size:1.15rem;margin-top:0">{e(q["q"])}</h2>{f"<div>{imgs}</div>" if imgs else ""}<ol type="1">{lis}</ol></div>'
         f'<p><b>Richtige Antwort:</b> {e(right)}</p>'
         + (f'<h2>Warum?</h2><p>{e(why)}</p>' if why else "")
@@ -424,7 +480,7 @@ for i, q in enumerate(singles):
             body,
             [("Leben in Deutschland", "lid"), (group_name, f"lid/{group_slug}"), (f"Frage {nr}", f"lid/{slug}")],
             "lid",
-            learning_resource(f"lid/{slug}", ttl, seo_desc(desc), LID_LEVEL, "Quiz"),
+            qa_page(f"lid/{slug}", q, ttl),  # QAPage only: no competing LearningResource for the same question
         )
     )
 

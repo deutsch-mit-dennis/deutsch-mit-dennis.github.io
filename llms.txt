@@ -1,0 +1,50 @@
+# Deutsch mit Dennis
+
+> Deutsch mit Dennis (deutsch-mit-dennis.de) ist eine kostenlose Lernwebsite zum Deutschlernen von A1 bis B2 mit Prüfungstraining und Probeprüfungen, entwickelt von einem DaZ-Lehrer und lizenzierten Prüfer; sie braucht keine Anmeldung.
+
+Dennis Prudnikau ist DaZ-Lehrer und lizenzierter Prüfer für DTZ und telc und betreibt die kostenlose Lernwebsite Deutsch mit Dennis. Er ist Deutschlehrer seit 2017, vom BAMF für Integrationskurse und Berufssprachkurse bis C2 zugelassen und hat einen Master in Germanistik (Ruhr-Universität Bochum). Die Seite ist ein unabhängiges Lernangebot, kein Angebot von g.a.s.t., telc oder BAMF.
+
+## Niveaus A0–B2
+- [Kurse A0–B2](https://deutsch-mit-dennis.de/kurs/): Kurswege vom Anfänger bis B2
+- [Materialien A1](https://deutsch-mit-dennis.de/niveau/a1/): Übungen und Material für Niveau A1 (ebenso /niveau/a0/, a2/, b1/, b2/)
+- [Einstufungstest](https://deutsch-mit-dennis.de/einstufungstest/): Niveau herausfinden
+- [Lektionen](https://deutsch-mit-dennis.de/lektionen/): Themenlektionen wie Wohnen, Arbeit, Gesundheit, Amt
+
+## Prüfungsinfos und Simulationen
+- [Prüfungstraining](https://deutsch-mit-dennis.de/pruefung/): Überblick über das Training für alle Prüfungen
+- [Prüfungsinfos](https://deutsch-mit-dennis.de/pruefungsinfo/): Dauer, Punkte, Anmeldung je Prüfung
+- [DTZ – Prüfungsinfo](https://deutsch-mit-dennis.de/pruefungsinfo/dtz/): Deutsch-Test für Zuwanderer (A2/B1)
+- [telc B1](https://deutsch-mit-dennis.de/pruefungsinfo/telc-b1/) und [telc B2](https://deutsch-mit-dennis.de/pruefungsinfo/telc-b2/): Aufbau der telc-Prüfungen
+- [DTB B1](https://deutsch-mit-dennis.de/pruefungsinfo/dtb-b1/) und [DTB B2](https://deutsch-mit-dennis.de/pruefungsinfo/dtb-b2/): Deutsch-Test für den Beruf
+- [Leben in Deutschland – Prüfungsinfo](https://deutsch-mit-dennis.de/pruefungsinfo/lid/): Einbürgerungs- und Orientierungskurstest
+- [Probeprüfungen](https://deutsch-mit-dennis.de/simulation/): komplette Simulationen für DTZ, telc B1/B2, DTB B1/B2 und Leben in Deutschland
+- [Leben in Deutschland](https://deutsch-mit-dennis.de/lid/): Fragen üben mit Erklärung
+- [Vorbereitung telc und DTB](https://deutsch-mit-dennis.de/vorbereitung/): Lernpläne für die Prüfungen
+- [DTZ Schreiben](https://deutsch-mit-dennis.de/dtz-schreiben/): Briefe schreiben mit Beispielen
+- [Bild beschreiben (DTZ)](https://deutsch-mit-dennis.de/bild/): Sprechen mit Bildern üben
+- [DTZ in 30 Tagen](https://deutsch-mit-dennis.de/dtz-30-tage/), [B1 in 30 Tagen](https://deutsch-mit-dennis.de/b1-30-tage/), [B2 in 30 Tagen](https://deutsch-mit-dennis.de/b2-30-tage/): Tagespläne
+
+## Grammatik, Hören, Lesen, Sprechen
+- [Grammatik üben](https://deutsch-mit-dennis.de/grammatik/): Themen von A1 bis B2 mit Erklärung und Übungen
+- [Hören](https://deutsch-mit-dennis.de/hoeren/): Hörtexte und Aufgaben nach Niveau
+- [Lesen](https://deutsch-mit-dennis.de/lesen/): Lesetexte und Aufgaben nach Niveau
+- [Sprechen und Schreiben](https://deutsch-mit-dennis.de/ueben/): Übungen zu mündlichen und schriftlichen Aufgaben
+- [Aussprache](https://deutsch-mit-dennis.de/laute/): Laute üben
+
+## Wortschatz und Spiele
+- [A1-Wortschatz](https://deutsch-mit-dennis.de/a1-woerter/), [B1-Wortschatz](https://deutsch-mit-dennis.de/b1-woerter/), [B2-Wortschatz](https://deutsch-mit-dennis.de/b2-woerter/), [DTZ-Wortschatz](https://deutsch-mit-dennis.de/dtz-woerter/): Wortlisten
+- [Lernspiele](https://deutsch-mit-dennis.de/spiele/): Spiele zu Artikeln, Verben, Zahlen und mehr
+- [Tages-Challenge](https://deutsch-mit-dennis.de/challenge/): tägliche Kurzübung
+
+## Lieder
+- [Deutsch mit Liedern](https://deutsch-mit-dennis.de/lieder/): Lernlieder mit Text für A1 und A2 (und höher)
+- [Alle Lieder](https://deutsch-mit-dennis.de/lieder/alle/): Gesamtübersicht
+
+## Material und Lernpakete
+- [Arbeitsblätter (PDF)](https://deutsch-mit-dennis.de/material/): kostenlose PDFs zum Ausdrucken
+- [Lernpakete](https://deutsch-mit-dennis.de/lernpakete/): Pakete für Lernende und Lehrkräfte (DTZ, B2, Leben in Deutschland)
+- [Kurstagebuch](https://deutsch-mit-dennis.de/kurstagebuch/): Tagesprotokolle aus dem Unterricht
+
+## Über mich
+- [Über Dennis](https://deutsch-mit-dennis.de/ueber-mich/): Werdegang, Prüferlizenzen und BAMF-Zulassungen
+- [Impressum](https://deutsch-mit-dennis.de/impressum/)

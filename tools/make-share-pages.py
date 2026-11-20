@@ -9,7 +9,7 @@ Preview images (assets/og/*.jpg) are only drawn when missing; --images redraws a
 IMPORTANT: run again after every change to index.html (new ?v= numbers!). The GitHub workflow
 "Seiten aktualisieren" (.github/workflows/seiten.yml) does that automatically after each push.
 Run in the repo folder:  python3 tools/make-share-pages.py  [--images]"""
-import json, os, re, subprocess, html, sys
+import json, os, re, subprocess, html, sys, datetime
 from PIL import Image, ImageDraw, ImageFont
 R = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 F = os.path.join(R, 'tools', 'fonts')
@@ -94,6 +94,16 @@ def swap(doc, pattern, new):
     return doc2
 
 
+MODIFIED = datetime.date.today().isoformat()  # dateModified = day of the generator run
+
+
+def with_modified(b):
+    # dateModified is valid on CreativeWork types (Course, LearningResource), not on ItemList etc.
+    if isinstance(b, dict) and b.get('@type') in ('Course', 'LearningResource'):
+        return {**b, 'dateModified': MODIFIED}
+    return b
+
+
 def stub(route, title, desc, img, extra_html='', extra_ld=None):
     """Copy of the app for one section (see module docstring).
     extra_html: readable content for the <noscript> part (bots without JavaScript); extra_ld: more JSON-LD blocks."""
@@ -106,7 +116,7 @@ def stub(route, title, desc, img, extra_html='', extra_ld=None):
     d = swap(d, r'<title>.*?</title>', f'<title>{e(seo_title(title))}</title>')
     d = swap(d, r'<meta name="description" content="[^"]*">', f'<meta name="description" content="{e(seo_desc(desc))}">')
     ld = f'<script type="application/ld+json">{breadcrumbs(route, title)}</script>' + ''.join(
-        f'\n<script type="application/ld+json">{json.dumps(b, ensure_ascii=False)}</script>' for b in (extra_ld or []))
+        f'\n<script type="application/ld+json">{json.dumps(b, ensure_ascii=False)}</script>' for b in map(with_modified, extra_ld or []))
     d = swap(d, r'<script type="application/ld\+json">.*?</script>', ld)
     d = swap(d, r'<link rel="canonical" href="[^"]*">', f'<link rel="canonical" href="{url}">')
     d = swap(d, r'<meta property="og:url" content="[^"]*">', f'<meta property="og:url" content="{url}">')
