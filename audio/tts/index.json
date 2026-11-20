@@ -1,5 +1,5 @@
 {
-"updated": "2026-11-19T17:47:46Z",
+"updated": "2026-11-20T06:50:59Z",
 "engines": [
 "elevenlabs",
 "gemini",
@@ -126,14 +126,16 @@
 "engine": "gemini",
 "sig": "a6a859c7d9",
 "text": "2e2dead9ef",
-"fx": "telefon"
+"fx": "telefon",
+"whole": true
 },
 "b2-4-02": {
 "v": "4942f6ad77",
 "engine": "gemini",
 "sig": "4942f6ad77",
 "text": "2aed00577d",
-"fx": "telefon"
+"fx": "telefon",
+"whole": true
 },
 "b2-4-03": {
 "v": "eb1b66af66",
@@ -146,7 +148,8 @@
 "engine": "gemini",
 "sig": "df966420da",
 "text": "b2b8024eb0",
-"fx": "telefon"
+"fx": "telefon",
+"whole": true
 },
 "dtbb1-1-02": {
 "v": "b667fdc5c5",
@@ -497,7 +500,8 @@
 "v": "7e1eada8bd",
 "engine": "gemini",
 "sig": "7e1eada8bd",
-"text": "921a04d866"
+"text": "921a04d866",
+"whole": true
 },
 "es-alphabet-17": {
 "v": "901c1b01b6",
@@ -541,10 +545,10 @@
 "whole": true
 },
 "es-alphabet-22": {
-"v": "5bcf2203c1",
+"v": "c2fcd2fde4",
 "engine": "gemini",
-"sig": "5bcf2203c1",
-"text": "b335eab813",
+"sig": "c2fcd2fde4",
+"text": "6bb262469c",
 "whole": true
 },
 "es-alphabet-23": {
@@ -639,10 +643,10 @@
 "whole": true
 },
 "es-alphabet-9": {
-"v": "0ed479eb24",
+"v": "f2d47f5cbb",
 "engine": "gemini",
-"sig": "0ed479eb24",
-"text": "eabe0ab702",
+"sig": "f2d47f5cbb",
+"text": "3c0b66c761",
 "whole": true
 },
 "es-alphabet-s0": {
@@ -1017,10 +1021,11 @@
 "whole": true
 },
 "es-farben-0": {
-"v": "434a3f70b7",
-"engine": "elevenlabs",
-"sig": "434a3f70b7",
-"text": "ffce0a5cb1"
+"v": "ac8f4fef58",
+"engine": "gemini",
+"sig": "ac8f4fef58",
+"text": "ffce0a5cb1",
+"whole": true
 },
 "es-farben-1": {
 "v": "63a0627e4b",
@@ -1035,10 +1040,11 @@
 "text": "d495c89c91"
 },
 "es-farben-2": {
-"v": "a06e5fe14d",
-"engine": "elevenlabs",
-"sig": "a06e5fe14d",
-"text": "c691a24a94"
+"v": "5acb21b7f1",
+"engine": "gemini",
+"sig": "5acb21b7f1",
+"text": "c691a24a94",
+"whole": true
 },
 "es-farben-3": {
 "v": "c45eaf111a",
@@ -1549,10 +1555,11 @@
 "text": "09d0cd9fde"
 },
 "es-kurs-10": {
-"v": "df7d30167e",
-"engine": "elevenlabs",
-"sig": "df7d30167e",
-"text": "fb66e86179"
+"v": "62e46fb430",
+"engine": "gemini",
+"sig": "62e46fb430",
+"text": "fb66e86179",
+"whole": true
 },
 "es-kurs-11": {
 "v": "9cd719d48d",
@@ -1753,10 +1760,11 @@
 "text": "6ee8331cc4"
 },
 "es-moebel-5": {
-"v": "9e05b95a62",
-"engine": "elevenlabs",
-"sig": "9e05b95a62",
-"text": "1c16d2df73"
+"v": "491cb796cd",
+"engine": "gemini",
+"sig": "491cb796cd",
+"text": "1c16d2df73",
+"whole": true
 },
 "es-moebel-6": {
 "v": "867289257e",
@@ -1993,10 +2001,11 @@
 "text": "a1e490cfcb"
 },
 "es-verkehr-0": {
-"v": "da8d60e97f",
-"engine": "elevenlabs",
-"sig": "da8d60e97f",
-"text": "b6f12a23ac"
+"v": "0dcb4f2829",
+"engine": "gemini",
+"sig": "0dcb4f2829",
+"text": "b6f12a23ac",
+"whole": true
 },
 "es-verkehr-1": {
 "v": "fff3c1d7a6",
@@ -2119,10 +2128,11 @@
 "text": "a05265a4d2"
 },
 "es-wetter-6": {
-"v": "c8048eddb0",
-"engine": "elevenlabs",
-"sig": "c8048eddb0",
-"text": "760f0ecdb9"
+"v": "b1238ffa61",
+"engine": "gemini",
+"sig": "b1238ffa61",
+"text": "760f0ecdb9",
+"whole": true
 },
 "es-wetter-7": {
 "v": "b885c0d36c",
@@ -2413,10 +2423,11 @@
 "text": "2eaed0dc62"
 },
 "es-zeit-13": {
-"v": "08f340e407",
-"engine": "google",
-"sig": "08f340e407",
-"text": "2227017c89"
+"v": "171040a664",
+"engine": "gemini",
+"sig": "171040a664",
+"text": "2227017c89",
+"whole": true
 },
 "es-zeit-14": {
 "v": "87399a1d02",
@@ -2455,10 +2466,11 @@
 "text": "d12a602040"
 },
 "es-zeit-7": {
-"v": "efc485d738",
-"engine": "elevenlabs",
-"sig": "efc485d738",
-"text": "e31a4acda8"
+"v": "125dabd40c",
+"engine": "gemini",
+"sig": "125dabd40c",
+"text": "e31a4acda8",
+"whole": true
 },
 "es-zeit-8": {
 "v": "3d2f730c17",
@@ -2572,7 +2584,8 @@
 "v": "2e971ac960",
 "engine": "gemini",
 "sig": "2e971ac960",
-"text": "7d6217c752"
+"text": "7d6217c752",
+"whole": true
 },
 "ex-reklamation": {
 "v": "c0745b9de5",
@@ -2729,10 +2742,11 @@
 "text": "9f15da8031"
 },
 "t00484bed": {
-"v": "645b7844ad",
-"engine": "elevenlabs",
-"sig": "645b7844ad",
-"text": "f14314f853"
+"v": "f28c00173d",
+"engine": "gemini",
+"sig": "f28c00173d",
+"text": "f14314f853",
+"whole": true
 },
 "t004e0a5e": {
 "v": "cf4e09189b",
@@ -2748,16 +2762,18 @@
 "whole": true
 },
 "t00674fa0": {
-"v": "2281a5764f",
-"engine": "elevenlabs",
-"sig": "2281a5764f",
-"text": "71f6459821"
+"v": "2256d3a633",
+"engine": "gemini",
+"sig": "2256d3a633",
+"text": "d2854f0228",
+"whole": true
 },
 "t0073e1da": {
-"v": "411fc5974e",
-"engine": "elevenlabs",
-"sig": "411fc5974e",
-"text": "d19051e935"
+"v": "0b8f5fb2e3",
+"engine": "gemini",
+"sig": "0b8f5fb2e3",
+"text": "d19051e935",
+"whole": true
 },
 "t00f45216": {
 "v": "345c3326ec",
@@ -2951,10 +2967,11 @@
 "text": "4e654e63e5"
 },
 "t040e8135": {
-"v": "78f93eb2e5",
-"engine": "elevenlabs",
-"sig": "78f93eb2e5",
-"text": "9c941ef802"
+"v": "4f8d8387ba",
+"engine": "gemini",
+"sig": "4f8d8387ba",
+"text": "59fd02f34f",
+"whole": true
 },
 "t04156b10": {
 "v": "4ea1cc052c",
@@ -3021,10 +3038,11 @@
 "whole": true
 },
 "t05181399": {
-"v": "f761546f20",
-"engine": "elevenlabs",
-"sig": "f761546f20",
-"text": "79b02867fe"
+"v": "22419e76f8",
+"engine": "gemini",
+"sig": "22419e76f8",
+"text": "79b02867fe",
+"whole": true
 },
 "t0535fb12": {
 "v": "dc52132cff",
@@ -3157,7 +3175,8 @@
 "v": "9d5967ce98",
 "engine": "gemini",
 "sig": "9d5967ce98",
-"text": "89539d81ec"
+"text": "89539d81ec",
+"whole": true
 },
 "t079682b1": {
 "v": "57cd874322",
@@ -3237,7 +3256,8 @@
 "v": "d1b12387d9",
 "engine": "gemini",
 "sig": "d1b12387d9",
-"text": "f6d0138a22"
+"text": "f6d0138a22",
+"whole": true
 },
 "t0858aaef": {
 "v": "4573073f5b",
@@ -3298,10 +3318,11 @@
 "text": "0f2051a2e2"
 },
 "t093b6383": {
-"v": "c5a5d7d5f9",
-"engine": "elevenlabs",
-"sig": "c5a5d7d5f9",
-"text": "92337b356e"
+"v": "59383148cb",
+"engine": "gemini",
+"sig": "59383148cb",
+"text": "09068f6ce8",
+"whole": true
 },
 "t093c0118": {
 "v": "b668c2578f",
@@ -3355,10 +3376,11 @@
 "whole": true
 },
 "t09e72093": {
-"v": "ba2f21cf23",
-"engine": "elevenlabs",
-"sig": "ba2f21cf23",
-"text": "575be8b71a"
+"v": "8b157049b7",
+"engine": "gemini",
+"sig": "8b157049b7",
+"text": "8db795b109",
+"whole": true
 },
 "t0a27e7f6": {
 "v": "861944a4e3",
@@ -3389,7 +3411,8 @@
 "v": "929bef3d39",
 "engine": "gemini",
 "sig": "929bef3d39",
-"text": "3ff7486b22"
+"text": "3ff7486b22",
+"whole": true
 },
 "t0aa528a4": {
 "v": "952db9d9f9",
@@ -3442,10 +3465,11 @@
 "text": "d9e836d3b9"
 },
 "t0b55be9b": {
-"v": "3659b39d1b",
-"engine": "elevenlabs",
-"sig": "3659b39d1b",
-"text": "728c9db2d3"
+"v": "e93bbf560d",
+"engine": "gemini",
+"sig": "e93bbf560d",
+"text": "728c9db2d3",
+"whole": true
 },
 "t0bc61bc7": {
 "v": "0cdd6a131a",
@@ -3551,10 +3575,11 @@
 "text": "32539f6d20"
 },
 "t0cf16ca4": {
-"v": "a2bbea8d3e",
-"engine": "elevenlabs",
-"sig": "a2bbea8d3e",
-"text": "718da41778"
+"v": "ece0ee9151",
+"engine": "gemini",
+"sig": "ece0ee9151",
+"text": "f27264e8c0",
+"whole": true
 },
 "t0cf57ac5": {
 "v": "463fc92164",
@@ -3650,7 +3675,8 @@
 "v": "7f7d48780a",
 "engine": "gemini",
 "sig": "7f7d48780a",
-"text": "8b14abbd14"
+"text": "8b14abbd14",
+"whole": true
 },
 "t0e378ada": {
 "v": "ef469691a3",
@@ -3782,13 +3808,15 @@
 "v": "a30c50c77d",
 "engine": "gemini",
 "sig": "a30c50c77d",
-"text": "63a4669140"
+"text": "63a4669140",
+"whole": true
 },
 "t0fac98dd": {
-"v": "a00d325d0e",
-"engine": "elevenlabs",
-"sig": "a00d325d0e",
-"text": "4614d8b628"
+"v": "85073b0a3b",
+"engine": "gemini",
+"sig": "85073b0a3b",
+"text": "4614d8b628",
+"whole": true
 },
 "t0fb51851": {
 "v": "c87e843343",
@@ -3895,7 +3923,8 @@
 "v": "939c1afdf4",
 "engine": "gemini",
 "sig": "939c1afdf4",
-"text": "40f2a90833"
+"text": "40f2a90833",
+"whole": true
 },
 "t1136f4e1": {
 "v": "a45e876db5",
@@ -3952,10 +3981,11 @@
 "text": "554b4288f0"
 },
 "t11bd7377": {
-"v": "6b9f286357",
-"engine": "elevenlabs",
-"sig": "6b9f286357",
-"text": "e8c66f6bf2"
+"v": "f97bb00870",
+"engine": "gemini",
+"sig": "f97bb00870",
+"text": "f0e0178984",
+"whole": true
 },
 "t11dd6ed8": {
 "v": "4a7c6bee27",
@@ -4020,10 +4050,11 @@
 "text": "bcdada88f2"
 },
 "t12924e67": {
-"v": "a3fab8b1d2",
-"engine": "elevenlabs",
-"sig": "a3fab8b1d2",
-"text": "16e75d5d1f"
+"v": "068d937f47",
+"engine": "gemini",
+"sig": "068d937f47",
+"text": "1387f89cfd",
+"whole": true
 },
 "t12a35f3a": {
 "v": "248e3e6f58",
@@ -4071,10 +4102,11 @@
 "text": "a340b5c627"
 },
 "t131e49ec": {
-"v": "caa8e98949",
-"engine": "elevenlabs",
-"sig": "caa8e98949",
-"text": "3c27d853fd"
+"v": "9634fbe9df",
+"engine": "gemini",
+"sig": "9634fbe9df",
+"text": "ace6a9fb1e",
+"whole": true
 },
 "t13394218": {
 "v": "5c44ada2b0",
@@ -4154,10 +4186,11 @@
 "whole": true
 },
 "t13e8e5ed": {
-"v": "7ad3ba9a7c",
-"engine": "elevenlabs",
-"sig": "7ad3ba9a7c",
-"text": "b7e3aaa4ae"
+"v": "bf31d4c818",
+"engine": "gemini",
+"sig": "bf31d4c818",
+"text": "fed895e020",
+"whole": true
 },
 "t13e95fe9": {
 "v": "50f13d02a9",
@@ -4204,10 +4237,11 @@
 "text": "e2843ce1b2"
 },
 "t148da443": {
-"v": "39e3e0dd14",
-"engine": "elevenlabs",
-"sig": "39e3e0dd14",
-"text": "cd205a2708"
+"v": "81b5f734b1",
+"engine": "gemini",
+"sig": "81b5f734b1",
+"text": "cd205a2708",
+"whole": true
 },
 "t14b2bcff": {
 "v": "933f3c601a",
@@ -4654,10 +4688,10 @@
 "text": "4d3f3a0f96"
 },
 "t19637f68": {
-"v": "f2570634ba",
+"v": "92280d5f0a",
 "engine": "gemini",
-"sig": "f2570634ba",
-"text": "4240337828",
+"sig": "92280d5f0a",
+"text": "e3e25e9434",
 "whole": true
 },
 "t1972d084": {
@@ -4699,10 +4733,11 @@
 "text": "5ad036789b"
 },
 "t19d9bb78": {
-"v": "36f7321521",
-"engine": "elevenlabs",
-"sig": "36f7321521",
-"text": "6d4ea08e50"
+"v": "29754a4f1b",
+"engine": "gemini",
+"sig": "29754a4f1b",
+"text": "6d4ea08e50",
+"whole": true
 },
 "t19de7041": {
 "v": "acc5d0fe9b",
@@ -4856,7 +4891,8 @@
 "v": "db0d83d2e4",
 "engine": "gemini",
 "sig": "db0d83d2e4",
-"text": "e86cdb4646"
+"text": "e86cdb4646",
+"whole": true
 },
 "t1c2237e2": {
 "v": "4944480b77",
@@ -4885,10 +4921,11 @@
 "text": "5761c3a826"
 },
 "t1c3f77f9": {
-"v": "932f955a54",
-"engine": "elevenlabs",
-"sig": "932f955a54",
-"text": "ac71ba5d9b"
+"v": "5d5d2c99f1",
+"engine": "gemini",
+"sig": "5d5d2c99f1",
+"text": "1c58e2a3e3",
+"whole": true
 },
 "t1c419c33": {
 "v": "c5f1eb8e43",
@@ -5116,10 +5153,11 @@
 "text": "30b42a662d"
 },
 "t1edd715c": {
-"v": "7b42dff90b",
-"engine": "elevenlabs",
-"sig": "7b42dff90b",
-"text": "a27bd904f4"
+"v": "58fc901b8a",
+"engine": "gemini",
+"sig": "58fc901b8a",
+"text": "a27bd904f4",
+"whole": true
 },
 "t1ee49477": {
 "v": "10e9db3c7a",
@@ -5233,10 +5271,11 @@
 "text": "04efb61528"
 },
 "t20227cfa": {
-"v": "2bd60d44d6",
-"engine": "elevenlabs",
-"sig": "2bd60d44d6",
-"text": "d84d532fe8"
+"v": "ba3e610b25",
+"engine": "gemini",
+"sig": "ba3e610b25",
+"text": "4eba4728cc",
+"whole": true
 },
 "t202d0375": {
 "v": "07fef58953",
@@ -5308,10 +5347,11 @@
 "text": "fc8fc51ccf"
 },
 "t21d6fe05": {
-"v": "ba956752de",
-"engine": "elevenlabs",
-"sig": "ba956752de",
-"text": "a193cbf536"
+"v": "aaa5d95014",
+"engine": "gemini",
+"sig": "aaa5d95014",
+"text": "a193cbf536",
+"whole": true
 },
 "t21d88a29": {
 "v": "62bb414613",
@@ -5443,10 +5483,11 @@
 "text": "a72052b911"
 },
 "t22eb394e": {
-"v": "fbb0608f42",
-"engine": "elevenlabs",
-"sig": "fbb0608f42",
-"text": "ca51e20c5f"
+"v": "ffbaa89e5c",
+"engine": "gemini",
+"sig": "ffbaa89e5c",
+"text": "21be9fbf46",
+"whole": true
 },
 "t22efa175": {
 "v": "e6ec71d22f",
@@ -5481,10 +5522,11 @@
 "text": "b657afe640"
 },
 "t231cfca0": {
-"v": "0e20c4de10",
-"engine": "elevenlabs",
-"sig": "0e20c4de10",
-"text": "ac7d43ae47"
+"v": "b92bd21fb1",
+"engine": "gemini",
+"sig": "b92bd21fb1",
+"text": "ac7d43ae47",
+"whole": true
 },
 "t233da1b5": {
 "v": "a5a5790bd6",
@@ -5537,10 +5579,11 @@
 "whole": true
 },
 "t23bd4312": {
-"v": "276826764b",
-"engine": "google",
-"sig": "276826764b",
-"text": "f61553f1a9"
+"v": "325f1b8f37",
+"engine": "gemini",
+"sig": "325f1b8f37",
+"text": "f61553f1a9",
+"whole": true
 },
 "t23c0456d": {
 "v": "5f21a5811c",
@@ -5662,16 +5705,18 @@
 "text": "b7c3f12bf9"
 },
 "t255be5b2": {
-"v": "37ac7d29c4",
-"engine": "elevenlabs",
-"sig": "37ac7d29c4",
-"text": "627364d753"
+"v": "73e26ed3e4",
+"engine": "gemini",
+"sig": "73e26ed3e4",
+"text": "d806d38a2f",
+"whole": true
 },
 "t2589e015": {
 "v": "ded9f95a1f",
 "engine": "gemini",
 "sig": "ded9f95a1f",
-"text": "f644100e2f"
+"text": "f644100e2f",
+"whole": true
 },
 "t2593775c": {
 "v": "79f72a1cc7",
@@ -5847,7 +5892,8 @@
 "v": "ea7ad5f44b",
 "engine": "gemini",
 "sig": "ea7ad5f44b",
-"text": "7058695ba7"
+"text": "7058695ba7",
+"whole": true
 },
 "t28198681": {
 "v": "9a8717985a",
@@ -5909,7 +5955,8 @@
 "v": "d9a328985f",
 "engine": "gemini",
 "sig": "d9a328985f",
-"text": "ee791891ac"
+"text": "ee791891ac",
+"whole": true
 },
 "t28ff5167": {
 "v": "706f0ded55",
@@ -5924,10 +5971,11 @@
 "text": "4ad68a4c76"
 },
 "t293371a9": {
-"v": "68e1a5f48d",
-"engine": "elevenlabs",
-"sig": "68e1a5f48d",
-"text": "910355395b"
+"v": "561ec90829",
+"engine": "gemini",
+"sig": "561ec90829",
+"text": "2732eeeeac",
+"whole": true
 },
 "t2948d868": {
 "v": "bcb9b9020f",
@@ -6074,10 +6122,11 @@
 "text": "c307708e0e"
 },
 "t2af36126": {
-"v": "a696e4a27a",
-"engine": "elevenlabs",
-"sig": "a696e4a27a",
-"text": "92dbc91651"
+"v": "a4819258c8",
+"engine": "gemini",
+"sig": "a4819258c8",
+"text": "92dbc91651",
+"whole": true
 },
 "t2b057c30": {
 "v": "6b16718866",
@@ -6292,7 +6341,8 @@
 "v": "f7d959d3b8",
 "engine": "gemini",
 "sig": "f7d959d3b8",
-"text": "5fd566a6af"
+"text": "5fd566a6af",
+"whole": true
 },
 "t2e301ce2": {
 "v": "10c352c3a0",
@@ -6345,10 +6395,11 @@
 "text": "869ace1864"
 },
 "t2e9446f4": {
-"v": "1a43728dd6",
-"engine": "elevenlabs",
-"sig": "1a43728dd6",
-"text": "6be5bdb158"
+"v": "58c69c9747",
+"engine": "gemini",
+"sig": "58c69c9747",
+"text": "c4b9a0e1b9",
+"whole": true
 },
 "t2e9c0bcc": {
 "v": "c2c6c7bf5d",
@@ -6412,10 +6463,11 @@
 "text": "bea48f6509"
 },
 "t2f624544": {
-"v": "0e660d39ff",
-"engine": "elevenlabs",
-"sig": "0e660d39ff",
-"text": "45773a377a"
+"v": "29aa35ccae",
+"engine": "gemini",
+"sig": "29aa35ccae",
+"text": "0b3adfefb7",
+"whole": true
 },
 "t2f719f50": {
 "v": "2bfb9e11ba",
@@ -6488,7 +6540,8 @@
 "v": "72b23b559f",
 "engine": "gemini",
 "sig": "72b23b559f",
-"text": "4ea06ff096"
+"text": "4ea06ff096",
+"whole": true
 },
 "t3073f495": {
 "v": "94c136e4fb",
@@ -6612,10 +6665,11 @@
 "text": "5806828f29"
 },
 "t32676b04": {
-"v": "7ab07280ee",
-"engine": "elevenlabs",
-"sig": "7ab07280ee",
-"text": "f631beeeee"
+"v": "9d722aa501",
+"engine": "gemini",
+"sig": "9d722aa501",
+"text": "30657f3286",
+"whole": true
 },
 "t32a663da": {
 "v": "9e87516b22",
@@ -6658,7 +6712,8 @@
 "v": "842c726ebd",
 "engine": "gemini",
 "sig": "842c726ebd",
-"text": "6495217950"
+"text": "6495217950",
+"whole": true
 },
 "t3361caeb": {
 "v": "37582ceda1",
@@ -6717,10 +6772,11 @@
 "text": "f238c3a0ca"
 },
 "t33e682dc": {
-"v": "6336b912d0",
-"engine": "elevenlabs",
-"sig": "6336b912d0",
-"text": "620cbbdc05"
+"v": "9d46ef1825",
+"engine": "gemini",
+"sig": "9d46ef1825",
+"text": "620cbbdc05",
+"whole": true
 },
 "t3438a825": {
 "v": "68da659ada",
@@ -6736,10 +6792,11 @@
 "whole": true
 },
 "t34442ff3": {
-"v": "4f21a9fd50",
-"engine": "elevenlabs",
-"sig": "4f21a9fd50",
-"text": "30f0b49736"
+"v": "ddcc4edacd",
+"engine": "gemini",
+"sig": "ddcc4edacd",
+"text": "30f0b49736",
+"whole": true
 },
 "t34474795": {
 "v": "4dc3b1de37",
@@ -6775,7 +6832,8 @@
 "v": "647782e51d",
 "engine": "gemini",
 "sig": "647782e51d",
-"text": "543d3e9173"
+"text": "543d3e9173",
+"whole": true
 },
 "t3513c70c": {
 "v": "ad0915955a",
@@ -6809,10 +6867,11 @@
 "text": "307dbbe834"
 },
 "t35856b06": {
-"v": "15f867153e",
-"engine": "elevenlabs",
-"sig": "15f867153e",
-"text": "e8cbcbf010"
+"v": "8f6192acb2",
+"engine": "gemini",
+"sig": "8f6192acb2",
+"text": "e8cbcbf010",
+"whole": true
 },
 "t3587eb28": {
 "v": "78821a3b58",
@@ -6828,10 +6887,11 @@
 "text": "6e08ec4f9a"
 },
 "t3595d3ee": {
-"v": "82c88185ae",
-"engine": "elevenlabs",
-"sig": "82c88185ae",
-"text": "c5b01d2dfc"
+"v": "c56eafa345",
+"engine": "gemini",
+"sig": "c56eafa345",
+"text": "c4e8f6aeec",
+"whole": true
 },
 "t35a2e876": {
 "v": "28291b8d82",
@@ -6919,10 +6979,11 @@
 "text": "6efecf0aa8"
 },
 "t361782bc": {
-"v": "35d843dbcd",
-"engine": "google",
-"sig": "35d843dbcd",
-"text": "5a128c2f5f"
+"v": "cf0c468e83",
+"engine": "gemini",
+"sig": "cf0c468e83",
+"text": "5a128c2f5f",
+"whole": true
 },
 "t361f6cb7": {
 "v": "75de4a4a6c",
@@ -7294,7 +7355,8 @@
 "v": "3de4d50f00",
 "engine": "gemini",
 "sig": "3de4d50f00",
-"text": "8e842c817e"
+"text": "8e842c817e",
+"whole": true
 },
 "t3a46214f": {
 "v": "25d2ccebfa",
@@ -7401,10 +7463,11 @@
 "whole": true
 },
 "t3bb1bb88": {
-"v": "5c2a2613c3",
-"engine": "elevenlabs",
-"sig": "5c2a2613c3",
-"text": "a7e54a7677"
+"v": "2632375f64",
+"engine": "gemini",
+"sig": "2632375f64",
+"text": "a7e54a7677",
+"whole": true
 },
 "t3bb74c7d": {
 "v": "4b05e4da88",
@@ -7438,10 +7501,11 @@
 "text": "558b6be57a"
 },
 "t3c434c6c": {
-"v": "4c18d3e70e",
-"engine": "elevenlabs",
-"sig": "4c18d3e70e",
-"text": "2b498f7471"
+"v": "b6398a5f9e",
+"engine": "gemini",
+"sig": "b6398a5f9e",
+"text": "2b498f7471",
+"whole": true
 },
 "t3c6c3019": {
 "v": "f13f8580f6",
@@ -7551,10 +7615,11 @@
 "text": "756499e0af"
 },
 "t3dc68309": {
-"v": "899083976a",
-"engine": "elevenlabs",
-"sig": "899083976a",
-"text": "7193f7afd5"
+"v": "59622e0011",
+"engine": "gemini",
+"sig": "59622e0011",
+"text": "7193f7afd5",
+"whole": true
 },
 "t3dca26c1": {
 "v": "9e2d9bae5f",
@@ -7911,10 +7976,11 @@
 "whole": true
 },
 "t429817d6": {
-"v": "0dd6855bf8",
-"engine": "elevenlabs",
-"sig": "0dd6855bf8",
-"text": "314f2d0278"
+"v": "27ba60f29e",
+"engine": "gemini",
+"sig": "27ba60f29e",
+"text": "b59830ccbb",
+"whole": true
 },
 "t4299e773": {
 "v": "9e7db21195",
@@ -7986,10 +8052,11 @@
 "whole": true
 },
 "t437487e5": {
-"v": "679044a33f",
-"engine": "elevenlabs",
-"sig": "679044a33f",
-"text": "4532baccf4"
+"v": "7a56f8e2ee",
+"engine": "gemini",
+"sig": "7a56f8e2ee",
+"text": "4532baccf4",
+"whole": true
 },
 "t43759d00": {
 "v": "d87db36279",
@@ -8077,10 +8144,11 @@
 "text": "f69efaff10"
 },
 "t44bb2022": {
-"v": "7b4151701d",
-"engine": "elevenlabs",
-"sig": "7b4151701d",
-"text": "07c0c1c306"
+"v": "9fe3fbb01a",
+"engine": "gemini",
+"sig": "9fe3fbb01a",
+"text": "7a1fbfc64b",
+"whole": true
 },
 "t44e4a32e": {
 "v": "27c9fa1961",
@@ -8196,7 +8264,8 @@
 "v": "54e425dc19",
 "engine": "gemini",
 "sig": "54e425dc19",
-"text": "cf97965a97"
+"text": "cf97965a97",
+"whole": true
 },
 "t473173e5": {
 "v": "2118fb3d48",
@@ -8296,7 +8365,8 @@
 "v": "e404eadb29",
 "engine": "gemini",
 "sig": "e404eadb29",
-"text": "fb2673af72"
+"text": "fb2673af72",
+"whole": true
 },
 "t48487f42": {
 "v": "b129bef465",
@@ -8318,10 +8388,11 @@
 "fx": "telefon"
 },
 "t489d06b9": {
-"v": "8fb2af0bf3",
-"engine": "elevenlabs",
-"sig": "8fb2af0bf3",
-"text": "7a6158ca2b"
+"v": "a6971e5c60",
+"engine": "gemini",
+"sig": "a6971e5c60",
+"text": "1bbaa82051",
+"whole": true
 },
 "t48af6461": {
 "v": "de6cae14d2",
@@ -8435,10 +8506,11 @@
 "text": "f89a7a74be"
 },
 "t49f99fbe": {
-"v": "8d9ae688cb",
-"engine": "google",
-"sig": "8d9ae688cb",
-"text": "7b1bfa7647"
+"v": "7c32964f3b",
+"engine": "gemini",
+"sig": "7c32964f3b",
+"text": "7b1bfa7647",
+"whole": true
 },
 "t49fa8117": {
 "v": "4376c47164",
@@ -8466,10 +8538,11 @@
 "text": "0179ee1ccc"
 },
 "t4ab12313": {
-"v": "d752c6edb6",
-"engine": "elevenlabs",
-"sig": "d752c6edb6",
-"text": "c763341626"
+"v": "546599b171",
+"engine": "gemini",
+"sig": "546599b171",
+"text": "13d33a2192",
+"whole": true
 },
 "t4ab17321": {
 "v": "7da5b3fae7",
@@ -8632,10 +8705,11 @@
 "text": "6401ff050a"
 },
 "t4c9c85d0": {
-"v": "0b73daacba",
-"engine": "elevenlabs",
-"sig": "0b73daacba",
-"text": "4efc3fd836"
+"v": "beccdc32b1",
+"engine": "gemini",
+"sig": "beccdc32b1",
+"text": "464ad3e0ab",
+"whole": true
 },
 "t4cc2c066": {
 "v": "d04dda0664",
@@ -9002,7 +9076,8 @@
 "v": "9fe6ed79b7",
 "engine": "gemini",
 "sig": "9fe6ed79b7",
-"text": "3c6cdbdd96"
+"text": "3c6cdbdd96",
+"whole": true
 },
 "t52181f57": {
 "v": "a960fd6726",
@@ -9011,10 +9086,11 @@
 "text": "6416ea25f4"
 },
 "t523e539e": {
-"v": "6c13235d1f",
-"engine": "elevenlabs",
-"sig": "6c13235d1f",
-"text": "de1a585965"
+"v": "f07c233132",
+"engine": "gemini",
+"sig": "f07c233132",
+"text": "ad4d0092ba",
+"whole": true
 },
 "t524962ae": {
 "v": "c77b9e3c18",
@@ -9200,10 +9276,11 @@
 "whole": true
 },
 "t550c2abc": {
-"v": "67df7f04ca",
-"engine": "elevenlabs",
-"sig": "67df7f04ca",
-"text": "4fce6aad2f"
+"v": "ab00efe46f",
+"engine": "gemini",
+"sig": "ab00efe46f",
+"text": "4fce6aad2f",
+"whole": true
 },
 "t5517e301": {
 "v": "e7062953a3",
@@ -9506,10 +9583,11 @@
 "text": "99fb789cd4"
 },
 "t59a8fd7e": {
-"v": "aad2809f16",
-"engine": "elevenlabs",
-"sig": "aad2809f16",
-"text": "d03d4083a2"
+"v": "68f6ec4b54",
+"engine": "gemini",
+"sig": "68f6ec4b54",
+"text": "d03d4083a2",
+"whole": true
 },
 "t59b3c477": {
 "v": "19133f915f",
@@ -9544,10 +9622,11 @@
 "text": "7d89ec097f"
 },
 "t5a68f059": {
-"v": "59b53634e7",
-"engine": "elevenlabs",
-"sig": "59b53634e7",
-"text": "5e734c840e"
+"v": "1765ad212c",
+"engine": "gemini",
+"sig": "1765ad212c",
+"text": "b7c23687c4",
+"whole": true
 },
 "t5a7b274b": {
 "v": "40f95429ee",
@@ -9793,10 +9872,11 @@
 "text": "ad4c51d6df"
 },
 "t5d90ac5c": {
-"v": "44f36da410",
-"engine": "elevenlabs",
-"sig": "44f36da410",
-"text": "804ccc1d52"
+"v": "8ff2d35092",
+"engine": "gemini",
+"sig": "8ff2d35092",
+"text": "a957851e51",
+"whole": true
 },
 "t5d937fb1": {
 "v": "b49fa68381",
@@ -9927,10 +10007,11 @@
 "text": "d6aaf0f3c7"
 },
 "t5f015e92": {
-"v": "8d533ea0e8",
-"engine": "elevenlabs",
-"sig": "8d533ea0e8",
-"text": "4ca3bcb7a5"
+"v": "912bc7969f",
+"engine": "gemini",
+"sig": "912bc7969f",
+"text": "dc4d69d5ab",
+"whole": true
 },
 "t5f2bddbe": {
 "v": "2ec26da0bb",
@@ -10016,10 +10097,11 @@
 "text": "6d59cc0e47"
 },
 "t5fe58d64": {
-"v": "538ba965e7",
-"engine": "elevenlabs",
-"sig": "538ba965e7",
-"text": "c5096084ed"
+"v": "41f3f932f0",
+"engine": "gemini",
+"sig": "41f3f932f0",
+"text": "7415066394",
+"whole": true
 },
 "t5ff1c878": {
 "v": "a3eeef1910",
@@ -10107,10 +10189,11 @@
 "text": "ed3ca21e75"
 },
 "t6132c3cd": {
-"v": "2a50e83ddd",
-"engine": "elevenlabs",
-"sig": "2a50e83ddd",
-"text": "6d7861c5ed"
+"v": "9b53d4c2f6",
+"engine": "gemini",
+"sig": "9b53d4c2f6",
+"text": "6d7861c5ed",
+"whole": true
 },
 "t61738825": {
 "v": "d88d1e4640",
@@ -10163,10 +10246,11 @@
 "text": "c9aeea63eb"
 },
 "t61ccf43a": {
-"v": "71d2bd0bd2",
-"engine": "elevenlabs",
-"sig": "71d2bd0bd2",
-"text": "bff5af8613"
+"v": "573bc238ee",
+"engine": "gemini",
+"sig": "573bc238ee",
+"text": "c9ab944589",
+"whole": true
 },
 "t62377b8a": {
 "v": "196edc2418",
@@ -10267,16 +10351,18 @@
 "text": "217b9fbe96"
 },
 "t632fa498": {
-"v": "d0acd27903",
-"engine": "elevenlabs",
-"sig": "d0acd27903",
-"text": "bcbc6a8853"
+"v": "1116a87b4d",
+"engine": "gemini",
+"sig": "1116a87b4d",
+"text": "c7105ae444",
+"whole": true
 },
 "t63337274": {
-"v": "4895a5ce86",
-"engine": "elevenlabs",
-"sig": "4895a5ce86",
-"text": "f30b1fd00c"
+"v": "2965aab933",
+"engine": "gemini",
+"sig": "2965aab933",
+"text": "7cf133a09f",
+"whole": true
 },
 "t633a0eee": {
 "v": "a5f09832e8",
@@ -10381,8 +10467,7 @@
 "v": "c9ff553c13",
 "engine": "gemini",
 "sig": "c9ff553c13",
-"text": "e1154a62fc",
-"whole": true
+"text": "e1154a62fc"
 },
 "t64ead6b2": {
 "v": "1128f7fd19",
@@ -10447,10 +10532,11 @@
 "text": "617a804746"
 },
 "t65d809c3": {
-"v": "de37012cee",
-"engine": "elevenlabs",
-"sig": "de37012cee",
-"text": "b9c170e38e"
+"v": "16ae95071b",
+"engine": "gemini",
+"sig": "16ae95071b",
+"text": "8b90239ca9",
+"whole": true
 },
 "t65e59c3b": {
 "v": "71052bd8fd",
@@ -10471,10 +10557,11 @@
 "text": "e055844473"
 },
 "t662b0ba8": {
-"v": "333fab9f0a",
-"engine": "elevenlabs",
-"sig": "333fab9f0a",
-"text": "b86a789aa2"
+"v": "5ff9fd9a94",
+"engine": "gemini",
+"sig": "5ff9fd9a94",
+"text": "b86a789aa2",
+"whole": true
 },
 "t6692c94f": {
 "v": "a255486216",
@@ -10778,10 +10865,11 @@
 "text": "05aa1dc8c8"
 },
 "t6a3892f1": {
-"v": "d9637868ca",
-"engine": "elevenlabs",
-"sig": "d9637868ca",
-"text": "af98e01538"
+"v": "98338d5bb5",
+"engine": "gemini",
+"sig": "98338d5bb5",
+"text": "af98e01538",
+"whole": true
 },
 "t6a4c184e": {
 "v": "e391862f20",
@@ -10790,10 +10878,11 @@
 "text": "e0199dffac"
 },
 "t6a5a3c82": {
-"v": "cec7202fd0",
-"engine": "elevenlabs",
-"sig": "cec7202fd0",
-"text": "c06d80a273"
+"v": "e131fa0742",
+"engine": "gemini",
+"sig": "e131fa0742",
+"text": "655fae1f6e",
+"whole": true
 },
 "t6a6466b8": {
 "v": "c55412f50d",
@@ -10822,10 +10911,11 @@
 "text": "079144f875"
 },
 "t6aa3a22f": {
-"v": "57817f0d40",
-"engine": "elevenlabs",
-"sig": "57817f0d40",
-"text": "490dfabaa0"
+"v": "ec908796c5",
+"engine": "gemini",
+"sig": "ec908796c5",
+"text": "9a4b7d360d",
+"whole": true
 },
 "t6aa47166": {
 "v": "cb47967f26",
@@ -10897,10 +10987,11 @@
 "text": "e9bc4cb11f"
 },
 "t6b4968ec": {
-"v": "eacd9bf6b3",
-"engine": "elevenlabs",
-"sig": "eacd9bf6b3",
-"text": "939c385116"
+"v": "e21489e33e",
+"engine": "gemini",
+"sig": "e21489e33e",
+"text": "5546ed6ee1",
+"whole": true
 },
 "t6b52cb21": {
 "v": "6ad6f634d5",
@@ -10934,10 +11025,11 @@
 "text": "c30145b97c"
 },
 "t6bab6dd1": {
-"v": "98c162742c",
-"engine": "elevenlabs",
-"sig": "98c162742c",
-"text": "8ce5563536"
+"v": "e737492342",
+"engine": "gemini",
+"sig": "e737492342",
+"text": "cce1dab269",
+"whole": true
 },
 "t6bb7ee36": {
 "v": "05ecf1c56f",
@@ -11013,10 +11105,11 @@
 "text": "9b764f4d97"
 },
 "t6cba9604": {
-"v": "a7d4ab9571",
-"engine": "elevenlabs",
-"sig": "a7d4ab9571",
-"text": "566608d32f"
+"v": "815e8874c5",
+"engine": "gemini",
+"sig": "815e8874c5",
+"text": "566608d32f",
+"whole": true
 },
 "t6cd7fcd7": {
 "v": "d0a2f3022b",
@@ -11253,10 +11346,11 @@
 "text": "0dd5ac8aee"
 },
 "t70793123": {
-"v": "dae7f7f324",
-"engine": "elevenlabs",
-"sig": "dae7f7f324",
-"text": "24c1eef906"
+"v": "1eafc8c6b5",
+"engine": "gemini",
+"sig": "1eafc8c6b5",
+"text": "046763a3bf",
+"whole": true
 },
 "t70a90268": {
 "v": "f67a92c3ae",
@@ -11418,10 +11512,11 @@
 "text": "69d747cc57"
 },
 "t72e57fae": {
-"v": "7b9ba2073d",
-"engine": "elevenlabs",
-"sig": "7b9ba2073d",
-"text": "18a05987bd"
+"v": "87494183c1",
+"engine": "gemini",
+"sig": "87494183c1",
+"text": "18a05987bd",
+"whole": true
 },
 "t72e97ee5": {
 "v": "3876aa855a",
@@ -11474,16 +11569,18 @@
 "text": "7ec64c982b"
 },
 "t73a5e56b": {
-"v": "11bc6413eb",
-"engine": "elevenlabs",
-"sig": "11bc6413eb",
-"text": "3dc8c4d314"
+"v": "12d0b52eaf",
+"engine": "gemini",
+"sig": "12d0b52eaf",
+"text": "e365ebf1f2",
+"whole": true
 },
 "t73ce6d14": {
-"v": "fa5333ab0b",
-"engine": "elevenlabs",
-"sig": "fa5333ab0b",
-"text": "6e6a78a8ae"
+"v": "74dcc90fc4",
+"engine": "gemini",
+"sig": "74dcc90fc4",
+"text": "83dfc2a1e3",
+"whole": true
 },
 "t73d3e1a7": {
 "v": "3b88b10510",
@@ -11661,10 +11758,11 @@
 "whole": true
 },
 "t76011a3e": {
-"v": "3d6bc88e90",
-"engine": "elevenlabs",
-"sig": "3d6bc88e90",
-"text": "e9817fc795"
+"v": "2668167103",
+"engine": "gemini",
+"sig": "2668167103",
+"text": "e9817fc795",
+"whole": true
 },
 "t7601f5bf": {
 "v": "5a4d7ccc8d",
@@ -11860,10 +11958,11 @@
 "text": "c2939ff06f"
 },
 "t793a1b9b": {
-"v": "4e91087fbf",
-"engine": "elevenlabs",
-"sig": "4e91087fbf",
-"text": "9f4605b3a3"
+"v": "5578d7847e",
+"engine": "gemini",
+"sig": "5578d7847e",
+"text": "6d0505237e",
+"whole": true
 },
 "t793a93e5": {
 "v": "daa555d153",
@@ -11872,10 +11971,11 @@
 "text": "4b63aae60b"
 },
 "t79503cd0": {
-"v": "2c65707612",
-"engine": "elevenlabs",
-"sig": "2c65707612",
-"text": "b0c370005c"
+"v": "3693e22cc3",
+"engine": "gemini",
+"sig": "3693e22cc3",
+"text": "6c75c901a5",
+"whole": true
 },
 "t795b1209": {
 "v": "3dc956cba2",
@@ -11909,10 +12009,11 @@
 "text": "1d87dad6ed"
 },
 "t79dda41d": {
-"v": "7a2db2ec57",
-"engine": "elevenlabs",
-"sig": "7a2db2ec57",
-"text": "d60c07b507"
+"v": "13d4d3a2bf",
+"engine": "gemini",
+"sig": "13d4d3a2bf",
+"text": "6aa779c984",
+"whole": true
 },
 "t79e022b9": {
 "v": "416a308f0d",
@@ -12160,10 +12261,11 @@
 "text": "344de52217"
 },
 "t7cae491d": {
-"v": "05c30edfd3",
-"engine": "elevenlabs",
-"sig": "05c30edfd3",
-"text": "31b1b0b865"
+"v": "cdf530d758",
+"engine": "gemini",
+"sig": "cdf530d758",
+"text": "8ae4a25ff0",
+"whole": true
 },
 "t7d00f382": {
 "v": "fc8927356e",
@@ -12178,10 +12280,11 @@
 "text": "12f93582c9"
 },
 "t7d1e9225": {
-"v": "8c482282c9",
-"engine": "elevenlabs",
-"sig": "8c482282c9",
-"text": "b987099688"
+"v": "b00936db15",
+"engine": "gemini",
+"sig": "b00936db15",
+"text": "c48a4694c6",
+"whole": true
 },
 "t7d21e5a9": {
 "v": "f9a7dfd333",
@@ -12208,10 +12311,11 @@
 "text": "1ead3b6d98"
 },
 "t7de6e26c": {
-"v": "798cd9e7f2",
-"engine": "elevenlabs",
-"sig": "798cd9e7f2",
-"text": "2e4f6c5ea5"
+"v": "e023fae03a",
+"engine": "gemini",
+"sig": "e023fae03a",
+"text": "0973c89fa1",
+"whole": true
 },
 "t7df742a3": {
 "v": "f32f6dec4d",
@@ -12226,10 +12330,11 @@
 "text": "1a611910b9"
 },
 "t7e28651e": {
-"v": "e59ff5f8bf",
-"engine": "elevenlabs",
-"sig": "e59ff5f8bf",
-"text": "4091b798c6"
+"v": "f5771b7548",
+"engine": "gemini",
+"sig": "f5771b7548",
+"text": "4091b798c6",
+"whole": true
 },
 "t7e2e7181": {
 "v": "8463d6a430",
@@ -12361,7 +12466,8 @@
 "v": "aa0ea7308a",
 "engine": "gemini",
 "sig": "aa0ea7308a",
-"text": "b1ab2b0063"
+"text": "b1ab2b0063",
+"whole": true
 },
 "t7fb1e88f": {
 "v": "7f3d260cd5",
@@ -12461,16 +12567,18 @@
 "text": "eb571ba7fc"
 },
 "t80fe9745": {
-"v": "94532cbc07",
-"engine": "elevenlabs",
-"sig": "94532cbc07",
-"text": "9d316f1d81"
+"v": "751c412841",
+"engine": "gemini",
+"sig": "751c412841",
+"text": "9d316f1d81",
+"whole": true
 },
 "t81014d90": {
-"v": "898e848a32",
-"engine": "elevenlabs",
-"sig": "898e848a32",
-"text": "b64f26de8d"
+"v": "6fa5afe0d1",
+"engine": "gemini",
+"sig": "6fa5afe0d1",
+"text": "b64f26de8d",
+"whole": true
 },
 "t810b1f9d": {
 "v": "1274cce25c",
@@ -12623,10 +12731,11 @@
 "text": "1601948181"
 },
 "t82f3d64f": {
-"v": "a9a18a0d71",
-"engine": "elevenlabs",
-"sig": "a9a18a0d71",
-"text": "c33510c8e3"
+"v": "34b4973771",
+"engine": "gemini",
+"sig": "34b4973771",
+"text": "c33510c8e3",
+"whole": true
 },
 "t83145864": {
 "v": "c4cced0910",
@@ -12638,7 +12747,8 @@
 "v": "7232410779",
 "engine": "gemini",
 "sig": "7232410779",
-"text": "8b647a3fe4"
+"text": "8b647a3fe4",
+"whole": true
 },
 "t833bf252": {
 "v": "0076eb4f5b",
@@ -12719,10 +12829,11 @@
 "text": "cb560d0b35"
 },
 "t83fe5187": {
-"v": "b7cbcce9d5",
-"engine": "elevenlabs",
-"sig": "b7cbcce9d5",
-"text": "12400d5b70"
+"v": "e5ba56f35e",
+"engine": "gemini",
+"sig": "e5ba56f35e",
+"text": "90643bac18",
+"whole": true
 },
 "t842ee0b3": {
 "v": "d8f659d8ee",
@@ -13003,10 +13114,11 @@
 "text": "f40890d78a"
 },
 "t876e05d2": {
-"v": "692d223e68",
-"engine": "elevenlabs",
-"sig": "692d223e68",
-"text": "ccd42cdca3"
+"v": "4700805419",
+"engine": "gemini",
+"sig": "4700805419",
+"text": "4e1d916c66",
+"whole": true
 },
 "t879f634a": {
 "v": "f691e32b30",
@@ -13082,16 +13194,18 @@
 "text": "be571a9dce"
 },
 "t888a8ff4": {
-"v": "f10b945591",
-"engine": "elevenlabs",
-"sig": "f10b945591",
-"text": "f7eb7bd417"
+"v": "c1f0c14d18",
+"engine": "gemini",
+"sig": "c1f0c14d18",
+"text": "227b27ba80",
+"whole": true
 },
 "t88951cef": {
-"v": "33f88ebb55",
-"engine": "elevenlabs",
-"sig": "33f88ebb55",
-"text": "a43dadecaa"
+"v": "067064be02",
+"engine": "gemini",
+"sig": "067064be02",
+"text": "6192e64bb4",
+"whole": true
 },
 "t88ae59d7": {
 "v": "9861802163",
@@ -13130,10 +13244,11 @@
 "text": "92ab75a165"
 },
 "t8974924e": {
-"v": "a152975867",
-"engine": "elevenlabs",
-"sig": "a152975867",
-"text": "deea4ac2b8"
+"v": "ac05c118b6",
+"engine": "gemini",
+"sig": "ac05c118b6",
+"text": "deea4ac2b8",
+"whole": true
 },
 "t897c52c9": {
 "v": "ebff46d0bf",
@@ -13220,10 +13335,11 @@
 "text": "21cb93dd67"
 },
 "t8ad2563e": {
-"v": "c5cd2e226b",
-"engine": "elevenlabs",
-"sig": "c5cd2e226b",
-"text": "d809373058"
+"v": "20c8543db5",
+"engine": "gemini",
+"sig": "20c8543db5",
+"text": "8ee1cd5232",
+"whole": true
 },
 "t8ade7465": {
 "v": "d9f2e5f130",
@@ -13262,10 +13378,11 @@
 "text": "8803fae92f"
 },
 "t8bb2d87c": {
-"v": "59dfa9d596",
-"engine": "elevenlabs",
-"sig": "59dfa9d596",
-"text": "744051d429"
+"v": "f3ddacfbfe",
+"engine": "gemini",
+"sig": "f3ddacfbfe",
+"text": "5e597db3d5",
+"whole": true
 },
 "t8bb6618a": {
 "v": "79d174a620",
@@ -13475,10 +13592,11 @@
 "text": "1fbdac5ed1"
 },
 "t8e021517": {
-"v": "50d53ba816",
-"engine": "elevenlabs",
-"sig": "50d53ba816",
-"text": "b1ae244c0d"
+"v": "d707f13948",
+"engine": "gemini",
+"sig": "d707f13948",
+"text": "369a6a10ad",
+"whole": true
 },
 "t8e18ca65": {
 "v": "774791d151",
@@ -13548,10 +13666,11 @@
 "whole": true
 },
 "t8e9ca6ba": {
-"v": "f0c46c3f53",
-"engine": "elevenlabs",
-"sig": "f0c46c3f53",
-"text": "4dd5ff6b81"
+"v": "a724ef1fb3",
+"engine": "gemini",
+"sig": "a724ef1fb3",
+"text": "46c5c301e7",
+"whole": true
 },
 "t8e9e608c": {
 "v": "5bb82cd380",
@@ -13563,7 +13682,8 @@
 "v": "26cbf7d123",
 "engine": "gemini",
 "sig": "26cbf7d123",
-"text": "1cb4c7b49d"
+"text": "1cb4c7b49d",
+"whole": true
 },
 "t8ec6ef59": {
 "v": "f39a1c99d6",
@@ -13717,10 +13837,11 @@
 "text": "e10494e750"
 },
 "t90c5562b": {
-"v": "8e2dfd3a98",
-"engine": "elevenlabs",
-"sig": "8e2dfd3a98",
-"text": "8ebb92a7db"
+"v": "ac6885e288",
+"engine": "gemini",
+"sig": "ac6885e288",
+"text": "8ebb92a7db",
+"whole": true
 },
 "t90d526f4": {
 "v": "3937bb13e6",
@@ -13753,10 +13874,11 @@
 "text": "1f474f5ffb"
 },
 "t91362007": {
-"v": "774e7a7d75",
-"engine": "elevenlabs",
-"sig": "774e7a7d75",
-"text": "aa493876f6"
+"v": "36f6437ac1",
+"engine": "gemini",
+"sig": "36f6437ac1",
+"text": "9a24413414",
+"whole": true
 },
 "t913e536e": {
 "v": "f1ee37efb6",
@@ -13783,10 +13905,11 @@
 "text": "3c078e432c"
 },
 "t91a7d046": {
-"v": "22a7f96eb4",
-"engine": "elevenlabs",
-"sig": "22a7f96eb4",
-"text": "8ee22fba90"
+"v": "ad5ad2e6ca",
+"engine": "gemini",
+"sig": "ad5ad2e6ca",
+"text": "0ef2ebfe8f",
+"whole": true
 },
 "t91afa7c8": {
 "v": "3fd09f39be",
@@ -13843,10 +13966,11 @@
 "text": "ba24293aa5"
 },
 "t9242d9a5": {
-"v": "877347ec99",
-"engine": "elevenlabs",
-"sig": "877347ec99",
-"text": "7f9ff2f420"
+"v": "f437f7f0ac",
+"engine": "gemini",
+"sig": "f437f7f0ac",
+"text": "82262e899e",
+"whole": true
 },
 "t92571b86": {
 "v": "2dd39f948a",
@@ -13969,10 +14093,11 @@
 "text": "67a2700115"
 },
 "t93862f14": {
-"v": "50e6eb58d0",
-"engine": "elevenlabs",
-"sig": "50e6eb58d0",
-"text": "0797b7cbc2"
+"v": "4043a62d46",
+"engine": "gemini",
+"sig": "4043a62d46",
+"text": "a54728b345",
+"whole": true
 },
 "t939a2279": {
 "v": "3681d71e19",
@@ -14078,10 +14203,11 @@
 "text": "3090c1df8d"
 },
 "t9546f94b": {
-"v": "e2c9ab33d3",
-"engine": "elevenlabs",
-"sig": "e2c9ab33d3",
-"text": "75309caed9"
+"v": "edf5444db0",
+"engine": "gemini",
+"sig": "edf5444db0",
+"text": "75309caed9",
+"whole": true
 },
 "t955cf70d": {
 "v": "5cd4d2d671",
@@ -14138,10 +14264,11 @@
 "text": "57e30256dc"
 },
 "t95b32784": {
-"v": "f137238f2b",
-"engine": "elevenlabs",
-"sig": "f137238f2b",
-"text": "4d7ec0c3c9"
+"v": "2ae52b818f",
+"engine": "gemini",
+"sig": "2ae52b818f",
+"text": "814d276e8e",
+"whole": true
 },
 "t95cc9bc8": {
 "v": "21c01bbe3b",
@@ -14168,10 +14295,11 @@
 "text": "7114f78ce6"
 },
 "t95fd7360": {
-"v": "5ea941bb4a",
-"engine": "elevenlabs",
-"sig": "5ea941bb4a",
-"text": "dfb3167b07"
+"v": "713b043aa4",
+"engine": "gemini",
+"sig": "713b043aa4",
+"text": "32e64bcf01",
+"whole": true
 },
 "t96427ef5": {
 "v": "e78815c725",
@@ -14234,10 +14362,11 @@
 "text": "71fa51a25a"
 },
 "t97062bae": {
-"v": "4797f6dcc0",
-"engine": "elevenlabs",
-"sig": "4797f6dcc0",
-"text": "e7bbbf4f8e"
+"v": "be223a4846",
+"engine": "gemini",
+"sig": "be223a4846",
+"text": "e7bbbf4f8e",
+"whole": true
 },
 "t971c8013": {
 "v": "4a122e6ddb",
@@ -14396,10 +14525,11 @@
 "text": "a388cc1f85"
 },
 "t99298edd": {
-"v": "60d25ad7a0",
-"engine": "elevenlabs",
-"sig": "60d25ad7a0",
-"text": "cb05cb98d2"
+"v": "e50d63bbca",
+"engine": "gemini",
+"sig": "e50d63bbca",
+"text": "172ce82226",
+"whole": true
 },
 "t99472ee0": {
 "v": "7275020571",
@@ -14590,10 +14720,11 @@
 "text": "1518c6d4b2"
 },
 "t9c2baf56": {
-"v": "a41dbd5876",
-"engine": "elevenlabs",
-"sig": "a41dbd5876",
-"text": "7df6dbc1ad"
+"v": "4857830331",
+"engine": "gemini",
+"sig": "4857830331",
+"text": "4f05618f9f",
+"whole": true
 },
 "t9c4ad73a": {
 "v": "e548975e55",
@@ -14681,10 +14812,11 @@
 "whole": true
 },
 "t9d537ef8": {
-"v": "ef492c2b70",
-"engine": "elevenlabs",
-"sig": "ef492c2b70",
-"text": "b2e61f3e09"
+"v": "b5af34eaab",
+"engine": "gemini",
+"sig": "b5af34eaab",
+"text": "72a81dec35",
+"whole": true
 },
 "t9d77e41c": {
 "v": "4f0fa001ae",
@@ -14816,10 +14948,11 @@
 "text": "3387acb7bb"
 },
 "t9ea13367": {
-"v": "20ebb7024a",
-"engine": "elevenlabs",
-"sig": "20ebb7024a",
-"text": "92c487349c"
+"v": "ae32ab46ed",
+"engine": "gemini",
+"sig": "ae32ab46ed",
+"text": "0d86e5c6ae",
+"whole": true
 },
 "t9eb386a9": {
 "v": "b8623d171c",
@@ -15005,7 +15138,8 @@
 "v": "f58ed110ff",
 "engine": "gemini",
 "sig": "f58ed110ff",
-"text": "ae5692741c"
+"text": "ae5692741c",
+"whole": true
 },
 "ta066313c": {
 "v": "0f2a8dd510",
@@ -15116,10 +15250,11 @@
 "text": "0a727e1c5e"
 },
 "ta14be50e": {
-"v": "831751d1be",
-"engine": "elevenlabs",
-"sig": "831751d1be",
-"text": "d13ab56c21"
+"v": "b90bc87518",
+"engine": "gemini",
+"sig": "b90bc87518",
+"text": "8f6648a346",
+"whole": true
 },
 "ta15bf612": {
 "v": "397ee046da",
@@ -15260,10 +15395,11 @@
 "text": "280e8d429d"
 },
 "ta30bced3": {
-"v": "9ba55915e1",
-"engine": "elevenlabs",
-"sig": "9ba55915e1",
-"text": "7bbade5ab3"
+"v": "a1aa6de8c3",
+"engine": "gemini",
+"sig": "a1aa6de8c3",
+"text": "7bbade5ab3",
+"whole": true
 },
 "ta312de65": {
 "v": "77236d27e0",
@@ -15315,10 +15451,11 @@
 "text": "0d0a4a8971"
 },
 "ta41daab8": {
-"v": "4d6bb2581d",
-"engine": "elevenlabs",
-"sig": "4d6bb2581d",
-"text": "c29e988e48"
+"v": "593ab6bbae",
+"engine": "gemini",
+"sig": "593ab6bbae",
+"text": "e8f934a523",
+"whole": true
 },
 "ta41dcfa2": {
 "v": "0cca2f27c3",
@@ -15646,10 +15783,11 @@
 "text": "8d2d33f4ca"
 },
 "ta8985b22": {
-"v": "bfe5d74f06",
-"engine": "elevenlabs",
-"sig": "bfe5d74f06",
-"text": "db41bb9779"
+"v": "deeac518ff",
+"engine": "gemini",
+"sig": "deeac518ff",
+"text": "db41bb9779",
+"whole": true
 },
 "ta89c182f": {
 "v": "9675b85c0f",
@@ -15667,8 +15805,7 @@
 "v": "874ee3973b",
 "engine": "gemini",
 "sig": "874ee3973b",
-"text": "f2c5e075fa",
-"whole": true
+"text": "f2c5e075fa"
 },
 "ta8cb90d1": {
 "v": "872acba32b",
@@ -15896,10 +16033,11 @@
 "text": "f6aec8e6e8"
 },
 "taad41883": {
-"v": "ad5a5f228d",
-"engine": "elevenlabs",
-"sig": "ad5a5f228d",
-"text": "8060659f0e"
+"v": "80f03d1066",
+"engine": "gemini",
+"sig": "80f03d1066",
+"text": "2a7f08d3bc",
+"whole": true
 },
 "taaf3842a": {
 "v": "f889423c9e",
@@ -16139,16 +16277,18 @@
 "text": "c57f094200"
 },
 "tae370636": {
-"v": "2fd537cca2",
-"engine": "google",
-"sig": "2fd537cca2",
-"text": "3eb298f420"
+"v": "1630cb72d4",
+"engine": "gemini",
+"sig": "1630cb72d4",
+"text": "633728c46d",
+"whole": true
 },
 "tae51a7b1": {
-"v": "5cb2a0b78b",
-"engine": "elevenlabs",
-"sig": "5cb2a0b78b",
-"text": "5de90adc4d"
+"v": "e9e61e5ef7",
+"engine": "gemini",
+"sig": "e9e61e5ef7",
+"text": "d1dc4b493f",
+"whole": true
 },
 "tae629379": {
 "v": "19618ea1ea",
@@ -16241,10 +16381,11 @@
 "text": "292288e9d4"
 },
 "taf3ace6a": {
-"v": "f4363aed4e",
-"engine": "elevenlabs",
-"sig": "f4363aed4e",
-"text": "6c0104e430"
+"v": "84789fbfa0",
+"engine": "gemini",
+"sig": "84789fbfa0",
+"text": "6c0104e430",
+"whole": true
 },
 "taf3f3596": {
 "v": "3d2467e084",
@@ -16636,10 +16777,11 @@
 "text": "2722ecbf34"
 },
 "tb45c977d": {
-"v": "ce1c898ffd",
-"engine": "elevenlabs",
-"sig": "ce1c898ffd",
-"text": "5b5083660b"
+"v": "55306072a7",
+"engine": "gemini",
+"sig": "55306072a7",
+"text": "b8aa60fcca",
+"whole": true
 },
 "tb45eb1f3": {
 "v": "c46e29a92b",
@@ -16672,10 +16814,11 @@
 "text": "9af3982c99"
 },
 "tb4c8519a": {
-"v": "48ed30b11f",
-"engine": "google",
-"sig": "48ed30b11f",
-"text": "a66df3cdb0"
+"v": "a3a5798b18",
+"engine": "gemini",
+"sig": "a3a5798b18",
+"text": "a66df3cdb0",
+"whole": true
 },
 "tb4e53b75": {
 "v": "29d482bf13",
@@ -16751,10 +16894,11 @@
 "text": "efa09b0a05"
 },
 "tb5f2c5db": {
-"v": "551d2c6752",
-"engine": "elevenlabs",
-"sig": "551d2c6752",
-"text": "80a1b94f23"
+"v": "768e713193",
+"engine": "gemini",
+"sig": "768e713193",
+"text": "80a1b94f23",
+"whole": true
 },
 "tb5f39e4d": {
 "v": "a2bc0a0d95",
@@ -16835,10 +16979,11 @@
 "text": "359550a753"
 },
 "tb743434d": {
-"v": "ad903c06dc",
-"engine": "elevenlabs",
-"sig": "ad903c06dc",
-"text": "256911f8d3"
+"v": "e845ee704c",
+"engine": "gemini",
+"sig": "e845ee704c",
+"text": "256911f8d3",
+"whole": true
 },
 "tb790ded9": {
 "v": "f9e5e419a1",
@@ -16945,10 +17090,11 @@
 "text": "6937c67308"
 },
 "tb89d3af6": {
-"v": "405f09c5ae",
-"engine": "elevenlabs",
-"sig": "405f09c5ae",
-"text": "089e129926"
+"v": "443aec1065",
+"engine": "gemini",
+"sig": "443aec1065",
+"text": "089e129926",
+"whole": true
 },
 "tb8aa7845": {
 "v": "116618a160",
@@ -16969,10 +17115,11 @@
 "text": "2bd78dcca7"
 },
 "tb8e1df46": {
-"v": "4dd9ee5952",
-"engine": "elevenlabs",
-"sig": "4dd9ee5952",
-"text": "68bc05d4e1"
+"v": "aaad976079",
+"engine": "gemini",
+"sig": "aaad976079",
+"text": "90032bdbd2",
+"whole": true
 },
 "tb8f43900": {
 "v": "cf25858b22",
@@ -17079,10 +17226,11 @@
 "text": "9f0e9c31af"
 },
 "tba41fe86": {
-"v": "38c2c878fc",
-"engine": "elevenlabs",
-"sig": "38c2c878fc",
-"text": "d70908bea2"
+"v": "0090111bbb",
+"engine": "gemini",
+"sig": "0090111bbb",
+"text": "d70908bea2",
+"whole": true
 },
 "tba472ad1": {
 "v": "6fda6263b2",
@@ -17112,7 +17260,8 @@
 "v": "e69007720e",
 "engine": "gemini",
 "sig": "e69007720e",
-"text": "38e908e1db"
+"text": "38e908e1db",
+"whole": true
 },
 "tbadb9b1a": {
 "v": "a288d6a043",
@@ -17223,10 +17372,11 @@
 "text": "ea24197af8"
 },
 "tbbd034d8": {
-"v": "bcbe91299e",
-"engine": "google",
-"sig": "bcbe91299e",
-"text": "8ab3cede71"
+"v": "1dd7e0864d",
+"engine": "gemini",
+"sig": "1dd7e0864d",
+"text": "a628a1ba48",
+"whole": true
 },
 "tbbde4956": {
 "v": "dd7c3b8c7d",
@@ -17235,10 +17385,11 @@
 "text": "3689075231"
 },
 "tbbeee41c": {
-"v": "3511d0ba40",
-"engine": "google",
-"sig": "3511d0ba40",
-"text": "233ef7806e"
+"v": "34c4878004",
+"engine": "gemini",
+"sig": "34c4878004",
+"text": "233ef7806e",
+"whole": true
 },
 "tbc1bc75b": {
 "v": "22093f68cc",
@@ -17326,10 +17477,11 @@
 "text": "19af17aa8b"
 },
 "tbcd59471": {
-"v": "eb58dc1eb6",
-"engine": "google",
-"sig": "eb58dc1eb6",
-"text": "d24cd7d7c9"
+"v": "29aa1d3d78",
+"engine": "gemini",
+"sig": "29aa1d3d78",
+"text": "02a1a7e78c",
+"whole": true
 },
 "tbce15fa0": {
 "v": "1c02587b5e",
@@ -17375,10 +17527,11 @@
 "text": "3256a6710e"
 },
 "tbdcb60f2": {
-"v": "069040d059",
-"engine": "elevenlabs",
-"sig": "069040d059",
-"text": "79dbb189c6"
+"v": "59f9745afb",
+"engine": "gemini",
+"sig": "59f9745afb",
+"text": "79dbb189c6",
+"whole": true
 },
 "tbde40982": {
 "v": "146bda8d6d",
@@ -17712,10 +17865,11 @@
 "text": "3dcc5185fa"
 },
 "tc25f3352": {
-"v": "65930f4d23",
-"engine": "google",
-"sig": "65930f4d23",
-"text": "42f608982f"
+"v": "824619bf29",
+"engine": "gemini",
+"sig": "824619bf29",
+"text": "c5bea2f034",
+"whole": true
 },
 "tc269e2c2": {
 "v": "398d7a8145",
@@ -17724,10 +17878,11 @@
 "text": "b1fca764ea"
 },
 "tc26c82b5": {
-"v": "426fdd959e",
-"engine": "google",
-"sig": "426fdd959e",
-"text": "5eae74b867"
+"v": "fc624a7c17",
+"engine": "gemini",
+"sig": "fc624a7c17",
+"text": "2f467ac5aa",
+"whole": true
 },
 "tc26f3e1f": {
 "v": "f4e3949dbf",
@@ -17863,10 +18018,11 @@
 "text": "1a9c82af45"
 },
 "tc44b8f47": {
-"v": "2d8ba666cc",
-"engine": "google",
-"sig": "2d8ba666cc",
-"text": "48338494b7"
+"v": "4a576ec878",
+"engine": "gemini",
+"sig": "4a576ec878",
+"text": "639899bdd7",
+"whole": true
 },
 "tc455a747": {
 "v": "2dda7f75b2",
@@ -17900,10 +18056,11 @@
 "text": "e9996c7432"
 },
 "tc49081cb": {
-"v": "dbebd025d4",
-"engine": "google",
-"sig": "dbebd025d4",
-"text": "e38a20cc5a"
+"v": "a5765818e1",
+"engine": "gemini",
+"sig": "a5765818e1",
+"text": "be35f7b2db",
+"whole": true
 },
 "tc4bc1644": {
 "v": "22b17f1a8e",
@@ -18149,10 +18306,11 @@
 "text": "c5c48179a3"
 },
 "tc814232a": {
-"v": "2851263904",
-"engine": "google",
-"sig": "2851263904",
-"text": "bef3707268"
+"v": "16d1ea0d27",
+"engine": "gemini",
+"sig": "16d1ea0d27",
+"text": "b73214351d",
+"whole": true
 },
 "tc8443dc0": {
 "v": "f0a7ad300a",
@@ -18535,10 +18693,11 @@
 "text": "d503201122"
 },
 "tcd813e6e": {
-"v": "de43be5bfc",
-"engine": "elevenlabs",
-"sig": "de43be5bfc",
-"text": "c0c0077cc3"
+"v": "0735646624",
+"engine": "gemini",
+"sig": "0735646624",
+"text": "05fc1dc0f6",
+"whole": true
 },
 "tcd8e22c6": {
 "v": "d4a82b9d1a",
@@ -18813,10 +18972,11 @@
 "text": "db34f261f3"
 },
 "td11959e9": {
-"v": "3c060db466",
-"engine": "elevenlabs",
-"sig": "3c060db466",
-"text": "c25b70865f"
+"v": "dad285dbb1",
+"engine": "gemini",
+"sig": "dad285dbb1",
+"text": "c25b70865f",
+"whole": true
 },
 "td14110c6": {
 "v": "8a671618fa",
@@ -19076,10 +19236,11 @@
 "text": "f8bd22c45d"
 },
 "td4cdb86f": {
-"v": "7a42a0880f",
-"engine": "elevenlabs",
-"sig": "7a42a0880f",
-"text": "1d3bdf3674"
+"v": "3fd4299a36",
+"engine": "gemini",
+"sig": "3fd4299a36",
+"text": "d0f696eb60",
+"whole": true
 },
 "td54117a4": {
 "v": "29a47d7371",
@@ -19345,7 +19506,8 @@
 "v": "d1b1e63e56",
 "engine": "gemini",
 "sig": "d1b1e63e56",
-"text": "9c20625441"
+"text": "9c20625441",
+"whole": true
 },
 "td8a6af67": {
 "v": "e75a21a74f",
@@ -19402,10 +19564,11 @@
 "text": "cbd5054fd1"
 },
 "td9208bc6": {
-"v": "14b6e964b6",
-"engine": "google",
-"sig": "14b6e964b6",
-"text": "561490d2e8"
+"v": "32fd0d538a",
+"engine": "gemini",
+"sig": "32fd0d538a",
+"text": "561490d2e8",
+"whole": true
 },
 "td9302d6e": {
 "v": "a5205954f6",
@@ -19480,10 +19643,11 @@
 "text": "b1b7dae568"
 },
 "tda3629d7": {
-"v": "2ffb867aae",
-"engine": "google",
-"sig": "2ffb867aae",
-"text": "579c2ae24c"
+"v": "082c0c318f",
+"engine": "gemini",
+"sig": "082c0c318f",
+"text": "f09f68a4bd",
+"whole": true
 },
 "tda3e635f": {
 "v": "627c1b5a4f",
@@ -19675,10 +19839,11 @@
 "text": "e9808b80bf"
 },
 "tdc36ae5f": {
-"v": "3d55e76f15",
-"engine": "elevenlabs",
-"sig": "3d55e76f15",
-"text": "df75830a65"
+"v": "deb4c4b19b",
+"engine": "gemini",
+"sig": "deb4c4b19b",
+"text": "d54be2683c",
+"whole": true
 },
 "tdc4cdcb1": {
 "v": "9a332a9bb7",
@@ -19717,10 +19882,11 @@
 "text": "4461f62883"
 },
 "tdc78c46c": {
-"v": "b095845907",
-"engine": "google",
-"sig": "b095845907",
-"text": "a23fa5ff0f"
+"v": "e5181aee1d",
+"engine": "gemini",
+"sig": "e5181aee1d",
+"text": "11c9b59210",
+"whole": true
 },
 "tdc845c2f": {
 "v": "c2cd040fef",
@@ -19753,10 +19919,11 @@
 "text": "eb9bf209b9"
 },
 "tdcd5b52b": {
-"v": "9f660932c2",
-"engine": "elevenlabs",
-"sig": "9f660932c2",
-"text": "fb1e5a6acb"
+"v": "e23ee442c4",
+"engine": "gemini",
+"sig": "e23ee442c4",
+"text": "fb1e5a6acb",
+"whole": true
 },
 "tdcdd9167": {
 "v": "6d30c8f26c",
@@ -19825,10 +19992,11 @@
 "text": "89949b4773"
 },
 "tddbb4db5": {
-"v": "c52b5ef150",
-"engine": "google",
-"sig": "c52b5ef150",
-"text": "822817744c"
+"v": "e82af9cb9e",
+"engine": "gemini",
+"sig": "e82af9cb9e",
+"text": "822817744c",
+"whole": true
 },
 "tddbf5538": {
 "v": "94768093c9",
@@ -19970,10 +20138,11 @@
 "text": "14e05abe23"
 },
 "tdfcf7d08": {
-"v": "0bc8d7cd46",
-"engine": "google",
-"sig": "0bc8d7cd46",
-"text": "deab58e3d6"
+"v": "476876cfc8",
+"engine": "gemini",
+"sig": "476876cfc8",
+"text": "d7452c6090",
+"whole": true
 },
 "te00590f9": {
 "v": "950fc3909a",
@@ -20045,8 +20214,7 @@
 "v": "9c8831c973",
 "engine": "gemini",
 "sig": "9c8831c973",
-"text": "1a4a49c28a",
-"whole": true
+"text": "1a4a49c28a"
 },
 "te11fa187": {
 "v": "835b25b60f",
@@ -20067,10 +20235,11 @@
 "text": "d420b236a3"
 },
 "te1f9f45a": {
-"v": "3b30f61b3c",
-"engine": "google",
-"sig": "3b30f61b3c",
-"text": "1f2a5035aa"
+"v": "68dcbbe0b2",
+"engine": "gemini",
+"sig": "68dcbbe0b2",
+"text": "25c027fb4b",
+"whole": true
 },
 "te20446e3": {
 "v": "19dba7e0e2",
@@ -20091,10 +20260,11 @@
 "text": "af4ec5060e"
 },
 "te22d1311": {
-"v": "55927eb97a",
-"engine": "google",
-"sig": "55927eb97a",
-"text": "1778f51711"
+"v": "da694b6a7f",
+"engine": "gemini",
+"sig": "da694b6a7f",
+"text": "1778f51711",
+"whole": true
 },
 "te232b2d6": {
 "v": "4bcd3f1679",
@@ -20223,16 +20393,18 @@
 "text": "093ebdf371"
 },
 "te407be1b": {
-"v": "ce68609e3d",
-"engine": "google",
-"sig": "ce68609e3d",
-"text": "ad1e4acb5b"
+"v": "978bc221d0",
+"engine": "gemini",
+"sig": "978bc221d0",
+"text": "85b7ee1775",
+"whole": true
 },
 "te433cab9": {
-"v": "060e37a8c9",
-"engine": "elevenlabs",
-"sig": "060e37a8c9",
-"text": "4dbbd0df4d"
+"v": "34128b9cf4",
+"engine": "gemini",
+"sig": "34128b9cf4",
+"text": "4dbbd0df4d",
+"whole": true
 },
 "te4400e19": {
 "v": "6027d2a2d6",
@@ -20301,10 +20473,11 @@
 "text": "1c23f1137b"
 },
 "te529abf9": {
-"v": "676eb41753",
-"engine": "elevenlabs",
-"sig": "676eb41753",
-"text": "8e70e62b53"
+"v": "3393ae2acb",
+"engine": "gemini",
+"sig": "3393ae2acb",
+"text": "9e395c98a9",
+"whole": true
 },
 "te53bfc2a": {
 "v": "c333ad4ddf",
@@ -20347,7 +20520,8 @@
 "engine": "gemini",
 "sig": "b862e54dfd",
 "text": "54f01b170f",
-"fx": "telefon"
+"fx": "telefon",
+"whole": true
 },
 "te5de7ee2": {
 "v": "8a87dc431d",
@@ -20434,10 +20608,11 @@
 "text": "6210704a43"
 },
 "te705de2f": {
-"v": "eadcb2513a",
-"engine": "elevenlabs",
-"sig": "eadcb2513a",
-"text": "f0a19f6058"
+"v": "ad1d834095",
+"engine": "gemini",
+"sig": "ad1d834095",
+"text": "f0a19f6058",
+"whole": true
 },
 "te743ee08": {
 "v": "114c8d42bf",
@@ -20458,10 +20633,11 @@
 "text": "51fa611339"
 },
 "te754cce2": {
-"v": "36758b8a96",
-"engine": "google",
-"sig": "36758b8a96",
-"text": "842406373d"
+"v": "3d984aff09",
+"engine": "gemini",
+"sig": "3d984aff09",
+"text": "420a14f8fd",
+"whole": true
 },
 "te78ec218": {
 "v": "97943963a4",
@@ -20513,10 +20689,11 @@
 "text": "21fd0de3b4"
 },
 "te81d9a12": {
-"v": "777fca85c5",
-"engine": "elevenlabs",
-"sig": "777fca85c5",
-"text": "3882f9c608"
+"v": "35189d8989",
+"engine": "gemini",
+"sig": "35189d8989",
+"text": "921c543cbb",
+"whole": true
 },
 "te8260c1e": {
 "v": "24e51a0cdb",
@@ -20618,7 +20795,8 @@
 "v": "d83197b91b",
 "engine": "gemini",
 "sig": "d83197b91b",
-"text": "a04f18302f"
+"text": "a04f18302f",
+"whole": true
 },
 "te9c87ecf": {
 "v": "a15149b773",
@@ -20715,7 +20893,8 @@
 "v": "270fbb0f47",
 "engine": "gemini",
 "sig": "270fbb0f47",
-"text": "e368955621"
+"text": "e368955621",
+"whole": true
 },
 "teaff9698": {
 "v": "77dd68be87",
@@ -20989,10 +21168,11 @@
 "text": "93225cd3a4"
 },
 "teeacde19": {
-"v": "c42154a7ae",
-"engine": "elevenlabs",
-"sig": "c42154a7ae",
-"text": "86e7050c00"
+"v": "84660813f7",
+"engine": "gemini",
+"sig": "84660813f7",
+"text": "86e7050c00",
+"whole": true
 },
 "teec8b820": {
 "v": "77a212551d",
@@ -21001,10 +21181,11 @@
 "text": "0cf410913a"
 },
 "teed5d6da": {
-"v": "9e3c6c0b7c",
-"engine": "elevenlabs",
-"sig": "9e3c6c0b7c",
-"text": "f591fe7d76"
+"v": "048b0bee1e",
+"engine": "gemini",
+"sig": "048b0bee1e",
+"text": "f591fe7d76",
+"whole": true
 },
 "teedb4c23": {
 "v": "e3ae4d434c",
@@ -21079,10 +21260,11 @@
 "text": "b9e8b812cd"
 },
 "tef6a3c6a": {
-"v": "04290ae0f7",
-"engine": "elevenlabs",
-"sig": "04290ae0f7",
-"text": "2040cb9375"
+"v": "fd40ccec79",
+"engine": "gemini",
+"sig": "fd40ccec79",
+"text": "edb76a2d3f",
+"whole": true
 },
 "tef6e7153": {
 "v": "e396b79a40",
@@ -21253,10 +21435,11 @@
 "text": "3fb73a4cdc"
 },
 "tf08bc73a": {
-"v": "8c7e0be87b",
-"engine": "google",
-"sig": "8c7e0be87b",
-"text": "762051a6e7"
+"v": "a35dac8f8d",
+"engine": "gemini",
+"sig": "a35dac8f8d",
+"text": "6dd5d1de8e",
+"whole": true
 },
 "tf08ec092": {
 "v": "3c33e89532",
@@ -21314,10 +21497,11 @@
 "text": "5177574cc8"
 },
 "tf1574ab9": {
-"v": "1bcbd342c6",
-"engine": "google",
-"sig": "1bcbd342c6",
-"text": "025ab5ad61"
+"v": "bbab25ed19",
+"engine": "gemini",
+"sig": "bbab25ed19",
+"text": "025ab5ad61",
+"whole": true
 },
 "tf16f1f1b": {
 "v": "3c67d54608",
@@ -21490,10 +21674,11 @@
 "text": "2c36b11f84"
 },
 "tf431ee88": {
-"v": "76c5875d54",
-"engine": "google",
-"sig": "76c5875d54",
-"text": "75d622594f"
+"v": "2f4e1f4ff7",
+"engine": "gemini",
+"sig": "2f4e1f4ff7",
+"text": "c6ef036b44",
+"whole": true
 },
 "tf43bbc4d": {
 "v": "dd4ff33d8d",
@@ -21597,7 +21782,8 @@
 "v": "c14bb0ab95",
 "engine": "gemini",
 "sig": "c14bb0ab95",
-"text": "5786161818"
+"text": "5786161818",
+"whole": true
 },
 "tf59dfce4": {
 "v": "e02851f9a9",
@@ -21710,16 +21896,18 @@
 "text": "2a3f938d89"
 },
 "tf789bf71": {
-"v": "b9b2c44b67",
-"engine": "elevenlabs",
-"sig": "b9b2c44b67",
-"text": "ced72443b7"
+"v": "63a9244b86",
+"engine": "gemini",
+"sig": "63a9244b86",
+"text": "ced72443b7",
+"whole": true
 },
 "tf7b14a15": {
-"v": "b43b89a2c0",
-"engine": "elevenlabs",
-"sig": "b43b89a2c0",
-"text": "a52c080504"
+"v": "36cf2fc2bd",
+"engine": "gemini",
+"sig": "36cf2fc2bd",
+"text": "a52c080504",
+"whole": true
 },
 "tf7e97d4e": {
 "v": "5a8502c8bb",
@@ -21737,7 +21925,8 @@
 "v": "e123fc666e",
 "engine": "gemini",
 "sig": "e123fc666e",
-"text": "90a329a2f0"
+"text": "90a329a2f0",
+"whole": true
 },
 "tf8550636": {
 "v": "6f31fb3186",
@@ -21837,10 +22026,11 @@
 "text": "b373910da9"
 },
 "tf94de6a8": {
-"v": "aed1dc3b4f",
-"engine": "elevenlabs",
-"sig": "aed1dc3b4f",
-"text": "809aa7185c"
+"v": "e9ac754a44",
+"engine": "gemini",
+"sig": "e9ac754a44",
+"text": "809aa7185c",
+"whole": true
 },
 "tf95b3d96": {
 "v": "3abf608320",
@@ -21995,10 +22185,11 @@
 "text": "905c6f667e"
 },
 "tfadec39b": {
-"v": "f31dd64353",
-"engine": "elevenlabs",
-"sig": "f31dd64353",
-"text": "5788ce11eb"
+"v": "c0c46e70bb",
+"engine": "gemini",
+"sig": "c0c46e70bb",
+"text": "c85f2fe946",
+"whole": true
 },
 "tfae309cb": {
 "v": "2a3c006ec8",
@@ -22055,10 +22246,11 @@
 "text": "5a55c5785b"
 },
 "tfb54ed57": {
-"v": "ba9ce987de",
-"engine": "elevenlabs",
-"sig": "ba9ce987de",
-"text": "2ec646799c"
+"v": "60d754d260",
+"engine": "gemini",
+"sig": "60d754d260",
+"text": "f4c9ef185a",
+"whole": true
 },
 "tfb8052a1": {
 "v": "4f6d39616b",
@@ -22127,10 +22319,11 @@
 "text": "bac26385c0"
 },
 "tfc7a1da5": {
-"v": "9474564ce7",
-"engine": "google",
-"sig": "9474564ce7",
-"text": "31881c7e46"
+"v": "c0eb2817a2",
+"engine": "gemini",
+"sig": "c0eb2817a2",
+"text": "03bdaa2eea",
+"whole": true
 },
 "tfca2f094": {
 "v": "4b52f3023c",
@@ -22265,10 +22458,11 @@
 "text": "faf460a382"
 },
 "tfe4e0075": {
-"v": "31dd7a53fa",
-"engine": "google",
-"sig": "31dd7a53fa",
-"text": "d4236fde08"
+"v": "ff3b8d75dd",
+"engine": "gemini",
+"sig": "ff3b8d75dd",
+"text": "45f286721f",
+"whole": true
 },
 "tfe5e37eb": {
 "v": "bcd37031b5",
@@ -22332,10 +22526,11 @@
 "text": "5ff2133b57"
 },
 "tff1cc68b": {
-"v": "89ad3a07a8",
-"engine": "google",
-"sig": "89ad3a07a8",
-"text": "4047ee9c43"
+"v": "9e165b7f67",
+"engine": "gemini",
+"sig": "9e165b7f67",
+"text": "5fd2de5a15",
+"whole": true
 },
 "tff26957e": {
 "v": "cc1ade76f7",

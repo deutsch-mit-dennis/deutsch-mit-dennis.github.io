@@ -133,9 +133,11 @@ def synth_eleven(text, role, wav):
 def synth_gemini(text, role, wav):
     voice = voice_for('gemini', role)
     models = [m for m in [os.environ.get('GEMINI_TTS_MODEL'), 'gemini-2.5-flash-preview-tts', 'gemini-2.5-pro-preview-tts'] if m]
-    prompt = ('Sprich den folgenden deutschen Text wie ein echter Mensch im Alltag: natürlich, locker, mit lebendiger '
-              'Betonung und kleinen natürlichen Pausen, in ruhigem, gut verständlichem Tempo für Deutschlernende. '
-              'Lies genau diesen Text, ohne etwas hinzuzufügen:\n\n' + text)
+    # No words like "natürlich"/"locker" in the instruction: Gemini sometimes spoke them as part of the text
+    # (audio audit 2026-11: takes started with "Natürlich, ..."). Short instruction, text clearly fenced.
+    prompt = ('Vorlesen auf Deutsch, wie ein echter Mensch im Alltag, mit lebendiger Betonung und ruhigem, gut '
+              'verständlichem Tempo für Deutschlernende. Lies nur den Text zwischen <<< und >>>, Wort für Wort, '
+              'ohne etwas hinzuzufügen oder wegzulassen. Sprich die Zeichen <<< und >>> nicht.\n\n<<<\n' + text + '\n>>>')
     body = {'contents': [{'parts': [{'text': prompt}]}],
             'generationConfig': {'responseModalities': ['AUDIO'],
                                  'speechConfig': {'voiceConfig': {'prebuiltVoiceConfig': {'voiceName': voice}}}}}
@@ -185,9 +187,10 @@ def gemini_whole(entry, wav):
         return True
     names = {v: SPEAKER_NAMES.get(v, v) for v in voices}
     dialog = '\n'.join(f'{names[v]}: {t}' for v, t in segs)
-    prompt = ('Lies dieses deutsche Alltagsgespräch wie zwei echte Menschen: natürlich, locker, mit lebendiger Betonung, '
+    prompt = ('Lies dieses deutsche Alltagsgespräch wie zwei echte Menschen, mit lebendiger Betonung, '
               'kleinen Pausen beim Sprecherwechsel und ruhigem, gut verständlichem Tempo für Deutschlernende. '
-              'Lies genau diesen Text, ohne etwas hinzuzufügen:\n\n' + dialog)
+              'Lies nur den Text zwischen <<< und >>>, Wort für Wort, ohne etwas hinzuzufügen oder wegzulassen. '
+              'Sprich die Zeichen <<< und >>> nicht.\n\n<<<\n' + dialog + '\n>>>')
     cfg = [{'speaker': names[v], 'voiceConfig': {'prebuiltVoiceConfig': {'voiceName': voice_for('gemini', v)}}} for v in voices]
     body = {'contents': [{'parts': [{'text': prompt}]}],
             'generationConfig': {'responseModalities': ['AUDIO'], 'speechConfig': {'multiSpeakerVoiceConfig': {'speakerVoiceConfigs': cfg}}}}
