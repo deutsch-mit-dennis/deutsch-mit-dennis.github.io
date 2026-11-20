@@ -16,6 +16,7 @@ import base64, hashlib, json, os, subprocess, sys, tempfile, time, urllib.reques
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 OUT = os.path.join(ROOT, 'audio', 'tts')
 MANIFEST = os.path.join(ROOT, 'tools', 'tts', 'manifest.json')
+OVERRIDES = os.path.join(ROOT, 'tools', 'tts', 'say-overrides.json')  # spoken-text fixes from the audio audit 2026-11
 INDEX = os.path.join(OUT, 'index.json')
 STATUS = os.path.join(OUT, 'status.json')
 MAX_SECONDS = int(os.environ.get('TTS_MAX_SECONDS', '4800'))  # Zeitbudget pro Lauf
@@ -350,9 +351,20 @@ def write_index(files):
                          for k, v in sorted(files.items())}},
               open(INDEX, 'w', encoding='utf-8'), ensure_ascii=False, indent=0)
 
+def load_entries():
+    """Manifest entries with spoken-text fixes from say-overrides.json applied (single-voice entries only).
+    The overrides live in their own file so the sync scripts that rebuild manifest.json cannot undo them."""
+    entries = json.load(open(MANIFEST, encoding='utf-8'))['entries']
+    try: over = json.load(open(OVERRIDES, encoding='utf-8'))
+    except Exception: over = {}
+    for e in entries:
+        if e['key'] in over and len(e['segments']) == 1:
+            e['segments'][0]['say'] = over[e['key']]
+    return entries
+
 def main():
     os.makedirs(OUT, exist_ok=True)
-    entries = json.load(open(MANIFEST, encoding='utf-8'))['entries']
+    entries = load_entries()
     try: index = json.load(open(INDEX, encoding='utf-8'))
     except Exception: index = {'files': {}}
     files = index.get('files', {})
