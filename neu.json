@@ -2,6 +2,12 @@
  "note": "Neu auf der Seite – neueste Einträge oben. Wird vom Redaktionsplan (geplante Aufgaben) ergänzt.",
  "items": [
   {
+   "date": "2026-11-20",
+   "type": "neu",
+   "title": "Neues Arbeitsblatt: Sich höflich beschweren – Probleme freundlich ansprechen (A2)",
+   "link": "#material"
+  },
+  {
    "date": "2026-11-19",
    "type": "neu",
    "title": "Neu: Kurstagebuch – das Protokoll aus meinem Integrationskurs (Tag 1: Sich vorstellen) mit Übersetzungen in 8 Sprachen und 104 Übungen zum Wiederholen",
@@ -174,138 +180,6 @@
    "type": "uebung",
    "title": "Neuer Lesetext: Neue Waschmaschinen im Waschkeller – Aushang (Alltag, A2–B1)",
    "link": "#lesen/alltag/10"
-  },
-  {
-   "date": "2026-11-11",
-   "type": "uebung",
-   "title": "Neuer Lesetext: Sachbearbeitung Kundenservice bei den Stadtwerken – Stellenanzeige (Beruf, B1–B2)",
-   "link": "#lesen/beruf/9"
-  },
-  {
-   "date": "2026-11-10",
-   "type": "schreiben",
-   "title": "DTZ Schreiben: 3 Musterbriefe mit Aufgabe, Redemitteln und Mustertext A2/B1 – Beschwerde, Termin absagen, Bitte um Information",
-   "link": "/dtz-schreiben/beschwerde/"
-  },
-  {
-   "date": "2026-11-09",
-   "type": "neu",
-   "title": "4 neue Lektionen: Familie und Freizeit (A1), Auf dem Amt und Feste & Geschenke (A2) – mit Wortkarten, Übungen und PDF",
-   "link": "#lektion/familie"
-  },
-  {
-   "date": "2026-11-09",
-   "type": "neu",
-   "title": "Alle 310 Fragen „Leben in Deutschland“ mit Antworten zum Nachlesen – nach Nummern geordnet",
-   "link": "/lid/fragen/"
-  },
-  {
-   "date": "2026-11-09",
-   "type": "neu",
-   "title": "Wortkarten: Übersetzung jetzt auch für B1/B2 – in 8 Sprachen zum Aufklappen (auch Italienisch)",
-   "link": "#wortschatz/meinung/0"
-  },
-  {
-   "date": "2026-11-09",
-   "type": "neu",
-   "title": "3D-Ansicht: Tages-Challenge als Zettel auf dem Schreibtisch – mit deiner Serie",
-   "link": "/3d/"
-  },
-  {
-   "date": "2026-11-07",
-   "type": "neu",
-   "title": "Neues Lernspiel: Mikula sucht den Weg nach Hause – hilf Mikula am Bahnhof und im Supermarkt (A1–B1)",
-   "link": "#spiele/mikula"
-  },
-  {
-   "date": "2026-11-06",
-   "type": "neu",
-   "title": "Neues Arbeitsblatt: Zweiteilige Konnektoren – sowohl … als auch, weder … noch, je … desto (B2, Grammatik)",
-   "link": "#material"
-  },
-  {
-   "date": "2026-11-04",
-   "type": "neu",
-   "title": "Jetzt erhältlich: Lehrerpaket Hören und Lesen DTZ – Strategien, Hörtexte und Lesetexte",
-   "link": "#lernpakete/lehrer-hoeren-lesen-dtz"
-  },
-  {
-   "date": "2026-11-04",
-   "type": "neu",
-   "title": "Jetzt erhältlich: Lehrerpaket Sprechen DTZ – Kärtchen und Rollenspiele",
-   "link": "#lernpakete/lehrer-sprechen-dtz"
-  },
-  {
-   "date": "2026-11-04",
-   "type": "neu",
-   "title": "Bald erhältlich: Lehrerpaket „Sprechen DTZ – Kärtchen und Rollenspiele“ (A2–B1) – Leseprobe ansehen",
-   "link": "#lernpakete/lehrer-sprechen-dtz"
-  },
-  {
-   "date": "2026-11-04",
-   "type": "uebung",
-   "title": "Neuer Lesetext: Ein Bus, den man bestellen kann – Zeitungsartikel (Alltag, A2–B1)",
-   "link": "#lesen/alltag/9"
-  },
-  {
-   "date": "2026-11-04",
-   "type": "uebung",
-   "title": "Neuer Lesetext: Telefonnotiz: Lieferung verspätet – Gesprächsnotiz (Beruf, B1–B2)",
-   "link": "#lesen/beruf/8"
-  },
-  {
-   "date": "2026-11-02",
-   "type": "neu",
-   "title": "DTZ Schreiben: Vorbereitungspaket zur neuen Regel ab 1.11.2026 (mindestens A2) – Briefgerüst, Redemittel, 8 Aufgaben, Mustertexte, Timer",
-   "link": "/dtz-schreiben/"
-  },
-  {
-   "date": "2026-11-01",
-   "type": "neu",
-   "title": "Neues Lernspiel: „Neu in Deutschland“ – eine Geschichte in 8 Kapiteln von A1 bis C1 (Wohnung, Amt, Arzt, Job, Widerspruch)",
-   "link": "#spiele/nid"
-  },
-  {
-   "date": "2026-10-30",
-   "type": "neu",
-   "title": "Neues Arbeitsblatt: DTZ Lesen Teil 1 – Wegweiser verstehen (B1, mit Lösungen)",
-   "link": "#material"
-  },
-  {
-   "date": "2026-10-29",
-   "type": "lied",
-   "title": "Neues Lied (A2): „I-K zwei-null-zwei – Ihr schafft das!“ – Mutmach-Lied für die DTZ-Prüfung",
-   "link": "#lieder/a2-13-ihr-schafft-das"
-  },
-  {
-   "date": "2026-10-29",
-   "type": "neu",
-   "title": "DTZ Modelltest 3 jetzt auch zum Ausdrucken: schriftliche Prüfung als PDF und Hörverstehen als MP3",
-   "link": "#simulation/dtz-3"
-  },
-  {
-   "date": "2026-10-29",
-   "type": "neu",
-   "title": "DTZ: dritter kompletter Modelltest – neue Hör- und Lesetexte, neue Schreib- und Sprechaufgaben mit Foto",
-   "link": "#simulation/dtz-3"
-  },
-  {
-   "date": "2026-10-29",
-   "type": "neu",
-   "title": "DTZ-Übungsheft zum Ausdrucken: Sprechen Teil 2 und 3 und Schreiben – 3 Varianten im bekannten Prüfungsformat",
-   "link": "#simulation/dtz"
-  },
-  {
-   "date": "2026-10-28",
-   "type": "neu",
-   "title": "Der Lesewurm ist da! Tippe auf den kleinen Wurm mit Brille und entdecke Dennis' Bücherregal",
-   "link": "#lernpakete/buecher"
-  },
-  {
-   "date": "2026-10-28",
-   "type": "kahoot",
-   "title": "3 neue Kahoot-Quiz zum Test „Leben in Deutschland“: Grundgesetz & Grundrechte, Staat & Wahlen, Mensch & Gesellschaft – je 18 Übungsfragen",
-   "link": "#kahoot"
   }
  ]
 }
