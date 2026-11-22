@@ -711,6 +711,9 @@ body:has(header.dm-header.menu-open) .dm-tour:not(.dm-tour-open){visibility:hidd
 .dm-intro{margin:56px 0 0;padding:28px clamp(18px,3vw,32px);background:var(--dm-surface);border:1px solid var(--dm-line);border-radius:20px}
 .dm-intro h1{font-size:clamp(26px,3.4vw,36px)!important;line-height:1.15;margin:0 0 14px}
 .dm-intro h2{font-size:clamp(20px,2.2vw,24px);line-height:1.25;margin:26px 0 6px}
+/* start page: the hero title is the H1; the intro title is an H2 that keeps the old H1 look (site.js home()) */
+.dm-intro h2.dm-intro-title{font-size:clamp(26px,3.4vw,36px)!important;line-height:1.15;margin:0 0 14px;letter-spacing:-.03em;font-weight:800;max-width:1000px}
+.dm-hero-copy h1.dm-hero-title{letter-spacing:-.035em!important}
 .dm-intro p{margin:0 0 12px;max-width:68ch}
 .dm-intro a{font-weight:700}
 .dm-draft{display:inline-block;background:var(--dm-marker);color:#4a3b00;font-weight:700;font-size:14px;border-radius:99px;padding:2px 12px;margin:0 0 12px}

@@ -160,6 +160,11 @@ SECTIONS = [
     ('challenge', 'Tages-Challenge: 10 Aufgaben, jeden Tag neu', 'Artikel, Verben, Satzbau, Wortschatz und „Leben in Deutschland“ – 3 Minuten am Tag. Wie lang wird deine Lernserie?'),
     ('lid', 'Leben in Deutschland Test & Einbürgerungstest: 310 Fragen', 'Kostenlos üben für den Einbürgerungstest und den Test „Leben in Deutschland“: alle 310 Fragen mit Lösung, Lernmodus und Testsimulation mit 33 Fragen.'),
     ('ueber-mich', 'Über Dennis', 'Deutschlehrer seit 2017, lizenzierter DTZ- und telc-Prüfer, vom BAMF zugelassene Lehrkraft für Integrations- und Berufssprachkurse.'),
+    # app sections that had no crawlable address before (2026-11-22); readable content: see EXTRA['kahoot'] … below
+    ('kahoot', 'Kahoot Deutsch: Quiz für A1, DTZ und LiD', 'Kostenlose Kahoot-Quiz zum Deutschlernen: A1-Grammatik, DTZ Bild beschreiben und gemeinsam planen, Leben in Deutschland. Allein üben oder im Kurs spielen.'),
+    ('videos', 'Deutsch lernen mit Videos: Erklärvideos', 'Kurze Erklärvideos von Dennis: der, die, das, Grammatik, DTZ und B1-Prüfung, Leben in Deutschland. Kostenlos auf YouTube, nach Thema sortiert.'),
+    ('witz', 'Witz des Tages: deutsche Witze mit Erklärung', 'Jeden Tag ein neuer deutscher Witz mit Niveau und einer Erklärung in einfachem Deutsch: Warum ist das lustig? Mit Übersetzung in viele Sprachen.'),
+    ('mikula', 'Mikula lernt Deutsch: typische Fehler', 'Mikula kommt aus dem Jahr 1024 und macht typische Fehler auf Deutsch. Findest du den Fehler? Jede Folge mit richtiger Lösung und kurzer Regel.'),
 ]
 # readable content (<noscript>) for app sections that are otherwise empty without JavaScript: data read from the app files
 NODE = r"""
@@ -286,6 +291,11 @@ def game_ld(g):
 
 EXTRA['simulation'] = EXTRA.get('simulation', '') + '\n<p>Neu: <a href="/simulation/lid/">Einbürgerungstest und „Leben in Deutschland“ online simulieren – 33 Fragen mit Uhr</a>.</p>\n'
 EXTRA['pruefung'] = EXTRA.get('pruefung', '') + '\n<p>Einbürgerung: <a href="/simulation/lid/">Einbürgerungstest online üben</a> · <a href="/lid/">alle 310 Fragen</a>.</p>\n'
+# links to the answer pages /antworten/… (tools/answer_links.py, only pages that exist)
+sys.path.insert(0, os.path.join(R, 'tools'))
+from answer_links import answer_html  # noqa: E402
+EXTRA['pruefung'] += answer_html('pruefung', 'Häufige Fragen kurz erklärt')
+EXTRA['simulation'] += answer_html('pruefung', 'Häufige Fragen kurz erklärt')
 EXTRA['spiele'] = (EXTRA.get('spiele', '') + '\n<h2>Alle Lernspiele</h2>\n' + ''.join(
     f'<h3>{esc(CAT_TXT[c])}</h3>\n<ul>' + ''.join(f'<li><a href="/spiele/{g["id"]}/">{esc(g["title"])}</a> – {esc(g["desc"])} ({esc(g["level"])})</li>' for g in GAMES if g['cat'] == c) + '</ul>\n'
     for c in CAT_TXT if any(g['cat'] == c for g in GAMES)))
@@ -301,7 +311,79 @@ EXTRA['lid'] = (EXTRA.get('lid', '') + '''
 <p>Stand: 11.11.2026, Quelle: Bundesamt für Migration und Flüchtlinge (BAMF). Mehr: <a href="/pruefungsinfo/lid/">Aufbau, Anmeldung und Kosten</a>.</p>
 <p>Üben: <a href="/simulation/lid/">Test mit 33 Fragen simulieren</a> · <a href="/spiele/lid-pruefung/">LiD-Quizshow</a> · <a href="/spiele/lid-staat/">Wer macht was im Staat?</a> · <a href="/spiele/lid-zeitstrahl/">Zeitstrahl Deutschland</a>.</p>
 <p>Die Fragen stammen aus dem öffentlichen Fragenkatalog des BAMF. Diese Website ist nicht vom BAMF.</p>
-''')
+''') + answer_html('lid')
+
+# --- Kahoot, Videos, Witz des Tages, Mikula: readable content from the same data the app shows ---
+def load_json(name):
+    try:
+        return json.load(open(os.path.join(R, name), encoding='utf-8'))
+    except (OSError, ValueError):
+        return {}
+
+
+def first_sentence(t, n=220):
+    t = re.split(r'(?<=[.!?])\s', ' '.join((t or '').split()), maxsplit=1)[0]
+    return t if len(t) <= n else t[: n - 1].rsplit(' ', 1)[0] + '…'
+
+
+kahoot_name = lambda t: re.sub(r'\s*\|\s*Kahoot-Quiz.*$', '', t).replace('_', ' ').strip()  # "A1 – … | Kahoot-Quiz (…)" -> "A1 – …"
+video_name = lambda t: re.sub(r'\s*#\w+', '', t).strip()  # drop "#Shorts" and other hashtags
+
+
+KH = load_json('kahoot-feed.json').get('kahoots') or []
+if KH:
+    EXTRA['kahoot'] = ('\n<p>Kahoot ist ein Quiz-Spiel für Handy und Computer. Du kannst jedes Quiz allein üben oder im Kurs gemeinsam spielen: '
+                       'Die Lehrkraft startet das Spiel bei Kahoot und zeigt die Spiel-PIN, alle anderen spielen mit dem Handy mit. '
+                       'Kahoot ist ein Angebot der Kahoot! ASA; beim Öffnen gelten deren Datenschutzbestimmungen.</p>\n'
+                       f'<h2>Alle {len(KH)} Quiz</h2>\n<ul>'
+                       + ''.join(f'<li><a href="{esc(k["url"])}" rel="noopener">{esc(kahoot_name(k["title"]))}</a>'
+                                 + (f' ({k["questions"]} Fragen)' if k.get('questions') else '')
+                                 + (f' – {esc(first_sentence(k.get("description")))}' if k.get('description') else '') + '</li>' for k in KH)
+                       + '</ul>\n<p>Alle QR-Codes zum Ausdrucken: <a href="/material/kahoot/alle-kahoot-qr-codes.pdf">QR-Codes als PDF</a>. '
+                       'Mehr spielerisch üben: <a href="/spiele/">Lernspiele</a> · <a href="/challenge/">Tages-Challenge</a> · <a href="/lid/">Leben in Deutschland: 310 Fragen</a>.</p>\n')
+YT = load_json('youtube-feed.json')
+VCAT = {'deutsch': 'Deutsch lernen', 'pruefung': 'Prüfung', 'orientierung': 'Leben in Deutschland'}
+if YT.get('videos'):
+    vids = sorted(YT['videos'], key=lambda v: v.get('published', ''), reverse=True)
+    EXTRA['videos'] = ('\n<p>Auf YouTube erkläre ich Deutsch kurz und einfach: Artikel (der, die, das), Grammatik, Wörter für den Alltag, '
+                       'die DTZ- und B1-Prüfung und Wissen für den Test „Leben in Deutschland“. Neue Videos erscheinen hier automatisch. '
+                       'Videos werden erst nach deinem Klick geladen.</p>\n'
+                       + ''.join(f'<h2>{esc(name)}</h2>\n<ul>' + ''.join(
+                           f'<li><a href="https://www.youtube.com/watch?v={esc(v["id"])}" rel="noopener">{esc(video_name(v["title"]))}</a></li>'
+                           for v in [v for v in vids if v.get('category') == key][:20]) + '</ul>\n'
+                                 for key, name in VCAT.items() if any(v.get('category') == key for v in vids))
+                       + '<p><a href="https://www.youtube.com/@deutsch-mit-Dennis" rel="noopener">YouTube-Kanal „Deutsch mit Dennis“</a> · '
+                       'Zum Üben danach: <a href="/grammatik/">Grammatik</a> · <a href="/spiele/">Lernspiele</a> · <a href="/pruefung/">Prüfungstraining</a>.</p>\n')
+WITZ_NODE = r"""
+const fs=require('fs'),vm=require('vm');const s=fs.readFileSync('witz.js','utf8');const a=s.indexOf('const JOKES = [');const b=s.indexOf('\n  ];',a);
+process.stdout.write(JSON.stringify(a<0||b<0?[]:vm.runInNewContext(s.slice(a+'const JOKES = '.length,b+4))));
+"""
+JOKES = json.loads(subprocess.run(['node', '-e', WITZ_NODE], cwd=R, capture_output=True, text=True, encoding='utf-8', check=True).stdout or '[]')
+if JOKES:
+    langs = len([f for f in os.listdir(os.path.join(R, 'witz-i18n')) if f.endswith('.json') and f != 'status.json']) if os.path.isdir(os.path.join(R, 'witz-i18n')) else 0
+    EXTRA['witz'] = ('\n<p>Witze sind gutes Deutschtraining: Man muss genau lesen, Wörter mit zwei Bedeutungen erkennen und ein bisschen über Deutschland wissen. '
+                     f'Jeden Tag gibt es einen neuen Witz – für alle gleich. Zu jedem Witz steht das Niveau und eine kurze Erklärung in einfachem Deutsch'
+                     + (f', und du kannst ihn in {langs} Sprachen übersetzen lassen' if langs else '') + f'. Insgesamt sind es {len(JOKES)} Witze.</p>\n'
+                     '<h2>Einige Witze mit Erklärung</h2>\n'
+                     + ''.join(f'<h3>Witz {i + 1} ({esc(j.get("lvl", ""))})</h3>\n<p>{"<br>".join(esc(l) for l in j["t"].splitlines())}</p>\n'
+                               f'<p><b>Warum ist das lustig?</b> {esc(j.get("why", ""))}</p>\n' for i, j in enumerate(JOKES[:12]))
+                     + '<p>Mehr zum Lachen und Lernen: <a href="/lieder/">Deutsch mit Liedern</a> · <a href="/mikula/">Mikula lernt Deutsch</a> · <a href="/challenge/">Tages-Challenge</a>.</p>\n')
+# Mikula: only episodes that are already public (date = time in Germany, see mikula.js)
+try:
+    from zoneinfo import ZoneInfo
+    NOW_DE = datetime.datetime.now(ZoneInfo('Europe/Berlin')).strftime('%Y-%m-%dT%H:%M')
+except Exception:  # no time zone data (Windows without tzdata): Germany in winter
+    NOW_DE = (datetime.datetime.now(datetime.timezone.utc) + datetime.timedelta(hours=1)).strftime('%Y-%m-%dT%H:%M')
+MK = [i for i in (load_json('mikula-feed.json').get('items') or []) if i.get('date', '9999') <= NOW_DE]
+if MK:
+    EXTRA['mikula'] = ('\n<p>Mikula ist eine KI-Figur aus dem Jahr 1024. Er reist in unsere Zeit und lernt Deutsch – und macht dabei genau die Fehler, '
+                       'die viele Deutschlernende machen. In jeder kurzen Folge siehst du zuerst Mikulas Satz. Findest du den Fehler? Dann kommt die Lösung mit einer einfachen Regel. '
+                       'Neue Folgen erscheinen auf Instagram und TikTok.</p>\n'
+                       f'<h2>Alle {len(MK)} Folgen</h2>\n<ol>'
+                       + ''.join(f'<li><b>Falsch:</b> {esc(i["wrong"])} – <b>Richtig:</b> {esc(i["right"])}<br>{esc(i.get("rule", ""))} {esc(i.get("explain", ""))}</li>\n'
+                                 for i in sorted(MK, key=lambda i: i.get('n', 0)))
+                       + '</ol>\n<p>Mikula gibt es auch als Lernspiel: <a href="/spiele/mikula/">Mikula-Spiel</a>. '
+                       'Mehr typische Fehler üben: <a href="/grammatik/">Grammatik-Trainer</a> · <a href="/spiele/">Lernspiele</a>.</p>\n')
 
 urls = [SITE + '/']
 for route, t, dsc in SECTIONS:
@@ -316,7 +398,7 @@ urls.append(stub('simulation/lid', 'Einbürgerungstest online üben: 33 Fragen m
 <li>Am Ende siehst du dein Ergebnis und alle Lösungen. Bestanden: Orientierungskurs ab 15 richtigen Antworten, Einbürgerungstest ab 17 richtigen Antworten (Stand: 11.11.2026, Quelle: BAMF).</li></ul>
 <p><a href="/#simulation/lid">▶ Simulation starten</a> · <a href="/lid/">Alle 310 Fragen nach Themen üben</a> · <a href="/pruefungsinfo/lid/">Infos zum Test</a></p>
 <p>Die Fragen stammen aus dem öffentlichen Fragenkatalog des BAMF. Diese Website ist nicht vom BAMF.</p>
-''', [{'@context': 'https://schema.org', '@type': 'LearningResource', 'name': 'Testsimulation Einbürgerungstest / Leben in Deutschland',
+''' + answer_html('lid'), [{'@context': 'https://schema.org', '@type': 'LearningResource', 'name': 'Testsimulation Einbürgerungstest / Leben in Deutschland',
         'url': f'{SITE}/simulation/lid/', 'inLanguage': 'de', 'isAccessibleForFree': True, 'learningResourceType': 'Prüfungssimulation',
         'educationalLevel': 'A2–B1', 'teaches': 'Einbürgerungstest, Leben in Deutschland'}]))
 for g in GAMES:

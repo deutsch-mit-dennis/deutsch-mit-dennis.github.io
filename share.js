@@ -11,9 +11,47 @@
       (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c],
     );
 
+  /* Real (indexable) page for the current #route, so a shared link counts for that page and shows its own preview.
+     The list of static pages comes from share-paths.js (written by tools/build-sitemap.js, loaded on demand):
+     window.DMSharePaths = { app: "lid pruefung …" (copies of the app, they accept an extra #part),
+                             page: { grammatik: "a1-perfekt …", "": "impressum …" } (readable pages, exact match only) }.
+     Without the list (not loaded yet, offline) the link stays /#route as before. */
+  let paths = null;
+  function loadPaths() {
+    if (paths || loadPaths.busy) return;
+    loadPaths.busy = true;
+    const me = document.querySelector('script[src*="share.js"]');
+    const v = ((me && me.src.match(/[?&]v=([^&]+)/)) || [])[1] || "";
+    const sc = document.createElement("script");
+    sc.src = "/share-paths.js?v=" + v + "-" + new Date().toISOString().slice(0, 10);
+    sc.async = true;
+    sc.onload = () => { paths = window.DMSharePaths || null; };
+    sc.onerror = () => { loadPaths.busy = false; };
+    document.head.appendChild(sc);
+  }
+  function hasPage(p) {
+    if (!paths) return false;
+    if ((" " + paths.app + " ").includes(" " + p + " ")) return "app";
+    const i = p.lastIndexOf("/"), dir = i < 0 ? "" : p.slice(0, i), leaf = p.slice(i + 1);
+    return (" " + ((paths.page || {})[dir] || "") + " ").includes(" " + leaf + " ") ? "page" : false;
+  }
+  // app routes use upper-case levels (#niveau/B2, #material/alle/B2), the static pages lower case (/niveau/b2/, /material/b2/)
+  const staticForm = (r) => r.replace(/^material\/alle\/(\w\d)$/i, (_, l) => "material/" + l.toLowerCase()).replace(/^(niveau|ueben\/sprechen)\/(\w\d)$/i, (_, a, l) => a + "/" + l.toLowerCase());
+  function pathFor(h) {
+    const t = h.replace(/\/+$/, ""), r = staticForm(t);
+    if (hasPage(r)) return BASE + r + "/";
+    // longest app copy that is a prefix: /lieder/#a1 opens #lieder/a1 (see tools/make-share-pages.py); the rest keeps its case
+    const seg = t.split("/");
+    for (let n = seg.length - 1; n > 0; n--) {
+      const pre = seg.slice(0, n).join("/");
+      if (hasPage(pre) === "app") return BASE + pre + "/#" + seg.slice(n).join("/");
+    }
+    return BASE + "#" + h;
+  }
+
   function currentUrl(whole) {
     const h = location.hash.replace(/^#\/?/, "");
-    return whole || !h ? BASE : BASE + "#" + h;
+    return whole || !h ? BASE : pathFor(h);
   }
 
   async function copy(text) {
@@ -132,7 +170,10 @@
     if (bell) bell.before(b); else head.querySelector('.logo')?.after(b);
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', headerButton); else headerButton();
+  // fetch the page list when the browser is idle (a share click must not wait for it: navigator.share needs the click)
+  setTimeout(() => (window.requestIdleCallback || setTimeout)(loadPaths), 2500);
+  document.addEventListener("pointerover", (e) => { if (e.target.closest && e.target.closest("[data-share]")) loadPaths(); }, { passive: true });
   setTimeout(headerButton, 1500);
 
-  window.DMShare = { share, close };
+  window.DMShare = { share, close, url: currentUrl };
 })();

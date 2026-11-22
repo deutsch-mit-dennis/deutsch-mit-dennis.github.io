@@ -1,0 +1,321 @@
+{
+  "_info": "Answer-first pages /antworten/<slug>/ (AEO/GEO). Build: python3 -X utf8 tools/make-answer-pages.py. RULE: every number in a text must appear in a referenced fact (ref) – the generator stops otherwise. Refs: '<exam>.parts.<i>', '<exam>.blocks.<i>' or '<exam>.blocks.<i>.<j>' from pruefung-fakten.js, 'stat:<exam>' from tools/pruefung-statistik.json, 'site:<key>' from site_facts below (numbers must appear in that local page). Placeholders: {sims:<id>} = number of simulations, {n:grammar}, {n:lessons}, {n:sims}. 'stand' = day the texts were checked; the page shows the newest of this date and the fact dates.",
+  "stand": "2026-11-22",
+  "site_facts": {
+    "datenschutz": {"text": "Du brauchst kein Konto. Dein Lernstand wird nur im Speicher deines Browsers gespeichert (localStorage).", "page": "/datenschutz/", "name": "Deutsch mit Dennis – Datenschutzerklärung"},
+    "kurs": {"text": "Kurse für die Niveaus A0, A1, A2, B1 und B2.", "page": "/kurs/", "name": "Deutsch mit Dennis – Kurse A0–B2"},
+    "grammatik": {"text": "{n:grammar} Grammatik-Themen mit Erklärung und Übungen.", "page": "/grammatik/", "name": "Deutsch mit Dennis – Grammatik"},
+    "lektionen": {"text": "{n:lessons} Themen-Lektionen, zum Beispiel Wohnen, Arbeit, Gesundheit, Amt.", "page": "/lektionen/", "name": "Deutsch mit Dennis – Lektionen"},
+    "simulation": {"text": "{n:sims} Probeprüfungen mit Zeitvorgabe für DTZ, telc B1, telc B2, DTB B1, DTB B2 und Leben in Deutschland.", "page": "/simulation/", "name": "Deutsch mit Dennis – Probeprüfungen"},
+    "ueber": {"text": "Dennis Prudnikau, DaZ-Lehrer und lizenzierter Prüfer für DTZ und telc.", "page": "/ueber-mich/", "name": "Deutsch mit Dennis – Über Dennis"},
+    "dtz-tipp": {"text": "Erfahrungswert von Dennis (keine offizielle Vorgabe): ca. 60–80 Wörter für A2, 80–100 Wörter für B1.", "page": "/dtz-schreiben/", "name": "Deutsch mit Dennis – DTZ Schreiben"},
+    "dtz-geruest": {"text": "Briefgerüst: Anrede, Einleitung, Leitpunkte, Bitte oder Frage, Schluss, Gruß und Name.", "page": "/dtz-schreiben/", "name": "Deutsch mit Dennis – DTZ Schreiben"}
+  },
+  "pages": [
+    {
+      "slug": "leben-in-deutschland-test-kostenlos-ueben",
+      "lid": true,
+      "og": "lid",
+      "crumb": "Leben in Deutschland kostenlos üben",
+      "h1": "Wo kann ich den Test „Leben in Deutschland“ kostenlos online üben?",
+      "title": "Leben in Deutschland Test kostenlos online üben",
+      "desc": "Leben in Deutschland Test kostenlos üben: alle 300 Fragen plus 10 Fragen zu deinem Bundesland, Probetest mit 33 Fragen und 60 Minuten. Ohne Anmeldung.",
+      "answer": "Auf Deutsch mit Dennis übst du kostenlos und ohne Anmeldung mit allen öffentlichen Fragen: 300 Fragen für ganz Deutschland und 10 Fragen für dein Bundesland. Im Probetest bekommst du wie im echten Test 33 Fragen und hast 60 Minuten Zeit. Bestanden ist der Test im Orientierungskurs ab 15 richtigen Antworten, der Einbürgerungstest ab 17.",
+      "refs": ["lid.parts.0", "lid.blocks.0.2", "lid.blocks.1.0", "lid.blocks.1.1", "site:datenschutz"],
+      "facts": [
+        {"k": "Fragen im Test", "v": "33 Fragen, zu jeder Frage 4 Antworten, eine ist richtig", "ref": ["lid.parts.0"]},
+        {"k": "Zeit", "v": "60 Minuten", "ref": ["lid.parts.0"]},
+        {"k": "Aufteilung", "v": "30 Fragen für ganz Deutschland, 3 Fragen zu deinem Bundesland", "ref": ["lid.parts.0"]},
+        {"k": "Fragenkatalog", "v": "300 Fragen für ganz Deutschland und 10 Fragen für jedes Bundesland – alle öffentlich", "ref": ["lid.blocks.0.2"]},
+        {"k": "Bestanden im Orientierungskurs", "v": "ab 15 richtigen Antworten", "ref": ["lid.blocks.1.0"]},
+        {"k": "Bestanden im Einbürgerungstest", "v": "ab 17 richtigen Antworten", "ref": ["lid.blocks.1.1"]},
+        {"k": "Kosten", "v": "Einbürgerungstest: 25 Euro. Im Integrationskurs ist der Abschlusstest kostenlos.", "ref": ["lid.blocks.2.2", "lid.blocks.2.0"]},
+        {"k": "So viele bestehen", "v": "2025: 89,6 % von 318.633 Teilnehmenden", "ref": ["stat:lid"]}
+      ],
+      "practice": [
+        {"href": "/simulation/lid/", "t": "Probetest mit Uhr", "d": "33 Fragen, 60 Minuten, am Ende Ergebnis und Lösungen."},
+        {"href": "/lid/", "t": "Alle Fragen mit Lösung", "d": "Lernmodus mit Lösung und kurzer Erklärung („Warum?“)."},
+        {"href": "/lid/fragen-001-010/", "t": "In kleinen Gruppen lernen", "d": "Immer 10 Fragen auf einer Seite – Schritt für Schritt."},
+        {"href": "/material/simulation/lid-test-1.pdf", "t": "Probetest 1 als PDF", "d": "Zum Ausdrucken und auf Papier üben."},
+        {"href": "/material/simulation/lid-test-2.pdf", "t": "Probetest 2 als PDF", "d": "Ein zweiter Test zum Ausdrucken."},
+        {"href": "/pruefungsinfo/lid/", "t": "Alles zum Test", "d": "Aufbau, Anmeldung, Kosten – mit Quellen."}
+      ],
+      "states": true,
+      "faq": [
+        {"q": "Ist das Üben hier wirklich kostenlos?", "a": "Ja. Du brauchst kein Konto und keine Anmeldung. Dein Lernstand bleibt nur im Browser auf deinem Gerät.", "ref": ["site:datenschutz"]},
+        {"q": "Sind das die echten Fragen aus dem Test?", "a": "Ja. Die Fragen und Antworten stammen aus dem öffentlichen Gesamtfragenkatalog des BAMF. Die Erklärungen („Warum?“) schreibt Deutsch mit Dennis – sie sind nicht vom BAMF.", "ref": ["lid.blocks.0.2"]},
+        {"q": "Wie viele Fragen muss ich richtig beantworten?", "a": "Im Orientierungskurs brauchst du mindestens 15 richtige Antworten, im Einbürgerungstest mindestens 17 – von 33 Fragen.", "ref": ["lid.blocks.1.0", "lid.blocks.1.1", "lid.parts.0"]},
+        {"q": "Was ist der Unterschied zwischen „Leben in Deutschland“ und dem Einbürgerungstest?", "a": "„Leben in Deutschland“ ist der Abschlusstest im Orientierungskurs. Für die Einbürgerung macht man den Einbürgerungstest. Beide Tests sind gleich aufgebaut. Hast du im Test „Leben in Deutschland“ im Integrationskurs mindestens 17 Punkte, brauchst du für die Einbürgerung keinen extra Einbürgerungstest.", "ref": ["lid.blocks.0.0", "lid.blocks.0.1", "lid.blocks.4.2"]},
+        {"q": "Was kostet der Einbürgerungstest?", "a": "Der Einbürgerungstest kostet 25 Euro. Im Integrationskurs ist der Abschlusstest kostenlos.", "ref": ["lid.blocks.2.2", "lid.blocks.2.0"]}
+      ]
+    },
+    {
+      "slug": "dtz-pruefung-online-ueben",
+      "og": "pruefung",
+      "crumb": "DTZ online üben",
+      "h1": "Wie kann ich die DTZ-Prüfung kostenlos online üben – und wie viele Punkte brauche ich?",
+      "title": "DTZ Prüfung online üben kostenlos: Aufbau und Punkte",
+      "desc": "DTZ kostenlos online üben: Probeprüfungen mit Uhr. Aufbau, Punkte für A2 und B1 und die neue Regel seit 1. November 2026 – mit Quellen.",
+      "answer": "Auf Deutsch mit Dennis machst du kostenlos und ohne Anmeldung {sims:dtz} komplette DTZ-Probeprüfungen mit Zeitvorgabe – mit eigenen Aufgaben im Stil der Prüfung. Der DTZ hat vier Teile: Hören (ca. 25 Min.), Lesen (45 Min.), Schreiben (30 Min.) und Sprechen zu zweit (ca. 16 Min.). Für das Gesamtergebnis B1 brauchst du B1 im Sprechen, B1 in Hören/Lesen oder im Schreiben – und seit 1. November 2026 im dritten Teil mindestens A2.",
+      "refs": ["dtz.parts.0", "dtz.parts.1", "dtz.parts.2", "dtz.parts.3", "dtz.blocks.1.4", "dtz.blocks.2"],
+      "facts": [
+        {"k": "Hören", "v": "ca. 25 Min. · 4 Teile · 20 Aufgaben · alle Texte einmal", "ref": ["dtz.parts.0"]},
+        {"k": "Lesen", "v": "45 Min. · 5 Teile · 25 Aufgaben", "ref": ["dtz.parts.1"]},
+        {"k": "Punkte Hören + Lesen", "v": "zusammen 45 Punkte · B1: 33–45 · A2: 20–32", "ref": ["dtz.parts.0", "dtz.blocks.1.1"]},
+        {"k": "Schreiben", "v": "30 Min. · 1 Text (Aufgabe A oder B) · 20 Punkte · B1: 15–20 · A2: 7–14", "ref": ["dtz.parts.2", "dtz.blocks.1.2"]},
+        {"k": "Sprechen", "v": "ca. 16 Min. · zu zweit, 2 Prüfende · 100 Punkte · B1: 75–100 · A2: 35–74,5", "ref": ["dtz.parts.3", "dtz.blocks.1.3"]},
+        {"k": "Gesamtergebnis B1", "v": "B1 im Sprechen + B1 in einem schriftlichen Teil + im anderen Teil mindestens A2", "ref": ["dtz.blocks.1.4"]},
+        {"k": "Neu seit 1. November 2026", "v": "Auch der dritte Teil muss mindestens A2 sein. Ein leeres Blatt beim Schreiben reicht nicht mehr.", "ref": ["dtz.blocks.2.1"]},
+        {"k": "Kosten", "v": "Im Integrationskurs kostenlos. Selbstzahler: Preis beim Prüfungszentrum fragen.", "ref": ["dtz.blocks.4.0", "dtz.blocks.4.2"]},
+        {"k": "Ergebnisse 2025", "v": "55,0 % von 318.550 Teilnehmenden erreichten B1, 32,2 % A2", "ref": ["stat:dtz"]}
+      ],
+      "practice": [
+        {"href": "/simulation/dtz/", "t": "DTZ-Probeprüfung 1", "d": "Alle vier Teile mit echter Zeit, am Ende Punkte und Lösungen."},
+        {"href": "/simulation/dtz-2/", "t": "DTZ-Probeprüfung 2", "d": "Neue Aufgaben, gleicher Aufbau."},
+        {"href": "/simulation/dtz-3/", "t": "DTZ-Probeprüfung 3", "d": "Noch ein kompletter Durchgang."},
+        {"href": "/material/simulation/dtz-schriftlich.pdf", "t": "Schriftliche Prüfung als PDF", "d": "Lesen und Schreiben zum Ausdrucken."},
+        {"href": "/material/simulation/dtz-hoeren.pdf", "t": "Hören als PDF", "d": "Aufgabenblatt zum Hörteil."},
+        {"href": "/dtz-schreiben/", "t": "DTZ Schreiben", "d": "Briefgerüst, Musterbriefe und Checkliste."},
+        {"href": "/bild/", "t": "Bild beschreiben", "d": "Sprechen mit Bild üben."},
+        {"href": "/dtz-30-tage/", "t": "DTZ in 30 Tagen", "d": "Ein Lernplan für jeden Tag."},
+        {"href": "/dtz-woerter/", "t": "DTZ-Wortschatz", "d": "Wichtige Wörter für die Prüfung."},
+        {"href": "/pruefungsinfo/dtz/", "t": "Alles zum DTZ", "d": "Anmeldung, Termine, Kosten – mit Quellen."}
+      ],
+      "faq": [
+        {"q": "Wie viele Punkte brauche ich im DTZ für B1?", "a": "Hören/Lesen: 33–45 Punkte. Schreiben: 15–20 Punkte. Sprechen: 75–100 Punkte. Für das Gesamtergebnis B1 brauchst du B1 im Sprechen und B1 in einem schriftlichen Teil. Im anderen Teil brauchst du mindestens A2.", "ref": ["dtz.blocks.1.1", "dtz.blocks.1.2", "dtz.blocks.1.3", "dtz.blocks.1.4"]},
+        {"q": "Kann ich beim Schreiben ein leeres Blatt abgeben?", "a": "Nein, nicht mehr. Seit 1. November 2026 muss auch der dritte Teil mindestens A2 sein. Ein leeres Blatt beim Schreiben reicht also nicht mehr für B1.", "ref": ["dtz.blocks.2"]},
+        {"q": "Wie lange dauert der DTZ?", "a": "Hören dauert ca. 25 Minuten, Lesen 45 Minuten, Schreiben 30 Minuten. Die mündliche Prüfung dauert ca. 16 Minuten – zu zweit und ohne Vorbereitungszeit.", "ref": ["dtz.parts.0", "dtz.parts.1", "dtz.parts.2", "dtz.parts.3"]},
+        {"q": "Was kostet der DTZ?", "a": "Im Integrationskurs ist der Abschlusstest kostenlos. Für Selbstzahler ist der Preis verschieden – bitte beim Prüfungszentrum fragen.", "ref": ["dtz.blocks.4.0", "dtz.blocks.4.2"]},
+        {"q": "Sind das offizielle DTZ-Aufgaben?", "a": "Nein. Die Probeprüfungen auf Deutsch mit Dennis sind eigene Übungsaufgaben im Stil der Prüfung. Einen offiziellen Übungssatz gibt es bei g.a.s.t. – der Link steht in der Tabelle oben.", "ref": ["dtz.parts.0"]}
+      ]
+    },
+    {
+      "slug": "telc-b1-modelltest-kostenlos",
+      "og": "simulation",
+      "crumb": "telc B1 Modelltest",
+      "h1": "Wo finde ich einen kostenlosen Modelltest für telc Deutsch B1?",
+      "title": "telc B1 Modelltest kostenlos: wo, wie, wie viele Punkte?",
+      "desc": "telc Deutsch B1 Modelltest kostenlos online: Probeprüfungen mit echter Zeit, Aufbau, Punkte und Bestehensregel – mit Quellen. Ohne Anmeldung.",
+      "answer": "Auf Deutsch mit Dennis findest du {sims:telc-b1} kostenlose Modelltests für telc Deutsch B1 mit echter Zeitvorgabe – eigene Aufgaben im Stil der Prüfung, ohne Anmeldung. Einen offiziellen Übungstest als PDF bietet telc selbst an. Die Prüfung hat 300 Punkte: Du bestehst mit 60 % in der schriftlichen Prüfung (135 von 225 Punkten) und 60 % in der mündlichen Prüfung (45 von 75 Punkten).",
+      "refs": ["telc-b1.blocks.0", "telc-b1.parts.0"],
+      "facts": [
+        {"k": "Leseverstehen und Sprachbausteine", "v": "90 Min. · Lesen 3 Teile (75 Punkte) · Sprachbausteine 2 Teile (30 Punkte)", "ref": ["telc-b1.parts.0"]},
+        {"k": "Hörverstehen", "v": "ca. 30 Min. · 3 Teile mit 5 + 10 + 5 Aufgaben (richtig oder falsch) · 75 Punkte", "ref": ["telc-b1.parts.1"]},
+        {"k": "Schriftlicher Ausdruck", "v": "30 Min. · 1 E-Mail mit 4 Leitpunkten · 45 Punkte", "ref": ["telc-b1.parts.2"]},
+        {"k": "Mündliche Prüfung", "v": "ca. 15 Min. zu zweit · 3 Teile · vorher 20 Min. Vorbereitung · 75 Punkte", "ref": ["telc-b1.parts.3"]},
+        {"k": "Bestehen", "v": "300 Punkte gesamt · 60 % schriftlich (135 von 225) und 60 % mündlich (45 von 75)", "ref": ["telc-b1.blocks.0"]},
+        {"k": "Wiederholen", "v": "Ganze Prüfung beliebig oft. Nur ein Teil nicht bestanden? Diesen Teil kannst du bis zum Ende des nächsten Kalenderjahres allein wiederholen.", "ref": ["telc-b1.blocks.3.0", "telc-b1.blocks.3.1"]},
+        {"k": "Kosten und Termine", "v": "verschieden – bitte beim Prüfungszentrum fragen", "ref": ["telc-b1.blocks.2.1"]}
+      ],
+      "practice": [
+        {"href": "/simulation/telc-b1/", "t": "telc B1 Modelltest 1", "d": "Alle Teile mit echter Zeit, am Ende Punkte und Lösungen."},
+        {"href": "/simulation/telc-b1-2/", "t": "telc B1 Modelltest 2", "d": "Neue Aufgaben, gleicher Aufbau."},
+        {"href": "/material/simulation/telc-b1-schriftlich.pdf", "t": "Schriftliche Prüfung als PDF", "d": "Zum Ausdrucken."},
+        {"href": "/material/simulation/telc-b1-hoeren.pdf", "t": "Hörverstehen als PDF", "d": "Aufgabenblatt zum Hörteil."},
+        {"href": "/vorbereitung/telc-b1/", "t": "Gezielte Vorbereitung telc B1", "d": "Aufbau, Zeiten und Strategien für jeden Teil."},
+        {"href": "/b1-30-tage/", "t": "B1 in 30 Tagen", "d": "Ein Lernplan für jeden Tag."},
+        {"href": "/b1-woerter/", "t": "B1-Wortschatz", "d": "Wörter zu den Prüfungsthemen."},
+        {"href": "/pruefungsinfo/telc-b1/", "t": "Alles zu telc B1", "d": "Anmeldung, Wiederholung, Zertifikat – mit Quellen."}
+      ],
+      "official": ["telcB1Ueb"],
+      "faq": [
+        {"q": "Wie viele Punkte brauche ich für telc Deutsch B1?", "a": "Insgesamt gibt es 300 Punkte. Du brauchst 60 % in der schriftlichen Prüfung (135 von 225 Punkten) und 60 % in der mündlichen Prüfung (45 von 75 Punkten).", "ref": ["telc-b1.blocks.0"]},
+        {"q": "Wie lange dauert die Prüfung telc Deutsch B1?", "a": "Leseverstehen und Sprachbausteine dauern 90 Minuten, Hörverstehen ca. 30 Minuten, der Schriftliche Ausdruck 30 Minuten. Die mündliche Prüfung dauert ca. 15 Minuten, vorher hast du 20 Minuten Vorbereitung.", "ref": ["telc-b1.parts.0", "telc-b1.parts.1", "telc-b1.parts.2", "telc-b1.parts.3"]},
+        {"q": "Gibt es einen offiziellen Modelltest?", "a": "Ja, telc bietet einen Übungstest als PDF an (Link in der Tabelle oben). Die Modelltests auf Deutsch mit Dennis sind eigene Aufgaben im Stil der Prüfung – keine offiziellen telc-Aufgaben.", "ref": ["telc-b1.parts.0"]},
+        {"q": "Kann ich nur einen Teil wiederholen?", "a": "Ja. Hast du nur den schriftlichen oder nur den mündlichen Teil nicht bestanden, kannst du diesen Teil bis zum Ende des nächsten Kalenderjahres allein wiederholen.", "ref": ["telc-b1.blocks.3.1"]},
+        {"q": "Reicht telc B1 für die Einbürgerung?", "a": "Für die Einbürgerung braucht man in der Regel Deutsch B1. Welche Zertifikate die Behörde annimmt, fragst du bitte vorher bei deiner Behörde. Keine Rechtsberatung.", "ref": ["telc-b1.blocks.5"]}
+      ]
+    },
+    {
+      "slug": "telc-b2-pruefung-ueben",
+      "og": "telc-b2-sprechen",
+      "crumb": "telc B2 üben",
+      "h1": "Wie übe ich kostenlos für die Prüfung telc Deutsch B2?",
+      "title": "telc Deutsch B2 Prüfung üben – kostenlos online",
+      "desc": "telc Deutsch B2 kostenlos üben: Modelltests mit Uhr, Sprachbausteine, Sprechen und Schreiben. Aufbau, Punkte und Bestehensregel mit Quellen.",
+      "answer": "Für telc Deutsch B2 übst du auf Deutsch mit Dennis kostenlos mit {sims:telc-b2} kompletten Modelltests im Stil der Prüfung, dazu mit einem Training für Sprachbausteine und für das Sprechen. Die Prüfung hat 300 Punkte: Du brauchst 60 % in der schriftlichen Prüfung (135 von 225 Punkten) und 60 % in der mündlichen Prüfung (45 von 75 Punkten). Alle Hörtexte hörst du nur einmal.",
+      "refs": ["telc-b2.blocks.0", "telc-b2.parts.1"],
+      "facts": [
+        {"k": "Leseverstehen und Sprachbausteine", "v": "90 Min. · Lesen 3 Teile (5 + 5 + 10 Aufgaben, 75 Punkte) · Sprachbausteine 2 Teile (10 + 10 Aufgaben, 30 Punkte)", "ref": ["telc-b2.parts.0"]},
+        {"k": "Hörverstehen", "v": "ca. 20 Min. · 3 Teile · alle Texte nur einmal · 75 Punkte", "ref": ["telc-b2.parts.1"]},
+        {"k": "Schriftlicher Ausdruck", "v": "30 Min. · 1 halbformelle E-Mail, Aufgabe A oder B · 45 Punkte", "ref": ["telc-b2.parts.2"]},
+        {"k": "Mündliche Prüfung", "v": "ca. 15 Min. zu zweit · 3 Teile · 20 Min. Vorbereitung für Teil 2 und 3 · 75 Punkte", "ref": ["telc-b2.parts.3"]},
+        {"k": "Bestehen", "v": "300 Punkte gesamt · 60 % schriftlich (135 von 225) und 60 % mündlich (45 von 75)", "ref": ["telc-b2.blocks.0"]},
+        {"k": "Bewertung Sprechen", "v": "Ausdrucksfähigkeit, Aufgabenbewältigung, formale Richtigkeit, Aussprache und Intonation", "ref": ["telc-b2.blocks.1"]},
+        {"k": "Wiederholen", "v": "Ganze Prüfung beliebig oft. Einen nicht bestandenen Teil kannst du allein wiederholen – die Frist bitte beim Prüfungszentrum fragen.", "ref": ["telc-b2.blocks.3.0", "telc-b2.blocks.3.1"]}
+      ],
+      "practice": [
+        {"href": "/simulation/telc-b2/", "t": "telc B2 Modelltest 1", "d": "Alle Teile mit echter Zeit, am Ende Punkte und Lösungen."},
+        {"href": "/simulation/telc-b2-2/", "t": "telc B2 Modelltest 2", "d": "Neue Aufgaben, gleicher Aufbau."},
+        {"href": "/material/simulation/telc-b2-schriftlich.pdf", "t": "Schriftliche Prüfung als PDF", "d": "Zum Ausdrucken."},
+        {"href": "/sprachbausteine/", "t": "Sprachbausteine üben", "d": "Gezieltes Training für telc B2 und DTB B2."},
+        {"href": "/telc-b2-sprechen/", "t": "Sprechen üben für telc B2", "d": "Aufgaben für alle Teile der mündlichen Prüfung."},
+        {"href": "/ueben/sprechen/b2/", "t": "Sprechaufgaben B2", "d": "Weitere Situationen zum lauten Üben."},
+        {"href": "/vorbereitung/telc-b2/", "t": "Gezielte Vorbereitung telc B2", "d": "Aufbau, Zeiten und Strategien."},
+        {"href": "/b2-30-tage/", "t": "B2 in 30 Tagen", "d": "Ein Lernplan für jeden Tag."},
+        {"href": "/b2-woerter/", "t": "B2-Wortschatz", "d": "Wörter zu den Prüfungsthemen."},
+        {"href": "/pruefungsinfo/telc-b2/", "t": "Alles zu telc B2", "d": "Anmeldung, Wiederholung, Zertifikat – mit Quellen."}
+      ],
+      "official": ["telcB2Hb"],
+      "faq": [
+        {"q": "Wie viele Punkte brauche ich für telc Deutsch B2?", "a": "Insgesamt gibt es 300 Punkte. Du brauchst 60 % in der schriftlichen Prüfung (135 von 225 Punkten) und 60 % in der mündlichen Prüfung (45 von 75 Punkten).", "ref": ["telc-b2.blocks.0"]},
+        {"q": "Höre ich die Texte bei telc B2 einmal oder zweimal?", "a": "Bei telc Deutsch B2 hörst du alle Texte nur einmal. Das Hörverstehen dauert ca. 20 Minuten.", "ref": ["telc-b2.parts.1"]},
+        {"q": "Was kann ich für die mündliche Prüfung zu Hause vorbereiten?", "a": "Im Teil „Über Erfahrungen sprechen“ wählst du 1 von 7 Themen und bereitest es zu Hause vor. Du sprichst dann höchstens 1,5 Minuten. Für Teil 2 und 3 hast du in der Prüfung 20 Minuten Vorbereitung.", "ref": ["telc-b2.parts.3"]},
+        {"q": "Wie wird das Sprechen bewertet?", "a": "Es gibt vier Kriterien: Ausdrucksfähigkeit, Aufgabenbewältigung, formale Richtigkeit sowie Aussprache und Intonation.", "ref": ["telc-b2.blocks.1"]},
+        {"q": "Sind die Modelltests hier offizielle telc-Aufgaben?", "a": "Nein. Es sind eigene Übungsaufgaben im Stil der Prüfung. Das offizielle Handbuch von telc findest du in der Tabelle oben.", "ref": ["telc-b2.parts.0"]}
+      ]
+    },
+    {
+      "slug": "dtb-deutsch-test-fuer-den-beruf-ueben",
+      "og": "vorbereitung",
+      "crumb": "DTB B1 und B2 üben",
+      "h1": "Wie übe ich für den Deutsch-Test für den Beruf (DTB B1 und B2)?",
+      "title": "DTB B1 und B2 üben: Deutsch-Test für den Beruf",
+      "desc": "Deutsch-Test für den Beruf kostenlos üben: Modelltests DTB B1 und DTB B2 mit Uhr. Aufbau, 240 Punkte, Bestehensregel und Anmeldung über den Kursträger.",
+      "answer": "Auf Deutsch mit Dennis übst du kostenlos mit {sims:dtb-b1} Modelltests für DTB B1 und {sims:dtb-b2} Modelltests für DTB B2 – mit Zeitvorgabe und eigenen Aufgaben im Stil der Prüfung. Beide Tests haben 240 Punkte, je 60 für Lesen, Hören, Schreiben und Sprechen. Bestanden hast du ab 144 Punkten, wenn mindestens drei Teile 36 Punkte haben und der vierte mindestens 24 Punkte.",
+      "refs": ["dtb-b1.blocks.1", "dtb-b2.blocks.1"],
+      "facts": [
+        {"k": "Lesen", "v": "DTB B1: 40 Min. · DTB B2: 45 Min. · je 4 Teile, 18 Aufgaben", "ref": ["dtb-b1.parts.0", "dtb-b2.parts.0"]},
+        {"k": "Hören", "v": "je 20 Min. · 4 Teile, 19 Aufgaben · alle Texte nur einmal", "ref": ["dtb-b1.parts.2", "dtb-b2.parts.2"]},
+        {"k": "Schreiben", "v": "DTB B1: Antwort-E-Mail, Notiz und Kurznachricht · DTB B2: Antwort, Notiz und Forumsbeitrag · zusammen 60 Punkte", "ref": ["dtb-b1.parts.1", "dtb-b1.parts.3", "dtb-b1.parts.4", "dtb-b2.parts.1", "dtb-b2.parts.3", "dtb-b2.parts.4"]},
+        {"k": "Sprechen", "v": "ca. 16 Min. · zu zweit · keine Vorbereitungszeit · 60 Punkte", "ref": ["dtb-b1.parts.5", "dtb-b2.parts.5"]},
+        {"k": "Bestehen", "v": "240 Punkte gesamt · ab 144 Punkten (60 %) · in mindestens drei Teilen 36 von 60 · der vierte Teil mindestens 24", "ref": ["dtb-b1.blocks.1", "dtb-b2.blocks.1"]},
+        {"k": "DTB B2: knapp nicht bestanden", "v": "120 bis 143 Punkte: im Ergebnis steht „B2 knapp nicht erfüllt“", "ref": ["dtb-b2.blocks.1.3"]},
+        {"k": "Anmeldung", "v": "über deinen Kursträger im Berufssprachkurs · als Selbstzahler nicht möglich", "ref": ["dtb-b1.blocks.0"]},
+        {"k": "Wiederholen", "v": "nur der ganze Test, nicht einzelne Teile", "ref": ["dtb-b1.blocks.2.1"]},
+        {"k": "Ergebnisse 2024", "v": "DTB B1: 45,3 % von 14.117 erreichten B1 · DTB B2: 58,3 % von 111.281 erreichten B2", "ref": ["stat:dtb-b1", "stat:dtb-b2"]}
+      ],
+      "practice": [
+        {"href": "/simulation/dtb-b1/", "t": "DTB B1 Modelltest 1", "d": "Alle Teile mit echter Zeit."},
+        {"href": "/simulation/dtb-b1-2/", "t": "DTB B1 Modelltest 2", "d": "Neue Aufgaben aus dem Berufsalltag."},
+        {"href": "/simulation/dtb-b1-3/", "t": "DTB B1 Modelltest 3", "d": "Noch ein kompletter Durchgang."},
+        {"href": "/simulation/dtb-b2/", "t": "DTB B2 Modelltest 1", "d": "Alle Teile mit echter Zeit."},
+        {"href": "/simulation/dtb-b2-2/", "t": "DTB B2 Modelltest 2", "d": "Neue Aufgaben aus dem Berufsalltag."},
+        {"href": "/simulation/dtb-b2-3/", "t": "DTB B2 Modelltest 3", "d": "Noch ein kompletter Durchgang."},
+        {"href": "/material/simulation/dtb-b2-schriftlich.pdf", "t": "DTB B2 schriftlich als PDF", "d": "Zum Ausdrucken."},
+        {"href": "/vorbereitung/dtb-b1/", "t": "Gezielte Vorbereitung DTB B1", "d": "Aufbau, Zeiten und Strategien."},
+        {"href": "/vorbereitung/dtb-b2/", "t": "Gezielte Vorbereitung DTB B2", "d": "Aufbau, Zeiten und Strategien."},
+        {"href": "/lesen/beruf/", "t": "Lesen im Beruf", "d": "Texte aus dem Arbeitsalltag."},
+        {"href": "/hoeren/beruf/", "t": "Hören im Beruf", "d": "Gespräche und Ansagen am Arbeitsplatz."},
+        {"href": "/sprachbausteine/", "t": "Sprachbausteine üben", "d": "Training für DTB B2 und telc B2."}
+      ],
+      "faq": [
+        {"q": "Kann ich den DTB ohne Berufssprachkurs machen?", "a": "Nein. Der Deutsch-Test für den Beruf gehört zu den Berufssprachkursen des BAMF. Dein Kursträger meldet dich an. Als Selbstzahler kannst du die Prüfung nicht machen.", "ref": ["dtb-b1.blocks.0"]},
+        {"q": "Wie viele Punkte brauche ich im DTB?", "a": "Du brauchst mindestens 144 von 240 Punkten. Dazu müssen mindestens drei der vier Teile 36 von 60 Punkten haben. Der vierte Teil braucht mindestens 24 Punkte.", "ref": ["dtb-b1.blocks.1", "dtb-b2.blocks.1"]},
+        {"q": "Was bedeutet „B2 knapp nicht erfüllt“?", "a": "Das steht im Ergebnis, wenn du im DTB B2 zwischen 120 und 143 Punkten hast.", "ref": ["dtb-b2.blocks.1.3"]},
+        {"q": "Kann ich nur einen Teil wiederholen?", "a": "Nein. Du kannst den Test nur ganz wiederholen. Wann und wie oft: Bitte frag deinen Kursträger.", "ref": ["dtb-b1.blocks.2"]},
+        {"q": "Wie lange dauert die schriftliche Prüfung im DTB B2?", "a": "Die schriftliche Prüfung im DTB B2 dauert 125 Minuten. Dazu kommt die mündliche Prüfung mit ca. 16 Minuten.", "ref": ["dtb-b2.blocks.0.3", "dtb-b2.parts.5"]}
+      ]
+    },
+    {
+      "slug": "einbuergerung-deutschkenntnisse-test",
+      "og": "lid",
+      "crumb": "Einbürgerung: Deutsch und Test",
+      "legal": true,
+      "h1": "Einbürgerung: Welche Deutschkenntnisse und welchen Test brauche ich?",
+      "title": "Einbürgerung: Welches Deutsch-Niveau, welcher Test?",
+      "desc": "Einbürgerung: In der Regel Deutsch B1 und der Einbürgerungstest (ab 17 von 33 Fragen). Welche Nachweise gelten, was der Test kostet – mit Quellen.",
+      "answer": "Für die Einbürgerung braucht man in der Regel Deutsch auf dem Niveau B1. Wissen über Deutschland zeigst du in der Regel mit dem Einbürgerungstest: 33 Fragen, bestanden ab 17 richtigen Antworten. Als B1-Nachweis kannst du zum Beispiel das „Zertifikat Integrationskurs“ benutzen – dafür brauchst du im DTZ das Ergebnis B1 und den bestandenen Test „Leben in Deutschland“. Ob dein Nachweis reicht, entscheidet immer die Behörde.",
+      "refs": ["dtz.blocks.6", "lid.parts.0", "lid.blocks.1.1", "dtz.blocks.0.2"],
+      "facts": [
+        {"k": "Deutsch-Niveau", "v": "in der Regel B1", "ref": ["dtz.blocks.6.0"]},
+        {"k": "Nachweis für B1", "v": "zum Beispiel das „Zertifikat Integrationskurs“", "ref": ["dtz.blocks.6.1"]},
+        {"k": "Zertifikat Integrationskurs", "v": "DTZ mit Gesamtergebnis B1 + bestandener Test „Leben in Deutschland“", "ref": ["dtz.blocks.0.2"]},
+        {"k": "Wissen über Deutschland", "v": "in der Regel der Einbürgerungstest: 33 Fragen, 60 Minuten, bestanden ab 17 richtigen Antworten", "ref": ["lid.blocks.4.1", "lid.parts.0", "lid.blocks.1.1"]},
+        {"k": "Ohne extra Einbürgerungstest", "v": "wenn du im Test „Leben in Deutschland“ im Integrationskurs mindestens 17 von 33 Punkten hast · mit 15 oder 16 Punkten musst du den Einbürgerungstest noch machen", "ref": ["dtz.blocks.6.2", "lid.blocks.4.2"]},
+        {"k": "Anmeldung zum Einbürgerungstest", "v": "bei einer Prüfstelle des BAMF · deine Einbürgerungsbehörde nennt dir Prüfstellen in deiner Nähe", "ref": ["lid.blocks.2.1"]},
+        {"k": "Kosten Einbürgerungstest", "v": "25 Euro", "ref": ["lid.blocks.2.2"]},
+        {"k": "Andere Zertifikate (z. B. telc B1)", "v": "Welche Zertifikate die Behörde annimmt: bitte vorher bei deiner Behörde fragen", "ref": ["telc-b1.blocks.5.1"]}
+      ],
+      "practice": [
+        {"href": "/simulation/lid/", "t": "Einbürgerungstest üben", "d": "33 Fragen, 60 Minuten, mit Auswertung."},
+        {"href": "/lid/", "t": "Alle Fragen mit Lösung", "d": "Fragen aus dem BAMF-Katalog mit kurzer Erklärung."},
+        {"href": "/simulation/dtz/", "t": "DTZ-Probeprüfung", "d": "Für das Zertifikat Integrationskurs: Deutsch A2/B1."},
+        {"href": "/simulation/telc-b1/", "t": "telc B1 Modelltest", "d": "Allgemeine B1-Prüfung mit echter Zeit."},
+        {"href": "/einstufungstest/", "t": "Einstufungstest", "d": "Finde heraus, wie weit du von B1 entfernt bist."},
+        {"href": "/pruefungsinfo/lid/", "t": "Alles zum Test „Leben in Deutschland“", "d": "Aufbau, Anmeldung, Kosten – mit Quellen."},
+        {"href": "/pruefungsinfo/dtz/", "t": "Alles zum DTZ", "d": "Punkte, Ergebnis A2/B1, Kosten – mit Quellen."}
+      ],
+      "faq": [
+        {"q": "Welches Deutsch-Niveau brauche ich für die Einbürgerung?", "a": "In der Regel braucht man Deutsch B1. Als Nachweis kannst du zum Beispiel das „Zertifikat Integrationskurs“ benutzen. Ob dein Zertifikat reicht, entscheidet immer die Behörde.", "ref": ["dtz.blocks.6"]},
+        {"q": "Brauche ich den Einbürgerungstest, wenn ich „Leben in Deutschland“ bestanden habe?", "a": "Hast du im Test „Leben in Deutschland“ im Integrationskurs mindestens 17 Punkte, brauchst du keinen extra Einbürgerungstest. Mit 15 oder 16 Punkten musst du ihn noch machen.", "ref": ["lid.blocks.4.2"]},
+        {"q": "Wie viele Fragen muss ich im Einbürgerungstest richtig haben?", "a": "Mindestens 17 von 33 Fragen. Du hast 60 Minuten Zeit.", "ref": ["lid.blocks.1.1", "lid.parts.0"]},
+        {"q": "Was kostet der Einbürgerungstest und wo melde ich mich an?", "a": "Der Einbürgerungstest kostet 25 Euro. Du meldest dich bei einer Prüfstelle des BAMF an. Deine Einbürgerungsbehörde nennt dir Prüfstellen in deiner Nähe.", "ref": ["lid.blocks.2.1", "lid.blocks.2.2"]},
+        {"q": "Reicht ein telc-B1-Zertifikat?", "a": "Welche Zertifikate die Behörde annimmt, ist nicht überall gleich. Bitte frag vorher bei deiner Einbürgerungsbehörde.", "ref": ["telc-b1.blocks.5.1"]}
+      ]
+    },
+    {
+      "slug": "deutsch-lernen-kostenlos-ohne-anmeldung",
+      "og": "start",
+      "crumb": "Kostenlos Deutsch lernen",
+      "h1": "Wo kann ich kostenlos und ohne Anmeldung Deutsch lernen – von A0 bis B2?",
+      "title": "Deutsch lernen kostenlos ohne Anmeldung: A0 bis B2",
+      "desc": "Deutsch kostenlos und ohne Anmeldung lernen: Kurse von A0 bis B2, Einstufungstest, Grammatik, Lektionen, Hören, Lesen, Lernspiele und Probeprüfungen.",
+      "answer": "Auf Deutsch mit Dennis lernst du kostenlos und ohne Konto Deutsch – vom ersten Wort (A0) bis B2. Es gibt Kurse für jedes Niveau, einen Einstufungstest, {n:grammar} Grammatik-Themen mit Übungen, {n:lessons} Themen-Lektionen, Hörtexte, Lesetexte, Lernspiele und {n:sims} Probeprüfungen. Dein Lernstand bleibt nur im Browser auf deinem Gerät.",
+      "refs": ["site:grammatik", "site:lektionen", "site:simulation", "site:datenschutz"],
+      "facts": [
+        {"k": "Kosten", "v": "kostenlos, kein Konto, keine Anmeldung", "ref": ["site:datenschutz"]},
+        {"k": "Lernstand", "v": "bleibt im Browser auf deinem Gerät (localStorage)", "ref": ["site:datenschutz"]},
+        {"k": "Niveaus", "v": "A0, A1, A2, B1 und B2 – jedes mit eigenem Kurs", "ref": ["site:kurs"]},
+        {"k": "Grammatik", "v": "{n:grammar} Themen mit Erklärung und Übungen", "ref": ["site:grammatik"]},
+        {"k": "Lektionen", "v": "{n:lessons} Themen, zum Beispiel Wohnen, Arbeit, Gesundheit, Amt", "ref": ["site:lektionen"]},
+        {"k": "Probeprüfungen", "v": "{n:sims} Simulationen für DTZ, telc B1, telc B2, DTB B1, DTB B2 und Leben in Deutschland", "ref": ["site:simulation"]},
+        {"k": "Wer macht die Seite?", "v": "Dennis Prudnikau, DaZ-Lehrer und lizenzierter Prüfer für DTZ und telc", "ref": ["site:ueber"]}
+      ],
+      "practice": [
+        {"href": "/einstufungstest/", "t": "Einstufungstest", "d": "Finde in wenigen Minuten dein Niveau."},
+        {"href": "/niveau/a0/", "t": "A0 – die ersten Schritte", "d": "Für Anfänger ohne Deutsch: Buchstaben, Laute, erste Wörter."},
+        {"href": "/kurs/a1/", "t": "Kurs A1", "d": "Schritt für Schritt durch A1."},
+        {"href": "/kurs/a2/", "t": "Kurs A2", "d": "Schritt für Schritt durch A2."},
+        {"href": "/kurs/b1/", "t": "Kurs B1", "d": "Schritt für Schritt durch B1."},
+        {"href": "/kurs/b2/", "t": "Kurs B2", "d": "Schritt für Schritt durch B2."},
+        {"href": "/grammatik/", "t": "Grammatik üben", "d": "Erklärung und Übungen von A1 bis B2."},
+        {"href": "/lektionen/", "t": "Lektionen", "d": "Themen aus dem Alltag mit Dialogen."},
+        {"href": "/hoeren/", "t": "Hören", "d": "Hörtexte mit Aufgaben nach Niveau."},
+        {"href": "/lesen/", "t": "Lesen", "d": "Lesetexte mit Aufgaben nach Niveau."},
+        {"href": "/spiele/", "t": "Lernspiele", "d": "Artikel, Verben, Zahlen spielerisch üben."},
+        {"href": "/material/", "t": "Arbeitsblätter als PDF", "d": "Kostenlos zum Ausdrucken."}
+      ],
+      "faq": [
+        {"q": "Brauche ich ein Konto?", "a": "Nein. Du brauchst kein Konto und keine Anmeldung. Dein Lernstand bleibt im Browser auf deinem Gerät.", "ref": ["site:datenschutz"]},
+        {"q": "Ich kann noch gar kein Deutsch. Wo fange ich an?", "a": "Fang mit A0 an: Dort lernst du Buchstaben, Laute und die ersten Wörter. Danach gehst du in den Kurs A1.", "ref": ["site:kurs"]},
+        {"q": "Ich weiß mein Niveau nicht. Was soll ich tun?", "a": "Mach den kostenlosen Einstufungstest. Danach bekommst du einen Vorschlag, mit welchem Niveau du anfangen kannst.", "ref": ["site:kurs"]},
+        {"q": "Kann ich mich hier auch auf eine Prüfung vorbereiten?", "a": "Ja. Es gibt {n:sims} Probeprüfungen mit Zeitvorgabe für DTZ, telc B1, telc B2, DTB B1, DTB B2 und Leben in Deutschland – eigene Aufgaben im Stil der Prüfung.", "ref": ["site:simulation"]},
+        {"q": "Wer steht hinter Deutsch mit Dennis?", "a": "Dennis Prudnikau, DaZ-Lehrer und lizenzierter Prüfer für DTZ und telc. Die Seite ist ein unabhängiges Lernangebot – kein Angebot von g.a.s.t., telc oder BAMF.", "ref": ["site:ueber"]}
+      ]
+    },
+    {
+      "slug": "dtz-schreiben-brief-muster",
+      "og": "dtz-30-tage",
+      "crumb": "DTZ Schreiben: Brief-Muster",
+      "h1": "Wie schreibe ich den Brief im DTZ? Muster, Punkte und Tipps",
+      "title": "DTZ Schreiben: Brief-Muster, Punkte und Tipps",
+      "desc": "DTZ Schreiben: 30 Minuten, Aufgabe A oder B, 20 Punkte (B1 ab 15, A2 ab 7). Musterbriefe, Briefgerüst und Checkliste – kostenlos.",
+      "answer": "Im DTZ schreibst du in 30 Minuten einen Text. Du wählst Aufgabe A oder B. Es gibt 20 Punkte: B1 hast du mit 15–20 Punkten, A2 mit 7–14 Punkten. Seit 1. November 2026 zählt das Schreiben für B1 immer mit – ein leeres Blatt reicht nicht mehr.",
+      "refs": ["dtz.parts.2", "dtz.blocks.1.2", "dtz.blocks.2"],
+      "facts": [
+        {"k": "Zeit", "v": "30 Minuten", "ref": ["dtz.parts.2"]},
+        {"k": "Aufgabe", "v": "1 Text – du wählst Aufgabe A oder B", "ref": ["dtz.parts.2"]},
+        {"k": "Punkte", "v": "20 Punkte · B1: 15–20 · A2: 7–14", "ref": ["dtz.parts.2", "dtz.blocks.1.2"]},
+        {"k": "Neu seit 1. November 2026", "v": "Für das Gesamtergebnis B1 muss auch der dritte Teil mindestens A2 sein. Ein leeres Blatt beim Schreiben reicht nicht mehr.", "ref": ["dtz.blocks.2.1"]},
+        {"k": "Wie viele Wörter?", "v": "Erfahrungswert von Dennis, keine offizielle Vorgabe: ca. 60–80 Wörter für A2, 80–100 Wörter für B1", "ref": ["site:dtz-tipp"]}
+      ],
+      "steps": {"h": "So baust du den Brief auf", "ref": "site:dtz-geruest", "list": ["Anrede: „Sehr geehrte Frau …,“ (Sie) oder „Liebe …, / Lieber …,“ (du)", "Einleitung in einem Satz: „ich schreibe Ihnen, weil …“", "Jeder Leitpunkt aus der Aufgabe: 1–3 kurze Sätze, in der Reihenfolge der Aufgabe", "Bitte oder Frage: „Können Sie mir bitte …?“", "Schluss: „Vielen Dank für Ihre Hilfe.“", "Gruß und Name: „Mit freundlichen Grüßen“ (Sie) oder „Viele Grüße“ (du)"]},
+      "letters": true,
+      "practice": [
+        {"href": "/dtz-schreiben/", "t": "DTZ Schreiben: Vorbereitungspaket", "d": "Neue Regel, Briefgerüst, Redemittel, Übungen und Checkliste."},
+        {"href": "/material/dtz-schreiben-vorbereitung.pdf", "t": "Vorbereitung als PDF", "d": "Übungen zum Briefgerüst mit Lösungen."},
+        {"href": "/#training/dtz-schreiben", "t": "Schreibtraining in der App", "d": "Aufgaben schreiben und mit der Checkliste prüfen."},
+        {"href": "/simulation/dtz/", "t": "DTZ-Probeprüfung", "d": "Schreiben mit echter Zeit – zusammen mit allen anderen Teilen."},
+        {"href": "/pruefungsinfo/dtz/", "t": "Alles zum DTZ", "d": "Punkte, Ergebnis A2/B1, Anmeldung – mit Quellen."}
+      ],
+      "faq": [
+        {"q": "Wie viele Punkte gibt es im DTZ Schreiben?", "a": "Es gibt 20 Punkte. B1 hast du mit 15–20 Punkten, A2 mit 7–14 Punkten.", "ref": ["dtz.parts.2", "dtz.blocks.1.2"]},
+        {"q": "Darf ich beim Schreiben ein leeres Blatt abgeben?", "a": "Seit 1. November 2026 reicht das nicht mehr für B1. Auch der dritte Teil muss mindestens A2 sein. A2 im Schreiben schaffst du mit einem festen Briefaufbau und kurzen, richtigen Sätzen.", "ref": ["dtz.blocks.2"]},
+        {"q": "Wie viele Wörter muss ich schreiben?", "a": "In unseren geprüften Quellen steht keine feste Wortzahl. Als Erfahrungswert empfiehlt Dennis ca. 60–80 Wörter für A2 und 80–100 Wörter für B1. Wichtiger ist: Bearbeite alle Leitpunkte aus der Aufgabe.", "ref": ["site:dtz-tipp"]},
+        {"q": "Schreibe ich „Sie“ oder „du“?", "a": "„Sie“ schreibst du an Firmen, Ämter, Vermieter und Lehrkräfte. „Du“ schreibst du an Freunde und Familie. Anrede und Gruß müssen dazu passen.", "ref": ["site:dtz-geruest"]},
+        {"q": "Wie lange habe ich Zeit?", "a": "Du hast 30 Minuten. Plane die letzten Minuten für die Kontrolle ein: Anrede, alle Leitpunkte, Gruß.", "ref": ["dtz.parts.2"]}
+      ]
+    }
+  ]
+}

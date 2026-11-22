@@ -45,6 +45,100 @@ Dennis Prudnikau ist DaZ-Lehrer und lizenzierter Prüfer für DTZ und telc und b
 - [Lernpakete](https://deutsch-mit-dennis.de/lernpakete/): Pakete für Lernende und Lehrkräfte (DTZ, B2, Leben in Deutschland)
 - [Kurstagebuch](https://deutsch-mit-dennis.de/kurstagebuch/): Tagesprotokolle aus dem Unterricht
 
+<!-- antworten:start (tools/make-answer-pages.py) -->
+## Antworten auf häufige Fragen (mit Quellen)
+Kurze Antworten von Dennis Prudnikau, DaZ-Lehrer und lizenzierter Prüfer für DTZ und telc. Übersicht: https://deutsch-mit-dennis.de/antworten/
+
+- [Wo kann ich den Test „Leben in Deutschland“ kostenlos online üben?](https://deutsch-mit-dennis.de/antworten/leben-in-deutschland-test-kostenlos-ueben/): Auf Deutsch mit Dennis übst du kostenlos und ohne Anmeldung mit allen öffentlichen Fragen: 300 Fragen für ganz Deutschland und 10 Fragen für dein Bundesland. Im Probetest bekommst du wie im echten Test 33 Fragen und hast 60 Minuten Zeit. Bestanden ist der Test im Orientierungskurs ab 15 richtigen Antworten, der Einbürgerungstest ab 17.
+- [Wie kann ich die DTZ-Prüfung kostenlos online üben – und wie viele Punkte brauche ich?](https://deutsch-mit-dennis.de/antworten/dtz-pruefung-online-ueben/): Auf Deutsch mit Dennis machst du kostenlos und ohne Anmeldung 3 komplette DTZ-Probeprüfungen mit Zeitvorgabe – mit eigenen Aufgaben im Stil der Prüfung. Der DTZ hat vier Teile: Hören (ca. 25 Min.), Lesen (45 Min.), Schreiben (30 Min.) und Sprechen zu zweit (ca. 16 Min.). Für das Gesamtergebnis B1 brauchst du B1 im Sprechen, B1 in Hören/Lesen oder im Schreiben – und seit 1. November 2026 im dritten Teil mindestens A2.
+- [Wo finde ich einen kostenlosen Modelltest für telc Deutsch B1?](https://deutsch-mit-dennis.de/antworten/telc-b1-modelltest-kostenlos/): Auf Deutsch mit Dennis findest du 2 kostenlose Modelltests für telc Deutsch B1 mit echter Zeitvorgabe – eigene Aufgaben im Stil der Prüfung, ohne Anmeldung. Einen offiziellen Übungstest als PDF bietet telc selbst an. Die Prüfung hat 300 Punkte: Du bestehst mit 60 % in der schriftlichen Prüfung (135 von 225 Punkten) und 60 % in der mündlichen Prüfung (45 von 75 Punkten).
+- [Wie übe ich kostenlos für die Prüfung telc Deutsch B2?](https://deutsch-mit-dennis.de/antworten/telc-b2-pruefung-ueben/): Für telc Deutsch B2 übst du auf Deutsch mit Dennis kostenlos mit 2 kompletten Modelltests im Stil der Prüfung, dazu mit einem Training für Sprachbausteine und für das Sprechen. Die Prüfung hat 300 Punkte: Du brauchst 60 % in der schriftlichen Prüfung (135 von 225 Punkten) und 60 % in der mündlichen Prüfung (45 von 75 Punkten). Alle Hörtexte hörst du nur einmal.
+- [Wie übe ich für den Deutsch-Test für den Beruf (DTB B1 und B2)?](https://deutsch-mit-dennis.de/antworten/dtb-deutsch-test-fuer-den-beruf-ueben/): Auf Deutsch mit Dennis übst du kostenlos mit 3 Modelltests für DTB B1 und 3 Modelltests für DTB B2 – mit Zeitvorgabe und eigenen Aufgaben im Stil der Prüfung. Beide Tests haben 240 Punkte, je 60 für Lesen, Hören, Schreiben und Sprechen. Bestanden hast du ab 144 Punkten, wenn mindestens drei Teile 36 Punkte haben und der vierte mindestens 24 Punkte.
+- [Einbürgerung: Welche Deutschkenntnisse und welchen Test brauche ich?](https://deutsch-mit-dennis.de/antworten/einbuergerung-deutschkenntnisse-test/): Für die Einbürgerung braucht man in der Regel Deutsch auf dem Niveau B1. Wissen über Deutschland zeigst du in der Regel mit dem Einbürgerungstest: 33 Fragen, bestanden ab 17 richtigen Antworten. Als B1-Nachweis kannst du zum Beispiel das „Zertifikat Integrationskurs“ benutzen – dafür brauchst du im DTZ das Ergebnis B1 und den bestandenen Test „Leben in Deutschland“. Ob dein Nachweis reicht, entscheidet immer die Behörde.
+- [Wo kann ich kostenlos und ohne Anmeldung Deutsch lernen – von A0 bis B2?](https://deutsch-mit-dennis.de/antworten/deutsch-lernen-kostenlos-ohne-anmeldung/): Auf Deutsch mit Dennis lernst du kostenlos und ohne Konto Deutsch – vom ersten Wort (A0) bis B2. Es gibt Kurse für jedes Niveau, einen Einstufungstest, 26 Grammatik-Themen mit Übungen, 21 Themen-Lektionen, Hörtexte, Lesetexte, Lernspiele und 14 Probeprüfungen. Dein Lernstand bleibt nur im Browser auf deinem Gerät.
+- [Wie schreibe ich den Brief im DTZ? Muster, Punkte und Tipps](https://deutsch-mit-dennis.de/antworten/dtz-schreiben-brief-muster/): Im DTZ schreibst du in 30 Minuten einen Text. Du wählst Aufgabe A oder B. Es gibt 20 Punkte: B1 hast du mit 15–20 Punkten, A2 mit 7–14 Punkten. Seit 1. November 2026 zählt das Schreiben für B1 immer mit – ein leeres Blatt reicht nicht mehr.
+
+### Wichtige Fakten nach Thema (jede Zahl aus der genannten Quelle)
+
+#### Leben in Deutschland kostenlos üben – Stand: 22.11.2026 – https://deutsch-mit-dennis.de/antworten/leben-in-deutschland-test-kostenlos-ueben/
+- Fragen im Test: 33 Fragen, zu jeder Frage 4 Antworten, eine ist richtig (Quelle: BAMF – Einbürgerung; BAMF – Informationsblatt zum Test „Leben in Deutschland“ (PDF))
+- Zeit: 60 Minuten (Quelle: BAMF – Einbürgerung; BAMF – Informationsblatt zum Test „Leben in Deutschland“ (PDF))
+- Aufteilung: 30 Fragen für ganz Deutschland, 3 Fragen zu deinem Bundesland (Quelle: BAMF – Einbürgerung; BAMF – Informationsblatt zum Test „Leben in Deutschland“ (PDF))
+- Fragenkatalog: 300 Fragen für ganz Deutschland und 10 Fragen für jedes Bundesland – alle öffentlich (Quelle: BAMF – Abschlussprüfung im Integrationskurs; BAMF – Einbürgerung; BAMF – Gesamtfragenkatalog)
+- Bestanden im Orientierungskurs: ab 15 richtigen Antworten (Quelle: BAMF – Abschlussprüfung im Integrationskurs; BAMF – Einbürgerung)
+- Bestanden im Einbürgerungstest: ab 17 richtigen Antworten (Quelle: BAMF – Abschlussprüfung im Integrationskurs; BAMF – Einbürgerung)
+- Kosten: Einbürgerungstest: 25 Euro. Im Integrationskurs ist der Abschlusstest kostenlos. (Quelle: BAMF – Einbürgerung; BAMF – Abschlussprüfung im Integrationskurs)
+- So viele bestehen: 2025: 89,6 % von 318.633 Teilnehmenden (Quelle: BAMF: Bericht zur Integrationskursgeschäftsstatistik für das Jahr 2025 (Abfragestand 1. April 2026), S. 21)
+
+#### DTZ online üben – Stand: 22.11.2026 – https://deutsch-mit-dennis.de/antworten/dtz-pruefung-online-ueben/
+- Hören: ca. 25 Min. · 4 Teile · 20 Aufgaben · alle Texte einmal (Quelle: g.a.s.t. – DTZ Übungssatz 1 (Erwachsene), Ausgabe November 2026; g.a.s.t. – DTZ: Fragen und Antworten; g.a.s.t. – Der DTZ auf einen Blick; g.a.s.t. – DTZ Übungssatz 2 (PDF))
+- Lesen: 45 Min. · 5 Teile · 25 Aufgaben (Quelle: g.a.s.t. – DTZ Übungssatz 1 (Erwachsene), Ausgabe November 2026; g.a.s.t. – DTZ: Fragen und Antworten; g.a.s.t. – Der DTZ auf einen Blick; g.a.s.t. – DTZ Übungssatz 2 (PDF))
+- Punkte Hören + Lesen: zusammen 45 Punkte · B1: 33–45 · A2: 20–32 (Quelle: g.a.s.t. – DTZ Übungssatz 1 (Erwachsene), Ausgabe November 2026; g.a.s.t. – DTZ: Fragen und Antworten; g.a.s.t. – Der DTZ auf einen Blick; g.a.s.t. – DTZ Übungssatz 2 (PDF))
+- Schreiben: 30 Min. · 1 Text (Aufgabe A oder B) · 20 Punkte · B1: 15–20 · A2: 7–14 (Quelle: g.a.s.t. – DTZ Übungssatz 1 (Erwachsene), Ausgabe November 2026; g.a.s.t. – DTZ: Fragen und Antworten; g.a.s.t. – Der DTZ auf einen Blick; g.a.s.t. – DTZ Übungssatz 2 (PDF))
+- Sprechen: ca. 16 Min. · zu zweit, 2 Prüfende · 100 Punkte · B1: 75–100 · A2: 35–74,5 (Quelle: g.a.s.t. – DTZ Übungssatz 1 (Erwachsene), Ausgabe November 2026; g.a.s.t. – DTZ: Fragen und Antworten; g.a.s.t. – Der DTZ auf einen Blick; g.a.s.t. – DTZ Übungssatz 2 (PDF))
+- Gesamtergebnis B1: B1 im Sprechen + B1 in einem schriftlichen Teil + im anderen Teil mindestens A2 (Quelle: g.a.s.t. – DTZ: Fragen und Antworten)
+- Neu seit 1. November 2026: Auch der dritte Teil muss mindestens A2 sein. Ein leeres Blatt beim Schreiben reicht nicht mehr. (Quelle: asyl.net – Neue Anforderungen beim Deutsch-Test für Zuwanderer; g.a.s.t. – DTZ: Fragen und Antworten)
+- Kosten: Im Integrationskurs kostenlos. Selbstzahler: Preis beim Prüfungszentrum fragen. (Quelle: BAMF – Abschlussprüfung im Integrationskurs)
+- Ergebnisse 2025: 55,0 % von 318.550 Teilnehmenden erreichten B1, 32,2 % A2 (Quelle: BAMF: Bericht zur Integrationskursgeschäftsstatistik für das Jahr 2025 (Abfragestand 1. April 2026), S. 17)
+
+#### telc B1 Modelltest – Stand: 22.11.2026 – https://deutsch-mit-dennis.de/antworten/telc-b1-modelltest-kostenlos/
+- Leseverstehen und Sprachbausteine: 90 Min. · Lesen 3 Teile (75 Punkte) · Sprachbausteine 2 Teile (30 Punkte) (Quelle: telc – Zertifikat Deutsch / telc Deutsch B1; telc – Übungstest 1 Zertifikat Deutsch B1 (PDF))
+- Hörverstehen: ca. 30 Min. · 3 Teile mit 5 + 10 + 5 Aufgaben (richtig oder falsch) · 75 Punkte (Quelle: telc – Zertifikat Deutsch / telc Deutsch B1; telc – Übungstest 1 Zertifikat Deutsch B1 (PDF))
+- Schriftlicher Ausdruck: 30 Min. · 1 E-Mail mit 4 Leitpunkten · 45 Punkte (Quelle: telc – Zertifikat Deutsch / telc Deutsch B1; telc – Übungstest 1 Zertifikat Deutsch B1 (PDF))
+- Mündliche Prüfung: ca. 15 Min. zu zweit · 3 Teile · vorher 20 Min. Vorbereitung · 75 Punkte (Quelle: telc – Zertifikat Deutsch / telc Deutsch B1; telc – Übungstest 1 Zertifikat Deutsch B1 (PDF))
+- Bestehen: 300 Punkte gesamt · 60 % schriftlich (135 von 225) und 60 % mündlich (45 von 75) (Quelle: telc – Übungstest 1 Zertifikat Deutsch B1 (PDF))
+- Wiederholen: Ganze Prüfung beliebig oft. Nur ein Teil nicht bestanden? Diesen Teil kannst du bis zum Ende des nächsten Kalenderjahres allein wiederholen. (Quelle: telc – Prüfungsregularien, gültig ab 15.04.2025 (PDF); telc – Übungstest 1 Zertifikat Deutsch B1 (PDF))
+- Kosten und Termine: verschieden – bitte beim Prüfungszentrum fragen (Quelle: telc – Zertifikat Deutsch / telc Deutsch B1)
+
+#### telc B2 üben – Stand: 22.11.2026 – https://deutsch-mit-dennis.de/antworten/telc-b2-pruefung-ueben/
+- Leseverstehen und Sprachbausteine: 90 Min. · Lesen 3 Teile (5 + 5 + 10 Aufgaben, 75 Punkte) · Sprachbausteine 2 Teile (10 + 10 Aufgaben, 30 Punkte) (Quelle: telc – telc Deutsch B2; telc – Handbuch Deutsch B2 (PDF); telc – Übungstest 1, telc Deutsch B2 (2019))
+- Hörverstehen: ca. 20 Min. · 3 Teile · alle Texte nur einmal · 75 Punkte (Quelle: telc – telc Deutsch B2; telc – Handbuch Deutsch B2 (PDF); telc – Übungstest 1, telc Deutsch B2 (2019))
+- Schriftlicher Ausdruck: 30 Min. · 1 halbformelle E-Mail, Aufgabe A oder B · 45 Punkte (Quelle: telc – telc Deutsch B2; telc – Handbuch Deutsch B2 (PDF); telc – Übungstest 1, telc Deutsch B2 (2019))
+- Mündliche Prüfung: ca. 15 Min. zu zweit · 3 Teile · 20 Min. Vorbereitung für Teil 2 und 3 · 75 Punkte (Quelle: telc – telc Deutsch B2; telc – Handbuch Deutsch B2 (PDF); telc – Übungstest 1, telc Deutsch B2 (2019))
+- Bestehen: 300 Punkte gesamt · 60 % schriftlich (135 von 225) und 60 % mündlich (45 von 75) (Quelle: telc – Handbuch Deutsch B2 (PDF))
+- Bewertung Sprechen: Ausdrucksfähigkeit, Aufgabenbewältigung, formale Richtigkeit, Aussprache und Intonation (Quelle: telc – Handbuch Deutsch B2 (PDF))
+- Wiederholen: Ganze Prüfung beliebig oft. Einen nicht bestandenen Teil kannst du allein wiederholen – die Frist bitte beim Prüfungszentrum fragen. (Quelle: telc – Prüfungsregularien, gültig ab 15.04.2025 (PDF))
+
+#### DTB B1 und B2 üben – Stand: 22.11.2026 – https://deutsch-mit-dennis.de/antworten/dtb-deutsch-test-fuer-den-beruf-ueben/
+- Lesen: DTB B1: 40 Min. · DTB B2: 45 Min. · je 4 Teile, 18 Aufgaben (Quelle: telc – Übungstest 1, Deutsch-Test für den Beruf B1 (2022); telc – Deutsch-Test für den Beruf B1; BAMF – Übungstest 1 Deutsch-Test für den Beruf B1 (PDF); telc – Übungstest 1, Deutsch-Test für den Beruf B2 (2022); telc – Deutsch-Test für den Beruf B2; BAMF – Übungstest 1 Deutsch-Test für den Beruf B2 (PDF))
+- Hören: je 20 Min. · 4 Teile, 19 Aufgaben · alle Texte nur einmal (Quelle: telc – Übungstest 1, Deutsch-Test für den Beruf B1 (2022); telc – Deutsch-Test für den Beruf B1; BAMF – Übungstest 1 Deutsch-Test für den Beruf B1 (PDF); telc – Übungstest 1, Deutsch-Test für den Beruf B2 (2022); telc – Deutsch-Test für den Beruf B2; BAMF – Übungstest 1 Deutsch-Test für den Beruf B2 (PDF))
+- Schreiben: DTB B1: Antwort-E-Mail, Notiz und Kurznachricht · DTB B2: Antwort, Notiz und Forumsbeitrag · zusammen 60 Punkte (Quelle: telc – Übungstest 1, Deutsch-Test für den Beruf B1 (2022); telc – Deutsch-Test für den Beruf B1; BAMF – Übungstest 1 Deutsch-Test für den Beruf B1 (PDF); telc – Übungstest 1, Deutsch-Test für den Beruf B2 (2022); telc – Deutsch-Test für den Beruf B2; BAMF – Übungstest 1 Deutsch-Test für den Beruf B2 (PDF))
+- Sprechen: ca. 16 Min. · zu zweit · keine Vorbereitungszeit · 60 Punkte (Quelle: telc – Übungstest 1, Deutsch-Test für den Beruf B1 (2022); telc – Deutsch-Test für den Beruf B1; BAMF – Übungstest 1 Deutsch-Test für den Beruf B1 (PDF); telc – Übungstest 1, Deutsch-Test für den Beruf B2 (2022); telc – Deutsch-Test für den Beruf B2; BAMF – Übungstest 1 Deutsch-Test für den Beruf B2 (PDF))
+- Bestehen: 240 Punkte gesamt · ab 144 Punkten (60 %) · in mindestens drei Teilen 36 von 60 · der vierte Teil mindestens 24 (Quelle: telc – Übungstest 1, Deutsch-Test für den Beruf B1 (2022); BAMF – Übungstest 1 Deutsch-Test für den Beruf B2 (PDF); telc – Prüfungshandbuch Deutsch-Tests für den Beruf (PDF); BAMF – Durchführungshinweise zu den Deutsch-Tests für den Beruf, gültig ab Juni 2024 (PDF))
+- DTB B2: knapp nicht bestanden: 120 bis 143 Punkte: im Ergebnis steht „B2 knapp nicht erfüllt“ (Quelle: BAMF – Übungstest 1 Deutsch-Test für den Beruf B2 (PDF); telc – Prüfungshandbuch Deutsch-Tests für den Beruf (PDF); BAMF – Durchführungshinweise zu den Deutsch-Tests für den Beruf, gültig ab Juni 2024 (PDF))
+- Anmeldung: über deinen Kursträger im Berufssprachkurs · als Selbstzahler nicht möglich (Quelle: BAMF – Durchführungshinweise zu den Deutsch-Tests für den Beruf, gültig ab Juni 2024 (PDF))
+- Wiederholen: nur der ganze Test, nicht einzelne Teile (Quelle: BAMF – Durchführungshinweise zu den Deutsch-Tests für den Beruf, gültig ab Juni 2024 (PDF))
+- Ergebnisse 2024: DTB B1: 45,3 % von 14.117 erreichten B1 · DTB B2: 58,3 % von 111.281 erreichten B2 (Quelle: BAMF: Jahresbericht Berufssprachkurse 2024, Tabelle 17c, S. 43)
+
+#### Einbürgerung: Deutsch und Test – Stand: 22.11.2026 – https://deutsch-mit-dennis.de/antworten/einbuergerung-deutschkenntnisse-test/
+- Deutsch-Niveau: in der Regel B1 (Quelle: BAMF – Sprachnachweise und Zertifikate; BAMF – Abschlussprüfung im Integrationskurs; BAMF – Einbürgerung)
+- Nachweis für B1: zum Beispiel das „Zertifikat Integrationskurs“ (Quelle: BAMF – Sprachnachweise und Zertifikate; BAMF – Abschlussprüfung im Integrationskurs; BAMF – Einbürgerung)
+- Zertifikat Integrationskurs: DTZ mit Gesamtergebnis B1 + bestandener Test „Leben in Deutschland“ (Quelle: g.a.s.t. – Deutsch-Test für Zuwanderer; BAMF – Abschlussprüfung im Integrationskurs)
+- Wissen über Deutschland: in der Regel der Einbürgerungstest: 33 Fragen, 60 Minuten, bestanden ab 17 richtigen Antworten (Quelle: BAMF – Abschlussprüfung im Integrationskurs; BAMF – Einbürgerung; BAMF – Informationsblatt zum Test „Leben in Deutschland“ (PDF))
+- Ohne extra Einbürgerungstest: wenn du im Test „Leben in Deutschland“ im Integrationskurs mindestens 17 von 33 Punkten hast · mit 15 oder 16 Punkten musst du den Einbürgerungstest noch machen (Quelle: BAMF – Sprachnachweise und Zertifikate; BAMF – Abschlussprüfung im Integrationskurs; BAMF – Einbürgerung)
+- Anmeldung zum Einbürgerungstest: bei einer Prüfstelle des BAMF · deine Einbürgerungsbehörde nennt dir Prüfstellen in deiner Nähe (Quelle: BAMF – Einbürgerung; BAMF – Abschlussprüfung im Integrationskurs)
+- Kosten Einbürgerungstest: 25 Euro (Quelle: BAMF – Einbürgerung; BAMF – Abschlussprüfung im Integrationskurs)
+- Andere Zertifikate (z. B. telc B1): Welche Zertifikate die Behörde annimmt: bitte vorher bei deiner Behörde fragen (Quelle: BAMF – Sprachnachweise und Zertifikate; telc – Prüfungsregularien, gültig ab 15.04.2025 (PDF))
+
+#### Kostenlos Deutsch lernen – Stand: 22.11.2026 – https://deutsch-mit-dennis.de/antworten/deutsch-lernen-kostenlos-ohne-anmeldung/
+- Kosten: kostenlos, kein Konto, keine Anmeldung (Quelle: deutsch-mit-dennis.de/datenschutz/)
+- Lernstand: bleibt im Browser auf deinem Gerät (localStorage) (Quelle: deutsch-mit-dennis.de/datenschutz/)
+- Niveaus: A0, A1, A2, B1 und B2 – jedes mit eigenem Kurs (Quelle: deutsch-mit-dennis.de/kurs/)
+- Grammatik: 26 Themen mit Erklärung und Übungen (Quelle: deutsch-mit-dennis.de/grammatik/)
+- Lektionen: 21 Themen, zum Beispiel Wohnen, Arbeit, Gesundheit, Amt (Quelle: deutsch-mit-dennis.de/lektionen/)
+- Probeprüfungen: 14 Simulationen für DTZ, telc B1, telc B2, DTB B1, DTB B2 und Leben in Deutschland (Quelle: deutsch-mit-dennis.de/simulation/)
+- Wer macht die Seite?: Dennis Prudnikau, DaZ-Lehrer und lizenzierter Prüfer für DTZ und telc (Quelle: deutsch-mit-dennis.de/ueber-mich/)
+
+#### DTZ Schreiben: Brief-Muster – Stand: 22.11.2026 – https://deutsch-mit-dennis.de/antworten/dtz-schreiben-brief-muster/
+- Zeit: 30 Minuten (Quelle: g.a.s.t. – DTZ Übungssatz 1 (Erwachsene), Ausgabe November 2026; g.a.s.t. – DTZ: Fragen und Antworten; g.a.s.t. – Der DTZ auf einen Blick; g.a.s.t. – DTZ Übungssatz 2 (PDF))
+- Aufgabe: 1 Text – du wählst Aufgabe A oder B (Quelle: g.a.s.t. – DTZ Übungssatz 1 (Erwachsene), Ausgabe November 2026; g.a.s.t. – DTZ: Fragen und Antworten; g.a.s.t. – Der DTZ auf einen Blick; g.a.s.t. – DTZ Übungssatz 2 (PDF))
+- Punkte: 20 Punkte · B1: 15–20 · A2: 7–14 (Quelle: g.a.s.t. – DTZ Übungssatz 1 (Erwachsene), Ausgabe November 2026; g.a.s.t. – DTZ: Fragen und Antworten; g.a.s.t. – Der DTZ auf einen Blick; g.a.s.t. – DTZ Übungssatz 2 (PDF))
+- Neu seit 1. November 2026: Für das Gesamtergebnis B1 muss auch der dritte Teil mindestens A2 sein. Ein leeres Blatt beim Schreiben reicht nicht mehr. (Quelle: asyl.net – Neue Anforderungen beim Deutsch-Test für Zuwanderer; g.a.s.t. – DTZ: Fragen und Antworten)
+- Wie viele Wörter?: Erfahrungswert von Dennis, keine offizielle Vorgabe: ca. 60–80 Wörter für A2, 80–100 Wörter für B1 (Quelle: deutsch-mit-dennis.de/dtz-schreiben/)
+
+Hinweis: Unabhängiges Lernangebot, kein Angebot von g.a.s.t., telc oder BAMF. Keine Rechtsberatung. Ob dein Zertifikat reicht, entscheidet immer die Behörde. Probeprüfungen sind eigene Aufgaben im Stil der Prüfung; Fragen zu „Leben in Deutschland“ stammen aus dem öffentlichen BAMF-Gesamtfragenkatalog, die Erklärungen sind nicht vom BAMF.
+<!-- antworten:end -->
+
 ## Über mich
 - [Über Dennis](https://deutsch-mit-dennis.de/ueber-mich/): Werdegang, Prüferlizenzen und BAMF-Zulassungen
 - [Impressum](https://deutsch-mit-dennis.de/impressum/)

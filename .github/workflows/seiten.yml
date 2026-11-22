@@ -25,6 +25,10 @@ on:
       - 'lid-laender.js'
       - 'lid-warum.js'
       - 'tools/build-sitemap.js'
+      - 'tools/make-answer-pages.py'
+      - 'tools/answers/**'
+      - 'tools/pruefung-statistik.json'
+      - 'tools/dtz-schreiben/briefe.json'
       - '.github/workflows/seiten.yml'
   workflow_dispatch:
 permissions:
@@ -46,6 +50,8 @@ jobs:
         with:
           python-version: '3.12'
       - run: pip install pillow
+      - name: Antwortseiten erzeugen   # /antworten/ – before make-share-pages.py, whose last step writes the sitemap
+        run: python3 -X utf8 tools/make-answer-pages.py
       - name: Seiten erzeugen
         run: python3 -X utf8 tools/make-share-pages.py
       - name: Speichern

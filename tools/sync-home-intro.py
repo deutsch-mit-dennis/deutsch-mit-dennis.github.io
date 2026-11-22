@@ -24,6 +24,8 @@ if not m:
 block = m.group(1)
 copy = block.replace('id="dm-intro-h"', 'id="dm-intro-ns-h"').replace('aria-labelledby="dm-intro-h"', 'aria-labelledby="dm-intro-ns-h"')
 copy = copy.replace('<section id="dm-intro"', '<section id="dm-intro-ns"')
+# only one <h1> in the raw HTML: the <noscript> copy uses an H2 with the same look (class dm-intro-title)
+copy = re.sub(r'<h1 id="dm-intro-ns-h">(.*?)</h1>', r'<h2 id="dm-intro-ns-h" class="dm-intro-title">\1</h2>', copy, count=1, flags=re.S)
 
 s2, n = re.subn(
     r"<!--intro-noscript:start-->\n.*?\n<!--intro-noscript:end-->",
