@@ -1,30 +1,30 @@
 {
  "hinweis": "Zusammengefasste Besucherzahlen (Cloudflare Web Analytics, ohne Cookies). Automatisch erzeugt.",
- "stand": "2026-11-21T12:24:32.612Z",
- "tag": "2026-11-20",
+ "stand": "2026-11-22T12:26:33.911Z",
+ "tag": "2026-11-21",
  "gestern": {
-  "besuche": 78,
-  "seitenaufrufe": 595
+  "besuche": 45,
+  "seitenaufrufe": 242
  },
  "letzte7Tage": {
-  "besuche": 548,
-  "seitenaufrufe": 3672
+  "besuche": 583,
+  "seitenaufrufe": 3862
  },
  "herkunft": [
   {
    "name": "deutsch-mit-dennis.de",
    "besuche": 0,
-   "aufrufe": 3124
+   "aufrufe": 3279
   },
   {
    "name": "(direkt)",
-   "besuche": 504,
-   "aufrufe": 504
+   "besuche": 530,
+   "aufrufe": 530
   },
   {
    "name": "www.google.com",
-   "besuche": 23,
-   "aufrufe": 23
+   "besuche": 31,
+   "aufrufe": 31
   },
   {
    "name": "www.bing.com",
@@ -47,7 +47,7 @@
    "aufrufe": 2
   },
   {
-   "name": "bing.com",
+   "name": "de.search.yahoo.com",
    "besuche": 1,
    "aufrufe": 1
   }
@@ -55,8 +55,8 @@
  "laender": [
   {
    "name": "DE",
-   "besuche": 439,
-   "aufrufe": 2976
+   "besuche": 458,
+   "aufrufe": 3116
   },
   {
    "name": "CH",
@@ -66,12 +66,12 @@
   {
    "name": "IN",
    "besuche": 5,
-   "aufrufe": 76
+   "aufrufe": 78
   },
   {
    "name": "ES",
-   "besuche": 2,
-   "aufrufe": 74
+   "besuche": 3,
+   "aufrufe": 75
   },
   {
    "name": "EG",
@@ -79,48 +79,48 @@
    "aufrufe": 70
   },
   {
+   "name": "MA",
+   "besuche": 4,
+   "aufrufe": 51
+  },
+  {
+   "name": "UA",
+   "besuche": 9,
+   "aufrufe": 49
+  },
+  {
    "name": "TN",
    "besuche": 0,
    "aufrufe": 42
-  },
-  {
-   "name": "AT",
-   "besuche": 9,
-   "aufrufe": 39
-  },
-  {
-   "name": "MA",
-   "besuche": 3,
-   "aufrufe": 38
   }
  ],
  "geraete": [
   {
    "name": "mobile",
-   "besuche": 416,
-   "aufrufe": 2330
+   "besuche": 441,
+   "aufrufe": 2473
   },
   {
    "name": "desktop",
-   "besuche": 117,
-   "aufrufe": 1175
+   "besuche": 126,
+   "aufrufe": 1214
   },
   {
    "name": "tablet",
-   "besuche": 15,
-   "aufrufe": 167
+   "besuche": 16,
+   "aufrufe": 175
   }
  ],
  "seiten": [
   {
    "name": "/",
-   "besuche": 547,
-   "aufrufe": 3470
+   "besuche": 581,
+   "aufrufe": 3656
   },
   {
    "name": "/index.html",
-   "besuche": 1,
-   "aufrufe": 202
+   "besuche": 2,
+   "aufrufe": 206
   }
  ],
  "verlauf": {
@@ -303,6 +303,10 @@
   "2026-11-20": {
    "besuche": 78,
    "seitenaufrufe": 595
+  },
+  "2026-11-21": {
+   "besuche": 45,
+   "seitenaufrufe": 242
   }
  }
 }
