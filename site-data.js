@@ -806,7 +806,7 @@ const HQ = (q, options, answer, why) => ({ q, options, answer, why });
 DM.listening = {
   alltag: {
     title: 'Hören im Alltag', level: 'A2–B1', exam: 'DTZ-Vorbereitung',
-    intro: 'Kurze Ansagen und Nachrichten wie im Alltag und im DTZ. Hör jeden Text zweimal. Lies zuerst die Frage.',
+    intro: 'Kurze Ansagen und Nachrichten wie im Alltag und im DTZ. Lies zuerst die Frage. Zum Üben kannst du jeden Text zweimal hören. Im DTZ hörst du jeden Text nur einmal – versuch es zuerst mit einem Mal.',
     items: [
       { type: 'Ansage am Bahnhof', text: 'Achtung an Gleis 4. Der Regionalexpress nach Dortmund, planmäßige Abfahrt 14 Uhr 12, fährt heute von Gleis 7. Wir bitten um Beachtung.', questions: [HQ('Von welchem Gleis fährt der Zug heute?', ['Gleis 4', 'Gleis 7', 'Gleis 12'], 1, 'Planmäßig wäre Gleis 4. Heute fährt der Zug von Gleis 7.')] },
       { type: 'Anrufbeantworter', text: 'Guten Tag, hier ist die Praxis Doktor Kaya. Frau Novak, Ihr Termin am Mittwoch um zehn Uhr muss leider ausfallen. Wir können Ihnen Donnerstag um halb neun anbieten. Bitte rufen Sie uns bis morgen Mittag zurück.', questions: [HQ('Was soll Frau Novak tun?', ['Am Mittwoch um zehn kommen', 'Bis morgen Mittag zurückrufen', 'Eine E-Mail schreiben'], 1, 'Die Praxis bittet um einen Rückruf bis morgen Mittag.'), HQ('Welchen neuen Termin bietet die Praxis an?', ['Donnerstag, 8:30 Uhr', 'Donnerstag, 9:30 Uhr', 'Mittwoch, 10 Uhr'], 0, '„Halb neun“ bedeutet 8:30 Uhr.')] },

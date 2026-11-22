@@ -79,7 +79,7 @@
         ] },
       { title: 'Sprachbausteine Teil 2', skill: 'sb', pts: 1.5,
         instr: 'Lesen Sie den folgenden Text. Welches Wort (a–o) passt in die Lücken 1–10? Jedes Wort passt nur einmal. Fünf Wörter bleiben übrig.',
-        opts: ['a) allerdings', 'b) bis', 'c) bereits', 'd) damit', 'e) darum', 'f) ihnen', 'g) innerhalb', 'h) je', 'i) mit', 'j) nachdem', 'k) ohne', 'l) sich', 'm) über', 'n) wegen', 'o) zwischen'],
+        opts: ['a) allerdings', 'b) bis', 'c) bereits', 'd) damit', 'e) darum', 'f) Ihnen', 'g) innerhalb', 'h) je', 'i) mit', 'j) nachdem', 'k) ohne', 'l) sich', 'm) über', 'n) wegen', 'o) zwischen'],
         material: [{ h: 'Information des Sportvereins', t: 'Liebe Mitglieder,\nab dem 1. April gibt es in unserem Verein neue Kurszeiten. Die Turnhalle der Gesamtschule wird renoviert. {1} können wir dort bis zu den Sommerferien leider nicht trainieren.\nDie Kurse für Kinder finden in dieser Zeit in der Halle am Stadtpark statt. Die Trainerinnen und Trainer informieren Sie {2} der nächsten Woche über die genauen Zeiten.\nDie Erwachsenenkurse können wir {3} im Freien anbieten, das Wetter ist ja im Frühling meistens gut. Bei Regen trainieren wir im Gemeindehaus. {4} ist dort nicht so viel Platz, deshalb müssen sich alle Teilnehmenden vorher online anmelden.\nViele von Ihnen haben uns gefragt, ob sie wegen der Renovierung weniger Beitrag zahlen müssen. {5} der Vorstand lange diskutiert hat, haben wir Folgendes entschieden: Jedes Mitglied bekommt für April und Mai die Hälfte des Beitrags zurück. Sie müssen dafür nichts tun – das Geld überweisen wir {6} automatisch im Juni.\nWer Fragen hat, kann {7} gern an unsere Geschäftsstelle wenden. Sie ist dienstags und donnerstags {8} 16 und 19 Uhr geöffnet. Außerdem freuen wir uns {9} Helferinnen und Helfer für unser Sommerfest. Wer mitmachen möchte, meldet sich bitte {10} Ende April.\nSportliche Grüße\nIhr Vorstand des TSV Grünwald' }],
         items: [
           { q: '', a: 4, why: '„Darum“ = deshalb, als Folge der Renovierung (Verb an Position 2).' },
@@ -87,7 +87,7 @@
           { q: '', a: 2, why: '„bereits“ = schon: Die Kurse finden schon jetzt draußen statt.' },
           { q: '', a: 0, why: '„Allerdings“ zeigt eine Einschränkung: Bei Regen gibt es dort nicht so viel Platz.' },
           { q: '', a: 9, why: 'Zeitliche Reihenfolge mit Verb am Ende: „Nachdem der Vorstand lange diskutiert hat, …“.' },
-          { q: '', a: 5, why: 'Dativ Plural, gemeint sind die Mitglieder: „überweisen wir ihnen das Geld“.' },
+          { q: '', a: 5, why: 'Höflichkeitsform Dativ: Gemeint sind die angesprochenen Mitglieder (Sie) → „überweisen wir Ihnen das Geld“.' },
           { q: '', a: 11, why: 'Reflexives Verb: „sich an jemanden wenden“.' },
           { q: '', a: 14, why: 'Zeitraum: „zwischen 16 und 19 Uhr“.' },
           { q: '', a: 12, why: 'Feste Verbindung: „sich über etwas freuen“ (über etwas, das man bekommt).' },

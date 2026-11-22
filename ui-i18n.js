@@ -400,7 +400,7 @@
     obs = null;
   const SKIP =
     '[data-no-i18n],[data-i18n],script,style,textarea,select,option,input,code,pre,[contenteditable="true"],.ui-tr,.ui-say,svg,audio,video,' +
-    ".es-card,.es-opt,.es-qword,.es-fb b,.dm-model,.translation-copy,.sentence-part,#site-helper,.dm-lang";
+    ".ku-bi,.ku-tr,.es-card,.es-opt,.es-qword,.es-fb b,.dm-model,.translation-copy,.sentence-part,#site-helper,.dm-lang";
   const HOST = "button,a,h1,h2,h3,h4,label,summary,legend,p,th,figcaption,li,.dm-lead,.dm-hint,.dm-kicker,.dm-tag";
   const SAY_HOST = "p:not(.dm-kicker):not(.dm-small):not(.dm-path-meta),.dm-lead,.dm-hint,legend";
 

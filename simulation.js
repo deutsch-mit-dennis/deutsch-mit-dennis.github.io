@@ -3,7 +3,7 @@
    LiD-Simulation: Fragen aus window.LID_KATALOG (BAMF-Gesamtfragenkatalog).
    Fortschritt und Antworten bleiben nur im Browser (DM.store.sim). */
 (() => {
-  const V = '20261117z';
+  const V = '20261122a';
   const $ = (s, r = document) => r.querySelector(s);
   const $$ = (s, r = document) => [...r.querySelectorAll(s)];
   const e = s => DM.esc(s);
@@ -56,9 +56,17 @@
   const dlLink = ([href, label, kind]) => `<a class="dm-btn dm-btn-quiet" href="${href}?v=${V}" download${kind === 'mp3' ? '' : ' target="_blank" rel="noopener"'}>${label}</a>`;
   /* compact row (running exam) */
   const pdfLinks = id => `<div class="sim-pdf">${downloads(id).map(dlLink).join('')}<a class="dm-btn dm-btn-quiet" href="#simulation/${id}/pruefen">✓ Papier-Antworten prüfen</a></div>`;
+  /* How often each listening text runs in the MP3 – derived from the plays values (same rule as tools/sim/build_listening_mp3.py) */
+  const playsText = ex => {
+    const ps = (ex?.sections || []).filter(s => !s.parts.some(p => p.kind === 'speak')).flatMap(s => s.parts.filter(p => p.audio && p.audio.length));
+    const two = ps.filter(p => p.plays === 2);
+    if (!two.length) return 'Hörtext (jeder Text nur einmal – wie in der Prüfung)';
+    if (two.length === ps.length) return 'Hörtext (jeder Text zweimal – wie in der Prüfung)';
+    return `Hörtext (wie in der Prüfung: meist einmal, zweimal nur bei ${e(two.map(p => p.title.split(':')[0]).join(', '))})`;
+  };
   /* full card (start page) */
-  const paperCard = id => `<section class="dm-card sim-paper" id="sim-paper"><h2>📄 Auf Papier üben</h2>
-      <p>${id === 'lid' ? 'Zwei feste Probetests zum Ausdrucken. Danach trägst du deine Kreuze hier ein und bekommst sofort dein Ergebnis.' : 'Drucke das Heft aus und übe ohne Bildschirm. Das Hörverstehen gibt es als eine MP3 – sie läuft wie in der Prüfung: Signalton, Zeit zum Lesen, Hörtext (bei Bedarf zweimal). Im Heft steht bei jedem Hörtext, ab welcher Minute er beginnt.'}</p>
+  const paperCard = (id, ex) => `<section class="dm-card sim-paper" id="sim-paper"><h2>📄 Auf Papier üben</h2>
+      <p>${id === 'lid' ? 'Zwei feste Probetests zum Ausdrucken. Danach trägst du deine Kreuze hier ein und bekommst sofort dein Ergebnis.' : 'Drucke das Heft aus und übe ohne Bildschirm. Das Hörverstehen gibt es als eine MP3 – sie läuft wie in der Prüfung: Signalton, Zeit zum Lesen, ${playsText(ex)}. Im Heft steht bei jedem Hörtext, ab welcher Minute er beginnt.'}</p>
       <div class="sim-pdf">${downloads(id).map(dlLink).join('')}</div>
       ${id === 'lid' ? '' : `<p class="dm-small">MP3: ca. ${MP3_MIN[id]} Minuten, ca. ${Math.round(MP3_MIN[id] * 0.47)} MB – am besten im WLAN laden.</p>`}
       <a class="dm-btn" href="#simulation/${id}/pruefen">✓ Papier-Antworten eintragen und prüfen lassen</a></section>`;
@@ -334,7 +342,7 @@
       <p class="sim-startlead">${hasOral ? 'Starte die schriftliche und die mündliche Prüfung getrennt – wie am Prüfungstag. Sobald du startest, läuft <b>eine Uhr für die gesamte schriftliche bzw. mündliche Prüfung</b>. Die Zeit teilst du dir selbst ein; ist sie um, wird automatisch abgegeben.' : 'Sobald du startest, läuft die Uhr für den gesamten Test. Ist sie um, wird automatisch abgegeben.'}</p>
       <div class="sim-startgrid">${startCard('written')}${hasOral ? startCard('oral') : ''}</div>
       ${combo ? `<aside class="dm-card sim-combo ${combo.verdict.pass ? 'ok' : 'no'}"><b>Gesamtergebnis (schriftlich + mündlich): ${e(combo.verdict.head)}</b>${combo.verdict.lines.map(l => `<span>${e(l)}</span>`).join('')}<small>Aus deiner letzten schriftlichen (${combo.wDate}) und mündlichen Prüfung (${combo.oDate}).</small></aside>` : ''}
-      ${hasPaper(id) ? paperCard(id) : ''}
+      ${hasPaper(id) ? paperCard(id, ex) : ''}
       ${ruleBox(ex)}
       ${id === 'lid' ? (window.DM && DM.lidLandPicker ? DM.lidLandPicker() : '') : ''}
       ${ex.sections.length > 1 ? `<details class="sim-more dm-card"><summary>Andere Möglichkeiten: Teil für Teil oder nur einen Teil üben</summary>
@@ -343,8 +351,7 @@
         <ol class="sim-steps">${rows}</ol></details>` : ''}
       ${PREP.includes(base(id)) ? `<div class="dm-row sim-start"><a class="dm-btn dm-btn-quiet" href="#vorbereitung/${base(id)}">Gezielte Vorbereitung</a></div>` : ''}
       ${hist.length ? `<section class="dm-card"><h2>Deine Ergebnisse</h2><ul class="sim-hist">${hist.slice(-6).reverse().map(h => `<li><span>${new Date(h.date).toLocaleDateString('de-DE')}</span><span class="sim-hmode">${e(modeLabel(h.mode || (h.single ? 'single' : 'full')))}</span><b>${h.pct} %</b><span>${h.pass === true ? '✓ bestanden' : h.pass === false && (h.mode === 'full' || !h.mode) && !h.single ? '✗ noch nicht bestanden' : ''}</span></li>`).join('')}</ul></section>` : ''}
-      <p class="dm-small">Eigene Übungsaufgaben im Stil der Prüfung – keine offiziellen Aufgaben.</p>
-      ${id === 'lid' ? window.LID_QUELLE_HTML || '' : ''}`, 'sim-page');
+      ${id === 'lid' ? (window.LID_QUELLE_HTML || '') + (window.LID_WARUM ? '<p class="dm-small">Erklärungen: Deutsch mit Dennis – nicht vom BAMF.</p>' : '') : '<p class="dm-small">Eigene Übungsaufgaben im Stil der Prüfung – keine offiziellen Aufgaben.</p>'}`, 'sim-page');
     /* Already finished this model test? Offer the next new one first – repeating is still possible. */
     const startOrAsk = mode => {
       const m = mode === 'full' ? 'written' : mode;

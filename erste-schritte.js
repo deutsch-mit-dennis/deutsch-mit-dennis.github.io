@@ -38,7 +38,9 @@
       const v =
         localStorage.getItem("dmd.eslang") ||
         localStorage.getItem("dmd.vlang") ||
-        localStorage.getItem("dmd.lang");
+        localStorage.getItem("dmd.lang") ||
+        (window.DM && DM.hi18n && DM.hi18n.get()) ||
+        (navigator.language || "").slice(0, 2).toLowerCase();
       return ES.langs.some(([k]) => k === v) ? v : v === "de" ? "de" : "en";
     } catch {
       return "en";
@@ -331,7 +333,19 @@
             DM.celebrate();
           } catch {}
       }
-      box.innerHTML = `<div class="es-result"><p class="es-score">${score} / ${rounds.length}</p><p>${good ? "Super! Thema geschafft. ✓" : "Gut gemacht! Hör dir die Karten noch einmal an und versuch es wieder."}</p><p class="dm-row"><button type="button" class="dm-btn" id="es-again">Neue Runde ↻</button></p></div>`;
+      // topic passed = course step done: tick it off now and say so ("✓ gespeichert – Schritt 3 von 19"), with the way on
+      let saved = "";
+      if (good) {
+        let k = null, nx = null;
+        try {
+          k = window.DMKurs && DMKurs.complete ? DMKurs.complete("erste-schritte/" + t.id, { quiet: true }) : null;
+          nx = k && DMKurs.next ? DMKurs.next(k.lv) : null;
+        } catch {}
+        saved = k
+          ? `<p class="es-saved" role="status">✓ gespeichert – Schritt ${k.no} von ${k.total} · Kurs ${x(k.lv)}</p>${nx && !nx.allDone ? `<a class="dm-btn es-saved-go" href="${x(nx.href)}">Weiter im Kurs ${x(k.lv)} ▶<small>${x(nx.title)}</small></a>` : ""}`
+          : `<p class="es-saved" role="status">✓ gespeichert</p>`;
+      }
+      box.innerHTML = `<div class="es-result"><p class="es-score">${score} / ${rounds.length}</p><p>${good ? "Super! Thema geschafft. ✓" : "Gut gemacht! Hör dir die Karten noch einmal an und versuch es wieder."}</p>${saved}<p class="dm-row"><button type="button" class="dm-btn${saved.includes("es-saved-go") ? " dm-btn-quiet" : ""}" id="es-again">Neue Runde ↻</button></p></div>`;
       $("#es-again").onclick = () => quiz(t, mode);
     }
     round();
@@ -532,9 +546,9 @@
     if (!wrap || !out) return;
     const show = wrap.dataset.show || "all";
     const hrefs = new Set();
-    $$("a.es-link", wrap).forEach((a) => {
+    $$("a.es-link, a.es-tcard", wrap).forEach((a) => {
       const href = a.getAttribute("href"), on = isSeen(href);
-      if (on && !a.classList.contains("is-seen")) {
+      if (on && a.classList.contains("es-link") && !a.classList.contains("is-seen")) {
         a.classList.add("is-seen");
         a.insertAdjacentHTML("beforeend", '<span class="es-seen" aria-hidden="true">✓</span><span class="dm-sr"> – bereits geöffnet</span>');
       }
@@ -548,7 +562,7 @@
     const wrap = $(".es-fmtwrap");
     if (!wrap) return;
     const mark = (e) => {
-      const a = e.target.closest && e.target.closest("a.es-link");
+      const a = e.target.closest && e.target.closest("a.es-link, a.es-tcard");
       if (!a || (e.type === "auxclick" && e.button !== 1)) return;
       seenStore()[a.getAttribute("href")] = Date.now();
       DM.save && DM.save();
@@ -750,8 +764,14 @@
           }),
         ),
       );
+    // guided course first: one big button to the next course step, the material list below is the "everything" view
+    let kn = null;
+    try { kn = window.DMKurs && DMKurs.next ? DMKurs.next(lv) : null; } catch {}
+    const kursCta = kn
+      ? `<div class="es-lv-kurs"><a class="dm-btn es-lv-kurs-go" href="${x(kn.allDone ? kn.courseHref : kn.href)}"><span>${kn.done ? `Weiter im Kurs ${lv}` : `Kurs ${lv} starten`} <span aria-hidden="true">▶</span></span><small>${kn.allDone ? "Alle Schritte geschafft 🎉" : `Schritt ${kn.done + 1} von ${kn.total}: ${x(kn.title)}`}</small></a><a class="es-lv-kurs-plan" href="${x(kn.courseHref)}">Kursplan ${lv} ansehen</a><p class="dm-small">Oder such dir unten selbst etwas aus: alle Materialien für ${lv}.</p></div>`
+      : "";
     DM.page(`${DM.crumbs([["Niveau " + lv]])}
-      <div class="dm-head"><p class="dm-kicker">Deine Materialien</p><h1>Niveau ${lv} · ${x(lv === "B2" ? "Beruf und Prüfung" : LV_NAME[lv])}</h1><p class="dm-lead">${lv === "A0" ? "Du fängst ganz neu an? Hier sind deine ersten Schritte – in dieser Reihenfolge." : `Alles für ${L} an einem Ort: Lektionen, Wörter, Übungen, Hörtexte und Arbeitsblätter.`}</p><div class="es-prog" id="es-prog"></div></div>
+      <div class="dm-head"><p class="dm-kicker">Deine Materialien</p><h1>Niveau ${lv} · ${x(lv === "B2" ? "Beruf und Prüfung" : LV_NAME[lv])}</h1><p class="dm-lead">${lv === "A0" ? "Du fängst ganz neu an? Am einfachsten ist der Kurs: immer ein Schritt nach dem anderen." : `Alles für ${L} an einem Ort: Lektionen, Wörter, Übungen, Hörtexte und Arbeitsblätter.`}</p>${kursCta}<div class="es-prog" id="es-prog"></div></div>
       <nav class="dm-tabs dm-tabs-small es-lvtabs" aria-label="Niveau wechseln">${Object.keys(
         LV_NAME,
       )

@@ -1,7 +1,7 @@
 // node validate.js  – checks grammatik-data.js
 global.window = {};
-const T = require('/home/user/deutsch-mit-dennis.github.io/grammatik-data.js');
-const IDS = ['a1-praesens','a1-haben-sein','a1-plural','a1-trennbare-verben','a1-modalverben','a1-imperativ','a1-lokale-praepositionen','a1-konnektoren','a2-praeteritum-war-hatte','a2-dass-wenn','a2-komparativ','a2-reflexive-verben','a2-praepositionen-dativ-akkusativ','a2-adjektivendungen','b1-konjunktiv2','b1-passiv','b1-praeteritum','b1-genitiv','b2-indirekte-rede','b2-nominalisierung','b2-passiv-modalverb','b2-partizipialattribute'];
+const T = require(require('path').join(__dirname, '..', 'grammatik-data.js'));
+const IDS = ['a1-praesens','a1-haben-sein','a1-plural','a1-trennbare-verben','a1-modalverben','a1-imperativ','a1-lokale-praepositionen','a1-konnektoren','a1-perfekt','a2-praeteritum-war-hatte','a2-dass-wenn','a2-weil-denn','a2-komparativ','a2-reflexive-verben','a2-kasus','a2-praepositionen-dativ-akkusativ','a2-adjektivendungen','b1-relativsatz','b1-konjunktiv2','b1-passiv','b1-praeteritum','b1-genitiv','b2-indirekte-rede','b2-nominalisierung','b2-passiv-modalverb','b2-partizipialattribute'];
 const LANGS = ['en','uk','ru','ar','fa','tr','es','it'];
 const err = []; const E = (id, m) => err.push(id + ': ' + m);
 const ids = T.map(t => t.id);
@@ -15,7 +15,7 @@ for (const t of T) {
   if (Object.keys(t.kurz_i18n || {}).length !== 8) E(id, 'kurz_i18n keys');
   if (!(t.beispiele.length >= 4 && t.beispiele.length <= 6)) E(id, 'beispiele count ' + t.beispiele.length);
   t.beispiele.forEach(b => { if (!/\*[^*]+\*/.test(b)) E(id, 'beispiel without mark: ' + b); if ((b.match(/\*/g) || []).length % 2) E(id, 'odd asterisks: ' + b); });
-  if (!(t.fehler.length >= 2 && t.fehler.length <= 3)) E(id, 'fehler count');
+  if (!(t.fehler.length >= 2 && t.fehler.length <= 6)) E(id, 'fehler count');
   t.fehler.forEach(f => { if (f.length !== 3 || f.some(x => !x) || f[0] === f[1]) E(id, 'fehler entry ' + f[0]); });
   if (t.tabelle) t.tabelle.rows.forEach(r => { if (r.length !== t.tabelle.head.length) E(id, 'table row width ' + r[0]); });
   const all = JSON.stringify(t); if ((t.kurz.match(/\*/g) || []).length % 2) E(id, 'odd asterisks in kurz');

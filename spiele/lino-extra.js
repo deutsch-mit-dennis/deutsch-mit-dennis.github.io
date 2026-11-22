@@ -187,8 +187,8 @@ window.LINO_X = {
         "Sie bewirbt sich ___ eine Stelle als Pflegerin.",
         "um",
         "für",
-        "auf",
-        "sich bewerben um",
+        "an",
+        "sich bewerben um + Akk. (auch: auf)",
       ],
       [
         "___ seiner Erfahrung bekam er die Stelle nicht.",
@@ -861,11 +861,11 @@ window.LINO_X = {
           "Adverb: gesetzlich geregelt",
         ],
         [
-          "Bei mehr als 60 Minuten Verspätung ___ Ihnen 25 Prozent zu.",
-          "stehen",
+          "Bei mehr als 60 Minuten Verspätung ___ Ihnen eine Entschädigung von 25 Prozent zu.",
           "steht",
+          "stehen",
           "gestanden",
-          "jemandem zustehen; Subjekt 25 Prozent (Plural)",
+          "jemandem zustehen; Subjekt: eine Entschädigung",
         ],
       ],
       hear: [
@@ -1461,7 +1461,7 @@ window.LINO_X = {
       ground: "#8f8796",
       grass: "#c7bfcc",
       questions: [
-        ["Ich bewerbe mich ___ die Stelle als Buchhalterin.", "auf", "für die", "um", "sich bewerben auf eine Stelle"],
+        ["Ich bewerbe mich ___ die Stelle als Buchhalterin.", "um", "für", "an", "sich bewerben um + Akk. (auch: auf)"],
         ["Ich verfüge ___ langjährige Erfahrung im Vertrieb.", "über", "von", "mit", "verfügen über + Akkusativ"],
         ["___ meiner Ausbildung habe ich ein Praktikum gemacht.", "Während", "Wegen", "Trotz", "während + Genitiv (Zeit)"],
         ["Ich lege großen Wert ___ Teamarbeit.", "auf", "an", "für", "Wert legen auf"],
@@ -1472,7 +1472,7 @@ window.LINO_X = {
         ["Wann ___ Sie frühestens anfangen?", "könnten", "konnten", "gekonnt", "höflich: Konjunktiv II"],
         ["Meine Gehaltsvorstellung ___ bei 45.000 Euro brutto im Jahr.", "liegt", "legt", "liegen", "die Vorstellung liegt bei …"],
         ["Ich würde mich über eine Zusage sehr ___.", "freuen", "gefreut", "freue", "würde + Infinitiv"],
-        ["___ Erfahrung habe ich vor allem im Kundenservice gesammelt.", "Berufserfahrung", "Berufserfahrungen haben", "Beruferfahrung", "Erfahrung sammeln"],
+        ["Erfahrung habe ich vor allem im Kundenservice ___.", "gesammelt", "gesamt", "sammeln", "Erfahrung sammeln → Perfekt: gesammelt"],
         ["Ich habe mich mit Ihrem Unternehmen ___ beschäftigt.", "intensiv", "intensive", "intensiver", "Adverb: keine Endung"],
         ["Die Probezeit beträgt in der Regel sechs ___.", "Monate", "Monaten", "Monat", "Plural: die Monate"],
         ["Ich könnte mir gut vorstellen, mehr Verantwortung zu ___.", "übernehmen", "übernommen", "übernimmt", "Verantwortung übernehmen"],

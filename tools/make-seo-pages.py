@@ -122,7 +122,7 @@ def page(path, title, desc, body, crumbs, og="start", extra_ld=None, ogtype="art
 <main><nav class="crumbs" aria-label="Brotkrumen">{nav}</nav>
 {body}
 </main>
-<footer><a href="/">Startseite</a><a href="/impressum/">Impressum</a><a href="/datenschutz/">Datenschutz</a><br>Kostenlos Deutsch lernen von A1 bis B2 (Lieder bis C1) – von Dennis, DaZ-Lehrer und lizenzierter Prüfer.<br><span class="small">Stand: {STAND_DE}</span></footer>
+<footer><a href="/">Startseite</a><a href="/impressum/">Impressum</a><a href="/datenschutz/">Datenschutz</a><br>Kostenlos Deutsch lernen von A0 bis B2 (Lieder bis C1) – von Dennis, DaZ-Lehrer und lizenzierter Prüfer.<br><span class="small">Stand: {STAND_DE}</span></footer>
 {script}
 </body></html>
 '''
@@ -565,6 +565,20 @@ document.getElementById("dm-wipe").onclick = function () {
   try { [localStorage, sessionStorage].forEach(function (S) { Object.keys(S).filter(function (k) { return k === "dmd.v1" || /^(dmd?|da)[-._]/.test(k); }).forEach(function (k) { S.removeItem(k); }); }); } catch (e) {}
   document.getElementById("dm-wipe-status").textContent = "Erledigt. Dein Lernstand wurde gelöscht.";
 };
+// withdraw only one consent flag (key dmd.v1 holds ytConsent / sunoConsent)
+function dmRevoke(btnId, statusId, flag, label) {
+  var st = document.getElementById(statusId);
+  document.getElementById(btnId).onclick = function () {
+    try {
+      var raw = localStorage.getItem("dmd.v1");
+      var o = raw ? JSON.parse(raw) : {};
+      if (o && typeof o === "object") { delete o[flag]; localStorage.setItem("dmd.v1", JSON.stringify(o)); }
+      st.textContent = "Erledigt. Deine " + label + "-Einwilligung wurde widerrufen.";
+    } catch (e) { st.textContent = "Das ging leider nicht (Browser-Speicher gesperrt). Bitte lösche die Website-Daten in deinen Browser-Einstellungen."; }
+  };
+}
+dmRevoke("dm-yt-revoke", "dm-yt-status", "ytConsent", "YouTube");
+dmRevoke("dm-suno-revoke", "dm-suno-status", "sunoConsent", "Suno");
 </script>"""
 LEGAL = [
     ("impressum", "Impressum", "Impressum von Deutsch mit Dennis: Anbieterkennzeichnung nach § 5 DDG, Kontakt, Haftung für Links und Urheberrecht.", ""),

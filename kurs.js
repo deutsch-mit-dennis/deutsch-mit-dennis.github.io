@@ -3,6 +3,7 @@
    Public API (window.DMKurs):
      visit(routeStr)  – called by the router on every route change; ticks steps off automatically
      next(level)      – { href, title, done, total, courseHref, allDone } or null (unknown level)
+     complete(route)  – tick a step off right away (e.g. quiz passed); shows "✓ gespeichert – Schritt X von Y"
      levels           – ['A0','A1','A2','B1','B2']
      t(key, vars)     – UI string in the learner's language (fallback German)
    A step counts as done when its route was open for 45 s (visible tab) or the learner went one level deeper inside it.
@@ -531,7 +532,7 @@
     });
     return out;
   }
-  function credit(route) {
+  function credit(route, quiet) {
     const c = candidates(route);
     if (!c.length) return false;
     const d = state().done,
@@ -540,7 +541,38 @@
       d[s.key] = now;
     });
     save();
-    return true;
+    // short confirmation so learners see that the step was saved ("✓ gespeichert – Schritt 3 von 19")
+    const s0 = c[0],
+      lv = s0.key.split(":")[0];
+    const info = { lv, no: s0.no, total: flat(lv).length };
+    if (!quiet) savedToast(info);
+    return info;
+  }
+  // "Alle Materialien A0" – secondary link from the course to the full level page (#niveau/<lv>), in the learner's language
+  const allMat = (lv) => {
+    const H = DM.hi18n,
+      v = H && H.t ? H.t("all_mat") : "";
+    return (v || "Alle Materialien {lv}").replace("{lv}", lv);
+  };
+  let toastEl = null,
+    toastTimer = null;
+  function savedToast(info) {
+    try {
+      if (!toastEl) {
+        toastEl = document.createElement("div");
+        toastEl.className = "ku-toast";
+        toastEl.setAttribute("role", "status");
+        document.body.appendChild(toastEl);
+      }
+      const l = lang(),
+        de = `✓ gespeichert – Schritt ${info.no} von ${info.total} · Kurs ${info.lv}`;
+      toastEl.innerHTML = `<a href="#kurs/${esc(info.lv)}"><span lang="de">${esc(de)}</span>${l === "de" ? "" : `<small lang="${l}" dir="${RTL.includes(l) ? "rtl" : "ltr"}">${esc(t("prog", { n: flat(info.lv).filter(isDone).length, m: info.total }, l))}</small>`}</a>`;
+      toastEl.classList.add("is-on");
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => toastEl.classList.remove("is-on"), 4500);
+    } catch {
+      /* decoration only */
+    }
   }
   const stopTick = () => {
     if (tick) {
@@ -597,7 +629,10 @@
       return location.hash;
     }
   };
-  window.addEventListener("hashchange", () => visit(hashRoute()));
+  window.addEventListener("hashchange", () => {
+    if (toastEl) toastEl.classList.remove("is-on"); // old "saved" note must not cover the next page
+    visit(hashRoute());
+  });
   document.addEventListener("DOMContentLoaded", () => {
     if (!cur) visit(hashRoute());
   });
@@ -650,6 +685,7 @@
       ${bar(n.done, n.total)}
       <p class="dm-progress-text ku-bi">${bi("prog", { n: n.done, m: n.total })}</p>
       ${top}
+      <p class="ku-allmat"><a class="dm-btn dm-btn-quiet" href="#niveau/${lv}"><span aria-hidden="true">📚</span> ${esc(allMat(lv))}</a></p>
       ${c.units
         .map((u, ui) => {
           const us = f.filter((s) => s.unit === ui),
@@ -1032,6 +1068,17 @@
     next,
     levels: LEVELS.slice(),
     t: (k, v) => t(k, v),
+    // a page that knows a step is finished (e.g. picture-card quiz passed) ticks it off at once;
+    // returns { lv, no, total } of the saved course step or false
+    complete: (routeStr, opt) => {
+      const r = norm(routeStr),
+        res = credit(r, opt && opt.quiet);
+      if (res && cur && cur.route === r) {
+        cur.credited = true;
+        stopTick();
+      }
+      return res;
+    },
     steps: (lv) =>
       flat(lv).map((s) => ({
         t: s.t,
