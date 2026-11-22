@@ -43,7 +43,7 @@
 
   /* 2) Verben mit Präposition: [Satz mit ___, richtig, [3 Ablenker], Regel] */
   const PRAEP = [
-    ['Ich bewerbe mich ___ die Stelle als Sachbearbeiterin.', 'um', ['für', 'auf', 'an'], 'sich bewerben um + Akkusativ'],
+    ['Ich bewerbe mich ___ die Stelle als Sachbearbeiterin.', 'um', ['für', 'an', 'zu'], 'sich bewerben um + Akk. (auch: auf)'],
     ['Der Kunde beschwert sich ___ die lange Lieferzeit.', 'über', ['von', 'auf', 'um'], 'sich beschweren über + Akkusativ'],
     ['Nächste Woche nehme ich ___ einer Schulung teil.', 'an', ['in', 'bei', 'zu'], 'teilnehmen an + Dativ'],
     ['Wer kümmert sich ___ die neuen Auszubildenden?', 'um', ['für', 'an', 'über'], 'sich kümmern um + Akkusativ'],

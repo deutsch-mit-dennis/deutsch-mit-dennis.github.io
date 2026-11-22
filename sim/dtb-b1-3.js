@@ -243,7 +243,7 @@ const CALL = [
         redemittel: ['Ja, unbedingt, denn …', 'Für mich ist … wichtiger, weil …', 'Man kann zum Beispiel …', 'Das kommt darauf an, ob …'],
         muster: '1) Ja, unbedingt, denn am Anfang hat man viele Fragen und traut sich nicht, den Chef zu fragen. Ein Pate erklärt einem alles in Ruhe.\n2) Für mich ist es wichtiger, die Kollegen kennenzulernen, weil man mit ihnen jeden Tag zusammenarbeitet. Die Arbeit lernt man dann Schritt für Schritt.\n3) Man kann zum Beispiel die Internetseite der Firma lesen, den Weg vorher einmal fahren und wichtige Wörter aus dem Beruf lernen.',
         check: ['Jede Frage direkt beantwortet', 'Jede Antwort mit Begründung oder Beispiel', 'Ganze Sätze, Verb an der richtigen Stelle'] },
-      { kind: 'speak', title: 'Sprechen Teil 2: Mit Kollegen sprechen – Erfahrungen austauschen', skill: 'sprechen', pts: 16, minutes: 4,
+      { kind: 'speak', title: 'Sprechen Teil 2: Mit Kollegen sprechen – Erfahrungen austauschen', skill: 'sprechen', pts: 16, minutes: 3,
         instr: 'Sie sind Kolleginnen / Kollegen und sprechen in der Pause über Ihre Erfahrungen. Erzählen Sie von sich, stellen Sie Fragen und reagieren Sie auf das, was Ihre Partnerin / Ihr Partner sagt.',
         task: 'Thema: Arbeit und Familie\n\n• Wie organisieren Sie Arbeit und Familie?\n• Wer hilft Ihnen (Familie, Kita, Nachbarn …)?\n• Was ist schwierig, zum Beispiel bei Schichtarbeit?\n• Was könnte der Arbeitgeber tun?',
         prompts: ['Sie sind Kollegen und sitzen in der Pause zusammen. Erzählen Sie doch mal: Wie organisieren Sie Arbeit und Familie?', 'Und jetzt fragen Sie bitte Ihre Partnerin oder Ihren Partner: Wie ist das bei ihr oder bei ihm?', 'Was könnte Ihr Arbeitgeber tun, damit es leichter wird?'],

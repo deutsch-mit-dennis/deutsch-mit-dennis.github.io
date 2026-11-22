@@ -210,13 +210,13 @@ const MAILBOX = [{ s: 'f', t: 'Guten Tag, hier spricht Claudia Reinhardt von der
       { title: 'Sprachbausteine Teil 1', skill: 'schreiben', pts: 0.5,
         instr: 'Lesen Sie die Mitarbeiterinformation. Welches Wort (a–j) passt in die Lücken 1–6? Jedes Wort können Sie nur einmal verwenden. Vier Wörter bleiben übrig.',
         opts: ['a) anstatt', 'b) bevor', 'c) dennoch', 'd) innerhalb', 'e) laut', 'f) sobald', 'g) sodass', 'h) während', 'i) wegen', 'j) weder'],
-        material: [{ h: 'Mitarbeiterinformation – Logistikzentrum Rheinhafen GmbH, Duisburg', t: 'Liebe Mitarbeiterinnen und Mitarbeiter,\n\n{1} der hohen Energiekosten wird die Heizung in den Lagerhallen ab November nachts auf 12 Grad abgesenkt. Tagsüber bleibt die Temperatur unverändert bei 17 Grad.\n\nDie Heizung startet morgens um 4:30 Uhr, {2} die Hallen zu Schichtbeginn um 6 Uhr wieder warm sind. Bitte lassen Sie die großen Hallentore nur so lange offen, wie es nötig ist. {3} der Ladezeiten sollen die Tore nach Möglichkeit geschlossen bleiben.\n\n{4} Sie feststellen, dass es an Ihrem Arbeitsplatz zu kalt ist, melden Sie dies bitte sofort der Schichtleitung. {5} der Arbeitsstättenverordnung muss es an Arbeitsplätzen mit leichter körperlicher Arbeit mindestens 17 Grad warm sein.\n\nZusätzliche warme Arbeitskleidung kann ab sofort im Lager bestellt werden. Die Lieferung erfolgt {6} von zwei Wochen.\n\nVielen Dank für Ihr Verständnis\nIhre Geschäftsführung' }],
+        material: [{ h: 'Mitarbeiterinformation – Logistikzentrum Rheinhafen GmbH, Duisburg', t: 'Liebe Mitarbeiterinnen und Mitarbeiter,\n\n{1} der hohen Energiekosten wird die Heizung in den Lagerhallen ab November nachts auf 12 Grad abgesenkt. Tagsüber bleibt die Temperatur unverändert bei 17 Grad.\n\nDie Heizung startet morgens um 4:30 Uhr, {2} die Hallen zu Schichtbeginn um 6 Uhr wieder warm sind. Bitte halten Sie die großen Hallentore geschlossen, wenn dort nicht gearbeitet wird. Auch {3} des Be- und Entladens sollen die Tore nicht länger als nötig offen stehen.\n\n{4} Sie feststellen, dass es an Ihrem Arbeitsplatz zu kalt ist, melden Sie dies bitte sofort der Schichtleitung. {5} der Arbeitsstättenregel ASR A3.5 muss es an Arbeitsplätzen mit mittelschwerer Arbeit im Stehen mindestens 17 Grad warm sein.\n\nZusätzliche warme Arbeitskleidung kann ab sofort im Lager bestellt werden. Die Lieferung erfolgt {6} von zwei Wochen.\n\nVielen Dank für Ihr Verständnis\nIhre Geschäftsführung' }],
         items: [
           { q: '', a: 8, why: '„Wegen der hohen Energiekosten“ – Grund, Präposition mit Genitiv.' },
           { q: '', a: 6, why: 'Folge mit Verb am Ende: „sodass die Hallen … wieder warm sind“.' },
-          { q: '', a: 7, why: 'Zeitraum: „Während der Ladezeiten“ (+ Genitiv).' },
+          { q: '', a: 7, why: 'Zeitraum: „während des Be- und Entladens“ (+ Genitiv).' },
           { q: '', a: 5, why: 'Zeitpunkt/Bedingung mit Verb am Ende: „Sobald Sie feststellen, …, melden Sie …“.' },
-          { q: '', a: 4, why: 'Quelle einer Regel: „Laut der Arbeitsstättenverordnung“.' },
+          { q: '', a: 4, why: 'Quelle einer Regel: „Laut der Arbeitsstättenregel ASR A3.5“.' },
           { q: '', a: 3, why: 'Frist: „innerhalb von zwei Wochen“.' }
         ] },
       { title: 'Sprachbausteine Teil 2', skill: 'schreiben', pts: 0.5,

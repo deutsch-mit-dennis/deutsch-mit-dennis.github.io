@@ -3958,7 +3958,7 @@
   };
   const a2 = {
     title: 'Hören A2 – Nachrichten und Gespräche', level: 'A2', exam: 'Alltag', group: 'start',
-    intro: 'Mailbox-Nachrichten, Durchsagen und Gespräche: Amt, Arzt, Wohnung, Arbeit und Freizeit. Lies zuerst die Fragen. Hör jeden Text zweimal.',
+    intro: 'Mailbox-Nachrichten, Durchsagen und Gespräche: Amt, Arzt, Wohnung, Arbeit und Freizeit. Lies zuerst die Fragen. Zum Üben kannst du jeden Text zweimal hören. Im DTZ hörst du jeden Text nur einmal – versuch es zuerst mit einem Mal.',
     items: [
       T('a2-01', 'Mailbox: Jobcenter', 'Herr Mbeki hört seine Mailbox ab.', [
         ['f2', 'Guten Tag, Herr Mbeki, hier ist Frau Lindner vom Jobcenter. Ich muss Ihren Termin am Dienstag leider verschieben. Der neue Termin ist am Donnerstag um 9:30 Uhr in Zimmer 214. Bitte bringen Sie Ihren Ausweis und Ihren Lebenslauf mit. Wenn Sie am Donnerstag nicht können, rufen Sie mich bitte bis Mittwoch an. Meine Durchwahl ist die 45. Auf Wiederhören.',

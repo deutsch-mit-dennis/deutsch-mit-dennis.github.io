@@ -213,10 +213,10 @@ const MAILBOX = [
       { title: 'Sprachbausteine Teil 1', skill: 'schreiben', pts: 0.5,
         instr: 'Lesen Sie die Mitarbeiterinformation. Welches Wort (a–j) passt in die Lücken 1–6? Jedes Wort können Sie nur einmal verwenden. Vier Wörter bleiben übrig.',
         opts: ['a) aufgrund', 'b) damit', 'c) falls', 'd) jedoch', 'e) nachdem', 'f) ohne', 'g) seit', 'h) trotz', 'i) zwar', 'j) zwischen'],
-        material: [{ h: 'Mitarbeiterinformation – Sparkasse Mittelrhein', t: 'Liebe Kolleginnen und Kollegen,\n\n{1} der positiven Erfahrungen in der Filiale Koblenz führen wir das mobile Arbeiten ab Januar in allen Filialen ein. Mitarbeitende im Backoffice können künftig bis zu zwei Tage pro Woche von zu Hause arbeiten, {2} die Arbeit im Team darunter leidet.\n\nBitte stimmen Sie Ihre Homeoffice-Tage mit Ihrer Teamleitung ab, {3} an jedem Tag genug Kolleginnen und Kollegen vor Ort sind. Die Kundenberatung ist von der Regelung {4} ausgenommen, da hier der persönliche Kontakt im Vordergrund steht.\n\n{5} Sie im Homeoffice technische Probleme haben, wenden Sie sich bitte an die IT-Hotline. Einen dienstlichen Laptop erhalten alle, {6} sie die Schulung „Sicher arbeiten von zu Hause“ abgeschlossen haben.\n\nIhr Personalmanagement' }],
+        material: [{ h: 'Mitarbeiterinformation – Sparkasse Mittelrhein', t: 'Liebe Kolleginnen und Kollegen,\n\n{1} der positiven Erfahrungen in der Filiale Koblenz führen wir das mobile Arbeiten ab Januar in allen Filialen ein. Mitarbeitende im Backoffice können künftig bis zu zwei Tage pro Woche von zu Hause arbeiten, {2} dass die Arbeit im Team darunter leidet.\n\nBitte stimmen Sie Ihre Homeoffice-Tage mit Ihrer Teamleitung ab, {3} an jedem Tag genug Kolleginnen und Kollegen vor Ort sind. Die Kundenberatung ist von der Regelung {4} ausgenommen, da hier der persönliche Kontakt im Vordergrund steht.\n\n{5} Sie im Homeoffice technische Probleme haben, wenden Sie sich bitte an die IT-Hotline. Einen dienstlichen Laptop erhalten alle, {6} sie die Schulung „Sicher arbeiten von zu Hause“ abgeschlossen haben.\n\nIhr Personalmanagement' }],
         items: [
           { q: '', a: 0, why: '„Aufgrund der positiven Erfahrungen“ – Grund, Präposition mit Genitiv.' },
-          { q: '', a: 5, why: '„ohne dass die Arbeit im Team darunter leidet“ – hier passt nur „ohne“ (ohne dass).' },
+          { q: '', a: 5, why: '„ohne dass die Arbeit im Team darunter leidet“ – vor „dass“ passt nur „ohne“ (ohne dass + Verb am Ende).' },
           { q: '', a: 1, why: 'Ziel/Zweck mit Verb am Ende: „damit an jedem Tag genug Kolleginnen und Kollegen vor Ort sind“.' },
           { q: '', a: 3, why: '„… ist von der Regelung jedoch ausgenommen“ – Gegensatz zur vorherigen Aussage.' },
           { q: '', a: 2, why: 'Bedingung: „Falls Sie im Homeoffice technische Probleme haben, …“.' },
@@ -230,7 +230,7 @@ const MAILBOX = [
           { q: '', opts: ['a) hat', 'b) verfügt', 'c) besteht'], a: 1, why: 'Feste Verbindung: „über etwas verfügen“.' },
           { q: '', opts: ['a) auf', 'b) mit', 'c) nach'], a: 2, why: '„sich richten nach“: Die Miete richtet sich nach der Dauer.' },
           { q: '', opts: ['a) Passt', 'b) Gefällt', 'c) Steht'], a: 0, why: '„Passt Ihnen ein Termin …?“ = Ist der Termin möglich?' },
-          { q: '', opts: ['a) hätten', 'b) haben', 'c) hatten'], a: 0, why: 'Höfliche indirekte Bitte, Konjunktiv II: „an welchem Tag Sie Zeit hätten“.' },
+          { q: '', opts: ['a) hätten', 'b) hättet', 'c) hatten'], a: 0, why: 'Höfliche indirekte Bitte, Konjunktiv II zu „Sie“: „an welchem Tag Sie Zeit hätten“. „hättet“ passt nur zu „ihr“, „hatten“ ist Vergangenheit.' },
           { q: '', opts: ['a) in', 'b) zur', 'c) bei'], a: 1, why: 'Feste Wendung: „zur Verfügung stehen“.' }
         ] },
       { kind: 'write', title: 'Schreiben: Beitrag im Mitarbeiterforum', skill: 'schreiben', pts: 32,

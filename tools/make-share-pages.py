@@ -135,7 +135,7 @@ def stub(route, title, desc, img, extra_html='', extra_ld=None):
 js = subprocess.run(['node', '-e', "global.window={};require('./site-data.js');console.log(JSON.stringify(window.DM.packages))"], cwd=R, capture_output=True, text=True)
 P = json.loads(js.stdout)
 O = 'assets/og'
-card('Deutsch lernen mit Dennis', 'Kostenlose Übungen von A1 bis B2 Beruf: Sprechen, Schreiben, Hören, DTZ- und B2-Training, Lieder. Ohne Anmeldung.', os.path.join(R, O, 'start.jpg'), kicker='DTZ-Prüfer · telc-Prüfer · BAMF-zugelassen')
+card('Deutsch lernen mit Dennis', 'Kostenlose Übungen von A0 bis B2 Beruf: Sprechen, Schreiben, Hören, DTZ- und B2-Training, Lieder. Ohne Anmeldung.', os.path.join(R, O, 'start.jpg'), kicker='DTZ-Prüfer · telc-Prüfer · vom BAMF zugelassene Lehrkraft')
 GAMES = json.loads(subprocess.run(['node', os.path.join(R, 'tools', 'spiele-meta.js')], cwd=R, capture_output=True, text=True, encoding='utf-8', check=True).stdout)
 SECTIONS = [
     ('lernpakete', 'Lernpakete als PDF', 'Ausführliche PDF-Pakete mit Musterlösungen für DTZ, B2 Beruf, „Leben in Deutschland“ und für Lehrkräfte.'),
@@ -159,7 +159,7 @@ SECTIONS = [
     ('bild', 'Bild beschreiben – DTZ-Trainer', 'Adjektivendungen und Relativsätze an vier Bildern üben – mit Musterbeschreibung zum Anhören und Arbeitsblättern.'),
     ('challenge', 'Tages-Challenge: 10 Aufgaben, jeden Tag neu', 'Artikel, Verben, Satzbau, Wortschatz und „Leben in Deutschland“ – 3 Minuten am Tag. Wie lang wird deine Lernserie?'),
     ('lid', 'Leben in Deutschland Test & Einbürgerungstest: 310 Fragen', 'Kostenlos üben für den Einbürgerungstest und den Test „Leben in Deutschland“: alle 310 Fragen mit Lösung, Lernmodus und Testsimulation mit 33 Fragen.'),
-    ('ueber-mich', 'Über Dennis', 'Deutschlehrer seit 2017, lizenzierter DTZ- und telc-Prüfer, vom BAMF zugelassen bis C2.'),
+    ('ueber-mich', 'Über Dennis', 'Deutschlehrer seit 2017, lizenzierter DTZ- und telc-Prüfer, vom BAMF zugelassene Lehrkraft für Integrations- und Berufssprachkurse.'),
 ]
 # readable content (<noscript>) for app sections that are otherwise empty without JavaScript: data read from the app files
 NODE = r"""

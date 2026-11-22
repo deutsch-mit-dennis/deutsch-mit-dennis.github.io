@@ -75,8 +75,12 @@
 
   /* ---------- Hinweis einmal pro Sitzung ---------- */
   let toast = null;
+  const onHome = () => { const h = decodeURIComponent(location.hash).replace(/^#\/?/, ''); return h === '' && /^\/(index\.html)?$/.test(location.pathname); };
+  window.addEventListener('hashchange', () => { if (!onHome()) hideToast(); });
   function hideToast() { if (!toast) return; const t = toast; toast = null; t.classList.remove('dm-in'); setTimeout(() => t.remove(), 300); }
   function showToast(nw) {
+    // only on the start page – never on top of tests, lessons or games
+    if (!onHome()) return;
     // Begrüßung von Dennis hat Vorrang – dann kein zweites Fenster
     // first visit: no pop-up ("new since your last visit" makes no sense yet); the bell still shows the news
     try { if ((+localStorage.getItem('dm-visits') || 0) < 2) return; } catch {}

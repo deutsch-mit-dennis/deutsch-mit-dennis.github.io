@@ -204,10 +204,12 @@
           h: "Wofür brauchst du das Zertifikat?",
           list: [
             "Für die Niederlassungserlaubnis und für die Einbürgerung braucht man in der Regel Deutsch B1.",
-            "Das „Zertifikat Integrationskurs“ kannst du dafür als Nachweis benutzen.",
+            "Das „Zertifikat Integrationskurs“ kannst du dafür als Nachweis für Deutsch B1 benutzen.",
+            "Für die Einbürgerung zeigt es auch dein Wissen über Deutschland – aber nur, wenn du im Test „Leben in Deutschland“ mindestens 17 von 33 Punkten hast. Mit 15 oder 16 Punkten musst du noch den Einbürgerungstest machen.",
             "Mit dem DTZ kannst du auch A2 nachweisen.",
           ],
-          src: ["bamfNachweis", "bamfAbschluss"],
+          src: ["bamfNachweis", "bamfAbschluss", "bamfEinb"],
+          stand: "22.11.2026",
           legal: true,
         },
       ],
@@ -270,8 +272,10 @@
           list: [
             "Für das „Zertifikat Integrationskurs“ brauchst du diesen Test und im DTZ das Ergebnis B1.",
             "Bei der Einbürgerung zeigt der Einbürgerungstest in der Regel, dass du die Rechts- und Gesellschaftsordnung kennst.",
+            "Hast du im Test „Leben in Deutschland“ im Integrationskurs mindestens 17 Punkte, brauchst du für die Einbürgerung keinen extra Einbürgerungstest. Mit 15 oder 16 Punkten musst du ihn noch machen.",
           ],
           src: ["bamfAbschluss", "bamfEinb"],
+          stand: "22.11.2026",
           legal: true,
         },
       ],
@@ -501,7 +505,7 @@
           list: [
             "Du kannst 240 Punkte erreichen: je 60 für Lesen, Hören, Schreiben und Sprechen.",
             "Bestanden hast du mit mindestens 144 Punkten (60 Prozent).",
-            "Dazu brauchst du in mindestens drei der vier Teile mehr als 36 Punkte. Ein schwächerer Teil ist möglich, wenn er zwischen 40 und 60 Prozent liegt.",
+            "Dazu brauchst du in mindestens drei der vier Teile mindestens 36 von 60 Punkten (60 %). Ein schwächerer Teil ist möglich, wenn er mindestens 24 Punkte (40 %) hat.",
           ],
           src: ["uebDtbB1"],
         },
@@ -634,8 +638,9 @@
   const ORDER = ["dtz", "lid", "telc-b1", "telc-b2", "dtb-b1", "dtb-b2"];
 
   const e = (s) => DM.esc(s);
-  const srcLine = (keys) =>
-    `<p class="pf-src">Quelle: ${keys.map((k) => `<a href="${S[k][1]}" target="_blank" rel="noopener">${e(S[k][0])}</a>`).join(" · ")} · Stand: ${STAND}</p>`;
+  // stand: optional per-block date when only that block was re-checked later than STAND
+  const srcLine = (keys, stand) =>
+    `<p class="pf-src">Quelle: ${keys.map((k) => `<a href="${S[k][1]}" target="_blank" rel="noopener">${e(S[k][0])}</a>`).join(" · ")} · Stand: ${e(stand || STAND)}</p>`;
 
   function hub() {
     DM.page(
@@ -661,7 +666,7 @@
     const blocks = x.blocks
       .map(
         (b) =>
-          `<section class="dm-card pf-block"><h2>${e(b.h)}</h2><ul>${b.list.map((t) => `<li>${e(t)}</li>`).join("")}</ul>${b.note ? `<p class="dm-small">${e(b.note)}</p>` : ""}${b.legal ? `<p class="dm-small pf-legal">${LEGAL}</p>` : ""}${srcLine(b.src)}</section>`,
+          `<section class="dm-card pf-block"><h2>${e(b.h)}</h2><ul>${b.list.map((t) => `<li>${e(t)}</li>`).join("")}</ul>${b.note ? `<p class="dm-small">${e(b.note)}</p>` : ""}${b.legal ? `<p class="dm-small pf-legal">${LEGAL}</p>` : ""}${srcLine(b.src, b.stand)}</section>`,
       )
       .join("");
     DM.page(

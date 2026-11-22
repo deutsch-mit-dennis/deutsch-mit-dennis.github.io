@@ -350,11 +350,18 @@ def run_engine(eng, entries, files, usage, month, start):
 def write_index(files):
     used_engines = sorted({v.get('engine') for v in files.values()})
     # 'whole' must survive: without it, restitched exam dialogues would be voiced again on every run
-    json.dump({'updated': time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime()), 'engines': used_engines,
-               'files': {k: {'v': v['sig'], 'engine': v.get('engine'), 'sig': v['sig'], 'text': v.get('text'),
-                             **({'fx': v['fx']} if v.get('fx') else {}), **({'whole': True} if v.get('whole') else {})}
-                         for k, v in sorted(files.items())}},
+    out = {k: {'v': v['sig'], 'engine': v.get('engine'), 'sig': v['sig'], 'text': v.get('text'),
+               **({'fx': v['fx']} if v.get('fx') else {}), **({'whole': True} if v.get('whole') else {})}
+           for k, v in sorted(files.items())}
+    json.dump({'updated': time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime()), 'engines': used_engines, 'files': out},
               open(INDEX, 'w', encoding='utf-8'), ensure_ascii=False, indent=0)
+    write_version(out)
+
+def write_version(files_out):
+    """audio/tts/version.json: tiny file with a hash of the file list. site.js loads it without cache and then
+    index.json?v=<hash> with normal browser caching – the big list is only downloaded again when it changed."""
+    h = hashlib.sha1(json.dumps(files_out, sort_keys=True, ensure_ascii=False).encode('utf-8')).hexdigest()[:10]
+    json.dump({'v': h}, open(os.path.join(OUT, 'version.json'), 'w', encoding='utf-8'))
 
 def load_entries():
     """Manifest entries with spoken-text fixes from say-overrides.json applied (single-voice entries only).

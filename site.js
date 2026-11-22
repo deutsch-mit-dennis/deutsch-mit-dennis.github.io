@@ -37,7 +37,11 @@
   const normT = s => String(s ?? '').replace(/\s+/g, ' ').trim();
   const fnv = s => { let h = 0x811c9dc5; for (const b of new TextEncoder().encode(normT(s))) { h ^= b; h = Math.imul(h, 0x01000193) >>> 0; } return 't' + h.toString(16).padStart(8, '0'); };
   let ttsFiles = {};
-  const ttsReady = fetch('audio/tts/index.json', { cache: 'no-cache' }).then(r => r.ok ? r.json() : {}).then(j => { ttsFiles = j.files || {}; }).catch(() => {});
+  // the list of recordings is big (~400 KB): ask the tiny version.json (written by tools/tts/generate.py with every audio run)
+  // and load index.json?v=<hash> with normal browser caching; without version.json fall back to the old no-cache request
+  const ttsReady = fetch('audio/tts/version.json', { cache: 'no-cache' }).then(r => r.ok ? r.json() : null).catch(() => null)
+    .then(ver => { const v = ver && /^[\w-]{4,40}$/.test(ver.v || '') ? ver.v : ''; return fetch(v ? 'audio/tts/index.json?v=' + v : 'audio/tts/index.json', v ? {} : { cache: 'no-cache' }); })
+    .then(r => r.ok ? r.json() : {}).then(j => { ttsFiles = j.files || {}; }).catch(() => {});
   const ttsSrc = key => ttsFiles[key] ? `audio/tts/${key}.mp3?v=${ttsFiles[key].v || ''}` : null;
   const hasRecording = (text, key) => !!ttsSrc(key || fnv(text));
   DM.ttsSrc = ttsSrc; DM.ttsReady = ttsReady;
@@ -223,7 +227,7 @@
     const H = hi(), sel = mem.level || '';
     return `<section class="dm-level" id="dm-level" aria-labelledby="dm-level-h" data-i18n-dir>
       <h2 id="dm-level-h" data-i18n="lvl_q">Wie gut ist dein Deutsch?</h2>
-      <p class="dm-level-hint" data-i18n="lvl_hint">Tippe auf dein Niveau. Dann siehst du alle Materialien dafür.</p>
+      <p class="dm-level-hint" data-i18n="lvl_hint">Tippe auf dein Niveau. Dann startet dein Kurs – Schritt für Schritt.</p>
       <div class="dm-level-btns" role="group" aria-labelledby="dm-level-h">${LV_KEYS.map(([l, k]) => `<button type="button" class="dm-lv" data-lv="${l}" aria-pressed="${sel === l}"><b>${l}</b><small data-i18n="lv_${k}">${x(({ a0: 'Ich fange an', a1: 'Erste Sätze', a2: 'Alltag', b1: 'Gespräche', b2: 'Beruf' })[k])}</small></button>`).join('')}<a class="dm-lv dm-lv-unk" href="#einstufung"><b>?</b><small data-i18n="lvl_unk">Ich weiß es nicht</small></a></div>
       <div class="dm-level-go" id="dm-level-go" aria-live="polite"></div>
       ${H ? `<div class="dm-lang" role="group" aria-label="${x(H.t('lang_h'))}" dir="ltr"><span aria-hidden="true">🌐</span>${H.langs.map(([c, n]) => `<button type="button" class="dm-lang-b" data-lang-set="${c}" lang="${c}" aria-pressed="false">${x(n)}</button>`).join('')}</div>` : ''}
@@ -240,20 +244,21 @@
       const lastDiffers = last && (!st || '#' + last.route !== st.href);
       // one clear next step; everything else is a small secondary link
       go.innerHTML = (st
-        ? `<a class="dm-btn dm-level-start" href="${x(st.href)}"><span class="dm-level-lbl"><span>${x(tr(st.key, st.key === 'next_step' ? 'Dein nächster Schritt' : st.key === 'go_start' ? 'Jetzt starten' : 'Lektionen öffnen'))}</span> <span aria-hidden="true">▶</span></span><small>${x(st.sub)}</small></a>`
+        ? `<a class="dm-btn dm-level-start" href="${x(st.href)}"><span class="dm-level-lbl"><span>${x(c ? tr(c.done ? 'kurs_cont' : 'kurs_start', c.done ? 'Weiter im Kurs {lv}' : 'Kurs {lv} starten').replace('{lv}', lv) : tr(st.key, st.key === 'go_start' ? 'Jetzt starten' : 'Lektionen öffnen'))}</span> <span aria-hidden="true">▶</span></span><small>${x(st.sub)}</small></a>`
         : `<a class="dm-btn dm-btn-quiet dm-level-test" href="#einstufung"><span aria-hidden="true">🧭</span> ${x(tr('test_l', 'Einstufungstest – 5 Minuten'))}</a><p class="dm-level-note">${x(tr('test_hint', 'Du kennst dein Niveau nicht? Mach den kurzen Test.'))}</p>`)
         + (c ? `<p class="dm-level-course"><a href="${x(c.courseHref || '#kurs/' + lv)}">${x(tr('course_of', 'Kurs {lv}: Schritt {n} von {total}').replace('{lv}', lv).replace('{n}', Math.min((c.done || 0) + 1, c.total || 1)).replace('{total}', c.total || ''))}</a></p>` : '')
         + `<p class="dm-level-more">`
         + (lastDiffers ? `<a href="#${x(last.route)}"><span aria-hidden="true">↩</span> ${x(tr('go_cont', 'Weitermachen'))}: ${x(last.title)}</a>` : '')
         + (due ? `<a href="#fehler"><span aria-hidden="true">🔁</span> ${x(tr('errors_l', 'Meine Fehler wiederholen'))} (${due})</a>` : '')
-        + (lv ? `<a href="#niveau/${x(lv)}"><span aria-hidden="true">📚</span> Alle Materialien ${x(lv)}</a>` : '')
+        + (lv ? `<a href="#niveau/${x(lv)}"><span aria-hidden="true">📚</span> ${x(tr('all_mat', 'Alle Materialien {lv}').replace('{lv}', lv))}</a>` : '')
         + (hasProgress ? `<a href="#lernstand"><span aria-hidden="true">💾</span> ${x(tr('backup_l', 'Lernstand sichern'))}</a>` : '')
         + `</p>`;
       $$('.dm-lv[data-lv]', box).forEach(b => b.setAttribute('aria-pressed', String(b.dataset.lv === lv)));
       if (H) H.apply(box);
     };
-    // a level button remembers the level and opens the level page with all materials and topics (#niveau/<lv>)
-    $$('.dm-lv[data-lv]', box).forEach(b => b.onclick = () => { mem.level = b.dataset.lv; save(); location.hash = '#niveau/' + b.dataset.lv; });
+    // a level button remembers the level and opens the guided course first (#kurs/<lv>, always the next step);
+    // the full material list (#niveau/<lv>) stays one tap away from the course page
+    $$('.dm-lv[data-lv]', box).forEach(b => b.onclick = () => { const lv = b.dataset.lv; mem.level = lv; save(); location.hash = (DM.kurs && DM.kurs[lv] ? '#kurs/' : '#niveau/') + lv; });
     $$('[data-lang-set]', box).forEach(b => b.onclick = () => { H.set(b.dataset.langSet); draw(); });
     draw();
     if (H) H.apply(document);
@@ -278,8 +283,8 @@
         <p class="dm-hero-title">Deutsch lernen mit Dennis</p>
         <p class="dm-promise" data-i18n="free" data-i18n-dir>Kostenlos · A0 bis B2 · ohne Anmeldung</p>
         ${levelPicker()}
-        <p class="dm-hand">Hallo! Ich bin Dennis, dein Deutschlehrer und zugelassener Prüfer. Tippe auf dein Niveau – ich zeige dir alle Materialien dafür.</p>
-        <ul class="dm-trust"><li>✓ DTZ-Prüfer</li><li>✓ telc-Prüfer B1–B2</li><li>✓ Lehrkraft mit BAMF-Zulassung bis C2</li></ul>
+        <p class="dm-hand">Hallo! Ich bin Dennis, dein Deutschlehrer und zugelassener Prüfer. Tippe auf dein Niveau – dann startet dein Kurs, Schritt für Schritt.</p>
+        <ul class="dm-trust"><li>✓ DTZ-Prüfer</li><li>✓ telc-Prüfer B1–B2</li><li>✓ Vom BAMF zugelassene Lehrkraft für Integrationskurse</li></ul>
       </div>
     </section>
 
@@ -883,9 +888,16 @@
   /* Startseite: kompakte Karte statt der großen Lieder-Bühne */
   function songHome() {
     const all = DM.songs || [], sod = songOfDay();
+    // lieder-data.js (~190 KB) is loaded lazily (lazy.js): the card sits in the closed „Mehr entdecken“ box,
+    // so load the songs when the box is opened (or right away if it is open) and then fill in the song of the day
+    if (!DM.songs && window.DMLazy) setTimeout(() => {
+      const more = $('#dm-more');
+      const go = () => DMLazy.load('lieder').then(() => { const el = $('.dm-song-home'); if (el && DM.songs) el.outerHTML = songHome(); });
+      if (more && !more.open) more.addEventListener('toggle', () => { if (more.open) go(); }, { once: true }); else go();
+    }, 0);
     return `<section class="dm-section dm-song-home" aria-labelledby="songh-h">
       <a class="dm-song-home-card" href="${sod ? '#lieder/' + sod.id : '#lieder'}"><span class="dm-song-home-disc" aria-hidden="true"><i></i></span>
-        <span class="dm-song-home-copy"><small>Deutsch mit Liedern · ${all.length} eigene Lieder A1–C1</small><b id="songh-h">${sod ? 'Lied des Tages: „' + x(sod.title) + '“' : 'Deutsch mit Liedern'}</b><span>Hör zu, sing mit, lerne die Wörter. 🤖 Musik und Gesang mit KI (Suno).</span></span>
+        <span class="dm-song-home-copy"><small>Deutsch mit Liedern · ${all.length ? all.length + ' eigene' : 'Eigene'} Lieder A1–C1</small><b id="songh-h">${sod ? 'Lied des Tages: „' + x(sod.title) + '“' : 'Deutsch mit Liedern'}</b><span>Hör zu, sing mit, lerne die Wörter. 🤖 Musik und Gesang mit KI (Suno).</span></span>
         <span class="dm-song-home-go" aria-hidden="true">▶</span></a>
       <p class="dm-song-home-more"><a href="#lieder">Alle Lieder</a> · <a href="#lieder/playlist">♫ Playlist</a></p>
     </section>`;
@@ -1217,7 +1229,7 @@
         <p class="dm-small">Einige ältere Videos erklären Deutsch auf Russisch. Das ist am Titel markiert.</p>`);
       bindVideoArea(mainEl, () => { const pending = $('#dm-player-box')?.dataset.pending; videos(cat, pending || id); });
     };
-    render();
+    return render();
   }
 
   /* ---------- Über mich, Impressum, Datenschutz ---------- */
@@ -1226,7 +1238,7 @@
     const C = DM.credentials || [];
     page(`${crumbs([['Über mich']])}
       <section class="dm-about">
-        <figure class="dm-about-photo"><img src="assets/dennis.webp" alt="Dennis, Deutschlehrer" width="626" height="1004"><figcaption class="dm-badge-stack"><span>✓ DTZ-Prüfer</span><span>✓ telc-Prüfer</span><span>✓ BAMF-zugelassen</span></figcaption></figure>
+        <figure class="dm-about-photo"><img src="assets/dennis.webp" alt="Dennis, Deutschlehrer" width="626" height="1004"><figcaption class="dm-badge-stack"><span>✓ DTZ-Prüfer</span><span>✓ telc-Prüfer</span><span>✓ Vom BAMF zugelassene Lehrkraft</span></figcaption></figure>
         <div class="dm-about-text">
           <h1>Hallo, ich bin Dennis.</h1>
           <p class="dm-lead">Seit Oktober 2017 bringe ich Menschen Deutsch bei – vom ersten Satz bis zur Hochschulprüfung. Und ich bin zugelassener Prüfer.</p>
@@ -1793,7 +1805,7 @@
     let built;
     if (own) { built = own(p); setupExamBox(p); }
     else { try { legacyRoute(); } catch (e) { console.error(e); home(); } afterLegacy(p); }
-    if (p[0] !== '' && $('main .dm-boot')) notFound();
+    if (p[0] !== '' && !(built && typeof built.then === 'function') && $('main .dm-boot')) notFound();
     hideMissingDownloads();
     unifyHead(p);
     addBackBar(p);
@@ -1801,7 +1813,7 @@
     $$('#main-navigation a[data-nav]').forEach(a => { const on = a.dataset.nav === nav; a.classList.toggle('active', on); if (on) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current'); });
     const setTitle = () => { const h1 = $('main h1')?.textContent.trim();
       if (entry && location.hash === entry.hash) { document.title = entry.title; return; }
-      document.title = (p[0] === '' ? 'Deutsch mit Dennis – kostenlos Deutsch lernen von A1 bis B2' : `${h1 && h1.length < 60 ? h1 : TITLES[p[0]] || 'Deutsch lernen'} – Deutsch mit Dennis`); };
+      document.title = (p[0] === '' ? 'Deutsch mit Dennis – kostenlos Deutsch lernen von A0 bis B2' : `${h1 && h1.length < 60 ? h1 : TITLES[p[0]] || 'Deutsch lernen'} – Deutsch mit Dennis`); };
     setTitle();
     // pages that build asynchronously (e.g. videos load the feed first): set the title again once they are ready
     if (built && typeof built.then === 'function') { const h = location.hash; built.then(() => { if (location.hash === h) setTitle(); }).catch(() => {}); }
@@ -1843,7 +1855,7 @@
   DM.page = page; DM.celebrate = celebrate; DM.art3d = art3d; DM.speechCoach = speechCoach; DM.bindSpeechCoach = bindSpeechCoach; DM.crumbs = crumbs; DM.note = note; DM.esc = x;
   route();
   ttsReady.then(() => { if (/^#(hoeren|ueben)/.test(location.hash)) route(); });
-  DM.speak = speak; DM.loadVideos = loadVideos;
+  DM.speak = speak; DM.stopSpeaking = stopSpeaking; DM.loadVideos = loadVideos;
   // footer link groups: folded on phones, open on larger screens
   const fq = matchMedia('(max-width:600px)'), fold = () => document.querySelectorAll('.dm-fgroup').forEach(d => { d.open = !fq.matches; });
   fold(); fq.addEventListener && fq.addEventListener('change', fold);

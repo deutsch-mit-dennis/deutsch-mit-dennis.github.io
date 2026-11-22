@@ -591,3 +591,13 @@
 .b2t-notes textarea{width:100%;box-sizing:border-box;padding:10px;border:2px solid var(--dm-line,#dadfea);border-radius:12px;font:inherit}
 .b2t-check{margin:14px 0}.b2t-check .check{display:flex;gap:8px;align-items:flex-start;min-height:44px}
 .sp-next-step{margin:12px 0 4px;line-height:2}.sp-next-step a{display:inline-block;min-height:44px;line-height:44px;font-weight:700}
+
+/* level page: guided course first (big button), material list below; quiz result: "saved" note + way on */
+.es-lv-kurs{margin:14px 0 4px;max-width:520px;display:grid;gap:8px}
+.es-lv-kurs-go{display:grid!important;justify-items:start;gap:4px;width:100%;text-align:start;padding:14px 18px;border-radius:16px;font-size:19px}
+.es-lv-kurs-go small{font-size:14px;font-weight:400;opacity:.92;overflow-wrap:anywhere;text-align:start}
+.es-lv-kurs-plan{display:inline-flex;align-items:center;min-height:44px;font-weight:700}
+.es-lv-kurs .dm-small{margin:0}
+.es-saved{font-weight:700;color:var(--dm-gruen,#1a7f37);margin:8px 0}
+.es-saved-go{display:grid!important;justify-items:center;gap:2px;margin:4px auto 8px;max-width:100%}
+.es-saved-go small{font-weight:400;font-size:13px;opacity:.92;overflow-wrap:anywhere}

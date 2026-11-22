@@ -170,8 +170,8 @@
           "Er bewirbt sich ___ eine Stelle als Koch.",
           "um",
           "für",
-          "auf",
-          "sich bewerben um + Akkusativ (bei einer Firma).",
+          "an",
+          "sich bewerben um + Akk. (auch: auf), bei einer Firma.",
         ],
         [
           "Ich bin ___ Ihrem Vorschlag einverstanden.",

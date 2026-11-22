@@ -4,7 +4,7 @@
   "use strict";
   const BASE = "https://deutsch-mit-dennis.de/";
   const TEXT =
-    "Kostenlos Deutsch lernen von A1 bis B2 – mit Übungen, Hörtexten und Probeprüfungen. Schau mal:";
+    "Kostenlos Deutsch lernen von A0 bis B2 – mit Übungen, Hörtexten und Probeprüfungen. Schau mal:";
   const esc = (s) =>
     String(s).replace(
       /[&<>"]/g,

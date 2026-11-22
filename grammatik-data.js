@@ -1163,6 +1163,157 @@ T({
     ),
   ],
 });
+T({
+  id: "a1-perfekt",
+  level: "A1",
+  title: "Perfekt: Ich habe gearbeitet. Ich bin gefahren.",
+  kurz: "Über Vergangenes sprichst du meist im Perfekt: *haben* oder *sein* + Partizip II am Satzende. Ich *habe* gearbeitet. Ich *bin* nach Hause gefahren. Die meisten Verben nehmen haben. Mit *sein*: Bewegung von A nach B (gehen, fahren, kommen), Veränderung (aufstehen, einschlafen) und die Verben sein, bleiben, passieren.",
+  kurz_i18n: {
+    en: "For the past you usually use the Perfekt: haben or sein + participle II at the end of the sentence. Ich habe gearbeitet. Ich bin nach Hause gefahren. Most verbs take haben. sein is used for movement from A to B (gehen, fahren, kommen), for a change (aufstehen, einschlafen) and with sein, bleiben, passieren.",
+    uk: "Про минуле зазвичай говорять у Perfekt: haben або sein + Partizip II у кінці речення. Ich habe gearbeitet. Ich bin nach Hause gefahren. Більшість дієслів – з haben. sein – для руху з A в B (gehen, fahren, kommen), для зміни стану (aufstehen, einschlafen) і з дієсловами sein, bleiben, passieren.",
+    ru: "О прошлом обычно говорят в Perfekt: haben или sein + Partizip II в конце предложения. Ich habe gearbeitet. Ich bin nach Hause gefahren. Большинство глаголов – с haben. sein – для движения из A в B (gehen, fahren, kommen), для изменения состояния (aufstehen, einschlafen) и с глаголами sein, bleiben, passieren.",
+    ar: "للحديث عن الماضي تستخدم غالبًا زمن Perfekt: ‏haben أو sein + ‏Partizip II في آخر الجملة. Ich habe gearbeitet. Ich bin nach Hause gefahren. معظم الأفعال تأخذ haben. وتأخذ sein أفعالُ الحركة من مكان إلى آخر (gehen, fahren, kommen) وأفعالُ تغيّر الحالة (aufstehen, einschlafen) والأفعال sein و bleiben و passieren.",
+    fa: "برای گذشته معمولاً از Perfekt استفاده می‌کنی: haben یا sein + Partizip II در آخر جمله. Ich habe gearbeitet. Ich bin nach Hause gefahren. بیشتر فعل‌ها با haben می‌آیند. sein برای حرکت از جایی به جای دیگر (gehen, fahren, kommen)، برای تغییر حالت (aufstehen, einschlafen) و با فعل‌های sein، bleiben و passieren است.",
+    tr: "Geçmişten söz ederken çoğunlukla Perfekt kullanılır: haben veya sein + cümlenin sonunda Partizip II. Ich habe gearbeitet. Ich bin nach Hause gefahren. Fiillerin çoğu haben alır. sein ile: bir yerden başka bir yere hareket (gehen, fahren, kommen), durum değişikliği (aufstehen, einschlafen) ve sein, bleiben, passieren fiilleri.",
+    es: "Para hablar del pasado se usa casi siempre el Perfekt: haben o sein + participio II al final de la frase. Ich habe gearbeitet. Ich bin nach Hause gefahren. La mayoría de los verbos lleva haben. Con sein: movimiento de A a B (gehen, fahren, kommen), cambio de estado (aufstehen, einschlafen) y los verbos sein, bleiben, passieren.",
+    it: "Per parlare del passato si usa quasi sempre il Perfekt: haben o sein + participio II alla fine della frase. Ich habe gearbeitet. Ich bin nach Hause gefahren. La maggior parte dei verbi prende haben. Con sein: movimento da A a B (gehen, fahren, kommen), cambiamento di stato (aufstehen, einschlafen) e i verbi sein, bleiben, passieren.",
+  },
+  tabelle: {
+    head: ["Verb", "Partizip II", "Beispiel"],
+    rows: [
+      ["regelmäßig: machen", "*ge*mach*t*", "Ich habe Kaffee gemacht."],
+      ["unregelmäßig: schreiben", "*ge*schrieb*en*", "Ich habe eine E-Mail geschrieben."],
+      ["trennbar: einkaufen", "ein*ge*kauf*t*", "Wir haben eingekauft."],
+      ["ohne ge-: bezahlen, telefonieren", "bezahl*t*, telefonier*t*", "Ich habe die Rechnung bezahlt."],
+      ["mit sein: fahren, aufstehen", "*ge*fahr*en*, auf*ge*stand*en*", "Sie ist zum Amt gefahren."],
+    ],
+  },
+  beispiele: [
+    "Ich *habe* gestern lange *gearbeitet*.",
+    "Lina *hat* im Supermarkt Obst *eingekauft*.",
+    "Wir *sind* mit dem Bus zum Arzt *gefahren*.",
+    "Mein Sohn *ist* heute um sechs Uhr *aufgestanden*.",
+    "*Hast* du die Miete schon *bezahlt*?",
+    "Herr Okafor *hat* mit dem Vermieter *telefoniert*.",
+  ],
+  fehler: [
+    [
+      "Ich habe nach Hause gegangen.",
+      "Ich bin nach Hause gegangen.",
+      "Bewegung von A nach B → sein.",
+    ],
+    [
+      "Ich habe gemacht meine Hausaufgaben.",
+      "Ich habe meine Hausaufgaben gemacht.",
+      "Das Partizip II steht am Satzende.",
+    ],
+    [
+      "Ich habe den Brief geschreibt.",
+      "Ich habe den Brief geschrieben.",
+      "schreiben ist unregelmäßig: geschrieben.",
+    ],
+    [
+      "Wir haben geeinkauft.",
+      "Wir haben eingekauft.",
+      "Trennbare Verben: ge- steht in der Mitte → ein-ge-kauft.",
+    ],
+    [
+      "Ich habe die Rechnung gebezahlt.",
+      "Ich habe die Rechnung bezahlt.",
+      "Verben mit be-, ver-, er- und Verben auf -ieren haben kein ge-.",
+    ],
+  ],
+  items: [
+    mc(
+      "Ich ___ gestern lange gearbeitet.",
+      ["habe", "bin", "hat"],
+      "arbeiten ist keine Bewegung → haben. Bei „ich“: habe.",
+    ),
+    mc(
+      "Wir ___ mit dem Zug nach Köln gefahren.",
+      ["sind", "haben", "seid"],
+      "fahren von A nach B → sein. Bei „wir“: sind.",
+    ),
+    gap(
+      "Ich habe am Wochenende viel Deutsch ___. (lernen)",
+      ["gelernt"],
+      "lernen ist regelmäßig: ge + lern + t → gelernt.",
+    ),
+    mc(
+      "Was ist das Partizip II von „schreiben“?",
+      ["geschrieben", "geschreibt", "schrieben"],
+      "schreiben ist unregelmäßig: ge…en → geschrieben.",
+    ),
+    fix(
+      "Sie ist zu Fuß zur Arbeit gegangen.",
+      "Sie hat zu Fuß zur Arbeit gegangen.",
+      "gehen = Bewegung von A nach B → sein: Sie ist gegangen.",
+    ),
+    gap(
+      "Lena ist heute sehr früh ___. (aufstehen)",
+      ["aufgestanden"],
+      "Trennbar: auf + ge + standen. Veränderung → sein.",
+    ),
+    order(
+      "Gestern | habe | ich | lange | gearbeitet.",
+      "Das Hilfsverb steht auf Position 2, das Partizip II am Ende.",
+    ),
+    mc(
+      "Das Paket ___ heute angekommen.",
+      ["ist", "hat", "habe"],
+      "ankommen = Bewegung zu einem Ziel → sein. Das Paket = es: ist.",
+    ),
+    gap(
+      "Herr Yilmaz hat gestern mit dem Arzt ___. (telefonieren)",
+      ["telefoniert"],
+      "Verben auf -ieren haben kein ge-: telefoniert.",
+    ),
+    fix(
+      "Wir haben im Supermarkt eingekauft.",
+      "Wir haben im Supermarkt geeinkauft.",
+      "Trennbare Verben: ge- steht in der Mitte → ein-ge-kauft.",
+    ),
+    mc(
+      "Mein Sohn ___ um acht Uhr eingeschlafen.",
+      ["ist", "hat", "haben"],
+      "einschlafen = Veränderung (wach → schlafen) → sein.",
+    ),
+    gap(
+      "Wir ___ am Sonntag zu Hause geblieben. (haben oder sein?)",
+      ["sind"],
+      "bleiben nimmt immer sein: Wir sind geblieben.",
+    ),
+    order(
+      "Am Samstag | sind | wir | in den Park | gegangen.",
+      "sein steht auf Position 2, „gegangen“ am Ende.",
+    ),
+    mc(
+      "Was ist das Partizip II von „verstehen“?",
+      ["verstanden", "geverstanden", "versteht"],
+      "Verben mit ver- haben kein ge-: verstanden.",
+    ),
+    gap(
+      "Hast du die Rechnung schon ___? (bezahlen)",
+      ["bezahlt"],
+      "Verben mit be- haben kein ge-: bezahlt.",
+    ),
+    fix(
+      "Ich habe den Antrag ausgefüllt.",
+      "Ich habe ausgefüllt den Antrag.",
+      "Das Partizip II steht am Satzende.",
+    ),
+    mc(
+      "Was ___ passiert?",
+      ["ist", "hat", "bist"],
+      "passieren nimmt sein: Was ist passiert?",
+    ),
+    order(
+      "Heute | ist | sie | früh | aufgestanden.",
+      "aufstehen = Veränderung → sein. Das Partizip steht am Ende.",
+    ),
+  ],
+});
+
 /* ===================== A2 ===================== */
 T({
   id: "a2-praeteritum-war-hatte",
@@ -1457,6 +1608,164 @@ T({
       "Wenn mein Kind krank ist, kann ich nicht zum Kurs kommen.",
       "Wenn mein Kind ist krank, kann ich nicht zum Kurs kommen.",
       "Im wenn-Satz steht das Verb am Ende: … krank ist.",
+    ),
+  ],
+});
+
+T({
+  id: "a2-weil-denn",
+  level: "A2",
+  title: "Gründe nennen: weil und denn",
+  kurz: "Mit *weil* nennst du einen Grund. Nach weil steht das Verb ganz am Ende: Ich komme nicht, *weil* ich krank *bin*. *denn* bedeutet dasselbe, aber danach bleibt das Verb auf Position 2: Ich komme nicht, *denn* ich *bin* krank. Auf die Frage *Warum?* antwortest du mit *Weil* …",
+  kurz_i18n: {
+    en: "With weil (because) you give a reason. After weil the verb goes to the very end: Ich komme nicht, weil ich krank bin. denn means the same, but after it the verb stays in position 2: Ich komme nicht, denn ich bin krank. You answer the question Warum? (why?) with Weil …",
+    uk: "Словом weil (бо, тому що) ти називаєш причину. Після weil дієслово стоїть у самому кінці: Ich komme nicht, weil ich krank bin. denn означає те саме, але після нього дієслово залишається на 2-му місці: Ich komme nicht, denn ich bin krank. На питання Warum? (чому?) відповідаєш: Weil …",
+    ru: "Словом weil (потому что) ты называешь причину. После weil глагол стоит в самом конце: Ich komme nicht, weil ich krank bin. denn значит то же самое, но после него глагол остаётся на 2-м месте: Ich komme nicht, denn ich bin krank. На вопрос Warum? (почему?) отвечаешь: Weil …",
+    ar: "بكلمة weil (لأنّ) تذكر السبب. بعد weil يأتي الفعل في آخر الجملة: Ich komme nicht, weil ich krank bin. كلمة denn لها المعنى نفسه، لكن بعدها يبقى الفعل في المكان الثاني: Ich komme nicht, denn ich bin krank. وعلى سؤال Warum? (لماذا؟) تجيب بـ Weil …",
+    fa: "با weil (چون، زیرا) دلیل را می‌گویی. بعد از weil فعل در آخر جمله می‌آید: Ich komme nicht, weil ich krank bin. denn همان معنی را دارد، اما بعد از آن فعل در جایگاه دوم می‌ماند: Ich komme nicht, denn ich bin krank. به سؤال Warum? (چرا؟) با Weil … جواب می‌دهی.",
+    tr: "weil (çünkü, -dığı için) ile bir sebep söylersin. weil'den sonra fiil en sona gider: Ich komme nicht, weil ich krank bin. denn aynı anlama gelir, ama ondan sonra fiil 2. yerde kalır: Ich komme nicht, denn ich bin krank. Warum? (neden?) sorusuna Weil … ile cevap verirsin.",
+    es: "Con weil (porque) das una razón. Después de weil el verbo va al final: Ich komme nicht, weil ich krank bin. denn significa lo mismo, pero después el verbo se queda en la posición 2: Ich komme nicht, denn ich bin krank. A la pregunta Warum? (¿por qué?) respondes con Weil …",
+    it: "Con weil (perché) dai un motivo. Dopo weil il verbo va alla fine: Ich komme nicht, weil ich krank bin. denn significa lo stesso, ma dopo denn il verbo resta in seconda posizione: Ich komme nicht, denn ich bin krank. Alla domanda Warum? (perché?) rispondi con Weil …",
+  },
+  tabelle: {
+    head: ["Satz 1", "Grund"],
+    rows: [
+      ["Ich komme heute nicht,", "*weil* ich krank *bin*."],
+      ["Ich komme heute nicht,", "*denn* ich *bin* krank."],
+      ["Ich rufe an,", "*weil* ich morgen nicht kommen *kann*."],
+      ["*Weil* ich krank *bin*,", "*komme* ich heute nicht."],
+    ],
+  },
+  beispiele: [
+    "Ich bleibe zu Hause, *weil* mein Kind Fieber *hat*.",
+    "Frau Rossi lernt Deutsch, *weil* sie als Pflegerin arbeiten *möchte*.",
+    "Wir suchen eine neue Wohnung, *weil* die alte zu klein *ist*.",
+    "Ich komme zu spät, *weil* der Bus nicht *gekommen ist*.",
+    "Ich gehe heute zum Arzt, *denn* ich *habe* Rückenschmerzen.",
+    "*Weil* der Kurs um acht Uhr *anfängt*, *stehe* ich früh auf.",
+  ],
+  fehler: [
+    [
+      "Ich komme nicht, weil ich bin krank.",
+      "Ich komme nicht, weil ich krank bin.",
+      "Nach „weil“ steht das Verb am Ende.",
+    ],
+    [
+      "Ich komme nicht, denn ich krank bin.",
+      "Ich komme nicht, denn ich bin krank.",
+      "Nach „denn“ bleibt das Verb auf Position 2.",
+    ],
+    [
+      "Weil ich krank bin, ich komme nicht.",
+      "Weil ich krank bin, komme ich nicht.",
+      "Nach dem weil-Satz kommt sofort das Verb.",
+    ],
+    [
+      "Ich komme zu spät, weil der Zug ist ausgefallen.",
+      "Ich komme zu spät, weil der Zug ausgefallen ist.",
+      "Im weil-Satz steht das Hilfsverb ganz am Ende: ausgefallen ist.",
+    ],
+    [
+      "Denn ich krank bin, komme ich nicht.",
+      "Weil ich krank bin, komme ich nicht.",
+      "„denn“ kann nicht am Anfang stehen. Am Satzanfang nimmst du „weil“.",
+    ],
+  ],
+  items: [
+    mc(
+      "Ich gehe heute nicht zur Arbeit, ___",
+      ["weil ich krank bin.", "weil ich bin krank.", "weil bin ich krank."],
+      "Nach „weil“ steht das Verb am Ende: … krank bin.",
+    ),
+    mc(
+      "Ich gehe heute nicht zur Arbeit, denn ___",
+      ["ich bin krank.", "ich krank bin.", "krank ich bin."],
+      "Nach „denn“: normale Wortstellung, das Verb steht auf Position 2.",
+    ),
+    gap(
+      "Ich lerne jeden Tag, weil ich die Prüfung bestehen ___. (wollen)",
+      ["will"],
+      "Bei „ich“: will. Im weil-Satz steht das Modalverb ganz am Ende.",
+    ),
+    fix(
+      "Wir ziehen um, weil die Wohnung zu klein ist.",
+      "Wir ziehen um, weil die Wohnung ist zu klein.",
+      "Nach „weil“ steht das Verb am Ende: … zu klein ist.",
+    ),
+    mc(
+      "Ich komme später, ___ mein Bus Verspätung hat.",
+      ["weil", "denn", "aber"],
+      "Das Verb „hat“ steht am Ende → weil.",
+    ),
+    mc(
+      "Ich komme später, ___ mein Bus hat Verspätung.",
+      ["denn", "weil", "dass"],
+      "Das Verb „hat“ steht auf Position 2 → denn. (Nach „weil“ steht es im richtigen Deutsch am Ende.)",
+    ),
+    order(
+      "Ich | bleibe | zu Hause, | weil | mein Kind | Fieber | hat.",
+      "Im weil-Satz steht das Verb am Ende: … Fieber hat.",
+    ),
+    gap(
+      "Herr Ahmadi kann nicht kommen, weil er einen Termin beim Arzt ___. (haben)",
+      ["hat"],
+      "Bei „er“: hat. Nach „weil“ steht das Verb am Ende.",
+    ),
+    mc(
+      "Warum lernst du Deutsch? – ___",
+      [
+        "Weil ich in Deutschland arbeiten möchte.",
+        "Denn ich in Deutschland arbeiten möchte.",
+        "Weil ich möchte in Deutschland arbeiten.",
+      ],
+      "Auf „Warum?“ antwortest du mit „Weil …“. Das Modalverb steht am Ende.",
+    ),
+    fix(
+      "Weil es regnet, nehmen wir das Auto.",
+      "Weil es regnet, wir nehmen das Auto.",
+      "Nach dem weil-Satz kommt sofort das Verb: nehmen wir.",
+    ),
+    gap(
+      "Ich komme zu spät, weil der Zug ___ ist. (ausfallen)",
+      ["ausgefallen"],
+      "Perfekt im weil-Satz: Partizip II + „ist“ am Ende.",
+    ),
+    order(
+      "Weil | der Kurs | um acht Uhr anfängt, | stehe | ich | früh auf.",
+      "Nach dem weil-Satz kommt sofort das Verb: stehe ich …",
+    ),
+    mc(
+      "Ich gehe zum Amt, denn ___",
+      ["ich brauche einen neuen Pass.", "ich einen neuen Pass brauche.", "brauche ich einen neuen Pass."],
+      "Nach „denn“ kommt zuerst das Subjekt, dann das Verb auf Position 2.",
+    ),
+    gap(
+      "Wir kaufen heute nicht ein, ___ der Supermarkt geschlossen ist.",
+      ["weil", "da"],
+      "Das Verb „ist“ steht am Ende → weil.",
+    ),
+    fix(
+      "Ich rufe an, weil ich morgen nicht kommen kann.",
+      "Ich rufe an, weil ich morgen nicht kann kommen.",
+      "Im weil-Satz steht das Modalverb ganz am Ende: kommen kann.",
+    ),
+    order(
+      "Sie | sucht | eine neue Stelle, | denn | sie | möchte | mehr verdienen.",
+      "Nach „denn“: Subjekt + Verb auf Position 2: sie möchte …",
+    ),
+    mc(
+      "Welcher Satz ist richtig? (Grund am Anfang)",
+      [
+        "Weil ich krank bin, komme ich nicht.",
+        "Denn ich krank bin, komme ich nicht.",
+        "Weil ich bin krank, komme ich nicht.",
+      ],
+      "Nur „weil“ kann am Satzanfang stehen. Im weil-Satz steht das Verb am Ende.",
+    ),
+    gap(
+      "Ich nehme heute ein Taxi, denn ich ___ spät dran. (sein)",
+      ["bin"],
+      "Nach „denn“ steht das Verb auf Position 2: ich bin.",
     ),
   ],
 });
@@ -1757,6 +2066,156 @@ T({
       "Ich kann ___ nicht an den Namen erinnern.",
       ["mich"],
       "sich erinnern: Bei „ich“ heißt es: mich.",
+    ),
+  ],
+});
+
+T({
+  id: "a2-kasus",
+  level: "A2",
+  title: "Nominativ, Akkusativ, Dativ: der – den – dem",
+  kurz: "Der Kasus zeigt die Rolle im Satz. Nominativ (*wer?*): *Der* Mann kauft ein. Akkusativ (*wen? was?*): Ich sehe *den* Mann. Dativ (*wem?*): Ich helfe *dem* Mann. Im Akkusativ ändert sich nur maskulin: der → den. Im Dativ: dem (m/n), der (f), den + -n (Plural). Pronomen: ich – mich – mir, du – dich – dir, er – ihn – ihm, sie – sie – ihr, wir – uns – uns, Sie – Sie – Ihnen.",
+  kurz_i18n: {
+    en: "The case shows the role in the sentence. Nominative (wer? – who?): Der Mann kauft ein. Accusative (wen? was? – whom? what?): Ich sehe den Mann. Dative (wem? – to whom?): Ich helfe dem Mann. In the accusative only the masculine changes: der → den. Dative: dem (m/n), der (f), den + -n (plural). Pronouns: ich – mich – mir, du – dich – dir, er – ihn – ihm, sie – sie – ihr, wir – uns – uns, Sie – Sie – Ihnen.",
+    uk: "Відмінок показує роль слова в реченні. Nominativ (wer? – хто?): Der Mann kauft ein. Akkusativ (wen? was? – кого? що?): Ich sehe den Mann. Dativ (wem? – кому?): Ich helfe dem Mann. В Akkusativ змінюється лише чоловічий рід: der → den. Dativ: dem (ч./с.), der (ж.), den + -n (множина). Займенники: ich – mich – mir, du – dich – dir, er – ihn – ihm, sie – sie – ihr, wir – uns – uns, Sie – Sie – Ihnen.",
+    ru: "Падеж показывает роль слова в предложении. Nominativ (wer? – кто?): Der Mann kauft ein. Akkusativ (wen? was? – кого? что?): Ich sehe den Mann. Dativ (wem? – кому?): Ich helfe dem Mann. В Akkusativ меняется только мужской род: der → den. Dativ: dem (м./ср.), der (ж.), den + -n (мн. ч.). Местоимения: ich – mich – mir, du – dich – dir, er – ihn – ihm, sie – sie – ihr, wir – uns – uns, Sie – Sie – Ihnen.",
+    ar: "الحالة الإعرابية تُظهر دور الكلمة في الجملة. Nominativ (‏wer? – مَن؟): Der Mann kauft ein. Akkusativ (‏wen? was? – مَن؟ ماذا؟ للمفعول به): Ich sehe den Mann. Dativ (‏wem? – لِمَن؟): Ich helfe dem Mann. في Akkusativ يتغيّر المذكّر فقط: der ← den. في Dativ: ‏dem (مذكّر/محايد)، der (مؤنّث)، den + ‏-n (جمع). الضمائر: ich – mich – mir, du – dich – dir, er – ihn – ihm, sie – sie – ihr, wir – uns – uns, Sie – Sie – Ihnen.",
+    fa: "حالت (Kasus) نقش کلمه را در جمله نشان می‌دهد. Nominativ (‏wer? – چه کسی؟): Der Mann kauft ein. Akkusativ (‏wen? was? – چه کسی را؟ چه چیزی را؟): Ich sehe den Mann. Dativ (‏wem? – به چه کسی؟): Ich helfe dem Mann. در Akkusativ فقط مذکر عوض می‌شود: der ← den. در Dativ: ‏dem (مذکر/خنثی)، der (مؤنث)، den + ‏-n (جمع). ضمیرها: ich – mich – mir, du – dich – dir, er – ihn – ihm, sie – sie – ihr, wir – uns – uns, Sie – Sie – Ihnen.",
+    tr: "Hâl (Kasus), kelimenin cümledeki görevini gösterir. Nominativ (wer? – kim?): Der Mann kauft ein. Akkusativ (wen? was? – kimi? neyi?): Ich sehe den Mann. Dativ (wem? – kime?): Ich helfe dem Mann. Akkusativ'de sadece eril değişir: der → den. Dativ: dem (eril/nötr), der (dişil), den + -n (çoğul). Zamirler: ich – mich – mir, du – dich – dir, er – ihn – ihm, sie – sie – ihr, wir – uns – uns, Sie – Sie – Ihnen.",
+    es: "El caso muestra la función en la frase. Nominativo (wer? – ¿quién?): Der Mann kauft ein. Acusativo (wen? was? – ¿a quién? ¿qué?): Ich sehe den Mann. Dativo (wem? – ¿a quién?, objeto indirecto): Ich helfe dem Mann. En acusativo solo cambia el masculino: der → den. Dativo: dem (m/n), der (f), den + -n (plural). Pronombres: ich – mich – mir, du – dich – dir, er – ihn – ihm, sie – sie – ihr, wir – uns – uns, Sie – Sie – Ihnen.",
+    it: "Il caso mostra la funzione nella frase. Nominativo (wer? – chi?): Der Mann kauft ein. Accusativo (wen? was? – chi? che cosa?, complemento oggetto): Ich sehe den Mann. Dativo (wem? – a chi?): Ich helfe dem Mann. All'accusativo cambia solo il maschile: der → den. Dativo: dem (m/n), der (f), den + -n (plurale). Pronomi: ich – mich – mir, du – dich – dir, er – ihn – ihm, sie – sie – ihr, wir – uns – uns, Sie – Sie – Ihnen.",
+  },
+  tabelle: {
+    head: ["", "der", "die", "das", "Plural"],
+    rows: [
+      ["Nom.", "der / ein", "die / eine", "das / ein", "die"],
+      ["Akk.", "*den* / *einen*", "die / eine", "das / ein", "die"],
+      ["Dat.", "*dem* / *einem*", "*der* / *einer*", "*dem* / *einem*", "*den*"],
+    ],
+  },
+  beispiele: [
+    "*Der* Vermieter repariert *den* Herd.",
+    "Ich suche *einen* Kitaplatz für meine Tochter.",
+    "Kannst du *mir* bitte helfen?",
+    "Ich gebe *dem* Kind *einen* Apfel.",
+    "Ich rufe *ihn* morgen an.",
+    "Das Fahrrad gehört *meinem* Bruder.",
+  ],
+  fehler: [
+    [
+      "Ich habe ein Termin beim Jobcenter.",
+      "Ich habe einen Termin beim Jobcenter.",
+      "haben + Akkusativ: der Termin → einen Termin.",
+    ],
+    [
+      "Ich helfe dich.",
+      "Ich helfe dir.",
+      "helfen + Dativ: du → dir.",
+    ],
+    [
+      "Ich fahre mit der Bus.",
+      "Ich fahre mit dem Bus.",
+      "mit + Dativ: der Bus → mit dem Bus.",
+    ],
+    [
+      "Ich rufe er an.",
+      "Ich rufe ihn an.",
+      "anrufen + Akkusativ: er → ihn.",
+    ],
+    [
+      "Die Tasche gehört die Frau.",
+      "Die Tasche gehört der Frau.",
+      "gehören + Dativ: die Frau → der Frau.",
+    ],
+  ],
+  items: [
+    mc(
+      "Ich habe ___ Termin beim Arzt.",
+      ["einen", "ein", "einem"],
+      "haben + Akkusativ. der Termin → einen Termin.",
+    ),
+    mc(
+      "Kannst du ___ bitte helfen?",
+      ["mir", "mich", "ich"],
+      "helfen + Dativ: ich → mir.",
+    ),
+    gap(
+      "Wir kaufen morgen ___ Kühlschrank. (ein)",
+      ["einen"],
+      "der Kühlschrank. kaufen + Akkusativ → einen.",
+    ),
+    mc(
+      "___ hilfst du? – Meiner Nachbarin.",
+      ["Wem", "Wen", "Wer"],
+      "helfen + Dativ → Frage mit „wem“.",
+    ),
+    mc(
+      "___ besuchst du am Sonntag? – Meinen Onkel.",
+      ["Wen", "Wem", "Wer"],
+      "besuchen + Akkusativ → Frage mit „wen“.",
+    ),
+    fix(
+      "Ich rufe ihn morgen an.",
+      "Ich rufe er morgen an.",
+      "anrufen + Akkusativ: er → ihn.",
+    ),
+    gap(
+      "Das Handy gehört ___ Lehrerin. (die)",
+      ["der"],
+      "gehören + Dativ: die Lehrerin → der Lehrerin.",
+    ),
+    mc(
+      "Der Vermieter schickt ___ Mieter einen Brief.",
+      ["dem", "den", "der"],
+      "Wem schickt er den Brief? Person im Dativ: der Mieter → dem Mieter.",
+    ),
+    order(
+      "Am Montag | rufe | ich | dich | an.",
+      "anrufen + Akkusativ: dich. „an“ steht am Ende.",
+    ),
+    gap(
+      "Ich fahre jeden Tag mit ___ Bus zur Arbeit. (der)",
+      ["dem"],
+      "mit + Dativ: der Bus → mit dem Bus.",
+    ),
+    fix(
+      "Ich danke Ihnen für die Hilfe.",
+      "Ich danke Sie für die Hilfe.",
+      "danken + Dativ: Sie → Ihnen.",
+    ),
+    mc(
+      "Die Ärztin fragt ___: „Wo tut es weh?“",
+      ["ihn", "ihm", "er"],
+      "fragen + Akkusativ: er → ihn.",
+    ),
+    gap(
+      "Die Lehrerin erklärt ___ Kindern die Aufgabe. (die)",
+      ["den"],
+      "Dativ Plural: den Kindern (Nomen mit -n).",
+    ),
+    mc(
+      "Wie gefällt ___ die neue Wohnung?",
+      ["dir", "dich", "du"],
+      "gefallen + Dativ: du → dir.",
+    ),
+    order(
+      "Morgen | besuche | ich | meinen Opa.",
+      "besuchen + Akkusativ: der Opa → meinen Opa.",
+    ),
+    fix(
+      "Ich habe keinen Führerschein.",
+      "Ich habe kein Führerschein.",
+      "der Führerschein. haben + Akkusativ → keinen.",
+    ),
+    mc(
+      "Wer ist das? – Das ist ___ neue Kollege.",
+      ["der", "den", "dem"],
+      "sein + Nominativ: Das ist der neue Kollege.",
+    ),
+    gap(
+      "Ich brauche das Formular für ___ Sohn. (mein)",
+      ["meinen"],
+      "für + Akkusativ: der Sohn → für meinen Sohn.",
     ),
   ],
 });
@@ -2107,6 +2566,161 @@ T({
   ],
 });
 /* ===================== B1 ===================== */
+T({
+  id: "b1-relativsatz",
+  level: "B1",
+  title: "Relativsätze: der Arzt, den ich kenne",
+  kurz: "Ein Relativsatz erklärt ein Nomen genauer. Das Relativpronomen bekommt Genus und Zahl vom Nomen, den Kasus aber vom Verb im Relativsatz. Das Verb steht am Ende. Der Arzt, *der* mir geholfen hat (wer? → Nominativ) · der Arzt, *den* ich kenne (wen? → Akkusativ) · der Arzt, *dem* ich vertraue (wem? → Dativ). Mit Präposition steht die Präposition vorne: die Firma, *bei der* ich arbeite.",
+  kurz_i18n: {
+    en: "A relative clause describes a noun more precisely. The relative pronoun takes gender and number from the noun, but its case from the verb in the relative clause. The verb goes to the end. Der Arzt, der mir geholfen hat (nominative) · den ich kenne (accusative) · dem ich vertraue (dative). With a preposition, the preposition comes first: die Firma, bei der ich arbeite (the company I work for).",
+    uk: "Підрядне означальне речення точніше пояснює іменник. Відносний займенник бере рід і число від іменника, а відмінок – від дієслова в підрядному реченні. Дієслово стоїть у кінці. Der Arzt, der mir geholfen hat (Nominativ) · den ich kenne (Akkusativ) · dem ich vertraue (Dativ). З прийменником прийменник стоїть попереду: die Firma, bei der ich arbeite.",
+    ru: "Определительное придаточное точнее объясняет существительное. Относительное местоимение берёт род и число от существительного, а падеж – от глагола в придаточном. Глагол стоит в конце. Der Arzt, der mir geholfen hat (Nominativ) · den ich kenne (Akkusativ) · dem ich vertraue (Dativ). С предлогом предлог стоит впереди: die Firma, bei der ich arbeite.",
+    ar: "جملة الصلة (Relativsatz) تشرح الاسم بدقّة أكبر. يأخذ اسم الموصول الجنس والعدد من الاسم، لكن الحالة الإعرابية من الفعل داخل جملة الصلة. والفعل يأتي في آخرها. Der Arzt, der mir geholfen hat (Nominativ) · den ich kenne (Akkusativ) · dem ich vertraue (Dativ). ومع حرف الجر يأتي حرف الجر أولًا: die Firma, bei der ich arbeite.",
+    fa: "جملهٔ موصولی (Relativsatz) یک اسم را دقیق‌تر توضیح می‌دهد. ضمیر موصولی جنس و تعداد را از اسم می‌گیرد، اما حالت (Kasus) را از فعلِ جملهٔ موصولی. فعل در آخر می‌آید. Der Arzt, der mir geholfen hat (Nominativ) · den ich kenne (Akkusativ) · dem ich vertraue (Dativ). با حرف اضافه، حرف اضافه اول می‌آید: die Firma, bei der ich arbeite.",
+    tr: "İlgi cümlesi (Relativsatz) bir ismi daha ayrıntılı açıklar. İlgi zamiri cinsiyet ve sayıyı isimden, hâli ise ilgi cümlesindeki fiilden alır. Fiil sona gider. Der Arzt, der mir geholfen hat (Nominativ) · den ich kenne (Akkusativ) · dem ich vertraue (Dativ). Edat varsa edat başa gelir: die Firma, bei der ich arbeite.",
+    es: "Una oración de relativo explica mejor un sustantivo. El pronombre relativo toma el género y el número del sustantivo, pero el caso del verbo de la oración de relativo. El verbo va al final. Der Arzt, der mir geholfen hat (nominativo) · den ich kenne (acusativo) · dem ich vertraue (dativo). Con preposición, la preposición va delante: die Firma, bei der ich arbeite.",
+    it: "Una frase relativa spiega meglio un nome. Il pronome relativo prende genere e numero dal nome, ma il caso dal verbo della frase relativa. Il verbo va alla fine. Der Arzt, der mir geholfen hat (nominativo) · den ich kenne (accusativo) · dem ich vertraue (dativo). Con una preposizione, la preposizione va davanti: die Firma, bei der ich arbeite.",
+  },
+  tabelle: {
+    head: ["", "der", "die", "das", "Plural"],
+    rows: [
+      ["Nom.", "der", "die", "das", "die"],
+      ["Akk.", "*den*", "die", "das", "die"],
+      ["Dat.", "*dem*", "*der*", "*dem*", "*denen*"],
+    ],
+  },
+  beispiele: [
+    "Das ist die Kollegin, *die* mir beim Antrag geholfen hat.",
+    "Der Termin, *den* ich beim Bürgeramt habe, ist am Montag.",
+    "Die Nachbarn, *denen* wir beim Umzug geholfen haben, haben uns zum Essen eingeladen.",
+    "Das ist die Firma, *bei der* ich seit zwei Jahren arbeite.",
+    "Der Arzt, *zu dem* ich immer gehe, hat heute keine Sprechstunde.",
+    "Das Formular, *das* du ausfüllen musst, liegt auf dem Tisch.",
+  ],
+  fehler: [
+    [
+      "Das ist der Mann, der ich gestern gesehen habe.",
+      "Das ist der Mann, den ich gestern gesehen habe.",
+      "Ich habe ihn gesehen → Akkusativ: den.",
+    ],
+    [
+      "Die Frau, die ich geholfen habe, wohnt nebenan.",
+      "Die Frau, der ich geholfen habe, wohnt nebenan.",
+      "helfen + Dativ, feminin → der.",
+    ],
+    [
+      "Die Eltern, den ich die Einladung geschickt habe, kommen alle.",
+      "Die Eltern, denen ich die Einladung geschickt habe, kommen alle.",
+      "Dativ Plural: denen.",
+    ],
+    [
+      "Das ist die Firma, die ich bei arbeite.",
+      "Das ist die Firma, bei der ich arbeite.",
+      "Die Präposition steht vor dem Relativpronomen: bei der.",
+    ],
+    [
+      "Der Kurs, der hat um neun Uhr angefangen, war gut.",
+      "Der Kurs, der um neun Uhr angefangen hat, war gut.",
+      "Im Relativsatz steht das Verb am Ende.",
+    ],
+    [
+      "Das Formular, die ich ausfüllen muss, ist sehr lang.",
+      "Das Formular, das ich ausfüllen muss, ist sehr lang.",
+      "das Formular ist neutral → das.",
+    ],
+  ],
+  items: [
+    mc(
+      "Das ist der Kollege, ___ mir immer hilft.",
+      ["der", "den", "dem"],
+      "Wer hilft mir? Er → Nominativ: der.",
+    ),
+    mc(
+      "Das ist der Kollege, ___ ich jeden Tag sehe.",
+      ["den", "der", "dem"],
+      "Ich sehe ihn → Akkusativ: den.",
+    ),
+    mc(
+      "Das ist der Kollege, ___ ich oft helfe.",
+      ["dem", "den", "der"],
+      "Ich helfe ihm → Dativ: dem.",
+    ),
+    gap(
+      "Die Wohnung, ___ wir gefunden haben, hat drei Zimmer.",
+      ["die"],
+      "die Wohnung. Wir haben sie gefunden → Akkusativ feminin: die.",
+    ),
+    gap(
+      "Die Ärztin, ___ ich meine Probleme erklärt habe, war sehr freundlich.",
+      ["der"],
+      "Ich habe ihr die Probleme erklärt → Dativ feminin: der.",
+    ),
+    fix(
+      "Das ist das Formular, das du unterschreiben musst.",
+      "Das ist das Formular, die du unterschreiben musst.",
+      "das Formular ist neutral → das.",
+    ),
+    mc(
+      "Das sind die Nachbarn, ___ wir beim Umzug geholfen haben.",
+      ["denen", "den", "die"],
+      "helfen + Dativ, Plural → denen.",
+    ),
+    order(
+      "Der Bus, | den | ich | jeden Tag nehme, | ist heute ausgefallen.",
+      "Ich nehme ihn → den. Im Relativsatz steht das Verb am Ende.",
+    ),
+    gap(
+      "Das ist die Firma, bei ___ ich ein Praktikum mache.",
+      ["der"],
+      "bei + Dativ, die Firma → bei der.",
+    ),
+    mc(
+      "Der Kurs, ___ ich mich angemeldet habe, beginnt im März.",
+      ["für den", "für dem", "den"],
+      "sich anmelden für + Akkusativ: für den Kurs → für den.",
+    ),
+    fix(
+      "Die Frau, der ich das Paket gegeben habe, wohnt im dritten Stock.",
+      "Die Frau, die ich das Paket gegeben habe, wohnt im dritten Stock.",
+      "Wem habe ich das Paket gegeben? → Dativ feminin: der.",
+    ),
+    gap(
+      "Das Kind, ___ dort spielt, ist mein Neffe.",
+      ["das"],
+      "das Kind. Wer spielt? → Nominativ neutral: das.",
+    ),
+    order(
+      "Das ist | die Lehrerin, | mit | der | ich | oft | spreche.",
+      "mit + Dativ: mit der. Das Verb steht am Ende.",
+    ),
+    mc(
+      "Die Stadt, ___ ich wohne, ist klein.",
+      ["in der", "in die", "die"],
+      "Wo wohne ich? in + Dativ: in der Stadt → in der.",
+    ),
+    gap(
+      "Die Kunden, mit ___ ich telefoniert habe, waren zufrieden.",
+      ["denen"],
+      "mit + Dativ Plural: mit denen.",
+    ),
+    fix(
+      "Der Termin, den ich verschoben habe, ist jetzt am Freitag.",
+      "Der Termin, den ich habe verschoben, ist jetzt am Freitag.",
+      "Im Relativsatz steht das Hilfsverb ganz am Ende: verschoben habe.",
+    ),
+    mc(
+      "Das Jobcenter hat mir einen Brief geschickt, ___ ich schnell beantworten muss.",
+      ["den", "der", "dem"],
+      "der Brief. Ich muss ihn beantworten → Akkusativ: den.",
+    ),
+    gap(
+      "Wie heißt der Arzt, zu ___ du immer gehst?",
+      ["dem"],
+      "zu + Dativ, der Arzt → zu dem.",
+    ),
+  ],
+});
+
 T({
   id: "b1-konjunktiv2",
   level: "B1",

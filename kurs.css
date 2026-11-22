@@ -113,3 +113,12 @@
   .ku-res-actions .dm-btn,.ku-weiter{width:auto}
   .ku-weiter{justify-self:start}
 }
+
+/* secondary link course -> all materials of the level, and the "saved" confirmation after a finished step */
+.ku-allmat{margin:10px 0 4px}
+.ku-allmat .dm-btn{min-height:44px}
+.ku-toast{position:fixed;left:16px;right:16px;margin:0 auto;width:fit-content;max-width:520px;bottom:calc(76px + env(safe-area-inset-bottom,0px));transform:translateY(24px);opacity:0;pointer-events:none;z-index:1200;transition:opacity .25s,transform .25s}
+.ku-toast.is-on{opacity:1;transform:none;pointer-events:auto}
+.ku-toast a{display:grid;gap:2px;min-height:44px;align-content:center;padding:10px 16px;border-radius:14px;background:#1b2a4a;color:#fff;text-decoration:none;font-weight:700;font-size:15px;line-height:1.3;box-shadow:0 8px 24px rgba(0,0,0,.25)}
+.ku-toast small{font-weight:400;font-size:13px;opacity:.9}
+@media (prefers-reduced-motion:reduce){.ku-toast{transition:none}}

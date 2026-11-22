@@ -2,7 +2,7 @@
 (function () {
   "use strict";
   var URL_ = "https://deutsch-mit-dennis.de/";
-  var TEXT = "Kostenlos Deutsch lernen von A1 bis B2 \u2013 mit \u00dcbungen, H\u00f6rtexten und Probepr\u00fcfungen. Schau mal:";
+  var TEXT = "Kostenlos Deutsch lernen von A0 bis B2 \u2013 mit \u00dcbungen, H\u00f6rtexten und Probepr\u00fcfungen. Schau mal:";
   var btn = document.getElementById("share3d"), ok = document.getElementById("share3d-ok");
   if (!btn) return;
   function say(t) { if (ok) { ok.textContent = t; setTimeout(function () { ok.textContent = ""; }, 4000); } }

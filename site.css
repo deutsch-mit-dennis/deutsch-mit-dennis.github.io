@@ -739,3 +739,6 @@ body:has(header.dm-header.menu-open) .dm-tour:not(.dm-tour-open){visibility:hidd
 @media (max-width:430px){header.dm-header .ui-lang-btn b{display:none}header.dm-header .ui-lang-btn{min-width:36px;padding:0 2px}}
 @media (max-width:400px){html body header.dm-header{column-gap:3px!important}header.dm-header .dm-hshare,header.dm-header .dm-bell,header.dm-header #pl-menu{flex:0 0 38px!important;width:38px!important;min-width:38px!important;height:38px!important}header.dm-header .dm-3d-switch{min-width:40px;padding:0 4px}}
 @media (max-width:350px){header.dm-header{gap:4px!important;padding-left:8px!important;padding-right:8px!important}header.dm-header .logo{font-size:12.5px!important;margin-right:0!important}header.dm-header .ui-lang-btn b{display:none}header.dm-header .ui-lang-btn{min-width:36px;padding:0 2px}}
+
+/* desktop 1181-1440: tighter header so the bell never overflows */
+@media (max-width:1440px) and (min-width:1181px){header.dm-header{gap:8px}header.dm-header nav{gap:2px;min-width:0}header.dm-header nav a{padding:10px 7px;font-size:15px}header.dm-header .dm-3d-switch{padding:0 8px}header.dm-header .logo{font-size:20px}}

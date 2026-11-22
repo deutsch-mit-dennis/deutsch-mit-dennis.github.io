@@ -203,7 +203,7 @@ def page(path, title, desc, body, crumbs, og="start", extra_ld=None, stand=None)
 <main><nav class="crumbs" aria-label="Brotkrumen">{nav}</nav>
 {body}
 </main>
-<footer><a href="/">Startseite</a><a href="/kurs/">Kurse A0–B2</a><a href="/grammatik/">Grammatik</a><a href="/lektionen/">Lektionen</a><a href="/pruefung/">Prüfung</a><a href="/material/">Arbeitsblätter</a><a href="/impressum/">Impressum</a><a href="/datenschutz/">Datenschutz</a><br>Kostenlos Deutsch lernen von A1 bis B2 – von Dennis, DaZ-Lehrer und lizenzierter Prüfer.</footer>
+<footer><a href="/">Startseite</a><a href="/kurs/">Kurse A0–B2</a><a href="/grammatik/">Grammatik</a><a href="/lektionen/">Lektionen</a><a href="/pruefung/">Prüfung</a><a href="/material/">Arbeitsblätter</a><a href="/impressum/">Impressum</a><a href="/datenschutz/">Datenschutz</a><br>Kostenlos Deutsch lernen von A0 bis B2 (Lieder bis C1) – von Dennis, DaZ-Lehrer und lizenzierter Prüfer.</footer>
 </body></html>
 """
     f = os.path.join(R, path, "index.html")
@@ -478,7 +478,17 @@ STATIC = {
 }
 
 
+def is_external(href):
+    return bool(re.match(r"(?i)^(https?:)?//|^(mailto|tel):", href))
+
+
+def ext_attr(href):
+    return ' target="_blank" rel="noopener noreferrer"' if is_external(href) and not href.lower().startswith(("mailto:", "tel:")) else ""
+
+
 def static_href(href):
+    if is_external(href):
+        return href  # external link: keep as is (no leading "/")
     if href.startswith("/"):
         return href  # already a real address (e.g. /dtz-schreiben/)
     r = href.lstrip("#").split("/")
@@ -496,7 +506,7 @@ for lv, k in K.items():
         lis = ""
         for s in u["steps"]:
             n += 1
-            lis += f'<li value="{n}"><a href="{e(static_href(s["href"]))}">{e(s["t"])}</a> <span class="muted">· {e(s.get("kind", ""))}{f" · {s['min']} Min." if s.get("min") else ""}</span></li>'
+            lis += f'<li value="{n}"><a href="{e(static_href(s["href"]))}"{ext_attr(s["href"])}>{e(s["t"])}</a> <span class="muted">· {e(s.get("kind", ""))}{f" · {s['min']} Min." if s.get("min") else ""}</span></li>'
         units += f"<h2>{e(u['title'])}</h2><ol>{lis}</ol>"
     others = " · ".join(
         f'<a href="/kurs/{o.lower()}/">Kurs {o}</a>' for o in K if o != lv
@@ -1080,9 +1090,9 @@ def parse_level(h):
 
 def level_li(href, t, sub):
     to = static_href(href)
-    if to.endswith(".pdf") and not pdf_ok(to.lstrip("/")):
+    if not is_external(to) and to.endswith(".pdf") and not pdf_ok(to.lstrip("/")):
         return ""
-    return f'<li><a href="{e(to)}"><b>{e(t)}</b>{f"<small>{e(sub)}</small>" if sub else ""}</a></li>'
+    return f'<li><a href="{e(to)}"{ext_attr(to)}><b>{e(t)}</b>{f"<small>{e(sub)}</small>" if sub else ""}</a></li>'
 
 
 for lv, h in LEVELS.items():
