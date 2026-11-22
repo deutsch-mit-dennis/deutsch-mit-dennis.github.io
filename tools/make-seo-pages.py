@@ -7,6 +7,9 @@ Run in the repo folder: python3 tools/make-seo-pages.py
 (make-share-pages.py calls it at the end; the last step is tools/build-sitemap.js, which writes sitemap.xml.)"""
 
 import json, os, re, subprocess, html, datetime
+import sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from answer_links import answer_html  # links to /antworten/… (only pages that exist)
 
 R = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SITE = "https://deutsch-mit-dennis.de"
@@ -159,45 +162,48 @@ def answer_text(q):
     return right + (" " + " ".join(why.split()) if why else "")
 
 
-def qa_page(path, q, name):
-    """schema.org QAPage for a single question page."""
-    url = f"{SITE}/{path}/"
+LID_SOURCE = {
+    "@type": "CreativeWork",
+    "name": "Gesamtfragenkatalog zum Test „Leben in Deutschland“ und zum Einbürgerungstest",
+    "url": "https://www.bamf.de/SharedDocs/Anlagen/DE/Integration/Einbuergerung/gesamtfragenkatalog-lebenindeutschland.pdf?__blob=publicationFile",
+    "publisher": {"@type": "GovernmentOrganization", "name": "Bundesamt für Migration und Flüchtlinge (BAMF)"},
+}
+
+
+def lid_question(q):
+    """schema.org Question (multiple choice) with the right answer and the three wrong ones."""
     return {
-        "@context": "https://schema.org",
-        "@type": "QAPage",
-        "name": name,
-        "url": url,
-        "inLanguage": "de",
-        "dateModified": MODIFIED,
-        "isAccessibleForFree": True,
-        "author": PERSON,
-        "mainEntity": {
-            "@type": "Question",
-            "name": " ".join(q["q"].split()),
-            "text": " ".join(q["q"].split()),
-            "answerCount": 1,
-            "dateModified": MODIFIED,
-            "author": PERSON,
-            "acceptedAnswer": {"@type": "Answer", "text": answer_text(q), "url": url, "dateModified": MODIFIED, "author": PERSON},
-        },
+        "@type": "Question",
+        "eduQuestionType": "Multiple choice",
+        "name": " ".join(q["q"].split()),
+        "text": " ".join(q["q"].split()),
+        "acceptedAnswer": {"@type": "Answer", "text": answer_text(q)},
+        "suggestedAnswer": [{"@type": "Answer", "text": " ".join(a.split())} for i, a in enumerate(q["a"]) if i != q["s"]],
     }
 
 
-def faq_page(path, qs, name):
-    """schema.org FAQPage for a question group page."""
-    return {
+def lid_quiz(path, qs, name, desc=None):
+    """schema.org Quiz for LiD question pages (one question or a group). The questions and answers come from the
+    publisher (BAMF catalogue + our explanation), so QAPage (user-generated forums) and FAQPage (real FAQs) do not fit."""
+    b = {
         "@context": "https://schema.org",
-        "@type": "FAQPage",
+        "@type": "Quiz",
         "name": name,
         "url": f"{SITE}/{path}/",
         "inLanguage": "de",
         "dateModified": MODIFIED,
+        "educationalLevel": LID_LEVEL,
+        "learningResourceType": "Quiz",
+        "isAccessibleForFree": True,
+        "about": {"@type": "Thing", "name": "Test „Leben in Deutschland“ und Einbürgerungstest"},
+        "isBasedOn": LID_SOURCE,
+        "provider": {"@type": "EducationalOrganization", "name": "Deutsch mit Dennis", "url": SITE + "/"},
         "author": PERSON,
-        "mainEntity": [
-            {"@type": "Question", "name": " ".join(q["q"].split()), "acceptedAnswer": {"@type": "Answer", "text": answer_text(q)}}
-            for q in qs
-        ],
+        "hasPart": [lid_question(q) for q in qs],
     }
+    if desc:
+        b["description"] = desc
+    return b
 
 
 LID_LEVEL = "Orientierungskurs und Einbürgerungstest"
@@ -407,6 +413,7 @@ for slug, name, qs in groups:
         + "".join(qhtml(q) for q in qs)
         + pager(slug)
         + '<p><a href="/lid/fragen/">Alle Fragengruppen im Überblick</a></p>'
+        + answer_html("lid")
         + quelle
         + '<p class="small">Erklärungen („Warum?“): Deutsch mit Dennis – nicht vom BAMF.</p>'
     )
@@ -423,7 +430,7 @@ for slug, name, qs in groups:
             body,
             [("Leben in Deutschland", "lid"), (name, f"lid/{slug}")],
             "lid",
-            [learning_resource(f"lid/{slug}", ttl, desc[:300], LID_LEVEL, "Quiz"), faq_page(f"lid/{slug}", qs, ttl)],
+            lid_quiz(f"lid/{slug}", qs, ttl, desc[:300]),  # Quiz is a LearningResource: one block per page
         )
     )
 
@@ -480,7 +487,7 @@ for i, q in enumerate(singles):
             body,
             [("Leben in Deutschland", "lid"), (group_name, f"lid/{group_slug}"), (f"Frage {nr}", f"lid/{slug}")],
             "lid",
-            qa_page(f"lid/{slug}", q, ttl),  # QAPage only: no competing LearningResource for the same question
+            lid_quiz(f"lid/{slug}", [q], ttl),  # Quiz, not QAPage: the answer comes from the publisher, not from users
         )
     )
 
@@ -493,6 +500,7 @@ body = (
         for slug, name, qs in groups
     )
     + "</ul>"
+    + answer_html("lid")
     + quelle
 )
 LID_ALL_DESC = "Leben in Deutschland Test: alle 300 allgemeinen Fragen und die Fragen aller 16 Bundesländer mit richtigen Antworten und kurzer Erklärung. Kostenlos üben."
@@ -529,7 +537,7 @@ for s in sims:
 <h2>Aufbau der Simulation</h2><table class="time"><tr><th>Prüfungsteil</th><th>Zeit</th></tr>{rows}{f"<tr><td><b>Gesamt</b></td><td>{total} Min.</td></tr>" if total else ""}</table>
 <h2>So funktioniert es</h2><ul class="list"><li>Du arbeitest mit echter Zeitvorgabe – wie in der Prüfung.</li><li>Am Ende siehst du deine Punkte, die Bestehensregel und die Lösungen.</li><li>Keine Anmeldung nötig, am Handy und am Computer.</li></ul>
 {NOTE}
-<h2>Weitere Simulationen</h2><ul class="list">{others}</ul>"""
+{answer_html(s["id"])}<h2>Weitere Simulationen</h2><ul class="list">{others}</ul>"""
     desc = (
         f"Kostenlose Prüfungssimulation {s['title']} (Niveau {s['level']}) mit Zeitvorgabe, Punkten und Lösungen: "
         + ", ".join(x["title"] for x in s["sections"])

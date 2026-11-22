@@ -280,7 +280,7 @@
     <section class="dm-hero">
       <figure class="dm-hero-photo"><img src="assets/dennis.webp" alt="Dennis, dein Deutschlehrer" width="626" height="1004" fetchpriority="high"></figure>
       <div class="dm-hero-copy">
-        <p class="dm-hero-title">Deutsch lernen mit Dennis</p>
+        <h1 class="dm-hero-title">Deutsch lernen mit Dennis</h1>
         <p class="dm-promise" data-i18n="free" data-i18n-dir>Kostenlos · A0 bis B2 · ohne Anmeldung</p>
         ${levelPicker()}
         <p class="dm-hand">Hallo! Ich bin Dennis, dein Deutschlehrer und zugelassener Prüfer. Tippe auf dein Niveau – dann startet dein Kurs, Schritt für Schritt.</p>
@@ -340,7 +340,12 @@
     ${pkgTeaser()}
         <p class="dm-social" aria-label="Dennis in den sozialen Netzwerken"><a class="dm-soc dm-soc-yt" href="https://www.youtube.com/@deutsch-mit-Dennis" target="_blank" rel="noopener noreferrer" aria-label="YouTube – Kanal öffnen"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="currentColor"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2C.5 9.1.5 12 .5 12s0 2.9.5 4.8a3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1c.5-1.9.5-4.8.5-4.8s0-2.9-.5-4.8zM9.7 15.5v-7l6 3.5-6 3.5z"/></svg><span>YouTube</span></a><a class="dm-soc dm-soc-ig" href="https://www.instagram.com/deutsch_mit_dennis/" target="_blank" rel="noopener noreferrer" aria-label="Instagram – Kanal öffnen"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg><span>Instagram</span></a><a class="dm-soc dm-soc-tt" href="https://www.tiktok.com/@deutsch_mit_dennis" target="_blank" rel="noopener noreferrer" aria-label="TikTok – Kanal öffnen"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="currentColor"><path d="M16.6 2h-3.2v13.2a2.8 2.8 0 1 1-2-2.7V9.2a6 6 0 1 0 5.2 5.9V8.6a7.4 7.4 0 0 0 4.3 1.4V6.8a4.3 4.3 0 0 1-4.3-4.8z"/></svg><span>TikTok</span></a></p>
     </details>`, 'dm-home');
-    if (introEl) mainEl.querySelector('.dm-home')?.append(introEl);
+    if (introEl) {
+      // the hero title is the page's H1 (first heading in DOM order); the intro text below keeps its look but becomes an H2
+      const ih = introEl.querySelector('h1');
+      if (ih) { const h2 = document.createElement('h2'); h2.id = ih.id; h2.className = 'dm-intro-title'; h2.innerHTML = ih.innerHTML; ih.replaceWith(h2); }
+      mainEl.querySelector('.dm-home')?.append(introEl);
+    }
     wireLevel();
     const more = $('#dm-more'); if (more) more.ontoggle = () => { mem.moreOpen = more.open; save(); };
     (window.DMNews ? DMNews.items() : fetch('neu.json?v=' + Math.floor(Date.now() / 36e5), { cache: 'no-cache' }).then(r => r.json()).then(j => j.items || [])).then(items => {
@@ -1711,7 +1716,7 @@
   /* The navigation and footer of index.html use real addresses (/pruefung/, /lieder/ …) so that Google can follow them.
      Inside the app a click is caught and routed as before (#pruefung …) – no page reload. Ctrl/Cmd/middle click and
      "open in new tab" still use the real address. Pages that are not part of the app (dtz-schreiben, impressum …) load normally. */
-  const SECTION_LINK = /^\/(pruefung|simulation|lid|lieder|ueben|hoeren|lesen|spiele|bild|challenge|lernpakete|ueber-mich|vorbereitung|kurs|grammatik|pruefungsinfo|laute|material|b2-30-tage|b2-woerter|sprachbausteine|telc-b2-sprechen|b1-30-tage|b1-woerter|a1-woerter|dtz-woerter|dtz-30-tage|lernpakete\/[\w-]+|vorbereitung\/[\w-]+|niveau\/a[0-2]|niveau\/b[12]|material\/[ab][12]|ueben\/sprechen\/b2)\/$/;
+  const SECTION_LINK = /^\/(pruefung|simulation|lid|lieder|ueben|hoeren|lesen|spiele|bild|challenge|lernpakete|ueber-mich|vorbereitung|kurs|grammatik|pruefungsinfo|laute|material|b2-30-tage|b2-woerter|sprachbausteine|telc-b2-sprechen|b1-30-tage|b1-woerter|a1-woerter|dtz-woerter|dtz-30-tage|kahoot|videos|witz|mikula|lernpakete\/[\w-]+|vorbereitung\/[\w-]+|niveau\/a[0-2]|niveau\/b[12]|material\/[ab][12]|ueben\/sprechen\/b2)\/$/;
   /* readable pages use lower-case levels (/niveau/b2/), the app routes use upper case (#niveau/B2, #material/alle/B2) */
   const appRoute = r => r.replace(/^(niveau|ueben\/sprechen)\/(\w\d)$/, (_, a, l) => a + '/' + l.toUpperCase()).replace(/^material\/(\w\d)$/, (_, l) => 'material/alle/' + l.toUpperCase());
   document.addEventListener('click', e => {

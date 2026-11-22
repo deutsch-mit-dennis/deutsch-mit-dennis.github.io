@@ -94,7 +94,7 @@ window.DMLazy = (() => {
     "lid-trainer.js?v=20261118c"
   ],
   "witz": [
-    "witz.js?v=20261107e"
+    "witz.js?v=20261122s"
   ],
   "mikula": [
     "mikula.js?v=20261107a"

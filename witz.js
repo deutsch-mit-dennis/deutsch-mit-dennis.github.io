@@ -497,7 +497,7 @@
     const b = e.target.closest("[data-wz-share]");
     if (!b) return;
     const j = jokeFor(+b.dataset.wzShare.slice(1));
-    const text = `😄 Witz des Tages:\n${j.t}\n\nMehr auf https://deutsch-mit-dennis.de/#witz`;
+    const text = `😄 Witz des Tages:\n${j.t}\n\nMehr auf https://deutsch-mit-dennis.de/witz/`;
     try {
       if (navigator.share) {
         await navigator.share({ title: "Witz des Tages", text });

@@ -16,6 +16,9 @@ import os
 import re
 import subprocess
 import datetime
+import sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from answer_links import answer_html  # links to /antworten/… (only pages that exist)
 
 R = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Official exam figures (GEO: verifiable statistics with source). Every value checked in the source PDF, see the file header.
@@ -832,7 +835,7 @@ if FK:
 <p><a class="btn" href="/simulation/{e(x["sim"])}/">▶ Kostenlose Probeprüfung {e(x["short"])}</a> <a class="btn ghost" href="/#pruefungsinfo/{e(fid)}">In der App öffnen</a></p>
 {f'<p><a href="/vorbereitung/{e(fid)}/">Aufbau und Strategien für jeden Teil: Vorbereitung {e(x["short"])}</a></p>' if fid in (D.get("prep") or ()) else ""}
 {faq_html}
-<p class="muted">Alle Angaben ohne Gewähr. Unabhängiges Lernangebot, kein Angebot von g.a.s.t., telc oder BAMF. Keine Rechtsberatung.</p>
+{answer_html(fid)}<p class="muted">Alle Angaben ohne Gewähr. Unabhängiges Lernangebot, kein Angebot von g.a.s.t., telc oder BAMF. Keine Rechtsberatung.</p>
 <p>Weitere Prüfungen: {others}</p>"""
         title = f"{x['short']}: Aufbau, Dauer, Punkte und Anmeldung"
         desc = f"{x['lead']} Teile, Dauer, Punkte, Bestehen, Anmeldung und Kosten – mit Quelle, Stand {STAND}."
@@ -898,7 +901,7 @@ if FK:
     cards = "".join(f'<li><a href="/pruefungsinfo/{fid}/"><b>{e(x["title"])}</b><small>{e(x["lead"])}</small></a></li>' for fid, x in F)
     urls.append(page("pruefungsinfo", "Deutschprüfungen: Aufbau, Punkte, Anmeldung",
                      "DTZ, telc B1/B2, DTB B1/B2 und Leben in Deutschland: Aufbau, Dauer, Punkte, Bestehen, Anmeldung und Kosten – mit Quelle und Stand.",
-                     f'<h1>Deutschprüfungen im Überblick</h1><p class="lead">Aufbau, Dauer, Punkte, Bestehensregeln und Anmeldung für sechs Prüfungen. Jede Angabe hat eine Quelle und ein Datum (Stand: {e(STAND)}).</p><ul class="grid">{cards}</ul>{cmp_html}<p><a class="btn" href="/simulation/">Zu den Probeprüfungen</a></p>',
+                     f'<h1>Deutschprüfungen im Überblick</h1><p class="lead">Aufbau, Dauer, Punkte, Bestehensregeln und Anmeldung für sechs Prüfungen. Jede Angabe hat eine Quelle und ein Datum (Stand: {e(STAND)}).</p><ul class="grid">{cards}</ul>{answer_html("pruefung", "Häufige Fragen kurz erklärt")}{cmp_html}<p><a class="btn" href="/simulation/">Zu den Probeprüfungen</a></p>',
                      [("Prüfungsinfos", "pruefungsinfo")], "pruefung", stand=STAND))
 
 # ---------------- worksheets /material/ + /material/<niveau>/ (DM.materials, site-data.js) ----------------
