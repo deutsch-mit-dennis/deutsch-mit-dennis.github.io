@@ -23,7 +23,7 @@ import urllib.request
 R = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 HOST = "deutsch-mit-dennis.de"
 SITE = f"https://{HOST}"
-ENDPOINT = "https://api.indexnow.org/indexnow"
+ENDPOINT = "https://www.bing.com/indexnow"  # shares with all IndexNow engines; api.indexnow.org gave 403 for the new key (22.11.2026)
 
 
 def find_key():
