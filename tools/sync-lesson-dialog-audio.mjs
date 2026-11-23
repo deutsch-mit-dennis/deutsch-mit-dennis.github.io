@@ -2,8 +2,8 @@
 // to tools/tts/manifest.json. Keys: lek-<lesson>-d<n> – the same keys platform.js plays.
 // Voices follow the speaker (female f2/f3, male m1/m2). Numbers are written out in "say" (display text stays).
 // A changed text replaces the entry, so audio.yml records it again. Run: node tools/sync-lesson-dialog-audio.mjs
-// HOLD (Dennis, 22.11.2026): these lines are to be voiced locally with VoiceStudio, not by the cloud chain.
-// Do not run this before the VoiceStudio takes exist (engine "voicestudio"), otherwise audio.yml voices them with Gemini.
+// Voiced locally with VoiceStudio (Dennis, 22.11.2026), not by the cloud chain: index entries have engine "voicestudio".
+// New or changed lines: run this, then tools/tts/voicestudio/ (README there) BEFORE pushing – otherwise audio.yml voices them with Gemini.
 import { readFile, writeFile } from 'node:fs/promises';
 import vm from 'node:vm';
 const root = new URL('../', import.meta.url);

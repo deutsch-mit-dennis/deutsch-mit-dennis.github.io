@@ -37423,6 +37423,1231 @@
      "text": "festlich. Der Tisch ist festlich gedeckt."
     }
    ]
+  },
+  {
+   "key": "lek-ankommen-d0",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Hallo, ich heiße Samira. Wie heißt du?"
+    }
+   ]
+  },
+  {
+   "key": "lek-ankommen-d1",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Ich heiße Pavel. Woher kommst du?"
+    }
+   ]
+  },
+  {
+   "key": "lek-ankommen-d2",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Ich komme aus Syrien. Jetzt wohne ich in Hagen. Und du?"
+    }
+   ]
+  },
+  {
+   "key": "lek-ankommen-d3",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Ich komme aus der Ukraine und wohne in Essen."
+    }
+   ]
+  },
+  {
+   "key": "lek-ankommen-d4",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Welche Sprachen sprichst du?"
+    }
+   ]
+  },
+  {
+   "key": "lek-ankommen-d5",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Ich spreche Ukrainisch und ein bisschen Deutsch."
+    }
+   ]
+  },
+  {
+   "key": "lek-einkaufen-d0",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Guten Morgen, ich möchte ein Brot."
+    }
+   ]
+  },
+  {
+   "key": "lek-einkaufen-d1",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Gern. Das kostet 2,80 Euro.",
+     "say": "Gern. Das kostet zwei Euro achtzig."
+    }
+   ]
+  },
+  {
+   "key": "lek-einkaufen-d2",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Und ein Kilo Äpfel, bitte. Was kostet das?"
+    }
+   ]
+  },
+  {
+   "key": "lek-einkaufen-d3",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "2,50 Euro. Möchten Sie eine Tüte?",
+     "say": "Zwei Euro fünfzig. Möchten Sie eine Tüte?"
+    }
+   ]
+  },
+  {
+   "key": "lek-einkaufen-d4",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Nein, danke. Ich habe eine Tasche."
+    }
+   ]
+  },
+  {
+   "key": "lek-einkaufen-d5",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Dann sind es zusammen 5,30 Euro.",
+     "say": "Dann sind es zusammen fünf Euro dreißig."
+    }
+   ]
+  },
+  {
+   "key": "lek-termine-d0",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Guten Tag, Praxis Weber."
+    }
+   ]
+  },
+  {
+   "key": "lek-termine-d1",
+   "segments": [
+    {
+     "voice": "f3",
+     "text": "Ich möchte einen Termin, bitte."
+    }
+   ]
+  },
+  {
+   "key": "lek-termine-d2",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Haben Sie am Donnerstag um halb vier Zeit?"
+    }
+   ]
+  },
+  {
+   "key": "lek-termine-d3",
+   "segments": [
+    {
+     "voice": "f3",
+     "text": "Um 15:30 Uhr kann ich leider nicht. Geht es später?",
+     "say": "Um fünfzehn Uhr dreißig kann ich leider nicht. Geht es später?"
+    }
+   ]
+  },
+  {
+   "key": "lek-termine-d4",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Ja, um 16 Uhr ist noch ein Termin frei.",
+     "say": "Ja, um sechzehn Uhr ist noch ein Termin frei."
+    }
+   ]
+  },
+  {
+   "key": "lek-termine-d5",
+   "segments": [
+    {
+     "voice": "f3",
+     "text": "Das passt. Donnerstag um 16 Uhr. Vielen Dank.",
+     "say": "Das passt. Donnerstag um sechzehn Uhr. Vielen Dank."
+    }
+   ]
+  },
+  {
+   "key": "lek-wohnen-d0",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Ich habe eine neue Wohnung."
+    }
+   ]
+  },
+  {
+   "key": "lek-wohnen-d1",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Wie viele Zimmer hat sie?"
+    }
+   ]
+  },
+  {
+   "key": "lek-wohnen-d2",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Zwei Zimmer, eine Küche und ein Bad."
+    }
+   ]
+  },
+  {
+   "key": "lek-wohnen-d3",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Hat sie einen Balkon?"
+    }
+   ]
+  },
+  {
+   "key": "lek-wohnen-d4",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Nein, sie hat keinen Balkon. Aber die Küche ist hell."
+    }
+   ]
+  },
+  {
+   "key": "lek-wohnen-d5",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Das klingt schön. Ist die Wohnung teuer?"
+    }
+   ]
+  },
+  {
+   "key": "lek-wohnen-d6",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Sie kostet 620 Euro im Monat.",
+     "say": "Sie kostet sechshundertzwanzig Euro im Monat."
+    }
+   ]
+  },
+  {
+   "key": "lek-alltag-d0",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Was hast du gestern gemacht?"
+    }
+   ]
+  },
+  {
+   "key": "lek-alltag-d1",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Ich habe bis 16 Uhr gearbeitet.",
+     "say": "Ich habe bis sechzehn Uhr gearbeitet."
+    }
+   ]
+  },
+  {
+   "key": "lek-alltag-d2",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Und danach?"
+    }
+   ]
+  },
+  {
+   "key": "lek-alltag-d3",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Danach bin ich mit dem Bus nach Hause gefahren."
+    }
+   ]
+  },
+  {
+   "key": "lek-alltag-d4",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Hast du am Abend noch etwas gemacht?"
+    }
+   ]
+  },
+  {
+   "key": "lek-alltag-d5",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Ja, ich habe gekocht und meine Schwester angerufen."
+    }
+   ]
+  },
+  {
+   "key": "lek-gesundheit-d0",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Guten Morgen. Wie kann ich Ihnen helfen?"
+    }
+   ]
+  },
+  {
+   "key": "lek-gesundheit-d1",
+   "segments": [
+    {
+     "voice": "f3",
+     "text": "Ich habe seit zwei Tagen Halsschmerzen."
+    }
+   ]
+  },
+  {
+   "key": "lek-gesundheit-d2",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Können Sie heute um 11 Uhr kommen?",
+     "say": "Können Sie heute um elf Uhr kommen?"
+    }
+   ]
+  },
+  {
+   "key": "lek-gesundheit-d3",
+   "segments": [
+    {
+     "voice": "f3",
+     "text": "Ja, das geht. Muss ich etwas mitbringen?"
+    }
+   ]
+  },
+  {
+   "key": "lek-gesundheit-d4",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Bringen Sie bitte Ihre Versichertenkarte mit."
+    }
+   ]
+  },
+  {
+   "key": "lek-gesundheit-d5",
+   "segments": [
+    {
+     "voice": "f3",
+     "text": "Danke. Ich komme um 11 Uhr.",
+     "say": "Danke. Ich komme um elf Uhr."
+    }
+   ]
+  },
+  {
+   "key": "lek-unterwegs-d0",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Entschuldigung, hält der Bus 542 heute hier?",
+     "say": "Entschuldigung, hält der Bus fünfhundertzweiundvierzig heute hier?"
+    }
+   ]
+  },
+  {
+   "key": "lek-unterwegs-d1",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Nein, wegen Bauarbeiten hält er an der Poststraße."
+    }
+   ]
+  },
+  {
+   "key": "lek-unterwegs-d2",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Wie komme ich dorthin?"
+    }
+   ]
+  },
+  {
+   "key": "lek-unterwegs-d3",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Gehen Sie geradeaus und dann nach links. Die Haltestelle ist neben der Apotheke."
+    }
+   ]
+  },
+  {
+   "key": "lek-unterwegs-d4",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Fährt der Bus zur gleichen Zeit?"
+    }
+   ]
+  },
+  {
+   "key": "lek-unterwegs-d5",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Ja, die Abfahrtszeiten bleiben gleich."
+    }
+   ]
+  },
+  {
+   "key": "lek-schule-d0",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Guten Tag, Frau Weber. Meine Tochter fehlt am Freitag, weil sie krank ist."
+    }
+   ]
+  },
+  {
+   "key": "lek-schule-d1",
+   "segments": [
+    {
+     "voice": "f3",
+     "text": "Danke für die Information. Dann kann sie nicht am Ausflug teilnehmen."
+    }
+   ]
+  },
+  {
+   "key": "lek-schule-d2",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Könnten Sie uns bitte die Aufgaben schicken?"
+    }
+   ]
+  },
+  {
+   "key": "lek-schule-d3",
+   "segments": [
+    {
+     "voice": "f3",
+     "text": "Ja, ich schicke sie morgen per E-Mail."
+    }
+   ]
+  },
+  {
+   "key": "lek-schule-d4",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Vielen Dank. Wann kommt die Klasse vom Ausflug zurück?"
+    }
+   ]
+  },
+  {
+   "key": "lek-schule-d5",
+   "segments": [
+    {
+     "voice": "f3",
+     "text": "Um 13 Uhr.",
+     "say": "Um dreizehn Uhr."
+    }
+   ]
+  },
+  {
+   "key": "lek-reklamation-d0",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Der Drucker, den ich letzte Woche bestellt habe, funktioniert nicht."
+    }
+   ]
+  },
+  {
+   "key": "lek-reklamation-d1",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Was genau passiert?"
+    }
+   ]
+  },
+  {
+   "key": "lek-reklamation-d2",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Er lässt sich einschalten, aber er druckt keine Seiten."
+    }
+   ]
+  },
+  {
+   "key": "lek-reklamation-d3",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Möchten Sie einen Austausch?"
+    }
+   ]
+  },
+  {
+   "key": "lek-reklamation-d4",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Ja, bitte. Können Sie mir ein Rücksendeetikett schicken?"
+    }
+   ]
+  },
+  {
+   "key": "lek-reklamation-d5",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Ja, Sie erhalten es heute per E-Mail."
+    }
+   ]
+  },
+  {
+   "key": "lek-meinung-d0",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Ich fahre gern mit dem Bus, weil ich keinen Parkplatz suchen muss."
+    }
+   ]
+  },
+  {
+   "key": "lek-meinung-d1",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Das verstehe ich. Allerdings dauert meine Fahrt mit dem Bus lange."
+    }
+   ]
+  },
+  {
+   "key": "lek-meinung-d2",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Obwohl die Fahrt länger dauert, kann ich unterwegs lesen."
+    }
+   ]
+  },
+  {
+   "key": "lek-meinung-d3",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Das ist ein Vorteil. Trotzdem brauche ich das Auto oft für die Arbeit."
+    }
+   ]
+  },
+  {
+   "key": "lek-meinung-d4",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Vielleicht kannst du an freien Tagen den Bus nehmen."
+    }
+   ]
+  },
+  {
+   "key": "lek-meinung-d5",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Ja, das könnte ich ausprobieren."
+    }
+   ]
+  },
+  {
+   "key": "lek-arbeit-d0",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Welche Arbeit suchen Sie?"
+    }
+   ]
+  },
+  {
+   "key": "lek-arbeit-d1",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Ich möchte im Verkauf arbeiten. Ich habe drei Jahre Erfahrung."
+    }
+   ]
+  },
+  {
+   "key": "lek-arbeit-d2",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Warum besuchen Sie den Deutschkurs?"
+    }
+   ]
+  },
+  {
+   "key": "lek-arbeit-d3",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Ich lerne Deutsch, um mit Kunden sicher zu sprechen."
+    }
+   ]
+  },
+  {
+   "key": "lek-arbeit-d4",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Interessieren Sie sich auch für eine Weiterbildung?"
+    }
+   ]
+  },
+  {
+   "key": "lek-arbeit-d5",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Ja. Ich möchte mich zuerst über passende Angebote informieren."
+    }
+   ]
+  },
+  {
+   "key": "lek-planen-d0",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Wir könnten am Samstag ein Picknick machen."
+    }
+   ]
+  },
+  {
+   "key": "lek-planen-d1",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Samstag kann ich nicht. Wie wäre es am Sonntag?"
+    }
+   ]
+  },
+  {
+   "key": "lek-planen-d2",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Gern. Treffen wir uns um elf Uhr im Park?"
+    }
+   ]
+  },
+  {
+   "key": "lek-planen-d3",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Ja. Ich bringe Getränke mit. Kannst du Brot besorgen?"
+    }
+   ]
+  },
+  {
+   "key": "lek-planen-d4",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Das mache ich. Wenn es regnet, treffen wir uns bei mir."
+    }
+   ]
+  },
+  {
+   "key": "lek-planen-d5",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Gut: Sonntag, elf Uhr im Park. Bei Regen bei dir."
+    }
+   ]
+  },
+  {
+   "key": "lek-kleidung-d0",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Welche Person meinst du?"
+    }
+   ]
+  },
+  {
+   "key": "lek-kleidung-d1",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Die Frau mit der schwarzen Jacke."
+    }
+   ]
+  },
+  {
+   "key": "lek-kleidung-d2",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Trägt sie eine blaue Hose?"
+    }
+   ]
+  },
+  {
+   "key": "lek-kleidung-d3",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Ja, und weiße Schuhe. Neben ihr steht ein Mann."
+    }
+   ]
+  },
+  {
+   "key": "lek-kleidung-d4",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Was trägt der Mann?"
+    }
+   ]
+  },
+  {
+   "key": "lek-kleidung-d5",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Einen roten Pullover und eine graue Hose."
+    }
+   ]
+  },
+  {
+   "key": "lek-bewerbung-b2-d0",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Welche Erfahrung bringen Sie mit?"
+    }
+   ]
+  },
+  {
+   "key": "lek-bewerbung-b2-d1",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Ich habe drei Jahre im Kundenservice gearbeitet und Reklamationen bearbeitet."
+    }
+   ]
+  },
+  {
+   "key": "lek-bewerbung-b2-d2",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Können Sie ein Beispiel nennen?"
+    }
+   ]
+  },
+  {
+   "key": "lek-bewerbung-b2-d3",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Bei einer verspäteten Lieferung habe ich eine Ersatzlösung organisiert. Der Kunde konnte seinen Termin einhalten."
+    }
+   ]
+  },
+  {
+   "key": "lek-bewerbung-b2-d4",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Was möchten Sie bei uns lernen?"
+    }
+   ]
+  },
+  {
+   "key": "lek-bewerbung-b2-d5",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Ich möchte meine Kenntnisse in der Auftragsplanung erweitern."
+    }
+   ]
+  },
+  {
+   "key": "lek-beschwerde-b2-d0",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Die Lieferung ist noch nicht angekommen. Ich brauche die Ware dringend."
+    }
+   ]
+  },
+  {
+   "key": "lek-beschwerde-b2-d1",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Wir bedauern die Verzögerung. Die Sendung wird gerade geprüft."
+    }
+   ]
+  },
+  {
+   "key": "lek-beschwerde-b2-d2",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Wann bekomme ich eine verbindliche Information?"
+    }
+   ]
+  },
+  {
+   "key": "lek-beschwerde-b2-d3",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Wir melden uns morgen bis 12 Uhr bei Ihnen.",
+     "say": "Wir melden uns morgen bis zwölf Uhr bei Ihnen."
+    }
+   ]
+  },
+  {
+   "key": "lek-beschwerde-b2-d4",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Und falls die Ware nicht rechtzeitig kommt?"
+    }
+   ]
+  },
+  {
+   "key": "lek-beschwerde-b2-d5",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Dann prüfen wir gemeinsam eine Ersatzlieferung."
+    }
+   ]
+  },
+  {
+   "key": "lek-forum-b2-d0",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Ich finde flexible Arbeitszeiten hilfreich, weil ich private Termine besser planen kann."
+    }
+   ]
+  },
+  {
+   "key": "lek-forum-b2-d1",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Das stimmt. Andererseits müssen Kunden uns zuverlässig erreichen."
+    }
+   ]
+  },
+  {
+   "key": "lek-forum-b2-d2",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Wir könnten eine gemeinsame Kernzeit vereinbaren."
+    }
+   ]
+  },
+  {
+   "key": "lek-forum-b2-d3",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Welche Zeit schlägst du vor?"
+    }
+   ]
+  },
+  {
+   "key": "lek-forum-b2-d4",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Von 10 bis 14 Uhr. Außerhalb dieser Zeit stimmen wir uns im Team ab.",
+     "say": "Von zehn bis vierzehn Uhr. Außerhalb dieser Zeit stimmen wir uns im Team ab."
+    }
+   ]
+  },
+  {
+   "key": "lek-forum-b2-d5",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Das wäre einen Versuch wert. Nach einem Monat könnten wir die Regel prüfen."
+    }
+   ]
+  },
+  {
+   "key": "lek-loesungen-b2-d0",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Der Lieferant bringt die 30 Namensschilder erst übermorgen. Die Veranstaltung ist morgen.",
+     "say": "Der Lieferant bringt die dreißig Namensschilder erst übermorgen. Die Veranstaltung ist morgen."
+    }
+   ]
+  },
+  {
+   "key": "lek-loesungen-b2-d1",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Dann könnten wir sie heute selbst drucken. Ein Drucker ist vorhanden."
+    }
+   ]
+  },
+  {
+   "key": "lek-loesungen-b2-d2",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Falls wir passendes Papier bekommen, ist das möglich. Ich kann bis 14 Uhr welches kaufen.",
+     "say": "Falls wir passendes Papier bekommen, ist das möglich. Ich kann bis vierzehn Uhr welches kaufen."
+    }
+   ]
+  },
+  {
+   "key": "lek-loesungen-b2-d3",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Ich prüfe bis 15 Uhr die Namen und die Datei.",
+     "say": "Ich prüfe bis fünfzehn Uhr die Namen und die Datei."
+    }
+   ]
+  },
+  {
+   "key": "lek-loesungen-b2-d4",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Danach drucken wir gemeinsam und kontrollieren die Schilder."
+    }
+   ]
+  },
+  {
+   "key": "lek-loesungen-b2-d5",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Beim nächsten Mal prüfen wir den Liefertermin eine Woche vorher."
+    }
+   ]
+  },
+  {
+   "key": "lek-familie-d0",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Schau mal, das ist meine Familie."
+    }
+   ]
+  },
+  {
+   "key": "lek-familie-d1",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Schön! Ist das deine Schwester?"
+    }
+   ]
+  },
+  {
+   "key": "lek-familie-d2",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Ja, das ist meine Schwester Irina. Sie ist 25 Jahre alt.",
+     "say": "Ja, das ist meine Schwester Irina. Sie ist fünfundzwanzig Jahre alt."
+    }
+   ]
+  },
+  {
+   "key": "lek-familie-d3",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Und wer ist der Mann hier?"
+    }
+   ]
+  },
+  {
+   "key": "lek-familie-d4",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Das ist mein Vater. Er lebt in der Ukraine."
+    }
+   ]
+  },
+  {
+   "key": "lek-familie-d5",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Wie alt ist dein Vater?"
+    }
+   ]
+  },
+  {
+   "key": "lek-familie-d6",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Er ist 61 Jahre alt. Ich vermisse meine Familie.",
+     "say": "Er ist einundsechzig Jahre alt. Ich vermisse meine Familie."
+    }
+   ]
+  },
+  {
+   "key": "lek-freizeit-d0",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Was machst du am Wochenende?"
+    }
+   ]
+  },
+  {
+   "key": "lek-freizeit-d1",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Ich weiß noch nicht. Ich schwimme gern. Und du?"
+    }
+   ]
+  },
+  {
+   "key": "lek-freizeit-d2",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Ich schwimme nicht gern. Ich gehe lieber in den Park."
+    }
+   ]
+  },
+  {
+   "key": "lek-freizeit-d3",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Kannst du Fußball spielen?"
+    }
+   ]
+  },
+  {
+   "key": "lek-freizeit-d4",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Ja, ich kann gut Fußball spielen."
+    }
+   ]
+  },
+  {
+   "key": "lek-freizeit-d5",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Toll! Spielen wir am Samstag um zehn Uhr im Park?"
+    }
+   ]
+  },
+  {
+   "key": "lek-freizeit-d6",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Ja, gern! Bis Samstag!"
+    }
+   ]
+  },
+  {
+   "key": "lek-amt-d0",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Guten Tag. Können Sie mir sagen, wo ich eine Nummer ziehe?"
+    }
+   ]
+  },
+  {
+   "key": "lek-amt-d1",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Gern. Der Automat steht dort neben der Tür."
+    }
+   ]
+  },
+  {
+   "key": "lek-amt-d2",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Danke. Wissen Sie auch, ob ich ein Formular brauche?"
+    }
+   ]
+  },
+  {
+   "key": "lek-amt-d3",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Ja. Das Formular liegt auf dem Tisch. Bitte füllen Sie es vollständig aus."
+    }
+   ]
+  },
+  {
+   "key": "lek-amt-d4",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Können Sie mir noch sagen, welche Unterlagen ich mitbringen muss?"
+    }
+   ]
+  },
+  {
+   "key": "lek-amt-d5",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Bringen Sie bitte Ihren Ausweis und das Formular zum Schalter mit. Dort ruft man Ihre Nummer auf."
+    }
+   ]
+  },
+  {
+   "key": "lek-amt-d6",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Vielen Dank für Ihre Hilfe!"
+    }
+   ]
+  },
+  {
+   "key": "lek-feste-d0",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Ich feiere am Samstag meinen Geburtstag. Ich lade dich ein!"
+    }
+   ]
+  },
+  {
+   "key": "lek-feste-d1",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Danke, das ist nett! Ich komme gern, aber erst um acht. Ist das in Ordnung?"
+    }
+   ]
+  },
+  {
+   "key": "lek-feste-d2",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Kein Problem. Mira und Reza kommen auch."
+    }
+   ]
+  },
+  {
+   "key": "lek-feste-d3",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Schön! Was wünschst du dir?"
+    }
+   ]
+  },
+  {
+   "key": "lek-feste-d4",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Nichts Besonderes. Ein Kuchen gefällt mir immer."
+    }
+   ]
+  },
+  {
+   "key": "lek-feste-d5",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Gut, dann backe ich dir einen Kuchen."
+    }
+   ]
+  },
+  {
+   "key": "lek-feste-d6",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Super, vielen Dank! Bis Samstag!"
+    }
+   ]
+  },
+  {
+   "key": "tc55c067c",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Bei mehr als 60 Minuten Verspätung steht Ihnen eine Entschädigung von 25 Prozent zu."
+    }
+   ]
+  },
+  {
+   "key": "t8b0aa92e",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Ich bewerbe mich um die Stelle als Buchhalterin."
+    }
+   ]
+  },
+  {
+   "key": "tf73d18ea",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Erfahrung habe ich vor allem im Kundenservice gesammelt."
+    }
+   ]
   }
  ]
 }
