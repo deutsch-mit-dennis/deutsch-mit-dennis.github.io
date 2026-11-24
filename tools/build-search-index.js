@@ -32,6 +32,8 @@ for (const loc of read('sitemap.xml').match(/<loc>[^<]+/g)) {
   pages.push([t, cut(d, 120), u, kind(p)]);
 }
 for (const m of DM.materials || []) if (fs.existsSync(path.join(ROOT, m.file))) pages.push([m.title, cut(`${m.level} · ${m.desc}${m.topics ? ' ' + m.topics.join(', ') : ''}`, 150), m.file, 'material']);
+for (const e of [['Diktat üben A1–B2', 'Satz hören und schreiben, mit sofortiger Kontrolle.', '#diktat', 'ueben'], ['Unregelmäßige Verben: Liste und Quiz', 'Präsens, Präteritum, Perfekt und Beispielsatz.', '#verben', 'ueben'], ['Einstufungstest', 'In 5 Minuten dein Niveau finden.', '#einstufung', 'kurs'], ['Mein Kurs A0–B2', 'Schritt für Schritt Deutsch lernen.', '#kurs', 'kurs']]) if (!seen.has(e[2])) pages.push(e);
+for (const [, id, level, title] of read('grammatik-data.js').matchAll(/\n\s+id: "([\w-]+)",\s+level: "(\w\d)",\s+title: "([^"]+)"/g)) if (!seen.has('#grammatik/' + id)) pages.push([title, `Grammatik ${level}: Regel und Übungen`, '#grammatik/' + id, 'grammatik']);
 pages.push(['Meine Wörter – dein Wörterheft', 'Wörter merken und mit Karten wiederholen.', '#meine-woerter', 'ueben'], ['Lernstand sichern', 'Deinen Fortschritt speichern und auf ein anderes Gerät mitnehmen.', '#lernstand', 'seite'], ['Schreib-Bausteine', 'Anrede, Gruß, Redemittel für Nachrichten, Briefe und E-Mails.', '#schreiben', 'ueben']);
 const words = [], ws = new Set();
 const add = (w, f, b) => { w = w.replace(/<\/?[a-z]+>/g, ''); if (!ws.has(w)) { ws.add(w); words.push([w, String(f || '').replace(/<\/?[a-z]+>/g, ''), b]); } };

@@ -10,18 +10,26 @@
   const x = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
   const $ = (s, r = document) => r.querySelector(s);
   const clean = (s, n) => String(s ?? '').replace(/<\/?[a-z]+>/gi, '').replace(/\s+/g, ' ').trim().slice(0, n);
-  const list = () => { const s = DM.store || {}; if (!Array.isArray(s.mw)) s.mw = []; return s.mw; };
+  // reading never creates the list (the backup restore relies on that); broken entries are dropped
+  const list = () => {
+    const s = DM.store || {};
+    if (s.mw === undefined) return [];
+    if (!Array.isArray(s.mw)) s.mw = [];
+    if (s.mw.some(i => !i || typeof i.w !== 'string')) s.mw = s.mw.filter(i => i && typeof i.w === 'string');
+    return s.mw;
+  };
   const save = () => { try { DM.save && DM.save(); } catch { /* private mode */ } };
-  const find = w => list().find(i => i.w === w);
+  const find = w => { const k = w.toLocaleLowerCase('de'); return list().find(i => i.w === w) || list().find(i => i.w.toLocaleLowerCase('de') === k && !/^(sie|ihr)$/.test(k)); };
   const due = () => list().filter(i => !i.known && (i.due || 0) <= Date.now());
   function put(e) {
     const w = clean(e.w, 80);
     if (!w || find(w) || list().length >= CAP) return false;
+    DM.store.mw ||= [];
     list().unshift({ w, f: clean(e.f, 80), b: clean(e.b, 200), n: clean(e.n, 80), box: 0, due: Date.now(), add: Date.now() });
     save();
     return true;
   }
-  const remove = w => { const l = list(), i = l.findIndex(e => e.w === w); if (i >= 0) { l.splice(i, 1); save(); } };
+  const remove = w => { const l = list(), i = l.indexOf(find(w)); if (i >= 0) { l.splice(i, 1); save(); } };
   function star(e) {
     const w = clean(e.w, 80), on = !!find(w);
     return `<button type="button" class="lh-star" data-lh-w="${x(w)}" data-lh-f="${x(clean(e.f, 80))}" data-lh-b="${x(clean(e.b, 200))}" aria-pressed="${on}" aria-label="${x(w)}: in „Meine Wörter“ merken"><span aria-hidden="true">${on ? '★' : '☆'}</span></button>`;
@@ -31,12 +39,20 @@
     if (!b) return;
     ev.preventDefault(); ev.stopPropagation();
     const w = b.dataset.lhW;
-    if (find(w)) remove(w); else put({ w, f: b.dataset.lhF, b: b.dataset.lhB });
+    if (find(w)) remove(w);
+    else if (!put({ w, f: b.dataset.lhF, b: b.dataset.lhB })) { alert(`Dein Wörterheft ist voll (${CAP} Wörter). Lösche zuerst ein Wort.`); return; }
     const on = !!find(w);
     b.setAttribute('aria-pressed', String(on));
     b.firstElementChild.textContent = on ? '★' : '☆';
   }, true);
-  window.DMWoerter = { has: w => !!find(clean(w, 80)), star, count: () => list().length, due: () => due().length };
+  const merge = items => {
+    items.slice().reverse().forEach(i => {
+      if (!i || typeof i.w !== 'string' || !put(i)) return;
+      const n = list()[0];
+      n.box = Math.min(IV.length - 1, Math.max(0, i.box | 0)); n.due = Number(i.due) || Date.now(); n.known = i.known ? 1 : 0; n.add = Number(i.add) || Date.now();
+    });
+  };
+  window.DMWoerter = { merge, has: w => !!find(clean(w, 80)), star, count: () => list().length, due: () => due().length };
 
   /* ---------- #meine-woerter ---------- */
   const sayBtn = t => `<button type="button" class="lh-say" data-lh-say="${x(t)}" aria-label="Vorlesen: ${x(t)}"><span aria-hidden="true">🔊</span></button>`;
@@ -59,7 +75,7 @@
     const m = $('main');
     bindSay(m);
     const go = $('#lh-go', m);
-    if (go) go.onclick = train;
+    if (go) go.onclick = () => { location.hash = '#meine-woerter/ueben'; };
     $('#lh-form', m).onsubmit = e => {
       e.preventDefault();
       const w = $('#lh-w').value;
@@ -74,13 +90,14 @@
   const CR = () => DM.crumbs([['Meine Wörter', '#meine-woerter'], ['Wiederholen']]);
   function train() {
     const d = due(), all = list();
+    if (!all.length) { location.replace('#meine-woerter'); return; }
     const round = (d.length ? d : all).map(i => [Math.random(), i]).sort((a, b) => a[0] - b[0]).slice(0, 10).map(p => p[1]);
     let k = 0, good = 0;
     const step = () => {
       window.scrollTo({ top: 0, behavior: 'instant' });
       if (k >= round.length) {
         DM.page(`${CR()}<section class="dm-card lh-card"><h1>Fertig!</h1><p class="lh-big">${good} von ${round.length} gewusst</p>${good < round.length ? '<p>Die anderen Wörter kommen bald wieder.</p>' : ''}<p class="dm-actions"><button type="button" class="dm-btn" id="lh-back">Zu meinen Wörtern</button></p></section>`, 'lh-page');
-        $('#lh-back').onclick = page;
+        $('#lh-back').onclick = () => { location.hash = '#meine-woerter'; };
         if (good === round.length && DM.celebrate) DM.celebrate($('.lh-card'));
         return;
       }
@@ -88,7 +105,7 @@
       DM.page(`${CR()}<section class="dm-card lh-card"><h1 class="dk-h">Karte ${k + 1} von ${round.length}</h1>
         <p class="lh-word">${i.n ? `<span dir="auto" data-no-i18n>${x(i.n)}</span>` : `<span lang="de">${x(art ? art[2] : i.w)}</span>`}</p><p class="lh-q">${i.n ? 'Wie heißt das auf Deutsch?' : art ? 'der, die oder das? Sag einen Satz.' : 'Was bedeutet das? Sag einen Satz.'}</p>
         <div id="lh-side" hidden><p class="lh-sol"><b lang="de">${x(i.w)}</b> ${sayBtn(i.w)}</p>${i.f ? `<p lang="de">${x(i.f)}</p>` : ''}${i.b ? `<p lang="de">${x(i.b)} ${sayBtn(i.b)}</p>` : ''}</div>
-        <p class="dm-actions" id="lh-act"><button type="button" class="dm-btn" id="lh-turn">Umdrehen</button></p></section>`, 'lh-page');
+        <p class="dm-actions" id="lh-act"><button type="button" class="dm-btn" id="lh-turn">Umdrehen</button></p><p><a href="#meine-woerter">Beenden</a></p></section>`, 'lh-page');
       bindSay($('main'));
       const done = () => { k++; save(); step(); };
       $('#lh-turn').onclick = () => {
@@ -107,7 +124,7 @@
     step();
   }
   DM.routes ||= {};
-  DM.routes['meine-woerter'] = page;
+  DM.routes['meine-woerter'] = p => { if (p && p[1] === 'ueben') train(); else page(); };
 
   /* ---------- "Heute für dich" on the start page (only after a level was chosen) ---------- */
   DM.todayCard = lv => {

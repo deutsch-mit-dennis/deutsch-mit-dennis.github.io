@@ -22,6 +22,8 @@
 
   const ROWS = [
     /* ---- search, dictation, word notebook, verbs (lernheft.js, diktat.js, verbliste.js, suche.js) ---- */
+    "Schreib Zahlen als Wörter.|Write numbers as words.|Пиши числа словами.|Пиши числа словами.|اكتب الأرقام بالكلمات.|عددها را با حروف بنویس.|Sayıları yazıyla yaz.|Escribe los números con letras.|Scrivi i numeri in lettere.",
+    "Beenden|Finish|Завершити|Завершить|إنهاء|پایان|Bitir|Terminar|Fine",
     "Heute für dich|Today for you|Сьогодні для тебе|Сегодня для тебя|اليوم لك|امروز برای تو|Bugün senin için|Hoy para ti|Oggi per te",
     "Wort des Tages|Word of the day|Слово дня|Слово дня|كلمة اليوم|واژهٔ روز|Günün kelimesi|Palabra del día|Parola del giorno",
     "Diktat|Dictation|Диктант|Диктант|إملاء|دیکته|Dikte|Dictado|Dettato",

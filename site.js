@@ -18,6 +18,8 @@
   const KEY = 'dmd.v1';
   let mem = {};
   try { mem = JSON.parse(localStorage.getItem(KEY) || '{}') || {}; } catch { mem = {}; }
+  if (typeof mem !== 'object' || Array.isArray(mem)) mem = {};
+  ['visited', 'done', 'drafts'].forEach(g => { if (mem[g] && typeof mem[g] !== 'object') mem[g] = {}; });
   mem.visited ||= {}; mem.done ||= {}; mem.drafts ||= {};
   const save = () => { try { localStorage.setItem(KEY, JSON.stringify(mem)); } catch { /* privater Modus: nur für diese Sitzung */ } };
   DM.store = mem;
@@ -274,6 +276,7 @@
       </div>
     </section>`;
   }
+  function todayCard() { try { return DM.todayCard ? DM.todayCard(mem.level) : ''; } catch (e) { console.error(e); return ''; } }
   function home() {
     const last = mem.last && mem.last.route !== '' ? mem.last : null;
     page(`
@@ -283,7 +286,7 @@
         <h1 class="dm-hero-title">Deutsch lernen mit Dennis</h1>
         <p class="dm-promise" data-i18n="free" data-i18n-dir>Kostenlos · A0 bis B2 · ohne Anmeldung</p>
         ${levelPicker()}
-        ${DM.todayCard ? DM.todayCard(mem.level) : ''}
+        ${todayCard()}
         <p class="dm-hand">Hallo! Ich bin Dennis, dein Deutschlehrer und zugelassener Prüfer. Tippe auf dein Niveau – dann startet dein Kurs, Schritt für Schritt.</p>
         <ul class="dm-trust"><li>✓ DTZ-Prüfer</li><li>✓ telc-Prüfer B1–B2</li><li>✓ Vom BAMF zugelassene Lehrkraft für Integrationskurse</li></ul>
       </div>
@@ -484,8 +487,12 @@
         let imp; try { imp = JSON.parse(v) || {}; } catch { return; }
         ['visited', 'done', 'drafts'].forEach(g => { mem[g] = Object.assign({}, imp[g] || {}, mem[g] || {}); });
         // course, mistakes notebook, grammar, lessons …: merge one level deep, existing entries win
-        ['kurs', 'fehler', 'grammatik', 'lektion', 'laute', 'lid', 'sim'].forEach(g => { if (imp[g] && typeof imp[g] === 'object' && mem[g] && typeof mem[g] === 'object' && !Array.isArray(mem[g])) Object.keys(imp[g]).forEach(k2 => { if (mem[g][k2] === undefined) mem[g][k2] = imp[g][k2]; else if (imp[g][k2] && typeof imp[g][k2] === 'object' && !Array.isArray(imp[g][k2]) && typeof mem[g][k2] === 'object' && !Array.isArray(mem[g][k2])) mem[g][k2] = Object.assign({}, imp[g][k2], mem[g][k2]); }); });
-        Object.keys(imp).forEach(g => { if (!['visited', 'done', 'drafts'].includes(g) && mem[g] === undefined) mem[g] = imp[g]; });
+        ['kurs', 'fehler', 'grammatik', 'lektion', 'laute', 'lid', 'sim', 'diktat'].forEach(g => { if (imp[g] && typeof imp[g] === 'object' && mem[g] && typeof mem[g] === 'object' && !Array.isArray(mem[g])) Object.keys(imp[g]).forEach(k2 => { if (mem[g][k2] === undefined) mem[g][k2] = imp[g][k2]; else if (imp[g][k2] && typeof imp[g][k2] === 'object' && !Array.isArray(imp[g][k2]) && typeof mem[g][k2] === 'object' && !Array.isArray(mem[g][k2])) mem[g][k2] = Object.assign({}, imp[g][k2], mem[g][k2]); }); });
+        // word notebook and mistakes: lists are joined, entries that exist on this device win
+        if (Array.isArray(imp.mw) && window.DMWoerter) DMWoerter.merge(imp.mw);
+        const a = mem.fehler && mem.fehler.items, b = imp.fehler && imp.fehler.items;
+        if (Array.isArray(a) && Array.isArray(b) && a !== b) { const ids = new Set(a.map(i => i && i.id)); b.forEach(i => { if (i && i.id !== undefined && !ids.has(i.id)) a.push(i); }); }
+        Object.keys(imp).forEach(g => { if (!['visited', 'done', 'drafts', 'mw'].includes(g) && mem[g] === undefined) mem[g] = imp[g]; });
         save(); n++;
       } else { try { if (localStorage.getItem(k) === null) { localStorage.setItem(k, v); n++; } } catch { /* privater Modus */ } }
     });
@@ -496,7 +503,7 @@
     page(`${crumbs([['Lernstand sichern']])}
       <div class="dm-head"><h1>Lernstand sichern</h1><p class="dm-lead">Alles bleibt auf deinem Gerät. Nichts wird an uns gesendet.</p></div>
       <section class="dm-card dm-ls"><h2><span aria-hidden="true">💾</span> Lernstand sichern</h2>
-        <p>Dein Fortschritt (Kurs, erledigte Schritte, Fehlerheft, Niveau, Challenge, Spiele) liegt nur auf diesem Gerät. Sichere ihn, bevor du das Handy wechselst oder Browserdaten löschst.</p>
+        <p>Dein Fortschritt (Kurs, erledigte Schritte, Fehlerheft, Wörter, Diktat, Niveau, Challenge, Spiele) liegt nur auf diesem Gerät. Sichere ihn, bevor du das Handy wechselst oder Browserdaten löschst.</p>
         <p class="dm-row"><button type="button" class="dm-btn" id="ls-save">Datei speichern</button><button type="button" class="dm-btn dm-btn-quiet" id="ls-copy">Code kopieren</button><button type="button" class="dm-btn dm-btn-quiet" id="ls-share" hidden>Senden …</button></p>
         <h3>Wiederherstellen</h3>
         <p><label for="ls-file">Datei auswählen</label><br><input type="file" id="ls-file"></p>
@@ -1797,7 +1804,9 @@
   }
 
   window.route = function () {
-    let raw = decodeURIComponent(location.hash.slice(1)).replace(/^\/+/, '');
+    let raw = location.hash.slice(1);
+    try { raw = decodeURIComponent(raw); } catch { /* a single % in the address */ }
+    raw = raw.replace(/^\/+/, '');
     let p = raw.split('/');
     p[0] = p[0].toLowerCase();
     if (p[0] in ALIAS) { p[0] = ALIAS[p[0]]; if (p[0] === '') p = ['']; if (p[0] === 'lernen' && p[1] === 'beruf') p[1] = 'B2'; }

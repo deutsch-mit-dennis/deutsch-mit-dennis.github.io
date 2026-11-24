@@ -4,7 +4,9 @@
   'use strict';
   const x = DM.esc, $ = (s, r = document) => r.querySelector(s), N = 5;
   const LV = { A1: 'Kurze Sätze', A2: 'Alltag', B1: 'Längere Sätze', B2: 'Beruf und komplexe Sätze' };
-  const st = () => { const s = (DM.store.diktat ||= {}); s.ok ||= {}; return s; };
+  const obj = v => v && typeof v === 'object' && !Array.isArray(v);
+  // reading never creates the entry (the backup restore relies on that)
+  const st = write => { let s = obj(DM.store.diktat) ? DM.store.diktat : {}; if (write) DM.store.diktat = s; if (!obj(s.ok)) s.ok = {}; return s; };
   const shuffle = a => a.map(i => [Math.random(), i]).sort((p, q) => p[0] - q[0]).map(p => p[1]);
   // punctuation never counts, hyphens inside a word do
   const toks = s => String(s).normalize('NFC').replace(/[.,!?;:„“"”‚‘()…]/g, ' ').replace(/\s[–-]\s/g, ' ').trim().split(/\s+/).filter(Boolean);
@@ -40,12 +42,12 @@
   function setup(lv) {
     const mode = st().mode || (lv === 'A1' ? 'gap' : 'full');
     DM.page(`${crumbs(lv)}
-      <div class="dm-head"><h1>Diktat ${lv}</h1><p class="dm-lead">${N} Sätze. Du kannst jeden Satz so oft hören, wie du willst.</p></div>
+      <div class="dm-head"><h1>Diktat ${lv}</h1><p class="dm-lead">${N} Sätze. Du kannst jeden Satz so oft hören, wie du willst. <span>Schreib Zahlen als Wörter.</span></p></div>
       <fieldset class="dm-card lh-mode"><legend>Wie möchtest du üben?</legend>
         <label><input type="radio" name="lh-m" value="gap"${mode === 'gap' ? ' checked' : ''}> <span><b>Lücken</b> – leicht: nur ein paar Wörter schreiben</span></label>
         <label><input type="radio" name="lh-m" value="full"${mode === 'full' ? ' checked' : ''}> <span><b>Ganzer Satz</b> – schwer: alles schreiben</span></label></fieldset>
       <p class="dm-actions"><button type="button" class="dm-btn" id="dk-go">Diktat starten</button> <a class="dm-btn dm-btn-quiet" href="#diktat">Anderes Niveau</a></p>`, 'lh-page');
-    $('#dk-go').onclick = () => { st().mode = $('input[name=lh-m]:checked').value; DM.save(); run(lv, st().mode); };
+    $('#dk-go').onclick = () => { st(true).mode = $('input[name=lh-m]:checked').value; DM.save(); run(lv, st().mode); };
   }
   function run(lv, mode, only) {
     const all = DM.diktat[lv], fresh = shuffle(all.filter(([, k]) => !st().ok[k])), old = shuffle(all.filter(([, k]) => st().ok[k]));
@@ -85,7 +87,7 @@
         };
       });
       const ta = $('#dk-t');
-      if (ta) ta.onkeydown = e => { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); $('#dk-f').requestSubmit(); } };
+      if (ta) ta.onkeydown = e => { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); if (!e.repeat) $('#dk-f').requestSubmit(); } };
       (DM.ttsReady || Promise.resolve()).then(() => { if ($('#dk-play')) play(1); });
       let checked = false;
       $('#dk-f').onsubmit = e => {
@@ -96,7 +98,7 @@
         // an empty gap must stay visible as a missing word in its place
         const typed = mode === 'gap' ? words.map((w, i) => { const g = $(`.dk-gap[data-i="${i}"]`); return g ? g.value.trim() || '___' : w; }).join(' ') : ta.value;
         const d = diff(text, typed), ok = d.every(t => t.ok);
-        if (ok) { right++; st().ok[key] = 1; }
+        if (ok) { right++; st(true).ok[key] = 1; }
         else {
           wrong.push(round[n]);
           if (window.DMFehler) DMFehler.add({ q: 'Diktat: Hör zu und schreib den Satz.', a: text, src: 'Diktat ' + lv, level: lv, listen: text, lkey: key });
@@ -107,14 +109,15 @@
         $('#dk-res').innerHTML = `<p class="${ok ? 'dk-ok' : 'dk-no'}"><b>${ok ? '✓ Richtig!' : 'Noch nicht ganz richtig.'}</b></p>
           ${ok ? '' : `<p class="dk-diff" lang="de">${d.map(t => t.extra ? `<del>${x(t.extra)}</del>` : t.ok ? x(t.w) : `${t.bad && t.bad !== '___' ? `<del>${x(t.bad)}</del> ` : ''}<mark>${x(t.w)}</mark>`).join(' ')}</p>${d.some(t => t.cs) ? '<p class="dm-small">Achte auf große und kleine Buchstaben.</p>' : ''}`}
           <p class="dk-sol" lang="de">${x(text)}</p><p class="dm-actions"><button type="button" class="dm-btn" id="dk-next">Weiter</button></p>`;
-        $('#dk-next').onclick = () => { n++; step(); };
+        $('#dk-next').onkeydown = e => { if (e.repeat) e.preventDefault(); };
+        $('#dk-next').onclick = () => { n++; step(); const h = $('main h1'); if (h) { h.tabIndex = -1; h.focus({ preventScroll: true }); } };
         $('#dk-next').focus({ preventScroll: true });
         $('#dk-next').scrollIntoView({ block: 'nearest' });
       };
     };
     const end = () => {
       if (DM.stopSpeaking) DM.stopSpeaking();
-      st().day = new Date().toDateString();
+      st(true).day = new Date().toDateString();
       DM.save();
       DM.page(`${crumbs(lv)}<section class="dm-card lh-card"><h1>${right === round.length ? 'Super!' : 'Gut geübt!'}</h1><p class="lh-big">${right} von ${round.length} richtig</p>
         ${wrong.length ? '<p>Die falschen Sätze findest du in „<a href="#fehler">Meine Fehler</a>“.</p>' : ''}

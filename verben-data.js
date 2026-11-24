@@ -14,7 +14,7 @@ beraten|berät|beriet|hat beraten|B1|Die Mitarbeiterin hat mich gut beraten.
 beschließen|beschließt|beschloss|hat beschlossen|B2|Das Team hat den Plan beschlossen.
 beschreiben|beschreibt|beschrieb|hat beschrieben|A2|Er hat das Bild genau beschrieben.
 besitzen|besitzt|besaß|hat besessen|B1|Früher haben wir ein Auto besessen.
-betreffen|betrifft|betraf|hat betroffen|B2|Die neue Regel hat alle Abteilungen betroffen.
+betreffen|betrifft|betraf|hat betroffen|B2|Der Streik hat viele Fahrgäste betroffen.
 betrügen|betrügt|betrog|hat betrogen|B2|Der Verkäufer hat die Kunden betrogen.
 beweisen|beweist|bewies|hat bewiesen|B2|Sie hat viel Geduld bewiesen.
 sich bewerben|bewirbt sich|bewarb sich|hat sich beworben|B1|Ich habe mich um eine Stelle beworben.
@@ -109,7 +109,7 @@ treiben|treibt|trieb|hat getrieben|B1|Früher habe ich mehr Sport getrieben.
 trinken|trinkt|trank|hat getrunken|A1|Ich habe einen Tee getrunken.
 tun|tut|tat|hat getan|A2|Was hast du am Wochenende getan?
 umziehen|zieht um|zog um|ist umgezogen|A2|Wir sind nach Köln umgezogen.
-unterscheiden|unterscheidet|unterschied|hat unterschieden|B2|Man hat früher zwei Gruppen unterschieden.
+unterscheiden|unterscheidet|unterschied|hat unterschieden|B2|Das Baby hat die Stimmen gut unterschieden.
 unterschreiben|unterschreibt|unterschrieb|hat unterschrieben|A2|Ich habe den Vertrag unterschrieben.
 verbieten|verbietet|verbot|hat verboten|B1|Der Vermieter hat das Grillen verboten.
 verbinden|verbindet|verband|hat verbunden|B1|Die Kollegin hat mich mit der Abteilung verbunden.

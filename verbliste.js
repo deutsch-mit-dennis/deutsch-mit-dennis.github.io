@@ -2,7 +2,7 @@
 (function () {
   'use strict';
   const x = DM.esc, $ = (s, r = document) => r.querySelector(s);
-  const norm = t => String(t).toLocaleLowerCase('de').normalize('NFD').replace(/\p{M}/gu, '').replace(/ß/g, 'ss');
+  const norm = t => String(t).toLocaleLowerCase('de').replace(/ä/g, 'ae').replace(/ö/g, 'oe').replace(/ü/g, 'ue').normalize('NFD').replace(/\p{M}/gu, '').replace(/ß/g, 'ss');
   const shuffle = a => a.map(i => [Math.random(), i]).sort((p, q) => p[0] - q[0]).map(p => p[1]);
   const bare = s => s.replace(/ \(.*?\)/g, '');
   const say = t => `<button type="button" class="lh-say" data-s="${x(t)}" aria-label="Vorlesen: ${x(t)}"><span aria-hidden="true">🔊</span></button>`;
@@ -30,11 +30,12 @@
     draw();
   }
   // verbs that (also) form the Perfekt with the other auxiliary in some regions or meanings: never offer it as "wrong"
-  const BOTH = /^(schwimmen|frieren|hängen|liegen|sitzen|stehen|springen|fliegen|fahren|laufen|brechen|reißen|ziehen|treiben|schlagen|abfahren|umziehen|einziehen|anfangen|beginnen|heißen)$/;
+  const BOTH = /^(schwimmen|frieren|hängen|liegen|sitzen|stehen|springen|fliegen|fahren|laufen|brechen|reißen|ziehen|treiben|schlagen|abfahren|umziehen|einziehen|anfangen|beginnen|heißen|treffen|steigen|sinken)$/;
   const crumbs = () => DM.crumbs([['Üben', '#ueben'], ['Verben', '#verben'], ['Verben üben']]);
+  const RARE = /^(dürfen|können|müssen|sollen|wollen|mögen|heißen)$/; // Perfekt hardly used: not asked
   function quiz() {
     const lv = ORDER.includes(DM.store.level) ? DM.store.level : 'A1', max = ORDER.indexOf(lv);
-    const own = shuffle(DM.verben.filter(v => v.level === lv)), low = shuffle(DM.verben.filter(v => ORDER.indexOf(v.level) < max));
+    const own = shuffle(DM.verben.filter(v => v.level === lv && !RARE.test(v.inf))), low = shuffle(DM.verben.filter(v => ORDER.indexOf(v.level) < max && !RARE.test(v.inf)));
     const round = shuffle(own.slice(0, low.length ? 7 : 10).concat(low.slice(0, 3)));
     let k = 0, good = 0;
     const step = () => {
@@ -60,7 +61,7 @@
           btns.forEach(o => { o.disabled = true; if (o.dataset.o === sol) o.classList.add('is-right'); else if (o === b) o.classList.add('is-wrong'); });
           if (!ok && window.DMFehler) DMFehler.add({ q: `${v.inf} – ${label}`, a: sol, src: 'Unregelmäßige Verben', level: v.level, opts: choices, hint: v.ex });
           $('#vb-r').innerHTML = `<p class="${ok ? 'dk-ok' : 'dk-no'}"><b>${ok ? '✓ Richtig!' : 'Richtig ist: ' + x(sol)}</b></p><p lang="de">${x(v.pr)} – ${x(v.prt)} – ${x(v.perf)}</p><p lang="de">${x(v.ex)}</p><p class="dm-actions"><button type="button" class="dm-btn" id="vb-next">Weiter</button></p>`;
-          $('#vb-next').onclick = () => { k++; step(); };
+          $('#vb-next').onclick = () => { k++; step(); const h = $('main h1'); if (h) { h.tabIndex = -1; h.focus({ preventScroll: true }); } };
           $('#vb-next').focus({ preventScroll: true });
           $('#vb-next').scrollIntoView({ block: 'nearest' });
         };
