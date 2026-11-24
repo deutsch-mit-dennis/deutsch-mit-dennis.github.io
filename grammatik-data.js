@@ -285,6 +285,160 @@ T({
 });
 
 T({
+  id: "a1-fragen",
+  level: "A1",
+  title: "Fragen: Wo wohnen Sie? Haben Sie Zeit?",
+  kurz: "W-Frage: zuerst das Fragewort, dann das Verb, dann die Person: *Wo wohnen* Sie? Ja/Nein-Frage: Das Verb steht auf Platz 1: *Haben* Sie Zeit? Bei einer Frage mit „nicht“ oder „kein“ sagt man statt „ja“: *doch*.",
+  kurz_i18n: {
+    en: "W-question: first the question word, then the verb, then the person: Wo wohnen Sie? Yes/no question: the verb is in position 1: Haben Sie Zeit? If the question contains nicht or kein, you say doch instead of ja.",
+    uk: "Питання з питальним словом: спочатку питальне слово, потім дієслово, потім особа: Wo wohnen Sie? Питання «так чи ні»: дієслово стоїть на першому місці: Haben Sie Zeit? Якщо в питанні є nicht або kein, замість ja кажуть doch.",
+    ru: "Вопрос с вопросительным словом: сначала вопросительное слово, потом глагол, потом лицо: Wo wohnen Sie? Вопрос «да или нет»: глагол стоит на первом месте: Haben Sie Zeit? Если в вопросе есть nicht или kein, вместо ja говорят doch.",
+    ar: "السؤال بأداة استفهام: أولًا أداة الاستفهام، ثم الفعل، ثم الشخص: Wo wohnen Sie?‏ سؤال نعم/لا: يأتي الفعل في المكان الأول: Haben Sie Zeit?‏ وإذا كان في السؤال nicht أو kein نقول doch بدلًا من ja.",
+    fa: "سؤال با کلمهٔ پرسشی: اول کلمهٔ پرسشی، بعد فعل، بعد شخص: Wo wohnen Sie?‏ سؤال بله/نه: فعل در جای اول می‌آید: Haben Sie Zeit?‏ اگر در سؤال nicht یا kein باشد، به‌جای ja می‌گوییم doch.",
+    tr: "Soru kelimeli soru: önce soru kelimesi, sonra fiil, sonra kişi: Wo wohnen Sie? Evet/hayır sorusu: fiil birinci sıradadır: Haben Sie Zeit? Soruda nicht veya kein varsa ja yerine doch denir.",
+    es: "Pregunta con palabra interrogativa: primero la palabra interrogativa, luego el verbo y después la persona: Wo wohnen Sie? Pregunta de sí o no: el verbo va en la posición 1: Haben Sie Zeit? Si la pregunta lleva nicht o kein, se dice doch en lugar de ja.",
+    it: "Domanda con parola interrogativa: prima la parola interrogativa, poi il verbo, poi la persona: Wo wohnen Sie? Domanda sì/no: il verbo è in posizione 1: Haben Sie Zeit? Se nella domanda c'è nicht o kein, si dice doch al posto di ja.",
+  },
+  tabelle: {
+    head: ["", "Platz 1", "Platz 2", ""],
+    rows: [
+      ["W-Frage", "*Wo*", "*wohnen*", "Sie?"],
+      ["W-Frage", "*Wann*", "*beginnt*", "der Kurs?"],
+      ["Ja/Nein-Frage", "*Wohnen*", "Sie", "in Essen?"],
+      ["Ja/Nein-Frage", "*Haben*", "Sie", "morgen Zeit?"],
+    ],
+  },
+  beispiele: [
+    "*Wie heißen* Sie? – Ich heiße Amina Diallo.",
+    "*Woher kommt* Ihre Familie? – Aus Polen.",
+    "*Was kostet* das Ticket? – Drei Euro.",
+    "*Wann beginnt* der Kurs? – Um neun Uhr.",
+    "*Haben* Sie einen Termin? – Ja, um zehn Uhr.",
+    "Hast du keine Zeit? – *Doch*, ich habe Zeit.",
+  ],
+  fehler: [
+    [
+      "Wo Sie wohnen?",
+      "Wo wohnen Sie?",
+      "In der W-Frage steht das Verb direkt nach „wo“.",
+    ],
+    [
+      "Haben heute Sie Zeit?",
+      "Haben Sie heute Zeit?",
+      "Ja/Nein-Frage: zuerst das Verb, dann sofort „Sie“.",
+    ],
+    [
+      "Wo kommen Sie? – Aus Syrien.",
+      "Woher kommen Sie? – Aus Syrien.",
+      "Antwort mit „aus“ + Land → Frage mit „woher“.",
+    ],
+    [
+      "Wer sind Sie von Beruf?",
+      "Was sind Sie von Beruf?",
+      "„wer“ fragt nach der Person. Nach dem Beruf fragt man mit „was“.",
+    ],
+    [
+      "Hast du keine Zeit? – Ja, ich habe Zeit.",
+      "Hast du keine Zeit? – Doch, ich habe Zeit.",
+      "Frage mit „kein“, aber die Antwort ist positiv → doch.",
+    ],
+  ],
+  items: [
+    mc(
+      "___ heißen Sie? – Ich heiße Mariam Haddad.",
+      ["Wie", "Wer", "Wo"],
+      "Nach dem Namen fragt man: Wie heißen Sie?",
+    ),
+    mc(
+      "___ wohnen Sie? – In Duisburg.",
+      ["Wo", "Woher", "Wohin"],
+      "Antwort: in Duisburg (ein Ort) → Wo?",
+    ),
+    mc(
+      "___ beginnt der Deutschkurs? – Um neun Uhr.",
+      ["Wann", "Wo", "Wer"],
+      "Antwort: um neun Uhr (Zeit) → Wann?",
+    ),
+    gap(
+      "___ kommen Sie? – Ich komme aus Marokko.",
+      ["Woher", "Von wo"],
+      "Antwort: aus Marokko → Woher?",
+    ),
+    fix(
+      "Wo arbeitest du?",
+      "Wo du arbeitest?",
+      "W-Frage: Nach „wo“ kommt sofort das Verb.",
+    ),
+    order(
+      "Wann | hast | du | heute | Zeit?",
+      "Fragewort – Verb – Person: Wann hast du …?",
+    ),
+    mc(
+      "___ ist das? – Das ist meine Nachbarin.",
+      ["Wer", "Was", "Wann"],
+      "Antwort: eine Person → Wer?",
+    ),
+    gap(
+      "___ kostet die Fahrkarte? – Vier Euro.",
+      ["Was", "Wie viel"],
+      "Nach dem Preis fragt man: Was kostet …? oder: Wie viel kostet …?",
+    ),
+    mc(
+      "Welche Frage ist richtig?",
+      [
+        "Haben Sie morgen Zeit?",
+        "Haben morgen Sie Zeit?",
+        "Morgen Zeit haben Sie?",
+      ],
+      "Ja/Nein-Frage: zuerst das Verb, dann die Person.",
+    ),
+    order(
+      "Kommen | Sie | aus | der Türkei?",
+      "Ja/Nein-Frage: Das Verb steht auf Platz 1.",
+    ),
+    gap(
+      "___ ihr Kinder? – Ja, wir haben zwei Kinder. (haben)",
+      ["Habt"],
+      "Bei „ihr“: habt. Das Verb steht auf Platz 1.",
+    ),
+    mc(
+      "Hast du keinen Hunger? – ___, ich habe großen Hunger.",
+      ["Doch", "Ja", "Nein"],
+      "Frage mit „kein“, aber die Antwort ist positiv → doch.",
+    ),
+    fix(
+      "Wie lange lernen Sie schon Deutsch?",
+      "Wie lange Sie lernen schon Deutsch?",
+      "„Wie lange“ ist das Fragewort. Dann kommt das Verb, dann „Sie“.",
+    ),
+    gap(
+      "___ fährst du am Wochenende? – Ich fahre nach Köln.",
+      ["Wohin"],
+      "Antwort: nach Köln (Richtung) → Wohin?",
+    ),
+    mc(
+      "___ Kinder haben Sie? – Drei.",
+      ["Wie viele", "Wie lange", "Wie oft"],
+      "Antwort: eine Zahl → Wie viele?",
+    ),
+    order(
+      "Wie oft | gehst | du | zum Sport?",
+      "„Wie oft“ ist das Fragewort. Dann kommt das Verb, dann die Person.",
+    ),
+    gap(
+      "___ kommst du heute nicht zum Kurs? – Mein Kind ist krank.",
+      ["Warum", "Wieso", "Weshalb", "Weswegen"],
+      "Die Antwort nennt den Grund → Warum?",
+    ),
+    mc(
+      "Arbeiten Sie heute? – ___",
+      ["Nein, heute habe ich frei.", "In einer Bäckerei.", "Um acht Uhr."],
+      "Das Verb steht auf Platz 1. Das ist eine Ja/Nein-Frage → ja oder nein.",
+    ),
+  ],
+});
+
+T({
   id: "a1-plural",
   level: "A1",
   title: "Plural: ein Kind – zwei Kinder",
@@ -428,6 +582,301 @@ T({
       "Wir haben drei Zimmer.",
       "Wir haben drei Zimmers.",
       "das Zimmer – die Zimmer. Hier gibt es keine Plural-Endung.",
+    ),
+  ],
+});
+
+T({
+  id: "a1-negation",
+  level: "A1",
+  title: "Nein sagen: nicht und kein",
+  kurz: "*kein* steht vor einem Nomen. Ohne Verneinung hat das Nomen „ein“ oder keinen Artikel: ein Auto → *kein* Auto, Zeit → *keine* Zeit. *nicht* verneint zum Beispiel ein Verb, ein Adjektiv, einen Ort oder ein Nomen mit „der“ oder „mein“: Ich komme *nicht*. Die Wohnung ist *nicht* groß.",
+  kurz_i18n: {
+    en: "kein stands before a noun. Without negation, the noun has ein or no article: ein Auto → kein Auto, Zeit → keine Zeit. nicht negates, for example, a verb, an adjective, a place or a noun with der or mein: Ich komme nicht. Die Wohnung ist nicht groß.",
+    uk: "kein стоїть перед іменником. Без заперечення цей іменник має ein або не має артикля: ein Auto → kein Auto, Zeit → keine Zeit. nicht заперечує, наприклад, дієслово, прикметник, місце або іменник із der чи mein: Ich komme nicht. Die Wohnung ist nicht groß.",
+    ru: "kein стоит перед существительным. Без отрицания у существительного есть ein или нет артикля: ein Auto → kein Auto, Zeit → keine Zeit. nicht отрицает, например, глагол, прилагательное, место или существительное с der или mein: Ich komme nicht. Die Wohnung ist nicht groß.",
+    ar: "تأتي kein قبل الاسم. بدون النفي يكون مع الاسم ein أو يكون بلا أداة: ein Auto ← kein Auto، ‏Zeit ← keine Zeit. أمّا nicht فتنفي مثلًا الفعل أو الصفة أو المكان أو الاسم مع der أو mein: ‏Ich komme nicht. ‏Die Wohnung ist nicht groß.",
+    fa: "kein قبل از اسم می‌آید. بدون نفی، آن اسم ein دارد یا حرف تعریف ندارد: ein Auto ← kein Auto، ‏Zeit ← keine Zeit. nicht مثلاً فعل، صفت، مکان یا اسمِ همراه با der یا mein را منفی می‌کند: ‏Ich komme nicht. ‏Die Wohnung ist nicht groß.",
+    tr: "kein ismin önünde durur. Olumsuz olmayan cümlede isim ein alır ya da artikelsizdir: ein Auto → kein Auto, Zeit → keine Zeit. nicht ise örneğin bir fiili, bir sıfatı, bir yeri ya da der veya mein ile kullanılan bir ismi olumsuz yapar: Ich komme nicht. Die Wohnung ist nicht groß.",
+    es: "kein va delante de un sustantivo. Sin negación, el sustantivo lleva ein o no lleva artículo: ein Auto → kein Auto, Zeit → keine Zeit. nicht niega, por ejemplo, un verbo, un adjetivo, un lugar o un sustantivo con der o mein: Ich komme nicht. Die Wohnung ist nicht groß.",
+    it: "kein sta davanti a un nome. Senza negazione, il nome ha ein o non ha articolo: ein Auto → kein Auto, Zeit → keine Zeit. nicht nega, per esempio, un verbo, un aggettivo, un luogo o un nome con der o mein: Ich komme nicht. Die Wohnung ist nicht groß.",
+  },
+  tabelle: {
+    head: ["", "der", "die", "das", "Plural"],
+    rows: [
+      ["Das ist / sind …", "kein Termin", "kein*e* Frage", "kein Auto", "kein*e* Kinder"],
+      ["Ich habe …", "kein*en* Termin", "kein*e* Frage", "kein Auto", "kein*e* Kinder"],
+    ],
+  },
+  beispiele: [
+    "Das ist *kein* Problem.",
+    "Ich habe heute *keinen* Kurs.",
+    "Wir haben *keine* Kinder.",
+    "Ich verstehe das Wort *nicht*.",
+    "Der Schlüssel ist *nicht* neu.",
+    "Herr Nowak wohnt *nicht* in Essen.",
+  ],
+  fehler: [
+    [
+      "Ich habe nicht Zeit.",
+      "Ich habe keine Zeit.",
+      "„Zeit“ steht hier ohne Artikel → keine Zeit.",
+    ],
+    [
+      "Ich habe kein Termin.",
+      "Ich habe keinen Termin.",
+      "der Termin: Nach „ich habe“ sagt man „keinen Termin“.",
+    ],
+    [
+      "Ich nicht verstehe das.",
+      "Ich verstehe das nicht.",
+      "Das Verb steht auf Platz 2. „nicht“ kommt danach.",
+    ],
+    [
+      "Die Wohnung ist keine groß.",
+      "Die Wohnung ist nicht groß.",
+      "„groß“ ist ein Adjektiv ohne Nomen → nicht.",
+    ],
+    [
+      "Das ist kein mein Schlüssel.",
+      "Das ist nicht mein Schlüssel.",
+      "Vor „mein“ steht „nicht“, nicht „kein“.",
+    ],
+  ],
+  items: [
+    mc(
+      "Ich habe ___ Auto. Ich fahre mit dem Bus.",
+      ["kein", "nicht", "keine"],
+      "das Auto: ein Auto → kein Auto.",
+    ),
+    mc(
+      "Meine Küche ist ___ groß.",
+      ["nicht", "kein", "keine"],
+      "„groß“ ist ein Adjektiv → nicht.",
+    ),
+    mc(
+      "Das ist ___ Problem. Ich helfe Ihnen gern.",
+      ["kein", "keine", "nicht"],
+      "das Problem: ein Problem → kein Problem.",
+    ),
+    gap(
+      "Herr Nowak hat heute leider ___ Zeit. (kein)",
+      ["keine"],
+      "die Zeit → keine Zeit.",
+    ),
+    fix(
+      "Ich verstehe die Frage nicht.",
+      "Ich nicht verstehe die Frage.",
+      "Das Verb steht auf Platz 2. „nicht“ kommt danach.",
+    ),
+    mc(
+      "Kommst du morgen zum Kurs? – Nein, ich komme morgen ___.",
+      ["nicht", "kein", "keinen"],
+      "Das Verb „komme“ wird verneint → nicht.",
+    ),
+    gap(
+      "Ich habe heute ___ Termin beim Arzt. (kein)",
+      ["keinen"],
+      "der Termin: Ich habe einen Termin → keinen Termin.",
+    ),
+    order(
+      "Ich | arbeite | am Sonntag | nicht.",
+      "Das Verb steht auf Platz 2. „nicht“ steht hier am Ende.",
+    ),
+    mc(
+      "Das ist ___ mein Schlüssel. Mein Schlüssel ist rot.",
+      ["nicht", "kein", "keinen"],
+      "Vor „mein“ steht nicht.",
+    ),
+    fix(
+      "Frau Haddad hat keine Kinder.",
+      "Frau Haddad hat nicht Kinder.",
+      "„Kinder“ steht hier ohne Artikel → keine Kinder.",
+    ),
+    gap(
+      "Wohnst du in Essen? – Nein, ich wohne ___ in Essen. (nicht / kein)",
+      ["nicht"],
+      "„in Essen“ ist ein Ort → nicht.",
+    ),
+    mc(
+      "Am Abend trinke ich ___ Kaffee.",
+      ["keinen", "kein", "keine"],
+      "der Kaffee: Ich trinke einen Kaffee → keinen Kaffee.",
+    ),
+    order(
+      "Die Kinder | sind heute | nicht | in der Kita.",
+      "„nicht“ steht hier vor dem Ort: nicht in der Kita.",
+    ),
+    gap(
+      "Im Kühlschrank ist ___ Milch. (kein)",
+      ["keine"],
+      "die Milch → keine Milch.",
+    ),
+    mc(
+      "Ich kann heute leider ___ kommen. Mein Sohn ist krank.",
+      ["nicht", "kein", "keine"],
+      "Das Verb „kommen“ wird verneint → nicht.",
+    ),
+    fix(
+      "Mein Mann kocht nicht gern.",
+      "Mein Mann kocht kein gern.",
+      "„gern“ ist kein Nomen → nicht gern.",
+    ),
+    gap(
+      "Haben Sie noch Fragen? – Nein, ich habe ___ Fragen. (kein)",
+      ["keine"],
+      "die Fragen (Plural) → keine Fragen.",
+    ),
+    mc(
+      "Hast du einen Führerschein? – Nein, ich habe ___ Führerschein.",
+      ["keinen", "kein", "nicht"],
+      "der Führerschein: einen Führerschein → keinen Führerschein.",
+    ),
+  ],
+});
+
+T({
+  id: "a1-possessiv",
+  level: "A1",
+  title: "Mein, dein, sein, ihr: Wem gehört das?",
+  kurz: "ich → *mein*, du → *dein*, er/es → *sein*, sie → *ihr*, wir → *unser*, ihr → *euer*, sie (Plural) → *ihr*, Sie → *Ihr*. Die Endungen sind wie bei „kein“: mein Bruder, mein*e* Schwester, mein Kind, mein*e* Eltern. Nach „ich suche“ oder „ich habe“ (Akkusativ) bei „der“: mein*en* Schlüssel.",
+  kurz_i18n: {
+    en: "ich → mein (my), du → dein (your), er/es → sein (his/its), sie → ihr (her), wir → unser (our), ihr → euer (your), sie plural → ihr (their), Sie → Ihr (your, polite). The endings are like those of kein: mein Bruder, meine Schwester, mein Kind, meine Eltern. After ich suche or ich habe (accusative) with der nouns: meinen Schlüssel.",
+    uk: "ich → mein (мій), du → dein (твій), er/es → sein (його), sie → ihr (її), wir → unser (наш), ihr → euer (ваш), sie (множина) → ihr (їхній), Sie → Ihr (Ваш, ввічливо). Закінчення такі, як у kein: mein Bruder, meine Schwester, mein Kind, meine Eltern. Після ich suche або ich habe (Akkusativ) з der: meinen Schlüssel.",
+    ru: "ich → mein (мой), du → dein (твой), er/es → sein (его), sie → ihr (её), wir → unser (наш), ihr → euer (ваш), sie (мн. ч.) → ihr (их), Sie → Ihr (Ваш, вежливо). Окончания как у kein: mein Bruder, meine Schwester, mein Kind, meine Eltern. После ich suche или ich habe (Akkusativ) с der: meinen Schlüssel.",
+    ar: "ich ← mein (لي)، du ← dein (لك)، er/es ← sein (له)، sie ← ihr (لها)، wir ← unser (لنا)، ihr ← euer (لكم)، sie (الجمع) ← ihr (لهم)، Sie ← Ihr (لحضرتك). النهايات مثل kein: ‏mein Bruder, meine Schwester, mein Kind, meine Eltern. وبعد ich suche أو ich habe (Akkusativ) مع der: ‏meinen Schlüssel.",
+    fa: "ich ← mein (مالِ من)، du ← dein (مالِ تو)، er/es ← sein (مالِ او)، sie ← ihr (مالِ او، مؤنث)، wir ← unser (مالِ ما)، ihr ← euer (مالِ شما)، sie (جمع) ← ihr (مالِ آن‌ها)، Sie ← Ihr (مالِ شما، محترمانه). پایانه‌ها مثل kein است: ‏mein Bruder, meine Schwester, mein Kind, meine Eltern. بعد از ich suche یا ich habe (Akkusativ) با der: ‏meinen Schlüssel.",
+    tr: "ich → mein (benim), du → dein (senin), er/es → sein (onun), sie → ihr (onun, kadın), wir → unser (bizim), ihr → euer (sizin), sie (çoğul) → ihr (onların), Sie → Ihr (sizin, kibar). Ekler kein gibidir: mein Bruder, meine Schwester, mein Kind, meine Eltern. ich suche veya ich habe sonrasında (Akkusativ) der ile: meinen Schlüssel.",
+    es: "ich → mein (mi), du → dein (tu), er/es → sein (su, de él), sie → ihr (su, de ella), wir → unser (nuestro), ihr → euer (vuestro), sie plural → ihr (su, de ellos), Sie → Ihr (su, de usted). Las terminaciones son como las de kein: mein Bruder, meine Schwester, mein Kind, meine Eltern. Después de ich suche o ich habe (acusativo) con der: meinen Schlüssel.",
+    it: "ich → mein (mio), du → dein (tuo), er/es → sein (suo, di lui), sie → ihr (suo, di lei), wir → unser (nostro), ihr → euer (vostro), sie plurale → ihr (loro), Sie → Ihr (Suo, forma di cortesia). Le desinenze sono come quelle di kein: mein Bruder, meine Schwester, mein Kind, meine Eltern. Dopo ich suche o ich habe (accusativo) con der: meinen Schlüssel.",
+  },
+  tabelle: {
+    head: ["", "der", "die", "das", "Plural"],
+    rows: [
+      ["Das ist / sind …", "mein Sohn", "mein*e* Tochter", "mein Kind", "mein*e* Kinder"],
+      ["Ich suche …", "mein*en* Sohn", "mein*e* Tochter", "mein Kind", "mein*e* Kinder"],
+      ["Das ist / sind …", "euer Sohn", "*eure* Tochter", "euer Kind", "*eure* Kinder"],
+      ["Ihr sucht …", "*euren* Sohn", "*eure* Tochter", "euer Kind", "*eure* Kinder"],
+    ],
+  },
+  beispiele: [
+    "Das ist *mein* Bruder und das ist *meine* Schwester.",
+    "Karim besucht *seine* Mutter.",
+    "Elena sucht *ihren* Schlüssel.",
+    "*Unsere* Wohnung hat drei Zimmer.",
+    "Ist das *euer* Sohn? Und ist das *eure* Tochter?",
+    "Wie ist *Ihre* Adresse, Herr Weber?",
+  ],
+  fehler: [
+    [
+      "Das ist meine Bruder.",
+      "Das ist mein Bruder.",
+      "der Bruder → mein Bruder, ohne -e.",
+    ],
+    [
+      "Ich suche mein Schlüssel.",
+      "Ich suche meinen Schlüssel.",
+      "der Schlüssel: Nach „ich suche“ sagt man „meinen Schlüssel“.",
+    ],
+    [
+      "Das ist Lara und das ist sein Mann.",
+      "Das ist Lara und das ist ihr Mann.",
+      "Lara = sie → ihr Mann.",
+    ],
+    [
+      "Wie ist ihre Adresse, Frau Kim?",
+      "Wie ist Ihre Adresse, Frau Kim?",
+      "Höflich mit „Sie“: Ihr / Ihre schreibt man groß.",
+    ],
+  ],
+  items: [
+    mc(
+      "Ich habe einen Bruder. ___ Bruder heißt Samir.",
+      ["Mein", "Meine", "Meinen"],
+      "der Bruder. Wer heißt Samir? → mein Bruder.",
+    ),
+    mc(
+      "Das ist Frau Costa und das ist ___ Mann. Sie sind verheiratet.",
+      ["ihr", "ihre", "sein"],
+      "Frau Costa = sie → ihr. der Mann → ihr Mann, ohne -e.",
+    ),
+    mc(
+      "Herr Yildiz wohnt in Bochum. ___ Wohnung ist klein.",
+      ["Seine", "Sein", "Seinen"],
+      "Herr Yildiz = er → sein. die Wohnung → seine Wohnung.",
+    ),
+    gap(
+      "Wir haben ein Auto. Das ist ___ Auto. (wir)",
+      ["unser"],
+      "wir → unser. das Auto → unser Auto, ohne Endung.",
+    ),
+    fix(
+      "Das ist meine Schwester.",
+      "Das ist mein Schwester.",
+      "die Schwester → meine Schwester.",
+    ),
+    gap(
+      "Wie ist ___ Telefonnummer, Ali? (du)",
+      ["deine"],
+      "du → dein. die Telefonnummer → deine Telefonnummer.",
+    ),
+    mc(
+      "Ich suche ___ Schlüssel. Er ist nicht in der Tasche.",
+      ["meinen", "mein", "meine"],
+      "der Schlüssel (Er ist nicht …). Ich suche … → meinen Schlüssel.",
+    ),
+    mc(
+      "Kinder, wo sind ___ Jacken?",
+      ["eure", "euer", "euren"],
+      "ihr → euer. die Jacken (Plural) → eure Jacken.",
+    ),
+    order(
+      "Wir | besuchen | am Sonntag | unsere Großeltern.",
+      "wir → unser. die Großeltern (Plural) → unsere Großeltern.",
+    ),
+    gap(
+      "Elena bringt ___ Sohn in die Kita. (sie)",
+      ["ihren"],
+      "Elena = sie → ihr. der Sohn: Wen bringt sie? → ihren Sohn.",
+    ),
+    mc(
+      "Guten Tag, Herr Weber! Wie ist ___ Adresse?",
+      ["Ihre", "Ihr", "Ihren"],
+      "Sie → Ihr. die Adresse → Ihre Adresse.",
+    ),
+    fix(
+      "Karim ruft seine Frau an.",
+      "Karim ruft sein Frau an.",
+      "Karim = er → sein. die Frau → seine Frau.",
+    ),
+    gap(
+      "Wir suchen ___ Hund. Er ist weg! (wir)",
+      ["unseren", "unsren", "unsern"],
+      "wir → unser. der Hund: Wir suchen … → unseren Hund.",
+    ),
+    mc(
+      "Das sind Lina und Jonas. ___ Sohn ist zwei Jahre alt.",
+      ["Ihr", "Ihre", "Ihren"],
+      "Lina und Jonas = sie (Plural) → ihr. der Sohn → ihr Sohn.",
+    ),
+    gap(
+      "Ich kenne ___ Lehrer. Er ist nett. (ihr)",
+      ["euren", "eueren", "euern"],
+      "ihr → euer. der Lehrer: Wen kenne ich? → euren Lehrer.",
+    ),
+    order(
+      "Frau Bauer | sucht | seit gestern | ihre Brille.",
+      "Frau Bauer = sie → ihr. die Brille → ihre Brille.",
+    ),
+    fix(
+      "Das ist Lara und das ist ihr Bruder.",
+      "Das ist Lara und das ist ihre Bruder.",
+      "Lara = sie → ihr. der Bruder → ihr Bruder, ohne -e.",
+    ),
+    gap(
+      "Ist das ___ Auto? Dann parkt es bitte woanders. (ihr)",
+      ["euer"],
+      "ihr → euer. das Auto → euer Auto, ohne Endung.",
     ),
   ],
 });
@@ -2396,6 +2845,155 @@ T({
 });
 
 T({
+  id: "a2-wechselpraepositionen",
+  level: "A2",
+  title: "Wechselpräpositionen: Wo? oder Wohin?",
+  kurz: "Neun Präpositionen wechseln den Kasus: *in, an, auf, über, unter, vor, hinter, neben, zwischen*. Bei Orten gilt: Wo? → Dativ: Das Rad steht *vor dem* Haus. Wohin? → Akkusativ: Ich stelle das Rad *vor das* Haus. *stehen, liegen, sitzen* = Wo? · *stellen, legen, sich setzen* = Wohin? · *hängen* = Wo? oder Wohin?",
+  kurz_i18n: {
+    en: "Nine prepositions change their case: in, an, auf, über, unter, vor, hinter, neben, zwischen. For places: Where? → dative: Das Rad steht vor dem Haus. Where to? → accusative: Ich stelle das Rad vor das Haus. stehen, liegen, sitzen = where? stellen, legen, sich setzen = where to? hängen = where? or where to?",
+    uk: "Дев’ять прийменників змінюють відмінок: in, an, auf, über, unter, vor, hinter, neben, zwischen. Коли йдеться про місце: Де? → Dativ: Das Rad steht vor dem Haus. Куди? → Akkusativ: Ich stelle das Rad vor das Haus. stehen, liegen, sitzen = де? stellen, legen, sich setzen = куди? hängen = де? або куди?",
+    ru: "Девять предлогов меняют падеж: in, an, auf, über, unter, vor, hinter, neben, zwischen. Когда речь о месте: Где? → Dativ: Das Rad steht vor dem Haus. Куда? → Akkusativ: Ich stelle das Rad vor das Haus. stehen, liegen, sitzen = где? stellen, legen, sich setzen = куда? hängen = где? или куда?",
+    ar: "تسعة حروف جر تغيّر الحالة الإعرابية: in, an, auf, über, unter, vor, hinter, neben, zwischen. مع الأماكن: أين؟ ← Dativ: ‏Das Rad steht vor dem Haus. إلى أين؟ ← Akkusativ: ‏Ich stelle das Rad vor das Haus. الأفعال stehen, liegen, sitzen = أين؟ والأفعال stellen, legen, sich setzen = إلى أين؟ أمّا hängen = أين؟ أو إلى أين؟",
+    fa: "نه حرف اضافه حالت را عوض می‌کنند: in, an, auf, über, unter, vor, hinter, neben, zwischen. برای مکان: کجا؟ ← Dativ: ‏Das Rad steht vor dem Haus. به کجا؟ ← Akkusativ: ‏Ich stelle das Rad vor das Haus. فعل‌های stehen, liegen, sitzen = کجا؟ و فعل‌های stellen, legen, sich setzen = به کجا؟ و hängen = کجا؟ یا به کجا؟",
+    tr: "Dokuz edat hâl değiştirir: in, an, auf, über, unter, vor, hinter, neben, zwischen. Yer bildirirken: Nerede? → Dativ: Das Rad steht vor dem Haus. Nereye? → Akkusativ: Ich stelle das Rad vor das Haus. stehen, liegen, sitzen = nerede? stellen, legen, sich setzen = nereye? hängen = nerede? ya da nereye?",
+    es: "Nueve preposiciones cambian de caso: in, an, auf, über, unter, vor, hinter, neben, zwischen. Con lugares: ¿Dónde? → dativo: Das Rad steht vor dem Haus. ¿Adónde? → acusativo: Ich stelle das Rad vor das Haus. stehen, liegen, sitzen = ¿dónde? stellen, legen, sich setzen = ¿adónde? hängen = ¿dónde? o ¿adónde?",
+    it: "Nove preposizioni cambiano caso: in, an, auf, über, unter, vor, hinter, neben, zwischen. Con i luoghi: Dove? → dativo: Das Rad steht vor dem Haus. Verso dove? → accusativo: Ich stelle das Rad vor das Haus. stehen, liegen, sitzen = dove? stellen, legen, sich setzen = verso dove? hängen = dove? o verso dove?",
+  },
+  tabelle: {
+    head: ["", "der", "die", "das", "Plural"],
+    rows: [
+      ["Wo? neben …", "*dem* Tisch", "*der* Tür", "*dem* Regal", "*den* Stühle*n*"],
+      ["Wohin? neben …", "*den* Tisch", "*die* Tür", "*das* Regal", "*die* Stühle"],
+    ],
+  },
+  beispiele: [
+    "Das Fahrrad *steht vor dem* Haus. – Ich *stelle* es *vor das* Haus.",
+    "Der Brief *liegt neben der* Lampe. – Ich *lege* ihn *neben die* Lampe.",
+    "Die Uhr *hängt über dem* Sofa. – Ich *hänge* sie *über das* Sofa.",
+    "Der Drucker steht *zwischen den* Schreibtischen.",
+    "Setzen Sie sich bitte *neben meine* Kollegin.",
+    "Die Kinder stehen *am* Fenster. – Geht bitte nicht *ans* Fenster!",
+  ],
+  fehler: [
+    [
+      "Ich stelle die Tasche unter dem Tisch.",
+      "Ich stelle die Tasche unter den Tisch.",
+      "stellen = Wohin? → Akkusativ: unter den Tisch.",
+    ],
+    [
+      "Das Auto steht vor das Haus.",
+      "Das Auto steht vor dem Haus.",
+      "stehen = Wo? → Dativ: vor dem Haus.",
+    ],
+    [
+      "Ich stehe den Stuhl neben das Fenster.",
+      "Ich stelle den Stuhl neben das Fenster.",
+      "Ich bewege den Stuhl → stellen. „stehen“ sagt nur, wo etwas ist.",
+    ],
+    [
+      "Die Lampe hängt über den Tisch.",
+      "Die Lampe hängt über dem Tisch.",
+      "Wo ist die Lampe? → Dativ: über dem Tisch.",
+    ],
+    [
+      "Wir sitzen zwischen die Nachbarn.",
+      "Wir sitzen zwischen den Nachbarn.",
+      "sitzen = Wo? → Dativ Plural: den Nachbarn.",
+    ],
+  ],
+  items: [
+    mc(
+      "Das Fahrrad steht vor ___ Haus.",
+      ["dem", "das", "den"],
+      "Wo steht es? → Dativ: das Haus → vor dem Haus.",
+    ),
+    mc(
+      "Ich stelle mein Fahrrad hinter ___ Haus.",
+      ["das", "dem", "der"],
+      "Wohin stelle ich es? → Akkusativ: hinter das Haus.",
+    ),
+    gap(
+      "Die Lampe hängt über ___ Schreibtisch. (der)",
+      ["dem"],
+      "Wo hängt sie? → Dativ: der Schreibtisch → über dem Schreibtisch.",
+    ),
+    mc(
+      "Leg den Brief bitte neben ___ Tastatur.",
+      ["die", "der", "dem"],
+      "legen = Wohin? → Akkusativ: die Tastatur → neben die Tastatur.",
+    ),
+    fix(
+      "Unter dem Stuhl liegt ein Handy.",
+      "Unter den Stuhl liegt ein Handy.",
+      "Wo liegt das Handy? → Dativ: unter dem Stuhl.",
+    ),
+    gap(
+      "Die Katze schläft unter ___ Bett. (das)",
+      ["dem"],
+      "Wo schläft sie? → Dativ: das Bett → unter dem Bett.",
+    ),
+    mc(
+      "Die Kollegin ___ die Ordner ins Regal.",
+      ["stellt", "steht", "liegt"],
+      "Wohin? ins Regal. Sie bewegt die Ordner → stellen.",
+    ),
+    order(
+      "Mein Auto | steht | hinter | dem Supermarkt.",
+      "stehen = Wo? → Dativ: hinter dem Supermarkt.",
+    ),
+    mc(
+      "Bitte warten Sie einen Moment vor ___ Tür!",
+      ["der", "die", "dem"],
+      "Wo soll man warten? → Dativ: die Tür → vor der Tür.",
+    ),
+    gap(
+      "Wir setzen uns an ___ Tisch beim Fenster. (der)",
+      ["den"],
+      "sich setzen = Wohin? → Akkusativ: der Tisch → an den Tisch.",
+    ),
+    fix(
+      "Stell den Eimer bitte neben die Tür.",
+      "Stell den Eimer bitte neben der Tür.",
+      "stellen = Wohin? → Akkusativ: neben die Tür.",
+    ),
+    mc(
+      "Der Drucker steht zwischen ___ Schreibtischen.",
+      ["den", "die", "dem"],
+      "Wo steht er? → Dativ Plural: zwischen den Schreibtischen.",
+    ),
+    gap(
+      "Setz dich doch neben ___ Oma! (die)",
+      ["die"],
+      "sich setzen = Wohin? → Akkusativ: die Oma → neben die Oma.",
+    ),
+    order(
+      "Frau Petrova | stellt | die Blumen | auf den Balkon.",
+      "stellen = Wohin? → Akkusativ: auf den Balkon.",
+    ),
+    mc(
+      "Der Kalender ___ über dem Kopierer.",
+      ["hängt", "stellt", "legt"],
+      "Wo ist der Kalender? Über dem Kopierer → er hängt.",
+    ),
+    gap(
+      "Viele Familien sitzen auf ___ Bänken im Park. (die)",
+      ["den"],
+      "sitzen = Wo? → Dativ Plural: auf den Bänken.",
+    ),
+    mc(
+      "Bringen Sie die Kisten bitte in ___ Keller.",
+      ["den", "dem", "der"],
+      "Wohin? → Akkusativ: der Keller → in den Keller.",
+    ),
+    fix(
+      "Zwischen der Apotheke und der Bank ist eine Haltestelle.",
+      "Zwischen die Apotheke und die Bank ist eine Haltestelle.",
+      "Wo ist die Haltestelle? → Dativ: zwischen der Apotheke und der Bank.",
+    ),
+  ],
+});
+
+T({
   id: "a2-adjektivendungen",
   level: "A2",
   title: "Adjektivendungen: ein neuer Job, die neue Wohnung",
@@ -3039,6 +3637,160 @@ T({
 });
 
 T({
+  id: "b1-verben-praepositionen",
+  level: "B1",
+  title: "Verben mit Präposition: warten auf, worauf, darauf",
+  kurz: "Viele Verben haben eine feste Präposition mit einem festen Kasus: warten *auf* + Akkusativ, sich kümmern *um* + Akkusativ, teilnehmen *an* + Dativ. Frage nach einer Sache: *Worauf* wartest du? – *Darauf.* Frage nach einer Person: *Auf wen* wartest du? – *Auf ihn.* Beginnt die Präposition mit einem Vokal, kommt ein r dazu: wo*r*auf, da*r*an.",
+  kurz_i18n: {
+    en: "Many verbs have a fixed preposition with a fixed case: warten auf + accusative (wait for), sich kümmern um + accusative (take care of), teilnehmen an + dative (take part in). Asking about a thing: Worauf wartest du? – Darauf. Asking about a person: Auf wen wartest du? – Auf ihn. If the preposition starts with a vowel, an r is added: worauf, daran.",
+    uk: "Багато дієслів мають сталий прийменник зі сталим відмінком: warten auf + Akkusativ (чекати на), sich kümmern um + Akkusativ (дбати про), teilnehmen an + Dativ (брати участь у). Питання про річ: Worauf wartest du? – Darauf. Питання про людину: Auf wen wartest du? – Auf ihn. Якщо прийменник починається з голосного, додається r: worauf, daran.",
+    ru: "У многих глаголов есть постоянный предлог с постоянным падежом: warten auf + Akkusativ (ждать), sich kümmern um + Akkusativ (заботиться о), teilnehmen an + Dativ (участвовать в). Вопрос о предмете: Worauf wartest du? – Darauf. Вопрос о человеке: Auf wen wartest du? – Auf ihn. Если предлог начинается с гласной, добавляется r: worauf, daran.",
+    ar: "لكثير من الأفعال حرف جر ثابت وحالة إعرابية ثابتة: ‏warten auf + Akkusativ (ينتظر)، ‏sich kümmern um + Akkusativ (يعتني بـ)، ‏teilnehmen an + Dativ (يشارك في). السؤال عن شيء: ‏Worauf wartest du? – Darauf.‏ السؤال عن شخص: ‏Auf wen wartest du? – Auf ihn.‏ وإذا بدأ حرف الجر بحرف صوتي يُضاف r: ‏worauf, daran.",
+    fa: "بسیاری از فعل‌ها حرف اضافهٔ ثابت با حالت ثابت دارند: ‏warten auf + Akkusativ (منتظر بودن)، ‏sich kümmern um + Akkusativ (مراقبت و رسیدگی کردن)، ‏teilnehmen an + Dativ (شرکت کردن در). سؤال دربارهٔ چیز: ‏Worauf wartest du? – Darauf.‏ سؤال دربارهٔ شخص: ‏Auf wen wartest du? – Auf ihn.‏ اگر حرف اضافه با حرف صدادار شروع شود، یک r اضافه می‌شود: ‏worauf, daran.",
+    tr: "Birçok fiilin sabit bir edatı ve sabit bir hâli vardır: warten auf + Akkusativ (beklemek), sich kümmern um + Akkusativ (ilgilenmek), teilnehmen an + Dativ (katılmak). Bir şey sorulurken: Worauf wartest du? – Darauf. Bir kişi sorulurken: Auf wen wartest du? – Auf ihn. Edat ünlüyle başlıyorsa araya r gelir: worauf, daran.",
+    es: "Muchos verbos tienen una preposición fija con un caso fijo: warten auf + acusativo (esperar), sich kümmern um + acusativo (ocuparse de), teilnehmen an + dativo (participar en). Pregunta por una cosa: Worauf wartest du? – Darauf. Pregunta por una persona: Auf wen wartest du? – Auf ihn. Si la preposición empieza por vocal, se añade una r: worauf, daran.",
+    it: "Molti verbi hanno una preposizione fissa con un caso fisso: warten auf + accusativo (aspettare), sich kümmern um + accusativo (occuparsi di), teilnehmen an + dativo (partecipare a). Domanda su una cosa: Worauf wartest du? – Darauf. Domanda su una persona: Auf wen wartest du? – Auf ihn. Se la preposizione comincia per vocale, si aggiunge una r: worauf, daran.",
+  },
+  tabelle: {
+    head: ["Präposition", "Verben", "Sache: Frage – Antwort"],
+    rows: [
+      ["*auf* + Akk.", "warten, achten, sich freuen (es kommt noch)", "worauf? – darauf"],
+      ["*um* + Akk.", "sich kümmern, bitten", "worum? – darum"],
+      ["*über* + Akk.", "sprechen, sich beschweren, sich ärgern, sich freuen (es ist da)", "worüber? – darüber"],
+      ["*an* + Akk.", "denken, sich erinnern, sich gewöhnen", "woran? – daran"],
+      ["*an* + Dat.", "teilnehmen", "woran? – daran"],
+      ["*nach* + Dat.", "fragen, suchen", "wonach? – danach"],
+      ["*von* + Dat.", "abhängen, träumen", "wovon? – davon"],
+    ],
+  },
+  beispiele: [
+    "*Worauf* wartest du? – Ich *warte auf* den Bus.",
+    "*Auf wen* wartest du? – Ich *warte auf* meinen Bruder.",
+    "Herr Nowak *kümmert sich um* die Anmeldung.",
+    "Wir *nehmen am* Elternabend *teil*.",
+    "Der Termin ist am Montag. *Denk* bitte *daran*!",
+    "Sie *freut sich darauf*, ihre Familie zu sehen.",
+  ],
+  fehler: [
+    [
+      "Ich warte für den Bus.",
+      "Ich warte auf den Bus.",
+      "warten auf + Akkusativ.",
+    ],
+    [
+      "Ich kümmere mich über meine Eltern.",
+      "Ich kümmere mich um meine Eltern.",
+      "sich kümmern um + Akkusativ.",
+    ],
+    [
+      "Ich nehme an einen Kurs teil.",
+      "Ich nehme an einem Kurs teil.",
+      "teilnehmen an + Dativ: an einem Kurs.",
+    ],
+    [
+      "Ich denke oft über meine Familie.",
+      "Ich denke oft an meine Familie.",
+      "Die Familie ist in meinen Gedanken → denken an + Akkusativ.",
+    ],
+    [
+      "Wo bleibt Frau Lehmann? Alle warten darauf.",
+      "Wo bleibt Frau Lehmann? Alle warten auf sie.",
+      "Frau Lehmann ist eine Person → Präposition + Pronomen: auf sie.",
+    ],
+  ],
+  items: [
+    mc(
+      "Ich warte schon seit zwanzig Minuten ___ den Bus.",
+      ["auf", "für", "nach"],
+      "warten auf + Akkusativ.",
+    ),
+    mc(
+      "Wer kümmert sich heute Abend ___ die Kinder?",
+      ["um", "auf", "für"],
+      "sich kümmern um + Akkusativ.",
+    ),
+    mc(
+      "Frau Haddad nimmt ___ einer Weiterbildung teil.",
+      ["an", "mit", "auf"],
+      "teilnehmen an + Dativ.",
+    ),
+    gap(
+      "Denk bitte ___ deinen Termin beim Zahnarzt!",
+      ["an"],
+      "denken an + Akkusativ.",
+    ),
+    fix(
+      "Herr Okafor bittet um einen neuen Termin.",
+      "Herr Okafor bittet für einen neuen Termin.",
+      "bitten um + Akkusativ.",
+    ),
+    gap(
+      "Der Kunde hat sich ___ die lange Wartezeit beschwert.",
+      ["über"],
+      "sich beschweren über + Akkusativ.",
+    ),
+    mc(
+      "___ wartest du? – Auf die Zusage von der Firma.",
+      ["Worauf", "Woran", "Wovon"],
+      "warten auf. Die Zusage ist eine Sache → worauf?",
+    ),
+    mc(
+      "___ wartest du? – Auf meine Schwester.",
+      ["Auf wen", "Worauf", "Auf wem"],
+      "Die Schwester ist eine Person. warten auf + Akkusativ → auf wen?",
+    ),
+    order(
+      "Ich | erinnere | mich | gern | an meine Schulzeit.",
+      "sich erinnern an + Akkusativ. „mich“ steht direkt nach dem Verb.",
+    ),
+    gap(
+      "Morgen ist der Elternabend. Denkst du bitte ___? (da + an)",
+      ["daran", "dran"],
+      "denken an. Eine Sache, „an“ beginnt mit einem Vokal → daran.",
+    ),
+    fix(
+      "Die Nachbarin hat nach deiner Adresse gefragt.",
+      "Die Nachbarin hat über deine Adresse gefragt.",
+      "fragen nach + Dativ.",
+    ),
+    mc(
+      "Die Höhe der Miete hängt ___ der Größe der Wohnung ab.",
+      ["von", "an", "mit"],
+      "abhängen von + Dativ.",
+    ),
+    gap(
+      "___ sprecht ihr gerade? – Über den neuen Dienstplan. (wo + über)",
+      ["Worüber"],
+      "sprechen über. Der Dienstplan ist eine Sache → worüber?",
+    ),
+    mc(
+      "Herr Weber war gestern hier. Ich habe lange ___ gesprochen.",
+      ["mit ihm", "damit", "mit ihn"],
+      "Herr Weber ist eine Person. sprechen mit + Dativ → mit ihm.",
+    ),
+    order(
+      "Ich | freue | mich | darauf, | dich bald | zu sehen.",
+      "sich freuen auf. „darauf“ zeigt auf den Satz mit „zu“.",
+    ),
+    gap(
+      "Ich muss mich noch ___ das frühe Aufstehen gewöhnen.",
+      ["an"],
+      "sich gewöhnen an + Akkusativ.",
+    ),
+    fix(
+      "Am Freitag nehmen wir an einer Besprechung teil.",
+      "Am Freitag nehmen wir an eine Besprechung teil.",
+      "teilnehmen an + Dativ: an einer Besprechung.",
+    ),
+    mc(
+      "Nächste Woche beginnt mein Praktikum. Ich freue mich schon sehr ___.",
+      ["darauf", "davon", "dagegen"],
+      "sich freuen auf. Das Praktikum ist eine Sache → darauf.",
+    ),
+  ],
+});
+
+T({
   id: "b1-praeteritum",
   level: "B1",
   title: "Präteritum: ging, kam, machte",
@@ -3191,6 +3943,158 @@ T({
       "Er ___ die Stelle, weil er gute Zeugnisse hatte. (bekommen)",
       ["bekam"],
       "bekommen → er bekam (wie kommen → kam).",
+    ),
+  ],
+});
+
+T({
+  id: "b1-als-wenn",
+  level: "B1",
+  title: "Als oder wenn? Über früher erzählen",
+  kurz: "*als*: ein einmaliges Ereignis oder eine Zeit in der Vergangenheit: *Als* ich ein Kind war, wohnten wir auf dem Land. *wenn*: etwas, das sich wiederholt, auch früher: Immer *wenn* ich krank war, kochte meine Mutter Suppe. Für jetzt und später steht auch *wenn*: *Wenn* ich morgen Zeit habe, rufe ich an. Das Verb steht am Ende des Nebensatzes.",
+  kurz_i18n: {
+    en: "als: a single event or one period in the past: Als ich ein Kind war, wohnten wir auf dem Land. wenn: something that is repeated, also in the past: Immer wenn ich krank war, kochte meine Mutter Suppe. For now and later you also use wenn: Wenn ich morgen Zeit habe, rufe ich an. The verb is at the end of the subordinate clause.",
+    uk: "als: одноразова подія або один період у минулому: Als ich ein Kind war, wohnten wir auf dem Land. wenn: те, що повторюється, також у минулому: Immer wenn ich krank war, kochte meine Mutter Suppe. Про теперішнє й майбутнє теж кажуть wenn: Wenn ich morgen Zeit habe, rufe ich an. Дієслово стоїть у кінці підрядного речення.",
+    ru: "als: однократное событие или один период в прошлом: Als ich ein Kind war, wohnten wir auf dem Land. wenn: то, что повторяется, также в прошлом: Immer wenn ich krank war, kochte meine Mutter Suppe. О настоящем и будущем тоже говорят wenn: Wenn ich morgen Zeit habe, rufe ich an. Глагол стоит в конце придаточного.",
+    ar: "als: حدث وقع مرّة واحدة أو فترة واحدة في الماضي: ‏Als ich ein Kind war, wohnten wir auf dem Land. ‏wenn: شيء يتكرّر، حتى في الماضي: ‏Immer wenn ich krank war, kochte meine Mutter Suppe. وللحاضر والمستقبل نستخدم wenn أيضًا: ‏Wenn ich morgen Zeit habe, rufe ich an. ويأتي الفعل في آخر الجملة الفرعية.",
+    fa: "als: یک اتفاقِ یک‌باره یا یک دوره در گذشته: ‏Als ich ein Kind war, wohnten wir auf dem Land. ‏wenn: چیزی که تکرار می‌شود، در گذشته هم: ‏Immer wenn ich krank war, kochte meine Mutter Suppe. برای حال و آینده هم wenn می‌آید: ‏Wenn ich morgen Zeit habe, rufe ich an. فعل در آخر جملهٔ پیرو می‌آید.",
+    tr: "als: geçmişte bir kez olan bir olay ya da tek bir dönem: Als ich ein Kind war, wohnten wir auf dem Land. wenn: tekrarlanan bir şey, geçmişte de: Immer wenn ich krank war, kochte meine Mutter Suppe. Şimdi ve gelecek için de wenn kullanılır: Wenn ich morgen Zeit habe, rufe ich an. Fiil yan cümlenin sonundadır.",
+    es: "als: un hecho único o una época en el pasado: Als ich ein Kind war, wohnten wir auf dem Land. wenn: algo que se repite, también en el pasado: Immer wenn ich krank war, kochte meine Mutter Suppe. Para ahora y el futuro también se usa wenn: Wenn ich morgen Zeit habe, rufe ich an. El verbo va al final de la oración subordinada.",
+    it: "als: un fatto unico o un periodo nel passato: Als ich ein Kind war, wohnten wir auf dem Land. wenn: qualcosa che si ripete, anche nel passato: Immer wenn ich krank war, kochte meine Mutter Suppe. Anche per il presente e il futuro si usa wenn: Wenn ich morgen Zeit habe, rufe ich an. Il verbo sta alla fine della frase secondaria.",
+  },
+  tabelle: {
+    head: ["", "einmal / eine Zeit", "mehrmals / immer"],
+    rows: [
+      ["früher", "*als*", "*wenn*"],
+      ["jetzt und später", "*wenn*", "*wenn*"],
+    ],
+  },
+  beispiele: [
+    "*Als* ich nach Deutschland kam, war ich 28 Jahre alt.",
+    "*Als* wir noch in Polen wohnten, hatten wir einen Garten.",
+    "Immer *wenn* ich meine Oma besuchte, backte sie Brot.",
+    "Jedes Mal, *wenn* der Bus zu spät kam, ging ich zu Fuß.",
+    "*Wenn* der Kurs zu Ende ist, suche ich eine Arbeit.",
+  ],
+  fehler: [
+    [
+      "Wenn ich sechs Jahre alt war, kam ich in die Schule.",
+      "Als ich sechs Jahre alt war, kam ich in die Schule.",
+      "Eine bestimmte Zeit in der Vergangenheit, nur einmal → als.",
+    ],
+    [
+      "Als ich morgen Zeit habe, helfe ich dir.",
+      "Wenn ich morgen Zeit habe, helfe ich dir.",
+      "Es geht um morgen, nicht um früher → wenn.",
+    ],
+    [
+      "Immer als ich krank war, blieb ich im Bett.",
+      "Immer wenn ich krank war, blieb ich im Bett.",
+      "„immer“ zeigt: Es war mehrmals so → wenn.",
+    ],
+    [
+      "Wann ich ein Kind war, spielte ich oft draußen.",
+      "Als ich ein Kind war, spielte ich oft draußen.",
+      "„wann“ steht in Fragen. Eine Zeit in der Vergangenheit → als.",
+    ],
+    [
+      "Als ich ankam, es regnete.",
+      "Als ich ankam, regnete es.",
+      "Nach dem als-Satz kommt sofort das Verb.",
+    ],
+  ],
+  items: [
+    mc(
+      "___ ich ein Kind war, hatten wir einen Hund.",
+      ["Als", "Wenn", "Wann"],
+      "Die Kindheit ist eine Zeit in der Vergangenheit → als.",
+    ),
+    mc(
+      "Ich rufe dich an, ___ ich morgen zu Hause bin.",
+      ["wenn", "als", "wann"],
+      "morgen = Zukunft → wenn.",
+    ),
+    mc(
+      "Immer ___ es stark regnete, kam der Zug zu spät.",
+      ["wenn", "als", "wann"],
+      "„immer“ = mehrmals → wenn, auch in der Vergangenheit.",
+    ),
+    gap(
+      "___ ich 2019 meinen Führerschein machte, war ich sehr nervös. (als / wenn)",
+      ["Als"],
+      "2019, ein einmaliges Ereignis → als.",
+    ),
+    fix(
+      "Als wir letztes Jahr umgezogen sind, hat es geregnet.",
+      "Wenn wir letztes Jahr umgezogen sind, hat es geregnet.",
+      "Letztes Jahr, ein einmaliges Ereignis → als.",
+    ),
+    gap(
+      "___ mein Bruder krank ist, bleibt er zu Hause. (als / wenn)",
+      ["Wenn"],
+      "Das ist Gegenwart (ist, bleibt) → wenn.",
+    ),
+    order(
+      "Als | ich | nach Hause | kam, | war | die Tür | offen.",
+      "Im als-Satz steht das Verb am Ende: kam. Danach kommt sofort „war“.",
+    ),
+    mc(
+      "Als ich in Deutschland ankam, ___ niemanden.",
+      ["kannte ich", "ich kannte", "ich niemand kannte"],
+      "Nach dem als-Satz kommt sofort das Verb: kannte ich.",
+    ),
+    mc(
+      "___ Frau Diallo ihre erste Stelle bekam, feierte sie mit Freunden.",
+      ["Als", "Wenn", "Wann"],
+      "Die erste Stelle bekommt man nur einmal → als.",
+    ),
+    gap(
+      "Jedes Mal, ___ ich ihn besuchte, kochte er Tee für uns. (als / wenn)",
+      ["wenn"],
+      "„jedes Mal“ = mehrmals → wenn.",
+    ),
+    fix(
+      "Wenn du morgen ankommst, hole ich dich ab.",
+      "Als du morgen ankommst, hole ich dich ab.",
+      "morgen = Zukunft → wenn.",
+    ),
+    order(
+      "Immer wenn | wir | im Urlaub | waren, | goss unsere Nachbarin | die Blumen.",
+      "„immer“ = mehrmals → wenn. Nach dem wenn-Satz kommt sofort „goss“.",
+    ),
+    mc(
+      "Gestern war ich gerade in der Küche, ___ das Telefon klingelte.",
+      ["als", "wenn", "wann"],
+      "Ein einzelner Moment gestern → als.",
+    ),
+    gap(
+      "Als ich gestern zum Arzt ___, war die Praxis geschlossen. (kommen, Präteritum)",
+      ["kam"],
+      "Präteritum von „kommen“: ich kam. Das Verb steht am Ende.",
+    ),
+    mc(
+      "Früher haben wir jedes Mal gefeiert, ___ jemand eine Prüfung bestanden hatte.",
+      ["wenn", "als", "wann"],
+      "„jedes Mal“ = mehrmals → wenn.",
+    ),
+    fix(
+      "Als der Kurs zu Ende war, gingen alle nach Hause.",
+      "Als der Kurs war zu Ende, gingen alle nach Hause.",
+      "Im als-Satz steht das Verb am Ende: … zu Ende war.",
+    ),
+    gap(
+      "___ meine Tochter zum ersten Mal allein zur Schule ging, war ich aufgeregt. (als / wenn)",
+      ["Als"],
+      "„zum ersten Mal“ = einmalig → als.",
+    ),
+    mc(
+      "Welcher Satz erzählt von einem einzigen Moment in der Vergangenheit?",
+      [
+        "Als der Strom ausfiel, saßen wir im Aufzug.",
+        "Immer wenn der Strom ausfiel, suchten wir Kerzen.",
+        "Wenn der Strom ausfällt, suchen wir Kerzen.",
+      ],
+      "„als“ + Präteritum: Es ist einmal passiert.",
     ),
   ],
 });
@@ -3357,6 +4261,172 @@ T({
     ),
   ],
 });
+T({
+  id: "b1-um-zu-damit",
+  level: "B1",
+  title: "Ziele ausdrücken: um … zu und damit",
+  kurz: "Wozu? Mit *um … zu* und *damit* nennst du ein Ziel. Gleiche Person in beiden Teilen → meist *um … zu* + Infinitiv: Ich lerne, *um* die Prüfung *zu bestehen*. Zwei verschiedene Personen oder Sachen → *damit*, das Verb steht am Ende: Ich spreche langsam, *damit* du mich *verstehst*.",
+  kurz_i18n: {
+    en: "What for? With um … zu and damit you state a goal. Same person in both parts → usually um … zu + infinitive: Ich lerne, um die Prüfung zu bestehen (in order to pass). Two different people or things → damit (so that), with the verb at the end: Ich spreche langsam, damit du mich verstehst.",
+    uk: "Для чого? За допомогою um … zu і damit ти називаєш мету. Та сама особа в обох частинах → зазвичай um … zu + інфінітив: Ich lerne, um die Prüfung zu bestehen (щоб скласти). Дві різні особи або речі → damit (щоб), дієслово стоїть у кінці: Ich spreche langsam, damit du mich verstehst.",
+    ru: "Для чего? С помощью um … zu и damit ты называешь цель. Одно и то же лицо в обеих частях → обычно um … zu + инфинитив: Ich lerne, um die Prüfung zu bestehen (чтобы сдать). Два разных лица или предмета → damit (чтобы), глагол стоит в конце: Ich spreche langsam, damit du mich verstehst.",
+    ar: "لأيّ هدف؟ باستخدام um … zu و damit تذكر الهدف. الشخص نفسه في الجزأين ← غالبًا um … zu مع المصدر: ‏Ich lerne, um die Prüfung zu bestehen (لكي أنجح). شخصان أو شيئان مختلفان ← damit (لكي)، والفعل في الآخر: ‏Ich spreche langsam, damit du mich verstehst.",
+    fa: "برای چه هدفی؟ با um … zu و damit هدف را می‌گویی. شخص یکسان در هر دو بخش ← معمولاً um … zu + مصدر: ‏Ich lerne, um die Prüfung zu bestehen (برای اینکه قبول شوم). دو شخص یا دو چیز متفاوت ← damit (برای اینکه)، فعل در آخر می‌آید: ‏Ich spreche langsam, damit du mich verstehst.",
+    tr: "Ne amaçla? um … zu ve damit ile bir amaç söylersin. İki bölümde de aynı kişi → çoğunlukla um … zu + mastar: Ich lerne, um die Prüfung zu bestehen (geçmek için). İki farklı kişi ya da şey → damit (-sin diye), fiil sonda durur: Ich spreche langsam, damit du mich verstehst.",
+    es: "¿Para qué? Con um … zu y damit expresas un objetivo. La misma persona en las dos partes → normalmente um … zu + infinitivo: Ich lerne, um die Prüfung zu bestehen (para aprobar). Dos personas o cosas diferentes → damit (para que), con el verbo al final: Ich spreche langsam, damit du mich verstehst.",
+    it: "A che scopo? Con um … zu e damit esprimi uno scopo. La stessa persona nelle due parti → di solito um … zu + infinito: Ich lerne, um die Prüfung zu bestehen (per superare). Due persone o cose diverse → damit (affinché), con il verbo alla fine: Ich spreche langsam, damit du mich verstehst.",
+  },
+  tabelle: {
+    head: ["Wann?", "Form", "Beispiel"],
+    rows: [
+      ["gleiche Person", "*um … zu* + Infinitiv", "Ich rufe an, *um* nach dem Preis *zu* fragen."],
+      ["trennbares Verb", "*zu* in der Mitte", "Sie geht zum Amt, *um* den Ausweis ab*zu*holen."],
+      ["mit Modalverb", "*zu* vor dem Modalverb", "Er spart, *um* reisen *zu* können."],
+      ["verschiedene Personen", "*damit* … Verb am Ende", "Ich rufe an, *damit* du Bescheid *weißt*."],
+    ],
+  },
+  beispiele: [
+    "Ich lerne jeden Abend, *um* die Prüfung *zu bestehen*.",
+    "Sie geht zum Amt, *um* ihren Ausweis *abzuholen*.",
+    "*Um* pünktlich *zu sein*, nehme ich den früheren Bus.",
+    "Die Lehrerin spricht langsam, *damit* alle sie *verstehen*.",
+    "Wir suchen eine größere Wohnung, *damit* jedes Kind ein Zimmer *hat*.",
+  ],
+  fehler: [
+    [
+      "Ich gehe zum Amt, um einen Antrag stellen.",
+      "Ich gehe zum Amt, um einen Antrag zu stellen.",
+      "„um“ braucht „zu“ beim Infinitiv.",
+    ],
+    [
+      "Ich lerne Deutsch, für eine Arbeit zu finden.",
+      "Ich lerne Deutsch, um eine Arbeit zu finden.",
+      "Ein Ziel mit Infinitiv → um … zu, nicht „für“.",
+    ],
+    [
+      "Ich helfe ihr, um sie die Prüfung besteht.",
+      "Ich helfe ihr, damit sie die Prüfung besteht.",
+      "Zwei verschiedene Personen (ich – sie) → damit.",
+    ],
+    [
+      "Ich rufe an, um ich einen Termin bekomme.",
+      "Ich rufe an, um einen Termin zu bekommen.",
+      "Im Satz mit „um … zu“ steht kein „ich“.",
+    ],
+    [
+      "Er fährt in die Stadt, um zu einkaufen.",
+      "Er fährt in die Stadt, um einzukaufen.",
+      "Trennbares Verb: „zu“ steht in der Mitte: ein-zu-kaufen.",
+    ],
+    [
+      "Ich mache das Licht an, damit du kannst lesen.",
+      "Ich mache das Licht an, damit du lesen kannst.",
+      "Nach „damit“ steht das konjugierte Verb am Ende.",
+    ],
+  ],
+  items: [
+    mc(
+      "Ich lerne Deutsch, ___ eine gute Arbeit zu finden.",
+      ["um", "damit", "für"],
+      "Gleiche Person, Infinitiv mit „zu“ → um … zu.",
+    ),
+    mc(
+      "Ich schreibe dir die Adresse auf, ___ du den Weg findest.",
+      ["damit", "um", "für"],
+      "Zwei Personen (ich – du) → damit.",
+    ),
+    gap(
+      "Frau Kim geht zur Bank, um ein Konto ___ eröffnen.",
+      ["zu"],
+      "um … zu + Infinitiv: um ein Konto zu eröffnen.",
+    ),
+    fix(
+      "Wir sparen Geld, um eine Reise zu machen.",
+      "Wir sparen Geld, um eine Reise machen.",
+      "„um“ braucht „zu“ beim Infinitiv.",
+    ),
+    mc(
+      "Die Ärztin spricht langsam, ___ ihre Patienten sie gut verstehen.",
+      ["damit", "um", "ohne"],
+      "Verschiedene Personen, Verb am Ende → damit.",
+    ),
+    order(
+      "Ich | gehe | zum Jobcenter, | um | einen Antrag | abzugeben.",
+      "Trennbares Verb: ab-zu-geben. Es steht am Ende.",
+    ),
+    gap(
+      "Samir steht früh auf, um pünktlich bei der Arbeit zu ___. (sein)",
+      ["sein"],
+      "um … zu + Infinitiv: um pünktlich zu sein.",
+    ),
+    mc(
+      "Heute fahre ich in die Stadt, um ___.",
+      ["einzukaufen", "zu einkaufen", "einkaufen zu"],
+      "Trennbares Verb: „zu“ steht in der Mitte: ein-zu-kaufen.",
+    ),
+    fix(
+      "Die Eltern sprechen leise, damit das Baby nicht aufwacht.",
+      "Die Eltern sprechen leise, um das Baby nicht aufwacht.",
+      "Verschiedene Personen (die Eltern – das Baby) → damit.",
+    ),
+    gap(
+      "Der Chef schickt eine E-Mail, ___ alle den neuen Plan kennen. (um / damit)",
+      ["damit"],
+      "Verschiedene Personen (der Chef – alle) → damit.",
+    ),
+    order(
+      "Ich | mache | das Fenster zu, | damit | es | nicht so laut | ist.",
+      "Nach „damit“ steht das Verb am Ende: ist.",
+    ),
+    mc(
+      "Er macht eine Fortbildung, ___.",
+      [
+        "um im Beruf weiterzukommen",
+        "um im Beruf zu weiterkommen",
+        "um er im Beruf weiterkommt",
+      ],
+      "um … zu, ohne „er“. Trennbares Verb: weiter-zu-kommen.",
+    ),
+    gap(
+      "Ich schalte das Handy aus, um besser schlafen ___ können.",
+      ["zu"],
+      "Mit Modalverb steht „zu“ vor dem Modalverb: schlafen zu können.",
+    ),
+    fix(
+      "Um Strom zu sparen, schalten wir das Licht aus.",
+      "Um Strom zu sparen, wir schalten das Licht aus.",
+      "Der Satz mit „um … zu“ steht auf Platz 1. Dann kommt sofort das Verb.",
+    ),
+    mc(
+      "Frau Novak bringt ihr Kind in die Kita, ___.",
+      [
+        "um arbeiten zu können",
+        "um arbeiten können",
+        "damit arbeiten zu können",
+      ],
+      "Gleiche Person: um … zu. „zu“ steht vor dem Modalverb.",
+    ),
+    order(
+      "Um | Geld | zu sparen, | kocht Karim | jeden Tag | selbst.",
+      "Nach dem Satz mit „um … zu“ kommt sofort das Verb: kocht Karim.",
+    ),
+    gap(
+      "Ich lege den Schlüssel auf den Tisch, damit mein Mann ihn sofort ___. (finden)",
+      ["findet"],
+      "Nach „damit“ steht das Verb am Ende: mein Mann = er → findet.",
+    ),
+    mc(
+      "Welcher Satz braucht „damit“?",
+      [
+        "Ich rufe an, … mein Kollege Bescheid weiß.",
+        "Ich rufe an, … einen Termin zu bekommen.",
+        "Ich rufe an, … nach dem Preis zu fragen.",
+      ],
+      "Nur hier gibt es zwei Personen (ich – mein Kollege) → damit. Die anderen Sätze haben einen Infinitiv mit „zu“ → um.",
+    ),
+  ],
+});
+
 /* ===================== B2 ===================== */
 T({
   id: "b2-indirekte-rede",

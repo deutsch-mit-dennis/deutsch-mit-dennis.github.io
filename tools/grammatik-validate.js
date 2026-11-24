@@ -1,7 +1,7 @@
 // node validate.js  – checks grammatik-data.js
 global.window = {};
 const T = require(require('path').join(__dirname, '..', 'grammatik-data.js'));
-const IDS = ['a1-praesens','a1-haben-sein','a1-plural','a1-trennbare-verben','a1-modalverben','a1-imperativ','a1-lokale-praepositionen','a1-konnektoren','a1-perfekt','a2-praeteritum-war-hatte','a2-dass-wenn','a2-weil-denn','a2-komparativ','a2-reflexive-verben','a2-kasus','a2-praepositionen-dativ-akkusativ','a2-adjektivendungen','b1-relativsatz','b1-konjunktiv2','b1-passiv','b1-praeteritum','b1-genitiv','b2-indirekte-rede','b2-nominalisierung','b2-passiv-modalverb','b2-partizipialattribute'];
+const IDS = ['a1-praesens','a1-haben-sein','a1-fragen', 'a1-plural','a1-negation', 'a1-possessiv', 'a1-trennbare-verben','a1-modalverben','a1-imperativ','a1-lokale-praepositionen','a1-konnektoren','a1-perfekt','a2-praeteritum-war-hatte','a2-dass-wenn','a2-weil-denn','a2-komparativ','a2-reflexive-verben','a2-kasus','a2-praepositionen-dativ-akkusativ','a2-wechselpraepositionen', 'a2-adjektivendungen','b1-relativsatz','b1-konjunktiv2','b1-passiv','b1-verben-praepositionen', 'b1-praeteritum','b1-als-wenn', 'b1-genitiv','b1-um-zu-damit', 'b2-indirekte-rede','b2-nominalisierung','b2-passiv-modalverb','b2-partizipialattribute'];
 const LANGS = ['en','uk','ru','ar','fa','tr','es','it'];
 const err = []; const E = (id, m) => err.push(id + ': ' + m);
 const ids = T.map(t => t.id);

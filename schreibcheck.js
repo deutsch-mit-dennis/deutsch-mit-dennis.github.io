@@ -354,7 +354,7 @@
     bar.querySelector('button').onclick = e => check(ta, panel, e.currentTarget);
   }
   window.DMSchreibcheck = { attach: ta => enhance(ta, true), taskHints, countWords };
-  const scan = () => document.querySelectorAll('main textarea').forEach(enhance);
+  const scan = () => document.querySelectorAll('main textarea:not([data-no-check])').forEach(enhance);
   new MutationObserver(scan).observe(document.querySelector('main') || document.body, { childList: true, subtree: true });
   window.addEventListener('hashchange', () => setTimeout(scan, 50));
   scan();

@@ -80,6 +80,12 @@
           S("Verben im Präsens", "#grammatik/a1-praesens", "Grammatik", 10),
           S("haben und sein", "#grammatik/a1-haben-sein", "Grammatik", 10),
           S(
+            "Fragen stellen: Wo? Wann? Haben Sie …?",
+            "#grammatik/a1-fragen",
+            "Grammatik",
+            10,
+          ),
+          S(
             "Sprechen: Hallo, das bin ich",
             "#ueben/sprechen/A1/0",
             "Sprechen",
@@ -94,6 +100,12 @@
             20,
           ),
           S("Der Plural", "#grammatik/a1-plural", "Grammatik", 10),
+          S(
+            "Nein sagen: nicht und kein",
+            "#grammatik/a1-negation",
+            "Grammatik",
+            10,
+          ),
           S(
             "Zahlen-Ohr: Preise und Uhrzeiten hören",
             "#spiele/zahlen",
@@ -148,6 +160,12 @@
             "#lektion/familie",
             "Lektion",
             20,
+          ),
+          S(
+            "mein, dein, sein, ihr",
+            "#grammatik/a1-possessiv",
+            "Grammatik",
+            10,
           ),
           S("Sprechen: Meine Familie", "#ueben/sprechen/A1/3", "Sprechen", 10),
           S("Der Körper", "#erste-schritte/koerper", "Wörter", 10),
@@ -241,6 +259,12 @@
           S(
             "Präpositionen mit Dativ und Akkusativ",
             "#grammatik/a2-praepositionen-dativ-akkusativ",
+            "Grammatik",
+            10,
+          ),
+          S(
+            "Wechselpräpositionen: Wo? Wohin?",
+            "#grammatik/a2-wechselpraepositionen",
             "Grammatik",
             10,
           ),
@@ -365,6 +389,12 @@
           S("Lektion 2: Ich sehe das so.", "#lektion/meinung", "Lektion", 25),
           S("Präteritum", "#grammatik/b1-praeteritum", "Grammatik", 15),
           S(
+            "Als oder wenn?",
+            "#grammatik/b1-als-wenn",
+            "Grammatik",
+            15,
+          ),
+          S(
             "Lektion: Was tragen die Menschen?",
             "#lektion/kleidung",
             "Lektion",
@@ -375,6 +405,12 @@
         U("Arbeit finden", [
           S("Lektion 3: Eine Stelle finden.", "#lektion/arbeit", "Lektion", 25),
           S("Das Passiv", "#grammatik/b1-passiv", "Grammatik", 15),
+          S(
+            "Verben mit Präposition: worauf, darauf",
+            "#grammatik/b1-verben-praepositionen",
+            "Grammatik",
+            15,
+          ),
           S(
             "Sprechen: Bei der Berufsberatung",
             "#ueben/sprechen/B1/4",
@@ -393,6 +429,12 @@
             10,
           ),
           S("Der Genitiv", "#grammatik/b1-genitiv", "Grammatik", 15),
+          S(
+            "Ziele ausdrücken: um … zu und damit",
+            "#grammatik/b1-um-zu-damit",
+            "Grammatik",
+            15,
+          ),
           S(
             "Schreiben: E-Mail an die Volkshochschule",
             "#ueben/schreiben/B1/5",

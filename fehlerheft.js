@@ -468,7 +468,7 @@
         <section class="dm-card fh-empty"><p class="fh-big" aria-hidden="true">📓</p>
           <p><b>Mach eine Übung.</b> Deine Fehler kommen automatisch hierher. Dann kannst du sie wiederholen.</p>${tr("empty", "p")}
           ${learned ? `<p class="fh-learned">✓ Gelernt: <b>${learned}</b></p>` : ""}
-          <p class="dm-row"><a class="dm-btn" href="#kurs">Zum Kurs →</a><a class="dm-btn dm-btn-quiet" href="#challenge">Tages-Challenge →</a></p></section>
+          <p class="dm-row"><a class="dm-btn" href="#kurs">Zum Kurs →</a><a class="dm-btn dm-btn-quiet" href="#challenge">Tages-Challenge →</a><a class="dm-btn dm-btn-quiet" href="#diktat">Diktat →</a><a class="dm-btn dm-btn-quiet" href="#verben/ueben">Verben üben →</a></p></section>
         ${help()}`,
         "fh-page",
       );

@@ -45,7 +45,7 @@ window.DMLazy = (() => {
     "bild.js?v=20261113q"
   ],
   "grammatik": [
-    "grammatik-data.js?v=20261122a",
+    "grammatik-data.js?v=20261124a",
     "grammatik.js?v=20261111m"
   ],
   "laute": [
@@ -73,7 +73,7 @@ window.DMLazy = (() => {
     "b1-30.js?v=20261117w"
   ],
   "wcore": [
-    "b2-woerter.js?v=20261117w"
+    "b2-woerter.js?v=20261124a"
   ],
   "wb2": [
     "b2-woerter-data.js?v=20261117w"
@@ -107,14 +107,26 @@ window.DMLazy = (() => {
   ],
   "lieder": [
     "lieder-data.js?v=20261112a"
+  ],
+  "diktat": [
+    "diktat-data.js?v=20261124a",
+    "diktat.js?v=20261124a"
+  ],
+  "verben": [
+    "verben-data.js?v=20261124a",
+    "verbliste.js?v=20261124a"
+  ],
+  "suche": [
+    "suche.js?v=20261124a"
   ]
 };
-  const NEED = { spiele: ['spiele'], hoeren: ['hoeren'], lesen: ['lesen'], pruefung: ['hoeren', 'lesen'], training: ['hoeren', 'lesen'], bild: ['bild'], 'erste-schritte': ['erste'], niveau: ['erste', 'hoeren', 'lesen'], grammatik: ['grammatik'], laute: ['laute'], lid: ['lidx', 'lidt'], simulation: ['lidx', 'muster', 'lidt', 'sim'], vorbereitung: ['lidx', 'muster', 'lidt', 'sim'], ueben: ['muster'], pruefungsinfo: ['fakten'], 'b2-30-tage': ['b230'], 'b1-30-tage': ['b130'], 'b2-woerter': ['wb2', 'wcore'], 'b1-woerter': ['wb1', 'wcore'], 'dtz-woerter': ['wdtz', 'wcore'], 'a1-woerter': ['wa1', 'wcore'], sprachbausteine: ['b2t'], 'telc-b2-sprechen': ['b2t'], witz: ['witz'], mikula: ['mikula'], 'mikula-buch': ['mikulab'], 'dtz-30-tage': ['d30'], lieder: ['lieder'] };
+  const NEED = { spiele: ['spiele'], hoeren: ['hoeren'], lesen: ['lesen'], pruefung: ['hoeren', 'lesen'], training: ['hoeren', 'lesen'], bild: ['bild'], 'erste-schritte': ['erste'], niveau: ['erste', 'hoeren', 'lesen'], grammatik: ['grammatik'], laute: ['laute'], lid: ['lidx', 'lidt'], simulation: ['lidx', 'muster', 'lidt', 'sim'], vorbereitung: ['lidx', 'muster', 'lidt', 'sim'], ueben: ['muster'], pruefungsinfo: ['fakten'], 'b2-30-tage': ['b230'], 'b1-30-tage': ['b130'], 'b2-woerter': ['wb2', 'wcore'], 'b1-woerter': ['wb1', 'wcore'], 'dtz-woerter': ['wdtz', 'wcore'], 'a1-woerter': ['wa1', 'wcore'], sprachbausteine: ['b2t'], 'telc-b2-sprechen': ['b2t'], witz: ['witz'], mikula: ['mikula'], 'mikula-buch': ['mikulab'], 'dtz-30-tage': ['d30'], lieder: ['lieder'], diktat: ['diktat'], verben: ['verben'], suche: ['suche'] };
   const done = {}, busy = {};
   const one = src => new Promise(res => { const s = document.createElement('script'); s.src = src; s.async = false; s.onload = s.onerror = () => res(); document.head.appendChild(s); });
   const group = g => busy[g] || (busy[g] = GROUPS[g].reduce((p, src) => p.then(() => one(src)), Promise.resolve()).then(() => { done[g] = true; }));
   return {
     ready: route => (NEED[route] || []).every(g => done[g]),
     load: route => Promise.all((NEED[route] || []).map(group)),
+    group,
   };
 })();

@@ -245,7 +245,7 @@
       // one clear next step; everything else is a small secondary link
       go.innerHTML = (st
         ? `<a class="dm-btn dm-level-start" href="${x(st.href)}"><span class="dm-level-lbl"><span>${x(c ? tr(c.done ? 'kurs_cont' : 'kurs_start', c.done ? 'Weiter im Kurs {lv}' : 'Kurs {lv} starten').replace('{lv}', lv) : tr(st.key, st.key === 'go_start' ? 'Jetzt starten' : 'Lektionen öffnen'))}</span> <span aria-hidden="true">▶</span></span><small>${x(st.sub)}</small></a>`
-        : `<a class="dm-btn dm-btn-quiet dm-level-test" href="#einstufung"><span aria-hidden="true">🧭</span> ${x(tr('test_l', 'Einstufungstest – 5 Minuten'))}</a><p class="dm-level-note">${x(tr('test_hint', 'Du kennst dein Niveau nicht? Mach den kurzen Test.'))}</p>`)
+        : `<p class="dm-level-note">${x(tr('test_hint', 'Du kennst dein Niveau nicht? Mach den kurzen Test.'))} <a href="#einstufung">${x(tr('test_l', 'Einstufungstest – 5 Minuten'))}</a></p>`)
         + (c ? `<p class="dm-level-course"><a href="${x(c.courseHref || '#kurs/' + lv)}">${x(tr('course_of', 'Kurs {lv}: Schritt {n} von {total}').replace('{lv}', lv).replace('{n}', Math.min((c.done || 0) + 1, c.total || 1)).replace('{total}', c.total || ''))}</a></p>` : '')
         + `<p class="dm-level-more">`
         + (lastDiffers ? `<a href="#${x(last.route)}"><span aria-hidden="true">↩</span> ${x(tr('go_cont', 'Weitermachen'))}: ${x(last.title)}</a>` : '')
@@ -283,6 +283,7 @@
         <h1 class="dm-hero-title">Deutsch lernen mit Dennis</h1>
         <p class="dm-promise" data-i18n="free" data-i18n-dir>Kostenlos · A0 bis B2 · ohne Anmeldung</p>
         ${levelPicker()}
+        ${DM.todayCard ? DM.todayCard(mem.level) : ''}
         <p class="dm-hand">Hallo! Ich bin Dennis, dein Deutschlehrer und zugelassener Prüfer. Tippe auf dein Niveau – dann startet dein Kurs, Schritt für Schritt.</p>
         <ul class="dm-trust"><li>✓ DTZ-Prüfer</li><li>✓ telc-Prüfer B1–B2</li><li>✓ Vom BAMF zugelassene Lehrkraft für Integrationskurse</li></ul>
       </div>
@@ -347,6 +348,7 @@
       mainEl.querySelector('.dm-home')?.append(introEl);
     }
     wireLevel();
+    if (DM.todayInit) DM.todayInit(mem.level).catch(() => {});
     const more = $('#dm-more'); if (more) more.ontoggle = () => { mem.moreOpen = more.open; save(); };
     (window.DMNews ? DMNews.items() : fetch('neu.json?v=' + Math.floor(Date.now() / 36e5), { cache: 'no-cache' }).then(r => r.json()).then(j => j.items || [])).then(items => {
       const ico = { lied: ['noten', 'Lied'], hoeren: ['kopfhoerer', 'Hören'], sprechen: ['sprechblase', 'Sprechen'], schreiben: ['schreiben', 'Schreiben'], uebung: ['idee', 'Übung'], neu: ['funkeln', 'Neu'], video: ['video', 'Video'], kahoot: ['spiel', 'Kahoot'] };
@@ -605,6 +607,8 @@
         <section class="dm-card dm-hub-card"><h2>✍️ Schreiben</h2><p>Plane deinen Text, schreib ihn und vergleiche mit einem Muster. Dein Entwurf bleibt auf deinem Gerät gespeichert.</p>${levelLinks('ueben/schreiben')}<a class="dm-inline-link" href="#schreiben/bausteine">Schreib-Bausteine: Anrede, Gruß, Verbindungswörter</a><a class="dm-inline-link" href="/dtz-schreiben/">DTZ Schreiben: Vorbereitungspaket zur neuen A2-Regel</a></section>
         <section class="dm-card dm-hub-card"><h2>🎧 Hören</h2><p>Hörtraining für DTZ und DTB B2 mit natürlichen Stimmen – plus kurze Texte zum Einstieg.</p><div class="dm-pills"><a href="#hoeren/dtz-1"><b>DTZ</b><small>5 Übungssätze</small></a><a href="#hoeren/b2-1"><b>DTB B2</b><small>4 Übungssätze</small></a><a href="#hoeren"><b>Alle</b><small>Übersicht</small></a></div></section>
         <section class="dm-card dm-hub-card"><h2>📖 Lesen</h2><p>Mitteilungen, Anzeigen, E-Mails und Artikel verstehen – mit Fragen und Erklärungen.</p><div class="dm-pills"><a href="#lesen/alltag"><b>Alltag</b><small>A2–B1 · DTZ</small></a><a href="#lesen/beruf"><b>Beruf</b><small>B1–B2 · DTB</small></a></div></section>
+        <section class="dm-card dm-hub-card"><h2>👂 Diktat</h2><p>Satz hören und schreiben – mit Aufnahmen und sofortiger Kontrolle.</p><div class="dm-pills">${LEVELS.map(k => `<a href="#diktat/${k}"><b>${k}</b></a>`).join('')}</div></section>
+        <section class="dm-card dm-hub-card"><h2>🔤 Verben und Wörter</h2><p>Unregelmäßige Verben nachschlagen und üben. Eigene Wörter merken und wiederholen.</p><div class="dm-pills"><a href="#verben"><b>Verben</b></a><a href="#meine-woerter"><b>Meine Wörter</b></a></div></section>
         <section class="dm-card dm-hub-card"><h2>🎮 Lernspiele</h2><p>23 Spiele, neu: „Mikula sucht den Weg nach Hause“ (A1–B1), das Story-Abenteuer „Neu in Deutschland“ in 8 Kapiteln und das Jump’n’Run „Lino läuft“ – beide von A1 bis C1. Dazu Grammatik, Alltag, DTB B2 Beruf und „Leben in Deutschland“.</p><a class="dm-btn dm-btn-quiet" href="#spiele">Zu den Lernspielen</a></section>
         <section class="dm-card dm-hub-card"><h2>🖼 Bild beschreiben</h2><p>Adjektivendungen und Relativsätze an Bildern üben – wie im DTZ, Teil Sprechen 2.</p><a class="dm-btn dm-btn-quiet" href="#bild">Zum Bild-Trainer</a></section>
         <section class="dm-card dm-hub-card"><h2>🎲 Gemeinsam spielen</h2><p>Kahoot-Quiz für den Kurs oder zu Hause. Wörter und Redemittel festigen.</p><a class="dm-btn dm-btn-quiet" href="#kahoot">Zu den Kahoot-Quiz</a></section>
@@ -776,7 +780,7 @@
       <div class="dm-head dm-head-art"><div><h1>Hören</h1><p class="dm-lead">Ansagen, Mailbox-Nachrichten, Gespräche und Radiobeiträge – mit Fragen und Lösungen. Die Texte sind mit natürlich klingenden KI-Stimmen vertont, verschiedene Figuren sprechen.</p></div><span class="dm-wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span></div>
       <section class="dm-section"><div class="dm-section-head"><h2>Für den Anfang: kurze Hörtexte</h2><p>A1 bis B1 · Alltag und Beruf · ohne Prüfungsdruck</p></div>
         <div class="dm-paths">${Object.entries(DM.listening).map(([id, set]) => setCard(id, set, id === 'beruf' ? 'sky' : 'mint')).join('')}</div>
-        <p class="dm-small">Die neuen A1- und A2-Texte liest im Moment die Stimme deines Geräts. Aufnahmen kommen später.</p></section>
+        <p class="dm-small">Die Texte A1 und A2 liest die Stimme deines Geräts.</p></section>
       <section class="dm-section"><div class="dm-section-head"><h2>DTZ Hören – Übungssätze</h2><p>A2–B1 · alle vier Teile wie in der Prüfung</p></div>
         <div class="dm-paths">${group('dtz').map(([id, s]) => setCard(id, s, 'sun')).join('')}</div></section>
       ${group('telcb1').length ? `<section class="dm-section"><div class="dm-section-head"><h2>telc B1 Hören – allgemein</h2><p>B1 · Radiomeldungen, Interview, Durchsagen – richtig oder falsch</p></div>
@@ -889,7 +893,7 @@
   /* ---------- Deutsch mit Liedern ---------- */
   const SONG_LEVELS = ['A1', 'A2', 'B1', 'B2', 'C1'];
   const sunoConsent = () => !!mem.sunoConsent;
-  function songOfDay() { const all = (DM.songs || []).filter(sg => sg.suno); if (!all.length) return null; const d = new Date(); return all[(d.getFullYear() * 400 + d.getMonth() * 31 + d.getDate()) % all.length]; }
+  function songOfDay(lv) { const songs = (DM.songs || []).filter(sg => sg.suno), want = lv || (mem.level === 'A0' ? 'A1' : mem.level), fit = songs.filter(sg => sg.level === want), all = fit.length ? fit : songs; if (!all.length) return null; const d = new Date(); return all[(d.getFullYear() * 400 + d.getMonth() * 31 + d.getDate()) % all.length]; }
   /* Startseite: kompakte Karte statt der großen Lieder-Bühne */
   function songHome() {
     const all = DM.songs || [], sod = songOfDay();
@@ -907,8 +911,8 @@
       <p class="dm-song-home-more"><a href="#lieder">Alle Lieder</a> · <a href="#lieder/playlist">♫ Playlist</a></p>
     </section>`;
   }
-  function songStage(isHub) {
-    const all = DM.songs || [], sod = songOfDay();
+  function songStage(isHub, lv) {
+    const all = DM.songs || [], sod = songOfDay(lv);
     return `<section class="dm-stage${isHub ? ' dm-stage-hub' : ''}" aria-labelledby="stage-h">
       <div class="dm-stage-lights" aria-hidden="true"><i></i><i></i><i></i></div>
       <div class="dm-stage-notes" aria-hidden="true"><span>♪</span><span>♫</span><span>♩</span><span>♬</span><span>♪</span></div>
@@ -933,7 +937,7 @@
     mem.songLevel = sel; save();
     const list = (DM.songs || []).filter(sg => sg.level === sel).sort((a, b) => (songIsNew(b) ? 1 : 0) - (songIsNew(a) ? 1 : 0));
     page(`${crumbs([['Deutsch mit Liedern']])}
-      ${songStage(true)}
+      ${songStage(true, SONG_LEVELS.includes(sel) ? sel : '')}
       <nav class="dm-tabs" aria-label="Niveau">${SONG_LEVELS.map(k => `<a href="#lieder/${k}" ${k === sel ? 'aria-current="page"' : ''}><b>${k}</b><small>${(DM.songs || []).filter(sg => sg.level === k).length} Lieder${(DM.songs || []).some(sg => sg.level === k && songIsNew(sg)) ? ' · <em class="dm-song-new">neu</em>' : ''}</small></a>`).join('')}</nav>
       <div class="dm-songs">${list.map(songCard).join('')}</div>
       <aside class="dm-card dm-song-how"><h2>So lernst du mit einem Lied</h2><ol class="dm-list"><li>Hör das Lied einmal nur zu. Worum geht es?</li><li>Lies die wichtigen Wörter und mach die Lückenaufgabe.</li><li>Hör noch einmal und lies den Text mit.</li><li>Sing mit – das trainiert Aussprache und Satzmelodie.</li><li>Lade das PDF herunter: Liedtext, Aufgaben und Lösungen.</li></ol></aside>
@@ -1367,15 +1371,18 @@
       <section class="dm-section dm-card dm-mat-lid"><div><h2>Leben in Deutschland</h2><p>18 illustrierte Merkblätter zum Orientierungskurs – von Politik und Wahlen über Rechtsstaat und Sozialstaat bis zu Geschichte und Europa – findest du im Bereich „Deutschland verstehen“.</p></div><a class="dm-btn dm-btn-quiet" href="#orientierungskurs">Zu den Merkblättern</a></section>
       <p class="dm-small">Alle Materialien sind von Dennis für seinen Unterricht erstellt. Du darfst sie zum Lernen und im Unterricht nutzen. Bitte veröffentliche sie nicht unter deinem Namen.</p>`);
     const norm = t => t.toLocaleLowerCase('de').normalize('NFD').replace(/\p{M}/gu, '').replace(/ß/g, 'ss');
+    const open = new Set(), PER = 8;
     const draw = () => {
       const q = norm($('#dm-mq').value.trim());
       const list = all.filter(m => (cat === 'alle' || m.cat === cat) && (lvl === 'alle' || m.level.includes(lvl)) && (!q || norm(`${m.title} ${m.desc} ${(m.topics || []).join(' ')} ${C[m.cat]}`).includes(q)));
       $('#dm-mcount').textContent = `${list.length} ${list.length === 1 ? 'Material' : 'Materialien'}`;
       const groups = cat === 'alle' ? Object.keys(C) : [cat];
       $('#dm-mlist').innerHTML = groups.map(g => {
-        const items = list.filter(m => m.cat === g); if (!items.length) return '';
-        return `<section class="dm-mat-group">${cat === 'alle' ? `<h2>${C[g]}</h2>` : ''}<ul class="dm-mat-list">${items.map(m => `<li><a class="dm-mat" href="${m.file}" download target="_blank" rel="noopener"><span class="dm-mat-icon" aria-hidden="true">PDF</span><span class="dm-mat-text"><b>${x(m.title)}</b><span>${x(m.desc)}</span>${m.topics ? `<ul class="dm-mat-topics">${m.topics.map(t => `<li>${x(t)}</li>`).join('')}</ul>` : ''}<small>${m.level} · ${m.pages} ${m.pages === 1 ? 'Seite' : 'Seiten'} · ${size(m.kb)}${m.loes ? ' · <span class="dm-mat-loes">✓ mit Lösungen</span>' : ''}</small></span><span class="dm-mat-dl">Herunterladen</span></a></li>`).join('')}</ul></section>`;
+        const found = list.filter(m => m.cat === g); if (!found.length) return '';
+        const items = q || open.has(g) ? found : found.slice(0, PER);
+        return `<section class="dm-mat-group">${cat === 'alle' ? `<h2>${C[g]}</h2>` : ''}<ul class="dm-mat-list">${items.map(m => `<li><a class="dm-mat" href="${m.file}" download target="_blank" rel="noopener"><span class="dm-mat-icon" aria-hidden="true">PDF</span><span class="dm-mat-text"><b>${x(m.title)}</b><span>${x(m.desc)}</span>${m.topics ? `<ul class="dm-mat-topics">${m.topics.map(t => `<li>${x(t)}</li>`).join('')}</ul>` : ''}<small>${m.level} · ${m.pages} ${m.pages === 1 ? 'Seite' : 'Seiten'} · ${size(m.kb)}${m.loes ? ' · <span class="dm-mat-loes">✓ mit Lösungen</span>' : ''}</small></span><span class="dm-mat-dl">Herunterladen</span></a></li>`).join('')}</ul>${items.length < found.length ? `<p class="dm-center"><button type="button" class="dm-btn dm-btn-quiet" data-more="${g}">Alle ${found.length} anzeigen</button></p>` : ''}</section>`;
       }).join('') || '<p class="dm-empty">Nichts gefunden. Versuche ein anderes Wort oder wähle „Alle“.</p>';
+      $$('[data-more]', $('#dm-mlist')).forEach(b => b.onclick = () => { open.add(b.dataset.more); draw(); });
     };
     $('#dm-mq').oninput = draw; draw();
   }
@@ -1716,7 +1723,7 @@
   /* The navigation and footer of index.html use real addresses (/pruefung/, /lieder/ …) so that Google can follow them.
      Inside the app a click is caught and routed as before (#pruefung …) – no page reload. Ctrl/Cmd/middle click and
      "open in new tab" still use the real address. Pages that are not part of the app (dtz-schreiben, impressum …) load normally. */
-  const SECTION_LINK = /^\/(pruefung|simulation|lid|lieder|ueben|hoeren|lesen|spiele|bild|challenge|lernpakete|ueber-mich|vorbereitung|kurs|grammatik|pruefungsinfo|laute|material|b2-30-tage|b2-woerter|sprachbausteine|telc-b2-sprechen|b1-30-tage|b1-woerter|a1-woerter|dtz-woerter|dtz-30-tage|kahoot|videos|witz|mikula|lernpakete\/[\w-]+|vorbereitung\/[\w-]+|niveau\/a[0-2]|niveau\/b[12]|material\/[ab][12]|ueben\/sprechen\/b2)\/$/;
+  const SECTION_LINK = /^\/(pruefung|simulation|lid|lieder|ueben|hoeren|lesen|spiele|bild|challenge|diktat|verben|lernpakete|ueber-mich|vorbereitung|kurs|grammatik|pruefungsinfo|laute|material|b2-30-tage|b2-woerter|sprachbausteine|telc-b2-sprechen|b1-30-tage|b1-woerter|a1-woerter|dtz-woerter|dtz-30-tage|kahoot|videos|witz|mikula|lernpakete\/[\w-]+|vorbereitung\/[\w-]+|niveau\/a[0-2]|niveau\/b[12]|material\/[ab][12]|ueben\/sprechen\/b2)\/$/;
   /* readable pages use lower-case levels (/niveau/b2/), the app routes use upper case (#niveau/B2, #material/alle/B2) */
   const appRoute = r => r.replace(/^(niveau|ueben\/sprechen)\/(\w\d)$/, (_, a, l) => a + '/' + l.toUpperCase()).replace(/^material\/(\w\d)$/, (_, l) => 'material/alle/' + l.toUpperCase());
   document.addEventListener('click', e => {
@@ -1731,8 +1738,8 @@
   });
   /* ---------- Router ---------- */
   const legacyRoute = window.route;
-  const NAV = { '': 'start', lernweg: 'wege', wegweiser: 'wege', lernen: 'lernen', lektion: 'lernen', wortschatz: 'lernen', wort: 'lernen', ueben: 'ueben', schreiben: 'ueben', hoeren: 'ueben', lesen: 'ueben', kahoot: 'ueben', challenge: 'spiele', spiele: 'spiele', bild: 'pruefung', pruefung: 'pruefung', training: 'pruefung', orientierungskurs: 'pruefung', lid: 'pruefung', quellen: 'pruefung', simulation: 'pruefung', vorbereitung: 'pruefung', videos: 'videos', 'ueber-mich': 'ueber', material: 'material', lernpakete: 'pakete', lieder: 'lieder', niveau: 'lernen', 'erste-schritte': 'lernen', kurs: 'wege', einstufung: 'wege', fehler: 'wege', grammatik: 'lernen', laute: 'lernen', pruefungsinfo: 'pruefung' };
-  const TITLES = { '': 'Deutsch lernen mit Dennis', lernstand: 'Lernstand sichern', hallo: 'Dennis in deiner Sprache', lernweg: 'Mein Lernweg', wegweiser: 'Welcher Weg passt?', lernen: 'Lektionen', lektion: 'Lektion', wortschatz: 'Wortschatz', wort: 'Wortkarte', ueben: 'Üben', schreiben: 'Schreib-Bausteine', hoeren: 'Hören', lesen: 'Lesen', kahoot: 'Kahoot-Quiz', challenge: 'Tages-Challenge', spiele: 'Lernspiele', bild: 'Bild beschreiben', pruefung: 'Prüfungstraining', training: 'Prüfungstraining', orientierungskurs: 'Deutschland verstehen', lid: 'Leben in Deutschland – 310 Fragen', quellen: 'Prüfungsinfos & Quellen', simulation: 'Prüfungssimulationen', vorbereitung: 'Gezielte Vorbereitung', videos: 'Videos', 'ueber-mich': 'Über mich', impressum: 'Impressum', datenschutz: 'Datenschutz', pinnwand: 'Deine Meinung', material: 'Materialien', lernpakete: 'Lernpakete', lieder: 'Deutsch mit Liedern', musik: 'Musik zum Lernen', niveau: 'Materialien nach Niveau', 'erste-schritte': 'Erste Schritte', kurs: 'Mein Kurs', einstufung: 'Einstufungstest', fehler: 'Meine Fehler', grammatik: 'Grammatik üben', laute: 'Laute und Buchstaben', pruefungsinfo: 'Prüfungsinfos' };
+  const NAV = { '': 'start', diktat: 'ueben', verben: 'ueben', 'meine-woerter': 'ueben', lernweg: 'wege', wegweiser: 'wege', lernen: 'lernen', lektion: 'lernen', wortschatz: 'lernen', wort: 'lernen', ueben: 'ueben', schreiben: 'ueben', hoeren: 'ueben', lesen: 'ueben', kahoot: 'ueben', challenge: 'spiele', spiele: 'spiele', bild: 'pruefung', pruefung: 'pruefung', training: 'pruefung', orientierungskurs: 'pruefung', lid: 'pruefung', quellen: 'pruefung', simulation: 'pruefung', vorbereitung: 'pruefung', videos: 'videos', 'ueber-mich': 'ueber', material: 'material', lernpakete: 'pakete', lieder: 'lieder', niveau: 'lernen', 'erste-schritte': 'lernen', kurs: 'wege', einstufung: 'wege', fehler: 'wege', grammatik: 'lernen', laute: 'lernen', pruefungsinfo: 'pruefung' };
+  const TITLES = { '': 'Deutsch lernen mit Dennis', suche: 'Suche', diktat: 'Diktat', verben: 'Verben', 'meine-woerter': 'Meine Wörter', lernstand: 'Lernstand sichern', hallo: 'Dennis in deiner Sprache', lernweg: 'Mein Lernweg', wegweiser: 'Welcher Weg passt?', lernen: 'Lektionen', lektion: 'Lektion', wortschatz: 'Wortschatz', wort: 'Wortkarte', ueben: 'Üben', schreiben: 'Schreib-Bausteine', hoeren: 'Hören', lesen: 'Lesen', kahoot: 'Kahoot-Quiz', challenge: 'Tages-Challenge', spiele: 'Lernspiele', bild: 'Bild beschreiben', pruefung: 'Prüfungstraining', training: 'Prüfungstraining', orientierungskurs: 'Deutschland verstehen', lid: 'Leben in Deutschland – 310 Fragen', quellen: 'Prüfungsinfos & Quellen', simulation: 'Prüfungssimulationen', vorbereitung: 'Gezielte Vorbereitung', videos: 'Videos', 'ueber-mich': 'Über mich', impressum: 'Impressum', datenschutz: 'Datenschutz', pinnwand: 'Deine Meinung', material: 'Materialien', lernpakete: 'Lernpakete', lieder: 'Deutsch mit Liedern', musik: 'Musik zum Lernen', niveau: 'Materialien nach Niveau', 'erste-schritte': 'Erste Schritte', kurs: 'Mein Kurs', einstufung: 'Einstufungstest', fehler: 'Meine Fehler', grammatik: 'Grammatik üben', laute: 'Laute und Buchstaben', pruefungsinfo: 'Prüfungsinfos' };
   const OWN = {
     '': () => home(),
     lernweg: p => p[1] ? pathPage(p[1]) : paths(),
@@ -1756,7 +1763,7 @@
     hallo: () => hallo(),
     lieder: p => p[1] === 'playlist' ? songPlaylist(p[2], p[3]) : p[1] && !SONG_LEVELS.includes(p[1]) ? songPage(p[1]) : songsHub(p[1])
   };
-  const ALIAS = { meinung: 'pinnwand', buch: 'lernen', themen: 'lernen', cover: '', praxis: 'ueben', pruefungen: 'pruefung', start: '' };
+  const ALIAS = { meinung: 'pinnwand', buch: 'lernen', themen: 'lernen', sprechen: 'ueben', vokabeln: 'meine-woerter', woerter: 'meine-woerter', suchen: 'suche', search: 'suche', spiel: 'spiele', test: 'einstufung', hilfe: 'hallo', fehlerheft: 'fehler', einstufungstest: 'einstufung', lektionen: 'lernen', cover: '', praxis: 'ueben', pruefungen: 'pruefung', start: '' };
 
   /* Zurück-Pfeil und Startseite auf jeder Unterseite */
   let navDepth = 0;
@@ -1795,6 +1802,7 @@
     p[0] = p[0].toLowerCase();
     if (p[0] in ALIAS) { p[0] = ALIAS[p[0]]; if (p[0] === '') p = ['']; if (p[0] === 'lernen' && p[1] === 'beruf') p[1] = 'B2'; }
     if (p[0] === 'lektion' && !p[1]) p = ['lernen'];
+    if (p[0] === 'wortschatz' && !p[1]) p = ['meine-woerter'];
     if (p[0] === 'lernweg' && p[1] === 'everyday') p[1] = 'sprechen';
     if (p[0] === 'lernweg' && p[1] === 'writing') p[1] = 'schreiben';
     // games, listening/reading data etc. load only when needed (lazy.js); build the page once they are there
@@ -1829,7 +1837,7 @@
     // Weitermachen merken: nur Lernseiten
     const routeStr = p.filter(Boolean).join('/');
     try { window.DMKurs && DMKurs.visit && DMKurs.visit(routeStr); } catch (e) { console.error(e); }
-    if (['erste-schritte', 'grammatik', 'laute', 'lesen', 'lektion', 'wortschatz', 'ueben', 'hoeren', 'training', 'lernweg', 'orientierungskurs', 'lid', 'lieder', 'challenge', 'bild', 'spiele', 'vorbereitung', 'simulation'].includes(p[0]) && routeStr && p[2] !== 'run' && p[2] !== 'ergebnis') {
+    if (['erste-schritte', 'grammatik', 'laute', 'lesen', 'lektion', 'wortschatz', 'ueben', 'hoeren', 'training', 'lernweg', 'orientierungskurs', 'lid', 'lieder', 'challenge', 'bild', 'spiele', 'vorbereitung', 'simulation', 'diktat', 'verben'].includes(p[0]) && routeStr && p[2] !== 'run' && p[2] !== 'ergebnis') {
       mem.visited[routeStr] = Date.now();
       mem.last = { route: routeStr, title: ($("main h1")?.textContent.trim() || TITLES[p[0]] || '').replace(/\.$/, '').slice(0, 48), ts: Date.now() };
       save();

@@ -82,7 +82,7 @@
     const body = $("#b2w-body");
     body.innerHTML = `<button type="button" class="b2w-card" id="b2w-card" aria-describedby="b2w-hint"></button>
       <p class="b2w-hint" id="b2w-hint">Tippen, Leertaste oder Enter: Karte umdrehen · Pfeiltasten: vor und zurück</p>
-      <div class="b2w-row"><button type="button" class="b2w-btn" id="b2w-say">🔊 Vorlesen</button></div>
+      <div class="b2w-row"><button type="button" class="b2w-btn" id="b2w-say">🔊 Vorlesen</button><span id="b2w-star"></span></div>
       <div class="b2w-row b2w-rate"><button type="button" class="b2w-btn b2w-u" id="b2w-u">↻ Noch üben</button><button type="button" class="b2w-btn b2w-k" id="b2w-k">✓ Kann ich</button></div>
       <div class="b2w-row b2w-nav"><button type="button" class="b2w-btn b2w-q" id="b2w-prev">← Zurück</button><button type="button" class="b2w-btn b2w-q" id="b2w-next">Weiter →</button></div>
       <div class="b2w-end" id="b2w-end" hidden></div>`;
@@ -129,6 +129,7 @@
       card.setAttribute("aria-label", `Karte ${idx + 1} von ${L.length}, ${flipped ? "Rückseite" : "Vorderseite"}. ${flipped ? plain(w.w) + ". " + (w.f ? plain(w.f) + ". " : "") + w.b : plain(w.k === "F" ? w.w : w.q || w.w, true) + ". " + (KIND[w.k] || ["", ""])[1]}`);
       card.innerHTML = face(w) + (mark === 1 ? '<span class="b2w-badge">✓ Kann ich</span>' : mark === 0 ? '<span class="b2w-badge b2w-badge-u">↻ Noch üben</span>' : "");
       $("#b2w-count").textContent = `Karte ${idx + 1} von ${L.length} · ${s.k} von ${s.n} kann ich`;
+      if (window.DMWoerter) $("#b2w-star").innerHTML = DMWoerter.star({ w: plain(w.w), f: w.f || "", b: w.b });
       $("#b2w-prev").disabled = idx === 0;
       $("#b2w-next").disabled = idx >= L.length - 1;
       $("#b2w-k").setAttribute("aria-pressed", String(mark === 1));

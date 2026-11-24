@@ -49,21 +49,29 @@
   const card = (g, s) => `<a class="sp-card" href="#spiele/${g.id}"><span class="sp-ic" aria-hidden="true">${g.icon}</span><span class="sp-t"><b>${esc(g.title)}</b><span>${esc(g.desc)}</span><small>${esc(g.level || '')}${s[g.id]?.best != null ? ` · Rekord: ${s[g.id].best}` : ''}</small></span></a>`;
   const BILD = '<a class="sp-card" href="#bild"><span class="sp-ic" aria-hidden="true">🖼</span><span class="sp-t"><b>Bild beschreiben</b><span>Endungen und Relativsätze an Bildern – wie im DTZ.</span><small>A2–B1</small></span></a>';
 
+  /* level filter of the game list: starts with the learner's own level (A0 = A1) */
+  const LV = ['A1', 'A2', 'B1', 'B2'];
+  let levelPick = null;
+  const fits = (g, lv) => { const m = String(g.level || '').match(/[ABC][12]/g); if (!m) return true; const all = [...LV, 'C1', 'C2'], i = all.indexOf(lv); return all.indexOf(m[0]) <= i && i <= all.indexOf(m[m.length - 1]); };
   function hub(only) {
     stopAll();
+    const own = DM.store && DM.store.level === 'A0' ? 'A1' : DM.store && DM.store.level;
+    const pickLv = levelPick || own, lv = !only && LV.includes(pickLv) ? pickLv : '';
     const s = get(), c = CATS.find(x => x.id === only);
     const section = k => {
-      const list = games.filter(g => catOf(g) === k.id);
+      const list = games.filter(g => catOf(g) === k.id && (!lv || fits(g, lv)));
       if (!list.length) return '';
       return `<section class="sp-cat" id="sp-cat-${k.id}" aria-labelledby="sp-h-${k.id}">
         <h2 id="sp-h-${k.id}"><span aria-hidden="true">${k.icon}</span> ${esc(k.t)}</h2><p class="sp-cat-d">${esc(k.d)}</p>
-        <div class="sp-grid">${list.map(g => card(g, s)).join('')}${k.id === 'basis' ? BILD : ''}</div>${k.id === 'lid' && window.LID_QUELLE_HTML ? window.LID_QUELLE_HTML : ''}</section>`;
+        <div class="sp-grid">${list.map(g => card(g, s)).join('')}${k.id === 'basis' && (!lv || lv === 'A2' || lv === 'B1') ? BILD : ''}</div>${k.id === 'lid' && window.LID_QUELLE_HTML ? window.LID_QUELLE_HTML : ''}</section>`;
     };
     DM.page(`${DM.crumbs([['Üben', '#ueben'], ['Lernspiele', c ? '#spiele' : null], ...(c ? [[c.t]] : [])])}
       <div class="dm-head"><h1>${c ? esc(c.t) : 'Lernspiele'}</h1><p class="dm-lead">${c ? esc(c.d) : 'Kurz, schnell und mit sofortiger Rückmeldung – auf dem Handy und am Computer. Ohne Anmeldung.'}</p></div>
       ${!c && window.DMChallenge ? DMChallenge.teaser() : ''}
       <div class="sp-filter-wrap"><nav class="sp-tabs" aria-label="Bereiche"><a href="#spiele"${!c ? ' aria-current="page"' : ''}>Alle</a>${CATS.map(k => `<a href="#spiele/${k.id}"${c === k ? ' aria-current="page"' : ''}><span aria-hidden="true">${k.icon}</span> ${esc(k.t.split(':')[0].replace('Test „Leben in Deutschland“', 'Leben in Deutschland'))}</a>`).join('')}</nav></div>
+      ${!c ? `<div class="lh-chips sp-lv-filter" role="group" aria-label="Niveau">${['Alle', ...LV].map(l => `<button type="button" data-lv="${l}" aria-pressed="${l === (lv || 'Alle')}">${l === 'Alle' ? 'Alle Niveaus' : l}</button>`).join('')}</div>` : ''}
       ${(c ? [c] : CATS).map(section).join('')}`, 'sp-page');
+    document.querySelectorAll('.sp-lv-filter button').forEach(b => { b.onclick = () => { levelPick = b.dataset.lv; hub(); }; });
     const tabs = document.querySelector('.sp-tabs'), wrap = tabs && tabs.parentElement;
     if (tabs) {
       const upd = () => wrap.classList.toggle('is-end', tabs.scrollLeft + tabs.clientWidth >= tabs.scrollWidth - 4);
