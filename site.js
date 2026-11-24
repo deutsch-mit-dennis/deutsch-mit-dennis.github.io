@@ -833,17 +833,17 @@
       </div>
       <div class="dm-row dm-next">${n < set.items.length - 1 ? `<a class="dm-btn" href="#hoeren/${setId}/${n + 1}">Nächster Hörtext</a>` : `<a class="dm-btn" href="#hoeren">Fertig – zur Übersicht</a>`}${n ? `<a class="dm-btn dm-btn-quiet" href="#hoeren/${setId}/${n - 1}">Vorheriger Hörtext</a>` : ''}</div>`);
     const btn = $('#dm-play');
-    let run = 0;
+    let run = 0, failed = false;
     if (btn) btn.onclick = () => {
       const card = btn.closest('.dm-listen');
-      if (btn.classList.contains('is-playing')) { run++; stopSpeaking(); btn.classList.remove('is-playing'); card.classList.remove('is-playing'); btn.innerHTML = '<span aria-hidden="true">▶</span> Abspielen'; return; }
-      plays.count++; const my = ++run;
+      if (btn.classList.contains('is-playing')) { run++; plays.count--; stopSpeaking(); btn.classList.remove('is-playing'); card.classList.remove('is-playing'); btn.innerHTML = '<span aria-hidden="true">▶</span> Abspielen'; return; }
+      plays.count++; const my = ++run; if (failed) { failed = false; $('#dm-plays').textContent = 'Lies zuerst die Fragen. Dann hör den Text – du kannst ihn zweimal hören.'; }
       btn.classList.add('is-playing'); card.classList.add('is-playing'); btn.innerHTML = '<span aria-hidden="true">■</span> Stopp';
       const isDialogue = /\s–\s/.test(item.text);
       speak(item.text, { key: item.id, rate: Number($('#dm-rate').value), dialogue: isDialogue, onend: (ok, why) => {
         if (!btn.isConnected || my !== run) return; // learner went on, or pressed play again
         btn.classList.remove('is-playing'); card.classList.remove('is-playing');
-        if (ok === false) { plays.count--; btn.innerHTML = '<span aria-hidden="true">▶</span> Abspielen'; if (why !== 'stopped') $('#dm-plays').textContent = 'Kein Ton. Prüfe Internet und Lautstärke.'; return; }
+        if (ok === false) { plays.count--; btn.innerHTML = '<span aria-hidden="true">▶</span> Abspielen'; if (why !== 'stopped') { failed = true; $('#dm-plays').textContent = 'Kein Ton. Prüfe Internet und Lautstärke.'; } return; }
         btn.innerHTML = plays.count >= 2 ? '<span aria-hidden="true">↺</span> Noch einmal hören' : '<span aria-hidden="true">▶</span> Zum zweiten Mal hören';
         $('#dm-plays').textContent = plays.count >= 2 ? 'Du hast den Text zweimal gehört. Beantworte jetzt die Fragen.' : 'Lies die Fragen noch einmal. Dann hör den Text ein zweites Mal.';
       } });

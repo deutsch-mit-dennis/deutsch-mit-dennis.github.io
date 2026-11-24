@@ -45,8 +45,7 @@ def clean(src, dst, name, sr=24000, hop=240):
     loud, keep = runs(top - 16, 12), []
     for k, (i, j) in enumerate(loud):
         before = i - loud[k - 1][1] if k else 0
-        after = loud[k + 1][0] - j if k + 1 < len(loud) else 999
-        if k and j - i <= 10 and before >= 24 and after >= 15:
+        if k and k == len(loud) - 1 and j - i <= 10 and before >= 24:  # only after the last word: inside a take it can be a real 'Ich'
             print(f'    {name}: burst {i / 100:.2f}-{j / 100:.2f} s removed')
             lo, hi = loud[k - 1][1] + 12, min(n, j + 4)  # also the breath before it
             x[max(lo, i - 30) * hop:hi * hop] = 0
