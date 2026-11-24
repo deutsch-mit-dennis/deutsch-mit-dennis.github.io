@@ -7,6 +7,7 @@ each sentence is one VoiceStudio take, the takes are joined again with generate.
   py -X utf8 tools/tts/voicestudio/dialogs.py finish <work> [--accept <take> …]
 """
 import json, os, re, subprocess, sys, tempfile
+import numpy as np
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
 import generate as G  # noqa: E402
 
@@ -24,6 +25,48 @@ def chunks(text, limit=90):
         if out and len(out[-1]) + len(s) < limit and (len(out[-1]) < 30 or len(s) < 30): out[-1] += ' ' + s
         else: out.append(s)
     return out
+
+
+def clean(src, dst, name, sr=24000, hop=240):
+    """One take -> level-matched speech. Removes the model's chopped extra syllables (short isolated bursts after a
+    pause) and everything after the last word, then sets every take to the same speech level."""
+    x = np.frombuffer(subprocess.run(['ffmpeg', '-loglevel', 'error', '-i', src, '-af', 'highpass=f=40', '-ar', str(sr), '-ac', '1',
+                                      '-f', 'f32le', '-'], capture_output=True, check=True).stdout, np.float32).copy()
+    n = len(x) // hop
+    db = 20 * np.log10(np.sqrt((x[:n * hop].reshape(n, hop) ** 2).mean(1)) + 1e-9)
+    top = np.percentile(db, 95)
+
+    def runs(level, join):
+        out = []
+        for i in np.flatnonzero(db > level):
+            if out and i - out[-1][1] <= join: out[-1][1] = i + 1
+            else: out.append([i, i + 1])
+        return out
+    loud, keep = runs(top - 16, 12), []
+    for k, (i, j) in enumerate(loud):
+        before = i - loud[k - 1][1] if k else 0
+        after = loud[k + 1][0] - j if k + 1 < len(loud) else 999
+        if k and j - i <= 10 and before >= 24 and after >= 15:
+            print(f'    {name}: burst {i / 100:.2f}-{j / 100:.2f} s removed')
+            lo, hi = loud[k - 1][1] + 12, min(n, j + 4)  # also the breath before it
+            x[max(lo, i - 30) * hop:hi * hop] = 0
+        else: keep.append([i, j])
+    end = keep[-1][1]
+    for i in range(end, min(n, end + 30)):  # soft endings (f, s, ch, k) belong to the word
+        if db[i] > top - 32 and i - end <= 14: end = i + 1
+    start = keep[0][0]
+    for i in range(start, max(-1, start - 25), -1):
+        if db[i] > top - 38 and start - i <= 8: start = i
+    y = x[max(0, start - 3) * hop:min(n, end + 5) * hop].copy()
+    for m, back in ((hop, 0), (4 * hop, 1)):
+        r = np.linspace(0, 1, m)
+        if back: y[-m:] *= r[::-1]
+        else: y[:m] *= r
+    e = db[(db > top - 16)]
+    y *= 10 ** ((-19 - 10 * np.log10((10 ** (e / 10)).mean())) / 20)
+    y = np.concatenate([np.zeros(hop), y, np.zeros(int(sr * .35))]).astype(np.float32)
+    subprocess.run(['ffmpeg', '-y', '-loglevel', 'error', '-f', 'f32le', '-ar', str(sr), '-ac', '1', '-i', '-', '-af',
+                    'alimiter=limit=0.7:level=0', '-ar', str(sr), '-ac', '1', dst], input=y.tobytes(), check=True)
 
 
 if cmd == 'prepare':
@@ -55,11 +98,8 @@ elif cmd == 'finish':
             with tempfile.TemporaryDirectory() as td:
                 cut = []
                 for n, t in enumerate(next(todo)):
-                    c = os.path.join(td, f'{n}.wav')
-                    G.run(['ffmpeg', '-y', '-loglevel', 'error', '-i', P(f'wav/{t}.wav'), '-af',
-                           'highpass=f=40,silenceremove=start_periods=1:start_threshold=-50dB,areverse,silenceremove=start_periods=1:start_threshold=-50dB,areverse,'
-                           'loudnorm=I=-17:TP=-1.5:LRA=11,apad=pad_dur=0.32', '-ar', '24000', '-ac', '1', c])
-                    cut.append(c)
+                    cut.append(os.path.join(td, f'{n}.wav'))
+                    clean(P(f'wav/{t}.wav'), cut[-1], t)
                 args = [a for c in cut for a in ('-i', c)]
                 G.run(['ffmpeg', '-y', '-loglevel', 'error', *args, '-filter_complex', f'concat=n={len(cut)}:v=0:a=1', '-ar', '24000', '-ac', '1', wav])
         G.SYNTH['voicestudio'] = synth

@@ -822,7 +822,7 @@
             <span class="dm-eq" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
           </div><p class="dm-small" id="dm-plays">Lies zuerst die Fragen. Dann hör den Text – du kannst ihn zweimal hören.</p>` : '<p class="dm-warn">Dein Browser kann keine Texte vorlesen. Du kannst den Text unten lesen.</p>'}
           <details id="dm-transcript" ${canPlay ? '' : 'open'}><summary>Text zum Mitlesen</summary><div class="dm-transcript">${transcript}</div></details>
-          <p class="dm-small">${rec ? '🎙 Aufnahme mit natürlichen KI-Stimmen.' : 'Computerstimme deines Geräts. Eine natürliche Aufnahme folgt in Kürze.'}</p>
+          <p class="dm-small">${rec ? '🎙 Gesprochen mit KI-Stimmen.' : 'Computerstimme deines Geräts. Eine natürliche Aufnahme folgt in Kürze.'}</p>
         </section>
         <section class="dm-card">
           <h2>Fragen</h2>
@@ -833,14 +833,17 @@
       </div>
       <div class="dm-row dm-next">${n < set.items.length - 1 ? `<a class="dm-btn" href="#hoeren/${setId}/${n + 1}">Nächster Hörtext</a>` : `<a class="dm-btn" href="#hoeren">Fertig – zur Übersicht</a>`}${n ? `<a class="dm-btn dm-btn-quiet" href="#hoeren/${setId}/${n - 1}">Vorheriger Hörtext</a>` : ''}</div>`);
     const btn = $('#dm-play');
+    let run = 0;
     if (btn) btn.onclick = () => {
       const card = btn.closest('.dm-listen');
-      if (btn.classList.contains('is-playing')) { stopSpeaking(); btn.classList.remove('is-playing'); card.classList.remove('is-playing'); btn.innerHTML = '<span aria-hidden="true">▶</span> Abspielen'; return; }
-      plays.count++;
+      if (btn.classList.contains('is-playing')) { run++; stopSpeaking(); btn.classList.remove('is-playing'); card.classList.remove('is-playing'); btn.innerHTML = '<span aria-hidden="true">▶</span> Abspielen'; return; }
+      plays.count++; const my = ++run;
       btn.classList.add('is-playing'); card.classList.add('is-playing'); btn.innerHTML = '<span aria-hidden="true">■</span> Stopp';
       const isDialogue = /\s–\s/.test(item.text);
-      speak(item.text, { key: item.id, rate: Number($('#dm-rate').value), dialogue: isDialogue, onend: () => {
+      speak(item.text, { key: item.id, rate: Number($('#dm-rate').value), dialogue: isDialogue, onend: (ok, why) => {
+        if (!btn.isConnected || my !== run) return; // learner went on, or pressed play again
         btn.classList.remove('is-playing'); card.classList.remove('is-playing');
+        if (ok === false) { plays.count--; btn.innerHTML = '<span aria-hidden="true">▶</span> Abspielen'; if (why !== 'stopped') $('#dm-plays').textContent = 'Kein Ton. Prüfe Internet und Lautstärke.'; return; }
         btn.innerHTML = plays.count >= 2 ? '<span aria-hidden="true">↺</span> Noch einmal hören' : '<span aria-hidden="true">▶</span> Zum zweiten Mal hören';
         $('#dm-plays').textContent = plays.count >= 2 ? 'Du hast den Text zweimal gehört. Beantworte jetzt die Fragen.' : 'Lies die Fragen noch einmal. Dann hör den Text ein zweites Mal.';
       } });
@@ -1353,11 +1356,11 @@
     siteHelpText.de.titles[1] = 'Navigation'; siteHelpText.de.titles[5] = 'Audio & Vorlesen'; siteHelpText.en.titles[1] = 'Navigation'; siteHelpText.en.titles[5] = 'Audio & read aloud';
     de[0] = 'Du lernst ohne Anmeldung. Unter „Mein Lernweg“ findest du Wege für Anfänger, für mehr Sprechen, für besseres Schreiben, für den DTZ und für B2 Beruf. Der „Wegweiser“ hilft dir beim Auswählen.';
     de[1] = 'Oben findest du das Menü: Start, Mein Lernweg, Lektionen, Üben, Prüfungstraining, Videos und Über mich. Auf dem Handy öffnest du es mit „Menü“. Jede Lektion hat sieben Lernschritte mit „Weiter“ und „Zurück“.';
-    de[5] = 'Starte ein Hörbeispiel mit der Wiedergabetaste. Unter „Üben“ und „Hören“ liest die Stimme deines Geräts Texte vor. Wenn nichts zu hören ist, prüfe die Lautstärke deines Geräts.';
+    de[5] = 'Starte ein Hörbeispiel mit der Wiedergabetaste. Die Texte unter „Hören“ sind mit KI-Stimmen aufgenommen. Andere Texte liest zum Teil die Stimme deines Geräts. Wenn nichts zu hören ist, prüfe die Lautstärke deines Geräts.';
     de[8] = 'Unter „Videos“ siehst du alle Videos von Dennis. Neue Videos erscheinen automatisch. Wenn der Player nicht funktioniert, öffne das Video direkt auf YouTube.';
     en[0] = 'No account is needed. “Mein Lernweg” offers paths for beginners, for speaking more, for better writing, for the DTZ and for B2 at work. The “Wegweiser” helps you choose.';
     en[1] = 'Use the menu at the top: Start, Mein Lernweg, Lektionen, Üben, Prüfungstraining, Videos and Über mich. On phones, open it with “Menü”. Each lesson has seven steps with “Weiter” and “Zurück”.';
-    en[5] = 'Press play to start an audio example. In “Üben” → “Hören” your device voice reads texts aloud. If you hear nothing, check your device volume.';
+    en[5] = 'Press play to start an audio example. The texts under “Hören” are recorded with AI voices. Some other texts are read by your device voice. If you hear nothing, check your device volume.';
     en[8] = 'All of Dennis’ videos are under “Videos”. New videos appear automatically. If the player does not work, open the video directly on YouTube.';
   } catch { /* Hilfe nicht geladen */ }
 
