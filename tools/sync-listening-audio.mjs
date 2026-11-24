@@ -7,7 +7,8 @@ import vm from 'node:vm';
 const root = new URL('../', import.meta.url);
 const ctx = { window: {} }; vm.createContext(ctx);
 vm.runInContext(await readFile(new URL('hoeren-data.js', root), 'utf8'), ctx);
-const exam = ctx.window.DM.listeningExam || {};
+const start = ctx.window.DM.listeningStart || {}; // A1/A2: voiced locally (tools/tts/voicestudio/dialogs.py) – push manifest and MP3s together
+const exam = { ...ctx.window.DM.listeningExam, ...start };
 const file = new URL('tools/tts/manifest.json', root);
 const man = JSON.parse(await readFile(file, 'utf8'));
 const have = new Map(man.entries.map((e, i) => [e.key, i]));
@@ -15,7 +16,7 @@ let added = 0;
 for (const set of Object.values(exam)) for (const it of set.items) {
   const segs = (it.segments && it.segments.length ? it.segments : [{ voice: 'f1', text: it.text }]).map(s => s.say ? { voice: s.voice, text: s.text, say: s.say } : { voice: s.voice, text: s.text });
   const entry = { key: it.id, segments: segs };
-  if (/Anrufbeantworter|Mailbox|Telefon/i.test(it.type || '')) entry.fx = 'telefon'; // klingt wie durchs Telefon, mit Signalton
+  if ((Object.values(start).includes(set) ? /Anrufbeantworter|Mailbox/i : /Anrufbeantworter|Mailbox|Telefon/i).test(it.type || '')) entry.fx = 'telefon'; // klingt wie durchs Telefon, mit Signalton
   if (!have.has(it.id)) { man.entries.push(entry); added++; }
 }
 await writeFile(file, JSON.stringify(man, null, 1) + '\n');

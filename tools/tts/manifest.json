@@ -38648,6 +38648,528 @@
      "text": "Erfahrung habe ich vor allem im Kundenservice gesammelt."
     }
    ]
+  },
+  {
+   "key": "a1-01",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Hallo! Ich heiße Mariam. Wie heißt du?"
+    },
+    {
+     "voice": "m1",
+     "text": "Ich heiße Tomás. Ich komme aus Chile. Und du?"
+    },
+    {
+     "voice": "f1",
+     "text": "Ich komme aus Georgien. Ich wohne jetzt in Köln."
+    },
+    {
+     "voice": "m1",
+     "text": "Ich wohne auch in Köln."
+    }
+   ]
+  },
+  {
+   "key": "a1-02",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Guten Morgen! Wir machen heute Seite 12. Haben alle ein Buch?",
+     "say": "Guten Morgen! Wir machen heute Seite zwölf. Haben alle ein Buch?"
+    },
+    {
+     "voice": "m2",
+     "text": "Entschuldigung, ich habe heute kein Buch."
+    },
+    {
+     "voice": "f2",
+     "text": "Kein Problem. Sie lesen heute zusammen mit Frau Okafor."
+    },
+    {
+     "voice": "m2",
+     "text": "Danke schön!"
+    }
+   ]
+  },
+  {
+   "key": "a1-03",
+   "segments": [
+    {
+     "voice": "f3",
+     "text": "Wie ist deine Telefonnummer, Jonas?"
+    },
+    {
+     "voice": "m3",
+     "text": "Meine Nummer ist 0123 45 67 89.",
+     "say": "Meine Nummer ist null, eins, zwei, drei, vier, fünf, sechs, sieben, acht, neun."
+    },
+    {
+     "voice": "f3",
+     "text": "Noch einmal, bitte. Langsam!"
+    },
+    {
+     "voice": "m3",
+     "text": "0123 45 67 89.",
+     "say": "Null, eins, zwei, drei. Vier, fünf. Sechs, sieben. Acht, neun."
+    },
+    {
+     "voice": "f3",
+     "text": "Danke. Ich rufe dich morgen an."
+    }
+   ]
+  },
+  {
+   "key": "a1-04",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Guten Tag. Wann beginnt der Deutschkurs?"
+    },
+    {
+     "voice": "f1",
+     "text": "Der Kurs beginnt um 9 Uhr.",
+     "say": "Der Kurs beginnt um neun Uhr."
+    },
+    {
+     "voice": "m1",
+     "text": "Und wann ist die Pause?"
+    },
+    {
+     "voice": "f1",
+     "text": "Die Pause ist um halb elf. Um 12 Uhr ist der Kurs zu Ende.",
+     "say": "Die Pause ist um halb elf. Um zwölf Uhr ist der Kurs zu Ende."
+    }
+   ]
+  },
+  {
+   "key": "a1-05",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Guten Morgen! Was möchten Sie?"
+    },
+    {
+     "voice": "m2",
+     "text": "Ich möchte vier Brötchen und ein Brot, bitte."
+    },
+    {
+     "voice": "f2",
+     "text": "Gern. Das macht 5,20 Euro.",
+     "say": "Gern. Das macht fünf Euro zwanzig."
+    },
+    {
+     "voice": "m2",
+     "text": "Hier, bitte."
+    },
+    {
+     "voice": "f2",
+     "text": "Danke. Einen schönen Tag!"
+    }
+   ]
+  },
+  {
+   "key": "a1-06",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Hallo! Was möchtest du essen?"
+    },
+    {
+     "voice": "f1",
+     "text": "Einen Falafel-Teller, bitte. Ohne Zwiebeln."
+    },
+    {
+     "voice": "m1",
+     "text": "Möchtest du auch etwas trinken?"
+    },
+    {
+     "voice": "f1",
+     "text": "Ja, ein Wasser, bitte."
+    },
+    {
+     "voice": "m1",
+     "text": "Das macht zusammen 9 Euro.",
+     "say": "Das macht zusammen neun Euro."
+    },
+    {
+     "voice": "f1",
+     "text": "Hier sind 10 Euro. Stimmt so.",
+     "say": "Hier sind zehn Euro. Stimmt so."
+    }
+   ]
+  },
+  {
+   "key": "a1-07",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Entschuldigung, wo ist die Apotheke?"
+    },
+    {
+     "voice": "m2",
+     "text": "Gehen Sie hier geradeaus. An der Ampel gehen Sie nach rechts. Die Apotheke ist neben der Bank."
+    },
+    {
+     "voice": "f2",
+     "text": "Ist das weit?"
+    },
+    {
+     "voice": "m2",
+     "text": "Nein, nur fünf Minuten zu Fuß."
+    },
+    {
+     "voice": "f2",
+     "text": "Vielen Dank!"
+    }
+   ]
+  },
+  {
+   "key": "a1-08",
+   "segments": [
+    {
+     "voice": "f3",
+     "text": "Praxis Doktor Brandt, guten Tag."
+    },
+    {
+     "voice": "m3",
+     "text": "Guten Tag, hier ist Amir Rahimi. Ich brauche einen Termin. Ich habe Halsschmerzen."
+    },
+    {
+     "voice": "f3",
+     "text": "Können Sie morgen um 10 Uhr kommen?",
+     "say": "Können Sie morgen um zehn Uhr kommen?"
+    },
+    {
+     "voice": "m3",
+     "text": "Ja, das geht."
+    },
+    {
+     "voice": "f3",
+     "text": "Gut. Bitte bringen Sie Ihre Versichertenkarte mit."
+    }
+   ]
+  },
+  {
+   "key": "a1-09",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Wie ist deine neue Wohnung, Daniel?"
+    },
+    {
+     "voice": "m1",
+     "text": "Sie ist klein, aber schön. Ich habe zwei Zimmer, eine Küche und ein Bad."
+    },
+    {
+     "voice": "f1",
+     "text": "Hast du auch einen Balkon?"
+    },
+    {
+     "voice": "m1",
+     "text": "Nein, leider nicht. Aber die Wohnung ist hell und ruhig."
+    }
+   ]
+  },
+  {
+   "key": "a1-10",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Das ist meine Familie. Mein Mann heißt Viktor. Wir haben zwei Kinder. Unsere Tochter Lina ist acht Jahre alt. Unser Sohn Emil ist drei. Meine Eltern wohnen nicht hier. Sie leben in Polen."
+    }
+   ]
+  },
+  {
+   "key": "a1-11",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Achtung an Gleis 3! Der Zug nach Hamburg fährt heute von Gleis 5. Der Zug hat zehn Minuten Verspätung. Bitte gehen Sie jetzt zu Gleis 5.",
+     "say": "Achtung an Gleis drei! Der Zug nach Hamburg fährt heute von Gleis fünf. Der Zug hat zehn Minuten Verspätung. Bitte gehen Sie jetzt zu Gleis fünf."
+    }
+   ]
+  },
+  {
+   "key": "a1-12",
+   "segments": [
+    {
+     "voice": "m3",
+     "text": "Guten Tag. Ich möchte ein Paket abholen. Hier ist die Karte."
+    },
+    {
+     "voice": "f3",
+     "text": "Haben Sie auch einen Ausweis?"
+    },
+    {
+     "voice": "m3",
+     "text": "Ja, hier, bitte."
+    },
+    {
+     "voice": "f3",
+     "text": "Danke, Herr Sousa. Einen Moment, bitte. Hier ist Ihr Paket. Bitte unterschreiben Sie hier."
+    }
+   ]
+  },
+  {
+   "key": "a1-13",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Hallo, Frau Demirci! Sie sind heute früh da."
+    },
+    {
+     "voice": "f2",
+     "text": "Ja, Noah hat um 3 Uhr einen Termin beim Zahnarzt. Wo ist er?",
+     "say": "Ja, Noah hat um drei Uhr einen Termin beim Zahnarzt. Wo ist er?"
+    },
+    {
+     "voice": "f1",
+     "text": "Er spielt im Garten. Ich hole ihn."
+    },
+    {
+     "voice": "f2",
+     "text": "Danke. Morgen holt mein Mann Noah ab."
+    },
+    {
+     "voice": "f1",
+     "text": "In Ordnung. Bis morgen!"
+    }
+   ]
+  },
+  {
+   "key": "a1-14",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Hallo Samira! Wann arbeitest du diese Woche?"
+    },
+    {
+     "voice": "f3",
+     "text": "Ich arbeite von Montag bis Mittwoch. Immer von 6 bis 14 Uhr.",
+     "say": "Ich arbeite von Montag bis Mittwoch. Immer von sechs bis vierzehn Uhr."
+    },
+    {
+     "voice": "m1",
+     "text": "So früh! Und am Donnerstag?"
+    },
+    {
+     "voice": "f3",
+     "text": "Am Donnerstag und am Freitag habe ich frei."
+    },
+    {
+     "voice": "m1",
+     "text": "Schön! Dann trinken wir am Donnerstag einen Kaffee."
+    }
+   ]
+  },
+  {
+   "key": "a2-01",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Guten Tag, Herr Mbeki, hier ist Frau Lindner vom Jobcenter. Ich muss Ihren Termin am Dienstag leider verschieben. Der neue Termin ist am Donnerstag um 9:30 Uhr in Zimmer 214. Bitte bringen Sie Ihren Ausweis und Ihren Lebenslauf mit. Wenn Sie am Donnerstag nicht können, rufen Sie mich bitte bis Mittwoch an. Meine Durchwahl ist die 45. Auf Wiederhören.",
+     "say": "Guten Tag, Herr Mbeki, hier ist Frau Lindner vom Jobcenter. Ich muss Ihren Termin am Dienstag leider verschieben. Der neue Termin ist am Donnerstag um neun Uhr dreißig in Zimmer zweihundertvierzehn. Bitte bringen Sie Ihren Ausweis und Ihren Lebenslauf mit. Wenn Sie am Donnerstag nicht können, rufen Sie mich bitte bis Mittwoch an. Meine Durchwahl ist die fünfundvierzig. Auf Wiederhören."
+    }
+   ],
+   "fx": "telefon"
+  },
+  {
+   "key": "a2-02",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "So, Frau Petrenko, Sie haben eine Erkältung, aber es ist nicht schlimm. Ich schreibe Ihnen ein Rezept für einen Hustensaft."
+    },
+    {
+     "voice": "f1",
+     "text": "Wie oft muss ich den nehmen?"
+    },
+    {
+     "voice": "m1",
+     "text": "Dreimal am Tag, immer nach dem Essen. Trinken Sie viel Tee und bleiben Sie drei Tage zu Hause."
+    },
+    {
+     "voice": "f1",
+     "text": "Brauche ich eine Krankmeldung für meinen Chef?"
+    },
+    {
+     "voice": "m1",
+     "text": "Ja. Die bekommen Sie gleich vorne am Empfang."
+    }
+   ]
+  },
+  {
+   "key": "a2-03",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Guten Tag, Frau Hoang, hier ist Bergmann, Ihr Vermieter. Sie haben mir geschrieben, dass die Heizung im Bad nicht funktioniert. Der Handwerker kommt am Freitag zwischen 8 und 10 Uhr. Bitte seien Sie dann zu Hause. Wenn das nicht geht, können Sie den Schlüssel bei Ihrer Nachbarin, Frau Schulz, abgeben. Vielen Dank und auf Wiederhören.",
+     "say": "Guten Tag, Frau Hoang, hier ist Bergmann, Ihr Vermieter. Sie haben mir geschrieben, dass die Heizung im Bad nicht funktioniert. Der Handwerker kommt am Freitag zwischen acht und zehn Uhr. Bitte seien Sie dann zu Hause. Wenn das nicht geht, können Sie den Schlüssel bei Ihrer Nachbarin, Frau Schulz, abgeben. Vielen Dank und auf Wiederhören."
+    }
+   ],
+   "fx": "telefon"
+  },
+  {
+   "key": "a2-04",
+   "segments": [
+    {
+     "voice": "f3",
+     "text": "Guten Tag, hier ist das Sekretariat der Grundschule am Park. Diese Nachricht ist für die Eltern der Klasse 2b. Morgen fällt der Sportunterricht aus, weil die Sporthalle geschlossen ist. Die Kinder haben deshalb schon um 11:30 Uhr Schluss. Die Betreuung am Nachmittag findet normal statt. Bitte geben Sie Ihrem Kind trotzdem ein Pausenbrot mit. Vielen Dank!",
+     "say": "Guten Tag, hier ist das Sekretariat der Grundschule am Park. Diese Nachricht ist für die Eltern der Klasse zwei b. Morgen fällt der Sportunterricht aus, weil die Sporthalle geschlossen ist. Die Kinder haben deshalb schon um elf Uhr dreißig Schluss. Die Betreuung am Nachmittag findet normal statt. Bitte geben Sie Ihrem Kind trotzdem ein Pausenbrot mit. Vielen Dank!"
+    }
+   ],
+   "fx": "telefon"
+  },
+  {
+   "key": "a2-05",
+   "segments": [
+    {
+     "voice": "m3",
+     "text": "Guten Tag, ich möchte ein Konto eröffnen."
+    },
+    {
+     "voice": "f2",
+     "text": "Gern. Haben Sie einen Termin?"
+    },
+    {
+     "voice": "m3",
+     "text": "Nein, leider nicht."
+    },
+    {
+     "voice": "f2",
+     "text": "Heute ist leider nichts mehr frei. Ich kann Ihnen morgen um 15 Uhr einen Termin geben. Bringen Sie bitte Ihren Pass und Ihre Meldebescheinigung mit.",
+     "say": "Heute ist leider nichts mehr frei. Ich kann Ihnen morgen um fünfzehn Uhr einen Termin geben. Bringen Sie bitte Ihren Pass und Ihre Meldebescheinigung mit."
+    },
+    {
+     "voice": "m3",
+     "text": "Kostet das Konto etwas?"
+    },
+    {
+     "voice": "f2",
+     "text": "Das erklärt Ihnen meine Kollegin morgen genau."
+    },
+    {
+     "voice": "m3",
+     "text": "Gut, dann komme ich morgen."
+    }
+   ]
+  },
+  {
+   "key": "a2-06",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Bäckerei Sommer, Yildiz am Apparat."
+    },
+    {
+     "voice": "m1",
+     "text": "Guten Morgen, Frau Yildiz, hier ist Luca. Ich kann heute leider nicht kommen. Ich habe Fieber."
+    },
+    {
+     "voice": "f1",
+     "text": "Oh, gute Besserung! Gehst du zum Arzt?"
+    },
+    {
+     "voice": "m1",
+     "text": "Ja, um zehn. Die Krankmeldung schicke ich Ihnen heute Nachmittag."
+    },
+    {
+     "voice": "f1",
+     "text": "Gut. Dann rufe ich Karim an. Vielleicht kann er deine Schicht übernehmen. Melde dich bitte morgen noch einmal."
+    },
+    {
+     "voice": "m1",
+     "text": "Das mache ich. Danke!"
+    }
+   ]
+  },
+  {
+   "key": "a2-07",
+   "segments": [
+    {
+     "voice": "f3",
+     "text": "Restaurant Olivenbaum, guten Abend."
+    },
+    {
+     "voice": "m2",
+     "text": "Guten Abend, mein Name ist Okonkwo. Ich möchte für Samstag einen Tisch reservieren, für sechs Personen."
+    },
+    {
+     "voice": "f3",
+     "text": "Um wie viel Uhr möchten Sie kommen?"
+    },
+    {
+     "voice": "m2",
+     "text": "Um 19 Uhr, wenn es geht.",
+     "say": "Um neunzehn Uhr, wenn es geht."
+    },
+    {
+     "voice": "f3",
+     "text": "Um 19 Uhr ist leider alles voll. Um 20 Uhr habe ich noch einen Tisch am Fenster.",
+     "say": "Um neunzehn Uhr ist leider alles voll. Um zwanzig Uhr habe ich noch einen Tisch am Fenster."
+    },
+    {
+     "voice": "m2",
+     "text": "Das passt auch. Wir brauchen noch einen Kinderstuhl."
+    },
+    {
+     "voice": "f3",
+     "text": "Kein Problem, Herr Okonkwo. Bis Samstag!"
+    }
+   ]
+  },
+  {
+   "key": "a2-08",
+   "segments": [
+    {
+     "voice": "m3",
+     "text": "Hallo Frau Castillo, hier ist Ihr Nachbar Jürgen Weiß aus dem zweiten Stock. Der Paketbote war heute Mittag da, aber Sie waren nicht zu Hause. Ich habe Ihr Paket angenommen. Sie können es heute Abend ab 18 Uhr bei mir abholen. Morgen bin ich den ganzen Tag bei der Arbeit, dann geht es erst wieder am Abend. Klingeln Sie einfach. Bis später!",
+     "say": "Hallo Frau Castillo, hier ist Ihr Nachbar Jürgen Weiß aus dem zweiten Stock. Der Paketbote war heute Mittag da, aber Sie waren nicht zu Hause. Ich habe Ihr Paket angenommen. Sie können es heute Abend ab achtzehn Uhr bei mir abholen. Morgen bin ich den ganzen Tag bei der Arbeit, dann geht es erst wieder am Abend. Klingeln Sie einfach. Bis später!"
+    }
+   ],
+   "fx": "telefon"
+  },
+  {
+   "key": "a2-09",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Guten Tag, Herr Haddad, hier ist die Sprachschule am Markt. Ihr A2-Kurs beginnt am Montag, dem 3. März. Der Unterricht ist montags bis donnerstags von 9 bis 12:15 Uhr in Raum 4. Das Kursbuch können Sie am ersten Tag bei uns im Büro kaufen. Bitte kommen Sie am Montag schon um 8:45 Uhr, weil wir noch ein Formular ausfüllen müssen. Bis Montag!",
+     "say": "Guten Tag, Herr Haddad, hier ist die Sprachschule am Markt. Ihr A zwei Kurs beginnt am Montag, dem dritten März. Der Unterricht ist montags bis donnerstags von neun bis zwölf Uhr fünfzehn in Raum vier. Das Kursbuch können Sie am ersten Tag bei uns im Büro kaufen. Bitte kommen Sie am Montag schon um acht Uhr fünfundvierzig, weil wir noch ein Formular ausfüllen müssen. Bis Montag!"
+    }
+   ],
+   "fx": "telefon"
+  },
+  {
+   "key": "a2-10",
+   "segments": [
+    {
+     "voice": "f1",
+     "text": "Hi Ben, hier ist Elif. Hast du am Samstag Zeit? Ich möchte ins Kino gehen."
+    },
+    {
+     "voice": "m2",
+     "text": "Am Samstag kann ich leider nicht, ich muss arbeiten. Aber am Sonntag habe ich frei."
+    },
+    {
+     "voice": "f1",
+     "text": "Sonntag ist auch gut. Der Film fängt um 17 Uhr an.",
+     "say": "Sonntag ist auch gut. Der Film fängt um siebzehn Uhr an."
+    },
+    {
+     "voice": "m2",
+     "text": "Super. Wollen wir uns um halb fünf vor dem Kino treffen?"
+    },
+    {
+     "voice": "f1",
+     "text": "Ja, gern. Ich kaufe die Karten online."
+    },
+    {
+     "voice": "m2",
+     "text": "Prima. Dann lade ich dich danach zum Essen ein."
+    }
+   ]
   }
  ]
 }

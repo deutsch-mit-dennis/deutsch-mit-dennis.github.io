@@ -26,3 +26,8 @@ Clips and sources: `VoiceStudio-Test\referenz\rollen\` (see `CLIPS-UND-LIZENZEN.
    `tools/qa/audiocheck.py`.
 4. Listen to the takes listed as failed in `<work>/report.json`; accept good ones with
    `finish.py … --accept <key>`. Push manifest + MP3s + index **together**.
+
+## Texts with several speakers (listening A1/A2)
+`dialogs.py prepare <work> <key> …` splits every segment into sentence takes; generate and check as above;
+`dialogs.py finish <work> [--accept <take> …]` joins them with `generate.py` `build()`. `check_takes.py` reports takes with
+numbers as failed when Whisper writes digits ("9 Euro" for "neun Euro"): compare `heard` and `text`, then accept.

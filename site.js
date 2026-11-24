@@ -790,8 +790,7 @@
     page(`${crumbs([['Üben', '#ueben'], ['Hören']])}
       <div class="dm-head dm-head-art"><div><h1>Hören</h1><p class="dm-lead">Ansagen, Mailbox-Nachrichten, Gespräche und Radiobeiträge – mit Fragen und Lösungen. Die Texte sind mit natürlich klingenden KI-Stimmen vertont, verschiedene Figuren sprechen.</p></div><span class="dm-wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span></div>
       <section class="dm-section"><div class="dm-section-head"><h2>Für den Anfang: kurze Hörtexte</h2><p>A1 bis B1 · Alltag und Beruf · ohne Prüfungsdruck</p></div>
-        <div class="dm-paths">${Object.entries(DM.listening).map(([id, set]) => setCard(id, set, id === 'beruf' ? 'sky' : 'mint')).join('')}</div>
-        <p class="dm-small">Die Texte A1 und A2 liest die Stimme deines Geräts.</p></section>
+        <div class="dm-paths">${Object.entries(DM.listening).map(([id, set]) => setCard(id, set, id === 'beruf' ? 'sky' : 'mint')).join('')}</div></section>
       <section class="dm-section"><div class="dm-section-head"><h2>DTZ Hören – Übungssätze</h2><p>A2–B1 · alle vier Teile wie in der Prüfung</p></div>
         <div class="dm-paths">${group('dtz').map(([id, s]) => setCard(id, s, 'sun')).join('')}</div></section>
       ${group('telcb1').length ? `<section class="dm-section"><div class="dm-section-head"><h2>telc B1 Hören – allgemein</h2><p>B1 · Radiomeldungen, Interview, Durchsagen – richtig oder falsch</p></div>

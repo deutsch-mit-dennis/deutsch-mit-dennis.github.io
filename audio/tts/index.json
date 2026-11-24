@@ -1,5 +1,5 @@
 {
-"updated": "2026-11-24T14:17:14Z",
+"updated": "2026-11-24T16:44:21Z",
 "engines": [
 "elevenlabs",
 "gemini",
@@ -8,6 +8,155 @@
 "voicestudio"
 ],
 "files": {
+"a1-01": {
+"v": "8a5fef2864",
+"engine": "voicestudio",
+"sig": "8a5fef2864",
+"text": "0a17433220"
+},
+"a1-02": {
+"v": "f484a5b3ce",
+"engine": "voicestudio",
+"sig": "f484a5b3ce",
+"text": "318255a0b1"
+},
+"a1-03": {
+"v": "c7d633897f",
+"engine": "voicestudio",
+"sig": "c7d633897f",
+"text": "b3079a241a"
+},
+"a1-04": {
+"v": "7bf71daf40",
+"engine": "voicestudio",
+"sig": "7bf71daf40",
+"text": "74f307d42c"
+},
+"a1-05": {
+"v": "5b3733d859",
+"engine": "voicestudio",
+"sig": "5b3733d859",
+"text": "fe36bb2c0f"
+},
+"a1-06": {
+"v": "e38ee1e1b8",
+"engine": "voicestudio",
+"sig": "e38ee1e1b8",
+"text": "66bed47c42"
+},
+"a1-07": {
+"v": "a8968586ce",
+"engine": "voicestudio",
+"sig": "a8968586ce",
+"text": "484282d4bd"
+},
+"a1-08": {
+"v": "45c05dbeb5",
+"engine": "voicestudio",
+"sig": "45c05dbeb5",
+"text": "eeba0b5ccc"
+},
+"a1-09": {
+"v": "e2621c1a0d",
+"engine": "voicestudio",
+"sig": "e2621c1a0d",
+"text": "58f05d4bb9"
+},
+"a1-10": {
+"v": "4451ea2b9b",
+"engine": "voicestudio",
+"sig": "4451ea2b9b",
+"text": "477ec6c8ce"
+},
+"a1-11": {
+"v": "0f9abd031e",
+"engine": "voicestudio",
+"sig": "0f9abd031e",
+"text": "042e197b41"
+},
+"a1-12": {
+"v": "2cc8ebd593",
+"engine": "voicestudio",
+"sig": "2cc8ebd593",
+"text": "9f18a3a086"
+},
+"a1-13": {
+"v": "80fffb5f8e",
+"engine": "voicestudio",
+"sig": "80fffb5f8e",
+"text": "ee0e27b138"
+},
+"a1-14": {
+"v": "4454c880f7",
+"engine": "voicestudio",
+"sig": "4454c880f7",
+"text": "c7eb2f8d68"
+},
+"a2-01": {
+"v": "73701be75c",
+"engine": "voicestudio",
+"sig": "73701be75c",
+"text": "9a693faf38",
+"fx": "telefon"
+},
+"a2-02": {
+"v": "ed5dde6a2c",
+"engine": "voicestudio",
+"sig": "ed5dde6a2c",
+"text": "e6dc98f5c7"
+},
+"a2-03": {
+"v": "0c084c8836",
+"engine": "voicestudio",
+"sig": "0c084c8836",
+"text": "aff748fed6",
+"fx": "telefon"
+},
+"a2-04": {
+"v": "1138369c21",
+"engine": "voicestudio",
+"sig": "1138369c21",
+"text": "086f2a6ab3",
+"fx": "telefon"
+},
+"a2-05": {
+"v": "e4b6b02f95",
+"engine": "voicestudio",
+"sig": "e4b6b02f95",
+"text": "52ee76781c"
+},
+"a2-06": {
+"v": "83d44951bb",
+"engine": "voicestudio",
+"sig": "83d44951bb",
+"text": "2657bacddb"
+},
+"a2-07": {
+"v": "83ff4080b3",
+"engine": "voicestudio",
+"sig": "83ff4080b3",
+"text": "944922f805"
+},
+"a2-08": {
+"v": "6761e62e21",
+"engine": "voicestudio",
+"sig": "6761e62e21",
+"text": "d988ed11d5",
+"fx": "telefon"
+},
+"a2-09": {
+"v": "12d9a78e27",
+"engine": "voicestudio",
+"sig": "12d9a78e27",
+"text": "f2f1325f8c",
+"fx": "telefon"
+},
+"a2-10": {
+"v": "e7810af6ae",
+"engine": "voicestudio",
+"sig": "e7810af6ae",
+"text": "eb2c5447ab"
+},
 "b2-1-01": {
 "v": "ad991467a5",
 "engine": "gemini",
