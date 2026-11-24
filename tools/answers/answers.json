@@ -2,7 +2,7 @@
   "_info": "Answer-first pages /antworten/<slug>/ (AEO/GEO). Build: python3 -X utf8 tools/make-answer-pages.py. RULE: every number in a text must appear in a referenced fact (ref) – the generator stops otherwise. Refs: '<exam>.parts.<i>', '<exam>.blocks.<i>' or '<exam>.blocks.<i>.<j>' from pruefung-fakten.js, 'stat:<exam>' from tools/pruefung-statistik.json, 'site:<key>' from site_facts below (numbers must appear in that local page). Placeholders: {sims:<id>} = number of simulations, {n:grammar}, {n:lessons}, {n:sims}. 'stand' = day the texts were checked; the page shows the newest of this date and the fact dates.",
   "stand": "2026-11-22",
   "site_facts": {
-    "datenschutz": {"text": "Du brauchst kein Konto. Dein Lernstand wird nur im Speicher deines Browsers gespeichert (localStorage).", "page": "/datenschutz/", "name": "Deutsch mit Dennis – Datenschutzerklärung"},
+    "verben": {"text": "132 unregelmäßige Verben von A1 bis B2 mit Präsens, Präteritum, Perfekt und Beispielsatz, dazu ein Quiz mit 10 Aufgaben. Das Perfekt mit sein bilden vor allem Verben der Bewegung und der Veränderung sowie sein, bleiben und werden.", "page": "/verben/", "name": "Deutsch mit Dennis – Unregelmäßige Verben"}, "diktat": {"text": "165 Sätze von A1 bis B2, 5 Sätze pro Runde, zwei Arten: Lücken oder ganzer Satz. Falsche Sätze kommen ins Fehlerheft.", "page": "/diktat/", "name": "Deutsch mit Dennis – Diktat"}, "datenschutz": {"text": "Du brauchst kein Konto. Dein Lernstand wird nur im Speicher deines Browsers gespeichert (localStorage).", "page": "/datenschutz/", "name": "Deutsch mit Dennis – Datenschutzerklärung"},
     "kurs": {"text": "Kurse für die Niveaus A0, A1, A2, B1 und B2.", "page": "/kurs/", "name": "Deutsch mit Dennis – Kurse A0–B2"},
     "grammatik": {"text": "{n:grammar} Grammatik-Themen mit Erklärung und Übungen.", "page": "/grammatik/", "name": "Deutsch mit Dennis – Grammatik"},
     "lektionen": {"text": "{n:lessons} Themen-Lektionen, zum Beispiel Wohnen, Arbeit, Gesundheit, Amt.", "page": "/lektionen/", "name": "Deutsch mit Dennis – Lektionen"},
@@ -316,6 +316,231 @@
         {"q": "Schreibe ich „Sie“ oder „du“?", "a": "„Sie“ schreibst du an Firmen, Ämter, Vermieter und Lehrkräfte. „Du“ schreibst du an Freunde und Familie. Anrede und Gruß müssen dazu passen.", "ref": ["site:dtz-geruest"]},
         {"q": "Wie lange habe ich Zeit?", "a": "Du hast 30 Minuten. Plane die letzten Minuten für die Kontrolle ein: Anrede, alle Leitpunkte, Gruß.", "ref": ["dtz.parts.2"]}
       ]
+    },
+    {
+     "slug": "unregelmaessige-verben-lernen",
+     "og": "start",
+     "crumb": "Unregelmäßige Verben",
+     "h1": "Wie lerne ich unregelmäßige Verben – und wann heißt es „ist“ oder „hat“?",
+     "title": "Unregelmäßige Verben lernen: Liste, hat oder ist?",
+     "desc": "Unregelmäßige Verben lernen: drei Formen zusammen, Perfekt mit haben oder sein einfach erklärt, Liste mit Beispielsätzen und Quiz. Kostenlos.",
+     "answer": "Lerne bei jedem Verb drei Formen zusammen: Präsens (er geht), Präteritum (er ging) und Perfekt (er ist gegangen). Das Perfekt mit „sein“ bilden vor allem Verben der Bewegung und der Veränderung sowie sein, bleiben und werden; die meisten anderen Verben nehmen „haben“. Auf Deutsch mit Dennis gibt es dazu eine kostenlose Liste mit 132 Verben von A1 bis B2 und ein Quiz.",
+     "refs": [
+      "site:verben"
+     ],
+     "facts": [
+      {
+       "k": "Formen",
+       "v": "Präsens, Präteritum, Perfekt – immer zusammen lernen",
+       "ref": [
+        "site:verben"
+       ]
+      },
+      {
+       "k": "Perfekt mit „sein“",
+       "v": "Bewegung (fahren, gehen), Veränderung (aufstehen, wachsen) und sein, bleiben, werden",
+       "ref": [
+        "site:verben"
+       ]
+      },
+      {
+       "k": "Perfekt mit „haben“",
+       "v": "die meisten anderen Verben: essen, lesen, schreiben, helfen",
+       "ref": [
+        "site:verben"
+       ]
+      },
+      {
+       "k": "Liste",
+       "v": "132 Verben von A1 bis B2 mit Beispielsatz",
+       "ref": [
+        "site:verben"
+       ]
+      },
+      {
+       "k": "Quiz",
+       "v": "10 Aufgaben pro Runde, passend zu deinem Niveau",
+       "ref": [
+        "site:verben"
+       ]
+      }
+     ],
+     "steps": {
+      "h": "So lernst du die Verben",
+      "ref": "site:verben",
+      "list": [
+       "Wähle fünf Verben aus deinem Niveau.",
+       "Sprich die drei Formen laut: gehen – ging – ist gegangen.",
+       "Schreib zu jedem Verb einen eigenen Satz im Perfekt.",
+       "Merke dir schwierige Verben mit dem Stern in „Meine Wörter“.",
+       "Mach am nächsten Tag das Quiz."
+      ]
+     },
+     "practice": [
+      {
+       "href": "/verben/",
+       "t": "Verbliste mit Suche und Quiz",
+       "d": "Präsens, Präteritum, Perfekt und Beispielsatz."
+      },
+      {
+       "href": "/grammatik/a1-perfekt/",
+       "t": "Perfekt",
+       "d": "Regel und Übungen."
+      },
+      {
+       "href": "/grammatik/b1-praeteritum/",
+       "t": "Präteritum",
+       "d": "Regel und Übungen."
+      },
+      {
+       "href": "/spiele/verben/",
+       "t": "Verben-Spiel",
+       "d": "Verbformen spielerisch üben."
+      }
+     ],
+     "faq": [
+      {
+       "q": "Wann bildet man das Perfekt mit „sein“?",
+       "a": "Vor allem bei Verben der Bewegung von einem Ort zum anderen (Ich bin gefahren.), bei einer Veränderung (Ich bin aufgewacht.) und bei sein, bleiben und werden.",
+       "ref": [
+        "site:verben"
+       ]
+      },
+      {
+       "q": "Heißt es „ich habe gefahren“ oder „ich bin gefahren“?",
+       "a": "Normalerweise „ich bin gefahren“, zum Beispiel: Ich bin mit dem Bus gefahren. Mit einem Akkusativobjekt sagt man „haben“: Ich habe das Auto in die Werkstatt gefahren.",
+       "ref": [
+        "site:verben"
+       ]
+      },
+      {
+       "q": "Brauche ich das Präteritum für das Sprechen?",
+       "a": "Im Gespräch benutzt man meist das Perfekt. Das Präteritum hört man beim Sprechen vor allem bei sein (war), haben (hatte) und den Modalverben (konnte, musste).",
+       "ref": [
+        "site:verben"
+       ]
+      },
+      {
+       "q": "Was ist der Unterschied zwischen regelmäßigen und unregelmäßigen Verben?",
+       "a": "Regelmäßige Verben haben im Präteritum die Endung -te und im Partizip -t: machen – machte – gemacht. Unregelmäßige Verben ändern oft den Vokal: schreiben – schrieb – geschrieben.",
+       "ref": [
+        "site:verben"
+       ]
+      }
+     ]
+    },
+    {
+     "slug": "deutsch-diktat-online-ueben",
+     "og": "start",
+     "crumb": "Diktat online üben",
+     "h1": "Wie kann ich Deutsch mit Diktaten online üben?",
+     "title": "Deutsch Diktat online üben: kostenlos, A1 bis B2",
+     "desc": "Diktate zum Deutschlernen: Sätze hören, schreiben und sofort kontrollieren, von A1 bis B2. Kostenlos, ohne Anmeldung, mit Tipps zum Üben.",
+     "answer": "Auf Deutsch mit Dennis übst du Diktate kostenlos und ohne Konto: Du hörst einen Satz, schreibst ihn und siehst sofort, welches Wort falsch ist. Es gibt 165 Sätze von A1 bis B2 und 5 Sätze pro Runde. Anfänger schreiben nur die fehlenden Wörter, Fortgeschrittene den ganzen Satz.",
+     "refs": [
+      "site:diktat",
+      "site:datenschutz"
+     ],
+     "facts": [
+      {
+       "k": "Kosten",
+       "v": "kostenlos, kein Konto",
+       "ref": [
+        "site:datenschutz"
+       ]
+      },
+      {
+       "k": "Niveau",
+       "v": "A1, A2, B1 und B2",
+       "ref": [
+        "site:diktat"
+       ]
+      },
+      {
+       "k": "Umfang",
+       "v": "165 Sätze, 5 pro Runde",
+       "ref": [
+        "site:diktat"
+       ]
+      },
+      {
+       "k": "Arten",
+       "v": "Lücken (leicht) oder ganzer Satz (schwer)",
+       "ref": [
+        "site:diktat"
+       ]
+      },
+      {
+       "k": "Stimmen",
+       "v": "Aufnahmen mit KI-Stimmen, auch langsam",
+       "ref": [
+        "site:diktat"
+       ]
+      }
+     ],
+     "steps": {
+      "h": "So übst du richtig",
+      "ref": "site:diktat",
+      "list": [
+       "Hör den Satz einmal ganz, ohne zu schreiben.",
+       "Hör noch einmal und schreib.",
+       "Kontrolliere: Nomen groß, Umlaute, ß oder ss, Endungen.",
+       "Drück auf „Prüfen“ und vergleiche Wort für Wort.",
+       "Wiederhole die falschen Sätze am nächsten Tag im Fehlerheft."
+      ]
+     },
+     "practice": [
+      {
+       "href": "/diktat/",
+       "t": "Diktat starten",
+       "d": "Wähle dein Niveau und höre den ersten Satz."
+      },
+      {
+       "href": "/hoeren/",
+       "t": "Hören",
+       "d": "Hörtexte mit Aufgaben nach Niveau."
+      },
+      {
+       "href": "/laute/",
+       "t": "Laute und Buchstaben",
+       "d": "Kurze und lange Vokale, ch, sch, ß."
+      },
+      {
+       "href": "/kurs/",
+       "t": "Kurse",
+       "d": "Schritt für Schritt lernen."
+      }
+     ],
+     "faq": [
+      {
+       "q": "Für welches Niveau ist das Diktat?",
+       "a": "Für A1, A2, B1 und B2. Auf A1 sind die Sätze kurz, auf B2 lang und komplex.",
+       "ref": [
+        "site:diktat"
+       ]
+      },
+      {
+       "q": "Zählen Satzzeichen?",
+       "a": "Nein. Punkte und Kommas zählen nicht. Große und kleine Buchstaben zählen.",
+       "ref": [
+        "site:diktat"
+       ]
+      },
+      {
+       "q": "Was passiert mit meinen Fehlern?",
+       "a": "Falsche Sätze kommen automatisch in dein Fehlerheft. Dort wiederholst du sie später.",
+       "ref": [
+        "site:diktat"
+       ]
+      },
+      {
+       "q": "Wird mein Text ins Internet geschickt?",
+       "a": "Nein. Dein Diktat wird nur in deinem Browser geprüft. Dein Lernstand bleibt auf deinem Gerät.",
+       "ref": [
+        "site:datenschutz"
+       ]
+      }
+     ]
     }
   ]
 }

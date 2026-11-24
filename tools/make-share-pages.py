@@ -158,6 +158,8 @@ SECTIONS = [
     ('spiele', 'Deutsch lernen mit Spielen: Lernspiele A1–B2', f'{len(GAMES)} kostenlose Lernspiele: der, die, das, Adjektivendungen, Satzbau, Uhrzeit, Verben, DTZ-Sprechen, B2-Beruf, Einbürgerungstest – auf dem Handy, ohne Anmeldung.'),
     ('bild', 'Bild beschreiben – DTZ-Trainer', 'Adjektivendungen und Relativsätze an vier Bildern üben – mit Musterbeschreibung zum Anhören und Arbeitsblättern.'),
     ('challenge', 'Tages-Challenge: 10 Aufgaben, jeden Tag neu', 'Artikel, Verben, Satzbau, Wortschatz und „Leben in Deutschland“ – 3 Minuten am Tag. Wie lang wird deine Lernserie?'),
+    ('diktat', 'Deutsch Diktat online üben: A1 bis B2', 'Diktat zum Anhören für Deutschlernende: Sätze von A1 bis B2 hören, schreiben und sofort kontrollieren. Kostenlos, ohne Anmeldung, auf dem Handy.'),
+    ('verben', 'Unregelmäßige Verben: Liste mit Perfekt', '132 unregelmäßige Verben von A1 bis B2 mit Präsens, Präteritum, Perfekt (haben oder sein) und Beispielsatz – mit Suche und Quiz. Kostenlos.'),
     ('lid', 'Leben in Deutschland Test & Einbürgerungstest: 310 Fragen', 'Kostenlos üben für den Einbürgerungstest und den Test „Leben in Deutschland“: alle 310 Fragen mit Lösung, Lernmodus und Testsimulation mit 33 Fragen.'),
     ('ueber-mich', 'Über Dennis', 'Deutschlehrer seit 2017, lizenzierter DTZ- und telc-Prüfer, vom BAMF zugelassene Lehrkraft für Integrations- und Berufssprachkurse.'),
     # app sections that had no crawlable address before (2026-11-22); readable content: see EXTRA['kahoot'] … below
@@ -291,6 +293,18 @@ def game_ld(g):
 
 EXTRA['simulation'] = EXTRA.get('simulation', '') + '\n<p>Neu: <a href="/simulation/lid/">Einbürgerungstest und „Leben in Deutschland“ online simulieren – 33 Fragen mit Uhr</a>.</p>\n'
 EXTRA['pruefung'] = EXTRA.get('pruefung', '') + '\n<p>Einbürgerung: <a href="/simulation/lid/">Einbürgerungstest online üben</a> · <a href="/lid/">alle 310 Fragen</a>.</p>\n'
+# --- dictation and verb table: readable content from the same data the app shows ---
+DV = json.loads(subprocess.run(['node', '-e', "global.window=global;require('./verben-data.js');require('./diktat-data.js');process.stdout.write(JSON.stringify({v:DM.verben,d:DM.diktat}))"], cwd=R, capture_output=True, text=True, encoding='utf-8', check=True).stdout)
+SECTIONS = [(r, t, re.sub(r'^\d+ unregelm', f'{len(DV["v"])} unregelm', d)) for r, t, d in SECTIONS]
+EXTRA['verben'] = (f'\n<p>Unregelmäßige Verben ändern den Vokal oder haben besondere Formen: gehen – ging – ist gegangen. Lerne immer drei Formen zusammen: Präsens (er/sie), Präteritum und Perfekt mit haben oder sein. Hier stehen {len(DV["v"])} wichtige Verben nach Niveau, dazu ein Quiz mit 10 Aufgaben.</p>\n'
+    + ''.join(f'<h2>Unregelmäßige Verben {lv}</h2>\n<table><thead><tr><th>Infinitiv</th><th>Präsens (er/sie)</th><th>Präteritum</th><th>Perfekt</th><th>Beispiel</th></tr></thead><tbody>'
+              + ''.join(f'<tr><td>{esc(v["inf"])}</td><td>{esc(v["pr"])}</td><td>{esc(v["prt"])}</td><td>{esc(v["perf"])}</td><td>{esc(v["ex"])}</td></tr>' for v in DV['v'] if v['level'] == lv) + '</tbody></table>\n' for lv in ('A1', 'A2', 'B1', 'B2'))
+    + '<p>Regeln dazu: <a href="/grammatik/a1-perfekt/">Perfekt</a> · <a href="/grammatik/b1-praeteritum/">Präteritum</a> · <a href="/antworten/unregelmaessige-verben-lernen/">Wie lernt man unregelmäßige Verben?</a></p>\n')
+EXTRA['diktat'] = (f'\n<p>So geht das Diktat: Du hörst einen Satz so oft, wie du willst. Dann schreibst du den ganzen Satz oder nur die fehlenden Wörter. Du siehst sofort, welches Wort falsch ist. Es gibt {sum(len(l) for l in DV["d"].values())} Sätze. Eine Runde hat 5 Sätze. Satzzeichen zählen nicht, große und kleine Buchstaben schon. Die Aufnahmen sind mit KI-Stimmen gesprochen.</p>\n'
+    + ''.join(f'<h2>Diktat {lv}: Beispiele</h2>\n<ul>' + ''.join(f'<li>{esc(t)}</li>' for t, _ in l[:6]) + f'</ul>\n<p><a href="/#diktat/{lv}">Diktat {lv} starten</a> ({len(l)} Sätze)</p>\n' for lv, l in DV['d'].items())
+    + '<p>Mehr dazu: <a href="/antworten/deutsch-diktat-online-ueben/">Wie übe ich Deutsch mit Diktaten?</a> · <a href="/hoeren/">Hören üben</a> · <a href="/laute/">Laute und Buchstaben</a></p>\n')
+EXTRA_LD['verben'] = [{'@context': 'https://schema.org', '@type': 'LearningResource', 'name': 'Unregelmäßige Verben Deutsch: Liste und Quiz', 'url': f'{SITE}/verben/', 'inLanguage': 'de', 'isAccessibleForFree': True, 'learningResourceType': ['Liste', 'Quiz'], 'educationalLevel': 'A1–B2', 'teaches': 'Unregelmäßige Verben im Präsens, Präteritum und Perfekt', 'author': {'@id': f'{SITE}/#dennis'}}]
+EXTRA_LD['diktat'] = [{'@context': 'https://schema.org', '@type': 'LearningResource', 'name': 'Deutsch Diktat online', 'url': f'{SITE}/diktat/', 'inLanguage': 'de', 'isAccessibleForFree': True, 'learningResourceType': 'Diktat', 'educationalLevel': 'A1–B2', 'teaches': 'Hören und Rechtschreibung', 'author': {'@id': f'{SITE}/#dennis'}}]
 # links to the answer pages /antworten/… (tools/answer_links.py, only pages that exist)
 sys.path.insert(0, os.path.join(R, 'tools'))
 from answer_links import answer_html  # noqa: E402

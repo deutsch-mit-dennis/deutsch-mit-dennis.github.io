@@ -2,6 +2,24 @@
  "note": "Neu auf der Seite – neueste Einträge oben. Wird vom Redaktionsplan (geplante Aufgaben) ergänzt.",
  "items": [
   {
+   "date": "2026-11-24",
+   "type": "neu",
+   "title": "Neu: Diktat – 165 Sätze von A1 bis B2 hören und schreiben",
+   "link": "#diktat"
+  },
+  {
+   "date": "2026-11-24",
+   "type": "neu",
+   "title": "Neu: Suche über die ganze Website, 132 unregelmäßige Verben und dein Wörterheft „Meine Wörter“",
+   "link": "#suche"
+  },
+  {
+   "date": "2026-11-24",
+   "type": "neu",
+   "title": "Grammatik-Trainer: 7 neue Themen – Fragen, nicht/kein, mein/dein, Wechselpräpositionen, Verben mit Präposition, als/wenn, um … zu",
+   "link": "#grammatik"
+  },
+  {
    "date": "2026-11-22",
    "type": "neu",
    "title": "Neu: Kurze Antworten auf häufige Prüfungsfragen – DTZ, telc, DTB, Leben in Deutschland und Einbürgerung, mit Quellen",

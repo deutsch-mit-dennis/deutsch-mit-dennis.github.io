@@ -16,6 +16,8 @@ ANSWERS = {  # slug -> short link text
     'telc-b1-modelltest-kostenlos': 'Kostenloser Modelltest telc Deutsch B1',
     'telc-b2-pruefung-ueben': 'telc Deutsch B2 kostenlos üben',
     'dtb-deutsch-test-fuer-den-beruf-ueben': 'Deutsch-Test für den Beruf (DTB B1/B2) üben',
+    'unregelmaessige-verben-lernen': 'Unregelmäßige Verben lernen: haben oder sein?',
+    'deutsch-diktat-online-ueben': 'Deutsch mit Diktaten üben',
     'deutsch-lernen-kostenlos-ohne-anmeldung': 'Kostenlos und ohne Anmeldung Deutsch lernen',
 }
 # exam / section id -> matching answer pages
