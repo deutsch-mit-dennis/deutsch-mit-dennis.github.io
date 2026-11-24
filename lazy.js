@@ -45,7 +45,7 @@ window.DMLazy = (() => {
     "bild.js?v=20261113q"
   ],
   "grammatik": [
-    "grammatik-data.js?v=20261124b",
+    "grammatik-data.js?v=20261124c",
     "grammatik.js?v=20261111m"
   ],
   "laute": [
@@ -73,7 +73,7 @@ window.DMLazy = (() => {
     "b1-30.js?v=20261117w"
   ],
   "wcore": [
-    "b2-woerter.js?v=20261124b"
+    "b2-woerter.js?v=20261124c"
   ],
   "wb2": [
     "b2-woerter-data.js?v=20261117w"
@@ -109,21 +109,21 @@ window.DMLazy = (() => {
     "lieder-data.js?v=20261112a"
   ],
   "diktat": [
-    "diktat-data.js?v=20261124b",
-    "diktat.js?v=20261124b"
+    "diktat-data.js?v=20261124c",
+    "diktat.js?v=20261124c"
   ],
   "verben": [
-    "verben-data.js?v=20261124b",
-    "verbliste.js?v=20261124b"
+    "verben-data.js?v=20261124c",
+    "verbliste.js?v=20261124c"
   ],
   "suche": [
-    "suche.js?v=20261124b"
+    "suche.js?v=20261124c"
   ]
 };
   const NEED = { spiele: ['spiele'], hoeren: ['hoeren'], lesen: ['lesen'], pruefung: ['hoeren', 'lesen'], training: ['hoeren', 'lesen'], bild: ['bild'], 'erste-schritte': ['erste'], niveau: ['erste', 'hoeren', 'lesen'], grammatik: ['grammatik'], laute: ['laute'], lid: ['lidx', 'lidt'], simulation: ['lidx', 'muster', 'lidt', 'sim'], vorbereitung: ['lidx', 'muster', 'lidt', 'sim'], ueben: ['muster'], pruefungsinfo: ['fakten'], 'b2-30-tage': ['b230'], 'b1-30-tage': ['b130'], 'b2-woerter': ['wb2', 'wcore'], 'b1-woerter': ['wb1', 'wcore'], 'dtz-woerter': ['wdtz', 'wcore'], 'a1-woerter': ['wa1', 'wcore'], sprachbausteine: ['b2t'], 'telc-b2-sprechen': ['b2t'], witz: ['witz'], mikula: ['mikula'], 'mikula-buch': ['mikulab'], 'dtz-30-tage': ['d30'], lieder: ['lieder'], diktat: ['diktat'], verben: ['verben'], suche: ['suche'] };
-  const done = {}, busy = {};
-  const one = src => new Promise(res => { const s = document.createElement('script'); s.src = src; s.async = false; s.onload = s.onerror = () => res(); document.head.appendChild(s); });
-  const group = g => busy[g] || (busy[g] = GROUPS[g].reduce((p, src) => p.then(() => one(src)), Promise.resolve()).then(() => { done[g] = true; }));
+  const done = {}, busy = {}, loaded = {};
+  const one = src => new Promise((res, rej) => { const s = document.createElement('script'); s.src = src; s.async = false; s.onload = () => res(); s.onerror = () => { s.remove(); rej(new Error('not loaded: ' + src)); }; document.head.appendChild(s); });
+  const group = g => busy[g] || (busy[g] = GROUPS[g].reduce((p, src) => p.then(() => loaded[src] || one(src).then(() => { loaded[src] = true; })), Promise.resolve()).then(() => { done[g] = true; }, e => { delete busy[g]; throw e; }));
   return {
     ready: route => (NEED[route] || []).every(g => done[g]),
     load: route => Promise.all((NEED[route] || []).map(group)),

@@ -26,8 +26,8 @@ Dennis Prudnikau ist DaZ-Lehrer und lizenzierter Prüfer für DTZ und telc und b
 
 ## Grammatik, Hören, Lesen, Sprechen
 - [Grammatik üben](https://deutsch-mit-dennis.de/grammatik/): Themen von A1 bis B2 mit Erklärung und Übungen
-- [Unregelmäßige Verben](https://deutsch-mit-dennis.de/verben/): 132 Verben A1–B2 mit Präsens, Präteritum, Perfekt, Beispielsatz und Quiz
-- [Diktat](https://deutsch-mit-dennis.de/diktat/): 165 Sätze A1–B2 zum Hören und Schreiben mit sofortiger Kontrolle
+- [Unregelmäßige Verben](https://deutsch-mit-dennis.de/verben/): Verben A1–B2 mit Präsens, Präteritum, Perfekt, Beispielsatz und Quiz
+- [Diktat](https://deutsch-mit-dennis.de/diktat/): Sätze A1–B2 zum Hören und Schreiben mit sofortiger Kontrolle
 - [Hören](https://deutsch-mit-dennis.de/hoeren/): Hörtexte und Aufgaben nach Niveau
 - [Lesen](https://deutsch-mit-dennis.de/lesen/): Lesetexte und Aufgaben nach Niveau
 - [Sprechen und Schreiben](https://deutsch-mit-dennis.de/ueben/): Übungen zu mündlichen und schriftlichen Aufgaben
@@ -64,7 +64,7 @@ Kurze Antworten von Dennis Prudnikau, DaZ-Lehrer und lizenzierter Prüfer für D
 
 ### Wichtige Fakten nach Thema (jede Zahl aus der genannten Quelle)
 
-#### Leben in Deutschland kostenlos üben – Stand: 22.11.2026 – https://deutsch-mit-dennis.de/antworten/leben-in-deutschland-test-kostenlos-ueben/
+#### Leben in Deutschland kostenlos üben – Stand: 24.11.2026 – https://deutsch-mit-dennis.de/antworten/leben-in-deutschland-test-kostenlos-ueben/
 - Fragen im Test: 33 Fragen, zu jeder Frage 4 Antworten, eine ist richtig (Quelle: BAMF – Einbürgerung; BAMF – Informationsblatt zum Test „Leben in Deutschland“ (PDF))
 - Zeit: 60 Minuten (Quelle: BAMF – Einbürgerung; BAMF – Informationsblatt zum Test „Leben in Deutschland“ (PDF))
 - Aufteilung: 30 Fragen für ganz Deutschland, 3 Fragen zu deinem Bundesland (Quelle: BAMF – Einbürgerung; BAMF – Informationsblatt zum Test „Leben in Deutschland“ (PDF))
@@ -74,7 +74,7 @@ Kurze Antworten von Dennis Prudnikau, DaZ-Lehrer und lizenzierter Prüfer für D
 - Kosten: Einbürgerungstest: 25 Euro. Im Integrationskurs ist der Abschlusstest kostenlos. (Quelle: BAMF – Einbürgerung; BAMF – Abschlussprüfung im Integrationskurs)
 - So viele bestehen: 2025: 89,6 % von 318.633 Teilnehmenden (Quelle: BAMF: Bericht zur Integrationskursgeschäftsstatistik für das Jahr 2025 (Abfragestand 1. April 2026), S. 21)
 
-#### DTZ online üben – Stand: 22.11.2026 – https://deutsch-mit-dennis.de/antworten/dtz-pruefung-online-ueben/
+#### DTZ online üben – Stand: 24.11.2026 – https://deutsch-mit-dennis.de/antworten/dtz-pruefung-online-ueben/
 - Hören: ca. 25 Min. · 4 Teile · 20 Aufgaben · alle Texte einmal (Quelle: g.a.s.t. – DTZ Übungssatz 1 (Erwachsene), Ausgabe November 2026; g.a.s.t. – DTZ: Fragen und Antworten; g.a.s.t. – Der DTZ auf einen Blick; g.a.s.t. – DTZ Übungssatz 2 (PDF))
 - Lesen: 45 Min. · 5 Teile · 25 Aufgaben (Quelle: g.a.s.t. – DTZ Übungssatz 1 (Erwachsene), Ausgabe November 2026; g.a.s.t. – DTZ: Fragen und Antworten; g.a.s.t. – Der DTZ auf einen Blick; g.a.s.t. – DTZ Übungssatz 2 (PDF))
 - Punkte Hören + Lesen: zusammen 45 Punkte · B1: 33–45 · A2: 20–32 (Quelle: g.a.s.t. – DTZ Übungssatz 1 (Erwachsene), Ausgabe November 2026; g.a.s.t. – DTZ: Fragen und Antworten; g.a.s.t. – Der DTZ auf einen Blick; g.a.s.t. – DTZ Übungssatz 2 (PDF))
@@ -85,7 +85,7 @@ Kurze Antworten von Dennis Prudnikau, DaZ-Lehrer und lizenzierter Prüfer für D
 - Kosten: Im Integrationskurs kostenlos. Selbstzahler: Preis beim Prüfungszentrum fragen. (Quelle: BAMF – Abschlussprüfung im Integrationskurs)
 - Ergebnisse 2025: 55,0 % von 318.550 Teilnehmenden erreichten B1, 32,2 % A2 (Quelle: BAMF: Bericht zur Integrationskursgeschäftsstatistik für das Jahr 2025 (Abfragestand 1. April 2026), S. 17)
 
-#### telc B1 Modelltest – Stand: 22.11.2026 – https://deutsch-mit-dennis.de/antworten/telc-b1-modelltest-kostenlos/
+#### telc B1 Modelltest – Stand: 24.11.2026 – https://deutsch-mit-dennis.de/antworten/telc-b1-modelltest-kostenlos/
 - Leseverstehen und Sprachbausteine: 90 Min. · Lesen 3 Teile (75 Punkte) · Sprachbausteine 2 Teile (30 Punkte) (Quelle: telc – Zertifikat Deutsch / telc Deutsch B1; telc – Übungstest 1 Zertifikat Deutsch B1 (PDF))
 - Hörverstehen: ca. 30 Min. · 3 Teile mit 5 + 10 + 5 Aufgaben (richtig oder falsch) · 75 Punkte (Quelle: telc – Zertifikat Deutsch / telc Deutsch B1; telc – Übungstest 1 Zertifikat Deutsch B1 (PDF))
 - Schriftlicher Ausdruck: 30 Min. · 1 E-Mail mit 4 Leitpunkten · 45 Punkte (Quelle: telc – Zertifikat Deutsch / telc Deutsch B1; telc – Übungstest 1 Zertifikat Deutsch B1 (PDF))
@@ -94,7 +94,7 @@ Kurze Antworten von Dennis Prudnikau, DaZ-Lehrer und lizenzierter Prüfer für D
 - Wiederholen: Ganze Prüfung beliebig oft. Nur ein Teil nicht bestanden? Diesen Teil kannst du bis zum Ende des nächsten Kalenderjahres allein wiederholen. (Quelle: telc – Prüfungsregularien, gültig ab 15.04.2025 (PDF); telc – Übungstest 1 Zertifikat Deutsch B1 (PDF))
 - Kosten und Termine: verschieden – bitte beim Prüfungszentrum fragen (Quelle: telc – Zertifikat Deutsch / telc Deutsch B1)
 
-#### telc B2 üben – Stand: 22.11.2026 – https://deutsch-mit-dennis.de/antworten/telc-b2-pruefung-ueben/
+#### telc B2 üben – Stand: 24.11.2026 – https://deutsch-mit-dennis.de/antworten/telc-b2-pruefung-ueben/
 - Leseverstehen und Sprachbausteine: 90 Min. · Lesen 3 Teile (5 + 5 + 10 Aufgaben, 75 Punkte) · Sprachbausteine 2 Teile (10 + 10 Aufgaben, 30 Punkte) (Quelle: telc – telc Deutsch B2; telc – Handbuch Deutsch B2 (PDF); telc – Übungstest 1, telc Deutsch B2 (2019))
 - Hörverstehen: ca. 20 Min. · 3 Teile · alle Texte nur einmal · 75 Punkte (Quelle: telc – telc Deutsch B2; telc – Handbuch Deutsch B2 (PDF); telc – Übungstest 1, telc Deutsch B2 (2019))
 - Schriftlicher Ausdruck: 30 Min. · 1 halbformelle E-Mail, Aufgabe A oder B · 45 Punkte (Quelle: telc – telc Deutsch B2; telc – Handbuch Deutsch B2 (PDF); telc – Übungstest 1, telc Deutsch B2 (2019))
@@ -103,7 +103,7 @@ Kurze Antworten von Dennis Prudnikau, DaZ-Lehrer und lizenzierter Prüfer für D
 - Bewertung Sprechen: Ausdrucksfähigkeit, Aufgabenbewältigung, formale Richtigkeit, Aussprache und Intonation (Quelle: telc – Handbuch Deutsch B2 (PDF))
 - Wiederholen: Ganze Prüfung beliebig oft. Einen nicht bestandenen Teil kannst du allein wiederholen – die Frist bitte beim Prüfungszentrum fragen. (Quelle: telc – Prüfungsregularien, gültig ab 15.04.2025 (PDF))
 
-#### DTB B1 und B2 üben – Stand: 22.11.2026 – https://deutsch-mit-dennis.de/antworten/dtb-deutsch-test-fuer-den-beruf-ueben/
+#### DTB B1 und B2 üben – Stand: 24.11.2026 – https://deutsch-mit-dennis.de/antworten/dtb-deutsch-test-fuer-den-beruf-ueben/
 - Lesen: DTB B1: 40 Min. · DTB B2: 45 Min. · je 4 Teile, 18 Aufgaben (Quelle: telc – Übungstest 1, Deutsch-Test für den Beruf B1 (2022); telc – Deutsch-Test für den Beruf B1; BAMF – Übungstest 1 Deutsch-Test für den Beruf B1 (PDF); telc – Übungstest 1, Deutsch-Test für den Beruf B2 (2022); telc – Deutsch-Test für den Beruf B2; BAMF – Übungstest 1 Deutsch-Test für den Beruf B2 (PDF))
 - Hören: je 20 Min. · 4 Teile, 19 Aufgaben · alle Texte nur einmal (Quelle: telc – Übungstest 1, Deutsch-Test für den Beruf B1 (2022); telc – Deutsch-Test für den Beruf B1; BAMF – Übungstest 1 Deutsch-Test für den Beruf B1 (PDF); telc – Übungstest 1, Deutsch-Test für den Beruf B2 (2022); telc – Deutsch-Test für den Beruf B2; BAMF – Übungstest 1 Deutsch-Test für den Beruf B2 (PDF))
 - Schreiben: DTB B1: Antwort-E-Mail, Notiz und Kurznachricht · DTB B2: Antwort, Notiz und Forumsbeitrag · zusammen 60 Punkte (Quelle: telc – Übungstest 1, Deutsch-Test für den Beruf B1 (2022); telc – Deutsch-Test für den Beruf B1; BAMF – Übungstest 1 Deutsch-Test für den Beruf B1 (PDF); telc – Übungstest 1, Deutsch-Test für den Beruf B2 (2022); telc – Deutsch-Test für den Beruf B2; BAMF – Übungstest 1 Deutsch-Test für den Beruf B2 (PDF))
@@ -114,7 +114,7 @@ Kurze Antworten von Dennis Prudnikau, DaZ-Lehrer und lizenzierter Prüfer für D
 - Wiederholen: nur der ganze Test, nicht einzelne Teile (Quelle: BAMF – Durchführungshinweise zu den Deutsch-Tests für den Beruf, gültig ab Juni 2024 (PDF))
 - Ergebnisse 2024: DTB B1: 45,3 % von 14.117 erreichten B1 · DTB B2: 58,3 % von 111.281 erreichten B2 (Quelle: BAMF: Jahresbericht Berufssprachkurse 2024, Tabelle 17c, S. 43)
 
-#### Einbürgerung: Deutsch und Test – Stand: 22.11.2026 – https://deutsch-mit-dennis.de/antworten/einbuergerung-deutschkenntnisse-test/
+#### Einbürgerung: Deutsch und Test – Stand: 24.11.2026 – https://deutsch-mit-dennis.de/antworten/einbuergerung-deutschkenntnisse-test/
 - Deutsch-Niveau: in der Regel B1 (Quelle: BAMF – Sprachnachweise und Zertifikate; BAMF – Abschlussprüfung im Integrationskurs; BAMF – Einbürgerung)
 - Nachweis für B1: zum Beispiel das „Zertifikat Integrationskurs“ (Quelle: BAMF – Sprachnachweise und Zertifikate; BAMF – Abschlussprüfung im Integrationskurs; BAMF – Einbürgerung)
 - Zertifikat Integrationskurs: DTZ mit Gesamtergebnis B1 + bestandener Test „Leben in Deutschland“ (Quelle: g.a.s.t. – Deutsch-Test für Zuwanderer; BAMF – Abschlussprüfung im Integrationskurs)
@@ -124,7 +124,7 @@ Kurze Antworten von Dennis Prudnikau, DaZ-Lehrer und lizenzierter Prüfer für D
 - Kosten Einbürgerungstest: 25 Euro (Quelle: BAMF – Einbürgerung; BAMF – Abschlussprüfung im Integrationskurs)
 - Andere Zertifikate (z. B. telc B1): Welche Zertifikate die Behörde annimmt: bitte vorher bei deiner Behörde fragen (Quelle: BAMF – Sprachnachweise und Zertifikate; telc – Prüfungsregularien, gültig ab 15.04.2025 (PDF))
 
-#### Kostenlos Deutsch lernen – Stand: 22.11.2026 – https://deutsch-mit-dennis.de/antworten/deutsch-lernen-kostenlos-ohne-anmeldung/
+#### Kostenlos Deutsch lernen – Stand: 24.11.2026 – https://deutsch-mit-dennis.de/antworten/deutsch-lernen-kostenlos-ohne-anmeldung/
 - Kosten: kostenlos, kein Konto, keine Anmeldung (Quelle: deutsch-mit-dennis.de/datenschutz/)
 - Lernstand: bleibt im Browser auf deinem Gerät (localStorage) (Quelle: deutsch-mit-dennis.de/datenschutz/)
 - Niveaus: A0, A1, A2, B1 und B2 – jedes mit eigenem Kurs (Quelle: deutsch-mit-dennis.de/kurs/)
@@ -133,21 +133,21 @@ Kurze Antworten von Dennis Prudnikau, DaZ-Lehrer und lizenzierter Prüfer für D
 - Probeprüfungen: 14 Simulationen für DTZ, telc B1, telc B2, DTB B1, DTB B2 und Leben in Deutschland (Quelle: deutsch-mit-dennis.de/simulation/)
 - Wer macht die Seite?: Dennis Prudnikau, DaZ-Lehrer und lizenzierter Prüfer für DTZ und telc (Quelle: deutsch-mit-dennis.de/ueber-mich/)
 
-#### DTZ Schreiben: Brief-Muster – Stand: 22.11.2026 – https://deutsch-mit-dennis.de/antworten/dtz-schreiben-brief-muster/
+#### DTZ Schreiben: Brief-Muster – Stand: 24.11.2026 – https://deutsch-mit-dennis.de/antworten/dtz-schreiben-brief-muster/
 - Zeit: 30 Minuten (Quelle: g.a.s.t. – DTZ Übungssatz 1 (Erwachsene), Ausgabe November 2026; g.a.s.t. – DTZ: Fragen und Antworten; g.a.s.t. – Der DTZ auf einen Blick; g.a.s.t. – DTZ Übungssatz 2 (PDF))
 - Aufgabe: 1 Text – du wählst Aufgabe A oder B (Quelle: g.a.s.t. – DTZ Übungssatz 1 (Erwachsene), Ausgabe November 2026; g.a.s.t. – DTZ: Fragen und Antworten; g.a.s.t. – Der DTZ auf einen Blick; g.a.s.t. – DTZ Übungssatz 2 (PDF))
 - Punkte: 20 Punkte · B1: 15–20 · A2: 7–14 (Quelle: g.a.s.t. – DTZ Übungssatz 1 (Erwachsene), Ausgabe November 2026; g.a.s.t. – DTZ: Fragen und Antworten; g.a.s.t. – Der DTZ auf einen Blick; g.a.s.t. – DTZ Übungssatz 2 (PDF))
 - Neu seit 1. November 2026: Für das Gesamtergebnis B1 muss auch der dritte Teil mindestens A2 sein. Ein leeres Blatt beim Schreiben reicht nicht mehr. (Quelle: asyl.net – Neue Anforderungen beim Deutsch-Test für Zuwanderer; g.a.s.t. – DTZ: Fragen und Antworten)
 - Wie viele Wörter?: Erfahrungswert von Dennis, keine offizielle Vorgabe: ca. 60–80 Wörter für A2, 80–100 Wörter für B1 (Quelle: deutsch-mit-dennis.de/dtz-schreiben/)
 
-#### Unregelmäßige Verben – Stand: 22.11.2026 – https://deutsch-mit-dennis.de/antworten/unregelmaessige-verben-lernen/
+#### Unregelmäßige Verben – Stand: 24.11.2026 – https://deutsch-mit-dennis.de/antworten/unregelmaessige-verben-lernen/
 - Formen: Präsens, Präteritum, Perfekt – immer zusammen lernen (Quelle: deutsch-mit-dennis.de/verben/)
 - Perfekt mit „sein“: Bewegung (fahren, gehen), Veränderung (aufstehen, wachsen) und sein, bleiben, werden (Quelle: deutsch-mit-dennis.de/verben/)
 - Perfekt mit „haben“: die meisten anderen Verben: essen, lesen, schreiben, helfen (Quelle: deutsch-mit-dennis.de/verben/)
 - Liste: 132 Verben von A1 bis B2 mit Beispielsatz (Quelle: deutsch-mit-dennis.de/verben/)
 - Quiz: 10 Aufgaben pro Runde, passend zu deinem Niveau (Quelle: deutsch-mit-dennis.de/verben/)
 
-#### Diktat online üben – Stand: 22.11.2026 – https://deutsch-mit-dennis.de/antworten/deutsch-diktat-online-ueben/
+#### Diktat online üben – Stand: 24.11.2026 – https://deutsch-mit-dennis.de/antworten/deutsch-diktat-online-ueben/
 - Kosten: kostenlos, kein Konto (Quelle: deutsch-mit-dennis.de/datenschutz/)
 - Niveau: A1, A2, B1 und B2 (Quelle: deutsch-mit-dennis.de/diktat/)
 - Umfang: 165 Sätze, 5 pro Runde (Quelle: deutsch-mit-dennis.de/diktat/)

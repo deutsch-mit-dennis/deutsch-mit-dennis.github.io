@@ -54,8 +54,11 @@
     player.preservesPitch = true;
     player.playbackRate = rate >= 0.9 ? 1 : 0.85;
     player.onended = () => onend?.(true);
-    player.onerror = () => onend?.(false);
-    player.play().catch(() => onend?.(false));
+    // reason 'load' = file not reachable; a blocked autoplay is not reported as a network problem
+    let told = false;
+    const fail = why => { if (!told) { told = true; onend?.(false, why); } };
+    player.onerror = () => fail('load');
+    player.play().catch(e => fail(e && e.name === 'NotAllowedError' ? 'blocked' : e && e.name === 'AbortError' ? 'stopped' : 'load'));
     return true;
   }
   function speak(text, { rate = 0.92, onend, dialogue = false, key } = {}) {
@@ -492,6 +495,7 @@
         if (Array.isArray(imp.mw) && window.DMWoerter) DMWoerter.merge(imp.mw);
         const a = mem.fehler && mem.fehler.items, b = imp.fehler && imp.fehler.items;
         if (Array.isArray(a) && Array.isArray(b) && a !== b) { const ids = new Set(a.map(i => i && i.id)); b.forEach(i => { if (i && i.id !== undefined && !ids.has(i.id)) a.push(i); }); }
+        if (imp.fehler && mem.fehler && Array.isArray(a)) mem.fehler.learned = Math.max(Number(mem.fehler.learned) || 0, Number(imp.fehler.learned) || 0);
         Object.keys(imp).forEach(g => { if (!['visited', 'done', 'drafts', 'mw'].includes(g) && mem[g] === undefined) mem[g] = imp[g]; });
         save(); n++;
       } else { try { if (localStorage.getItem(k) === null) { localStorage.setItem(k, v); n++; } } catch { /* privater Modus */ } }
@@ -908,7 +912,7 @@
     // so load the songs when the box is opened (or right away if it is open) and then fill in the song of the day
     if (!DM.songs && window.DMLazy) setTimeout(() => {
       const more = $('#dm-more');
-      const go = () => DMLazy.load('lieder').then(() => { const el = $('.dm-song-home'); if (el && DM.songs) el.outerHTML = songHome(); });
+      const go = () => DMLazy.load('lieder').then(() => { const el = $('.dm-song-home'); if (el && DM.songs) el.outerHTML = songHome(); }).catch(() => {});
       if (more && !more.open) more.addEventListener('toggle', () => { if (more.open) go(); }, { once: true }); else go();
     }, 0);
     return `<section class="dm-section dm-song-home" aria-labelledby="songh-h">
@@ -1817,7 +1821,13 @@
     // games, listening/reading data etc. load only when needed (lazy.js); build the page once they are there
     if (window.DMLazy && !DMLazy.ready(p[0])) {
       mainEl.setAttribute('aria-busy', 'true');
-      DMLazy.load(p[0]).then(() => { mainEl.removeAttribute('aria-busy'); window.route(); });
+      const at = location.hash, stay = () => location.hash === at;
+      DMLazy.load(p[0]).then(() => { if (stay()) { mainEl.removeAttribute('aria-busy'); window.route(); } }, () => {
+        if (!stay()) return;
+        mainEl.removeAttribute('aria-busy');
+        page('<div class="dm-head"><h1>Keine Verbindung</h1><p class="dm-lead">Diese Seite konnte nicht geladen werden. Prüfe dein Internet.</p></div><p class="dm-actions"><button type="button" class="dm-btn" id="dm-retry">Noch einmal versuchen</button> <a class="dm-btn dm-btn-quiet" href="#">Startseite</a></p>');
+        $('#dm-retry').onclick = () => window.route();
+      });
       return;
     }
     stopSpeaking();
@@ -1848,7 +1858,7 @@
     try { window.DMKurs && DMKurs.visit && DMKurs.visit(routeStr); } catch (e) { console.error(e); }
     if (['erste-schritte', 'grammatik', 'laute', 'lesen', 'lektion', 'wortschatz', 'ueben', 'hoeren', 'training', 'lernweg', 'orientierungskurs', 'lid', 'lieder', 'challenge', 'bild', 'spiele', 'vorbereitung', 'simulation', 'diktat', 'verben'].includes(p[0]) && routeStr && p[2] !== 'run' && p[2] !== 'ergebnis') {
       mem.visited[routeStr] = Date.now();
-      mem.last = { route: routeStr, title: ($("main h1")?.textContent.trim() || TITLES[p[0]] || '').replace(/\.$/, '').slice(0, 48), ts: Date.now() };
+      mem.last = { route: routeStr, title: ((routeStr === 'verben/ueben' ? 'Verben üben' : '') || $("main h1")?.textContent.trim() || TITLES[p[0]] || '').replace(/\.$/, '').slice(0, 48), ts: Date.now() };
       save();
     }
   };

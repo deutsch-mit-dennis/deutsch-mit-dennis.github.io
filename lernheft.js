@@ -71,7 +71,7 @@
         <label>Beispielsatz (wenn du möchtest)<input id="lh-b" maxlength="200" lang="de" placeholder="Ich habe morgen einen Termin."></label>
         <button class="dm-btn" type="submit">Speichern</button><p class="dm-small" id="lh-msg" role="status"></p></form>
       ${l.length ? `<section class="dm-section"><h2>Alle Wörter</h2><ul class="lh-list">${l.map((i, k) => `<li><div><b lang="de">${x(i.w)}</b>${i.f ? `<small lang="de">${x(i.f)}</small>` : ''}${i.n ? `<span class="lh-n" dir="auto" data-no-i18n>${x(i.n)}</span>` : ''}${i.b ? `<span lang="de">${x(i.b)}</span>` : ''}${i.known ? '<em>✓ gelernt</em>' : ''}</div>${sayBtn(i.w)}<button type="button" class="lh-del" data-k="${k}" aria-label="Löschen: ${x(i.w)}"><span aria-hidden="true">✕</span></button></li>`).join('')}</ul></section>` : ''}
-      <p class="dm-small">Deine Wörter bleiben nur auf diesem Gerät. <a href="#lernstand">Lernstand sichern</a></p>`, 'lh-page');
+      <p class="dm-small">Deine Wörter bleiben nur auf diesem Gerät.</p><p><a href="#lernstand">Lernstand sichern</a></p>`, 'lh-page');
     const m = $('main');
     bindSay(m);
     const go = $('#lh-go', m);
@@ -81,11 +81,12 @@
       const w = $('#lh-w').value;
       if (put({ w, n: $('#lh-n').value, b: $('#lh-b').value })) {
         page();
-        $('#lh-msg').textContent = '✓ Gespeichert: ' + clean(w, 80);
+        setTimeout(() => { const m = $('#lh-msg'); if (m) m.textContent = '✓ Gespeichert: ' + clean(w, 80); }, 120);
+        $('#lh-w').focus({ preventScroll: true });
         $('#lh-msg').scrollIntoView({ block: 'center' });
       } else $('#lh-msg').textContent = find(clean(w, 80)) ? 'Dieses Wort steht schon in deinem Heft.' : 'Das Wort konnte nicht gespeichert werden.';
     };
-    m.querySelectorAll('.lh-del').forEach(b => { b.onclick = () => { const i = list()[+b.dataset.k]; if (i && confirm(`„${i.w}“ löschen?`)) { remove(i.w); page(); } }; });
+    m.querySelectorAll('.lh-del').forEach(b => { b.onclick = () => { const i = list()[+b.dataset.k]; if (i && confirm(`„${i.w}“ löschen?`)) { const k = +b.dataset.k; remove(i.w); page(); const d = document.querySelectorAll('.lh-del'); (d[k] || d[d.length - 1] || $('#lh-w'))?.focus(); } }; });
   }
   const CR = () => DM.crumbs([['Meine Wörter', '#meine-woerter'], ['Wiederholen']]);
   function train() {
@@ -143,7 +144,7 @@
   const GROUP = { A0: ['wa1', 'a1'], A1: ['wa1', 'a1'], A2: ['wdtz', 'dtz'], B1: ['wb1', 'b1'], B2: ['wb2', 'b2'] };
   DM.todayInit = async lv => {
     const box = $('#lh-wod');
-    if (!box || !GROUP[lv] || !window.DMLazy || !DMLazy.group) return;
+    if (!box || lv === 'A0' || !GROUP[lv] || !window.DMLazy || !DMLazy.group) return;
     const [g, id] = GROUP[lv];
     await DMLazy.group(g);
     const W = id === 'b2' ? DM.b2Woerter : DM.woerter && DM.woerter[id];

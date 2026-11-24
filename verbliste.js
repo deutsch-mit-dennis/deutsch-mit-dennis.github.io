@@ -3,6 +3,7 @@
   'use strict';
   const x = DM.esc, $ = (s, r = document) => r.querySelector(s);
   const norm = t => String(t).toLocaleLowerCase('de').replace(/ä/g, 'ae').replace(/ö/g, 'oe').replace(/ü/g, 'ue').normalize('NFD').replace(/\p{M}/gu, '').replace(/ß/g, 'ss');
+  const plain = t => String(t).toLocaleLowerCase('de').normalize('NFD').replace(/\p{M}/gu, '').replace(/ß/g, 'ss'); // 'fahrt' finds 'fährt'
   const shuffle = a => a.map(i => [Math.random(), i]).sort((p, q) => p[0] - q[0]).map(p => p[1]);
   const bare = s => s.replace(/ \(.*?\)/g, '');
   const say = t => `<button type="button" class="lh-say" data-s="${x(t)}" aria-label="Vorlesen: ${x(t)}"><span aria-hidden="true">🔊</span></button>`;
@@ -18,8 +19,8 @@
       <p class="dm-small" id="vb-n" role="status"></p><ul class="vb-list" id="vb-l"></ul>`, 'lh-page');
     let lv = 'Alle';
     const draw = () => {
-      const q = norm($('#vb-q').value.trim());
-      const l = DM.verben.filter(v => (lv === 'Alle' || v.level === lv) && (!q || norm([v.inf, v.pr, v.prt, v.perf].join(' ')).includes(q)));
+      const q = norm($('#vb-q').value.trim()), q2 = plain($('#vb-q').value.trim());
+      const l = DM.verben.filter(v => (lv === 'Alle' || v.level === lv) && (!q || norm([v.inf, v.pr, v.prt, v.perf].join(' ')).includes(q) || plain([v.inf, v.pr, v.prt, v.perf].join(' ')).includes(q2)));
       $('#vb-n').textContent = `${l.length} ${l.length === 1 ? 'Verb' : 'Verben'}`;
       $('#vb-l').innerHTML = l.map(v => `<li><div class="vb-h"><b lang="de">${x(v.inf)}</b><span class="dm-tag">${v.level}</span>${say(bare(v.inf))}${star(v)}</div>
         <dl lang="de"><div><dt>er/sie</dt><dd>${x(v.pr)}</dd></div><div><dt>Präteritum</dt><dd>${x(v.prt)}</dd></div><div><dt>Perfekt</dt><dd>${x(v.perf)}</dd></div></dl><p lang="de">${x(v.ex)}</p></li>`).join('') || '<li>Nichts gefunden.</li>';
@@ -51,7 +52,7 @@
       if (f === 'perf' && !BOTH.test(v.inf)) opts.add(sol.replace(/^(hat|ist)/, a => a === 'hat' ? 'ist' : 'hat'));
       shuffle(DM.verben).some(o => { if (o !== v && bare(o.perf) !== bare(v.perf)) opts.add(bare(o[f])); return opts.size >= 4; });
       const choices = shuffle([...opts]);
-      DM.page(`${crumbs()}<section class="dm-card lh-card"><h1 class="dk-h">Aufgabe ${k + 1} von ${round.length}</h1><p class="lh-q">${label}</p><p class="lh-word" lang="de">${x(v.inf)}</p>
+      DM.page(`${crumbs()}<section class="dm-card lh-card"><h1 class="dk-h">Verben üben</h1><p class="dm-small">Aufgabe ${k + 1} von ${round.length}</p><p class="lh-q">${label}</p><p class="lh-word" lang="de">${x(v.inf)}</p>
         <div class="vb-opts" lang="de">${choices.map(o => `<button type="button" class="ch-opt" data-o="${x(o)}">${x(o)}</button>`).join('')}</div><div id="vb-r" role="status"></div></section>`, 'lh-page');
       const btns = [...document.querySelectorAll('.vb-opts button')];
       btns.forEach(b => {

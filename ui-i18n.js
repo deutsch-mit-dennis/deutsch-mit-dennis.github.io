@@ -21,6 +21,29 @@
   const SAY_LABEL = { en: "Read aloud", uk: "Прочитати вголос", ru: "Прочитать вслух", ar: "اقرأ بصوت عالٍ", fa: "بلند بخوان", tr: "Sesli oku", es: "Leer en voz alta", it: "Leggi ad alta voce" };
 
   const ROWS = [
+    "Keine Verbindung|No connection|Немає з’єднання|Нет соединения|لا يوجد اتصال|اتصال نیست|Bağlantı yok|Sin conexión|Nessuna connessione",
+    "Diese Seite konnte nicht geladen werden. Prüfe dein Internet.|This page could not be loaded. Check your internet.|Сторінку не вдалося завантажити. Перевір інтернет.|Страницу не удалось загрузить. Проверь интернет.|تعذّر تحميل هذه الصفحة. تحقق من الإنترنت.|این صفحه بارگذاری نشد. اینترنت را بررسی کن.|Bu sayfa yüklenemedi. İnternetini kontrol et.|No se pudo cargar esta página. Comprueba tu internet.|Impossibile caricare la pagina. Controlla internet.",
+    "Noch einmal versuchen|Try again|Спробувати ще раз|Попробовать ещё раз|حاول مرة أخرى|دوباره امتحان کن|Tekrar dene|Intentar de nuevo|Riprova",
+    "Kein Ton. Prüfe Internet und Lautstärke.|No sound. Check internet and volume.|Немає звуку. Перевір інтернет і гучність.|Нет звука. Проверь интернет и громкость.|لا يوجد صوت. تحقق من الإنترنت ومستوى الصوت.|صدا نیست. اینترنت و بلندی صدا را بررسی کن.|Ses yok. İnterneti ve ses seviyesini kontrol et.|Sin sonido. Comprueba internet y el volumen.|Nessun suono. Controlla internet e volume.",
+    "Ersatz: Stimme deines Geräts.|Backup: your device’s voice.|Заміна: голос твого пристрою.|Замена: голос твоего устройства.|بديل: صوت جهازك.|جایگزین: صدای دستگاه تو.|Yedek: cihazının sesi.|Alternativa: la voz de tu dispositivo.|In alternativa: la voce del tuo dispositivo.",
+    "Überspringen|Skip|Пропустити|Пропустить|تخطَّ|رد کردن|Atla|Saltar|Salta",
+    "Richtiger Satz:|Correct sentence:|Правильне речення:|Правильное предложение:|الجملة الصحيحة:|جملهٔ درست:|Doğru cümle:|Frase correcta:|Frase corretta:",
+    "Du kannst jeden Satz so oft hören, wie du willst.|You can listen to every sentence as often as you like.|Кожне речення можна слухати скільки завгодно разів.|Каждое предложение можно слушать сколько угодно раз.|يمكنك الاستماع إلى كل جملة كما تشاء.|هر جمله را هر چند بار که بخواهی می‌توانی گوش کنی.|Her cümleyi istediğin kadar dinleyebilirsin.|Puedes escuchar cada frase todas las veces que quieras.|Puoi ascoltare ogni frase quante volte vuoi.",
+    "Leicht: nur ein paar Wörter schreiben|Easy: write only a few words|Легко: написати лише кілька слів|Легко: написать только несколько слов|سهل: اكتب بضع كلمات فقط|آسان: فقط چند واژه بنویس|Kolay: sadece birkaç kelime yaz|Fácil: escribir solo unas palabras|Facile: scrivi solo alcune parole",
+    "Schwer: den ganzen Satz schreiben|Hard: write the whole sentence|Складно: написати все речення|Сложно: написать всё предложение|صعب: اكتب الجملة كاملة|سخت: کل جمله را بنویس|Zor: bütün cümleyi yaz|Difícil: escribir la frase entera|Difficile: scrivi tutta la frase",
+    "Die Sätze sind mit KI-Stimmen aufgenommen.|The sentences are recorded with AI voices.|Речення записані голосами ШІ.|Предложения записаны голосами ИИ.|الجمل مسجلة بأصوات ذكاء اصطناعي.|جمله‌ها با صدای هوش مصنوعی ضبط شده‌اند.|Cümleler yapay zekâ sesleriyle kaydedildi.|Las frases están grabadas con voces de IA.|Le frasi sono registrate con voci IA.",
+    "Satzzeichen zählen nicht, große und kleine Buchstaben schon.|Punctuation does not count, capital and small letters do.|Розділові знаки не враховуються, великі й малі літери — так.|Знаки препинания не учитываются, большие и маленькие буквы — да.|علامات الترقيم لا تُحسب، لكن الأحرف الكبيرة والصغيرة تُحسب.|نشانه‌گذاری حساب نمی‌شود، ولی حروف بزرگ و کوچک حساب می‌شود.|Noktalama sayılmaz, büyük ve küçük harfler sayılır.|La puntuación no cuenta, las mayúsculas y minúsculas sí.|La punteggiatura non conta, maiuscole e minuscole sì.",
+    "Satz {1} von {2}|Sentence {1} of {2}|Речення {1} з {2}|Предложение {1} из {2}|الجملة {1} من {2}|جملهٔ {1} از {2}|Cümle {1} / {2}|Frase {1} de {2}|Frase {1} di {2}",
+    "{1} von {2} Sätzen richtig|{1} of {2} sentences correct|{1} з {2} речень правильно|{1} из {2} предложений правильно|{1} من {2} جمل صحيحة|{1} از {2} جمله درست|{2} cümleden {1} doğru|{1} de {2} frases correctas|{1} frasi corrette su {2}",
+    "Aufgabe {1} von {2}|Task {1} of {2}|Завдання {1} з {2}|Задание {1} из {2}|التمرين {1} من {2}|تمرین {1} از {2}|Alıştırma {1} / {2}|Ejercicio {1} de {2}|Esercizio {1} di {2}",
+    "Karte {1} von {2}|Card {1} of {2}|Картка {1} з {2}|Карточка {1} из {2}|البطاقة {1} من {2}|کارت {1} از {2}|Kart {1} / {2}|Tarjeta {1} de {2}|Scheda {1} di {2}",
+    "{1} heute dran|{1} due today|{1} на сьогодні|{1} на сегодня|{1} لليوم|{1} برای امروز|Bugün {1}|{1} para hoy|{1} per oggi",
+    "der, die oder das? Sag einen Satz.|der, die or das? Say a sentence.|der, die чи das? Скажи речення.|der, die или das? Скажи предложение.|der أم die أم das؟ قل جملة.|der، die یا das؟ یک جمله بگو.|der, die mi das mı? Bir cümle söyle.|¿der, die o das? Di una frase.|der, die o das? Di’ una frase.",
+    "Was bedeutet das? Sag einen Satz.|What does it mean? Say a sentence.|Що це означає? Скажи речення.|Что это значит? Скажи предложение.|ماذا يعني هذا؟ قل جملة.|یعنی چه؟ یک جمله بگو.|Bu ne demek? Bir cümle söyle.|¿Qué significa? Di una frase.|Che cosa significa? Di’ una frase.",
+    "Wie heißt das auf Deutsch?|What is this in German?|Як це німецькою?|Как это по-немецки?|ما معنى هذا بالألمانية؟|این به آلمانی چه می‌شود؟|Bunun Almancası ne?|¿Cómo se dice en alemán?|Come si dice in tedesco?",
+    "Deine Wörter bleiben nur auf diesem Gerät.|Your words stay only on this device.|Твої слова лишаються тільки на цьому пристрої.|Твои слова остаются только на этом устройстве.|تبقى كلماتك على هذا الجهاز فقط.|واژه‌های تو فقط روی این دستگاه می‌مانند.|Kelimelerin sadece bu cihazda kalır.|Tus palabras se quedan solo en este dispositivo.|Le tue parole restano solo su questo dispositivo.",
+    "Schreib ein deutsches Wort.|Write a German word.|Напиши німецьке слово.|Напиши немецкое слово.|اكتب كلمة ألمانية.|یک واژهٔ آلمانی بنویس.|Almanca bir kelime yaz.|Escribe una palabra en alemán.|Scrivi una parola tedesca.",
+    "Nichts gefunden.|Nothing found.|Нічого не знайдено.|Ничего не найдено.|لم يتم العثور على شيء.|چیزی پیدا نشد.|Bir şey bulunamadı.|No se ha encontrado nada.|Nessun risultato.",
     /* ---- search, dictation, word notebook, verbs (lernheft.js, diktat.js, verbliste.js, suche.js) ---- */
     "Schreib Zahlen als Wörter.|Write numbers as words.|Пиши числа словами.|Пиши числа словами.|اكتب الأرقام بالكلمات.|عددها را با حروف بنویس.|Sayıları yazıyla yaz.|Escribe los números con letras.|Scrivi i numeri in lettere.",
     "Beenden|Finish|Завершити|Завершить|إنهاء|پایان|Bitir|Terminar|Fine",
@@ -713,9 +736,9 @@
     const s = document.createElement("style");
     s.id = "ui-i18n-css";
     s.textContent = [
-      ".ui-tr{display:block;margin:2px 0 0;font-size:max(11.5px,.72em);line-height:1.3;font-weight:400;font-style:normal;letter-spacing:0;text-transform:none;white-space:normal;opacity:.82;unicode-bidi:isolate;overflow-wrap:anywhere;text-decoration:none}",
+      ".ui-tr{display:block;margin:2px 0 0;font-size:max(13px,.72em);line-height:1.3;font-weight:400;font-style:normal;letter-spacing:0;text-transform:none;white-space:normal;unicode-bidi:isolate;overflow-wrap:anywhere;text-decoration:none}",
       ".ui-tr::after{content:attr(data-t)}",
-      ".ui-tr-line{font-size:max(13px,.8em);opacity:.78;margin-top:3px}",
+      ".ui-tr-line{font-size:max(13px,.8em);margin-top:3px}",
       "h1 .ui-tr-line,h2 .ui-tr-line,h3 .ui-tr-line{font-size:max(13px,.52em);line-height:1.35}",
       ".ui-tr-l[dir=rtl]{text-align:left}",
       ".ui-tr[lang=ar],.ui-tr[lang=fa]{font-size:max(13px,.8em);line-height:1.5}",

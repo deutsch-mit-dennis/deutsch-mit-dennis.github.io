@@ -90,3 +90,4 @@ main h1.dk-h{font-size:21px;margin:0 0 8px}
 .dm-hero .lh-today{grid-column:1/-1;min-width:0;margin:6px 0 16px}
 .lh-today ul{grid-template-columns:repeat(auto-fit,minmax(min(100%,170px),1fr))}
 @media (max-width:400px){html body header.dm-header .lh-search,html body header.dm-header .dm-hshare,html body header.dm-header .dm-bell,html body header.dm-header #pl-menu{height:44px!important}}
+#dk-next,#vb-next{scroll-margin-bottom:80px}

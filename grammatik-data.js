@@ -589,7 +589,7 @@ T({
 T({
   id: "a1-negation",
   level: "A1",
-  title: "Nein sagen: nicht und kein",
+  title: "nicht oder kein? Nein sagen",
   kurz: "*kein* steht vor einem Nomen. Ohne Verneinung hat das Nomen „ein“ oder keinen Artikel: ein Auto → *kein* Auto, Zeit → *keine* Zeit. *nicht* verneint zum Beispiel ein Verb, ein Adjektiv, einen Ort oder ein Nomen mit „der“ oder „mein“: Ich komme *nicht*. Die Wohnung ist *nicht* groß.",
   kurz_i18n: {
     en: "kein stands before a noun. Without negation, the noun has ein or no article: ein Auto → kein Auto, Zeit → keine Zeit. nicht negates, for example, a verb, an adjective, a place or a noun with der or mein: Ich komme nicht. Die Wohnung ist nicht groß.",
@@ -4265,7 +4265,7 @@ T({
 T({
   id: "b1-um-zu-damit",
   level: "B1",
-  title: "Ziele ausdrücken: um … zu und damit",
+  title: "um … zu oder damit? Ziele ausdrücken",
   kurz: "Wozu? Mit *um … zu* und *damit* nennst du ein Ziel. Gleiche Person in beiden Teilen → meist *um … zu* + Infinitiv: Ich lerne, *um* die Prüfung *zu bestehen*. Zwei verschiedene Personen oder Sachen → *damit*, das Verb steht am Ende: Ich spreche langsam, *damit* du mich *verstehst*.",
   kurz_i18n: {
     en: "What for? With um … zu and damit you state a goal. Same person in both parts → usually um … zu + infinitive: Ich lerne, um die Prüfung zu bestehen (in order to pass). Two different people or things → damit (so that), with the verb at the end: Ich spreche langsam, damit du mich verstehst.",
@@ -4607,8 +4607,8 @@ T({
     en: "In formal texts a verb or adjective often becomes a noun: prüfen → die Prüfung, pünktlich → die Pünktlichkeit. A subordinate clause then becomes a phrase with a preposition: Weil es regnet, … → Wegen des Regens … (because of the rain).",
     uk: "У формальних текстах дієслово або прикметник часто стає іменником: prüfen → die Prüfung, pünktlich → die Pünktlichkeit. Тоді підрядне речення стає групою слів із прийменником: Weil es regnet, … → Wegen des Regens … (через дощ).",
     ru: "В официальных текстах глагол или прилагательное часто становится существительным: prüfen → die Prüfung, pünktlich → die Pünktlichkeit. Тогда придаточное предложение превращается в группу слов с предлогом: Weil es regnet, … → Wegen des Regens … (из-за дождя).",
-    ar: "في النصوص الرسمية يتحوّل الفعل أو الصفة كثيرًا إلى اسم: prüfen → die Prüfung, pünktlich → die Pünktlichkeit. عندها تتحوّل الجملة الفرعية إلى مجموعة كلمات مع حرف جر: Weil es regnet, … ← Wegen des Regens … (بسبب المطر).",
-    fa: "در متن‌های رسمی، فعل یا صفت اغلب به اسم تبدیل می‌شود: prüfen → die Prüfung, pünktlich → die Pünktlichkeit. آن‌وقت جملهٔ پیرو به یک گروه کلمه با حرف اضافه تبدیل می‌شود: Weil es regnet, … ← Wegen des Regens … (به‌خاطر باران).",
+    ar: "في النصوص الرسمية يتحوّل الفعل أو الصفة كثيرًا إلى اسم: prüfen → die Prüfung, pünktlich → die Pünktlichkeit. عندها تتحوّل الجملة الفرعية إلى مجموعة كلمات مع حرف جر: Weil es regnet, … → Wegen des Regens … (بسبب المطر).",
+    fa: "در متن‌های رسمی، فعل یا صفت اغلب به اسم تبدیل می‌شود: prüfen → die Prüfung, pünktlich → die Pünktlichkeit. آن‌وقت جملهٔ پیرو به یک گروه کلمه با حرف اضافه تبدیل می‌شود: Weil es regnet, … → Wegen des Regens … (به‌خاطر باران).",
     tr: "Resmî metinlerde fiil veya sıfat çoğu zaman isme dönüşür: prüfen → die Prüfung, pünktlich → die Pünktlichkeit. O zaman yan cümle, edatlı bir söz grubuna dönüşür: Weil es regnet, … → Wegen des Regens … (yağmur yüzünden).",
     es: "En textos formales un verbo o adjetivo se convierte a menudo en sustantivo: prüfen → die Prüfung, pünktlich → die Pünktlichkeit. La oración subordinada pasa a ser un grupo con preposición: Weil es regnet, … → Wegen des Regens … (a causa de la lluvia).",
     it: "Nei testi formali un verbo o un aggettivo diventa spesso un nome: prüfen → die Prüfung, pünktlich → die Pünktlichkeit. La frase secondaria diventa allora un gruppo con preposizione: Weil es regnet, … → Wegen des Regens … (a causa della pioggia).",
