@@ -66,6 +66,9 @@ try {
   c.window.window = c.window; vm.createContext(c);
   vm.runInContext(fs.readFileSync(path.join(ROOT, 'site-data.js'), 'utf8'), c);
   const files = [...new Set(((c.window.DM && c.window.DM.materials) || []).map(m => m.file).filter(f => /\.pdf$/i.test(f) && fs.existsSync(path.join(ROOT, f))))].sort();
+  // printable practice exams (linked from the simulations, not part of DM.materials)
+  const simDir = 'material/simulation';
+  if (fs.existsSync(path.join(ROOT, simDir))) for (const f of fs.readdirSync(path.join(ROOT, simDir)).sort()) if (/\.pdf$/i.test(f) && !files.includes(`${simDir}/${f}`)) files.push(`${simDir}/${f}`);
   for (const f of files) entries.push({ loc: `${SITE}/${f.split('/').map(encodeURIComponent).join('/')}`, lastmod: dateOf(f) });
 } catch (e) { console.warn('worksheet PDFs skipped:', e.message); }
 const xml = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
