@@ -341,7 +341,7 @@
 
     <section class="dm-section dm-about-teaser">
       <img src="assets/dennis.webp" alt="Dennis Prudnikau, Deutschlehrer und Prüfer" width="120" height="192" loading="lazy">
-      <div><h2>Wer ist Dennis?</h2><p>Master in Germanistik, seit 2017 Deutschlehrer und lizenzierter DTZ- und telc-Prüfer. Ich kenne die Prüfungen aus dem Unterricht und als Prüfer.</p><div class="dm-row"><a class="dm-btn dm-btn-quiet" href="#ueber-mich">Mehr über mich</a><a class="dm-btn dm-btn-quiet" href="#ueber-mich/nachweise">Zulassungen</a></div></div>
+      <div><h2>Wer ist Dennis?</h2><p>Master in Germanistik, seit 2017 Deutschlehrer und lizenzierter Prüfer für DTZ, telc und DTB. Ich kenne die Prüfungen aus dem Unterricht und als Prüfer.</p><div class="dm-row"><a class="dm-btn dm-btn-quiet" href="#ueber-mich">Mehr über mich</a><a class="dm-btn dm-btn-quiet" href="#ueber-mich/nachweise">Zulassungen</a></div></div>
     </section>
 
     ${pkgTeaser()}
@@ -1265,7 +1265,7 @@
           <h1>Hallo, ich bin Dennis.</h1>
           <p class="dm-lead">Seit Oktober 2017 bringe ich Menschen Deutsch bei – vom ersten Satz bis zur Hochschulprüfung. Und ich bin zugelassener Prüfer.</p>
           <p>In ${teachYears()} Jahren Unterricht habe ich <b>Deutsch als Fremdsprache von A1 bis B2</b> unterrichtet, <b>Integrationskurse</b> geleitet und Lernende auf die <b>DSH</b> und den <b>TestDaF</b> vorbereitet – also auf die Sprachprüfungen für das Studium in Deutschland.</p>
-          <p>Ich habe einen Master in Germanistik. Ich bin <b>lizenzierter Prüfer für den DTZ</b> (Deutsch-Test für Zuwanderer) und <b>telc-Prüfer für Deutsch B1–B2</b>. Das Bundesamt für Migration und Flüchtlinge (BAMF) hat mich als <b>Lehrkraft für Integrationskurse</b> und für <b>Berufssprachkurse bis zum Niveau C2</b> zugelassen.</p>
+          <p>Ich habe einen Master in Germanistik. Ich bin <b>lizenzierter Prüfer für den DTZ</b> (Deutsch-Test für Zuwanderer) und <b>telc-Prüfer für Deutsch B1–B2</b>. Dazu habe ich die <b>Prüfendenlizenz für den DTB B2–C1</b> (Deutsch-Test für den Beruf). Das Bundesamt für Migration und Flüchtlinge (BAMF) hat mich als <b>Lehrkraft für Integrationskurse</b> und für <b>Berufssprachkurse bis zum Niveau C2</b> zugelassen.</p>
           <p>Ich kenne die Prüfungen also von beiden Seiten: aus dem Unterricht und als Prüfer. Deshalb weiß ich genau, worauf es ankommt – und wo die größten Stolpersteine liegen.</p>
           <p>Auf dieser Seite findest du, was sich in meinem Unterricht bewährt hat: Lektionen, Übungen zum Sprechen und Schreiben, Prüfungstraining und meine Erklärvideos. Alle Übungen sind kostenlos und ohne Anmeldung.</p>
           <ul class="dm-facts">

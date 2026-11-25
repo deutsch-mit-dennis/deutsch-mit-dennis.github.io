@@ -108,7 +108,7 @@ async function build() {
   if (dennis) { g.save(); g.beginPath(); g.arc(700, 420, 170, 0, Math.PI * 2); g.clip(); g.drawImage(dennis, 530, 250, 340, 340 * dennis.height / dennis.width); g.restore();
     g.strokeStyle = C.marker; g.lineWidth = 14; g.beginPath(); g.arc(700, 420, 176, 0, Math.PI * 2); g.stroke(); }
   sans(g, 'Ich bin Dennis.', p.x0, 360, 58);
-  bullets(g, ['DaZ-Lehrer', 'Prüfer: DTZ, telc', 'Kostenlos lernen'], p.x0, 700, 48);
+  bullets(g, ['DaZ-Lehrer', 'Prüfer: DTZ, telc, DTB', 'Kostenlos lernen'], p.x0, 700, 48);
   hand(g, 'Viel Spaß beim Lernen!', p.x0, 1180, 80, C.rot, -0.03);
   const insideCover = spots(tex(p.c), [[40, 40, 944, 1286, 'ueber-mich', 'Über Dennis']]);
 

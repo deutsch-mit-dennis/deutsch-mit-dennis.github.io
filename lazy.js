@@ -59,7 +59,7 @@ window.DMLazy = (() => {
     "muster-data.js?v=20261111s"
   ],
   "fakten": [
-    "pruefung-fakten.js?v=20261125a"
+    "pruefung-fakten.js?v=20261125b"
   ],
   "b230": [
     "b2-30.js?v=20261113g2"

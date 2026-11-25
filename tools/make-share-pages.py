@@ -410,7 +410,7 @@ const s=fs.readFileSync('dtz30.js','utf8');
 const days=vm.runInNewContext(s.slice(s.indexOf('const DAYS = ')+13,s.indexOf('\n  ];',s.indexOf('const DAYS = '))+4));
 const weeks=vm.runInNewContext(s.match(/const WEEKS = (\[.*\]);/)[1]);
 process.stdout.write(JSON.stringify({songs:c.DM.songs.map(g=>({id:g.id,level:g.level,title:g.title,theme:g.theme})),bild:c.DM_BILD,cred:c.DM.credentials,days,weeks,
-  mats:c.DM.materials.filter(m=>/bild/i.test(m.file)&&!/wortbild/i.test(m.file)).map(m=>({file:m.file,title:m.title,level:m.level}))}));
+  mats:c.DM.materials.filter(m=>/bild(?!en)/i.test(m.file)&&!/wortbild/i.test(m.file)).map(m=>({file:m.file,title:m.title,level:m.level}))}));
 """
 Z = json.loads(subprocess.run(['node', '-e', NODE2], cwd=R, capture_output=True, text=True, encoding='utf-8', check=True).stdout)
 page_ok = lambda p: os.path.exists(os.path.join(R, *p.strip('/').split('/'), 'index.html'))

@@ -29,7 +29,7 @@
         {"k": "Fragenkatalog", "v": "300 Fragen für ganz Deutschland und 10 Fragen für jedes Bundesland – alle öffentlich", "ref": ["lid.blocks.0.2"]},
         {"k": "Bestanden im Orientierungskurs", "v": "ab 15 richtigen Antworten", "ref": ["lid.blocks.1.0"]},
         {"k": "Bestanden im Einbürgerungstest", "v": "ab 17 richtigen Antworten", "ref": ["lid.blocks.1.1"]},
-        {"k": "Kosten", "v": "Einbürgerungstest: 25 Euro. Im Integrationskurs ist der Abschlusstest kostenlos.", "ref": ["lid.blocks.2.2", "lid.blocks.2.0"]},
+        {"k": "Kosten", "v": "Einbürgerungstest: 25 Euro. Mit Zulassung zum Integrationskurs zahlt das BAMF die einmalige Teilnahme am Abschlusstest.", "ref": ["lid.blocks.2.2", "lid.blocks.2.0"]},
         {"k": "So viele bestehen", "v": "2025: 89,6 % von 318.633 Teilnehmenden hatten mindestens 15 Punkte · 272.727 hatten mindestens 17 Punkte (gerechnet 85,6 %)", "ref": ["stat:lid"]}
       ],
       "practice": [
@@ -46,7 +46,7 @@
         {"q": "Sind das die echten Fragen aus dem Test?", "a": "Ja. Die Fragen und Antworten stammen aus dem öffentlichen Gesamtfragenkatalog des BAMF. Die Erklärungen („Warum?“) schreibt Deutsch mit Dennis – sie sind nicht vom BAMF.", "ref": ["lid.blocks.0.2"]},
         {"q": "Wie viele Fragen muss ich richtig beantworten?", "a": "Im Orientierungskurs brauchst du mindestens 15 richtige Antworten, im Einbürgerungstest mindestens 17 – von 33 Fragen.", "ref": ["lid.blocks.1.0", "lid.blocks.1.1", "lid.parts.0"]},
         {"q": "Was ist der Unterschied zwischen „Leben in Deutschland“ und dem Einbürgerungstest?", "a": "„Leben in Deutschland“ ist der Abschlusstest im Orientierungskurs. Für die Einbürgerung macht man den Einbürgerungstest. Beide Tests sind gleich aufgebaut. Hast du im Test „Leben in Deutschland“ im Integrationskurs mindestens 17 Punkte, brauchst du für die Einbürgerung keinen extra Einbürgerungstest.", "ref": ["lid.blocks.0.0", "lid.blocks.0.1", "lid.blocks.4.2"]},
-        {"q": "Was kostet der Einbürgerungstest?", "a": "Der Einbürgerungstest kostet 25 Euro. Im Integrationskurs ist der Abschlusstest kostenlos.", "ref": ["lid.blocks.2.2", "lid.blocks.2.0"]}
+        {"q": "Was kostet der Einbürgerungstest?", "a": "Der Einbürgerungstest kostet 25 Euro. Mit Zulassung zum Integrationskurs zahlt das BAMF die einmalige Teilnahme am Abschlusstest.", "ref": ["lid.blocks.2.2", "lid.blocks.2.0"]}
       ]
     },
     {
@@ -102,7 +102,8 @@
       "facts": [
         {"k": "Dauer bis zum Ergebnis", "v": "zweieinhalb Wochen bis zur Meldung an das BAMF (in der Regel), dann Prüfung durch das BAMF", "ref": ["dtz.blocks.7.0"]},
         {"k": "Wo fragen?", "v": "bei der Prüfstelle, bei der du den DTZ gemacht hast", "ref": ["dtz.blocks.7.1"]},
-        {"k": "Unterlagen ansehen", "v": "Antrag bis zu drei Monate nach dem Ergebnis", "ref": ["dtz.blocks.7.2"]},
+        {"k": "Unterlagen ansehen", "v": "Antrag bis zu drei Monate nach dem Ergebnis · Bearbeitung bis zu acht Wochen", "ref": ["dtz.blocks.7.2"]},
+        {"k": "Einspruch", "v": "zuerst bei der Prüfstelle melden · spätestens drei Monate nach der Bekanntgabe des Ergebnisses", "ref": ["dtz.blocks.7.3"]},
         {"k": "Wiederholen", "v": "beliebig oft, immer schriftlich und mündlich · alte Teilergebnisse zählen nicht", "ref": ["dtz.blocks.4.3"]},
         {"k": "Wer zahlt?", "v": "Mit Zulassung zum Integrationskurs zahlt das BAMF eine Teilnahme, eine zweite nur in bestimmten Fällen. Selbstzahler: Preis beim Prüfungszentrum fragen.", "ref": ["dtz.blocks.4.0", "dtz.blocks.4.1", "dtz.blocks.4.2"]},
         {"k": "Gesamtergebnis B1", "v": "B1 im Sprechen + B1 in einem schriftlichen Teil + im anderen Teil mindestens A2", "ref": ["dtz.blocks.1.4"]},
@@ -120,7 +121,8 @@
         {"q": "Wie lange dauert es bis zum DTZ-Ergebnis?", "a": "In der Regel schickt g.a.s.t. die Ergebnisse zweieinhalb Wochen nach der Prüfung an das BAMF. Danach prüft das BAMF die Ergebnisse. Wie lange diese Prüfung dauert, nennt g.a.s.t. nicht.", "ref": ["dtz.blocks.7.0"]},
         {"q": "Kann ich nur einen Teil des DTZ wiederholen?", "a": "Nein. Du machst immer die komplette Prüfung, schriftlich und mündlich. Alte Teilergebnisse zählen nicht.", "ref": ["dtz.blocks.4.3"]},
         {"q": "Wer bezahlt die Wiederholung?", "a": "Das BAMF zahlt eine zweite Teilnahme nur in bestimmten Fällen: zum Beispiel wenn du den ersten Test gemacht hast, bevor alle Unterrichtsstunden aufgebraucht waren, oder nach einer zugelassenen Kurswiederholung. Frag deinen Kursträger. Sonst zahlst du selbst.", "ref": ["dtz.blocks.4.1", "dtz.blocks.4.2"]},
-        {"q": "Kann ich meine Prüfung ansehen?", "a": "Ja. Du kannst bis zu drei Monate nach deinem Ergebnis einen Antrag stellen. Die Orte und das Formular findest du bei g.a.s.t.", "ref": ["dtz.blocks.7.2"]}
+        {"q": "Kann ich meine Prüfung ansehen?", "a": "Ja. Du kannst bis zu drei Monate nach deinem Ergebnis einen Antrag stellen. Die Bearbeitung kann bis zu acht Wochen dauern. Die Orte und das Formular findest du bei g.a.s.t.", "ref": ["dtz.blocks.7.2"]},
+        {"q": "Kann ich Einspruch gegen mein DTZ-Ergebnis einlegen?", "a": "Ja. Frag zuerst deine Prüfstelle, sie bespricht mit dir die nächsten Schritte. Der Einspruch muss spätestens drei Monate nach der Bekanntgabe deines Ergebnisses vorliegen.", "ref": ["dtz.blocks.7.3"]}
       ]
     },
     {
@@ -157,7 +159,7 @@
         {"q": "Wie lange dauert die Prüfung telc Deutsch B1?", "a": "Leseverstehen und Sprachbausteine dauern 90 Minuten, Hörverstehen ca. 30 Minuten, der Schriftliche Ausdruck 30 Minuten. Die mündliche Prüfung dauert ca. 15 Minuten, vorher hast du 20 Minuten Vorbereitung.", "ref": ["telc-b1.parts.0", "telc-b1.parts.1", "telc-b1.parts.2", "telc-b1.parts.3"]},
         {"q": "Gibt es einen offiziellen Modelltest?", "a": "Ja, telc bietet einen Übungstest als PDF an (Link in der Tabelle oben). Die Modelltests auf Deutsch mit Dennis sind eigene Aufgaben im Stil der Prüfung – keine offiziellen telc-Aufgaben.", "ref": ["telc-b1.parts.0"]},
         {"q": "Kann ich nur einen Teil wiederholen?", "a": "Ja. Hast du nur den schriftlichen oder nur den mündlichen Teil nicht bestanden, kannst du diesen Teil innerhalb von 12 Monaten nach Ausstellung des Ergebnisbogens allein wiederholen. Sag das bei der Anmeldung.", "ref": ["telc-b1.blocks.3.1"]},
-        {"q": "Reicht telc B1 für die Einbürgerung?", "a": "Für die Einbürgerung braucht man in der Regel Deutsch B1. Das BAMF hat eine Übersicht anerkannter B1-Sprachnachweise (Link bei den Prüfungsinfos). Ob dein Zertifikat reicht, entscheidet deine Behörde – frag dort vorher. Keine Rechtsberatung.", "ref": ["telc-b1.blocks.5"]}
+        {"q": "Reicht telc B1 für die Einbürgerung?", "a": "Für die Einbürgerung braucht man in der Regel Deutsch B1. Das BAMF hat eine Übersicht anerkannter B1-Sprachnachweise für den Integrationskurs (Link bei den Prüfungsinfos). Ob dein Zertifikat reicht, entscheidet deine Behörde – frag dort vorher. Keine Rechtsberatung.", "ref": ["telc-b1.blocks.5"]}
       ]
     },
     {
@@ -206,14 +208,14 @@
       "h1": "Wie übe ich für den Deutsch-Test für den Beruf (DTB B1 und B2)?",
       "title": "DTB B1 und B2 üben: Deutsch-Test für den Beruf",
       "desc": "Deutsch-Test für den Beruf kostenlos üben: Modelltests DTB B1 und DTB B2 mit Uhr. Aufbau, 240 Punkte, Bestehensregel und Anmeldung über den Kursträger.",
-      "answer": "Auf Deutsch mit Dennis übst du kostenlos mit {sims:dtb-b1} Modelltests für DTB B1 und {sims:dtb-b2} Modelltests für DTB B2 – mit Zeitvorgabe und eigenen Aufgaben im Stil der Prüfung. Beide Tests haben 240 Punkte, je 60 für Lesen, Hören, Schreiben und Sprechen. Bestanden hast du ab 144 Punkten, wenn mindestens drei Teile 36 Punkte haben und der vierte mindestens 24 Punkte.",
+      "answer": "Auf Deutsch mit Dennis übst du kostenlos mit {sims:dtb-b1} Modelltests für DTB B1 und {sims:dtb-b2} Modelltests für DTB B2 – mit Zeitvorgabe und eigenen Aufgaben im Stil der Prüfung. Beide Tests haben 240 Punkte, je 60 für Lesen, Hören, Schreiben und Sprechen. Bestanden hast du ab 144 Punkten, wenn mindestens drei Teile „über 60 Prozent“ (36 Punkte) haben und der vierte mindestens 24 Punkte.",
       "refs": ["dtb-b1.blocks.1", "dtb-b2.blocks.1"],
       "facts": [
         {"k": "Lesen", "v": "DTB B1: 40 Min. · DTB B2: 45 Min. · je 4 Teile, 18 Aufgaben", "ref": ["dtb-b1.parts.0", "dtb-b2.parts.0"]},
         {"k": "Hören", "v": "je 20 Min. · 4 Teile, 19 Aufgaben · alle Texte nur einmal", "ref": ["dtb-b1.parts.2", "dtb-b2.parts.2"]},
         {"k": "Schreiben", "v": "DTB B1: Antwort-E-Mail, Notiz und Kurznachricht · DTB B2: Antwort, Notiz und Forumsbeitrag · zusammen 60 Punkte", "ref": ["dtb-b1.parts.1", "dtb-b1.parts.3", "dtb-b1.parts.4", "dtb-b2.parts.1", "dtb-b2.parts.3", "dtb-b2.parts.4"]},
         {"k": "Sprechen", "v": "ca. 16 Min. · zu zweit · keine Vorbereitungszeit · 60 Punkte", "ref": ["dtb-b1.parts.5", "dtb-b2.parts.5"]},
-        {"k": "Bestehen", "v": "240 Punkte gesamt · ab 144 Punkten (60 %) · in mindestens drei Teilen 36 von 60 · der vierte Teil mindestens 24", "ref": ["dtb-b1.blocks.1", "dtb-b2.blocks.1"]},
+        {"k": "Bestehen", "v": "240 Punkte gesamt · ab 144 Punkten (60 %) · in mindestens drei Teilen „über 60 Prozent“ (36 von 60) · der vierte Teil mindestens 24", "ref": ["dtb-b1.blocks.1", "dtb-b2.blocks.1"]},
         {"k": "Anmeldung", "v": "über den Träger deines Berufssprachkurses", "ref": ["dtb-b1.blocks.0"]},
         {"k": "Wiederholen", "v": "in der Regel nur der ganze Test · bei Nichtbestehen einmal, das BAMF übernimmt auch diese Kosten", "ref": ["dtb-b1.blocks.2", "dtb-b2.blocks.3"]},
         {"k": "Ergebnisse 2024", "v": "DTB B1: 45,3 % von 14.117 erreichten B1 · DTB B2: 58,3 % von 111.281 erreichten B2", "ref": ["stat:dtb-b1", "stat:dtb-b2"]}
@@ -234,7 +236,7 @@
       ],
       "faq": [
         {"q": "Kann ich den DTB ohne Berufssprachkurs machen?", "a": "Der Deutsch-Test für den Beruf gehört zu den Berufssprachkursen des BAMF. Die Anmeldung läuft über den Träger deines Berufssprachkurses. Ohne Kurs passt eher telc Deutsch: Dort meldest du dich selbst bei einem telc Prüfungszentrum an.", "ref": ["dtb-b1.blocks.0", "telc-b1.blocks.2.0"]},
-        {"q": "Wie viele Punkte brauche ich im DTB?", "a": "Du brauchst mindestens 144 von 240 Punkten. Dazu müssen mindestens drei der vier Teile 36 von 60 Punkten haben. Der vierte Teil braucht mindestens 24 Punkte.", "ref": ["dtb-b1.blocks.1", "dtb-b2.blocks.1"]},
+        {"q": "Wie viele Punkte brauche ich im DTB?", "a": "Du brauchst mindestens 144 von 240 Punkten. Dazu müssen mindestens drei der vier Teile „ein Ergebnis über 60 Prozent“ haben (36 von 60 Punkten). So steht es im Übungstest des BAMF. Der vierte Teil braucht mindestens 24 Punkte.", "ref": ["dtb-b1.blocks.1", "dtb-b2.blocks.1"]},
         {"q": "Was kostet der DTB?", "a": "Im Berufssprachkurs übernimmt das BAMF die Kosten der Prüfung. Das gilt auch für eine Wiederholung.", "ref": ["dtb-b1.blocks.2.0"]},
         {"q": "Kann ich nur einen Teil wiederholen?", "a": "In der Regel nein: Du wiederholst den ganzen Test. Bei Nichtbestehen kannst du die Prüfung einmal wiederholen. Den Termin kennt dein Kursträger.", "ref": ["dtb-b1.blocks.2"]},
         {"q": "Wie lange dauert die schriftliche Prüfung im DTB B2?", "a": "Die schriftliche Prüfung im DTB B2 dauert 125 Minuten. Dazu kommt die mündliche Prüfung mit ca. 16 Minuten.", "ref": ["dtb-b2.blocks.0.2", "dtb-b2.parts.5"]}
@@ -258,9 +260,9 @@
         {"k": "Ohne extra Einbürgerungstest", "v": "wenn du im Test „Leben in Deutschland“ im Integrationskurs mindestens 17 von 33 Punkten hast · mit 15 oder 16 Punkten musst du den Einbürgerungstest noch machen", "ref": ["dtz.blocks.6.2", "lid.blocks.4.2"]},
         {"k": "Anmeldung zum Einbürgerungstest", "v": "bei einer Prüfstelle des BAMF · deine Einbürgerungsbehörde nennt dir Prüfstellen in deiner Nähe", "ref": ["lid.blocks.2.1"]},
         {"k": "Kosten Einbürgerungstest", "v": "25 Euro", "ref": ["lid.blocks.2.2"]},
-        {"k": "Andere Zertifikate (z. B. telc B1)", "v": "Das BAMF hat eine Übersicht anerkannter B1-Sprachnachweise. Ob dein Zertifikat reicht, entscheidet die Behörde.", "ref": ["telc-b1.blocks.5.1"]},
+        {"k": "Andere Zertifikate (z. B. telc B1)", "v": "Das BAMF hat eine Übersicht anerkannter B1-Sprachnachweise für den Integrationskurs. Ob dein Zertifikat reicht, entscheidet die Behörde.", "ref": ["telc-b1.blocks.5.1"]},
         {"k": "Ausnahmen", "v": "deutscher Schulabschluss (kein Einbürgerungstest) · Krankheit, Behinderung oder Alter, wenn man die Anforderungen deshalb nicht erfüllen kann", "ref": ["lid.blocks.5.0", "lid.blocks.5.1"]},
-        {"k": "Kosten der Einbürgerung", "v": "255 Euro pro Person · 51 Euro für minderjährige Kinder zusammen mit den Eltern", "ref": ["lid.blocks.5.2"]}
+        {"k": "Kosten der Einbürgerung", "v": "255 Euro pro Person · 51 Euro für minderjährige Kinder zusammen mit den Eltern und ohne eigene Einkünfte", "ref": ["lid.blocks.5.2"]}
       ],
       "practice": [
         {"href": "/simulation/lid/", "t": "Einbürgerungstest üben", "d": "33 Fragen, 60 Minuten, mit Auswertung."},
@@ -276,7 +278,7 @@
         {"q": "Brauche ich den Einbürgerungstest, wenn ich „Leben in Deutschland“ bestanden habe?", "a": "Hast du im Test „Leben in Deutschland“ im Integrationskurs mindestens 17 Punkte, brauchst du keinen extra Einbürgerungstest. Mit 15 oder 16 Punkten musst du ihn noch machen.", "ref": ["lid.blocks.4.2"]},
         {"q": "Wie viele Fragen muss ich im Einbürgerungstest richtig haben?", "a": "Mindestens 17 von 33 Fragen. Du hast 60 Minuten Zeit.", "ref": ["lid.blocks.1.1", "lid.parts.0"]},
         {"q": "Was kostet der Einbürgerungstest und wo melde ich mich an?", "a": "Der Einbürgerungstest kostet 25 Euro. Du meldest dich bei einer Prüfstelle des BAMF an. Deine Einbürgerungsbehörde nennt dir Prüfstellen in deiner Nähe.", "ref": ["lid.blocks.2.1", "lid.blocks.2.2"]},
-        {"q": "Reicht ein telc-B1-Zertifikat?", "a": "Das Gesetz verlangt die Anforderungen einer Sprachprüfung auf dem Niveau B1. Das BAMF hat eine Übersicht anerkannter B1-Sprachnachweise. Ob dein Zertifikat reicht, entscheidet die Behörde – frag vorher bei deiner Einbürgerungsbehörde.", "ref": ["telc-b1.blocks.5.1"]}
+        {"q": "Reicht ein telc-B1-Zertifikat?", "a": "Das Gesetz verlangt die Anforderungen einer Sprachprüfung auf dem Niveau B1. Das BAMF hat eine Übersicht anerkannter B1-Sprachnachweise für den Integrationskurs. Ob dein Zertifikat reicht, entscheidet die Behörde – frag vorher bei deiner Einbürgerungsbehörde.", "ref": ["telc-b1.blocks.5.1"]}
       ]
     },
     {

@@ -42,10 +42,6 @@
       "BAMF – Gesamtfragenkatalog",
       "https://www.bamf.de/SharedDocs/Anlagen/DE/Integration/Einbuergerung/gesamtfragenkatalog-lebenindeutschland.html",
     ],
-    asyl: [
-      "asyl.net – Neue Anforderungen beim Deutsch-Test für Zuwanderer",
-      "https://www.asyl.net/view/neue-anforderungen-beim-deutsch-test-fuer-zuwanderer",
-    ],
     intTestV: [
       "§ 10 Integrationskurstestverordnung (Gesetze im Internet)",
       "https://www.gesetze-im-internet.de/inttestv/__10.html",
@@ -61,6 +57,10 @@
     deufv15: [
       "§ 15 Deutschsprachförderverordnung (Gesetze im Internet)",
       "https://www.gesetze-im-internet.de/deuf_v/__15.html",
+    ],
+    stag38: [
+      "§ 38 Staatsangehörigkeitsgesetz (Gesetze im Internet)",
+      "https://www.gesetze-im-internet.de/stag/__38.html",
     ],
     stag10: [
       "§ 10 Staatsangehörigkeitsgesetz (Gesetze im Internet)",
@@ -191,9 +191,9 @@
             "Jetzt muss auch der dritte Teil mindestens A2 sein. Ein leeres Blatt beim Schreiben reicht also nicht mehr.",
             "Die Änderung steht in der Integrationskurstestverordnung (§ 10 Abs. 1 IntTestV). Sie wurde am 20. Oktober 2026 im Bundesgesetzblatt veröffentlicht.",
           ],
-          src: ["intTestV", "bgblDtz", "gastFaq", "asyl"],
+          src: ["intTestV", "bgblDtz", "gastFaq"],
           stand: "25.11.2026",
-          note: "Das Startdatum 1. November stammt aus einer Fachmeldung von asyl.net. Auf der BAMF-Seite zur Abschlussprüfung stand am 25.11.2026 noch die alte Regel. Es gilt der Text der Verordnung.",
+          note: "Das Startdatum steht in Artikel 2 der Änderungsverordnung (BGBl. 2026 I Nr. 306). Auf der BAMF-Seite zur Abschlussprüfung stand am 25.11.2026 noch die alte Regel. Es gilt der Text der Verordnung.",
         },
         {
           h: "Anmeldung und Termine",
@@ -240,7 +240,8 @@
           list: [
             "In der Regel schickt g.a.s.t. die Ergebnisse zweieinhalb Wochen nach der Prüfung an das BAMF. Danach prüft das BAMF die Ergebnisse. Wie lange diese Prüfung dauert, nennt g.a.s.t. nicht.",
             "Danach liegen Zertifikate und Ergebnisbögen im Portal für Prüfstellen. Frag bei der Prüfstelle nach, bei der du den DTZ gemacht hast.",
-            "Du kannst deine Prüfungsunterlagen ansehen. Den Antrag kannst du bis zu drei Monate nach deinem Ergebnis stellen.",
+            "Du kannst deine Prüfungsunterlagen ansehen. Den Antrag kannst du bis zu drei Monate nach deinem Ergebnis stellen. Die Bearbeitung kann bis zu acht Wochen dauern.",
+            "Du zweifelst an deinem Ergebnis? Frag zuerst deine Prüfstelle. Ein Einspruch muss spätestens drei Monate nach der Bekanntgabe deines Ergebnisses vorliegen.",
           ],
           src: ["gastFaq"],
           stand: "25.11.2026",
@@ -293,12 +294,12 @@
         {
           h: "Anmeldung und Kosten",
           list: [
-            "Im Integrationskurs meldet dich dein Kursträger an. Dort ist der Abschlusstest kostenlos.",
+            "Im Integrationskurs meldet dich dein Kursträger an. Mit Zulassung zum Integrationskurs zahlt das BAMF die einmalige Teilnahme am Abschlusstest.",
             "Einbürgerungstest: Du meldest dich bei einer Prüfstelle des BAMF an. Deine Einbürgerungsbehörde nennt dir Prüfstellen in deiner Nähe.",
             "Der Einbürgerungstest kostet 25 Euro.",
             "Weniger als 17 richtige Antworten im Einbürgerungstest? Dann kannst du den Test wiederholen. Wartezeit: " + ASK,
           ],
-          src: ["bamfEinb", "bamfAbschluss"],
+          src: ["bamfEinb", "bamfAbschluss", "intV17"],
           stand: "25.11.2026",
         },
         {
@@ -326,9 +327,9 @@
           list: [
             "Wer einen deutschen Schulabschluss hat, braucht den Einbürgerungstest in der Regel nicht.",
             "Ausnahmen gibt es auch bei Krankheit, Behinderung oder aus Altersgründen, wenn man die Anforderungen deshalb nicht erfüllen kann. Das gilt auch für die Deutschkenntnisse. Die Behörde prüft das.",
-            "Die Einbürgerung selbst kostet 255 Euro pro Person. Für minderjährige Kinder, die zusammen mit ihren Eltern eingebürgert werden, sind es 51 Euro.",
+            "Die Einbürgerung selbst kostet 255 Euro pro Person. Für minderjährige Kinder, die zusammen mit ihren Eltern eingebürgert werden und keine eigenen Einkünfte haben, sind es 51 Euro.",
           ],
-          src: ["bamfEinb", "stag10"],
+          src: ["bamfEinb", "stag10", "stag38"],
           stand: "25.11.2026",
           legal: true,
         },
@@ -413,7 +414,7 @@
           h: "Wofür brauchst du das Zertifikat?",
           list: [
             "Für die Niederlassungserlaubnis und für die Einbürgerung braucht man in der Regel Deutsch B1.",
-            "Das Gesetz verlangt für die Einbürgerung die Anforderungen einer Sprachprüfung auf dem Niveau B1. Das BAMF hat eine Übersicht anerkannter B1-Sprachnachweise (Link unten). Ob dein Zertifikat reicht: Bitte frag vorher bei deiner Behörde.",
+            "Das Gesetz verlangt für die Einbürgerung die Anforderungen einer Sprachprüfung auf dem Niveau B1. Das BAMF hat eine Übersicht anerkannter B1-Sprachnachweise für den Integrationskurs (Link unten). Ob dein Zertifikat reicht: Bitte frag vorher bei deiner Behörde.",
           ],
           src: ["bamfNachweis", "stag10"],
           stand: "25.11.2026",
@@ -562,7 +563,7 @@
           list: [
             "Du kannst 240 Punkte erreichen: je 60 für Lesen, Hören, Schreiben und Sprechen.",
             "Bestanden hast du mit mindestens 144 Punkten (60 Prozent).",
-            "Dazu brauchst du in mindestens drei der vier Teile mindestens 36 von 60 Punkten (60 %). Ein schwächerer Teil ist möglich, wenn er mindestens 24 Punkte (40 %) hat.",
+            "Dazu brauchst du in mindestens drei der vier Teile „ein Ergebnis über 60 Prozent“ (36 von 60 Punkten). So steht es im Übungstest des BAMF. Ein schwächerer Teil ist möglich, wenn er mindestens 24 Punkte (40 %) hat.",
           ],
           src: ["uebDtbB1"],
         },
@@ -651,7 +652,7 @@
           list: [
             "Insgesamt gibt es 240 Punkte: je 60 für Lesen, Hören, Schreiben und Sprechen.",
             "Bestanden: mindestens 144 Punkte (60 %).",
-            "Dazu kommt: In mindestens drei Fertigkeiten brauchst du 36 von 60 Punkten. Eine schwächere Fertigkeit ist erlaubt, wenn sie mindestens 24 Punkte hat.",
+            "Dazu kommt: In mindestens drei Fertigkeiten brauchst du „ein Ergebnis über 60 Prozent“ (36 von 60 Punkten). So steht es im Übungstest des BAMF. Eine schwächere Fertigkeit ist erlaubt, wenn sie mindestens 24 Punkte hat.",
           ],
           src: ["bamfDtbB2", "telcDtbHb", "bamfDtbDurch"],
         },

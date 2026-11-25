@@ -10,7 +10,7 @@ R = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 ANSWERS = {  # slug -> short link text
     'dtz-pruefung-online-ueben': 'DTZ online üben – wie viele Punkte brauche ich?',
-    'dtz-ergebnis-und-wiederholung': 'DTZ: Wann kommt das Ergebnis, was tun bei nicht bestanden?',
+    'dtz-ergebnis-und-wiederholung': 'DTZ: Wann kommt das Ergebnis, was tun bei Nichtbestehen?',
     'dtz-schreiben-brief-muster': 'Den Brief im DTZ schreiben: Muster und Tipps',
     'leben-in-deutschland-test-kostenlos-ueben': 'Test „Leben in Deutschland“ kostenlos üben',
     'einbuergerung-deutschkenntnisse-test': 'Einbürgerung: Welche Deutschkenntnisse und welcher Test?',
