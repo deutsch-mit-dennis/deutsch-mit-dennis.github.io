@@ -953,7 +953,7 @@
       ${songStage(true, SONG_LEVELS.includes(sel) ? sel : '')}
       <nav class="dm-tabs" aria-label="Niveau">${SONG_LEVELS.map(k => `<a href="#lieder/${k}" ${k === sel ? 'aria-current="page"' : ''}><b>${k}</b><small>${(DM.songs || []).filter(sg => sg.level === k).length} Lieder${(DM.songs || []).some(sg => sg.level === k && songIsNew(sg)) ? ' · <em class="dm-song-new">neu</em>' : ''}</small></a>`).join('')}</nav>
       <div class="dm-songs">${list.map(songCard).join('')}</div>
-      <aside class="dm-card dm-song-how"><h2>So lernst du mit einem Lied</h2><ol class="dm-list"><li>Hör das Lied einmal nur zu. Worum geht es?</li><li>Lies die wichtigen Wörter und mach die Lückenaufgabe.</li><li>Hör noch einmal und lies den Text mit.</li><li>Sing mit – das trainiert Aussprache und Satzmelodie.</li><li>Lade das PDF herunter: Liedtext, Aufgaben und Lösungen.</li></ol></aside>
+      <aside class="dm-card dm-song-how"><h2>So lernst du mit einem Lied</h2><ol class="dm-list"><li>Hör das Lied einmal nur zu. Worum geht es?</li><li>Lies die wichtigen Wörter und mach die Lückenaufgabe.</li><li>Hör noch einmal und lies den Text mit.</li><li>Sing mit – das trainiert Aussprache und Satzmelodie.</li><li>Lade das PDF herunter: Liedtext, Aufgaben und Lösungen.</li></ol><p><a href="/lieder/alle/">Alle Liedtexte als Liste (A1–C1)</a></p></aside>
       `);
   }
   function songPage(id) {
