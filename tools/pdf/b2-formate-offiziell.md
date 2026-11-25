@@ -54,7 +54,7 @@ Geprüft am 13.11.2026.
 
 **Gesamt:** schriftlich 140 Min. (Leseverstehen + Sprachbausteine 90 Min., Hörverstehen ca. 20 Min., Schriftlicher Ausdruck 30 Min.); mündlich ca. 15 Min. als Paar (ca. 25 Min. zu dritt) + 20 Min. Vorbereitung. 300 Punkte: schriftlich 225 (75 %), mündlich 75 (25 %).
 
-**Bestehen:** schriftlich **und** mündlich je mind. 60 % (135 bzw. 45 Punkte). Noten: 270–300 sehr gut · 240–269,5 gut · 210–239,5 befriedigend · 180–209,5 ausreichend. Ein nicht bestandener Prüfungsteil kann im selben oder im folgenden Kalenderjahr einzeln wiederholt werden.
+**Bestehen:** schriftlich **und** mündlich je mind. 60 % (135 bzw. 45 Punkte). Noten: 270–300 sehr gut · 240–269,5 gut · 210–239,5 befriedigend · 180–209,5 ausreichend. Ein nicht bestandener Prüfungsteil kann innerhalb von 12 Monaten nach Ausstellung des Ergebnisbogens einzeln wiederholt werden (telc-Prüfungsregularien ab 15.04.2025, § 7 Nr. 3; ältere Übungstests nennen noch das Folgejahr).
 
 | Teil | Aufgabentyp | Items (Nr.) | Zeit | Punkte | Hören |
 |---|---|---|---|---|---|

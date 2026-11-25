@@ -10,6 +10,7 @@ R = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 ANSWERS = {  # slug -> short link text
     'dtz-pruefung-online-ueben': 'DTZ online üben – wie viele Punkte brauche ich?',
+    'dtz-ergebnis-und-wiederholung': 'DTZ: Wann kommt das Ergebnis, was tun bei nicht bestanden?',
     'dtz-schreiben-brief-muster': 'Den Brief im DTZ schreiben: Muster und Tipps',
     'leben-in-deutschland-test-kostenlos-ueben': 'Test „Leben in Deutschland“ kostenlos üben',
     'einbuergerung-deutschkenntnisse-test': 'Einbürgerung: Welche Deutschkenntnisse und welcher Test?',
@@ -22,13 +23,13 @@ ANSWERS = {  # slug -> short link text
 }
 # exam / section id -> matching answer pages
 TOPIC = {
-    'dtz': ['dtz-pruefung-online-ueben', 'dtz-schreiben-brief-muster'],
+    'dtz': ['dtz-pruefung-online-ueben', 'dtz-ergebnis-und-wiederholung', 'dtz-schreiben-brief-muster'],
     'lid': ['leben-in-deutschland-test-kostenlos-ueben', 'einbuergerung-deutschkenntnisse-test'],
     'telc-b1': ['telc-b1-modelltest-kostenlos'],
     'telc-b2': ['telc-b2-pruefung-ueben'],
     'dtb-b1': ['dtb-deutsch-test-fuer-den-beruf-ueben'],
     'dtb-b2': ['dtb-deutsch-test-fuer-den-beruf-ueben'],
-    'pruefung': ['dtz-pruefung-online-ueben', 'leben-in-deutschland-test-kostenlos-ueben', 'einbuergerung-deutschkenntnisse-test',
+    'pruefung': ['dtz-pruefung-online-ueben', 'dtz-ergebnis-und-wiederholung', 'leben-in-deutschland-test-kostenlos-ueben', 'einbuergerung-deutschkenntnisse-test',
                  'telc-b1-modelltest-kostenlos', 'telc-b2-pruefung-ueben', 'dtb-deutsch-test-fuer-den-beruf-ueben', 'dtz-schreiben-brief-muster'],
 }
 

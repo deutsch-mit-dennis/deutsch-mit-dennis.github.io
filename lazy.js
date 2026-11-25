@@ -59,7 +59,7 @@ window.DMLazy = (() => {
     "muster-data.js?v=20261111s"
   ],
   "fakten": [
-    "pruefung-fakten.js?v=20261122a"
+    "pruefung-fakten.js?v=20261125a"
   ],
   "b230": [
     "b2-30.js?v=20261113g2"
@@ -88,7 +88,7 @@ window.DMLazy = (() => {
     "a1-woerter-data.js?v=20261117w"
   ],
   "sim": [
-    "simulation.js?v=20261122a"
+    "simulation.js?v=20261125a"
   ],
   "lidt": [
     "lid-trainer.js?v=20261118c"

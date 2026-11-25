@@ -26,14 +26,17 @@ PERSON = {
     "@id": SITE + "/#dennis",
     "name": "Dennis Prudnikau",
     "url": SITE + "/ueber-mich/",
-    "jobTitle": "DaZ-Lehrer und Prüfer (DTZ, telc)",
+    "jobTitle": "DaZ-Lehrer und Prüfer (DTZ, telc, DTB)",
 }
 ORG = {"@type": "EducationalOrganization", "@id": SITE + "/#org", "name": "Deutsch mit Dennis", "url": SITE + "/"}
-BYLINE = "Dennis Prudnikau, DaZ-Lehrer und lizenzierter Prüfer für DTZ und telc"
+BYLINE = "Dennis Prudnikau, DaZ-Lehrer und lizenzierter Prüfer für DTZ, telc und DTB"
 ENTITY = "Deutsch mit Dennis – die kostenlose Lernwebsite von Dennis Prudnikau"
 INDEPENDENT = "Unabhängiges Lernangebot, kein Angebot von g.a.s.t., telc oder BAMF."
 LEGAL = "Keine Rechtsberatung. Ob dein Zertifikat reicht, entscheidet immer die Behörde."
 STYLE_NOTE = "Die Probeprüfungen auf Deutsch mit Dennis sind eigene Übungsaufgaben im Stil der Prüfung – keine offiziellen Aufgaben von telc, g.a.s.t. oder BAMF."
+
+sys.path.insert(0, os.path.join(R, "tools"))
+from page_write import write_page  # noqa: E402
 
 # ---------------- data ----------------
 NODE = r"""
@@ -173,12 +176,12 @@ def write(path, title, desc, body, crumbs, og, ld):
 <main><nav class="crumbs" aria-label="Brotkrumen">{nav}</nav>
 {body}
 </main>
-<footer><a href="/">Startseite</a><a href="/kurs/">Kurse A0–B2</a><a href="/pruefung/">Prüfung</a><a href="/simulation/">Probeprüfungen</a><a href="/{BASE}/">Antworten</a><a href="/impressum/">Impressum</a><a href="/datenschutz/">Datenschutz</a><br>{e(ENTITY)}, DaZ-Lehrer und lizenzierter Prüfer für DTZ und telc. Kostenlos, ohne Anmeldung.</footer>
+<footer><a href="/">Startseite</a><a href="/kurs/">Kurse A0–B2</a><a href="/pruefung/">Prüfung</a><a href="/simulation/">Probeprüfungen</a><a href="/{BASE}/">Antworten</a><a href="/impressum/">Impressum</a><a href="/datenschutz/">Datenschutz</a><br>{e(ENTITY)}, DaZ-Lehrer und lizenzierter Prüfer für DTZ, telc und DTB. Kostenlos, ohne Anmeldung.</footer>
 </body></html>
 """
     f = os.path.join(R, path, "index.html")
     os.makedirs(os.path.dirname(f), exist_ok=True)
-    open(f, "w", encoding="utf-8", newline="\n").write(doc)
+    write_page(f, doc)
     return url
 
 def is_ext(h):

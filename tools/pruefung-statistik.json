@@ -24,10 +24,11 @@
       "quelle": "bamf-ik-2025",
       "fundstelle": "S. 21",
       "fakten": [
-        "2025 haben 318.633 Menschen den Test „Leben in Deutschland“ gemacht, 89,6 % haben bestanden (2024: 91,6 %).",
-        "Von den 63.773 externen Teilnehmenden (Selbstzahlende, z. B. für die Einbürgerung) bestanden 91,8 %."
+        "2025 haben 318.633 Menschen den Test „Leben in Deutschland“ gemacht, 89,6 % haben mit mindestens 15 Punkten bestanden (2024: 91,6 %).",
+        "Für die Einbürgerung zählen 17 Punkte: 272.727 Teilnehmende hatten 17 oder mehr Punkte (gerechnet 85,6 %).",
+        "Von den 63.773 externen Teilnehmenden hatten 56.564 mindestens 17 Punkte (gerechnet 88,7 %)."
       ],
-      "faq": ["Wie viele Menschen bestehen den Test „Leben in Deutschland“?", "Im Jahr 2025 bestanden 89,6 % der 318.633 Teilnehmenden (BAMF, Integrationskursgeschäftsstatistik 2025)."]
+      "faq": ["Wie viele Menschen bestehen den Test „Leben in Deutschland“?", "Im Jahr 2025 erreichten 89,6 % der 318.633 Teilnehmenden mindestens 15 Punkte. 17 Punkte oder mehr, wie für die Einbürgerung nötig, hatten 272.727 Teilnehmende, gerechnet 85,6 % (BAMF, Integrationskursgeschäftsstatistik 2025)."]
     },
     "dtb-b1": {
       "quelle": "bamf-bsk-2024",

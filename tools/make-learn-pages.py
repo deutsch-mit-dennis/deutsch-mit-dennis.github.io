@@ -19,6 +19,7 @@ import datetime
 import sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from answer_links import answer_html  # links to /antworten/… (only pages that exist)
+from page_write import write_page  # noqa: E402
 
 R = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Official exam figures (GEO: verifiable statistics with source). Every value checked in the source PDF, see the file header.
@@ -211,7 +212,7 @@ def page(path, title, desc, body, crumbs, og="start", extra_ld=None, stand=None)
 """
     f = os.path.join(R, path, "index.html")
     os.makedirs(os.path.dirname(f), exist_ok=True)
-    open(f, "w", encoding="utf-8").write(doc)
+    write_page(f, doc)
     return url
 
 
@@ -673,9 +674,9 @@ F = []
 if FK:
     SRC, STAND = FK["sources"], FK["stand"]
 
-    def src_line(keys):
+    def src_line(keys, stand=None):  # stand: per-block date when only that block was re-checked
         links = " · ".join(f'<a href="{e(SRC[k][1])}" rel="noopener nofollow">{e(SRC[k][0])}</a>' for k in (keys or []) if k in SRC)
-        return f'<p class="small">Quelle: {links} · Stand: {e(STAND)}</p>' if links else f'<p class="small">Stand: {e(STAND)}</p>'
+        return f'<p class="small">Quelle: {links} · Stand: {e(stand or STAND)}</p>' if links else f'<p class="small">Stand: {e(stand or STAND)}</p>'
 
     # Short facts + FAQ per exam. Every sentence is taken from pruefung-fakten.js (no extra facts);
     # questions whose answer is missing there ("Bitte beim Prüfungszentrum fragen") are left out.
@@ -684,7 +685,7 @@ if FK:
             "Der DTZ ist der Abschlusstest für Deutsch im Integrationskurs und zeigt das Niveau A2 oder B1.",
             "Er hat vier Teile: Hören (ca. 25 Min.), Lesen (45 Min.), Schreiben (30 Min.) und Sprechen (ca. 16 Min.).",
             "Das Gesamtergebnis B1 braucht B1 im Sprechen und B1 in einem schriftlichen Teil; im anderen Teil mindestens A2.",
-            "Im Integrationskurs ist der Abschlusstest kostenlos; die Prüfung macht seit Januar 2023 g.a.s.t.",
+            "Mit Zulassung zum Integrationskurs zahlt das BAMF eine Teilnahme; die Prüfung macht seit Januar 2023 g.a.s.t.",
         ],
         "lid": [
             "Der Test „Leben in Deutschland“ ist der Abschlusstest im Orientierungskurs.",
@@ -696,7 +697,7 @@ if FK:
             "telc Deutsch B1 ist eine allgemeine Deutschprüfung auf dem Niveau B1, die du ohne Kurs machen kannst.",
             "Es gibt 300 Punkte: 225 schriftlich und 75 mündlich.",
             "Bestanden hast du mit 60 % in der schriftlichen (135 von 225) und 60 % in der mündlichen Prüfung (45 von 75).",
-            "Nicht bestandene Teile (schriftlich oder mündlich) kannst du bis zum Ende des nächsten Kalenderjahres allein wiederholen.",
+            "Nicht bestandene Teile (schriftlich oder mündlich) kannst du innerhalb von 12 Monaten nach Ausstellung des Ergebnisbogens allein wiederholen.",
         ],
         "telc-b2": [
             "telc Deutsch B2 ist eine allgemeine Deutschprüfung auf dem Niveau B2, die du ohne Kurs machen kannst.",
@@ -708,13 +709,13 @@ if FK:
             "Der DTB B1 ist die Prüfung am Ende eines Berufssprachkurses B1 und prüft Deutsch am Arbeitsplatz.",
             "Es gibt 240 Punkte: je 60 für Lesen, Hören, Schreiben und Sprechen.",
             "Bestanden hast du mit mindestens 144 Punkten (60 Prozent).",
-            "Ohne Berufssprachkurs kannst du die Prüfung nicht als Selbstzahler machen.",
+            "Die Anmeldung läuft über den Träger deines Berufssprachkurses.",
         ],
         "dtb-b2": [
             "Der DTB B2 ist die Prüfung am Ende eines Berufssprachkurses B2 und prüft Deutsch am Arbeitsplatz.",
             "Es gibt 240 Punkte: je 60 für Lesen, Hören, Schreiben und Sprechen; die schriftliche Prüfung dauert 125 Minuten.",
-            "Bestanden hast du mit mindestens 144 Punkten (60 %); mit 120 bis 143 Punkten steht im Ergebnis „B2 knapp nicht erfüllt“.",
-            "Ohne Berufssprachkurs kannst du die Prüfung nicht als Selbstzahler machen.",
+            "Bestanden hast du mit mindestens 144 Punkten (60 %).",
+            "Die Anmeldung läuft über den Träger deines Berufssprachkurses.",
         ],
     }
     FAQ = {
@@ -723,8 +724,9 @@ if FK:
             ("Wie viele Punkte braucht man im DTZ für B1?", "Für B1 brauchst du in Hören/Lesen 33–45 Punkte, im Schreiben 15–20 Punkte und im Sprechen 75–100 Punkte."),
             ("Wann hat man den DTZ mit B1 bestanden?", "Du brauchst B1 im Sprechen und B1 in einem schriftlichen Teil (Hören/Lesen oder Schreiben). Seit 1. November 2026 muss der dritte Teil mindestens A2 sein."),
             ("Was passiert, wenn man unter A2 bleibt?", "Unter A2 bekommst du kein Zertifikat, sondern nur einen Ergebnisbogen."),
-            ("Was kostet der DTZ?", "Im Integrationskurs ist der Abschlusstest kostenlos. Den Preis für Selbstzahler nennt das Prüfungszentrum."),
-            ("Wie oft kann man den DTZ wiederholen?", "Auf eigene Kosten kannst du den DTZ beliebig oft wiederholen."),
+            ("Was kostet der DTZ?", "Mit Zulassung zum Integrationskurs zahlt das BAMF eine Teilnahme, eine zweite nur in bestimmten Fällen. Den Preis für Selbstzahler nennt das Prüfungszentrum."),
+            ("Wie oft kann man den DTZ wiederholen?", "Beliebig oft, aber immer komplett: schriftlich und mündlich. Alte Teilergebnisse zählen nicht."),
+            ("Wie lange dauert es bis zum DTZ-Ergebnis?", "In der Regel schickt g.a.s.t. die Ergebnisse zweieinhalb Wochen nach der Prüfung an das BAMF. Danach prüft das BAMF die Ergebnisse. Frag bei der Prüfstelle nach, bei der du den DTZ gemacht hast."),
             ("Wie melde ich mich zum DTZ an?", "Im Integrationskurs meldet dich dein Kursträger an. Die Anmeldung läuft bis 21 Tage vor dem Termin; Prüfungen gibt es alle zwei Wochen an einem Freitag und einem Samstag."),
         ],
         "lid": [
@@ -738,7 +740,7 @@ if FK:
         "telc-b1": [
             ("Wie ist telc Deutsch B1 aufgebaut?", "Die Prüfung hat Leseverstehen und Sprachbausteine (90 Min.), Hörverstehen (ca. 30 Min.), Schriftlicher Ausdruck (30 Min.) und eine Mündliche Prüfung (ca. 15 Min., zu zweit)."),
             ("Wie viele Punkte braucht man für telc B1?", "Es gibt 300 Punkte. Du brauchst 60 % in der schriftlichen Prüfung (135 von 225 Punkten) und 60 % in der mündlichen Prüfung (45 von 75 Punkten)."),
-            ("Kann man einzelne Teile von telc B1 wiederholen?", "Ja. Hast du nur den schriftlichen oder nur den mündlichen Teil nicht bestanden, kannst du ihn bis zum Ende des nächsten Kalenderjahres allein wiederholen."),
+            ("Kann man einzelne Teile von telc B1 wiederholen?", "Ja. Hast du nur den schriftlichen oder nur den mündlichen Teil nicht bestanden, kannst du ihn innerhalb von 12 Monaten nach Ausstellung des Ergebnisbogens allein wiederholen."),
             ("Wie oft kann man telc B1 wiederholen?", "Die ganze Prüfung kannst du beliebig oft wiederholen."),
             ("Braucht man für telc B1 einen Kurs?", "Nein, du kannst die Prüfung ohne Kurs machen und meldest dich bei einem telc Prüfungszentrum an."),
             ("Läuft das telc-Zertifikat ab?", "Nein, auf dem Zertifikat steht kein Ablaufdatum."),
@@ -746,6 +748,7 @@ if FK:
         "telc-b2": [
             ("Wie ist telc Deutsch B2 aufgebaut?", "Die Prüfung hat Leseverstehen und Sprachbausteine (90 Min.), Hörverstehen (ca. 20 Min.), Schriftlicher Ausdruck (30 Min.) und eine Mündliche Prüfung (ca. 15 Min.)."),
             ("Wie viele Punkte braucht man für telc B2?", "Es gibt 300 Punkte. Du brauchst 60 % in der schriftlichen Prüfung (135 von 225 Punkten) und 60 % in der mündlichen Prüfung (45 von 75 Punkten)."),
+            ("Kann man einzelne Teile von telc B2 wiederholen?", "Ja. Hast du nur den schriftlichen oder nur den mündlichen Teil nicht bestanden, kannst du ihn innerhalb von 12 Monaten nach Ausstellung des Ergebnisbogens allein wiederholen."),
             ("Wie oft kann man telc B2 wiederholen?", "Die ganze Prüfung kannst du beliebig oft wiederholen."),
             ("Braucht man für telc B2 einen Kurs?", "Nein, du kannst die Prüfung ohne Kurs machen und meldest dich bei einem telc Prüfungszentrum an."),
             ("Wie wird das Sprechen bei telc B2 bewertet?", "Es gibt vier Kriterien: Ausdrucksfähigkeit, Aufgabenbewältigung, formale Richtigkeit sowie Aussprache und Intonation."),
@@ -754,17 +757,17 @@ if FK:
         "dtb-b1": [
             ("Wie ist der DTB B1 aufgebaut?", "Der DTB B1 hat Lesen (40 Min.), Lesen und Schreiben (20 Min.), Hören (20 Min.), Hören und Schreiben (5 Min.), Sprachbausteine und Schreiben (10 Min.) und Sprechen (ca. 16 Min., zu zweit)."),
             ("Wie viele Punkte braucht man für den DTB B1?", "Es gibt 240 Punkte (je 60 für Lesen, Hören, Schreiben und Sprechen). Bestanden hast du mit mindestens 144 Punkten (60 Prozent)."),
-            ("Gibt es beim DTB B1 Mindestpunkte pro Teil?", "Ja. Du brauchst in mindestens drei der vier Teile mehr als 36 Punkte. Ein schwächerer Teil ist möglich, wenn er zwischen 40 und 60 Prozent liegt."),
-            ("Wer kann den DTB B1 machen?", "Der DTB gehört zu den Berufssprachkursen des BAMF. Ohne Berufssprachkurs kannst du die Prüfung nicht als Selbstzahler machen."),
-            ("Kann man einzelne Teile des DTB B1 wiederholen?", "Nein, du kannst den Test nur ganz wiederholen, nicht einzelne Teile."),
+            ("Gibt es beim DTB B1 Mindestpunkte pro Teil?", "Ja. Du brauchst in mindestens drei der vier Teile mindestens 36 von 60 Punkten (60 %). Ein schwächerer Teil ist möglich, wenn er mindestens 24 Punkte (40 %) hat."),
+            ("Wer kann den DTB B1 machen?", "Der DTB gehört zu den Berufssprachkursen des BAMF. Die Anmeldung läuft über den Träger deines Berufssprachkurses."),
+            ("Kann man einzelne Teile des DTB B1 wiederholen?", "In der Regel nein: Du kannst den Test nur ganz wiederholen, nicht einzelne Teile."),
         ],
         "dtb-b2": [
             ("Wie ist der DTB B2 aufgebaut?", "Der DTB B2 hat Lesen (45 Min.), Lesen und Schreiben (20 Min.), Hören (20 Min.), Hören und Schreiben (5 Min.), Sprachbausteine und Schreiben (35 Min.) und Sprechen (ca. 16 Min., zu zweit)."),
             ("Wie lange dauert die schriftliche Prüfung beim DTB B2?", "Die schriftliche Prüfung dauert 125 Minuten. Du kannst nicht nur einen Teil machen."),
             ("Wie viele Punkte braucht man für den DTB B2?", "Es gibt 240 Punkte (je 60 pro Fertigkeit). Bestanden hast du mit mindestens 144 Punkten (60 %)."),
             ("Gibt es beim DTB B2 Mindestpunkte pro Fertigkeit?", "Ja. In mindestens drei Fertigkeiten brauchst du 36 von 60 Punkten. Eine schwächere Fertigkeit ist erlaubt, wenn sie mindestens 24 Punkte hat."),
-            ("Was bedeutet „B2 knapp nicht erfüllt“?", "Mit 120 bis 143 Punkten steht im Ergebnis „B2 knapp nicht erfüllt“."),
-            ("Kann man einzelne Teile des DTB B2 wiederholen?", "Nein, du kannst den Test nur ganz wiederholen, nicht einzelne Teile."),
+            ("Was kostet der DTB B2?", "Im Berufssprachkurs übernimmt das BAMF die Kosten der Prüfung. Das gilt auch für eine Wiederholung."),
+            ("Kann man einzelne Teile des DTB B2 wiederholen?", "In der Regel nein: Du kannst den Test nur ganz wiederholen, nicht einzelne Teile."),
         ],
     }
     EXAM_LEVEL = {"dtz": "A2-B1", "lid": "Orientierungskurs", "telc-b1": "B1", "telc-b2": "B2", "dtb-b1": "B1", "dtb-b2": "B2"}
@@ -784,7 +787,7 @@ if FK:
             f'<h2>{e(b["h"])}</h2><ul class="list">{"".join(f"<li>{e(t)}</li>" for t in b["list"])}</ul>'
             + (f'<p class="muted">{e(b["note"])}</p>' if b.get("note") else "")
             + ('<p class="small">Allgemeine Information, keine Rechtsberatung.</p>' if b.get("legal") else "")
-            + src_line(b.get("src"))
+            + src_line(b.get("src"), b.get("stand"))
             for b in x["blocks"]
         )
         others = " · ".join(f'<a href="/pruefungsinfo/{o}/">{e(FK["data"][o]["short"])}</a>' for o in FK["ids"] if o != fid)
@@ -835,7 +838,7 @@ if FK:
 <p><a class="btn" href="/simulation/{e(x["sim"])}/">▶ Kostenlose Probeprüfung {e(x["short"])}</a> <a class="btn ghost" href="/#pruefungsinfo/{e(fid)}">In der App öffnen</a></p>
 {f'<p><a href="/vorbereitung/{e(fid)}/">Aufbau und Strategien für jeden Teil: Vorbereitung {e(x["short"])}</a></p>' if fid in (D.get("prep") or ()) else ""}
 {faq_html}
-{answer_html(fid)}<p class="muted">Alle Angaben ohne Gewähr. Unabhängiges Lernangebot, kein Angebot von g.a.s.t., telc oder BAMF. Keine Rechtsberatung.</p>
+{'<p>Alle Fragen mit Antworten: <a href="/lid/fragen/">300 allgemeine Fragen und die Fragen für dein Bundesland</a></p>' if fid == "lid" else ""}{answer_html(fid)}<p class="muted">Alle Angaben ohne Gewähr. Unabhängiges Lernangebot, kein Angebot von g.a.s.t., telc oder BAMF. Keine Rechtsberatung.</p>
 <p>Weitere Prüfungen: {others}</p>"""
         title = f"{x['short']}: Aufbau, Dauer, Punkte und Anmeldung"
         desc = f"{x['lead']} Teile, Dauer, Punkte, Bestehen, Anmeldung und Kosten – mit Quelle, Stand {STAND}."
@@ -868,27 +871,27 @@ if FK:
             "DTZ, telc B1 oder DTB B1 im Vergleich",
             ["dtz", "telc-b1", "dtb-b1"],
             [
-                ("Zweck / für wen", ["Abschlusstest im Integrationskurs; kostenlos im Kurs", "Allgemeine Deutschprüfung, ohne Kurs möglich (Anmeldung beim telc Prüfungszentrum)", "Prüfung am Ende eines Berufssprachkurses B1; nicht als Selbstzahler"]),
+                ("Zweck / für wen", ["Abschlusstest im Integrationskurs; mit Zulassung zahlt das BAMF eine Teilnahme", "Allgemeine Deutschprüfung, ohne Kurs möglich (Anmeldung beim telc Prüfungszentrum)", "Prüfung am Ende eines Berufssprachkurses B1; Anmeldung über den Kursträger"]),
                 ("Niveau", ["A2 oder B1", "B1", "B1"]),
                 ("Punkte", ["Ergebnis nach Teilen: Hören/Lesen (45), Schreiben (20), Sprechen (100)", "300 Punkte: 225 schriftlich, 75 mündlich", "240 Punkte: je 60 für Lesen, Hören, Schreiben, Sprechen"]),
-                ("Bestehensregel", ["B1 im Sprechen und B1 in einem schriftlichen Teil; der dritte Teil mindestens A2 (seit 1. November 2026)", "60 % schriftlich (135 von 225) und 60 % mündlich (45 von 75)", "Mindestens 144 Punkte (60 %); in mindestens drei Teilen mehr als 36 Punkte"]),
-                ("Wiederholung", ["Auf eigene Kosten beliebig oft", "Ganze Prüfung beliebig oft; einzelner Teil bis Ende des nächsten Kalenderjahres", "Nur ganz, nicht einzelne Teile"]),
+                ("Bestehensregel", ["B1 im Sprechen und B1 in einem schriftlichen Teil; der dritte Teil mindestens A2 (seit 1. November 2026)", "60 % schriftlich (135 von 225) und 60 % mündlich (45 von 75)", "Mindestens 144 Punkte (60 %); in mindestens drei Teilen mindestens 36 Punkte"]),
+                ("Wiederholung", ["Beliebig oft, immer komplett", "Ganze Prüfung beliebig oft; einzelner Teil innerhalb von 12 Monaten", "Bei Nichtbestehen einmal; in der Regel nur ganz"]),
                 ("Ergebnis / Zertifikat", ["Unter A2 kein Zertifikat, nur Ergebnisbogen", "Zertifikat ohne Ablaufdatum", "Zertifikat für den Beruf; ob es reicht, entscheidet die Stelle"]),
             ],
-            ["gastFaq", "gastBlick", "telcB1", "telcB1Ueb", "telcReg", "telcDtbB1", "bamfDtbDurch"],
+            ["gastFaq", "gastBlick", "telcB1", "telcB1Ueb", "telcReg", "telcDtbB1", "bamfDtbDurch", "deufv15"],
         )
         t_b2 = cmp_table(
             "telc B2 oder DTB B2 im Vergleich",
             ["telc-b2", "dtb-b2"],
             [
-                ("Zweck / für wen", ["Allgemeine Deutschprüfung, ohne Kurs möglich (Anmeldung beim telc Prüfungszentrum)", "Prüfung am Ende eines Berufssprachkurses B2; nicht als Selbstzahler"]),
+                ("Zweck / für wen", ["Allgemeine Deutschprüfung, ohne Kurs möglich (Anmeldung beim telc Prüfungszentrum)", "Prüfung am Ende eines Berufssprachkurses B2; Anmeldung über den Kursträger"]),
                 ("Niveau", ["B2", "B2"]),
                 ("Punkte", ["300 Punkte: 225 schriftlich, 75 mündlich", "240 Punkte: je 60 für Lesen, Hören, Schreiben, Sprechen"]),
-                ("Bestehensregel", ["60 % schriftlich (135 von 225) und 60 % mündlich (45 von 75)", "Mindestens 144 Punkte (60 %); in mindestens drei Fertigkeiten 36 von 60 Punkten; 120 bis 143 Punkte: „B2 knapp nicht erfüllt“"]),
-                ("Wiederholung", ["Ganze Prüfung beliebig oft", "Nur ganz, nicht einzelne Teile"]),
+                ("Bestehensregel", ["60 % schriftlich (135 von 225) und 60 % mündlich (45 von 75)", "Mindestens 144 Punkte (60 %); in mindestens drei Fertigkeiten 36 von 60 Punkten"]),
+                ("Wiederholung", ["Ganze Prüfung beliebig oft; einzelner Teil innerhalb von 12 Monaten", "Bei Nichtbestehen einmal; in der Regel nur ganz"]),
                 ("Ergebnis / Zertifikat", ["Zertifikat ohne Ablaufdatum", "Zertifikat; ob es reicht, entscheidet die Stelle"]),
             ],
-            ["telcB2", "telcReg", "telcDtbB2", "bamfDtbB2", "bamfDtbDurch"],
+            ["telcB2", "telcReg", "telcDtbB2", "bamfDtbB2", "bamfDtbDurch", "deufv15"],
         )
         cmp_html = (
             '<h2>DTZ, telc B1 oder DTB B1 – welche Prüfung passt zu mir?</h2>'
@@ -1098,6 +1101,14 @@ def level_li(href, t, sub):
     return f'<li><a href="{e(to)}"{ext_attr(to)}><b>{e(t)}</b>{f"<small>{e(sub)}</small>" if sub else ""}</a></li>'
 
 
+# pages that no other readable page linked to (25.11.2026)
+EXTRA_LINKS = {
+    "A0": [("/a1-woerter/", "A1-Wörter"), ("/lieder/alle/", "Deutsch mit Liedern")],
+    "A1": [("/a1-woerter/", "A1-Wörter"), ("/hoeren/a1/", "Hören A1"), ("/diktat/", "Diktat"), ("/verben/", "Unregelmäßige Verben"), ("/lieder/alle/", "Lieder A1–C1")],
+    "A2": [("/dtz-woerter/", "DTZ-Wörter A2–B1"), ("/hoeren/a2/", "Hören A2"), ("/diktat/", "Diktat"), ("/lieder/alle/", "Lieder A1–C1")],
+    "B1": [("/b1-woerter/", "B1-Wörter"), ("/dtz-woerter/", "DTZ-Wörter A2–B1"), ("/diktat/", "Diktat"), ("/lieder/alle/", "Lieder A1–C1")],
+    "B2": [("/b2-woerter/", "B2-Wörter"), ("/telc-b2-sprechen/", "Sprechen telc B2"), ("/lieder/alle/", "Lieder A1–C1")],
+}
 for lv, h in LEVELS.items():
     secs = parse_level(h)
     if not secs:
@@ -1117,6 +1128,7 @@ for lv, h in LEVELS.items():
 <p><a class="btn" href="/#niveau/{lv}">▶ In der App öffnen</a> <a class="btn ghost" href="/kurs/{lv.lower()}/">Kurs {lv} Schritt für Schritt</a></p>
 <p>Niveau: {tabs}</p>
 {out}
+<p>{" · ".join(f'<a href="{h}">{t}</a>' for h, t in EXTRA_LINKS.get(lv, []) if os.path.exists(os.path.join(R, h.strip("/"), "index.html")))}</p>
 <p><a href="/material/{L.lower()}/">Alle Arbeitsblätter {L} (PDF)</a> · <a href="/kurs/{lv.lower()}/">Kurs {lv}</a> · <a href="/einstufungstest/">Welches Niveau habe ich?</a></p>"""
     desc = {
         "A0": "Deutsch für Anfänger ohne Vorkenntnisse: Bildkarten mit Ton, Alphabet, Zahlen, erste Lektionen und Spiele – kostenlos und ohne Anmeldung.",

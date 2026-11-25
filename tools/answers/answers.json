@@ -7,7 +7,7 @@
     "grammatik": {"text": "{n:grammar} Grammatik-Themen mit Erklärung und Übungen.", "page": "/grammatik/", "name": "Deutsch mit Dennis – Grammatik"},
     "lektionen": {"text": "{n:lessons} Themen-Lektionen, zum Beispiel Wohnen, Arbeit, Gesundheit, Amt.", "page": "/lektionen/", "name": "Deutsch mit Dennis – Lektionen"},
     "simulation": {"text": "{n:sims} Probeprüfungen mit Zeitvorgabe für DTZ, telc B1, telc B2, DTB B1, DTB B2 und Leben in Deutschland.", "page": "/simulation/", "name": "Deutsch mit Dennis – Probeprüfungen"},
-    "ueber": {"text": "Dennis Prudnikau, DaZ-Lehrer und lizenzierter Prüfer für DTZ und telc.", "page": "/ueber-mich/", "name": "Deutsch mit Dennis – Über Dennis"},
+    "ueber": {"text": "Dennis Prudnikau, DaZ-Lehrer und lizenzierter Prüfer für DTZ, telc und DTB.", "page": "/ueber-mich/", "name": "Deutsch mit Dennis – Über Dennis"},
     "dtz-tipp": {"text": "Erfahrungswert von Dennis (keine offizielle Vorgabe): ca. 60–80 Wörter für A2, 80–100 Wörter für B1.", "page": "/dtz-schreiben/", "name": "Deutsch mit Dennis – DTZ Schreiben"},
     "dtz-geruest": {"text": "Briefgerüst: Anrede, Einleitung, Leitpunkte, Bitte oder Frage, Schluss, Gruß und Name.", "page": "/dtz-schreiben/", "name": "Deutsch mit Dennis – DTZ Schreiben"}
   },
@@ -30,7 +30,7 @@
         {"k": "Bestanden im Orientierungskurs", "v": "ab 15 richtigen Antworten", "ref": ["lid.blocks.1.0"]},
         {"k": "Bestanden im Einbürgerungstest", "v": "ab 17 richtigen Antworten", "ref": ["lid.blocks.1.1"]},
         {"k": "Kosten", "v": "Einbürgerungstest: 25 Euro. Im Integrationskurs ist der Abschlusstest kostenlos.", "ref": ["lid.blocks.2.2", "lid.blocks.2.0"]},
-        {"k": "So viele bestehen", "v": "2025: 89,6 % von 318.633 Teilnehmenden", "ref": ["stat:lid"]}
+        {"k": "So viele bestehen", "v": "2025: 89,6 % von 318.633 Teilnehmenden hatten mindestens 15 Punkte · 272.727 hatten mindestens 17 Punkte (gerechnet 85,6 %)", "ref": ["stat:lid"]}
       ],
       "practice": [
         {"href": "/simulation/lid/", "t": "Probetest mit Uhr", "d": "33 Fragen, 60 Minuten, am Ende Ergebnis und Lösungen."},
@@ -66,7 +66,8 @@
         {"k": "Sprechen", "v": "ca. 16 Min. · zu zweit, 2 Prüfende · 100 Punkte · B1: 75–100 · A2: 35–74,5", "ref": ["dtz.parts.3", "dtz.blocks.1.3"]},
         {"k": "Gesamtergebnis B1", "v": "B1 im Sprechen + B1 in einem schriftlichen Teil + im anderen Teil mindestens A2", "ref": ["dtz.blocks.1.4"]},
         {"k": "Neu seit 1. November 2026", "v": "Auch der dritte Teil muss mindestens A2 sein. Ein leeres Blatt beim Schreiben reicht nicht mehr.", "ref": ["dtz.blocks.2.1"]},
-        {"k": "Kosten", "v": "Im Integrationskurs kostenlos. Selbstzahler: Preis beim Prüfungszentrum fragen.", "ref": ["dtz.blocks.4.0", "dtz.blocks.4.2"]},
+        {"k": "Kosten", "v": "Mit Zulassung zum Integrationskurs zahlt das BAMF eine Teilnahme, eine zweite nur in bestimmten Fällen. Selbstzahler: Preis beim Prüfungszentrum fragen.", "ref": ["dtz.blocks.4.0", "dtz.blocks.4.1", "dtz.blocks.4.2"]},
+        {"k": "Wiederholen", "v": "beliebig oft, aber immer komplett (schriftlich und mündlich)", "ref": ["dtz.blocks.4.3"]},
         {"k": "Ergebnisse 2025", "v": "55,0 % von 318.550 Teilnehmenden erreichten B1, 32,2 % A2", "ref": ["stat:dtz"]}
       ],
       "practice": [
@@ -85,8 +86,41 @@
         {"q": "Wie viele Punkte brauche ich im DTZ für B1?", "a": "Hören/Lesen: 33–45 Punkte. Schreiben: 15–20 Punkte. Sprechen: 75–100 Punkte. Für das Gesamtergebnis B1 brauchst du B1 im Sprechen und B1 in einem schriftlichen Teil. Im anderen Teil brauchst du mindestens A2.", "ref": ["dtz.blocks.1.1", "dtz.blocks.1.2", "dtz.blocks.1.3", "dtz.blocks.1.4"]},
         {"q": "Kann ich beim Schreiben ein leeres Blatt abgeben?", "a": "Nein, nicht mehr. Seit 1. November 2026 muss auch der dritte Teil mindestens A2 sein. Ein leeres Blatt beim Schreiben reicht also nicht mehr für B1.", "ref": ["dtz.blocks.2"]},
         {"q": "Wie lange dauert der DTZ?", "a": "Hören dauert ca. 25 Minuten, Lesen 45 Minuten, Schreiben 30 Minuten. Die mündliche Prüfung dauert ca. 16 Minuten – zu zweit und ohne Vorbereitungszeit.", "ref": ["dtz.parts.0", "dtz.parts.1", "dtz.parts.2", "dtz.parts.3"]},
-        {"q": "Was kostet der DTZ?", "a": "Im Integrationskurs ist der Abschlusstest kostenlos. Für Selbstzahler ist der Preis verschieden – bitte beim Prüfungszentrum fragen.", "ref": ["dtz.blocks.4.0", "dtz.blocks.4.2"]},
+        {"q": "Was kostet der DTZ?", "a": "Mit Zulassung zum Integrationskurs zahlt das BAMF eine Teilnahme. Eine zweite Teilnahme zahlt es nur in bestimmten Fällen – frag deinen Kursträger. Für Selbstzahler ist der Preis verschieden – bitte beim Prüfungszentrum fragen.", "ref": ["dtz.blocks.4.0", "dtz.blocks.4.2"]},
         {"q": "Sind das offizielle DTZ-Aufgaben?", "a": "Nein. Die Probeprüfungen auf Deutsch mit Dennis sind eigene Übungsaufgaben im Stil der Prüfung. Einen offiziellen Übungssatz gibt es bei g.a.s.t. – der Link steht in der Tabelle oben.", "ref": ["dtz.parts.0"]}
+      ]
+    },
+    {
+      "slug": "dtz-ergebnis-und-wiederholung",
+      "og": "pruefung",
+      "crumb": "DTZ-Ergebnis und Wiederholung",
+      "h1": "DTZ: Wann kommt das Ergebnis – und was tun, wenn ich nicht bestanden habe?",
+      "title": "DTZ-Ergebnis: Wie lange? Was tun, wenn nicht bestanden?",
+      "desc": "Wann kommt das DTZ-Ergebnis? Wer zahlt die Wiederholung? Antworten nach g.a.s.t. und Integrationskursverordnung, mit Quellen und Datum.",
+      "answer": "In der Regel schickt g.a.s.t. die Ergebnisse zweieinhalb Wochen nach der Prüfung an das BAMF. Danach prüft das BAMF sie. Dein Zertifikat oder deinen Ergebnisbogen bekommst du über deine Prüfstelle. Du kannst den DTZ beliebig oft wiederholen, aber immer komplett.",
+      "refs": ["dtz.blocks.7", "dtz.blocks.4.3"],
+      "facts": [
+        {"k": "Dauer bis zum Ergebnis", "v": "zweieinhalb Wochen bis zur Meldung an das BAMF (in der Regel), dann Prüfung durch das BAMF", "ref": ["dtz.blocks.7.0"]},
+        {"k": "Wo fragen?", "v": "bei der Prüfstelle, bei der du den DTZ gemacht hast", "ref": ["dtz.blocks.7.1"]},
+        {"k": "Unterlagen ansehen", "v": "Antrag bis zu drei Monate nach dem Ergebnis", "ref": ["dtz.blocks.7.2"]},
+        {"k": "Wiederholen", "v": "beliebig oft, immer schriftlich und mündlich · alte Teilergebnisse zählen nicht", "ref": ["dtz.blocks.4.3"]},
+        {"k": "Wer zahlt?", "v": "Mit Zulassung zum Integrationskurs zahlt das BAMF eine Teilnahme, eine zweite nur in bestimmten Fällen. Selbstzahler: Preis beim Prüfungszentrum fragen.", "ref": ["dtz.blocks.4.0", "dtz.blocks.4.1", "dtz.blocks.4.2"]},
+        {"k": "Gesamtergebnis B1", "v": "B1 im Sprechen + B1 in einem schriftlichen Teil + im anderen Teil mindestens A2", "ref": ["dtz.blocks.1.4"]},
+        {"k": "Unter A2", "v": "kein Zertifikat, nur ein Ergebnisbogen", "ref": ["dtz.blocks.1.5"]}
+      ],
+      "practice": [
+        {"href": "/simulation/dtz/", "t": "DTZ-Probeprüfung", "d": "Finde heraus, welcher Teil noch schwach ist."},
+        {"href": "/dtz-30-tage/", "t": "Neuer Versuch: DTZ-Lernplan", "d": "Ein Lernplan für jeden Tag."},
+        {"href": "/dtz-schreiben/", "t": "DTZ Schreiben", "d": "Briefgerüst, Musterbriefe und Checkliste."},
+        {"href": "/bild/", "t": "Sprechen: Bild beschreiben", "d": "Teil 2 der mündlichen Prüfung üben."},
+        {"href": "/hoeren/", "t": "Hören üben", "d": "Hörtexte mit Aufgaben."},
+        {"href": "/pruefungsinfo/dtz/", "t": "Alles zum DTZ", "d": "Punkte, Anmeldung, Kosten – mit Quellen."}
+      ],
+      "faq": [
+        {"q": "Wie lange dauert es bis zum DTZ-Ergebnis?", "a": "In der Regel schickt g.a.s.t. die Ergebnisse zweieinhalb Wochen nach der Prüfung an das BAMF. Danach prüft das BAMF die Ergebnisse. Wie lange diese Prüfung dauert, nennt g.a.s.t. nicht.", "ref": ["dtz.blocks.7.0"]},
+        {"q": "Kann ich nur einen Teil des DTZ wiederholen?", "a": "Nein. Du machst immer die komplette Prüfung, schriftlich und mündlich. Alte Teilergebnisse zählen nicht.", "ref": ["dtz.blocks.4.3"]},
+        {"q": "Wer bezahlt die Wiederholung?", "a": "Das BAMF zahlt eine zweite Teilnahme nur in bestimmten Fällen: zum Beispiel wenn du den ersten Test gemacht hast, bevor alle Unterrichtsstunden aufgebraucht waren, oder nach einer zugelassenen Kurswiederholung. Frag deinen Kursträger. Sonst zahlst du selbst.", "ref": ["dtz.blocks.4.1", "dtz.blocks.4.2"]},
+        {"q": "Kann ich meine Prüfung ansehen?", "a": "Ja. Du kannst bis zu drei Monate nach deinem Ergebnis einen Antrag stellen. Die Orte und das Formular findest du bei g.a.s.t.", "ref": ["dtz.blocks.7.2"]}
       ]
     },
     {
@@ -104,7 +138,7 @@
         {"k": "Schriftlicher Ausdruck", "v": "30 Min. · 1 E-Mail mit 4 Leitpunkten · 45 Punkte", "ref": ["telc-b1.parts.2"]},
         {"k": "Mündliche Prüfung", "v": "ca. 15 Min. zu zweit · 3 Teile · vorher 20 Min. Vorbereitung · 75 Punkte", "ref": ["telc-b1.parts.3"]},
         {"k": "Bestehen", "v": "300 Punkte gesamt · 60 % schriftlich (135 von 225) und 60 % mündlich (45 von 75)", "ref": ["telc-b1.blocks.0"]},
-        {"k": "Wiederholen", "v": "Ganze Prüfung beliebig oft. Nur ein Teil nicht bestanden? Diesen Teil kannst du bis zum Ende des nächsten Kalenderjahres allein wiederholen.", "ref": ["telc-b1.blocks.3.0", "telc-b1.blocks.3.1"]},
+        {"k": "Wiederholen", "v": "Ganze Prüfung beliebig oft. Nur ein Teil nicht bestanden? Diesen Teil kannst du innerhalb von 12 Monaten allein wiederholen (ab Ausstellung des Ergebnisbogens).", "ref": ["telc-b1.blocks.3.0", "telc-b1.blocks.3.1"]},
         {"k": "Kosten und Termine", "v": "verschieden – bitte beim Prüfungszentrum fragen", "ref": ["telc-b1.blocks.2.1"]}
       ],
       "practice": [
@@ -122,8 +156,8 @@
         {"q": "Wie viele Punkte brauche ich für telc Deutsch B1?", "a": "Insgesamt gibt es 300 Punkte. Du brauchst 60 % in der schriftlichen Prüfung (135 von 225 Punkten) und 60 % in der mündlichen Prüfung (45 von 75 Punkten).", "ref": ["telc-b1.blocks.0"]},
         {"q": "Wie lange dauert die Prüfung telc Deutsch B1?", "a": "Leseverstehen und Sprachbausteine dauern 90 Minuten, Hörverstehen ca. 30 Minuten, der Schriftliche Ausdruck 30 Minuten. Die mündliche Prüfung dauert ca. 15 Minuten, vorher hast du 20 Minuten Vorbereitung.", "ref": ["telc-b1.parts.0", "telc-b1.parts.1", "telc-b1.parts.2", "telc-b1.parts.3"]},
         {"q": "Gibt es einen offiziellen Modelltest?", "a": "Ja, telc bietet einen Übungstest als PDF an (Link in der Tabelle oben). Die Modelltests auf Deutsch mit Dennis sind eigene Aufgaben im Stil der Prüfung – keine offiziellen telc-Aufgaben.", "ref": ["telc-b1.parts.0"]},
-        {"q": "Kann ich nur einen Teil wiederholen?", "a": "Ja. Hast du nur den schriftlichen oder nur den mündlichen Teil nicht bestanden, kannst du diesen Teil bis zum Ende des nächsten Kalenderjahres allein wiederholen.", "ref": ["telc-b1.blocks.3.1"]},
-        {"q": "Reicht telc B1 für die Einbürgerung?", "a": "Für die Einbürgerung braucht man in der Regel Deutsch B1. Welche Zertifikate die Behörde annimmt, fragst du bitte vorher bei deiner Behörde. Keine Rechtsberatung.", "ref": ["telc-b1.blocks.5"]}
+        {"q": "Kann ich nur einen Teil wiederholen?", "a": "Ja. Hast du nur den schriftlichen oder nur den mündlichen Teil nicht bestanden, kannst du diesen Teil innerhalb von 12 Monaten nach Ausstellung des Ergebnisbogens allein wiederholen. Sag das bei der Anmeldung.", "ref": ["telc-b1.blocks.3.1"]},
+        {"q": "Reicht telc B1 für die Einbürgerung?", "a": "Für die Einbürgerung braucht man in der Regel Deutsch B1. Das BAMF hat eine Übersicht anerkannter B1-Sprachnachweise (Link bei den Prüfungsinfos). Ob dein Zertifikat reicht, entscheidet deine Behörde – frag dort vorher. Keine Rechtsberatung.", "ref": ["telc-b1.blocks.5"]}
       ]
     },
     {
@@ -142,7 +176,7 @@
         {"k": "Mündliche Prüfung", "v": "ca. 15 Min. zu zweit · 3 Teile · 20 Min. Vorbereitung für Teil 2 und 3 · 75 Punkte", "ref": ["telc-b2.parts.3"]},
         {"k": "Bestehen", "v": "300 Punkte gesamt · 60 % schriftlich (135 von 225) und 60 % mündlich (45 von 75)", "ref": ["telc-b2.blocks.0"]},
         {"k": "Bewertung Sprechen", "v": "Ausdrucksfähigkeit, Aufgabenbewältigung, formale Richtigkeit, Aussprache und Intonation", "ref": ["telc-b2.blocks.1"]},
-        {"k": "Wiederholen", "v": "Ganze Prüfung beliebig oft. Einen nicht bestandenen Teil kannst du allein wiederholen – die Frist bitte beim Prüfungszentrum fragen.", "ref": ["telc-b2.blocks.3.0", "telc-b2.blocks.3.1"]}
+        {"k": "Wiederholen", "v": "Ganze Prüfung beliebig oft. Einen nicht bestandenen Teil (schriftlich oder mündlich) kannst du innerhalb von 12 Monaten allein wiederholen, ab Ausstellung des Ergebnisbogens.", "ref": ["telc-b2.blocks.3.0", "telc-b2.blocks.3.1"]}
       ],
       "practice": [
         {"href": "/simulation/telc-b2/", "t": "telc B2 Modelltest 1", "d": "Alle Teile mit echter Zeit, am Ende Punkte und Lösungen."},
@@ -180,9 +214,8 @@
         {"k": "Schreiben", "v": "DTB B1: Antwort-E-Mail, Notiz und Kurznachricht · DTB B2: Antwort, Notiz und Forumsbeitrag · zusammen 60 Punkte", "ref": ["dtb-b1.parts.1", "dtb-b1.parts.3", "dtb-b1.parts.4", "dtb-b2.parts.1", "dtb-b2.parts.3", "dtb-b2.parts.4"]},
         {"k": "Sprechen", "v": "ca. 16 Min. · zu zweit · keine Vorbereitungszeit · 60 Punkte", "ref": ["dtb-b1.parts.5", "dtb-b2.parts.5"]},
         {"k": "Bestehen", "v": "240 Punkte gesamt · ab 144 Punkten (60 %) · in mindestens drei Teilen 36 von 60 · der vierte Teil mindestens 24", "ref": ["dtb-b1.blocks.1", "dtb-b2.blocks.1"]},
-        {"k": "DTB B2: knapp nicht bestanden", "v": "120 bis 143 Punkte: im Ergebnis steht „B2 knapp nicht erfüllt“", "ref": ["dtb-b2.blocks.1.3"]},
-        {"k": "Anmeldung", "v": "über deinen Kursträger im Berufssprachkurs · als Selbstzahler nicht möglich", "ref": ["dtb-b1.blocks.0"]},
-        {"k": "Wiederholen", "v": "nur der ganze Test, nicht einzelne Teile", "ref": ["dtb-b1.blocks.2.1"]},
+        {"k": "Anmeldung", "v": "über den Träger deines Berufssprachkurses", "ref": ["dtb-b1.blocks.0"]},
+        {"k": "Wiederholen", "v": "in der Regel nur der ganze Test · bei Nichtbestehen einmal, das BAMF übernimmt auch diese Kosten", "ref": ["dtb-b1.blocks.2", "dtb-b2.blocks.3"]},
         {"k": "Ergebnisse 2024", "v": "DTB B1: 45,3 % von 14.117 erreichten B1 · DTB B2: 58,3 % von 111.281 erreichten B2", "ref": ["stat:dtb-b1", "stat:dtb-b2"]}
       ],
       "practice": [
@@ -200,11 +233,11 @@
         {"href": "/sprachbausteine/", "t": "Sprachbausteine üben", "d": "Training für DTB B2 und telc B2."}
       ],
       "faq": [
-        {"q": "Kann ich den DTB ohne Berufssprachkurs machen?", "a": "Nein. Der Deutsch-Test für den Beruf gehört zu den Berufssprachkursen des BAMF. Dein Kursträger meldet dich an. Als Selbstzahler kannst du die Prüfung nicht machen.", "ref": ["dtb-b1.blocks.0"]},
+        {"q": "Kann ich den DTB ohne Berufssprachkurs machen?", "a": "Der Deutsch-Test für den Beruf gehört zu den Berufssprachkursen des BAMF. Die Anmeldung läuft über den Träger deines Berufssprachkurses. Ohne Kurs passt eher telc Deutsch: Dort meldest du dich selbst bei einem telc Prüfungszentrum an.", "ref": ["dtb-b1.blocks.0", "telc-b1.blocks.2.0"]},
         {"q": "Wie viele Punkte brauche ich im DTB?", "a": "Du brauchst mindestens 144 von 240 Punkten. Dazu müssen mindestens drei der vier Teile 36 von 60 Punkten haben. Der vierte Teil braucht mindestens 24 Punkte.", "ref": ["dtb-b1.blocks.1", "dtb-b2.blocks.1"]},
-        {"q": "Was bedeutet „B2 knapp nicht erfüllt“?", "a": "Das steht im Ergebnis, wenn du im DTB B2 zwischen 120 und 143 Punkten hast.", "ref": ["dtb-b2.blocks.1.3"]},
-        {"q": "Kann ich nur einen Teil wiederholen?", "a": "Nein. Du kannst den Test nur ganz wiederholen. Wann und wie oft: Bitte frag deinen Kursträger.", "ref": ["dtb-b1.blocks.2"]},
-        {"q": "Wie lange dauert die schriftliche Prüfung im DTB B2?", "a": "Die schriftliche Prüfung im DTB B2 dauert 125 Minuten. Dazu kommt die mündliche Prüfung mit ca. 16 Minuten.", "ref": ["dtb-b2.blocks.0.3", "dtb-b2.parts.5"]}
+        {"q": "Was kostet der DTB?", "a": "Im Berufssprachkurs übernimmt das BAMF die Kosten der Prüfung. Das gilt auch für eine Wiederholung.", "ref": ["dtb-b1.blocks.2.0"]},
+        {"q": "Kann ich nur einen Teil wiederholen?", "a": "In der Regel nein: Du wiederholst den ganzen Test. Bei Nichtbestehen kannst du die Prüfung einmal wiederholen. Den Termin kennt dein Kursträger.", "ref": ["dtb-b1.blocks.2"]},
+        {"q": "Wie lange dauert die schriftliche Prüfung im DTB B2?", "a": "Die schriftliche Prüfung im DTB B2 dauert 125 Minuten. Dazu kommt die mündliche Prüfung mit ca. 16 Minuten.", "ref": ["dtb-b2.blocks.0.2", "dtb-b2.parts.5"]}
       ]
     },
     {
@@ -225,7 +258,9 @@
         {"k": "Ohne extra Einbürgerungstest", "v": "wenn du im Test „Leben in Deutschland“ im Integrationskurs mindestens 17 von 33 Punkten hast · mit 15 oder 16 Punkten musst du den Einbürgerungstest noch machen", "ref": ["dtz.blocks.6.2", "lid.blocks.4.2"]},
         {"k": "Anmeldung zum Einbürgerungstest", "v": "bei einer Prüfstelle des BAMF · deine Einbürgerungsbehörde nennt dir Prüfstellen in deiner Nähe", "ref": ["lid.blocks.2.1"]},
         {"k": "Kosten Einbürgerungstest", "v": "25 Euro", "ref": ["lid.blocks.2.2"]},
-        {"k": "Andere Zertifikate (z. B. telc B1)", "v": "Welche Zertifikate die Behörde annimmt: bitte vorher bei deiner Behörde fragen", "ref": ["telc-b1.blocks.5.1"]}
+        {"k": "Andere Zertifikate (z. B. telc B1)", "v": "Das BAMF hat eine Übersicht anerkannter B1-Sprachnachweise. Ob dein Zertifikat reicht, entscheidet die Behörde.", "ref": ["telc-b1.blocks.5.1"]},
+        {"k": "Ausnahmen", "v": "deutscher Schulabschluss (kein Einbürgerungstest) · Krankheit, Behinderung oder Alter, wenn man die Anforderungen deshalb nicht erfüllen kann", "ref": ["lid.blocks.5.0", "lid.blocks.5.1"]},
+        {"k": "Kosten der Einbürgerung", "v": "255 Euro pro Person · 51 Euro für minderjährige Kinder zusammen mit den Eltern", "ref": ["lid.blocks.5.2"]}
       ],
       "practice": [
         {"href": "/simulation/lid/", "t": "Einbürgerungstest üben", "d": "33 Fragen, 60 Minuten, mit Auswertung."},
@@ -241,7 +276,7 @@
         {"q": "Brauche ich den Einbürgerungstest, wenn ich „Leben in Deutschland“ bestanden habe?", "a": "Hast du im Test „Leben in Deutschland“ im Integrationskurs mindestens 17 Punkte, brauchst du keinen extra Einbürgerungstest. Mit 15 oder 16 Punkten musst du ihn noch machen.", "ref": ["lid.blocks.4.2"]},
         {"q": "Wie viele Fragen muss ich im Einbürgerungstest richtig haben?", "a": "Mindestens 17 von 33 Fragen. Du hast 60 Minuten Zeit.", "ref": ["lid.blocks.1.1", "lid.parts.0"]},
         {"q": "Was kostet der Einbürgerungstest und wo melde ich mich an?", "a": "Der Einbürgerungstest kostet 25 Euro. Du meldest dich bei einer Prüfstelle des BAMF an. Deine Einbürgerungsbehörde nennt dir Prüfstellen in deiner Nähe.", "ref": ["lid.blocks.2.1", "lid.blocks.2.2"]},
-        {"q": "Reicht ein telc-B1-Zertifikat?", "a": "Welche Zertifikate die Behörde annimmt, ist nicht überall gleich. Bitte frag vorher bei deiner Einbürgerungsbehörde.", "ref": ["telc-b1.blocks.5.1"]}
+        {"q": "Reicht ein telc-B1-Zertifikat?", "a": "Das Gesetz verlangt die Anforderungen einer Sprachprüfung auf dem Niveau B1. Das BAMF hat eine Übersicht anerkannter B1-Sprachnachweise. Ob dein Zertifikat reicht, entscheidet die Behörde – frag vorher bei deiner Einbürgerungsbehörde.", "ref": ["telc-b1.blocks.5.1"]}
       ]
     },
     {
@@ -260,7 +295,7 @@
         {"k": "Grammatik", "v": "{n:grammar} Themen mit Erklärung und Übungen", "ref": ["site:grammatik"]},
         {"k": "Lektionen", "v": "{n:lessons} Themen, zum Beispiel Wohnen, Arbeit, Gesundheit, Amt", "ref": ["site:lektionen"]},
         {"k": "Probeprüfungen", "v": "{n:sims} Simulationen für DTZ, telc B1, telc B2, DTB B1, DTB B2 und Leben in Deutschland", "ref": ["site:simulation"]},
-        {"k": "Wer macht die Seite?", "v": "Dennis Prudnikau, DaZ-Lehrer und lizenzierter Prüfer für DTZ und telc", "ref": ["site:ueber"]}
+        {"k": "Wer macht die Seite?", "v": "Dennis Prudnikau, DaZ-Lehrer und lizenzierter Prüfer für DTZ, telc und DTB", "ref": ["site:ueber"]}
       ],
       "practice": [
         {"href": "/einstufungstest/", "t": "Einstufungstest", "d": "Finde in wenigen Minuten dein Niveau."},
@@ -281,7 +316,7 @@
         {"q": "Ich kann noch gar kein Deutsch. Wo fange ich an?", "a": "Fang mit A0 an: Dort lernst du Buchstaben, Laute und die ersten Wörter. Danach gehst du in den Kurs A1.", "ref": ["site:kurs"]},
         {"q": "Ich weiß mein Niveau nicht. Was soll ich tun?", "a": "Mach den kostenlosen Einstufungstest. Danach bekommst du einen Vorschlag, mit welchem Niveau du anfangen kannst.", "ref": ["site:kurs"]},
         {"q": "Kann ich mich hier auch auf eine Prüfung vorbereiten?", "a": "Ja. Es gibt {n:sims} Probeprüfungen mit Zeitvorgabe für DTZ, telc B1, telc B2, DTB B1, DTB B2 und Leben in Deutschland – eigene Aufgaben im Stil der Prüfung.", "ref": ["site:simulation"]},
-        {"q": "Wer steht hinter Deutsch mit Dennis?", "a": "Dennis Prudnikau, DaZ-Lehrer und lizenzierter Prüfer für DTZ und telc. Die Seite ist ein unabhängiges Lernangebot – kein Angebot von g.a.s.t., telc oder BAMF.", "ref": ["site:ueber"]}
+        {"q": "Wer steht hinter Deutsch mit Dennis?", "a": "Dennis Prudnikau, DaZ-Lehrer und lizenzierter Prüfer für DTZ, telc und DTB. Die Seite ist ein unabhängiges Lernangebot – kein Angebot von g.a.s.t., telc oder BAMF.", "ref": ["site:ueber"]}
       ]
     },
     {
@@ -312,7 +347,7 @@
       "faq": [
         {"q": "Wie viele Punkte gibt es im DTZ Schreiben?", "a": "Es gibt 20 Punkte. B1 hast du mit 15–20 Punkten, A2 mit 7–14 Punkten.", "ref": ["dtz.parts.2", "dtz.blocks.1.2"]},
         {"q": "Darf ich beim Schreiben ein leeres Blatt abgeben?", "a": "Seit 1. November 2026 reicht das nicht mehr für B1. Auch der dritte Teil muss mindestens A2 sein. A2 im Schreiben schaffst du mit einem festen Briefaufbau und kurzen, richtigen Sätzen.", "ref": ["dtz.blocks.2"]},
-        {"q": "Wie viele Wörter muss ich schreiben?", "a": "In unseren geprüften Quellen steht keine feste Wortzahl. Als Erfahrungswert empfiehlt Dennis ca. 60–80 Wörter für A2 und 80–100 Wörter für B1. Wichtiger ist: Bearbeite alle Leitpunkte aus der Aufgabe.", "ref": ["site:dtz-tipp"]},
+        {"q": "Wie viele Wörter muss ich schreiben?", "a": "Eine Mindestzahl gibt es laut g.a.s.t. nicht. Bei einem sehr kurzen Text, zum Beispiel unter 40 Wörtern, ist B1 aber kaum möglich. Als Erfahrungswert empfiehlt Dennis ca. 60–80 Wörter für A2 und 80–100 Wörter für B1. Wichtiger ist: Bearbeite alle Leitpunkte aus der Aufgabe.", "ref": ["site:dtz-tipp", "dtz.blocks.8.0"]},
         {"q": "Schreibe ich „Sie“ oder „du“?", "a": "„Sie“ schreibst du an Firmen, Ämter, Vermieter und Lehrkräfte. „Du“ schreibst du an Freunde und Familie. Anrede und Gruß müssen dazu passen.", "ref": ["site:dtz-geruest"]},
         {"q": "Wie lange habe ich Zeit?", "a": "Du hast 30 Minuten. Plane die letzten Minuten für die Kontrolle ein: Anrede, alle Leitpunkte, Gruß.", "ref": ["dtz.parts.2"]}
       ]

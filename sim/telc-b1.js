@@ -979,11 +979,11 @@
       ],
       [
         "Teilbestehen",
-        "Wer nur den schriftlichen oder nur den mündlichen Teil besteht, kann den anderen Teil einzeln wiederholen – bis zum Ende des folgenden Kalenderjahres. Frag im Zweifel bei deinem Prüfungszentrum nach.",
+        "Wer nur den schriftlichen oder nur den mündlichen Teil besteht, kann den anderen Teil innerhalb von 12 Monaten nach Ausstellung des Ergebnisbogens einzeln wiederholen (telc-Prüfungsregularien, gültig ab 15.04.2025). Sag das bei der Anmeldung.",
       ],
       [
         "Ergebnis",
-        "Zertifikat mit Punkten und Note (sehr gut, gut, befriedigend, ausreichend); es ist unbegrenzt gültig.",
+        "Zertifikat mit Punkten und Note (sehr gut, gut, befriedigend, ausreichend); auf dem Zertifikat steht kein Ablaufdatum.",
       ],
       [
         "Wer braucht sie?",

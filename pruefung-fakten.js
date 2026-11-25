@@ -19,8 +19,8 @@
       "https://www.gast.de/de/forschung-entwicklung/entwicklung/auftraege/deutsch-test-fuer-zuwanderer-dtz",
     ],
     gastUeb: [
-      "g.a.s.t. – DTZ Übungssatz 2 (PDF)",
-      "https://www.gast.de/fileadmin/gast.de/GAST/5_DTZ/PDF/gast_DTZ_UEbungssatz_2.pdf",
+      "g.a.s.t. – DTZ Übungssatz 2 (Erwachsene), Oktober 2026 (PDF)",
+      "https://www.gast.de/fileadmin/gast.de/GAST/5_DTZ/PDF/DTZ_UEbungssatz_2_Erwachsene.pdf",
     ],
     bamfAbschluss: [
       "BAMF – Abschlussprüfung im Integrationskurs",
@@ -46,6 +46,26 @@
       "asyl.net – Neue Anforderungen beim Deutsch-Test für Zuwanderer",
       "https://www.asyl.net/view/neue-anforderungen-beim-deutsch-test-fuer-zuwanderer",
     ],
+    intTestV: [
+      "§ 10 Integrationskurstestverordnung (Gesetze im Internet)",
+      "https://www.gesetze-im-internet.de/inttestv/__10.html",
+    ],
+    bgblDtz: [
+      "BGBl. 2026 I Nr. 306 vom 20.10.2026",
+      "https://www.recht.bund.de/bgbl/1/2026/306/VO.html",
+    ],
+    intV17: [
+      "§ 17 Integrationskursverordnung (Gesetze im Internet)",
+      "https://www.gesetze-im-internet.de/intv/__17.html",
+    ],
+    deufv15: [
+      "§ 15 Deutschsprachförderverordnung (Gesetze im Internet)",
+      "https://www.gesetze-im-internet.de/deuf_v/__15.html",
+    ],
+    stag10: [
+      "§ 10 Staatsangehörigkeitsgesetz (Gesetze im Internet)",
+      "https://www.gesetze-im-internet.de/stag/__10.html",
+    ],
     telcB1: [
       "telc – Zertifikat Deutsch / telc Deutsch B1",
       "https://www.telc.net/en/language-examinations/certificate-exams/german/certificate-german-telc-german-b1/",
@@ -67,8 +87,8 @@
       "https://www.telc.net/en/language-examinations/certificate-exams/german/telc-german-b2/",
     ],
     uebDtz: [
-      "g.a.s.t. – DTZ Übungssatz 1 (Erwachsene), Ausgabe November 2026",
-      "https://www.gast.de/de/forschung-entwicklung/entwicklung/auftraege/deutsch-test-fuer-zuwanderer-dtz/faq",
+      "g.a.s.t. – DTZ Übungssatz 1 (Erwachsene), Oktober 2026 (PDF)",
+      "https://www.gast.de/fileadmin/gast.de/GAST/5_DTZ/PDF/DTZ_UEbungssatz_1_Erwachsene.pdf",
     ],
     telcB2: [
       "telc – telc Deutsch B2",
@@ -171,8 +191,9 @@
             "Jetzt muss auch der dritte Teil mindestens A2 sein. Ein leeres Blatt beim Schreiben reicht also nicht mehr.",
             "Die Änderung steht in der Integrationskurstestverordnung (§ 10 Abs. 1 IntTestV). Sie wurde am 20. Oktober 2026 im Bundesgesetzblatt veröffentlicht.",
           ],
-          src: ["asyl", "gastFaq"],
-          note: "Datum und Paragraf stammen aus einer Fachmeldung von asyl.net. Die Regel selbst steht auch bei g.a.s.t.",
+          src: ["intTestV", "bgblDtz", "gastFaq", "asyl"],
+          stand: "25.11.2026",
+          note: "Das Startdatum 1. November stammt aus einer Fachmeldung von asyl.net. Auf der BAMF-Seite zur Abschlussprüfung stand am 25.11.2026 noch die alte Regel. Es gilt der Text der Verordnung.",
         },
         {
           h: "Anmeldung und Termine",
@@ -186,17 +207,18 @@
         {
           h: "Kosten und Wiederholung",
           list: [
-            "Im Integrationskurs ist der Abschlusstest kostenlos.",
-            "Auf eigene Kosten kannst du den DTZ beliebig oft wiederholen.",
+            "Mit Zulassung zum Integrationskurs zahlt das BAMF eine Teilnahme am DTZ.",
+            "Eine zweite Teilnahme zahlt das BAMF nur in bestimmten Fällen: zum Beispiel wenn du den ersten Test gemacht hast, bevor alle Unterrichtsstunden aufgebraucht waren, oder nach einer zugelassenen Kurswiederholung. Frag deinen Kursträger.",
             "Preis für Selbstzahler: verschieden. " + ASK,
+            "Du kannst den DTZ beliebig oft wiederholen, aber immer komplett: schriftlich und mündlich. Alte Teilergebnisse zählen nicht.",
           ],
-          src: ["bamfAbschluss"],
+          src: ["intV17", "gastFaq"],
+          stand: "25.11.2026",
         },
         {
           h: "Am Prüfungstag",
           list: [
             "Bring deinen Ausweis mit. Er liegt bei der Prüfung auf dem Tisch.",
-            "Wie lange das Ergebnis dauert: " + ASK,
           ],
           src: ["gastUeb"],
         },
@@ -211,6 +233,25 @@
           src: ["bamfNachweis", "bamfAbschluss", "bamfEinb"],
           stand: "22.11.2026",
           legal: true,
+        },
+        // new blocks go to the end: answers.json refers to blocks by index
+        {
+          h: "Wann kommt das DTZ-Ergebnis?",
+          list: [
+            "In der Regel schickt g.a.s.t. die Ergebnisse zweieinhalb Wochen nach der Prüfung an das BAMF. Danach prüft das BAMF die Ergebnisse. Wie lange diese Prüfung dauert, nennt g.a.s.t. nicht.",
+            "Danach liegen Zertifikate und Ergebnisbögen im Portal für Prüfstellen. Frag bei der Prüfstelle nach, bei der du den DTZ gemacht hast.",
+            "Du kannst deine Prüfungsunterlagen ansehen. Den Antrag kannst du bis zu drei Monate nach deinem Ergebnis stellen.",
+          ],
+          src: ["gastFaq"],
+          stand: "25.11.2026",
+        },
+        {
+          h: "Wie viele Wörter im Brief?",
+          list: [
+            "Eine Mindestzahl gibt es nicht. Bei einem sehr kurzen Text, zum Beispiel unter 40 Wörtern, ist B1 bei Korrektheit und Wortschatz aber kaum möglich.",
+          ],
+          src: ["gastFaq"],
+          stand: "25.11.2026",
         },
       ],
     },
@@ -255,17 +296,19 @@
             "Im Integrationskurs meldet dich dein Kursträger an. Dort ist der Abschlusstest kostenlos.",
             "Einbürgerungstest: Du meldest dich bei einer Prüfstelle des BAMF an. Deine Einbürgerungsbehörde nennt dir Prüfstellen in deiner Nähe.",
             "Der Einbürgerungstest kostet 25 Euro.",
-            "Wiederholung und Wartezeit: " + ASK,
+            "Weniger als 17 richtige Antworten im Einbürgerungstest? Dann kannst du den Test wiederholen. Wartezeit: " + ASK,
           ],
           src: ["bamfEinb", "bamfAbschluss"],
+          stand: "25.11.2026",
         },
         {
           h: "Am Prüfungstag",
           list: [
             "Bring einen gültigen Ausweis mit Foto mit. Er liegt gut sichtbar auf deinem Tisch.",
-            "Wie lange das Ergebnis dauert: " + ASK,
+            "Eine feste Dauer bis zum Ergebnis nennt das BAMF auf seiner Seite „Abschlussprüfung“ nicht. Dort steht aber, bis zu welchem Prüfungsdatum die Tests gerade ausgewertet werden.",
           ],
-          src: ["bamfLidInfo", "bamfEinb"],
+          src: ["bamfLidInfo", "bamfAbschluss"],
+          stand: "25.11.2026",
         },
         {
           h: "Wofür brauchst du das Ergebnis?",
@@ -276,6 +319,17 @@
           ],
           src: ["bamfAbschluss", "bamfEinb"],
           stand: "22.11.2026",
+          legal: true,
+        },
+        {
+          h: "Wer braucht den Einbürgerungstest nicht?",
+          list: [
+            "Wer einen deutschen Schulabschluss hat, braucht den Einbürgerungstest in der Regel nicht.",
+            "Ausnahmen gibt es auch bei Krankheit, Behinderung oder aus Altersgründen, wenn man die Anforderungen deshalb nicht erfüllen kann. Das gilt auch für die Deutschkenntnisse. Die Behörde prüft das.",
+            "Die Einbürgerung selbst kostet 255 Euro pro Person. Für minderjährige Kinder, die zusammen mit ihren Eltern eingebürgert werden, sind es 51 Euro.",
+          ],
+          src: ["bamfEinb", "stag10"],
+          stand: "25.11.2026",
           legal: true,
         },
       ],
@@ -342,11 +396,13 @@
           h: "Ergebnis und Wiederholung",
           list: [
             "Du kannst die ganze Prüfung beliebig oft wiederholen.",
-            "Nur ein Teil nicht bestanden (schriftlich oder mündlich)? Diesen Teil kannst du bis zum Ende des nächsten Kalenderjahres allein wiederholen.",
-            "Auf dem Zertifikat steht kein Ablaufdatum.",
+            "Nur ein Teil nicht bestanden (schriftlich oder mündlich)? Diesen Teil kannst du innerhalb von 12 Monaten allein wiederholen. Die Frist beginnt mit dem Ausstellungsdatum des Ergebnisbogens. Sag das bei der Anmeldung.",
+            "Auf dem Zertifikat steht kein Ablaufdatum. Ob ein älteres Zertifikat reicht, entscheidet die Stelle, die es verlangt.",
             "Wie lange das Ergebnis dauert: " + ASK,
+            "Zweifel am Ergebnis? Innerhalb von 6 Wochen kannst du es bei telc prüfen lassen. Das kostet 40 Euro. Das Ergebnis kann dabei auch schlechter werden. Wird es geändert, bekommst du die Kosten zurück.",
           ],
-          src: ["telcReg", "telcB1Ueb"],
+          src: ["telcReg"],
+          stand: "25.11.2026",
         },
         {
           h: "Am Prüfungstag",
@@ -357,9 +413,10 @@
           h: "Wofür brauchst du das Zertifikat?",
           list: [
             "Für die Niederlassungserlaubnis und für die Einbürgerung braucht man in der Regel Deutsch B1.",
-            "Welche Zertifikate die Behörde annimmt: Bitte frag vorher bei deiner Behörde.",
+            "Das Gesetz verlangt für die Einbürgerung die Anforderungen einer Sprachprüfung auf dem Niveau B1. Das BAMF hat eine Übersicht anerkannter B1-Sprachnachweise (Link unten). Ob dein Zertifikat reicht: Bitte frag vorher bei deiner Behörde.",
           ],
-          src: ["bamfNachweis", "telcReg"],
+          src: ["bamfNachweis", "stag10"],
+          stand: "25.11.2026",
           legal: true,
         },
       ],
@@ -426,12 +483,13 @@
           h: "Ergebnis und Wiederholung",
           list: [
             "Du kannst die ganze Prüfung beliebig oft wiederholen.",
-            "Nur ein Teil nicht bestanden (schriftlich oder mündlich)? Diesen Teil kannst du allein wiederholen. Die Frist: " +
-              ASK,
-            "Auf dem Zertifikat steht kein Ablaufdatum.",
+            "Nur ein Teil nicht bestanden (schriftlich oder mündlich)? Diesen Teil kannst du innerhalb von 12 Monaten allein wiederholen. Die Frist beginnt mit dem Ausstellungsdatum des Ergebnisbogens. Sag das bei der Anmeldung.",
+            "Auf dem Zertifikat steht kein Ablaufdatum. Ob ein älteres Zertifikat reicht, entscheidet die Stelle, die es verlangt.",
             "Wie lange das Ergebnis dauert: " + ASK,
+            "Zweifel am Ergebnis? Innerhalb von 6 Wochen kannst du es bei telc prüfen lassen. Das kostet 40 Euro. Das Ergebnis kann dabei auch schlechter werden. Wird es geändert, bekommst du die Kosten zurück.",
           ],
           src: ["telcReg"],
+          stand: "25.11.2026",
         },
         {
           h: "Am Prüfungstag",
@@ -495,8 +553,7 @@
           h: "Was ist der DTB? Wer macht ihn?",
           list: [
             "Der Deutsch-Test für den Beruf gehört zu den Berufssprachkursen des BAMF.",
-            "Dein Kursträger meldet dich an und informiert dich über den Ablauf.",
-            "Ohne Berufssprachkurs kannst du die Prüfung nicht als Selbstzahler machen.",
+            "Die Anmeldung läuft über den Träger deines Berufssprachkurses. Er informiert dich auch über den Ablauf.",
           ],
           src: ["bamfDtbDurch"],
         },
@@ -512,11 +569,12 @@
         {
           h: "Kosten und Wiederholung",
           list: [
-            "Die Prüfung gehört zum Berufssprachkurs. Kosten: Bitte frag deinen Kursträger.",
-            "Du kannst den Test nur ganz wiederholen, nicht einzelne Teile.",
-            "Wie oft und wann du wiederholen kannst: Bitte frag deinen Kursträger.",
+            "Im Berufssprachkurs übernimmt das BAMF die Kosten der Prüfung. Das gilt auch für eine Wiederholung.",
+            "In der Regel kannst du den Test nur ganz wiederholen, nicht einzelne Teile.",
+            "Nicht bestanden? Dann kannst du die Prüfung einmal wiederholen. Wann: Bitte frag deinen Kursträger.",
           ],
-          src: ["bamfDtbDurch"],
+          src: ["deufv15", "bamfDtbDurch"],
+          stand: "25.11.2026",
         },
         {
           h: "Am Prüfungstag",
@@ -583,8 +641,7 @@
           h: "Was ist der DTB? Wer macht ihn?",
           list: [
             "Der Deutsch-Test für den Beruf gehört zu den Berufssprachkursen des BAMF.",
-            "Dein Kursträger meldet dich an und informiert dich über den Ablauf.",
-            "Ohne Berufssprachkurs kannst du die Prüfung nicht als Selbstzahler machen.",
+            "Die Anmeldung läuft über den Träger deines Berufssprachkurses. Er informiert dich auch über den Ablauf.",
             "Die schriftliche Prüfung dauert 125 Minuten. Du kannst nicht nur einen Teil machen.",
           ],
           src: ["bamfDtbDurch", "telcDtbB2"],
@@ -595,7 +652,6 @@
             "Insgesamt gibt es 240 Punkte: je 60 für Lesen, Hören, Schreiben und Sprechen.",
             "Bestanden: mindestens 144 Punkte (60 %).",
             "Dazu kommt: In mindestens drei Fertigkeiten brauchst du 36 von 60 Punkten. Eine schwächere Fertigkeit ist erlaubt, wenn sie mindestens 24 Punkte hat.",
-            "Mit 120 bis 143 Punkten steht im Ergebnis „B2 knapp nicht erfüllt“.",
           ],
           src: ["bamfDtbB2", "telcDtbHb", "bamfDtbDurch"],
         },
@@ -609,11 +665,12 @@
         {
           h: "Kosten und Wiederholung",
           list: [
-            "Die Prüfung gehört zum Berufssprachkurs. Kosten: Bitte frag deinen Kursträger.",
-            "Du kannst den Test nur ganz wiederholen, nicht einzelne Teile.",
-            "Nicht bestanden? Es gibt einen Kurs zur Prüfungsvorbereitung für Wiederholende. Bitte frag deinen Kursträger.",
+            "Im Berufssprachkurs übernimmt das BAMF die Kosten der Prüfung. Das gilt auch für eine Wiederholung.",
+            "In der Regel kannst du den Test nur ganz wiederholen, nicht einzelne Teile.",
+            "Nicht bestanden? Dann kannst du die Prüfung einmal wiederholen. Es gibt einen Kurs zur Prüfungsvorbereitung für Wiederholende. Bitte frag deinen Kursträger.",
           ],
-          src: ["bamfDtbDurch"],
+          src: ["deufv15", "bamfDtbDurch"],
+          stand: "25.11.2026",
         },
         {
           h: "Am Prüfungstag",
