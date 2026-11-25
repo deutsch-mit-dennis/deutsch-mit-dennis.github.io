@@ -1,7 +1,17 @@
 {
   "user": "28070f1f-b266-41cd-a90f-0e8f04c31f07",
-  "updated": "2026-11-25T15:39:48.517Z",
+  "updated": "2026-11-25T15:59:45.391Z",
   "kahoots": [
+    {
+      "uuid": "8800c1bb-1925-499a-bd91-510dc1b6f131",
+      "title": "A1 – Berufe & Traumberuf | Kahoot-Quiz (Deutsch mit Dennis)",
+      "description": "Übungsquiz Deutsch A1: 10 Berufe, Tätigkeiten (schneidet, löscht, hilft …), weibliche Formen (-in, -frau), „Ich bin Lehrer“ ohne Artikel, arbeiten als, Mein Traumberuf ist … 20 Fragen mit Bildern (KI-generiert). Mehr Kahoots und Übungen: https://deutsch-mit-dennis.de/#kahoot",
+      "questions": 20,
+      "created": "2026-11-25T15:46:47.346Z",
+      "url": "https://create.kahoot.it/details/8800c1bb-1925-499a-bd91-510dc1b6f131",
+      "cover": "assets/kahoot/8800c1bb-1925-499a-bd91-510dc1b6f131.webp",
+      "qr": "assets/kahoot/8800c1bb-1925-499a-bd91-510dc1b6f131-qr.svg"
+    },
     {
       "uuid": "024875d1-ddc3-458c-9f95-91fed7863ff2",
       "title": "A1 – ich heiße, du heißt | Kahoot-Quiz (Deutsch mit Dennis)",

@@ -38,7 +38,7 @@ window.DMLazy = (() => {
   ],
   "erste": [
     "erste-schritte-data.js?v=20261118e",
-    "erste-schritte.js?v=20261122a"
+    "erste-schritte.js?v=20261125a"
   ],
   "bild": [
     "bild-data.js?v=20261008e",

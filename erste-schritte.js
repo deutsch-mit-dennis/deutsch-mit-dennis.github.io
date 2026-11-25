@@ -747,6 +747,7 @@
             ? [
                 tile("https://create.kahoot.it/details/caed22fa-4a08-4c41-8d6a-6616a9f5e574", "🟣", "Kahoot: Hallo! Wer bist du?", "A1 · Wortschatz · 20 Fragen"),
                 tile("https://create.kahoot.it/details/024875d1-ddc3-458c-9f95-91fed7863ff2", "🟣", "Kahoot: ich heiße, du heißt", "A1 · Grammatik · 20 Fragen"),
+                tile("https://create.kahoot.it/details/8800c1bb-1925-499a-bd91-510dc1b6f131", "🟣", "Kahoot: Berufe & Traumberuf", "A1 · Wortschatz und Grammatik · 20 Fragen"),
               ]
             : []),
           tile("#kahoot", "🟣", "Kahoot-Quiz", "Allein oder im Kurs"),
