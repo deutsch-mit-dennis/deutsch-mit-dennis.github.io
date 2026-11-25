@@ -10,6 +10,7 @@ import json, os, re, subprocess, html, datetime
 import sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from answer_links import answer_html  # links to /antworten/… (only pages that exist)
+from page_write import write_page  # noqa: E402
 
 R = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SITE = "https://deutsch-mit-dennis.de"
@@ -131,7 +132,7 @@ def page(path, title, desc, body, crumbs, og="start", extra_ld=None, ogtype="art
 '''
     f = os.path.join(R, path, "index.html")
     os.makedirs(os.path.dirname(f), exist_ok=True)
-    open(f, "w", encoding="utf-8").write(doc)
+    write_page(f, doc)
     return url
 
 
@@ -405,7 +406,7 @@ def prevnext(cur):
 
 for slug, name, qs in groups:
     body = (
-        f'<h1>Leben in Deutschland – {e(name)}</h1><p class="lead">Fragen aus dem offiziellen Gesamtfragenkatalog mit der richtigen Antwort (✓) und einer kurzen Erklärung. '
+        f'<h1>{"Einbürgerungstest und Leben in Deutschland: " if slug in SHORT else "Leben in Deutschland – "}{e(name)}</h1><p class="lead">Fragen aus dem offiziellen Gesamtfragenkatalog mit der richtigen Antwort (✓) und einer kurzen Erklärung. '
         "Üben mit Lernmodus, Wiederholung und Prüfungssimulation kannst du kostenlos in der Lern-App.</p>"
         '<p><a class="btn" href="/#lid">▶ Fragen interaktiv üben</a></p>'
         + '<p>Prüfung simulieren: <a href="/simulation/lid/">Einbürgerungstest online üben (33 Fragen mit Uhr)</a></p>'
@@ -420,7 +421,12 @@ for slug, name, qs in groups:
     firsts = "; ".join(f"„{cut(q['q'], 48)}“" for q in qs[:2])
     desc = f"Leben in Deutschland Test: {name} mit richtigen Antworten und Erklärung, z. B. {firsts}. Kostenlos üben."
     ttl = f"Leben in Deutschland: {name.replace('Nordrhein-Westfalen', 'NRW')} mit Antworten"
-    if len(ttl) >= 60:  # long state names: keep the keyword, drop the long test name
+    land = name[len("Fragen "):].replace("Nordrhein-Westfalen", "NRW") if slug in SHORT else ""
+    if land:  # state pages: both test names, the state questions are the same in both tests
+        full = name[len("Fragen "):]
+        ttl = next(t for t in (f"Einbürgerungstest {land}: 10 Fragen mit Antworten", f"Einbürgerungstest {land}: 10 Fragen") if len(t) < 60)
+        desc = f"Einbürgerungstest und „Leben in Deutschland“ {full}: die 10 Landesfragen mit richtigen Antworten und Erklärung. Kostenlos üben."
+    elif len(ttl) >= 60:  # long state names: keep the keyword, drop the long test name
         ttl = f"LiD-{name} mit Antworten"
     urls.append(
         page(
