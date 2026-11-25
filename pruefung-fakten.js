@@ -563,9 +563,10 @@
           list: [
             "Du kannst 240 Punkte erreichen: je 60 für Lesen, Hören, Schreiben und Sprechen.",
             "Bestanden hast du mit mindestens 144 Punkten (60 Prozent).",
-            "Dazu brauchst du in mindestens drei der vier Teile „ein Ergebnis über 60 Prozent“ (36 von 60 Punkten). So steht es im Übungstest des BAMF. Ein schwächerer Teil ist möglich, wenn er mindestens 24 Punkte (40 %) hat.",
+            "Dazu brauchst du in mindestens drei der vier Teile mindestens 36 von 60 Punkten. Im Übungstest von telc und BAMF steht: „ein Ergebnis über 60 Prozent … (36 Punkte)“. Ob genau 36 reichen, ist dort nicht eindeutig. Frag im Zweifel deine Prüfungsstelle. Ein schwächerer Teil ist möglich, wenn er mindestens 24 Punkte (40 %) hat.",
           ],
-          src: ["uebDtbB1"],
+          src: ["bamfDtbB1", "uebDtbB1"],
+          stand: "25.11.2026",
         },
         {
           h: "Kosten und Wiederholung",
@@ -652,7 +653,7 @@
           list: [
             "Insgesamt gibt es 240 Punkte: je 60 für Lesen, Hören, Schreiben und Sprechen.",
             "Bestanden: mindestens 144 Punkte (60 %).",
-            "Dazu kommt: In mindestens drei Fertigkeiten brauchst du „ein Ergebnis über 60 Prozent“ (36 von 60 Punkten). So steht es im Übungstest des BAMF. Eine schwächere Fertigkeit ist erlaubt, wenn sie mindestens 24 Punkte hat.",
+            "Dazu kommt: In mindestens drei Fertigkeiten brauchst du mindestens 36 von 60 Punkten. Im Übungstest von telc und BAMF steht: „ein Ergebnis über 60 Prozent … (36 Punkte)“. Ob genau 36 reichen, ist dort nicht eindeutig. Frag im Zweifel deine Prüfungsstelle. Eine schwächere Fertigkeit ist erlaubt, wenn sie mindestens 24 Punkte hat.",
           ],
           src: ["bamfDtbB2", "telcDtbHb", "bamfDtbDurch"],
         },

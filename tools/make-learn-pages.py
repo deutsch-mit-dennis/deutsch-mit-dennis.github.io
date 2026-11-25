@@ -757,7 +757,7 @@ if FK:
         "dtb-b1": [
             ("Wie ist der DTB B1 aufgebaut?", "Der DTB B1 hat Lesen (40 Min.), Lesen und Schreiben (20 Min.), Hören (20 Min.), Hören und Schreiben (5 Min.), Sprachbausteine und Schreiben (10 Min.) und Sprechen (ca. 16 Min., zu zweit)."),
             ("Wie viele Punkte braucht man für den DTB B1?", "Es gibt 240 Punkte (je 60 für Lesen, Hören, Schreiben und Sprechen). Bestanden hast du mit mindestens 144 Punkten (60 Prozent)."),
-            ("Gibt es beim DTB B1 Mindestpunkte pro Teil?", "Ja. Du brauchst in mindestens drei der vier Teile „ein Ergebnis über 60 Prozent“ (36 von 60 Punkten). Ein schwächerer Teil ist möglich, wenn er mindestens 24 Punkte (40 %) hat."),
+            ("Gibt es beim DTB B1 Mindestpunkte pro Teil?", "Ja. Du brauchst in mindestens drei der vier Teile mindestens 36 von 60 Punkten. Im Übungstest von telc und BAMF steht: „ein Ergebnis über 60 Prozent … (36 Punkte)“. Ob genau 36 reichen, ist dort nicht eindeutig. Frag im Zweifel deine Prüfungsstelle. Ein schwächerer Teil ist möglich, wenn er mindestens 24 Punkte (40 %) hat."),
             ("Wer kann den DTB B1 machen?", "Der DTB gehört zu den Berufssprachkursen des BAMF. Die Anmeldung läuft über den Träger deines Berufssprachkurses."),
             ("Kann man einzelne Teile des DTB B1 wiederholen?", "In der Regel nein: Du kannst den Test nur ganz wiederholen, nicht einzelne Teile."),
         ],
@@ -765,7 +765,7 @@ if FK:
             ("Wie ist der DTB B2 aufgebaut?", "Der DTB B2 hat Lesen (45 Min.), Lesen und Schreiben (20 Min.), Hören (20 Min.), Hören und Schreiben (5 Min.), Sprachbausteine und Schreiben (35 Min.) und Sprechen (ca. 16 Min., zu zweit)."),
             ("Wie lange dauert die schriftliche Prüfung beim DTB B2?", "Die schriftliche Prüfung dauert 125 Minuten. Du kannst nicht nur einen Teil machen."),
             ("Wie viele Punkte braucht man für den DTB B2?", "Es gibt 240 Punkte (je 60 pro Fertigkeit). Bestanden hast du mit mindestens 144 Punkten (60 %)."),
-            ("Gibt es beim DTB B2 Mindestpunkte pro Fertigkeit?", "Ja. In mindestens drei Fertigkeiten brauchst du „ein Ergebnis über 60 Prozent“ (36 von 60 Punkten). Eine schwächere Fertigkeit ist erlaubt, wenn sie mindestens 24 Punkte hat."),
+            ("Gibt es beim DTB B2 Mindestpunkte pro Fertigkeit?", "Ja. In mindestens drei Fertigkeiten brauchst du mindestens 36 von 60 Punkten. Im Übungstest von telc und BAMF steht: „ein Ergebnis über 60 Prozent … (36 Punkte)“. Ob genau 36 reichen, ist dort nicht eindeutig. Frag im Zweifel deine Prüfungsstelle. Eine schwächere Fertigkeit ist erlaubt, wenn sie mindestens 24 Punkte hat."),
             ("Was kostet der DTB B2?", "Im Berufssprachkurs übernimmt das BAMF die Kosten der Prüfung. Das gilt auch für eine Wiederholung."),
             ("Kann man einzelne Teile des DTB B2 wiederholen?", "In der Regel nein: Du kannst den Test nur ganz wiederholen, nicht einzelne Teile."),
         ],
@@ -1156,7 +1156,7 @@ FAQ = {
     "dtb-b2": [
         ("Was ist der Unterschied zwischen DTB B2 und telc Deutsch B2?", B2_DIFF),
         ("Wie oft hört man die Texte im DTB B2?", "Alle Hörtexte hört man nur einmal – auch im Teil „Hören und Schreiben“, in dem man eine Telefonnotiz schreibt."),
-        ("Wie viele Punkte braucht man, um den DTB B2 zu bestehen?", "Es gibt 240 Punkte, je 60 für Lesen, Hören, Schreiben und Sprechen. Man braucht insgesamt mindestens 60 Prozent (144 Punkte) und in mindestens drei der vier Fertigkeiten „ein Ergebnis über 60 Prozent“ (36 Punkte). Eine Fertigkeit darf zwischen 40 und 60 Prozent liegen."),
+        ("Wie viele Punkte braucht man, um den DTB B2 zu bestehen?", "Es gibt 240 Punkte, je 60 für Lesen, Hören, Schreiben und Sprechen. Man braucht insgesamt mindestens 60 Prozent (144 Punkte) und in mindestens drei der vier Fertigkeiten mindestens 36 von 60 Punkten. Im Übungstest von telc und BAMF steht: „ein Ergebnis über 60 Prozent … (36 Punkte)“. Ob genau 36 reichen, ist dort nicht eindeutig. Frag im Zweifel deine Prüfungsstelle. Eine Fertigkeit darf zwischen 40 und 60 Prozent liegen."),
         ("Gibt es im DTB B2 eine Vorbereitungszeit für die mündliche Prüfung?", "Nein. Die mündliche Prüfung ist eine Paarprüfung von ca. 16 Minuten ohne Vorbereitungszeit. Sie hat drei Teile: über ein Thema sprechen, ein Gespräch mit Kolleginnen und Kollegen und gemeinsam eine Lösung für ein Problem am Arbeitsplatz finden."),
     ],
 }
