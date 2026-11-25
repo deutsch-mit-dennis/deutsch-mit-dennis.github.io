@@ -1,30 +1,30 @@
 {
  "hinweis": "Zusammengefasste Besucherzahlen (Cloudflare Web Analytics, ohne Cookies). Automatisch erzeugt.",
- "stand": "2026-11-24T14:43:57.237Z",
- "tag": "2026-11-23",
+ "stand": "2026-11-25T14:07:09.181Z",
+ "tag": "2026-11-24",
  "gestern": {
-  "besuche": 92,
-  "seitenaufrufe": 717
+  "besuche": 100,
+  "seitenaufrufe": 829
  },
  "letzte7Tage": {
-  "besuche": 914,
-  "seitenaufrufe": 6267
+  "besuche": 945,
+  "seitenaufrufe": 6547
  },
  "herkunft": [
   {
    "name": "deutsch-mit-dennis.de",
    "besuche": 0,
-   "aufrufe": 5353
+   "aufrufe": 5602
   },
   {
    "name": "(direkt)",
-   "besuche": 858,
-   "aufrufe": 858
+   "besuche": 889,
+   "aufrufe": 889
   },
   {
    "name": "www.google.com",
-   "besuche": 29,
-   "aufrufe": 29
+   "besuche": 32,
+   "aufrufe": 32
   },
   {
    "name": "m.facebook.com",
@@ -33,13 +33,8 @@
   },
   {
    "name": "www.bing.com",
-   "besuche": 4,
-   "aufrufe": 4
-  },
-  {
-   "name": "www.facebook.com",
-   "besuche": 4,
-   "aufrufe": 4
+   "besuche": 3,
+   "aufrufe": 3
   },
   {
    "name": "de.search.yahoo.com",
@@ -50,77 +45,82 @@
    "name": "ch.search.yahoo.com",
    "besuche": 2,
    "aufrufe": 2
+  },
+  {
+   "name": "www.facebook.com",
+   "besuche": 2,
+   "aufrufe": 2
   }
  ],
  "laender": [
   {
    "name": "DE",
-   "besuche": 778,
-   "aufrufe": 5293
+   "besuche": 779,
+   "aufrufe": 5295
   },
   {
    "name": "MA",
-   "besuche": 21,
-   "aufrufe": 241
-  },
-  {
-   "name": "TN",
-   "besuche": 1,
-   "aufrufe": 83
+   "besuche": 29,
+   "aufrufe": 280
   },
   {
    "name": "CH",
-   "besuche": 9,
-   "aufrufe": 79
+   "besuche": 14,
+   "aufrufe": 221
+  },
+  {
+   "name": "TJ",
+   "besuche": 8,
+   "aufrufe": 73
   },
   {
    "name": "ES",
    "besuche": 2,
-   "aufrufe": 63
+   "aufrufe": 61
   },
   {
-   "name": "EG",
-   "besuche": 3,
-   "aufrufe": 58
+   "name": "TN",
+   "besuche": 1,
+   "aufrufe": 55
   },
   {
    "name": "IT",
-   "besuche": 5,
-   "aufrufe": 51
+   "besuche": 8,
+   "aufrufe": 54
   },
   {
-   "name": "AT",
-   "besuche": 14,
+   "name": "UA",
+   "besuche": 9,
    "aufrufe": 49
   }
  ],
  "geraete": [
   {
    "name": "desktop",
-   "besuche": 450,
-   "aufrufe": 3559
+   "besuche": 490,
+   "aufrufe": 3930
   },
   {
    "name": "mobile",
-   "besuche": 448,
-   "aufrufe": 2598
+   "besuche": 410,
+   "aufrufe": 2670
   },
   {
    "name": "tablet",
-   "besuche": 16,
-   "aufrufe": 110
+   "besuche": 10,
+   "aufrufe": 100
   }
  ],
  "seiten": [
   {
    "name": "/",
-   "besuche": 907,
-   "aufrufe": 5961
+   "besuche": 938,
+   "aufrufe": 6253
   },
   {
    "name": "/index.html",
    "besuche": 7,
-   "aufrufe": 306
+   "aufrufe": 294
   }
  ],
  "verlauf": {
@@ -315,6 +315,10 @@
   "2026-11-23": {
    "besuche": 92,
    "seitenaufrufe": 717
+  },
+  "2026-11-24": {
+   "besuche": 100,
+   "seitenaufrufe": 829
   }
  }
 }
