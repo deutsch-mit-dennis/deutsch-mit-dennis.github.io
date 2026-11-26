@@ -108,7 +108,7 @@ window.DMLazy = (() => {
     "dtz30.js?v=20261112a"
   ],
   "lieder": [
-    "lieder-data.js?v=20261112a"
+    "lieder-data.js?v=20261126a"
   ],
   "diktat": [
     "diktat-data.js?v=20261124c",
