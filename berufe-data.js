@@ -562,7 +562,7 @@
    "pm": "die Elektriker",
    "pf": "die Elektrikerinnen",
    "ort": "auf der Baustelle",
-   "taetigkeit": "Strom und Licht reparieren",
+   "taetigkeit": "Kabel und Lampen reparieren",
    "satz": [
     "Die Elektrikerin",
     "repariert",

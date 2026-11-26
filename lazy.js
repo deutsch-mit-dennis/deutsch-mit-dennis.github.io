@@ -23,8 +23,8 @@ window.DMLazy = (() => {
     "spiele/mikula.js?v=20261107e",
     "spiele/endungen.js?v=20261118a",
     "spiele/satzbau.js?v=20261118a",
-    "berufe-data.js?v=20261126a",
-    "spiele/berufe-a1.js?v=20261126a",
+    "berufe-data.js?v=20261126b",
+    "spiele/berufe-a1.js?v=20261126b",
     "spiele/uhrzeit.js?v=20261118a",
     "spiele/planen.js?v=20261118a",
     "spiele/tagesmix.js?v=20261122a",
@@ -122,7 +122,7 @@ window.DMLazy = (() => {
     "suche.js?v=20261124c"
   ],
   "berufe": [
-    "berufe-data.js?v=20261126a",
+    "berufe-data.js?v=20261126b",
     "berufe.js?v=20261126a"
   ]
 };

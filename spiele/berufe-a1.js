@@ -25,7 +25,7 @@
   // pictures that do not show one profession clearly are never asked in "Wer ist das?"
   const NO_PIC = ['kassierer', 'erzieher', 'lagerarbeiter', 'altenpfleger', 'hausmeister', 'dolmetscher'];
   // professions that are too close to be used as wrong answers for each other (picture and activity)
-  const NEAR = [['pfleger', 'altenpfleger', 'arzt'], ['arzt', 'tierarzt'], ['busfahrer', 'lkwfahrer'], ['verkaeufer', 'kassierer'],
+  const NEAR = [['pfleger', 'altenpfleger', 'arzt'], ['arzt', 'tierarzt'], ['polizist', 'feuerwehr', 'pfleger', 'altenpfleger', 'arzt'], ['busfahrer', 'lkwfahrer'], ['verkaeufer', 'kassierer'],
     ['elektriker', 'hausmeister', 'mechaniker'], ['bauarbeiter', 'maler', 'elektriker', 'hausmeister'], ['postbote', 'lagerarbeiter'],
     ['lehrer', 'erzieher'], ['reinigung', 'hausmeister'], ['schauspieler', 'saenger']];
   const near = (a, b) => a === b || NEAR.some(g => g.includes(a) && g.includes(b));
@@ -33,7 +33,8 @@
   const ALSO = { kellner: ['im Restaurant'], koch: ['im Café'], arzt: ['im Krankenhaus', 'in der Tierarztpraxis'], tierarzt: ['in der Praxis'],
     pfleger: ['in der Praxis', 'im Altenheim'], altenpfleger: ['im Krankenhaus'], verkaeufer: ['im Supermarkt'], kassierer: ['im Geschäft'],
     elektriker: ['im Wohnhaus', 'in der Werkstatt'], maler: ['im Wohnhaus'], lehrer: ['in der Kita'], erzieher: ['in der Schule'],
-    dolmetscher: ['im Krankenhaus', 'in der Praxis', 'in der Schule'], busfahrer: ['auf der Autobahn'], lkwfahrer: ['im Bus'] };
+    dolmetscher: ['im Krankenhaus', 'in der Praxis', 'in der Schule'], busfahrer: ['auf der Autobahn'], lkwfahrer: ['im Bus'],
+    polizist: ['auf der Autobahn'], feuerwehr: ['auf der Autobahn'] };
   const NO_ORT = ['reinigung', 'hausmeister']; // work in many places
 
   DMGame.register({
@@ -76,7 +77,8 @@
           tip = `${form} arbeitet ${b.ort}.`;
         } else {
           const n = noun(form), ein = fem ? 'eine' : 'ein', art = fem ? 'die' : 'der';
-          q = 'Ich bin ___ .'; top = picHTML(b); hint = `${fem ? 'Frau' : 'Mann'}: ${form}`; right = n;
+          // no picture here: the photos show one gender, the question alternates m/f
+          q = 'Ich bin ___ .'; hint = `${fem ? 'Frau' : 'Mann'}: ${form}`; right = n;
           wrongs = [`${ein} ${n}`, `${art} ${n}`];
           tip = `Beruf nach „sein“: ohne Artikel. Ich bin ${n}.`;
         }
