@@ -244,7 +244,7 @@ window.KT_DAY = {
       "blocks": [
         {
           "type": "text",
-          "text": "Wiederholung von <a href=\"/kurstagebuch/2026-11-19/\">Tag 1</a>: der Lehrer – die Lehrerin, der Friseur – die Friseurin, Beruf ohne Artikel, Frauen meistens mit <b>-in</b>."
+          "text": "Wiederholung von <a href=\"/kurstagebuch/2026-11-19/\">Tag 1</a>: der Lehrer – die Lehrerin, der Friseur – die Friseurin, Beruf ohne Artikel, Frauen meistens mit <b>-in</b>. Alle Berufe mit Artikel, Plural und Ton: <a href=\"/berufe/\">Berufe auf Deutsch A1</a> · <a href=\"/spiele/berufe-a1/\">Berufe-Quiz</a>."
         },
         {
           "type": "words",

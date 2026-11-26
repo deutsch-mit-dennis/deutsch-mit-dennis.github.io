@@ -9,7 +9,9 @@
     "simulation": {"text": "{n:sims} Probeprüfungen mit Zeitvorgabe für DTZ, telc B1, telc B2, DTB B1, DTB B2 und Leben in Deutschland.", "page": "/simulation/", "name": "Deutsch mit Dennis – Probeprüfungen"},
     "ueber": {"text": "Dennis Prudnikau, DaZ-Lehrer und lizenzierter Prüfer für DTZ, telc und DTB.", "page": "/ueber-mich/", "name": "Deutsch mit Dennis – Über Dennis"},
     "dtz-tipp": {"text": "Erfahrungswert von Dennis (keine offizielle Vorgabe): ca. 60–80 Wörter für A2, 80–100 Wörter für B1.", "page": "/dtz-schreiben/", "name": "Deutsch mit Dennis – DTZ Schreiben"},
-    "dtz-geruest": {"text": "Briefgerüst: Anrede, Einleitung, Leitpunkte, Bitte oder Frage, Schluss, Gruß und Name.", "page": "/dtz-schreiben/", "name": "Deutsch mit Dennis – DTZ Schreiben"}
+    "dtz-geruest": {"text": "Briefgerüst: Anrede, Einleitung, Leitpunkte, Bitte oder Frage, Schluss, Gruß und Name.", "page": "/dtz-schreiben/", "name": "Deutsch mit Dennis – DTZ Schreiben"},
+    "berufe": {"text": "{n:berufe} Berufe für A1 mit der/die, Plural, Arbeitsort und Beispielsatz. Beruf ohne Artikel: Ich bin Lehrerin. Die weibliche Form meistens mit -in, oft mit Umlaut: der Arzt → die Ärztin. Dialoge mit Sie und du.", "page": "/berufe/", "name": "Deutsch mit Dennis – Berufe A1", "stand": "2026-11-26"},
+    "berufe-quiz": {"text": "Berufe-Quiz A1: Bild, Tätigkeit, Arbeitsort und „Ich bin …“ – 10 Fragen pro Runde.", "page": "/spiele/berufe-a1/", "name": "Deutsch mit Dennis – Berufe-Quiz A1", "stand": "2026-11-26"}
   },
   "pages": [
     {
@@ -575,6 +577,144 @@
        "a": "Nein. Dein Diktat wird nur in deinem Browser geprüft. Dein Lernstand bleibt auf deinem Gerät.",
        "ref": [
         "site:datenschutz"
+       ]
+      }
+     ]
+    },
+    {
+     "slug": "was-sind-sie-von-beruf",
+     "og": "berufe",
+     "crumb": "Was sind Sie von Beruf?",
+     "h1": "„Was sind Sie von Beruf?“ – Wie sage ich meinen Beruf auf Deutsch?",
+     "title": "Was sind Sie von Beruf? Den Beruf auf Deutsch sagen",
+     "desc": "„Ich bin Lehrerin“ – ohne Artikel! So sagst du deinen Beruf auf Deutsch (A1): Fragen, Antworten, der/die, Plural und Dialog. Kostenlos üben.",
+     "answer": "Den Beruf sagt man auf Deutsch ohne Artikel: „Ich bin Lehrer.“ oder „Ich bin Lehrerin.“ Die Frage heißt „Was sind Sie von Beruf?“ (förmlich) oder „Was bist du von Beruf?“ (locker). Die männliche Form hat den Artikel der. Die weibliche Form endet meistens auf -in und hat den Artikel die: der Arzt – die Ärztin. Im Plural ist der Artikel immer die: die Ärzte, die Ärztinnen. Auf Deutsch mit Dennis übst du das kostenlos mit einer Liste von {n:berufe} Berufen, Ton, Dialog und Quiz.",
+     "refs": [
+      "site:berufe",
+      "site:berufe-quiz"
+     ],
+     "facts": [
+      {
+       "k": "Frage",
+       "v": "Was sind Sie von Beruf? · Was bist du von Beruf?",
+       "ref": [
+        "site:berufe"
+       ]
+      },
+      {
+       "k": "Antwort",
+       "v": "Ich bin Köchin. · Ich arbeite als Busfahrer. – ohne Artikel",
+       "ref": [
+        "site:berufe"
+       ]
+      },
+      {
+       "k": "Weibliche Form",
+       "v": "meistens -in, oft mit Umlaut: der Arzt → die Ärztin",
+       "ref": [
+        "site:berufe"
+       ]
+      },
+      {
+       "k": "Plural",
+       "v": "immer die: die Ärzte · die Ärztinnen",
+       "ref": [
+        "site:berufe"
+       ]
+      },
+      {
+       "k": "Liste",
+       "v": "{n:berufe} Berufe mit der/die, Plural, Arbeitsort und Beispielsatz",
+       "ref": [
+        "site:berufe"
+       ]
+      },
+      {
+       "k": "Quiz",
+       "v": "10 Fragen pro Runde",
+       "ref": [
+        "site:berufe-quiz"
+       ]
+      }
+     ],
+     "steps": {
+      "h": "So übst du die Berufe",
+      "ref": "site:berufe",
+      "list": [
+       "Hör dir die Berufe an und sprich laut nach: der Arzt – die Ärztin.",
+       "Lies den Dialog mit Sie und sprich ihn zu zweit.",
+       "Schreib drei Sätze über dich: Ich bin … · Ich arbeite als … · In meinem Land war ich …",
+       "Spiel danach das Berufe-Quiz."
+      ]
+     },
+     "practice": [
+      {
+       "href": "/berufe/",
+       "t": "Berufe A1: Liste mit Ton",
+       "d": "der/die, Plural, Arbeitsort, Beispielsatz, Dialog."
+      },
+      {
+       "href": "/spiele/berufe-a1/",
+       "t": "Berufe-Quiz A1",
+       "d": "Bild, Tätigkeit und „Ich bin …“."
+      },
+      {
+       "href": "/material/arbeitsblaetter/es-berufe.pdf",
+       "t": "Arbeitsblatt Berufe (PDF)",
+       "d": "Zum Ausdrucken."
+      },
+      {
+       "href": "/kurstagebuch/2026-11-26/",
+       "t": "Kurstagebuch Tag 3",
+       "d": "Berufe im Unterricht, mit Übersetzungen."
+      },
+      {
+       "href": "/niveau/a1/",
+       "t": "Alles für A1",
+       "d": "Lektionen, Wörter, Übungen."
+      }
+     ],
+     "faq": [
+      {
+       "q": "Wie antworte ich auf „Was sind Sie von Beruf?“",
+       "a": "Zum Beispiel: „Ich bin Köchin.“, „Ich arbeite als Busfahrer.“ oder „Ich arbeite im Krankenhaus.“",
+       "ref": [
+        "site:berufe"
+       ]
+      },
+      {
+       "q": "„Ich bin Lehrer“ oder „Ich bin ein Lehrer“?",
+       "a": "Ohne Artikel: Ich bin Lehrer. Genauso: Ich bin Köchin. – Nicht: Ich bin eine Köchin.",
+       "ref": [
+        "site:berufe"
+       ]
+      },
+      {
+       "q": "Wie bilde ich die weibliche Form?",
+       "a": "Meistens mit -in, oft mit Umlaut: der Koch – die Köchin. Es gibt Ausnahmen: der Feuerwehrmann – die Feuerwehrfrau.",
+       "ref": [
+        "site:berufe"
+       ]
+      },
+      {
+       "q": "Welcher Artikel steht im Plural?",
+       "a": "Immer die: die Lehrer, die Lehrerinnen. Die weibliche Form hat im Plural -innen.",
+       "ref": [
+        "site:berufe"
+       ]
+      },
+      {
+       "q": "„arbeiten als“, „bei“ oder „in“?",
+       "a": "als + Beruf: Ich arbeite als Verkäuferin. bei + Firma oder Amt: bei der Post, bei der Polizei. in + Ort: im Krankenhaus, in der Schule.",
+       "ref": [
+        "site:berufe"
+       ]
+      },
+      {
+       "q": "Wie sage ich meinen Beruf von früher?",
+       "a": "„In meinem Land war ich Lehrerin. Jetzt suche ich Arbeit.“",
+       "ref": [
+        "site:berufe"
        ]
       }
      ]
