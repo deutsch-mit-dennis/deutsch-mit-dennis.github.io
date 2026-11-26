@@ -14,10 +14,10 @@ const DM = c.DM;
 // readable pages that have a richer twin inside the app: link straight to the app route
 const APP = [[/^grammatik\/([\w-]+)$/, '#grammatik/$1'], [/^lektion\/([\w-]+)$/, '#lektion/$1'], [/^spiele\/([\w-]+)$/, '#spiele/$1'], [/^simulation\/([\w-]+)$/, '#simulation/$1'], [/^lieder\/([a-z]\d-\d\d-[\w-]+)$/, '#lieder/$1'], [/^hoeren\/([\w-]+)$/, '#hoeren/$1'], [/^lesen\/([\w-]+)$/, '#lesen/$1'], [/^pruefungsinfo\/([\w-]+)$/, '#pruefungsinfo/$1'], [/^vorbereitung\/([\w-]+)$/, '#vorbereitung/$1'], [/^lernpakete\/([\w-]+)$/, '#lernpakete/$1'],
   [/^kurs\/(\w\d)$/, (_, l) => '#kurs/' + l.toUpperCase()], [/^niveau\/(\w\d)$/, (_, l) => '#niveau/' + l.toUpperCase()], [/^material\/(\w\d)$/, (_, l) => '#material/alle/' + l.toUpperCase()],
-  [/^(kurs|grammatik|spiele|simulation|lieder|hoeren|lesen|pruefungsinfo|vorbereitung|lernpakete|material|ueben|lid|pruefung|bild|challenge|laute|kahoot|videos|witz|mikula|ueber-mich|diktat|verben|[ab]\d-woerter|dtz-woerter|[ab]\d-30-tage|dtz-30-tage|sprachbausteine|telc-b2-sprechen)$/, '#$1'],
+  [/^(kurs|grammatik|spiele|simulation|lieder|hoeren|lesen|pruefungsinfo|vorbereitung|lernpakete|material|ueben|lid|pruefung|bild|challenge|laute|kahoot|videos|witz|mikula|ueber-mich|diktat|verben|berufe|[ab]\d-woerter|dtz-woerter|[ab]\d-30-tage|dtz-30-tage|sprachbausteine|telc-b2-sprechen)$/, '#$1'],
   [/^einstufungstest$/, '#einstufung'], [/^lektionen$/, '#lernen'], [/^fehlerheft$/, '#fehler']];
 const url = p => { for (const [re, to] of APP) if (re.test(p)) return p.replace(re, to); return '/' + p + '/'; };
-const KIND = { niveau: 'kurs', 'dtz-schreiben': 'brief', pruefungsinfo: 'pruefung', vorbereitung: 'pruefung', lernpakete: 'pruefung', diktat: 'ueben', verben: 'ueben', laute: 'ueben', bild: 'ueben', fehlerheft: 'ueben', einstufungstest: 'kurs', lektionen: 'lektion' };
+const KIND = { niveau: 'kurs', 'dtz-schreiben': 'brief', pruefungsinfo: 'pruefung', vorbereitung: 'pruefung', lernpakete: 'pruefung', diktat: 'ueben', verben: 'ueben', berufe: 'ueben', laute: 'ueben', bild: 'ueben', fehlerheft: 'ueben', einstufungstest: 'kurs', lektionen: 'lektion' };
 const kind = p => { const k = p.split('/')[0]; return /woerter$/.test(k) ? 'wort' : /30-tage$/.test(k) ? 'pruefung' : KIND[k] || k; };
 
 const pages = [], seen = new Set();

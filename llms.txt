@@ -26,6 +26,7 @@ Dennis Prudnikau ist DaZ-Lehrer und lizenzierter Prüfer für DTZ, telc und DTB 
 
 ## Grammatik, Hören, Lesen, Sprechen
 - [Grammatik üben](https://deutsch-mit-dennis.de/grammatik/): Themen von A1 bis B2 mit Erklärung und Übungen
+- [Berufe A1](https://deutsch-mit-dennis.de/berufe/): 30 Berufe mit der/die, Plural, Arbeitsort, Beispielsatz, Dialog und Ton; dazu das [Berufe-Quiz A1](https://deutsch-mit-dennis.de/spiele/berufe-a1/)
 - [Unregelmäßige Verben](https://deutsch-mit-dennis.de/verben/): Verben A1–B2 mit Präsens, Präteritum, Perfekt, Beispielsatz und Quiz
 - [Diktat](https://deutsch-mit-dennis.de/diktat/): Sätze A1–B2 zum Hören und Schreiben mit sofortiger Kontrolle
 - [Hören](https://deutsch-mit-dennis.de/hoeren/): Hörtexte und Aufgaben nach Niveau

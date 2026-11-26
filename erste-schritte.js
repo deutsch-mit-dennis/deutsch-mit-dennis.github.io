@@ -131,6 +131,7 @@
     ];
     DM.page(`${DM.crumbs([["Erste Schritte", "#erste-schritte"], [t.title]])}
       <div class="dm-head"><p class="dm-kicker">${t.level} · Erste Schritte</p><h1><span aria-hidden="true">${t.icon}</span> ${x(t.title)}</h1><p class="dm-lead">${x(t.intro)}</p></div>
+      ${t.id === "berufe" ? '<p class="dm-card es-more"><a href="#berufe"><b>Mehr Berufe:</b> 30 Berufe mit Arbeitsort, Dialog und Quiz →</a></p>' : ""}
       <div class="es-bar">${hasTr ? `<label class="es-lang">Übersetzung <select id="es-lang"><option value="de">keine</option>${ES.langs.map(([k, n]) => `<option value="${k}"${k === lang ? " selected" : ""}>${n}</option>`).join("")}</select></label>` : ""}<button type="button" class="dm-btn dm-btn-quiet" id="es-all"><span aria-hidden="true">▶</span> Alle anhören</button><a class="dm-btn dm-btn-quiet" href="material/arbeitsblaetter/es-${t.id}.pdf" download target="_blank" rel="noopener"><span aria-hidden="true">📄</span> Arbeitsblatt (PDF)</a></div>
       ${t.items.some((it) => it.art) ? '<p class="es-legend"><span class="es-der">der</span> <span class="es-die">die</span> <span class="es-das">das</span> – die Farbe zeigt den Artikel.</p>' : ""}
       <ul class="es-grid${t.kind === "phrase" ? " es-grid-phrase" : ""}${t.kind === "tile" ? " es-grid-tile" : ""}">${t.items.map((it, k) => card(t, it, k)).join("")}</ul>
@@ -669,7 +670,7 @@
             ...(lv === "B2" ? [tile("#b2-woerter", "🗂️", "B2-Wörter nach Prüfungsthemen – Karteikarten", "8 Themen · Wort, Artikel, Plural, Beispielsatz")] : []),
             ...(lv === "B1" ? [tile("#b1-woerter", "🗂️", "B1-Wörter nach Prüfungsthemen – Karteikarten", "telc B1 und DTB B1 · 8 Themen mit Beispielsatz")] : []),
             ...(lv === "A2" || lv === "B1" ? [fmtLi(tile("#dtz-woerter", "🗂️", "DTZ-Wörter nach Prüfungsthemen – Karteikarten", "Wohnen, Arbeit, Ämter, Gesundheit … · mit Beispielsatz"), lv === "B1" ? "dtz" : "")] : []),
-            ...(lv === "A1" ? [tile("#a1-woerter", "🗂️", "A1-Wörter nach Alltagsthemen – Karteikarten", "8 Themen · Wort, Artikel, Plural, Beispielsatz")] : []),
+            ...(lv === "A1" ? [tile("#a1-woerter", "🗂️", "A1-Wörter nach Alltagsthemen – Karteikarten", "8 Themen · Wort, Artikel, Plural, Beispielsatz"), tile("#berufe", "👩‍🔧", "Berufe A1 – 30 Berufe mit Ton, Dialog und Quiz", "der/die, Plural, Arbeitsort, Beispielsatz")] : []),
             ...LS.map((l) =>
             tile(
               "#wortschatz/" + l.id + "/0",
@@ -748,6 +749,7 @@
                 tile("https://create.kahoot.it/details/caed22fa-4a08-4c41-8d6a-6616a9f5e574", "🟣", "Kahoot: Hallo! Wer bist du?", "A1 · Wortschatz · 20 Fragen"),
                 tile("https://create.kahoot.it/details/024875d1-ddc3-458c-9f95-91fed7863ff2", "🟣", "Kahoot: ich heiße, du heißt", "A1 · Grammatik · 20 Fragen"),
                 tile("https://create.kahoot.it/details/8800c1bb-1925-499a-bd91-510dc1b6f131", "🟣", "Kahoot: Berufe & Traumberuf", "A1 · Wortschatz und Grammatik · 20 Fragen"),
+                tile("#berufe", "👩‍🔧", "Vor dem Kahoot: Berufe A1 üben", "30 Berufe mit Bild, Ton und Quiz"),
               ]
             : []),
           tile("#kahoot", "🟣", "Kahoot-Quiz", "Allein oder im Kurs"),

@@ -2,6 +2,12 @@
  "note": "Neu auf der Seite – neueste Einträge oben. Wird vom Redaktionsplan (geplante Aufgaben) ergänzt.",
  "items": [
   {
+   "date": "2026-11-26",
+   "type": "neu",
+   "title": "Neu: Berufe A1 – 30 Berufe mit Arbeitsort, Dialog und Quiz",
+   "link": "/berufe/"
+  },
+  {
    "date": "2026-11-25",
    "type": "neu",
    "title": "Neue Übungsbücher: Mikula sucht den Weg nach Hause – Deutsch–Englisch und Deutsch–Persisch (A1–B1)",
