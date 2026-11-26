@@ -179,6 +179,12 @@
     return h >>> 0;
   }
   // Deterministic shuffle (mulberry32 seeded by a string).
+  // "richtig / falsch" items keep a fixed order (richtig first) – shuffling them only confuses A1 learners
+  function rfOrder(opts) {
+    var low = (opts || []).map(function (o) { return String(o).toLowerCase().replace(/<[^>]+>/g, '').trim(); });
+    if (low.length !== 2 || low.indexOf('richtig') < 0 || low.indexOf('falsch') < 0) return null;
+    return [low.indexOf('richtig'), low.indexOf('falsch')];
+  }
   function shuffle(arr, seed) {
     var a = arr.slice(), s = hash(seed);
     function rnd() {
@@ -756,7 +762,7 @@
       q.appendChild(qt);
       var opts = el('div', 'kt-opts');
       var order = (it.options || []).map(function (_, i) { return i; });
-      order = shuffle(order, set.id + qi + 'r' + round);
+      order = rfOrder(it.options) || shuffle(order, set.id + qi + 'r' + round);
       var answered = false;
       function answer(oi, silent) {
         if (answered) return;
@@ -1171,9 +1177,10 @@
     if (set.type === 'choice') {
       items.forEach(function (it, qi) {
         var idx = (it.options || []).map(function (_, i) { return i; });
-        var order = shuffle(idx, set.id + '|' + qi + '|' + BLATT_SEED);
+        var rf = rfOrder(it.options);
+        var order = rf || shuffle(idx, set.id + '|' + qi + '|' + BLATT_SEED);
         // never the same answer letter 3 times in a row (still deterministic: next fixed salt)
-        for (var k = 1; k < 8 && sol.length >= 2 && sol[sol.length - 1] === sol[sol.length - 2] &&
+        for (var k = 1; !rf && k < 8 && sol.length >= 2 && sol[sol.length - 1] === sol[sol.length - 2] &&
           letter(order.indexOf(it.answer)) === sol[sol.length - 1]; k++) {
           order = shuffle(idx, set.id + '|' + qi + '|' + BLATT_SEED + k);
         }
