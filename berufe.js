@@ -215,7 +215,7 @@
     $('#bf-rand').onclick = randomJob;
     $('#bf-play').onclick = showVideo;
     $('#bf-print').onclick = () => window.print();
-    $$('[data-dlg]', root).forEach(b => { b.onclick = () => { const l = b.dataset.dlg === 'sie' ? B.dialogSie : B.dialogDu; DM.speak(l.map(r => r[1]).join(' – '), { dialogue: true }); }; });
+    $$('[data-dlg]', root).forEach(b => { b.onclick = () => { const l = b.dataset.dlg === 'sie' ? B.dialogSie : B.dialogDu; const id = b.dataset.dlg; const next = i => { if (i >= l.length) return; DM.speak(l[i][1], { key: `bf-${id}-${i + 1}`, onend: ok => { if (ok) setTimeout(() => next(i + 1), 350); } }); }; next(0); }; });
     $$('[data-stop]', root).forEach(b => { b.onclick = () => { DM.stopSpeaking(); $$('.bf-say.is-playing', root).forEach(o => o.classList.remove('is-playing')); }; });
     $$('[data-opt]', root).forEach(a => { a.addEventListener('click', () => setOpt(a.dataset.opt)); });
   }
