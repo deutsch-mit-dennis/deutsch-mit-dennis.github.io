@@ -267,6 +267,15 @@
   }
   // All 8 translations are always in the DOM; CSS shows the chosen one (body[data-lang]).
   // tag 'span' is used inside buttons and feedback lines (phrasing content).
+  // In Arabic/Persian translations German words, numbers and symbols (ge- … -t, -in → -innen, 0228) get their own
+  // left-to-right island (<bdi dir="ltr">), otherwise the bidi algorithm moves dots, arrows and brackets around.
+  var LATIN_RUN = /[A-Za-zÀ-ÖØ-öø-žß0-9„"'(\[\-–+][A-Za-zÀ-ÖØ-öø-žß0-9 \-–—→←…\/=.,:;!?()\[\]„“"'’+*·]*[A-Za-zÀ-ÖØ-öø-žß0-9)\]“"'’.!?…]|[A-Za-zÀ-ÖØ-öø-žß0-9]/g;
+  function isolateLatin(html) {
+    return String(html).split(/(<[^>]+>)/).map(function (part) {
+      if (part.charAt(0) === '<') return part;
+      return part.replace(LATIN_RUN, function (m) { return '<bdi dir="ltr">' + m + '</bdi>'; });
+    }).join('');
+  }
   function trHTML(tr, tag, extraCls) {
     if (!tr || !tr.length) return '';
     tag = tag || 'div';
@@ -277,7 +286,7 @@
       // label always left (LTR row), the text itself is an isolated span so RTL scripts keep their order
       h += '<span class="kt-t' + (RTL[l] ? ' rtl' : '') + '" data-l="' + l + '">' +
         '<span class="kt-l" title="' + GERMAN_NAME[l] + '">' + l + '</span>' +
-        '<span class="kt-x" lang="' + l + '"' + (RTL[l] ? ' dir="rtl"' : '') + '>' + tr[i] + '</span></span>';
+        '<span class="kt-x" lang="' + l + '"' + (RTL[l] ? ' dir="rtl"' : '') + '>' + (RTL[l] ? isolateLatin(tr[i]) : tr[i]) + '</span></span>';
     }
     return h + '</' + tag + '>';
   }
