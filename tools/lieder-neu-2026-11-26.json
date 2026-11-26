@@ -1,0 +1,121 @@
+[
+ {
+  "id": "b2-13-wenn-ich-das-gewusst-haette",
+  "level": "B2",
+  "title": "Wenn ich das gewusst hätte",
+  "theme": "Angehörige pflegen: nachts bei der alten Mutter – Verantwortung, Pflegedienst und Pflegegrad, Hilfe annehmen und Bedauern",
+  "grammar": "Konjunktiv II der Vergangenheit für Bedauern und irreale Bedingungen (Wenn ich das gewusst hätte, wäre ich öfter gekommen.) – auch mit Modalverb (Ich hätte früher Hilfe holen sollen.)",
+  "intro": "Kurz vor Mitternacht ruft die Mutter an – sie kommt allein nicht mehr zurecht. Ihr Sohn fährt durch die leere Stadt zu ihr und denkt darüber nach, was er früher anders hätte machen sollen. Mit diesem Lied übst du den Konjunktiv II der Vergangenheit: hätte/wäre + Partizip II.",
+  "lyrics": "[Verse 1]\nHalb zwölf, die Autobahn ist leer,\nder Regen malt die Lichter an.\nDein Anruf kam vor einer Stunde,\ndu wusstest nicht mehr, wo du warst – und wann.\nIch fahre durch die stille Stadt,\nvorbei an Fenstern ohne Schein,\nund ich denke: Seit wie vielen Nächten\nbist du schon so allein?\n\n[Chorus]\nWenn ich das gewusst hätte,\nwäre ich öfter gekommen.\nHätte ich nur früher\ndeine Hand in meine genommen.\nDoch heute Nacht bin ich hier,\ndas Licht im Flur bleibt an.\nIch bleibe bei dir, Mama,\nso lange ich kann.\n\n[Verse 2]\nDer Pflegedienst kommt jeden Morgen,\ndie Nachbarin schaut abends rein.\nIch habe Formulare ausgefüllt,\nden Pflegegrad beantragt – ganz allein.\nIch hätte früher Hilfe holen sollen,\nstatt alles selbst zu tragen.\nIch hätte dir zuhören sollen,\nstatt immer „Keine Zeit“ zu sagen.\n\n[Chorus]\nWenn ich das gewusst hätte,\nwäre ich öfter gekommen.\nHätte ich nur früher\ndeine Hand in meine genommen.\nDoch heute Nacht bin ich hier,\ndas Licht im Flur bleibt an.\nIch bleibe bei dir, Mama,\nso lange ich kann.\n\n[Bridge]\nDu hältst ein altes Foto in der Hand:\nein Sommer am Meer, ich war fünf.\nDu weißt nicht mehr, wie ich heiße,\ndoch du lächelst und du summst.\nWärst du nicht so stark gewesen,\nwäre ich nie so weit gegangen.\nHeute halte ich dich fest –\nso wie du mich damals gehalten hast.\n\n[Chorus]\nWenn ich das gewusst hätte,\nwäre ich öfter gekommen.\nHätte ich nur früher\ndeine Hand in meine genommen.\nDoch heute Nacht bin ich hier,\ndas Licht im Flur bleibt an.\nIch bleibe bei dir, Mama,\nso lange ich kann.\n\n[Outro]\nWenn ich das gewusst hätte …\nDas Licht im Flur bleibt an.\nIch bin hier, Mama.\nSo lange ich kann.",
+  "vocab": [
+   [
+    "der Anruf, die Anrufe",
+    "das Telefongespräch, wenn jemand bei dir anruft"
+   ],
+   [
+    "der Schein (hier)",
+    "das Licht, das von einer Lampe oder einem Fenster kommt"
+   ],
+   [
+    "der Pflegedienst, die Pflegedienste",
+    "Firma, deren Pflegekräfte kranke oder alte Menschen zu Hause versorgen"
+   ],
+   [
+    "(bei jdm.) reinschauen (ugs.)",
+    "kurz bei jemandem vorbeikommen und nachsehen, ob alles in Ordnung ist"
+   ],
+   [
+    "ein Formular ausfüllen",
+    "die Fragen auf einem Papier oder online beantworten"
+   ],
+   [
+    "der Pflegegrad",
+    "Stufe von 1 bis 5: Sie zeigt, wie viel Hilfe ein Mensch braucht – davon hängt das Geld der Pflegekasse ab"
+   ],
+   [
+    "etwas beantragen",
+    "offiziell um etwas bitten, z. B. bei der Kranken- oder Pflegekasse"
+   ],
+   [
+    "Hilfe holen / Hilfe annehmen",
+    "andere um Unterstützung bitten / Unterstützung akzeptieren"
+   ],
+   [
+    "etwas allein tragen (hier)",
+    "eine schwere Aufgabe oder Verantwortung ohne Hilfe von anderen übernehmen"
+   ],
+   [
+    "summen",
+    "eine Melodie mit geschlossenem Mund singen"
+   ]
+  ],
+  "gap": {
+   "type": "gap",
+   "title": "Aufgabe 2: Lückentext",
+   "instruction": "Hör das Lied und ergänze die fehlenden Wörter.",
+   "items": [
+    "der Regen ___ die Lichter an.",
+    "wäre ich öfter ___.",
+    "die Nachbarin schaut abends ___.",
+    "den ___ beantragt – ganz allein.",
+    "doch du lächelst und du ___."
+   ],
+   "solutions": [
+    "malt",
+    "gekommen",
+    "rein",
+    "Pflegegrad",
+    "summst"
+   ]
+  },
+  "tf": [
+   [
+    "Die Mutter hat spät am Abend angerufen.",
+    true,
+    ""
+   ],
+   [
+    "Der Sohn fährt mit dem Zug zu seiner Mutter.",
+    false,
+    "Er fährt mit dem Auto über die leere Autobahn."
+   ],
+   [
+    "Ein Pflegedienst kommt jeden Morgen zur Mutter.",
+    true,
+    ""
+   ],
+   [
+    "Der Sohn hat von Anfang an viel Hilfe angenommen.",
+    false,
+    "Er hat alles allein gemacht und bedauert, dass er nicht früher Hilfe geholt hat."
+   ],
+   [
+    "In dieser Nacht bleibt das Licht im Flur an.",
+    true,
+    ""
+   ]
+  ],
+  "gram": {
+   "title": "Grammatik – Konjunktiv II der Vergangenheit",
+   "instruction": "Drück Bedauern aus oder bilde irreale Bedingungen: hätte/wäre + Partizip II. Mit Modalverb: hätte + Infinitiv + Modalverb im Infinitiv (Ich hätte … holen sollen).",
+   "items": [
+    "Ich bin nicht oft gekommen. → Wäre ich doch ___!",
+    "Ich habe nicht früher gefragt. → Hätte ich doch ___!",
+    "Ich wusste es nicht. Ich bin nicht gekommen. → Wenn ich es ___, ___ ich gekommen.",
+    "Ich habe keine Hilfe geholt. (sollen) → Ich ___ früher Hilfe ___.",
+    "Ich habe dir nicht zugehört. (sollen) → Ich ___ dir ___.",
+    "Du warst stark. Deshalb bin ich so weit gegangen. → Wärst du nicht so stark ___, ___ ich nie so weit gegangen."
+   ],
+   "solutions": [
+    "Wäre ich doch öfter gekommen!",
+    "Hätte ich doch früher gefragt!",
+    "Wenn ich es gewusst hätte, wäre ich gekommen.",
+    "Ich hätte früher Hilfe holen sollen.",
+    "Ich hätte dir zuhören sollen.",
+    "Wärst du nicht so stark gewesen, wäre ich nie so weit gegangen."
+   ]
+  },
+  "style": "Atmospheric future garage, 130 BPM. Intimate male vocals with heavy reverb and pitch-shifted textures. Soaring female vocals in the chorus. Deep sub-bass, shuffled 2-step garage drums, atmospheric pads, chopped vocal samples, piano, cello, vinyl crackle. Nocturnal city ambience, distant voices, rain. Dreamy, melancholic, romantic, mysterious, cinematic. Poetry clearly understandable. Unforgettable hook, cinematic finale. 2026 future garage aesthetic.",
+  "author": "Dzianis Prudnikau (Dennis)"
+ }
+]
