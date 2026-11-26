@@ -123,7 +123,7 @@ window.DMLazy = (() => {
   ],
   "berufe": [
     "berufe-data.js?v=20261126b",
-    "berufe.js?v=20261126b"
+    "berufe.js?v=20261126c"
   ]
 };
   const NEED = { spiele: ['spiele'], hoeren: ['hoeren'], lesen: ['lesen'], pruefung: ['hoeren', 'lesen'], training: ['hoeren', 'lesen'], bild: ['bild'], 'erste-schritte': ['erste'], niveau: ['erste', 'hoeren', 'lesen'], grammatik: ['grammatik'], laute: ['laute'], lid: ['lidx', 'lidt'], simulation: ['lidx', 'muster', 'lidt', 'sim'], vorbereitung: ['lidx', 'muster', 'lidt', 'sim'], ueben: ['muster'], pruefungsinfo: ['fakten'], 'b2-30-tage': ['b230'], 'b1-30-tage': ['b130'], 'b2-woerter': ['wb2', 'wcore'], 'b1-woerter': ['wb1', 'wcore'], 'dtz-woerter': ['wdtz', 'wcore'], 'a1-woerter': ['wa1', 'wcore'], sprachbausteine: ['b2t'], 'telc-b2-sprechen': ['b2t'], witz: ['witz'], mikula: ['mikula'], 'mikula-buch': ['mikulab'], 'dtz-30-tage': ['d30'], lieder: ['lieder'], diktat: ['diktat'], verben: ['verben'], suche: ['suche'], berufe: ['berufe'] };

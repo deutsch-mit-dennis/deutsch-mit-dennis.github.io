@@ -18,6 +18,7 @@
   let lang = '';
   try { const v = localStorage.getItem('dmd.eslang'); if (v && LANG_NAMES[v]) lang = v; } catch {}
   let group = 'alle';
+  let dlgRun = 0; // id of the current dialogue playback
 
   const css = `
 .bf-page .bf-lead{margin:.2em 0 0}
@@ -215,8 +216,13 @@
     $('#bf-rand').onclick = randomJob;
     $('#bf-play').onclick = showVideo;
     $('#bf-print').onclick = () => window.print();
-    $$('[data-dlg]', root).forEach(b => { b.onclick = () => { const l = b.dataset.dlg === 'sie' ? B.dialogSie : B.dialogDu; const id = b.dataset.dlg; const next = i => { if (i >= l.length) return; DM.speak(l[i][1], { key: `bf-${id}-${i + 1}`, onend: ok => { if (ok) setTimeout(() => next(i + 1), 350); } }); }; next(0); }; });
-    $$('[data-stop]', root).forEach(b => { b.onclick = () => { DM.stopSpeaking(); $$('.bf-say.is-playing', root).forEach(o => o.classList.remove('is-playing')); }; });
+    $$('[data-dlg]', root).forEach(b => { b.onclick = () => { const l = b.dataset.dlg === 'sie' ? B.dialogSie : B.dialogDu; const id = b.dataset.dlg; const run = ++dlgRun;
+      // Play line by line with the recorded voice; a newer click or Stopp (dlgRun changes) cancels the rest.
+      const next = (i, retry) => { if (i >= l.length || run !== dlgRun) return;
+        const done = ok => { if (run !== dlgRun) return; if (ok) setTimeout(() => next(i + 1), 350); else if (!retry) next(i, true); };
+        DM.speak(l[i][1], retry ? { onend: done } : { key: `bf-${id}-${i + 1}`, onend: done }); };
+      DM.stopSpeaking(); next(0); }; });
+    $$('[data-stop]', root).forEach(b => { b.onclick = () => { dlgRun++; DM.stopSpeaking(); $$('.bf-say.is-playing', root).forEach(o => o.classList.remove('is-playing')); }; });
     $$('[data-opt]', root).forEach(a => { a.addEventListener('click', () => setOpt(a.dataset.opt)); });
   }
   DM.routes = DM.routes || {};
