@@ -39170,6 +39170,742 @@
      "text": "Prima. Dann lade ich dich danach zum Essen ein."
     }
    ]
+  },
+  {
+   "key": "bf-friseur-w",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "der Friseur · die Friseurin",
+     "say": "der Friseur. die Friseurin."
+    }
+   ]
+  },
+  {
+   "key": "bf-pfleger-w",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "der Pfleger · die Pflegerin",
+     "say": "der Pfleger. die Pflegerin."
+    }
+   ]
+  },
+  {
+   "key": "bf-lehrer-w",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "der Lehrer · die Lehrerin",
+     "say": "der Lehrer. die Lehrerin."
+    }
+   ]
+  },
+  {
+   "key": "bf-polizist-w",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "der Polizist · die Polizistin",
+     "say": "der Polizist. die Polizistin."
+    }
+   ]
+  },
+  {
+   "key": "bf-arzt-w",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "der Arzt · die Ärztin",
+     "say": "der Arzt. die Ärztin."
+    }
+   ]
+  },
+  {
+   "key": "bf-koch-w",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "der Koch · die Köchin",
+     "say": "der Koch. die Köchin."
+    }
+   ]
+  },
+  {
+   "key": "bf-kellner-w",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "der Kellner · die Kellnerin",
+     "say": "der Kellner. die Kellnerin."
+    }
+   ]
+  },
+  {
+   "key": "bf-verkaeufer-w",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "der Verkäufer · die Verkäuferin",
+     "say": "der Verkäufer. die Verkäuferin."
+    }
+   ]
+  },
+  {
+   "key": "bf-baecker-w",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "der Bäcker · die Bäckerin",
+     "say": "der Bäcker. die Bäckerin."
+    }
+   ]
+  },
+  {
+   "key": "bf-mechaniker-w",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "der Automechaniker · die Automechanikerin",
+     "say": "der Automechaniker. die Automechanikerin."
+    }
+   ]
+  },
+  {
+   "key": "bf-postbote-w",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "der Postbote · die Postbotin",
+     "say": "der Postbote. die Postbotin."
+    }
+   ]
+  },
+  {
+   "key": "bf-informatiker-w",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "der Informatiker · die Informatikerin",
+     "say": "der Informatiker. die Informatikerin."
+    }
+   ]
+  },
+  {
+   "key": "bf-kassierer-w",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "der Kassierer · die Kassiererin",
+     "say": "der Kassierer. die Kassiererin."
+    }
+   ]
+  },
+  {
+   "key": "bf-reinigung-w",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "der Gebäudereiniger · die Gebäudereinigerin",
+     "say": "der Gebäudereiniger. die Gebäudereinigerin."
+    }
+   ]
+  },
+  {
+   "key": "bf-erzieher-w",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "der Erzieher · die Erzieherin",
+     "say": "der Erzieher. die Erzieherin."
+    }
+   ]
+  },
+  {
+   "key": "bf-lagerarbeiter-w",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "der Lagerarbeiter · die Lagerarbeiterin",
+     "say": "der Lagerarbeiter. die Lagerarbeiterin."
+    }
+   ]
+  },
+  {
+   "key": "bf-busfahrer-w",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "der Busfahrer · die Busfahrerin",
+     "say": "der Busfahrer. die Busfahrerin."
+    }
+   ]
+  },
+  {
+   "key": "bf-lkwfahrer-w",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "der Lkw-Fahrer · die Lkw-Fahrerin",
+     "say": "der Lkw-Fahrer. die Lkw-Fahrerin."
+    }
+   ]
+  },
+  {
+   "key": "bf-altenpfleger-w",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "der Altenpfleger · die Altenpflegerin",
+     "say": "der Altenpfleger. die Altenpflegerin."
+    }
+   ]
+  },
+  {
+   "key": "bf-elektriker-w",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "der Elektriker · die Elektrikerin",
+     "say": "der Elektriker. die Elektrikerin."
+    }
+   ]
+  },
+  {
+   "key": "bf-maler-w",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "der Maler · die Malerin",
+     "say": "der Maler. die Malerin."
+    }
+   ]
+  },
+  {
+   "key": "bf-hausmeister-w",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "der Hausmeister · die Hausmeisterin",
+     "say": "der Hausmeister. die Hausmeisterin."
+    }
+   ]
+  },
+  {
+   "key": "bf-bauarbeiter-w",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "der Bauarbeiter · die Bauarbeiterin",
+     "say": "der Bauarbeiter. die Bauarbeiterin."
+    }
+   ]
+  },
+  {
+   "key": "bf-dolmetscher-w",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "der Dolmetscher · die Dolmetscherin",
+     "say": "der Dolmetscher. die Dolmetscherin."
+    }
+   ]
+  },
+  {
+   "key": "bf-schauspieler-w",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "der Schauspieler · die Schauspielerin",
+     "say": "der Schauspieler. die Schauspielerin."
+    }
+   ]
+  },
+  {
+   "key": "bf-tierarzt-w",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "der Tierarzt · die Tierärztin",
+     "say": "der Tierarzt. die Tierärztin."
+    }
+   ]
+  },
+  {
+   "key": "bf-saenger-w",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "der Sänger · die Sängerin",
+     "say": "der Sänger. die Sängerin."
+    }
+   ]
+  },
+  {
+   "key": "bf-pilot-w",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "der Pilot · die Pilotin",
+     "say": "der Pilot. die Pilotin."
+    }
+   ]
+  },
+  {
+   "key": "bf-feuerwehr-w",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "der Feuerwehrmann · die Feuerwehrfrau",
+     "say": "der Feuerwehrmann. die Feuerwehrfrau."
+    }
+   ]
+  },
+  {
+   "key": "bf-fussballspieler-w",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "der Fußballspieler · die Fußballspielerin",
+     "say": "der Fußballspieler. die Fußballspielerin."
+    }
+   ]
+  },
+  {
+   "key": "bf-friseur-s",
+   "segments": [
+    {
+     "voice": "f3",
+     "text": "Ich schneide Haare."
+    }
+   ]
+  },
+  {
+   "key": "bf-pfleger-s",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Im Krankenhaus pflege ich kranke Menschen."
+    }
+   ]
+  },
+  {
+   "key": "bf-lehrer-s",
+   "segments": [
+    {
+     "voice": "f3",
+     "text": "Ich unterrichte Deutsch."
+    }
+   ]
+  },
+  {
+   "key": "bf-polizist-s",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Der Polizist kontrolliert das Auto."
+    }
+   ]
+  },
+  {
+   "key": "bf-arzt-s",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Die Ärztin untersucht das Kind."
+    }
+   ]
+  },
+  {
+   "key": "bf-koch-s",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Ich koche im Restaurant."
+    }
+   ]
+  },
+  {
+   "key": "bf-kellner-s",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Der Kellner bringt den Kaffee."
+    }
+   ]
+  },
+  {
+   "key": "bf-verkaeufer-s",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Sie verkauft Obst im Supermarkt."
+    }
+   ]
+  },
+  {
+   "key": "bf-baecker-s",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Am Morgen backt der Bäcker Brot."
+    }
+   ]
+  },
+  {
+   "key": "bf-mechaniker-s",
+   "segments": [
+    {
+     "voice": "f3",
+     "text": "Ich repariere Autos."
+    }
+   ]
+  },
+  {
+   "key": "bf-postbote-s",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Die Postbotin bringt ein Paket."
+    }
+   ]
+  },
+  {
+   "key": "bf-informatiker-s",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Sie schreibt ein Programm."
+    }
+   ]
+  },
+  {
+   "key": "bf-kassierer-s",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Ich arbeite an der Kasse."
+    }
+   ]
+  },
+  {
+   "key": "bf-reinigung-s",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Am Abend putze ich Büros."
+    }
+   ]
+  },
+  {
+   "key": "bf-erzieher-s",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Der Erzieher spielt mit den Kindern."
+    }
+   ]
+  },
+  {
+   "key": "bf-lagerarbeiter-s",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Ich packe Pakete im Lager."
+    }
+   ]
+  },
+  {
+   "key": "bf-busfahrer-s",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Die Busfahrerin fährt durch die Stadt."
+    }
+   ]
+  },
+  {
+   "key": "bf-lkwfahrer-s",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Er fährt nach Hamburg."
+    }
+   ]
+  },
+  {
+   "key": "bf-altenpfleger-s",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Er pflegt alte Menschen."
+    }
+   ]
+  },
+  {
+   "key": "bf-elektriker-s",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Die Elektrikerin repariert das Licht."
+    }
+   ]
+  },
+  {
+   "key": "bf-maler-s",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Heute streicht sie die Wand weiß."
+    }
+   ]
+  },
+  {
+   "key": "bf-hausmeister-s",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Der Hausmeister repariert die Tür."
+    }
+   ]
+  },
+  {
+   "key": "bf-bauarbeiter-s",
+   "segments": [
+    {
+     "voice": "f3",
+     "text": "Wir bauen ein Haus."
+    }
+   ]
+  },
+  {
+   "key": "bf-dolmetscher-s",
+   "segments": [
+    {
+     "voice": "m2",
+     "text": "Ich spreche Arabisch und Deutsch."
+    }
+   ]
+  },
+  {
+   "key": "bf-schauspieler-s",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Ich spiele im Theater."
+    }
+   ]
+  },
+  {
+   "key": "bf-tierarzt-s",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Die Tierärztin untersucht den Hund."
+    }
+   ]
+  },
+  {
+   "key": "bf-saenger-s",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Am Abend singt die Sängerin auf der Bühne."
+    }
+   ]
+  },
+  {
+   "key": "bf-pilot-s",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Die Pilotin fliegt nach Spanien."
+    }
+   ]
+  },
+  {
+   "key": "bf-feuerwehr-s",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Die Feuerwehrfrau löscht das Feuer."
+    }
+   ]
+  },
+  {
+   "key": "bf-fussballspieler-s",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Am Sonntag spielt sie Fußball."
+    }
+   ]
+  },
+  {
+   "key": "bf-rm-1",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Was sind Sie von Beruf? / Was bist du von Beruf?",
+     "say": "Was sind Sie von Beruf? Was bist du von Beruf?"
+    }
+   ]
+  },
+  {
+   "key": "bf-rm-2",
+   "segments": [
+    {
+     "voice": "f3",
+     "text": "Ich bin Köchin."
+    }
+   ]
+  },
+  {
+   "key": "bf-rm-3",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Ich arbeite als Busfahrer."
+    }
+   ]
+  },
+  {
+   "key": "bf-rm-4",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Ich arbeite im Krankenhaus. / in der Kita. / bei der Post.",
+     "say": "Ich arbeite im Krankenhaus. Ich arbeite in der Kita. Ich arbeite bei der Post."
+    }
+   ]
+  },
+  {
+   "key": "bf-rm-5",
+   "segments": [
+    {
+     "voice": "f3",
+     "text": "In meinem Land war ich Lehrerin."
+    }
+   ]
+  },
+  {
+   "key": "bf-rm-6",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Ich suche Arbeit. / Ich suche eine Stelle als Verkäufer.",
+     "say": "Ich suche Arbeit. Ich suche eine Stelle als Verkäufer."
+    }
+   ]
+  },
+  {
+   "key": "bf-rm-7",
+   "segments": [
+    {
+     "voice": "f3",
+     "text": "Ich bin arbeitslos. / Ich mache einen Deutschkurs.",
+     "say": "Ich bin arbeitslos. Ich mache einen Deutschkurs."
+    }
+   ]
+  },
+  {
+   "key": "bf-rm-8",
+   "segments": [
+    {
+     "voice": "f3",
+     "text": "Ich möchte als Erzieherin arbeiten."
+    }
+   ]
+  },
+  {
+   "key": "bf-sie-1",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Guten Tag! Was sind Sie von Beruf?"
+    }
+   ]
+  },
+  {
+   "key": "bf-sie-2",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Ich bin Köchin. Ich arbeite im Restaurant. Und Sie?"
+    }
+   ]
+  },
+  {
+   "key": "bf-sie-3",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "In meinem Land war ich Lehrer. Jetzt suche ich Arbeit."
+    }
+   ]
+  },
+  {
+   "key": "bf-sie-4",
+   "segments": [
+    {
+     "voice": "f2",
+     "text": "Was möchten Sie machen?"
+    }
+   ]
+  },
+  {
+   "key": "bf-sie-5",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Ich möchte als Erzieher arbeiten."
+    }
+   ]
+  },
+  {
+   "key": "bf-du-1",
+   "segments": [
+    {
+     "voice": "f3",
+     "text": "Hallo! Was bist du von Beruf?"
+    }
+   ]
+  },
+  {
+   "key": "bf-du-2",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Ich bin Busfahrer. Und du?"
+    }
+   ]
+  },
+  {
+   "key": "bf-du-3",
+   "segments": [
+    {
+     "voice": "f3",
+     "text": "Ich arbeite als Verkäuferin im Supermarkt."
+    }
+   ]
+  },
+  {
+   "key": "bf-du-4",
+   "segments": [
+    {
+     "voice": "m1",
+     "text": "Und was ist dein Traumberuf?"
+    }
+   ]
+  },
+  {
+   "key": "bf-du-5",
+   "segments": [
+    {
+     "voice": "f3",
+     "text": "Mein Traumberuf ist Pilotin. Ich möchte fliegen!"
+    }
+   ]
   }
  ]
 }
