@@ -20,6 +20,7 @@ ANSWERS = {  # slug -> short link text
     'unregelmaessige-verben-lernen': 'Unregelmäßige Verben lernen: haben oder sein?',
     'deutsch-diktat-online-ueben': 'Deutsch mit Diktaten üben',
     'deutsch-lernen-kostenlos-ohne-anmeldung': 'Kostenlos und ohne Anmeldung Deutsch lernen',
+    'was-sind-sie-von-beruf': 'Was sind Sie von Beruf? So antwortest du',
 }
 # exam / section id -> matching answer pages
 TOPIC = {
@@ -31,6 +32,7 @@ TOPIC = {
     'dtb-b2': ['dtb-deutsch-test-fuer-den-beruf-ueben'],
     'pruefung': ['dtz-pruefung-online-ueben', 'dtz-ergebnis-und-wiederholung', 'leben-in-deutschland-test-kostenlos-ueben', 'einbuergerung-deutschkenntnisse-test',
                  'telc-b1-modelltest-kostenlos', 'telc-b2-pruefung-ueben', 'dtb-deutsch-test-fuer-den-beruf-ueben', 'dtz-schreiben-brief-muster'],
+    'berufe': ['was-sind-sie-von-beruf'],
 }
 
 

@@ -452,7 +452,12 @@ STATIC = {
         else "/#" + "/".join(r) if len(r) > 1 else "/simulation/"
     ),
     "lid": lambda r: "/lid/",
-    "spiele": lambda r: "/spiele/",
+    "spiele": lambda r: (
+        f"/spiele/{r[1]}/" if len(r) > 1 and os.path.exists(os.path.join(R, "spiele", r[1], "index.html")) else "/spiele/"
+    ),
+    "berufe": lambda r: "/berufe/",
+    "a1-woerter": lambda r: "/a1-woerter/",
+    "kahoot": lambda r: "/kahoot/",
     "bild": lambda r: "/bild/",
     "einstufung": lambda r: "/einstufungstest/",
     "lernen": lambda r: "/lektionen/",

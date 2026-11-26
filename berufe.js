@@ -179,7 +179,7 @@
     addCss();
     const B = DM.berufe;
     DM.page(`${DM.crumbs([['A1', '#niveau/A1'], ['Berufe']])}
-      <div class="dm-head"><p class="dm-kicker">A1 · Wortschatz</p><h1>Berufe – A1</h1><p class="dm-lead bf-lead">30 Berufe mit der/die, Plural, Arbeitsort und Beispielsatz.</p></div>
+      <div class="dm-head"><p class="dm-kicker">A1 · Wortschatz</p><h1>Berufe auf Deutsch – A1</h1><p class="dm-lead bf-lead">${B.list.length} Berufe mit Artikel (der/die) und Plural, Arbeitsort und Beispielsatz. Und die Frage: „Was sind Sie von Beruf?“</p></div>
       <section class="bf-sec bf-noprint" aria-labelledby="bf-v-h"><h2 id="bf-v-h">Erst schauen, dann üben</h2>
         <div class="bf-video"><button type="button" class="dm-btn" id="bf-play"><span aria-hidden="true">▶</span> Video ansehen: Berufe A1</button><a href="https://www.youtube.com/watch?v=${VIDEO}" target="_blank" rel="noopener noreferrer">auf YouTube ↗</a></div>
         <div class="bf-video-box" id="bf-video-box"></div></section>
@@ -204,6 +204,7 @@
           <a class="dm-btn dm-btn-quiet" href="#spiele/satzbau">🧱 Satz-Baumeister: Verb auf Platz 2</a>
           <a class="dm-btn dm-btn-quiet" href="${KAHOOT}" target="_blank" rel="noopener">🟣 Kahoot: Berufe &amp; Traumberuf ↗</a>
           <a class="dm-btn dm-btn-quiet" href="material/arbeitsblaetter/es-berufe.pdf" target="_blank" rel="noopener">📄 Arbeitsblatt Berufe (PDF)</a>
+          <a class="dm-btn dm-btn-quiet" href="/kurstagebuch/2026-11-26/">📓 Kurstagebuch Tag 3: Berufe</a>
           <a class="dm-btn dm-btn-quiet" href="#erste-schritte/berufe">← Thema Berufe (Erste Schritte)</a></div>
         <div class="bf-row" style="margin-top:12px"><button type="button" class="dm-btn dm-btn-quiet" id="bf-print"><span aria-hidden="true">🖨</span> Drucken</button><button type="button" class="dm-btn dm-btn-quiet" data-share><span aria-hidden="true">🔗</span> Teilen</button></div></section>
       <p class="bf-printfoot">created by D.Prudnikau · deutsch-mit-dennis.de/berufe/</p>`, 'bf-page');

@@ -79,8 +79,8 @@ COUNTS = {f"sims:{i}": count_dirs("simulation", re.escape(i) + r"(-\d+)?") for i
 COUNTS["n:sims"] = sum(COUNTS[f"sims:{i}"] for i in SIM_IDS)
 COUNTS["n:grammar"] = count_dirs("grammatik", r"[a-c]\d-.+")
 COUNTS["n:lessons"] = count_dirs("lektion", r"[a-z0-9-]+")
-_dv = json.loads(subprocess.run(["node", "-e", "global.window=global;require('./verben-data.js');require('./diktat-data.js');process.stdout.write(JSON.stringify([DM.verben.length,Object.values(DM.diktat).reduce((n,l)=>n+l.length,0)]))"], cwd=R, capture_output=True, text=True, check=True).stdout)
-COUNTS["n:verbs"], COUNTS["n:diktat"] = _dv  # numbers of verbs and dictation sentences, always from the data
+_dv = json.loads(subprocess.run(["node", "-e", "global.window=global;require('./verben-data.js');require('./diktat-data.js');require('./berufe-data.js');process.stdout.write(JSON.stringify([DM.verben.length,Object.values(DM.diktat).reduce((n,l)=>n+l.length,0),DM.berufe.list.length]))"], cwd=R, capture_output=True, text=True, check=True).stdout)
+COUNTS["n:verbs"], COUNTS["n:diktat"], COUNTS["n:berufe"] = _dv  # numbers of verbs, dictation sentences and professions, always from the data
 
 def fill(s):
     return re.sub(r"\{((?:sims|n):[a-z0-9-]+)\}", lambda m: str(COUNTS[m.group(1)]), s)

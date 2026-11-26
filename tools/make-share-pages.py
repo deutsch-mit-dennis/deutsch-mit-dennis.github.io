@@ -161,7 +161,7 @@ SECTIONS = [
     ('bild', 'Bildbeschreibung DTZ: Beispiele, Redemittel', 'Bild beschreiben im DTZ (Sprechen Teil 2): vier Beispiele mit Musterbeschreibung, Redemittel, Übungen zu Adjektiven und Relativsätzen. Kostenlos.'),
     ('challenge', 'Tages-Challenge: 10 Aufgaben, jeden Tag neu', 'Artikel, Verben, Satzbau, Wortschatz und „Leben in Deutschland“ – 3 Minuten am Tag. Wie lang wird deine Lernserie?'),
     ('diktat', 'Deutsch Diktat online üben: A1 bis B2', 'Diktat zum Anhören für Deutschlernende: Sätze von A1 bis B2 hören, schreiben und sofort kontrollieren. Kostenlos, ohne Anmeldung, auf dem Handy.'),
-    ('berufe', 'Berufe auf Deutsch A1: Liste mit Artikel', '30 Berufe auf Deutsch für A1: der/die, Plural, Arbeitsort und Beispielsatz – mit Ton, Dialog und Quiz. Kostenlos, fürs Handy.'),
+    ('berufe', 'Berufe auf Deutsch A1: Liste mit Artikel und Plural', 'Was sind Sie von Beruf? 30 Berufe auf Deutsch für A1 mit der/die, Plural, Arbeitsort und Beispielsatz – mit Ton, Dialog und Quiz. Kostenlos.'),
     ('verben', 'Unregelmäßige Verben: Liste mit Perfekt', '132 unregelmäßige Verben von A1 bis B2 mit Präsens, Präteritum, Perfekt (haben oder sein) und Beispielsatz – mit Suche und Quiz. Kostenlos.'),
     ('lid', 'Leben in Deutschland Test & Einbürgerungstest: 310 Fragen', 'Kostenlos üben für den Einbürgerungstest und den Test „Leben in Deutschland“: alle 310 Fragen mit Lösung, Lernmodus und Testsimulation mit 33 Fragen.'),
     ('ueber-mich', 'Dennis Prudnikau: DaZ-Lehrer und Prüfer', 'Dennis Prudnikau: Deutschlehrer seit 2017, Prüfer für DTZ, telc und DTB, vom BAMF zugelassene Lehrkraft für Integrations- und Berufssprachkurse.'),
@@ -241,7 +241,7 @@ if X.get('words'):
     EXTRA['b2-woerter'] = words_html(X['words'], 'Mehr für B2: <a href="/niveau/b2/">alles für B2</a> · <a href="/ueben/sprechen/b2/">Sprechaufgaben B2</a>.')
 MORE = {'b1-woerter': 'Mehr für B1: <a href="/niveau/b1/">alles für B1</a> · <a href="/b1-30-tage/">B1 in 30 Tagen</a>.',
         'dtz-woerter': 'Mehr für den DTZ: <a href="/dtz-30-tage/">DTZ in 30 Tagen</a> · <a href="/niveau/a2/">alles für A2</a>.',
-        'a1-woerter': 'Mehr für Anfänger: <a href="/niveau/a1/">alles für A1</a> · <a href="/niveau/a0/">ganz neu anfangen (A0)</a>.'}
+        'a1-woerter': 'Mehr für Anfänger: <a href="/niveau/a1/">alles für A1</a> · <a href="/berufe/">Berufe A1 mit der/die und Plural</a> · <a href="/niveau/a0/">ganz neu anfangen (A0)</a>.'}
 for r, W in (X.get('w') or {}).items():
     if W:
         EXTRA[r] = words_html(W, MORE[r])
@@ -258,6 +258,8 @@ GAME_KW = {
     'lid-staat': 'Politik in Deutschland üben', 'alltag-formular': 'Formulare ausfüllen üben',
     'berufe-a1': 'Berufe auf Deutsch üben',
 }
+GAME_OG = {'berufe-a1': 'berufe.jpg'}  # own preview image instead of spiele.jpg
+GAME_BACK = {'berufe-a1': ('/berufe/', 'Zuerst die Liste: Berufe mit Artikel und Plural')}
 CAT_TXT = {'basis': 'Wörter und Grammatik', 'alltag': 'Alltag: Reisen, Einkaufen, Ämter', 'dtz': 'Prüfung DTZ',
            'b2': 'Beruf und Prüfung B1–B2', 'lid': 'Test „Leben in Deutschland“ und Einbürgerungstest', 'abenteuer': 'Abenteuer'}
 NEXT_TXT = {'basis': [('/grammatik/', 'Grammatik üben'), ('/challenge/', 'Tages-Challenge')],
@@ -279,6 +281,8 @@ def game_html(g):
     out += f'<p><b>Niveau:</b> {esc(g["level"])} · <b>Bereich:</b> {esc(CAT_TXT.get(g["cat"], ""))} · kostenlos, ohne Anmeldung, auch auf dem Handy.</p>\n'
     if g['options']:
         out += '<h3>Varianten</h3>\n<ul>' + ''.join(f'<li>{esc(o)}</li>' for o in g['options']) + '</ul>\n'
+    if g['id'] in GAME_BACK:
+        out += f'<p><a href="{GAME_BACK[g["id"]][0]}">{esc(GAME_BACK[g["id"]][1])}</a></p>\n'
     out += f'<p><a href="/#spiele/{g["id"]}">▶ Jetzt spielen</a></p>\n'
     if same:
         out += '<h3>Ähnliche Spiele</h3>\n<ul>' + ''.join(f'<li><a href="/spiele/{o["id"]}/">{esc(o["title"])}</a> ({esc(o["level"])})</li>' for o in same) + '</ul>\n'
@@ -312,18 +316,23 @@ EXTRA_LD['verben'] = [{'@context': 'https://schema.org', '@type': 'LearningResou
 EXTRA_LD['diktat'] = [{'@context': 'https://schema.org', '@type': 'LearningResource', 'name': 'Deutsch Diktat online', 'url': f'{SITE}/diktat/', 'inLanguage': 'de', 'isAccessibleForFree': True, 'learningResourceType': 'Diktat', 'educationalLevel': 'A1–B2', 'teaches': 'Hören und Rechtschreibung', 'author': {'@type': 'Person', '@id': f'{SITE}/#dennis', 'name': 'Dennis Prudnikau', 'url': f'{SITE}/ueber-mich/'}, 'provider': {'@type': 'EducationalOrganization', '@id': f'{SITE}/#org', 'name': 'Deutsch mit Dennis', 'url': f'{SITE}/'}}]
 # professions A1 (2026-11-26): readable list from berufe-data.js (same data as #berufe)
 BF = json.loads(subprocess.run(['node', '-e', "global.window=global;require('./berufe-data.js');process.stdout.write(JSON.stringify(DM.berufe))"], cwd=R, capture_output=True, text=True, encoding='utf-8', check=True).stdout)
-EXTRA['berufe'] = ('\n<p>Beruf ohne Artikel: <b>Ich bin Lehrerin.</b> (nicht: Ich bin eine Lehrerin.) Frauen: meistens mit -in, oft mit Umlaut: der Arzt → die Ärztin. '
+EXTRA['berufe'] = ('\n<p><b>Kurz gesagt:</b> Den Beruf sagt man ohne Artikel: <b>Ich bin Lehrer.</b> / <b>Ich bin Lehrerin.</b> (nicht: Ich bin eine Lehrerin.) '
+                   'Die Frage heißt: <b>Was sind Sie von Beruf?</b> (förmlich) oder <b>Was bist du von Beruf?</b> (locker). Die männliche Form hat den Artikel <i>der</i>. '
+                   'Die weibliche Form endet meistens auf -in und hat den Artikel <i>die</i>, oft mit Umlaut: der Arzt → die Ärztin. Im Plural immer <i>die</i>: die Ärzte, die Ärztinnen. '
                    'Im Satz steht das Verb auf Platz 2: Ich <b>arbeite</b> im Krankenhaus.</p>\n'
                    + ''.join(f'<h2>{h}</h2>\n<table><thead><tr><th>Beruf (männlich · weiblich)</th><th>Plural</th><th>Arbeitsort</th><th>Beispielsatz</th></tr></thead><tbody>'
                              + ''.join(f'<tr><td>{esc(b["m"])} · {esc(b["f"])}</td><td>{esc(b["pm"])} · {esc(b["pf"])}</td><td>{esc(b["ort"])}</td><td>{esc(" ".join(b["satz"]))}</td></tr>' for b in BF['list'] if b['gruppe'] == g)
                              + '</tbody></table>\n' for g, h in (('alltag', 'Alltag und Arbeit'), ('traum', 'Traumberufe')))
                    + '<h2>Wichtige Sätze</h2>\n<ul>' + ''.join(f'<li>{esc(r["t"])}</li>' for r in BF['redemittel']) + '</ul>\n'
                    + ''.join(f'<h2>{h}</h2>\n<p>' + '<br>'.join(f'{w}: {esc(t)}' for w, t in BF[k]) + '</p>\n' for k, h in (('dialogSie', 'Dialog förmlich (Sie)'), ('dialogDu', 'Dialog locker (du)')))
-                   + '<p>Üben: <a href="/spiele/berufe-a1/">Berufe-Quiz A1</a> · <a href="/spiele/satzbau/">Satz-Baumeister</a> · <a href="/material/arbeitsblaetter/es-berufe.pdf">Arbeitsblatt Berufe (PDF)</a> · <a href="/niveau/a1/">alles für A1</a></p>\n')
-EXTRA_LD['berufe'] = [{'@context': 'https://schema.org', '@type': 'LearningResource', 'name': 'Berufe auf Deutsch A1', 'url': f'{SITE}/berufe/', 'inLanguage': 'de', 'isAccessibleForFree': True, 'learningResourceType': ['Liste', 'Dialog', 'Quiz'], 'educationalLevel': 'A1', 'teaches': 'Berufe und Tätigkeiten auf Deutsch', 'author': {'@type': 'Person', '@id': f'{SITE}/#dennis', 'name': 'Dennis Prudnikau', 'url': f'{SITE}/ueber-mich/'}, 'provider': {'@type': 'EducationalOrganization', '@id': f'{SITE}/#org', 'name': 'Deutsch mit Dennis', 'url': f'{SITE}/'}}]
+                   + '<p>Üben: <a href="/spiele/berufe-a1/">Berufe-Quiz A1</a> · <a href="/spiele/satzbau/">Satz-Baumeister</a> · <a href="/material/arbeitsblaetter/es-berufe.pdf">Arbeitsblatt Berufe (PDF)</a> · '
+                   '<a href="https://create.kahoot.it/details/8800c1bb-1925-499a-bd91-510dc1b6f131">Kahoot: Berufe &amp; Traumberuf</a> · <a href="https://youtu.be/paHxGVmNdzU">Video: Berufe auf Deutsch A1</a></p>\n'
+                   '<p>Mehr: <a href="/kurstagebuch/2026-11-26/">Kurstagebuch Tag 3: Berufe</a> · <a href="/a1-woerter/">A1-Wörter nach Alltagsthemen</a> · <a href="/niveau/a1/">alles für A1</a></p>\n')
+EXTRA_LD['berufe'] = [{'@context': 'https://schema.org', '@type': 'LearningResource', 'name': 'Berufe auf Deutsch A1', 'url': f'{SITE}/berufe/', 'inLanguage': 'de', 'isAccessibleForFree': True, 'learningResourceType': ['Liste', 'Dialog', 'Quiz'], 'educationalLevel': 'A1', 'teaches': 'Berufe und Tätigkeiten auf Deutsch', 'isPartOf': {'@id': f'{SITE}/#website'}, 'author': {'@type': 'Person', '@id': f'{SITE}/#dennis', 'name': 'Dennis Prudnikau', 'url': f'{SITE}/ueber-mich/'}, 'provider': {'@type': 'EducationalOrganization', '@id': f'{SITE}/#org', 'name': 'Deutsch mit Dennis', 'url': f'{SITE}/'}}]
 # links to the answer pages /antworten/… (tools/answer_links.py, only pages that exist)
 sys.path.insert(0, os.path.join(R, 'tools'))
 from answer_links import answer_html  # noqa: E402
+EXTRA['berufe'] += answer_html('berufe')
 EXTRA['pruefung'] += answer_html('pruefung', 'Häufige Fragen kurz erklärt')
 EXTRA['simulation'] += answer_html('pruefung', 'Häufige Fragen kurz erklärt')
 EXTRA['spiele'] = (EXTRA.get('spiele', '') + '\n<h2>Alle Lernspiele</h2>\n' + ''.join(
@@ -497,7 +506,7 @@ urls.append(stub('simulation/lid', 'Einbürgerungstest online üben: 33 Fragen m
         'url': f'{SITE}/simulation/lid/', 'inLanguage': 'de', 'isAccessibleForFree': True, 'learningResourceType': 'Prüfungssimulation',
         'educationalLevel': 'A2–B1', 'teaches': 'Einbürgerungstest, Leben in Deutschland'}]))
 for g in GAMES:
-    urls.append(stub('spiele/' + g['id'], game_title(g), f"{g['desc']} Lernspiel {g['level']}: kostenlos, ohne Anmeldung, auch auf dem Handy.", f'{O}/spiele.jpg', game_html(g), game_ld(g)))
+    urls.append(stub('spiele/' + g['id'], game_title(g), f"{g['desc']} Lernspiel {g['level']}: kostenlos, ohne Anmeldung, auch auf dem Handy.", f"{O}/{GAME_OG.get(g['id'], 'spiele.jpg')}", game_html(g), game_ld(g)))
 for k in P:
     sub = f"{k['level']} · {k['target']} · {k['pages']} Seiten PDF" + (f" · {k['price']}" if k.get('price') else '')
     card(k['title'], sub, os.path.join(R, O, 'paket-' + k['id'] + '.jpg'), pic=os.path.join(R, k['img']), kicker='Lernpaket' if k['group'] != 'lehrende' else 'Für Lehrkräfte')

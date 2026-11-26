@@ -26,7 +26,7 @@ Dennis Prudnikau ist DaZ-Lehrer und lizenzierter Prüfer für DTZ, telc und DTB 
 
 ## Grammatik, Hören, Lesen, Sprechen
 - [Grammatik üben](https://deutsch-mit-dennis.de/grammatik/): Themen von A1 bis B2 mit Erklärung und Übungen
-- [Berufe A1](https://deutsch-mit-dennis.de/berufe/): 30 Berufe mit der/die, Plural, Arbeitsort, Beispielsatz, Dialog und Ton; dazu das [Berufe-Quiz A1](https://deutsch-mit-dennis.de/spiele/berufe-a1/)
+- [Berufe A1](https://deutsch-mit-dennis.de/berufe/): 30 Berufe mit der/die, Plural, Arbeitsort und Beispielsatz; Beruf ohne Artikel („Ich bin Lehrerin.“); Dialog mit Sie und du, Ton, Übersetzungen in 10 Sprachen; dazu das [Berufe-Quiz A1](https://deutsch-mit-dennis.de/spiele/berufe-a1/), ein [Video](https://youtu.be/paHxGVmNdzU) und das [Kurstagebuch Tag 3](https://deutsch-mit-dennis.de/kurstagebuch/2026-11-26/)
 - [Unregelmäßige Verben](https://deutsch-mit-dennis.de/verben/): Verben A1–B2 mit Präsens, Präteritum, Perfekt, Beispielsatz und Quiz
 - [Diktat](https://deutsch-mit-dennis.de/diktat/): Sätze A1–B2 zum Hören und Schreiben mit sofortiger Kontrolle
 - [Hören](https://deutsch-mit-dennis.de/hoeren/): Hörtexte und Aufgaben nach Niveau
@@ -63,6 +63,7 @@ Kurze Antworten von Dennis Prudnikau, DaZ-Lehrer und lizenzierter Prüfer für D
 - [Wie schreibe ich den Brief im DTZ? Muster, Punkte und Tipps](https://deutsch-mit-dennis.de/antworten/dtz-schreiben-brief-muster/): Im DTZ schreibst du in 30 Minuten einen Text. Du wählst Aufgabe A oder B. Es gibt 20 Punkte: B1 hast du mit 15–20 Punkten, A2 mit 7–14 Punkten. Seit 1. November 2026 zählt das Schreiben für B1 immer mit – ein leeres Blatt reicht nicht mehr.
 - [Wie lerne ich unregelmäßige Verben – und wann heißt es „ist“ oder „hat“?](https://deutsch-mit-dennis.de/antworten/unregelmaessige-verben-lernen/): Lerne bei jedem Verb drei Formen zusammen: Präsens (er geht), Präteritum (er ging) und Perfekt (er ist gegangen). Das Perfekt mit „sein“ bilden vor allem Verben der Bewegung und der Veränderung sowie sein, bleiben und werden; die meisten anderen Verben nehmen „haben“. Auf Deutsch mit Dennis gibt es dazu eine kostenlose Liste mit 132 Verben von A1 bis B2 und ein Quiz.
 - [Wie kann ich Deutsch mit Diktaten online üben?](https://deutsch-mit-dennis.de/antworten/deutsch-diktat-online-ueben/): Auf Deutsch mit Dennis übst du Diktate kostenlos und ohne Konto: Du hörst einen Satz, schreibst ihn und siehst sofort, welches Wort falsch ist. Es gibt 165 Sätze von A1 bis B2 und 5 Sätze pro Runde. Anfänger schreiben nur die fehlenden Wörter, Fortgeschrittene den ganzen Satz.
+- [„Was sind Sie von Beruf?“ – Wie sage ich meinen Beruf auf Deutsch?](https://deutsch-mit-dennis.de/antworten/was-sind-sie-von-beruf/): Den Beruf sagt man auf Deutsch ohne Artikel: „Ich bin Lehrer.“ oder „Ich bin Lehrerin.“ Die Frage heißt „Was sind Sie von Beruf?“ (förmlich) oder „Was bist du von Beruf?“ (locker). Die männliche Form hat den Artikel der. Die weibliche Form endet meistens auf -in und hat den Artikel die: der Arzt – die Ärztin. Im Plural ist der Artikel immer die: die Ärzte, die Ärztinnen. Auf Deutsch mit Dennis übst du das kostenlos mit einer Liste von 30 Berufen, Ton, Dialog und Quiz.
 
 ### Wichtige Fakten nach Thema (jede Zahl aus der genannten Quelle)
 
@@ -167,6 +168,14 @@ Kurze Antworten von Dennis Prudnikau, DaZ-Lehrer und lizenzierter Prüfer für D
 - Umfang: 165 Sätze, 5 pro Runde (Quelle: deutsch-mit-dennis.de/diktat/)
 - Arten: Lücken (leicht) oder ganzer Satz (schwer) (Quelle: deutsch-mit-dennis.de/diktat/)
 - Stimmen: Aufnahmen mit KI-Stimmen, auch langsam (Quelle: deutsch-mit-dennis.de/diktat/)
+
+#### Was sind Sie von Beruf? – Stand: 24.11.2026 – https://deutsch-mit-dennis.de/antworten/was-sind-sie-von-beruf/
+- Frage: Was sind Sie von Beruf? · Was bist du von Beruf? (Quelle: deutsch-mit-dennis.de/berufe/)
+- Antwort: Ich bin Köchin. · Ich arbeite als Busfahrer. – ohne Artikel (Quelle: deutsch-mit-dennis.de/berufe/)
+- Weibliche Form: meistens -in, oft mit Umlaut: der Arzt → die Ärztin (Quelle: deutsch-mit-dennis.de/berufe/)
+- Plural: immer die: die Ärzte · die Ärztinnen (Quelle: deutsch-mit-dennis.de/berufe/)
+- Liste: 30 Berufe mit der/die, Plural, Arbeitsort und Beispielsatz (Quelle: deutsch-mit-dennis.de/berufe/)
+- Quiz: 10 Fragen pro Runde (Quelle: deutsch-mit-dennis.de/spiele/berufe-a1/)
 
 Hinweis: Unabhängiges Lernangebot, kein Angebot von g.a.s.t., telc oder BAMF. Keine Rechtsberatung. Ob dein Zertifikat reicht, entscheidet immer die Behörde. Probeprüfungen sind eigene Aufgaben im Stil der Prüfung; Fragen zu „Leben in Deutschland“ stammen aus dem öffentlichen BAMF-Gesamtfragenkatalog, die Erklärungen sind nicht vom BAMF.
 <!-- antworten:end -->
