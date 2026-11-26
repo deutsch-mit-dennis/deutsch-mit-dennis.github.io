@@ -22,19 +22,21 @@
   }
   const isImg = s => /^[\w-]+\/[\w-]+$/.test(s);
   const noun = s => s.replace(/^(der|die) /, '');
+  const cap = s => s.charAt(0).toUpperCase() + s.slice(1);
   // pictures that do not show one profession clearly are never asked in "Wer ist das?"
   const NO_PIC = ['kassierer', 'erzieher', 'lagerarbeiter', 'altenpfleger', 'hausmeister', 'dolmetscher'];
   // professions that are too close to be used as wrong answers for each other (picture and activity)
   const NEAR = [['pfleger', 'altenpfleger', 'arzt'], ['arzt', 'tierarzt'], ['polizist', 'feuerwehr', 'pfleger', 'altenpfleger', 'arzt'], ['busfahrer', 'lkwfahrer'], ['verkaeufer', 'kassierer'],
     ['elektriker', 'hausmeister', 'mechaniker'], ['bauarbeiter', 'maler', 'elektriker', 'hausmeister'], ['postbote', 'lagerarbeiter'],
-    ['lehrer', 'erzieher'], ['reinigung', 'hausmeister'], ['schauspieler', 'saenger']];
+    ['lehrer', 'erzieher'], ['reinigung', 'hausmeister'], ['schauspieler', 'saenger'], ['baecker', 'verkaeufer']];
   const near = (a, b) => a === b || NEAR.some(g => g.includes(a) && g.includes(b));
   // workplaces that are also true for a profession: never offered as a "wrong" place
   const ALSO = { kellner: ['im Restaurant'], koch: ['im Café'], arzt: ['im Krankenhaus', 'in der Tierarztpraxis'], tierarzt: ['in der Praxis'],
-    pfleger: ['in der Praxis', 'im Altenheim'], altenpfleger: ['im Krankenhaus'], verkaeufer: ['im Supermarkt'], kassierer: ['im Geschäft'],
+    pfleger: ['in der Praxis', 'im Altenheim'], altenpfleger: ['im Krankenhaus'], verkaeufer: ['im Supermarkt', 'in der Bäckerei'], baecker: ['im Geschäft'], kassierer: ['im Geschäft'],
     elektriker: ['im Wohnhaus', 'in der Werkstatt'], maler: ['im Wohnhaus'], lehrer: ['in der Kita'], erzieher: ['in der Schule'],
-    dolmetscher: ['im Krankenhaus', 'in der Praxis', 'in der Schule'], busfahrer: ['auf der Autobahn'], lkwfahrer: ['im Bus'],
-    polizist: ['auf der Autobahn'], feuerwehr: ['auf der Autobahn'] };
+    dolmetscher: ['im Krankenhaus', 'in der Praxis', 'in der Schule', 'bei der Polizei'], busfahrer: ['auf der Autobahn'], lkwfahrer: ['im Bus'],
+    polizist: ['auf der Autobahn'], feuerwehr: ['auf der Autobahn'],
+    schauspieler: ['auf der Bühne'], saenger: ['im Theater'], lagerarbeiter: ['bei der Post'], postbote: ['im Lager'] };
   const NO_ORT = ['reinigung', 'hausmeister']; // work in many places
 
   DMGame.register({
@@ -70,11 +72,11 @@
         } else if (mode === 'taetigkeit') {
           q = `Was macht ${form}?`; say = q; right = b.taetigkeit;
           wrongs = others(b, right, o => near(b.id, o.id) ? '' : o.taetigkeit);
-          tip = `${form}: ${b.taetigkeit}`;
+          tip = `${cap(form)}: ${b.taetigkeit}`;
         } else if (mode === 'ort') {
           q = `Wo arbeitet ${form}?`; say = q; right = b.ort;
           wrongs = others(b, right, o => (ALSO[b.id] || []).includes(o.ort) ? '' : o.ort);
-          tip = `${form} arbeitet ${b.ort}.`;
+          tip = `${cap(form)} arbeitet ${b.ort}.`;
         } else {
           const n = noun(form), ein = fem ? 'eine' : 'ein', art = fem ? 'die' : 'der';
           // no picture here: the photos show one gender, the question alternates m/f

@@ -24,7 +24,7 @@ window.DMLazy = (() => {
     "spiele/endungen.js?v=20261118a",
     "spiele/satzbau.js?v=20261118a",
     "berufe-data.js?v=20261126b",
-    "spiele/berufe-a1.js?v=20261126b",
+    "spiele/berufe-a1.js?v=20261126c",
     "spiele/uhrzeit.js?v=20261118a",
     "spiele/planen.js?v=20261118a",
     "spiele/tagesmix.js?v=20261122a",
