@@ -161,6 +161,7 @@ SECTIONS = [
     ('bild', 'Bildbeschreibung DTZ: Beispiele, Redemittel', 'Bild beschreiben im DTZ (Sprechen Teil 2): vier Beispiele mit Musterbeschreibung, Redemittel, Übungen zu Adjektiven und Relativsätzen. Kostenlos.'),
     ('challenge', 'Tages-Challenge: 10 Aufgaben, jeden Tag neu', 'Artikel, Verben, Satzbau, Wortschatz und „Leben in Deutschland“ – 3 Minuten am Tag. Wie lang wird deine Lernserie?'),
     ('diktat', 'Deutsch Diktat online üben: A1 bis B2', 'Diktat zum Anhören für Deutschlernende: Sätze von A1 bis B2 hören, schreiben und sofort kontrollieren. Kostenlos, ohne Anmeldung, auf dem Handy.'),
+    ('berufe', 'Berufe auf Deutsch A1: Liste mit Artikel', '30 Berufe auf Deutsch für A1: der/die, Plural, Arbeitsort und Beispielsatz – mit Ton, Dialog und Quiz. Kostenlos, fürs Handy.'),
     ('verben', 'Unregelmäßige Verben: Liste mit Perfekt', '132 unregelmäßige Verben von A1 bis B2 mit Präsens, Präteritum, Perfekt (haben oder sein) und Beispielsatz – mit Suche und Quiz. Kostenlos.'),
     ('lid', 'Leben in Deutschland Test & Einbürgerungstest: 310 Fragen', 'Kostenlos üben für den Einbürgerungstest und den Test „Leben in Deutschland“: alle 310 Fragen mit Lösung, Lernmodus und Testsimulation mit 33 Fragen.'),
     ('ueber-mich', 'Dennis Prudnikau: DaZ-Lehrer und Prüfer', 'Dennis Prudnikau: Deutschlehrer seit 2017, Prüfer für DTZ, telc und DTB, vom BAMF zugelassene Lehrkraft für Integrations- und Berufssprachkurse.'),
@@ -255,6 +256,7 @@ GAME_KW = {
     'b2-nominal': 'Nominalstil üben', 'b1-telefon': 'Telefonieren im Beruf üben', 'b1-stil': 'Formelle E-Mail oder locker?',
     'tagesmix': 'B2-Prüfung täglich üben', 'lid-pruefung': 'Einbürgerungstest Quiz', 'lid-zeitstrahl': 'Deutsche Geschichte üben',
     'lid-staat': 'Politik in Deutschland üben', 'alltag-formular': 'Formulare ausfüllen üben',
+    'berufe-a1': 'Berufe auf Deutsch üben',
 }
 CAT_TXT = {'basis': 'Wörter und Grammatik', 'alltag': 'Alltag: Reisen, Einkaufen, Ämter', 'dtz': 'Prüfung DTZ',
            'b2': 'Beruf und Prüfung B1–B2', 'lid': 'Test „Leben in Deutschland“ und Einbürgerungstest', 'abenteuer': 'Abenteuer'}
@@ -308,6 +310,17 @@ EXTRA['diktat'] = (f'\n<p>So geht das Diktat: Du hörst einen Satz so oft, wie d
     + '<p>Mehr dazu: <a href="/antworten/deutsch-diktat-online-ueben/">Wie übe ich Deutsch mit Diktaten?</a> · <a href="/hoeren/">Hören üben</a> · <a href="/laute/">Laute und Buchstaben</a></p>\n')
 EXTRA_LD['verben'] = [{'@context': 'https://schema.org', '@type': 'LearningResource', 'name': 'Unregelmäßige Verben Deutsch: Liste und Quiz', 'url': f'{SITE}/verben/', 'inLanguage': 'de', 'isAccessibleForFree': True, 'learningResourceType': ['Liste', 'Quiz'], 'educationalLevel': 'A1–B2', 'teaches': 'Unregelmäßige Verben im Präsens, Präteritum und Perfekt', 'author': {'@type': 'Person', '@id': f'{SITE}/#dennis', 'name': 'Dennis Prudnikau', 'url': f'{SITE}/ueber-mich/'}, 'provider': {'@type': 'EducationalOrganization', '@id': f'{SITE}/#org', 'name': 'Deutsch mit Dennis', 'url': f'{SITE}/'}}]
 EXTRA_LD['diktat'] = [{'@context': 'https://schema.org', '@type': 'LearningResource', 'name': 'Deutsch Diktat online', 'url': f'{SITE}/diktat/', 'inLanguage': 'de', 'isAccessibleForFree': True, 'learningResourceType': 'Diktat', 'educationalLevel': 'A1–B2', 'teaches': 'Hören und Rechtschreibung', 'author': {'@type': 'Person', '@id': f'{SITE}/#dennis', 'name': 'Dennis Prudnikau', 'url': f'{SITE}/ueber-mich/'}, 'provider': {'@type': 'EducationalOrganization', '@id': f'{SITE}/#org', 'name': 'Deutsch mit Dennis', 'url': f'{SITE}/'}}]
+# professions A1 (2026-11-26): readable list from berufe-data.js (same data as #berufe)
+BF = json.loads(subprocess.run(['node', '-e', "global.window=global;require('./berufe-data.js');process.stdout.write(JSON.stringify(DM.berufe))"], cwd=R, capture_output=True, text=True, encoding='utf-8', check=True).stdout)
+EXTRA['berufe'] = ('\n<p>Beruf ohne Artikel: <b>Ich bin Lehrerin.</b> (nicht: Ich bin eine Lehrerin.) Frauen: meistens mit -in, oft mit Umlaut: der Arzt → die Ärztin. '
+                   'Im Satz steht das Verb auf Platz 2: Ich <b>arbeite</b> im Krankenhaus.</p>\n'
+                   + ''.join(f'<h2>{h}</h2>\n<table><thead><tr><th>Beruf (männlich · weiblich)</th><th>Plural</th><th>Arbeitsort</th><th>Beispielsatz</th></tr></thead><tbody>'
+                             + ''.join(f'<tr><td>{esc(b["m"])} · {esc(b["f"])}</td><td>{esc(b["pm"])} · {esc(b["pf"])}</td><td>{esc(b["ort"])}</td><td>{esc(" ".join(b["satz"]))}</td></tr>' for b in BF['list'] if b['gruppe'] == g)
+                             + '</tbody></table>\n' for g, h in (('alltag', 'Alltag und Arbeit'), ('traum', 'Traumberufe')))
+                   + '<h2>Wichtige Sätze</h2>\n<ul>' + ''.join(f'<li>{esc(r["t"])}</li>' for r in BF['redemittel']) + '</ul>\n'
+                   + ''.join(f'<h2>{h}</h2>\n<p>' + '<br>'.join(f'{w}: {esc(t)}' for w, t in BF[k]) + '</p>\n' for k, h in (('dialogSie', 'Dialog förmlich (Sie)'), ('dialogDu', 'Dialog locker (du)')))
+                   + '<p>Üben: <a href="/spiele/berufe-a1/">Berufe-Quiz A1</a> · <a href="/spiele/satzbau/">Satz-Baumeister</a> · <a href="/material/arbeitsblaetter/es-berufe.pdf">Arbeitsblatt Berufe (PDF)</a> · <a href="/niveau/a1/">alles für A1</a></p>\n')
+EXTRA_LD['berufe'] = [{'@context': 'https://schema.org', '@type': 'LearningResource', 'name': 'Berufe auf Deutsch A1', 'url': f'{SITE}/berufe/', 'inLanguage': 'de', 'isAccessibleForFree': True, 'learningResourceType': ['Liste', 'Dialog', 'Quiz'], 'educationalLevel': 'A1', 'teaches': 'Berufe und Tätigkeiten auf Deutsch', 'author': {'@type': 'Person', '@id': f'{SITE}/#dennis', 'name': 'Dennis Prudnikau', 'url': f'{SITE}/ueber-mich/'}, 'provider': {'@type': 'EducationalOrganization', '@id': f'{SITE}/#org', 'name': 'Deutsch mit Dennis', 'url': f'{SITE}/'}}]
 # links to the answer pages /antworten/… (tools/answer_links.py, only pages that exist)
 sys.path.insert(0, os.path.join(R, 'tools'))
 from answer_links import answer_html  # noqa: E402

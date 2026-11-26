@@ -1242,12 +1242,12 @@
           P(
             "der Pfleger · die Pflegerin",
             "a0/pflegerin",
-            "nurse / carer|медбрат / медсестра|медбрат / медсестра|ممرض / ممرضة|hemşire / bakıcı|پرستار|enfermero / enfermera|infermiere / infermiera",
+            "nurse / carer|медбрат / медсестра|медбрат / медсестра|ممرض / ممرضة|hemşire|پرستار|enfermero / enfermera|infermiere / infermiera",
           ),
           P(
             "der Friseur · die Friseurin",
             "a0/friseur",
-            "hairdresser|перукар / перукарка|парикмахер|حلاق / مصففة شعر|kuaför|آرایشگر|peluquero / peluquera|parrucchiere / parrucchiera",
+            "hairdresser|перукар / перукарка|парикмахер|مصفف شعر / مصففة شعر|kuaför|آرایشگر|peluquero / peluquera|parrucchiere / parrucchiera",
           ),
           P(
             "der Kellner · die Kellnerin",

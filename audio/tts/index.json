@@ -293,6 +293,552 @@
 "sig": "eb1b66af66",
 "text": "3e10bb3e74"
 },
+"bf-altenpfleger-s": {
+"v": "a8d782e3c7",
+"engine": "gemini",
+"sig": "a8d782e3c7",
+"text": "fccdecb926",
+"whole": true
+},
+"bf-altenpfleger-w": {
+"v": "d9f128c685",
+"engine": "gemini",
+"sig": "d9f128c685",
+"text": "2f37f2172c",
+"whole": true
+},
+"bf-arzt-s": {
+"v": "be4be54fa2",
+"engine": "gemini",
+"sig": "be4be54fa2",
+"text": "dff1d7a711",
+"whole": true
+},
+"bf-arzt-w": {
+"v": "ce7b36e06c",
+"engine": "gemini",
+"sig": "ce7b36e06c",
+"text": "5e4ee51a58",
+"whole": true
+},
+"bf-baecker-s": {
+"v": "c37b47e860",
+"engine": "gemini",
+"sig": "c37b47e860",
+"text": "5359088781",
+"whole": true
+},
+"bf-baecker-w": {
+"v": "e3f6db775a",
+"engine": "gemini",
+"sig": "e3f6db775a",
+"text": "c00f750560",
+"whole": true
+},
+"bf-bauarbeiter-s": {
+"v": "166abade8a",
+"engine": "gemini",
+"sig": "166abade8a",
+"text": "45605f6ae2",
+"whole": true
+},
+"bf-bauarbeiter-w": {
+"v": "8792f3ae6a",
+"engine": "gemini",
+"sig": "8792f3ae6a",
+"text": "39eecf9867",
+"whole": true
+},
+"bf-busfahrer-s": {
+"v": "678396e630",
+"engine": "gemini",
+"sig": "678396e630",
+"text": "5e9a1bbf2a",
+"whole": true
+},
+"bf-busfahrer-w": {
+"v": "1e19dbd795",
+"engine": "gemini",
+"sig": "1e19dbd795",
+"text": "668b840fcf",
+"whole": true
+},
+"bf-dolmetscher-s": {
+"v": "8f924b4d99",
+"engine": "gemini",
+"sig": "8f924b4d99",
+"text": "9a424637d9",
+"whole": true
+},
+"bf-dolmetscher-w": {
+"v": "000ba36db4",
+"engine": "gemini",
+"sig": "000ba36db4",
+"text": "1a70eff815",
+"whole": true
+},
+"bf-du-1": {
+"v": "a9b9c7fc6e",
+"engine": "gemini",
+"sig": "a9b9c7fc6e",
+"text": "f7c014fc08",
+"whole": true
+},
+"bf-du-2": {
+"v": "7ee659152d",
+"engine": "gemini",
+"sig": "7ee659152d",
+"text": "e74d4ce1c0",
+"whole": true
+},
+"bf-du-3": {
+"v": "749e46aeb1",
+"engine": "gemini",
+"sig": "749e46aeb1",
+"text": "e5ddf8acf4",
+"whole": true
+},
+"bf-du-4": {
+"v": "c144c82471",
+"engine": "gemini",
+"sig": "c144c82471",
+"text": "c521648910",
+"whole": true
+},
+"bf-du-5": {
+"v": "56f4b94810",
+"engine": "gemini",
+"sig": "56f4b94810",
+"text": "c0334b41e9",
+"whole": true
+},
+"bf-elektriker-s": {
+"v": "0e341e9078",
+"engine": "gemini",
+"sig": "0e341e9078",
+"text": "08276e41a4",
+"whole": true
+},
+"bf-elektriker-w": {
+"v": "edb0c0712e",
+"engine": "gemini",
+"sig": "edb0c0712e",
+"text": "0b95a3bbe1",
+"whole": true
+},
+"bf-erzieher-s": {
+"v": "3ca3a4a4f3",
+"engine": "gemini",
+"sig": "3ca3a4a4f3",
+"text": "3184f30ae9",
+"whole": true
+},
+"bf-erzieher-w": {
+"v": "2d9de54b25",
+"engine": "gemini",
+"sig": "2d9de54b25",
+"text": "b8d91710b7",
+"whole": true
+},
+"bf-feuerwehr-s": {
+"v": "08e023ced0",
+"engine": "gemini",
+"sig": "08e023ced0",
+"text": "48cd3dfacd",
+"whole": true
+},
+"bf-feuerwehr-w": {
+"v": "b9dd55be5e",
+"engine": "gemini",
+"sig": "b9dd55be5e",
+"text": "0899cdeb74",
+"whole": true
+},
+"bf-friseur-s": {
+"v": "e662b6f3e7",
+"engine": "gemini",
+"sig": "e662b6f3e7",
+"text": "5a413a7422",
+"whole": true
+},
+"bf-friseur-w": {
+"v": "e904b866ab",
+"engine": "gemini",
+"sig": "e904b866ab",
+"text": "4bd436697a",
+"whole": true
+},
+"bf-fussballspieler-s": {
+"v": "1cc96395bb",
+"engine": "gemini",
+"sig": "1cc96395bb",
+"text": "89838a4704",
+"whole": true
+},
+"bf-fussballspieler-w": {
+"v": "80cc284b8c",
+"engine": "gemini",
+"sig": "80cc284b8c",
+"text": "b71fb5f288",
+"whole": true
+},
+"bf-hausmeister-s": {
+"v": "dbbcc63c53",
+"engine": "gemini",
+"sig": "dbbcc63c53",
+"text": "f00b0ed2e2",
+"whole": true
+},
+"bf-hausmeister-w": {
+"v": "c22110d4e7",
+"engine": "gemini",
+"sig": "c22110d4e7",
+"text": "071a2a2839",
+"whole": true
+},
+"bf-informatiker-s": {
+"v": "e1d04e05de",
+"engine": "gemini",
+"sig": "e1d04e05de",
+"text": "977cca5eec",
+"whole": true
+},
+"bf-informatiker-w": {
+"v": "a28b7d9003",
+"engine": "gemini",
+"sig": "a28b7d9003",
+"text": "401f49c316",
+"whole": true
+},
+"bf-kassierer-s": {
+"v": "3d01c6c98b",
+"engine": "gemini",
+"sig": "3d01c6c98b",
+"text": "3028cb2b7f",
+"whole": true
+},
+"bf-kassierer-w": {
+"v": "2b78f3a3f1",
+"engine": "gemini",
+"sig": "2b78f3a3f1",
+"text": "cf66b254fd",
+"whole": true
+},
+"bf-kellner-s": {
+"v": "f5b1ac8136",
+"engine": "gemini",
+"sig": "f5b1ac8136",
+"text": "a951e6816f",
+"whole": true
+},
+"bf-kellner-w": {
+"v": "ba1c33be75",
+"engine": "gemini",
+"sig": "ba1c33be75",
+"text": "0f52dee080",
+"whole": true
+},
+"bf-koch-s": {
+"v": "c038e047cb",
+"engine": "gemini",
+"sig": "c038e047cb",
+"text": "4ca7ebdaf4",
+"whole": true
+},
+"bf-koch-w": {
+"v": "e174b9a249",
+"engine": "gemini",
+"sig": "e174b9a249",
+"text": "a30328b099",
+"whole": true
+},
+"bf-lagerarbeiter-s": {
+"v": "b3167fb426",
+"engine": "gemini",
+"sig": "b3167fb426",
+"text": "64e4e1e23a",
+"whole": true
+},
+"bf-lagerarbeiter-w": {
+"v": "556c1a85aa",
+"engine": "gemini",
+"sig": "556c1a85aa",
+"text": "1e2d7af6f0",
+"whole": true
+},
+"bf-lehrer-s": {
+"v": "eb9f44f8ca",
+"engine": "gemini",
+"sig": "eb9f44f8ca",
+"text": "373b84f7ff",
+"whole": true
+},
+"bf-lehrer-w": {
+"v": "83bc494603",
+"engine": "gemini",
+"sig": "83bc494603",
+"text": "6cf896ba76",
+"whole": true
+},
+"bf-lkwfahrer-s": {
+"v": "bc0d070e39",
+"engine": "gemini",
+"sig": "bc0d070e39",
+"text": "ab158cf509",
+"whole": true
+},
+"bf-lkwfahrer-w": {
+"v": "b435efe9d7",
+"engine": "gemini",
+"sig": "b435efe9d7",
+"text": "cb6ff00fc6",
+"whole": true
+},
+"bf-maler-s": {
+"v": "09b17893b7",
+"engine": "gemini",
+"sig": "09b17893b7",
+"text": "ac9d6f0707",
+"whole": true
+},
+"bf-maler-w": {
+"v": "0e54fb79c4",
+"engine": "gemini",
+"sig": "0e54fb79c4",
+"text": "75a6e2c4fb",
+"whole": true
+},
+"bf-mechaniker-s": {
+"v": "a99eecaef9",
+"engine": "gemini",
+"sig": "a99eecaef9",
+"text": "6f3e914f30",
+"whole": true
+},
+"bf-mechaniker-w": {
+"v": "fe4a1ba7c6",
+"engine": "gemini",
+"sig": "fe4a1ba7c6",
+"text": "1ce1a94258",
+"whole": true
+},
+"bf-pfleger-s": {
+"v": "29cefda919",
+"engine": "gemini",
+"sig": "29cefda919",
+"text": "f605881368",
+"whole": true
+},
+"bf-pfleger-w": {
+"v": "1286057f11",
+"engine": "gemini",
+"sig": "1286057f11",
+"text": "d89dc14a9d",
+"whole": true
+},
+"bf-pilot-s": {
+"v": "49481ae28c",
+"engine": "gemini",
+"sig": "49481ae28c",
+"text": "d9313001c1",
+"whole": true
+},
+"bf-pilot-w": {
+"v": "cd06943782",
+"engine": "gemini",
+"sig": "cd06943782",
+"text": "d0655dfd2d",
+"whole": true
+},
+"bf-polizist-s": {
+"v": "083d023dd3",
+"engine": "gemini",
+"sig": "083d023dd3",
+"text": "5fe5f40e44",
+"whole": true
+},
+"bf-polizist-w": {
+"v": "59ca5ac093",
+"engine": "gemini",
+"sig": "59ca5ac093",
+"text": "5e048d5378",
+"whole": true
+},
+"bf-postbote-s": {
+"v": "928a5e1794",
+"engine": "gemini",
+"sig": "928a5e1794",
+"text": "0d88567227",
+"whole": true
+},
+"bf-postbote-w": {
+"v": "cdcada6c16",
+"engine": "gemini",
+"sig": "cdcada6c16",
+"text": "1a3ba9ff79",
+"whole": true
+},
+"bf-reinigung-s": {
+"v": "d1f18a72aa",
+"engine": "gemini",
+"sig": "d1f18a72aa",
+"text": "3062330202",
+"whole": true
+},
+"bf-reinigung-w": {
+"v": "4848062726",
+"engine": "gemini",
+"sig": "4848062726",
+"text": "8baa4fd0d1",
+"whole": true
+},
+"bf-rm-1": {
+"v": "4d9c70c519",
+"engine": "gemini",
+"sig": "4d9c70c519",
+"text": "13adafc4de",
+"whole": true
+},
+"bf-rm-2": {
+"v": "8599314cc2",
+"engine": "gemini",
+"sig": "8599314cc2",
+"text": "d079e1289a",
+"whole": true
+},
+"bf-rm-3": {
+"v": "d0dfefb34b",
+"engine": "gemini",
+"sig": "d0dfefb34b",
+"text": "6498706e37",
+"whole": true
+},
+"bf-rm-4": {
+"v": "94c8144c80",
+"engine": "gemini",
+"sig": "94c8144c80",
+"text": "f3abb7f30b",
+"whole": true
+},
+"bf-rm-5": {
+"v": "8e5de7f86f",
+"engine": "gemini",
+"sig": "8e5de7f86f",
+"text": "c8ab4cddcc",
+"whole": true
+},
+"bf-rm-6": {
+"v": "e996edd611",
+"engine": "gemini",
+"sig": "e996edd611",
+"text": "d3f3877218",
+"whole": true
+},
+"bf-rm-7": {
+"v": "fa59416cfe",
+"engine": "gemini",
+"sig": "fa59416cfe",
+"text": "079425e6ba",
+"whole": true
+},
+"bf-rm-8": {
+"v": "4c27c19764",
+"engine": "gemini",
+"sig": "4c27c19764",
+"text": "b827b49235",
+"whole": true
+},
+"bf-saenger-s": {
+"v": "836b399acb",
+"engine": "gemini",
+"sig": "836b399acb",
+"text": "ab4abf82b6",
+"whole": true
+},
+"bf-saenger-w": {
+"v": "572f2ecc30",
+"engine": "gemini",
+"sig": "572f2ecc30",
+"text": "7045b5c821",
+"whole": true
+},
+"bf-schauspieler-s": {
+"v": "221c951511",
+"engine": "gemini",
+"sig": "221c951511",
+"text": "405d14cbd4",
+"whole": true
+},
+"bf-schauspieler-w": {
+"v": "609f9e10a7",
+"engine": "gemini",
+"sig": "609f9e10a7",
+"text": "6f94e8c68a",
+"whole": true
+},
+"bf-sie-1": {
+"v": "1a766bb7c4",
+"engine": "gemini",
+"sig": "1a766bb7c4",
+"text": "e40beaabcb",
+"whole": true
+},
+"bf-sie-2": {
+"v": "0135e6a74c",
+"engine": "gemini",
+"sig": "0135e6a74c",
+"text": "8818e2d9e5",
+"whole": true
+},
+"bf-sie-3": {
+"v": "dce4da1aec",
+"engine": "gemini",
+"sig": "dce4da1aec",
+"text": "8eac86b643",
+"whole": true
+},
+"bf-sie-4": {
+"v": "4443f8732e",
+"engine": "gemini",
+"sig": "4443f8732e",
+"text": "20fe363b31",
+"whole": true
+},
+"bf-sie-5": {
+"v": "917473645e",
+"engine": "gemini",
+"sig": "917473645e",
+"text": "e42d7b0c7e",
+"whole": true
+},
+"bf-tierarzt-s": {
+"v": "9a907b8556",
+"engine": "gemini",
+"sig": "9a907b8556",
+"text": "06d481d629",
+"whole": true
+},
+"bf-tierarzt-w": {
+"v": "327523f035",
+"engine": "gemini",
+"sig": "327523f035",
+"text": "f9ca1218d0",
+"whole": true
+},
+"bf-verkaeufer-s": {
+"v": "d21fc119ba",
+"engine": "gemini",
+"sig": "d21fc119ba",
+"text": "f7e83ffe8a",
+"whole": true
+},
+"bf-verkaeufer-w": {
+"v": "27b89b9500",
+"engine": "gemini",
+"sig": "27b89b9500",
+"text": "a704424390",
+"whole": true
+},
 "dtbb1-1-01": {
 "v": "df966420da",
 "engine": "gemini",

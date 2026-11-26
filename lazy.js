@@ -23,6 +23,8 @@ window.DMLazy = (() => {
     "spiele/mikula.js?v=20261107e",
     "spiele/endungen.js?v=20261118a",
     "spiele/satzbau.js?v=20261118a",
+    "berufe-data.js?v=20261126b",
+    "spiele/berufe-a1.js?v=20261126c",
     "spiele/uhrzeit.js?v=20261118a",
     "spiele/planen.js?v=20261118a",
     "spiele/tagesmix.js?v=20261122a",
@@ -37,8 +39,8 @@ window.DMLazy = (() => {
     "lesen-data.js?v=20261111m"
   ],
   "erste": [
-    "erste-schritte-data.js?v=20261118e",
-    "erste-schritte.js?v=20261125a"
+    "erste-schritte-data.js?v=20261126a",
+    "erste-schritte.js?v=20261126a"
   ],
   "bild": [
     "bild-data.js?v=20261008e",
@@ -118,9 +120,13 @@ window.DMLazy = (() => {
   ],
   "suche": [
     "suche.js?v=20261124c"
+  ],
+  "berufe": [
+    "berufe-data.js?v=20261126b",
+    "berufe.js?v=20261126c"
   ]
 };
-  const NEED = { spiele: ['spiele'], hoeren: ['hoeren'], lesen: ['lesen'], pruefung: ['hoeren', 'lesen'], training: ['hoeren', 'lesen'], bild: ['bild'], 'erste-schritte': ['erste'], niveau: ['erste', 'hoeren', 'lesen'], grammatik: ['grammatik'], laute: ['laute'], lid: ['lidx', 'lidt'], simulation: ['lidx', 'muster', 'lidt', 'sim'], vorbereitung: ['lidx', 'muster', 'lidt', 'sim'], ueben: ['muster'], pruefungsinfo: ['fakten'], 'b2-30-tage': ['b230'], 'b1-30-tage': ['b130'], 'b2-woerter': ['wb2', 'wcore'], 'b1-woerter': ['wb1', 'wcore'], 'dtz-woerter': ['wdtz', 'wcore'], 'a1-woerter': ['wa1', 'wcore'], sprachbausteine: ['b2t'], 'telc-b2-sprechen': ['b2t'], witz: ['witz'], mikula: ['mikula'], 'mikula-buch': ['mikulab'], 'dtz-30-tage': ['d30'], lieder: ['lieder'], diktat: ['diktat'], verben: ['verben'], suche: ['suche'] };
+  const NEED = { spiele: ['spiele'], hoeren: ['hoeren'], lesen: ['lesen'], pruefung: ['hoeren', 'lesen'], training: ['hoeren', 'lesen'], bild: ['bild'], 'erste-schritte': ['erste'], niveau: ['erste', 'hoeren', 'lesen'], grammatik: ['grammatik'], laute: ['laute'], lid: ['lidx', 'lidt'], simulation: ['lidx', 'muster', 'lidt', 'sim'], vorbereitung: ['lidx', 'muster', 'lidt', 'sim'], ueben: ['muster'], pruefungsinfo: ['fakten'], 'b2-30-tage': ['b230'], 'b1-30-tage': ['b130'], 'b2-woerter': ['wb2', 'wcore'], 'b1-woerter': ['wb1', 'wcore'], 'dtz-woerter': ['wdtz', 'wcore'], 'a1-woerter': ['wa1', 'wcore'], sprachbausteine: ['b2t'], 'telc-b2-sprechen': ['b2t'], witz: ['witz'], mikula: ['mikula'], 'mikula-buch': ['mikulab'], 'dtz-30-tage': ['d30'], lieder: ['lieder'], diktat: ['diktat'], verben: ['verben'], suche: ['suche'], berufe: ['berufe'] };
   const done = {}, busy = {}, loaded = {};
   const one = src => new Promise((res, rej) => { const s = document.createElement('script'); s.src = src; s.async = false; s.onload = () => res(); s.onerror = () => { s.remove(); rej(new Error('not loaded: ' + src)); }; document.head.appendChild(s); });
   const group = g => busy[g] || (busy[g] = GROUPS[g].reduce((p, src) => p.then(() => loaded[src] || one(src).then(() => { loaded[src] = true; })), Promise.resolve()).then(() => { done[g] = true; }, e => { delete busy[g]; throw e; }));
