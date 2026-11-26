@@ -141,7 +141,7 @@ card('Deutsch lernen mit Dennis', 'Kostenlose Übungen von A0 bis B2 Beruf: Spre
 GAMES = json.loads(subprocess.run(['node', os.path.join(R, 'tools', 'spiele-meta.js')], cwd=R, capture_output=True, text=True, encoding='utf-8', check=True).stdout)
 SECTIONS = [
     ('lernpakete', 'Lernpakete als PDF', 'Ausführliche PDF-Pakete mit Musterlösungen für DTZ, B2 Beruf, „Leben in Deutschland“ und für Lehrkräfte.'),
-    ('lieder', 'Deutsch mit Liedern', '63 eigene Lieder von A1 bis C1 – mit Text, Aufgaben und Lösungen. Hör zu, sing mit und lerne.'),
+    ('lieder', 'Deutsch mit Liedern', '68 eigene Lieder von A1 bis C1 – mit Text, Aufgaben und Lösungen. Hör zu, sing mit und lerne.'),
     ('pruefung', 'B1 und B2 Prüfung üben: DTZ, telc, DTB', 'Prüfung üben mit Schreiben, Sprechen, Hören und Lesen: DTZ, Leben in Deutschland, telc B1/B2 und DTB B1/B2. Kostenlos, von einem lizenzierten Prüfer.'),
     ('dtz-30-tage', 'DTZ Prüfung vorbereiten: 30-Tage-Lernplan', 'Lernplan für den Deutsch-Test für Zuwanderer: 30 Tage, täglich 20–40 Minuten, sechs Probeprüfungen mit Uhr. Kostenlos, von einem DTZ-Prüfer.'),
     ('b2-30-tage', 'B2 Prüfung vorbereiten: 30-Tage-Lernplan', 'Lernplan für telc Deutsch B2 oder DTB B2: 30 Tage, meist 30–60 Minuten täglich, Einstiegstest und Generalprobe mit Uhr. Kostenlos, von einem telc-Prüfer.'),

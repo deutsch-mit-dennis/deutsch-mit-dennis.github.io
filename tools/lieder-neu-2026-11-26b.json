@@ -1,0 +1,478 @@
+[
+ {
+  "id": "a1-14-ich-moechte-einen-tee",
+  "level": "A1",
+  "title": "Ich möchte einen Tee",
+  "theme": "Im Café am Abend: bestellen, fragen und bezahlen",
+  "grammar": "möchte + Akkusativ (einen Tee, eine Suppe, ein Wasser); Sätze im Café: Was möchten Sie? Was kostet das? Zahlen, bitte!",
+  "intro": "Ein kalter, regnerischer Abend: Jemand geht allein in ein kleines Café, bestellt Tee, Suppe und Kuchen und bezahlt. Mit diesem Lied übst du „Ich möchte einen / eine / ein …“ und wichtige Sätze im Café.",
+  "lyrics": "[Verse 1]\nEs ist Abend, es ist spät,\nder Regen fällt, der Wind weht.\nDa ist ein Café, das Licht ist warm,\nich gehe hinein, ich bin allein.\n„Guten Abend! Was möchten Sie?“\n„Einen Platz am Fenster, bitte.“\n„Hier, bitte schön!“ – „Danke schön!“\nIch sitze am Fenster und sehe den Regen.\n\n[Chorus]\nIch möchte einen Tee,\neinen Tee mit Zitrone.\nIch möchte eine Suppe,\neine Suppe mit Bohnen.\nIch möchte ein Stück Kuchen\nund dann noch ein Wasser.\nDraußen ist es kalt und nass –\nhier drinnen ist es warm.\n\n[Verse 2]\nDie Kellnerin ist nett, sie lacht,\nsie bringt den Tee – es ist schon acht.\nAm Tisch daneben sitzt ein Mann,\ner liest ein Buch, er trinkt Kaffee.\nEine Frau ruft leise: „Zahlen, bitte!“\nEin Kind isst Eis – im Winter, oje!\n\n[Chorus]\nIch möchte einen Tee,\neinen Tee mit Zitrone.\nIch möchte eine Suppe,\neine Suppe mit Bohnen.\nIch möchte ein Stück Kuchen\nund dann noch ein Wasser.\nDraußen ist es kalt und nass –\nhier drinnen ist es warm.\n\n[Bridge]\n„Was kostet das?“ – „Neun Euro zwanzig.“\n„Zehn Euro, bitte. Stimmt so.“\n„Vielen Dank und gute Nacht!“\nIch gehe nach Hause – und ich bin froh.\n\n[Chorus]\nIch möchte einen Tee,\neinen Tee mit Zitrone.\nIch möchte eine Suppe,\neine Suppe mit Bohnen.\nIch möchte ein Stück Kuchen\nund dann noch ein Wasser.\nDraußen ist es kalt und nass –\nhier drinnen ist es warm.\n\n[Outro]\nIch möchte einen Tee …\nDraußen ist es kalt und nass.\nGute Nacht. Bis morgen.",
+  "vocab": [
+   [
+    "das Café, die Cafés",
+    "ein kleines Lokal: Man trinkt Kaffee oder Tee und isst Kuchen."
+   ],
+   [
+    "Was möchten Sie?",
+    "höfliche Frage: Was wollen Sie essen oder trinken?"
+   ],
+   [
+    "der Platz, die Plätze",
+    "hier: der Sitzplatz, z. B. am Fenster"
+   ],
+   [
+    "die Zitrone, die Zitronen",
+    "eine gelbe, saure Frucht"
+   ],
+   [
+    "die Suppe, die Suppen",
+    "warmes, flüssiges Essen – man isst sie mit dem Löffel"
+   ],
+   [
+    "das Stück Kuchen",
+    "ein Teil von einem Kuchen"
+   ],
+   [
+    "die Kellnerin / der Kellner",
+    "Person im Café oder Restaurant: Sie bringt das Essen."
+   ],
+   [
+    "Zahlen, bitte!",
+    "Ich möchte jetzt bezahlen."
+   ],
+   [
+    "Was kostet das?",
+    "Wie viel Geld muss ich bezahlen?"
+   ],
+   [
+    "Stimmt so.",
+    "Das Wechselgeld ist für Sie (Trinkgeld)."
+   ]
+  ],
+  "tf": [
+   [
+    "Es ist Morgen.",
+    false,
+    "Es ist Abend."
+   ],
+   [
+    "Draußen regnet es.",
+    true,
+    ""
+   ],
+   [
+    "Die Person sitzt am Fenster.",
+    true,
+    ""
+   ],
+   [
+    "Der Mann am Tisch daneben liest eine Zeitung.",
+    false,
+    "Er liest ein Buch."
+   ],
+   [
+    "Das Essen kostet neun Euro zwanzig.",
+    true,
+    ""
+   ]
+  ],
+  "style": "Atmospheric future garage, 130 BPM. Intimate male vocals with heavy reverb and pitch-shifted textures. Soaring female vocals in the chorus. Deep sub-bass, shuffled 2-step garage drums, atmospheric pads, chopped vocal samples, piano, cello, vinyl crackle. Nocturnal city ambience, distant voices, rain. Dreamy, melancholic, romantic, mysterious, cinematic. Poetry clearly understandable. Unforgettable hook, cinematic finale. 2026 future garage aesthetic.",
+  "author": "Dzianis Prudnikau (Dennis)",
+  "gap": {
+   "type": "gap",
+   "title": "Aufgabe 2: Lückentext",
+   "instruction": "Hör das Lied und ergänze die fehlenden Wörter.",
+   "items": [
+    "der Regen fällt, der Wind ___.",
+    "Ich möchte einen ___,",
+    "einen Tee mit ___.",
+    "er liest ein Buch, er trinkt ___.",
+    "„Zehn Euro, bitte. Stimmt ___.“"
+   ],
+   "solutions": [
+    "weht",
+    "Tee",
+    "Zitrone",
+    "Kaffee",
+    "so"
+   ]
+  },
+  "gram": {
+   "title": "Grammatik – möchte + Akkusativ: einen, eine, ein",
+   "instruction": "Ergänze einen, eine oder ein. der Tee → einen Tee, die Suppe → eine Suppe, das Wasser → ein Wasser.",
+   "items": [
+    "Ich möchte ___ Tee. (der Tee)",
+    "Ich möchte ___ Suppe. (die Suppe)",
+    "Ich möchte ___ Wasser. (das Wasser)",
+    "Möchten Sie ___ Kaffee? (der Kaffee)",
+    "Ich möchte ___ Stück Kuchen. (das Stück)",
+    "Wir möchten ___ Pizza. (die Pizza)"
+   ],
+   "solutions": [
+    "Ich möchte einen Tee.",
+    "Ich möchte eine Suppe.",
+    "Ich möchte ein Wasser.",
+    "Möchten Sie einen Kaffee?",
+    "Ich möchte ein Stück Kuchen.",
+    "Wir möchten eine Pizza."
+   ]
+  }
+ },
+ {
+  "id": "a2-14-ueber-die-bruecke",
+  "level": "A2",
+  "title": "Über die Brücke",
+  "theme": "Mit dem Fahrrad durch die Stadt bei Nacht: Wege, Orte und Verkehr",
+  "grammar": "Wechselpräpositionen: Wohin? + Akkusativ (über die Brücke, in den Park) – Wo? + Dativ (auf der Brücke, im Park)",
+  "intro": "Zehn Uhr abends: Jemand fährt mit dem Fahrrad durch die leere Stadt – über die Brücke, in den Park, an den Fluss. Mit diesem Lied übst du die Wechselpräpositionen: Wohin? mit Akkusativ, Wo? mit Dativ.",
+  "lyrics": "[Verse 1]\nIch steige auf mein Fahrrad,\ndie Uhr am Bahnhof zeigt zehn.\nDas Licht ist an, die Jacke zu –\nheute will ich die Stadt sehen.\nIch fahre durch die leeren Straßen,\nan der Ampel warte ich kurz.\nRot, dann Gelb, dann wieder Grün –\nund weiter geht's, ich fahre los.\n\n[Chorus]\nIch fahre über die Brücke,\nder Fluss liegt schwarz und still.\nAuf der Brücke bleib ich stehen,\nweil ich die Lichter sehen will.\nIch fahre in die Nacht hinein,\nder Wind ist kalt und frei.\nIn der Nacht bin ich nicht allein –\ndie ganze Stadt ist dabei.\n\n[Verse 2]\nIch fahre in den Park hinein,\nim Park ist niemand mehr.\nAuf der Bank liegt eine Zeitung,\nunter dem Baum ist es dunkel und leer.\nIch stelle das Rad an die Mauer,\nich setze mich auf die Bank.\nNeben mir schläft eine Katze –\nfür diesen Moment: danke.\n\n[Chorus]\nIch fahre über die Brücke,\nder Fluss liegt schwarz und still.\nAuf der Brücke bleib ich stehen,\nweil ich die Lichter sehen will.\nIch fahre in die Nacht hinein,\nder Wind ist kalt und frei.\nIn der Nacht bin ich nicht allein –\ndie ganze Stadt ist dabei.\n\n[Bridge]\nWohin? – In die Stadt, über den Platz, an den Fluss.\nWo? – In der Stadt, auf dem Platz, am Fluss.\nWohin fährst du? – Ich weiß es nicht.\nWo bist du? – Hier, im Licht.\n\n[Chorus]\nIch fahre über die Brücke,\nder Fluss liegt schwarz und still.\nAuf der Brücke bleib ich stehen,\nweil ich die Lichter sehen will.\nIch fahre in die Nacht hinein,\nder Wind ist kalt und frei.\nIn der Nacht bin ich nicht allein –\ndie ganze Stadt ist dabei.\n\n[Outro]\nÜber die Brücke … auf der Brücke …\nDie ganze Stadt ist dabei.",
+  "vocab": [
+   [
+    "auf das Fahrrad steigen",
+    "sich auf das Fahrrad setzen, um loszufahren"
+   ],
+   [
+    "die Ampel, die Ampeln",
+    "Licht an der Straße: Rot – stehen, Grün – fahren"
+   ],
+   [
+    "losfahren (fährt los)",
+    "anfangen zu fahren"
+   ],
+   [
+    "die Brücke, die Brücken",
+    "Weg über einen Fluss oder eine Straße"
+   ],
+   [
+    "der Fluss, die Flüsse",
+    "großes, fließendes Wasser, z. B. der Rhein"
+   ],
+   [
+    "stehen bleiben",
+    "aufhören zu gehen oder zu fahren"
+   ],
+   [
+    "(in die Nacht) hinein",
+    "nach innen, in etwas hinein"
+   ],
+   [
+    "die Bank, die Bänke",
+    "ein langer Sitz, z. B. im Park"
+   ],
+   [
+    "die Mauer, die Mauern",
+    "eine Wand aus Steinen, oft draußen"
+   ],
+   [
+    "etwas an + Akk. stellen",
+    "etwas irgendwohin tun, sodass es steht"
+   ]
+  ],
+  "tf": [
+   [
+    "Die Person fährt am Morgen mit dem Fahrrad.",
+    false,
+    "Es ist zehn Uhr abends."
+   ],
+   [
+    "An der Ampel wartet die Person kurz.",
+    true,
+    ""
+   ],
+   [
+    "Im Park sind viele Menschen.",
+    false,
+    "Im Park ist niemand mehr."
+   ],
+   [
+    "Auf der Bank liegt eine Zeitung.",
+    true,
+    ""
+   ],
+   [
+    "Auf der Brücke bleibt die Person stehen und sieht die Lichter.",
+    true,
+    ""
+   ]
+  ],
+  "style": "Atmospheric future garage, 130 BPM. Intimate male vocals with heavy reverb and pitch-shifted textures. Soaring female vocals in the chorus. Deep sub-bass, shuffled 2-step garage drums, atmospheric pads, chopped vocal samples, piano, cello, vinyl crackle. Nocturnal city ambience, distant voices, rain. Dreamy, melancholic, romantic, mysterious, cinematic. Poetry clearly understandable. Unforgettable hook, cinematic finale. 2026 future garage aesthetic.",
+  "author": "Dzianis Prudnikau (Dennis)",
+  "gap": {
+   "type": "gap",
+   "title": "Aufgabe 2: Lückentext",
+   "instruction": "Hör das Lied und ergänze die fehlenden Wörter.",
+   "items": [
+    "die Uhr am Bahnhof zeigt ___.",
+    "Ich fahre über die ___,",
+    "im Park ist niemand ___.",
+    "Ich stelle das Rad an die ___,",
+    "Neben mir schläft eine ___ –"
+   ],
+   "solutions": [
+    "zehn",
+    "Brücke",
+    "mehr",
+    "Mauer",
+    "Katze"
+   ]
+  },
+  "gram": {
+   "title": "Grammatik – Wechselpräpositionen: Wohin? oder Wo?",
+   "instruction": "Ergänze den Artikel. Wohin? (Bewegung, Richtung) → Akkusativ. Wo? (Ort, Position) → Dativ.",
+   "items": [
+    "Ich fahre über ___ Brücke. (Wohin?)",
+    "Ich bleibe auf ___ Brücke stehen. (Wo?)",
+    "Ich fahre in ___ Park. (Wohin?)",
+    "Die Zeitung liegt auf ___ Bank. (Wo?)",
+    "Ich stelle das Rad an ___ Mauer. (Wohin?)",
+    "Unter ___ Baum ist es dunkel. (Wo?)"
+   ],
+   "solutions": [
+    "Ich fahre über die Brücke.",
+    "Ich bleibe auf der Brücke stehen.",
+    "Ich fahre in den Park.",
+    "Die Zeitung liegt auf der Bank.",
+    "Ich stelle das Rad an die Mauer.",
+    "Unter dem Baum ist es dunkel."
+   ]
+  }
+ },
+ {
+  "id": "b1-14-ich-freue-mich-auf-morgen",
+  "level": "B1",
+  "title": "Ich freue mich auf morgen",
+  "theme": "Abendschule: nach der Arbeit lernen – Ziele, Müdigkeit, Motivation und Prüfung",
+  "grammar": "Reflexive Verben mit Präposition (sich freuen auf, sich ärgern über, sich konzentrieren auf, sich vorbereiten auf, sich kümmern um, sich erinnern an) – Reflexivpronomen mich, dich, sich, uns, euch",
+  "intro": "Nach der Arbeit geht es noch in die Abendschule – müde, aber mit einem Ziel vor Augen. Mit diesem Lied übst du reflexive Verben mit Präposition: sich freuen auf, sich ärgern über, sich vorbereiten auf …",
+  "lyrics": "[Verse 1]\nUm sechs ist Feierabend,\nich wasche mir die Hände schnell.\nDann nehme ich die Bahn zur Schule,\ndie Fenster dort sind noch hell.\nIch setze mich in die dritte Reihe,\nmein Heft ist alt, mein Stift ist neu.\nIch ärgere mich über meine Müdigkeit –\ndoch ich bleibe mir treu.\n\n[Chorus]\nIch freue mich auf morgen,\nauch wenn die Nacht noch dauert.\nIch konzentriere mich auf jedes Wort,\nauch wenn der Zweifel lauert.\nIch bereite mich auf die Prüfung vor,\nSeite für Seite, Licht für Licht.\nIch freue mich auf morgen –\nund aufgeben werde ich nicht.\n\n[Verse 2]\nDie Lehrerin erklärt die Grammatik,\nneben mir sitzt Amir aus Herat.\nEr kümmert sich um seine Kinder\nund lernt nachts, wenn er Zeit hat.\nIch erinnere mich an meine Mutter:\n„Lernen, Kind, ist nie umsonst.“\nIch habe mich lange nicht getraut –\njetzt weiß ich: Ich kann es doch.\n\n[Chorus]\nIch freue mich auf morgen,\nauch wenn die Nacht noch dauert.\nIch konzentriere mich auf jedes Wort,\nauch wenn der Zweifel lauert.\nIch bereite mich auf die Prüfung vor,\nSeite für Seite, Licht für Licht.\nIch freue mich auf morgen –\nund aufgeben werde ich nicht.\n\n[Bridge]\nUm zehn ist der Unterricht zu Ende,\ndie Straßen sind dunkel und nass.\nIch setze mich in die letzte Bahn\nund lerne Vokabeln – mit Spaß.\n\n[Chorus]\nIch freue mich auf morgen,\nauch wenn die Nacht noch dauert.\nIch konzentriere mich auf jedes Wort,\nauch wenn der Zweifel lauert.\nIch bereite mich auf die Prüfung vor,\nSeite für Seite, Licht für Licht.\nIch freue mich auf morgen –\nund aufgeben werde ich nicht.\n\n[Outro]\nIch freue mich auf morgen …\nSeite für Seite, Licht für Licht.\nAufgeben werde ich nicht.",
+  "vocab": [
+   [
+    "der Feierabend",
+    "das Ende der Arbeitszeit am Tag"
+   ],
+   [
+    "die Müdigkeit",
+    "das Gefühl, wenn man müde ist und schlafen möchte"
+   ],
+   [
+    "sich ärgern über + Akk.",
+    "wegen etwas böse oder unzufrieden sein"
+   ],
+   [
+    "sich treu bleiben",
+    "seine Ziele und Werte nicht vergessen"
+   ],
+   [
+    "sich konzentrieren auf + Akk.",
+    "nur an eine Sache denken und gut aufpassen"
+   ],
+   [
+    "der Zweifel lauert",
+    "die Unsicherheit wartet versteckt und kann jederzeit kommen"
+   ],
+   [
+    "sich vorbereiten auf + Akk.",
+    "für etwas lernen oder üben, z. B. für eine Prüfung"
+   ],
+   [
+    "aufgeben (gibt auf, hat aufgegeben)",
+    "mit etwas aufhören, weil es zu schwer ist"
+   ],
+   [
+    "sich kümmern um + Akk.",
+    "für jemanden sorgen, z. B. für Kinder"
+   ],
+   [
+    "umsonst",
+    "hier: ohne Erfolg, ohne Nutzen (auch: kostenlos)"
+   ]
+  ],
+  "tf": [
+   [
+    "Die Person geht nach der Arbeit zur Schule.",
+    true,
+    ""
+   ],
+   [
+    "Sie fährt mit dem Auto zur Schule.",
+    false,
+    "Sie nimmt die Bahn."
+   ],
+   [
+    "Amir hat Kinder.",
+    true,
+    ""
+   ],
+   [
+    "Der Unterricht endet um acht Uhr.",
+    false,
+    "Er endet um zehn Uhr."
+   ],
+   [
+    "In der Bahn lernt die Person Vokabeln.",
+    true,
+    ""
+   ]
+  ],
+  "style": "Atmospheric future garage, 130 BPM. Intimate male vocals with heavy reverb and pitch-shifted textures. Soaring female vocals in the chorus. Deep sub-bass, shuffled 2-step garage drums, atmospheric pads, chopped vocal samples, piano, cello, vinyl crackle. Nocturnal city ambience, distant voices, rain. Dreamy, melancholic, romantic, mysterious, cinematic. Poetry clearly understandable. Unforgettable hook, cinematic finale. 2026 future garage aesthetic.",
+  "author": "Dzianis Prudnikau (Dennis)",
+  "gap": {
+   "type": "gap",
+   "title": "Aufgabe 2: Lückentext",
+   "instruction": "Hör das Lied und ergänze die fehlenden Wörter.",
+   "items": [
+    "die Fenster dort sind noch ___.",
+    "Ich freue mich auf ___,",
+    "Ich konzentriere mich auf jedes ___,",
+    "Er kümmert sich um seine ___",
+    "und lerne Vokabeln – mit ___."
+   ],
+   "solutions": [
+    "hell",
+    "morgen",
+    "Wort",
+    "Kinder",
+    "Spaß"
+   ]
+  },
+  "gram": {
+   "title": "Grammatik – Reflexive Verben mit Präposition",
+   "instruction": "Ergänze das Reflexivpronomen (mich, dich, sich, uns, euch) und die Präposition.",
+   "items": [
+    "Ich freue ___ ___ morgen.",
+    "Wir bereiten ___ ___ die Prüfung vor.",
+    "Er kümmert ___ ___ seine Kinder.",
+    "Ärgerst du ___ ___ den Fehler?",
+    "Ihr müsst ___ ___ die Aufgabe konzentrieren.",
+    "Ich erinnere ___ ___ meine Mutter."
+   ],
+   "solutions": [
+    "Ich freue mich auf morgen.",
+    "Wir bereiten uns auf die Prüfung vor.",
+    "Er kümmert sich um seine Kinder.",
+    "Ärgerst du dich über den Fehler?",
+    "Ihr müsst euch auf die Aufgabe konzentrieren.",
+    "Ich erinnere mich an meine Mutter."
+   ]
+  }
+ },
+ {
+  "id": "c1-13-die-nie-geloeschten-nachrichten",
+  "level": "C1",
+  "title": "Die nie gelöschten Nachrichten",
+  "theme": "Digitale Spuren und Erinnerung: alte Chats und Fotos einer verlorenen Freundschaft – was von uns bleibt",
+  "grammar": "Erweiterte Partizipialattribute (die nie gelöschten Nachrichten, die von dir geschickten Bilder, der im Dunkeln summende Server) und ihre Umformung in Relativsätze",
+  "intro": "Drei Uhr nachts: Jemand scrollt durch alte Nachrichten einer verlorenen Freundschaft – Fotos, ein geteiltes Lied, ein unbeantworteter Gruß. Mit diesem Lied übst du erweiterte Partizipialattribute, wie sie in anspruchsvollen Texten auf C1-Niveau vorkommen.",
+  "lyrics": "[Verse 1]\nDrei Uhr. Die Stadt atmet langsamer,\ndas Display wirft blasses Licht.\nIch scrolle durch längst vergangene Sommer,\ndoch vergessen kann ich sie nicht.\nDie von dir geschickten Bilder:\nein Dach in Lissabon, ein Glas Wein,\ndein in den Wind gerufenes „Komm doch!“ –\nund ich schrieb: „Ein andermal, vielleicht.“\n\n[Chorus]\nDie nie gelöschten Nachrichten\nleuchten wie Fenster in der Nacht.\nDie nie gesagten Antworten\nhaben mich wach gemacht.\nWas von uns bleibt, ist mehr als Daten,\nmehr als ein Archiv aus Licht –\ndie nie gelöschten Nachrichten:\nIch lösche sie nicht.\n\n[Verse 2]\nDie Cloud vergisst nichts, sagt man,\nsie speichert, ohne zu verstehen.\nDie von Algorithmen sortierten Tage\nlassen mich dich wiedersehen.\nEin vor Jahren geteiltes Lied,\nein nie zu Ende geschriebener Gruß –\nund darunter, grau und unbeantwortet,\ndein letztes „Pass auf dich auf“.\n\n[Chorus]\nDie nie gelöschten Nachrichten\nleuchten wie Fenster in der Nacht.\nDie nie gesagten Antworten\nhaben mich wach gemacht.\nWas von uns bleibt, ist mehr als Daten,\nmehr als ein Archiv aus Licht –\ndie nie gelöschten Nachrichten:\nIch lösche sie nicht.\n\n[Bridge]\nVielleicht ist Erinnerung nur ein Server,\nder irgendwo im Dunkeln summt.\nVielleicht ist Freundschaft ein nie beendeter Satz,\nder nachts von selbst weiterklingt.\nIch tippe: „Bist du noch da?“\nDrei Punkte. Dann – Stille. Dann: „Ja.“\n\n[Chorus]\nDie nie gelöschten Nachrichten\nleuchten wie Fenster in der Nacht.\nDie nie gesagten Antworten\nhaben mich wach gemacht.\nWas von uns bleibt, ist mehr als Daten,\nmehr als ein Archiv aus Licht –\ndie nie gelöschten Nachrichten:\nIch lösche sie nicht.\n\n[Outro]\nDie nie gelöschten Nachrichten …\n„Bist du noch da?“ – „Ja.“",
+  "vocab": [
+   [
+    "das Display, die Displays",
+    "der Bildschirm, z. B. vom Handy"
+   ],
+   [
+    "scrollen",
+    "auf dem Bildschirm Text oder Bilder nach oben oder unten bewegen"
+   ],
+   [
+    "längst vergangen",
+    "schon vor langer Zeit vorbei"
+   ],
+   [
+    "ein andermal",
+    "zu einem anderen, späteren Zeitpunkt (oft eine höfliche Absage)"
+   ],
+   [
+    "löschen",
+    "Daten entfernen, sodass sie nicht mehr da sind"
+   ],
+   [
+    "speichern",
+    "Daten aufbewahren, damit man sie später wieder öffnen kann"
+   ],
+   [
+    "der Algorithmus, die Algorithmen",
+    "eine Rechenvorschrift; hier: ein Programm, das Inhalte automatisch sortiert"
+   ],
+   [
+    "teilen (ein Lied, einen Beitrag)",
+    "anderen etwas im Internet zeigen oder schicken"
+   ],
+   [
+    "unbeantwortet",
+    "ohne Antwort geblieben"
+   ],
+   [
+    "summen (hier)",
+    "ein leises, gleichmäßiges Geräusch machen, z. B. ein Computer"
+   ]
+  ],
+  "tf": [
+   [
+    "Das Lied spielt mitten in der Nacht.",
+    true,
+    ""
+   ],
+   [
+    "Die Person ist damals mit nach Lissabon gefahren.",
+    false,
+    "Sie hat abgesagt: „Ein andermal, vielleicht.“"
+   ],
+   [
+    "Die Person will die alten Nachrichten löschen.",
+    false,
+    "Sie löscht sie nicht."
+   ],
+   [
+    "Die Cloud speichert alles, versteht aber nichts.",
+    true,
+    ""
+   ],
+   [
+    "Am Ende bekommt die Person eine Antwort.",
+    true,
+    ""
+   ]
+  ],
+  "style": "Atmospheric future garage, 130 BPM. Intimate male vocals with heavy reverb and pitch-shifted textures. Soaring female vocals in the chorus. Deep sub-bass, shuffled 2-step garage drums, atmospheric pads, chopped vocal samples, piano, cello, vinyl crackle. Nocturnal city ambience, distant voices, rain. Dreamy, melancholic, romantic, mysterious, cinematic. Poetry clearly understandable. Unforgettable hook, cinematic finale. 2026 future garage aesthetic.",
+  "author": "Dzianis Prudnikau (Dennis)",
+  "gap": {
+   "type": "gap",
+   "title": "Aufgabe 2: Lückentext",
+   "instruction": "Hör das Lied und ergänze die fehlenden Wörter.",
+   "items": [
+    "das Display wirft blasses ___.",
+    "ein Dach in Lissabon, ein Glas ___,",
+    "Die nie gelöschten ___",
+    "Die Cloud vergisst nichts, sagt ___,",
+    "Drei Punkte. Dann – ___."
+   ],
+   "solutions": [
+    "Licht",
+    "Wein",
+    "Nachrichten",
+    "man",
+    "Stille"
+   ]
+  },
+  "gram": {
+   "title": "Grammatik – Erweiterte Partizipialattribute",
+   "instruction": "Forme die Relativsätze in erweiterte Partizipialattribute um. Aktiv und gleichzeitig → Partizip I (summend); passiv oder abgeschlossen → Partizip II (gelöscht). Achte auf die Adjektivendung.",
+   "items": [
+    "die Nachrichten, die nie gelöscht wurden → die ___ Nachrichten",
+    "die Bilder, die du geschickt hast → die ___ Bilder",
+    "das Licht, das im Regen verschwimmt → das ___ Licht",
+    "die Tage, die von Algorithmen sortiert werden → die ___ Tage",
+    "ein Satz, der nie beendet wurde → ein ___ Satz",
+    "der Server, der irgendwo im Dunkeln summt → der ___ Server"
+   ],
+   "solutions": [
+    "die nie gelöschten Nachrichten",
+    "die von dir geschickten Bilder",
+    "das im Regen verschwimmende Licht",
+    "die von Algorithmen sortierten Tage",
+    "ein nie beendeter Satz",
+    "der irgendwo im Dunkeln summende Server"
+   ]
+  }
+ }
+]
