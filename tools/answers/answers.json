@@ -10,8 +10,8 @@
     "ueber": {"text": "Dennis Prudnikau, DaZ-Lehrer und lizenzierter Prüfer für DTZ, telc und DTB.", "page": "/ueber-mich/", "name": "Deutsch mit Dennis – Über Dennis"},
     "dtz-tipp": {"text": "Erfahrungswert von Dennis (keine offizielle Vorgabe): ca. 60–80 Wörter für A2, 80–100 Wörter für B1.", "page": "/dtz-schreiben/", "name": "Deutsch mit Dennis – DTZ Schreiben"},
     "dtz-geruest": {"text": "Briefgerüst: Anrede, Einleitung, Leitpunkte, Bitte oder Frage, Schluss, Gruß und Name.", "page": "/dtz-schreiben/", "name": "Deutsch mit Dennis – DTZ Schreiben"},
-    "berufe": {"text": "{n:berufe} Berufe für A1 mit der/die, Plural, Arbeitsort und Beispielsatz. Beruf ohne Artikel: Ich bin Lehrerin. Die weibliche Form meistens mit -in, oft mit Umlaut: der Arzt → die Ärztin. Dialoge mit Sie und du.", "page": "/berufe/", "name": "Deutsch mit Dennis – Berufe A1"},
-    "berufe-quiz": {"text": "Berufe-Quiz A1: Bild, Tätigkeit, Arbeitsort und „Ich bin …“ – 10 Fragen pro Runde.", "page": "/spiele/berufe-a1/", "name": "Deutsch mit Dennis – Berufe-Quiz A1"}
+    "berufe": {"text": "{n:berufe} Berufe für A1 mit der/die, Plural, Arbeitsort und Beispielsatz. Beruf ohne Artikel: Ich bin Lehrerin. Die weibliche Form meistens mit -in, oft mit Umlaut: der Arzt → die Ärztin. Dialoge mit Sie und du.", "page": "/berufe/", "name": "Deutsch mit Dennis – Berufe A1", "stand": "2026-11-26"},
+    "berufe-quiz": {"text": "Berufe-Quiz A1: Bild, Tätigkeit, Arbeitsort und „Ich bin …“ – 10 Fragen pro Runde.", "page": "/spiele/berufe-a1/", "name": "Deutsch mit Dennis – Berufe-Quiz A1", "stand": "2026-11-26"}
   },
   "pages": [
     {
@@ -684,7 +684,7 @@
       },
       {
        "q": "„Ich bin Lehrer“ oder „Ich bin ein Lehrer“?",
-       "a": "Ohne Artikel: Ich bin Lehrer. Mit einem Adjektiv braucht man den Artikel: Ich bin eine gute Lehrerin.",
+       "a": "Ohne Artikel: Ich bin Lehrer. Genauso: Ich bin Köchin. – Nicht: Ich bin eine Köchin.",
        "ref": [
         "site:berufe"
        ]

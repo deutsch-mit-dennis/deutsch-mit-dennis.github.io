@@ -111,7 +111,7 @@ def resolve(ref):
         missing = nums(text) - {str(v) for v in COUNTS.values()} - nums(page_text(sf["page"]))
         if missing:  # a site fact must be backed by the local page it points to
             ERR.append(f"site fact {ref}: number(s) {sorted(missing)} not on {sf['page']}")
-        return {"text": text, "src": [(sf["name"], sf["page"])], "stand": A["stand"]}
+        return {"text": text, "src": [(sf["name"], sf["page"])], "stand": sf.get("stand") or A["stand"]}
     exam, kind, *rest = ref.split(".")
     x = FX[exam]
     if kind == "parts":

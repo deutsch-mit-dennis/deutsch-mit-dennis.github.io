@@ -42,11 +42,11 @@
   DMGame.register({
     id: 'berufe-a1', cat: 'basis', level: 'A1', icon: '👩‍🔧', title: 'Berufe-Quiz A1',
     desc: 'Bild, Tätigkeit, Arbeitsort und „Ich bin …“ – 10 Fragen pro Runde.',
-    intro: 'Wähle die richtige Antwort. Es gibt 10 Fragen und 3 Antworten pro Frage. Tipp: Erst die 30 Berufe auf der Seite „Berufe – A1“ ansehen.',
+    intro: 'Wähle die richtige Antwort. Es gibt 10 Fragen und 3 Antworten pro Frage. Tipp: Erst alle Berufe auf der Seite „Berufe auf Deutsch A1“ ansehen.',
     optionsLabel: 'Übung',
     options: [{ id: 'bild', label: 'Wer ist das? (Bild)' }, { id: 'taetigkeit', label: 'Was macht …? (Tätigkeit)' },
       { id: 'ort', label: 'Wo arbeitet …? (Arbeitsort)' }, { id: 'ichbin', label: 'Ich bin … (ohne Artikel)' }],
-    next: [['#berufe', 'Alle 30 Berufe ansehen'], ['#spiele/satzbau', 'Satz-Baumeister']],
+    next: [['#berufe', 'Alle Berufe ansehen'], ['#spiele/satzbau', 'Satz-Baumeister']],
     start(api, opt) {
       const B = (window.DM && DM.berufe && DM.berufe.list) || [];
       if (!B.length) { api.el.innerHTML = '<p>Die Berufe konnten nicht geladen werden. Bitte lade die Seite neu.</p>'; return; }
