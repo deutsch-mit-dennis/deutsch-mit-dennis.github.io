@@ -409,3 +409,7 @@ body.kt-blatt .kb-instr [dir="rtl"]{font-size:1em}
 /* long Arabic/Persian rule translations read right-aligned (short word items stay left for a uniform look) */
 .kt-rule .kt-tr .kt-t.rtl .kt-x,body[data-lang="all"] .kt-rule .kt-tr .kt-t.rtl .kt-x{text-align:right}
 @media print{.kt-rule .kt-tr .kt-t.rtl .kt-x{text-align:right}}
+
+/* PDF: no colour-emoji Type3 fonts (Acrobat warns 'T3Font konnte nicht entnommen werden') – print emojis as monochrome glyphs */
+@media print{html body,html body *,html body *::before,html body *::after{font-family:'Atkinson Hyperlegible','Segoe UI','Segoe UI Symbol',Arial,sans-serif!important;font-variant-emoji:text}}
+@media print{.kt-goals li::before{content:''!important;width:6px!important;height:11px!important;left:8px!important;top:3px!important;background:none!important;border:solid var(--gruen);border-width:0 3px 3px 0;border-radius:0!important;transform:rotate(45deg)}}

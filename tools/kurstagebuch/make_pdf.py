@@ -118,6 +118,14 @@ def main() -> int:
                     " a.href = site + a.pathname + a.search + a.hash; })",
                     SITE,
                 )
+                # colour emojis become Type 3 fonts in Chromium PDFs; Acrobat then warns
+                # "Die eingebettete Schrift T3Font_1 konnte nicht entnommen werden" -> drop pictographs in the PDF only
+                page.evaluate(
+                    "() => { const re = /[0-9#*]\\uFE0F?\\u20E3|\\p{Extended_Pictographic}(\\uFE0F|\\u200D\\p{Extended_Pictographic}\\uFE0F?)*\\uFE0F?|[\\u{1F1E6}-\\u{1F1FF}]|\\uFE0F/gu;"
+                    " const w = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT); let n;"
+                    " while ((n = w.nextNode())) { if (re.test(n.nodeValue)) { re.lastIndex = 0;"
+                    " n.nodeValue = n.nodeValue.replace(re, '').replace(/^\\s+(?=\\S)/, m => n.previousSibling ? m : ''); } re.lastIndex = 0; } }"
+                )
                 page.pdf(
                     path=str(pdf),
                     format="A4",
