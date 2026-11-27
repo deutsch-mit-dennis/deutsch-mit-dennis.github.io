@@ -283,6 +283,7 @@
   function home() {
     const last = mem.last && mem.last.route !== '' ? mem.last : null;
     page(`
+    ${musicBar()}
     <section class="dm-hero">
       <figure class="dm-hero-photo"><img src="assets/dennis.webp" alt="Dennis, dein Deutschlehrer" width="626" height="1004" fetchpriority="high"></figure>
       <div class="dm-hero-copy">
@@ -905,8 +906,26 @@
 
   /* ---------- Deutsch mit Liedern ---------- */
   const SONG_LEVELS = ['A1', 'A2', 'B1', 'B2', 'C1'];
-  const sunoConsent = () => !!mem.sunoConsent;
+  // mem.sunoConsent: explicit consent on a song/playlist page (stored). The start-page tap only counts for this browser session.
+  let sunoPageOk = false;   // fallback when sessionStorage is blocked: allowed for this page view only
+  const sunoSession = () => { try { return sunoPageOk || sessionStorage.getItem('dmd.sunoSession') === '1'; } catch (e) { return sunoPageOk; } };
+  const sunoConsent = () => !!mem.sunoConsent || sunoSession();
+  // store consent permanently only where the consent box was shown (not after the session-only start-page tap)
+  const sunoKeep = () => { if (!sunoSession()) { mem.sunoConsent = true; save(); } };
   function songOfDay(lv) { const songs = (DM.songs || []).filter(sg => sg.suno), want = lv || (mem.level === 'A0' ? 'A1' : mem.level), fit = songs.filter(sg => sg.level === want), all = fit.length ? fit : songs; if (!all.length) return null; const d = new Date(); return all[(d.getFullYear() * 400 + d.getMonth() * 31 + d.getDate()) % all.length]; }
+  /* Start page, top: one tap starts the song playlist (students want music fast, especially on phones).
+     The tap counts as consent for loading the Suno player - the notice sits right under the button. */
+  function musicBar() {
+    setTimeout(() => $$('[data-music-go]').forEach(a => a.addEventListener('click', () => { try { sessionStorage.setItem('dmd.sunoSession', '1'); } catch (e) { sunoPageOk = true; } })), 0);
+    return `<section class="dm-qsong" aria-labelledby="dm-qsong-h">
+      <a class="dm-qsong-go" href="#lieder/playlist/alle/start" data-music-go><span class="dm-song-home-disc" aria-hidden="true"><i></i></span>
+        <span class="dm-qsong-t"><b id="dm-qsong-h" data-i18n="music_go">Lieder abspielen</b><small data-i18n="music_sub">Alle Lieder am Stück – startet sofort</small></span>
+        <span class="dm-qsong-play" aria-hidden="true">▶</span></a>
+      <div class="dm-qsong-side"><p class="dm-qsong-lv"><span data-i18n="music_lv">Nur ein Niveau:</span> ${SONG_LEVELS.map(k => `<a href="#lieder/playlist/${k}/start" data-music-go aria-label="Playlist ${k} abspielen">${k}</a>`).join('')}</p>
+      <a class="dm-qsong-pdf" href="material/lieder/liederheft.pdf" target="_blank" rel="noopener">📄 <span data-i18n="music_pdf">Liedtexte + Aufgaben als PDF</span></a></div>
+      <p class="dm-qsong-note"><span data-i18n="music_note">Beim Tippen lädt der Player von Suno – dabei gehen Daten wie deine IP-Adresse an Suno.</span> 🤖 KI-Musik. <a href="/datenschutz/">Datenschutz</a> · <a href="#lieder">Alle Lieder</a></p>
+    </section>`;
+  }
   /* Startseite: kompakte Karte statt der großen Lieder-Bühne */
   function songHome() {
     const all = DM.songs || [], sod = songOfDay();
@@ -1003,7 +1022,7 @@
     mem.plLevel = filt; save();
     const base = (DM.songs || []).filter(sg => sg.suno && (filt === 'alle' || sg.level === filt));
     let order = base.map((_, i) => i);
-    if (mem.plShuffle && !startId) for (let i = order.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [order[i], order[j]] = [order[j], order[i]]; }
+    if (mem.plShuffle && (!startId || startId === 'start')) for (let i = order.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [order[i], order[j]] = [order[j], order[i]]; }
     const list = order.map(i => base[i]);
     const total = list.reduce((a, sg) => a + (SONG_SEC[sg.suno] || 200), 0);
     let cur = -1, left = 0, endAt = 0, paused = false, loading = false, tapped = false;
@@ -1025,6 +1044,7 @@
           <div id="dm-pl-stage">${sunoConsent() ? `<div class="dm-pl-start"><button type="button" class="dm-btn dm-btn-sun" id="dm-pl-go">▶ Playlist starten</button></div>`
             : `<div class="dm-consent"><p><b>Die Lieder werden von Suno geladen.</b> Beim Abspielen überträgt dein Browser Daten (zum Beispiel deine IP-Adresse) an Suno. Mehr in der <a href="/datenschutz/">Datenschutzerklärung</a>.</p><div class="dm-row"><button type="button" class="dm-btn" id="dm-pl-go">▶ Einverstanden – Playlist starten</button></div></div>`}</div>
           <p class="dm-pl-now" id="pl-now" aria-live="polite"></p>
+          <p class="dm-row dm-pl-pdfrow"><a class="dm-btn dm-btn-sun" id="dm-pl-pdf" href="material/lieder/liederheft.pdf" target="_blank" rel="noopener">📄 PDF: Liedtexte + Aufgaben</a></p>
           <div class="dm-row dm-pl-ctrl">
             <button type="button" class="dm-btn dm-btn-quiet" id="dm-pl-prev" aria-label="Vorheriges Lied">⏮ Zurück</button>
             <button type="button" class="dm-btn dm-btn-quiet" id="dm-pl-next" aria-label="Nächstes Lied">Weiter ⏭</button>
@@ -1050,6 +1070,7 @@
       cur = (k + list.length) % list.length;
       const sg = list[cur];
       const len = (SONG_SEC[sg.suno] || 200) + 2;
+      const pdf = $('#dm-pl-pdf'); if (pdf) { pdf.href = `material/lieder/${sg.id}.pdf`; pdf.textContent = `📄 PDF zu „${sg.title}“`; }
       left = len; endAt = 0; loading = true; tapped = false;   // Countdown startet erst, wenn der Player geladen ist
       paused = false; btnP.textContent = '⏸ Automatisch weiter: an'; btnP.setAttribute('aria-pressed', 'false');
       stage().innerHTML = `<div class="dm-suno"><iframe src="https://suno.com/embed/${x(sg.suno)}?autoplay=1" title="${x(sg.title)}" allow="autoplay; encrypted-media"></iframe></div>`;
@@ -1074,18 +1095,21 @@
         if (left <= 0) play(cur + 1);
       }, 1000);
     };
-    const startK = startId ? list.findIndex(sg => sg.id === startId) : -1;
-    if (startK >= 0 && sunoConsent()) setTimeout(() => { play(startK); $('.dm-pl-player')?.scrollIntoView({ block: 'nearest', behavior: 'smooth' }); }, 50);
-    $('#dm-pl-go').onclick = () => { mem.sunoConsent = true; save(); play(Math.max(0, cur)); $('.dm-pl-player').scrollIntoView({ block: 'nearest', behavior: 'smooth' }); };
+    // '#lieder/playlist/<level>/start' (button on the start page): play the first song right away
+    // 'alle' + start: begin with the learner's own level if it is known (A0 counts as A1)
+    const ownLv = mem.level === 'A0' ? 'A1' : mem.level, ownK = filt === 'alle' && !mem.plShuffle ? list.findIndex(sg => sg.level === ownLv) : -1;
+    const startK = startId === 'start' ? Math.max(0, ownK) : startId ? list.findIndex(sg => sg.id === startId) : -1;
+    if (startK >= 0 && sunoConsent()) setTimeout(() => { play(startK); $('.dm-pl-player')?.scrollIntoView({ block: startId === 'start' ? 'start' : 'nearest', behavior: 'smooth' }); }, 50);
+    $('#dm-pl-go').onclick = () => { sunoKeep(); play(Math.max(0, cur)); $('.dm-pl-player').scrollIntoView({ block: 'nearest', behavior: 'smooth' }); };
     $('#dm-pl-next').onclick = () => { if (sunoConsent()) play(cur + 1); };
     $('#dm-pl-prev').onclick = () => { if (sunoConsent()) play(cur - 1); };
     btnP.onclick = () => { if (cur < 0) return; paused = !paused; btnP.textContent = paused ? '▶ Automatisch weiter: aus' : '⏸ Automatisch weiter: an'; btnP.setAttribute('aria-pressed', String(paused)); show(); };
-    $$('.dm-pl-item').forEach(b => b.onclick = () => { mem.sunoConsent = true; save(); play(+b.dataset.k); });
+    $$('.dm-pl-item').forEach(b => b.onclick = () => { sunoKeep(); play(+b.dataset.k); });
     const btnM = $('#dm-pl-mini');
     if (btnM) btnM.onclick = async () => {
       if (pip) return pip.close();
       try { pip = await documentPictureInPicture.requestWindow({ width: 440, height: 300 }); } catch (e) { return; }
-      mem.sunoConsent = true; save();
+      sunoKeep();
       const d = pip.document, css = d.createElement('style');
       d.title = 'Deutsch mit Liedern – Playlist';
       css.textContent = 'body{margin:0;font:15px/1.4 system-ui,sans-serif;background:#1B1446;color:#fff}#s iframe{display:block;width:100%;height:240px;border:0}#b{display:flex;gap:6px;align-items:center;padding:6px 8px}#b button{min-height:36px;min-width:44px;border-radius:10px;border:1px solid rgba(255,255,255,.35);background:transparent;color:#fff;font:inherit;cursor:pointer}#n{flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:13px}';

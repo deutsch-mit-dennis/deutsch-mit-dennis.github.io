@@ -660,6 +660,32 @@ body:has(header.dm-header.menu-open) .dm-tour:not(.dm-tour-open){visibility:hidd
 .dm-song-home-go{flex:0 0 44px;width:44px;height:44px;border-radius:50%;background:#ffc928;color:#172036;display:grid;place-items:center;font-size:18px}
 .dm-song-home-more{margin:8px 4px 0;font-size:15px}
 .dm-song-home-more a{display:inline-flex;min-height:44px;align-items:center}
+/* Start page: one-tap song playlist at the very top */
+.dm-qsong{margin:0 0 14px}
+.dm-qsong-go{display:flex;align-items:center;gap:12px;padding:10px 14px;border-radius:18px;text-decoration:none;color:#fff;background:linear-gradient(135deg,#2b2f77,#5b3fa8);box-shadow:0 8px 20px rgba(43,47,119,.22);min-height:64px;transition:transform .2s}
+.dm-qsong-go:hover{transform:translateY(-2px)}
+.dm-qsong-go:focus-visible{outline:3px solid #ffc928;outline-offset:3px}
+.dm-qsong-go .dm-song-home-disc{flex-basis:44px;width:44px;height:44px}
+.dm-qsong-t{display:flex;flex-direction:column;gap:1px;flex:1;min-width:0}
+.dm-qsong-t b{font-size:19px;line-height:1.2}
+.dm-qsong-t small{color:#e3defc;font-size:13px;font-weight:600}
+.dm-qsong-play{flex:0 0 48px;width:48px;height:48px;border-radius:50%;background:#ffc928;color:#172036;display:grid;place-items:center;font-size:20px;padding-left:3px;box-sizing:border-box}
+.dm-qsong-lv{display:flex;flex-wrap:wrap;align-items:center;gap:4px 6px;margin:8px 2px 0;font-size:14px}
+.dm-qsong-lv a{display:inline-grid;place-items:center;min-width:44px;min-height:44px;padding:0 8px;border-radius:12px;border:1px solid #d7d3ef;background:#fff;color:#2b2f77;font-weight:700;text-decoration:none;box-sizing:border-box}
+.dm-qsong-lv a.dm-qsong-txt{font-weight:600;border-color:transparent;background:transparent;text-decoration:underline}
+.dm-qsong-note{margin:4px 2px 0;font-size:12px;line-height:1.4;color:#5d6478}
+.dm-qsong-note a{display:inline-flex;align-items:center;min-height:44px;padding:0 4px;font-size:13px}
+@media (max-width:359px){.dm-qsong-lv>span{flex-basis:100%}}
+.dm-qsong-pdf{display:flex;align-items:center;justify-content:center;gap:8px;min-height:48px;margin:8px 0 0;padding:8px 14px;border-radius:14px;background:#ffc928;color:#172036;font-weight:700;text-decoration:none;text-align:center;box-sizing:border-box}
+.dm-qsong-pdf:hover{background:#ffd451}
+.dm-qsong-pdf:focus-visible{outline:3px solid #2b2f77;outline-offset:3px}
+@media (min-width:700px){
+  .dm-qsong{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:8px 18px;align-items:center}
+  .dm-qsong-side .dm-qsong-lv{margin-top:0}
+  .dm-qsong-note{grid-column:1/-1}
+}
+.dm-pl-pdfrow{margin:6px 0 0}
+#dm-pl-pdf{white-space:normal;text-align:center;max-width:100%}
 /* Neu: news + latest video + Mikula in one section */
 .dm-news-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:16px;align-items:start}
 .dm-news-grid .dm-newslist{grid-template-columns:1fr}
