@@ -1,5 +1,7 @@
 // Kurstagebuch – list of lesson days (newest first). Data contract: /kurstagebuch/SCHEMA.md
 window.KT_TAGE = [
+  { date: "2026-11-27", nr: 4, title: "Dinge im Kursraum und Bitten", level: "A1",
+    teaser: "Was ist das? ein, kein, mein – der, das, die und er, es, sie, Gib mir bitte einen Stift und freundliche Bitten (Imperativ)." },
   { date: "2026-11-26", nr: 3, title: "Berufe und Tätigkeiten", level: "A1",
     teaser: "Berufe und was man dort macht, arbeiten als und bei, mein Traumberuf, Verben mit e → i und das erste Perfekt." },
   { date: "2026-11-20", nr: 2, title: "Zahlen, Daten und Formulare", level: "A1",

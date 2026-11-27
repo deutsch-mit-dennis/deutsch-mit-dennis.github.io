@@ -118,6 +118,18 @@ def main() -> int:
                     " a.href = site + a.pathname + a.search + a.hash; })",
                     SITE,
                 )
+                # worksheet match cells that contain only an emoji (picture -> word) carry the content:
+                # draw them into a PNG image first, so they survive the emoji removal below (images use no fonts)
+                page.evaluate(
+                    "() => { const re = /^(\\p{Extended_Pictographic}|\\uFE0F|\\u200D|\\s)+$/u;"
+                    " document.querySelectorAll('.kb-mt').forEach(e => { const t = e.textContent.trim();"
+                    " if (!t || !re.test(t)) return; const s = 128, c = document.createElement('canvas'); c.width = c.height = s;"
+                    " const x = c.getContext('2d'); x.font = (s * 0.78) + 'px \"Segoe UI Emoji\",\"Apple Color Emoji\",\"Noto Color Emoji\",sans-serif';"
+                    " x.textAlign = 'center'; x.textBaseline = 'middle'; x.fillText(t, s / 2, s * 0.54);"
+                    " const img = new Image(); img.src = c.toDataURL('image/png'); img.alt = t;"
+                    " img.style.cssText = 'width:1.7em;height:1.7em;vertical-align:middle';"
+                    " e.textContent = ''; e.appendChild(img); }); }"
+                )
                 # colour emojis become Type 3 fonts in Chromium PDFs; Acrobat then warns
                 # "Die eingebettete Schrift T3Font_1 konnte nicht entnommen werden" -> drop pictographs in the PDF only
                 page.evaluate(
