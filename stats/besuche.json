@@ -1,30 +1,30 @@
 {
  "hinweis": "Zusammengefasste Besucherzahlen (Cloudflare Web Analytics, ohne Cookies). Automatisch erzeugt.",
- "stand": "2026-11-26T13:44:22.268Z",
- "tag": "2026-11-25",
+ "stand": "2026-11-27T13:41:32.741Z",
+ "tag": "2026-11-26",
  "gestern": {
-  "besuche": 137,
-  "seitenaufrufe": 902
+  "besuche": 148,
+  "seitenaufrufe": 984
  },
  "letzte7Tage": {
-  "besuche": 1013,
-  "seitenaufrufe": 6883
+  "besuche": 969,
+  "seitenaufrufe": 6868
  },
  "herkunft": [
   {
    "name": "deutsch-mit-dennis.de",
    "besuche": 0,
-   "aufrufe": 5870
+   "aufrufe": 5899
   },
   {
    "name": "(direkt)",
-   "besuche": 950,
-   "aufrufe": 950
+   "besuche": 897,
+   "aufrufe": 897
   },
   {
    "name": "www.google.com",
-   "besuche": 38,
-   "aufrufe": 38
+   "besuche": 43,
+   "aufrufe": 43
   },
   {
    "name": "m.facebook.com",
@@ -33,13 +33,13 @@
   },
   {
    "name": "www.bing.com",
-   "besuche": 4,
-   "aufrufe": 4
+   "besuche": 6,
+   "aufrufe": 6
   },
   {
-   "name": "de.search.yahoo.com",
-   "besuche": 2,
-   "aufrufe": 2
+   "name": "l.instagram.com",
+   "besuche": 3,
+   "aufrufe": 3
   },
   {
    "name": "ch.search.yahoo.com",
@@ -55,23 +55,23 @@
  "laender": [
   {
    "name": "DE",
-   "besuche": 826,
-   "aufrufe": 5375
+   "besuche": 742,
+   "aufrufe": 5043
   },
   {
    "name": "MA",
-   "besuche": 31,
-   "aufrufe": 288
+   "besuche": 35,
+   "aufrufe": 314
   },
   {
    "name": "CH",
-   "besuche": 16,
-   "aufrufe": 245
+   "besuche": 17,
+   "aufrufe": 290
   },
   {
    "name": "GE",
-   "besuche": 2,
-   "aufrufe": 160
+   "besuche": 1,
+   "aufrufe": 148
   },
   {
    "name": "TJ",
@@ -79,48 +79,48 @@
    "aufrufe": 145
   },
   {
-   "name": "TN",
+   "name": "DZ",
    "besuche": 2,
-   "aufrufe": 56
+   "aufrufe": 139
+  },
+  {
+   "name": "VN",
+   "besuche": 12,
+   "aufrufe": 115
   },
   {
    "name": "IT",
-   "besuche": 8,
-   "aufrufe": 56
-  },
-  {
-   "name": "UA",
    "besuche": 10,
-   "aufrufe": 53
+   "aufrufe": 62
   }
  ],
  "geraete": [
   {
    "name": "desktop",
-   "besuche": 500,
-   "aufrufe": 3983
+   "besuche": 515,
+   "aufrufe": 4323
   },
   {
    "name": "mobile",
-   "besuche": 498,
-   "aufrufe": 2833
+   "besuche": 437,
+   "aufrufe": 2475
   },
   {
    "name": "tablet",
-   "besuche": 15,
-   "aufrufe": 67
+   "besuche": 17,
+   "aufrufe": 70
   }
  ],
  "seiten": [
   {
    "name": "/",
-   "besuche": 1006,
-   "aufrufe": 6579
+   "besuche": 962,
+   "aufrufe": 6597
   },
   {
    "name": "/index.html",
    "besuche": 7,
-   "aufrufe": 304
+   "aufrufe": 271
   }
  ],
  "verlauf": {
@@ -323,6 +323,10 @@
   "2026-11-25": {
    "besuche": 137,
    "seitenaufrufe": 902
+  },
+  "2026-11-26": {
+   "besuche": 148,
+   "seitenaufrufe": 984
   }
  }
 }
